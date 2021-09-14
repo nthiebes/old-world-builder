@@ -1,0 +1,23 @@
+{
+  "name": "old-world-builder",
+  "version": "0.1.0",
+  "description": "An army builder for The Old World and Warhammer Fantasy Battles",
+  "private": true,
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 1337",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nthiebes/old-world-builder.git"
+  },
+  "author": "Nico Thiebes",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/nthiebes/old-world-builder/issues"
+  },
+  "homepage": "https://github.com/nthiebes/old-world-builder#readme",
+  "devDependencies": {
+    "prettier": "^2.4.0"
+  }
+}
