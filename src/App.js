@@ -1,17 +1,36 @@
-<html>
-  <head>
-    <title>Old World Builder</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-    />
-    <link href="source/index.css" rel="stylesheet" />
-  </head>
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-  <body>
-    <header class="header">
+// import { Home } from "./pages/home";
+import { List } from "./pages/list";
+import "./App.css";
+
+export const App = () => {
+  return (
+    <Router>
+      <header className="header">
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
+        <div className="title">
+          <h1>
+            Zhufbar <button className="button">Edit</button>
+          </h1>
+          <p>1337 / 2000 Punkte</p>
+        </div>
+        <button className="button">...</button>
+      </header>
+      <main>
+        <Switch>
+          <Route path="/:id">{<List />}</Route>
+          <Route path="/">{/* <Home /> */}</Route>
+        </Switch>
+      </main>
+    </Router>
+  );
+};
+
+/*
+<header class="header">
       <button class="button"><</button>
       <div class="title">
         <h1>Zhufbar <button class="button">Edit</button></h1>
@@ -49,5 +68,4 @@
       </h2>
     </main>
     <footer></footer>
-  </body>
-</html>
+*/

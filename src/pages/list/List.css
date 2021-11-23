@@ -1,0 +1,57 @@
+.list__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.5rem;
+}
+
+.list__points {
+  margin: 0 1rem;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100px;
+  height: 5px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: gray;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: green;
+}
+
+.progress--red[value]::-webkit-progress-value {
+  background-color: red;
+}
+
+li {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+li a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.2rem;
+  flex-grow: 1;
+  /* font-weight: 400; */
+  /* font-family: ui-serif, "Times New Roman", Times, serif; */
+  /* text-transform: uppercase; */
+}
+
+h2 span {
+  font-size: 1rem;
+  font-weight: 400;
+}
