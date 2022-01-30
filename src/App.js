@@ -17,6 +17,7 @@ import "./App.css";
 const emptyList = {
   name: "Neue Liste",
   points: 1500,
+  army: "greenskins",
   lords: [],
   heroes: [],
   core: [],

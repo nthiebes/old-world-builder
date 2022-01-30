@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import classNames from "classnames";
 import { fetcher } from "../../utils/fetcher";
-import { getRandomId } from "../../utils/id";
+import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 
 import "./Editor.css";
 
@@ -25,18 +26,65 @@ export const Editor = () => {
   const [list, setList] = useState(null);
 
   const addLord = () => {
-    const lord = {
-      name: "Grimgork Eisenpelz",
+    const lord = army.lords.find(({ id }) => id === "grimgor");
+    const newList = {
+      ...list,
+      lords: [...list.lords, lord],
     };
 
-    setList({
+    setList(newList);
+    updateList(newList);
+  };
+  const addHero = () => {
+    const hero = army.heroes.find(({ id }) => id === "ng-shaman");
+    const newList = {
       ...list,
-      lords: [...list.lords, lord],
-    });
-    updateList({
+      heroes: [...list.heroes, hero],
+    };
+
+    setList(newList);
+    updateList(newList);
+  };
+  const addCore = () => {
+    const unit = army.core.find(({ id }) => id === "savageorks");
+    const newList = {
       ...list,
-      lords: [...list.lords, lord],
+      core: [...list.core, unit],
+    };
+
+    setList(newList);
+    updateList(newList);
+  };
+  const addSpecial = () => {
+    const unit = army.special.find(({ id }) => id === "blackorks");
+    const newList = {
+      ...list,
+      special: [...list.special, unit],
+    };
+
+    setList(newList);
+    updateList(newList);
+  };
+  const addRare = () => {
+    const unit = army.rare.find(({ id }) => id === "doomdiver");
+    const newList = {
+      ...list,
+      rare: [...list.rare, unit],
+    };
+
+    setList(newList);
+    updateList(newList);
+  };
+  const getPoints = (type) => {
+    let points = 0;
+
+    list[type].forEach((unit) => {
+      const unitPoints = army[type].find(({ id }) => id === unit.id).points;
+
+      points += unitPoints;
     });
+
+    return points;
   };
 
   useEffect(() => {
@@ -46,16 +94,49 @@ export const Editor = () => {
     setList(localList);
 
     fetcher({
-      url: `armies/${id}`,
+      url: `armies/${localList.army}`,
       onSuccess: (data) => {
         setArmy(data);
       },
     });
   }, [id]);
 
-  if (!list) {
+  if (!list || !army) {
     return null;
   }
+
+  const lordsPoints = getPoints("lords");
+  const heroesPoints = getPoints("heroes");
+  const corePoints = getPoints("core");
+  const specialPoints = getPoints("special");
+  const rarePoints = getPoints("rare");
+  const allPoints =
+    lordsPoints + heroesPoints + corePoints + specialPoints + rarePoints;
+  const lordsData = getMaxPercentData({
+    type: "lords",
+    armyPoints: list.points,
+    points: lordsPoints,
+  });
+  const heroesData = getMaxPercentData({
+    type: "heroes",
+    armyPoints: list.points,
+    points: heroesPoints,
+  });
+  const coreData = getMinPercentData({
+    type: "core",
+    armyPoints: list.points,
+    points: corePoints,
+  });
+  const specialData = getMaxPercentData({
+    type: "special",
+    armyPoints: list.points,
+    points: specialPoints,
+  });
+  const rareData = getMaxPercentData({
+    type: "rare",
+    armyPoints: list.points,
+    points: rarePoints,
+  });
 
   return (
     <>
@@ -64,24 +145,37 @@ export const Editor = () => {
           <h1>
             {list.name} <button className="button">Edit</button>
           </h1>
-          <p>{list.points} Punkte</p>
+          <p>
+            {allPoints} / {list.points} Punkte
+          </p>
         </div>
         <Link to="/">Zurück</Link>
       </header>
       <main>
         <header className="list__header">
-          <h2>
-            Kommandanten
-            {/* <br /> */}
-            {/* <span>(123 Pkte.)</span> */}
-          </h2>
+          <h2>Kommandanten</h2>
           <div className="list__points">
             <p>
-              {/* <b>123 Punkte</b> (Max. 300) */}
-              123 / 300 Punkte
+              {lordsData.diff > 0 ? (
+                <>
+                  <br />
+                  {`❌ ${lordsData.diff} Punkte zu viel`}
+                </>
+              ) : (
+                <>
+                  ✓ <b>{lordsPoints}</b> Punkte (Max. {lordsData.points})
+                </>
+              )}
             </p>
-            <progress value="130" max="300" className="progress">
-              130 Pkte.
+            <progress
+              value={lordsPoints}
+              max={lordsData.points}
+              className={classNames(
+                "progress",
+                lordsData.overLimit && "progress--red"
+              )}
+            >
+              {lordsPoints}
             </progress>
           </div>
           <button className="button" onClick={addLord}>
@@ -89,30 +183,138 @@ export const Editor = () => {
           </button>
         </header>
         <ul>
-          {list &&
-            list.lords.map(({ name }, index) => <li key={index}>{name}</li>)}
+          {list.lords.map(({ name_de }, index) => (
+            <li key={index}>{name_de}</li>
+          ))}
         </ul>
+
         <header className="list__header">
           <h2>Helden</h2>
           <div className="list__points">
             <p>
-              <b>220 / 300</b> Punkte
+              {heroesData.diff > 0 ? (
+                <>
+                  <br />
+                  {`❌ ${heroesData.diff} Punkte zu viel`}
+                </>
+              ) : (
+                <>
+                  ✓ <b>{heroesPoints}</b> / {heroesData.points} Punkten
+                </>
+              )}
             </p>
-            <progress value="220" max="300" className="progress--red">
-              220 Pkte.
+            <progress
+              value={heroesPoints}
+              max={heroesData.points}
+              className={classNames(
+                "progress",
+                heroesData.overLimit && "progress--red"
+              )}
+            >
+              {heroesPoints}
             </progress>
           </div>
-          <button className="button">Neu +</button>
+          <button className="button" onClick={addHero}>
+            Neu +
+          </button>
         </header>
+        <ul>
+          {list.heroes.map(({ name_de }, index) => (
+            <li key={index}>{name_de}</li>
+          ))}
+        </ul>
+
         <header className="list__header">
           <h2>Kerneinheiten</h2>
+          <div className="list__points">
+            <p>
+              {/* <b>{corePoints}</b> / {coreData.points} Punkten */}
+
+              {coreData.diff > 0 ? (
+                <>
+                  <br />
+                  {`Es fehlen ${coreData.diff} Punkte`}
+                </>
+              ) : (
+                <>
+                  <b>{corePoints}</b> Punkte (Min. {coreData.points})
+                </>
+              )}
+            </p>
+            <progress
+              value={corePoints}
+              max={coreData.points}
+              className={classNames(
+                "progress",
+                coreData.overLimit && "progress--red"
+              )}
+            >
+              {corePoints}
+            </progress>
+          </div>
+          <button className="button" onClick={addCore}>
+            Neu +
+          </button>
         </header>
+        <ul>
+          {list.core.map(({ name_de }, index) => (
+            <li key={index}>{name_de}</li>
+          ))}
+        </ul>
+
         <header className="list__header">
           <h2>Eliteeinheiten</h2>
+          <div className="list__points">
+            <p>
+              <b>{specialPoints}</b> / {specialData.points} Punkten
+            </p>
+            <progress
+              value={specialPoints}
+              max={specialData.points}
+              className={classNames(
+                "progress",
+                specialData.overLimit && "progress--red"
+              )}
+            >
+              {specialPoints}
+            </progress>
+          </div>
+          <button className="button" onClick={addSpecial}>
+            Neu +
+          </button>
         </header>
+        <ul>
+          {list.special.map(({ name_de }, index) => (
+            <li key={index}>{name_de}</li>
+          ))}
+        </ul>
+
         <header className="list__header">
           <h2>Seltene Einheiten</h2>
+          <div className="list__points">
+            <p>
+              <b>{rarePoints}</b> / {rareData.points} Punkten
+            </p>
+            <progress
+              value={rarePoints}
+              max={rareData.points}
+              className={classNames(
+                "progress",
+                rareData.overLimit && "progress--red"
+              )}
+            >
+              {rarePoints}
+            </progress>
+          </div>
+          <button className="button" onClick={addRare}>
+            Neu +
+          </button>
         </header>
+        <ul>
+          {list.rare.map(({ name_de }, index) => (
+            <li key={index}>{name_de}</li>
+          ))}
+        </ul>
       </main>
     </>
   );

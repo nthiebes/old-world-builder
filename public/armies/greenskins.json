@@ -1,41 +1,27 @@
 {
   "lords": [
     {
-      "id": 0,
+      "id": "grimgor",
       "name_de": "Grimgork Eisenpelz",
       "name_en": "Grimgor Ironhide",
       "points": 355,
-      "rules": [
-        {
-          "maxPercent": 25
-        }
-      ]
+      "named": true
     }
   ],
   "heroes": [
     {
-      "id": 1,
+      "id": "ng-shaman",
       "name_de": "Nachtgoblin-Schamane",
       "name_en": "",
-      "points": 50,
-      "rules": [
-        {
-          "maxPercent": 25
-        }
-      ]
+      "points": 50
     }
   ],
   "core": [
     {
-      "id": 2,
+      "id": "savageorks",
       "name_de": "Wildorks",
       "name_en": "",
       "points": 8,
-      "rules": [
-        {
-          "minPercent": 25
-        }
-      ],
       "options": [
         {
           "name_de": "Boss",
@@ -69,32 +55,18 @@
   ],
   "special": [
     {
-      "id": 3,
+      "id": "blackorks",
       "name_de": "Schwarzorks",
       "name_en": "",
-      "points": 12,
-      "rules": [
-        {
-          "maxPercent": 50,
-          "maxSame": 3,
-          "maxSameLarge": 6
-        }
-      ]
+      "points": 12
     }
   ],
   "rare": [
     {
-      "id": 4,
+      "id": "doomdiver",
       "name_de": "Kamikazekatapult",
       "name_en": "",
-      "points": 80,
-      "rules": [
-        {
-          "maxPercent": 25,
-          "maxSame": 2,
-          "maxSameLarge": 4
-        }
-      ]
+      "points": 80
     }
   ]
 }
