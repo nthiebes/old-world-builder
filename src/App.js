@@ -1,30 +1,77 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 // import { Home } from "./pages/home";
-import { List } from "./pages/list";
+import { Editor } from "./pages/editor";
+import { Expandable } from "./components/expandable";
+import { getRandomId } from "./utils/id";
+// import warhammerFantasy from "./data/warhammer-fantasy.json";
 import "./App.css";
 
+const emptyList = {
+  name: "Neue Liste",
+  points: 1500,
+  lords: [],
+  heroes: [],
+  core: [],
+  special: [],
+  rare: [],
+};
+
 export const App = () => {
+  const [lists, setLists] = useState([]);
+  const [redirect, setRedirect] = useState(null);
+  const createList = () => {
+    const localLists = JSON.parse(localStorage.getItem("lists")) || [];
+    const newId = getRandomId();
+    const newList = { ...emptyList, id: newId };
+
+    localStorage.setItem("lists", JSON.stringify([...localLists, newList]));
+    setRedirect(newId);
+  };
+
+  useEffect(() => {
+    const localLists = localStorage.getItem("lists");
+
+    setLists(JSON.parse(localLists) || []);
+  }, [setLists]);
+
   return (
     <Router>
-      <header className="header">
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-        <div className="title">
-          <h1>
-            Zhufbar <button className="button">Edit</button>
-          </h1>
-          <p>1337 / 2000 Punkte</p>
-        </div>
-        <button className="button">...</button>
-      </header>
-      <main>
-        <Switch>
-          <Route path="/:id">{<List />}</Route>
-          <Route path="/">{/* <Home /> */}</Route>
-        </Switch>
-      </main>
+      <Switch>
+        <Route path="/editor/:id">{<Editor />}</Route>
+        <Route path="/">
+          {
+            <>
+              {redirect && <Redirect to={`/editor/${redirect}`} />}
+              <button onClick={createList}>{"Neu +"}</button>
+              <ul>
+                {lists.map(({ id, name }, index) => (
+                  <li key={index}>
+                    <Link to={`/editor/${id}`}>{name}</Link>
+                  </li>
+                ))}
+              </ul>
+              {/* <Expandable headline="Warhammer Fantasy" open>
+                  {warhammerFantasy.map(({ id, name }) => (
+                    <li key={id}>
+                      <Link to={`/${id}`}>{name}</Link>
+                    </li>
+                  ))}
+                </Expandable>
+                <Expandable headline="Warhammer: The Old World">
+                  {""}
+                </Expandable> */}
+            </>
+          }
+        </Route>
+      </Switch>
     </Router>
   );
 };

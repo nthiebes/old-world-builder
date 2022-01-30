@@ -1,0 +1,100 @@
+{
+  "lords": [
+    {
+      "id": 0,
+      "name_de": "Grimgork Eisenpelz",
+      "name_en": "Grimgor Ironhide",
+      "points": 355,
+      "rules": [
+        {
+          "maxPercent": 25
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "id": 1,
+      "name_de": "Nachtgoblin-Schamane",
+      "name_en": "",
+      "points": 50,
+      "rules": [
+        {
+          "maxPercent": 25
+        }
+      ]
+    }
+  ],
+  "core": [
+    {
+      "id": 2,
+      "name_de": "Wildorks",
+      "name_en": "",
+      "points": 8,
+      "rules": [
+        {
+          "minPercent": 25
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        },
+        {
+          "name_de": "Speere",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Bögen",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": 3,
+      "name_de": "Schwarzorks",
+      "name_en": "",
+      "points": 12,
+      "rules": [
+        {
+          "maxPercent": 50,
+          "maxSame": 3,
+          "maxSameLarge": 6
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "id": 4,
+      "name_de": "Kamikazekatapult",
+      "name_en": "",
+      "points": 80,
+      "rules": [
+        {
+          "maxPercent": 25,
+          "maxSame": 2,
+          "maxSameLarge": 4
+        }
+      ]
+    }
+  ]
+}
