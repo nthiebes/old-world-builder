@@ -1,10 +1,140 @@
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-size: 16px;
+  --font-color: #f8f7fc;
+  --color-dark: #1e1f28;
+  --color-medium-dark: #282934;
+  --color-medium: #323141;
+  --color-primary: #fbe2a9;
+  --color-light: #f8f7fc;
+  --color-red: #eb7260;
+  --color-green: #92b06a;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  border-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea,
+button,
+a,
+*:focus {
+  outline: 1px solid transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button::-moz-focus-inner {
+  border-color: transparent;
+}
+
+b,
+strong {
+  font-weight: 700; /* Was still 400 in Firefox */
+}
+
+main,
+header,
+footer,
+section,
+nav,
+aside,
+details,
+summary,
+article,
+time {
+  display: block;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  -moz-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  -ms-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family);
+  height: 100%;
+  color: var(--font-color);
+  font-weight: 400;
+  background-color: var(--color-dark);
+}
+
+::-moz-selection {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+}
+
+::selection {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+}
+
+.list {
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.list a {
+  border-radius: 10px;
+  color: var(--color-light);
+  text-decoration: none;
+  background-color: var(--color-medium-dark);
+  transition: background-color 0.2s linear;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (hover: hover) {
+  .list a:hover {
+    background-color: var(--color-medium);
+  }
+}
+
+.list a:focus,
+.list a:active {
+  background-color: var(--color-medium);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }

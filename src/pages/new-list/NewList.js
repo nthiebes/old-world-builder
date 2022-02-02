@@ -1,0 +1,120 @@
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
+
+import { Button } from "../../components/button";
+import { getRandomId } from "../../utils/id";
+import { Header, Main } from "../../components/page";
+import { Select } from "../../components/select/Select";
+import gameSystems from "../../data/armies.json";
+
+import "./NewList.css";
+
+export const NewList = () => {
+  const [game, setGame] = useState(gameSystems[0].id);
+  const [army, setArmy] = useState(gameSystems[0].armies[0].id);
+  const [name, setName] = useState("");
+  const [points, setPoints] = useState(2000);
+
+  const [redirect, setRedirect] = useState(null);
+  const createList = () => {
+    const localLists = JSON.parse(localStorage.getItem("lists")) || [];
+    const newId = getRandomId();
+    const newList = {
+      name: name,
+      game: game,
+      points: points,
+      army: army,
+      lords: [],
+      heroes: [],
+      core: [],
+      special: [],
+      rare: [],
+      id: newId,
+    };
+
+    localStorage.setItem("lists", JSON.stringify([...localLists, newList]));
+    setRedirect(newId);
+  };
+  const handleSystemChange = (event) => {
+    setGame(event.target.value);
+    setArmy(
+      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id
+    );
+  };
+  const handleArmyChange = (value) => {
+    setArmy(value);
+  };
+  const handlePointsChange = (event) => {
+    setPoints(event.target.value);
+  };
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createList();
+  };
+
+  return (
+    <>
+      {redirect && <Redirect to={`/editor/${redirect}`} />}
+
+      <Header backButton headline="Neue Liste" />
+
+      <Main>
+        <form onSubmit={handleSubmit}>
+          {gameSystems.map(({ name, id }) => (
+            <div className="radio" key={id}>
+              <input
+                type="radio"
+                id={id}
+                name="new-list"
+                value={id}
+                onChange={handleSystemChange}
+                defaultChecked={id === "warhammer-fantasy"}
+                className="radio__input"
+              />
+              <label htmlFor={id} className="radio__label">
+                {id === "warhammer-fantasy" && (
+                  <img height="20" src={`/${id}.png`} alt={name} />
+                )}
+                {id === "the-old-world" && (
+                  <img height="35" src={`/${id}.png`} alt={name} />
+                )}
+              </label>
+            </div>
+          ))}
+          <label htmlFor="points">Name:</label>
+          <input
+            type="text"
+            id="name"
+            className="input"
+            value={name}
+            onChange={handleNameChange}
+            autoComplete="off"
+            required
+          />
+          <label htmlFor="points">Punkte:</label>
+          <input
+            type="number"
+            id="points"
+            className="input"
+            min={0}
+            value={points}
+            onChange={handlePointsChange}
+            required
+          />
+          <Select
+            options={gameSystems.filter(({ id }) => id === game)[0].armies}
+            onChange={handleArmyChange}
+            selected="warhammer-fantasy"
+            spaceBottom
+          />
+          <Button type="tertiary" fullWidth>
+            {"Liste anlegen"}
+          </Button>
+        </form>
+      </Main>
+    </>
+  );
+};

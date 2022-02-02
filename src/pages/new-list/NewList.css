@@ -1,0 +1,24 @@
+.radio {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.radio__input {
+  margin-right: 0.5rem;
+}
+
+.radio__label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.input {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.2s linear;
+  width: 100%;
+  margin-bottom: 1rem;
+}

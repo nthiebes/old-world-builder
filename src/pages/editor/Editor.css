@@ -1,17 +1,27 @@
-.list__header {
+.editor strong {
+  margin: 0 5px;
+}
+
+.editor__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.editor__header .icon {
+  margin-left: 5px;
+}
+
+.editor__section {
+  margin-bottom: 3rem;
+}
+
+.editor__points {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid gray;
-  padding-bottom: 0.5rem;
-  background-color: black;
 }
 
-.list__points {
-  margin: 0 2rem;
-}
-
-progress[value] {
+/* progress[value] {
   -webkit-appearance: none;
   appearance: none;
 
@@ -29,30 +39,14 @@ progress[value]::-webkit-progress-value {
 
 .progress--red[value]::-webkit-progress-value {
   background-color: red;
-}
+} */
 
-li {
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-}
-
-li a {
+.unit {
+  padding: 1rem;
+  margin-bottom: 1rem;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  color: var(--font-color);
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 1.2rem;
-  flex-grow: 1;
-  /* font-weight: 400; */
-  /* font-family: ui-serif, "Times New Roman", Times, serif; */
-  /* text-transform: uppercase; */
-}
-
-h2 span {
-  font-size: 1rem;
-  font-weight: 400;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-medium-dark);
 }

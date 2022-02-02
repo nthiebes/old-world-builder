@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import classNames from "classnames";
+// import classNames from "classnames";
+
 import { fetcher } from "../../utils/fetcher";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
+import { Button } from "../../components/button";
+import { Icon } from "../../components/icon";
+import { Header, Main } from "../../components/page";
 
 import "./Editor.css";
 
@@ -44,6 +48,15 @@ export const Editor = () => {
 
     setList(newList);
     updateList(newList);
+  };
+  const removeHero = () => {
+    // const hero = army.heroes.find(({ id }) => id === "ng-shaman");
+    // const newList = {
+    //   ...list,
+    //   heroes: [...list.heroes, hero],
+    // };
+    // setList(newList);
+    // updateList(newList);
   };
   const addCore = () => {
     const unit = army.core.find(({ id }) => id === "savageorks");
@@ -94,7 +107,7 @@ export const Editor = () => {
     setList(localList);
 
     fetcher({
-      url: `armies/${localList.army}`,
+      url: `armies/${localList.game}/${localList.army}`,
       onSuccess: (data) => {
         setArmy(data);
       },
@@ -140,182 +153,161 @@ export const Editor = () => {
 
   return (
     <>
-      <header className="header">
-        <div className="title">
-          <h1>
-            {list.name} <button className="button">Edit</button>
-          </h1>
-          <p>
-            {allPoints} / {list.points} Punkte
-          </p>
-        </div>
-        <Link to="/">Zurück</Link>
-      </header>
-      <main>
-        <header className="list__header">
-          <h2>Kommandanten</h2>
-          <div className="list__points">
-            <p>
+      <Header
+        backButton
+        headline={list.name}
+        subheadline={`${allPoints} / ${list.points} Pkte.`}
+        moreButton
+      />
+
+      <Main className="editor">
+        <section className="editor__section">
+          <header className="editor__header">
+            <h2>Kommandanten</h2>
+            <p className="editor__points">
               {lordsData.diff > 0 ? (
                 <>
-                  <br />
-                  {`❌ ${lordsData.diff} Punkte zu viel`}
+                  <strong>{lordsData.diff}</strong>Punkte zu viel
+                  <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  ✓ <b>{lordsPoints}</b> Punkte (Max. {lordsData.points})
+                  <strong>{lordsData.points - lordsPoints}</strong>
+                  Pkte. verfügbar
+                  <Icon symbol="check" color="green" />
                 </>
               )}
             </p>
-            <progress
-              value={lordsPoints}
-              max={lordsData.points}
-              className={classNames(
-                "progress",
-                lordsData.overLimit && "progress--red"
-              )}
-            >
-              {lordsPoints}
-            </progress>
-          </div>
-          <button className="button" onClick={addLord}>
-            Neu +
-          </button>
-        </header>
-        <ul>
-          {list.lords.map(({ name_de }, index) => (
-            <li key={index}>{name_de}</li>
-          ))}
-        </ul>
+          </header>
+          <ul>
+            {list.lords.map(({ name_de }, index) => (
+              <li className="unit" key={index}>
+                {name_de}
+              </li>
+            ))}
+          </ul>
+          <Button type="tertiary" spaceBottom fullWidth onClick={addLord}>
+            <Icon symbol="add" /> Hinzufügen
+          </Button>
+        </section>
 
-        <header className="list__header">
-          <h2>Helden</h2>
-          <div className="list__points">
-            <p>
+        <section className="editor__section">
+          <header className="editor__header">
+            <h2>Helden</h2>
+            <p className="editor__points">
               {heroesData.diff > 0 ? (
                 <>
-                  <br />
-                  {`❌ ${heroesData.diff} Punkte zu viel`}
+                  <strong>{heroesData.diff}</strong> Pkte. zu viel
+                  <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  ✓ <b>{heroesPoints}</b> / {heroesData.points} Punkten
+                  <strong>{heroesData.points - heroesPoints}</strong>
+                  Pkte. verfügbar
+                  <Icon symbol="check" color="green" />
                 </>
               )}
             </p>
-            <progress
-              value={heroesPoints}
-              max={heroesData.points}
-              className={classNames(
-                "progress",
-                heroesData.overLimit && "progress--red"
-              )}
-            >
-              {heroesPoints}
-            </progress>
-          </div>
-          <button className="button" onClick={addHero}>
-            Neu +
-          </button>
-        </header>
-        <ul>
-          {list.heroes.map(({ name_de }, index) => (
-            <li key={index}>{name_de}</li>
-          ))}
-        </ul>
+          </header>
+          <ul>
+            {list.heroes.map(({ id, name_de }, index) => (
+              <li className="unit" key={`${id + index}`}>
+                {name_de}
+              </li>
+            ))}
+          </ul>
+          <Button type="tertiary" spaceBottom fullWidth onClick={addHero}>
+            <Icon symbol="add" /> Hinzufügen
+          </Button>
+        </section>
 
-        <header className="list__header">
-          <h2>Kerneinheiten</h2>
-          <div className="list__points">
-            <p>
-              {/* <b>{corePoints}</b> / {coreData.points} Punkten */}
-
+        <section className="editor__section">
+          <header className="editor__header">
+            <h2>Kerneinheiten</h2>
+            <p className="editor__points">
               {coreData.diff > 0 ? (
                 <>
-                  <br />
-                  {`Es fehlen ${coreData.diff} Punkte`}
+                  <>
+                    Es fehlen<strong>{coreData.diff}</strong> Pkte.
+                    <Icon symbol="error" color="red" />
+                  </>
+                </>
+              ) : (
+                <Icon symbol="check" color="green" />
+              )}
+            </p>
+          </header>
+          <ul>
+            {list.core.map(({ name_de }, index) => (
+              <li className="unit" key={index}>
+                {name_de}
+              </li>
+            ))}
+          </ul>
+          <Button type="tertiary" spaceBottom fullWidth onClick={addCore}>
+            <Icon symbol="add" /> Hinzufügen
+          </Button>
+        </section>
+
+        <section className="editor__section">
+          <header className="editor__header">
+            <h2>Eliteeinheiten</h2>
+            <p className="editor__points">
+              {specialData.diff > 0 ? (
+                <>
+                  <strong>{specialData.diff}</strong> Pkte. zu viel
+                  <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <b>{corePoints}</b> Punkte (Min. {coreData.points})
+                  <strong>{specialData.points - specialPoints}</strong> Pkte.
+                  verfügbar <Icon symbol="check" color="green" />
                 </>
               )}
             </p>
-            <progress
-              value={corePoints}
-              max={coreData.points}
-              className={classNames(
-                "progress",
-                coreData.overLimit && "progress--red"
-              )}
-            >
-              {corePoints}
-            </progress>
-          </div>
-          <button className="button" onClick={addCore}>
-            Neu +
-          </button>
-        </header>
-        <ul>
-          {list.core.map(({ name_de }, index) => (
-            <li key={index}>{name_de}</li>
-          ))}
-        </ul>
+          </header>
+          <ul>
+            {list.special.map(({ name_de }, index) => (
+              <li className="unit" key={index}>
+                {name_de}
+              </li>
+            ))}
+          </ul>
+          <Button type="tertiary" spaceBottom fullWidth onClick={addSpecial}>
+            <Icon symbol="add" /> Hinzufügen
+          </Button>
+        </section>
 
-        <header className="list__header">
-          <h2>Eliteeinheiten</h2>
-          <div className="list__points">
-            <p>
-              <b>{specialPoints}</b> / {specialData.points} Punkten
-            </p>
-            <progress
-              value={specialPoints}
-              max={specialData.points}
-              className={classNames(
-                "progress",
-                specialData.overLimit && "progress--red"
+        <section className="editor__section">
+          <header className="editor__header">
+            <h2>Seltene Einheiten</h2>
+            <p className="editor__points">
+              {rareData.diff > 0 ? (
+                <>
+                  <strong>{rareData.diff}</strong> Pkte. zu viel
+                  <Icon symbol="error" color="red" />
+                </>
+              ) : (
+                <>
+                  <strong>{rareData.points - rarePoints}</strong> Pkte.
+                  verfügbar
+                  <Icon symbol="check" color="green" />
+                </>
               )}
-            >
-              {specialPoints}
-            </progress>
-          </div>
-          <button className="button" onClick={addSpecial}>
-            Neu +
-          </button>
-        </header>
-        <ul>
-          {list.special.map(({ name_de }, index) => (
-            <li key={index}>{name_de}</li>
-          ))}
-        </ul>
-
-        <header className="list__header">
-          <h2>Seltene Einheiten</h2>
-          <div className="list__points">
-            <p>
-              <b>{rarePoints}</b> / {rareData.points} Punkten
             </p>
-            <progress
-              value={rarePoints}
-              max={rareData.points}
-              className={classNames(
-                "progress",
-                rareData.overLimit && "progress--red"
-              )}
-            >
-              {rarePoints}
-            </progress>
-          </div>
-          <button className="button" onClick={addRare}>
-            Neu +
-          </button>
-        </header>
-        <ul>
-          {list.rare.map(({ name_de }, index) => (
-            <li key={index}>{name_de}</li>
-          ))}
-        </ul>
-      </main>
+          </header>
+          <ul>
+            {list.rare.map(({ name_de }, index) => (
+              <li className="unit" key={index}>
+                {name_de}
+              </li>
+            ))}
+          </ul>
+          <Button type="tertiary" spaceBottom fullWidth onClick={addRare}>
+            <Icon symbol="add" /> Hinzufügen
+          </Button>
+        </section>
+      </Main>
     </>
   );
 };

@@ -1,0 +1,26 @@
+.header {
+  background-color: var(--color-medium-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.header__text {
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 1rem;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.header__name {
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main {
+  padding: 1rem;
+}
