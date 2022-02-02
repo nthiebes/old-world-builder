@@ -16,7 +16,7 @@ export const App = () => {
     const localLists = localStorage.getItem("lists");
 
     setLists(JSON.parse(localLists) || []);
-  }, [setLists]);
+  }, []);
 
   return (
     <Router>

@@ -18,7 +18,6 @@ export const Header = ({
       {backButton && (
         <Button to="/">
           <Icon symbol="back" />
-          Zurück
         </Button>
       )}
       <div className="header__text">

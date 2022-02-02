@@ -8,6 +8,7 @@ import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
+import { AddUnitModal } from "./add-unit-modal/AddUnitModal";
 
 import "./Editor.css";
 
@@ -28,26 +29,32 @@ export const Editor = () => {
   const { id } = useParams();
   const [army, setArmy] = useState(null);
   const [list, setList] = useState(null);
+  const [addUnitModalData, setAddUnitModalData] = useState(null);
 
+  const handleCloseModal = () => {
+    setAddUnitModalData(null);
+  };
   const addLord = () => {
-    const lord = army.lords.find(({ id }) => id === "grimgor");
-    const newList = {
-      ...list,
-      lords: [...list.lords, lord],
-    };
+    // const lord = army.lords.find(({ id }) => id === "grimgor");
+    // const newList = {
+    //   ...list,
+    //   lords: [...list.lords, lord],
+    // };
 
-    setList(newList);
-    updateList(newList);
+    // setList(newList);
+    // updateList(newList);
+    setAddUnitModalData(army.lords);
   };
   const addHero = () => {
-    const hero = army.heroes.find(({ id }) => id === "ng-shaman");
-    const newList = {
-      ...list,
-      heroes: [...list.heroes, hero],
-    };
+    // const hero = army.heroes.find(({ id }) => id === "ng-shaman");
+    // const newList = {
+    //   ...list,
+    //   heroes: [...list.heroes, hero],
+    // };
 
-    setList(newList);
-    updateList(newList);
+    // setList(newList);
+    // updateList(newList);
+    setAddUnitModalData(army.heroes);
   };
   const removeHero = () => {
     // const hero = army.heroes.find(({ id }) => id === "ng-shaman");
@@ -59,34 +66,37 @@ export const Editor = () => {
     // updateList(newList);
   };
   const addCore = () => {
-    const unit = army.core.find(({ id }) => id === "savageorks");
-    const newList = {
-      ...list,
-      core: [...list.core, unit],
-    };
+    // const unit = army.core.find(({ id }) => id === "savageorks");
+    // const newList = {
+    //   ...list,
+    //   core: [...list.core, unit],
+    // };
 
-    setList(newList);
-    updateList(newList);
+    // setList(newList);
+    // updateList(newList);
+    setAddUnitModalData(army.core);
   };
   const addSpecial = () => {
-    const unit = army.special.find(({ id }) => id === "blackorks");
-    const newList = {
-      ...list,
-      special: [...list.special, unit],
-    };
+    // const unit = army.special.find(({ id }) => id === "blackorks");
+    // const newList = {
+    //   ...list,
+    //   special: [...list.special, unit],
+    // };
 
-    setList(newList);
-    updateList(newList);
+    // setList(newList);
+    // updateList(newList);
+    setAddUnitModalData(army.special);
   };
   const addRare = () => {
-    const unit = army.rare.find(({ id }) => id === "doomdiver");
-    const newList = {
-      ...list,
-      rare: [...list.rare, unit],
-    };
+    // const unit = army.rare.find(({ id }) => id === "doomdiver");
+    // const newList = {
+    //   ...list,
+    //   rare: [...list.rare, unit],
+    // };
 
-    setList(newList);
-    updateList(newList);
+    // setList(newList);
+    // updateList(newList);
+    setAddUnitModalData(army.rare);
   };
   const getPoints = (type) => {
     let points = 0;
@@ -308,6 +318,9 @@ export const Editor = () => {
           </Button>
         </section>
       </Main>
+      {addUnitModalData && (
+        <AddUnitModal unitData={addUnitModalData} onCancel={handleCloseModal} />
+      )}
     </>
   );
 };
