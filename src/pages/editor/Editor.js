@@ -31,8 +31,10 @@ export const Editor = () => {
   const [army, setArmy] = useState(null);
   const [list, setList] = useState(null);
   const [addUnitModalData, setAddUnitModalData] = useState(null);
+  const [editUnitModalData, setEditUnitModalData] = useState(null);
   const handleCloseModal = () => {
     setAddUnitModalData(null);
+    setEditUnitModalData(null);
   };
   const handleAddUnit = (id, type) => {
     const unit = army[type].find(({ id: unitId }) => id === unitId);
@@ -45,10 +47,37 @@ export const Editor = () => {
     updateList(newList);
     setAddUnitModalData(null);
   };
-  const handleRemoveUnit = () => {};
+  const handleEditUnit = (newData) => {
+    const { strength, type, id } = newData;
+    const unit = list[type].find(({ id: unitId }) => id === unitId);
+    const newUnit = {
+      ...unit,
+      strength,
+    };
+    const newList = {
+      ...list,
+      [type]: list[type].map((data) => {
+        if (data.id === id) {
+          return newUnit;
+        }
+        return data;
+      }),
+    };
+
+    setList(newList);
+    updateList(newList);
+    setAddUnitModalData(null);
+  };
+  // const handleRemoveUnit = () => {};
   const addLord = () => {
     setAddUnitModalData({
       units: army.lords,
+      type: "lords",
+    });
+  };
+  const editLord = (unitId) => {
+    setEditUnitModalData({
+      unit: list.lords.find((unit) => unit.id === unitId),
       type: "lords",
     });
   };
@@ -58,9 +87,21 @@ export const Editor = () => {
       type: "heroes",
     });
   };
+  const editHero = (unitId) => {
+    setEditUnitModalData({
+      unit: list.heroes.find((unit) => unit.id === unitId),
+      type: "heroes",
+    });
+  };
   const addCore = () => {
     setAddUnitModalData({
       units: army.core,
+      type: "core",
+    });
+  };
+  const editCore = (unitId) => {
+    setEditUnitModalData({
+      unit: list.core.find((unit) => unit.id === unitId),
       type: "core",
     });
   };
@@ -70,9 +111,21 @@ export const Editor = () => {
       type: "special",
     });
   };
+  const editSpecial = (unitId) => {
+    setEditUnitModalData({
+      unit: list.special.find((unit) => unit.id === unitId),
+      type: "special",
+    });
+  };
   const addRare = () => {
     setAddUnitModalData({
       units: army.rare,
+      type: "rare",
+    });
+  };
+  const editRare = (unitId) => {
+    setEditUnitModalData({
+      unit: list.rare.find((unit) => unit.id === unitId),
       type: "rare",
     });
   };
@@ -168,8 +221,10 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.lords.map(({ name_de }, index) => (
-              <List key={index}>{name_de}</List>
+            {list.lords.map(({ name_de, id }, index) => (
+              <List key={index} onClick={() => editLord(id)}>
+                {name_de}
+              </List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addLord}>
@@ -197,7 +252,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.heroes.map(({ id, name_de }, index) => (
-              <List className="unit" key={`${id + index}`}>
+              <List key={index} onClick={() => editHero(id)}>
                 {name_de}
               </List>
             ))}
@@ -224,8 +279,9 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.core.map(({ name_de }, index) => (
-              <List className="unit" key={index}>
+            {list.core.map(({ id, strength, minimum, name_de }, index) => (
+              <List key={index} onClick={() => editCore(id)}>
+                {strength ? `${strength} ` : `${minimum} `}
                 {name_de}
               </List>
             ))}
@@ -254,7 +310,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.special.map(({ name_de }, index) => (
-              <List className="unit" key={index}>
+              <List key={index} onClick={() => editSpecial(id)}>
                 {name_de}
               </List>
             ))}
@@ -284,7 +340,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.rare.map(({ name_de }, index) => (
-              <List className="unit" key={index}>
+              <List key={index} onClick={() => editRare(id)}>
                 {name_de}
               </List>
             ))}
@@ -297,8 +353,15 @@ export const Editor = () => {
       {addUnitModalData && (
         <AddUnitModal
           unitData={addUnitModalData}
-          onCancel={handleCloseModal}
+          onClose={handleCloseModal}
           onAdd={handleAddUnit}
+        />
+      )}
+      {editUnitModalData && (
+        <AddUnitModal
+          unitData={editUnitModalData}
+          onClose={handleCloseModal}
+          onEdit={handleEditUnit}
         />
       )}
     </>
