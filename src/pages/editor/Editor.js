@@ -133,7 +133,12 @@ export const Editor = () => {
     let points = 0;
 
     list[type].forEach((unit) => {
-      const unitPoints = army[type].find(({ id }) => id === unit.id).points;
+      const unit1 = list[type].find(({ id }) => id === unit.id);
+      let unitPoints = unit1.points;
+
+      if (unit1.minimum) {
+        unitPoints = unit1.strength || unit.minimum;
+      }
 
       points += unitPoints;
     });
