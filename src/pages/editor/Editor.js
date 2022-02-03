@@ -7,6 +7,7 @@ import { fetcher } from "../../utils/fetcher";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
+import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { AddUnitModal } from "./add-unit-modal/AddUnitModal";
 
@@ -30,73 +31,50 @@ export const Editor = () => {
   const [army, setArmy] = useState(null);
   const [list, setList] = useState(null);
   const [addUnitModalData, setAddUnitModalData] = useState(null);
-
   const handleCloseModal = () => {
     setAddUnitModalData(null);
   };
-  const addLord = () => {
-    // const lord = army.lords.find(({ id }) => id === "grimgor");
-    // const newList = {
-    //   ...list,
-    //   lords: [...list.lords, lord],
-    // };
+  const handleAddUnit = (id, type) => {
+    const unit = army[type].find(({ id: unitId }) => id === unitId);
+    const newList = {
+      ...list,
+      [type]: [...list[type], unit],
+    };
 
-    // setList(newList);
-    // updateList(newList);
-    setAddUnitModalData(army.lords);
+    setList(newList);
+    updateList(newList);
+    setAddUnitModalData(null);
+  };
+  const handleRemoveUnit = () => {};
+  const addLord = () => {
+    setAddUnitModalData({
+      units: army.lords,
+      type: "lords",
+    });
   };
   const addHero = () => {
-    // const hero = army.heroes.find(({ id }) => id === "ng-shaman");
-    // const newList = {
-    //   ...list,
-    //   heroes: [...list.heroes, hero],
-    // };
-
-    // setList(newList);
-    // updateList(newList);
-    setAddUnitModalData(army.heroes);
-  };
-  const removeHero = () => {
-    // const hero = army.heroes.find(({ id }) => id === "ng-shaman");
-    // const newList = {
-    //   ...list,
-    //   heroes: [...list.heroes, hero],
-    // };
-    // setList(newList);
-    // updateList(newList);
+    setAddUnitModalData({
+      units: army.heroes,
+      type: "heroes",
+    });
   };
   const addCore = () => {
-    // const unit = army.core.find(({ id }) => id === "savageorks");
-    // const newList = {
-    //   ...list,
-    //   core: [...list.core, unit],
-    // };
-
-    // setList(newList);
-    // updateList(newList);
-    setAddUnitModalData(army.core);
+    setAddUnitModalData({
+      units: army.core,
+      type: "core",
+    });
   };
   const addSpecial = () => {
-    // const unit = army.special.find(({ id }) => id === "blackorks");
-    // const newList = {
-    //   ...list,
-    //   special: [...list.special, unit],
-    // };
-
-    // setList(newList);
-    // updateList(newList);
-    setAddUnitModalData(army.special);
+    setAddUnitModalData({
+      units: army.special,
+      type: "special",
+    });
   };
   const addRare = () => {
-    // const unit = army.rare.find(({ id }) => id === "doomdiver");
-    // const newList = {
-    //   ...list,
-    //   rare: [...list.rare, unit],
-    // };
-
-    // setList(newList);
-    // updateList(newList);
-    setAddUnitModalData(army.rare);
+    setAddUnitModalData({
+      units: army.rare,
+      type: "rare",
+    });
   };
   const getPoints = (type) => {
     let points = 0;
@@ -191,9 +169,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.lords.map(({ name_de }, index) => (
-              <li className="unit" key={index}>
-                {name_de}
-              </li>
+              <List key={index}>{name_de}</List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addLord}>
@@ -221,9 +197,9 @@ export const Editor = () => {
           </header>
           <ul>
             {list.heroes.map(({ id, name_de }, index) => (
-              <li className="unit" key={`${id + index}`}>
+              <List className="unit" key={`${id + index}`}>
                 {name_de}
-              </li>
+              </List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addHero}>
@@ -249,9 +225,9 @@ export const Editor = () => {
           </header>
           <ul>
             {list.core.map(({ name_de }, index) => (
-              <li className="unit" key={index}>
+              <List className="unit" key={index}>
                 {name_de}
-              </li>
+              </List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addCore}>
@@ -278,9 +254,9 @@ export const Editor = () => {
           </header>
           <ul>
             {list.special.map(({ name_de }, index) => (
-              <li className="unit" key={index}>
+              <List className="unit" key={index}>
                 {name_de}
-              </li>
+              </List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addSpecial}>
@@ -308,9 +284,9 @@ export const Editor = () => {
           </header>
           <ul>
             {list.rare.map(({ name_de }, index) => (
-              <li className="unit" key={index}>
+              <List className="unit" key={index}>
                 {name_de}
-              </li>
+              </List>
             ))}
           </ul>
           <Button type="tertiary" spaceBottom fullWidth onClick={addRare}>
@@ -319,7 +295,11 @@ export const Editor = () => {
         </section>
       </Main>
       {addUnitModalData && (
-        <AddUnitModal unitData={addUnitModalData} onCancel={handleCloseModal} />
+        <AddUnitModal
+          unitData={addUnitModalData}
+          onCancel={handleCloseModal}
+          onAdd={handleAddUnit}
+        />
       )}
     </>
   );

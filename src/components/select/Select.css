@@ -3,23 +3,22 @@
   font-size: 1rem;
   color: var(--color-light);
   border-radius: 10px;
-  background-color: var(--color-medium);
+  background-color: var(--color-medium-dark);
   padding: 1rem;
   transition: background-color 0.3s, border-color 0.3s linear;
   width: 100%;
+  cursor: pointer;
+}
 
-  /* &:active,
-  &:focus {
-    border-bottom-color: $color--blue;
-    background-color: $color-font--white;
+@media (hover: hover) {
+  .select:hover {
+    background-color: var(--color-medium);
   }
+}
 
-  @include desktop {
-    &:hover {
-      background-color: $color-font--white;
-      border-bottom-color: $color--blue;
-    }
-  } */
+.select:focus,
+.select:active {
+  background-color: var(--color-medium);
 }
 
 .select--spaceBottom {

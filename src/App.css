@@ -87,36 +87,6 @@ body {
   background-color: var(--color-primary);
 }
 
-.list {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.list a {
-  border-radius: 10px;
-  color: var(--color-light);
-  text-decoration: none;
-  background-color: var(--color-medium-dark);
-  transition: background-color 0.2s linear;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@media (hover: hover) {
-  .list a:hover {
-    background-color: var(--color-medium);
-  }
-}
-
-.list a:focus,
-.list a:active {
-  background-color: var(--color-medium);
-}
-
 h1 {
   font-size: 1.5rem;
   font-weight: 700;

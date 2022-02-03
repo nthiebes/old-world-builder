@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { NewList } from "./pages/new-list/NewList";
 import { Editor } from "./pages/editor";
 import { Button } from "./components/button";
 import { Icon } from "./components/icon";
+import { List } from "./components/list";
 import { Header, Main } from "./components/page";
 
 import "./App.css";
@@ -30,28 +31,26 @@ export const App = () => {
               <Main>
                 <ul>
                   {lists.map(({ id, name, points, game }, index) => (
-                    <li key={index} className="list">
-                      <Link to={`/editor/${id}`}>
-                        <span>
-                          <h2>{name}</h2>
-                          <p>{points} Pkte.</p>
-                        </span>
-                        {game === "warhammer-fantasy" && (
-                          <img
-                            height="20"
-                            src={`/${game}.png`}
-                            alt="Warhammer Fantasy"
-                          />
-                        )}
-                        {game === "the-old-world" && (
-                          <img
-                            height="35"
-                            src={`/${game}.png`}
-                            alt="Warhammer: The Old World"
-                          />
-                        )}
-                      </Link>
-                    </li>
+                    <List key={index} to={`/editor/${id}`}>
+                      <span>
+                        <h2>{name}</h2>
+                        <p>{points} Pkte.</p>
+                      </span>
+                      {game === "warhammer-fantasy" && (
+                        <img
+                          height="20"
+                          src={`/${game}.png`}
+                          alt="Warhammer Fantasy"
+                        />
+                      )}
+                      {game === "the-old-world" && (
+                        <img
+                          height="35"
+                          src={`/${game}.png`}
+                          alt="Warhammer: The Old World"
+                        />
+                      )}
+                    </List>
                   ))}
                 </ul>
                 <Button type="tertiary" to="/new" fullWidth>
