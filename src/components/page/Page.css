@@ -1,9 +1,11 @@
 .header {
-  background-color: var(--color-medium-dark);
+  background-color: var(--color-header);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  height: 62px;
+  align-items: center;
 }
 
 .header__text {
@@ -14,13 +16,17 @@
   flex-grow: 1;
 }
 
+.header__text * {
+  color: var(--color-font-light);
+}
+
 .header__name {
-  margin-bottom: 5px;
+  margin-bottom: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .main {
-  padding: 1rem;
+  padding: 1rem 0;
 }

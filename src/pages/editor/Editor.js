@@ -220,7 +220,7 @@ export const Editor = () => {
                 <>
                   <strong>{lordsData.points - lordsPoints}</strong>
                   Pkte. verfügbar
-                  <Icon symbol="check" color="green" />
+                  <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -232,7 +232,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button type="tertiary" spaceBottom fullWidth onClick={addLord}>
+          <Button spaceBottom onClick={addLord}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -250,7 +250,7 @@ export const Editor = () => {
                 <>
                   <strong>{heroesData.points - heroesPoints}</strong>
                   Pkte. verfügbar
-                  <Icon symbol="check" color="green" />
+                  <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -262,7 +262,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button type="tertiary" spaceBottom fullWidth onClick={addHero}>
+          <Button spaceBottom onClick={addHero}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -279,7 +279,7 @@ export const Editor = () => {
                   </>
                 </>
               ) : (
-                <Icon symbol="check" color="green" />
+                <Icon symbol="check" />
               )}
             </p>
           </header>
@@ -291,7 +291,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button type="tertiary" spaceBottom fullWidth onClick={addCore}>
+          <Button spaceBottom onClick={addCore}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -308,7 +308,7 @@ export const Editor = () => {
               ) : (
                 <>
                   <strong>{specialData.points - specialPoints}</strong> Pkte.
-                  verfügbar <Icon symbol="check" color="green" />
+                  verfügbar <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -320,7 +320,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button type="tertiary" spaceBottom fullWidth onClick={addSpecial}>
+          <Button spaceBottom onClick={addSpecial}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -338,7 +338,7 @@ export const Editor = () => {
                 <>
                   <strong>{rareData.points - rarePoints}</strong> Pkte.
                   verfügbar
-                  <Icon symbol="check" color="green" />
+                  <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -350,7 +350,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button type="tertiary" spaceBottom fullWidth onClick={addRare}>
+          <Button spaceBottom onClick={addRare}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>

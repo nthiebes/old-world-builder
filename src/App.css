@@ -2,15 +2,18 @@
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-size: 16px;
-  --font-color: #f8f7fc;
-  --color-dark: #1e1f28;
-  --color-medium-dark: #282934;
-  --color-medium: #323141;
-  --color-primary: #fbe2a9;
-  --color-light: #f8f7fc;
-  --color-red: #eb7260;
-  --color-green: #92b06a;
+  --color-font: #1c242f;
+  --color-font-light: #f6fffd;
+  --color-headline: #384043;
+  --color-background: rgb(243, 222, 191);
+  --color-list: rgb(221, 196, 165);
+  --color-button: #fd7f66;
+  --color-header: #303d4d;
+  --color-error: #fd7f66;
+  --color-success: #92b06a;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap");
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -72,22 +75,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family);
   height: 100%;
-  color: var(--font-color);
+  color: var(--color-font);
   font-weight: 400;
-  background-color: var(--color-dark);
+  background: var(--color-background);
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 0%,
+    rgba(254, 245, 230, 1) 50%,
+    var(--color-background) 100%
+  );
 }
 
 ::-moz-selection {
   color: var(--color-light);
-  background-color: var(--color-primary);
+  background-color: var(--color-button);
 }
 
 ::selection {
   color: var(--color-light);
-  background-color: var(--color-primary);
+  background-color: var(--color-button);
 }
 
 h1 {
+  /* font-family: "Gideon Roman", serif; */
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -97,6 +107,7 @@ h2 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--color-headline);
 }
 
 strong {
@@ -105,6 +116,10 @@ strong {
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin: 0 1rem 0.5rem 1rem;
   font-weight: 700;
+}
+
+p {
+  color: var(--color-font);
 }

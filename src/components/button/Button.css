@@ -1,53 +1,49 @@
 .button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: 700;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
   cursor: pointer;
+  height: calc(1.2rem + 18px);
+  margin: 0 auto;
 }
 
 .button--primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-button);
+  color: var(--color-font-light);
+}
+
+@media (hover: hover) {
+  .button--primary:hover {
+    color: var(--color-dark);
+  }
+}
+
+.button--primary:focus,
+.button--primary:active {
   color: var(--color-dark);
 }
 
 .button--secondary {
-  background-color: var(--color-medium);
-  color: var(--color-light);
+  background-color: transparent;
+  color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--secondary:hover {
-    background-color: var(--color-dark);
+    color: var(--color-background);
   }
 }
 
 .button--secondary:focus,
 .button--secondary:active {
-  background-color: var(--color-dark);
-}
-
-.button--tertiary {
-  background-color: transparent;
-  color: var(--color-light);
-  border: 1px solid var(--color-light);
-}
-
-@media (hover: hover) {
-  .button--tertiary:hover {
-    background-color: var(--color-medium-dark);
-  }
-}
-
-.button--tertiary:focus,
-.button--tertiary:active {
-  background-color: var(--color-medium-dark);
+  color: var(--color-background);
 }
 
 .button--spaceBottom {

@@ -25,7 +25,8 @@ export const AddUnitModal = ({ unitData, onClose, onAdd, onEdit }) => {
     setStrength(event.target.value);
   };
 
-  const handleClose = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     onEdit({ strength, type, id: unit.id });
     onClose();
   };
@@ -40,7 +41,7 @@ export const AddUnitModal = ({ unitData, onClose, onAdd, onEdit }) => {
       >
         <div className="add-unit-modal__header">
           <h2>{units ? "Einheit auswählen" : unit.name_de}</h2>
-          <Button onClick={onClose}>
+          <Button onClick={onClose} label="Schließen">
             <Icon symbol="close" />
           </Button>
         </div>
@@ -53,7 +54,7 @@ export const AddUnitModal = ({ unitData, onClose, onAdd, onEdit }) => {
             ))}
         </ul>
         {unit && (
-          <>
+          <form onSubmit={handleSubmit}>
             {unit.minimum && (
               <>
                 <label htmlFor="points">Einheitengröße:</label>
@@ -68,10 +69,8 @@ export const AddUnitModal = ({ unitData, onClose, onAdd, onEdit }) => {
                 />
               </>
             )}
-            <Button type="tertiary" onClick={handleClose}>
-              Schließen
-            </Button>
-          </>
+            <Button>Schließen</Button>
+          </form>
         )}
       </div>
     </aside>

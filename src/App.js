@@ -53,7 +53,7 @@ export const App = () => {
                     </List>
                   ))}
                 </ul>
-                <Button type="tertiary" to="/new" fullWidth>
+                <Button to="/new">
                   <Icon symbol="add" />
                   {"Neue Liste"}
                 </Button>

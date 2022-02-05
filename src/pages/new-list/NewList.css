@@ -1,5 +1,5 @@
 .radio {
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 1rem;
   display: flex;
   align-items: center;
 }
@@ -17,8 +17,10 @@
   display: block;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 10px;
   transition: background-color 0.2s linear;
-  width: 100%;
-  margin-bottom: 1rem;
+  border: 0 none;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 1rem 1rem;
+  box-shadow: 0 0 10px 2px var(--color-list) inset;
+  height: 54px;
 }

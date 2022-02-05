@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -9,11 +9,11 @@
 }
 
 .icon--red {
-  stroke: var(--color-red);
-  fill: var(--color-red);
+  stroke: var(--color-error);
+  fill: var(--color-error);
 }
 
 .icon--green {
-  stroke: var(--color-green);
-  fill: var(--color-green);
+  stroke: var(--color-success);
+  fill: var(--color-success);
 }

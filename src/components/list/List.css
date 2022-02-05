@@ -2,15 +2,31 @@
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.list a::before,
+.list button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: var(--color-list);
+  /* background: linear-gradient(
+    90deg,
+    rgba(232, 221, 203, 1) 0%,
+    var(--color-list) 50%,
+    rgba(232, 221, 203, 1) 100%
+  ); */
+  z-index: -1;
+  transition: opacity 0.3s linear;
+  opacity: 0;
 }
 
 .list a,
 .list button {
-  border-radius: 10px;
-  color: var(--color-light);
   text-decoration: none;
-  background-color: var(--color-medium-dark);
-  transition: background-color 0.2s linear;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -18,18 +34,26 @@
   justify-content: space-between;
   font-size: 1rem;
   cursor: pointer;
+  z-index: 1;
+  background: var(--color-list);
+  background: linear-gradient(
+    90deg,
+    var(--color-list) 0%,
+    rgba(232, 221, 203, 1) 50%,
+    var(--color-list) 100%
+  );
 }
 
 @media (hover: hover) {
-  .list a:hover,
-  .list button:hover {
-    background-color: var(--color-medium);
+  .list a:hover::before,
+  .list button:hover::before {
+    opacity: 1;
   }
 }
 
-.list a:focus,
-.list a:active,
-.list button:focus,
-.list button:active {
-  background-color: var(--color-medium);
+.list a:focus::before,
+.list a:active::before,
+.list button:focus::before,
+.list button:active::before {
+  opacity: 1;
 }

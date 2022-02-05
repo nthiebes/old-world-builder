@@ -5,7 +5,12 @@
 .editor__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.editor__header h2 {
+  margin: 0;
 }
 
 .editor__header .icon {
@@ -20,23 +25,3 @@
   display: flex;
   align-items: center;
 }
-
-/* progress[value] {
-  -webkit-appearance: none;
-  appearance: none;
-
-  width: 100px;
-  height: 5px;
-}
-
-progress[value]::-webkit-progress-bar {
-  background-color: gray;
-}
-
-progress[value]::-webkit-progress-value {
-  background-color: green;
-}
-
-.progress--red[value]::-webkit-progress-value {
-  background-color: red;
-} */

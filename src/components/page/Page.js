@@ -16,7 +16,7 @@ export const Header = ({
   return (
     <header className={classNames("header", className)}>
       {backButton && (
-        <Button to="/">
+        <Button type="secondary" to="/" label="Zurück">
           <Icon symbol="back" />
         </Button>
       )}
@@ -25,7 +25,7 @@ export const Header = ({
         {subheadline && <p className="header__points">{subheadline}</p>}
       </div>
       {moreButton && (
-        <Button label="Mehr Optionen">
+        <Button type="secondary" label="Mehr Optionen">
           <Icon symbol="more" />
         </Button>
       )}

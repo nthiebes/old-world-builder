@@ -46,5 +46,5 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  type: "secondary",
+  type: "primary",
 };
