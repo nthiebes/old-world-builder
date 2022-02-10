@@ -1,23 +1,25 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select/Select";
 import gameSystems from "../../data/armies.json";
+import { setLists } from "../../state/lists";
 
 import "./NewList.css";
 
 export const NewList = () => {
+  const dispatch = useDispatch();
+  const lists = useSelector((state) => state.lists.value);
   const [game, setGame] = useState(gameSystems[0].id);
   const [army, setArmy] = useState(gameSystems[0].armies[0].id);
   const [name, setName] = useState("");
   const [points, setPoints] = useState(2000);
-
   const [redirect, setRedirect] = useState(null);
   const createList = () => {
-    const localLists = JSON.parse(localStorage.getItem("lists")) || [];
     const newId = getRandomId();
     const newList = {
       name: name,
@@ -31,8 +33,11 @@ export const NewList = () => {
       rare: [],
       id: newId,
     };
+    const newLists = [...lists, newList];
 
-    localStorage.setItem("lists", JSON.stringify([...localLists, newList]));
+    localStorage.setItem("lists", JSON.stringify(newLists));
+    dispatch(setLists(newLists));
+
     setRedirect(newId);
   };
   const handleSystemChange = (event) => {
@@ -84,7 +89,7 @@ export const NewList = () => {
               </label>
             </div>
           ))}
-          <label htmlFor="points">Name:</label>
+          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
@@ -104,7 +109,9 @@ export const NewList = () => {
             onChange={handlePointsChange}
             required
           />
+          <label htmlFor="army">Armee:</label>
           <Select
+            id="army"
             options={gameSystems.filter(({ id }) => id === game)[0].armies}
             onChange={handleArmyChange}
             selected="warhammer-fantasy"

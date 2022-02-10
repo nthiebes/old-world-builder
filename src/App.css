@@ -7,6 +7,7 @@
   --color-headline: #384043;
   --color-background: rgb(243, 222, 191);
   --color-list: rgb(221, 196, 165);
+  --color-white: #f6fffd;
   --color-button: #fd7f66;
   --color-header: #303d4d;
   --color-error: #fd7f66;
@@ -116,8 +117,9 @@ strong {
 
 label {
   display: block;
-  margin: 0 1rem 0.5rem 1rem;
+  margin: 0 1rem 0 1rem;
   font-weight: 700;
+  padding-bottom: 0.5rem;
 }
 
 p {
