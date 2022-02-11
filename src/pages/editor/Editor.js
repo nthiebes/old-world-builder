@@ -150,8 +150,8 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={() => addUnit("lords")}>
-            <Icon symbol="add" /> Hinzufügen
+          <Button spaceBottom onClick={() => addUnit("lords")} icon="add">
+            Hinzufügen
           </Button>
         </section>
 
@@ -181,8 +181,8 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={() => addUnit("heroes")}>
-            <Icon symbol="add" /> Hinzufügen
+          <Button spaceBottom onClick={() => addUnit("heroes")} icon="add">
+            Hinzufügen
           </Button>
         </section>
 
@@ -215,8 +215,8 @@ export const Editor = () => {
               )
             )}
           </ul>
-          <Button spaceBottom onClick={() => addUnit("core")}>
-            <Icon symbol="add" /> Hinzufügen
+          <Button spaceBottom onClick={() => addUnit("core")} icon="add">
+            Hinzufügen
           </Button>
         </section>
 
@@ -250,8 +250,8 @@ export const Editor = () => {
               )
             )}
           </ul>
-          <Button spaceBottom onClick={() => addUnit("special")}>
-            <Icon symbol="add" /> Hinzufügen
+          <Button spaceBottom onClick={() => addUnit("special")} icon="add">
+            Hinzufügen
           </Button>
         </section>
 
@@ -286,8 +286,8 @@ export const Editor = () => {
               )
             )}
           </ul>
-          <Button spaceBottom onClick={() => addUnit("rare")}>
-            <Icon symbol="add" /> Hinzufügen
+          <Button spaceBottom onClick={() => addUnit("rare")} icon="add">
+            Hinzufügen
           </Button>
         </section>
       </Main>

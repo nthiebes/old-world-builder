@@ -2,7 +2,6 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import { Button } from "../../components/button";
-import { Icon } from "../../components/icon";
 
 import "./Page.css";
 
@@ -16,18 +15,14 @@ export const Header = ({
   return (
     <header className={classNames("header", className)}>
       {backButton && (
-        <Button type="secondary" to="/" label="Zurück">
-          <Icon symbol="back" />
-        </Button>
+        <Button type="secondary" to="/" label="Zurück" icon="back" />
       )}
       <div className="header__text">
         {headline && <h1 className="header__name">{headline}</h1>}
         {subheadline && <p className="header__points">{subheadline}</p>}
       </div>
       {moreButton && (
-        <Button type="secondary" label="Mehr Optionen">
-          <Icon symbol="more" />
-        </Button>
+        <Button type="secondary" label="Mehr Optionen" icon="more" />
       )}
     </header>
   );

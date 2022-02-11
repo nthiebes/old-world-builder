@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
+import { Icon } from "..//icon";
+
 import "./Button.css";
 
 export const Button = ({
@@ -14,6 +16,7 @@ export const Button = ({
   spaceBottom,
   fullWidth,
   label,
+  icon,
 }) => {
   const Component = to ? Link : "button";
 
@@ -29,8 +32,15 @@ export const Button = ({
       onClick={onClick}
       to={to}
       aria-label={label}
+      title={label}
     >
-      {children}
+      {icon && (
+        <Icon
+          className={classNames(children && "button__icon")}
+          symbol={icon}
+        />
+      )}
+      {children && children}
     </Component>
   );
 };
@@ -43,6 +53,7 @@ Button.propTypes = {
   children: PropTypes.node,
   spaceBottom: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  icon: PropTypes.string,
 };
 
 Button.defaultProps = {

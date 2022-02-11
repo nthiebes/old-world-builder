@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
-import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 
 import "./Home.css";
@@ -35,8 +34,7 @@ export const Home = () => {
             </List>
           ))}
         </ul>
-        <Button to="/new">
-          <Icon symbol="add" />
+        <Button to="/new" icon="new-list">
           {"Neue Liste"}
         </Button>
       </Main>

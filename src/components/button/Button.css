@@ -47,10 +47,30 @@
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
 }
 
+.button--text {
+  background-color: transparent;
+  color: var(--color-font);
+}
+
+@media (hover: hover) {
+  .button--text:hover {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.button--text:focus,
+.button--text:active {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+}
+
 .button--spaceBottom {
   margin-bottom: 2rem;
 }
 
 .button--fullWidth {
   width: 100%;
+}
+
+.button__icon {
+  margin-right: 0.5rem;
 }

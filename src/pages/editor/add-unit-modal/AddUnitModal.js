@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { Button } from "../../../components/button";
-import { Icon } from "../../../components/icon";
 import { List } from "../../../components/list";
 import { addUnit, editUnit, removeUnit } from "../../../state/lists";
 
@@ -53,9 +52,12 @@ export const AddUnitModal = ({ unitData, onClose }) => {
       >
         <div className="add-unit-modal__header">
           <h2>{units ? "Einheit auswählen" : unit.name_de}</h2>
-          <Button onClick={onClose} label="Schließen">
-            <Icon symbol="close" />
-          </Button>
+          <Button
+            onClick={onClose}
+            label="Schließen"
+            type="text"
+            icon="close"
+          />
         </div>
         <div className="add-unit-modal__content">
           <ul>
@@ -87,12 +89,15 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                     />
                   </>
                 )}
-                <Button spaceBottom>Schließen</Button>
+                <Button spaceBottom icon="check">
+                  Fertig
+                </Button>
               </form>
               <Button
                 type="secondary"
                 spaceBottom
                 onClick={() => handleRemove(unit.id)}
+                icon="remove"
               >
                 Entfernen
               </Button>
