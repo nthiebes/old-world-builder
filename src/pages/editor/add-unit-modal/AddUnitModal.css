@@ -45,8 +45,22 @@
   justify-content: space-between;
   margin-bottom: 0.5rem;
   padding: 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
 }
 
 .add-unit-modal__header h2 {
   flex-grow: 1;
+}
+
+.add-unit-modal__content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  width: 100%;
 }

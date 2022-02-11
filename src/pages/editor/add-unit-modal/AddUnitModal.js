@@ -57,41 +57,48 @@ export const AddUnitModal = ({ unitData, onClose }) => {
             <Icon symbol="close" />
           </Button>
         </div>
-        <ul>
-          {units &&
-            units.map(({ name_de, id, minimum }) => (
-              <List key={id} onClick={() => handleAdd(id)}>
-                <span>
-                  {minimum && `${minimum} `}
-                  <b>{name_de}</b>
-                </span>
-              </List>
-            ))}
-        </ul>
-        {unit && (
-          <>
-            <form onSubmit={handleSubmit}>
-              {unit.minimum && (
-                <>
-                  <label htmlFor="points">Einheitengröße:</label>
-                  <input
-                    type="number"
-                    id="size"
-                    className="input"
-                    min={unit.minimum}
-                    value={strength}
-                    onChange={handleStrengthChange}
-                    required
-                  />
-                </>
-              )}
-              <Button spaceBottom>Schließen</Button>
-            </form>
-            <Button type="secondary" onClick={() => handleRemove(unit.id)}>
-              Entfernen
-            </Button>
-          </>
-        )}
+        <div className="add-unit-modal__content">
+          <ul>
+            {units &&
+              units.map(({ name_de, id, minimum, points }) => (
+                <List key={id} onClick={() => handleAdd(id)}>
+                  <span>
+                    {minimum && `${minimum} `}
+                    <b>{name_de}</b>
+                  </span>
+                  <i>{`${minimum ? points * minimum : points} Pkte.`}</i>
+                </List>
+              ))}
+          </ul>
+          {unit && (
+            <>
+              <form onSubmit={handleSubmit}>
+                {unit.minimum && (
+                  <>
+                    <label htmlFor="points">Einheitengröße:</label>
+                    <input
+                      type="number"
+                      id="size"
+                      className="input"
+                      min={unit.minimum}
+                      value={strength}
+                      onChange={handleStrengthChange}
+                      required
+                    />
+                  </>
+                )}
+                <Button spaceBottom>Schließen</Button>
+              </form>
+              <Button
+                type="secondary"
+                spaceBottom
+                onClick={() => handleRemove(unit.id)}
+              >
+                Entfernen
+              </Button>
+            </>
+          )}
+        </div>
       </div>
     </aside>
   );
