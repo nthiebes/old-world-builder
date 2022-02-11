@@ -143,9 +143,10 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.lords.map(({ name_de, id }, index) => (
+            {list.lords.map(({ name_de, id, points }, index) => (
               <List key={index} onClick={() => editUnit(id, "lords")}>
                 <b>{name_de}</b>
+                <i>{`${points} Pkte.`}</i>
               </List>
             ))}
           </ul>
@@ -173,9 +174,10 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.heroes.map(({ id, name_de }, index) => (
+            {list.heroes.map(({ id, name_de, points }, index) => (
               <List key={index} onClick={() => editUnit(id, "heroes")}>
                 <b>{name_de}</b>
+                <i>{`${points} Pkte.`}</i>
               </List>
             ))}
           </ul>
@@ -201,14 +203,17 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.core.map(({ id, strength, minimum, name_de }, index) => (
-              <List key={index} onClick={() => editUnit(id, "core")}>
-                <span>
-                  {(strength || minimum) && `${strength || minimum} `}
-                  <b>{name_de}</b>
-                </span>
-              </List>
-            ))}
+            {list.core.map(
+              ({ id, strength, minimum, name_de, points }, index) => (
+                <List key={index} onClick={() => editUnit(id, "core")}>
+                  <span>
+                    {(strength || minimum) && `${strength || minimum} `}
+                    <b>{name_de}</b>
+                  </span>
+                  <i>{`${points * strength} Pkte.`}</i>
+                </List>
+              )
+            )}
           </ul>
           <Button spaceBottom onClick={() => addUnit("core")}>
             <Icon symbol="add" /> Hinzufügen
@@ -233,14 +238,17 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.special.map(({ id, strength, minimum, name_de }, index) => (
-              <List key={index} onClick={() => editUnit(id, "specials")}>
-                <span>
-                  {(strength || minimum) && `${strength || minimum} `}
-                  <b>{name_de}</b>
-                </span>
-              </List>
-            ))}
+            {list.special.map(
+              ({ id, strength, minimum, name_de, points }, index) => (
+                <List key={index} onClick={() => editUnit(id, "special")}>
+                  <span>
+                    {(strength || minimum) && `${strength || minimum} `}
+                    <b>{name_de}</b>
+                  </span>
+                  <i>{`${points * strength} Pkte.`}</i>
+                </List>
+              )
+            )}
           </ul>
           <Button spaceBottom onClick={() => addUnit("special")}>
             <Icon symbol="add" /> Hinzufügen
@@ -266,14 +274,17 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.rare.map(({ id, strength, minimum, name_de }, index) => (
-              <List key={index} onClick={() => editUnit(id, "rare")}>
-                <span>
-                  {(strength || minimum) && `${strength || minimum} `}
-                  <b>{name_de}</b>
-                </span>
-              </List>
-            ))}
+            {list.rare.map(
+              ({ id, strength, minimum, name_de, points }, index) => (
+                <List key={index} onClick={() => editUnit(id, "rare")}>
+                  <span>
+                    {(strength || minimum) && `${strength || minimum} `}
+                    <b>{name_de}</b>
+                  </span>
+                  <i>{`${minimum ? points * strength : points} Pkte.`}</i>
+                </List>
+              )
+            )}
           </ul>
           <Button spaceBottom onClick={() => addUnit("rare")}>
             <Icon symbol="add" /> Hinzufügen
