@@ -22,29 +22,29 @@
 
 @media (hover: hover) {
   .button--primary:hover {
-    color: var(--color-dark);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
   }
 }
 
 .button--primary:focus,
 .button--primary:active {
-  color: var(--color-dark);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
 }
 
 .button--secondary {
-  background-color: transparent;
+  background-color: var(--color-header);
   color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--secondary:hover {
-    color: var(--color-background);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
   }
 }
 
 .button--secondary:focus,
 .button--secondary:active {
-  color: var(--color-background);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
 }
 
 .button--spaceBottom {

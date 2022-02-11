@@ -13,7 +13,7 @@ import "./NewList.css";
 
 export const NewList = () => {
   const dispatch = useDispatch();
-  const lists = useSelector((state) => state.lists.value);
+  const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState(gameSystems[0].id);
   const [army, setArmy] = useState(gameSystems[0].armies[0].id);
   const [name, setName] = useState("");

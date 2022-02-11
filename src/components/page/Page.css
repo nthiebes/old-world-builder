@@ -6,6 +6,10 @@
   padding: 0.5rem 1rem;
   height: 62px;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .header__text {
@@ -28,5 +32,5 @@
 }
 
 .main {
-  padding: 1rem 0;
+  padding: calc(62px + 1rem) 0 1rem 0;
 }

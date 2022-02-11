@@ -9,7 +9,7 @@ import { Header, Main } from "../../components/page";
 import "./Home.css";
 
 export const Home = () => {
-  const lists = useSelector((state) => state.lists.value);
+  const lists = useSelector((state) => state.lists);
 
   return (
     <>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-// import classNames from "classnames";
+import { useSelector } from "react-redux";
 
 import { fetcher } from "../../utils/fetcher";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
@@ -27,117 +26,37 @@ const updateList = (updatedList) => {
 };
 
 export const Editor = () => {
-  const { id } = useParams();
+  const { listId } = useParams();
+  const list = useSelector((state) =>
+    state.lists.find(({ id }) => listId === id)
+  );
   const [army, setArmy] = useState(null);
-  const [list, setList] = useState(null);
   const [addUnitModalData, setAddUnitModalData] = useState(null);
   const [editUnitModalData, setEditUnitModalData] = useState(null);
   const handleCloseModal = () => {
     setAddUnitModalData(null);
     setEditUnitModalData(null);
   };
-  const handleAddUnit = (id, type) => {
-    const unit = army[type].find(({ id: unitId }) => id === unitId);
-    const newList = {
-      ...list,
-      [type]: [...list[type], unit],
-    };
-
-    setList(newList);
-    updateList(newList);
-    setAddUnitModalData(null);
-  };
-  const handleEditUnit = (newData) => {
-    const { strength, type, id } = newData;
-    const unit = list[type].find(({ id: unitId }) => id === unitId);
-    const newUnit = {
-      ...unit,
-      strength,
-    };
-    const newList = {
-      ...list,
-      [type]: list[type].map((data) => {
-        if (data.id === id) {
-          return newUnit;
-        }
-        return data;
-      }),
-    };
-
-    setList(newList);
-    updateList(newList);
-    setAddUnitModalData(null);
-  };
-  // const handleRemoveUnit = () => {};
-  const addLord = () => {
+  const addUnit = (type) => {
     setAddUnitModalData({
-      units: army.lords,
-      type: "lords",
+      units: army[type],
+      type,
     });
   };
-  const editLord = (unitId) => {
+  const editUnit = (unitId, type) => {
     setEditUnitModalData({
-      unit: list.lords.find((unit) => unit.id === unitId),
-      type: "lords",
-    });
-  };
-  const addHero = () => {
-    setAddUnitModalData({
-      units: army.heroes,
-      type: "heroes",
-    });
-  };
-  const editHero = (unitId) => {
-    setEditUnitModalData({
-      unit: list.heroes.find((unit) => unit.id === unitId),
-      type: "heroes",
-    });
-  };
-  const addCore = () => {
-    setAddUnitModalData({
-      units: army.core,
-      type: "core",
-    });
-  };
-  const editCore = (unitId) => {
-    setEditUnitModalData({
-      unit: list.core.find((unit) => unit.id === unitId),
-      type: "core",
-    });
-  };
-  const addSpecial = () => {
-    setAddUnitModalData({
-      units: army.special,
-      type: "special",
-    });
-  };
-  const editSpecial = (unitId) => {
-    setEditUnitModalData({
-      unit: list.special.find((unit) => unit.id === unitId),
-      type: "special",
-    });
-  };
-  const addRare = () => {
-    setAddUnitModalData({
-      units: army.rare,
-      type: "rare",
-    });
-  };
-  const editRare = (unitId) => {
-    setEditUnitModalData({
-      unit: list.rare.find((unit) => unit.id === unitId),
-      type: "rare",
+      unit: list[type].find((unit) => unit.id === unitId),
+      type,
     });
   };
   const getPoints = (type) => {
     let points = 0;
 
     list[type].forEach((unit) => {
-      const unit1 = list[type].find(({ id }) => id === unit.id);
-      let unitPoints = unit1.points;
+      let unitPoints = unit.points;
 
-      if (unit1.minimum) {
-        unitPoints = unit1.strength || unit.minimum;
+      if (unit.strength) {
+        unitPoints = unit.strength * unit.strength;
       }
 
       points += unitPoints;
@@ -147,18 +66,16 @@ export const Editor = () => {
   };
 
   useEffect(() => {
-    const localLists = JSON.parse(localStorage.getItem("lists"));
-    const localList = localLists.find(({ id: localId }) => id === localId);
+    list && updateList(list);
 
-    setList(localList);
-
-    fetcher({
-      url: `armies/${localList.game}/${localList.army}`,
-      onSuccess: (data) => {
-        setArmy(data);
-      },
-    });
-  }, [id]);
+    list &&
+      fetcher({
+        url: `armies/${list.game}/${list.army}`,
+        onSuccess: (data) => {
+          setArmy(data);
+        },
+      });
+  }, [list]);
 
   if (!list || !army) {
     return null;
@@ -227,12 +144,12 @@ export const Editor = () => {
           </header>
           <ul>
             {list.lords.map(({ name_de, id }, index) => (
-              <List key={index} onClick={() => editLord(id)}>
-                {name_de}
+              <List key={index} onClick={() => editUnit(id, "lords")}>
+                <b>{name_de}</b>
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={addLord}>
+          <Button spaceBottom onClick={() => addUnit("lords")}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -257,12 +174,12 @@ export const Editor = () => {
           </header>
           <ul>
             {list.heroes.map(({ id, name_de }, index) => (
-              <List key={index} onClick={() => editHero(id)}>
-                {name_de}
+              <List key={index} onClick={() => editUnit(id, "heroes")}>
+                <b>{name_de}</b>
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={addHero}>
+          <Button spaceBottom onClick={() => addUnit("heroes")}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -285,13 +202,15 @@ export const Editor = () => {
           </header>
           <ul>
             {list.core.map(({ id, strength, minimum, name_de }, index) => (
-              <List key={index} onClick={() => editCore(id)}>
-                {strength ? `${strength} ` : `${minimum} `}
-                {name_de}
+              <List key={index} onClick={() => editUnit(id, "core")}>
+                <span>
+                  {(strength || minimum) && `${strength || minimum} `}
+                  <b>{name_de}</b>
+                </span>
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={addCore}>
+          <Button spaceBottom onClick={() => addUnit("core")}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -314,13 +233,16 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.special.map(({ name_de }, index) => (
-              <List key={index} onClick={() => editSpecial(id)}>
-                {name_de}
+            {list.special.map(({ id, strength, minimum, name_de }, index) => (
+              <List key={index} onClick={() => editUnit(id, "specials")}>
+                <span>
+                  {(strength || minimum) && `${strength || minimum} `}
+                  <b>{name_de}</b>
+                </span>
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={addSpecial}>
+          <Button spaceBottom onClick={() => addUnit("special")}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
@@ -344,30 +266,25 @@ export const Editor = () => {
             </p>
           </header>
           <ul>
-            {list.rare.map(({ name_de }, index) => (
-              <List key={index} onClick={() => editRare(id)}>
-                {name_de}
+            {list.rare.map(({ id, strength, minimum, name_de }, index) => (
+              <List key={index} onClick={() => editUnit(id, "rare")}>
+                <span>
+                  {(strength || minimum) && `${strength || minimum} `}
+                  <b>{name_de}</b>
+                </span>
               </List>
             ))}
           </ul>
-          <Button spaceBottom onClick={addRare}>
+          <Button spaceBottom onClick={() => addUnit("rare")}>
             <Icon symbol="add" /> Hinzufügen
           </Button>
         </section>
       </Main>
       {addUnitModalData && (
-        <AddUnitModal
-          unitData={addUnitModalData}
-          onClose={handleCloseModal}
-          onAdd={handleAddUnit}
-        />
+        <AddUnitModal unitData={addUnitModalData} onClose={handleCloseModal} />
       )}
       {editUnitModalData && (
-        <AddUnitModal
-          unitData={editUnitModalData}
-          onClose={handleCloseModal}
-          onEdit={handleEditUnit}
-        />
+        <AddUnitModal unitData={editUnitModalData} onClose={handleCloseModal} />
       )}
     </>
   );

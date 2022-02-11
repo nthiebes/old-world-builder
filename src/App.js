@@ -21,7 +21,7 @@ export const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/editor/:id">{<Editor />}</Route>
+        <Route path="/editor/:listId">{<Editor />}</Route>
         <Route path="/new">{<NewList />}</Route>
         <Route path="/">{<Home />}</Route>
       </Switch>
