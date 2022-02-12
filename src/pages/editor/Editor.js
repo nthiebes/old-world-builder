@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 import { fetcher } from "../../utils/fetcher";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
+import { getUnitPoints } from "../../utils/points";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
@@ -23,50 +24,6 @@ const updateList = (updatedList) => {
   });
 
   localStorage.setItem("lists", JSON.stringify(updatedLists));
-};
-
-const getUnitPoints = (unit) => {
-  let unitPoints = 0;
-
-  if (unit.strength) {
-    unitPoints = unit.strength * unit.points;
-  } else {
-    unitPoints = unit.points;
-  }
-  if (unit.options) {
-    unit.options.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += unit.strength * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.equipment) {
-    unit.equipment.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += unit.strength * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.command) {
-    unit.command.forEach((option) => {
-      if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.mounts) {
-    unit.mounts.forEach((option) => {
-      if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-
-  return unitPoints;
 };
 
 export const Editor = () => {

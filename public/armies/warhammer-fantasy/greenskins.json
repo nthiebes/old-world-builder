@@ -53,7 +53,59 @@
       "id": "ork-whaaaghboss",
       "name_de": "Ork-Waaaghboss",
       "name_en": "",
-      "points": 115
+      "points": 115,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "id": "lindwurm",
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "id": "streitwagen",
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ]
     },
     {
       "id": "wildork-whaaaghboss",

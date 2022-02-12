@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+import { getUnitPoints } from "../../../utils/points";
 import { Button } from "../../../components/button";
 import { List } from "../../../components/list";
 import { addUnit, editUnit, removeUnit } from "../../../state/lists";
@@ -116,7 +117,23 @@ export const AddUnitModal = ({ unitData, onClose }) => {
         )}
       >
         <div className="add-unit-modal__header">
-          <h1>{units ? "Einheit auswählen" : unit.name_de}</h1>
+          <h1>
+            {units ? (
+              "Einheit auswählen"
+            ) : (
+              <>
+                {unit.name_de}
+                <i className="add-unit-modal__points">{` ${getUnitPoints({
+                  ...unit,
+                  strength,
+                  command,
+                  equipment,
+                  mounts,
+                  options,
+                })} Pkte.`}</i>
+              </>
+            )}
+          </h1>
           <Button
             onClick={unit ? handleSubmit : onClose}
             label="Schließen"
