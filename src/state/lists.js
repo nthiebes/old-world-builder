@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 import { getRandomId } from "../utils/id";
 
@@ -35,20 +35,30 @@ export const listsSlice = createSlice({
         listId,
         type,
         strength,
-        unit,
+        unitId,
         options,
         equipment,
         command,
         mounts,
       } = payload;
-      const newUnit = {
-        ...unit,
+      const newValues = {
         strength,
-        id: `${unit.id}.${getRandomId()}`,
         options,
         equipment,
         command,
         mounts,
+      };
+      const unit = current(state)
+        .find(({ id }) => id === listId)
+        [type].find(({ id }) => id === unitId);
+
+      Object.keys(newValues).forEach((key) =>
+        newValues[key] === undefined ? delete newValues[key] : {}
+      );
+
+      const newUnit = {
+        ...unit,
+        ...newValues,
       };
 
       return state.map((list) => {

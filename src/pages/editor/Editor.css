@@ -6,11 +6,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
 }
 
 .editor__header h2 {
   margin: 0;
+  margin-right: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
 }
 
 .editor__header .icon {
@@ -21,7 +25,12 @@
   margin-bottom: 3rem;
 }
 
+.editor__section i {
+  white-space: nowrap;
+}
+
 .editor__points {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }

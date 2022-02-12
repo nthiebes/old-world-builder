@@ -68,10 +68,20 @@
 
 .add-unit-modal__subline {
   padding-top: 1rem;
-  padding-left: 1rem;
 }
 
 .add-unit-modal__points {
   font-size: 1rem;
   font-weight: 400;
+}
+
+.unit__name {
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden; */
+  margin-right: 0.5rem;
+}
+
+.unit__points {
+  white-space: nowrap;
 }

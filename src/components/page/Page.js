@@ -7,30 +7,26 @@ import "./Page.css";
 
 export const Header = ({
   className,
-  backButton,
   headline,
   subheadline,
   moreButton,
+  to,
 }) => {
   return (
     <header className={classNames("header", className)}>
-      {backButton && (
-        <Button type="secondary" to="/" label="Zurück" icon="back" />
-      )}
+      {to && <Button type="text" to={to} label="Zurück" icon="back" />}
       <div className="header__text">
         {headline && <h1 className="header__name">{headline}</h1>}
         {subheadline && <p className="header__points">{subheadline}</p>}
       </div>
-      {moreButton && (
-        <Button type="secondary" label="Mehr Optionen" icon="more" />
-      )}
+      {moreButton && <Button type="text" label="Mehr Optionen" icon="more" />}
     </header>
   );
 };
 
 Header.propTypes = {
   className: PropTypes.string,
-  backButton: PropTypes.bool,
+  to: PropTypes.string,
   headline: PropTypes.string,
   subheadline: PropTypes.string,
   children: PropTypes.node,

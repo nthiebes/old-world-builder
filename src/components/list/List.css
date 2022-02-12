@@ -1,5 +1,5 @@
 .list {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -27,7 +27,7 @@
 .list a,
 .list button {
   text-decoration: none;
-  width: 100%;
+  width: calc(100% + 2rem);
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -35,7 +35,10 @@
   font-size: 1rem;
   cursor: pointer;
   z-index: 1;
+  margin: 0 -1rem;
   background: var(--color-list);
+  color: var(--color-font);
+  text-align: left;
   background: linear-gradient(
     90deg,
     var(--color-list) 0%,

@@ -12,6 +12,7 @@
     box-shadow 0.2s linear;
   cursor: pointer;
   height: calc(1.2rem + 18px);
+  white-space: nowrap;
 }
 
 .button--primary {
@@ -31,7 +32,7 @@
 }
 
 .button--secondary {
-  background-color: var(--color-header);
+  background-color: var(--color-error);
   color: var(--color-font-light);
 }
 
@@ -48,18 +49,18 @@
 
 .button--text {
   background-color: transparent;
-  color: var(--color-font);
+  color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--text:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+    color: var(--color-font);
   }
 }
 
 .button--text:focus,
 .button--text:active {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  color: var(--color-font);
 }
 
 .button--spaceBottom {

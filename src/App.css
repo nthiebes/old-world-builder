@@ -118,7 +118,7 @@ strong {
 
 label {
   display: block;
-  margin: 0 1rem 0 1rem;
+  margin: 0 1rem 0 0;
   font-weight: 700;
   padding-bottom: 0.5rem;
 }
@@ -128,7 +128,7 @@ p {
 }
 
 .radio {
-  margin: 0 1rem 0.5rem 1rem;
+  margin: 0 0 0.5rem 0;
   display: flex;
   align-items: center;
 }
@@ -154,8 +154,8 @@ p {
   font-size: 1rem;
   transition: box-shadow 0.2s linear;
   border: 0 none;
-  width: calc(100% - 2rem);
-  margin: 0 1rem 1rem 1rem;
+  width: 100%;
+  margin: 0 1rem 1rem 0;
   height: 54px;
 }
 
@@ -171,7 +171,6 @@ p {
 }
 
 .checkbox {
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
@@ -193,4 +192,6 @@ p {
 
 .checkbox__points {
   margin-left: 0.5rem;
+  text-align: right;
+  white-space: nowrap;
 }

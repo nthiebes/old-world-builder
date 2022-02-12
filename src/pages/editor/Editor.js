@@ -1,15 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { fetcher } from "../../utils/fetcher";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { getUnitPoints } from "../../utils/points";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
-import { AddUnitModal } from "./add-unit-modal/AddUnitModal";
 
 import "./Editor.css";
 
@@ -31,25 +29,6 @@ export const Editor = () => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const [army, setArmy] = useState(null);
-  const [addUnitModalData, setAddUnitModalData] = useState(null);
-  const [editUnitModalData, setEditUnitModalData] = useState(null);
-  const handleCloseModal = () => {
-    setAddUnitModalData(null);
-    setEditUnitModalData(null);
-  };
-  const addUnit = (type) => {
-    setAddUnitModalData({
-      units: army[type],
-      type,
-    });
-  };
-  const editUnit = (unitId, type) => {
-    setEditUnitModalData({
-      unit: list[type].find((unit) => unit.id === unitId),
-      type,
-    });
-  };
   const getPoints = (type) => {
     let points = 0;
 
@@ -62,17 +41,9 @@ export const Editor = () => {
 
   useEffect(() => {
     list && updateList(list);
-
-    list &&
-      fetcher({
-        url: `armies/${list.game}/${list.army}`,
-        onSuccess: (data) => {
-          setArmy(data);
-        },
-      });
   }, [list]);
 
-  if (!list || !army) {
+  if (!list) {
     return null;
   }
 
@@ -112,7 +83,7 @@ export const Editor = () => {
   return (
     <>
       <Header
-        backButton
+        to="/"
         headline={list.name}
         subheadline={`${allPoints} / ${list.points} Pkte.`}
         moreButton
@@ -139,18 +110,13 @@ export const Editor = () => {
           </header>
           <ul>
             {list.lords.map((unit, index) => (
-              <List key={index} onClick={() => editUnit(unit.id, "lords")}>
+              <List key={index} to={`/editor/${listId}/lords/${unit.id}`}>
                 <b>{unit.name_de}</b>
                 <i>{`${getUnitPoints(unit)} Pkte.`}</i>
               </List>
             ))}
           </ul>
-          <Button
-            centered
-            spaceBottom
-            onClick={() => addUnit("lords")}
-            icon="add"
-          >
+          <Button centered to={`/editor/${listId}/add/lords`} icon="add">
             Hinzufügen
           </Button>
         </section>
@@ -175,18 +141,13 @@ export const Editor = () => {
           </header>
           <ul>
             {list.heroes.map((unit, index) => (
-              <List key={index} onClick={() => editUnit(unit.id, "heroes")}>
+              <List key={index} to={`/editor/${listId}/heroes/${unit.id}`}>
                 <b>{unit.name_de}</b>
                 <i>{`${getUnitPoints(unit)} Pkte.`}</i>
               </List>
             ))}
           </ul>
-          <Button
-            centered
-            spaceBottom
-            onClick={() => addUnit("heroes")}
-            icon="add"
-          >
+          <Button centered to={`/editor/${listId}/add/heroes`} icon="add">
             Hinzufügen
           </Button>
         </section>
@@ -209,7 +170,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.core.map((unit, index) => (
-              <List key={index} onClick={() => editUnit(unit.id, "core")}>
+              <List key={index} to={`/editor/${listId}/core/${unit.id}`}>
                 <span>
                   {(unit.strength || unit.minimum) &&
                     `${unit.strength || unit.minimum} `}
@@ -219,12 +180,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button
-            centered
-            spaceBottom
-            onClick={() => addUnit("core")}
-            icon="add"
-          >
+          <Button centered to={`/editor/${listId}/add/core`} icon="add">
             Hinzufügen
           </Button>
         </section>
@@ -248,7 +204,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.special.map((unit, index) => (
-              <List key={index} onClick={() => editUnit(unit.id, "special")}>
+              <List key={index} to={`/editor/${listId}/special/${unit.id}`}>
                 <span>
                   {(unit.strength || unit.minimum) &&
                     `${unit.strength || unit.minimum} `}
@@ -258,12 +214,7 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button
-            centered
-            spaceBottom
-            onClick={() => addUnit("special")}
-            icon="add"
-          >
+          <Button centered to={`/editor/${listId}/add/special`} icon="add">
             Hinzufügen
           </Button>
         </section>
@@ -288,7 +239,7 @@ export const Editor = () => {
           </header>
           <ul>
             {list.rare.map((unit, index) => (
-              <List key={index} onClick={() => editUnit(unit.id, "rare")}>
+              <List key={index} to={`/editor/${listId}/rare/${unit.id}`}>
                 <span>
                   {(unit.strength || unit.minimum) &&
                     `${unit.strength || unit.minimum} `}
@@ -298,22 +249,11 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button
-            centered
-            spaceBottom
-            onClick={() => addUnit("rare")}
-            icon="add"
-          >
+          <Button centered to={`/editor/${listId}/add/rare`} icon="add">
             Hinzufügen
           </Button>
         </section>
       </Main>
-      {addUnitModalData && (
-        <AddUnitModal unitData={addUnitModalData} onClose={handleCloseModal} />
-      )}
-      {editUnitModalData && (
-        <AddUnitModal unitData={editUnitModalData} onClose={handleCloseModal} />
-      )}
     </>
   );
 };

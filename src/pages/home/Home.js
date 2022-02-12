@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { Button } from "../../components/button";
@@ -17,8 +16,8 @@ export const Home = () => {
         <ul>
           {lists.map(({ id, name, points, game }, index) => (
             <List key={index} to={`/editor/${id}`}>
-              <span>
-                <h2>{name}</h2>
+              <span className="home__list-item">
+                <h2 className="home__headline">{name}</h2>
                 <p>{points} Pkte.</p>
               </span>
               {game === "warhammer-fantasy" && (
