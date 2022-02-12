@@ -111,57 +111,697 @@
       "id": "wildork-whaaaghboss",
       "name_de": "Wildork-Waaaghboss",
       "name_en": "",
-      "points": 150
+      "points": 150,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "id": "lindwurm",
+          "name_de": "Lindwurm",
+          "points": 160
+        }
+      ]
     },
     {
       "id": "schwarzork-whaaaghboss",
       "name_de": "Schwarzork-Waaaghboss",
       "name_en": "",
-      "points": 160
+      "points": 160,
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "id": "lindwurm",
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "id": "streitwagen",
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ]
     },
     {
       "id": "goblin-whaaaghboss",
       "name_de": "Goblin-Waaaghboss",
       "name_en": "",
-      "points": 65
+      "points": 65,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "wolf",
+          "name_de": "Riesenwolf",
+          "points": 18
+        },
+        {
+          "id": "spider",
+          "name_de": "Riesenspinne",
+          "points": 22
+        },
+        {
+          "id": "gigantula",
+          "name_de": "Gigantula",
+          "points": 22
+        },
+        {
+          "id": "goblin-streitwagen",
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ]
     },
     {
       "id": "nachtgoblin-whaaaghboss",
       "name_de": "Nachtgoblin-Waaaghboss",
       "name_en": "",
-      "points": 55
+      "points": 55,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "id": "light-armor",
+          "name_de": "Leichte Rüstung",
+          "points": 3
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "squig",
+          "name_de": "Höhlensquig",
+          "points": 40
+        }
+      ]
     },
     {
       "id": "ork-grossschamane",
       "name_de": "Ork-Grossschamane",
       "name_en": "",
-      "points": 165
+      "points": 165,
+      "options": [
+        {
+          "id": "level4",
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "id": "lindwurm",
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "id": "streitwagen",
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ]
     },
     {
       "id": "wildork-grossschamane",
       "name_de": "Wildork-Grossschamane",
       "name_en": "",
-      "points": 170
+      "points": 170,
+      "options": [
+        {
+          "id": "level4",
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "id": "lindwurm",
+          "name_de": "Lindwurm",
+          "points": 160
+        }
+      ]
     },
     {
       "id": "goblin-grossschamane",
       "name_de": "Goblin-Grossschamane",
       "name_en": "",
-      "points": 145
+      "points": 145,
+      "options": [
+        {
+          "id": "level4",
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ],
+      "mounts": [
+        {
+          "id": "wolf",
+          "name_de": "Riesenwolf",
+          "points": 18
+        },
+        {
+          "id": "goblin-streitwagen",
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        },
+        {
+          "id": "arachnarok",
+          "name_de": "Arachnarok-Spinne",
+          "points": 290
+        }
+      ]
     },
     {
       "id": "nachtgoblin-grossschamane",
       "name_de": "Nachtgoblin-Grossschamane",
       "name_en": "",
-      "points": 140
+      "points": 140,
+      "options": [
+        {
+          "id": "level4",
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 100
+        }
+      ]
     }
   ],
   "heroes": [
     {
-      "id": "ng-shaman",
+      "id": "gitilla",
+      "name_de": "Gitilla da Jäga",
+      "name_en": "",
+      "points": 110
+    },
+    {
+      "id": "snagla",
+      "name_de": "Snagla Madenspucka",
+      "name_en": "",
+      "points": 115
+    },
+    {
+      "id": "ork-gargboss",
+      "name_de": "Ork-Gargboss",
+      "name_en": "",
+      "points": 55,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 16
+        },
+        {
+          "id": "streitwagen",
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ]
+    },
+    {
+      "id": "wildork-gargboss",
+      "name_de": "Wildork-Gargboss",
+      "name_en": "",
+      "points": 75,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 2
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ]
+    },
+    {
+      "id": "schwarzork-gargboss",
+      "name_de": "Schwarzork-Gargboss",
+      "name_en": "",
+      "points": 90,
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 16
+        },
+        {
+          "id": "streitwagen",
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ]
+    },
+    {
+      "id": "goblin-gargboss",
+      "name_de": "Goblin-Gargboss",
+      "name_en": "",
+      "points": 30,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        },
+        {
+          "id": "bow",
+          "name_de": "Kurzbogen",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "light-armor",
+          "name_de": "Leichte Rüstung",
+          "points": 2
+        },
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "wolf",
+          "name_de": "Riesenwolf",
+          "points": 12
+        },
+        {
+          "id": "spider",
+          "name_de": "Riesenspinne",
+          "points": 15
+        },
+        {
+          "id": "gigantula",
+          "name_de": "Gigantula",
+          "points": 15
+        },
+        {
+          "id": "goblin-streitwagen",
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ]
+    },
+    {
+      "id": "nachtgoblin-gargboss",
+      "name_de": "Nachtgoblin-Gargboss",
+      "name_en": "",
+      "points": 30,
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "id": "zweihand",
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "id": "zus-handwaffe",
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "id": "speer",
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        },
+        {
+          "id": "bow",
+          "name_de": "Kurzbogen",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "schild",
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "id": "light-armor",
+          "name_de": "Leichte Rüstung",
+          "points": 2
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "squig",
+          "name_de": "Höhlensquig",
+          "points": 50
+        }
+      ]
+    },
+    {
+      "id": "ork-schamane",
+      "name_de": "Ork-Schamane",
+      "name_en": "",
+      "points": 65,
+      "options": [
+        {
+          "id": "level2",
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ]
+    },
+    {
+      "id": "wildork-schamane",
+      "name_de": "Wildork-Schamane",
+      "name_en": "",
+      "points": 70,
+      "options": [
+        {
+          "id": "level2",
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "baconcav",
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ]
+    },
+    {
+      "id": "goblin-schamane",
+      "name_de": "Goblin-Schamane",
+      "name_en": "",
+      "points": 55,
+      "options": [
+        {
+          "id": "level2",
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [
+        {
+          "id": "wolf",
+          "name_de": "Riesenwolf",
+          "points": 12
+        },
+        {
+          "id": "goblin-streitwagen",
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ]
+    },
+    {
+      "id": "nachtgoblin-schamane",
       "name_de": "Nachtgoblin-Schamane",
       "name_en": "",
-      "points": 50
+      "points": 50,
+      "options": [
+        {
+          "id": "level2",
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        },
+        {
+          "id": "magic-items",
+          "name_de": "Magische Gegenstände",
+          "maxPoints": 50
+        }
+      ]
     }
   ],
   "core": [

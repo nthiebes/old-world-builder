@@ -54,6 +54,10 @@ export const Editor = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [listId]);
+
+  useEffect(() => {
     list && updateList(list);
   }, [list]);
 
