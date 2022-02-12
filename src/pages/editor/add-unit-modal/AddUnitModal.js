@@ -278,11 +278,12 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                     )}
                   </>
                 )}
-                <Button spaceBottom icon="check">
+                <Button centered spaceBottom icon="check">
                   Fertig
                 </Button>
               </form>
               <Button
+                centered
                 type="secondary"
                 spaceBottom
                 onClick={() => handleRemove(unit.id)}

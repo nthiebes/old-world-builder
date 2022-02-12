@@ -117,7 +117,9 @@ export const NewList = () => {
             selected="warhammer-fantasy"
             spaceBottom
           />
-          <Button icon="add-list">{"Liste anlegen"}</Button>
+          <Button centered icon="add-list">
+            {"Liste anlegen"}
+          </Button>
         </form>
       </Main>
     </>

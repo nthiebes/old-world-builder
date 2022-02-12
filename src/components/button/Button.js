@@ -17,6 +17,7 @@ export const Button = ({
   fullWidth,
   label,
   icon,
+  centered,
 }) => {
   const Component = to ? Link : "button";
 
@@ -27,6 +28,7 @@ export const Button = ({
         `button--${type}`,
         spaceBottom && "button--spaceBottom",
         fullWidth && "button--fullWidth",
+        centered && "button--centered",
         className
       )}
       onClick={onClick}
@@ -53,6 +55,7 @@ Button.propTypes = {
   children: PropTypes.node,
   spaceBottom: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  centered: PropTypes.bool,
   icon: PropTypes.string,
 };
 

@@ -34,7 +34,7 @@ export const Home = () => {
             </List>
           ))}
         </ul>
-        <Button to="/new" icon="new-list">
+        <Button centered to="/new" icon="new-list">
           {"Neue Liste"}
         </Button>
       </Main>
