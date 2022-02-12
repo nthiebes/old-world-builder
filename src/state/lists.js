@@ -31,8 +31,16 @@ export const listsSlice = createSlice({
       });
     },
     editUnit: (state, { payload }) => {
-      const { listId, type, strength, unit, options, equipment, command } =
-        payload;
+      const {
+        listId,
+        type,
+        strength,
+        unit,
+        options,
+        equipment,
+        command,
+        mounts,
+      } = payload;
       const newUnit = {
         ...unit,
         strength,
@@ -40,6 +48,7 @@ export const listsSlice = createSlice({
         options,
         equipment,
         command,
+        mounts,
       };
 
       return state.map((list) => {

@@ -21,6 +21,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
   const [equipment, setEquipment] = useState(
     unit && unit.equipment ? unit.equipment : []
   );
+  const [mounts, setMounts] = useState(unit && unit.mounts ? unit.mounts : []);
   const [command, setCommand] = useState(
     unit && unit.command ? unit.command : []
   );
@@ -72,11 +73,32 @@ export const AddUnitModal = ({ unitData, onClose }) => {
       }))
     );
   };
+  const handleMountsChange = (id) => {
+    const newOptions = mounts.map((option) => {
+      if (option.id === id) {
+        return {
+          ...option,
+          active: option.active ? false : true,
+        };
+      }
+      return option;
+    });
+    setMounts(newOptions);
+  };
   const handleSubmit = (event) => {
     event && event.preventDefault();
 
     dispatch(
-      editUnit({ listId, type, strength, unit, options, equipment, command })
+      editUnit({
+        listId,
+        type,
+        strength,
+        unit,
+        options,
+        equipment,
+        command,
+        mounts,
+      })
     );
     onClose();
   };
@@ -96,7 +118,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
         <div className="add-unit-modal__header">
           <h1>{units ? "Einheit auswählen" : unit.name_de}</h1>
           <Button
-            onClick={handleSubmit}
+            onClick={unit ? handleSubmit : onClose}
             label="Schließen"
             type="text"
             icon="close"
@@ -132,7 +154,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                     />
                   </>
                 )}
-                {unit.command && (
+                {unit.command && unit.command.length > 0 && (
                   <>
                     <h2 className="add-unit-modal__subline">
                       Kommandoabteilung:
@@ -146,7 +168,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                             name={id}
                             value={id}
                             onChange={() => handleCommandChange(id)}
-                            defaultChecked={active === true}
+                            defaultChecked={active}
                             className="checkbox__input"
                           />
                           <label htmlFor={id} className="checkbox__label">
@@ -161,7 +183,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                     )}
                   </>
                 )}
-                {unit.equipment && (
+                {unit.equipment && unit.equipment.length > 0 && (
                   <>
                     <h2 className="add-unit-modal__subline">Ausrüstung:</h2>
                     {unit.equipment.map(
@@ -173,7 +195,7 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                             name="equipment"
                             value={id}
                             onChange={() => handleEquipmentChange(id)}
-                            defaultChecked={active === true}
+                            defaultChecked={active}
                             className="radio__input"
                           />
                           <label htmlFor={id} className="radio__label">
@@ -188,7 +210,31 @@ export const AddUnitModal = ({ unitData, onClose }) => {
                     )}
                   </>
                 )}
-                {unit.options && (
+                {unit.mounts && unit.mounts.length > 0 && (
+                  <>
+                    <h2 className="add-unit-modal__subline">Reittier:</h2>
+                    {unit.mounts.map(({ name_de, points, id, active }) => (
+                      <div className="checkbox" key={id}>
+                        <input
+                          type="checkbox"
+                          id={id}
+                          name={id}
+                          value={id}
+                          onChange={() => handleMountsChange(id)}
+                          defaultChecked={active}
+                          className="checkbox__input"
+                        />
+                        <label htmlFor={id} className="checkbox__label">
+                          {name_de}
+                          <i className="checkbox__points">
+                            {`${points} Punkte`}
+                          </i>
+                        </label>
+                      </div>
+                    ))}
+                  </>
+                )}
+                {unit.options && unit.options.length > 0 && (
                   <>
                     <h2 className="add-unit-modal__subline">Optionen:</h2>
                     {unit.options.map(

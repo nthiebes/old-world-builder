@@ -58,6 +58,13 @@ const getUnitPoints = (unit) => {
       }
     });
   }
+  if (unit.mounts) {
+    unit.mounts.forEach((option) => {
+      if (option.active) {
+        unitPoints += option.points;
+      }
+    });
+  }
 
   return unitPoints;
 };
