@@ -38,9 +38,9 @@ export const Header = ({
       )}
       {showMenu && (
         <ul className="header__more">
-          {moreButton.map(({ callback, name_de }) => (
+          {moreButton.map(({ callback, name_de, to: moreButtonTo }) => (
             <li key={name_de}>
-              <Button type="text" onClick={() => callback()}>
+              <Button type="text" onClick={callback} to={moreButtonTo}>
                 {name_de}
               </Button>
             </li>

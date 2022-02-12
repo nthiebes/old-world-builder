@@ -44,7 +44,12 @@ export const Editor = () => {
   }, [list]);
 
   if (!list) {
-    return null;
+    return (
+      <>
+        <Header to="/" />
+        <Main></Main>
+      </>
+    );
   }
 
   const lordsPoints = getPoints("lords");
@@ -86,7 +91,12 @@ export const Editor = () => {
         to="/"
         headline={list.name}
         subheadline={`${allPoints} / ${list.points} Pkte.`}
-        moreButton
+        moreButton={[
+          {
+            name_de: "Bearbeiten",
+            to: `/editor/${listId}/edit`,
+          },
+        ]}
       />
 
       <Main className="editor">

@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 import { getRandomId } from "../utils/id";
 
@@ -8,6 +8,27 @@ export const listsSlice = createSlice({
   reducers: {
     setLists: (state, { payload }) => {
       return payload || [];
+    },
+    updateList: (state, { payload }) => {
+      const { listId, name, points } = payload;
+      const newValues = { name, points };
+
+      Object.keys(newValues).forEach((key) =>
+        newValues[key] === undefined ? delete newValues[key] : {}
+      );
+
+      return state.map((list) => {
+        const { id } = list;
+
+        if (listId === id) {
+          return {
+            ...list,
+            ...newValues,
+          };
+        }
+
+        return list;
+      });
     },
     addUnit: (state, { payload }) => {
       const { listId, type, unit } = payload;
@@ -32,7 +53,7 @@ export const listsSlice = createSlice({
     },
     duplicateUnit: (state, { payload }) => {
       const { listId, type, unitId } = payload;
-      const unit = current(state)
+      const unit = state
         .find(({ id }) => id === listId)
         [type].find(({ id }) => id === unitId);
 
@@ -70,7 +91,7 @@ export const listsSlice = createSlice({
         command,
         mounts,
       };
-      const unit = current(state)
+      const unit = state
         .find(({ id }) => id === listId)
         [type].find(({ id }) => id === unitId);
 
@@ -125,7 +146,13 @@ export const listsSlice = createSlice({
   },
 });
 
-export const { setLists, addUnit, editUnit, removeUnit, duplicateUnit } =
-  listsSlice.actions;
+export const {
+  setLists,
+  addUnit,
+  editUnit,
+  removeUnit,
+  duplicateUnit,
+  updateList,
+} = listsSlice.actions;
 
 export default listsSlice.reducer;
