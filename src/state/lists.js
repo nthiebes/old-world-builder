@@ -30,6 +30,28 @@ export const listsSlice = createSlice({
         return list;
       });
     },
+    duplicateUnit: (state, { payload }) => {
+      const { listId, type, unitId } = payload;
+      const unit = current(state)
+        .find(({ id }) => id === listId)
+        [type].find(({ id }) => id === unitId);
+
+      return state.map((list) => {
+        const { id } = list;
+
+        if (listId === id) {
+          return {
+            ...list,
+            [type]: [
+              ...list[type],
+              { ...unit, id: `${unit.id}.${getRandomId()}` },
+            ],
+          };
+        }
+
+        return list;
+      });
+    },
     editUnit: (state, { payload }) => {
       const {
         listId,
@@ -103,6 +125,7 @@ export const listsSlice = createSlice({
   },
 });
 
-export const { setLists, addUnit, editUnit, removeUnit } = listsSlice.actions;
+export const { setLists, addUnit, editUnit, removeUnit, duplicateUnit } =
+  listsSlice.actions;
 
 export default listsSlice.reducer;

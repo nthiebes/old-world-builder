@@ -6,10 +6,14 @@ import PropTypes from "prop-types";
 
 import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints } from "../../utils/points";
-import { Button } from "../../components/button";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
-import { addUnit, editUnit, removeUnit } from "../../state/lists";
+import {
+  addUnit,
+  editUnit,
+  removeUnit,
+  duplicateUnit,
+} from "../../state/lists";
 import { setArmy } from "../../state/army";
 
 import "./Unit.css";
@@ -32,6 +36,10 @@ export const Unit = () => {
   };
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
+    setRedirect(true);
+  };
+  const handleDuplicate = (unitId) => {
+    dispatch(duplicateUnit({ listId, type, unitId }));
     setRedirect(true);
   };
   const handleStrengthChange = (event) => {
@@ -138,7 +146,7 @@ export const Unit = () => {
   if (!unit && !army) {
     return (
       <>
-        <Header to={`/editor/${listId}`} moreButton />
+        <Header to={`/editor/${listId}`} />
         <Main></Main>
       </>
     );
@@ -149,140 +157,134 @@ export const Unit = () => {
       <>
         <Header
           to={`/editor/${listId}`}
-          moreButton
+          moreButton={[
+            {
+              name_de: "Entfernen",
+              callback: () => handleRemove(unit.id),
+            },
+            {
+              name_de: "Duplizieren",
+              callback: () => handleDuplicate(unit.id),
+            },
+          ]}
           headline={unit.name_de}
           subheadline={`${getUnitPoints(unit)} Pkte.`}
         />
 
         <Main>
-          <>
-            {unit.minimum && (
-              <>
-                <label htmlFor="strength">Einheitengröße:</label>
-                <input
-                  type="number"
-                  id="strength"
-                  className="input"
-                  min={unit.minimum}
-                  value={unit.strength}
-                  onChange={handleStrengthChange}
-                  required
-                />
-              </>
-            )}
-            {unit.command && unit.command.length > 0 && (
-              <>
-                <h2 className="add-unit-modal__subline">Kommandoabteilung:</h2>
-                {unit.command.map(
-                  ({ name_de, points, perModel, id, active }) => (
-                    <div className="checkbox" key={id}>
-                      <input
-                        type="checkbox"
-                        id={id}
-                        name={id}
-                        value={id}
-                        onChange={() => handleCommandChange(id)}
-                        defaultChecked={active}
-                        className="checkbox__input"
-                      />
-                      <label htmlFor={id} className="checkbox__label">
-                        {name_de}
-                        <i className="checkbox__points">
-                          {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                          {perModel && ` pro Modell`}
-                        </i>
-                      </label>
-                    </div>
-                  )
-                )}
-              </>
-            )}
-            {unit.equipment && unit.equipment.length > 0 && (
-              <>
-                <h2 className="add-unit-modal__subline">Ausrüstung:</h2>
-                {unit.equipment.map(
-                  ({ name_de, points, perModel, id, active }) => (
-                    <div className="radio" key={id}>
-                      <input
-                        type="radio"
-                        id={id}
-                        name="equipment"
-                        value={id}
-                        onChange={() => handleEquipmentChange(id)}
-                        defaultChecked={active}
-                        className="radio__input"
-                      />
-                      <label htmlFor={id} className="radio__label">
-                        {name_de}
-                        <i className="checkbox__points">
-                          {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                          {perModel && ` pro Modell`}
-                        </i>
-                      </label>
-                    </div>
-                  )
-                )}
-              </>
-            )}
-            {unit.mounts && unit.mounts.length > 0 && (
-              <>
-                <h2 className="add-unit-modal__subline">Reittier:</h2>
-                {unit.mounts.map(({ name_de, points, id, active }) => (
-                  <div className="checkbox" key={id}>
+          {unit.minimum && (
+            <>
+              <label htmlFor="strength">Einheitengröße:</label>
+              <input
+                type="number"
+                id="strength"
+                className="input"
+                min={unit.minimum}
+                value={unit.strength}
+                onChange={handleStrengthChange}
+                required
+              />
+            </>
+          )}
+          {unit.command && unit.command.length > 0 && (
+            <>
+              <h2 className="unit__subline">Kommandoabteilung:</h2>
+              {unit.command.map(({ name_de, points, perModel, id, active }) => (
+                <div className="checkbox" key={id}>
+                  <input
+                    type="checkbox"
+                    id={id}
+                    name={id}
+                    value={id}
+                    onChange={() => handleCommandChange(id)}
+                    defaultChecked={active}
+                    className="checkbox__input"
+                  />
+                  <label htmlFor={id} className="checkbox__label">
+                    {name_de}
+                    <i className="checkbox__points">
+                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                      {perModel && ` pro Modell`}
+                    </i>
+                  </label>
+                </div>
+              ))}
+            </>
+          )}
+          {unit.equipment && unit.equipment.length > 0 && (
+            <>
+              <h2 className="unit__subline">Ausrüstung:</h2>
+              {unit.equipment.map(
+                ({ name_de, points, perModel, id, active }) => (
+                  <div className="radio" key={id}>
                     <input
-                      type="checkbox"
+                      type="radio"
                       id={id}
-                      name={id}
+                      name="equipment"
                       value={id}
-                      onChange={() => handleMountsChange(id)}
+                      onChange={() => handleEquipmentChange(id)}
                       defaultChecked={active}
-                      className="checkbox__input"
+                      className="radio__input"
                     />
-                    <label htmlFor={id} className="checkbox__label">
+                    <label htmlFor={id} className="radio__label">
                       {name_de}
-                      <i className="checkbox__points">{`${points} Pkte.`}</i>
+                      <i className="checkbox__points">
+                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                        {perModel && ` pro Modell`}
+                      </i>
                     </label>
                   </div>
-                ))}
-              </>
-            )}
-            {unit.options && unit.options.length > 0 && (
-              <>
-                <h2 className="add-unit-modal__subline">Optionen:</h2>
-                {unit.options.map(
-                  ({ name_de, points, perModel, id, active }) => (
-                    <div className="checkbox" key={id}>
-                      <input
-                        type="checkbox"
-                        id={id}
-                        name={id}
-                        value={id}
-                        onChange={() => handleOptionsChange(id)}
-                        defaultChecked={active}
-                        className="checkbox__input"
-                      />
-                      <label htmlFor={id} className="checkbox__label">
-                        {name_de}
-                        <i className="checkbox__points">
-                          {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                          {perModel && ` pro Modell`}
-                        </i>
-                      </label>
-                    </div>
-                  )
-                )}
-              </>
-            )}
-            <Button
-              centered
-              type="secondary"
-              spaceBottom
-              onClick={() => handleRemove(unit.id)}
-              icon="remove"
-            >
-              Entfernen
-            </Button>
-          </>
+                )
+              )}
+            </>
+          )}
+          {unit.mounts && unit.mounts.length > 0 && (
+            <>
+              <h2 className="unit__subline">Reittier:</h2>
+              {unit.mounts.map(({ name_de, points, id, active }) => (
+                <div className="checkbox" key={id}>
+                  <input
+                    type="checkbox"
+                    id={id}
+                    name={id}
+                    value={id}
+                    onChange={() => handleMountsChange(id)}
+                    defaultChecked={active}
+                    className="checkbox__input"
+                  />
+                  <label htmlFor={id} className="checkbox__label">
+                    {name_de}
+                    <i className="checkbox__points">{`${points} Pkte.`}</i>
+                  </label>
+                </div>
+              ))}
+            </>
+          )}
+          {unit.options && unit.options.length > 0 && (
+            <>
+              <h2 className="unit__subline">Optionen:</h2>
+              {unit.options.map(({ name_de, points, perModel, id, active }) => (
+                <div className="checkbox" key={id}>
+                  <input
+                    type="checkbox"
+                    id={id}
+                    name={id}
+                    value={id}
+                    onChange={() => handleOptionsChange(id)}
+                    defaultChecked={active}
+                    className="checkbox__input"
+                  />
+                  <label htmlFor={id} className="checkbox__label">
+                    {name_de}
+                    <i className="checkbox__points">
+                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                      {perModel && ` pro Modell`}
+                    </i>
+                  </label>
+                </div>
+              ))}
+            </>
+          )}
         </Main>
       </>
     );

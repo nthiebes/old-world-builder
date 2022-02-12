@@ -31,6 +31,18 @@
   text-overflow: ellipsis;
 }
 
+.header__more {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-header-menu);
+  padding: 0.4rem 0;
+}
+
+.header__empty-icon {
+  width: 54px;
+}
+
 .main {
   padding: calc(62px + 1rem) 1rem 1rem 1rem;
 }

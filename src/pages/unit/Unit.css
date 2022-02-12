@@ -1,4 +1,4 @@
-.add-unit-modal {
+.unit {
   position: fixed;
   height: 90vh;
   bottom: 0;
@@ -8,7 +8,7 @@
   z-index: 3;
 }
 
-.add-unit-modal::before {
+.unit::before {
   position: fixed;
   content: "";
   top: 0;
@@ -18,7 +18,7 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.add-unit-modal__inner {
+.unit__inner {
   border-radius: 10px 10px 0 0;
   position: relative;
   background: var(--color-background);
@@ -34,12 +34,12 @@
   opacity: 0;
 }
 
-.add-unit-modal__inner--animate {
+.unit__inner--animate {
   transform: translateY(0);
   opacity: 1;
 }
 
-.add-unit-modal__header {
+.unit__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,12 +51,12 @@
   height: 70px;
 }
 
-.add-unit-modal__header h1 {
+.unit__header h1 {
   flex-grow: 1;
   margin-bottom: 0;
 }
 
-.add-unit-modal__content {
+.unit__content {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -66,19 +66,16 @@
   width: 100%;
 }
 
-.add-unit-modal__subline {
+.unit__subline {
   padding-top: 1rem;
 }
 
-.add-unit-modal__points {
+.unit__points {
   font-size: 1rem;
   font-weight: 400;
 }
 
 .unit__name {
-  /* white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow-x: hidden; */
   margin-right: 0.5rem;
 }
 
