@@ -112,10 +112,12 @@ export const Editor = () => {
         moreButton={[
           {
             name_de: "Bearbeiten",
+            icon: "edit",
             to: `/editor/${listId}/edit`,
           },
           {
             name_de: "Löschen",
+            icon: "delete",
             callback: handleDelete,
           },
         ]}

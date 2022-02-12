@@ -129,6 +129,10 @@ export const Unit = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [unitId]);
+
+  useEffect(() => {
     list &&
       !unit &&
       fetcher({
@@ -159,12 +163,14 @@ export const Unit = () => {
           to={`/editor/${listId}`}
           moreButton={[
             {
-              name_de: "Entfernen",
-              callback: () => handleRemove(unit.id),
+              name_de: "Duplizieren",
+              icon: "duplicate",
+              callback: () => handleDuplicate(unit.id),
             },
             {
-              name_de: "Duplizieren",
-              callback: () => handleDuplicate(unit.id),
+              name_de: "Entfernen",
+              icon: "delete",
+              callback: () => handleRemove(unit.id),
             },
           ]}
           headline={unit.name_de}
