@@ -31,11 +31,15 @@ export const listsSlice = createSlice({
       });
     },
     editUnit: (state, { payload }) => {
-      const { listId, type, strength, unit } = payload;
+      const { listId, type, strength, unit, options, equipment, command } =
+        payload;
       const newUnit = {
         ...unit,
         strength,
         id: `${unit.id}.${getRandomId()}`,
+        options,
+        equipment,
+        command,
       };
 
       return state.map((list) => {

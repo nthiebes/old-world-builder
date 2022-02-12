@@ -51,8 +51,9 @@
   height: 70px;
 }
 
-.add-unit-modal__header h2 {
+.add-unit-modal__header h1 {
   flex-grow: 1;
+  margin-bottom: 0;
 }
 
 .add-unit-modal__content {
@@ -63,4 +64,9 @@
   top: 70px;
   bottom: 0;
   width: 100%;
+}
+
+.add-unit-modal__subline {
+  padding-top: 1rem;
+  padding-left: 1rem;
 }

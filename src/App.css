@@ -102,6 +102,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--color-headline);
 }
 
 h2 {
@@ -124,4 +125,72 @@ label {
 
 p {
   color: var(--color-font);
+}
+
+.radio {
+  margin: 0 1rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.radio__input {
+  margin-right: 0.5rem;
+}
+
+.radio__label {
+  display: flex;
+  margin: 0;
+  padding: 0.5rem 0;
+  user-select: none;
+  justify-content: space-between;
+  font-weight: 400;
+  width: 100%;
+}
+
+.input {
+  background-color: var(--color-white);
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: box-shadow 0.2s linear;
+  border: 0 none;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 1rem 1rem;
+  height: 54px;
+}
+
+@media (hover: hover) {
+  .input:hover {
+    box-shadow: 0 0 7px 2px var(--color-list) inset;
+  }
+}
+
+.input:focus,
+.input:active {
+  box-shadow: 0 0 7px 2px var(--color-list) inset;
+}
+
+.checkbox {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox__label {
+  display: flex;
+  margin: 0;
+  padding: 0.5rem 0;
+  user-select: none;
+  justify-content: space-between;
+  font-weight: 400;
+  width: 100%;
+}
+
+.checkbox__input {
+  margin-right: 0.5rem;
+}
+
+.checkbox__points {
+  margin-left: 0.5rem;
 }

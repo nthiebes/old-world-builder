@@ -112,32 +112,66 @@
       "name_en": "",
       "points": 8,
       "minimum": 10,
-      "options": [
+      "command": [
         {
+          "id": "boss",
           "name_de": "Boss",
           "points": 15
         },
         {
+          "id": "musiker",
           "name_de": "Musiker",
           "points": 10
         },
         {
+          "id": "standarte",
           "name_de": "Standartenträger",
           "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "id": "handwaffe",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
         },
         {
+          "id": "speere",
           "name_de": "Speere",
           "points": 1,
           "perModel": true
         },
         {
+          "id": "boegen",
           "name_de": "Bögen",
           "points": 1,
           "perModel": true
         },
         {
+          "id": "zus-handwaffe",
           "name_de": "Zusätzliche Handwaffe",
           "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "id": "schilde",
+          "name_de": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "id": "spiessas",
+          "name_de": "Große Spießaz",
+          "points": 20
+        },
+        {
+          "id": "moschaz",
+          "name_de": "Moschaz",
+          "points": 2,
           "perModel": true
         }
       ]
