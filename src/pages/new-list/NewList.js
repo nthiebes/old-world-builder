@@ -64,7 +64,7 @@ export const NewList = () => {
     <>
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
-      <Header backButton headline="Neue Liste" />
+      <Header to="/" headline="Neue Liste" />
 
       <Main>
         <form onSubmit={handleSubmit}>

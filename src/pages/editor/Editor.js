@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useParams, Redirect } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { getUnitPoints } from "../../utils/points";
@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
+import { deleteList } from "../../state/lists";
 
 import "./Editor.css";
 
@@ -23,9 +24,17 @@ const updateList = (updatedList) => {
 
   localStorage.setItem("lists", JSON.stringify(updatedLists));
 };
+const removeList = (listId) => {
+  const localLists = JSON.parse(localStorage.getItem("lists"));
+  const updatedLists = localLists.filter(({ id }) => listId !== id);
+
+  localStorage.setItem("lists", JSON.stringify(updatedLists));
+};
 
 export const Editor = () => {
   const { listId } = useParams();
+  const dispatch = useDispatch();
+  const [redirect, setRedirect] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -38,10 +47,19 @@ export const Editor = () => {
 
     return points;
   };
+  const handleDelete = () => {
+    dispatch(deleteList(listId));
+    removeList(listId);
+    setRedirect(true);
+  };
 
   useEffect(() => {
     list && updateList(list);
   }, [list]);
+
+  if (redirect) {
+    return <Redirect to="/" />;
+  }
 
   if (!list) {
     return (
@@ -95,6 +113,10 @@ export const Editor = () => {
           {
             name_de: "Bearbeiten",
             to: `/editor/${listId}/edit`,
+          },
+          {
+            name_de: "Löschen",
+            callback: handleDelete,
           },
         ]}
       />

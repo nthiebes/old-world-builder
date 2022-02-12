@@ -30,6 +30,9 @@ export const listsSlice = createSlice({
         return list;
       });
     },
+    deleteList: (state, { payload }) => {
+      return state.filter(({ id }) => id !== payload);
+    },
     addUnit: (state, { payload }) => {
       const { listId, type, unit } = payload;
       const newUnit = {
@@ -153,6 +156,7 @@ export const {
   removeUnit,
   duplicateUnit,
   updateList,
+  deleteList,
 } = listsSlice.actions;
 
 export default listsSlice.reducer;
