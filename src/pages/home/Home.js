@@ -13,6 +13,9 @@ export const Home = () => {
     <>
       <Header headline="Old World Builder" />
       <Main className="home">
+        {!lists.length && (
+          <i className="home__empty">Noch keine Listen erstellt.</i>
+        )}
         <ul>
           {lists.map(({ id, name, points, game }, index) => (
             <List key={index} to={`/editor/${id}`}>

@@ -178,6 +178,13 @@ export const Unit = () => {
         />
 
         <Main className="unit">
+          {!unit.minimum &&
+            !unit.command &&
+            !unit.equipment &&
+            !unit.mounts &&
+            !unit.options && (
+              <i className="unit__empty">Keine Optionen verfügbar.</i>
+            )}
           {unit.minimum && (
             <>
               <label htmlFor="strength">Einheitengröße:</label>
