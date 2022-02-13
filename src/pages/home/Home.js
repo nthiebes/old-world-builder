@@ -12,7 +12,7 @@ export const Home = () => {
   return (
     <>
       <Header headline="Old World Builder" />
-      <Main>
+      <Main className="home">
         <ul>
           {lists.map(({ id, name, points, game }, index) => (
             <List key={index} to={`/editor/${id}`}>
@@ -33,7 +33,7 @@ export const Home = () => {
             </List>
           ))}
         </ul>
-        <Button centered to="/new" icon="new-list">
+        <Button centered to="/new" icon="new-list" spaceTop>
           {"Neue Liste"}
         </Button>
       </Main>

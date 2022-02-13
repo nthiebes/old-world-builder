@@ -177,7 +177,7 @@ export const Unit = () => {
           subheadline={`${getUnitPoints(unit)} Pkte.`}
         />
 
-        <Main>
+        <Main className="unit">
           {unit.minimum && (
             <>
               <label htmlFor="strength">Einheitengröße:</label>
@@ -300,7 +300,7 @@ export const Unit = () => {
     <>
       <Header to={`/editor/${listId}`} headline="Einheit auswählen" />
 
-      <Main>
+      <Main className="unit">
         <ul>
           {army[type].map(({ name_de, id, minimum, points }) => (
             <List key={id} onClick={() => handleAdd(id)}>

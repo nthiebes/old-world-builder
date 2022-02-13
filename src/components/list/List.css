@@ -1,5 +1,4 @@
 .list {
-  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -9,16 +8,10 @@
 .list button::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -1rem;
+  right: -1rem;
   height: 100%;
   background: var(--color-list);
-  /* background: linear-gradient(
-    90deg,
-    rgba(232, 221, 203, 1) 0%,
-    var(--color-list) 50%,
-    rgba(232, 221, 203, 1) 100%
-  ); */
   z-index: -1;
   transition: opacity 0.3s linear;
   opacity: 0;
@@ -36,15 +29,17 @@
   cursor: pointer;
   z-index: 1;
   margin: 0 -1rem;
-  background: var(--color-list);
   color: var(--color-font);
   text-align: left;
-  background: linear-gradient(
+  /* background: var(--color-list); */
+  background-color: transparent;
+  /* background: linear-gradient(
     90deg,
     var(--color-list) 0%,
     rgba(232, 221, 203, 1) 50%,
     var(--color-list) 100%
-  );
+  ); */
+  border-bottom: 2px solid var(--color-list);
 }
 
 @media (hover: hover) {

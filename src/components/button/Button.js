@@ -14,6 +14,7 @@ export const Button = ({
   onClick,
   children,
   spaceBottom,
+  spaceTop,
   fullWidth,
   label,
   icon,
@@ -27,6 +28,7 @@ export const Button = ({
         "button",
         `button--${type}`,
         spaceBottom && "button--spaceBottom",
+        spaceTop && "button--spaceTop",
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         className
@@ -54,6 +56,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
   spaceBottom: PropTypes.bool,
+  spaceTop: PropTypes.bool,
   fullWidth: PropTypes.bool,
   centered: PropTypes.bool,
   icon: PropTypes.string,

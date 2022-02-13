@@ -154,7 +154,12 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button centered to={`/editor/${listId}/add/lords`} icon="add">
+          <Button
+            centered
+            to={`/editor/${listId}/add/lords`}
+            icon="add"
+            spaceTop
+          >
             Hinzufügen
           </Button>
         </section>
@@ -185,7 +190,12 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button centered to={`/editor/${listId}/add/heroes`} icon="add">
+          <Button
+            centered
+            to={`/editor/${listId}/add/heroes`}
+            icon="add"
+            spaceTop
+          >
             Hinzufügen
           </Button>
         </section>
@@ -218,7 +228,12 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button centered to={`/editor/${listId}/add/core`} icon="add">
+          <Button
+            centered
+            to={`/editor/${listId}/add/core`}
+            icon="add"
+            spaceTop
+          >
             Hinzufügen
           </Button>
         </section>
@@ -252,7 +267,12 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button centered to={`/editor/${listId}/add/special`} icon="add">
+          <Button
+            centered
+            to={`/editor/${listId}/add/special`}
+            icon="add"
+            spaceTop
+          >
             Hinzufügen
           </Button>
         </section>
@@ -287,7 +307,12 @@ export const Editor = () => {
               </List>
             ))}
           </ul>
-          <Button centered to={`/editor/${listId}/add/rare`} icon="add">
+          <Button
+            centered
+            to={`/editor/${listId}/add/rare`}
+            icon="add"
+            spaceTop
+          >
             Hinzufügen
           </Button>
         </section>

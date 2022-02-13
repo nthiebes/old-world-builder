@@ -1,3 +1,7 @@
+.editor {
+  padding-top: 62px;
+}
+
 .editor strong {
   margin: 0 5px;
 }
@@ -6,7 +10,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 1rem 0;
+  padding: 1rem;
+  background: var(--color-list);
+  margin: 0 -1rem 0 -1rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-list) 0%,
+    rgba(232, 221, 203, 1) 50%,
+    var(--color-list) 100%
+  );
 }
 
 .editor__header h2 {
