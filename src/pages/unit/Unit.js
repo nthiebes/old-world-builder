@@ -248,14 +248,13 @@ export const Unit = () => {
                 <div className="checkbox" key={id}>
                   <input
                     type="checkbox"
-                    id={id}
-                    name={id}
+                    id={`command-${id}`}
                     value={id}
                     onChange={() => handleCommandChange(id)}
                     defaultChecked={active}
                     className="checkbox__input"
                   />
-                  <label htmlFor={id} className="checkbox__label">
+                  <label htmlFor={`command-${id}`} className="checkbox__label">
                     {name_de}
                     <i className="checkbox__points">
                       {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
@@ -274,14 +273,14 @@ export const Unit = () => {
                   <div className="radio" key={id}>
                     <input
                       type="radio"
-                      id={id}
+                      id={`equipment-${id}`}
                       name="equipment"
                       value={id}
                       onChange={() => handleEquipmentChange(id)}
                       defaultChecked={active}
                       className="radio__input"
                     />
-                    <label htmlFor={id} className="radio__label">
+                    <label htmlFor={`equipment-${id}`} className="radio__label">
                       {name_de}
                       <i className="checkbox__points">
                         {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
@@ -300,14 +299,13 @@ export const Unit = () => {
                 <div className="checkbox" key={id}>
                   <input
                     type="checkbox"
-                    id={id}
-                    name={id}
+                    id={`mounts-${id}`}
                     value={id}
                     onChange={() => handleMountsChange(id)}
                     defaultChecked={active}
                     className="checkbox__input"
                   />
-                  <label htmlFor={id} className="checkbox__label">
+                  <label htmlFor={`mounts-${id}`} className="checkbox__label">
                     {name_de}
                     <i className="checkbox__points">{`${points} Pkte.`}</i>
                   </label>
@@ -322,14 +320,13 @@ export const Unit = () => {
                 <div className="checkbox" key={id}>
                   <input
                     type="checkbox"
-                    id={id}
-                    name={id}
+                    id={`options-${id}`}
                     value={id}
                     onChange={() => handleOptionsChange(id)}
                     defaultChecked={active}
                     className="checkbox__input"
                   />
-                  <label htmlFor={id} className="checkbox__label">
+                  <label htmlFor={`options-${id}`} className="checkbox__label">
                     {name_de}
                     <i className="checkbox__points">
                       {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
