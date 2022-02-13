@@ -18,6 +18,38 @@ import { setArmy } from "../../state/army";
 
 import "./Unit.css";
 
+const updateIds = (type) => {
+  return type.map((unit) => {
+    return {
+      ...unit,
+      command: unit.command
+        ? unit.command.map((commandData, index) => ({
+            ...commandData,
+            id: index,
+          }))
+        : null,
+      equipment: unit.equipment
+        ? unit.equipment.map((equipmentData, index) => ({
+            ...equipmentData,
+            id: index,
+          }))
+        : null,
+      mounts: unit.mounts
+        ? unit.mounts.map((mountsData, index) => ({
+            ...mountsData,
+            id: index,
+          }))
+        : null,
+      options: unit.options
+        ? unit.options.map((optionsData, index) => ({
+            ...optionsData,
+            id: index,
+          }))
+        : null,
+    };
+  });
+};
+
 export const Unit = () => {
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
@@ -138,7 +170,15 @@ export const Unit = () => {
       fetcher({
         url: `armies/${list.game}/${list.army}`,
         onSuccess: (data) => {
-          dispatch(setArmy(data));
+          dispatch(
+            setArmy({
+              lords: updateIds(data.lords),
+              heroes: updateIds(data.heroes),
+              core: updateIds(data.core),
+              special: updateIds(data.special),
+              rare: updateIds(data.rare),
+            })
+          );
         },
       });
   }, [list, unit, dispatch]);
@@ -187,7 +227,9 @@ export const Unit = () => {
             )}
           {unit.minimum && (
             <>
-              <label htmlFor="strength">Einheitengröße:</label>
+              <label htmlFor="strength" className="unit__strength">
+                Einheitengröße:
+              </label>
               <input
                 type="number"
                 id="strength"

@@ -174,19 +174,17 @@ export const Editor = () => {
           </header>
           <ul>
             {list.lords.map((unit, index) => (
-              <>
-                <List
-                  key={index}
-                  to={`/editor/${listId}/lords/${unit.id}`}
-                  className="editor__list"
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit.name_de}</b>
-                    <i>{`${getUnitPoints(unit)} Pkte.`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              </>
+              <List
+                key={index}
+                to={`/editor/${listId}/lords/${unit.id}`}
+                className="editor__list"
+              >
+                <div className="editor__list-inner">
+                  <b>{unit.name_de}</b>
+                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                </div>
+                {getAllOptions(unit)}
+              </List>
             ))}
           </ul>
           <Button
