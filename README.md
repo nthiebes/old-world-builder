@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Old World Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Army builder for Warhammer Fantasy and Warhammer: The Old World.
 
 ## Available Scripts
 
