@@ -6,6 +6,27 @@
   margin: 0 5px;
 }
 
+.editor__list a,
+.editor__list button {
+  display: block;
+}
+
+.editor__list p {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.editor__list-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editor__list-inner b {
+  margin-right: 0.5rem;
+}
+
 .editor__header {
   display: flex;
   justify-content: space-between;

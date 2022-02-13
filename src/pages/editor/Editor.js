@@ -30,6 +30,32 @@ const removeList = (listId) => {
 
   localStorage.setItem("lists", JSON.stringify(updatedLists));
 };
+const getAllOptions = ({ mounts, equipment, options, command }) => {
+  const allMounts = mounts
+    ? mounts.filter(({ active }) => active).map(({ name_de }) => name_de)
+    : [];
+  const allEquipment = equipment
+    ? equipment.filter(({ active }) => active).map(({ name_de }) => name_de)
+    : [];
+  const allOptions = options
+    ? options.filter(({ active }) => active).map(({ name_de }) => name_de)
+    : [];
+  const allCommand = command
+    ? command.filter(({ active }) => active).map(({ name_de }) => name_de)
+    : [];
+  const allOptionsArray = [
+    ...allCommand,
+    ...allEquipment,
+    ...allMounts,
+    ...allOptions,
+  ];
+  const allOptionsString = allOptionsArray.join(", ");
+
+  if (allOptionsString) {
+    return <p>{allOptionsString}</p>;
+  }
+  return null;
+};
 
 export const Editor = () => {
   const { listId } = useParams();
@@ -148,10 +174,19 @@ export const Editor = () => {
           </header>
           <ul>
             {list.lords.map((unit, index) => (
-              <List key={index} to={`/editor/${listId}/lords/${unit.id}`}>
-                <b>{unit.name_de}</b>
-                <i>{`${getUnitPoints(unit)} Pkte.`}</i>
-              </List>
+              <>
+                <List
+                  key={index}
+                  to={`/editor/${listId}/lords/${unit.id}`}
+                  className="editor__list"
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit.name_de}</b>
+                    <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              </>
             ))}
           </ul>
           <Button
@@ -184,9 +219,16 @@ export const Editor = () => {
           </header>
           <ul>
             {list.heroes.map((unit, index) => (
-              <List key={index} to={`/editor/${listId}/heroes/${unit.id}`}>
-                <b>{unit.name_de}</b>
-                <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+              <List
+                key={index}
+                to={`/editor/${listId}/heroes/${unit.id}`}
+                className="editor__list"
+              >
+                <div className="editor__list-inner">
+                  <b>{unit.name_de}</b>
+                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                </div>
+                {getAllOptions(unit)}
               </List>
             ))}
           </ul>
@@ -218,13 +260,20 @@ export const Editor = () => {
           </header>
           <ul>
             {list.core.map((unit, index) => (
-              <List key={index} to={`/editor/${listId}/core/${unit.id}`}>
-                <span>
-                  {(unit.strength || unit.minimum) &&
-                    `${unit.strength || unit.minimum} `}
-                  <b>{unit.name_de}</b>
-                </span>
-                <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+              <List
+                key={index}
+                to={`/editor/${listId}/core/${unit.id}`}
+                className="editor__list"
+              >
+                <div className="editor__list-inner">
+                  <span>
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                    <b>{unit.name_de}</b>
+                  </span>
+                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                </div>
+                {getAllOptions(unit)}
               </List>
             ))}
           </ul>
@@ -257,13 +306,20 @@ export const Editor = () => {
           </header>
           <ul>
             {list.special.map((unit, index) => (
-              <List key={index} to={`/editor/${listId}/special/${unit.id}`}>
-                <span>
-                  {(unit.strength || unit.minimum) &&
-                    `${unit.strength || unit.minimum} `}
-                  <b>{unit.name_de}</b>
-                </span>
-                <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+              <List
+                key={index}
+                to={`/editor/${listId}/special/${unit.id}`}
+                className="editor__list"
+              >
+                <div className="editor__list-inner">
+                  <span>
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                    <b>{unit.name_de}</b>
+                  </span>
+                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                </div>
+                {getAllOptions(unit)}
               </List>
             ))}
           </ul>
@@ -297,13 +353,20 @@ export const Editor = () => {
           </header>
           <ul>
             {list.rare.map((unit, index) => (
-              <List key={index} to={`/editor/${listId}/rare/${unit.id}`}>
-                <span>
-                  {(unit.strength || unit.minimum) &&
-                    `${unit.strength || unit.minimum} `}
-                  <b>{unit.name_de}</b>
-                </span>
-                <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+              <List
+                key={index}
+                to={`/editor/${listId}/rare/${unit.id}`}
+                className="editor__list"
+              >
+                <div className="editor__list-inner">
+                  <span>
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                    <b>{unit.name_de}</b>
+                  </span>
+                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                </div>
+                {getAllOptions(unit)}
               </List>
             ))}
           </ul>
