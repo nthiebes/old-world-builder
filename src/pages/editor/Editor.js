@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -57,7 +57,8 @@ const getAllOptions = ({ mounts, equipment, options, command }) => {
   return null;
 };
 
-export const Editor = () => {
+export const Editor = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
@@ -135,25 +136,27 @@ export const Editor = () => {
 
   return (
     <>
-      <Header
-        to="/"
-        headline={list.name}
-        subheadline={`${allPoints} / ${list.points} Pkte.`}
-        moreButton={[
-          {
-            name_de: "Bearbeiten",
-            icon: "edit",
-            to: `/editor/${listId}/edit`,
-          },
-          {
-            name_de: "Löschen",
-            icon: "delete",
-            callback: handleDelete,
-          },
-        ]}
-      />
+      {isMobile && (
+        <Header
+          to="/"
+          headline={list.name}
+          subheadline={`${allPoints} / ${list.points} Pkte.`}
+          moreButton={[
+            {
+              name_de: "Bearbeiten",
+              icon: "edit",
+              to: `/editor/${listId}/edit`,
+            },
+            {
+              name_de: "Löschen",
+              icon: "delete",
+              callback: handleDelete,
+            },
+          ]}
+        />
+      )}
 
-      <Main className="editor">
+      <MainComponent>
         <section className="editor__section">
           <header className="editor__header">
             <h2>Kommandanten</h2>
@@ -377,7 +380,7 @@ export const Editor = () => {
             Hinzufügen
           </Button>
         </section>
-      </Main>
+      </MainComponent>
     </>
   );
 };

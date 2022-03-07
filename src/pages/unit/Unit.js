@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -49,7 +49,8 @@ const updateIds = (type) => {
   });
 };
 
-export const Unit = () => {
+export const Unit = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(null);
@@ -198,25 +199,27 @@ export const Unit = () => {
   if (unit) {
     return (
       <>
-        <Header
-          to={`/editor/${listId}`}
-          moreButton={[
-            {
-              name_de: "Duplizieren",
-              icon: "duplicate",
-              callback: () => handleDuplicate(unit.id),
-            },
-            {
-              name_de: "Entfernen",
-              icon: "delete",
-              callback: () => handleRemove(unit.id),
-            },
-          ]}
-          headline={unit.name_de}
-          subheadline={`${getUnitPoints(unit)} Pkte.`}
-        />
+        {isMobile && (
+          <Header
+            to={`/editor/${listId}`}
+            moreButton={[
+              {
+                name_de: "Duplizieren",
+                icon: "duplicate",
+                callback: () => handleDuplicate(unit.id),
+              },
+              {
+                name_de: "Entfernen",
+                icon: "delete",
+                callback: () => handleRemove(unit.id),
+              },
+            ]}
+            headline={unit.name_de}
+            subheadline={`${getUnitPoints(unit)} Pkte.`}
+          />
+        )}
 
-        <Main className="unit">
+        <MainComponent>
           {!unit.minimum &&
             !unit.command &&
             !unit.equipment &&
@@ -329,6 +332,7 @@ export const Unit = () => {
                     <List
                       to={`/editor/${listId}/${type}/${unitId}/magic`}
                       className="unit__link"
+                      key={id}
                     >
                       <label
                         htmlFor={`options-${id}`}
@@ -365,16 +369,18 @@ export const Unit = () => {
               )}
             </>
           )}
-        </Main>
+        </MainComponent>
       </>
     );
   }
 
   return (
     <>
-      <Header to={`/editor/${listId}`} headline="Einheit auswählen" />
+      {isMobile && (
+        <Header to={`/editor/${listId}`} headline="Einheit auswählen" />
+      )}
 
-      <Main className="unit">
+      <MainComponent>
         <ul>
           {army[type].map(({ name_de, id, minimum, points }) => (
             <List key={id} onClick={() => handleAdd(id)}>
@@ -388,7 +394,7 @@ export const Unit = () => {
             </List>
           ))}
         </ul>
-      </Main>
+      </MainComponent>
     </>
   );
 };

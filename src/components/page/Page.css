@@ -8,6 +8,7 @@
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 2;
 }
@@ -43,6 +44,11 @@
   width: 54px;
 }
 
-.main {
-  padding: calc(62px + 1rem) 1rem 1rem 1rem;
+.mobile {
+  padding: 62px 1rem 1rem 1rem;
+  min-height: 100%;
+}
+
+.mobile strong {
+  margin: 0 5px;
 }

@@ -1,10 +1,14 @@
+import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Header, Main } from "../../components/page";
 import { updateList } from "../../state/lists";
 
-export const Edit = () => {
+import "./Edit.css";
+
+export const Edit = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
@@ -39,9 +43,11 @@ export const Edit = () => {
 
   return (
     <>
-      <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
+      {isMobile && (
+        <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
+      )}
 
-      <Main>
+      <MainComponent className="edit">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -62,7 +68,7 @@ export const Edit = () => {
           onChange={handlePointsChange}
           required
         />
-      </Main>
+      </MainComponent>
     </>
   );
 };

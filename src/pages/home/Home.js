@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { useSelector } from "react-redux";
 
 import { Button } from "../../components/button";
@@ -6,13 +7,15 @@ import { Header, Main } from "../../components/page";
 
 import "./Home.css";
 
-export const Home = () => {
+export const Home = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
 
   return (
     <>
-      <Header headline="Old World Builder" />
-      <Main className="home">
+      {isMobile && <Header headline="Old World Builder" />}
+
+      <MainComponent>
         {!lists.length && (
           <i className="home__empty">Noch keine Listen erstellt.</i>
         )}
@@ -39,7 +42,7 @@ export const Home = () => {
         <Button centered to="/new" icon="new-list" spaceTop>
           {"Neue Liste"}
         </Button>
-      </Main>
+      </MainComponent>
     </>
   );
 };

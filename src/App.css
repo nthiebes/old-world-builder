@@ -25,6 +25,11 @@
   padding: 0;
 }
 
+html,
+#root {
+  min-height: 100%;
+}
+
 input,
 select,
 textarea,
@@ -76,7 +81,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family);
-  height: 100%;
+  min-height: 100%;
   color: var(--color-font);
   font-weight: 400;
   background: var(--color-background);
@@ -195,4 +200,41 @@ p {
   margin-left: 0.5rem;
   text-align: right;
   white-space: nowrap;
+}
+
+.desktop {
+  display: flex;
+  justify-content: center;
+  padding-top: 62px;
+  min-height: 100%;
+}
+
+.desktop strong {
+  margin: 0 5px;
+}
+
+.column {
+  width: 25%;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.column::before {
+  content: "";
+  left: 1rem;
+  top: 0;
+  width: 2px;
+  position: absolute;
+  background-color: var(--color-list);
+  height: 100%;
+}
+
+.column::after {
+  content: "";
+  right: 1rem;
+  top: 0;
+  width: 2px;
+  position: absolute;
+  background-color: var(--color-list);
+  height: 100%;
 }

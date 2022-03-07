@@ -66,5 +66,5 @@ Header.propTypes = {
 };
 
 export const Main = ({ className, children }) => {
-  return <main className={classNames("main", className)}>{children}</main>;
+  return <main className={classNames("mobile", className)}>{children}</main>;
 };

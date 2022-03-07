@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -11,7 +11,8 @@ import { setLists } from "../../state/lists";
 
 import "./NewList.css";
 
-export const NewList = () => {
+export const NewList = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const dispatch = useDispatch();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState(gameSystems[0].id);
@@ -64,9 +65,9 @@ export const NewList = () => {
     <>
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
-      <Header to="/" headline="Neue Liste" />
+      {isMobile && <Header to="/" headline="Neue Liste" />}
 
-      <Main>
+      <MainComponent className="new-list">
         <form onSubmit={handleSubmit}>
           {gameSystems.map(({ name, id, enabled }) => (
             <div className="radio" key={id}>
@@ -123,7 +124,7 @@ export const NewList = () => {
             {"Liste anlegen"}
           </Button>
         </form>
-      </Main>
+      </MainComponent>
     </>
   );
 };

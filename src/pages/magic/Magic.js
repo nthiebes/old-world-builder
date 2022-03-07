@@ -30,7 +30,8 @@ const updateIds = (items) => {
   }));
 };
 
-export const Magic = () => {
+export const Magic = ({ isMobile }) => {
+  const MainComponent = isMobile ? Main : Fragment;
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
@@ -102,12 +103,14 @@ export const Magic = () => {
 
   return (
     <>
-      <Header
-        to={`/editor/${listId}/${type}/${unitId}`}
-        headline="Magische Gegenstände"
-      />
+      {isMobile && (
+        <Header
+          to={`/editor/${listId}/${type}/${unitId}`}
+          headline="Magische Gegenstände"
+        />
+      )}
 
-      <Main className="magic">
+      <MainComponent>
         {items.map((item) => (
           <Fragment key={item.name_de}>
             <h2 className="unit__subline">{item.name_de}</h2>
@@ -132,7 +135,7 @@ export const Magic = () => {
             ))}
           </Fragment>
         ))}
-      </Main>
+      </MainComponent>
     </>
   );
 };
