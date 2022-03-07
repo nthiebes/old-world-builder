@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import PropTypes from "prop-types";
 
 import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints } from "../../utils/points";
@@ -316,25 +315,54 @@ export const Unit = () => {
           {unit.options && unit.options.length > 0 && (
             <>
               <h2 className="unit__subline">Optionen:</h2>
-              {unit.options.map(({ name_de, points, perModel, id, active }) => (
-                <div className="checkbox" key={id}>
-                  <input
-                    type="checkbox"
-                    id={`options-${id}`}
-                    value={id}
-                    onChange={() => handleOptionsChange(id)}
-                    defaultChecked={active}
-                    className="checkbox__input"
-                  />
-                  <label htmlFor={`options-${id}`} className="checkbox__label">
-                    {name_de}
-                    <i className="checkbox__points">
-                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                      {perModel && ` pro Modell`}
-                    </i>
-                  </label>
-                </div>
-              ))}
+              {unit.options.map(
+                ({
+                  name_de,
+                  points,
+                  perModel,
+                  id,
+                  active,
+                  magicItems,
+                  maxPoints,
+                }) =>
+                  magicItems ? (
+                    <List
+                      to={`/editor/${listId}/${type}/${unitId}/magic`}
+                      className="unit__link"
+                    >
+                      <label
+                        htmlFor={`options-${id}`}
+                        className="checkbox__label"
+                      >
+                        {name_de}
+                        <i className="checkbox__points">
+                          {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                        </i>
+                      </label>
+                    </List>
+                  ) : (
+                    <div className="checkbox" key={id}>
+                      <input
+                        type="checkbox"
+                        id={`options-${id}`}
+                        value={id}
+                        onChange={() => handleOptionsChange(id)}
+                        defaultChecked={active}
+                        className="checkbox__input"
+                      />
+                      <label
+                        htmlFor={`options-${id}`}
+                        className="checkbox__label"
+                      >
+                        {name_de}
+                        <i className="checkbox__points">
+                          {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                          {perModel && ` pro Modell`}
+                        </i>
+                      </label>
+                    </div>
+                  )
+              )}
             </>
           )}
         </Main>
@@ -363,9 +391,4 @@ export const Unit = () => {
       </Main>
     </>
   );
-};
-
-Unit.propTypes = {
-  onClose: PropTypes.func,
-  unitData: PropTypes.object,
 };

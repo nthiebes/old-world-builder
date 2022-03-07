@@ -2,29 +2,27 @@
   {
     "id": "warhammer-fantasy",
     "name": "Warhammer Fantasy",
+    "enabled": true,
     "armies": [
       {
         "id": "greenskins",
-        "name": "Orks & Goblins"
+        "name_de": "Orks & Goblins",
+        "items": ["greenskins", "general"]
       },
       {
         "id": "dwarfs",
-        "name": "Zwerge"
+        "name_de": "Zwerge"
       },
       {
         "id": "empire",
-        "name": "Das Imperium"
+        "name_de": "Das Imperium"
       }
     ]
   },
   {
     "id": "the-old-world",
-    "name": "Warhammer: The Old World",
-    "armies": [
-      {
-        "id": "greenskins",
-        "name": "Orks & Goblins"
-      }
-    ]
+    "name_de": "Warhammer: The Old World",
+    "enabled": false,
+    "armies": []
   }
 ]

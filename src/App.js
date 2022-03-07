@@ -7,6 +7,7 @@ import { Editor } from "./pages/editor";
 import { Home } from "./pages/home";
 import { Unit } from "./pages/unit";
 import { Edit } from "./pages/edit";
+import { Magic } from "./pages/magic";
 import { setLists } from "./state/lists";
 
 import "./App.css";
@@ -25,6 +26,7 @@ export const App = () => {
       <Switch>
         <Route path="/editor/:listId/edit">{<Edit />}</Route>
         <Route path="/editor/:listId/add/:type">{<Unit />}</Route>
+        <Route path="/editor/:listId/:type/:unitId/magic">{<Magic />}</Route>
         <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>
         <Route path="/editor/:listId">{<Editor />}</Route>
         <Route path="/new">{<NewList />}</Route>

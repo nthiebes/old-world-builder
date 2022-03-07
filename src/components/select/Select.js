@@ -35,9 +35,9 @@ export const Select = ({
         className
       )}
     >
-      {options.map(({ name, id: optionValue }) => (
+      {options.map(({ name_de, id: optionValue }) => (
         <option key={optionValue} value={optionValue}>
-          {name}
+          {name_de}
         </option>
       ))}
     </select>

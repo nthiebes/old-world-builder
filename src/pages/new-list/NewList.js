@@ -68,7 +68,7 @@ export const NewList = () => {
 
       <Main>
         <form onSubmit={handleSubmit}>
-          {gameSystems.map(({ name, id }) => (
+          {gameSystems.map(({ name, id, enabled }) => (
             <div className="radio" key={id}>
               <input
                 type="radio"
@@ -78,6 +78,7 @@ export const NewList = () => {
                 onChange={handleSystemChange}
                 defaultChecked={id === "warhammer-fantasy"}
                 className="radio__input"
+                disabled={!enabled}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
@@ -116,6 +117,7 @@ export const NewList = () => {
             onChange={handleArmyChange}
             selected="warhammer-fantasy"
             spaceBottom
+            required
           />
           <Button centered icon="add-list">
             {"Liste anlegen"}
