@@ -12,16 +12,24 @@ export const Header = ({
   subheadline,
   moreButton,
   to,
+  isSection,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const Component = isSection ? "section" : "header";
 
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <header className={classNames("header", className)}>
-      {to && <Button type="text" to={to} label="Zurück" icon="back" />}
+    <Component
+      className={classNames(isSection ? "column-header" : "header", className)}
+    >
+      {to ? (
+        <Button type="text" to={to} label="Zurück" icon="back" />
+      ) : (
+        <>{moreButton && <div className="header__empty-icon" />}</>
+      )}
       <div className="header__text">
         {headline && <h1 className="header__name">{headline}</h1>}
         {subheadline && <p className="header__points">{subheadline}</p>}
@@ -29,6 +37,7 @@ export const Header = ({
       {moreButton ? (
         <Button
           type="text"
+          color={isSection ? "dark" : "light"}
           label="Mehr Optionen"
           icon="more"
           onClick={handleMenuClick}
@@ -52,7 +61,7 @@ export const Header = ({
           ))}
         </ul>
       )}
-    </header>
+    </Component>
   );
 };
 
@@ -63,6 +72,7 @@ Header.propTypes = {
   subheadline: PropTypes.string,
   children: PropTypes.node,
   moreButton: PropTypes.array,
+  isSection: PropTypes.bool,
 };
 
 export const Main = ({ className, children }) => {

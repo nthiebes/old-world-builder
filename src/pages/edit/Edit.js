@@ -48,6 +48,7 @@ export const Edit = ({ isMobile }) => {
       )}
 
       <MainComponent className="edit">
+        {!isMobile && <Header isSection headline="Liste bearbeiten" />}
         <label htmlFor="name">Name:</label>
         <input
           type="text"

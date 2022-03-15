@@ -20,13 +20,20 @@ export const Home = ({ isMobile }) => {
           <i className="home__empty">Noch keine Listen erstellt.</i>
         )}
         <ul>
-          {lists.map(({ id, name, points, game }, index) => (
+          {lists.map(({ id, name, points, game, army }, index) => (
             <List key={index} to={`/editor/${id}`}>
               <span className="home__list-item">
                 <h2 className="home__headline">{name}</h2>
                 <p>{points} Pkte.</p>
               </span>
-              {game === "warhammer-fantasy" && (
+              <img
+                className="home__icon"
+                height="40"
+                width="40"
+                src={`/icons/${army}.svg`}
+                alt=""
+              />
+              {/* {game === "warhammer-fantasy" && (
                 <img height="20" src={`/${game}.png`} alt="Warhammer Fantasy" />
               )}
               {game === "the-old-world" && (
@@ -35,7 +42,7 @@ export const Home = ({ isMobile }) => {
                   src={`/${game}.png`}
                   alt="Warhammer: The Old World"
                 />
-              )}
+              )} */}
             </List>
           ))}
         </ul>

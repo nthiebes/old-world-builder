@@ -13,6 +13,17 @@
   z-index: 2;
 }
 
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  align-items: flex-start;
+  position: relative;
+  width: calc(100% + 2rem);
+  margin: 0 -1rem 1rem -1rem;
+}
+
 .header__text {
   text-align: center;
   white-space: nowrap;
@@ -23,6 +34,10 @@
 
 .header__text * {
   color: var(--color-font-light);
+}
+
+.column-header .header__text * {
+  color: var(--color-font-dark);
 }
 
 .header__name {

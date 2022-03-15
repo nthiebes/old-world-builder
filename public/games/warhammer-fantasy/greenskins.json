@@ -888,7 +888,84 @@
       "name_de": "Schwarzorks",
       "name_en": "",
       "points": 12,
-      "minimum": 10
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magisches Banner",
+          "maxPoints": 50,
+          "maxBanners": 1
+        },
+        {
+          "name_de": "Schilde",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "ork-boarboys",
+      "name_de": "Ork-Wildschweinreiter",
+      "name_en": "",
+      "points": 16,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Speere",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_de": "Magisches Banner",
+          "maxPoints": 50,
+          "maxBanners": 1
+        },
+        {
+          "name_de": "Moschaz",
+          "points": 4,
+          "perModel": true
+        }
+      ]
     }
   ],
   "rare": [

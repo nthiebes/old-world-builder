@@ -6,6 +6,7 @@
 
 .home__list-item {
   overflow-x: hidden;
+  flex-grow: 1;
 }
 
 .home__headline {
@@ -13,4 +14,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 0.5rem;
+}
+
+.home__icon {
+  /* margin-right: 0.5rem; */
 }

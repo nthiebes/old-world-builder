@@ -168,7 +168,7 @@ export const Unit = ({ isMobile }) => {
     list &&
       !unit &&
       fetcher({
-        url: `armies/${list.game}/${list.army}`,
+        url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
           dispatch(
             setArmy({
@@ -220,6 +220,25 @@ export const Unit = ({ isMobile }) => {
         )}
 
         <MainComponent>
+          {!isMobile && (
+            <Header
+              isSection
+              headline={unit.name_de}
+              subheadline={`${getUnitPoints(unit)} Pkte.`}
+              moreButton={[
+                {
+                  name_de: "Duplizieren",
+                  icon: "duplicate",
+                  callback: () => handleDuplicate(unit.id),
+                },
+                {
+                  name_de: "Entfernen",
+                  icon: "delete",
+                  callback: () => handleRemove(unit.id),
+                },
+              ]}
+            />
+          )}
           {!unit.minimum &&
             !unit.command &&
             !unit.equipment &&

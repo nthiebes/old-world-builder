@@ -75,7 +75,7 @@ export const Magic = ({ isMobile }) => {
   useEffect(() => {
     army &&
       fetcher({
-        url: `armies/${list.game}/magic-items`,
+        url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
           const allItems = army.items.map((item) => {
             return {
@@ -111,6 +111,7 @@ export const Magic = ({ isMobile }) => {
       )}
 
       <MainComponent>
+        {!isMobile && <Header isSection headline="Magische Gegenstände" />}
         {items.map((item) => (
           <Fragment key={item.name_de}>
             <h2 className="unit__subline">{item.name_de}</h2>

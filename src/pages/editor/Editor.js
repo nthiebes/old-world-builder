@@ -157,6 +157,25 @@ export const Editor = ({ isMobile }) => {
       )}
 
       <MainComponent>
+        {!isMobile && (
+          <Header
+            isSection
+            headline={list.name}
+            subheadline={`${allPoints} / ${list.points} Pkte.`}
+            moreButton={[
+              {
+                name_de: "Bearbeiten",
+                icon: "edit",
+                to: `/editor/${listId}/edit`,
+              },
+              {
+                name_de: "Löschen",
+                icon: "delete",
+                callback: handleDelete,
+              },
+            ]}
+          />
+        )}
         <section className="editor__section">
           <header className="editor__header">
             <h2>Kommandanten</h2>

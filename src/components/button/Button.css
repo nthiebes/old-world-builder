@@ -80,6 +80,16 @@
   transform: translateX(-50%);
 }
 
+.button--text.button--dark {
+  color: var(--color-font);
+}
+
+@media (hover: hover) {
+  .button--text.button--dark:hover {
+    color: var(--color-button);
+  }
+}
+
 .button__icon {
   margin-right: 0.5rem;
 }
