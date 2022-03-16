@@ -30,7 +30,7 @@ const removeList = (listId) => {
 
   localStorage.setItem("lists", JSON.stringify(updatedLists));
 };
-const getAllOptions = ({ mounts, equipment, options, command }) => {
+const getAllOptions = ({ mounts, equipment, options, command, magic }) => {
   const allMounts = mounts
     ? mounts.filter(({ active }) => active).map(({ name_de }) => name_de)
     : [];
@@ -43,11 +43,15 @@ const getAllOptions = ({ mounts, equipment, options, command }) => {
   const allCommand = command
     ? command.filter(({ active }) => active).map(({ name_de }) => name_de)
     : [];
+  const allMagicItems = magic?.items
+    ? magic.items.map(({ name_de }) => name_de)
+    : [];
   const allOptionsArray = [
     ...allCommand,
     ...allEquipment,
     ...allMounts,
     ...allOptions,
+    ...allMagicItems,
   ];
   const allOptionsString = allOptionsArray.join(", ");
 

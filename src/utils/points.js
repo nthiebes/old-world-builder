@@ -38,6 +38,11 @@ export const getUnitPoints = (unit) => {
       }
     });
   }
+  if (unit?.magic?.items) {
+    unit.magic.items.forEach((option) => {
+      unitPoints += option.points;
+    });
+  }
 
   return unitPoints;
 };

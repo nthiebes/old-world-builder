@@ -39,33 +39,39 @@ export const Magic = ({ isMobile }) => {
   );
   const army =
     list &&
-    gameSystems
-      .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => list.army);
+    gameSystems.find(({ id }) => id === list.game).armies.find(() => list.army);
   const items = useSelector((state) => state.items);
+  const units = list ? list[type] : null;
+  const unit = units && units.find(({ id }) => id === unitId);
 
-  const handleMagicChange = (blubb) => {
-    const magic = items.map((item) => ({
-      ...item,
-      items: item.items.map((bla) => {
-        if (bla.id === blubb.id && bla.name_de === blubb.name_de) {
-          return {
-            ...bla,
-            active: bla.active ? false : true,
-          };
-        }
-        return bla;
-      }),
-    }));
+  const handleMagicChange = (event, magicItem) => {
+    let magicItems;
 
-    // dispatch(
-    //   editUnit({
-    //     listId,
-    //     type,
-    //     unitId,
-    //     magic,
-    //   })
-    // );
+    if (event.target.checked) {
+      magicItems = [
+        ...(unit?.magic?.items || []),
+        {
+          ...magicItem,
+          id: event.target.value,
+        },
+      ];
+    } else {
+      magicItems = unit.magic.items.filter(
+        ({ id }) => id !== event.target.value
+      );
+    }
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        magic: {
+          ...unit.magic,
+          items: magicItems,
+        },
+      })
+    );
   };
 
   useEffect(() => {
@@ -74,6 +80,7 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     army &&
+      !items &&
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
@@ -84,12 +91,13 @@ export const Magic = ({ isMobile }) => {
               id: item,
             };
           });
+
           dispatch(setItems(updateIds(allItems)));
         },
       });
-  }, [army, dispatch, list]);
+  }, [army, dispatch, list, items]);
 
-  if (!items) {
+  if (!items || !unit) {
     return (
       <>
         <Header
@@ -121,22 +129,28 @@ export const Magic = ({ isMobile }) => {
         {items.map((item) => (
           <Fragment key={item.name_de}>
             <h2 className="unit__subline">{item.name_de}</h2>
-            {item.items.map((bla) => (
-              <div className="checkbox" key={bla.id}>
+            {item.items.map((magicItem) => (
+              <div className="checkbox" key={magicItem.id}>
                 <input
                   type="checkbox"
-                  id={`${item.id}-${bla.id}`}
-                  value={bla.id}
-                  onChange={() => handleMagicChange(bla)}
-                  defaultChecked={bla.active}
+                  id={`${item.id}-${magicItem.id}`}
+                  value={`${item.id}-${magicItem.id}`}
+                  onChange={(event) => handleMagicChange(event, magicItem)}
+                  defaultChecked={
+                    unit?.magic?.items
+                      ? unit.magic.items.find(
+                          ({ id }) => id === `${item.id}-${magicItem.id}`
+                        )
+                      : false
+                  }
                   className="checkbox__input"
                 />
                 <label
-                  htmlFor={`${item.id}-${bla.id}`}
+                  htmlFor={`${item.id}-${magicItem.id}`}
                   className="checkbox__label"
                 >
-                  {bla.name_de}
-                  <i className="checkbox__points">{`${bla.points} Pkte.`}</i>
+                  {magicItem.name_de}
+                  <i className="checkbox__points">{`${magicItem.points} Pkte.`}</i>
                 </label>
               </div>
             ))}
