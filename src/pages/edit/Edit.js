@@ -48,7 +48,13 @@ export const Edit = ({ isMobile }) => {
       )}
 
       <MainComponent className="edit">
-        {!isMobile && <Header isSection headline="Liste bearbeiten" />}
+        {!isMobile && (
+          <Header
+            isSection
+            to={`/editor/${listId}`}
+            headline="Liste bearbeiten"
+          />
+        )}
         <label htmlFor="name">Name:</label>
         <input
           type="text"

@@ -223,6 +223,7 @@ export const Unit = ({ isMobile }) => {
           {!isMobile && (
             <Header
               isSection
+              to={`/editor/${listId}`}
               headline={unit.name_de}
               subheadline={`${getUnitPoints(unit)} Pkte.`}
               moreButton={[

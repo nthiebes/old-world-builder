@@ -25,11 +25,6 @@
   padding: 0;
 }
 
-html,
-#root {
-  min-height: 100%;
-}
-
 input,
 select,
 textarea,
@@ -133,6 +128,24 @@ p {
   color: var(--color-font);
 }
 
+a,
+a:visited {
+  text-decoration: underline;
+  color: var(--color-headline);
+  transition: color 0.2s linear;
+}
+
+a:focus,
+a:active {
+  color: var(--color-button);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-button);
+  }
+}
+
 .radio {
   margin: 0 0 0.5rem 0;
   display: flex;
@@ -200,17 +213,6 @@ p {
   margin-left: 0.5rem;
   text-align: right;
   white-space: nowrap;
-}
-
-.desktop {
-  display: flex;
-  justify-content: center;
-  padding-top: 62px;
-  min-height: 100%;
-}
-
-.desktop strong {
-  margin: 0 5px;
 }
 
 .column {

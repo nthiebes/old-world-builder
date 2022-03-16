@@ -68,7 +68,7 @@ export const NewList = ({ isMobile }) => {
       {isMobile && <Header to="/" headline="Neue Liste" />}
 
       <MainComponent className="new-list">
-        {!isMobile && <Header isSection headline="Neue Liste" />}
+        {!isMobile && <Header isSection to="/" headline="Neue Liste" />}
         <form onSubmit={handleSubmit}>
           {gameSystems.map(({ name, id, enabled }) => (
             <div className="radio" key={id}>

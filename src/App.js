@@ -9,7 +9,7 @@ import { Unit } from "./pages/unit";
 import { Edit } from "./pages/edit";
 import { Magic } from "./pages/magic";
 import { setLists } from "./state/lists";
-import { Header } from "./components/page";
+import { Header, Main } from "./components/page";
 
 import "./App.css";
 
@@ -51,7 +51,7 @@ export const App = () => {
         <Switch>
           <Route path="/">
             <Header headline="Old World Builder" />
-            <main className="desktop">
+            <Main isDesktop>
               <section className="column">
                 <Home />
               </section>
@@ -73,7 +73,7 @@ export const App = () => {
                   {<Magic />}
                 </Route>
               </section>
-            </main>
+            </Main>
           </Route>
         </Switch>
       )}

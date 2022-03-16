@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import { Button } from "../../components/button";
 
@@ -26,7 +27,13 @@ export const Header = ({
       className={classNames(isSection ? "column-header" : "header", className)}
     >
       {to ? (
-        <Button type="text" to={to} label="Zurück" icon="back" />
+        <Button
+          type="text"
+          to={to}
+          label={isSection ? "Schließen" : "Zurück"}
+          color={isSection ? "dark" : "light"}
+          icon={isSection ? "close" : "back"}
+        />
       ) : (
         <>{moreButton && <div className="header__empty-icon" />}</>
       )}
@@ -75,6 +82,37 @@ Header.propTypes = {
   isSection: PropTypes.bool,
 };
 
-export const Main = ({ className, children }) => {
-  return <main className={classNames("mobile", className)}>{children}</main>;
+export const Main = ({ className, children, isDesktop }) => {
+  return (
+    <>
+      <main
+        className={classNames(
+          "main",
+          isDesktop ? "main--desktop" : "main--mobile",
+          className
+        )}
+      >
+        {children}
+      </main>
+      <footer className="footer">
+        <nav>
+          <Link to="/about">Über OWB</Link>
+          <Link to="/help">Hilfe</Link>
+          <a
+            href="https://github.com/nthiebes/old-world-builder/issues"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fehler melden
+          </a>
+        </nav>
+      </footer>
+    </>
+  );
+};
+
+Main.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  isDesktop: PropTypes.bool,
 };

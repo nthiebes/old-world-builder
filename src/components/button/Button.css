@@ -15,23 +15,25 @@
   white-space: nowrap;
 }
 
-.button--primary {
+.button--primary,
+.button--primary:visited {
   background-color: var(--color-button);
   color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--primary:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+    color: var(--color-font);
   }
 }
 
 .button--primary:focus,
 .button--primary:active {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  color: var(--color-font);
 }
 
-.button--secondary {
+.button--secondary,
+.button--secondary:visited {
   background-color: var(--color-error);
   color: var(--color-font-light);
 }
@@ -47,20 +49,21 @@
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
 }
 
-.button--text {
+.button--text,
+.button--text:visited {
   background-color: transparent;
   color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--text:hover {
-    color: var(--color-font);
+    color: var(--color-button);
   }
 }
 
 .button--text:focus,
 .button--text:active {
-  color: var(--color-font);
+  color: var(--color-button);
 }
 
 .button--spaceBottom {

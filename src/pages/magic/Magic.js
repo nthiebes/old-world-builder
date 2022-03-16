@@ -111,7 +111,13 @@ export const Magic = ({ isMobile }) => {
       )}
 
       <MainComponent>
-        {!isMobile && <Header isSection headline="Magische Gegenstände" />}
+        {!isMobile && (
+          <Header
+            isSection
+            to={`/editor/${listId}/${type}/${unitId}`}
+            headline="Magische Gegenstände"
+          />
+        )}
         {items.map((item) => (
           <Fragment key={item.name_de}>
             <h2 className="unit__subline">{item.name_de}</h2>

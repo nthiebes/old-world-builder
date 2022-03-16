@@ -160,6 +160,7 @@ export const Editor = ({ isMobile }) => {
         {!isMobile && (
           <Header
             isSection
+            to="/"
             headline={list.name}
             subheadline={`${allPoints} / ${list.points} Pkte.`}
             moreButton={[
