@@ -75,6 +75,19 @@
   min-height: 100vh;
 }
 
+.main--compact {
+  max-width: 650px;
+  margin: 2rem auto;
+}
+
+.main--compact h2 {
+  margin-top: 2rem;
+}
+
+.main--compact p {
+  margin-bottom: 1rem;
+}
+
 .footer {
   padding: 1rem;
   border-top: 2px solid var(--color-list);

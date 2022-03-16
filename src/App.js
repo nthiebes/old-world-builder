@@ -8,6 +8,8 @@ import { Home } from "./pages/home";
 import { Unit } from "./pages/unit";
 import { Edit } from "./pages/edit";
 import { Magic } from "./pages/magic";
+import { About } from "./pages/about";
+import { Help } from "./pages/help";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -45,10 +47,13 @@ export const App = () => {
           </Route>
           <Route path="/editor/:listId">{<Editor isMobile />}</Route>
           <Route path="/new">{<NewList isMobile />}</Route>
+          <Route path="/about">{<About />}</Route>
           <Route path="/">{<Home isMobile />}</Route>
         </Switch>
       ) : (
         <Switch>
+          <Route path="/about">{<About />}</Route>
+          <Route path="/help">{<Help />}</Route>
           <Route path="/">
             <Header headline="Old World Builder" />
             <Main isDesktop>

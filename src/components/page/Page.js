@@ -82,13 +82,14 @@ Header.propTypes = {
   isSection: PropTypes.bool,
 };
 
-export const Main = ({ className, children, isDesktop }) => {
+export const Main = ({ className, children, isDesktop, compact }) => {
   return (
     <>
       <main
         className={classNames(
           "main",
           isDesktop ? "main--desktop" : "main--mobile",
+          compact && "main--compact",
           className
         )}
       >
@@ -98,6 +99,7 @@ export const Main = ({ className, children, isDesktop }) => {
         <nav>
           <Link to="/about">Über OWB</Link>
           <Link to="/help">Hilfe</Link>
+          {/* <Link to="/news">Neues</Link> */}
           <a
             href="https://github.com/nthiebes/old-world-builder/issues"
             target="_blank"
