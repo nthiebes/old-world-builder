@@ -23,7 +23,16 @@ export const Home = ({ isMobile }) => {
 
       <MainComponent>
         {!lists.length && (
-          <i className="home__empty">Erstelle jetzt deine erste Liste.</i>
+          <>
+            <img
+              src="/logo-dark.svg"
+              alt=""
+              width="100"
+              height="100"
+              className="home__logo"
+            />
+            <i className="home__empty">Erstelle jetzt deine erste Liste.</i>
+          </>
         )}
         <ul>
           {lists.map(({ id, name, points, game, army }, index) => (
@@ -37,7 +46,6 @@ export const Home = ({ isMobile }) => {
                 <p>{points} Pkte.</p>
               </span>
               <img
-                className="home__icon"
                 height="40"
                 width="40"
                 src={`/army-icons/${army}.svg`}
