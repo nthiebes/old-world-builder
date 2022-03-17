@@ -99,7 +99,21 @@ export const Magic = ({ isMobile }) => {
   }, [army, dispatch, list, items]);
 
   if (!items || !unit) {
-    return <Main loading />;
+    if (isMobile) {
+      return (
+        <>
+          <Header to={`/editor/${listId}/${type}/${unitId}`} />
+          <Main loading />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Header to={`/editor/${listId}/${type}/${unitId}`} isSection />
+          <Main loading />
+        </>
+      );
+    }
   }
 
   return (

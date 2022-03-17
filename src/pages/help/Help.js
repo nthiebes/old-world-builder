@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { Header, Main } from "../../components/page";
+import { Button } from "../../components/button";
 
 export const Help = () => {
   const location = useLocation();
@@ -15,7 +16,9 @@ export const Help = () => {
       <Header headline="Old World Builder" />
 
       <Main compact>
-        <Link to="/">Zurück zur Startseite</Link>
+        <Button to="/" icon="home">
+          Zur Startseite
+        </Button>
 
         <h2>Hilfe</h2>
         <p>

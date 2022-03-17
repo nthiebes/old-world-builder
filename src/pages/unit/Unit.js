@@ -196,7 +196,21 @@ export const Unit = ({ isMobile }) => {
   }
 
   if (!unit && !army) {
-    return <Main loading />;
+    if (isMobile) {
+      return (
+        <>
+          <Header to={`/editor/${listId}`} />
+          <Main loading />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Header to={`/editor/${listId}`} isSection />
+          <Main loading />
+        </>
+      );
+    }
   }
 
   if (unit) {
@@ -365,7 +379,7 @@ export const Unit = ({ isMobile }) => {
             <List
               to={`/editor/${listId}/${type}/${unitId}/magic`}
               className="editor__list unit__link"
-              active={location.pathname.includes(unit.id)}
+              active={location.pathname.includes("magic")}
             >
               <div className="editor__list-inner">
                 <b>{"Magische Gegenstände"}</b>
@@ -390,6 +404,13 @@ export const Unit = ({ isMobile }) => {
       )}
 
       <MainComponent>
+        {!isMobile && (
+          <Header
+            isSection
+            to={`/editor/${listId}`}
+            headline="Einheit auswählen"
+          />
+        )}
         <ul>
           {army[type].map(({ name_de, id, minimum, points }) => (
             <List key={id} onClick={() => handleAdd(id)}>

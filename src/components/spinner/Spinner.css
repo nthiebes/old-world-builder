@@ -1,7 +1,13 @@
 .spinner {
   animation: 1s linear infinite rotate;
   display: block;
-  margin: 0 auto;
+  margin: 4rem auto;
+}
+
+@media (min-width: 1280px) {
+  .spinner {
+    margin: 1rem auto;
+  }
 }
 
 @keyframes rotate {

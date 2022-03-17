@@ -98,7 +98,21 @@ export const Editor = ({ isMobile }) => {
   }
 
   if (!list) {
-    return <Main loading />;
+    if (isMobile) {
+      return (
+        <>
+          <Header to="/" />
+          <Main loading />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Header to="/" isSection />
+          <Main loading />
+        </>
+      );
+    }
   }
 
   const lordsPoints = getPoints("lords");
