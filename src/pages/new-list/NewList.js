@@ -1,5 +1,5 @@
-import { useState, Fragment } from "react";
-import { Redirect } from "react-router-dom";
+import { useState, useEffect, Fragment } from "react";
+import { useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Button } from "../../components/button";
@@ -13,6 +13,7 @@ import "./NewList.css";
 
 export const NewList = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
+  const location = useLocation();
   const dispatch = useDispatch();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState(gameSystems[0].id);
@@ -60,6 +61,10 @@ export const NewList = ({ isMobile }) => {
     event.preventDefault();
     createList();
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>

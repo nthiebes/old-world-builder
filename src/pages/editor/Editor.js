@@ -87,7 +87,7 @@ export const Editor = ({ isMobile }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [listId]);
+  }, [location.pathname]);
 
   useEffect(() => {
     list && updateList(list);

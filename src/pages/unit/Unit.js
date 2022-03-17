@@ -169,7 +169,7 @@ export const Unit = ({ isMobile }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [unitId]);
+  }, [location.pathname]);
 
   useEffect(() => {
     list &&

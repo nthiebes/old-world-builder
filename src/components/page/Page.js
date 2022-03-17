@@ -17,7 +17,6 @@ export const Header = ({
 }) => {
   const [showMenu, setShowMenu] = useState(false);
   const Component = isSection ? "section" : "header";
-
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };

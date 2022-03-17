@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
@@ -12,6 +12,10 @@ export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>

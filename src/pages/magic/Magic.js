@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
@@ -32,6 +32,7 @@ const updateIds = (items) => {
 
 export const Magic = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
+  const location = useLocation();
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
@@ -76,7 +77,7 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [unitId]);
+  }, [location.pathname]);
 
   useEffect(() => {
     army &&

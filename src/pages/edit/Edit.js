@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { useParams } from "react-router-dom";
+import { Fragment, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Header, Main } from "../../components/page";
@@ -8,6 +8,7 @@ import { updateList } from "../../state/lists";
 import "./Edit.css";
 
 export const Edit = ({ isMobile }) => {
+  const location = useLocation();
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
   const dispatch = useDispatch();
@@ -31,6 +32,10 @@ export const Edit = ({ isMobile }) => {
       })
     );
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   if (!list) {
     return (
