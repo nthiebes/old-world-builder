@@ -19,9 +19,9 @@ export const getMaxPercentData = ({ type, armyPoints, points }) => {
   const maxPoints = (armyPoints / 100) * maxPercent;
 
   return {
-    points: maxPoints,
+    points: Math.floor(maxPoints),
     overLimit: points > maxPoints,
-    diff: points > maxPoints ? points - maxPoints : 0,
+    diff: points > maxPoints ? Math.ceil(points - maxPoints) : 0,
   };
 };
 
@@ -30,8 +30,8 @@ export const getMinPercentData = ({ type, armyPoints, points }) => {
   const minPoints = (armyPoints / 100) * minPercent;
 
   return {
-    points: minPoints,
+    points: Math.floor(minPoints),
     overLimit: points <= minPoints,
-    diff: points <= minPoints ? minPoints - points : 0,
+    diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
   };
 };
