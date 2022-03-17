@@ -54,8 +54,8 @@ export const About = () => {
 
         <h2>Eure Unterstützung</h2>
         <p>
-          <i>Old World Builder</i> ist Open-Source. Ihr findet das Projekt auf
-          GitHub:{" "}
+          Der <i>Old World Builder</i> ist Open-Source. Ihr findet das Projekt
+          auf GitHub:{" "}
           <a
             href="https://github.com/nthiebes/old-world-builder"
             target="_blank"

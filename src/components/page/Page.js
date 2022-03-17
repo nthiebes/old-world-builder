@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { Button } from "../../components/button";
 import { Spinner } from "../../components/spinner";
@@ -16,11 +16,16 @@ export const Header = ({
   to,
   isSection,
 }) => {
+  const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const Component = isSection ? "section" : "header";
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [location.pathname]);
 
   return (
     <Component
