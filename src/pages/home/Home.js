@@ -23,7 +23,7 @@ export const Home = ({ isMobile }) => {
 
       <MainComponent>
         {!lists.length && (
-          <i className="home__empty">Noch keine Listen erstellt.</i>
+          <i className="home__empty">Erstelle jetzt deine erste Liste.</i>
         )}
         <ul>
           {lists.map(({ id, name, points, game, army }, index) => (

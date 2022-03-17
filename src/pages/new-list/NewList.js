@@ -126,7 +126,7 @@ export const NewList = ({ isMobile }) => {
             spaceBottom
             required
           />
-          <Button centered icon="add-list">
+          <Button centered icon="add-list" submitButton>
             {"Liste anlegen"}
           </Button>
         </form>

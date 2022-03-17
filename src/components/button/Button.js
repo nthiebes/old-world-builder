@@ -20,8 +20,18 @@ export const Button = ({
   icon,
   centered,
   color,
+  submitButton,
 }) => {
   const Component = to ? Link : "button";
+  const buttonProps = {};
+
+  if (!to) {
+    if (submitButton) {
+      buttonProps.type = "submit";
+    } else {
+      buttonProps.type = "button";
+    }
+  }
 
   return (
     <Component
@@ -39,6 +49,7 @@ export const Button = ({
       to={to}
       aria-label={label}
       title={label}
+      {...buttonProps}
     >
       {icon && (
         <Icon
@@ -63,6 +74,7 @@ Button.propTypes = {
   centered: PropTypes.bool,
   icon: PropTypes.string,
   color: PropTypes.string,
+  submitButton: PropTypes.bool,
 };
 
 Button.defaultProps = {
