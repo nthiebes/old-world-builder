@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { Button } from "../../components/button";
+import { Spinner } from "../../components/spinner";
 
 import "./Page.css";
 
@@ -81,7 +82,7 @@ Header.propTypes = {
   isSection: PropTypes.bool,
 };
 
-export const Main = ({ className, children, isDesktop, compact }) => {
+export const Main = ({ className, children, isDesktop, compact, loading }) => {
   return (
     <>
       <main
@@ -93,21 +94,24 @@ export const Main = ({ className, children, isDesktop, compact }) => {
         )}
       >
         {children}
+        {loading && <Spinner />}
       </main>
-      <footer className="footer">
-        <nav>
-          <Link to="/about">Über OWB</Link>
-          <Link to="/help">Hilfe</Link>
-          {/* <Link to="/news">Neues</Link> */}
-          <a
-            href="https://github.com/nthiebes/old-world-builder/issues"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Fehler melden
-          </a>
-        </nav>
-      </footer>
+      {!loading && (
+        <footer className="footer">
+          <nav>
+            <Link to="/about">Über OWB</Link>
+            <Link to="/help">Hilfe</Link>
+            {/* <Link to="/news">Neues</Link> */}
+            <a
+              href="https://github.com/nthiebes/old-world-builder/issues"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Fehler melden
+            </a>
+          </nav>
+        </footer>
+      )}
     </>
   );
 };

@@ -99,15 +99,7 @@ export const Magic = ({ isMobile }) => {
   }, [army, dispatch, list, items]);
 
   if (!items || !unit) {
-    return (
-      <>
-        <Header
-          headline="Magische Gegenstände"
-          to={`/editor/${listId}/${type}/${unitId}`}
-        />
-        <Main></Main>
-      </>
-    );
+    return <Main loading />;
   }
 
   return (

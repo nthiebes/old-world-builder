@@ -195,12 +195,7 @@ export const Unit = ({ isMobile }) => {
   }
 
   if (!unit && !army) {
-    return (
-      <>
-        <Header to={`/editor/${listId}`} />
-        <Main></Main>
-      </>
-    );
+    return <Main loading />;
   }
 
   if (unit) {
