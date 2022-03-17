@@ -4,18 +4,40 @@
   padding-right: 1rem;
 }
 
-.number-input__button {
-  position: absolute;
-  right: 0;
-  height: auto;
-  border: 0 none;
-  padding: 2px;
+@media (max-width: 1279px) {
+  .number-input {
+    padding-right: 6rem;
+  }
+
+  .number-input__button {
+    position: absolute;
+    top: 8px;
+    padding: 0.6rem;
+  }
+
+  .number-input__button--up {
+    right: 0;
+  }
+
+  .number-input__button--down {
+    right: 55px;
+  }
 }
 
-.number-input__button--up {
-  top: 0;
-}
+@media (min-width: 1280px) {
+  .number-input__button {
+    position: absolute;
+    right: 0;
+    height: auto;
+    border: 0 none;
+    padding: 2px;
+  }
 
-.number-input__button--down {
-  top: 28px;
+  .number-input__button--up {
+    top: 0;
+  }
+
+  .number-input__button--down {
+    top: 28px;
+  }
 }
