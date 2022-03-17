@@ -93,6 +93,11 @@
   }
 }
 
+.button--text.button--dark:focus,
+.button--text.button--dark:active {
+  color: var(--color-button);
+}
+
 .button__icon {
   margin-right: 0.5rem;
 }

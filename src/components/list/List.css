@@ -70,3 +70,19 @@
 .list button:active {
   color: var(--color-font);
 }
+
+@media (min-width: 1280px) {
+  .list--active::after {
+    content: "";
+    position: absolute;
+    right: calc(-1rem - 30px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--color-list);
+  }
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
@@ -54,6 +54,7 @@ export const Unit = ({ isMobile }) => {
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(null);
+  const location = useLocation();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -161,9 +162,10 @@ export const Unit = ({ isMobile }) => {
     );
   };
 
-  unit?.magic?.items.forEach((option) => {
-    magicPoints += option.points;
-  });
+  unit?.magic?.items &&
+    unit?.magic?.items.forEach((option) => {
+      magicPoints += option.points;
+    });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -343,50 +345,42 @@ export const Unit = ({ isMobile }) => {
           {unit.options && unit.options.length > 0 && (
             <>
               <h2 className="unit__subline">Optionen:</h2>
-              {unit.options.map(
-                ({
-                  name_de,
-                  points,
-                  perModel,
-                  id,
-                  active,
-                  magicItems,
-                  maxPoints,
-                }) => (
-                  <div className="checkbox" key={id}>
-                    <input
-                      type="checkbox"
-                      id={`options-${id}`}
-                      value={id}
-                      onChange={() => handleOptionsChange(id)}
-                      defaultChecked={active}
-                      className="checkbox__input"
-                    />
-                    <label
-                      htmlFor={`options-${id}`}
-                      className="checkbox__label"
-                    >
-                      {name_de}
-                      <i className="checkbox__points">
-                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                        {perModel && ` pro Modell`}
-                      </i>
-                    </label>
-                  </div>
-                )
-              )}
+              {unit.options.map(({ name_de, points, perModel, id, active }) => (
+                <div className="checkbox" key={id}>
+                  <input
+                    type="checkbox"
+                    id={`options-${id}`}
+                    value={id}
+                    onChange={() => handleOptionsChange(id)}
+                    defaultChecked={active}
+                    className="checkbox__input"
+                  />
+                  <label htmlFor={`options-${id}`} className="checkbox__label">
+                    {name_de}
+                    <i className="checkbox__points">
+                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                      {perModel && ` pro Modell`}
+                    </i>
+                  </label>
+                </div>
+              ))}
             </>
           )}
           {unit?.magic && (
             <List
               to={`/editor/${listId}/${type}/${unitId}/magic`}
               className="editor__list unit__link"
+              active={location.pathname.includes(unit.id)}
             >
               <div className="editor__list-inner">
                 <b>{"Magische Gegenstände"}</b>
                 <i className="checkbox__points">{`${magicPoints} Pkte.`}</i>
               </div>
-              <p>{unit.magic.items.map(({ name_de }) => name_de).join(", ")}</p>
+              {unit.magic.items && (
+                <p>
+                  {unit.magic.items.map(({ name_de }) => name_de).join(", ")}
+                </p>
+              )}
             </List>
           )}
         </MainComponent>

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
@@ -10,6 +11,7 @@ import "./Home.css";
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
+  const location = useLocation();
 
   return (
     <>
@@ -21,7 +23,11 @@ export const Home = ({ isMobile }) => {
         )}
         <ul>
           {lists.map(({ id, name, points, game, army }, index) => (
-            <List key={index} to={`/editor/${id}`}>
+            <List
+              key={index}
+              to={`/editor/${id}`}
+              active={location.pathname.includes(id)}
+            >
               <span className="home__list-item">
                 <h2 className="home__headline">{name}</h2>
                 <p>{points} Pkte.</p>

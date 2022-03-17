@@ -1,5 +1,5 @@
 import { useEffect, useState, Fragment } from "react";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
@@ -66,6 +66,7 @@ export const Editor = ({ isMobile }) => {
   const { listId } = useParams();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
+  const location = useLocation();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -205,6 +206,7 @@ export const Editor = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${listId}/lords/${unit.id}`}
                 className="editor__list"
+                active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
                   <b>{unit.name_de}</b>
@@ -248,6 +250,7 @@ export const Editor = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${listId}/heroes/${unit.id}`}
                 className="editor__list"
+                active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
                   <b>{unit.name_de}</b>
@@ -289,6 +292,7 @@ export const Editor = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${listId}/core/${unit.id}`}
                 className="editor__list"
+                active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
                   <span>
@@ -335,6 +339,7 @@ export const Editor = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${listId}/special/${unit.id}`}
                 className="editor__list"
+                active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
                   <span>
@@ -382,6 +387,7 @@ export const Editor = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${listId}/rare/${unit.id}`}
                 className="editor__list"
+                active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
                   <span>
