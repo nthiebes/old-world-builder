@@ -68,7 +68,7 @@ export const listsSlice = createSlice({
             ...list,
             [type]: [
               ...list[type],
-              { ...unit, id: `${unit.id}.${getRandomId()}` },
+              { ...unit, id: `${unit.id.split(".")[0]}.${getRandomId()}` },
             ],
           };
         }
