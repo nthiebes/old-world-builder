@@ -19,9 +19,9 @@ export const About = () => {
 
         <h2>Was ist der "Old World Builder"?</h2>
         <p>
-          Der <i>Old World Builder</i> ist eine Armeebau-Hilfe für die Tabletop
-          Spiele Warhammer Fantasy und Warhammer: The Old World von Games
-          Workshop.
+          Der <i>Old World Builder</i> ist eine Armeebau-Hilfe für die Games
+          Workshop Tabletop Spiele Warhammer Fantasy und Warhammer: The Old
+          World.
         </p>
         <p>
           Das Projekt ist Open-Source und wird entwickelt von Nico Thiebes (
