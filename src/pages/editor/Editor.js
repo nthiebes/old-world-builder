@@ -286,7 +286,7 @@ export const Editor = ({ isMobile }) => {
               {coreData.diff > 0 ? (
                 <>
                   <>
-                    Es fehlen<strong>{coreData.diff}</strong> Pkte.
+                    <strong>{coreData.diff}</strong> Pkte. fehlen
                     <Icon symbol="error" color="red" />
                   </>
                 </>

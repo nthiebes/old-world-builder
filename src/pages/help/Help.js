@@ -16,7 +16,7 @@ export const Help = () => {
       <Header headline="Old World Builder" />
 
       <Main compact>
-        <Button to="/" icon="home">
+        <Button to="/" icon="home" centered>
           Zur Startseite
         </Button>
 
