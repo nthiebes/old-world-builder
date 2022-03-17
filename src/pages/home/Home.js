@@ -40,7 +40,7 @@ export const Home = ({ isMobile }) => {
                 className="home__icon"
                 height="40"
                 width="40"
-                src={`/icons/${army}.svg`}
+                src={`/army-icons/${army}.svg`}
                 alt=""
               />
               {/* {game === "warhammer-fantasy" && (
