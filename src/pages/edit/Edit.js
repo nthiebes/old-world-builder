@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Header, Main } from "../../components/page";
+import { NumberInput } from "../../components/number-input";
 import { updateList } from "../../state/lists";
 
 import "./Edit.css";
@@ -52,7 +53,7 @@ export const Edit = ({ isMobile }) => {
         <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
       )}
 
-      <MainComponent className="edit">
+      <MainComponent>
         {!isMobile && (
           <Header
             isSection
@@ -60,7 +61,9 @@ export const Edit = ({ isMobile }) => {
             headline="Liste bearbeiten"
           />
         )}
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name" className="edit__label">
+          Name:
+        </label>
         <input
           type="text"
           id="name"
@@ -71,8 +74,7 @@ export const Edit = ({ isMobile }) => {
           required
         />
         <label htmlFor="points">Punkte:</label>
-        <input
-          type="number"
+        <NumberInput
           id="points"
           className="input"
           min={0}

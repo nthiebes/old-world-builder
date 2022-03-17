@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints } from "../../utils/points";
 import { List } from "../../components/list";
+import { NumberInput } from "../../components/number-input";
 import { Header, Main } from "../../components/page";
 import {
   addUnit,
@@ -254,8 +255,7 @@ export const Unit = ({ isMobile }) => {
               <label htmlFor="strength" className="unit__strength">
                 Einheitengröße:
               </label>
-              <input
-                type="number"
+              <NumberInput
                 id="strength"
                 className="input"
                 min={unit.minimum}

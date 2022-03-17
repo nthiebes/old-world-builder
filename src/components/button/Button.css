@@ -34,19 +34,19 @@
 
 .button--secondary,
 .button--secondary:visited {
-  background-color: var(--color-error);
+  background-color: var(--color-header);
   color: var(--color-font-light);
 }
 
 @media (hover: hover) {
   .button--secondary:hover {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+    color: var(--color-button);
   }
 }
 
 .button--secondary:focus,
 .button--secondary:active {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  color: var(--color-button);
 }
 
 .button--text,

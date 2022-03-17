@@ -1,0 +1,21 @@
+.number-input {
+  display: flex;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.number-input__button {
+  position: absolute;
+  right: 0;
+  height: auto;
+  border: 0 none;
+  padding: 0;
+}
+
+.number-input__button--up {
+  top: 0;
+}
+
+.number-input__button--down {
+  top: 32px;
+}

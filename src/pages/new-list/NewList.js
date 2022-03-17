@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
 import { Header, Main } from "../../components/page";
-import { Select } from "../../components/select/Select";
+import { Select } from "../../components/select";
+import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../data/armies.json";
 import { setLists } from "../../state/lists";
 
@@ -72,9 +73,9 @@ export const NewList = ({ isMobile }) => {
 
       {isMobile && <Header to="/" headline="Neue Liste" />}
 
-      <MainComponent className="new-list">
+      <MainComponent>
         {!isMobile && <Header isSection to="/" headline="Neue Liste" />}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="new-list">
           {gameSystems.map(({ name, id, enabled }) => (
             <div className="radio" key={id}>
               <input
@@ -108,8 +109,7 @@ export const NewList = ({ isMobile }) => {
             required
           />
           <label htmlFor="points">Punkte:</label>
-          <input
-            type="number"
+          <NumberInput
             id="points"
             className="input"
             min={0}
