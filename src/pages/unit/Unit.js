@@ -9,6 +9,8 @@ import { NumberInput } from "../../components/number-input";
 import { Header, Main } from "../../components/page";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 
+import "./Unit.css";
+
 export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type, unitId } = useParams();

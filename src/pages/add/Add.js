@@ -55,7 +55,7 @@ export const Add = ({ isMobile }) => {
   const handleAdd = (unitId) => {
     const unit = {
       ...army[type].find(({ id }) => unitId === id),
-      unitId: getRandomId(),
+      id: `${unitId}.${getRandomId()}`,
     };
 
     dispatch(addUnit({ listId, type, unit }));
