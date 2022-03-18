@@ -1,0 +1,53 @@
+/* @media print { */
+.print {
+  font-size: 14px;
+}
+
+.print h1 {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.print h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.print ul {
+  margin-left: 0.5rem;
+}
+
+.print li {
+  margin-bottom: 1rem;
+}
+
+.print__points {
+  margin-left: 5px;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+.print__subheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-font);
+  padding-bottom: 1rem;
+}
+
+.print-footer {
+  padding-top: 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-font);
+}
+
+.print-footer p {
+  text-align: center;
+}
+/* } */

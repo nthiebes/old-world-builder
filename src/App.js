@@ -11,6 +11,8 @@ import { Magic } from "./pages/magic";
 import { About } from "./pages/about";
 import { Add } from "./pages/add";
 import { Help } from "./pages/help";
+import { Export } from "./pages/export";
+import { Print } from "./pages/print";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -39,6 +41,7 @@ export const App = () => {
       {isMobile ? (
         <Switch>
           <Route path="/editor/:listId/edit">{<Edit isMobile />}</Route>
+          <Route path="/editor/:listId/export">{<Export isMobile />}</Route>
           <Route path="/editor/:listId/add/:type">{<Add isMobile />}</Route>
           <Route path="/editor/:listId/:type/:unitId/magic">
             {<Magic isMobile />}
@@ -50,12 +53,14 @@ export const App = () => {
           <Route path="/new">{<NewList isMobile />}</Route>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/">{<Home isMobile />}</Route>
         </Switch>
       ) : (
         <Switch>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/">
             <Header headline="Old World Builder" />
             <Main isDesktop>
@@ -71,6 +76,7 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/editor/:listId/edit">{<Edit />}</Route>
+                  <Route path="/editor/:listId/export">{<Export />}</Route>
                   <Route path="/editor/:listId/add/:type">{<Add />}</Route>
                   <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>
                 </Switch>

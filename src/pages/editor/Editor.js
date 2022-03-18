@@ -3,12 +3,14 @@ import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
-import { getUnitPoints } from "../../utils/points";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { deleteList } from "../../state/lists";
+import { printList } from "../../utils/print";
+import { getAllOptions } from "../../utils/unit";
+import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 
 import "./Editor.css";
 
@@ -30,36 +32,6 @@ const removeList = (listId) => {
 
   localStorage.setItem("lists", JSON.stringify(updatedLists));
 };
-const getAllOptions = ({ mounts, equipment, options, command, magic }) => {
-  const allMounts = mounts
-    ? mounts.filter(({ active }) => active).map(({ name_de }) => name_de)
-    : [];
-  const allEquipment = equipment
-    ? equipment.filter(({ active }) => active).map(({ name_de }) => name_de)
-    : [];
-  const allOptions = options
-    ? options.filter(({ active }) => active).map(({ name_de }) => name_de)
-    : [];
-  const allCommand = command
-    ? command.filter(({ active }) => active).map(({ name_de }) => name_de)
-    : [];
-  const allMagicItems = magic?.items
-    ? magic.items.map(({ name_de }) => name_de)
-    : [];
-  const allOptionsArray = [
-    ...allCommand,
-    ...allEquipment,
-    ...allMounts,
-    ...allOptions,
-    ...allMagicItems,
-  ];
-  const allOptionsString = allOptionsArray.join(", ");
-
-  if (allOptionsString) {
-    return <p>{allOptionsString}</p>;
-  }
-  return null;
-};
 
 export const Editor = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -71,15 +43,7 @@ export const Editor = ({ isMobile }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const getPoints = (type) => {
-    let points = 0;
 
-    list[type].forEach((unit) => {
-      points += getUnitPoints(unit);
-    });
-
-    return points;
-  };
   const handleDelete = () => {
     dispatch(deleteList(listId));
     removeList(listId);
@@ -116,13 +80,12 @@ export const Editor = ({ isMobile }) => {
     }
   }
 
-  const lordsPoints = getPoints("lords");
-  const heroesPoints = getPoints("heroes");
-  const corePoints = getPoints("core");
-  const specialPoints = getPoints("special");
-  const rarePoints = getPoints("rare");
-  const allPoints =
-    lordsPoints + heroesPoints + corePoints + specialPoints + rarePoints;
+  const allPoints = getAllPoints(list);
+  const lordsPoints = getPoints({ list, type: "lords" });
+  const heroesPoints = getPoints({ list, type: "heroes" });
+  const corePoints = getPoints({ list, type: "core" });
+  const specialPoints = getPoints({ list, type: "special" });
+  const rarePoints = getPoints({ list, type: "rare" });
   const lordsData = getMaxPercentData({
     type: "lords",
     armyPoints: list.points,
@@ -148,6 +111,28 @@ export const Editor = ({ isMobile }) => {
     armyPoints: list.points,
     points: rarePoints,
   });
+  const moreButtons = [
+    {
+      name_de: "Bearbeiten",
+      icon: "edit",
+      to: `/editor/${listId}/edit`,
+    },
+    {
+      name_de: "Löschen",
+      icon: "delete",
+      callback: handleDelete,
+    },
+    // {
+    //   name_de: "Exportieren",
+    //   icon: "export",
+    //   to: `/editor/${listId}/export`,
+    // },
+    {
+      name_de: "Drucken",
+      icon: "print",
+      callback: () => printList(`#/print/${listId}`),
+    },
+  ];
 
   return (
     <>
@@ -156,18 +141,7 @@ export const Editor = ({ isMobile }) => {
           to="/"
           headline={list.name}
           subheadline={`${allPoints} / ${list.points} Pkte.`}
-          moreButton={[
-            {
-              name_de: "Bearbeiten",
-              icon: "edit",
-              to: `/editor/${listId}/edit`,
-            },
-            {
-              name_de: "Löschen",
-              icon: "delete",
-              callback: handleDelete,
-            },
-          ]}
+          moreButton={moreButtons}
         />
       )}
 
@@ -178,18 +152,7 @@ export const Editor = ({ isMobile }) => {
             to="/"
             headline={list.name}
             subheadline={`${allPoints} / ${list.points} Pkte.`}
-            moreButton={[
-              {
-                name_de: "Bearbeiten",
-                icon: "edit",
-                to: `/editor/${listId}/edit`,
-              },
-              {
-                name_de: "Löschen",
-                icon: "delete",
-                callback: handleDelete,
-              },
-            ]}
+            moreButton={moreButtons}
           />
         )}
         <section>

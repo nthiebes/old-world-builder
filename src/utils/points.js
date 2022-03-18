@@ -46,3 +46,23 @@ export const getUnitPoints = (unit) => {
 
   return unitPoints;
 };
+
+export const getPoints = ({ type, list }) => {
+  let points = 0;
+
+  list[type].forEach((unit) => {
+    points += getUnitPoints(unit);
+  });
+
+  return points;
+};
+
+export const getAllPoints = (list) => {
+  const lordsPoints = getPoints({ list, type: "lords" });
+  const heroesPoints = getPoints({ list, type: "heroes" });
+  const corePoints = getPoints({ list, type: "core" });
+  const specialPoints = getPoints({ list, type: "special" });
+  const rarePoints = getPoints({ list, type: "rare" });
+
+  return lordsPoints + heroesPoints + corePoints + specialPoints + rarePoints;
+};

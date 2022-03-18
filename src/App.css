@@ -96,13 +96,13 @@ body {
 }
 
 ::-moz-selection {
-  color: var(--color-light);
-  background-color: var(--color-button);
+  color: var(--color-font-light);
+  background-color: var(--color-header);
 }
 
 ::selection {
-  color: var(--color-light);
-  background-color: var(--color-button);
+  color: var(--color-font-light);
+  background-color: var(--color-header);
 }
 
 h1 {
@@ -118,6 +118,16 @@ h2 {
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--color-headline);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-headline);
+}
+
+ul {
+  list-style: none;
 }
 
 strong {
