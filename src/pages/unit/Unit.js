@@ -206,6 +206,7 @@ export const Unit = ({ isMobile }) => {
               id="strength"
               className="input"
               min={unit.minimum}
+              max={unit.maximum}
               value={unit.strength}
               onChange={handleStrengthChange}
               required

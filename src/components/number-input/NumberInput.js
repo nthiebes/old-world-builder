@@ -32,6 +32,7 @@ export const NumberInput = (props) => {
         type="secondary"
         icon="up"
         label="Erhöhen"
+        disabled={props.value >= props.max}
         className="number-input__button number-input__button--up"
       />
       <Button
