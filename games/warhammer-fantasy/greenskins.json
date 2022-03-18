@@ -1,0 +1,934 @@
+{
+  "lords": [
+    {
+      "id": "gorbad",
+      "name_de": "Gorbad Eisenfaust",
+      "name_en": "",
+      "points": 375,
+      "named": true
+    },
+    {
+      "id": "azhag",
+      "name_de": "Azhag der Vernichter",
+      "name_en": "",
+      "points": 550,
+      "named": true
+    },
+    {
+      "id": "grimgor",
+      "name_de": "Grimgork Eisenpelz",
+      "name_en": "Grimgor Ironhide",
+      "points": 355,
+      "named": true
+    },
+    {
+      "id": "wurrzag",
+      "name_de": "Wurrzag, da Prophet des Gross'n Grün",
+      "name_en": "",
+      "points": 350,
+      "named": true,
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        }
+      ]
+    },
+    {
+      "id": "grom",
+      "name_de": "Grom der Fettsack vom Nebelberg",
+      "name_en": "",
+      "points": 285,
+      "named": true
+    },
+    {
+      "id": "skarsnik",
+      "name_de": "Skarsnik, Waaaghboss der Acht Gipfel",
+      "name_en": "",
+      "points": 275,
+      "named": true
+    },
+    {
+      "id": "ork-whaaaghboss",
+      "name_de": "Ork-Waaaghboss",
+      "name_en": "",
+      "points": 115,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "savage-whaaaghboss",
+      "name_de": "Wildork-Waaaghboss",
+      "name_en": "",
+      "points": 150,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "name_de": "Lindwurm",
+          "points": 160
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "blork-whaaaghboss",
+      "name_de": "Schwarzork-Waaaghboss",
+      "name_en": "",
+      "points": 160,
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "goblin-whaaaghboss",
+      "name_de": "Goblin-Waaaghboss",
+      "name_en": "",
+      "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Riesenwolf",
+          "points": 18
+        },
+        {
+          "name_de": "Riesenspinne",
+          "points": 22
+        },
+        {
+          "name_de": "Gigantula",
+          "points": 22
+        },
+        {
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "nightgobline-whaaaghboss",
+      "name_de": "Nachtgoblin-Waaaghboss",
+      "name_en": "",
+      "points": 55,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 3
+        },
+        {
+          "name_de": "Leichte Rüstung",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Höhlensquig",
+          "points": 40
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "ork-grossschamane",
+      "name_de": "Ork-Grossschamane",
+      "name_en": "",
+      "points": 165,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "name_de": "Lindwurm",
+          "points": 160
+        },
+        {
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "savage-grossschamane",
+      "name_de": "Wildork-Grossschamane",
+      "name_en": "",
+      "points": 170,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 24
+        },
+        {
+          "name_de": "Lindwurm",
+          "points": 160
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "goblin-grossschamane",
+      "name_de": "Goblin-Grossschamane",
+      "name_en": "",
+      "points": 145,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Riesenwolf",
+          "points": 18
+        },
+        {
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        },
+        {
+          "name_de": "Arachnarok-Spinne",
+          "points": 290
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "nightgoblin-grossschamane",
+      "name_de": "Nachtgoblin-Grossschamane",
+      "name_en": "",
+      "points": 140,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    }
+  ],
+  "heroes": [
+    {
+      "id": "gitilla",
+      "name_de": "Gitilla da Jäga",
+      "name_en": "",
+      "points": 110
+    },
+    {
+      "id": "snagla",
+      "name_de": "Snagla Madenspucka",
+      "name_en": "",
+      "points": 115
+    },
+    {
+      "id": "ork-gargboss",
+      "name_de": "Ork-Gargboss",
+      "name_en": "",
+      "points": 55,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 16
+        },
+        {
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "savage-gargboss",
+      "name_de": "Wildork-Gargboss",
+      "name_en": "",
+      "points": 75,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 2
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "blork-gargboss",
+      "name_de": "Schwarzork-Gargboss",
+      "name_en": "",
+      "points": 90,
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 16
+        },
+        {
+          "name_de": "Ork-Wildschweinstreitwagen",
+          "points": 85
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "goblin-gargboss",
+      "name_de": "Goblin-Gargboss",
+      "name_en": "",
+      "points": 30,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        },
+        {
+          "name_de": "Kurzbogen",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Leichte Rüstung",
+          "points": 2
+        },
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Riesenwolf",
+          "points": 12
+        },
+        {
+          "name_de": "Riesenspinne",
+          "points": 15
+        },
+        {
+          "name_de": "Gigantula",
+          "points": 15
+        },
+        {
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "nightgoblin-gargboss",
+      "name_de": "Nachtgoblin-Gargboss",
+      "name_en": "",
+      "points": 30,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 4
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "points": 2
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "points": 2
+        },
+        {
+          "name_de": "Kurzbogen",
+          "points": 2
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Leichte Rüstung",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Höhlensquig",
+          "points": 50
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "ork-schamane",
+      "name_de": "Ork-Schamane",
+      "name_en": "",
+      "points": 65,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "savage-schamane",
+      "name_de": "Wildork-Schamane",
+      "name_en": "",
+      "points": 70,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Wildschwein",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "goblin-schamane",
+      "name_de": "Goblin-Schamane",
+      "name_en": "",
+      "points": 55,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Riesenwolf",
+          "points": 12
+        },
+        {
+          "name_de": "Goblin-Wolfsstreitwagen",
+          "points": 50
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "nightgoblin-schamane",
+      "name_de": "Nachtgoblin-Schamane",
+      "name_en": "",
+      "points": 50,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "id": "orks",
+      "name_de": "Ork-Krieger",
+      "name_en": "",
+      "points": 6,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Speere",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Moschaz",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_de": "Magisches Banner",
+          "magicBanner": true,
+          "maxPoints": 50,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "ork-arrow",
+      "name_de": "Ork-Bogenschützen",
+      "name_en": "",
+      "points": 7,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "savageorks",
+      "name_de": "Wildorks",
+      "name_en": "",
+      "points": 8,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Speere",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Bögen",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Große Spießaz",
+          "points": 20
+        },
+        {
+          "name_de": "Moschaz",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": "blackorks",
+      "name_de": "Schwarzorks",
+      "name_en": "",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magisches Banner",
+          "maxPoints": 50,
+          "maxBanners": 1
+        },
+        {
+          "name_de": "Schilde",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "ork-boarboys",
+      "name_de": "Ork-Wildschweinreiter",
+      "name_en": "",
+      "points": 16,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Boss",
+          "points": 15
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Speere",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_de": "Magisches Banner",
+          "maxPoints": 50,
+          "maxBanners": 1
+        },
+        {
+          "name_de": "Moschaz",
+          "points": 4,
+          "perModel": true
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "id": "doomdiver",
+      "name_de": "Kamikazekatapult",
+      "name_en": "",
+      "points": 80
+    }
+  ]
+}
