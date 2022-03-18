@@ -4,8 +4,7 @@
   position: relative;
 }
 
-.list a::before,
-.list button::before {
+.list__inner::before {
   content: "";
   position: absolute;
   top: 0;
@@ -18,8 +17,7 @@
   opacity: 0;
 }
 
-.list a,
-.list button {
+.list__inner {
   text-decoration: none;
   width: calc(100% + 2rem);
   padding: 1rem;
@@ -32,42 +30,29 @@
   margin: 0 -1rem;
   color: var(--color-font);
   text-align: left;
-  /* background: var(--color-list); */
   background-color: transparent;
-  /* background: linear-gradient(
-    90deg,
-    var(--color-list) 0%,
-    rgba(232, 221, 203, 1) 50%,
-    var(--color-list) 100%
-  ); */
   border-bottom: 2px solid var(--color-list);
 }
 
 @media (hover: hover) {
-  .list a:hover::before,
-  .list button:hover::before {
+  .list__inner:hover::before {
     opacity: 1;
   }
 }
 
 @media (hover: hover) {
-  .list a:hover,
-  .list button:hover {
+  .list__inner:hover {
     color: var(--color-font);
   }
 }
 
-.list a:focus::before,
-.list a:active::before,
-.list button:focus::before,
-.list button:active::before {
+.list__inner:focus::before,
+.list__inner:active::before {
   opacity: 1;
 }
 
-.list a:focus,
-.list button:focus,
-.list a:active,
-.list button:active {
+.list__inner:focus,
+.list__inner:focus {
   color: var(--color-font);
 }
 
