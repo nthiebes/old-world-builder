@@ -97,15 +97,10 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleMountsChange = (id) => {
-    const mounts = unit.mounts.map((option) => {
-      if (option.id === id) {
-        return {
-          ...option,
-          active: option.active ? false : true,
-        };
-      }
-      return option;
-    });
+    const mounts = unit.mounts.map((item) => ({
+      ...item,
+      active: item.id === id ? true : false,
+    }));
 
     dispatch(
       editUnit({
@@ -166,9 +161,9 @@ export const Unit = ({ isMobile }) => {
             },
           ]}
           headline={unit.name_de}
-          subheadline={`${getUnitPoints(unit)} Pkte. (${
-            unit.points
-          } pro Modell)`}
+          subheadline={`${getUnitPoints(unit)} Pkte.${
+            unit.minimum ? ` (${unit.points} pro Modell)` : ""
+          }`}
         />
       )}
 
@@ -178,9 +173,9 @@ export const Unit = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}`}
             headline={unit.name_de}
-            subheadline={`${getUnitPoints(unit)} Pkte. (${
-              unit.points
-            } pro Modell)`}
+            subheadline={`${getUnitPoints(unit)} Pkte.${
+              unit.minimum ? ` (${unit.points} pro Modell)` : ""
+            }`}
             moreButton={[
               {
                 name_de: "Duplizieren",
@@ -270,27 +265,6 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
-        {unit.mounts && unit.mounts.length > 0 && (
-          <>
-            <h2 className="unit__subline">Reittier:</h2>
-            {unit.mounts.map(({ name_de, points, id, active = false }) => (
-              <div className="checkbox" key={id}>
-                <input
-                  type="checkbox"
-                  id={`mounts-${id}`}
-                  value={id}
-                  onChange={() => handleMountsChange(id)}
-                  checked={active}
-                  className="checkbox__input"
-                />
-                <label htmlFor={`mounts-${id}`} className="checkbox__label">
-                  {name_de}
-                  <i className="checkbox__points">{`${points} Pkte.`}</i>
-                </label>
-              </div>
-            ))}
-          </>
-        )}
         {unit.options && unit.options.length > 0 && (
           <>
             <h2 className="unit__subline">Optionen:</h2>
@@ -315,6 +289,28 @@ export const Unit = ({ isMobile }) => {
                 </div>
               )
             )}
+          </>
+        )}
+        {unit.mounts && unit.mounts.length > 0 && (
+          <>
+            <h2 className="unit__subline">Reittier:</h2>
+            {unit.mounts.map(({ name_de, points, id, active = false }) => (
+              <div className="radio" key={id}>
+                <input
+                  type="radio"
+                  id={`mounts-${id}`}
+                  name="mounts"
+                  value={id}
+                  onChange={() => handleMountsChange(id)}
+                  checked={active}
+                  className="radio__input"
+                />
+                <label htmlFor={`mounts-${id}`} className="radio__label">
+                  {name_de}
+                  <i className="checkbox__points">{`${points} Pkte.`}</i>
+                </label>
+              </div>
+            ))}
           </>
         )}
         {unit?.magic && (
