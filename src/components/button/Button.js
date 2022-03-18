@@ -21,6 +21,7 @@ export const Button = ({
   centered,
   color,
   submitButton,
+  disabled,
 }) => {
   const Component = to ? Link : "button";
   const buttonProps = {};
@@ -38,17 +39,19 @@ export const Button = ({
       className={classNames(
         "button",
         `button--${type}`,
-        `button--${color}`,
+        color && `button--${color}`,
         spaceBottom && "button--spaceBottom",
         spaceTop && "button--spaceTop",
         fullWidth && "button--fullWidth",
         centered && "button--centered",
+        disabled && "button--disabled",
         className
       )}
       onClick={onClick}
       to={to}
       aria-label={label}
       title={label}
+      disabled={disabled}
       {...buttonProps}
     >
       {icon && (
@@ -75,6 +78,7 @@ Button.propTypes = {
   icon: PropTypes.string,
   color: PropTypes.string,
   submitButton: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {

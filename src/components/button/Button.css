@@ -83,6 +83,11 @@
   transform: translateX(-50%);
 }
 
+.button--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .button--text.button--dark {
   color: var(--color-font);
 }

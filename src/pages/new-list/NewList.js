@@ -86,7 +86,7 @@ export const NewList = ({ isMobile }) => {
                 name="new-list"
                 value={id}
                 onChange={handleSystemChange}
-                defaultChecked={id === "warhammer-fantasy"}
+                checked={id === "warhammer-fantasy"}
                 className="radio__input"
                 disabled={!enabled}
               />

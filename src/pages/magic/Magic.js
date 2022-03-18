@@ -143,11 +143,11 @@ export const Magic = ({ isMobile }) => {
                   id={`${item.id}-${magicItem.id}`}
                   value={`${item.id}-${magicItem.id}`}
                   onChange={(event) => handleMagicChange(event, magicItem)}
-                  defaultChecked={
+                  checked={
                     unit?.magic?.items
                       ? unit.magic.items.find(
                           ({ id }) => id === `${item.id}-${magicItem.id}`
-                        )
+                        ) || false
                       : false
                   }
                   className="checkbox__input"

@@ -39,6 +39,7 @@ export const NumberInput = (props) => {
         type="secondary"
         icon="down"
         label="Verringern"
+        disabled={props.value <= props.min}
         className="number-input__button number-input__button--down"
       />
     </div>
