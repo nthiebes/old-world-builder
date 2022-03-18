@@ -9,6 +9,7 @@ import { Unit } from "./pages/unit";
 import { Edit } from "./pages/edit";
 import { Magic } from "./pages/magic";
 import { About } from "./pages/about";
+import { Add } from "./pages/add";
 import { Help } from "./pages/help";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
@@ -38,7 +39,7 @@ export const App = () => {
       {isMobile ? (
         <Switch>
           <Route path="/editor/:listId/edit">{<Edit isMobile />}</Route>
-          <Route path="/editor/:listId/add/:type">{<Unit isMobile />}</Route>
+          <Route path="/editor/:listId/add/:type">{<Add isMobile />}</Route>
           <Route path="/editor/:listId/:type/:unitId/magic">
             {<Magic isMobile />}
           </Route>
@@ -70,7 +71,7 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/editor/:listId/edit">{<Edit />}</Route>
-                  <Route path="/editor/:listId/add/:type">{<Unit />}</Route>
+                  <Route path="/editor/:listId/add/:type">{<Add />}</Route>
                   <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>
                 </Switch>
               </section>

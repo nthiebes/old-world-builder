@@ -38,7 +38,6 @@ export const listsSlice = createSlice({
       const newUnit = {
         ...unit,
         strength: unit.minimum,
-        id: `${unit.id}.${getRandomId()}`,
       };
 
       return state.map((list) => {

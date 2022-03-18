@@ -3,52 +3,11 @@ import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Header, Main } from "../../components/page";
-import {
-  addUnit,
-  editUnit,
-  removeUnit,
-  duplicateUnit,
-} from "../../state/lists";
-import { setArmy } from "../../state/army";
-
-import "./Unit.css";
-
-const updateIds = (type) => {
-  return type.map((unit) => {
-    return {
-      ...unit,
-      command: unit.command
-        ? unit.command.map((commandData, index) => ({
-            ...commandData,
-            id: index,
-          }))
-        : null,
-      equipment: unit.equipment
-        ? unit.equipment.map((equipmentData, index) => ({
-            ...equipmentData,
-            id: index,
-          }))
-        : null,
-      mounts: unit.mounts
-        ? unit.mounts.map((mountsData, index) => ({
-            ...mountsData,
-            id: index,
-          }))
-        : null,
-      options: unit.options
-        ? unit.options.map((optionsData, index) => ({
-            ...optionsData,
-            id: index,
-          }))
-        : null,
-    };
-  });
-};
+import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 
 export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -59,16 +18,9 @@ export const Unit = ({ isMobile }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const army = useSelector((state) => state.army);
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
   let magicPoints = 0;
-  const handleAdd = (unitId) => {
-    const unit = army[type].find(({ id }) => unitId === id);
-
-    dispatch(addUnit({ listId, type, unit }));
-    setRedirect(true);
-  };
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -172,30 +124,11 @@ export const Unit = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  useEffect(() => {
-    list &&
-      !unit &&
-      fetcher({
-        url: `games/${list.game}/${list.army}`,
-        onSuccess: (data) => {
-          dispatch(
-            setArmy({
-              lords: updateIds(data.lords),
-              heroes: updateIds(data.heroes),
-              core: updateIds(data.core),
-              special: updateIds(data.special),
-              rare: updateIds(data.rare),
-            })
-          );
-        },
-      });
-  }, [list, unit, dispatch]);
-
-  if (redirect) {
+  if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
   }
 
-  if (!unit && !army) {
+  if (!unit) {
     if (isMobile) {
       return (
         <>
@@ -396,35 +329,4 @@ export const Unit = ({ isMobile }) => {
       </>
     );
   }
-
-  return (
-    <>
-      {isMobile && (
-        <Header to={`/editor/${listId}`} headline="Einheit auswählen" />
-      )}
-
-      <MainComponent>
-        {!isMobile && (
-          <Header
-            isSection
-            to={`/editor/${listId}`}
-            headline="Einheit auswählen"
-          />
-        )}
-        <ul>
-          {army[type].map(({ name_de, id, minimum, points }) => (
-            <List key={id} onClick={() => handleAdd(id)}>
-              <span className="unit__name">
-                {minimum && `${minimum} `}
-                <b>{name_de}</b>
-              </span>
-              <i className="unit__points">{`${
-                minimum ? points * minimum : points
-              } Pkte.`}</i>
-            </List>
-          ))}
-        </ul>
-      </MainComponent>
-    </>
-  );
 };
