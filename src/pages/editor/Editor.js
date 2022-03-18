@@ -67,6 +67,7 @@ export const Editor = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
   const location = useLocation();
+  const errors = useSelector((state) => state.errors);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -191,6 +192,14 @@ export const Editor = ({ isMobile }) => {
             ]}
           />
         )}
+        <section>
+          {errors.map(() => (
+            <span>
+              <strong>{coreData.diff}</strong> Pkte. fehlen
+              <Icon symbol="error" color="red" />
+            </span>
+          ))}
+        </section>
         <section className="editor__section">
           <header className="editor__header">
             <h2>Kommandanten</h2>
