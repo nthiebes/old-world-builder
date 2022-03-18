@@ -9,6 +9,8 @@ import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../data/armies.json";
 import { setLists } from "../../state/lists";
+import warhammerFantasy from "../../assets/warhammer-fantasy.png";
+import warhammerTheOldWorld from "../../assets/the-old-world.png";
 
 import "./NewList.css";
 
@@ -90,10 +92,10 @@ export const NewList = ({ isMobile }) => {
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
-                  <img height="20" src={`/${id}.png`} alt={name} />
+                  <img height="20" src={warhammerFantasy} alt={name} />
                 )}
                 {id === "the-old-world" && (
-                  <img height="35" src={`/${id}.png`} alt={name} />
+                  <img height="35" src={warhammerTheOldWorld} alt={name} />
                 )}
               </label>
             </div>

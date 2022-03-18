@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+import icons from "../../assets/symbol-defs.svg";
+
 import "./Icon.css";
 
 export const Icon = ({ className, symbol, color }) => {
@@ -10,7 +12,7 @@ export const Icon = ({ className, symbol, color }) => {
       focusable="false"
       className={classNames("icon", color && `icon--${color}`, className)}
     >
-      <use xlinkHref={`/symbol-defs.svg#icon-${symbol}`} />
+      <use xlinkHref={`${icons}#icon-${symbol}`} />
     </svg>
   );
 };

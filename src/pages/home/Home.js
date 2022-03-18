@@ -5,8 +5,19 @@ import { useLocation } from "react-router-dom";
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
+// import warhammerFantasy from "../../assets/warhammer-fantasy.png";
+// import warhammerTheOldWorld from "../../assets/the-old-world.png";
+import theEmpire from "../../assets/army-icons/the-empire.svg";
+import dwarfs from "../../assets/army-icons/dwarfs.svg";
+import greenskins from "../../assets/army-icons/greenskins.svg";
 
 import "./Home.css";
+
+const armyIconMap = {
+  "the-empire": theEmpire,
+  dwarfs: dwarfs,
+  greenskins: greenskins,
+};
 
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -25,7 +36,7 @@ export const Home = ({ isMobile }) => {
         {!lists.length && (
           <>
             <img
-              src="/logo-dark.svg"
+              src={theEmpire}
               alt=""
               width="100"
               height="100"
@@ -45,22 +56,21 @@ export const Home = ({ isMobile }) => {
                 <h2 className="home__headline">{name}</h2>
                 <p>{points} Pkte.</p>
               </span>
-              <img
-                height="40"
-                width="40"
-                src={`/army-icons/${army}.svg`}
-                alt=""
-              />
               {/* {game === "warhammer-fantasy" && (
-                <img height="20" src={`/${game}.png`} alt="Warhammer Fantasy" />
+                <img
+                  height="20"
+                  src={warhammerFantasy}
+                  alt="Warhammer Fantasy"
+                />
               )}
               {game === "the-old-world" && (
                 <img
                   height="35"
-                  src={`/${game}.png`}
+                  src={warhammerTheOldWorld}
                   alt="Warhammer: The Old World"
                 />
               )} */}
+              <img height="40" width="40" src={armyIconMap[army]} alt="" />
             </List>
           ))}
         </ul>
