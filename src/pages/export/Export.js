@@ -17,7 +17,7 @@ const getUnitsString = (units) => {
       return `${
         unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
       }${unit.name_de} [${getUnitPoints(unit)} Pkte.]
-${allOptions ? `·${allOptions.split(", ").join("\n·")}\n` : ""}
+${allOptions ? `· ${allOptions.split(", ").join("\n· ")}\n` : ""}
 `;
     })
     .join("");
@@ -31,9 +31,10 @@ const getListAsText = (list) => {
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
 
-  return `${list.name} [${allPoints} Pkte.]
+  return `===
+${list.name} [${allPoints} Pkte.]
 ${list.game}, ${list.army}
-
+===
 
 ++ Kommandanten [${lordsPoints} Pkte.] ++
 
@@ -49,7 +50,12 @@ ${getUnitsString(list.core)}
 ${getUnitsString(list.special)}
 ++ Seltene Einheiten [${rarePoints} Pkte.] ++
 
-${getUnitsString(list.rare)}`;
+${getUnitsString(list.rare)}
+
+---
+Erstellt mit "Old World Builder"
+
+[https://old-world-builder.com]`;
 };
 
 export const Export = ({ isMobile }) => {
