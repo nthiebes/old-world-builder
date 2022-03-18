@@ -1,5 +1,7 @@
 import "abortcontroller-polyfill/dist/abortcontroller-polyfill-only";
 
+const baseUrl =
+  process.env.NODE_ENV === "development" ? "/" : "/old-world-builder/";
 let controller;
 
 const abortFetch = () => {
@@ -8,11 +10,11 @@ const abortFetch = () => {
 export const fetcher = ({ url, onSuccess, onError }) => {
   controller = new AbortController();
 
-  fetch(`/${url}.json`, {
-    // headers: {
-    //   "Content-Type": "application/json",
-    //   Accept: "application/json",
-    // },
+  fetch(`${baseUrl}${url}.json`, {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
     signal: controller.signal,
   })
     .then((response) => response.json())
