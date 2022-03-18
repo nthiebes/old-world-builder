@@ -41,6 +41,26 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
+  const handleStackableOptionChange = ({ id, stackableCount }) => {
+    const options = unit.options.map((option) => {
+      if (option.id === id) {
+        return {
+          ...option,
+          stackableCount,
+        };
+      }
+      return option;
+    });
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        options,
+      })
+    );
+  };
   const handleOptionsChange = (id) => {
     const options = unit.options.map((option) => {
       if (option.id === id) {
@@ -161,9 +181,7 @@ export const Unit = ({ isMobile }) => {
             },
           ]}
           headline={unit.name_de}
-          subheadline={`${getUnitPoints(unit)} Pkte.${
-            unit.minimum ? ` (${unit.points} pro Modell)` : ""
-          }`}
+          subheadline={`${getUnitPoints(unit)} Pkte.`}
         />
       )}
 
@@ -173,9 +191,7 @@ export const Unit = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}`}
             headline={unit.name_de}
-            subheadline={`${getUnitPoints(unit)} Pkte.${
-              unit.minimum ? ` (${unit.points} pro Modell)` : ""
-            }`}
+            subheadline={`${getUnitPoints(unit)} Pkte.`}
             moreButton={[
               {
                 name_de: "Duplizieren",
@@ -209,7 +225,6 @@ export const Unit = ({ isMobile }) => {
               max={unit.maximum}
               value={unit.strength}
               onChange={handleStrengthChange}
-              required
             />
           </>
         )}
@@ -270,25 +285,64 @@ export const Unit = ({ isMobile }) => {
           <>
             <h2 className="unit__subline">Optionen:</h2>
             {unit.options.map(
-              ({ name_de, points, perModel, id, active = false }) => (
-                <div className="checkbox" key={id}>
-                  <input
-                    type="checkbox"
-                    id={`options-${id}`}
-                    value={id}
-                    onChange={() => handleOptionsChange(id)}
-                    checked={active}
-                    className="checkbox__input"
-                  />
-                  <label htmlFor={`options-${id}`} className="checkbox__label">
-                    {name_de}
-                    <i className="checkbox__points">
-                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                      {perModel && ` pro Modell`}
-                    </i>
-                  </label>
-                </div>
-              )
+              ({
+                name_de,
+                points,
+                perModel,
+                id,
+                stackable,
+                maximum,
+                minimum = 0,
+                stackableCount = minimum || 0,
+                active = false,
+              }) =>
+                !stackable ? (
+                  <div className="checkbox" key={id}>
+                    <input
+                      type="checkbox"
+                      id={`options-${id}`}
+                      value={id}
+                      onChange={() => handleOptionsChange(id)}
+                      checked={active}
+                      className="checkbox__input"
+                    />
+                    <label
+                      htmlFor={`options-${id}`}
+                      className="checkbox__label"
+                    >
+                      {name_de}
+                      <i className="checkbox__points">
+                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                        {perModel && ` pro Modell`}
+                      </i>
+                    </label>
+                  </div>
+                ) : (
+                  <Fragment key={id}>
+                    <label
+                      htmlFor={`options-${id}`}
+                      className="unit__special-option"
+                    >
+                      {name_de}:
+                      <i className="checkbox__points">
+                        {points} Pkte. pro Modell
+                      </i>
+                    </label>
+                    <NumberInput
+                      id={`options-${id}`}
+                      className="input"
+                      min={minimum}
+                      max={maximum}
+                      value={stackableCount}
+                      onChange={(event) =>
+                        handleStackableOptionChange({
+                          id,
+                          stackableCount: event.target.value,
+                        })
+                      }
+                    />
+                  </Fragment>
+                )
             )}
           </>
         )}

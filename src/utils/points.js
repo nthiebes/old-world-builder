@@ -8,7 +8,9 @@ export const getUnitPoints = (unit) => {
   }
   if (unit.options) {
     unit.options.forEach((option) => {
-      if (option.active && option.perModel) {
+      if (option.stackableCount) {
+        unitPoints += option.stackableCount * option.points;
+      } else if (option.active && option.perModel) {
         unitPoints += unit.strength * option.points;
       } else if (option.active) {
         unitPoints += option.points;

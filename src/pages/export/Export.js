@@ -17,7 +17,7 @@ const getUnitsString = (units) => {
       return `${
         unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
       }${unit.name_de} [${getUnitPoints(unit)} Pkte.]
-${allOptions ? `· ${allOptions.split(", ").join("\n· ")}\n` : ""}
+${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
 `;
     })
     .join("");
