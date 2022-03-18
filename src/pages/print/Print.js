@@ -150,7 +150,11 @@ export const Print = () => {
           Erstellt mit <b>"Old World Builder"</b>
         </p>
         <p>
-          [<i>old-world-builder.com</i>]
+          [
+          <a href="https://old-world-builder.com">
+            <i>old-world-builder.com</i>
+          </a>
+          ]
         </p>
       </footer>
     </>
