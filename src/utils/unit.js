@@ -1,10 +1,7 @@
-export const getAllOptions = ({
-  mounts,
-  equipment,
-  options,
-  command,
-  magic,
-}) => {
+export const getAllOptions = (
+  { mounts, equipment, options, command, magic },
+  asString
+) => {
   const allMounts = mounts
     ? mounts.filter(({ active }) => active).map(({ name_de }) => name_de)
     : [];
@@ -30,6 +27,9 @@ export const getAllOptions = ({
   const allOptionsString = allOptionsArray.join(", ");
 
   if (allOptionsString) {
+    if (asString) {
+      return allOptionsString;
+    }
     return <p>{allOptionsString}</p>;
   }
   return null;

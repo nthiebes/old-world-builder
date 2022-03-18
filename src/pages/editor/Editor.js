@@ -122,11 +122,11 @@ export const Editor = ({ isMobile }) => {
       icon: "delete",
       callback: handleDelete,
     },
-    // {
-    //   name_de: "Exportieren",
-    //   icon: "export",
-    //   to: `/editor/${listId}/export`,
-    // },
+    {
+      name_de: "Exportieren",
+      icon: "export",
+      to: `/editor/${listId}/export`,
+    },
     {
       name_de: "Drucken",
       icon: "print",

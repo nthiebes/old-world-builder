@@ -41,7 +41,7 @@ export const Print = () => {
           <ul>
             {list.lords.map((unit) => (
               <li key={unit.id}>
-                <h3 className="">
+                <h3>
                   {unit.name_de}
                   <span className="print__points">
                     [{getUnitPoints(unit)} Pkte.]
@@ -60,7 +60,7 @@ export const Print = () => {
           <ul>
             {list.heroes.map((unit) => (
               <li key={unit.id}>
-                <h3 className="">
+                <h3>
                   {unit.name_de}
                   <span className="print__points">
                     [{getUnitPoints(unit)} Pkte.]
@@ -80,7 +80,11 @@ export const Print = () => {
           <ul>
             {list.core.map((unit) => (
               <li key={unit.id}>
-                <h3 className="">
+                <h3>
+                  <span className="print__strength">
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                  </span>
                   {unit.name_de}
                   <span className="print__points">
                     [{getUnitPoints(unit)} Pkte.]
@@ -100,7 +104,11 @@ export const Print = () => {
           <ul>
             {list.special.map((unit) => (
               <li key={unit.id}>
-                <h3 className="">
+                <h3>
+                  <span className="print__strength">
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                  </span>
                   {unit.name_de}
                   <span className="print__points">
                     [{getUnitPoints(unit)} Pkte.]
@@ -120,7 +128,11 @@ export const Print = () => {
           <ul>
             {list.rare.map((unit) => (
               <li key={unit.id}>
-                <h3 className="">
+                <h3>
+                  <span className="print__strength">
+                    {(unit.strength || unit.minimum) &&
+                      `${unit.strength || unit.minimum} `}
+                  </span>
                   {unit.name_de}
                   <span className="print__points">
                     [{getUnitPoints(unit)} Pkte.]
