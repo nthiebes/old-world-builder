@@ -7,13 +7,16 @@ import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
-import gameSystems from "../../data/armies.json";
+import gameSystems from "../../assets/armies.json";
 
 import "./Magic.css";
 
 const nameMap = {
   greenskins: {
     name_de: "Glitzakram",
+  },
+  "the-empire": {
+    name_de: "Magische Erbstücke",
   },
   general: {
     name_de: "Magische Gegenstände",
@@ -59,11 +62,12 @@ export const Magic = ({ isMobile }) => {
   );
   const army =
     list &&
-    gameSystems.find(({ id }) => id === list.game).armies.find(() => list.army);
+    gameSystems
+      .find(({ id }) => id === list.game)
+      .armies.find(({ id }) => list.army === id);
   const items = useSelector((state) => state.items);
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
-
   const handleMagicChange = (event, magicItem) => {
     let magicItems;
 
@@ -164,7 +168,7 @@ export const Magic = ({ isMobile }) => {
               }
 
               return (
-                <>
+                <Fragment key={magicItem.name_de}>
                   {isFirstItemType && (
                     <h3 className="magic__type">
                       {nameMap[magicItem.type].name_de}
@@ -193,7 +197,7 @@ export const Magic = ({ isMobile }) => {
                       <i className="checkbox__points">{`${magicItem.points} Pkte.`}</i>
                     </label>
                   </div>
-                </>
+                </Fragment>
               );
             })}
           </Fragment>

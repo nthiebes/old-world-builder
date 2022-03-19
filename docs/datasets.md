@@ -61,7 +61,7 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
       "name_de": String,
       "points": Number,
       "active": Boolean, // Wether it should be selected by default
-    },
+    }
   ],
   "magic": { // Magic items are defined in the "magic-items.json" file
     "maxPoints": Number // Maximum points for magic items

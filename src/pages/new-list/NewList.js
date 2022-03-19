@@ -7,7 +7,7 @@ import { getRandomId } from "../../utils/id";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
-import gameSystems from "../../data/armies.json";
+import gameSystems from "../../assets/armies.json";
 import { setLists } from "../../state/lists";
 import warhammerFantasy from "../../assets/warhammer-fantasy.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
