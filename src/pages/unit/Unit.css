@@ -2,8 +2,10 @@
   padding-top: 1rem;
 }
 
-.unit__subline:first-of-type {
-  padding-top: 0;
+@media (min-width: 1280px) {
+  .unit__subline:first-of-type {
+    padding-top: 0;
+  }
 }
 
 .unit__points {

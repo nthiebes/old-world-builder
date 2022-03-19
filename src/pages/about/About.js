@@ -22,7 +22,7 @@ export const About = () => {
 
         <h2>Was ist der "Old World Builder"?</h2>
         <p>
-          Der <i>Old World Builder</i> ist eine Armeebau-Hilfe für die Games
+          Der <i>Old World Builder</i> ist ein Armeeplaner für die Games
           Workshop Tabletop Spiele Warhammer Fantasy und Warhammer: The Old
           World.
         </p>
