@@ -375,8 +375,10 @@ export const Unit = ({ isMobile }) => {
             active={location.pathname.includes("magic")}
           >
             <div className="editor__list-inner">
-              <b>{"Magische Gegenstände"}</b>
-              <i className="checkbox__points">{`${magicPoints} Pkte.`}</i>
+              <b>Magische Gegenstände</b>
+              <i className="checkbox__points">
+                {magicPoints} / {unit.magic.maxPoints} Pkte.
+              </i>
             </div>
             {unit.magic.items && (
               <p>{unit.magic.items.map(({ name_de }) => name_de).join(", ")}</p>
