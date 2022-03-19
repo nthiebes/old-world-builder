@@ -4,6 +4,12 @@ The "Old World Builder" is an army builder for the Games Workshop tabletop games
 
 This project is still work in progress.
 
+## Contribution
+
+[Datasets documentation](https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md)
+
+[Datasets at /public/games/warhammer-fantasy](https://github.com/nthiebes/old-world-builder/tree/main/public/games/warhammer-fantasy)
+
 ## Credits
 
 Fantasy icons by game-icons.net (CC BY 3.0).
