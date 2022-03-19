@@ -10,6 +10,7 @@ import { Header, Main } from "../../components/page";
 import { deleteList } from "../../state/lists";
 import { printList } from "../../utils/print";
 import { getAllOptions } from "../../utils/unit";
+import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 
 import "./Editor.css";
@@ -51,7 +52,15 @@ export const Editor = ({ isMobile }) => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const onScroll = () => {
+      if (document.location.hash === `#${location.pathname}`) {
+        sessionStorage.setItem("scrollPosition", window.pageYOffset);
+      }
+    };
+    window.addEventListener("scroll", throttle(onScroll, 100));
+    window.scrollTo(0, Number(sessionStorage.getItem("scrollPosition")) || 0);
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, [location.pathname]);
 
   useEffect(() => {
