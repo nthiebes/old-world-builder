@@ -1,0 +1,376 @@
+{
+  "lords": [
+    {
+      "id": "karl",
+      "name_de": "Karl Franz, Der Imperator",
+      "name_en": "",
+      "points": 340,
+      "named": true,
+      "equipment": [
+        {
+          "name_de": "Die Runenklinge des Reiklands",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Ghal Maraz",
+          "points": 30
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Todesklaue (Imperialer Greif)",
+          "points": 215
+        },
+        {
+          "name_de": "Der Imperiale Drache",
+          "points": 300
+        },
+        {
+          "name_de": "Imperialer Pegasus",
+          "points": 45
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+          "points": 50
+        },
+        {
+          "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+          "points": 50
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+          "points": 55
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 18
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 24
+        }
+      ]
+    },
+    {
+      "id": "kurt",
+      "name_de": "Kurt Helborg, Reichsmarschall des Imperiums",
+      "name_en": "",
+      "points": 320,
+      "named": true
+    },
+    {
+      "id": "balthasar",
+      "name_de": "Balthasar Gelt, Oberster Patriarch der magischen Orden",
+      "name_en": "",
+      "points": 360,
+      "named": true,
+      "options": [
+        {
+          "name_de": "Eisenharte Hufe",
+          "points": 5
+        },
+        {
+          "name_de": "Schnell wie der Wind",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "volkmar",
+      "name_de": "Volkmar der Grimmige, Grosstheogonist",
+      "name_en": "",
+      "points": 190,
+      "named": true,
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Kriegsaltar des Sigmar",
+          "points": 150
+        },
+        {
+          "name_de": "Kriegsaltar des Sigmar, Das Horn des Sigismund",
+          "points": 160
+        }
+      ]
+    },
+    {
+      "id": "marius",
+      "name_de": "Marius Leitdorf",
+      "name_en": "",
+      "points": 220,
+      "named": true
+    },
+    {
+      "id": "general",
+      "name_de": "Feldherr des Imperiums",
+      "name_en": "",
+      "points": 95,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+          "points": 3
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Lanze (nur beritten)",
+          "points": 7
+        },
+        {
+          "name_de": "Muskete",
+          "points": 6
+        },
+        {
+          "name_de": "Langbogen",
+          "points": 5
+        },
+        {
+          "name_de": "Pistole",
+          "points": 5
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Plattenrüstung",
+          "points": 9
+        },
+        {
+          "name_de": "Schwere Rüstung",
+          "points": 4
+        },
+        {
+          "name_de": "Schild",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Imperialer Greif",
+          "points": 170
+        },
+        {
+          "name_de": "Imperialer Greif, Blutschrei",
+          "points": 195
+        },
+        {
+          "name_de": "Imperialer Greif, Zweiköpfig",
+          "points": 200
+        },
+        {
+          "name_de": "Imperialer Greif, Blutschrei, Zweiköpfig",
+          "points": 225
+        },
+        {
+          "name_de": "Imperialer Pegasus",
+          "points": 45
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+          "points": 50
+        },
+        {
+          "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+          "points": 55
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+          "points": 60
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 18
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 24
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "wizard-lord",
+      "name_de": "Meisterzauberer",
+      "name_en": "",
+      "points": 165,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 4",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Imperialer Pegasus",
+          "points": 45
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+          "points": 50
+        },
+        {
+          "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+          "points": 55
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+          "points": 60
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 18
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 24
+        },
+        {
+          "name_de": "Celestisches Orkanium",
+          "points": 125
+        },
+        {
+          "name_de": "Luminarium des Hysh",
+          "points": 120
+        },
+        {
+          "name_de": "Imperialer Greif",
+          "points": 170
+        },
+        {
+          "name_de": "Imperialer Greif, Blutschrei",
+          "points": 195
+        },
+        {
+          "name_de": "Imperialer Greif, Zweiköpfig",
+          "points": 200
+        },
+        {
+          "name_de": "Imperialer Greif, Blutschrei, Zweiköpfig",
+          "points": 225
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "arch-lector",
+      "name_de": "Erzlektor",
+      "name_en": "",
+      "points": 100,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 2
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 5
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schwere Rüstung",
+          "points": 4
+        },
+        {
+          "name_de": "Schild",
+          "points": 4
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Kriegsaltar des Sigmar",
+          "points": 150
+        },
+        {
+          "name_de": "Kriegsaltar des Sigmar, Das Horn des Sigismund",
+          "points": 160
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 18
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 24
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "grand-master",
+      "name_de": "Grossmeister",
+      "name_en": "",
+      "points": 155,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Lanze",
+          "points": 7
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "points": 4
+        }
+      ],
+      "magic": {
+        "maxPoints": 100
+      }
+    }
+  ],
+  "heroes": [],
+  "core": [],
+  "special": [],
+  "rare": []
+}
