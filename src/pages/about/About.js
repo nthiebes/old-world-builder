@@ -24,7 +24,7 @@ export const About = () => {
         <p>
           Der <i>Old World Builder</i> ist ein Armeeplaner für die Games
           Workshop Tabletop Spiele Warhammer Fantasy und Warhammer: The Old
-          World.
+          World (sobald es erscheint).
         </p>
         <p>
           Das Projekt ist Open-Source und wird entwickelt von Nico Thiebes (
@@ -57,15 +57,17 @@ export const About = () => {
 
         <h2>Eure Unterstützung</h2>
         <p>
-          Der <i>Old World Builder</i> ist Open-Source. Ihr findet das Projekt
-          auf GitHub:{" "}
+          Der <i>Old World Builder</i> wird Open-Source entwickelt. Ihr könnt
+          dabei helfen, fehlende bzw. unvollständige Datensets der Armeen zu
+          vervollständigen. Details dazu Ihr findet ihr auf der{" "}
           <a
             href="https://github.com/nthiebes/old-world-builder"
             target="_blank"
             rel="noreferrer"
           >
-            github.com/nthiebes/old-world-builder
+            GitHub Projektseite
           </a>
+          .
         </p>
       </Main>
     </>

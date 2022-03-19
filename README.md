@@ -7,3 +7,7 @@ This project is still work in progress.
 ## Credits
 
 Fantasy icons by game-icons.net (CC BY 3.0).
+
+## LICENSE
+
+This work is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) License.

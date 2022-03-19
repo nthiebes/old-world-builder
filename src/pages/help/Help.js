@@ -21,7 +21,7 @@ export const Help = () => {
         </Button>
 
         <h2>Hilfe</h2>
-        <p>
+        {/* <p>
           Falls du Fragen zum OWL hast, kannst du diese im OWL Thema des{" "}
           <a
             href="https://www.gw-fanworld.net"
@@ -38,6 +38,25 @@ export const Help = () => {
             hello@old-world-builder.com
           </a>
           .
+        </p> */}
+        <p>
+          Bei Fragen oder Problemen kannst du ein Issue auf{" "}
+          <a
+            href="https://github.com/nthiebes/old-world-builder"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          erstellen oder mir auf{" "}
+          <a
+            href="https://twitter.com/_gscheid"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>{" "}
+          schreiben.
         </p>
       </Main>
     </>
