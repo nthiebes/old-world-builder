@@ -2,9 +2,20 @@
   body {
     background: #fff !important;
   }
+
+  .print-back,
+  .print-info {
+    display: none;
+  }
 }
 
-/* @media print { */
+@media screen {
+  .print,
+  .print-footer {
+    display: none;
+  }
+}
+
 .print {
   font-size: 14px;
 }
@@ -60,4 +71,7 @@
 .print-footer p {
   text-align: center;
 }
-/* } */
+
+.print-info {
+  text-align: center;
+}

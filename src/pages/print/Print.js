@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import { Button } from "../../components/button";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 
@@ -9,7 +10,7 @@ import "./Print.css";
 
 export const Print = () => {
   const { listId } = useParams();
-  const [redirect, setRedirect] = useState(false);
+  const [isDone, setIsDone] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -19,7 +20,7 @@ export const Print = () => {
       document.title = `${list.name}, ${list.army}`;
       window.onafterprint = () => {
         document.title = "Old World Builder";
-        setRedirect(true);
+        setIsDone(true);
       };
       window.print();
     }
@@ -27,10 +28,6 @@ export const Print = () => {
 
   if (!list) {
     return null;
-  }
-
-  if (redirect) {
-    return <Redirect to={`/editor/${listId}`} />;
   }
 
   const allPoints = getAllPoints(list);
@@ -42,6 +39,17 @@ export const Print = () => {
 
   return (
     <>
+      <Button
+        className="print-back"
+        to={`/editor/${listId}`}
+        centered
+        icon="back"
+        spaceTop
+        spaceBottom
+      >
+        Zurück
+      </Button>
+      {!isDone && <p className="print-info">Druckt...</p>}
       <main className="print">
         <h1>
           {list.name} <span className="print__points">[{allPoints} Pkte.]</span>
