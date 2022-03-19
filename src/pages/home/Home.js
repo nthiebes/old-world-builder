@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
+import { getAllPoints } from "../../utils/points";
 // import warhammerFantasy from "../../assets/warhammer-fantasy.png";
 // import warhammerTheOldWorld from "../../assets/the-old-world.png";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
@@ -46,7 +47,7 @@ export const Home = ({ isMobile }) => {
           </>
         )}
         <ul>
-          {lists.map(({ id, name, points, game, army }, index) => (
+          {lists.map(({ id, name, points, game, army, ...list }, index) => (
             <List
               key={index}
               to={`/editor/${id}`}
@@ -54,7 +55,13 @@ export const Home = ({ isMobile }) => {
             >
               <span className="home__list-item">
                 <h2 className="home__headline">{name}</h2>
-                <p>{points} Pkte.</p>
+                <p>
+                  {getAllPoints({
+                    ...list,
+                    points,
+                  })}{" "}
+                  / {points} Pkte.
+                </p>
               </span>
               {/* {game === "warhammer-fantasy" && (
                 <img
