@@ -8,7 +8,6 @@ import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { deleteList } from "../../state/lists";
-import { printList } from "../../utils/print";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
@@ -139,7 +138,7 @@ export const Editor = ({ isMobile }) => {
     {
       name_de: "Drucken",
       icon: "print",
-      callback: () => printList(`#/print/${listId}`),
+      to: `/print/${listId}`,
     },
   ];
 

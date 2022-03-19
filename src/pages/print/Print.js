@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { getAllOptions } from "../../utils/unit";
@@ -8,12 +9,28 @@ import "./Print.css";
 
 export const Print = () => {
   const { listId } = useParams();
+  const [redirect, setRedirect] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
 
+  useEffect(() => {
+    if (list) {
+      document.title = `${list.name}, ${list.army}`;
+      window.onafterprint = () => {
+        document.title = "Old World Builder";
+        setRedirect(true);
+      };
+      window.print();
+    }
+  }, [list]);
+
   if (!list) {
     return null;
+  }
+
+  if (redirect) {
+    return <Redirect to={`/editor/${listId}`} />;
   }
 
   const allPoints = getAllPoints(list);
