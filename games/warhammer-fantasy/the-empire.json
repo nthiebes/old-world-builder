@@ -369,8 +369,764 @@
       }
     }
   ],
-  "heroes": [],
-  "core": [],
-  "special": [],
-  "rare": []
+  "heroes": [
+    {
+      "id": "ludwig",
+      "name_de": "Ludwig Schwartzhelm, Schiedskämpfer des Imperators",
+      "name_en": "",
+      "points": 185
+    },
+    {
+      "id": "luthor",
+      "name_de": "Luthor Huss, Phrophet des Sigmar",
+      "name_en": "",
+      "points": 155
+    },
+    {
+      "id": "markus",
+      "name_de": "Markus Wulfhart, Jagdmarschall des Imperiums",
+      "name_en": "",
+      "points": 140
+    },
+    {
+      "id": "captain",
+      "name_de": "Hauptmann des Imperiums",
+      "name_en": "",
+      "points": 60,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 6
+        },
+        {
+          "name_de": "Lanze (nur beritten)",
+          "points": 7
+        },
+        {
+          "name_de": "Muskete",
+          "points": 6
+        },
+        {
+          "name_de": "Langbogen",
+          "points": 5
+        },
+        {
+          "name_de": "Pistole",
+          "points": 5
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Plattenrüstung",
+          "points": 6
+        },
+        {
+          "name_de": "Schwere Rüstung",
+          "points": 2
+        },
+        {
+          "name_de": "Schild",
+          "points": 2
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        },
+        {
+          "name_de": "Magische Standarte",
+          "magicBanner": true,
+          "points": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Imperialer Pegasus",
+          "points": 45
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+          "points": 50
+        },
+        {
+          "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+          "points": 55
+        },
+        {
+          "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+          "points": 60
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 12
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "wizard",
+      "name_de": "Kampfzauberer",
+      "name_en": "",
+      "points": 65,
+      "options": [
+        {
+          "name_de": "Zauberer der Stufe 2",
+          "points": 35
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 12
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "warrior-priest",
+      "name_de": "Kriegspriester",
+      "name_en": "",
+      "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+          "points": 2
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 5
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schwere Rüstung",
+          "points": 2
+        },
+        {
+          "name_de": "Schild",
+          "points": 2
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 12
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "engineer",
+      "name_de": "Meistertechnicus",
+      "name_en": "",
+      "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Granatenbüchse",
+          "points": 10
+        },
+        {
+          "name_de": "Hochland-Langbüchse",
+          "points": 20
+        },
+        {
+          "name_de": "Taubenbomben",
+          "points": 20
+        },
+        {
+          "name_de": "Bündelmuskete",
+          "points": 10
+        },
+        {
+          "name_de": "Bündelpistole",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Leichte Rüstung",
+          "points": 1
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Mechanisches Pferd",
+          "points": 25
+        },
+        {
+          "name_de": "Schlachtross",
+          "points": 12
+        },
+        {
+          "name_de": "Schlachtross, Rossharnisch",
+          "points": 16
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "witchhunter",
+      "name_de": "Hexenjäger",
+      "name_en": "",
+      "points": 50,
+      "options": [
+        {
+          "name_de": "Pistolenpaar",
+          "points": 5
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "points": 5
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "id": "halberts",
+      "name_de": "Hellebardiere",
+      "name_en": "",
+      "points": 6,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Feldwaibel",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "spears",
+      "name_de": "Speerträger",
+      "name_en": "",
+      "points": 5,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Feldwaibel",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "swords",
+      "name_de": "Schwertkämpfer",
+      "name_en": "",
+      "points": 7,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Fechtmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "crossbows",
+      "name_de": "Armbrustschützen",
+      "name_en": "",
+      "points": 9,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Schützenmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "muskets",
+      "name_de": "Musketiere",
+      "name_en": "",
+      "points": 9,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Schützenmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Schützenmeister, Pistolenpaar",
+          "points": 15
+        },
+        {
+          "name_de": "Schützenmeister, Hochland-Langbüchse",
+          "points": 30
+        },
+        {
+          "name_de": "Schützenmeister, Bündelmuskete",
+          "points": 20
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "bows",
+      "name_de": "Bogenschützen",
+      "name_en": "",
+      "points": 7,
+      "minimum": 10,
+      "detachment": true,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Schützenmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "militia",
+      "name_de": "Freischärler-Miliz",
+      "name_en": "",
+      "points": 6,
+      "minimum": 10,
+      "detachment": true,
+      "command": [
+        {
+          "name_de": "Feldwaibel",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "knights",
+      "name_de": "Ordensritter",
+      "name_en": "",
+      "points": 22,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Rittmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Lanzen, Schilde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Ritter des Inneren Zirkels",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": "greatswords",
+      "name_de": "Bihandkämpfer",
+      "name_en": "",
+      "points": 11,
+      "minimum": 10,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Hauptmann",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "demis",
+      "name_de": "Demigreifen-Ritter",
+      "name_en": "",
+      "points": 58,
+      "minimum": 3,
+      "command": [
+        {
+          "name_de": "Rittmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Lanzen",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Hellebarden",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "reiksguard",
+      "name_de": "Ritter der Reichsgarde",
+      "name_en": "",
+      "points": 27,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Hauptmann",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "huntsmen",
+      "name_de": "Jäger",
+      "name_en": "",
+      "points": 8,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Jagdmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "pistoliers",
+      "name_de": "Pistoliere",
+      "name_en": "",
+      "points": 18,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Schützenmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Schützenmeister, Pistolenpaar einschließlich einer Bündelpistole",
+          "points": 20
+        },
+        {
+          "name_de": "Schützenmeister, Bündelmuskete",
+          "points": 20
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "outriders",
+      "name_de": "Schützenreiter",
+      "name_en": "",
+      "points": 21,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Meisterschützenreiter",
+          "points": 10
+        },
+        {
+          "name_de": "Meisterschützenreiter, Pistolenpaar einschließlich einer Bündelpistole",
+          "points": 20
+        },
+        {
+          "name_de": "Meisterschützenreiter, Granatenbüchse",
+          "points": 20
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Rossharnische",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "canon",
+      "name_de": "Grosskanone",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "mortar",
+      "name_de": "Mörser",
+      "name_en": "",
+      "points": 100
+    },
+    {
+      "id": "flagellants",
+      "name_de": "Flagellanten",
+      "name_en": "",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Untergangsprophet",
+          "points": 10
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "id": "hellblaster",
+      "name_de": "Höllenfeuer-Salvenkanone",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "hellstorm",
+      "name_de": "Höllensturm-Raketenlafette",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "stank",
+      "name_de": "Dampfpanzer",
+      "name_en": "",
+      "points": 250,
+      "options": [
+        {
+          "name_de": "Hochland-Langbüchse",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "hurricanum",
+      "name_de": "Celestisches Orkanium",
+      "name_en": "",
+      "points": 130
+    },
+    {
+      "id": "luminark",
+      "name_de": "Luminarium des Hysh",
+      "name_en": "",
+      "points": 120
+    }
+  ]
 }
