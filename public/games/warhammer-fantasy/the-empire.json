@@ -877,6 +877,256 @@
       ]
     }
   ],
-  "special": [],
-  "rare": []
+  "special": [
+    {
+      "id": "greatswords",
+      "name_de": "Bihandkämpfer",
+      "name_en": "",
+      "points": 11,
+      "minimum": 10,
+      "regimentalUnit": true,
+      "command": [
+        {
+          "name_de": "Hauptmann",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "demis",
+      "name_de": "Demigreifen-Ritter",
+      "name_en": "",
+      "points": 58,
+      "minimum": 3,
+      "command": [
+        {
+          "name_de": "Rittmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_de": "Lanzen",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Hellebarden",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "reiksguard",
+      "name_de": "Ritter der Reichsgarde",
+      "name_en": "",
+      "points": 27,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Hauptmann",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Magische Standarte",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "huntsmen",
+      "name_de": "Jäger",
+      "name_en": "",
+      "points": 8,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Jagdmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "pistoliers",
+      "name_de": "Pistoliere",
+      "name_en": "",
+      "points": 18,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Schützenmeister",
+          "points": 10
+        },
+        {
+          "name_de": "Schützenmeister, Pistolenpaar einschließlich einer Bündelpistole",
+          "points": 20
+        },
+        {
+          "name_de": "Schützenmeister, Bündelmuskete",
+          "points": 20
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "outriders",
+      "name_de": "Schützenreiter",
+      "name_en": "",
+      "points": 21,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Meisterschützenreiter",
+          "points": 10
+        },
+        {
+          "name_de": "Meisterschützenreiter, Pistolenpaar einschließlich einer Bündelpistole",
+          "points": 20
+        },
+        {
+          "name_de": "Meisterschützenreiter, Granatenbüchse",
+          "points": 20
+        },
+        {
+          "name_de": "Musiker",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Rossharnische",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "canon",
+      "name_de": "Grosskanone",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "mortar",
+      "name_de": "Mörser",
+      "name_en": "",
+      "points": 100
+    },
+    {
+      "id": "flagellants",
+      "name_de": "Flagellanten",
+      "name_en": "",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Untergangsprophet",
+          "points": 10
+        }
+      ]
+    }
+  ],
+  "rare": [
+    {
+      "id": "hellblaster",
+      "name_de": "Höllenfeuer-Salvenkanone",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "hellstorm",
+      "name_de": "Höllensturm-Raketenlafette",
+      "name_en": "",
+      "points": 120
+    },
+    {
+      "id": "stank",
+      "name_de": "Dampfpanzer",
+      "name_en": "",
+      "points": 250,
+      "options": [
+        {
+          "name_de": "Hochland-Langbüchse",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "hurricanum",
+      "name_de": "Celestisches Orkanium",
+      "name_en": "",
+      "points": 130
+    },
+    {
+      "id": "luminark",
+      "name_de": "Luminarium des Hysh",
+      "name_en": "",
+      "points": 120
+    }
+  ]
 }
