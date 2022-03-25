@@ -55,7 +55,7 @@ ${getUnitsString(list.rare)}
 ---
 Erstellt mit "Old World Builder"
 
-[https://old-world-builder.com]`;
+[https://nthiebes.github.io/old-world-builder]`;
 };
 
 export const Export = ({ isMobile }) => {

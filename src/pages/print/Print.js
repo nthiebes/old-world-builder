@@ -176,8 +176,8 @@ export const Print = () => {
         </p>
         <p>
           [
-          <a href="https://old-world-builder.com">
-            <i>old-world-builder.com</i>
+          <a href="https://nthiebes.github.io/old-world-builder">
+            <i>nthiebes.github.io/old-world-builder</i>
           </a>
           ]
         </p>
