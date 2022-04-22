@@ -18,6 +18,14 @@ const nameMap = {
   "the-empire": {
     name_de: "Magische Erbstücke",
   },
+  heirlooms: {
+    name_de: "Erbstücke",
+    name_en: "Ancestral Heirlooms",
+  },
+  dwarfs: {
+    name_de: "Zwergenrunen",
+    name_en: "Runic Items",
+  },
   general: {
     name_de: "Magische Gegenstände",
   },
@@ -38,6 +46,26 @@ const nameMap = {
   },
   "enchanted-item": {
     name_de: "Verzauberte Gegenstände",
+  },
+  "weapon-runes": {
+    name_de: "Waffenrunen",
+    name_en: "Weapon Runes",
+  },
+  "armour-runes": {
+    name_de: "Rüstungsrunen",
+    name_en: "Armour Runes",
+  },
+  "banner-runes": {
+    name_de: "Standartenrunen",
+    name_en: "Banner Runes",
+  },
+  "talismanic-runes": {
+    name_de: "Talismanrunen",
+    name_en: "Talismanic Runes",
+  },
+  "engineering-runes": {
+    name_de: "Maschinenrunen",
+    name_en: "Engineering Runes",
   },
 };
 let prevItemType, isFirstItemType;
