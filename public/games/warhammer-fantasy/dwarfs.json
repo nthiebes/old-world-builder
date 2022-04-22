@@ -198,6 +198,7 @@
         },
         {
           "name_de": "Armeestandartenträger",
+          "name_en": "Battle standard bearer",
           "points": 25
         }
       ],
@@ -296,7 +297,166 @@
       }
     }
   ],
-  "core": [],
+  "core": [
+    {
+      "id": "warriors",
+      "name_de": "Klankrieger",
+      "name_en": "Dwarf Warriors",
+      "points": 8,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "quarrellers",
+      "name_de": "Armbrustschützen",
+      "name_en": "Quarrellers",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "thunderers",
+      "name_de": "Musketenschützen",
+      "name_en": "Thunderers",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zwei Zwergenpistolen für den Veteran",
+          "name_en": "Brace of Dwarf pistols for Veteran",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "longbeards",
+      "name_de": "Langbärte",
+      "name_en": "Longbeards",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Old Guard",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Schilde",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_de": "Runenstandarte",
+          "name_en": "Runic standard",
+          "maxPoints": 50,
+          "maxBanners": 1,
+          "points": 0
+        }
+      ]
+    }
+  ],
   "special": [],
   "rare": []
 }
