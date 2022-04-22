@@ -210,6 +210,7 @@ export const Unit = ({ isMobile }) => {
           !unit.command &&
           !unit.equipment &&
           !unit.mounts &&
+          !unit.magic &&
           !unit.options && (
             <i className="unit__empty">Keine Optionen verfügbar.</i>
           )}

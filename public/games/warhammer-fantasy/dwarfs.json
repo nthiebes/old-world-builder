@@ -1,6 +1,301 @@
 {
-  "lords": [],
-  "heroes": [],
+  "lords": [
+    {
+      "id": "thorgrim",
+      "name_de": "Thorgrim Grollbart",
+      "name_en": "Thorgrim Grudgebearer",
+      "points": 650,
+      "named": true
+    },
+    {
+      "id": "thorek",
+      "name_de": "Thorek Eisenstirn",
+      "name_en": "Thorek Ironbrow",
+      "points": 435,
+      "named": true
+    },
+    {
+      "id": "ungrim",
+      "name_de": "Ungrim Eisenfaust",
+      "name_en": "Ungrim Ironfist",
+      "points": 350,
+      "named": true
+    },
+    {
+      "id": "belegar",
+      "name_de": "Belegar Eisenhammer",
+      "name_en": "Belegar Ironhammer",
+      "points": 305,
+      "named": true
+    },
+    {
+      "id": "lord",
+      "name_de": "König",
+      "name_en": "Lord",
+      "points": 145,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenarmbrust",
+          "name_en": "Dwarf crossbow",
+          "points": 12
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Eidstein",
+          "name_en": "Oath Stone",
+          "points": 25
+        },
+        {
+          "name_de": "Schildträger",
+          "name_en": "Shieldbearers",
+          "points": 40
+        }
+      ],
+      "magic": {
+        "maxPoints": 125
+      }
+    },
+    {
+      "id": "runelord",
+      "name_de": "Runenmeister",
+      "name_en": "Runelord",
+      "points": 120,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Runenamboss",
+          "name_en": "Anvil of Doom",
+          "points": 170
+        }
+      ],
+      "magic": {
+        "maxPoints": 150
+      }
+    },
+    {
+      "id": "deamonslayer",
+      "name_de": "Dämonenslayer",
+      "name_en": "Daemon Slayer",
+      "points": 140,
+      "magic": {
+        "maxPoints": 100
+      }
+    }
+  ],
+  "heroes": [
+    {
+      "id": "josef",
+      "name_de": "Josef Bugman",
+      "name_en": "Josef Bugman",
+      "named": true,
+      "points": 165
+    },
+    {
+      "id": "grimm",
+      "name_de": "Grimm Burloksson",
+      "name_en": "Grimm Burloksson",
+      "named": true,
+      "points": 165
+    },
+    {
+      "id": "thane",
+      "name_de": "Thain",
+      "name_en": "Thane",
+      "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenarmbrust",
+          "name_en": "Dwarf crossbow",
+          "points": 12
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Eidstein",
+          "name_en": "Oath Stone",
+          "points": 25
+        }
+      ],
+      "magic": {
+        "maxPoints": 75
+      }
+    },
+    {
+      "id": "runesmith",
+      "name_de": "Runenschmied",
+      "name_en": "Runesmith",
+      "points": 60,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "magic": {
+        "maxPoints": 75
+      }
+    },
+    {
+      "id": "engineer",
+      "name_de": "Meistermaschinist",
+      "name_en": "Master Engineer",
+      "points": 70,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+          "name_en": "Brace of Dwarf pistols",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "magic": {
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "dragonslayer",
+      "name_de": "Drachenslayer",
+      "name_en": "Dragon Slayer",
+      "points": 70,
+      "magic": {
+        "maxPoints": 75
+      }
+    }
+  ],
   "core": [],
   "special": [],
   "rare": []
