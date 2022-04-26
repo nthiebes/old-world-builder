@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -83,6 +83,7 @@ const updateIds = (items) => {
 export const Magic = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
@@ -132,7 +133,6 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     army &&
-      !items &&
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
@@ -145,11 +145,12 @@ export const Magic = ({ isMobile }) => {
           });
 
           dispatch(setItems(updateIds(allItems)));
+          setIsLoading(false);
         },
       });
-  }, [army, dispatch, list, items]);
+  }, [army, dispatch, list, setIsLoading]);
 
-  if (!items || !unit) {
+  if (isLoading) {
     if (isMobile) {
       return (
         <>
