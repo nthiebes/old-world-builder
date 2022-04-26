@@ -324,7 +324,7 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
@@ -362,7 +362,7 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
@@ -400,7 +400,7 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
@@ -431,13 +431,17 @@
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "type": "banner-runes",
+            "maxPoints": 50
+          }
         }
       ],
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
@@ -446,17 +450,328 @@
           "name_en": "Great weapons",
           "points": 2,
           "perModel": true
-        },
-        {
-          "name_de": "Runenstandarte",
-          "name_en": "Runic standard",
-          "maxPoints": 50,
-          "maxBanners": 1,
-          "points": 0
         }
       ]
     }
   ],
-  "special": [],
-  "rare": []
+  "special": [
+    {
+      "id": "hammerers",
+      "name_de": "Hammerträger",
+      "name_en": "Hammerers",
+      "points": 14,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Hüter des Tores",
+          "name_en": "Keeper of the Gate",
+          "points": 10,
+          "magic": {
+            "type": "weapon-runes",
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "type": "banner-runes",
+            "maxPoints": 75
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "ironbreakers",
+      "name_de": "Eisenbrecher",
+      "name_en": "Ironbreakers",
+      "points": 14,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Eisenbart",
+          "name_en": "Ironbeard",
+          "points": 10
+        },
+        {
+          "name_de": "Eisenbart, Brace of drakefire pistols",
+          "name_en": "Ironbeard, Brace of drakefire pistols",
+          "points": 10
+        },
+        {
+          "name_de": "Eisenbart, Cinderblast bombs",
+          "name_en": "Ironbeard, Cinderblast bombs",
+          "points": 25
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "type": "banner-runes",
+            "maxPoints": 50
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "miners",
+      "name_de": "Miners",
+      "name_en": "Bergwerker",
+      "points": 10,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Prospektor",
+          "name_en": "Prospector",
+          "points": 10
+        },
+        {
+          "name_de": "Prospektor, Dampfhammer",
+          "name_en": "Prospector, Steam drill",
+          "points": 35
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Sprengladungen",
+          "name_en": "Blasting charges",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "slayers",
+      "name_de": "Slayers",
+      "name_en": "Slayers",
+      "points": 11,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "type": "banner-runes",
+            "maxPoints": 50
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Riesenslayer",
+          "name_en": "Giant Slayers",
+          "points": 12,
+          "perModel": true,
+          "stackable": true
+        }
+      ]
+    },
+    {
+      "id": "cannon",
+      "name_de": "Kanone",
+      "name_en": "Cannon",
+      "points": 120,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "gyro",
+      "name_de": "Gyrokopter",
+      "name_en": "Gyrocopter",
+      "points": 80,
+      "options": [
+        {
+          "name_de": "Brimstone gun",
+          "name_en": "Brimstone gun",
+          "points": 0
+        },
+        {
+          "name_de": "Vorhut",
+          "name_en": "Vanguard deployment",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "boltthrower",
+      "name_de": "Speerschleuder",
+      "name_en": "Bolt Thrower",
+      "points": 55,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "grudgethrower",
+      "name_de": "Grollschleuder",
+      "name_en": "Grudge Thrower",
+      "points": 80,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    }
+  ],
+  "rare": [
+    {
+      "id": "organgun",
+      "name_de": "Orgelkanone",
+      "name_en": "Organ Gun",
+      "points": 120,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "flamecanon",
+      "name_de": "Flammenkanone",
+      "name_en": "Flame Cannon",
+      "points": 140,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "rangers",
+      "name_de": "Grenzläufer",
+      "name_en": "Rangers",
+      "points": 14,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Ol' Deadeye",
+          "name_en": "Ol' Deadeye",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "irondrakes",
+      "name_de": "Irondrakes",
+      "name_en": "Irondrakes",
+      "points": 15,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Ironwarden",
+          "name_en": "Ironwarden",
+          "points": 10
+        },
+        {
+          "name_de": "Ironwarden, Cinderblast bombs",
+          "name_en": "Ironwarden, Cinderblast bombs",
+          "points": 25
+        },
+        {
+          "name_de": "Ironwarden, Brace of drakefire pistols",
+          "name_en": "Ironwarden, Brace of drakefire pistols",
+          "points": 10
+        },
+        {
+          "name_de": "Ironwarden, Trollhammer torpedo",
+          "name_en": "Ironwarden, Trollhammer torpedo",
+          "points": 30
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "type": "banner-runes",
+            "maxPoints": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "gyrobomber",
+      "name_de": "Gyrobomber",
+      "name_en": "Gyrobomber",
+      "points": 125
+    }
+  ]
 }
