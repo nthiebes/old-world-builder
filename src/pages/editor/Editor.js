@@ -265,13 +265,15 @@ export const Editor = ({ isMobile }) => {
             <p className="editor__points">
               {coreData.diff > 0 ? (
                 <>
-                  <>
-                    <strong>{coreData.diff}</strong> Pkte. fehlen
-                    <Icon symbol="error" color="red" />
-                  </>
+                  <strong>{coreData.diff}</strong> Pkte. fehlen
+                  <Icon symbol="error" color="red" />
                 </>
               ) : (
-                <Icon symbol="check" />
+                <>
+                  <strong>{corePoints}</strong>
+                  {` / ${coreData.points} `}
+                  Pkte. <Icon symbol="check" />
+                </>
               )}
             </p>
           </header>
