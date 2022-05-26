@@ -29,7 +29,13 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
     {
       "name_de": String,
       "name_de": String,
-      "points": Number
+      "points": Number,
+      "magic": [
+        "types": [ // Limit the available magic items (see "magic-items.json" types)
+          String
+        ],
+        "maxPoints": Number // Maximum points for magic items
+      ]
     }
   ],
   "equipment": [ // All equipment options, they are mutually exclusive
@@ -46,10 +52,6 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
       "name_de": String,
       "name_de": String,
       "points": Number,
-
-      "maxBanners": Boolean, // Maximum amount of magic banners
-      "maxPoints": Number, // Maximum points for banners
-
       "stackable": Boolean, // Allows multiple selectins of this option
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
@@ -64,6 +66,9 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
     }
   ],
   "magic": { // Magic items are defined in the "magic-items.json" file
+    "types": [ // Limit the available magic items (see "magic-items.json" types)
+      String
+    ],
     "maxPoints": Number // Maximum points for magic items
   }
 }

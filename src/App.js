@@ -82,9 +82,14 @@ export const App = () => {
                 </Switch>
               </section>
               <section className="column">
-                <Route path="/editor/:listId/:type/:unitId/magic">
-                  {<Magic />}
-                </Route>
+                <Switch>
+                  <Route path="/editor/:listId/:type/:unitId/magic/:command">
+                    {<Magic />}
+                  </Route>
+                  <Route path="/editor/:listId/:type/:unitId/magic">
+                    {<Magic />}
+                  </Route>
+                </Switch>
               </section>
             </Main>
           </Route>

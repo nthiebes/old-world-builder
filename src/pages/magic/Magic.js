@@ -11,7 +11,7 @@ import gameSystems from "../../assets/armies.json";
 
 import "./Magic.css";
 
-const nameMap = {
+export const nameMap = {
   greenskins: {
     name_de: "Glitzakram",
   },
@@ -84,7 +84,7 @@ export const Magic = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const { listId, type, unitId } = useParams();
+  const { listId, type, unitId, command } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -105,6 +105,7 @@ export const Magic = ({ isMobile }) => {
         ...(unit?.magic?.items || []),
         {
           ...magicItem,
+          command: Number(command),
           id: event.target.value,
         },
       ];
@@ -148,7 +149,7 @@ export const Magic = ({ isMobile }) => {
           setIsLoading(false);
         },
       });
-  }, [army, dispatch, list, setIsLoading]);
+  }, [army, dispatch, list, setIsLoading, unit]);
 
   if (isLoading) {
     if (isMobile) {
@@ -194,6 +195,23 @@ export const Magic = ({ isMobile }) => {
                 isFirstItemType = true;
               } else {
                 isFirstItemType = false;
+              }
+
+              // Filter command magic items
+              if (
+                unit?.command &&
+                unit?.command[command] &&
+                !unit.command[command].magic.types.includes(magicItem.type)
+              ) {
+                return null;
+              }
+
+              // Filter magic items
+              if (
+                unit?.magic?.types &&
+                !unit.magic.types.includes(magicItem.type)
+              ) {
+                return null;
               }
 
               return (

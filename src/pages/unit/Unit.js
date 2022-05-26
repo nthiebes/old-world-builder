@@ -7,6 +7,7 @@ import { getUnitPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Header, Main } from "../../components/page";
+import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 
 import "./Unit.css";
@@ -233,24 +234,59 @@ export const Unit = ({ isMobile }) => {
           <>
             <h2 className="unit__subline">Kommandoabteilung:</h2>
             {unit.command.map(
-              ({ name_de, points, perModel, id, active = false }) => (
-                <div className="checkbox" key={id}>
-                  <input
-                    type="checkbox"
-                    id={`command-${id}`}
-                    value={id}
-                    onChange={() => handleCommandChange(id)}
-                    checked={active}
-                    className="checkbox__input"
-                  />
-                  <label htmlFor={`command-${id}`} className="checkbox__label">
-                    {name_de}
-                    <i className="checkbox__points">
-                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                      {perModel && ` pro Modell`}
-                    </i>
-                  </label>
-                </div>
+              (
+                { name_de, points, perModel, id, active = false, magic },
+                index
+              ) => (
+                <Fragment key={id}>
+                  <div className="checkbox">
+                    <input
+                      type="checkbox"
+                      id={`command-${id}`}
+                      value={id}
+                      onChange={() => handleCommandChange(id)}
+                      checked={active}
+                      className="checkbox__input"
+                    />
+                    <label
+                      htmlFor={`command-${id}`}
+                      className="checkbox__label"
+                    >
+                      {name_de}
+                      <i className="checkbox__points">
+                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
+                        {perModel && ` pro Modell`}
+                      </i>
+                    </label>
+                  </div>
+                  {magic && active && (
+                    <List
+                      to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+                      className="editor__list unit__link"
+                      active={location.pathname.includes("magic")}
+                    >
+                      <div className="editor__list-inner">
+                        <b>
+                          {magic.types
+                            .map((type) => nameMap[type].name_de)
+                            .join(", ")}
+                        </b>
+                        <i className="checkbox__points">
+                          {unit.command[index].points} /{" "}
+                          {unit.command[index].magic.maxPoints} Pkte.
+                        </i>
+                      </div>
+                      {unit?.magic?.items && (
+                        <p>
+                          {unit.magic.items
+                            .filter(({ command }) => command === index)
+                            .map(({ name_de }) => name_de)
+                            .join(", ")}
+                        </p>
+                      )}
+                    </List>
+                  )}
+                </Fragment>
               )
             )}
           </>
@@ -369,7 +405,7 @@ export const Unit = ({ isMobile }) => {
             ))}
           </>
         )}
-        {unit?.magic && (
+        {unit?.magic?.maxPoints && (
           <List
             to={`/editor/${listId}/${type}/${unitId}/magic`}
             className="editor__list unit__link"
