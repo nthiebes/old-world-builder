@@ -433,7 +433,7 @@
           "name_en": "Standard bearer",
           "points": 10,
           "magic": {
-            "type": "banner-runes",
+            "types": ["banner-runes"],
             "maxPoints": 50
           }
         }
@@ -467,7 +467,7 @@
           "name_en": "Keeper of the Gate",
           "points": 10,
           "magic": {
-            "type": "weapon-runes",
+            "types": ["weapon-runes"],
             "maxPoints": 25
           }
         },
@@ -481,7 +481,7 @@
           "name_en": "Standard bearer",
           "points": 10,
           "magic": {
-            "type": "banner-runes",
+            "types": ["banner-runes"],
             "maxPoints": 75
           }
         }
@@ -491,12 +491,6 @@
           "name_de": "Schilde",
           "name_en": "Shields",
           "points": 1,
-          "perModel": true
-        },
-        {
-          "name_de": "Zweihandwaffen",
-          "name_en": "Great weapons",
-          "points": 2,
           "perModel": true
         }
       ]
@@ -533,23 +527,9 @@
           "name_en": "Standard bearer",
           "points": 10,
           "magic": {
-            "type": "banner-runes",
+            "types": ["banner-runes"],
             "maxPoints": 50
           }
-        }
-      ],
-      "options": [
-        {
-          "name_de": "Schilde",
-          "name_en": "Shields",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_de": "Zweihandwaffen",
-          "name_en": "Great weapons",
-          "points": 2,
-          "perModel": true
         }
       ]
     },
@@ -607,7 +587,7 @@
           "name_en": "Standard bearer",
           "points": 10,
           "magic": {
-            "type": "banner-runes",
+            "types": ["banner-runes"],
             "maxPoints": 50
           }
         }
@@ -761,7 +741,7 @@
           "name_en": "Standard bearer",
           "points": 10,
           "magic": {
-            "type": "banner-runes",
+            "types": ["banner-runes"],
             "maxPoints": 50
           }
         }
