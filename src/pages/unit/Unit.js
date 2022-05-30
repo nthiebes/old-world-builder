@@ -12,6 +12,18 @@ import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 
 import "./Unit.css";
 
+const getUnitCommandPoints = (items) => {
+  let commandPoints = 0;
+
+  if (items) {
+    items.forEach((option) => {
+      commandPoints += option.points;
+    });
+  }
+
+  return commandPoints;
+};
+
 export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type, unitId } = useParams();
@@ -272,8 +284,12 @@ export const Unit = ({ isMobile }) => {
                             .join(", ")}
                         </b>
                         <i className="checkbox__points">
-                          {unit.command[index].points} /{" "}
-                          {unit.command[index].magic.maxPoints} Pkte.
+                          {getUnitCommandPoints(
+                            unit?.magic?.items.filter(
+                              ({ command }) => command === index
+                            )
+                          )}{" "}
+                          / {unit.command[index].magic.maxPoints} Pkte.
                         </i>
                       </div>
                       {unit?.magic?.items && (
