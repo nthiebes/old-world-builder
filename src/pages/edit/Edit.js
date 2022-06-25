@@ -42,7 +42,7 @@ export const Edit = ({ isMobile }) => {
     return (
       <>
         <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
-        <Main></Main>
+        <Main />
       </>
     );
   }

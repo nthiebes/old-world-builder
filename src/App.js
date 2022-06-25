@@ -43,6 +43,9 @@ export const App = () => {
           <Route path="/editor/:listId/edit">{<Edit isMobile />}</Route>
           <Route path="/editor/:listId/export">{<Export isMobile />}</Route>
           <Route path="/editor/:listId/add/:type">{<Add isMobile />}</Route>
+          <Route path="/editor/:listId/:type/:unitId/magic/:command">
+            {<Magic isMobile />}
+          </Route>
           <Route path="/editor/:listId/:type/:unitId/magic">
             {<Magic isMobile />}
           </Route>
