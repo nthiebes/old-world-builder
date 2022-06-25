@@ -95,8 +95,14 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleCommandChange = (id) => {
-    const command = unit.command.map((option) => {
+    let magicItems = unit.magic.items;
+    const command = unit.command.map((option, index) => {
       if (option.id === id) {
+        // Also remove banner runes
+        if (option.active) {
+          magicItems = magicItems.filter(({ command }) => command !== index);
+        }
+
         return {
           ...option,
           active: option.active ? false : true,
@@ -111,6 +117,10 @@ export const Unit = ({ isMobile }) => {
         type,
         unitId,
         command,
+        magic: {
+          ...unit.magic,
+          items: magicItems,
+        },
       })
     );
   };
