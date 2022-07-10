@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { Button } from "../../components/button";
 import { Spinner } from "../../components/spinner";
+import { Icon } from "../../components/icon";
 
 import "./Page.css";
 
@@ -15,6 +16,7 @@ export const Header = ({
   moreButton,
   to,
   isSection,
+  hasPointsError,
 }) => {
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
@@ -44,7 +46,12 @@ export const Header = ({
       )}
       <div className="header__text">
         {headline && <h1 className="header__name">{headline}</h1>}
-        {subheadline && <p className="header__points">{subheadline}</p>}
+        {subheadline && (
+          <p className="header__points">
+            {subheadline}{" "}
+            {hasPointsError && <Icon symbol="error" color="red" />}
+          </p>
+        )}
       </div>
       {moreButton ? (
         <Button

@@ -54,6 +54,16 @@
   text-overflow: ellipsis;
 }
 
+.header__points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__points .icon {
+  margin-left: 5px;
+}
+
 .header__more {
   position: absolute;
   top: 100%;

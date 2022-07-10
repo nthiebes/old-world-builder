@@ -7,31 +7,13 @@ import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
-import { deleteList } from "../../state/lists";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import { deleteList } from "../../state/lists";
 
+import { removeList, updateList } from "./helpers";
 import "./Editor.css";
-
-const updateList = (updatedList) => {
-  const localLists = JSON.parse(localStorage.getItem("lists"));
-  const updatedLists = localLists.map((list) => {
-    if (list.id === updatedList.id) {
-      return updatedList;
-    } else {
-      return list;
-    }
-  });
-
-  localStorage.setItem("lists", JSON.stringify(updatedLists));
-};
-const removeList = (listId) => {
-  const localLists = JSON.parse(localStorage.getItem("lists"));
-  const updatedLists = localLists.filter(({ id }) => listId !== id);
-
-  localStorage.setItem("lists", JSON.stringify(updatedLists));
-};
 
 export const Editor = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -39,7 +21,7 @@ export const Editor = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
   const location = useLocation();
-  const errors = useSelector((state) => state.errors);
+  // const errors = useSelector((state) => state.errors);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -154,6 +136,7 @@ export const Editor = ({ isMobile }) => {
           to="/"
           headline={list.name}
           subheadline={`${allPoints} / ${list.points} Pkte.`}
+          hasPointsError={allPoints > list.points}
           moreButton={moreButtons}
         />
       )}
@@ -165,17 +148,18 @@ export const Editor = ({ isMobile }) => {
             to="/"
             headline={list.name}
             subheadline={`${allPoints} / ${list.points} Pkte.`}
+            hasPointsError={allPoints > list.points}
             moreButton={moreButtons}
           />
         )}
-        <section>
-          {errors.map(() => (
+        {/* <section>
+          {errors.map((error) => (
             <span>
-              <strong>{coreData.diff}</strong> Pkte. fehlen
+              <strong>{error}</strong>
               <Icon symbol="error" color="red" />
             </span>
           ))}
-        </section>
+        </section> */}
         <section className="editor__section">
           <header className="editor__header">
             <h2>Kommandanten</h2>

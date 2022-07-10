@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { getUnitPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
+import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
@@ -438,10 +439,13 @@ export const Unit = ({ isMobile }) => {
             active={location.pathname.includes("magic")}
           >
             <div className="editor__list-inner">
-              <b>Magische Gegenstände</b>
+              <b className="unit__magic-headline">Magische Gegenstände</b>
               <i className="checkbox__points">
                 {magicPoints} / {unit.magic.maxPoints} Pkte.
               </i>
+              {magicPoints > unit.magic.maxPoints && (
+                <Icon symbol="error" color="red" className="unit__magic-icon" />
+              )}
             </div>
             {unit.magic.items && (
               <p>{unit.magic.items.map(({ name_de }) => name_de).join(", ")}</p>
