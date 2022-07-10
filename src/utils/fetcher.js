@@ -1,7 +1,6 @@
 import "abortcontroller-polyfill/dist/abortcontroller-polyfill-only";
 
-const baseUrl =
-  process.env.NODE_ENV === "development" ? "/" : "/old-world-builder/";
+const baseUrl = "/";
 let controller;
 
 const abortFetch = () => {
