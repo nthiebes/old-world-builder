@@ -6,9 +6,9 @@ import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { updateList } from "../../state/lists";
 
-import "./Edit.css";
+import "./EditList.css";
 
-export const Edit = ({ isMobile }) => {
+export const EditList = ({ isMobile }) => {
   const location = useLocation();
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
@@ -21,7 +21,7 @@ export const Edit = ({ isMobile }) => {
     dispatch(
       updateList({
         listId,
-        points: event.target.value,
+        points: Number(event.target.value),
       })
     );
   };

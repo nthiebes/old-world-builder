@@ -6,7 +6,7 @@ import { NewList } from "./pages/new-list";
 import { Editor } from "./pages/editor";
 import { Home } from "./pages/home";
 import { Unit } from "./pages/unit";
-import { Edit } from "./pages/edit";
+import { EditList } from "./pages/edit-list";
 import { Magic } from "./pages/magic";
 import { About } from "./pages/about";
 import { Add } from "./pages/add";
@@ -41,7 +41,7 @@ export const App = () => {
     <Router>
       {isMobile ? (
         <Switch>
-          <Route path="/editor/:listId/edit">{<Edit isMobile />}</Route>
+          <Route path="/editor/:listId/edit">{<EditList isMobile />}</Route>
           <Route path="/editor/:listId/export">{<Export isMobile />}</Route>
           <Route path="/editor/:listId/duplicate">
             {<Duplicate isMobile />}
@@ -82,7 +82,7 @@ export const App = () => {
               </section>
               <section className="column">
                 <Switch>
-                  <Route path="/editor/:listId/edit">{<Edit />}</Route>
+                  <Route path="/editor/:listId/edit">{<EditList />}</Route>
                   <Route path="/editor/:listId/export">{<Export />}</Route>
                   <Route path="/editor/:listId/duplicate">
                     {<Duplicate />}
