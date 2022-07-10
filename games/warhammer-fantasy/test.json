@@ -1,0 +1,5087 @@
+[
+  {
+    "name": "Waaagh Grangit",
+    "game": "warhammer-fantasy",
+    "points": "5000",
+    "army": "greenskins",
+    "lords": [
+      {
+        "id": "savage-grossschamane.vjyesbb",
+        "name_de": "Wildork-Grossschamane",
+        "name_en": "",
+        "points": 170,
+        "options": [
+          { "name_de": "Zauberer der Stufe 4", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1, "active": false },
+          { "name_de": "Lindwurm", "points": 160, "id": 2, "active": false }
+        ],
+        "magic": { "maxPoints": 100, "items": [] },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "grimgor.fefyggse",
+        "name_de": "Grimgork Eisenpelz",
+        "name_en": "Grimgor Ironhide",
+        "points": 355,
+        "named": true,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "ork-whaaaghboss.oxwllmfwe",
+        "name_de": "Ork-Waaaghboss",
+        "name_en": "",
+        "points": 115,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 3,
+            "id": 2
+          },
+          { "name_de": "Speer (nur beritten)", "points": 3, "id": 3 }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 3, "id": 0, "active": true }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": false, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1, "active": true },
+          { "name_de": "Lindwurm", "points": 160, "id": 2, "active": false },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen",
+            "points": 85,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 4,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null
+      },
+      {
+        "id": "ork-grossschamane.rndsjfksl",
+        "name_de": "Ork-Grossschamane",
+        "name_en": "",
+        "points": 165,
+        "options": [
+          { "name_de": "Zauberer der Stufe 4", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1 },
+          { "name_de": "Lindwurm", "points": 160, "id": 2 },
+          { "name_de": "Ork-Wildschweinstreitwagen", "points": 85, "id": 3 },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 4
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "ork-whaaaghboss.aueibggjpf",
+        "name_de": "Ork-Waaaghboss",
+        "name_en": "",
+        "points": 115,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 3,
+            "id": 2
+          },
+          { "name_de": "Speer (nur beritten)", "points": 3, "id": 3 }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 3, "id": 0, "active": true }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": false, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1, "active": false },
+          { "name_de": "Lindwurm", "points": 160, "id": 2, "active": true },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen",
+            "points": 85,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 4,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "blork-gargboss.oayjphb",
+        "name_de": "Schwarzork-Gargboss",
+        "name_en": "",
+        "points": 90,
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0, "active": true },
+          {
+            "name_de": "Armeestandartenträger",
+            "points": 25,
+            "id": 1,
+            "active": false
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 16, "id": 1, "active": false },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen",
+            "points": 85,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 3,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 50, "items": [] },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "nightgoblin-schamane.ixbtmtqq",
+        "name_de": "Nachtgoblin-Schamane",
+        "name_en": "",
+        "points": 50,
+        "options": [
+          { "name_de": "Zauberer der Stufe 2", "points": 35, "id": 0 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "nightgoblin-schamane.qmgazefwjp",
+        "name_de": "Nachtgoblin-Schamane",
+        "name_en": "",
+        "points": 50,
+        "options": [
+          { "name_de": "Zauberer der Stufe 2", "points": 35, "id": 0 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "nightgoblin-gargboss.ljehiud",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          { "name_de": "Leichte Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "nightgoblin-gargboss.cjbjvmneug",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          { "name_de": "Leichte Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "nightgoblin-gargboss.owrmi",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          { "name_de": "Leichte Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "goblin-gargboss.gncweme",
+        "name_de": "Goblin-Gargboss",
+        "name_en": "",
+        "points": 35,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Leichte Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Riesenwolf", "points": 12, "id": 1 },
+          { "name_de": "Riesenspinne", "points": 15, "id": 2 },
+          { "name_de": "Gigantula", "points": 40, "id": 3 },
+          { "name_de": "Goblin-Wolfsstreitwagen", "points": 50, "id": 4 },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+            "points": 55,
+            "id": 5
+          },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+            "points": 55,
+            "id": 6
+          },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+            "points": 60,
+            "id": 7
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      }
+    ],
+    "core": [
+      {
+        "id": "savageorks.mfjbols",
+        "name_de": "Wildorks",
+        "name_en": "",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere",
+            "points": 1,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Bögen",
+            "points": 1,
+            "perModel": true,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Zusätzliche Handwaffen",
+            "points": 1,
+            "perModel": true,
+            "id": 3,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 },
+          { "name_de": "Große Spießaz", "points": 20, "id": 1, "active": true },
+          {
+            "name_de": "Moschaz",
+            "points": 2,
+            "perModel": true,
+            "id": 2,
+            "active": false
+          }
+        ],
+        "mounts": null,
+        "strength": 28
+      },
+      {
+        "id": "goblin-spiderriders.qadzdzl",
+        "name_de": "Waldgoblin-Spinnenreiter",
+        "name_en": "",
+        "points": 13,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Kurzbögen",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": false
+          }
+        ],
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "goblin-wolves.iltekhk",
+        "name_de": "Goblin-Wolfsreiter",
+        "name_en": "",
+        "points": 10,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Speere",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Kurzbögen", "points": 1, "perModel": true, "id": 1 },
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 2 }
+        ],
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "nightgoblins.tjqeh",
+        "name_de": "Nachtgoblins",
+        "name_en": "",
+        "points": 3,
+        "minimum": 20,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Handwaffen, Kurzbögen",
+            "points": 0,
+            "perModel": true,
+            "id": 2,
+            "active": false
+          }
+        ],
+        "options": [
+          { "name_de": "Netzgitz", "points": 45, "id": 0, "active": true },
+          {
+            "name_de": "Fanatics",
+            "points": 25,
+            "maximum": 3,
+            "stackable": true,
+            "id": 1,
+            "stackableCount": 3
+          }
+        ],
+        "mounts": null,
+        "strength": 50
+      },
+      {
+        "id": "orks.cfrfarsc",
+        "name_de": "Ork-Krieger",
+        "name_en": "",
+        "points": 6,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          },
+          { "name_de": "Speere", "points": 1, "perModel": true, "id": 1 },
+          {
+            "name_de": "Zusätzliche Handwaffen",
+            "points": 1,
+            "perModel": true,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Moschaz", "points": 2, "perModel": true, "id": 1 },
+          {
+            "name_de": "Magisches Banner",
+            "magicBanner": true,
+            "maxPoints": 50,
+            "points": 0,
+            "id": 2
+          }
+        ],
+        "mounts": null,
+        "strength": 15
+      },
+      {
+        "id": "orks.dzpcuwj",
+        "name_de": "Ork-Krieger",
+        "name_en": "",
+        "points": 6,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere",
+            "points": 1,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Zusätzliche Handwaffen",
+            "points": 1,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 },
+          { "name_de": "Moschaz", "points": 2, "perModel": true, "id": 1 },
+          {
+            "name_de": "Magisches Banner",
+            "magicBanner": true,
+            "maxPoints": 50,
+            "points": 0,
+            "id": 2
+          }
+        ],
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "nightgoblins.afhsitlzi",
+        "name_de": "Nachtgoblins",
+        "name_en": "",
+        "points": 3,
+        "minimum": 20,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Handwaffen, Kurzbögen",
+            "points": 0,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Netzgitz", "points": 45, "id": 0 },
+          {
+            "name_de": "Fanatics",
+            "points": 25,
+            "maximum": 3,
+            "stackable": true,
+            "id": 1
+          }
+        ],
+        "mounts": null,
+        "strength": 20
+      }
+    ],
+    "special": [
+      {
+        "id": "goblin-wolfchariot.eyxsesfs",
+        "name_de": "Goblin-Wolfsstreitwagen",
+        "name_en": "",
+        "points": 50,
+        "minimum": 1,
+        "maximum": 3,
+        "options": [
+          {
+            "name_de": "Zusätzliches Goblin-Besatzungsmitglied",
+            "points": 5,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zusätzlicher Riesenwolf",
+            "points": 5,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "strength": 1
+      },
+      {
+        "id": "ork-boarchariot.fqkmd",
+        "name_de": "Ork-Wildschweinstreitwagen",
+        "name_en": "",
+        "points": 85,
+        "options": [
+          {
+            "name_de": "Zusätzliches Ork-Besatzungsmitglied",
+            "points": 5,
+            "id": 0
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "trolls.hdgasapll",
+        "name_de": "Trolle",
+        "name_en": "",
+        "points": 35,
+        "minimum": 1,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 3
+      },
+      {
+        "id": "nightgoblin-squigherd.gcbighnm",
+        "name_de": "Nachtgoblin-Squigherde",
+        "name_en": "",
+        "points": 0,
+        "options": [
+          {
+            "name_de": "Nachtgoblin-Squigtreiba",
+            "points": 3,
+            "minimum": 1,
+            "stackable": true,
+            "id": 0,
+            "stackableCount": 12
+          },
+          {
+            "name_de": "Höhlensquig",
+            "points": 8,
+            "minimum": 3,
+            "stackable": true,
+            "id": 1,
+            "stackableCount": 23
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "goblin-spearchucka.pnsmhntbk",
+        "name_de": "Goblin-Speerschleuda",
+        "name_en": "",
+        "points": 35,
+        "options": [{ "name_de": "Orktreiba", "points": 10, "id": 0 }],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "blackorks.omhayib",
+        "name_de": "Schwarzorks",
+        "name_en": "",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Magisches Banner",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Schilde",
+            "points": 1,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 35
+      }
+    ],
+    "rare": [
+      {
+        "id": "doomdiver.hejase",
+        "name_de": "Kamikazekatapult",
+        "name_en": "",
+        "points": 80,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "doomdiver.xhfjdz",
+        "name_de": "Kamikazekatapult",
+        "name_en": "",
+        "points": 80,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "giant.fjrmamden",
+        "name_de": "Riese",
+        "name_en": "",
+        "points": 200,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "manglersquigs.hkrkmgo",
+        "name_de": "Kettensquigs",
+        "name_en": "",
+        "points": 65,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "rivertrolls.tolmkgujk",
+        "name_de": "Flusstrolle",
+        "name_en": "",
+        "points": 45,
+        "minimum": 1,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 3
+      }
+    ],
+    "id": "vtzeoc"
+  },
+  {
+    "name": "Würfelpechs Sommerrollen",
+    "game": "warhammer-fantasy",
+    "points": "2600",
+    "army": "the-empire",
+    "lords": [
+      {
+        "id": "arch-lector.buyhdzilhn",
+        "name_de": "Erzlektor",
+        "name_en": "",
+        "points": 100,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe",
+            "points": 2,
+            "id": 1,
+            "active": false
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2, "active": false }
+        ],
+        "options": [
+          {
+            "name_de": "Schwere Rüstung",
+            "points": 4,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Schild", "points": 4, "id": 1, "active": true }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": false, "id": 0 },
+          {
+            "name_de": "Kriegsaltar des Sigmar",
+            "points": 150,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Kriegsaltar des Sigmar, Das Horn des Sigismund",
+            "points": 160,
+            "id": 2,
+            "active": false
+          },
+          { "name_de": "Schlachtross", "points": 18, "id": 3, "active": false },
+          {
+            "name_de": "Schlachtross, Rossharnisch",
+            "points": 24,
+            "id": 4,
+            "active": false
+          }
+        ],
+        "magic": {
+          "maxPoints": 100,
+          "items": [
+            {
+              "name_de": "Duellklingen",
+              "name_en": "",
+              "points": 35,
+              "type": "weapon",
+              "id": "general-5"
+            }
+          ]
+        },
+        "command": null
+      },
+      {
+        "id": "wizard-lord.rucwjj",
+        "name_de": "Meisterzauberer",
+        "name_en": "",
+        "points": 165,
+        "options": [
+          { "name_de": "Zauberer der Stufe 4", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Imperialer Pegasus", "points": 45, "id": 1 },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4
+          },
+          { "name_de": "Schlachtross", "points": 18, "id": 5 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 24, "id": 6 },
+          { "name_de": "Celestisches Orkanium", "points": 125, "id": 7 },
+          { "name_de": "Luminarium des Hysh", "points": 120, "id": 8 },
+          { "name_de": "Imperialer Greif", "points": 170, "id": 9 },
+          {
+            "name_de": "Imperialer Greif, Blutschrei",
+            "points": 195,
+            "id": 10
+          },
+          {
+            "name_de": "Imperialer Greif, Zweiköpfig",
+            "points": 200,
+            "id": 11
+          },
+          {
+            "name_de": "Imperialer Greif, Blutschrei, Zweiköpfig",
+            "points": 225,
+            "id": 12
+          }
+        ],
+        "magic": {
+          "maxPoints": 100,
+          "items": [
+            {
+              "name_de": "Magiebannende Spruchrolle",
+              "name_en": "",
+              "points": 25,
+              "type": "artifact",
+              "id": "general-63"
+            }
+          ]
+        },
+        "command": null,
+        "equipment": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "captain.jpiorcyjvs",
+        "name_de": "Hauptmann des Imperiums",
+        "name_en": "",
+        "points": 60,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1 },
+          { "name_de": "Lanze (nur beritten)", "points": 7, "id": 2 },
+          { "name_de": "Muskete", "points": 6, "id": 3 },
+          { "name_de": "Langbogen", "points": 5, "id": 4 },
+          { "name_de": "Pistole", "points": 5, "id": 5 }
+        ],
+        "options": [
+          { "name_de": "Plattenrüstung", "points": 6, "id": 0, "active": true },
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Schild", "points": 2, "id": 2, "active": true },
+          {
+            "name_de": "Armeestandartenträger",
+            "points": 25,
+            "id": 3,
+            "active": true
+          },
+          {
+            "name_de": "Magische Standarte",
+            "magicBanner": true,
+            "points": 0,
+            "id": 4
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Imperialer Pegasus", "points": 45, "id": 1 },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4
+          },
+          { "name_de": "Schlachtross", "points": 12, "id": 5 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 6 }
+        ],
+        "magic": {
+          "maxPoints": 50,
+          "items": [
+            {
+              "name_de": "Talisman der Bewahrung",
+              "name_en": "",
+              "points": 45,
+              "type": "talisman",
+              "id": "general-31"
+            }
+          ]
+        },
+        "command": null
+      },
+      {
+        "id": "captain.jlvrvltkvv",
+        "name_de": "Hauptmann des Imperiums",
+        "name_en": "",
+        "points": 60,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1, "active": false },
+          {
+            "name_de": "Lanze (nur beritten)",
+            "points": 7,
+            "id": 2,
+            "active": true
+          },
+          { "name_de": "Muskete", "points": 6, "id": 3, "active": false },
+          { "name_de": "Langbogen", "points": 5, "id": 4, "active": false },
+          { "name_de": "Pistole", "points": 5, "id": 5, "active": false }
+        ],
+        "options": [
+          { "name_de": "Plattenrüstung", "points": 6, "id": 0, "active": true },
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Schild", "points": 2, "id": 2, "active": true },
+          {
+            "name_de": "Armeestandartenträger",
+            "points": 25,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Magische Standarte",
+            "magicBanner": true,
+            "points": 0,
+            "id": 4
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": false, "id": 0 },
+          {
+            "name_de": "Imperialer Pegasus",
+            "points": 45,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4,
+            "active": false
+          },
+          { "name_de": "Schlachtross", "points": 12, "id": 5, "active": false },
+          {
+            "name_de": "Schlachtross, Rossharnisch",
+            "points": 16,
+            "id": 6,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 50, "items": [] },
+        "command": null
+      },
+      {
+        "id": "engineer.ybuglkou",
+        "name_de": "Meistertechnicus",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Granatenbüchse", "points": 10, "id": 1 },
+          { "name_de": "Hochland-Langbüchse", "points": 20, "id": 2 },
+          { "name_de": "Taubenbomben", "points": 20, "id": 3 },
+          { "name_de": "Bündelmuskete", "points": 10, "id": 4 },
+          { "name_de": "Bündelpistole", "points": 10, "id": 5 }
+        ],
+        "options": [{ "name_de": "Leichte Rüstung", "points": 1, "id": 0 }],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Mechanisches Pferd", "points": 25, "id": 1 },
+          { "name_de": "Schlachtross", "points": 12, "id": 2 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 3 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      }
+    ],
+    "core": [
+      {
+        "id": "bows.yrkbhnra",
+        "name_de": "Bogenschützen",
+        "name_en": "",
+        "points": 7,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Schützenmeister", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": false },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 10
+      },
+      {
+        "id": "halberts.wlaiujbs",
+        "name_de": "Hellebardiere",
+        "name_en": "",
+        "points": 6,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Feldwaibel", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 49
+      },
+      {
+        "id": "knights.ofqlfyhp",
+        "name_de": "Ordensritter",
+        "name_en": "",
+        "points": 22,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Rittmeister", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Lanzen, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "points": 0,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Ritter des Inneren Zirkels",
+            "points": 3,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 1,
+            "active": false
+          }
+        ],
+        "mounts": null,
+        "strength": 10
+      }
+    ],
+    "special": [
+      {
+        "id": "demis.hdodxz",
+        "name_de": "Demigreifen-Ritter",
+        "name_en": "",
+        "points": 58,
+        "minimum": 3,
+        "command": [
+          { "name_de": "Rittmeister", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Lanzen",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          },
+          { "name_de": "Hellebarden", "points": 0, "perModel": true, "id": 1 }
+        ],
+        "options": [
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          }
+        ],
+        "mounts": null,
+        "strength": 3
+      },
+      {
+        "id": "canon.gzcv",
+        "name_de": "Grosskanone",
+        "name_en": "",
+        "points": 120,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "greatswords.qycvuvs",
+        "name_de": "Bihandkämpfer",
+        "name_en": "",
+        "points": 11,
+        "minimum": 10,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Hauptmann", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0,
+            "active": false
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 26
+      },
+      {
+        "id": "outriders.nzoebvne",
+        "name_de": "Schützenreiter",
+        "name_en": "",
+        "points": 21,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Meisterschützenreiter", "points": 10, "id": 0 },
+          {
+            "name_de": "Meisterschützenreiter, Pistolenpaar einschließlich einer Bündelpistole",
+            "points": 20,
+            "id": 1
+          },
+          {
+            "name_de": "Meisterschützenreiter, Granatenbüchse",
+            "points": 20,
+            "id": 2
+          },
+          { "name_de": "Musiker", "points": 10, "id": 3 },
+          { "name_de": "Standartenträger", "points": 10, "id": 4 }
+        ],
+        "options": [
+          { "name_de": "Rossharnische", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 5
+      }
+    ],
+    "rare": [
+      {
+        "id": "stank.avsvmknvg",
+        "name_de": "Dampfpanzer",
+        "name_en": "",
+        "points": 250,
+        "options": [
+          { "name_de": "Hochland-Langbüchse", "points": 20, "id": 0 }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "hellblaster.ebxrwoo",
+        "name_de": "Höllenfeuer-Salvenkanone",
+        "name_en": "",
+        "points": 120,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "id": "ndqmsdfeq"
+  },
+  {
+    "name": "Oldhammer Challenge",
+    "game": "warhammer-fantasy",
+    "points": "1000",
+    "army": "greenskins",
+    "lords": [
+      {
+        "id": "ork-grossschamane.qxwuwkeh",
+        "name_de": "Ork-Grossschamane",
+        "name_en": "",
+        "points": 165,
+        "options": [
+          { "name_de": "Zauberer der Stufe 4", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1 },
+          { "name_de": "Lindwurm", "points": 160, "id": 2 },
+          { "name_de": "Ork-Wildschweinstreitwagen", "points": 85, "id": 3 },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 4
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "ork-whaaaghboss.dqpebcjk",
+        "name_de": "Ork-Waaaghboss",
+        "name_en": "",
+        "points": 115,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1, "active": false },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 3,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 3,
+            "id": 3,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 3, "id": 0, "active": true }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": false, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1, "active": true },
+          { "name_de": "Lindwurm", "points": 160, "id": 2, "active": false },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen",
+            "points": 85,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 4,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "blork-gargboss.hqlllz",
+        "name_de": "Schwarzork-Gargboss",
+        "name_en": "",
+        "points": 90,
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0, "active": true },
+          {
+            "name_de": "Armeestandartenträger",
+            "points": 25,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 16, "id": 1 },
+          { "name_de": "Ork-Wildschweinstreitwagen", "points": 85, "id": 2 },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 3
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "nightgoblin-schamane.sxndy",
+        "name_de": "Nachtgoblin-Schamane",
+        "name_en": "",
+        "points": 50,
+        "options": [
+          { "name_de": "Zauberer der Stufe 2", "points": 35, "id": 0 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "nightgoblin-gargboss.knaoewvq",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          {
+            "name_de": "Leichte Rüstung",
+            "points": 2,
+            "id": 1,
+            "active": true
+          },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "nightgoblin-gargboss.eajpaigco",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          {
+            "name_de": "Leichte Rüstung",
+            "points": 2,
+            "id": 1,
+            "active": true
+          },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "nightgoblin-gargboss.oeutdrjz",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          {
+            "name_de": "Leichte Rüstung",
+            "points": 2,
+            "id": 1,
+            "active": true
+          },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "goblin-gargboss.lylevq",
+        "name_de": "Goblin-Gargboss",
+        "name_en": "",
+        "points": 35,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": true },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": false
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          {
+            "name_de": "Leichte Rüstung",
+            "points": 2,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Schild", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Riesenwolf", "points": 12, "id": 1 },
+          { "name_de": "Riesenspinne", "points": 15, "id": 2 },
+          { "name_de": "Gigantula", "points": 40, "id": 3 },
+          { "name_de": "Goblin-Wolfsstreitwagen", "points": 50, "id": 4 },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+            "points": 55,
+            "id": 5
+          },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+            "points": 55,
+            "id": 6
+          },
+          {
+            "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+            "points": 60,
+            "id": 7
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      }
+    ],
+    "core": [
+      {
+        "id": "goblin-spiderriders.evnsckg",
+        "name_de": "Waldgoblin-Spinnenreiter",
+        "name_en": "",
+        "points": 13,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1 },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": [
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          }
+        ],
+        "options": [
+          { "name_de": "Kurzbögen", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "mounts": null,
+        "strength": 5
+      },
+      {
+        "id": "goblins.slvsxuii",
+        "name_de": "Goblins",
+        "name_en": "",
+        "points": 3,
+        "minimum": 20,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere",
+            "points": 0.5,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Kurzbögen",
+            "points": 0.5,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 0.5, "perModel": true, "id": 0 },
+          {
+            "name_de": "Fiese Schlitzer",
+            "points": 10,
+            "maximum": 3,
+            "stackable": true,
+            "id": 1
+          }
+        ],
+        "mounts": null,
+        "strength": 20
+      }
+    ],
+    "special": [
+      {
+        "id": "goblin-spearchucka.euxotvqo",
+        "name_de": "Goblin-Speerschleuda",
+        "name_en": "",
+        "points": 35,
+        "options": [{ "name_de": "Orktreiba", "points": 10, "id": 0 }],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "trolls.ebsxnvhjf",
+        "name_de": "Trolle",
+        "name_en": "",
+        "points": 35,
+        "minimum": 1,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 3
+      },
+      {
+        "id": "blackorks.kbavdyl",
+        "name_de": "Schwarzorks",
+        "name_en": "",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1 },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "options": [
+          {
+            "name_de": "Magisches Banner",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          },
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 1 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 10
+      }
+    ],
+    "rare": [],
+    "id": "tqkhaeld"
+  },
+  {
+    "name": "Würfelpechs Sommerrollen",
+    "game": "warhammer-fantasy",
+    "points": "2600",
+    "army": "greenskins",
+    "lords": [
+      {
+        "id": "savage-grossschamane.qzlnlbrzh",
+        "name_de": "Wildork-Grossschamane",
+        "name_en": "",
+        "points": 170,
+        "options": [
+          {
+            "name_de": "Zauberer der Stufe 4",
+            "points": 35,
+            "id": 0,
+            "active": false
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 24, "id": 1 },
+          { "name_de": "Lindwurm", "points": 160, "id": 2 }
+        ],
+        "magic": {
+          "maxPoints": 100,
+          "items": [
+            {
+              "name_de": "Glückbringender Schrumpfkopf",
+              "name_en": "",
+              "points": 50,
+              "type": "armor",
+              "id": "greenskins-3"
+            },
+            {
+              "name_de": "Silberstahlrüstung",
+              "name_en": "",
+              "points": 45,
+              "type": "armor",
+              "id": "general-21"
+            },
+            {
+              "name_de": "Glücksstein",
+              "name_en": "",
+              "points": 5,
+              "type": "talisman",
+              "id": "general-42"
+            }
+          ]
+        },
+        "command": null,
+        "equipment": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "blork-gargboss.fcgmpkxh",
+        "name_de": "Schwarzork-Gargboss",
+        "name_en": "",
+        "points": 90,
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0, "active": true },
+          {
+            "name_de": "Armeestandartenträger",
+            "points": 25,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Wildschwein", "points": 16, "id": 1 },
+          { "name_de": "Ork-Wildschweinstreitwagen", "points": 85, "id": 2 },
+          {
+            "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+            "points": 90,
+            "id": 3
+          }
+        ],
+        "magic": {
+          "maxPoints": 50,
+          "items": [
+            {
+              "name_de": "Banner der Eile",
+              "name_en": "",
+              "points": 15,
+              "type": "banner",
+              "id": "general-48"
+            }
+          ]
+        },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "nightgoblin-schamane.jefbgnhl",
+        "name_de": "Nachtgoblin-Schamane",
+        "name_en": "",
+        "points": 50,
+        "options": [
+          {
+            "name_de": "Zauberer der Stufe 2",
+            "points": 35,
+            "id": 0,
+            "active": true
+          }
+        ],
+        "magic": {
+          "maxPoints": 50,
+          "items": [
+            {
+              "name_de": "Magiebannende Spruchrolle",
+              "name_en": "",
+              "points": 25,
+              "type": "artifact",
+              "id": "general-63"
+            }
+          ]
+        },
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "nightgoblin-gargboss.dzvjxbnigi",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1, "active": false },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Speer (nur beritten)",
+            "points": 2,
+            "id": 3,
+            "active": true
+          },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4, "active": false }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0, "active": true },
+          {
+            "name_de": "Leichte Rüstung",
+            "points": 2,
+            "id": 1,
+            "active": true
+          },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": false, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1, "active": true }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "nightgoblin-gargboss.wdttftnb",
+        "name_de": "Nachtgoblin-Gargboss",
+        "name_en": "",
+        "points": 30,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 4, "id": 1 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+            "points": 2,
+            "id": 2
+          },
+          { "name_de": "Speer (nur beritten)", "points": 2, "id": 3 },
+          { "name_de": "Kurzbogen", "points": 2, "id": 4 }
+        ],
+        "options": [
+          { "name_de": "Schild", "points": 2, "id": 0 },
+          { "name_de": "Leichte Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 2 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "active": true, "points": 0, "id": 0 },
+          { "name_de": "Höhlensquig", "points": 50, "id": 1 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      }
+    ],
+    "core": [
+      {
+        "id": "savageorks.bjzvkv",
+        "name_de": "Wildorks",
+        "name_en": "",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Boss", "points": 15, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere",
+            "points": 1,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Bögen",
+            "points": 1,
+            "perModel": true,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Zusätzliche Handwaffen",
+            "points": 1,
+            "perModel": true,
+            "id": 3,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 },
+          { "name_de": "Große Spießaz", "points": 20, "id": 1 },
+          {
+            "name_de": "Moschaz",
+            "points": 2,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "mounts": null,
+        "strength": 38
+      },
+      {
+        "id": "goblin-spiderriders.mfmmomp",
+        "name_de": "Waldgoblin-Spinnenreiter",
+        "name_en": "",
+        "points": 13,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": false },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": [
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          }
+        ],
+        "options": [
+          { "name_de": "Kurzbögen", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "goblin-wolves.fjwchzw",
+        "name_de": "Goblin-Wolfsreiter",
+        "name_en": "",
+        "points": 10,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1 },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Speere",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Kurzbögen", "points": 1, "perModel": true, "id": 1 },
+          {
+            "name_de": "Schilde",
+            "points": 1,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "mounts": null,
+        "strength": 5
+      },
+      {
+        "id": "nightgoblins.gagpfsxyvj",
+        "name_de": "Nachtgoblins",
+        "name_en": "",
+        "points": 3,
+        "minimum": 20,
+        "command": [
+          { "name_de": "Boss", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": [
+          {
+            "name_de": "Handwaffen, Schilde",
+            "points": 0,
+            "perModel": true,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Speere, Schilde",
+            "points": 0,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Handwaffen, Kurzbögen",
+            "points": 0,
+            "perModel": true,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Netzgitz", "points": 45, "id": 0 },
+          {
+            "name_de": "Fanatics",
+            "points": 25,
+            "maximum": 3,
+            "stackable": true,
+            "id": 1,
+            "stackableCount": 0
+          }
+        ],
+        "mounts": null,
+        "strength": 20
+      }
+    ],
+    "special": [
+      {
+        "id": "trolls.aabnlxvz",
+        "name_de": "Trolle",
+        "name_en": "",
+        "points": 35,
+        "minimum": 1,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 8
+      },
+      {
+        "id": "goblin-wolfchariot.eunqgpaah",
+        "name_de": "Goblin-Wolfsstreitwagen",
+        "name_en": "",
+        "points": 50,
+        "minimum": 1,
+        "maximum": 3,
+        "options": [
+          {
+            "name_de": "Zusätzliches Goblin-Besatzungsmitglied",
+            "points": 5,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zusätzlicher Riesenwolf",
+            "points": 5,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "strength": 1
+      },
+      {
+        "id": "nightgoblin-squigherd.evmopkjt",
+        "name_de": "Nachtgoblin-Squigherde",
+        "name_en": "",
+        "points": 0,
+        "options": [
+          {
+            "name_de": "Nachtgoblin-Squigtreiba",
+            "points": 3,
+            "minimum": 1,
+            "stackable": true,
+            "id": 0,
+            "stackableCount": 12
+          },
+          {
+            "name_de": "Höhlensquigs",
+            "points": 8,
+            "minimum": 3,
+            "stackable": true,
+            "id": 1,
+            "stackableCount": 23
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "ork-boarchariot.yucuxt",
+        "name_de": "Ork-Wildschweinstreitwagen",
+        "name_en": "",
+        "points": 85,
+        "options": [
+          {
+            "name_de": "Zusätzliches Ork-Besatzungsmitglied",
+            "points": 5,
+            "id": 0
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "nightgoblin-squighoppaz.qfcyog",
+        "name_de": "Nachtgoblin-Squighoppaz",
+        "name_en": "",
+        "points": 12,
+        "minimum": 5,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 5
+      }
+    ],
+    "rare": [
+      {
+        "id": "manglersquigs.yprynxjq",
+        "name_de": "Kettensquigs",
+        "name_en": "",
+        "points": 65,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "manglersquigs.eystefvz",
+        "name_de": "Kettensquigs",
+        "name_en": "",
+        "points": 65,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "doomdiver.vwjjzlg",
+        "name_de": "Kamikazekatapult",
+        "name_en": "",
+        "points": 80,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "doomdiver.czrwtjg",
+        "name_de": "Kamikazekatapult",
+        "name_en": "",
+        "points": 80,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "giant.tgfzwctdcp",
+        "name_de": "Riese",
+        "name_en": "",
+        "points": 200,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "id": "txoxlpis"
+  },
+  {
+    "name": "Würfelpechs Sommerrollen",
+    "game": "warhammer-fantasy",
+    "points": "2600",
+    "army": "dwarfs",
+    "lords": [],
+    "heroes": [
+      {
+        "id": "engineer.kemmmge",
+        "name_de": "Meistermaschinist",
+        "name_en": "Master Engineer",
+        "points": 70,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+            "name_en": "Brace of Dwarf pistols",
+            "points": 10,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "mounts": null
+      },
+      {
+        "id": "thane.xzzwoiv",
+        "name_de": "Thain",
+        "name_en": "Thane",
+        "points": 65,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Armeestandartenträger",
+            "name_en": "Battle standard bearer",
+            "points": 25,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null
+      },
+      {
+        "id": "runesmith.wiahzaycnq",
+        "name_de": "Runenschmied",
+        "name_en": "Runesmith",
+        "points": 60,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 0,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null,
+        "mounts": null
+      },
+      {
+        "id": "runesmith.zrpqvkxh",
+        "name_de": "Runenschmied",
+        "name_en": "Runesmith",
+        "points": 60,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 0,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null,
+        "mounts": null
+      }
+    ],
+    "core": [
+      {
+        "id": "longbeards.jhhhokd",
+        "name_de": "Langbärte",
+        "name_en": "Longbeards",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Old Guard",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 50 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 29
+      },
+      {
+        "id": "warriors.eezxmtt",
+        "name_de": "Klankrieger",
+        "name_en": "Dwarf Warriors",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          { "name_de": "Veteran", "name_en": "Veteran", "points": 10, "id": 0 },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 28
+      }
+    ],
+    "special": [
+      {
+        "id": "hammerers.owpkhit",
+        "name_de": "Hammerträger",
+        "name_en": "Hammerers",
+        "points": 14,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Hüter des Tores",
+            "name_en": "Keeper of the Gate",
+            "points": 10,
+            "magic": { "type": "weapon-runes", "maxPoints": 25 },
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 75 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": false
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 30
+      },
+      {
+        "id": "cannon.pwqgetyyb",
+        "name_de": "Kanone",
+        "name_en": "Cannon",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "gyro.dowkbhdn",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "gyro.rlbmvis",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "miners.mpcw",
+        "name_de": "Miners",
+        "name_en": "Bergwerker",
+        "points": 10,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Prospektor",
+            "name_en": "Prospector",
+            "points": 10,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Prospektor, Dampfhammer",
+            "name_en": "Prospector, Steam drill",
+            "points": 35,
+            "id": 1
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 2,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 3,
+            "active": false
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Sprengladungen",
+            "name_en": "Blasting charges",
+            "points": 2,
+            "perModel": true,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 15
+      },
+      {
+        "id": "grudgethrower.ftdekdbg",
+        "name_de": "Grollschleuder",
+        "name_en": "Grudge Thrower",
+        "points": 80,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "rare": [
+      {
+        "id": "organgun.jisiafp",
+        "name_de": "Orgelkanone",
+        "name_en": "Organ Gun",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 50 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "irondrakes.lrqwnjca",
+        "name_de": "Irondrakes",
+        "name_en": "Irondrakes",
+        "points": 15,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Ironwarden",
+            "name_en": "Ironwarden",
+            "points": 10,
+            "id": 0
+          },
+          {
+            "name_de": "Ironwarden, Cinderblast bombs",
+            "name_en": "Ironwarden, Cinderblast bombs",
+            "points": 25,
+            "id": 1
+          },
+          {
+            "name_de": "Ironwarden, Brace of drakefire pistols",
+            "name_en": "Ironwarden, Brace of drakefire pistols",
+            "points": 10,
+            "id": 2
+          },
+          {
+            "name_de": "Ironwarden, Trollhammer torpedo",
+            "name_en": "Ironwarden, Trollhammer torpedo",
+            "points": 30,
+            "id": 3
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 4,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 50 },
+            "id": 5,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 12
+      }
+    ],
+    "id": "uvkfqz"
+  },
+  {
+    "name": "Zhufbar",
+    "game": "warhammer-fantasy",
+    "points": "5000",
+    "army": "dwarfs",
+    "lords": [
+      {
+        "id": "lord.kxxjqkd",
+        "name_de": "König",
+        "name_en": "Lord",
+        "points": 145,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          { "name_de": "Schild", "name_en": "Shield", "points": 3, "id": 1 }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Schildträger",
+            "name_en": "Shieldbearers",
+            "points": 40,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 125 },
+        "command": null
+      },
+      {
+        "id": "lord.igilmbo",
+        "name_de": "König",
+        "name_en": "Lord",
+        "points": 145,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Schildträger",
+            "name_en": "Shieldbearers",
+            "points": 40,
+            "id": 2,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 125 },
+        "command": null
+      },
+      {
+        "id": "runelord.qbhyzllh",
+        "name_de": "Runenmeister",
+        "name_en": "Runelord",
+        "points": 120,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          }
+        ],
+        "options": [
+          { "name_de": "Schild", "name_en": "Shield", "points": 3, "id": 0 }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Runenamboss",
+            "name_en": "Anvil of Doom",
+            "points": 170,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 150 },
+        "command": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "thane.qpyrti",
+        "name_de": "Thain",
+        "name_en": "Thane",
+        "points": 65,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Armeestandartenträger",
+            "name_en": "Battle standard bearer",
+            "points": 25,
+            "id": 2
+          }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null
+      },
+      {
+        "id": "dragonslayer.dbdcueic",
+        "name_de": "Drachenslayer",
+        "name_en": "Dragon Slayer",
+        "points": 70,
+        "magic": { "maxPoints": 75 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "engineer.dfhhsbfpf",
+        "name_de": "Meistermaschinist",
+        "name_en": "Master Engineer",
+        "points": 70,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+            "name_en": "Brace of Dwarf pistols",
+            "points": 10,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "mounts": null
+      },
+      {
+        "id": "engineer.joh",
+        "name_de": "Meistermaschinist",
+        "name_en": "Master Engineer",
+        "points": 70,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+            "name_en": "Brace of Dwarf pistols",
+            "points": 10,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "mounts": null
+      },
+      {
+        "id": "engineer.uzxonqjswm",
+        "name_de": "Meistermaschinist",
+        "name_en": "Master Engineer",
+        "points": 70,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+            "name_en": "Brace of Dwarf pistols",
+            "points": 10,
+            "id": 2
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "mounts": null
+      },
+      {
+        "id": "runesmith.fxqornsz",
+        "name_de": "Runenschmied",
+        "name_en": "Runesmith",
+        "points": 60,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          }
+        ],
+        "options": [
+          { "name_de": "Schild", "name_en": "Shield", "points": 3, "id": 0 }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null,
+        "mounts": null
+      }
+    ],
+    "core": [
+      {
+        "id": "warriors.ngnrtxdf",
+        "name_de": "Klankrieger",
+        "name_en": "Dwarf Warriors",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Veteran",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 40
+      },
+      {
+        "id": "warriors.xaulhued",
+        "name_de": "Klankrieger",
+        "name_en": "Dwarf Warriors",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Veteran",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 40
+      },
+      {
+        "id": "longbeards.sbtadwna",
+        "name_de": "Langbärte",
+        "name_en": "Longbeards",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Old Guard",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 50 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "longbeards.ikyamlud",
+        "name_de": "Langbärte",
+        "name_en": "Longbeards",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Old Guard",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 50 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 10
+      },
+      {
+        "id": "quarrellers.zmfepjx",
+        "name_de": "Armbrustschützen",
+        "name_en": "Quarrellers",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Veteran",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 12
+      },
+      {
+        "id": "thunderers.fxtxwvz",
+        "name_de": "Musketenschützen",
+        "name_en": "Thunderers",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Veteran",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zwei Zwergenpistolen für den Veteran",
+            "name_en": "Brace of Dwarf pistols for Veteran",
+            "points": 0,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 20
+      }
+    ],
+    "special": [
+      {
+        "id": "ironbreakers.bfogrsiiu",
+        "name_de": "Eisenbrecher",
+        "name_en": "Ironbreakers",
+        "points": 14,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Eisenbart",
+            "name_en": "Ironbeard",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Eisenbart, Brace of drakefire pistols",
+            "name_en": "Ironbeard, Brace of drakefire pistols",
+            "points": 10,
+            "id": 1
+          },
+          {
+            "name_de": "Eisenbart, Cinderblast bombs",
+            "name_en": "Ironbeard, Cinderblast bombs",
+            "points": 25,
+            "id": 2
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 3,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 50 },
+            "id": 4,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0,
+            "active": false
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 23
+      },
+      {
+        "id": "miners.viuinng",
+        "name_de": "Miners",
+        "name_en": "Bergwerker",
+        "points": 10,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Prospektor",
+            "name_en": "Prospector",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Prospektor, Dampfhammer",
+            "name_en": "Prospector, Steam drill",
+            "points": 35,
+            "id": 1
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 2,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 3,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Sprengladungen",
+            "name_en": "Blasting charges",
+            "points": 2,
+            "perModel": true,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 25
+      },
+      {
+        "id": "hammerers.nnbpdnyf",
+        "name_de": "Hammerträger",
+        "name_en": "Hammerers",
+        "points": 14,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Hüter des Tores",
+            "name_en": "Keeper of the Gate",
+            "points": 10,
+            "magic": { "type": "weapon-runes", "maxPoints": 25 },
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "type": "banner-runes", "maxPoints": 75 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 20
+      },
+      {
+        "id": "cannon.gohyew",
+        "name_de": "Kanone",
+        "name_en": "Cannon",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "cannon.pqiqiw",
+        "name_de": "Kanone",
+        "name_en": "Cannon",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "cannon.rkzsbujkt",
+        "name_de": "Kanone",
+        "name_en": "Cannon",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "gyro.cpvnakeq",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "boltthrower.tswvsznl",
+        "name_de": "Speerschleuder",
+        "name_en": "Bolt Thrower",
+        "points": 55,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 100 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "rare": [
+      {
+        "id": "gyrobomber.wtldupq",
+        "name_de": "Gyrobomber",
+        "name_en": "Gyrobomber",
+        "points": 125,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "organgun.ldwxdvos",
+        "name_de": "Orgelkanone",
+        "name_en": "Organ Gun",
+        "points": 120,
+        "magic": { "types": ["engineering-runes"], "maxPoints": 50 },
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "id": "lobgkrrjv"
+  },
+  {
+    "name": "Averland",
+    "game": "warhammer-fantasy",
+    "points": "5000",
+    "army": "the-empire",
+    "lords": [
+      {
+        "id": "karl.hzmzkkqk",
+        "name_de": "Karl Franz, Der Imperator",
+        "name_en": "",
+        "points": 340,
+        "named": true,
+        "equipment": [
+          {
+            "name_de": "Die Runenklinge des Reiklands",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          { "name_de": "Ghal Maraz", "points": 30, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": false, "id": 0 },
+          {
+            "name_de": "Todesklaue (Imperialer Greif)",
+            "points": 215,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Der Imperiale Drache",
+            "points": 300,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus",
+            "points": 45,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 4,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 50,
+            "id": 5,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 55,
+            "id": 6,
+            "active": false
+          },
+          { "name_de": "Schlachtross", "points": 18, "id": 7, "active": false },
+          {
+            "name_de": "Schlachtross, Rossharnisch",
+            "points": 24,
+            "id": 8,
+            "active": false
+          }
+        ],
+        "command": null,
+        "options": null
+      },
+      {
+        "id": "wizard-lord.irfdnsud",
+        "name_de": "Meisterzauberer",
+        "name_en": "",
+        "points": 165,
+        "options": [
+          { "name_de": "Zauberer der Stufe 4", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Imperialer Pegasus", "points": 45, "id": 1 },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4
+          },
+          { "name_de": "Schlachtross", "points": 18, "id": 5 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 24, "id": 6 },
+          { "name_de": "Celestisches Orkanium", "points": 125, "id": 7 },
+          { "name_de": "Luminarium des Hysh", "points": 120, "id": 8 },
+          { "name_de": "Imperialer Greif", "points": 170, "id": 9 },
+          {
+            "name_de": "Imperialer Greif, Blutschrei",
+            "points": 195,
+            "id": 10
+          },
+          {
+            "name_de": "Imperialer Greif, Zweiköpfig",
+            "points": 200,
+            "id": 11
+          },
+          {
+            "name_de": "Imperialer Greif, Blutschrei, Zweiköpfig",
+            "points": 225,
+            "id": 12
+          }
+        ],
+        "magic": { "maxPoints": 100 },
+        "command": null,
+        "equipment": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "captain.diccybbcp",
+        "name_de": "Hauptmann des Imperiums",
+        "name_en": "",
+        "points": 60,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1 },
+          { "name_de": "Lanze (nur beritten)", "points": 7, "id": 2 },
+          { "name_de": "Muskete", "points": 6, "id": 3 },
+          { "name_de": "Langbogen", "points": 5, "id": 4 },
+          { "name_de": "Pistole", "points": 5, "id": 5 }
+        ],
+        "options": [
+          { "name_de": "Plattenrüstung", "points": 6, "id": 0 },
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Schild", "points": 2, "id": 2 },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 3 },
+          {
+            "name_de": "Magische Standarte",
+            "magicBanner": true,
+            "points": 0,
+            "id": 4
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": false, "id": 0 },
+          {
+            "name_de": "Imperialer Pegasus",
+            "points": 45,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3,
+            "active": false
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4,
+            "active": false
+          },
+          { "name_de": "Schlachtross", "points": 12, "id": 5, "active": false },
+          {
+            "name_de": "Schlachtross, Rossharnisch",
+            "points": 16,
+            "id": 6,
+            "active": false
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "captain.clcbfcac",
+        "name_de": "Hauptmann des Imperiums",
+        "name_en": "",
+        "points": 60,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Zweihandwaffe", "points": 6, "id": 1 },
+          { "name_de": "Lanze (nur beritten)", "points": 7, "id": 2 },
+          { "name_de": "Muskete", "points": 6, "id": 3 },
+          { "name_de": "Langbogen", "points": 5, "id": 4 },
+          { "name_de": "Pistole", "points": 5, "id": 5 }
+        ],
+        "options": [
+          { "name_de": "Plattenrüstung", "points": 6, "id": 0 },
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 1 },
+          { "name_de": "Schild", "points": 2, "id": 2, "active": true },
+          { "name_de": "Armeestandartenträger", "points": 25, "id": 3 },
+          {
+            "name_de": "Magische Standarte",
+            "magicBanner": true,
+            "points": 0,
+            "id": 4
+          }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Imperialer Pegasus", "points": 45, "id": 1 },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe",
+            "points": 50,
+            "id": 2
+          },
+          {
+            "name_de": "Imperialer Pegasus, Schnell wie der Wind",
+            "points": 55,
+            "id": 3
+          },
+          {
+            "name_de": "Imperialer Pegasus, Eisenharte Hufe, Schnell wie der Wind",
+            "points": 60,
+            "id": 4
+          },
+          { "name_de": "Schlachtross", "points": 12, "id": 5 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 6 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "wizard.gvdibqxrt",
+        "name_de": "Kampfzauberer",
+        "name_en": "",
+        "points": 65,
+        "options": [
+          { "name_de": "Zauberer der Stufe 2", "points": 35, "id": 0 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 2 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null,
+        "equipment": null
+      },
+      {
+        "id": "warrior-priest.dlvwtbsg",
+        "name_de": "Kriegspriester",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+            "points": 2,
+            "id": 1
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2 }
+        ],
+        "options": [
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": false, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1, "active": false },
+          {
+            "name_de": "Schlachtross, Rossharnisch",
+            "points": 16,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "warrior-priest.liqqeqvkws",
+        "name_de": "Kriegspriester",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+            "points": 2,
+            "id": 1
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2 }
+        ],
+        "options": [
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 2 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "warrior-priest.lkoctch",
+        "name_de": "Kriegspriester",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+            "points": 2,
+            "id": 1
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2 }
+        ],
+        "options": [
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 2 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "warrior-priest.mocjz",
+        "name_de": "Kriegspriester",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+            "points": 2,
+            "id": 1
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2 }
+        ],
+        "options": [
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 2 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      },
+      {
+        "id": "warrior-priest.sjlsxxkkex",
+        "name_de": "Kriegspriester",
+        "name_en": "",
+        "points": 65,
+        "equipment": [
+          { "name_de": "Handwaffe", "points": 0, "active": true, "id": 0 },
+          {
+            "name_de": "Zusätzliche Handwaffe (nur zu Fuß)",
+            "points": 2,
+            "id": 1
+          },
+          { "name_de": "Zweihandwaffe", "points": 5, "id": 2 }
+        ],
+        "options": [
+          { "name_de": "Schwere Rüstung", "points": 2, "id": 0 },
+          { "name_de": "Schild", "points": 2, "id": 1 }
+        ],
+        "mounts": [
+          { "name_de": "Zu Fuß", "points": 0, "active": true, "id": 0 },
+          { "name_de": "Schlachtross", "points": 12, "id": 1 },
+          { "name_de": "Schlachtross, Rossharnisch", "points": 16, "id": 2 }
+        ],
+        "magic": { "maxPoints": 50 },
+        "command": null
+      }
+    ],
+    "core": [
+      {
+        "id": "halberts.fnylegxk",
+        "name_de": "Hellebardiere",
+        "name_en": "",
+        "points": 6,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Feldwaibel", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 20
+      },
+      {
+        "id": "swords.mnuxjuc",
+        "name_de": "Schwertkämpfer",
+        "name_en": "",
+        "points": 7,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Fechtmeister", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 20
+      },
+      {
+        "id": "crossbows.ntxajq",
+        "name_de": "Armbrustschützen",
+        "name_en": "",
+        "points": 9,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          {
+            "name_de": "Schützenmeister",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 20
+      },
+      {
+        "id": "muskets.wdkpevlek",
+        "name_de": "Musketiere",
+        "name_en": "",
+        "points": 9,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          {
+            "name_de": "Schützenmeister",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          { "name_de": "Schützenmeister, Pistolenpaar", "points": 15, "id": 1 },
+          {
+            "name_de": "Schützenmeister, Hochland-Langbüchse",
+            "points": 30,
+            "id": 2
+          },
+          {
+            "name_de": "Schützenmeister, Bündelmuskete",
+            "points": 20,
+            "id": 3
+          },
+          { "name_de": "Musiker", "points": 10, "id": 4, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 5,
+            "active": true
+          }
+        ],
+        "options": [
+          { "name_de": "Schilde", "points": 1, "perModel": true, "id": 0 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 20
+      },
+      {
+        "id": "bows.kxgtnaaf",
+        "name_de": "Bogenschützen",
+        "name_en": "",
+        "points": 7,
+        "minimum": 10,
+        "detachment": true,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Schützenmeister", "points": 10, "id": 0 },
+          { "name_de": "Musiker", "points": 10, "id": 1 },
+          { "name_de": "Standartenträger", "points": 10, "id": 2 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 10
+      }
+    ],
+    "special": [
+      {
+        "id": "pistoliers.wqnvlqk",
+        "name_de": "Pistoliere",
+        "name_en": "",
+        "points": 18,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Schützenmeister", "points": 10, "id": 0 },
+          {
+            "name_de": "Schützenmeister, Pistolenpaar einschließlich einer Bündelpistole",
+            "points": 20,
+            "id": 1
+          },
+          {
+            "name_de": "Schützenmeister, Bündelmuskete",
+            "points": 20,
+            "id": 2
+          },
+          { "name_de": "Musiker", "points": 10, "id": 3 },
+          { "name_de": "Standartenträger", "points": 10, "id": 4 }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 5
+      },
+      {
+        "id": "reiksguard.hxzrgvur",
+        "name_de": "Ritter der Reichsgarde",
+        "name_en": "",
+        "points": 27,
+        "minimum": 5,
+        "command": [
+          { "name_de": "Hauptmann", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 15
+      },
+      {
+        "id": "demis.rwcazzhg",
+        "name_de": "Demigreifen-Ritter",
+        "name_en": "",
+        "points": 58,
+        "minimum": 3,
+        "command": [
+          { "name_de": "Rittmeister", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "equipment": [
+          {
+            "name_de": "Lanzen",
+            "points": 0,
+            "perModel": true,
+            "active": true,
+            "id": 0
+          },
+          { "name_de": "Hellebarden", "points": 0, "perModel": true, "id": 1 }
+        ],
+        "options": [
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          }
+        ],
+        "mounts": null,
+        "strength": 8
+      },
+      {
+        "id": "greatswords.bcubbozs",
+        "name_de": "Bihandkämpfer",
+        "name_en": "",
+        "points": 11,
+        "minimum": 10,
+        "regimentalUnit": true,
+        "command": [
+          { "name_de": "Hauptmann", "points": 10, "id": 0, "active": true },
+          { "name_de": "Musiker", "points": 10, "id": 1, "active": true },
+          {
+            "name_de": "Standartenträger",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Magische Standarte",
+            "maxPoints": 50,
+            "maxBanners": 1,
+            "points": 0,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 30
+      },
+      {
+        "id": "canon.tzoefurk",
+        "name_de": "Grosskanone",
+        "name_en": "",
+        "points": 120,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "rare": [
+      {
+        "id": "stank.bytojrpm",
+        "name_de": "Dampfpanzer",
+        "name_en": "",
+        "points": 250,
+        "options": [
+          { "name_de": "Hochland-Langbüchse", "points": 20, "id": 0 }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "hellblaster.rjylvb",
+        "name_de": "Höllenfeuer-Salvenkanone",
+        "name_en": "",
+        "points": 120,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "hellstorm.cchtddtp",
+        "name_de": "Höllensturm-Raketenlafette",
+        "name_en": "",
+        "points": 120,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      },
+      {
+        "id": "stank.hnadsrk",
+        "name_de": "Dampfpanzer",
+        "name_en": "",
+        "points": 250,
+        "options": [
+          { "name_de": "Hochland-Langbüchse", "points": 20, "id": 0 }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      }
+    ],
+    "id": "ytkgqgjos"
+  },
+  {
+    "name": "Zhufbar offensiv",
+    "game": "warhammer-fantasy",
+    "points": "2500",
+    "army": "dwarfs",
+    "lords": [
+      {
+        "id": "lord.tyrwllbsfo",
+        "name_de": "König",
+        "name_en": "Lord",
+        "points": 145,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2,
+            "active": false
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3,
+            "active": false
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 1,
+            "active": false
+          }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": false,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1,
+            "active": false
+          },
+          {
+            "name_de": "Schildträger",
+            "name_en": "Shieldbearers",
+            "points": 40,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 125 },
+        "command": null
+      }
+    ],
+    "heroes": [
+      {
+        "id": "thane.qwmcajs",
+        "name_de": "Thain",
+        "name_en": "Thane",
+        "points": 65,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          },
+          {
+            "name_de": "Zwergenarmbrust",
+            "name_en": "Dwarf crossbow",
+            "points": 12,
+            "id": 2
+          },
+          {
+            "name_de": "Zwergenmuskete",
+            "name_en": "Dwarf handgun",
+            "points": 12,
+            "id": 3
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Zwergenpistole",
+            "name_en": "Dwarf pistol",
+            "points": 6,
+            "id": 0
+          },
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Armeestandartenträger",
+            "name_en": "Battle standard bearer",
+            "points": 25,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "mounts": [
+          {
+            "name_de": "Zu Fuß",
+            "name_en": "On foot",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Eidstein",
+            "name_en": "Oath Stone",
+            "points": 25,
+            "id": 1
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null
+      },
+      {
+        "id": "runesmith.mjkfxqkwl",
+        "name_de": "Runenschmied",
+        "name_en": "Runesmith",
+        "points": 60,
+        "equipment": [
+          {
+            "name_de": "Handwaffe",
+            "name_en": "Hand weapon",
+            "points": 0,
+            "active": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffe",
+            "name_en": "Great weapon",
+            "points": 6,
+            "id": 1
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schild",
+            "name_en": "Shield",
+            "points": 3,
+            "id": 0,
+            "active": true
+          }
+        ],
+        "magic": { "maxPoints": 75 },
+        "command": null,
+        "mounts": null
+      }
+    ],
+    "core": [
+      {
+        "id": "warriors.xmuslshxom",
+        "name_de": "Klankrieger",
+        "name_en": "Dwarf Warriors",
+        "points": 8,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Veteran",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 30
+      },
+      {
+        "id": "longbeards.yzhxpzbo",
+        "name_de": "Langbärte",
+        "name_en": "Longbeards",
+        "points": 12,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Veteran",
+            "name_en": "Old Guard",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "types": ["banner-runes"], "maxPoints": 50 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          },
+          {
+            "name_de": "Zweihandwaffen",
+            "name_en": "Great weapons",
+            "points": 2,
+            "perModel": true,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 30
+      }
+    ],
+    "special": [
+      {
+        "id": "hammerers.ijwwefe",
+        "name_de": "Hammerträger",
+        "name_en": "Hammerers",
+        "points": 14,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Hüter des Tores",
+            "name_en": "Keeper of the Gate",
+            "points": 10,
+            "magic": { "types": ["weapon-runes"], "maxPoints": 25 },
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 1,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "types": ["banner-runes"], "maxPoints": 75 },
+            "id": 2,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Schilde",
+            "name_en": "Shields",
+            "points": 1,
+            "perModel": true,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 30
+      },
+      {
+        "id": "gyro.zzdelqin",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "gyro.yuxzcmnj",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      },
+      {
+        "id": "miners.osyfhdk",
+        "name_de": "Miners",
+        "name_en": "Bergwerker",
+        "points": 10,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Prospektor",
+            "name_en": "Prospector",
+            "points": 10,
+            "id": 0,
+            "active": true
+          },
+          {
+            "name_de": "Prospektor, Dampfhammer",
+            "name_en": "Prospector, Steam drill",
+            "points": 35,
+            "id": 1
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 2,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "id": 3,
+            "active": true
+          }
+        ],
+        "options": [
+          {
+            "name_de": "Sprengladungen",
+            "name_en": "Blasting charges",
+            "points": 2,
+            "perModel": true,
+            "id": 0
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "strength": 20
+      },
+      {
+        "id": "gyro.hcjylofqk",
+        "name_de": "Gyrokopter",
+        "name_en": "Gyrocopter",
+        "points": 80,
+        "options": [
+          {
+            "name_de": "Brimstone gun",
+            "name_en": "Brimstone gun",
+            "points": 0,
+            "id": 0
+          },
+          {
+            "name_de": "Vorhut",
+            "name_en": "Vanguard deployment",
+            "points": 20,
+            "id": 1,
+            "active": true
+          }
+        ],
+        "command": null,
+        "equipment": null,
+        "mounts": null
+      }
+    ],
+    "rare": [
+      {
+        "id": "irondrakes.edpllk",
+        "name_de": "Irondrakes",
+        "name_en": "Irondrakes",
+        "points": 15,
+        "minimum": 10,
+        "command": [
+          {
+            "name_de": "Ironwarden",
+            "name_en": "Ironwarden",
+            "points": 10,
+            "id": 0
+          },
+          {
+            "name_de": "Ironwarden, Cinderblast bombs",
+            "name_en": "Ironwarden, Cinderblast bombs",
+            "points": 25,
+            "id": 1
+          },
+          {
+            "name_de": "Ironwarden, Brace of drakefire pistols",
+            "name_en": "Ironwarden, Brace of drakefire pistols",
+            "points": 10,
+            "id": 2
+          },
+          {
+            "name_de": "Ironwarden, Trollhammer torpedo",
+            "name_en": "Ironwarden, Trollhammer torpedo",
+            "points": 30,
+            "id": 3
+          },
+          {
+            "name_de": "Musiker",
+            "name_en": "Musician",
+            "points": 10,
+            "id": 4,
+            "active": true
+          },
+          {
+            "name_de": "Standartenträger",
+            "name_en": "Standard bearer",
+            "points": 10,
+            "magic": { "types": ["banner-runes"], "maxPoints": 50 },
+            "id": 5
+          }
+        ],
+        "equipment": null,
+        "mounts": null,
+        "options": null,
+        "strength": 12
+      },
+      {
+        "id": "gyrobomber.ruxbha",
+        "name_de": "Gyrobomber",
+        "name_en": "Gyrobomber",
+        "points": 125,
+        "command": null,
+        "equipment": null,
+        "mounts": null,
+        "options": null
+      }
+    ],
+    "id": "thmhghte"
+  }
+]
