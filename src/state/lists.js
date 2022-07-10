@@ -158,6 +158,7 @@ export const {
   duplicateUnit,
   updateList,
   deleteList,
+  duplicateList,
 } = listsSlice.actions;
 
 export default listsSlice.reducer;

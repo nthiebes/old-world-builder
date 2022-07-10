@@ -126,6 +126,11 @@ export const Editor = ({ isMobile }) => {
       to: `/editor/${listId}/edit`,
     },
     {
+      name_de: "Duplizieren",
+      icon: "duplicate",
+      to: `/editor/${listId}/duplicate`,
+    },
+    {
       name_de: "Löschen",
       icon: "delete",
       callback: handleDelete,
