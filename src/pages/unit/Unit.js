@@ -95,7 +95,7 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleCommandChange = (id) => {
-    let magicItems = unit.magic.items;
+    let magicItems = unit.magic?.items || [];
     const command = unit.command.map((option, index) => {
       if (option.id === id) {
         // Also remove banner runes
