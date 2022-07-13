@@ -302,6 +302,13 @@ export const Unit = ({ isMobile }) => {
                           )}{" "}
                           / {unit.command[index].magic.maxPoints} Pkte.
                         </i>
+                        {magicPoints > unit.magic.maxPoints && (
+                          <Icon
+                            symbol="error"
+                            color="red"
+                            className="unit__magic-icon"
+                          />
+                        )}
                       </div>
                       {unit?.magic?.items && (
                         <p>
