@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import classNames from "classnames";
 
 import { getUnitPoints } from "../../utils/points";
 import { List } from "../../components/list";
@@ -295,11 +295,18 @@ export const Unit = ({ isMobile }) => {
                             .join(", ")}
                         </b>
                         <i className="checkbox__points">
-                          {getUnitCommandPoints(
-                            unit?.magic?.items.filter(
-                              ({ command }) => command === index
-                            )
-                          )}{" "}
+                          <span
+                            className={classNames(
+                              magicPoints > unit.magic.maxPoints &&
+                                "editor__error"
+                            )}
+                          >
+                            {getUnitCommandPoints(
+                              unit?.magic?.items.filter(
+                                ({ command }) => command === index
+                              )
+                            )}
+                          </span>{" "}
                           / {unit.command[index].magic.maxPoints} Pkte.
                         </i>
                         {magicPoints > unit.magic.maxPoints && (
@@ -448,7 +455,14 @@ export const Unit = ({ isMobile }) => {
             <div className="editor__list-inner">
               <b className="unit__magic-headline">Magische Gegenstände</b>
               <i className="checkbox__points">
-                {magicPoints} / {unit.magic.maxPoints} Pkte.
+                <span
+                  className={classNames(
+                    magicPoints > unit.magic.maxPoints && "editor__error"
+                  )}
+                >
+                  {magicPoints}
+                </span>{" "}
+                / {unit.magic.maxPoints} Pkte.
               </i>
               {magicPoints > unit.magic.maxPoints && (
                 <Icon symbol="error" color="red" className="unit__magic-icon" />

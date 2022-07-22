@@ -50,6 +50,18 @@ export const getUnitPoints = (unit) => {
   return unitPoints;
 };
 
+export const getUnitMagicPoints = (unit) => {
+  let unitPoints = 0;
+
+  if (unit?.magic?.items) {
+    unit.magic.items.forEach((option) => {
+      unitPoints += option.points;
+    });
+  }
+
+  return unitPoints;
+};
+
 export const getPoints = ({ type, list }) => {
   let points = 0;
 

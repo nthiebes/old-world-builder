@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
+import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
@@ -175,6 +176,10 @@ export const Magic = ({ isMobile }) => {
         <Header
           to={`/editor/${listId}/${type}/${unitId}`}
           headline="Magische Gegenstände"
+          subheadline={`${getUnitMagicPoints(unit)} / ${
+            unit.magic.maxPoints
+          } Pkte.`}
+          hasPointsError={getUnitMagicPoints(unit) > unit.magic.maxPoints}
         />
       )}
 
@@ -184,6 +189,10 @@ export const Magic = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}/${type}/${unitId}`}
             headline="Magische Gegenstände"
+            subheadline={`${getUnitMagicPoints(unit)} / ${
+              unit.magic.maxPoints
+            } Pkte.`}
+            hasPointsError={getUnitMagicPoints(unit) > unit.magic.maxPoints}
           />
         )}
         {items.map((item) => (
