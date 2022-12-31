@@ -4,6 +4,8 @@ The "Old World Builder" is an army builder for the [Games Workshop](https://www.
 
 This project is still work in progress.
 
+You can already test it (in german) here: [old-world-builder.com](https://old-world-builder.com/)
+
 ## Contribution
 
 [Datasets documentation](https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md)
