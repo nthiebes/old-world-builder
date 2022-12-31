@@ -47,23 +47,27 @@ export const Home = ({ isMobile }) => {
           </>
         )}
         <ul>
-          {lists.map(({ id, name, points, game, army, ...list }, index) => (
-            <List
-              key={index}
-              to={`/editor/${id}`}
-              active={location.pathname.includes(id)}
-            >
-              <span className="home__list-item">
-                <h2 className="home__headline">{name}</h2>
-                <p>
-                  {getAllPoints({
-                    ...list,
-                    points,
-                  })}{" "}
-                  / {points} Pkte.
-                </p>
-              </span>
-              {/* {game === "warhammer-fantasy" && (
+          {lists.map(
+            ({ id, name, description, points, game, army, ...list }, index) => (
+              <List
+                key={index}
+                to={`/editor/${id}`}
+                active={location.pathname.includes(id)}
+              >
+                <span className="home__list-item">
+                  <h2 className="home__headline">{name}</h2>
+                  {description && (
+                    <p className="home__description">{description}</p>
+                  )}
+                  <p className="home__points">
+                    {getAllPoints({
+                      ...list,
+                      points,
+                    })}{" "}
+                    / {points} Pkte.
+                  </p>
+                </span>
+                {/* {game === "warhammer-fantasy" && (
                 <img
                   height="20"
                   src={warhammerFantasy}
@@ -77,9 +81,10 @@ export const Home = ({ isMobile }) => {
                   alt="Warhammer: The Old World"
                 />
               )} */}
-              <img height="40" width="40" src={armyIconMap[army]} alt="" />
-            </List>
-          ))}
+                <img height="40" width="40" src={armyIconMap[army]} alt="" />
+              </List>
+            )
+          )}
         </ul>
         <Button centered to="/new" icon="new-list" spaceTop>
           {"Neue Liste"}

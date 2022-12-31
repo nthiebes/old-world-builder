@@ -22,12 +22,14 @@ export const NewList = ({ isMobile }) => {
   const [game, setGame] = useState(gameSystems[0].id);
   const [army, setArmy] = useState(gameSystems[0].armies[0].id);
   const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
   const [redirect, setRedirect] = useState(null);
   const createList = () => {
     const newId = getRandomId();
     const newList = {
       name: name,
+      description: description,
       game: game,
       points: points,
       army: army,
@@ -59,6 +61,9 @@ export const NewList = ({ isMobile }) => {
   };
   const handleNameChange = (event) => {
     setName(event.target.value);
+  };
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -109,6 +114,15 @@ export const NewList = ({ isMobile }) => {
             onChange={handleNameChange}
             autoComplete="off"
             required
+          />
+          <label htmlFor="description">Beschreibung (optional):</label>
+          <input
+            type="text"
+            id="description"
+            className="input"
+            value={description}
+            onChange={handleDescriptionChange}
+            autoComplete="off"
           />
           <label htmlFor="points">Punkte:</label>
           <NumberInput

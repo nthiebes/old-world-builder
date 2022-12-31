@@ -15,9 +15,21 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 0.5rem;
+  margin-bottom: 0;
 }
 
 .home__logo {
   display: block;
   margin: 2rem auto;
+}
+
+.home__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  font-style: italic;
+}
+
+.home__points {
+  margin-top: 0.5rem;
 }

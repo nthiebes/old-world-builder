@@ -33,6 +33,14 @@ export const EditList = ({ isMobile }) => {
       })
     );
   };
+  const handleDescriptionChange = (event) => {
+    dispatch(
+      updateList({
+        listId,
+        description: event.target.value,
+      })
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -72,6 +80,17 @@ export const EditList = ({ isMobile }) => {
           onChange={handleNameChange}
           autoComplete="off"
           required
+        />
+        <label htmlFor="description" className="edit__label">
+          Beschreibung (optional):
+        </label>
+        <input
+          type="text"
+          id="description"
+          className="input"
+          value={list.description}
+          onChange={handleDescriptionChange}
+          autoComplete="off"
         />
         <label htmlFor="points">Punkte:</label>
         <NumberInput
