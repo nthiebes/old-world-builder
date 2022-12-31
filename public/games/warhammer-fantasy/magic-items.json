@@ -601,24 +601,248 @@
   ],
   "heirlooms": [
     {
-      "name_de": "Dummy weapon heirloom",
-      "name_en": "",
-      "points": 10,
+      "name_de": "The Hammer of Karak Drazh",
+      "name_en": "The Hammer of Karak Drazh",
+      "points": 65,
       "type": "weapon"
+    },
+    {
+      "name_de": "Red Axe of Karak Eight Peaks",
+      "name_en": "Red Axe of Karak Eight Peaks",
+      "points": 50,
+      "type": "weapon"
+    },
+    {
+      "name_de": "Magnificent Armour of Borek Beetlebrow",
+      "name_en": "Magnificent Armour of Borek Beetlebrow",
+      "points": 60,
+      "type": "armor"
+    },
+    {
+      "name_de": "Silver Horn of Vengeance",
+      "name_en": "Silver Horn of Vengeance",
+      "points": 45,
+      "type": "item"
+    },
+    {
+      "name_de": "Fiery Ring of Thori",
+      "name_en": "Fiery Ring of Thori",
+      "points": 35,
+      "type": "item"
+    },
+    {
+      "name_de": "Banner of Lost Holds",
+      "name_en": "Banner of Lost Holds",
+      "points": 100,
+      "type": "banner"
     }
   ],
   "dwarfs": [
     {
-      "name_de": "Dummy weapon rune",
-      "name_en": "",
+      "name_de": "Master Rune of Skalf Blackhammer",
+      "name_en": "Master Rune of Skalf Blackhammer",
+      "points": 75,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Smithing",
+      "name_en": "Master Rune of Smithing",
+      "points": 60,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Alaric the Mad",
+      "name_en": "Master Rune of Alaric the Mad",
+      "points": 50,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Breaking",
+      "name_en": "Master Rune of Breaking",
+      "points": 50,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Dragon Slaying",
+      "name_en": "Master Rune of Dragon Slaying",
+      "points": 50,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Flight",
+      "name_en": "Master Rune of Flight",
+      "points": 30,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Snorri Spangelhelm",
+      "name_en": "Master Rune of Snorri Spangelhelm",
+      "points": 25,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Master Rune of Swiftness",
+      "name_en": "Master Rune of Swiftness",
+      "points": 25,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Rune of Daemon Slaying",
+      "name_en": "Rune of Daemon Slaying",
+      "points": 25,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Daemon Slaying",
+          "name_en": "Second Rune of Daemon Slaying",
+          "points": 25,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Daemon Slaying",
+          "name_en": "Third Rune of Daemon Slaying",
+          "points": 75,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Fire",
+      "name_en": "Rune of Fire",
+      "points": 10,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Fire",
+          "name_en": "Second Rune of Fire",
+          "points": 40,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Fire",
+          "name_en": "Third Rune of Fire",
+          "points": 75,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Fury",
+      "name_en": "Rune of Fury",
+      "points": 25,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Fury",
+          "name_en": "Second Rune of Fury",
+          "points": 35,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Fury",
+          "name_en": "Third Rune of Fury",
+          "points": 40,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Dismay",
+      "name_en": "Rune of Dismay",
       "points": 20,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Dismay",
+          "name_en": "Second Rune of Dismay",
+          "points": 25,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Dismay",
+          "name_en": "Third Rune of Dismay",
+          "points": 35,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Cleaving",
+      "name_en": "Rune of Cleaving",
+      "points": 10,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Cleaving",
+          "name_en": "Second Rune of Cleaving",
+          "points": 25,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Cleaving",
+          "name_en": "Third Rune of Cleaving",
+          "points": 30,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Might",
+      "name_en": "Rune of Might",
+      "points": 25,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Might",
+          "name_en": "Second Rune of Might",
+          "points": 35,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Striking",
+      "name_en": "Rune of Striking",
+      "points": 10,
+      "type": "weapon-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Striking",
+          "name_en": "Second Rune of Striking",
+          "points": 25,
+          "type": "weapon-runes"
+        },
+        {
+          "name_de": "Third Rune of Striking",
+          "name_en": "Third Rune of Striking",
+          "points": 25,
+          "type": "weapon-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Grudge Rune",
+      "name_en": "Grudge Rune",
+      "points": 25,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Rune of Parrying",
+      "name_en": "Rune of Parrying",
+      "points": 25,
+      "type": "weapon-runes"
+    },
+    {
+      "name_de": "Rune of Speed",
+      "name_en": "Rune of Speed",
+      "points": 5,
       "type": "weapon-runes"
     },
     {
       "name_de": "Dummy armour rune",
       "name_en": "",
       "points": 30,
-      "type": "armour-runes"
+      "type": "armor-runes"
     },
     {
       "name_de": "Dummy banner rune",
