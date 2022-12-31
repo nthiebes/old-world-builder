@@ -1,6 +1,6 @@
 export const getAllOptions = (
   { mounts, equipment, options, command, magic },
-  asString
+  { asString, noMagic } = {}
 ) => {
   const allCommand = command
     ? command.filter(({ active }) => active).map(({ name_de }) => name_de)
@@ -28,7 +28,7 @@ export const getAllOptions = (
     ...allStackableOptions,
     ...allCommand,
     ...allMounts,
-    ...allMagicItems,
+    ...(!noMagic ? allMagicItems : []),
   ];
   const allOptionsString = allOptionsArray.join(", ");
 

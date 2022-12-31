@@ -9,10 +9,23 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 
 import "./Export.css";
 
-const getUnitsString = (units) => {
+const getUnitsString = (units, isShowList) => {
   return units
     .map((unit) => {
-      const allOptions = getAllOptions(unit, true);
+      const allOptions = getAllOptions(unit, {
+        asString: true,
+        noMagic: isShowList,
+      });
+
+      if (isShowList) {
+        return `${
+          unit.strength || unit.minimum
+            ? `${unit.strength || unit.minimum} `
+            : ""
+        }${unit.name_de}
+${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
+`;
+      }
 
       return `${
         unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
@@ -23,13 +36,41 @@ ${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
     .join("");
 };
 
-const getListAsText = (list) => {
+const getListAsText = (list, isShowList) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+
+  if (isShowList) {
+    return `===
+${list.name}
+${list.game}, ${list.army}
+===
+
+++ Kommandanten ++
+
+${getUnitsString(list.lords, isShowList)}
+++ Helden ++
+
+${getUnitsString(list.heroes, isShowList)}
+++ Kerneinheiten ++
+
+${getUnitsString(list.core, isShowList)}
+++ Eliteeinheiten ++
+
+${getUnitsString(list.special, isShowList)}
+++ Seltene Einheiten ++
+
+${getUnitsString(list.rare, isShowList)}
+
+---
+Erstellt mit "Old World Builder"
+
+[https://old-world-builder.com]`;
+  }
 
   return `===
 ${list.name} [${allPoints} Pkte.]
@@ -63,11 +104,12 @@ export const Export = ({ isMobile }) => {
   const location = useLocation();
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+  const [isShowList, setIsShowList] = useState(false);
   const { listId } = useParams();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const listText = list ? getListAsText(list) : "";
+  const listText = list ? getListAsText(list, isShowList) : "";
   const copyText = () => {
     navigator.clipboard &&
       navigator.clipboard.writeText(listText).then(
@@ -114,6 +156,19 @@ export const Export = ({ isMobile }) => {
         {copyError && (
           <p className="export__error">Das hat leider nicht geklappt :(.</p>
         )}
+
+        <div className="checkbox">
+          <input
+            type="checkbox"
+            id="show"
+            onChange={() => setIsShowList(!isShowList)}
+            checked={isShowList}
+            className="checkbox__input"
+          />
+          <label htmlFor="show" className="checkbox__label">
+            Sichtbare Liste
+          </label>
+        </div>
 
         <textarea className="export__text" value={listText} readOnly />
       </MainComponent>
