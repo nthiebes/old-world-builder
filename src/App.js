@@ -26,7 +26,11 @@ export const App = () => {
   );
 
   useEffect(() => {
-    const localLists = localStorage.getItem("lists");
+    // TODO: Remove deprecated "lists"
+    const localLists =
+      localStorage.getItem("owb.lists") || localStorage.getItem("lists");
+
+    localStorage.setItem("owb.lists", localLists);
 
     dispatch(setLists(JSON.parse(localLists)));
   }, [dispatch]);

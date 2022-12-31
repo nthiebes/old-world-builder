@@ -42,7 +42,7 @@ export const NewList = ({ isMobile }) => {
     };
     const newLists = [...lists, newList];
 
-    localStorage.setItem("lists", JSON.stringify(newLists));
+    localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
 
     setRedirect(newId);

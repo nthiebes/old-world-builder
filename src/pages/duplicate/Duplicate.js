@@ -43,7 +43,7 @@ export const Duplicate = ({ isMobile }) => {
 
     event.preventDefault();
 
-    localStorage.setItem("lists", JSON.stringify(newLists));
+    localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
 
     setRedirect(newId);
