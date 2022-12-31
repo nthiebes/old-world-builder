@@ -36,6 +36,9 @@ export const nameMap = {
   armor: {
     name_de: "Magische Rüstungen",
   },
+  item: {
+    name_de: "Enchanted Items",
+  },
   talisman: {
     name_de: "Talismane",
   },
@@ -52,7 +55,7 @@ export const nameMap = {
     name_de: "Waffenrunen",
     name_en: "Weapon Runes",
   },
-  "armour-runes": {
+  "armor-runes": {
     name_de: "Rüstungsrunen",
     name_en: "Armour Runes",
   },
@@ -74,10 +77,25 @@ let prevItemType, isFirstItemType;
 const updateIds = (items) => {
   return items.map((item) => ({
     ...item,
-    items: item.items.map((bla, index) => ({
-      ...bla,
-      id: index,
-    })),
+    items: item.items.map((data, index) => {
+      if (data.conditional) {
+        return {
+          ...data,
+          id: index,
+          conditional: data.conditional.map(
+            (conditionalItem, conditionalIndex) => ({
+              ...conditionalItem,
+              id: `${index}-${conditionalIndex}`,
+            })
+          ),
+        };
+      }
+
+      return {
+        ...data,
+        id: index,
+      };
+    }),
   }));
 };
 
@@ -170,6 +188,34 @@ export const Magic = ({ isMobile }) => {
     }
   }
 
+  const getCheckbox = ({ unit, magicItem, itemGroup }) => {
+    const isChecked = unit?.magic?.items
+      ? unit.magic.items.find(
+          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+        ) || false
+      : false;
+
+    return (
+      <div className="checkbox" key={magicItem.id}>
+        <input
+          type="checkbox"
+          id={`${itemGroup.id}-${magicItem.id}`}
+          value={`${itemGroup.id}-${magicItem.id}`}
+          onChange={(event) => handleMagicChange(event, magicItem)}
+          checked={isChecked}
+          className="checkbox__input"
+        />
+        <label
+          htmlFor={`${itemGroup.id}-${magicItem.id}`}
+          className="checkbox__label"
+        >
+          {magicItem.name_de}
+          <i className="checkbox__points">{`${magicItem.points} Pkte.`}</i>
+        </label>
+      </div>
+    );
+  };
+
   return (
     <>
       {isMobile && (
@@ -195,10 +241,10 @@ export const Magic = ({ isMobile }) => {
             hasPointsError={getUnitMagicPoints(unit) > unit.magic.maxPoints}
           />
         )}
-        {items.map((item) => (
-          <Fragment key={item.name_de}>
-            <h2 className="unit__subline">{item.name_de}</h2>
-            {item.items.map((magicItem) => {
+        {items.map((itemGroup) => (
+          <Fragment key={itemGroup.name_de}>
+            <h2 className="unit__subline">{itemGroup.name_de}</h2>
+            {itemGroup.items.map((magicItem) => {
               if (prevItemType !== magicItem.type) {
                 prevItemType = magicItem.type;
                 isFirstItemType = true;
@@ -223,6 +269,12 @@ export const Magic = ({ isMobile }) => {
                 return null;
               }
 
+              const isChecked = unit?.magic?.items
+                ? unit.magic.items.find(
+                    ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                  ) || false
+                : false;
+
               return (
                 <Fragment key={magicItem.name_de}>
                   {isFirstItemType && (
@@ -230,29 +282,16 @@ export const Magic = ({ isMobile }) => {
                       {nameMap[magicItem.type].name_de}
                     </h3>
                   )}
-                  <div className="checkbox" key={magicItem.id}>
-                    <input
-                      type="checkbox"
-                      id={`${item.id}-${magicItem.id}`}
-                      value={`${item.id}-${magicItem.id}`}
-                      onChange={(event) => handleMagicChange(event, magicItem)}
-                      checked={
-                        unit?.magic?.items
-                          ? unit.magic.items.find(
-                              ({ id }) => id === `${item.id}-${magicItem.id}`
-                            ) || false
-                          : false
-                      }
-                      className="checkbox__input"
-                    />
-                    <label
-                      htmlFor={`${item.id}-${magicItem.id}`}
-                      className="checkbox__label"
-                    >
-                      {magicItem.name_de}
-                      <i className="checkbox__points">{`${magicItem.points} Pkte.`}</i>
-                    </label>
-                  </div>
+                  {getCheckbox({ unit, magicItem, itemGroup })}
+                  {magicItem.conditional && isChecked
+                    ? magicItem.conditional.map((confitionalItem) =>
+                        getCheckbox({
+                          unit,
+                          magicItem: confitionalItem,
+                          itemGroup,
+                        })
+                      )
+                    : null}
                 </Fragment>
               );
             })}
