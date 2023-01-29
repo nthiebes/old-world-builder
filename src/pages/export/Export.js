@@ -168,6 +168,9 @@ export const Export = ({ isMobile }) => {
           <label htmlFor="show" className="checkbox__label">
             Sichtbare Liste
           </label>
+          <p>
+            <i>(keine Punkte und versteckte Gegenstände)</i>
+          </p>
         </div>
 
         <textarea className="export__text" value={listText} readOnly />
