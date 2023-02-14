@@ -953,15 +953,131 @@
       "type": "banner-runes"
     },
     {
-      "name_de": "Dummy talismanic rune",
-      "name_en": "",
+      "name_de": "Master Rune of Balance",
+      "name_en": "Master Rune of Balance",
       "points": 50,
       "type": "talismanic-runes"
     },
     {
-      "name_de": "Dummy engineering rune",
-      "name_en": "",
-      "points": 60,
+      "name_de": "Master Rune of Spite",
+      "name_en": "Master Rune of Spite",
+      "points": 25,
+      "type": "talismanic-runes"
+    },
+    {
+      "name_de": "Master Rune of Passage",
+      "name_en": "Master Rune of Passage",
+      "points": 10,
+      "type": "talismanic-runes"
+    },
+    {
+      "name_de": "Rune of Warding",
+      "name_en": "Rune of Warding",
+      "points": 15,
+      "type": "talismanic-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Warding",
+          "name_en": "Second Rune of Warding",
+          "points": 20,
+          "type": "talismanic-runes"
+        },
+        {
+          "name_de": "Third Rune of Warding",
+          "name_en": "Third Rune of Warding",
+          "points": 10,
+          "type": "talismanic-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Spellbreaking",
+      "name_en": "Rune of Spellbreaking",
+      "points": 25,
+      "type": "talismanic-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Spellbreaking",
+          "name_en": "Second Rune of Spellbreaking",
+          "points": 20,
+          "type": "talismanic-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Luck",
+      "name_en": "Rune of Luck",
+      "points": 15,
+      "type": "talismanic-runes"
+    },
+    {
+      "name_de": "Rune of Furnace",
+      "name_en": "Rune of Furnace",
+      "points": 5,
+      "type": "talismanic-runes"
+    },
+    {
+      "name_de": "Master Rune of Immolation",
+      "name_en": "Master Rune of Immolation",
+      "points": 30,
+      "type": "engineering-runes"
+    },
+    {
+      "name_de": "Master Rune of Disguise",
+      "name_en": "Master Rune of Disguise",
+      "points": 25,
+      "type": "engineering-runes"
+    },
+    {
+      "name_de": "Rune of Penetrating",
+      "name_en": "Rune of Penetrating",
+      "points": 40,
+      "type": "engineering-runes",
+      "conditional": [
+        {
+          "name_de": "Second Rune of Penetrating",
+          "name_en": "Second Rune of Penetrating",
+          "points": 10,
+          "type": "engineering-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Stalwart Rune",
+      "name_en": "Stalwart Rune",
+      "points": 15,
+      "type": "engineering-runes",
+      "conditional": [
+        {
+          "name_de": "Second Stalwart Rune",
+          "name_en": "Second Stalwart Rune",
+          "points": 15,
+          "type": "engineering-runes"
+        }
+      ]
+    },
+    {
+      "name_de": "Rune of Accuracy",
+      "name_en": "Rune of Accuracy",
+      "points": 25,
+      "type": "engineering-runes"
+    },
+    {
+      "name_de": "Rune of Forging",
+      "name_en": "Rune of Forging",
+      "points": 25,
+      "type": "engineering-runes"
+    },
+    {
+      "name_de": "Flakkson's Rune of Seeking",
+      "name_en": "Flakkson's Rune of Seeking",
+      "points": 15,
+      "type": "engineering-runes"
+    },
+    {
+      "name_de": "Rune of Burning",
+      "name_en": "Rune of Burning",
+      "points": 5,
       "type": "engineering-runes"
     }
   ]
