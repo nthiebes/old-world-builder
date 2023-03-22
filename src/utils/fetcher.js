@@ -9,7 +9,7 @@ const abortFetch = () => {
 export const fetcher = ({ url, onSuccess, onError }) => {
   controller = new AbortController();
 
-  fetch(`${baseUrl}${url}.json`, {
+  fetch(`${baseUrl}${url}.json?v=${process.env.REACT_APP_VERSION}`, {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
