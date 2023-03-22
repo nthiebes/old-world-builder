@@ -11,6 +11,7 @@ import { editUnit } from "../../state/lists";
 import gameSystems from "../../assets/armies.json";
 
 import "./Magic.css";
+import classNames from "classnames";
 
 export const nameMap = {
   greenskins: {
@@ -188,7 +189,7 @@ export const Magic = ({ isMobile }) => {
     }
   }
 
-  const getCheckbox = ({ unit, magicItem, itemGroup }) => {
+  const getCheckbox = ({ unit, magicItem, itemGroup, isConditional }) => {
     const isChecked = unit?.magic?.items
       ? unit.magic.items.find(
           ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
@@ -196,7 +197,13 @@ export const Magic = ({ isMobile }) => {
       : false;
 
     return (
-      <div className="checkbox" key={magicItem.id}>
+      <div
+        className={classNames(
+          "checkbox",
+          isConditional && "checkbox--conditional"
+        )}
+        key={magicItem.id}
+      >
         <input
           type="checkbox"
           id={`${itemGroup.id}-${magicItem.id}`}
@@ -289,6 +296,7 @@ export const Magic = ({ isMobile }) => {
                           unit,
                           magicItem: confitionalItem,
                           itemGroup,
+                          isConditional: true,
                         })
                       )
                     : null}
