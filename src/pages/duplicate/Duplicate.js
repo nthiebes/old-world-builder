@@ -17,6 +17,7 @@ export const Duplicate = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [points, setPoints] = useState(2000);
+  const [description, setDescription] = useState("");
   const [redirect, setRedirect] = useState(null);
   const lists = useSelector((state) => state.lists);
   const list = useSelector((state) =>
@@ -29,6 +30,9 @@ export const Duplicate = ({ isMobile }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
   const handleSubmit = (event) => {
     const newId = getRandomId();
     const newLists = [
@@ -37,6 +41,7 @@ export const Duplicate = ({ isMobile }) => {
         ...list,
         name,
         points,
+        description,
         id: newId,
       },
     ];
@@ -57,6 +62,7 @@ export const Duplicate = ({ isMobile }) => {
     if (list) {
       setName(`Kopie von ${list.name}`);
       setPoints(list.points);
+      setDescription(list.description);
     }
   }, [list]);
 
@@ -95,6 +101,17 @@ export const Duplicate = ({ isMobile }) => {
             onChange={handleNameChange}
             autoComplete="off"
             required
+          />
+          <label htmlFor="description" className="edit__label">
+            Beschreibung (optional):
+          </label>
+          <input
+            type="text"
+            id="description"
+            className="input"
+            value={description}
+            onChange={handleDescriptionChange}
+            autoComplete="off"
           />
           <label htmlFor="points">Punkte:</label>
           <NumberInput
