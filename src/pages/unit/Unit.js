@@ -11,6 +11,7 @@ import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
+import { useLanguage } from "../../utils/useLanguage";
 
 import "./Unit.css";
 
@@ -30,6 +31,7 @@ export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
+  const { language } = useLanguage();
   const [redirect, setRedirect] = useState(null);
   const location = useLocation();
   const intl = useIntl();
@@ -320,7 +322,7 @@ export const Unit = ({ isMobile }) => {
                       <div className="editor__list-inner">
                         <b>
                           {magic.types
-                            .map((type) => nameMap[type].name_de)
+                            .map((type) => nameMap[type][`name_${language}`])
                             .join(", ")}
                         </b>
                         <i className="checkbox__points">

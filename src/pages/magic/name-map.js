@@ -1,9 +1,11 @@
 export const nameMap = {
   greenskins: {
     name_de: "Glitzakram",
+    name_en: "Shiny Stuff",
   },
   "the-empire": {
     name_de: "Magische Erbstücke",
+    name_en: "Magische Erbstücke",
   },
   heirlooms: {
     name_de: "Erbstücke",
@@ -15,27 +17,35 @@ export const nameMap = {
   },
   general: {
     name_de: "Magische Gegenstände",
+    name_en: "Magische Gegenstände",
   },
   weapon: {
     name_de: "Magische Waffen",
+    name_en: "Magische Waffen",
   },
   armor: {
     name_de: "Magische Rüstungen",
+    name_en: "Magische Rüstungen",
   },
   item: {
     name_de: "Enchanted Items",
+    name_en: "Enchanted Items",
   },
   talisman: {
     name_de: "Talismane",
+    name_en: "Talismane",
   },
   banner: {
     name_de: "Magische Standarten",
+    name_en: "Magische Standarten",
   },
   artifact: {
     name_de: "Arkane Artifakte",
+    name_en: "Arkane Artifakte",
   },
   "enchanted-item": {
     name_de: "Verzauberte Gegenstände",
+    name_en: "Verzauberte Gegenstände",
   },
   "weapon-runes": {
     name_de: "Waffenrunen",

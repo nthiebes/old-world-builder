@@ -9,6 +9,7 @@ import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
+import { useLanguage } from "../../utils/useLanguage";
 import gameSystems from "../../assets/armies.json";
 
 import "./Magic.css";
@@ -44,6 +45,7 @@ const updateIds = (items) => {
 export const Magic = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const location = useLocation();
+  const { language } = useLanguage();
   const intl = useIntl();
   const [isLoading, setIsLoading] = useState(true);
   const { listId, type, unitId, command } = useParams();
@@ -102,7 +104,7 @@ export const Magic = ({ isMobile }) => {
           const allItems = army.items.map((item) => {
             return {
               items: data[item],
-              name_de: nameMap[item].name_de,
+              name_de: nameMap[item][`name_${language}`],
               id: item,
             };
           });
@@ -111,7 +113,7 @@ export const Magic = ({ isMobile }) => {
           setIsLoading(false);
         },
       });
-  }, [army, dispatch, list, setIsLoading, unit]);
+  }, [army, dispatch, list, setIsLoading, unit, language]);
 
   if (isLoading) {
     if (isMobile) {
@@ -240,7 +242,7 @@ export const Magic = ({ isMobile }) => {
                 <Fragment key={magicItem.name_de}>
                   {isFirstItemType && (
                     <h3 className="magic__type">
-                      {nameMap[magicItem.type].name_de}
+                      {nameMap[magicItem.type][`name_${language}`]}
                     </h3>
                   )}
                   {getCheckbox({ unit, magicItem, itemGroup })}
