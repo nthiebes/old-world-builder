@@ -173,17 +173,20 @@ export const Editor = ({ isMobile }) => {
         </section> */}
         <section className="editor__section">
           <header className="editor__header">
-            <h2>Kommandanten</h2>
+            <h2>
+              <FormattedMessage id="editor.lords" />
+            </h2>
             <p className="editor__points">
               {lordsData.diff > 0 ? (
                 <>
-                  <strong>{lordsData.diff}</strong>Punkte zu viel
+                  <strong>{lordsData.diff}</strong>
+                  <FormattedMessage id="editor.tooManyPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
                   <strong>{lordsData.points - lordsPoints}</strong>
-                  Pkte. verfügbar
+                  <FormattedMessage id="editor.availablePoints" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -219,17 +222,20 @@ export const Editor = ({ isMobile }) => {
 
         <section className="editor__section">
           <header className="editor__header">
-            <h2>Helden</h2>
+            <h2>
+              <FormattedMessage id="editor.heroes" />
+            </h2>
             <p className="editor__points">
               {heroesData.diff > 0 ? (
                 <>
-                  <strong>{heroesData.diff}</strong> Pkte. zu viel
+                  <strong>{heroesData.diff}</strong>
+                  <FormattedMessage id="editor.tooManyPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
                   <strong>{heroesData.points - heroesPoints}</strong>
-                  Pkte. verfügbar
+                  <FormattedMessage id="editor.availablePoints" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -265,18 +271,22 @@ export const Editor = ({ isMobile }) => {
 
         <section className="editor__section">
           <header className="editor__header">
-            <h2>Kerneinheiten</h2>
+            <h2>
+              <FormattedMessage id="editor.core" />
+            </h2>
             <p className="editor__points">
               {coreData.diff > 0 ? (
                 <>
-                  <strong>{coreData.diff}</strong> Pkte. fehlen
+                  <strong>{coreData.diff}</strong>
+                  <FormattedMessage id="editor.missingPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
                   <strong>{corePoints}</strong>
                   {` / ${coreData.points} `}
-                  Pkte. <Icon symbol="check" />
+                  <FormattedMessage id="app.points" />
+                  <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -315,17 +325,21 @@ export const Editor = ({ isMobile }) => {
 
         <section className="editor__section">
           <header className="editor__header">
-            <h2>Eliteeinheiten</h2>
+            <h2>
+              <FormattedMessage id="editor.special" />
+            </h2>
             <p className="editor__points">
               {specialData.diff > 0 ? (
                 <>
-                  <strong>{specialData.diff}</strong> Pkte. zu viel
+                  <strong>{specialData.diff}</strong>
+                  <FormattedMessage id="editor.tooManyPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{specialData.points - specialPoints}</strong> Pkte.
-                  verfügbar <Icon symbol="check" />
+                  <strong>{specialData.points - specialPoints}</strong>
+                  <FormattedMessage id="editor.availablePoints" />
+                  <Icon symbol="check" />
                 </>
               )}
             </p>
@@ -364,17 +378,20 @@ export const Editor = ({ isMobile }) => {
 
         <section className="editor__section">
           <header className="editor__header">
-            <h2>Seltene Einheiten</h2>
+            <h2>
+              <FormattedMessage id="editor.rare" />
+            </h2>
             <p className="editor__points">
               {rareData.diff > 0 ? (
                 <>
-                  <strong>{rareData.diff}</strong> Pkte. zu viel
+                  <strong>{rareData.diff}</strong>
+                  <FormattedMessage id="editor.tooManyPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{rareData.points - rarePoints}</strong> Pkte.
-                  verfügbar
+                  <strong>{rareData.points - rarePoints}</strong>
+                  <FormattedMessage id="editor.availablePoints" />
                   <Icon symbol="check" />
                 </>
               )}

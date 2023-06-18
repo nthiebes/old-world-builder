@@ -13,7 +13,7 @@ import { Add } from "./pages/add";
 import { Help } from "./pages/help";
 import { Export } from "./pages/export";
 import { Print } from "./pages/print";
-import { Duplicate } from "./pages/duplicate";
+import { DuplicateList } from "./pages/duplicate-list";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -48,7 +48,7 @@ export const App = () => {
           <Route path="/editor/:listId/edit">{<EditList isMobile />}</Route>
           <Route path="/editor/:listId/export">{<Export isMobile />}</Route>
           <Route path="/editor/:listId/duplicate">
-            {<Duplicate isMobile />}
+            {<DuplicateList isMobile />}
           </Route>
           <Route path="/editor/:listId/add/:type">{<Add isMobile />}</Route>
           <Route path="/editor/:listId/:type/:unitId/magic/:command">
@@ -89,7 +89,7 @@ export const App = () => {
                   <Route path="/editor/:listId/edit">{<EditList />}</Route>
                   <Route path="/editor/:listId/export">{<Export />}</Route>
                   <Route path="/editor/:listId/duplicate">
-                    {<Duplicate />}
+                    {<DuplicateList />}
                   </Route>
                   <Route path="/editor/:listId/add/:type">{<Add />}</Route>
                   <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>

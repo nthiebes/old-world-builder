@@ -1,15 +1,18 @@
 import { useEffect, Fragment, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import { useLanguage } from "../../utils/useLanguage";
+import gameSystems from "../../assets/armies.json";
 
 import "./Export.css";
 
-const getUnitsString = (units, isShowList) => {
+const getUnitsString = ({ units, isShowList, intl }) => {
   return units
     .map((unit) => {
       const allOptions = getAllOptions(unit, {
@@ -29,42 +32,58 @@ ${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
 
       return `${
         unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
-      }${unit.name_de} [${getUnitPoints(unit)} Pkte.]
+      }${unit.name_de} [${getUnitPoints(unit)} ${intl.formatMessage({
+        id: "app.points",
+      })}]
 ${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
 `;
     })
     .join("");
 };
 
-const getListAsText = (list, isShowList) => {
+const getListAsText = ({ list, isShowList, intl, language }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const game = gameSystems.find((game) => game.id === list.game);
+  const armyName = game.armies.find((army) => army.id === list.army)[
+    `name_${language}`
+  ];
 
   if (isShowList) {
     return `===
 ${list.name}
-${list.game}, ${list.army}
+${game.name}, ${armyName}
 ===
 
-++ Kommandanten ++
+++ ${intl.formatMessage({
+      id: "editor.lords",
+    })} ++
 
-${getUnitsString(list.lords, isShowList)}
-++ Helden ++
+${getUnitsString({ units: list.lords, isShowList, intl })}
+++ ${intl.formatMessage({
+      id: "editor.heroes",
+    })} ++
 
-${getUnitsString(list.heroes, isShowList)}
-++ Kerneinheiten ++
+${getUnitsString({ units: list.heroes, isShowList, intl })}
+++ ${intl.formatMessage({
+      id: "editor.core",
+    })} ++
 
-${getUnitsString(list.core, isShowList)}
-++ Eliteeinheiten ++
+${getUnitsString({ units: list.core, isShowList, intl })}
+++ ${intl.formatMessage({
+      id: "editor.special",
+    })} ++
 
-${getUnitsString(list.special, isShowList)}
-++ Seltene Einheiten ++
+${getUnitsString({ units: list.special, isShowList, intl })}
+++ ${intl.formatMessage({
+      id: "editor.rare",
+    })} ++
 
-${getUnitsString(list.rare, isShowList)}
+${getUnitsString({ units: list.rare, isShowList, intl })}
 
 ---
 Erstellt mit "Old World Builder"
@@ -73,35 +92,61 @@ Erstellt mit "Old World Builder"
   }
 
   return `===
-${list.name} [${allPoints} Pkte.]
-${list.game}, ${list.army}
+${list.name} [${allPoints} ${intl.formatMessage({
+    id: "app.points",
+  })}]
+${game.name}, ${armyName}
 ===
 
-++ Kommandanten [${lordsPoints} Pkte.] ++
+++ ${intl.formatMessage({
+    id: "editor.lords",
+  })} [${lordsPoints} ${intl.formatMessage({
+    id: "app.points",
+  })}] ++
 
-${getUnitsString(list.lords)}
-++ Helden [${heroesPoints} Pkte.] ++
+${getUnitsString({ units: list.lords, intl })}
+++ ${intl.formatMessage({
+    id: "editor.heroes",
+  })} [${heroesPoints} ${intl.formatMessage({
+    id: "app.points",
+  })}] ++
 
-${getUnitsString(list.heroes)}
-++ Kerneinheiten [${corePoints} Pkte.] ++
+${getUnitsString({ units: list.heroes, intl })}
+++ ${intl.formatMessage({
+    id: "editor.core",
+  })} [${corePoints} ${intl.formatMessage({
+    id: "app.points",
+  })}] ++
 
-${getUnitsString(list.core)}
-++ Eliteeinheiten [${specialPoints} Pkte.] ++
+${getUnitsString({ units: list.core, intl })}
+++ ${intl.formatMessage({
+    id: "editor.special",
+  })} [${specialPoints} ${intl.formatMessage({
+    id: "app.points",
+  })}] ++
 
-${getUnitsString(list.special)}
-++ Seltene Einheiten [${rarePoints} Pkte.] ++
+${getUnitsString({ units: list.special, intl })}
+++ ${intl.formatMessage({
+    id: "editor.rare",
+  })} [${rarePoints} ${intl.formatMessage({
+    id: "app.points",
+  })}] ++
 
-${getUnitsString(list.rare)}
+${getUnitsString({ units: list.rare, intl })}
 
 ---
-Erstellt mit "Old World Builder"
+${intl.formatMessage({
+  id: "export.createdWith",
+})} "Old World Builder"
 
 [https://old-world-builder.com]`;
 };
 
 export const Export = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
+  const intl = useIntl();
   const location = useLocation();
+  const { language } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
@@ -109,7 +154,9 @@ export const Export = ({ isMobile }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const listText = list ? getListAsText(list, isShowList) : "";
+  const listText = list
+    ? getListAsText({ list, isShowList, intl, language })
+    : "";
   const copyText = () => {
     navigator.clipboard &&
       navigator.clipboard.writeText(listText).then(
@@ -133,7 +180,12 @@ export const Export = ({ isMobile }) => {
   return (
     <>
       {isMobile && (
-        <Header to={`/editor/${listId}`} headline="Liste exportieren" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "export.title",
+          })}
+        />
       )}
 
       <MainComponent>
@@ -141,7 +193,9 @@ export const Export = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline="Liste exportieren"
+            headline={intl.formatMessage({
+              id: "export.title",
+            })}
           />
         )}
         <Button
@@ -151,13 +205,21 @@ export const Export = ({ isMobile }) => {
           spaceBottom
           onClick={copyText}
         >
-          {copied ? "Text kopiert!" : "Als Text kopieren"}
+          {copied
+            ? intl.formatMessage({
+                id: "export.copied",
+              })
+            : intl.formatMessage({
+                id: "export.copy",
+              })}
         </Button>
         {copyError && (
-          <p className="export__error">Das hat leider nicht geklappt :(.</p>
+          <p className="export__error">
+            <FormattedMessage id="export.error" />
+          </p>
         )}
 
-        <div className="checkbox">
+        <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"
             id="show"
@@ -166,12 +228,14 @@ export const Export = ({ isMobile }) => {
             className="checkbox__input"
           />
           <label htmlFor="show" className="checkbox__label">
-            Sichtbare Liste
+            <FormattedMessage id="export.visibleList" />
           </label>
-          <p>
-            <i>(keine Punkte und versteckte Gegenstände)</i>
-          </p>
         </div>
+        <p className="export__visible-description">
+          <i>
+            (<FormattedMessage id="export.visibleListDescription" />)
+          </i>
+        </p>
 
         <textarea className="export__text" value={listText} readOnly />
       </MainComponent>

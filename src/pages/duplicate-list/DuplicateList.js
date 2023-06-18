@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
@@ -8,10 +9,11 @@ import { NumberInput } from "../../components/number-input";
 import { getRandomId } from "../../utils/id";
 import { setLists } from "../../state/lists";
 
-import "./Duplicate.css";
+import "./DuplicateList.css";
 
-export const Duplicate = ({ isMobile }) => {
+export const DuplicateList = ({ isMobile }) => {
   const location = useLocation();
+  const intl = useIntl();
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
   const dispatch = useDispatch();
@@ -60,16 +62,25 @@ export const Duplicate = ({ isMobile }) => {
 
   useEffect(() => {
     if (list) {
-      setName(`Kopie von ${list.name}`);
+      setName(
+        `${intl.formatMessage({
+          id: "duplicate.copyOf",
+        })} ${list.name}`
+      );
       setPoints(list.points);
       setDescription(list.description);
     }
-  }, [list]);
+  }, [list, intl]);
 
   if (!list) {
     return (
       <>
-        <Header to={`/editor/${listId}`} headline="Liste duplizieren" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "duplicate.title",
+          })}
+        />
         <Main />
       </>
     );
@@ -80,7 +91,12 @@ export const Duplicate = ({ isMobile }) => {
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
       {isMobile && (
-        <Header to={`/editor/${listId}`} headline="Liste duplizieren" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "duplicate.title",
+          })}
+        />
       )}
 
       <MainComponent>
@@ -88,11 +104,15 @@ export const Duplicate = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline="Liste duplizieren"
+            headline={intl.formatMessage({
+              id: "duplicate.title",
+            })}
           />
         )}
         <form onSubmit={handleSubmit} className="duplicate">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">
+            <FormattedMessage id="misc.name" />
+          </label>
           <input
             type="text"
             id="name"
@@ -103,7 +123,7 @@ export const Duplicate = ({ isMobile }) => {
             required
           />
           <label htmlFor="description" className="edit__label">
-            Beschreibung (optional):
+            <FormattedMessage id="misc.description" />
           </label>
           <input
             type="text"
@@ -113,7 +133,9 @@ export const Duplicate = ({ isMobile }) => {
             onChange={handleDescriptionChange}
             autoComplete="off"
           />
-          <label htmlFor="points">Punkte:</label>
+          <label htmlFor="points">
+            <FormattedMessage id="misc.points" />
+          </label>
           <NumberInput
             id="points"
             className="input"
@@ -123,7 +145,7 @@ export const Duplicate = ({ isMobile }) => {
             required
           />
           <Button centered icon="duplicate" submitButton>
-            {"Liste duplizieren"}
+            <FormattedMessage id="duplicate.duplicate" />
           </Button>
         </form>
       </MainComponent>

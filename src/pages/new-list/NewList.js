@@ -119,7 +119,7 @@ export const NewList = ({ isMobile }) => {
             </div>
           ))}
           <label htmlFor="name">
-            <FormattedMessage id="new.name" />
+            <FormattedMessage id="misc.name" />
           </label>
           <input
             type="text"
@@ -131,7 +131,7 @@ export const NewList = ({ isMobile }) => {
             required
           />
           <label htmlFor="description">
-            <FormattedMessage id="new.description" />
+            <FormattedMessage id="misc.description" />
           </label>
           <input
             type="text"
@@ -142,7 +142,7 @@ export const NewList = ({ isMobile }) => {
             autoComplete="off"
           />
           <label htmlFor="points">
-            <FormattedMessage id="new.points" />
+            <FormattedMessage id="misc.points" />
           </label>
           <NumberInput
             id="points"

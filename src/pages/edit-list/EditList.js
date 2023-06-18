@@ -1,6 +1,7 @@
 import { Fragment, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
@@ -10,6 +11,7 @@ import "./EditList.css";
 
 export const EditList = ({ isMobile }) => {
   const location = useLocation();
+  const intl = useIntl();
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
   const dispatch = useDispatch();
@@ -49,7 +51,12 @@ export const EditList = ({ isMobile }) => {
   if (!list) {
     return (
       <>
-        <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "edit.title",
+          })}
+        />
         <Main />
       </>
     );
@@ -58,7 +65,12 @@ export const EditList = ({ isMobile }) => {
   return (
     <>
       {isMobile && (
-        <Header to={`/editor/${listId}`} headline="Liste bearbeiten" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "edit.title",
+          })}
+        />
       )}
 
       <MainComponent>
@@ -66,11 +78,13 @@ export const EditList = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline="Liste bearbeiten"
+            headline={intl.formatMessage({
+              id: "edit.title",
+            })}
           />
         )}
         <label htmlFor="name" className="edit__label">
-          Name:
+          <FormattedMessage id="misc.name" />
         </label>
         <input
           type="text"
@@ -82,7 +96,7 @@ export const EditList = ({ isMobile }) => {
           required
         />
         <label htmlFor="description" className="edit__label">
-          Beschreibung (optional):
+          <FormattedMessage id="misc.description" />
         </label>
         <input
           type="text"
@@ -92,7 +106,9 @@ export const EditList = ({ isMobile }) => {
           onChange={handleDescriptionChange}
           autoComplete="off"
         />
-        <label htmlFor="points">Punkte:</label>
+        <label htmlFor="points">
+          <FormattedMessage id="misc.points" />
+        </label>
         <NumberInput
           id="points"
           className="input"

@@ -7,6 +7,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Button } from "../../components/button";
 import { Spinner } from "../../components/spinner";
 import { Icon } from "../../components/icon";
+import { useLanguage } from "../../utils/useLanguage";
 
 import "./Page.css";
 
@@ -20,6 +21,7 @@ export const Header = ({
   hasPointsError,
 }) => {
   const intl = useIntl();
+  const { language } = useLanguage();
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const Component = isSection ? "section" : "header";
@@ -72,18 +74,20 @@ export const Header = ({
       )}
       {showMenu && (
         <ul className="header__more">
-          {moreButton.map(({ callback, name_de, icon, to: moreButtonTo }) => (
-            <li key={name_de}>
-              <Button
-                type="text"
-                onClick={callback}
-                to={moreButtonTo}
-                icon={icon}
-              >
-                {name_de}
-              </Button>
-            </li>
-          ))}
+          {moreButton.map(
+            ({ callback, name_de, name_en, icon, to: moreButtonTo }) => (
+              <li key={name_de}>
+                <Button
+                  type="text"
+                  onClick={callback}
+                  to={moreButtonTo}
+                  icon={icon}
+                >
+                  {language === "de" ? name_de : name_en}
+                </Button>
+              </li>
+            )
+          )}
         </ul>
       )}
     </Component>
@@ -101,7 +105,7 @@ Header.propTypes = {
 };
 
 export const Main = ({ className, children, isDesktop, compact, loading }) => {
-  const language = localStorage.getItem("lang");
+  const { language } = useLanguage();
   const handleLanguageChange = (event) => {
     localStorage.setItem("lang", event.target.value);
     window.location.reload();

@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useIntl } from "react-intl";
 
 import { fetcher } from "../../utils/fetcher";
 import { List } from "../../components/list";
@@ -47,6 +47,7 @@ export const Add = ({ isMobile }) => {
   const { listId, type } = useParams();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(null);
+  const intl = useIntl();
   const location = useLocation();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -109,7 +110,12 @@ export const Add = ({ isMobile }) => {
   return (
     <>
       {isMobile && (
-        <Header to={`/editor/${listId}`} headline="Einheit auswählen" />
+        <Header
+          to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "add.title",
+          })}
+        />
       )}
 
       <MainComponent>
@@ -117,7 +123,9 @@ export const Add = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline="Einheit auswählen"
+            headline={intl.formatMessage({
+              id: "add.title",
+            })}
           />
         )}
         <ul>
@@ -129,7 +137,9 @@ export const Add = ({ isMobile }) => {
               </span>
               <i className="unit__points">{`${
                 minimum ? points * minimum : points
-              } Pkte.`}</i>
+              } ${intl.formatMessage({
+                id: "app.points",
+              })}`}</i>
             </List>
           ))}
         </ul>
