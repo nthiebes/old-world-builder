@@ -1,18 +1,43 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { IntlProvider } from "react-intl";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { App } from "./App";
 import store from "./store";
 
+import English from "./i18n/en.json";
+import German from "./i18n/de.json";
+
+// Language detection
+const supportedLanguages = ["en", "de"];
+const localStorageLanguage = localStorage.getItem("lang");
+const locale = (
+  localStorageLanguage ||
+  navigator.language ||
+  navigator.userLanguage
+).slice(0, 2);
+const language = supportedLanguages.indexOf(locale) === -1 ? "en" : locale;
+
+localStorage.setItem("lang", language);
+
+let messages;
+if (language === "de") {
+  messages = German;
+} else {
+  messages = English;
+}
+
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
+  <IntlProvider locale={locale} messages={messages}>
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
+  </IntlProvider>,
   document.getElementById("root")
 );
 

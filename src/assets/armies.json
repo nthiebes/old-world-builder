@@ -1,5 +1,18 @@
 [
   {
+    "id": "the-old-world",
+    "name": "Warhammer: The Old World",
+    "enabled": false,
+    "armies": [
+      {
+        "id": "dummy",
+        "name_de": "Dummy",
+        "name_en": "Dummy",
+        "items": []
+      }
+    ]
+  },
+  {
     "id": "warhammer-fantasy",
     "name": "Warhammer Fantasy",
     "enabled": true,
@@ -23,11 +36,5 @@
         "items": ["the-empire", "general"]
       }
     ]
-  },
-  {
-    "id": "the-old-world",
-    "name_de": "Warhammer: The Old World",
-    "enabled": false,
-    "armies": []
   }
 ]

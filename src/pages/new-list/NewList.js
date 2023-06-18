@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 import { useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
@@ -18,9 +19,12 @@ export const NewList = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const location = useLocation();
   const dispatch = useDispatch();
+  const intl = useIntl();
   const lists = useSelector((state) => state.lists);
-  const [game, setGame] = useState(gameSystems[0].id);
-  const [army, setArmy] = useState(gameSystems[0].armies[0].id);
+  const [game, setGame] = useState(gameSystems.find((game) => game.enabled).id);
+  const [army, setArmy] = useState(
+    gameSystems.find((game) => game.enabled).armies[0].id
+  );
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
@@ -78,10 +82,18 @@ export const NewList = ({ isMobile }) => {
     <>
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
-      {isMobile && <Header to="/" headline="Neue Liste" />}
+      {isMobile && (
+        <Header to="/" headline={intl.formatMessage({ id: "new.title" })} />
+      )}
 
       <MainComponent>
-        {!isMobile && <Header isSection to="/" headline="Neue Liste" />}
+        {!isMobile && (
+          <Header
+            isSection
+            to="/"
+            headline={intl.formatMessage({ id: "new.title" })}
+          />
+        )}
         <form onSubmit={handleSubmit} className="new-list">
           {gameSystems.map(({ name, id, enabled }) => (
             <div className="radio" key={id}>
@@ -94,6 +106,7 @@ export const NewList = ({ isMobile }) => {
                 checked={id === "warhammer-fantasy"}
                 className="radio__input"
                 disabled={!enabled}
+                aria-label={name}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
@@ -105,7 +118,9 @@ export const NewList = ({ isMobile }) => {
               </label>
             </div>
           ))}
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">
+            <FormattedMessage id="new.name" />
+          </label>
           <input
             type="text"
             id="name"
@@ -115,7 +130,9 @@ export const NewList = ({ isMobile }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor="description">Beschreibung (optional):</label>
+          <label htmlFor="description">
+            <FormattedMessage id="new.description" />
+          </label>
           <input
             type="text"
             id="description"
@@ -124,7 +141,9 @@ export const NewList = ({ isMobile }) => {
             onChange={handleDescriptionChange}
             autoComplete="off"
           />
-          <label htmlFor="points">Punkte:</label>
+          <label htmlFor="points">
+            <FormattedMessage id="new.points" />
+          </label>
           <NumberInput
             id="points"
             className="input"
@@ -133,7 +152,9 @@ export const NewList = ({ isMobile }) => {
             onChange={handlePointsChange}
             required
           />
-          <label htmlFor="army">Armee:</label>
+          <label htmlFor="army">
+            <FormattedMessage id="new.army" />
+          </label>
           <Select
             id="army"
             options={gameSystems.filter(({ id }) => id === game)[0].armies}
@@ -143,7 +164,7 @@ export const NewList = ({ isMobile }) => {
             required
           />
           <Button centered icon="add-list" submitButton>
-            {"Liste anlegen"}
+            <FormattedMessage id="new.create" />
           </Button>
         </form>
       </MainComponent>

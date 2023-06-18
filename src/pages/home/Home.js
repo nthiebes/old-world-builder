@@ -1,6 +1,7 @@
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
@@ -32,7 +33,6 @@ export const Home = ({ isMobile }) => {
   return (
     <>
       {isMobile && <Header headline="Old World Builder" />}
-
       <MainComponent>
         {!lists.length && (
           <>
@@ -43,7 +43,9 @@ export const Home = ({ isMobile }) => {
               height="100"
               className="home__logo"
             />
-            <i className="home__empty">Erstelle jetzt deine erste Liste.</i>
+            <i className="home__empty">
+              <FormattedMessage id="home.empty" />
+            </i>
           </>
         )}
         <ul>
@@ -64,7 +66,7 @@ export const Home = ({ isMobile }) => {
                       ...list,
                       points,
                     })}{" "}
-                    / {points} Pkte.
+                    / {points} <FormattedMessage id="app.points" />
                   </p>
                 </span>
                 {/* {game === "warhammer-fantasy" && (
@@ -87,7 +89,7 @@ export const Home = ({ isMobile }) => {
           )}
         </ul>
         <Button centered to="/new" icon="new-list" spaceTop>
-          {"Neue Liste"}
+          <FormattedMessage id="home.newList" />
         </Button>
       </MainComponent>
     </>

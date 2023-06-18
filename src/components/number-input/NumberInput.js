@@ -1,10 +1,12 @@
 import React from "react";
+import { useIntl } from "react-intl";
 
 import { Button } from "../button";
 
 import "./NumberInput.css";
 
 export const NumberInput = (props) => {
+  const intl = useIntl();
   const handleOnUpClick = (event) => {
     event.preventDefault();
 
@@ -31,7 +33,7 @@ export const NumberInput = (props) => {
         onClick={handleOnUpClick}
         type="secondary"
         icon="up"
-        label="Erhöhen"
+        label={intl.formatMessage({ id: "misc.increase" })}
         disabled={props.value >= props.max}
         className="number-input__button number-input__button--up"
       />
@@ -39,7 +41,7 @@ export const NumberInput = (props) => {
         onClick={handleOnDownClick}
         type="secondary"
         icon="down"
-        label="Verringern"
+        label={intl.formatMessage({ id: "misc.decrease" })}
         disabled={props.value <= props.min}
         className="number-input__button number-input__button--down"
       />

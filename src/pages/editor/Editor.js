@@ -1,6 +1,7 @@
 import { useEffect, useState, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
@@ -18,6 +19,7 @@ import "./Editor.css";
 export const Editor = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
+  const intl = useIntl();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
   const location = useLocation();
@@ -104,26 +106,31 @@ export const Editor = ({ isMobile }) => {
   const moreButtons = [
     {
       name_de: "Bearbeiten",
+      name_en: "Edit",
       icon: "edit",
       to: `/editor/${listId}/edit`,
     },
     {
       name_de: "Duplizieren",
+      name_en: "Duplicate",
       icon: "duplicate",
       to: `/editor/${listId}/duplicate`,
     },
     {
       name_de: "Löschen",
+      name_en: "Delete",
       icon: "delete",
       callback: handleDelete,
     },
     {
       name_de: "Exportieren",
+      name_en: "Export",
       icon: "export",
       to: `/editor/${listId}/export`,
     },
     {
       name_de: "Drucken",
+      name_en: "Print",
       icon: "print",
       to: `/print/${listId}`,
     },
@@ -135,7 +142,9 @@ export const Editor = ({ isMobile }) => {
         <Header
           to="/"
           headline={list.name}
-          subheadline={`${allPoints} / ${list.points} Pkte.`}
+          subheadline={`${allPoints} / ${list.points} ${intl.formatMessage({
+            id: "app.points",
+          })}`}
           hasPointsError={allPoints > list.points}
           moreButton={moreButtons}
         />
@@ -147,7 +156,9 @@ export const Editor = ({ isMobile }) => {
             isSection
             to="/"
             headline={list.name}
-            subheadline={`${allPoints} / ${list.points} Pkte.`}
+            subheadline={`${allPoints} / ${list.points} ${intl.formatMessage({
+              id: "app.points",
+            })}`}
             hasPointsError={allPoints > list.points}
             moreButton={moreButtons}
           />
@@ -188,7 +199,9 @@ export const Editor = ({ isMobile }) => {
               >
                 <div className="editor__list-inner">
                   <b>{unit.name_de}</b>
-                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}</i>
                 </div>
                 {getAllOptions(unit)}
               </List>
@@ -200,7 +213,7 @@ export const Editor = ({ isMobile }) => {
             icon="add"
             spaceTop
           >
-            Hinzufügen
+            <FormattedMessage id="editor.add" />
           </Button>
         </section>
 
@@ -232,7 +245,9 @@ export const Editor = ({ isMobile }) => {
               >
                 <div className="editor__list-inner">
                   <b>{unit.name_de}</b>
-                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}</i>
                 </div>
                 {getAllOptions(unit)}
               </List>
@@ -244,7 +259,7 @@ export const Editor = ({ isMobile }) => {
             icon="add"
             spaceTop
           >
-            Hinzufügen
+            <FormattedMessage id="editor.add" />
           </Button>
         </section>
 
@@ -280,7 +295,9 @@ export const Editor = ({ isMobile }) => {
                       `${unit.strength || unit.minimum} `}
                     <b>{unit.name_de}</b>
                   </span>
-                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}</i>
                 </div>
                 {getAllOptions(unit)}
               </List>
@@ -292,7 +309,7 @@ export const Editor = ({ isMobile }) => {
             icon="add"
             spaceTop
           >
-            Hinzufügen
+            <FormattedMessage id="editor.add" />
           </Button>
         </section>
 
@@ -327,7 +344,9 @@ export const Editor = ({ isMobile }) => {
                       `${unit.strength || unit.minimum} `}
                     <b>{unit.name_de}</b>
                   </span>
-                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}</i>
                 </div>
                 {getAllOptions(unit)}
               </List>
@@ -339,7 +358,7 @@ export const Editor = ({ isMobile }) => {
             icon="add"
             spaceTop
           >
-            Hinzufügen
+            <FormattedMessage id="editor.add" />
           </Button>
         </section>
 
@@ -375,7 +394,9 @@ export const Editor = ({ isMobile }) => {
                       `${unit.strength || unit.minimum} `}
                     <b>{unit.name_de}</b>
                   </span>
-                  <i>{`${getUnitPoints(unit)} Pkte.`}</i>
+                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}</i>
                 </div>
                 {getAllOptions(unit)}
               </List>
@@ -387,7 +408,7 @@ export const Editor = ({ isMobile }) => {
             icon="add"
             spaceTop
           >
-            Hinzufügen
+            <FormattedMessage id="editor.add" />
           </Button>
         </section>
       </MainComponent>
