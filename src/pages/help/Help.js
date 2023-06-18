@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
@@ -17,10 +18,12 @@ export const Help = () => {
 
       <Main compact>
         <Button to="/" icon="home" centered>
-          Zur Startseite
+          <FormattedMessage id="misc.startpage" />
         </Button>
 
-        <h2>Hilfe</h2>
+        <h2>
+          <FormattedMessage id="help.title" />
+        </h2>
         {/* <p>
           Falls du Fragen zum OWL hast, kannst du diese im OWL Thema des{" "}
           <a
@@ -40,23 +43,29 @@ export const Help = () => {
           .
         </p> */}
         <p>
-          Bei Fragen oder Problemen kannst du ein Issue auf{" "}
-          <a
-            href="https://github.com/nthiebes/old-world-builder"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>{" "}
-          erstellen oder mir auf{" "}
-          <a
-            href="https://twitter.com/_gscheid"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Twitter
-          </a>{" "}
-          schreiben.
+          <FormattedMessage
+            id="help.text"
+            values={{
+              github: (
+                <a
+                  href="https://github.com/nthiebes/old-world-builder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              ),
+              twitter: (
+                <a
+                  href="https://twitter.com/_gscheid"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Twitter
+                </a>
+              ),
+            }}
+          />
         </p>
       </Main>
     </>

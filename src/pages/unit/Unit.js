@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
 import { getUnitPoints } from "../../utils/points";
@@ -31,6 +32,7 @@ export const Unit = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(null);
   const location = useLocation();
+  const intl = useIntl();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -194,18 +196,24 @@ export const Unit = ({ isMobile }) => {
           to={`/editor/${listId}`}
           moreButton={[
             {
-              name_de: "Duplizieren",
+              name: intl.formatMessage({
+                id: "misc.duplicate",
+              }),
               icon: "duplicate",
               callback: () => handleDuplicate(unit.id),
             },
             {
-              name_de: "Entfernen",
+              name: intl.formatMessage({
+                id: "misc.remove",
+              }),
               icon: "delete",
               callback: () => handleRemove(unit.id),
             },
           ]}
           headline={unit.name_de}
-          subheadline={`${getUnitPoints(unit)} Pkte.`}
+          subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+            id: "app.points",
+          })}`}
         />
       )}
 
@@ -215,15 +223,21 @@ export const Unit = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}`}
             headline={unit.name_de}
-            subheadline={`${getUnitPoints(unit)} Pkte.`}
+            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+              id: "app.points",
+            })}`}
             moreButton={[
               {
-                name_de: "Duplizieren",
+                name: intl.formatMessage({
+                  id: "misc.duplicate",
+                }),
                 icon: "duplicate",
                 callback: () => handleDuplicate(unit.id),
               },
               {
-                name_de: "Entfernen",
+                name: intl.formatMessage({
+                  id: "misc.remove",
+                }),
                 icon: "delete",
                 callback: () => handleRemove(unit.id),
               },
@@ -236,12 +250,14 @@ export const Unit = ({ isMobile }) => {
           !unit.mounts &&
           !unit.magic &&
           !unit.options && (
-            <i className="unit__empty">Keine Optionen verfügbar.</i>
+            <i className="unit__empty">
+              <FormattedMessage id="unit.noOptions" />
+            </i>
           )}
         {unit.minimum && (
           <>
             <label htmlFor="strength" className="unit__strength">
-              Einheitengröße:
+              <FormattedMessage id="unit.unitSize" />
             </label>
             <NumberInput
               id="strength"
@@ -255,7 +271,9 @@ export const Unit = ({ isMobile }) => {
         )}
         {unit.command && unit.command.length > 0 && (
           <>
-            <h2 className="unit__subline">Kommandoabteilung:</h2>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.command" />
+            </h2>
             {unit.command.map(
               (
                 { name_de, points, perModel, id, active = false, magic },
@@ -277,8 +295,19 @@ export const Unit = ({ isMobile }) => {
                     >
                       {name_de}
                       <i className="checkbox__points">
-                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                        {perModel && ` pro Modell`}
+                        {`${points} ${
+                          points === 1
+                            ? intl.formatMessage({
+                                id: "app.point",
+                              })
+                            : intl.formatMessage({
+                                id: "app.points",
+                              })
+                        }`}
+                        {perModel &&
+                          ` ${intl.formatMessage({
+                            id: "unit.perModel",
+                          })}`}
                       </i>
                     </label>
                   </div>
@@ -307,7 +336,8 @@ export const Unit = ({ isMobile }) => {
                               )
                             )}
                           </span>{" "}
-                          / {unit.command[index].magic.maxPoints} Pkte.
+                          / {unit.command[index].magic.maxPoints}{" "}
+                          <FormattedMessage id="app.points" />
                         </i>
                         {magicPoints > unit.magic.maxPoints && (
                           <Icon
@@ -334,7 +364,9 @@ export const Unit = ({ isMobile }) => {
         )}
         {unit.equipment && unit.equipment.length > 0 && (
           <>
-            <h2 className="unit__subline">Ausrüstung:</h2>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.equipment" />
+            </h2>
             {unit.equipment.map(
               ({ name_de, points, perModel, id, active = false }) => (
                 <div className="radio" key={id}>
@@ -350,8 +382,19 @@ export const Unit = ({ isMobile }) => {
                   <label htmlFor={`equipment-${id}`} className="radio__label">
                     {name_de}
                     <i className="checkbox__points">
-                      {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                      {perModel && ` pro Modell`}
+                      {`${points} ${
+                        points === 1
+                          ? intl.formatMessage({
+                              id: "app.point",
+                            })
+                          : intl.formatMessage({
+                              id: "app.points",
+                            })
+                      }`}
+                      {perModel &&
+                        ` ${intl.formatMessage({
+                          id: "unit.perModel",
+                        })}`}
                     </i>
                   </label>
                 </div>
@@ -361,7 +404,9 @@ export const Unit = ({ isMobile }) => {
         )}
         {unit.options && unit.options.length > 0 && (
           <>
-            <h2 className="unit__subline">Optionen:</h2>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.options" />
+            </h2>
             {unit.options.map(
               ({
                 name_de,
@@ -390,8 +435,19 @@ export const Unit = ({ isMobile }) => {
                     >
                       {name_de}
                       <i className="checkbox__points">
-                        {`${points} ${points === 1 ? "Pkt." : "Pkte."}`}
-                        {perModel && ` pro Modell`}
+                        {`${points} ${
+                          points === 1
+                            ? intl.formatMessage({
+                                id: "app.point",
+                              })
+                            : intl.formatMessage({
+                                id: "app.points",
+                              })
+                        }`}
+                        {perModel &&
+                          ` ${intl.formatMessage({
+                            id: "unit.perModel",
+                          })}`}
                       </i>
                     </label>
                   </div>
@@ -403,7 +459,11 @@ export const Unit = ({ isMobile }) => {
                     >
                       {name_de}:
                       <i className="checkbox__points">
-                        {points} Pkte. pro Modell
+                        {`${points} ${intl.formatMessage({
+                          id: "app.points",
+                        })} ${intl.formatMessage({
+                          id: "unit.perModel",
+                        })}`}
                       </i>
                     </label>
                     <NumberInput
@@ -426,7 +486,9 @@ export const Unit = ({ isMobile }) => {
         )}
         {unit.mounts && unit.mounts.length > 0 && (
           <>
-            <h2 className="unit__subline">Reittier:</h2>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.mount" />
+            </h2>
             {unit.mounts.map(({ name_de, points, id, active = false }) => (
               <div className="radio" key={id}>
                 <input
@@ -440,7 +502,11 @@ export const Unit = ({ isMobile }) => {
                 />
                 <label htmlFor={`mounts-${id}`} className="radio__label">
                   {name_de}
-                  <i className="checkbox__points">{`${points} Pkte.`}</i>
+                  <i className="checkbox__points">{`${points} ${intl.formatMessage(
+                    {
+                      id: "app.points",
+                    }
+                  )}`}</i>
                 </label>
               </div>
             ))}
@@ -453,7 +519,9 @@ export const Unit = ({ isMobile }) => {
             active={location.pathname.includes("magic")}
           >
             <div className="editor__list-inner">
-              <b className="unit__magic-headline">Magische Gegenstände</b>
+              <b className="unit__magic-headline">
+                <FormattedMessage id="unit.magicItems" />
+              </b>
               <i className="checkbox__points">
                 <span
                   className={classNames(
@@ -462,7 +530,7 @@ export const Unit = ({ isMobile }) => {
                 >
                   {magicPoints}
                 </span>{" "}
-                / {unit.magic.maxPoints} Pkte.
+                / {unit.magic.maxPoints} <FormattedMessage id="app.points" />
               </i>
               {magicPoints > unit.magic.maxPoints && (
                 <Icon symbol="error" color="red" className="unit__magic-icon" />

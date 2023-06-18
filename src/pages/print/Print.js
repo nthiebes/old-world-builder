@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { FormattedMessage } from "react-intl";
 
 import { Button } from "../../components/button";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import { useLanguage } from "../../utils/useLanguage";
+import gameSystems from "../../assets/armies.json";
 
 import "./Print.css";
 
 export const Print = () => {
   const { listId } = useParams();
+  const { language } = useLanguage();
   const [isDone, setIsDone] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -17,14 +21,14 @@ export const Print = () => {
 
   useEffect(() => {
     if (list) {
-      document.title = `${list.name}, ${list.army}`;
+      document.title = `${list.name} - Old World Builder`;
       window.onafterprint = () => {
         document.title = "Old World Builder";
         setIsDone(true);
       };
       window.print();
     }
-  }, [list]);
+  }, [list, language]);
 
   if (!list) {
     return null;
@@ -36,6 +40,10 @@ export const Print = () => {
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const game = gameSystems.find((game) => game.id === list.game);
+  const armyName = game.armies.find((army) => army.id === list.army)[
+    `name_${language}`
+  ];
 
   return (
     <>
@@ -47,21 +55,30 @@ export const Print = () => {
         spaceTop
         spaceBottom
       >
-        Zurück
+        <FormattedMessage id="header.back" />
       </Button>
-      {!isDone && <p className="print-info">Druckt...</p>}
+      {!isDone && (
+        <p className="print-info">
+          <FormattedMessage id="print.printing" />
+        </p>
+      )}
       <main className="print">
         <h1>
-          {list.name} <span className="print__points">[{allPoints} Pkte.]</span>
+          {list.name}{" "}
+          <span className="print__points">
+            [{allPoints} <FormattedMessage id="app.points" />]
+          </span>
         </h1>
         <p className="print__subheader">
-          {list.game}, {list.army}
+          {game.name}, {armyName}
         </p>
 
         <section>
           <h2>
-            Kommandanten{" "}
-            <span className="print__points">[{lordsPoints} Pkte.]</span>
+            <FormattedMessage id="editor.lords" />{" "}
+            <span className="print__points">
+              [{lordsPoints} <FormattedMessage id="app.points" />]
+            </span>
           </h2>
           <ul>
             {list.lords.map((unit) => (
@@ -69,7 +86,7 @@ export const Print = () => {
                 <h3>
                   {unit.name_de}
                   <span className="print__points">
-                    [{getUnitPoints(unit)} Pkte.]
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
                 </h3>
                 {getAllOptions(unit)}
@@ -80,7 +97,10 @@ export const Print = () => {
 
         <section>
           <h2>
-            Helden <span className="print__points">[{heroesPoints} Pkte.]</span>
+            <FormattedMessage id="editor.heroes" />{" "}
+            <span className="print__points">
+              [{heroesPoints} <FormattedMessage id="app.points" />]
+            </span>
           </h2>
           <ul>
             {list.heroes.map((unit) => (
@@ -88,7 +108,7 @@ export const Print = () => {
                 <h3>
                   {unit.name_de}
                   <span className="print__points">
-                    [{getUnitPoints(unit)} Pkte.]
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
                 </h3>
                 {getAllOptions(unit)}
@@ -99,8 +119,10 @@ export const Print = () => {
 
         <section>
           <h2>
-            Kerneinheiten{" "}
-            <span className="print__points">[{corePoints} Pkte.]</span>
+            <FormattedMessage id="editor.core" />{" "}
+            <span className="print__points">
+              [{corePoints} <FormattedMessage id="app.points" />]
+            </span>
           </h2>
           <ul>
             {list.core.map((unit) => (
@@ -112,7 +134,7 @@ export const Print = () => {
                   </span>
                   {unit.name_de}
                   <span className="print__points">
-                    [{getUnitPoints(unit)} Pkte.]
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
                 </h3>
                 {getAllOptions(unit)}
@@ -123,8 +145,10 @@ export const Print = () => {
 
         <section>
           <h2>
-            Eliteeinheiten{" "}
-            <span className="print__points">[{specialPoints} Pkte.]</span>
+            <FormattedMessage id="editor.special" />{" "}
+            <span className="print__points">
+              [{specialPoints} <FormattedMessage id="app.points" />]
+            </span>
           </h2>
           <ul>
             {list.special.map((unit) => (
@@ -136,7 +160,7 @@ export const Print = () => {
                   </span>
                   {unit.name_de}
                   <span className="print__points">
-                    [{getUnitPoints(unit)} Pkte.]
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
                 </h3>
                 {getAllOptions(unit)}
@@ -147,8 +171,10 @@ export const Print = () => {
 
         <section>
           <h2>
-            Seltene Einheiten{" "}
-            <span className="print__points">[{rarePoints} Pkte.]</span>
+            <FormattedMessage id="editor.rare" />{" "}
+            <span className="print__points">
+              [{rarePoints} <FormattedMessage id="app.points" />]
+            </span>
           </h2>
           <ul>
             {list.rare.map((unit) => (
@@ -160,7 +186,7 @@ export const Print = () => {
                   </span>
                   {unit.name_de}
                   <span className="print__points">
-                    [{getUnitPoints(unit)} Pkte.]
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
                 </h3>
                 {getAllOptions(unit)}
@@ -172,7 +198,8 @@ export const Print = () => {
 
       <footer className="print-footer">
         <p>
-          Erstellt mit <b>"Old World Builder"</b>
+          <FormattedMessage id="export.createdWith" />{" "}
+          <b>"Old World Builder"</b>
         </p>
         <p>
           [

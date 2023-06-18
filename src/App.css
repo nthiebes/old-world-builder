@@ -141,6 +141,10 @@ label {
   padding-bottom: 0.5rem;
 }
 
+label:hover {
+  cursor: pointer;
+}
+
 p {
   color: var(--color-font);
   line-height: 1.5;
@@ -172,6 +176,10 @@ a:active {
 
 .radio__input {
   margin-right: 0.5rem;
+}
+
+.radio__input:hover {
+  cursor: pointer;
 }
 
 .radio__label {

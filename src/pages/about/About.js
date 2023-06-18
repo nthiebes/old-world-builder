@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
@@ -17,57 +18,83 @@ export const About = () => {
 
       <Main compact>
         <Button to="/" icon="home" centered>
-          Zur Startseite
+          <FormattedMessage id="misc.startpage" />
         </Button>
 
-        <h2>Was ist der "Old World Builder"?</h2>
+        <h2>
+          <FormattedMessage id="about.title" />
+        </h2>
         <p>
-          Der <i>Old World Builder</i> ist ein Armeeplaner für die Games
-          Workshop Tabletop Spiele Warhammer Fantasy und Warhammer: The Old
-          World (sobald es erscheint).
+          <FormattedMessage
+            id="about.text"
+            values={{
+              owb: <i>Old World Builder</i>,
+            }}
+          />
         </p>
         <p>
-          Das Projekt ist Open-Source und wird entwickelt von Nico Thiebes (
-          <a
-            href="https://twitter.com/_gscheid"
-            target="_blank"
-            rel="noreferrer"
-          >
-            @_gscheid
-          </a>
-          ).
+          <FormattedMessage
+            id="about.text2"
+            values={{
+              twitter: (
+                <a
+                  href="https://twitter.com/_gscheid"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @_gscheid
+                </a>
+              ),
+            }}
+          />
         </p>
 
         <h2>Credits</h2>
         <p>
-          Fantasy icons von{" "}
-          <a href="https://game-icons.net" target="_blank" rel="noreferrer">
-            game-icons.net
-          </a>{" "}
-          (
-          <a
-            href="https://creativecommons.org/licenses/by/3.0/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            CC BY 3.0
-          </a>
-          ).
+          <FormattedMessage
+            id="about.credits"
+            values={{
+              gameIcons: (
+                <a
+                  href="https://game-icons.net"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  game-icons.net
+                </a>
+              ),
+              license: (
+                <a
+                  href="https://creativecommons.org/licenses/by/3.0/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  CC BY 3.0
+                </a>
+              ),
+            }}
+          />
         </p>
 
-        <h2>Eure Unterstützung</h2>
+        <h2>
+          <FormattedMessage id="about.support" />
+        </h2>
         <p>
-          Der <i>Old World Builder</i> wird Open-Source entwickelt. Ihr könnt
-          dabei helfen, fehlende bzw. unvollständige Datensets der Armeen zu
-          vervollständigen. Details dazu Ihr findet ihr auf der{" "}
-          <a
-            href="https://github.com/nthiebes/old-world-builder"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub Projektseite
-          </a>
-          .
+          <FormattedMessage
+            id="about.text3"
+            values={{
+              owb: <i>Old World Builder</i>,
+              github: (
+                <a
+                  href="https://github.com/nthiebes/old-world-builder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              ),
+            }}
+          />
         </p>
       </Main>
     </>

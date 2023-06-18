@@ -145,7 +145,7 @@ export const DuplicateList = ({ isMobile }) => {
             required
           />
           <Button centered icon="duplicate" submitButton>
-            <FormattedMessage id="duplicate.duplicate" />
+            <FormattedMessage id="misc.duplicate" />
           </Button>
         </form>
       </MainComponent>

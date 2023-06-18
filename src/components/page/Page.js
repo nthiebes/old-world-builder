@@ -8,6 +8,8 @@ import { Button } from "../../components/button";
 import { Spinner } from "../../components/spinner";
 import { Icon } from "../../components/icon";
 import { useLanguage } from "../../utils/useLanguage";
+import germany from "../../assets/germany.svg";
+import usa from "../../assets/usa.svg";
 
 import "./Page.css";
 
@@ -21,7 +23,6 @@ export const Header = ({
   hasPointsError,
 }) => {
   const intl = useIntl();
-  const { language } = useLanguage();
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const Component = isSection ? "section" : "header";
@@ -74,20 +75,18 @@ export const Header = ({
       )}
       {showMenu && (
         <ul className="header__more">
-          {moreButton.map(
-            ({ callback, name_de, name_en, icon, to: moreButtonTo }) => (
-              <li key={name_de}>
-                <Button
-                  type="text"
-                  onClick={callback}
-                  to={moreButtonTo}
-                  icon={icon}
-                >
-                  {language === "de" ? name_de : name_en}
-                </Button>
-              </li>
-            )
-          )}
+          {moreButton.map(({ callback, name, icon, to: moreButtonTo }) => (
+            <li key={name}>
+              <Button
+                type="text"
+                onClick={callback}
+                to={moreButtonTo}
+                icon={icon}
+              >
+                {name}
+              </Button>
+            </li>
+          ))}
         </ul>
       )}
     </Component>
@@ -154,6 +153,12 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 className="radio__input"
               />
               <label htmlFor="english" className="radio__label">
+                <img
+                  width="24"
+                  alt=""
+                  src={usa}
+                  className="footer__language-icon"
+                />
                 English
               </label>
             </div>
@@ -168,6 +173,12 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 className="radio__input"
               />
               <label htmlFor="deutsch" className="radio__label">
+                <img
+                  width="24"
+                  alt=""
+                  src={germany}
+                  className="footer__language-icon"
+                />
                 Deutsch
               </label>
             </div>

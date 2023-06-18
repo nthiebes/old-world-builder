@@ -120,7 +120,24 @@
 .footer__languages {
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.footer__languages .radio {
+  margin-bottom: 0;
+}
+
+.footer__languages .radio:first-child {
+  margin-right: 1rem;
+}
+
+.footer__languages label {
+  padding: 0;
+}
+
+.footer__language-icon {
+  width: 24px;
+  margin-right: 0.5rem;
 }
 
 .footer a {

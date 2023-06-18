@@ -105,32 +105,37 @@ export const Editor = ({ isMobile }) => {
   });
   const moreButtons = [
     {
-      name_de: "Bearbeiten",
-      name_en: "Edit",
+      name: intl.formatMessage({
+        id: "misc.edit",
+      }),
       icon: "edit",
       to: `/editor/${listId}/edit`,
     },
     {
-      name_de: "Duplizieren",
-      name_en: "Duplicate",
+      name: intl.formatMessage({
+        id: "misc.duplicate",
+      }),
       icon: "duplicate",
       to: `/editor/${listId}/duplicate`,
     },
     {
-      name_de: "Löschen",
-      name_en: "Delete",
+      name: intl.formatMessage({
+        id: "misc.delete",
+      }),
       icon: "delete",
       callback: handleDelete,
     },
     {
-      name_de: "Exportieren",
-      name_en: "Export",
+      name: intl.formatMessage({
+        id: "misc.export",
+      }),
       icon: "export",
       to: `/editor/${listId}/export`,
     },
     {
-      name_de: "Drucken",
-      name_en: "Print",
+      name: intl.formatMessage({
+        id: "misc.print",
+      }),
       icon: "print",
       to: `/print/${listId}`,
     },
