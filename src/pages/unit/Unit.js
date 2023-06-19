@@ -212,7 +212,7 @@ export const Unit = ({ isMobile }) => {
               callback: () => handleRemove(unit.id),
             },
           ]}
-          headline={unit.name_de}
+          headline={unit[`name_${language}`]}
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -224,7 +224,7 @@ export const Unit = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline={unit.name_de}
+            headline={unit[`name_${language}`]}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -278,7 +278,15 @@ export const Unit = ({ isMobile }) => {
             </h2>
             {unit.command.map(
               (
-                { name_de, points, perModel, id, active = false, magic },
+                {
+                  name_de,
+                  name_en,
+                  points,
+                  perModel,
+                  id,
+                  active = false,
+                  magic,
+                },
                 index
               ) => (
                 <Fragment key={id}>
@@ -295,7 +303,7 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`command-${id}`}
                       className="checkbox__label"
                     >
-                      {name_de}
+                      {language === "de" ? name_de : name_en}
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -353,7 +361,9 @@ export const Unit = ({ isMobile }) => {
                         <p>
                           {unit.magic.items
                             .filter(({ command }) => command === index)
-                            .map(({ name_de }) => name_de)
+                            .map(({ name_de, name_en }) =>
+                              language === "de" ? name_de : name_en
+                            )
                             .join(", ")}
                         </p>
                       )}
@@ -370,7 +380,7 @@ export const Unit = ({ isMobile }) => {
               <FormattedMessage id="unit.equipment" />
             </h2>
             {unit.equipment.map(
-              ({ name_de, points, perModel, id, active = false }) => (
+              ({ name_de, name_en, points, perModel, id, active = false }) => (
                 <div className="radio" key={id}>
                   <input
                     type="radio"
@@ -382,7 +392,7 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
-                    {name_de}
+                    {language === "de" ? name_de : name_en}
                     <i className="checkbox__points">
                       {`${points} ${
                         points === 1
@@ -412,6 +422,7 @@ export const Unit = ({ isMobile }) => {
             {unit.options.map(
               ({
                 name_de,
+                name_en,
                 points,
                 perModel,
                 id,
@@ -435,7 +446,7 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="checkbox__label"
                     >
-                      {name_de}
+                      {language === "de" ? name_de : name_en}
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -459,7 +470,7 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="unit__special-option"
                     >
-                      {name_de}:
+                      {language === "de" ? name_de : name_en}:
                       <i className="checkbox__points">
                         {`${points} ${intl.formatMessage({
                           id: "app.points",
@@ -491,27 +502,29 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.mount" />
             </h2>
-            {unit.mounts.map(({ name_de, points, id, active = false }) => (
-              <div className="radio" key={id}>
-                <input
-                  type="radio"
-                  id={`mounts-${id}`}
-                  name="mounts"
-                  value={id}
-                  onChange={() => handleMountsChange(id)}
-                  checked={active}
-                  className="radio__input"
-                />
-                <label htmlFor={`mounts-${id}`} className="radio__label">
-                  {name_de}
-                  <i className="checkbox__points">{`${points} ${intl.formatMessage(
-                    {
-                      id: "app.points",
-                    }
-                  )}`}</i>
-                </label>
-              </div>
-            ))}
+            {unit.mounts.map(
+              ({ name_de, name_en, points, id, active = false }) => (
+                <div className="radio" key={id}>
+                  <input
+                    type="radio"
+                    id={`mounts-${id}`}
+                    name="mounts"
+                    value={id}
+                    onChange={() => handleMountsChange(id)}
+                    checked={active}
+                    className="radio__input"
+                  />
+                  <label htmlFor={`mounts-${id}`} className="radio__label">
+                    {language === "de" ? name_de : name_en}
+                    <i className="checkbox__points">{`${points} ${intl.formatMessage(
+                      {
+                        id: "app.points",
+                      }
+                    )}`}</i>
+                  </label>
+                </div>
+              )
+            )}
           </>
         )}
         {unit?.magic?.maxPoints && (
@@ -539,7 +552,13 @@ export const Unit = ({ isMobile }) => {
               )}
             </div>
             {unit.magic.items && (
-              <p>{unit.magic.items.map(({ name_de }) => name_de).join(", ")}</p>
+              <p>
+                {unit.magic.items
+                  .map(({ name_de, name_en }) =>
+                    language === "de" ? name_de : name_en
+                  )
+                  .join(", ")}
+              </p>
             )}
           </List>
         )}

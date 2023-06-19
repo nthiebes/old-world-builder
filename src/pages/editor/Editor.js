@@ -12,6 +12,7 @@ import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { deleteList } from "../../state/lists";
+import { useLanguage } from "../../utils/useLanguage";
 
 import { removeList, updateList } from "./helpers";
 import "./Editor.css";
@@ -23,6 +24,7 @@ export const Editor = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
   const location = useLocation();
+  const { language } = useLanguage();
   // const errors = useSelector((state) => state.errors);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -206,7 +208,7 @@ export const Editor = ({ isMobile }) => {
                 active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
-                  <b>{unit.name_de}</b>
+                  <b>{unit[`name_${language}`]}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -255,7 +257,7 @@ export const Editor = ({ isMobile }) => {
                 active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
-                  <b>{unit.name_de}</b>
+                  <b>{unit[`name_${language}`]}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -308,7 +310,7 @@ export const Editor = ({ isMobile }) => {
                   <span>
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
-                    <b>{unit.name_de}</b>
+                    <b>{unit[`name_${language}`]}</b>
                   </span>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
@@ -361,7 +363,7 @@ export const Editor = ({ isMobile }) => {
                   <span>
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
-                    <b>{unit.name_de}</b>
+                    <b>{unit[`name_${language}`]}</b>
                   </span>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
@@ -414,7 +416,7 @@ export const Editor = ({ isMobile }) => {
                   <span>
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
-                    <b>{unit.name_de}</b>
+                    <b>{unit[`name_${language}`]}</b>
                   </span>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",

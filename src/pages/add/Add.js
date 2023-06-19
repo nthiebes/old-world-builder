@@ -9,6 +9,7 @@ import { Header, Main } from "../../components/page";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { getRandomId } from "../../utils/id";
+import { useLanguage } from "../../utils/useLanguage";
 
 const updateIds = (type) => {
   return type.map((unit) => {
@@ -49,6 +50,7 @@ export const Add = ({ isMobile }) => {
   const [redirect, setRedirect] = useState(null);
   const intl = useIntl();
   const location = useLocation();
+  const { language } = useLanguage();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -129,11 +131,11 @@ export const Add = ({ isMobile }) => {
           />
         )}
         <ul>
-          {army[type].map(({ name_de, id, minimum, points }) => (
+          {army[type].map(({ name_de, name_en, id, minimum, points }) => (
             <List key={id} onClick={() => handleAdd(id)}>
               <span className="unit__name">
                 {minimum && `${minimum} `}
-                <b>{name_de}</b>
+                <b>{language === "de" ? name_de : name_en}</b>
               </span>
               <i className="unit__points">{`${
                 minimum ? points * minimum : points
