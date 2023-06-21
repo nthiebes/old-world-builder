@@ -11,6 +11,11 @@ import store from "./store";
 import English from "./i18n/en.json";
 import German from "./i18n/de.json";
 
+const metaDescription = {
+  de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
+  en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
+};
+
 // Language detection
 const supportedLanguages = ["en", "de"];
 const localStorageLanguage = localStorage.getItem("lang");
@@ -22,6 +27,10 @@ const locale = (
 const language = supportedLanguages.indexOf(locale) === -1 ? "en" : locale;
 
 localStorage.setItem("lang", language);
+document.documentElement.setAttribute("lang", language);
+document
+  .querySelector("meta[name=description]")
+  .setAttribute("content", metaDescription[language]);
 
 let messages;
 if (language === "de") {
