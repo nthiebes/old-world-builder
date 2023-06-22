@@ -2,6 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Helmet } from "react-helmet-async";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
@@ -145,6 +146,10 @@ export const Editor = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to="/"

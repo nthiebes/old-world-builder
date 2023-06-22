@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 
 export const Help = () => {
   const location = useLocation();
+  const intl = useIntl();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,6 +16,12 @@ export const Help = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {`Old World Builder | ${intl.formatMessage({ id: "footer.help" })}`}
+        </title>
+      </Helmet>
+
       <Header headline="Old World Builder" />
 
       <Main compact>
@@ -24,24 +32,6 @@ export const Help = () => {
         <h2>
           <FormattedMessage id="help.title" />
         </h2>
-        {/* <p>
-          Falls du Fragen zum OWL hast, kannst du diese im OWL Thema des{" "}
-          <a
-            href="https://www.gw-fanworld.net"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GW-Fanworld.net Forums
-          </a>{" "}
-          stellen.
-        </p>
-        <p>
-          Alternativ kannst du auch direkt eine E-Mail schreiben an{" "}
-          <a href="mailto:hello@old-world-builder.com">
-            hello@old-world-builder.com
-          </a>
-          .
-        </p> */}
         <p>
           <FormattedMessage
             id="help.text"
@@ -62,6 +52,15 @@ export const Help = () => {
                   rel="noreferrer"
                 >
                   Twitter
+                </a>
+              ),
+              discord: (
+                <a
+                  href="https://discord.gg/87nUyjUxTU"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Discord
                 </a>
               ),
             }}

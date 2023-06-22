@@ -2,6 +2,7 @@ import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import { Helmet } from "react-helmet-async";
 
 import { Button } from "../../components/button";
 import { List } from "../../components/list";
@@ -32,6 +33,10 @@ export const Home = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Old World Builder</title>
+      </Helmet>
+
       {isMobile && <Header headline="Old World Builder" />}
       <MainComponent>
         {!lists.length && (

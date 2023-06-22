@@ -40,13 +40,6 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
-            <a
-              href="https://github.com/nthiebes/old-world-builder/issues"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FormattedMessage id="footer.error" />
-            </a>
           </nav>
           <div className="footer__languages">
             <div className="radio">

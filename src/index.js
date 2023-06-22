@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import { Provider as ReduxProvider } from "react-redux";
 import { IntlProvider } from "react-intl";
+import { HelmetProvider } from "react-helmet-async";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -41,11 +42,13 @@ if (language === "de") {
 
 ReactDOM.render(
   <IntlProvider locale={locale} messages={messages}>
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <React.StrictMode>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </React.StrictMode>
-    </Provider>
+    </ReduxProvider>
   </IntlProvider>,
   document.getElementById("root")
 );
