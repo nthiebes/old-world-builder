@@ -10,10 +10,11 @@ import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
+import { updateList } from "../../utils/list";
 import gameSystems from "../../assets/armies.json";
 
-import "./Magic.css";
 import { nameMap } from "./name-map";
+import "./Magic.css";
 
 let prevItemType, isFirstItemType;
 
@@ -101,6 +102,10 @@ export const Magic = ({ isMobile }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    list && updateList(list);
+  }, [list]);
 
   useEffect(() => {
     army &&
