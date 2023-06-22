@@ -2,6 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
@@ -154,9 +155,21 @@ export const Editor = ({ isMobile }) => {
         <Header
           to="/"
           headline={list.name}
-          subheadline={`${allPoints} / ${list.points} ${intl.formatMessage({
-            id: "app.points",
-          })}`}
+          subheadline={
+            <>
+              <span
+                className={classNames(
+                  "magic__header-points",
+                  allPoints > list.points && "magic__header-points--error"
+                )}
+              >
+                {allPoints}&nbsp;
+              </span>
+              {`/ ${list.points} ${intl.formatMessage({
+                id: "app.points",
+              })}`}
+            </>
+          }
           hasPointsError={allPoints > list.points}
           moreButton={moreButtons}
         />
@@ -168,9 +181,21 @@ export const Editor = ({ isMobile }) => {
             isSection
             to="/"
             headline={list.name}
-            subheadline={`${allPoints} / ${list.points} ${intl.formatMessage({
-              id: "app.points",
-            })}`}
+            subheadline={
+              <>
+                <span
+                  className={classNames(
+                    "magic__header-points",
+                    allPoints > list.points && "magic__header-points--error"
+                  )}
+                >
+                  {allPoints}&nbsp;
+                </span>
+                {`/ ${list.points} ${intl.formatMessage({
+                  id: "app.points",
+                })}`}
+              </>
+            }
             hasPointsError={allPoints > list.points}
             moreButton={moreButtons}
           />
