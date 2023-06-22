@@ -71,6 +71,18 @@ export const getUnitMagicPoints = ({ unit, command }) => {
   return unitPoints;
 };
 
+export const getUnitCommandPoints = (items) => {
+  let commandPoints = 0;
+
+  if (items) {
+    items.forEach((option) => {
+      commandPoints += option.points;
+    });
+  }
+
+  return commandPoints;
+};
+
 export const getPoints = ({ type, list }) => {
   let points = 0;
 

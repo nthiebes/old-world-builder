@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
-import { getUnitPoints } from "../../utils/points";
+import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -12,20 +12,9 @@ import { Header, Main } from "../../components/page";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
+import { updateList } from "../../utils/list";
 
 import "./Unit.css";
-
-const getUnitCommandPoints = (items) => {
-  let commandPoints = 0;
-
-  if (items) {
-    items.forEach((option) => {
-      commandPoints += option.points;
-    });
-  }
-
-  return commandPoints;
-};
 
 export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -168,6 +157,10 @@ export const Unit = ({ isMobile }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    list && updateList(list);
+  }, [list]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
