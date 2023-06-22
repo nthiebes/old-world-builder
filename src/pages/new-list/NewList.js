@@ -21,9 +21,9 @@ export const NewList = ({ isMobile }) => {
   const dispatch = useDispatch();
   const intl = useIntl();
   const lists = useSelector((state) => state.lists);
-  const [game, setGame] = useState(gameSystems.find((game) => game.enabled).id);
+  const [game, setGame] = useState("warhammer-fantasy");
   const [army, setArmy] = useState(
-    gameSystems.find((game) => game.enabled).armies[0].id
+    gameSystems.find(({ id }) => id === game).armies[0].id
   );
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -95,7 +95,7 @@ export const NewList = ({ isMobile }) => {
           />
         )}
         <form onSubmit={handleSubmit} className="new-list">
-          {gameSystems.map(({ name, id, enabled }) => (
+          {gameSystems.map(({ name, id }) => (
             <div className="radio" key={id}>
               <input
                 type="radio"
@@ -103,9 +103,8 @@ export const NewList = ({ isMobile }) => {
                 name="new-list"
                 value={id}
                 onChange={handleSystemChange}
-                checked={id === "warhammer-fantasy"}
+                checked={id === game}
                 className="radio__input"
-                disabled={!enabled}
                 aria-label={name}
               />
               <label htmlFor={id} className="radio__label">
