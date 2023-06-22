@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import { NewList } from "./pages/new-list";
 import { Editor } from "./pages/editor";
@@ -42,7 +42,7 @@ export const App = () => {
   }, []);
 
   return (
-    <Router>
+    <BrowserRouter>
       {isMobile ? (
         <Switch>
           <Route path="/editor/:listId/edit">{<EditList isMobile />}</Route>
@@ -109,6 +109,6 @@ export const App = () => {
           </Route>
         </Switch>
       )}
-    </Router>
+    </BrowserRouter>
   );
 };
