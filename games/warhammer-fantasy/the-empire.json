@@ -849,7 +849,11 @@
         },
         {
           "name_de": "Standartenträger",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
         }
       ],
       "equipment": [
@@ -870,12 +874,6 @@
           "name_de": "Ritter des Inneren Zirkels",
           "points": 3,
           "perModel": true
-        },
-        {
-          "name_de": "Magische Standarte",
-          "maxPoints": 50,
-          "maxBanners": 1,
-          "points": 0
         }
       ]
     }
@@ -899,17 +897,14 @@
         },
         {
           "name_de": "Standartenträger",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
         }
       ],
-      "options": [
-        {
-          "name_de": "Magische Standarte",
-          "maxPoints": 50,
-          "maxBanners": 1,
-          "points": 0
-        }
-      ]
+      "options": []
     },
     {
       "id": "demis",
@@ -928,7 +923,11 @@
         },
         {
           "name_de": "Standartenträger",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
         }
       ],
       "equipment": [
@@ -944,14 +943,7 @@
           "perModel": true
         }
       ],
-      "options": [
-        {
-          "name_de": "Magische Standarte",
-          "maxPoints": 50,
-          "maxBanners": 1,
-          "points": 0
-        }
-      ]
+      "options": []
     },
     {
       "id": "reiksguard",
@@ -970,17 +962,14 @@
         },
         {
           "name_de": "Standartenträger",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
         }
       ],
-      "options": [
-        {
-          "name_de": "Magische Standarte",
-          "maxPoints": 50,
-          "maxBanners": 1,
-          "points": 0
-        }
-      ]
+      "options": []
     },
     {
       "id": "huntsmen",
