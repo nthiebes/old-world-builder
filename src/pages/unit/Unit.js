@@ -224,10 +224,6 @@ export const Unit = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            headline={unit[`name_${language}`]}
-            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
-              id: "app.points",
-            })}`}
             moreButton={[
               {
                 name: intl.formatMessage({
@@ -244,6 +240,10 @@ export const Unit = ({ isMobile }) => {
                 callback: () => handleRemove(unit.id),
               },
             ]}
+            headline={unit[`name_${language}`]}
+            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+              id: "app.points",
+            })}`}
           />
         )}
         {!unit.minimum &&
@@ -288,89 +288,103 @@ export const Unit = ({ isMobile }) => {
                   magic,
                 },
                 index
-              ) => (
-                <Fragment key={id}>
-                  <div className="checkbox">
-                    <input
-                      type="checkbox"
-                      id={`command-${id}`}
-                      value={id}
-                      onChange={() => handleCommandChange(id)}
-                      checked={active}
-                      className="checkbox__input"
-                    />
-                    <label
-                      htmlFor={`command-${id}`}
-                      className="checkbox__label"
-                    >
-                      {language === "de" ? name_de : name_en}
-                      <i className="checkbox__points">
-                        {`${points} ${
-                          points === 1
-                            ? intl.formatMessage({
-                                id: "app.point",
-                              })
-                            : intl.formatMessage({
-                                id: "app.points",
-                              })
-                        }`}
-                        {perModel &&
-                          ` ${intl.formatMessage({
-                            id: "unit.perModel",
-                          })}`}
-                      </i>
-                    </label>
-                  </div>
-                  {magic && active && (
-                    <List
-                      to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                      className="editor__list unit__link"
-                      active={location.pathname.includes("magic")}
-                    >
-                      <div className="editor__list-inner">
-                        <b>
-                          {magic.types
-                            .map((type) => nameMap[type][`name_${language}`])
-                            .join(", ")}
-                        </b>
+              ) => {
+                let commandMagicPoints = 0;
+
+                if (magic) {
+                  unit.magic.items
+                    .filter((item) => item.command === index)
+                    .forEach(({ points }) => {
+                      commandMagicPoints = commandMagicPoints + points;
+                    });
+                }
+
+                return (
+                  <Fragment key={id}>
+                    <div className="checkbox">
+                      <input
+                        type="checkbox"
+                        id={`command-${id}`}
+                        value={id}
+                        onChange={() => handleCommandChange(id)}
+                        checked={active}
+                        className="checkbox__input"
+                      />
+                      <label
+                        htmlFor={`command-${id}`}
+                        className="checkbox__label"
+                      >
+                        {language === "de" ? name_de : name_en}
                         <i className="checkbox__points">
-                          <span
-                            className={classNames(
-                              magicPoints > unit.magic.maxPoints &&
-                                "editor__error"
-                            )}
-                          >
-                            {getUnitCommandPoints(
-                              unit?.magic?.items.filter(
-                                ({ command }) => command === index
-                              )
-                            )}
-                          </span>{" "}
-                          / {unit.command[index].magic.maxPoints}{" "}
-                          <FormattedMessage id="app.points" />
+                          {`${points} ${
+                            points === 1
+                              ? intl.formatMessage({
+                                  id: "app.point",
+                                })
+                              : intl.formatMessage({
+                                  id: "app.points",
+                                })
+                          }`}
+                          {perModel &&
+                            ` ${intl.formatMessage({
+                              id: "unit.perModel",
+                            })}`}
                         </i>
-                        {magicPoints > unit.magic.maxPoints && (
-                          <Icon
-                            symbol="error"
-                            color="red"
-                            className="unit__magic-icon"
-                          />
+                      </label>
+                    </div>
+                    {magic && active && (
+                      <List
+                        to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+                        className="editor__list unit__link"
+                        active={location.pathname.includes("magic")}
+                      >
+                        <div className="editor__list-inner">
+                          <b>
+                            {magic.types
+                              .map((type) => nameMap[type][`name_${language}`])
+                              .join(", ")}
+                          </b>
+                          <i className="checkbox__points">
+                            <span
+                              className={classNames(
+                                commandMagicPoints >
+                                  unit.command[index].magic.maxPoints &&
+                                  "editor__error"
+                              )}
+                            >
+                              {getUnitCommandPoints(
+                                unit?.magic?.items.filter(
+                                  ({ command }) => command === index
+                                )
+                              )}
+                            </span>{" "}
+                            / {unit.command[index].magic.maxPoints}{" "}
+                            <FormattedMessage id="app.points" />
+                          </i>
+                          {commandMagicPoints >
+                            unit.command[index].magic.maxPoints && (
+                            <Icon
+                              symbol="error"
+                              color="red"
+                              className="unit__magic-icon"
+                            />
+                          )}
+                        </div>
+                        {unit?.magic?.items && (
+                          <p>
+                            {unit.magic.items
+                              .filter(({ command }) => command === index)
+                              .map(({ name_de, name_en }) =>
+                                language === "de" ? name_de : name_en
+                              )
+                              .join(", ")}
+                          </p>
                         )}
-                      </div>
-                      {unit?.magic?.items && (
-                        <p>
-                          {unit.magic.items
-                            .filter(({ command }) => command === index)
-                            .map(({ name_de, name_en }) =>
-                              language === "de" ? name_de : name_en
-                            )
-                            .join(", ")}
-                        </p>
-                      )}
-                    </List>
-                  )}
-                </Fragment>
-              )
+                      </List>
+                    )}
+                  </Fragment>
+                );
+              }
             )}
           </>
         )}

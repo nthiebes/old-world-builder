@@ -61,6 +61,12 @@ export const Magic = ({ isMobile }) => {
   const items = useSelector((state) => state.items);
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
+  const maxMagicPoints =
+    (unit &&
+      unit.command &&
+      unit.command[command] &&
+      unit.command[command]?.magic?.maxPoints) ||
+    (unit && unit.magic.maxPoints);
   const handleMagicChange = (event, magicItem) => {
     let magicItems;
 
@@ -170,6 +176,7 @@ export const Magic = ({ isMobile }) => {
       </div>
     );
   };
+  const hasPointsError = getUnitMagicPoints({ unit, command }) > maxMagicPoints;
 
   return (
     <>
@@ -179,12 +186,22 @@ export const Magic = ({ isMobile }) => {
           headline={intl.formatMessage({
             id: "unit.magicItems",
           })}
-          subheadline={`${getUnitMagicPoints(unit)} / ${
-            unit.magic.maxPoints
-          } ${intl.formatMessage({
-            id: "app.points",
-          })}`}
-          hasPointsError={getUnitMagicPoints(unit) > unit.magic.maxPoints}
+          subheadline={
+            <>
+              <span
+                className={classNames(
+                  "magic__header-points",
+                  hasPointsError && "magic__header-points--error"
+                )}
+              >
+                {`${getUnitMagicPoints({ unit, command })}`}&nbsp;
+              </span>
+              {`/ ${maxMagicPoints} ${intl.formatMessage({
+                id: "app.points",
+              })}`}
+            </>
+          }
+          hasPointsError={hasPointsError}
         />
       )}
 
@@ -196,12 +213,22 @@ export const Magic = ({ isMobile }) => {
             headline={intl.formatMessage({
               id: "unit.magicItems",
             })}
-            subheadline={`${getUnitMagicPoints(unit)} / ${
-              unit.magic.maxPoints
-            } ${intl.formatMessage({
-              id: "app.points",
-            })}`}
-            hasPointsError={getUnitMagicPoints(unit) > unit.magic.maxPoints}
+            subheadline={
+              <>
+                <span
+                  className={classNames(
+                    "magic__header-points",
+                    hasPointsError && "magic__header-points--error"
+                  )}
+                >
+                  {`${getUnitMagicPoints({ unit, command })}`}&nbsp;
+                </span>
+                {`/ ${maxMagicPoints} ${intl.formatMessage({
+                  id: "app.points",
+                })}`}
+              </>
+            }
+            hasPointsError={hasPointsError}
           />
         )}
         {items.map((itemGroup) => (

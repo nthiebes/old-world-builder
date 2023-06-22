@@ -18,6 +18,13 @@
 
 .editor__list-inner b {
   margin-right: 0.5rem;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.editor__list-inner .checkbox__points {
+  margin-left: 0;
 }
 
 .editor__header {

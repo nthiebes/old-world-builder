@@ -94,7 +94,7 @@ Header.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string,
   headline: PropTypes.string,
-  subheadline: PropTypes.string,
+  subheadline: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
   moreButton: PropTypes.array,
   isSection: PropTypes.bool,
