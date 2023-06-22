@@ -28,7 +28,7 @@ export const NumberInput = (props) => {
 
   return (
     <div className="number-input">
-      <input {...props} type="number" />
+      <input {...props} type="number" pattern="[0-9]*" />
       <Button
         onClick={handleOnUpClick}
         type="secondary"
