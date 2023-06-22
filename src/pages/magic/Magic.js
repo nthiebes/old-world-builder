@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useIntl } from "react-intl";
 import classNames from "classnames";
+import { Helmet } from "react-helmet-async";
 
 import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
@@ -185,6 +186,10 @@ export const Magic = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to={`/editor/${listId}/${type}/${unitId}`}

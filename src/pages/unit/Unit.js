@@ -3,6 +3,7 @@ import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
+import { Helmet } from "react-helmet-async";
 
 import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
 import { List } from "../../components/list";
@@ -186,6 +187,10 @@ export const Unit = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to={`/editor/${listId}`}
