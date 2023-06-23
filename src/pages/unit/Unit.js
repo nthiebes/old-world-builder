@@ -185,6 +185,30 @@ export const Unit = ({ isMobile }) => {
     }
   }
 
+  const moreButtons = [
+    {
+      name: intl.formatMessage({
+        id: "misc.rename",
+      }),
+      icon: "edit",
+      to: `/editor/${listId}/${type}/${unit.id}/rename`,
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.duplicate",
+      }),
+      icon: "duplicate",
+      callback: () => handleDuplicate(unit.id),
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.remove",
+      }),
+      icon: "delete",
+      callback: () => handleRemove(unit.id),
+    },
+  ];
+
   return (
     <>
       <Helmet>
@@ -194,22 +218,7 @@ export const Unit = ({ isMobile }) => {
       {isMobile && (
         <Header
           to={`/editor/${listId}`}
-          moreButton={[
-            {
-              name: intl.formatMessage({
-                id: "misc.duplicate",
-              }),
-              icon: "duplicate",
-              callback: () => handleDuplicate(unit.id),
-            },
-            {
-              name: intl.formatMessage({
-                id: "misc.remove",
-              }),
-              icon: "delete",
-              callback: () => handleRemove(unit.id),
-            },
-          ]}
+          moreButton={moreButtons}
           headline={unit[`name_${language}`]}
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
@@ -222,22 +231,7 @@ export const Unit = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            moreButton={[
-              {
-                name: intl.formatMessage({
-                  id: "misc.duplicate",
-                }),
-                icon: "duplicate",
-                callback: () => handleDuplicate(unit.id),
-              },
-              {
-                name: intl.formatMessage({
-                  id: "misc.remove",
-                }),
-                icon: "delete",
-                callback: () => handleRemove(unit.id),
-              },
-            ]}
+            moreButton={moreButtons}
             headline={unit[`name_${language}`]}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",

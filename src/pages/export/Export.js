@@ -2,6 +2,7 @@ import { useEffect, Fragment, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
@@ -179,6 +180,10 @@ export const Export = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to={`/editor/${listId}`}

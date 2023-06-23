@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Helmet } from "react-helmet-async";
 
 import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
@@ -89,6 +90,10 @@ export const DuplicateList = ({ isMobile }) => {
   return (
     <>
       {redirect && <Redirect to={`/editor/${redirect}`} />}
+
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
 
       {isMobile && (
         <Header
