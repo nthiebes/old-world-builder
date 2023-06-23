@@ -84,7 +84,7 @@ export const Print = () => {
             {list.lords.map((unit) => (
               <li key={unit.id}>
                 <h3>
-                  {unit.name_de}
+                  {language === "de" ? unit.name_de : unit.name_en}
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
@@ -106,7 +106,7 @@ export const Print = () => {
             {list.heroes.map((unit) => (
               <li key={unit.id}>
                 <h3>
-                  {unit.name_de}
+                  {language === "de" ? unit.name_de : unit.name_en}
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
@@ -132,7 +132,7 @@ export const Print = () => {
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
                   </span>
-                  {unit.name_de}
+                  {language === "de" ? unit.name_de : unit.name_en}
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
@@ -158,7 +158,7 @@ export const Print = () => {
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
                   </span>
-                  {unit.name_de}
+                  {language === "de" ? unit.name_de : unit.name_en}
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>
@@ -184,7 +184,7 @@ export const Print = () => {
                     {(unit.strength || unit.minimum) &&
                       `${unit.strength || unit.minimum} `}
                   </span>
-                  {unit.name_de}
+                  {language === "de" ? unit.name_de : unit.name_en}
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
                   </span>

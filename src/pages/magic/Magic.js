@@ -116,7 +116,8 @@ export const Magic = ({ isMobile }) => {
           const allItems = army.items.map((item) => {
             return {
               items: data[item],
-              name_de: nameMap[item][`name_${language}`],
+              name_de: nameMap[item].name_de,
+              name_en: nameMap[item].name_en,
               id: item,
             };
           });
@@ -172,7 +173,7 @@ export const Magic = ({ isMobile }) => {
           htmlFor={`${itemGroup.id}-${magicItem.id}`}
           className="checkbox__label"
         >
-          {magicItem.name_de}
+          {language === "de" ? magicItem.name_de : magicItem.name_en}
           <i className="checkbox__points">{`${
             magicItem.points
           } ${intl.formatMessage({
@@ -243,7 +244,9 @@ export const Magic = ({ isMobile }) => {
         )}
         {items.map((itemGroup) => (
           <Fragment key={itemGroup.name_de}>
-            <h2 className="unit__subline">{itemGroup.name_de}</h2>
+            <h2 className="unit__subline">
+              {language === "de" ? itemGroup.name_de : itemGroup.name_en}
+            </h2>
             {itemGroup.items.map((magicItem) => {
               if (prevItemType !== magicItem.type) {
                 prevItemType = magicItem.type;

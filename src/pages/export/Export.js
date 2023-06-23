@@ -13,7 +13,7 @@ import gameSystems from "../../assets/armies.json";
 
 import "./Export.css";
 
-const getUnitsString = ({ units, isShowList, intl }) => {
+const getUnitsString = ({ units, isShowList, intl, language }) => {
   return units
     .map((unit) => {
       const allOptions = getAllOptions(unit, {
@@ -26,16 +26,18 @@ const getUnitsString = ({ units, isShowList, intl }) => {
           unit.strength || unit.minimum
             ? `${unit.strength || unit.minimum} `
             : ""
-        }${unit.name_de}
+        }${unit[`name_${language}`]}
 ${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
 `;
       }
 
       return `${
         unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
-      }${unit.name_de} [${getUnitPoints(unit)} ${intl.formatMessage({
-        id: "app.points",
-      })}]
+      }${unit[`name_${language}`]} [${getUnitPoints(unit)} ${intl.formatMessage(
+        {
+          id: "app.points",
+        }
+      )}]
 ${allOptions ? `- ${allOptions.split(", ").join("\n- ")}\n` : ""}
 `;
     })
@@ -64,27 +66,27 @@ ${game.name}, ${armyName}
       id: "editor.lords",
     })} ++
 
-${getUnitsString({ units: list.lords, isShowList, intl })}
+${getUnitsString({ units: list.lords, isShowList, intl, language })}
 ++ ${intl.formatMessage({
       id: "editor.heroes",
     })} ++
 
-${getUnitsString({ units: list.heroes, isShowList, intl })}
+${getUnitsString({ units: list.heroes, isShowList, intl, language })}
 ++ ${intl.formatMessage({
       id: "editor.core",
     })} ++
 
-${getUnitsString({ units: list.core, isShowList, intl })}
+${getUnitsString({ units: list.core, isShowList, intl, language })}
 ++ ${intl.formatMessage({
       id: "editor.special",
     })} ++
 
-${getUnitsString({ units: list.special, isShowList, intl })}
+${getUnitsString({ units: list.special, isShowList, intl, language })}
 ++ ${intl.formatMessage({
       id: "editor.rare",
     })} ++
 
-${getUnitsString({ units: list.rare, isShowList, intl })}
+${getUnitsString({ units: list.rare, isShowList, intl, language })}
 
 ---
 Erstellt mit "Old World Builder"
@@ -105,35 +107,35 @@ ${game.name}, ${armyName}
     id: "app.points",
   })}] ++
 
-${getUnitsString({ units: list.lords, intl })}
+${getUnitsString({ units: list.lords, intl, language })}
 ++ ${intl.formatMessage({
     id: "editor.heroes",
   })} [${heroesPoints} ${intl.formatMessage({
     id: "app.points",
   })}] ++
 
-${getUnitsString({ units: list.heroes, intl })}
+${getUnitsString({ units: list.heroes, intl, language })}
 ++ ${intl.formatMessage({
     id: "editor.core",
   })} [${corePoints} ${intl.formatMessage({
     id: "app.points",
   })}] ++
 
-${getUnitsString({ units: list.core, intl })}
+${getUnitsString({ units: list.core, intl, language })}
 ++ ${intl.formatMessage({
     id: "editor.special",
   })} [${specialPoints} ${intl.formatMessage({
     id: "app.points",
   })}] ++
 
-${getUnitsString({ units: list.special, intl })}
+${getUnitsString({ units: list.special, intl, language })}
 ++ ${intl.formatMessage({
     id: "editor.rare",
   })} [${rarePoints} ${intl.formatMessage({
     id: "app.points",
   })}] ++
 
-${getUnitsString({ units: list.rare, intl })}
+${getUnitsString({ units: list.rare, intl, language })}
 
 ---
 ${intl.formatMessage({
