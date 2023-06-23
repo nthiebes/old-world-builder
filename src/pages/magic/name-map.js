@@ -5,7 +5,7 @@ export const nameMap = {
   },
   "the-empire": {
     name_de: "Magische Erbstücke",
-    name_en: "Magische Erbstücke",
+    name_en: "Heirlooms of Magic",
   },
   heirlooms: {
     name_de: "Erbstücke",
@@ -17,35 +17,31 @@ export const nameMap = {
   },
   general: {
     name_de: "Magische Gegenstände",
-    name_en: "Magische Gegenstände",
+    name_en: "Magic Items",
   },
   weapon: {
     name_de: "Magische Waffen",
-    name_en: "Magische Waffen",
+    name_en: "Magic Weapons",
   },
   armor: {
     name_de: "Magische Rüstungen",
-    name_en: "Magische Rüstungen",
-  },
-  item: {
-    name_de: "Enchanted Items",
-    name_en: "Enchanted Items",
+    name_en: "Magic Armour",
   },
   talisman: {
     name_de: "Talismane",
-    name_en: "Talismane",
+    name_en: "Talismans",
   },
   banner: {
     name_de: "Magische Standarten",
-    name_en: "Magische Standarten",
+    name_en: "Magic Standards",
   },
   artifact: {
     name_de: "Arkane Artifakte",
-    name_en: "Arkane Artifakte",
+    name_en: "Arcane Items",
   },
   "enchanted-item": {
     name_de: "Verzauberte Gegenstände",
-    name_en: "Verzauberte Gegenstände",
+    name_en: "Enchanted Items",
   },
   "weapon-runes": {
     name_de: "Waffenrunen",
