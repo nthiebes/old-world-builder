@@ -59,3 +59,22 @@
   color: var(--color-error);
   font-weight: bold;
 }
+
+.unit__detachments-header {
+  cursor: initial;
+  background: linear-gradient(
+    90deg,
+    var(--color-list) 0%,
+    rgba(232, 221, 203, 1) 50%,
+    var(--color-list) 100%
+  );
+}
+
+.unit__detachments-header::before,
+.unit__detachments::before {
+  content: none;
+}
+
+.unit__detachments {
+  cursor: initial;
+}

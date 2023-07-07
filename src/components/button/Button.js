@@ -22,6 +22,7 @@ export const Button = ({
   color,
   submitButton,
   disabled,
+  size,
 }) => {
   const Component = to ? Link : "button";
   const buttonProps = {};
@@ -45,6 +46,7 @@ export const Button = ({
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         disabled && "button--disabled",
+        `button--${size}`,
         className
       )}
       onClick={onClick}
@@ -79,8 +81,10 @@ Button.propTypes = {
   color: PropTypes.string,
   submitButton: PropTypes.bool,
   disabled: PropTypes.bool,
+  size: PropTypes.string,
 };
 
 Button.defaultProps = {
   type: "primary",
+  size: "large",
 };
