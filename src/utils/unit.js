@@ -1,5 +1,5 @@
 export const getAllOptions = (
-  { mounts, equipment, options, command, magic },
+  { mounts, equipment, options, command, magic, detachments },
   { asString, noMagic } = {}
 ) => {
   const language = localStorage.getItem("lang");
@@ -36,6 +36,14 @@ export const getAllOptions = (
         language === "de" ? name_de : name_en
       )
     : [];
+  const allDetachments = detachments
+    ? detachments
+        .filter(({ strength }) => strength > 0)
+        .map(
+          ({ name_de, name_en, strength }) =>
+            `${strength} ${language === "de" ? name_de : name_en}`
+        )
+    : [];
   const allOptionsArray = [
     ...allEquipment,
     ...allOptions,
@@ -43,6 +51,7 @@ export const getAllOptions = (
     ...allCommand,
     ...allMounts,
     ...(!noMagic ? allMagicItems : []),
+    ...allDetachments,
   ];
   const allOptionsString = allOptionsArray.join(", ");
 

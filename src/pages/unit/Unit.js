@@ -37,7 +37,6 @@ export const Unit = ({ isMobile }) => {
   const army = useSelector((state) => state.army);
   const detachments =
     army && army.core.filter((coreUnit) => coreUnit.detachment);
-  console.log(unit);
   let magicPoints = 0;
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
@@ -101,6 +100,21 @@ export const Unit = ({ isMobile }) => {
   const handleDeleteDetachmentClick = ({ id }) => {
     const unitDetachments = [...unit.detachments].filter(
       (detachment) => detachment.id !== id
+    );
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
+      })
+    );
+  };
+  const handleDetachmentStrengthClick = ({ id, strength }) => {
+    console.log(id, strength);
+    const unitDetachments = [...unit.detachments].map((detachment) =>
+      detachment.id === id ? { ...detachment, strength } : detachment
     );
 
     dispatch(
@@ -566,7 +580,7 @@ export const Unit = ({ isMobile }) => {
         )}
         {unit.regimentalUnit && (
           <>
-            <h2 className="unit__subline">
+            <h2 className="unit__subline unit__detachments-headline">
               <FormattedMessage id="unit.detachments" />
             </h2>
             {detachments.map(({ name_de, name_en, id }) => (
@@ -598,16 +612,27 @@ export const Unit = ({ isMobile }) => {
                     .map(({ name_de, name_en, strength, id, points }) => (
                       <div className="list" key={id}>
                         <div className="list__inner unit__detachments">
+                          <NumberInput
+                            id={`strength-${id}`}
+                            className="input"
+                            min={5}
+                            value={strength}
+                            onChange={(event) =>
+                              handleDetachmentStrengthClick({
+                                id,
+                                strength: event.target.value,
+                              })
+                            }
+                          />
                           <span>
-                            {`${strength} `}
                             <b>{language === "de" ? name_de : name_en}</b>
+                            <i>{`${getUnitPoints({
+                              strength,
+                              points,
+                            })} ${intl.formatMessage({
+                              id: "app.points",
+                            })}`}</i>
                           </span>
-                          <i>{`${getUnitPoints({
-                            strength,
-                            points,
-                          })} ${intl.formatMessage({
-                            id: "app.points",
-                          })}`}</i>
                           <Button
                             onClick={() =>
                               handleDeleteDetachmentClick({

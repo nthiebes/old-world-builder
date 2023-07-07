@@ -60,6 +60,10 @@
   font-weight: bold;
 }
 
+.unit__detachments-headline {
+  margin-bottom: 1rem;
+}
+
 .unit__detachments-header {
   cursor: initial;
   background: linear-gradient(
@@ -77,4 +81,24 @@
 
 .unit__detachments {
   cursor: initial;
+}
+
+.unit__detachments .input {
+  margin-bottom: 0;
+  width: 50px;
+  padding-right: 0;
+}
+
+.unit__detachments > span {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 1rem;
+  min-width: 0;
+}
+
+.unit__detachments > span > b {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
