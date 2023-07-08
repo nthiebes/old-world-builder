@@ -46,6 +46,11 @@ export const getUnitPoints = (unit) => {
       unitPoints += option.points;
     });
   }
+  if (unit.detachments) {
+    unit.detachments.forEach((detachment) => {
+      unitPoints += detachment.strength * detachment.points;
+    });
+  }
 
   return unitPoints;
 };

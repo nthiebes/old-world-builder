@@ -1,6 +1,8 @@
-// import React, { Component, Fragment } from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+
+import { useLanguage } from "../../utils/useLanguage";
 
 import "./Select.css";
 
@@ -16,6 +18,7 @@ export const Select = ({
   onChange,
   spaceBottom,
 }) => {
+  const { language } = useLanguage();
   const handleOnChange = (event) => {
     onChange(event.target.value);
   };
@@ -35,9 +38,9 @@ export const Select = ({
         className
       )}
     >
-      {options.map(({ name_de, id: optionValue }) => (
+      {options.map(({ name_de, name_en, id: optionValue }) => (
         <option key={optionValue} value={optionValue}>
-          {name_de}
+          {language === "de" ? name_de : name_en}
         </option>
       ))}
     </select>

@@ -3,16 +3,21 @@ import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
+import { Helmet } from "react-helmet-async";
 
+import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
+import { Button } from "../../components/button";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
+import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateList } from "../../utils/list";
+import { updateIds, getRandomId } from "../../utils/id";
 
 import "./Unit.css";
 
@@ -29,6 +34,9 @@ export const Unit = ({ isMobile }) => {
   );
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
+  const army = useSelector((state) => state.army);
+  const detachments =
+    army && army.core.filter((coreUnit) => coreUnit.detachment);
   let magicPoints = 0;
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
@@ -65,6 +73,56 @@ export const Unit = ({ isMobile }) => {
         type,
         unitId,
         options,
+      })
+    );
+  };
+  const handleAddDetachmentClick = ({ id }) => {
+    const detachment = detachments.find((detachment) => detachment.id === id);
+    const unitDetachments = unit.detachments ? [...unit.detachments] : [];
+
+    unitDetachments.push({
+      id: `${id}.${getRandomId()}`,
+      name_de: detachment.name_de,
+      name_en: detachment.name_en,
+      points: detachment.points,
+      strength: 5,
+    });
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
+      })
+    );
+  };
+  const handleDeleteDetachmentClick = ({ id }) => {
+    const unitDetachments = [...unit.detachments].filter(
+      (detachment) => detachment.id !== id
+    );
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
+      })
+    );
+  };
+  const handleDetachmentStrengthClick = ({ id, strength }) => {
+    console.log(id, strength);
+    const unitDetachments = [...unit.detachments].map((detachment) =>
+      detachment.id === id ? { ...detachment, strength } : detachment
+    );
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
       })
     );
   };
@@ -162,11 +220,29 @@ export const Unit = ({ isMobile }) => {
     list && updateList(list);
   }, [list]);
 
+  useEffect(() => {
+    list &&
+      fetcher({
+        url: `games/${list.game}/${list.army}`,
+        onSuccess: (data) => {
+          dispatch(
+            setArmy({
+              lords: updateIds(data.lords),
+              heroes: updateIds(data.heroes),
+              core: updateIds(data.core),
+              special: updateIds(data.special),
+              rare: updateIds(data.rare),
+            })
+          );
+        },
+      });
+  }, [list, dispatch]);
+
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
   }
 
-  if (!unit) {
+  if (!unit || !army) {
     if (isMobile) {
       return (
         <>
@@ -184,27 +260,40 @@ export const Unit = ({ isMobile }) => {
     }
   }
 
+  const moreButtons = [
+    {
+      name: intl.formatMessage({
+        id: "misc.rename",
+      }),
+      icon: "edit",
+      to: `/editor/${listId}/${type}/${unit.id}/rename`,
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.duplicate",
+      }),
+      icon: "duplicate",
+      callback: () => handleDuplicate(unit.id),
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.remove",
+      }),
+      icon: "delete",
+      callback: () => handleRemove(unit.id),
+    },
+  ];
+
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to={`/editor/${listId}`}
-          moreButton={[
-            {
-              name: intl.formatMessage({
-                id: "misc.duplicate",
-              }),
-              icon: "duplicate",
-              callback: () => handleDuplicate(unit.id),
-            },
-            {
-              name: intl.formatMessage({
-                id: "misc.remove",
-              }),
-              icon: "delete",
-              callback: () => handleRemove(unit.id),
-            },
-          ]}
+          moreButton={moreButtons}
           headline={unit[`name_${language}`]}
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
@@ -217,22 +306,7 @@ export const Unit = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}`}
-            moreButton={[
-              {
-                name: intl.formatMessage({
-                  id: "misc.duplicate",
-                }),
-                icon: "duplicate",
-                callback: () => handleDuplicate(unit.id),
-              },
-              {
-                name: intl.formatMessage({
-                  id: "misc.remove",
-                }),
-                icon: "delete",
-                callback: () => handleRemove(unit.id),
-              },
-            ]}
+            moreButton={moreButtons}
             headline={unit[`name_${language}`]}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
@@ -502,6 +576,79 @@ export const Unit = ({ isMobile }) => {
                   </Fragment>
                 )
             )}
+          </>
+        )}
+        {unit.regimentalUnit && (
+          <>
+            <h2 className="unit__subline unit__detachments-headline">
+              <FormattedMessage id="unit.detachments" />
+            </h2>
+            {detachments.map(({ name_de, name_en, id }) => (
+              <>
+                <div className="list" key={id}>
+                  <div className="list__inner unit__detachments-header">
+                    <b className="unit__magic-headline">
+                      {language === "de" ? name_de : name_en}
+                    </b>
+                    <Button
+                      onClick={() =>
+                        handleAddDetachmentClick({
+                          id,
+                        })
+                      }
+                      type="secondary"
+                      icon="add"
+                      label={intl.formatMessage({ id: "editor.add" })}
+                      size="small"
+                    />
+                  </div>
+                </div>
+                {unit.detachments &&
+                  unit.detachments
+                    .filter(
+                      (detachment) =>
+                        detachment.id.split(".")[0] === id.split(".")[0]
+                    )
+                    .map(({ name_de, name_en, strength, id, points }) => (
+                      <div className="list" key={id}>
+                        <div className="list__inner unit__detachments">
+                          <NumberInput
+                            id={`strength-${id}`}
+                            className="input"
+                            min={5}
+                            value={strength}
+                            onChange={(event) =>
+                              handleDetachmentStrengthClick({
+                                id,
+                                strength: event.target.value,
+                              })
+                            }
+                          />
+                          <span>
+                            <b>{language === "de" ? name_de : name_en}</b>
+                            <i>{`${getUnitPoints({
+                              strength,
+                              points,
+                            })} ${intl.formatMessage({
+                              id: "app.points",
+                            })}`}</i>
+                          </span>
+                          <Button
+                            onClick={() =>
+                              handleDeleteDetachmentClick({
+                                id,
+                              })
+                            }
+                            type="secondary"
+                            icon="close"
+                            label={intl.formatMessage({ id: "misc.remove" })}
+                            size="small"
+                          />
+                        </div>
+                      </div>
+                    ))}
+              </>
+            ))}
           </>
         )}
         {unit.mounts && unit.mounts.length > 0 && (

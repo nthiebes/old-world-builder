@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useIntl } from "react-intl";
 import classNames from "classnames";
+import { Helmet } from "react-helmet-async";
 
 import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
@@ -10,10 +11,11 @@ import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
+import { updateList } from "../../utils/list";
 import gameSystems from "../../assets/armies.json";
 
-import "./Magic.css";
 import { nameMap } from "./name-map";
+import "./Magic.css";
 
 let prevItemType, isFirstItemType;
 
@@ -103,6 +105,10 @@ export const Magic = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
+    list && updateList(list);
+  }, [list]);
+
+  useEffect(() => {
     army &&
       fetcher({
         url: `games/${list.game}/magic-items`,
@@ -110,7 +116,8 @@ export const Magic = ({ isMobile }) => {
           const allItems = army.items.map((item) => {
             return {
               items: data[item],
-              name_de: nameMap[item][`name_${language}`],
+              name_de: nameMap[item].name_de,
+              name_en: nameMap[item].name_en,
               id: item,
             };
           });
@@ -166,7 +173,7 @@ export const Magic = ({ isMobile }) => {
           htmlFor={`${itemGroup.id}-${magicItem.id}`}
           className="checkbox__label"
         >
-          {magicItem.name_de}
+          {language === "de" ? magicItem.name_de : magicItem.name_en}
           <i className="checkbox__points">{`${
             magicItem.points
           } ${intl.formatMessage({
@@ -180,6 +187,10 @@ export const Magic = ({ isMobile }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`Old World Builder | ${list.name}`}</title>
+      </Helmet>
+
       {isMobile && (
         <Header
           to={`/editor/${listId}/${type}/${unitId}`}
@@ -233,7 +244,9 @@ export const Magic = ({ isMobile }) => {
         )}
         {items.map((itemGroup) => (
           <Fragment key={itemGroup.name_de}>
-            <h2 className="unit__subline">{itemGroup.name_de}</h2>
+            <h2 className="unit__subline">
+              {language === "de" ? itemGroup.name_de : itemGroup.name_en}
+            </h2>
             {itemGroup.items.map((magicItem) => {
               if (prevItemType !== magicItem.type) {
                 prevItemType = magicItem.type;

@@ -14,6 +14,7 @@ import { Help } from "./pages/help";
 import { Export } from "./pages/export";
 import { Print } from "./pages/print";
 import { DuplicateList } from "./pages/duplicate-list";
+import { Rename } from "./pages/rename";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -51,6 +52,9 @@ export const App = () => {
           <Route path="/editor/:listId/add/:type">{<Add isMobile />}</Route>
           <Route path="/editor/:listId/:type/:unitId/magic/:command">
             {<Magic isMobile />}
+          </Route>
+          <Route path="/editor/:listId/:type/:unitId/rename">
+            {<Rename isMobile />}
           </Route>
           <Route path="/editor/:listId/:type/:unitId/magic">
             {<Magic isMobile />}
@@ -97,6 +101,9 @@ export const App = () => {
                 <Switch>
                   <Route path="/editor/:listId/:type/:unitId/magic/:command">
                     {<Magic />}
+                  </Route>
+                  <Route path="/editor/:listId/:type/:unitId/rename">
+                    {<Rename />}
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/magic">
                     {<Magic />}

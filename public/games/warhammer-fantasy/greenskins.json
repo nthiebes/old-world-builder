@@ -30,13 +30,13 @@
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         }
       ]
@@ -63,62 +63,63 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 6
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 3
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 3
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 3
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         },
         {
           "name_de": "Lindwurm",
-          "name_en": "Lindwurm",
+          "name_en": "Wyvern",
           "points": 160
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
-          "name_en": "Ork-Wildschweinstreitwagen",
+          "name_en": "Orc Boar Chariot",
           "points": 85
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Orc Boar Chariot, Extra Orc Crew model",
           "points": 90
         }
       ],
       "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -130,52 +131,53 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 6
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 3
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 3
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 3
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         },
         {
           "name_de": "Lindwurm",
-          "name_en": "Lindwurm",
+          "name_en": "Wyvern",
           "points": 160
         }
       ],
       "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -187,39 +189,40 @@
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 3
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         },
         {
           "name_de": "Lindwurm",
-          "name_en": "Lindwurm",
+          "name_en": "Wyvern",
           "points": 160
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
-          "name_en": "Ork-Wildschweinstreitwagen",
+          "name_en": "Orc Boar Chariot",
           "points": 85
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Orc Boar Chariot, Extra Orc Crew model",
           "points": 90
         }
       ],
       "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -231,77 +234,78 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 6
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 3
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 3
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 3
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Riesenwolf",
-          "name_en": "Riesenwolf",
+          "name_en": "Giant Wolf",
           "points": 18
         },
         {
           "name_de": "Riesenspinne",
-          "name_en": "Riesenspinne",
+          "name_en": "Giant Spider",
           "points": 22
         },
         {
           "name_de": "Gigantula",
-          "name_en": "Gigantula",
+          "name_en": "Gigantic Spider",
           "points": 50
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen",
-          "name_en": "Goblin-Wolfsstreitwagen",
+          "name_en": "Wolf Chariot",
           "points": 50
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Giant Wolf",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
           "points": 60
         }
       ],
       "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -313,52 +317,53 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 6
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 3
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 3
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 3
         },
         {
           "name_de": "Leichte Rüstung",
-          "name_en": "Leichte Rüstung",
+          "name_en": "Light armour",
           "points": 3
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Höhlensquig",
-          "name_en": "Höhlensquig",
+          "name_en": "Great Cave Squig",
           "points": 40
         }
       ],
       "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -370,39 +375,40 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
-          "name_en": "Zauberer der Stufe 4",
+          "name_en": "Level 4 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         },
         {
           "name_de": "Lindwurm",
-          "name_en": "Lindwurm",
+          "name_en": "Wyvern",
           "points": 160
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
-          "name_en": "Ork-Wildschweinstreitwagen",
+          "name_en": "Orc Boar Chariot",
           "points": 85
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Orc Boar Chariot, Extra Orc Crew model",
           "points": 90
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -414,29 +420,30 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
-          "name_en": "Zauberer der Stufe 4",
+          "name_en": "Level 4 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 24
         },
         {
           "name_de": "Lindwurm",
-          "name_en": "Lindwurm",
+          "name_en": "Wyvern",
           "points": 160
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -448,59 +455,60 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
-          "name_en": "Zauberer der Stufe 4",
+          "name_en": "Level 4 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Riesenwolf",
-          "name_en": "Riesenwolf",
+          "name_en": "Giant Wolf",
           "points": 18
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen",
-          "name_en": "Goblin-Wolfsstreitwagen",
+          "name_en": "Wolf Chariot",
           "points": 50
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Giant Wolf",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
           "points": 60
         },
         {
           "name_de": "Arachnarok-Spinne",
-          "name_en": "Arachnarok-Spinne",
+          "name_en": "Arachnarok Spider",
           "points": 290
         },
         {
           "name_de": "Arachnarok-Spinne, Netzschleuda",
-          "name_en": "Arachnarok-Spinne, Netzschleuda",
+          "name_en": "Arachnarok Spider, Flinger",
           "points": 320
         },
         {
           "name_de": "Arachnarok-Spinne, Spinn'netzschrein",
-          "name_en": "Arachnarok-Spinne, Spinn'netzschrein",
+          "name_en": "Arachnarok Spider, Catchweb Spidershrine",
           "points": 330
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -512,11 +520,12 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
-          "name_en": "Zauberer der Stufe 4",
+          "name_en": "Level 4 Wizard",
           "points": 35
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 100
       }
     }
@@ -544,62 +553,70 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 4
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 2
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 2
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 2
         },
         {
           "name_de": "Armeestandartenträger",
-          "name_en": "Armeestandartenträger",
+          "name_en": "Battle Standard Bearer",
           "points": 25
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 16
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
-          "name_en": "Ork-Wildschweinstreitwagen",
+          "name_en": "Orc Boar Chariot",
           "points": 85
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Orc Boar Chariot, Extra Orc Crew model",
           "points": 90
         }
       ],
       "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "item",
+          "talisman",
+          "banner",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       }
     },
@@ -611,52 +628,60 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 4
         },
         {
           "name_de": "Zusätzliche Handwaffe",
-          "name_en": "Zusätzliche Handwaffe",
+          "name_en": "Additional hand weapon",
           "points": 2
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 2
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 2
         },
         {
           "name_de": "Armeestandartenträger",
-          "name_en": "Armeestandartenträger",
+          "name_en": "Battle Standard Bearer",
           "points": 25
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 16
         }
       ],
       "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "item",
+          "talisman",
+          "banner",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       }
     },
@@ -668,39 +693,47 @@
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 2
         },
         {
           "name_de": "Armeestandartenträger",
-          "name_en": "Armeestandartenträger",
+          "name_en": "Battle Standard Bearer",
           "points": 25
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 16
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
-          "name_en": "Ork-Wildschweinstreitwagen",
+          "name_en": "Orc Boar Chariot",
           "points": 85
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Orc Boar Chariot, Extra Orc Crew model",
           "points": 90
         }
       ],
       "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "item",
+          "talisman",
+          "banner",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       }
     },
@@ -712,92 +745,100 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 4
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 2
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 2
         },
         {
           "name_de": "Kurzbogen",
-          "name_en": "Kurzbogen",
+          "name_en": "Short bow",
           "points": 2
         }
       ],
       "options": [
         {
           "name_de": "Leichte Rüstung",
-          "name_en": "Leichte Rüstung",
+          "name_en": "Light armour",
           "points": 2
         },
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 2
         },
         {
           "name_de": "Armeestandartenträger",
-          "name_en": "Armeestandartenträger",
+          "name_en": "Battle Standard Bearer",
           "points": 25
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Riesenwolf",
-          "name_en": "Riesenwolf",
+          "name_en": "Giant Wolf",
           "points": 12
         },
         {
           "name_de": "Riesenspinne",
-          "name_en": "Riesenspinne",
+          "name_en": "Giant Spider",
           "points": 15
         },
         {
           "name_de": "Gigantula",
-          "name_en": "Gigantula",
+          "name_en": "Gigantic Spider",
           "points": 40
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen",
-          "name_en": "Goblin-Wolfsstreitwagen",
+          "name_en": "Wolf Chariot",
           "points": 50
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Giant Wolf",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
           "points": 60
         }
       ],
       "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "item",
+          "talisman",
+          "banner",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       }
     },
@@ -809,62 +850,70 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Handwaffe",
+          "name_en": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Zweihandwaffe",
+          "name_en": "Great weapon",
           "points": 4
         },
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
           "points": 2
         },
         {
           "name_de": "Speer (nur beritten)",
-          "name_en": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
           "points": 2
         },
         {
           "name_de": "Kurzbogen",
-          "name_en": "Kurzbogen",
+          "name_en": "Short bow",
           "points": 2
         }
       ],
       "options": [
         {
           "name_de": "Schild",
-          "name_en": "Schild",
+          "name_en": "Shield",
           "points": 2
         },
         {
           "name_de": "Leichte Rüstung",
-          "name_en": "Leichte Rüstung",
+          "name_en": "Light armour",
           "points": 2
         },
         {
           "name_de": "Armeestandartenträger",
-          "name_en": "Armeestandartenträger",
+          "name_en": "Battle Standard Bearer",
           "points": 25
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Höhlensquig",
-          "name_en": "Höhlensquig",
+          "name_en": "Great Cave Squig",
           "points": 50
         }
       ],
       "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "item",
+          "talisman",
+          "banner",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       }
     },
@@ -876,24 +925,25 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
-          "name_en": "Zauberer der Stufe 2",
+          "name_en": "Level 2 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 16
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 50
       }
     },
@@ -905,24 +955,25 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
-          "name_en": "Zauberer der Stufe 2",
+          "name_en": "Level 2 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Wildschwein",
-          "name_en": "Wildschwein",
+          "name_en": "War Boar",
           "points": 16
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 50
       }
     },
@@ -934,44 +985,45 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
-          "name_en": "Zauberer der Stufe 2",
+          "name_en": "Level 2 Wizard",
           "points": 35
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "Zu Fuß",
+          "name_en": "On foot",
           "active": true,
           "points": 0
         },
         {
           "name_de": "Riesenwolf",
-          "name_en": "Riesenwolf",
+          "name_en": "Giant Wolf",
           "points": 12
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen",
-          "name_en": "Goblin-Wolfsstreitwagen",
+          "name_en": "Wolf Chariot",
           "points": 50
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Giant Wolf",
           "points": 55
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
-          "name_en": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
+          "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
           "points": 60
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 50
       }
     },
@@ -983,11 +1035,12 @@
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
-          "name_en": "Zauberer der Stufe 2",
+          "name_en": "Level 2 Wizard",
           "points": 35
         }
       ],
       "magic": {
+        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
         "maxPoints": 50
       }
     }
@@ -1007,32 +1060,36 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
-          "points": 10
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Zusätzliche Handwaffen",
+          "name_en": "Additional hand weapons",
           "points": 1,
           "perModel": true
         }
@@ -1040,22 +1097,15 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Moschaz",
-          "name_en": "Moschaz",
+          "name_en": "Big 'Uns",
           "points": 2,
           "perModel": true
-        },
-        {
-          "name_de": "Magisches Banner",
-          "name_en": "Magisches Banner",
-          "magicBanner": true,
-          "maxPoints": 50,
-          "points": 0
         }
       ]
     },
@@ -1073,24 +1123,16 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
-      "equipment": [
-        {
-          "name_de": "Handwaffen, Bögen",
-          "name_en": "Handwaffen, Bögen",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ]
+      "equipment": []
     },
     {
       "id": "savageorks",
@@ -1106,38 +1148,38 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Bögen",
-          "name_en": "Bögen",
+          "name_en": "Bows",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Zusätzliche Handwaffen",
+          "name_en": "Additional hand weapons",
           "points": 1,
           "perModel": true
         }
@@ -1145,18 +1187,18 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Große Spießaz",
-          "name_en": "Große Spießaz",
+          "name_en": "Big Stabbas",
           "points": 20
         },
         {
           "name_de": "Moschaz",
-          "name_en": "Moschaz",
+          "name_en": "Big 'Uns",
           "points": 2,
           "perModel": true
         }
@@ -1176,32 +1218,32 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 0.5,
           "perModel": true
         },
         {
           "name_de": "Kurzbögen",
-          "name_en": "Kurzbögen",
+          "name_en": "Short bows",
           "points": 0.5,
           "perModel": true
         }
@@ -1209,13 +1251,13 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 0.5,
           "perModel": true
         },
         {
           "name_de": "Fiese Schlitzer",
-          "name_en": "Fiese Schlitzer",
+          "name_en": "Nasty Skulkers",
           "points": 10,
           "maximum": 3,
           "stackable": true
@@ -1236,19 +1278,19 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1257,19 +1299,19 @@
       "options": [
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Kurzbögen",
-          "name_en": "Kurzbögen",
+          "name_en": "Short bows",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         }
@@ -1289,32 +1331,32 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen, Schilde",
-          "name_en": "Handwaffen, Schilde",
+          "name_en": "Hand weapons, Shields",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere, Schilde",
-          "name_en": "Speere, Schilde",
+          "name_en": "Spears, Shields",
           "points": 0,
           "perModel": true
         },
         {
           "name_de": "Handwaffen, Kurzbögen",
-          "name_en": "Handwaffen, Kurzbögen",
+          "name_en": "Hand weapons, Shields",
           "points": 0,
           "perModel": true
         }
@@ -1322,7 +1364,7 @@
       "options": [
         {
           "name_de": "Netzgitz",
-          "name_en": "Netzgitz",
+          "name_en": "Netters",
           "points": 45
         },
         {
@@ -1348,19 +1390,19 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_de": "Speere, Schilde",
-          "name_en": "Speere, Schilde",
+          "name_en": "Spears, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1369,7 +1411,7 @@
       "options": [
         {
           "name_de": "Kurzbögen",
-          "name_en": "Kurzbögen",
+          "name_en": "Short bows",
           "points": 1,
           "perModel": true
         }
@@ -1391,12 +1433,12 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10,
           "magic": {
             "types": ["banner"],
@@ -1407,7 +1449,7 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 1,
           "perModel": true
         }
@@ -1427,12 +1469,12 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10,
           "magic": {
             "types": ["banner"],
@@ -1443,7 +1485,7 @@
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1452,19 +1494,19 @@
       "options": [
         {
           "name_de": "Schilde",
-          "name_en": "Schilde",
+          "name_en": "Shields",
           "points": 2,
           "perModel": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 2,
           "perModel": true
         },
         {
           "name_de": "Moschaz",
-          "name_en": "Moschaz",
+          "name_en": "Big 'Uns",
           "points": 4,
           "perModel": true
         }
@@ -1484,12 +1526,12 @@
         },
         {
           "name_de": "Musiker",
-          "name_en": "Musiker",
+          "name_en": "Musician",
           "points": 10
         },
         {
           "name_de": "Standartenträger",
-          "name_en": "Standartenträger",
+          "name_en": "Standard bearer",
           "points": 10,
           "magic": {
             "types": ["banner"],
@@ -1500,32 +1542,32 @@
       "equipment": [
         {
           "name_de": "Handwaffen",
-          "name_en": "Handwaffen",
+          "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Handwaffen, Schilde",
-          "name_en": "Handwaffen, Schilde",
+          "name_en": "Hand weapons, Shields",
           "points": 2,
           "perModel": true
         },
         {
           "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Zusätzliche Handwaffen",
+          "name_en": "Additional hand weapons",
           "points": 2,
           "perModel": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Speere",
+          "name_en": "Spears",
           "points": 2,
           "perModel": true
         },
         {
           "name_de": "Speere, Schilde",
-          "name_en": "Speere, Schilde",
+          "name_en": "Spears, Shields",
           "points": 4,
           "perModel": true
         }
@@ -1533,7 +1575,7 @@
       "options": [
         {
           "name_de": "Moschaz",
-          "name_en": "Moschaz",
+          "name_en": "Big 'Uns",
           "points": 4,
           "perModel": true
         }
@@ -1547,7 +1589,7 @@
       "options": [
         {
           "name_de": "Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Extra Orc Crew model",
           "points": 5
         }
       ]
@@ -1562,13 +1604,13 @@
       "options": [
         {
           "name_de": "Zusätzliches Goblin-Besatzungsmitglied",
-          "name_en": "Zusätzliches Goblin-Besatzungsmitglied",
+          "name_en": "Extra Goblin Crew model",
           "points": 5,
           "perModel": true
         },
         {
           "name_de": "Zusätzlicher Riesenwolf",
-          "name_en": "Zusätzlicher Riesenwolf",
+          "name_en": "Extra Giant Wolf",
           "points": 5,
           "perModel": true
         }
@@ -1582,7 +1624,7 @@
       "options": [
         {
           "name_de": "Orktreiba",
-          "name_en": "Orktreiba",
+          "name_en": "Orc Bully",
           "points": 10
         }
       ]
@@ -1602,14 +1644,14 @@
       "options": [
         {
           "name_de": "Nachtgoblin-Squigtreiba",
-          "name_en": "Nachtgoblin-Squigtreiba",
+          "name_en": "Night Goblin Herder",
           "points": 3,
           "minimum": 1,
           "stackable": true
         },
         {
           "name_de": "Höhlensquigs",
-          "name_en": "Höhlensquigs",
+          "name_en": "Cave Squig",
           "points": 8,
           "minimum": 3,
           "stackable": true
@@ -1640,7 +1682,7 @@
       "options": [
         {
           "name_de": "Orktreiba",
-          "name_en": "Orktreiba",
+          "name_en": "Orc Bully",
           "points": 10
         }
       ]
@@ -1659,22 +1701,22 @@
       "options": [
         {
           "name_de": "Stachelwalze",
-          "name_en": "Stachelwalze",
+          "name_en": "Spiky Roller",
           "points": 15
         },
         {
           "name_de": "Segel",
-          "name_en": "Segel",
+          "name_en": "Out-rigga",
           "points": 10
         },
         {
           "name_de": "Flügel",
-          "name_en": "Flügel",
+          "name_en": "Flappas",
           "points": 5
         },
         {
           "name_de": "Dicke Bummpilze",
-          "name_en": "Dicke Bummpilze",
+          "name_en": "Giant Explodin' Spores",
           "points": 15
         }
       ]
@@ -1687,7 +1729,7 @@
       "options": [
         {
           "name_de": "Netzschleuda",
-          "name_en": "Netzschleuda",
+          "name_en": "Flinger",
           "points": 30
         }
       ]
