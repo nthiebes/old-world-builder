@@ -37,7 +37,10 @@ export const Home = ({ isMobile }) => {
   return (
     <>
       <Helmet>
-        <title>Old World Builder</title>
+        <title>
+          Old World Builder - Army builder for Warhammer Fantasy and Warhammer:
+          The Old World
+        </title>
       </Helmet>
 
       {isMobile && <Header headline="Old World Builder" />}

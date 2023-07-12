@@ -113,6 +113,9 @@ export const About = () => {
             }}
           />
         </p>
+        <p>
+          <FormattedMessage id="about.disclaimer" />
+        </p>
       </Main>
     </>
   );
