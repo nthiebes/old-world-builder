@@ -35,6 +35,11 @@ a,
   outline: 1px solid transparent;
 }
 
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 2px dotted var(--color-font);
+}
+
 input[type="text"],
 input[type="number"] {
   -webkit-appearance: none; /* enables box-shadow on iOs */

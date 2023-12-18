@@ -1,0 +1,10 @@
+.datasets {
+  margin: 2rem auto;
+}
+
+.datasets__columns {
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -13,6 +13,7 @@ export const NumberInput = (props) => {
     props.onChange({
       target: {
         value: Number(props.value) + 1,
+        id: props.id,
       },
     });
   };
@@ -22,6 +23,7 @@ export const NumberInput = (props) => {
     props.onChange({
       target: {
         value: Number(props.value) - 1,
+        id: props.id,
       },
     });
   };
