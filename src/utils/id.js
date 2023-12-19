@@ -3,7 +3,7 @@ export const getRandomId = () =>
     .toString(36)
     .replace(/[^a-z]+/g, "");
 
-export const updateIds = (type) => {
+export const updateIds = (type = []) => {
   return type.map((unit) => {
     return {
       ...unit,

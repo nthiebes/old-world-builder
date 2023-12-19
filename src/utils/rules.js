@@ -1,6 +1,7 @@
 const rules = {
   lords: { maxPercent: 25 },
   heroes: { maxPercent: 25 },
+  characters: { maxPercent: 50 },
   core: { minPercent: 25 },
   special: {
     maxPercent: 50,
@@ -12,6 +13,8 @@ const rules = {
     maxSame: 2,
     maxSameLarge: 4,
   },
+  mercenaries: { maxPercent: 20 },
+  allies: { maxPercent: 25 },
 };
 
 export const getMaxPercentData = ({ type, armyPoints, points }) => {

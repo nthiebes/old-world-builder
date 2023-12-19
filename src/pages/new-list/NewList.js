@@ -21,7 +21,7 @@ export const NewList = ({ isMobile }) => {
   const dispatch = useDispatch();
   const intl = useIntl();
   const lists = useSelector((state) => state.lists);
-  const [game, setGame] = useState("warhammer-fantasy");
+  const [game, setGame] = useState("the-old-world");
   const [army, setArmy] = useState(
     gameSystems.find(({ id }) => id === game).armies[0].id
   );
@@ -32,19 +32,35 @@ export const NewList = ({ isMobile }) => {
   const createList = () => {
     const newId = getRandomId();
     const newList = {
-      name: name,
-      description: description,
-      game: game,
-      points: points,
-      army: army,
-      lords: [],
-      heroes: [],
-      core: [],
-      special: [],
-      rare: [],
-      id: newId,
+      "warhammer-fantasy": {
+        name: name,
+        description: description,
+        game: game,
+        points: points,
+        army: army,
+        lords: [],
+        heroes: [],
+        core: [],
+        special: [],
+        rare: [],
+        id: newId,
+      },
+      "the-old-world": {
+        name: name,
+        description: description,
+        game: game,
+        points: points,
+        army: army,
+        characters: [],
+        core: [],
+        special: [],
+        rare: [],
+        mercenaries: [],
+        allies: [],
+        id: newId,
+      },
     };
-    const newLists = [...lists, newList];
+    const newLists = [...lists, newList[game]];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
@@ -112,7 +128,10 @@ export const NewList = ({ isMobile }) => {
                   <img height="20" src={warhammerFantasy} alt={name} />
                 )}
                 {id === "the-old-world" && (
-                  <img height="35" src={warhammerTheOldWorld} alt={name} />
+                  <>
+                    <img height="35" src={warhammerTheOldWorld} alt={name} />
+                    <p className="new-list__beta">Beta</p>
+                  </>
                 )}
               </label>
             </div>

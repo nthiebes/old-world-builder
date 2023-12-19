@@ -16,9 +16,9 @@
         "items": []
       },
       {
-        "id": "dwarven-mountain-holds",
-        "name_de": "Dwarven Mountain Holds",
-        "name_en": "Dwarven Mountain Holds",
+        "id": "dwarfen-mountain-holds",
+        "name_de": "Dwarfen Mountain Holds",
+        "name_en": "Dwarfen Mountain Holds",
         "items": []
       },
       {
@@ -31,7 +31,13 @@
         "id": "kingdom-of-bretonnia",
         "name_de": "Kingdom of Bretonnia",
         "name_en": "Kingdom of Bretonnia",
-        "items": []
+        "allies": [
+          "dwarfen-mountain-holds",
+          "empire-of-man",
+          "high-elf-realms",
+          "wood-elf-realms"
+        ],
+        "items": ["general", "kingdom-of-bretonnia"]
       },
       {
         "id": "beastmen-brayherds",

@@ -1,0 +1,252 @@
+{
+  "characters": [
+    {
+      "id": "duke",
+      "name_de": "Duke",
+      "name_en": "Duke",
+      "points": 99,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Morning star",
+          "name_en": "Morning star",
+          "points": 3
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 3
+        },
+        {
+          "name_de": "Lance (if appropriately mounted)",
+          "name_en": "Lance (if appropriately mounted)",
+          "points": 4
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 2
+        },
+        {
+          "name_de": "Knightly Virtue",
+          "name_en": "Knightly Virtue",
+          "points": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Hippogryph",
+          "name_en": "Hippogryph",
+          "points": 0
+        },
+        {
+          "name_de": "Hippogryph, barding",
+          "name_en": "Hippogryph, barding",
+          "points": 15
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "baron",
+      "name_de": "Baron",
+      "name_en": "Baron",
+      "points": 99,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Morning star",
+          "name_en": "Morning star",
+          "points": 3
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 3
+        },
+        {
+          "name_de": "Lance (if appropriately mounted)",
+          "name_en": "Lance (if appropriately mounted)",
+          "points": 4
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 2
+        },
+        {
+          "name_de": "The Questing Vow",
+          "name_en": "The Questing Vow",
+          "points": 15
+        },
+        {
+          "name_de": "The Grail Vow",
+          "name_en": "The Grail Vow",
+          "points": 20
+        },
+        {
+          "name_de": "Knightly Virtue",
+          "name_en": "Knightly Virtue",
+          "points": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Hippogryph",
+          "name_en": "Hippogryph",
+          "points": 0
+        },
+        {
+          "name_de": "Hippogryph, barding",
+          "name_en": "Hippogryph, barding",
+          "points": 15
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 75
+      }
+    },
+    {
+      "id": "paladin",
+      "name_de": "Paladin",
+      "name_en": "Paladin",
+      "points": 99,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Morning star",
+          "name_en": "Morning star",
+          "points": 3
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 3
+        },
+        {
+          "name_de": "Lance (if appropriately mounted)",
+          "name_en": "Lance (if appropriately mounted)",
+          "points": 4
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 2
+        },
+        {
+          "name_de": "The Questing Vow",
+          "name_en": "The Questing Vow",
+          "points": 15
+        },
+        {
+          "name_de": "The Grail Vow",
+          "name_en": "The Grail Vow",
+          "points": 20
+        },
+        {
+          "name_de": "Knightly Virtue",
+          "name_en": "Knightly Virtue",
+          "points": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Hippogryph",
+          "name_en": "Hippogryph",
+          "points": 0
+        },
+        {
+          "name_de": "Hippogryph, barding",
+          "name_en": "Hippogryph, barding",
+          "points": 15
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "id": "men-at-arms",
+      "name_de": "Men-At-Arms",
+      "name_en": "Men-At-Arms",
+      "points": 99,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Yeoman",
+          "name_en": "Yeoman",
+          "points": 7
+        },
+        {
+          "name_de": "Grail Monk",
+          "name_en": "Grail Monk",
+          "points": 7,
+          "magic": {
+            "types": ["triptych"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 5
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 5
+        }
+      ]
+    }
+  ],
+  "special": [],
+  "rare": [],
+  "mercenaries": [],
+  "allies": []
+}
