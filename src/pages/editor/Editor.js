@@ -581,14 +581,15 @@ export const Editor = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <Button
+            <p className="editor__soon">Coming soon</p>
+            {/* <Button
               centered
               to={`/editor/${listId}/add/mercenaries`}
               icon="add"
               spaceTop
             >
               <FormattedMessage id="editor.add" />
-            </Button>
+            </Button> */}
           </section>
         )}
 
@@ -632,14 +633,15 @@ export const Editor = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <Button
+            <p className="editor__soon">Coming soon</p>
+            {/* <Button
               centered
               to={`/editor/${listId}/add/allies`}
               icon="add"
               spaceTop
             >
               <FormattedMessage id="editor.add" />
-            </Button>
+            </Button> */}
           </section>
         )}
       </MainComponent>
