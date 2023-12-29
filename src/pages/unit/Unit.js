@@ -229,9 +229,12 @@ export const Unit = ({ isMobile }) => {
             setArmy({
               lords: updateIds(data.lords),
               heroes: updateIds(data.heroes),
+              characters: updateIds(data.characters),
               core: updateIds(data.core),
               special: updateIds(data.special),
               rare: updateIds(data.rare),
+              mercenaries: updateIds(data.mercenaries),
+              allies: updateIds(data.allies),
             })
           );
         },

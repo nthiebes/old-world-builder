@@ -81,7 +81,7 @@ export const App = () => {
           <Route path="/help">{<Help />}</Route>
           {/* <Route path="/datasets">{<Datasets />}</Route> */}
           <Route path="/print/:listId">{<Print />}</Route>
-          <Route path="/" exact>
+          <Route path="/">
             <Header headline="Old World Builder" />
             <Main isDesktop>
               <section className="column">
@@ -119,7 +119,6 @@ export const App = () => {
               </section>
             </Main>
           </Route>
-          <Route path="*">{<NotFound />}</Route>
         </Switch>
       )}
     </BrowserRouter>

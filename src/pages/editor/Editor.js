@@ -79,9 +79,12 @@ export const Editor = ({ isMobile }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
+  const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
+  const alliesPoints = getPoints({ list, type: "allies" });
   const lordsData = getMaxPercentData({
     type: "lords",
     armyPoints: list.points,
@@ -91,6 +94,11 @@ export const Editor = ({ isMobile }) => {
     type: "heroes",
     armyPoints: list.points,
     points: heroesPoints,
+  });
+  const charactersData = getMaxPercentData({
+    type: "characters",
+    armyPoints: list.points,
+    points: charactersPoints,
   });
   const coreData = getMinPercentData({
     type: "core",
@@ -104,6 +112,16 @@ export const Editor = ({ isMobile }) => {
   });
   const rareData = getMaxPercentData({
     type: "rare",
+    armyPoints: list.points,
+    points: rarePoints,
+  });
+  const mercenariesData = getMaxPercentData({
+    type: "mercenaries",
+    armyPoints: list.points,
+    points: rarePoints,
+  });
+  const alliesData = getMaxPercentData({
+    type: "allies",
     armyPoints: list.points,
     points: rarePoints,
   });
@@ -208,103 +226,158 @@ export const Editor = ({ isMobile }) => {
             </span>
           ))}
         </section> */}
-        <section className="editor__section">
-          <header className="editor__header">
-            <h2>
-              <FormattedMessage id="editor.lords" />
-            </h2>
-            <p className="editor__points">
-              {lordsData.diff > 0 ? (
-                <>
-                  <strong>{lordsData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
-                  <Icon symbol="error" color="red" />
-                </>
-              ) : (
-                <>
-                  <strong>{lordsData.points - lordsPoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
-                  <Icon symbol="check" />
-                </>
-              )}
-            </p>
-          </header>
-          <ul>
-            {list.lords.map((unit, index) => (
-              <List
-                key={index}
-                to={`/editor/${listId}/lords/${unit.id}`}
-                className="editor__list"
-                active={location.pathname.includes(unit.id)}
-              >
-                <div className="editor__list-inner">
-                  <b>{unit[`name_${language}`]}</b>
-                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}</i>
-                </div>
-                {getAllOptions(unit)}
-              </List>
-            ))}
-          </ul>
-          <Button
-            centered
-            to={`/editor/${listId}/add/lords`}
-            icon="add"
-            spaceTop
-          >
-            <FormattedMessage id="editor.add" />
-          </Button>
-        </section>
+        {list.lords && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.lords" />
+              </h2>
+              <p className="editor__points">
+                {lordsData.diff > 0 ? (
+                  <>
+                    <strong>{lordsData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{lordsData.points - lordsPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.lords.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/lords/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`]}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <Button
+              centered
+              to={`/editor/${listId}/add/lords`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
 
-        <section className="editor__section">
-          <header className="editor__header">
-            <h2>
-              <FormattedMessage id="editor.heroes" />
-            </h2>
-            <p className="editor__points">
-              {heroesData.diff > 0 ? (
-                <>
-                  <strong>{heroesData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
-                  <Icon symbol="error" color="red" />
-                </>
-              ) : (
-                <>
-                  <strong>{heroesData.points - heroesPoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
-                  <Icon symbol="check" />
-                </>
-              )}
-            </p>
-          </header>
-          <ul>
-            {list.heroes.map((unit, index) => (
-              <List
-                key={index}
-                to={`/editor/${listId}/heroes/${unit.id}`}
-                className="editor__list"
-                active={location.pathname.includes(unit.id)}
-              >
-                <div className="editor__list-inner">
-                  <b>{unit[`name_${language}`]}</b>
-                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}</i>
-                </div>
-                {getAllOptions(unit)}
-              </List>
-            ))}
-          </ul>
-          <Button
-            centered
-            to={`/editor/${listId}/add/heroes`}
-            icon="add"
-            spaceTop
-          >
-            <FormattedMessage id="editor.add" />
-          </Button>
-        </section>
+        {list.heroes && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.heroes" />
+              </h2>
+              <p className="editor__points">
+                {heroesData.diff > 0 ? (
+                  <>
+                    <strong>{heroesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{heroesData.points - heroesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.heroes.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/heroes/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`]}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <Button
+              centered
+              to={`/editor/${listId}/add/heroes`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
+
+        {list.characters && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.characters" />
+              </h2>
+              <p className="editor__points">
+                {charactersData.diff > 0 ? (
+                  <>
+                    <strong>{charactersData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{charactersData.points - charactersPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.characters.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/characters/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`]}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <Button
+              centered
+              to={`/editor/${listId}/add/characters`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
 
         <section className="editor__section">
           <header className="editor__header">
@@ -465,6 +538,112 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="editor.add" />
           </Button>
         </section>
+
+        {list.mercenaries && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.mercenaries" />
+              </h2>
+              <p className="editor__points">
+                {mercenariesData.diff > 0 ? (
+                  <>
+                    <strong>{mercenariesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>
+                      {mercenariesData.points - mercenariesPoints}
+                    </strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.mercenaries.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/mercenaries/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`]}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <p className="editor__soon">Coming soon</p>
+            {/* <Button
+              centered
+              to={`/editor/${listId}/add/mercenaries`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button> */}
+          </section>
+        )}
+
+        {list.allies && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.allies" />
+              </h2>
+              <p className="editor__points">
+                {alliesData.diff > 0 ? (
+                  <>
+                    <strong>{alliesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{alliesData.points - alliesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.allies.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/allies/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`]}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <p className="editor__soon">Coming soon</p>
+            {/* <Button
+              centered
+              to={`/editor/${listId}/add/allies`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button> */}
+          </section>
+        )}
       </MainComponent>
     </>
   );

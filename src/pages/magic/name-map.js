@@ -63,4 +63,12 @@ export const nameMap = {
     name_de: "Maschinenrunen",
     name_en: "Engineering Runes",
   },
+  triptych: {
+    name_de: "Triptych",
+    name_en: "Triptych",
+  },
+  "kingdom-of-bretonnia": {
+    name_de: "Kingdom of Bretonnia",
+    name_en: "Kingdom of Bretonnia",
+  },
 };

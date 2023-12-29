@@ -48,92 +48,201 @@ const getListAsText = ({ list, isShowList, intl, language }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
+  const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
+  const alliesPoints = getPoints({ list, type: "allies" });
   const game = gameSystems.find((game) => game.id === list.game);
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
 
   if (isShowList) {
-    return `===
+    if (list.game === "the-old-world") {
+      return `===
 ${list.name}
 ${game.name}, ${armyName}
 ===
 
 ++ ${intl.formatMessage({
-      id: "editor.lords",
-    })} ++
+        id: "editor.characters",
+      })} ++
 
-${getUnitsString({ units: list.lords, isShowList, intl, language })}
+${getUnitsString({ units: list.characters, isShowList, intl, language })}
 ++ ${intl.formatMessage({
-      id: "editor.heroes",
-    })} ++
-
-${getUnitsString({ units: list.heroes, isShowList, intl, language })}
-++ ${intl.formatMessage({
-      id: "editor.core",
-    })} ++
+        id: "editor.core",
+      })} ++
 
 ${getUnitsString({ units: list.core, isShowList, intl, language })}
 ++ ${intl.formatMessage({
-      id: "editor.special",
-    })} ++
+        id: "editor.special",
+      })} ++
 
 ${getUnitsString({ units: list.special, isShowList, intl, language })}
 ++ ${intl.formatMessage({
-      id: "editor.rare",
-    })} ++
+        id: "editor.rare",
+      })} ++
 
 ${getUnitsString({ units: list.rare, isShowList, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.mercenaries",
+      })} ++
+
+${getUnitsString({ units: list.mercenaries, isShowList, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.allies",
+      })} ++
+
+${getUnitsString({ units: list.allies, isShowList, intl, language })}
 
 ---
-Erstellt mit "Old World Builder"
+${intl.formatMessage({
+  id: "export.createdWith",
+})} "Old World Builder"
 
 [https://old-world-builder.com]`;
-  }
-
-  return `===
+    } else {
+      // Warhammer fantasy
+      return `===
+  ${list.name}
+  ${game.name}, ${armyName}
+  ===
+  
+  ++ ${intl.formatMessage({
+    id: "editor.lords",
+  })} ++
+  
+  ${getUnitsString({ units: list.lords, isShowList, intl, language })}
+  ++ ${intl.formatMessage({
+    id: "editor.heroes",
+  })} ++
+  
+  ${getUnitsString({ units: list.heroes, isShowList, intl, language })}
+  ++ ${intl.formatMessage({
+    id: "editor.core",
+  })} ++
+  
+  ${getUnitsString({ units: list.core, isShowList, intl, language })}
+  ++ ${intl.formatMessage({
+    id: "editor.special",
+  })} ++
+  
+  ${getUnitsString({ units: list.special, isShowList, intl, language })}
+  ++ ${intl.formatMessage({
+    id: "editor.rare",
+  })} ++
+  
+  ${getUnitsString({ units: list.rare, isShowList, intl, language })}
+  
+  ---
+  ${intl.formatMessage({
+    id: "export.createdWith",
+  })} "Old World Builder"
+  
+  [https://old-world-builder.com]`;
+    }
+  } else {
+    if (list.game === "the-old-world") {
+      return `===
 ${list.name} [${allPoints} ${intl.formatMessage({
-    id: "app.points",
-  })}]
+        id: "app.points",
+      })}]
 ${game.name}, ${armyName}
 ===
 
 ++ ${intl.formatMessage({
-    id: "editor.lords",
-  })} [${lordsPoints} ${intl.formatMessage({
-    id: "app.points",
-  })}] ++
+        id: "editor.characters",
+      })} [${charactersPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
 
-${getUnitsString({ units: list.lords, intl, language })}
+${getUnitsString({ units: list.characters, intl, language })}
 ++ ${intl.formatMessage({
-    id: "editor.heroes",
-  })} [${heroesPoints} ${intl.formatMessage({
-    id: "app.points",
-  })}] ++
-
-${getUnitsString({ units: list.heroes, intl, language })}
-++ ${intl.formatMessage({
-    id: "editor.core",
-  })} [${corePoints} ${intl.formatMessage({
-    id: "app.points",
-  })}] ++
+        id: "editor.core",
+      })} [${corePoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
 
 ${getUnitsString({ units: list.core, intl, language })}
 ++ ${intl.formatMessage({
-    id: "editor.special",
-  })} [${specialPoints} ${intl.formatMessage({
-    id: "app.points",
-  })}] ++
+        id: "editor.special",
+      })} [${specialPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
 
 ${getUnitsString({ units: list.special, intl, language })}
 ++ ${intl.formatMessage({
-    id: "editor.rare",
-  })} [${rarePoints} ${intl.formatMessage({
-    id: "app.points",
-  })}] ++
+        id: "editor.rare",
+      })} [${rarePoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.rare, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.mercenaries",
+      })} [${mercenariesPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.mercenaries, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.allies",
+      })} [${alliesPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.allies, intl, language })}
+
+---
+${intl.formatMessage({
+  id: "export.createdWith",
+})} "Old World Builder"
+
+[https://old-world-builder.com]`;
+    } else {
+      // Warhammer fantasy
+      return `===
+${list.name} [${allPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}]
+${game.name}, ${armyName}
+===
+
+++ ${intl.formatMessage({
+        id: "editor.lords",
+      })} [${lordsPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.lords, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.heroes",
+      })} [${heroesPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.heroes, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.core",
+      })} [${corePoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.core, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.special",
+      })} [${specialPoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
+
+${getUnitsString({ units: list.special, intl, language })}
+++ ${intl.formatMessage({
+        id: "editor.rare",
+      })} [${rarePoints} ${intl.formatMessage({
+        id: "app.points",
+      })}] ++
 
 ${getUnitsString({ units: list.rare, intl, language })}
 
@@ -143,6 +252,8 @@ ${intl.formatMessage({
 })} "Old World Builder"
 
 [https://old-world-builder.com]`;
+    }
+  }
 };
 
 export const Export = ({ isMobile }) => {

@@ -8,11 +8,24 @@ import { Button } from "../../components/button";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { getAllPoints } from "../../utils/points";
-// import warhammerFantasy from "../../assets/warhammer-fantasy.png";
-// import warhammerTheOldWorld from "../../assets/the-old-world.png";
+import warhammerFantasy from "../../assets/warhammer-fantasy.png";
+import warhammerTheOldWorld from "../../assets/the-old-world.png";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
 import dwarfs from "../../assets/army-icons/dwarfs.svg";
 import greenskins from "../../assets/army-icons/greenskins.svg";
+import beastmen from "../../assets/army-icons/beastmen.svg";
+import chaosDeamons from "../../assets/army-icons/chaos-deamons.svg";
+import chaosWarriors from "../../assets/army-icons/chaos-warriors.svg";
+import darkElves from "../../assets/army-icons/dark-elves.svg";
+import highElves from "../../assets/army-icons/high-elves.svg";
+import lizardmen from "../../assets/army-icons/lizardmen.svg";
+import ogres from "../../assets/army-icons/ogres.svg";
+import skaven from "../../assets/army-icons/skaven.svg";
+import tombKings from "../../assets/army-icons/tomb-kings.svg";
+import vampireCounts from "../../assets/army-icons/vampire-counts.svg";
+import woodElves from "../../assets/army-icons/wood-elves.svg";
+import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
+import bretonnia from "../../assets/army-icons/bretonnia.svg";
 
 import "./Home.css";
 
@@ -20,6 +33,22 @@ const armyIconMap = {
   "the-empire": theEmpire,
   dwarfs: dwarfs,
   greenskins: greenskins,
+  "empire-of-man": theEmpire,
+  "orc-and-goblins-tribes": greenskins,
+  "dwarfen-mountain-holds": dwarfs,
+  "warriors-of-chaos": chaosWarriors,
+  "kingdom-of-bretonnia": bretonnia,
+  "beastmen-brayherds": beastmen,
+  "wood-elf-realms": woodElves,
+  "tomb-kings-of-khemri": tombKings,
+  "high-elf-realms": highElves,
+  "dark-elves": darkElves,
+  skaven: skaven,
+  "vampire-counts": vampireCounts,
+  "daemons-of-chaos": chaosDeamons,
+  "ogre-kingdoms": ogres,
+  lizardmen: lizardmen,
+  "chaos-dwarfs": chaosDwarfs,
 };
 
 export const Home = ({ isMobile }) => {
@@ -34,7 +63,10 @@ export const Home = ({ isMobile }) => {
   return (
     <>
       <Helmet>
-        <title>Old World Builder</title>
+        <title>
+          Old World Builder - Army builder for Warhammer Fantasy and Warhammer:
+          The Old World
+        </title>
       </Helmet>
 
       {isMobile && <Header headline="Old World Builder" />}
@@ -74,21 +106,23 @@ export const Home = ({ isMobile }) => {
                     / {points} <FormattedMessage id="app.points" />
                   </p>
                 </span>
-                {/* {game === "warhammer-fantasy" && (
-                <img
-                  height="20"
-                  src={warhammerFantasy}
-                  alt="Warhammer Fantasy"
-                />
-              )}
-              {game === "the-old-world" && (
-                <img
-                  height="35"
-                  src={warhammerTheOldWorld}
-                  alt="Warhammer: The Old World"
-                />
-              )} */}
-                <img height="40" width="40" src={armyIconMap[army]} alt="" />
+                <div className="home__info">
+                  <img
+                    width="70"
+                    src={
+                      game === "warhammer-fantasy"
+                        ? warhammerFantasy
+                        : warhammerTheOldWorld
+                    }
+                    alt={
+                      game === "warhammer-fantasy"
+                        ? "Warhammer Fantasy"
+                        : "Warhammer: The Old World"
+                    }
+                    className="home__game"
+                  />
+                  <img height="40" width="40" src={armyIconMap[army]} alt="" />
+                </div>
               </List>
             )
           )}

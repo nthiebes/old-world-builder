@@ -91,9 +91,10 @@ export const getUnitCommandPoints = (items) => {
 export const getPoints = ({ type, list }) => {
   let points = 0;
 
-  list[type].forEach((unit) => {
-    points += getUnitPoints(unit);
-  });
+  list[type] &&
+    list[type].forEach((unit) => {
+      points += getUnitPoints(unit);
+    });
 
   return points;
 };
@@ -104,6 +105,18 @@ export const getAllPoints = (list) => {
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const charactersPoints = getPoints({ list, type: "characters" });
+  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
+  const alliesPoints = getPoints({ list, type: "allies" });
 
-  return lordsPoints + heroesPoints + corePoints + specialPoints + rarePoints;
+  return (
+    lordsPoints +
+    heroesPoints +
+    corePoints +
+    specialPoints +
+    rarePoints +
+    charactersPoints +
+    mercenariesPoints +
+    alliesPoints
+  );
 };

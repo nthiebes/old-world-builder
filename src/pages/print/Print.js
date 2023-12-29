@@ -37,9 +37,12 @@ export const Print = () => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
+  const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
+  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
+  const alliesPoints = getPoints({ list, type: "allies" });
   const game = gameSystems.find((game) => game.id === list.game);
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
@@ -73,49 +76,78 @@ export const Print = () => {
           {game.name}, {armyName}
         </p>
 
-        <section>
-          <h2>
-            <FormattedMessage id="editor.lords" />{" "}
-            <span className="print__points">
-              [{lordsPoints} <FormattedMessage id="app.points" />]
-            </span>
-          </h2>
-          <ul>
-            {list.lords.map((unit) => (
-              <li key={unit.id}>
-                <h3>
-                  {language === "de" ? unit.name_de : unit.name_en}
-                  <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
-                </h3>
-                {getAllOptions(unit)}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {list.game === "the-old-world" ? (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.characters" />{" "}
+              <span className="print__points">
+                [{charactersPoints} <FormattedMessage id="app.points" />]
+              </span>
+            </h2>
+            <ul>
+              {list.characters.map((unit) => (
+                <li key={unit.id}>
+                  <h3>
+                    {language === "de" ? unit.name_de : unit.name_en}
+                    <span className="print__points">
+                      [{getUnitPoints(unit)}{" "}
+                      <FormattedMessage id="app.points" />]
+                    </span>
+                  </h3>
+                  {getAllOptions(unit)}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : (
+          <>
+            <section>
+              <h2>
+                <FormattedMessage id="editor.lords" />{" "}
+                <span className="print__points">
+                  [{lordsPoints} <FormattedMessage id="app.points" />]
+                </span>
+              </h2>
+              <ul>
+                {list.lords.map((unit) => (
+                  <li key={unit.id}>
+                    <h3>
+                      {language === "de" ? unit.name_de : unit.name_en}
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    </h3>
+                    {getAllOptions(unit)}
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-        <section>
-          <h2>
-            <FormattedMessage id="editor.heroes" />{" "}
-            <span className="print__points">
-              [{heroesPoints} <FormattedMessage id="app.points" />]
-            </span>
-          </h2>
-          <ul>
-            {list.heroes.map((unit) => (
-              <li key={unit.id}>
-                <h3>
-                  {language === "de" ? unit.name_de : unit.name_en}
-                  <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
-                </h3>
-                {getAllOptions(unit)}
-              </li>
-            ))}
-          </ul>
-        </section>
+            <section>
+              <h2>
+                <FormattedMessage id="editor.heroes" />{" "}
+                <span className="print__points">
+                  [{heroesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              </h2>
+              <ul>
+                {list.heroes.map((unit) => (
+                  <li key={unit.id}>
+                    <h3>
+                      {language === "de" ? unit.name_de : unit.name_en}
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    </h3>
+                    {getAllOptions(unit)}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
 
         <section>
           <h2>
@@ -194,6 +226,64 @@ export const Print = () => {
             ))}
           </ul>
         </section>
+
+        {list.game === "the-old-world" && (
+          <>
+            <section>
+              <h2>
+                <FormattedMessage id="editor.mercenaries" />{" "}
+                <span className="print__points">
+                  [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              </h2>
+              <ul>
+                {list.mercenaries.map((unit) => (
+                  <li key={unit.id}>
+                    <h3>
+                      <span className="print__strength">
+                        {(unit.strength || unit.minimum) &&
+                          `${unit.strength || unit.minimum} `}
+                      </span>
+                      {language === "de" ? unit.name_de : unit.name_en}
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    </h3>
+                    {getAllOptions(unit)}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2>
+                <FormattedMessage id="editor.allies" />{" "}
+                <span className="print__points">
+                  [{alliesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              </h2>
+              <ul>
+                {list.allies.map((unit) => (
+                  <li key={unit.id}>
+                    <h3>
+                      <span className="print__strength">
+                        {(unit.strength || unit.minimum) &&
+                          `${unit.strength || unit.minimum} `}
+                      </span>
+                      {language === "de" ? unit.name_de : unit.name_en}
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    </h3>
+                    {getAllOptions(unit)}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
       </main>
 
       <footer className="print-footer">

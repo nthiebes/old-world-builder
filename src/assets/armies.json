@@ -2,20 +2,24 @@
   {
     "id": "the-old-world",
     "name": "Warhammer: The Old World",
-    "enabled": false,
     "armies": [
       {
-        "id": "dummy",
-        "name_de": "Dummy",
-        "name_en": "Dummy",
-        "items": []
+        "id": "kingdom-of-bretonnia",
+        "name_de": "Kingdom of Bretonnia",
+        "name_en": "Kingdom of Bretonnia",
+        "allies": [
+          "dwarfen-mountain-holds",
+          "empire-of-man",
+          "high-elf-realms",
+          "wood-elf-realms"
+        ],
+        "items": ["general", "kingdom-of-bretonnia"]
       }
     ]
   },
   {
     "id": "warhammer-fantasy",
     "name": "Warhammer Fantasy",
-    "enabled": true,
     "armies": [
       {
         "id": "greenskins",
