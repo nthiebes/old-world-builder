@@ -2,9 +2,30 @@
   margin: 2rem auto;
 }
 
-.datasets__columns {
-  @media (min-width: 1280px) {
+.datasets__paragraph {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .datasets__columns {
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid var(--color-list);
   }
+
+  .column.datasets__column {
+    width: 25%;
+    padding: 0 2rem 2rem 2rem;
+    position: relative;
+  }
+}
+
+.datasets__column-header {
+  margin-bottom: 2rem;
+}
+
+.datasets__output {
+  white-space: nowrap;
+  min-width: 100%;
+  max-width: 100%;
 }

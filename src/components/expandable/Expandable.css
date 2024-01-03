@@ -8,31 +8,23 @@
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
-  color: $color-font--medium;
+  color: var(--color-font);
   line-height: 1.5;
   display: list-item;
   transition: color 0.2s linear;
 
   &:focus {
-    outline: 1px dashed $color-font--medium;
+    outline: 1px dashed var(--color-font);
   }
 
   @media (hover: hover) {
     &:hover {
-      color: $color-font--primary;
+      color: var(--color-font);
     }
   }
 }
 
 .expandable__summary--normal {
   font-weight: normal;
-  color: $color-font--dark;
-}
-
-.expandable__summary--dark-mode {
-  color: $color-font--white;
-
-  &:focus {
-    outline-color: $color-font--white;
-  }
+  color: var(--color-font);
 }

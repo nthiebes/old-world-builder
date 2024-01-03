@@ -40,9 +40,9 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
-            {/* <Link to="/datasets">
+            <Link to="/datasets">
               <FormattedMessage id="footer.datasets" />
-            </Link> */}
+            </Link>
           </nav>
           <div className="footer__languages">
             <div className="radio">
