@@ -240,7 +240,7 @@ export const Datasets = ({ isMobile }) => {
                   autoComplete="off"
                   pattern="(([a-z]*-[a-z]*)|[a-z]*)*"
                 />
-                <div className="checkbox export__visible-checkbox">
+                <div className="checkbox">
                   <input
                     type="checkbox"
                     id="named"

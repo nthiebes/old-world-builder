@@ -3,8 +3,7 @@
     background: #fff !important;
   }
 
-  .print-back,
-  .print-info {
+  .hide-for-printing {
     display: none;
   }
 }
@@ -18,6 +17,7 @@
 
 .print {
   font-size: 14px;
+  padding: 1rem;
 }
 
 .print h1 {
@@ -72,6 +72,15 @@
   text-align: center;
 }
 
-.print-info {
+.print-info,
+.print-checkbox-description {
   text-align: center;
+}
+
+.print-checkbox {
+  justify-content: center;
+}
+
+.print-checkbox .checkbox__label {
+  width: auto;
 }
