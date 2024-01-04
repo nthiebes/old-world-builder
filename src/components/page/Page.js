@@ -43,6 +43,9 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/datasets">
               <FormattedMessage id="footer.datasets" />
             </Link>
+            <Link to="/privacy">
+              <FormattedMessage id="footer.privacy" />
+            </Link>
           </nav>
           <div className="footer__languages">
             <div className="radio">

@@ -41,20 +41,7 @@ export const About = () => {
           />
         </p>
         <p>
-          <FormattedMessage
-            id="about.text2"
-            values={{
-              twitter: (
-                <a
-                  href="https://twitter.com/_gscheid"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  @_gscheid
-                </a>
-              ),
-            }}
-          />
+          <FormattedMessage id="about.text2" />
         </p>
 
         <h2>

@@ -17,6 +17,7 @@ import { DuplicateList } from "./pages/duplicate-list";
 import { Rename } from "./pages/rename";
 import { Datasets } from "./pages/datasets";
 import { NotFound } from "./pages/not-found";
+import { Privacy } from "./pages/privacy";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -68,6 +69,7 @@ export const App = () => {
           <Route path="/new">{<NewList isMobile />}</Route>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/" exact>
@@ -79,6 +81,7 @@ export const App = () => {
         <Switch>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/">

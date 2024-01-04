@@ -45,15 +45,6 @@ export const Help = () => {
                   GitHub
                 </a>
               ),
-              twitter: (
-                <a
-                  href="https://twitter.com/_gscheid"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Twitter
-                </a>
-              ),
               discord: (
                 <a
                   href="https://discord.gg/87nUyjUxTU"
