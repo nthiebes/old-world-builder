@@ -30,12 +30,12 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
       "name_de": String,
       "name_de": String,
       "points": Number,
-      "magic": [
+      "magic": {
         "types": [ // Limit the available magic items (see "magic-items.json" types)
           String
         ],
         "maxPoints": Number // Maximum points for magic items
-      ]
+      }
     }
   ],
   "equipment": [ // All equipment options, they are mutually exclusive
