@@ -94,6 +94,7 @@ export const Rename = ({ isMobile }) => {
           onChange={handleNameChange}
           autoComplete="off"
           required
+          maxLength="100"
         />
       </MainComponent>
     </>

@@ -147,6 +147,7 @@ export const NewList = ({ isMobile }) => {
             onChange={handleNameChange}
             autoComplete="off"
             required
+            maxLength="100"
           />
           <label htmlFor="description">
             <FormattedMessage id="misc.description" />
@@ -158,6 +159,7 @@ export const NewList = ({ isMobile }) => {
             value={description}
             onChange={handleDescriptionChange}
             autoComplete="off"
+            maxLength="255"
           />
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />

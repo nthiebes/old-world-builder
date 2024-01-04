@@ -126,6 +126,7 @@ export const DuplicateList = ({ isMobile }) => {
             onChange={handleNameChange}
             autoComplete="off"
             required
+            maxLength="100"
           />
           <label htmlFor="description" className="edit__label">
             <FormattedMessage id="misc.description" />
@@ -137,6 +138,7 @@ export const DuplicateList = ({ isMobile }) => {
             value={description}
             onChange={handleDescriptionChange}
             autoComplete="off"
+            maxLength="255"
           />
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
