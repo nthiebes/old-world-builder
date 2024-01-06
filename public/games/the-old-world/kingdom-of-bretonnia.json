@@ -208,6 +208,40 @@
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 50
       }
+    },
+    {
+      "name_en": "Prophetess",
+      "name_de": "Prophetess",
+      "id": "prophetess",
+      "named": false,
+      "points": 99,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Sergeant at Arms",
+      "name_de": "Sergeant at Arms",
+      "id": "sergeant-at-arms",
+      "named": false,
+      "points": 99,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "core": [
@@ -221,7 +255,11 @@
         {
           "name_de": "Yeoman",
           "name_en": "Yeoman",
-          "points": 7
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         },
         {
           "name_de": "Grail Monk",
@@ -235,14 +273,52 @@
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 5
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 5
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ]
+    },
+    {
+      "name_en": "Knights of the Realm",
+      "name_de": "Knights of the Realm",
+      "id": "knights-of-the-realm",
+      "named": false,
+      "points": 99,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "options": [],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Mounted",
+          "name_de": "Mounted",
+          "points": 99,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "special": [],

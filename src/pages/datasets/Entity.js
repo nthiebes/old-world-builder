@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { NumberInput } from "../../components/number-input";
 import { Button } from "../../components/button";
@@ -31,35 +31,56 @@ const magicItemTypes = [
   "enchanted-item",
   "triptych",
 ];
+const getRandomId = () =>
+  (Math.random().toString(36) + Math.random().toString(36)).replace(
+    /[^a-z]+/g,
+    ""
+  );
 
-export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
+export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
+  const randomId = getRandomId();
   const [unit, setUnit] = useState(
     existingUnit ? { ...initialUnitState, ...existingUnit } : initialUnitState
   );
   const handleSubmit = (event) => {
-    event.preventDefault();
+    const isNew = !Boolean(existingUnit);
 
-    onSubmit({ unit, type, isNew: !Boolean(existingUnit) });
-    setUnit(initialUnitState);
+    event.preventDefault();
+    onSubmit({
+      unit: {
+        ...unit,
+        id: isNew
+          ? unit.name_en.toLowerCase().replace(/ /g, "-").replace(/,/g, "")
+          : unit.id,
+      },
+      type,
+      isNew,
+    });
+    isNew && setUnit(initialUnitState);
   };
   const handleFieldChange = (event) => {
+    const id = event.target.id.split("-")[0];
+
     setUnit({
       ...unit,
-      [event.target.id]:
+      [id]:
         event.target.type === "number"
           ? Number(event.target.value)
           : event.target.value,
     });
   };
   const handleNameBlur = () => {
+    const isNew = !Boolean(existingUnit);
+
     setUnit({
       ...unit,
-      id: unit.name_en.toLowerCase().replace(/ /g, "-"),
+      id: isNew
+        ? unit.name_en.toLowerCase().replace(/ /g, "-").replace(/,/g, "")
+        : unit.id,
       name_de: !unit.name_de ? unit.name_en : unit.name_de,
     });
   };
   const handleSecondLevelFieldChange = ({ key, field, value, index }) => {
-    console.log(key, field, value, index);
     const newEntries = unit[key].map((entry, entryIndex) => {
       if (index === entryIndex) {
         return {
@@ -153,7 +174,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       },
     });
   };
-
   const handleNewCommand = () => {
     setUnit({
       ...unit,
@@ -217,12 +237,18 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
     });
   };
 
+  useEffect(() => {
+    setUnit(
+      existingUnit ? { ...initialUnitState, ...existingUnit } : initialUnitState
+    );
+  }, [existingUnit]);
+
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name_en">Name English</label>
+      <label htmlFor={`name_en-${randomId}`}>Name English</label>
       <input
         type="text"
-        id="name_en"
+        id={`name_en-${randomId}`}
         className="input"
         value={unit.name_en}
         onChange={handleFieldChange}
@@ -230,24 +256,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         required
         onBlur={handleNameBlur}
       />
-      <label htmlFor="name_de">Name German</label>
+      <label htmlFor={`name_de-${randomId}`}>Name German</label>
       <input
         type="text"
-        id="name_de"
+        id={`name_de-${randomId}`}
         className="input"
         value={unit.name_de}
         onChange={handleFieldChange}
         autoComplete="off"
         required
       />
-      <label htmlFor="id" className="edit__label">
+      <label htmlFor={`id-${randomId}`} className="edit__label">
         ID
       </label>
       <input
         type="text"
-        id="id"
+        id={`id-${randomId}`}
         className="input"
-        defaultValue={unit.id}
+        value={unit.id}
         autoComplete="off"
         pattern="(([a-z]*-[a-z]*)|[a-z]*)*"
         disabled
@@ -255,9 +281,9 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         placeholder="Automatically filled"
         required
       />
-      <label htmlFor="points">Points per model</label>
+      <label htmlFor={`points-${randomId}`}>Points per model</label>
       <NumberInput
-        id="points"
+        id={`points-${randomId}`}
         className="input"
         min={1}
         value={unit.points}
@@ -341,7 +367,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               <NumberInput
                 id={`command-points${index}`}
                 className="input"
-                min={1}
                 value={command.points}
                 onChange={(event) =>
                   handleSecondLevelFieldChange({
@@ -462,7 +487,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <NumberInput
             id={`equipment-points${index}`}
             className="input"
-            min={1}
             value={equipment.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -583,7 +607,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <NumberInput
             id={`options-points${index}`}
             className="input"
-            min={1}
             value={option.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -718,7 +741,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <NumberInput
             id={`mounts-points${index}`}
             className="input"
-            min={1}
             value={mount.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -809,9 +831,20 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         submitButton
         spaceBottom
         icon={existingUnit ? "add-list" : "new-list"}
+        className="entity__submit"
       >
         {existingUnit ? "Update unit" : "Add unit"}
       </Button>
+      {existingUnit ? (
+        <Button
+          type="text"
+          color="dark"
+          spaceBottom
+          icon="delete"
+          aria-label="Delete unit"
+          onClick={() => onDelete({ type, id: unit.id })}
+        ></Button>
+      ) : null}
     </form>
   );
 };

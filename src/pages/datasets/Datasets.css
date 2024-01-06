@@ -9,7 +9,9 @@
 }
 
 .datasets__edit-headline {
-  margin: 1rem 0;
+  padding: 1rem;
+  margin: 0 -1rem;
+  border-bottom: 2px solid var(--color-list);
 }
 
 .datasets__info {
@@ -25,11 +27,6 @@
 
 .datasets__info h3 {
   margin-bottom: 0;
-}
-
-.datasets__expandable .expandable__summary {
-  font-weight: normal;
-  padding-bottom: 0;
 }
 
 .datasets .list:first-child .list__inner {
@@ -53,10 +50,6 @@
   }
 }
 
-.datasets__column-header {
-  /* margin-bottom: 2rem; */
-}
-
 .datasets__output {
   white-space: nowrap;
   min-width: 100%;
@@ -65,8 +58,13 @@
   padding: 0.5rem;
 }
 
-.datasets__unit-type {
+.datasets__unit-type,
+.datasets__unit {
   margin: 0 -1rem;
   padding: 1rem 1rem 0.5rem 1rem;
   border-bottom: 2px solid var(--color-list);
+}
+
+.datasets__unit .expandable__summary {
+  font-weight: normal;
 }

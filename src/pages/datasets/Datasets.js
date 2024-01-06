@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Select } from "../../components/select";
-import { List } from "../../components/list";
 import { Expandable } from "../../components/expandable";
 import { Spinner } from "../../components/spinner";
 import { fetcher } from "../../utils/fetcher";
@@ -60,7 +59,14 @@ export const Datasets = ({ isMobile }) => {
 
     window.scrollTo(0, 0);
   };
+  const handleDelete = ({ id, type }) => {
+    setDataset({
+      ...dataset,
+      [type]: dataset[type].filter((existingUnit) => existingUnit.id !== id),
+    });
 
+    window.scrollTo(0, 0);
+  };
   const handleArmyChange = (value) => {
     setArmy(value);
   };
@@ -68,8 +74,8 @@ export const Datasets = ({ isMobile }) => {
     setIsLoading(true);
     fetcher({
       url: `games/${game}/${army}`,
-      onSuccess: (dataset) => {
-        setDataset(dataset);
+      onSuccess: (existingDataset) => {
+        setDataset(existingDataset);
         setIsLoading(false);
       },
     });
@@ -153,7 +159,7 @@ export const Datasets = ({ isMobile }) => {
 
         <div className="datasets__columns">
           <section className="column datasets__column">
-            <header className="editor__header datasets__column-header">
+            <header className="editor__header">
               <h2>Load a dataset</h2>
             </header>
 
@@ -182,7 +188,7 @@ export const Datasets = ({ isMobile }) => {
           </section>
 
           <section className="column datasets__column">
-            <header className="editor__header datasets__column-header">
+            <header className="editor__header">
               <h2>Edit units</h2>
             </header>
             {isLoading && <Spinner />}
@@ -191,19 +197,19 @@ export const Datasets = ({ isMobile }) => {
             )}
             <ul>
               {dataset.characters.map((unit, index) => (
-                <List key={index}>
-                  <Expandable
-                    headline={unit.name_en}
-                    noMargin
-                    className="datasets__expandable"
-                  >
-                    <Entity
-                      unit={unit}
-                      type="characters"
-                      onSubmit={handleSubmit}
-                    />
-                  </Expandable>
-                </List>
+                <Expandable
+                  headline={unit.name_en}
+                  noMargin
+                  className="datasets__unit-type datasets__unit"
+                  key={index}
+                >
+                  <Entity
+                    unit={unit}
+                    type="characters"
+                    onSubmit={handleSubmit}
+                    onDelete={handleDelete}
+                  />
+                </Expandable>
               ))}
             </ul>
             {dataset.core.length > 0 && (
@@ -211,15 +217,19 @@ export const Datasets = ({ isMobile }) => {
             )}
             <ul>
               {dataset.core.map((unit, index) => (
-                <List key={index}>
-                  <Expandable
-                    headline={unit.name_en}
-                    noMargin
-                    className="datasets__expandable"
-                  >
-                    <Entity unit={unit} type="core" onSubmit={handleSubmit} />
-                  </Expandable>
-                </List>
+                <Expandable
+                  headline={unit.name_en}
+                  noMargin
+                  className="datasets__unit-type datasets__unit"
+                  key={index}
+                >
+                  <Entity
+                    unit={unit}
+                    type="core"
+                    onSubmit={handleSubmit}
+                    onDelete={handleDelete}
+                  />
+                </Expandable>
               ))}
             </ul>
             {dataset.special.length > 0 && (
@@ -227,19 +237,19 @@ export const Datasets = ({ isMobile }) => {
             )}
             <ul>
               {dataset.special.map((unit, index) => (
-                <List key={index}>
-                  <Expandable
-                    headline={unit.name_en}
-                    noMargin
-                    className="datasets__expandable"
-                  >
-                    <Entity
-                      unit={unit}
-                      type="special"
-                      onSubmit={handleSubmit}
-                    />
-                  </Expandable>
-                </List>
+                <Expandable
+                  headline={unit.name_en}
+                  noMargin
+                  className="datasets__unit-type datasets__unit"
+                  key={index}
+                >
+                  <Entity
+                    unit={unit}
+                    type="special"
+                    onSubmit={handleSubmit}
+                    onDelete={handleDelete}
+                  />
+                </Expandable>
               ))}
             </ul>
             {dataset.rare.length > 0 && (
@@ -247,21 +257,25 @@ export const Datasets = ({ isMobile }) => {
             )}
             <ul>
               {dataset.rare.map((unit, index) => (
-                <List key={index}>
-                  <Expandable
-                    headline={unit.name_en}
-                    noMargin
-                    className="datasets__expandable"
-                  >
-                    <Entity unit={unit} type="rare" onSubmit={handleSubmit} />
-                  </Expandable>
-                </List>
+                <Expandable
+                  headline={unit.name_en}
+                  noMargin
+                  className="datasets__unit-type datasets__unit"
+                  key={index}
+                >
+                  <Entity
+                    unit={unit}
+                    type="rare"
+                    onSubmit={handleSubmit}
+                    onDelete={handleDelete}
+                  />
+                </Expandable>
               ))}
             </ul>
           </section>
 
           <section className="column datasets__column">
-            <header className="editor__header datasets__column-header">
+            <header className="editor__header">
               <h2>Add new unit</h2>
             </header>
             <Expandable
@@ -295,7 +309,7 @@ export const Datasets = ({ isMobile }) => {
           </section>
 
           <section className="column datasets__column">
-            <header className="editor__header datasets__column-header">
+            <header className="editor__header">
               <h2>JSON output</h2>
             </header>
 
