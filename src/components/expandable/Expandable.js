@@ -11,8 +11,16 @@ export const Expandable = ({
   notBold,
   open,
   onClick,
+  noMargin,
 }) => (
-  <details className={classNames("expandable", className)} open={open}>
+  <details
+    className={classNames(
+      "expandable",
+      noMargin && "expandable--no-margin",
+      className
+    )}
+    open={open}
+  >
     <summary
       className={classNames(
         "expandable__summary",

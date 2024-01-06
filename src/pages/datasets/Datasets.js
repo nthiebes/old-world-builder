@@ -29,11 +29,22 @@ export const Datasets = ({ isMobile }) => {
     allies: [],
   });
   const intl = useIntl();
-  const handleSubmit = ({ unit, type }) => {
-    setDataset({
-      ...dataset,
-      [type]: [...dataset[type], unit],
-    });
+  const handleSubmit = ({ unit, isNew, type }) => {
+    if (isNew) {
+      setDataset({
+        ...dataset,
+        [type]: [...dataset[type], unit],
+      });
+    } else {
+      setDataset({
+        ...dataset,
+        [type]: dataset[type].map((existingUnit) =>
+          existingUnit.id === unit.id ? unit : existingUnit
+        ),
+      });
+    }
+
+    window.scrollTo(0, 0);
   };
 
   const handleArmyChange = (value) => {
@@ -43,8 +54,6 @@ export const Datasets = ({ isMobile }) => {
     fetcher({
       url: `games/${game}/${army}`,
       onSuccess: (dataset) => {
-        console.log(dataset);
-
         setDataset(dataset);
         setIsLoading(false);
       },
@@ -94,7 +103,12 @@ export const Datasets = ({ isMobile }) => {
         <h2>
           <FormattedMessage id="datasets.title" />
         </h2>
-        <p className="datasets__paragraph">Some explanations.</p>
+        <p className="datasets__paragraph">Thank you!</p>
+        <p className="datasets__paragraph">More links?</p>
+        <ul>
+          <li>Write as in book, double check</li>
+          <li>Special rule missing - report</li>
+        </ul>
         <br />
 
         <div className="datasets__columns">
@@ -135,16 +149,59 @@ export const Datasets = ({ isMobile }) => {
               </h2>
             </header>
 
+            <h3>
+              <FormattedMessage id="Characters" />
+            </h3>
             <ul>
               {dataset.characters.map((unit, index) => (
-                <List
-                  key={index}
-                  className="editor__list"
-                  // active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit.name_en}</b>
-                  </div>
+                <List key={index}>
+                  <Expandable headline={unit.name_en} noMargin>
+                    <Entity
+                      unit={unit}
+                      type="characters"
+                      onSubmit={handleSubmit}
+                    />
+                  </Expandable>
+                </List>
+              ))}
+            </ul>
+            <h3>
+              <FormattedMessage id="Core" />
+            </h3>
+            <ul>
+              {dataset.core.map((unit, index) => (
+                <List key={index}>
+                  <Expandable headline={unit.name_en} noMargin>
+                    <Entity unit={unit} type="core" onSubmit={handleSubmit} />
+                  </Expandable>
+                </List>
+              ))}
+            </ul>
+            <h3>
+              <FormattedMessage id="Special" />
+            </h3>
+            <ul>
+              {dataset.special.map((unit, index) => (
+                <List key={index}>
+                  <Expandable headline={unit.name_en} noMargin>
+                    <Entity
+                      unit={unit}
+                      type="special"
+                      onSubmit={handleSubmit}
+                    />
+                  </Expandable>
+                </List>
+              ))}
+            </ul>
+            <h3>
+              <FormattedMessage id="Rare" />
+            </h3>
+            <ul>
+              {dataset.rare.map((unit, index) => (
+                <List key={index}>
+                  <Expandable headline={unit.name_en} noMargin>
+                    <Entity unit={unit} type="rare" onSubmit={handleSubmit} />
+                  </Expandable>
                 </List>
               ))}
             </ul>
@@ -157,29 +214,28 @@ export const Datasets = ({ isMobile }) => {
               </h2>
             </header>
 
-            <Expandable headline="Character">
-              <Entity
-                onSubmit={(unit) => handleSubmit({ unit, type: "characters" })}
-              />
-            </Expandable>
-            <hr />
-            <Expandable headline="Core Unit">
-              <Entity
-                onSubmit={(unit) => handleSubmit({ unit, type: "core" })}
-              />
-            </Expandable>
-            <hr />
-            <Expandable headline="Special Unit">
-              <Entity
-                onSubmit={(unit) => handleSubmit({ unit, type: "special" })}
-              />
-            </Expandable>
-            <hr />
-            <Expandable headline="Rare Unit">
-              <Entity
-                onSubmit={(unit) => handleSubmit({ unit, type: "rare" })}
-              />
-            </Expandable>
+            <ul>
+              <List>
+                <Expandable headline="Character" noMargin>
+                  <Entity type="characters" onSubmit={handleSubmit} />
+                </Expandable>
+              </List>
+              <List>
+                <Expandable headline="Core Unit" noMargin>
+                  <Entity type="core" onSubmit={handleSubmit} />
+                </Expandable>
+              </List>
+              <List>
+                <Expandable headline="Special Unit" noMargin>
+                  <Entity type="special" onSubmit={handleSubmit} />
+                </Expandable>
+              </List>
+              <List>
+                <Expandable headline="Rare Unit" noMargin>
+                  <Entity type="rare" onSubmit={handleSubmit} />
+                </Expandable>
+              </List>
+            </ul>
           </section>
 
           <section className="column datasets__column">
@@ -196,6 +252,16 @@ export const Datasets = ({ isMobile }) => {
               data-gramm="false"
               value={JSON.stringify(dataset, null, 2)}
             />
+            <p>
+              <FormattedMessage id="Copy and post in discord" />
+            </p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://discord.com/channels/1120710419108085780/1120720528068583434"
+            >
+              Discord
+            </a>
           </section>
         </div>
       </Main>

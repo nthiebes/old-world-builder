@@ -219,11 +219,19 @@ hr {
   .input:hover {
     box-shadow: 0 0 7px 2px var(--color-list) inset;
   }
+
+  .input:disabled:hover {
+    box-shadow: none;
+  }
 }
 
 .input:focus,
 .input:active {
   box-shadow: 0 0 7px 2px var(--color-list) inset;
+}
+
+.input:disabled {
+  opacity: 0.5;
 }
 
 .checkbox {
