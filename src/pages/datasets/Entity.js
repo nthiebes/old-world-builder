@@ -292,18 +292,22 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       />
       {type !== "characters" && (
         <>
-          <label htmlFor="minimum">Minimum number of models</label>
+          <label htmlFor={`minimum-${randomId}`}>
+            Minimum number of models
+          </label>
           <NumberInput
-            id="minimum"
+            id={`minimum-${randomId}`}
             className="input"
             min={0}
             value={unit.minimum}
             onChange={handleFieldChange}
             required
           />
-          <label htmlFor="maximum">Maximum number of models</label>
+          <label htmlFor={`maximum-${randomId}`}>
+            Maximum number of models
+          </label>
           <NumberInput
-            id="maximum"
+            id={`maximum-${randomId}`}
             className="input"
             min={0}
             value={unit.maximum}
@@ -322,10 +326,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           </p>
           {unit.command.map((command, index) => (
             <div className="entity__second-level" key={index}>
-              <label htmlFor={`command-name_en${index}`}>Name English</label>
+              <label htmlFor={`command-name_en${index}-${randomId}`}>
+                Name English
+              </label>
               <input
                 type="text"
-                id={`command-name_en${index}`}
+                id={`command-name_en${index}-${randomId}`}
                 className="input"
                 value={command.name_en}
                 onChange={(event) =>
@@ -346,10 +352,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`command-name_de${index}`}>Name German</label>
+              <label htmlFor={`command-name_de${index}-${randomId}`}>
+                Name German
+              </label>
               <input
                 type="text"
-                id={`command-name_de${index}`}
+                id={`command-name_de${index}-${randomId}`}
                 className="input"
                 value={command.name_de}
                 onChange={(event) =>
@@ -363,9 +371,11 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`command-points${index}`}>Points</label>
+              <label htmlFor={`command-points${index}-${randomId}`}>
+                Points
+              </label>
               <NumberInput
-                id={`command-points${index}`}
+                id={`command-points${index}-${randomId}`}
                 className="input"
                 value={command.points}
                 onChange={(event) =>
@@ -383,7 +393,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                   <div className="checkbox" key={item}>
                     <input
                       type="checkbox"
-                      id={`${item}${itemIndex}`}
+                      id={`${item}${itemIndex}-${randomId}`}
                       onChange={(event) =>
                         handleCommandMagicChange({
                           index,
@@ -397,18 +407,18 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                       className="checkbox__input"
                     />
                     <label
-                      htmlFor={`${item}${itemIndex}`}
+                      htmlFor={`${item}${itemIndex}-${randomId}`}
                       className="checkbox__label"
                     >
                       {item}
                     </label>
                   </div>
                 ))}
-                <label htmlFor={`command-magic-points-${index}`}>
+                <label htmlFor={`command-magic-points-${index}-${randomId}`}>
                   Maximum points for magic items
                 </label>
                 <NumberInput
-                  id={`command-magic-points-${index}`}
+                  id={`command-magic-points-${index}-${randomId}`}
                   className="input"
                   min={0}
                   value={command.magic.maxPoints}
@@ -442,10 +452,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       </p>
       {unit.equipment.map((equipment, index) => (
         <div className="entity__second-level" key={index}>
-          <label htmlFor={`equipment-name_en${index}`}>Name English</label>
+          <label htmlFor={`equipment-name_en${index}-${randomId}`}>
+            Name English
+          </label>
           <input
             type="text"
-            id={`equipment-name_en${index}`}
+            id={`equipment-name_en${index}-${randomId}`}
             className="input"
             value={equipment.name_en}
             onChange={(event) =>
@@ -466,10 +478,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`equipment-name_de${index}`}>Name German</label>
+          <label htmlFor={`equipment-name_de${index}-${randomId}`}>
+            Name German
+          </label>
           <input
             type="text"
-            id={`equipment-name_de${index}`}
+            id={`equipment-name_de${index}-${randomId}`}
             className="input"
             value={equipment.name_de}
             onChange={(event) =>
@@ -483,9 +497,9 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`equipment-points${index}`}>Points</label>
+          <label htmlFor={`equipment-points${index}-${randomId}`}>Points</label>
           <NumberInput
-            id={`equipment-points${index}`}
+            id={`equipment-points${index}-${randomId}`}
             className="input"
             value={equipment.points}
             onChange={(event) =>
@@ -501,7 +515,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           <div className="checkbox">
             <input
               type="checkbox"
-              id={`equipment-perModel${index}`}
+              id={`equipment-perModel${index}-${randomId}`}
               onChange={() =>
                 handleSecondLevelFieldChange({
                   index,
@@ -514,7 +528,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               className="checkbox__input"
             />
             <label
-              htmlFor={`equipment-perModel${index}`}
+              htmlFor={`equipment-perModel${index}-${randomId}`}
               className="checkbox__label"
             >
               Points count for each model
@@ -523,7 +537,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           <div className="checkbox">
             <input
               type="checkbox"
-              id={`equipment-active${index}`}
+              id={`equipment-active${index}-${randomId}`}
               onChange={() =>
                 handleSecondLevelFieldChange({
                   index,
@@ -536,7 +550,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               className="checkbox__input"
             />
             <label
-              htmlFor={`equipment-active${index}`}
+              htmlFor={`equipment-active${index}-${randomId}`}
               className="checkbox__label"
             >
               Selected by default
@@ -562,10 +576,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       </p>
       {unit.options.map((option, index) => (
         <div className="entity__second-level" key={index}>
-          <label htmlFor={`options-name_en${index}`}>Name English</label>
+          <label htmlFor={`options-name_en${index}-${randomId}`}>
+            Name English
+          </label>
           <input
             type="text"
-            id={`options-name_en${index}`}
+            id={`options-name_en${index}-${randomId}`}
             className="input"
             value={option.name_en}
             onChange={(event) =>
@@ -586,10 +602,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`options-name_de${index}`}>Name German</label>
+          <label htmlFor={`options-name_de${index}-${randomId}`}>
+            Name German
+          </label>
           <input
             type="text"
-            id={`options-name_de${index}`}
+            id={`options-name_de${index}-${randomId}`}
             className="input"
             value={option.name_de}
             onChange={(event) =>
@@ -603,9 +621,9 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`options-points${index}`}>Points</label>
+          <label htmlFor={`options-points${index}-${randomId}`}>Points</label>
           <NumberInput
-            id={`options-points${index}`}
+            id={`options-points${index}-${randomId}`}
             className="input"
             value={option.points}
             onChange={(event) =>
@@ -621,7 +639,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           <div className="checkbox">
             <input
               type="checkbox"
-              id={`options-stackable${index}`}
+              id={`options-stackable${index}-${randomId}`}
               onChange={() =>
                 handleSecondLevelFieldChange({
                   index,
@@ -634,7 +652,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               className="checkbox__input"
             />
             <label
-              htmlFor={`options-stackable${index}`}
+              htmlFor={`options-stackable${index}-${randomId}`}
               className="checkbox__label"
             >
               Allow multiple selections
@@ -642,9 +660,11 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           </div>
           {option.stackable && (
             <>
-              <label htmlFor={`options-minimum${index}`}>Minimum</label>
+              <label htmlFor={`options-minimum${index}-${randomId}`}>
+                Minimum
+              </label>
               <NumberInput
-                id={`options-minimum${index}`}
+                id={`options-minimum${index}-${randomId}`}
                 className="input"
                 min={0}
                 value={option.minimum}
@@ -658,9 +678,11 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                 }
                 required
               />
-              <label htmlFor={`options-maximum${index}`}>Maximum</label>
+              <label htmlFor={`options-maximum${index}-${randomId}`}>
+                Maximum
+              </label>
               <NumberInput
-                id={`options-maximum${index}`}
+                id={`options-maximum${index}-${randomId}`}
                 className="input"
                 min={0}
                 value={option.maximum}
@@ -696,10 +718,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       </p>
       {unit.mounts.map((mount, index) => (
         <div className="entity__second-level" key={index}>
-          <label htmlFor={`mounts-name_en${index}`}>Name English</label>
+          <label htmlFor={`mounts-name_en${index}-${randomId}`}>
+            Name English
+          </label>
           <input
             type="text"
-            id={`mounts-name_en${index}`}
+            id={`mounts-name_en${index}-${randomId}`}
             className="input"
             value={mount.name_en}
             onChange={(event) =>
@@ -720,10 +744,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`mounts-name_de${index}`}>Name German</label>
+          <label htmlFor={`mounts-name_de${index}-${randomId}`}>
+            Name German
+          </label>
           <input
             type="text"
-            id={`mounts-name_de${index}`}
+            id={`mounts-name_de${index}-${randomId}`}
             className="input"
             value={mount.name_de}
             onChange={(event) =>
@@ -737,9 +763,9 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`mounts-points${index}`}>Points</label>
+          <label htmlFor={`mounts-points${index}-${randomId}`}>Points</label>
           <NumberInput
-            id={`mounts-points${index}`}
+            id={`mounts-points${index}-${randomId}`}
             className="input"
             value={mount.points}
             onChange={(event) =>
@@ -755,7 +781,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           <div className="checkbox">
             <input
               type="checkbox"
-              id={`mounts-active${index}`}
+              id={`mounts-active${index}-${randomId}`}
               onChange={() =>
                 handleSecondLevelFieldChange({
                   index,
@@ -768,7 +794,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               className="checkbox__input"
             />
             <label
-              htmlFor={`mounts-active${index}`}
+              htmlFor={`mounts-active${index}-${randomId}`}
               className="checkbox__label"
             >
               Selected by default
@@ -794,7 +820,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             <div className="checkbox" key={item}>
               <input
                 type="checkbox"
-                id={`${item}-${itemIndex}`}
+                id={`${item}-${itemIndex}-${randomId}`}
                 onChange={(event) =>
                   handleMagicChange({
                     value: unit.magic.types.includes(item) ? "off" : "on",
@@ -805,16 +831,18 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                 className="checkbox__input"
               />
               <label
-                htmlFor={`${item}-${itemIndex}`}
+                htmlFor={`${item}-${itemIndex}-${randomId}`}
                 className="checkbox__label"
               >
                 {item}
               </label>
             </div>
           ))}
-          <label htmlFor="magic-points">Max. magic item points</label>
+          <label htmlFor={`magic-points-${randomId}`}>
+            Max. magic item points
+          </label>
           <NumberInput
-            id="magic-points"
+            id={`magic-points-${randomId}`}
             className="input"
             min={0}
             value={unit.magic.maxPoints}
@@ -831,7 +859,6 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
         submitButton
         spaceBottom
         icon={existingUnit ? "add-list" : "new-list"}
-        className="entity__submit"
       >
         {existingUnit ? "Update unit" : "Add unit"}
       </Button>
@@ -841,7 +868,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           color="dark"
           spaceBottom
           icon="delete"
-          aria-label="Delete unit"
+          label="Delete unit"
           onClick={() => onDelete({ type, id: unit.id })}
         ></Button>
       ) : null}
