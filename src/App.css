@@ -131,6 +131,13 @@ h3 {
   color: var(--color-headline);
 }
 
+.page-headline {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 29px;
+}
+
 ul {
   list-style: none;
 }
@@ -219,10 +226,6 @@ hr {
   .input:hover {
     box-shadow: 0 0 7px 2px var(--color-list) inset;
   }
-
-  .input:disabled:hover {
-    box-shadow: none;
-  }
 }
 
 .input:focus,
@@ -232,6 +235,7 @@ hr {
 
 .input:disabled {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .checkbox {

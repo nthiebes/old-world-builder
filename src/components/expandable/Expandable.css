@@ -12,23 +12,23 @@
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
-  color: var(--color-font);
+  color: var(--color-headline);
   line-height: 1.5;
   display: list-item;
   transition: color 0.2s linear;
 
   &:focus {
-    outline: 1px dashed var(--color-font);
+    outline: 1px dashed var(--color-headline);
   }
+}
 
-  @media (hover: hover) {
-    &:hover {
-      color: var(--color-font);
-    }
+@media (hover: hover) {
+  .expandable__summary:hover {
+    color: var(--color-headline);
   }
 }
 
 .expandable__summary--normal {
   font-weight: normal;
-  color: var(--color-font);
+  color: var(--color-headline);
 }

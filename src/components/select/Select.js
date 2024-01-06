@@ -16,6 +16,7 @@ export const Select = ({
   disabled,
   value,
   onChange,
+  spaceTop,
   spaceBottom,
 }) => {
   const { language } = useLanguage();
@@ -34,6 +35,7 @@ export const Select = ({
       disabled={disabled}
       className={classNames(
         "select",
+        spaceTop && "select--spaceTop",
         spaceBottom && "select--spaceBottom",
         className
       )}

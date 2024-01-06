@@ -85,7 +85,7 @@ export const App = () => {
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/">
-            <Header headline="Old World Builder" />
+            <Header headline="Old World Builder" hasMainNavigation />
             <Main isDesktop>
               <section className="column">
                 <Home />

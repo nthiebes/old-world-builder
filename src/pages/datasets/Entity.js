@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
 
 import { NumberInput } from "../../components/number-input";
 import { Button } from "../../components/button";
@@ -11,7 +10,6 @@ const initialUnitState = {
   name_en: "",
   name_de: "",
   id: "",
-  named: false,
   points: 1,
   minimum: 0,
   maximum: 0,
@@ -51,12 +49,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         event.target.type === "number"
           ? Number(event.target.value)
           : event.target.value,
-    });
-  };
-  const handleCheckboxChange = (event) => {
-    setUnit({
-      ...unit,
-      [event.target.id]: event.target.value === "on" ? true : false,
     });
   };
   const handleNameBlur = () => {
@@ -227,9 +219,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name_en">
-        <FormattedMessage id="Name en" />
-      </label>
+      <label htmlFor="name_en">Name English</label>
       <input
         type="text"
         id="name_en"
@@ -240,9 +230,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         required
         onBlur={handleNameBlur}
       />
-      <label htmlFor="name_de">
-        <FormattedMessage id="Name de" />
-      </label>
+      <label htmlFor="name_de">Name German</label>
       <input
         type="text"
         id="name_de"
@@ -253,34 +241,21 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         required
       />
       <label htmlFor="id" className="edit__label">
-        <FormattedMessage id="id" />
+        ID
       </label>
       <input
         type="text"
         id="id"
         className="input"
-        value={unit.id}
-        onChange={handleFieldChange}
+        defaultValue={unit.id}
         autoComplete="off"
         pattern="(([a-z]*-[a-z]*)|[a-z]*)*"
-        disabled={existingUnit ? true : false}
+        disabled
+        readOnly
+        placeholder="Automatically filled"
         required
       />
-      <div className="checkbox">
-        <input
-          type="checkbox"
-          id="named"
-          onChange={handleCheckboxChange}
-          checked={unit.named}
-          className="checkbox__input"
-        />
-        <label htmlFor="named" className="checkbox__label">
-          <FormattedMessage id="named" />
-        </label>
-      </div>
-      <label htmlFor="points">
-        <FormattedMessage id="points" />
-      </label>
+      <label htmlFor="points">Points per model</label>
       <NumberInput
         id="points"
         className="input"
@@ -289,37 +264,39 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         onChange={handleFieldChange}
         required
       />
-      <label htmlFor="minimum">
-        <FormattedMessage id="minimum" />
-      </label>
-      <NumberInput
-        id="minimum"
-        className="input"
-        min={0}
-        value={unit.minimum}
-        onChange={handleFieldChange}
-        required
-      />
-      <label htmlFor="maximum">
-        <FormattedMessage id="maximum" />
-      </label>
-      <NumberInput
-        id="maximum"
-        className="input"
-        min={0}
-        value={unit.maximum}
-        onChange={handleFieldChange}
-        required
-      />
+      {type !== "characters" && (
+        <>
+          <label htmlFor="minimum">Minimum number of models</label>
+          <NumberInput
+            id="minimum"
+            className="input"
+            min={0}
+            value={unit.minimum}
+            onChange={handleFieldChange}
+            required
+          />
+          <label htmlFor="maximum">Maximum number of models</label>
+          <NumberInput
+            id="maximum"
+            className="input"
+            min={0}
+            value={unit.maximum}
+            onChange={handleFieldChange}
+            required
+          />
+        </>
+      )}
 
       {type !== "characters" && (
         <>
+          <hr />
           <h3>Command</h3>
+          <p className="datasets__paragraph">
+            All command options are NOT mutually exclusive.
+          </p>
           {unit.command.map((command, index) => (
-            <div className="entity__second-level">
-              <label htmlFor={`command-name_en${index}`}>
-                <FormattedMessage id="Name en" />
-              </label>
+            <div className="entity__second-level" key={index}>
+              <label htmlFor={`command-name_en${index}`}>Name English</label>
               <input
                 type="text"
                 id={`command-name_en${index}`}
@@ -343,9 +320,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`command-name_de${index}`}>
-                <FormattedMessage id="Name de" />
-              </label>
+              <label htmlFor={`command-name_de${index}`}>Name German</label>
               <input
                 type="text"
                 id={`command-name_de${index}`}
@@ -362,9 +337,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`command-points${index}`}>
-                <FormattedMessage id="Command points" />
-              </label>
+              <label htmlFor={`command-points${index}`}>Points</label>
               <NumberInput
                 id={`command-points${index}`}
                 className="input"
@@ -382,7 +355,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               />
               <Expandable headline="Magic items">
                 {magicItemTypes.map((item, itemIndex) => (
-                  <div className="checkbox">
+                  <div className="checkbox" key={item}>
                     <input
                       type="checkbox"
                       id={`${item}${itemIndex}`}
@@ -402,12 +375,12 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                       htmlFor={`${item}${itemIndex}`}
                       className="checkbox__label"
                     >
-                      <FormattedMessage id={item} />
+                      {item}
                     </label>
                   </div>
                 ))}
                 <label htmlFor={`command-magic-points-${index}`}>
-                  <FormattedMessage id="Max points" />
+                  Maximum points for magic items
                 </label>
                 <NumberInput
                   id={`command-magic-points-${index}`}
@@ -426,6 +399,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           ))}
           <Button
             type="secondary"
+            icon="add"
             onClick={handleNewCommand}
             spaceBottom
             className="entity__second-level-button"
@@ -435,15 +409,15 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         </>
       )}
 
+      <hr />
+
       <h3>Equipment</h3>
-      <p>
-        All equipment options, they are mutually exclusive. Weapons belong here.
+      <p className="datasets__paragraph">
+        All equipment options are mutually exclusive.
       </p>
       {unit.equipment.map((equipment, index) => (
-        <div className="entity__second-level">
-          <label htmlFor={`equipment-name_en${index}`}>
-            <FormattedMessage id="Name en" />
-          </label>
+        <div className="entity__second-level" key={index}>
+          <label htmlFor={`equipment-name_en${index}`}>Name English</label>
           <input
             type="text"
             id={`equipment-name_en${index}`}
@@ -467,9 +441,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`equipment-name_de${index}`}>
-            <FormattedMessage id="Name de" />
-          </label>
+          <label htmlFor={`equipment-name_de${index}`}>Name German</label>
           <input
             type="text"
             id={`equipment-name_de${index}`}
@@ -486,9 +458,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`equipment-points${index}`}>
-            <FormattedMessage id="Equipment points" />
-          </label>
+          <label htmlFor={`equipment-points${index}`}>Points</label>
           <NumberInput
             id={`equipment-points${index}`}
             className="input"
@@ -504,7 +474,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             required
           />
-          <p>Wether the points are counted per model</p>
           <div className="checkbox">
             <input
               type="checkbox"
@@ -524,10 +493,9 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               htmlFor={`equipment-perModel${index}`}
               className="checkbox__label"
             >
-              <FormattedMessage id="per model" />
+              Points count for each model
             </label>
           </div>
-          <p>Wether it should be selected by default</p>
           <div className="checkbox">
             <input
               type="checkbox"
@@ -547,27 +515,30 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               htmlFor={`equipment-active${index}`}
               className="checkbox__label"
             >
-              <FormattedMessage id="active" />
+              Selected by default
             </label>
           </div>
         </div>
       ))}
       <Button
         type="secondary"
+        icon="add"
         onClick={handleNewEquipment}
         spaceBottom
         className="entity__second-level-button"
       >
-        New entry
+        New equipment
       </Button>
 
+      <hr />
+
       <h3>Options</h3>
-      <p>All options, they are NOT mutually exclusive. eg Shield</p>
+      <p className="datasets__paragraph">
+        All options are NOT mutually exclusive.
+      </p>
       {unit.options.map((option, index) => (
-        <div className="entity__second-level">
-          <label htmlFor={`options-name_en${index}`}>
-            <FormattedMessage id="Name en" />
-          </label>
+        <div className="entity__second-level" key={index}>
+          <label htmlFor={`options-name_en${index}`}>Name English</label>
           <input
             type="text"
             id={`options-name_en${index}`}
@@ -591,9 +562,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`options-name_de${index}`}>
-            <FormattedMessage id="Name de" />
-          </label>
+          <label htmlFor={`options-name_de${index}`}>Name German</label>
           <input
             type="text"
             id={`options-name_de${index}`}
@@ -610,9 +579,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`options-points${index}`}>
-            <FormattedMessage id="Pptions points" />
-          </label>
+          <label htmlFor={`options-points${index}`}>Points</label>
           <NumberInput
             id={`options-points${index}`}
             className="input"
@@ -628,7 +595,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             required
           />
-          <p>Allows multiple selectins of this option</p>
           <div className="checkbox">
             <input
               type="checkbox"
@@ -648,63 +614,66 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               htmlFor={`options-stackable${index}`}
               className="checkbox__label"
             >
-              <FormattedMessage id="stackable" />
+              Allow multiple selections
             </label>
           </div>
-          <label htmlFor={`options-minimum${index}`}>
-            <FormattedMessage id="minimum" />
-          </label>
-          <NumberInput
-            id={`options-minimum${index}`}
-            className="input"
-            min={0}
-            value={option.minimum}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "stackable",
-                value: Number(event.target.value),
-              })
-            }
-            required
-          />
-          <label htmlFor={`options-maximum${index}`}>
-            <FormattedMessage id="maximum" />
-          </label>
-          <NumberInput
-            id={`options-maximum${index}`}
-            className="input"
-            min={0}
-            value={option.maximum}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "stackable",
-                value: Number(event.target.value),
-              })
-            }
-            required
-          />
+          {option.stackable && (
+            <>
+              <label htmlFor={`options-minimum${index}`}>Minimum</label>
+              <NumberInput
+                id={`options-minimum${index}`}
+                className="input"
+                min={0}
+                value={option.minimum}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "options",
+                    field: "stackable",
+                    value: Number(event.target.value),
+                  })
+                }
+                required
+              />
+              <label htmlFor={`options-maximum${index}`}>Maximum</label>
+              <NumberInput
+                id={`options-maximum${index}`}
+                className="input"
+                min={0}
+                value={option.maximum}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "options",
+                    field: "stackable",
+                    value: Number(event.target.value),
+                  })
+                }
+                required
+              />
+            </>
+          )}
         </div>
       ))}
       <Button
         type="secondary"
+        icon="add"
         onClick={handleNewOption}
         spaceBottom
         className="entity__second-level-button"
       >
-        New entry
+        New option
       </Button>
 
+      <hr />
+
       <h3>Mounts</h3>
-      <p>All mount options, they are mutually exclusive</p>
+      <p className="datasets__paragraph">
+        All mount options are mutually exclusive.
+      </p>
       {unit.mounts.map((mount, index) => (
-        <div className="entity__second-level">
-          <label htmlFor={`mounts-name_en${index}`}>
-            <FormattedMessage id="Name en" />
-          </label>
+        <div className="entity__second-level" key={index}>
+          <label htmlFor={`mounts-name_en${index}`}>Name English</label>
           <input
             type="text"
             id={`mounts-name_en${index}`}
@@ -728,9 +697,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`mounts-name_de${index}`}>
-            <FormattedMessage id="Name de" />
-          </label>
+          <label htmlFor={`mounts-name_de${index}`}>Name German</label>
           <input
             type="text"
             id={`mounts-name_de${index}`}
@@ -747,9 +714,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`mounts-points${index}`}>
-            <FormattedMessage id="mount points" />
-          </label>
+          <label htmlFor={`mounts-points${index}`}>Points</label>
           <NumberInput
             id={`mounts-points${index}`}
             className="input"
@@ -765,7 +730,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             required
           />
-          <p>Wether it should be selected by default</p>
           <div className="checkbox">
             <input
               type="checkbox"
@@ -785,24 +749,27 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               htmlFor={`mounts-active${index}`}
               className="checkbox__label"
             >
-              <FormattedMessage id="active" />
+              Selected by default
             </label>
           </div>
         </div>
       ))}
       <Button
         type="secondary"
+        icon="add"
         onClick={handleNewMount}
         spaceBottom
         className="entity__second-level-button"
       >
-        New entry
+        New mount
       </Button>
 
       {type === "characters" && (
-        <Expandable headline="Magic items">
+        <>
+          <hr />
+          <h3>Allowed magic item categories</h3>
           {magicItemTypes.map((item, itemIndex) => (
-            <div className="checkbox">
+            <div className="checkbox" key={item}>
               <input
                 type="checkbox"
                 id={`${item}-${itemIndex}`}
@@ -819,13 +786,11 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 htmlFor={`${item}-${itemIndex}`}
                 className="checkbox__label"
               >
-                <FormattedMessage id={item} />
+                {item}
               </label>
             </div>
           ))}
-          <label htmlFor="magic-points">
-            <FormattedMessage id="Max points" />
-          </label>
+          <label htmlFor="magic-points">Max. magic item points</label>
           <NumberInput
             id="magic-points"
             className="input"
@@ -837,11 +802,15 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               })
             }
           />
-        </Expandable>
+        </>
       )}
 
-      <Button submitButton icon={existingUnit ? "edit" : "add"}>
-        {existingUnit ? "Update" : "Add"}
+      <Button
+        submitButton
+        spaceBottom
+        icon={existingUnit ? "add-list" : "new-list"}
+      >
+        {existingUnit ? "Update unit" : "Add unit"}
       </Button>
     </form>
   );

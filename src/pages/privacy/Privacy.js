@@ -24,13 +24,13 @@ export const Privacy = () => {
         </title>
       </Helmet>
 
-      <Header headline="Old World Builder" />
+      <Header headline="Old World Builder" hasMainNavigation />
 
       <Main compact>
         <Button to="/" icon="home" centered>
           <FormattedMessage id="misc.startpage" />
         </Button>
-        <h2>
+        <h2 className="page-headline">
           <FormattedMessage id="footer.privacy" />
         </h2>
         <p>

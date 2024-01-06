@@ -33,7 +33,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
       </main>
       {!loading && (
         <footer className="footer">
-          <nav>
+          <nav className="footer__navigation">
             <Link to="/about">
               <FormattedMessage id="footer.about" />
             </Link>

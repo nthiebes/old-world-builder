@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { Select } from "../../components/select";
 import { List } from "../../components/list";
 import { Expandable } from "../../components/expandable";
+import { Spinner } from "../../components/spinner";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
 
@@ -16,8 +17,10 @@ import "./Datasets.css";
 
 export const Datasets = ({ isMobile }) => {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [armyInput, setArmyInput] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
   const [army, setArmy] = useState("kingdom-of-bretonnia");
   const game = "the-old-world";
   const [dataset, setDataset] = useState({
@@ -29,6 +32,17 @@ export const Datasets = ({ isMobile }) => {
     allies: [],
   });
   const intl = useIntl();
+  const copyText = () => {
+    navigator.clipboard &&
+      navigator.clipboard.writeText(JSON.stringify(dataset, null, 2)).then(
+        () => {
+          setCopied(true);
+        },
+        () => {
+          setCopyError(true);
+        }
+      );
+  };
   const handleSubmit = ({ unit, isNew, type }) => {
     if (isNew) {
       setDataset({
@@ -51,6 +65,7 @@ export const Datasets = ({ isMobile }) => {
     setArmy(value);
   };
   const handleLoadArmy = () => {
+    setIsLoading(true);
     fetcher({
       url: `games/${game}/${army}`,
       onSuccess: (dataset) => {
@@ -74,15 +89,6 @@ export const Datasets = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // if (isLoading) {
-  //   return (
-  //     <>
-  //       <Header headline="Old World Builder" />
-  //       <Main loading />
-  //     </>
-  //   );
-  // }
-
   return (
     <>
       <Helmet>
@@ -93,36 +99,69 @@ export const Datasets = ({ isMobile }) => {
         </title>
       </Helmet>
 
-      <Header headline="Old World Builder" />
+      <Header headline="Old World Builder" hasMainNavigation />
 
       <Main className="datasets">
         <Button to="/" icon="home" centered spaceBottom>
           <FormattedMessage id="misc.startpage" />
         </Button>
 
-        <h2>
-          <FormattedMessage id="datasets.title" />
-        </h2>
-        <p className="datasets__paragraph">Thank you!</p>
-        <p className="datasets__paragraph">More links?</p>
-        <ul>
-          <li>Write as in book, double check</li>
-          <li>Special rule missing - report</li>
-        </ul>
-        <br />
+        <div className="datasets__info">
+          <h2 className="page-headline">Datasets Editor</h2>
+          <p className="datasets__paragraph">
+            Thank you for taking the time to improve the{" "}
+            <i>Old World Builder</i>! You can expand existing army data, add
+            missing translations or create a new army dataset.
+          </p>
+          <h3>What is a dataset?</h3>
+          <p className="datasets__paragraph">
+            A datasets contains the data of all units required to create an army
+            list in the <i>Old World Builder</i>. The datasets for each army are
+            defined in a{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+            >
+              JSON format
+            </a>{" "}
+            (although you don't have to edit these manually) .
+          </p>
+          <h3>Notes before you get started</h3>
+          <ul>
+            <li>
+              Currently only datasets for "Warhammer: The Old World" can be
+              created on this page
+            </li>
+            <li>
+              Translate texts from the army books very carefully and exactly as
+              they appear in the book
+            </li>
+            <li>Proofread after you're done</li>
+            <li>
+              If a special rule cannot be mapped, write to us in{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://discord.gg/87nUyjUxTU"
+              >
+                Discord
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <div className="datasets__columns">
           <section className="column datasets__column">
             <header className="editor__header datasets__column-header">
-              <h2>
-                <FormattedMessage id="Load a dataset" />
-              </h2>
+              <h2>Load a dataset</h2>
             </header>
 
             <Select
               options={gameSystems.filter(({ id }) => id === game)[0].armies}
               onChange={handleArmyChange}
               selected="kingdom-of-bretonnia"
+              spaceTop
               spaceBottom
               required
             />
@@ -144,18 +183,20 @@ export const Datasets = ({ isMobile }) => {
 
           <section className="column datasets__column">
             <header className="editor__header datasets__column-header">
-              <h2>
-                <FormattedMessage id="Edit units" />
-              </h2>
+              <h2>Edit units</h2>
             </header>
-
-            <h3>
-              <FormattedMessage id="Characters" />
-            </h3>
+            {isLoading && <Spinner />}
+            {dataset.characters.length > 0 && (
+              <h3 className="datasets__edit-headline">Characters</h3>
+            )}
             <ul>
               {dataset.characters.map((unit, index) => (
                 <List key={index}>
-                  <Expandable headline={unit.name_en} noMargin>
+                  <Expandable
+                    headline={unit.name_en}
+                    noMargin
+                    className="datasets__expandable"
+                  >
                     <Entity
                       unit={unit}
                       type="characters"
@@ -165,25 +206,33 @@ export const Datasets = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <h3>
-              <FormattedMessage id="Core" />
-            </h3>
+            {dataset.core.length > 0 && (
+              <h3 className="datasets__edit-headline">Core Units</h3>
+            )}
             <ul>
               {dataset.core.map((unit, index) => (
                 <List key={index}>
-                  <Expandable headline={unit.name_en} noMargin>
+                  <Expandable
+                    headline={unit.name_en}
+                    noMargin
+                    className="datasets__expandable"
+                  >
                     <Entity unit={unit} type="core" onSubmit={handleSubmit} />
                   </Expandable>
                 </List>
               ))}
             </ul>
-            <h3>
-              <FormattedMessage id="Special" />
-            </h3>
+            {dataset.special.length > 0 && (
+              <h3 className="datasets__edit-headline">Special Units</h3>
+            )}
             <ul>
               {dataset.special.map((unit, index) => (
                 <List key={index}>
-                  <Expandable headline={unit.name_en} noMargin>
+                  <Expandable
+                    headline={unit.name_en}
+                    noMargin
+                    className="datasets__expandable"
+                  >
                     <Entity
                       unit={unit}
                       type="special"
@@ -193,13 +242,17 @@ export const Datasets = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <h3>
-              <FormattedMessage id="Rare" />
-            </h3>
+            {dataset.rare.length > 0 && (
+              <h3 className="datasets__edit-headline">Rare Units</h3>
+            )}
             <ul>
               {dataset.rare.map((unit, index) => (
                 <List key={index}>
-                  <Expandable headline={unit.name_en} noMargin>
+                  <Expandable
+                    headline={unit.name_en}
+                    noMargin
+                    className="datasets__expandable"
+                  >
                     <Entity unit={unit} type="rare" onSubmit={handleSubmit} />
                   </Expandable>
                 </List>
@@ -209,59 +262,88 @@ export const Datasets = ({ isMobile }) => {
 
           <section className="column datasets__column">
             <header className="editor__header datasets__column-header">
-              <h2>
-                <FormattedMessage id="Add new unit" />
-              </h2>
+              <h2>Add new unit</h2>
             </header>
-
-            <ul>
-              <List>
-                <Expandable headline="Character" noMargin>
-                  <Entity type="characters" onSubmit={handleSubmit} />
-                </Expandable>
-              </List>
-              <List>
-                <Expandable headline="Core Unit" noMargin>
-                  <Entity type="core" onSubmit={handleSubmit} />
-                </Expandable>
-              </List>
-              <List>
-                <Expandable headline="Special Unit" noMargin>
-                  <Entity type="special" onSubmit={handleSubmit} />
-                </Expandable>
-              </List>
-              <List>
-                <Expandable headline="Rare Unit" noMargin>
-                  <Entity type="rare" onSubmit={handleSubmit} />
-                </Expandable>
-              </List>
-            </ul>
+            <Expandable
+              headline="Character"
+              noMargin
+              className="datasets__unit-type"
+            >
+              <Entity type="characters" onSubmit={handleSubmit} />
+            </Expandable>
+            <Expandable
+              headline="Core Unit"
+              noMargin
+              className="datasets__unit-type"
+            >
+              <Entity type="core" onSubmit={handleSubmit} />
+            </Expandable>
+            <Expandable
+              headline="Special Unit"
+              noMargin
+              className="datasets__unit-type"
+            >
+              <Entity type="special" onSubmit={handleSubmit} />
+            </Expandable>
+            <Expandable
+              headline="Rare Unit"
+              noMargin
+              className="datasets__unit-type"
+            >
+              <Entity type="rare" onSubmit={handleSubmit} />
+            </Expandable>
           </section>
 
           <section className="column datasets__column">
             <header className="editor__header datasets__column-header">
-              <h2>
-                <FormattedMessage id="JSON output" />
-              </h2>
+              <h2>JSON output</h2>
             </header>
 
             <textarea
               className="datasets__output"
-              rows="30"
-              spellcheck="false"
+              rows="20"
+              spellCheck="false"
               data-gramm="false"
               value={JSON.stringify(dataset, null, 2)}
+              onChange={() => {}}
             />
-            <p>
-              <FormattedMessage id="Copy and post in discord" />
-            </p>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://discord.com/channels/1120710419108085780/1120720528068583434"
+            <Button
+              icon={copied ? "check" : "copy"}
+              centered
+              spaceTop
+              spaceBottom
+              onClick={copyText}
             >
-              Discord
-            </a>
+              {copied ? "Copied" : "Copy"}
+            </Button>
+            {copyError && (
+              <p className="export__error">
+                <FormattedMessage id="export.error" />
+              </p>
+            )}
+            <p className="datasets__paragraph">
+              When you're done editing, copy the text and post it in the{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://discord.com/channels/1120710419108085780/1120720528068583434"
+              >
+                "Datasets Contribution" Discord Channel
+              </a>
+              .
+            </p>
+            <p>
+              If you're a bit tech-savvy, you can also create a pull request
+              directly in{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/nthiebes/old-world-builder/pulls"
+              >
+                GitHub
+              </a>
+              .
+            </p>
           </section>
         </div>
       </Main>
