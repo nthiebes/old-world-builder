@@ -72,7 +72,7 @@ export const App = () => {
           <Route path="/help">{<Help />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets isMobile />}</Route>
-          <Route path="/changelog">{<Datasets />}</Route>
+          <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/" exact>
             {<Home isMobile />}
