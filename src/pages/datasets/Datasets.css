@@ -16,7 +16,6 @@
 
 .datasets__info {
   margin-bottom: 2rem;
-  margin-left: 1rem;
 }
 
 .datasets__info li {
@@ -44,9 +43,20 @@
   }
 
   .column.datasets__column {
-    width: 25%;
     padding: 0 2rem 2rem 2rem;
-    position: relative;
+    width: 25%;
+  }
+
+  .datasets__info {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  .column.datasets__column {
+    padding: 0 2rem 2rem 2rem;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
