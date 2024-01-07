@@ -34,7 +34,7 @@ const armyIconMap = {
   dwarfs: dwarfs,
   greenskins: greenskins,
   "empire-of-man": theEmpire,
-  "orc-and-goblins-tribes": greenskins,
+  "orc-and-goblin-tribes": greenskins,
   "dwarfen-mountain-holds": dwarfs,
   "warriors-of-chaos": chaosWarriors,
   "kingdom-of-bretonnia": bretonnia,
@@ -127,7 +127,7 @@ export const Home = ({ isMobile }) => {
             )
           )}
         </ul>
-        <Button centered to="/new" icon="new-list" spaceTop>
+        <Button centered to="/new" icon="new-list" spaceTop spaceBottom>
           <FormattedMessage id="home.newList" />
         </Button>
       </MainComponent>

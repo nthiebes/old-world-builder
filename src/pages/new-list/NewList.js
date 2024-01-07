@@ -183,7 +183,7 @@ export const NewList = ({ isMobile }) => {
             spaceBottom
             required
           />
-          <Button centered icon="add-list" submitButton>
+          <Button centered icon="add-list" submitButton spaceBottom>
             <FormattedMessage id="new.create" />
           </Button>
         </form>
