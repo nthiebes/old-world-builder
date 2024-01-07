@@ -410,12 +410,11 @@ export const Editor = ({ isMobile }) => {
                 active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
-                  <span>
-                    {unit.strength || unit.minimum
-                      ? `${unit.strength || unit.minimum} `
-                      : null}
-                    <b>{unit[`name_${language}`]}</b>
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span>{`${unit.strength || unit.minimum}`}</span>
+                  ) : null}
+
+                  <b>{unit[`name_${language}`]}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -464,12 +463,10 @@ export const Editor = ({ isMobile }) => {
                 active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
-                  <span>
-                    {unit.strength || unit.minimum
-                      ? `${unit.strength || unit.minimum} `
-                      : null}
-                    <b>{unit[`name_${language}`]}</b>
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span>{`${unit.strength || unit.minimum}`}</span>
+                  ) : null}
+                  <b>{unit[`name_${language}`]}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -518,12 +515,10 @@ export const Editor = ({ isMobile }) => {
                 active={location.pathname.includes(unit.id)}
               >
                 <div className="editor__list-inner">
-                  <span>
-                    {unit.strength || unit.minimum
-                      ? `${unit.strength || unit.minimum} `
-                      : null}
-                    <b>{unit[`name_${language}`]}</b>
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span>{`${unit.strength || unit.minimum}`}</span>
+                  ) : null}
+                  <b>{unit[`name_${language}`]}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
