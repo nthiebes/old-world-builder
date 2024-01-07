@@ -22,6 +22,7 @@ export const Datasets = ({ isMobile }) => {
   const [copyError, setCopyError] = useState(false);
   const [army, setArmy] = useState("kingdom-of-bretonnia");
   const game = "the-old-world";
+  const localDataset = localStorage.getItem("owb.dataset");
   const [dataset, setDataset] = useState({
     characters: [],
     core: [],
@@ -44,27 +45,32 @@ export const Datasets = ({ isMobile }) => {
   };
   const handleSubmit = ({ unit, isNew, type }) => {
     if (isNew) {
-      setDataset({
-        ...dataset,
-        [type]: [...dataset[type], unit],
-      });
+      const newDataset = { ...dataset, [type]: [...dataset[type], unit] };
+
+      setDataset(newDataset);
+      localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
     } else {
-      setDataset({
+      const newDataset = {
         ...dataset,
         [type]: dataset[type].map((existingUnit) =>
           existingUnit.id === unit.id ? unit : existingUnit
         ),
-      });
+      };
+
+      setDataset(newDataset);
+      localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
     }
 
     window.scrollTo(0, 0);
   };
   const handleDelete = ({ id, type }) => {
-    setDataset({
+    const newDataset = {
       ...dataset,
       [type]: dataset[type].filter((existingUnit) => existingUnit.id !== id),
-    });
+    };
 
+    setDataset(newDataset);
+    localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
     window.scrollTo(0, 0);
   };
   const handleArmyChange = (value) => {
@@ -76,6 +82,10 @@ export const Datasets = ({ isMobile }) => {
       url: `games/${game}/${army}`,
       onSuccess: (existingDataset) => {
         setDataset(existingDataset);
+        localStorage.setItem(
+          "owb.dataset",
+          JSON.stringify(existingDataset, null, 2)
+        );
         setIsLoading(false);
       },
     });
@@ -86,6 +96,15 @@ export const Datasets = ({ isMobile }) => {
   const handleArmyFromJsonClick = () => {
     try {
       setDataset(JSON.parse(armyInput));
+      localStorage.setItem("owb.dataset", armyInput);
+      setArmyInput("");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleArmyFromLocalClick = () => {
+    try {
+      setDataset(JSON.parse(localStorage.getItem("owb.dataset")));
     } catch (error) {
       console.log(error);
     }
@@ -184,7 +203,17 @@ export const Datasets = ({ isMobile }) => {
             />
             <Button onClick={handleArmyFromJsonClick}>Load from .json</Button>
             <hr />
-            <Button disabled>Load local dataset</Button>
+            <Button
+              disabled={!Boolean(localDataset)}
+              onClick={handleArmyFromLocalClick}
+              spaceBottom
+            >
+              Load local dataset
+            </Button>
+            <p>
+              The most current dataset is always saved locally, so you can
+              continue working on it even after a reload.
+            </p>
           </section>
 
           <section className="column datasets__column">

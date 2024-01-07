@@ -388,7 +388,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                 }
                 required
               />
-              <Expandable headline="Magic items">
+              <Expandable headline="Allowed magic item categories">
                 {magicItemTypes.map((item, itemIndex) => (
                   <div className="checkbox" key={item}>
                     <input
@@ -415,7 +415,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                   </div>
                 ))}
                 <label htmlFor={`command-magic-points-${index}-${randomId}`}>
-                  Maximum points for magic items
+                  Max. magic item points
                 </label>
                 <NumberInput
                   id={`command-magic-points-${index}-${randomId}`}
@@ -449,6 +449,8 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       <h3>Equipment</h3>
       <p className="datasets__paragraph">
         All equipment options are mutually exclusive.
+        <br />
+        <i>(e.g. "Hand weapon" or "Great weapon")</i>
       </p>
       {unit.equipment.map((equipment, index) => (
         <div className="entity__second-level" key={index}>
@@ -556,6 +558,9 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               Selected by default
             </label>
           </div>
+          <p>
+            <i>(e.g. when "Hand weapon" is the default equipment)</i>
+          </p>
         </div>
       ))}
       <Button
@@ -573,6 +578,8 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       <h3>Options</h3>
       <p className="datasets__paragraph">
         All options are NOT mutually exclusive.
+        <br />
+        <i>(e.g. "Shield")</i>
       </p>
       {unit.options.map((option, index) => (
         <div className="entity__second-level" key={index}>
@@ -658,8 +665,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               Allow multiple selections
             </label>
           </div>
+          <p>
+            <i>(e.g. for Nightgoblin Fanatics)</i>
+          </p>
           {option.stackable && (
             <>
+              <br />
               <label htmlFor={`options-minimum${index}-${randomId}`}>
                 Minimum
               </label>
@@ -715,6 +726,8 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       <h3>Mounts</h3>
       <p className="datasets__paragraph">
         All mount options are mutually exclusive.
+        <br />
+        <i>(e.g. "On foot" or "Hippogryph")</i>
       </p>
       {unit.mounts.map((mount, index) => (
         <div className="entity__second-level" key={index}>
@@ -800,6 +813,9 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               Selected by default
             </label>
           </div>
+          <p>
+            <i>(e.g. when "On foot" is the default mount)</i>
+          </p>
         </div>
       ))}
       <Button
