@@ -36,7 +36,7 @@ export const Changelog = () => {
         <h2 className="page-headline">
           <FormattedMessage id="changelog.title" />
         </h2>
-        <h3>v0.4.0</h3>
+        <h3>v0.4.1</h3>
         <p>
           <time>
             <i>
