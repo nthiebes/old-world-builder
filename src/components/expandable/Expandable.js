@@ -2,20 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+import "./Expandable.css";
+
 export const Expandable = ({
   className,
   headline,
   children,
-  darkMode,
   notBold,
   open,
   onClick,
+  noMargin,
 }) => (
-  <details className={classNames("expandable", className)} open={open}>
+  <details
+    className={classNames(
+      "expandable",
+      noMargin && "expandable--no-margin",
+      className
+    )}
+    open={open}
+  >
     <summary
       className={classNames(
         "expandable__summary",
-        darkMode && "expandable__summary--dark-mode",
         notBold && "expandable__summary--normal"
       )}
       onClick={onClick}
@@ -30,7 +38,6 @@ Expandable.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   headline: PropTypes.node.isRequired,
-  darkMode: PropTypes.bool,
   open: PropTypes.bool,
   onClick: PropTypes.func,
   notBold: PropTypes.bool,

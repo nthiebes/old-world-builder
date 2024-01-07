@@ -131,6 +131,13 @@ h3 {
   color: var(--color-headline);
 }
 
+.page-headline {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 29px;
+}
+
 ul {
   list-style: none;
 }
@@ -171,6 +178,12 @@ a:active {
   a:hover {
     color: var(--color-button);
   }
+}
+
+hr {
+  height: 2px;
+  background-color: var(--color-list);
+  margin: 2rem 0;
 }
 
 .radio {
@@ -218,6 +231,11 @@ a:active {
 .input:focus,
 .input:active {
   box-shadow: 0 0 7px 2px var(--color-list) inset;
+}
+
+.input:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .checkbox {

@@ -5,6 +5,7 @@
 .main--mobile {
   padding: 62px 1rem 1rem 1rem;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .main--desktop {
@@ -31,6 +32,12 @@
   padding: 1.5rem 1rem;
   border-top: 2px solid var(--color-list);
   text-align: center;
+}
+
+.footer__navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer__languages {

@@ -1,16 +1,18 @@
 # Old World Builder
 
-The "Old World Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop games Warhammer Fantasy and Warhammer: The Old World (once released).
+The "Old World Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop games Warhammer Fantasy and Warhammer: The Old World.
 
-This project is still work in progress.
+This project is still in beta phase.
 
 You can already test it here: [old-world-builder.com](https://old-world-builder.com/)
 
 ## Contribution
 
-[Datasets documentation](https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md)
+You can help to complete or translate missing or incomplete army datasets.
 
-[Datasets at /public/games/warhammer-fantasy](https://github.com/nthiebes/old-world-builder/tree/main/public/games/warhammer-fantasy)
+More details on the [datasets page](https://old-world-builder.com/datasets) or on our [Discord](https://discord.gg/87nUyjUxTU).
+
+[Datasets JSON documentation](https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md)
 
 ## Feedback
 

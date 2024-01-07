@@ -317,16 +317,16 @@ export const Unit = ({ isMobile }) => {
           />
         )}
         {!unit.minimum &&
-          !unit.command &&
-          !unit.equipment &&
-          !unit.mounts &&
-          !unit.magic &&
-          !unit.options && (
+          (!unit.command || (unit.command && !unit.command.length)) &&
+          (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
+          (!unit.mounts || (unit.mounts && !unit.mounts.length)) &&
+          (!unit.magic || (unit.magic && !unit.magic.maxPoints)) &&
+          (!unit.options || (unit.options && !unit.options.length)) && (
             <i className="unit__empty">
               <FormattedMessage id="unit.noOptions" />
             </i>
           )}
-        {unit.minimum && (
+        {unit.minimum ? (
           <>
             <label htmlFor="strength" className="unit__strength">
               <FormattedMessage id="unit.unitSize" />
@@ -340,7 +340,7 @@ export const Unit = ({ isMobile }) => {
               onChange={handleStrengthChange}
             />
           </>
-        )}
+        ) : null}
         {unit.command && unit.command.length > 0 && (
           <>
             <h2 className="unit__subline">
@@ -402,7 +402,7 @@ export const Unit = ({ isMobile }) => {
                         </i>
                       </label>
                     </div>
-                    {magic && active && (
+                    {magic?.maxPoints && active ? (
                       <List
                         to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                         className="editor__list unit__link"
@@ -451,7 +451,7 @@ export const Unit = ({ isMobile }) => {
                           </p>
                         )}
                       </List>
-                    )}
+                    ) : null}
                   </Fragment>
                 );
               }
@@ -684,7 +684,7 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
-        {unit?.magic?.maxPoints && (
+        {unit.magic?.maxPoints ? (
           <List
             to={`/editor/${listId}/${type}/${unitId}/magic`}
             className="editor__list unit__link"
@@ -718,7 +718,7 @@ export const Unit = ({ isMobile }) => {
               </p>
             )}
           </List>
-        )}
+        ) : null}
       </MainComponent>
     </>
   );

@@ -69,7 +69,7 @@ export const Home = ({ isMobile }) => {
         </title>
       </Helmet>
 
-      {isMobile && <Header headline="Old World Builder" />}
+      {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
       <MainComponent>
         {!lists.length && (
           <>

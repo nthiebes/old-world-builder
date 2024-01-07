@@ -33,16 +33,22 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
       </main>
       {!loading && (
         <footer className="footer">
-          <nav>
+          <nav className="footer__navigation">
             <Link to="/about">
               <FormattedMessage id="footer.about" />
             </Link>
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
-            {/* <Link to="/datasets">
+            <Link to="/datasets">
               <FormattedMessage id="footer.datasets" />
-            </Link> */}
+            </Link>
+            <Link to="/changelog">
+              <FormattedMessage id="footer.changelog" />
+            </Link>
+            <Link to="/privacy">
+              <FormattedMessage id="footer.privacy" />
+            </Link>
           </nav>
           <div className="footer__languages">
             <div className="radio">

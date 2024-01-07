@@ -17,6 +17,7 @@ export const Header = ({
   to,
   isSection,
   hasPointsError,
+  hasMainNavigation,
 }) => {
   const intl = useIntl();
   const location = useLocation();
@@ -25,6 +26,33 @@ export const Header = ({
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
+  const navigationLinks = [
+    {
+      name: intl.formatMessage({
+        id: "footer.about",
+      }),
+      to: "/about",
+    },
+    {
+      name: intl.formatMessage({
+        id: "footer.help",
+      }),
+      to: "/help",
+    },
+    {
+      name: intl.formatMessage({
+        id: "footer.datasets",
+      }),
+      to: "/datasets",
+    },
+    {
+      name: intl.formatMessage({
+        id: "footer.changelog",
+      }),
+      to: "/changelog",
+    },
+  ];
+  const navigation = hasMainNavigation ? navigationLinks : moreButton;
 
   useEffect(() => {
     setShowMenu(false);
@@ -47,7 +75,7 @@ export const Header = ({
           icon={isSection ? "close" : "back"}
         />
       ) : (
-        <>{moreButton && <div className="header__empty-icon" />}</>
+        <>{navigation && <div className="header__empty-icon" />}</>
       )}
       <div className="header__text">
         {headline && <h1 className="header__name">{headline}</h1>}
@@ -58,7 +86,7 @@ export const Header = ({
           </p>
         )}
       </div>
-      {moreButton ? (
+      {navigation ? (
         <Button
           type="text"
           className={classNames(showMenu && "header__more-button")}
@@ -71,8 +99,13 @@ export const Header = ({
         <>{to && <div className="header__empty-icon" />}</>
       )}
       {showMenu && (
-        <ul className="header__more">
-          {moreButton.map(({ callback, name, icon, to: moreButtonTo }) => (
+        <ul
+          className={classNames(
+            "header__more",
+            !hasMainNavigation && "header__more--secondary-navigation"
+          )}
+        >
+          {navigation.map(({ callback, name, icon, to: moreButtonTo }) => (
             <li key={name}>
               <Button
                 type="text"
@@ -98,4 +131,6 @@ Header.propTypes = {
   children: PropTypes.node,
   moreButton: PropTypes.array,
   isSection: PropTypes.bool,
+  hasPointsError: PropTypes.bool,
+  hasMainNavigation: PropTypes.bool,
 };

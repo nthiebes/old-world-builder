@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FormattedMessage } from "react-intl";
@@ -14,21 +14,11 @@ import "./Print.css";
 export const Print = () => {
   const { listId } = useParams();
   const { language } = useLanguage();
-  const [isDone, setIsDone] = useState(false);
+  const [isPrinting, setIsPrinting] = useState(false);
+  const [isShowList, setIsShowList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-
-  useEffect(() => {
-    if (list) {
-      document.title = `${list.name} - Old World Builder`;
-      window.onafterprint = () => {
-        document.title = "Old World Builder";
-        setIsDone(true);
-      };
-      window.print();
-    }
-  }, [list, language]);
 
   if (!list) {
     return null;
@@ -47,30 +37,72 @@ export const Print = () => {
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
+  const handlePrintClick = () => {
+    setIsPrinting(true);
+    document.title = `${list.name} - Old World Builder`;
+    window.onafterprint = () => {
+      document.title = "Old World Builder";
+      setIsPrinting(false);
+    };
+    window.print();
+  };
 
   return (
     <>
-      <Button
-        className="print-back"
-        to={`/editor/${listId}`}
-        centered
-        icon="back"
-        spaceTop
-        spaceBottom
-      >
-        <FormattedMessage id="header.back" />
-      </Button>
-      {!isDone && (
-        <p className="print-info">
-          <FormattedMessage id="print.printing" />
-        </p>
-      )}
+      <div className="hide-for-printing">
+        <Button
+          to={`/editor/${listId}`}
+          centered
+          icon="back"
+          spaceTop
+          spaceBottom
+        >
+          <FormattedMessage id="header.back" />
+        </Button>
+        {isPrinting ? (
+          <p className="print-info">
+            <FormattedMessage id="print.printing" />
+          </p>
+        ) : (
+          <>
+            <div className="checkbox print-checkbox">
+              <input
+                type="checkbox"
+                id="show"
+                onChange={() => setIsShowList(!isShowList)}
+                checked={isShowList}
+                className="checkbox__input"
+              />
+              <label htmlFor="show" className="checkbox__label">
+                <FormattedMessage id="export.visibleList" />
+              </label>
+            </div>
+            <p className="print-checkbox-description">
+              <i>
+                (<FormattedMessage id="export.visibleListDescription" />)
+              </i>
+            </p>
+            <Button
+              onClick={handlePrintClick}
+              centered
+              icon="print"
+              spaceTop
+              spaceBottom
+            >
+              <FormattedMessage id="misc.print" />
+            </Button>
+          </>
+        )}
+      </div>
+
       <main className="print">
         <h1>
           {list.name}{" "}
-          <span className="print__points">
-            [{allPoints} <FormattedMessage id="app.points" />]
-          </span>
+          {!isShowList && (
+            <span className="print__points">
+              [{allPoints} <FormattedMessage id="app.points" />]
+            </span>
+          )}
         </h1>
         <p className="print__subheader">
           {game.name}, {armyName}
@@ -80,19 +112,23 @@ export const Print = () => {
           <section>
             <h2>
               <FormattedMessage id="editor.characters" />{" "}
-              <span className="print__points">
-                [{charactersPoints} <FormattedMessage id="app.points" />]
-              </span>
+              {!isShowList && (
+                <span className="print__points">
+                  [{charactersPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
             </h2>
             <ul>
               {list.characters.map((unit) => (
                 <li key={unit.id}>
                   <h3>
                     {language === "de" ? unit.name_de : unit.name_en}
-                    <span className="print__points">
-                      [{getUnitPoints(unit)}{" "}
-                      <FormattedMessage id="app.points" />]
-                    </span>
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
                   </h3>
                   {getAllOptions(unit)}
                 </li>
@@ -104,19 +140,23 @@ export const Print = () => {
             <section>
               <h2>
                 <FormattedMessage id="editor.lords" />{" "}
-                <span className="print__points">
-                  [{lordsPoints} <FormattedMessage id="app.points" />]
-                </span>
+                {!isShowList && (
+                  <span className="print__points">
+                    [{lordsPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
               </h2>
               <ul>
                 {list.lords.map((unit) => (
                   <li key={unit.id}>
                     <h3>
                       {language === "de" ? unit.name_de : unit.name_en}
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
+                      {!isShowList && (
+                        <span className="print__points">
+                          [{getUnitPoints(unit)}{" "}
+                          <FormattedMessage id="app.points" />]
+                        </span>
+                      )}
                     </h3>
                     {getAllOptions(unit)}
                   </li>
@@ -127,19 +167,23 @@ export const Print = () => {
             <section>
               <h2>
                 <FormattedMessage id="editor.heroes" />{" "}
-                <span className="print__points">
-                  [{heroesPoints} <FormattedMessage id="app.points" />]
-                </span>
+                {!isShowList && (
+                  <span className="print__points">
+                    [{heroesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
               </h2>
               <ul>
                 {list.heroes.map((unit) => (
                   <li key={unit.id}>
                     <h3>
                       {language === "de" ? unit.name_de : unit.name_en}
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
+                      {!isShowList && (
+                        <span className="print__points">
+                          [{getUnitPoints(unit)}{" "}
+                          <FormattedMessage id="app.points" />]
+                        </span>
+                      )}
                     </h3>
                     {getAllOptions(unit)}
                   </li>
@@ -152,9 +196,11 @@ export const Print = () => {
         <section>
           <h2>
             <FormattedMessage id="editor.core" />{" "}
-            <span className="print__points">
-              [{corePoints} <FormattedMessage id="app.points" />]
-            </span>
+            {!isShowList && (
+              <span className="print__points">
+                [{corePoints} <FormattedMessage id="app.points" />]
+              </span>
+            )}
           </h2>
           <ul>
             {list.core.map((unit) => (
@@ -165,9 +211,12 @@ export const Print = () => {
                       `${unit.strength || unit.minimum} `}
                   </span>
                   {language === "de" ? unit.name_de : unit.name_en}
-                  <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{getUnitPoints(unit)}{" "}
+                      <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
                 </h3>
                 {getAllOptions(unit)}
               </li>
@@ -178,9 +227,11 @@ export const Print = () => {
         <section>
           <h2>
             <FormattedMessage id="editor.special" />{" "}
-            <span className="print__points">
-              [{specialPoints} <FormattedMessage id="app.points" />]
-            </span>
+            {!isShowList && (
+              <span className="print__points">
+                [{specialPoints} <FormattedMessage id="app.points" />]
+              </span>
+            )}
           </h2>
           <ul>
             {list.special.map((unit) => (
@@ -191,9 +242,12 @@ export const Print = () => {
                       `${unit.strength || unit.minimum} `}
                   </span>
                   {language === "de" ? unit.name_de : unit.name_en}
-                  <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{getUnitPoints(unit)}{" "}
+                      <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
                 </h3>
                 {getAllOptions(unit)}
               </li>
@@ -204,9 +258,11 @@ export const Print = () => {
         <section>
           <h2>
             <FormattedMessage id="editor.rare" />{" "}
-            <span className="print__points">
-              [{rarePoints} <FormattedMessage id="app.points" />]
-            </span>
+            {!isShowList && (
+              <span className="print__points">
+                [{rarePoints} <FormattedMessage id="app.points" />]
+              </span>
+            )}
           </h2>
           <ul>
             {list.rare.map((unit) => (
@@ -217,9 +273,12 @@ export const Print = () => {
                       `${unit.strength || unit.minimum} `}
                   </span>
                   {language === "de" ? unit.name_de : unit.name_en}
-                  <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{getUnitPoints(unit)}{" "}
+                      <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
                 </h3>
                 {getAllOptions(unit)}
               </li>
@@ -232,9 +291,11 @@ export const Print = () => {
             <section>
               <h2>
                 <FormattedMessage id="editor.mercenaries" />{" "}
-                <span className="print__points">
-                  [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                </span>
+                {!isShowList && (
+                  <span className="print__points">
+                    [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
               </h2>
               <ul>
                 {list.mercenaries.map((unit) => (
@@ -245,10 +306,12 @@ export const Print = () => {
                           `${unit.strength || unit.minimum} `}
                       </span>
                       {language === "de" ? unit.name_de : unit.name_en}
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
+                      {!isShowList && (
+                        <span className="print__points">
+                          [{getUnitPoints(unit)}{" "}
+                          <FormattedMessage id="app.points" />]
+                        </span>
+                      )}
                     </h3>
                     {getAllOptions(unit)}
                   </li>
@@ -259,9 +322,11 @@ export const Print = () => {
             <section>
               <h2>
                 <FormattedMessage id="editor.allies" />{" "}
-                <span className="print__points">
-                  [{alliesPoints} <FormattedMessage id="app.points" />]
-                </span>
+                {!isShowList && (
+                  <span className="print__points">
+                    [{alliesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
               </h2>
               <ul>
                 {list.allies.map((unit) => (
@@ -272,10 +337,12 @@ export const Print = () => {
                           `${unit.strength || unit.minimum} `}
                       </span>
                       {language === "de" ? unit.name_de : unit.name_en}
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
+                      {!isShowList && (
+                        <span className="print__points">
+                          [{getUnitPoints(unit)}{" "}
+                          <FormattedMessage id="app.points" />]
+                        </span>
+                      )}
                     </h3>
                     {getAllOptions(unit)}
                   </li>
