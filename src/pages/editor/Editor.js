@@ -411,8 +411,9 @@ export const Editor = ({ isMobile }) => {
               >
                 <div className="editor__list-inner">
                   <span>
-                    {(unit.strength || unit.minimum) &&
-                      `${unit.strength || unit.minimum} `}
+                    {unit.strength || unit.minimum
+                      ? `${unit.strength || unit.minimum} `
+                      : null}
                     <b>{unit[`name_${language}`]}</b>
                   </span>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
