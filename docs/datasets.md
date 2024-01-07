@@ -2,7 +2,24 @@
 
 The datasets for each army are defined in a [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format.
 
+You can also use our [Datasets editor](https://old-world-builder.com/datasets), no coding required.
+
 ## Army structure
+
+### Warhammer: The Old World
+
+```javascript
+{
+  "characters": [],
+  "core": [],
+  "special": [],
+  "rare": [],
+  "mercenaries": [],
+  "allies": [],
+}
+```
+
+### Warhammer Fantasy
 
 ```javascript
 {
@@ -14,7 +31,7 @@ The datasets for each army are defined in a [JSON](https://developer.mozilla.org
 }
 ```
 
-## Unit options
+## All unit options
 
 ```javascript
 {
