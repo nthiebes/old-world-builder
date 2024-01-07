@@ -361,7 +361,7 @@ export const Unit = ({ isMobile }) => {
               ) => {
                 let commandMagicPoints = 0;
 
-                if (unit.magic) {
+                if (unit.magic && unit.magic.items) {
                   unit.magic.items
                     .filter((item) => item.command === index)
                     .forEach(({ points }) => {

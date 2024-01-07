@@ -150,7 +150,7 @@ export const Datasets = ({ isMobile }) => {
             >
               JSON format
             </a>{" "}
-            (although you don't have to edit these manually) .
+            (although you don't have to edit these manually).
           </p>
           <h3>Notes before you get started</h3>
           <ul>
@@ -344,7 +344,7 @@ export const Datasets = ({ isMobile }) => {
 
             <textarea
               className="datasets__output"
-              rows="20"
+              rows="10"
               spellCheck="false"
               data-gramm="false"
               value={JSON.stringify(dataset, null, 2)}
