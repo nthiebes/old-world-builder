@@ -45,6 +45,12 @@ export const Header = ({
       }),
       to: "/datasets",
     },
+    {
+      name: intl.formatMessage({
+        id: "footer.changelog",
+      }),
+      to: "/changelog",
+    },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
 
