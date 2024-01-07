@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
@@ -41,7 +41,20 @@ export const About = () => {
           />
         </p>
         <p>
-          <FormattedMessage id="about.text2" />
+          <FormattedMessage
+            id="about.text2"
+            values={{
+              github: (
+                <a
+                  href="https://github.com/nthiebes/old-world-builder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              ),
+            }}
+          />
         </p>
 
         <h2>
@@ -52,15 +65,7 @@ export const About = () => {
             id="about.text3"
             values={{
               owb: <i>Old World Builder</i>,
-              github: (
-                <a
-                  href="https://github.com/nthiebes/old-world-builder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              ),
+              datasets: <Link to="/datasets">/datasets</Link>,
               discord: (
                 <a
                   href="https://discord.gg/87nUyjUxTU"
