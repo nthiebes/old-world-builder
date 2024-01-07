@@ -30,6 +30,8 @@ const magicItemTypes = [
   "artifact",
   "enchanted-item",
   "triptych",
+  "chaos-mutation",
+  "gift-of-chaos",
 ];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(

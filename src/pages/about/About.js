@@ -106,7 +106,9 @@ export const About = () => {
           />
         </p>
         <p>
-          <FormattedMessage id="about.disclaimer" />
+          <b>
+            <FormattedMessage id="about.disclaimer" />
+          </b>
         </p>
       </Main>
     </>

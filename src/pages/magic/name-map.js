@@ -71,4 +71,20 @@ export const nameMap = {
     name_de: "Kingdom of Bretonnia",
     name_en: "Kingdom of Bretonnia",
   },
+  "chaos-mutations": {
+    name_de: "Chaos Mutations",
+    name_en: "Chaos Mutations",
+  },
+  "chaos-mutation": {
+    name_de: "Chaos Mutation",
+    name_en: "Chaos Mutation",
+  },
+  "gifts-of-chaos": {
+    name_de: "Gifts of Chaos",
+    name_en: "Gifts of Chaos",
+  },
+  "gift-of-chaos": {
+    name_de: "Gift of Chaos",
+    name_en: "Gift of Chaos",
+  },
 };
