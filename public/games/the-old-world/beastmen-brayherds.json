@@ -1,8 +1,1436 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Beastlord",
+      "name_de": "Beastlord",
+      "id": "beastlord",
+      "points": 125,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great Weapoon",
+          "name_de": "Great Weapoon",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambush Special rule",
+          "name_de": "Ambush Special rule",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_de": "Tuskgor Chariot",
+          "points": 1,
+          "active": false
+        },
+        {
+          "name_en": "Ratgor Chariot",
+          "name_de": "Ratgor Chariot",
+          "points": 1,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "enchanted-item",
+          "artifact",
+          "banner",
+          "talisman",
+          "armor",
+          "weapon"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Wargor",
+      "name_de": "Wargor",
+      "id": "wargor",
+      "points": 55,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "additional hand weapon",
+          "name_de": "hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "additional hand weapon",
+          "name_de": "additional hand weapon",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "great weapon",
+          "name_de": "great weapon",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "light armour",
+          "name_de": "light armour",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "heavy armour",
+          "name_de": "heavy armour",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "shield",
+          "name_de": "shield",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "chaos mutations",
+          "name_de": "chaos mutations",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "ambush special rule",
+          "name_de": "ambush special rule",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "tuskgor chariot",
+          "name_de": "tuskgor chariot",
+          "points": 0,
+          "active": false
+        },
+        {
+          "name_en": "Ratgor chariot",
+          "name_de": "Ratgor chariot",
+          "points": 0,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "banner",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Great Bray-Shaman",
+      "name_de": "Great Bray-Shaman",
+      "id": "great-bray-shaman",
+      "points": 149,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Braystaff",
+          "name_de": "Braystaff",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers Special Rule",
+          "name_de": "Ambushers Special Rule",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 wizard",
+          "name_de": "Level 4 wizard",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_de": "Tuskgor Chariot",
+          "points": 1,
+          "active": false
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_de": "Razorgor Chariot",
+          "points": 1,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "banner"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Bray Shaman",
+      "name_de": "Bray Shaman",
+      "id": "bray-shaman",
+      "points": 65,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Braystaff",
+          "name_de": "Braystaff",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers Special Rule",
+          "name_de": "Ambushers Special Rule",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Shaman",
+          "name_de": "Level 2 Shaman",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_de": "Tuskgor Chariot",
+          "points": 1,
+          "active": false
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_de": "Razorgor Chariot",
+          "points": 1,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Doombull",
+      "name_de": "Doombull",
+      "id": "doombull",
+      "points": 210,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Handweapon",
+          "name_de": "Handweapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 6,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Gorebull",
+      "name_de": "Gorebull",
+      "id": "gorebull",
+      "points": 129,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional hand Weapon",
+          "name_de": "Additional hand Weapon",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 6,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Centigore Chieftain",
+      "name_de": "Centigore Chieftain",
+      "id": "centigore-chieftain",
+      "points": 73,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 4,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Throwing Axe",
+          "name_de": "Throwing Axe",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Javelins",
+          "name_de": "Javelin",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambush Special Rule",
+          "name_de": "Ambush Special Rule",
+          "points": 8,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Bestigor Herds",
+      "name_de": "Bestigor Herds",
+      "id": "bestigor-herds",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Gouge-Horn",
+          "name_de": "Gouge-Horn",
+          "points": 6,
+          "magic": {
+            "types": [
+              "enchanted-item",
+              "artifact",
+              "talisman",
+              "armor",
+              "weapon"
+            ],
+            "maxPoints": 26
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Gor Herds",
+      "name_de": "Gor Herds",
+      "id": "gor-herds",
+      "points": 7,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "True-Born",
+          "name_de": "True-Born",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "artifact",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Additional hand Weapon",
+          "name_de": "Additional hand Weapon",
+          "points": -1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": -1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers Special Rule",
+          "name_de": "Ambushers Special Rule",
+          "points": 9,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ungor Herd",
+      "name_de": "Ungor Herd",
+      "id": "ungor-herd",
+      "points": 3,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Half Horn",
+          "name_de": "Half Horn",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Shield",
+          "name_de": "Hand Weapon and Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting Spears",
+          "name_de": "Thrusting Spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing Spears",
+          "name_de": "Throwing Spears",
+          "points": -1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ambusher special Rule",
+          "name_de": "Ambusher special Rule",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Warhounds",
+      "name_de": "Warhounds",
+      "id": "warhounds",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Armoured Hide",
+          "name_de": "Armoured Hide",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Poisoned Attacks special rule",
+          "name_de": "Poisoned Attacks special rule",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Vanguard Special rule",
+          "name_de": "Vanguard Special rule",
+          "points": 2,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Razorgor Herds",
+      "name_de": "Razorgor Herds",
+      "id": "razorgor-herds",
+      "points": 52,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Tusks (counts as a Hand weapon)",
+          "name_de": "Tusks",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Calloused Hide (counts as a Light Armour) ",
+          "name_de": "Calloused Hide (counts as a Light Armour) ",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Tuskgor Chariots",
+      "name_de": "Tuskgor Chariots",
+      "id": "tuskgor-chariots-",
+      "points": 88,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bestigor Crew - Hand weapons and Great weapons",
+          "name_de": "Bestigor Crew - Hand weapons and Great weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Gor Crew - Hand weapons and Cavalry Spear",
+          "name_de": "Gor Crew - Hand weapons and Cavalry Spear",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Tuskrgor - Tusks (counts as Hand Weapon)",
+          "name_de": "Tuskrgor - Tusks (counts as Hand Weapon)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Harpies",
+      "name_de": "Harpies",
+      "id": "harpies",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as hand weapons)",
+          "name_de": "Claws (counts as hand weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Minotaur Herds",
+      "name_de": "Minotaur Herds",
+      "id": "minotaur-herds",
+      "points": 47,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Bloodkine",
+          "name_de": "Bloodkine",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Handweapons and light Armour",
+          "name_de": "Handweapons and light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_de": "Additional hand weapons",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ambushers special Rule",
+          "name_de": "Ambushers special Rule",
+          "points": 10,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Cockatrice",
+      "name_de": "Cockatrice",
+      "id": "cockatrice",
+      "points": 169,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as Hand Weapons), Petrifying gaze, and Scaly Skin",
+          "name_de": "Claws (counts as Hand Weapons), Petrifying gaze, and Scaly Skin",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Acidic Vomit",
+          "name_de": "Acidic Vomit",
+          "points": 20,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Poison Attacks Special Rule",
+          "name_de": "Poison Attacks Special Rule",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Centigor Herds",
+      "name_de": "Centigor Herds",
+      "id": "centigor-herds",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Gorehoof",
+          "name_de": "Gorehoof",
+          "points": 6,
+          "magic": {
+            "types": [
+              "artifact",
+              "enchanted-item",
+              "armor",
+              "weapon",
+              "talisman"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons and Shields",
+          "name_de": "Hand Weapons and Shields",
+          "points": -1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing spears",
+          "name_de": "Throwing spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Replace shields with Great Weapons",
+          "name_de": "Replace shields with Great Weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing Axes",
+          "name_de": "Throwing Axes",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Javalins",
+          "name_de": "Javalins",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ambushers Special Rule",
+          "name_de": "Ambushers Special Rule",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Dragon Ogres",
+      "name_de": "Dragon Ogres",
+      "id": "dragon-ogres",
+      "points": 55,
+      "minimum": 1,
+      "maximum": 9,
+      "command": [
+        {
+          "name_en": "Shartak",
+          "name_de": "Shartak",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Additional hand Weapons",
+          "name_de": "Additional hand Weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapon and light Armour",
+          "name_de": "Hand weapon and light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great Weapons",
+          "name_de": "Great Weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Razergor Chariot",
+      "name_de": "Razergor Chariot",
+      "id": "razergor-chariot",
+      "points": 120,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bestigor Crew - Hand weapons and Great weapons",
+          "name_de": "Bestigor Crew - Hand weapons and Great weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Gor Crew - Hand weapons and Cavalry Spear",
+          "name_de": "Gor Crew - Hand weapons and Cavalry Spear",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Razergor - Tusks (counts as Hand Weapon)",
+          "name_de": "Razergor - Tusks (counts as Hand Weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Dragon Ogre Shaggoth",
+      "name_de": "Dragon Ogre Shaggoth",
+      "id": "dragon-ogre-shaggoth-",
+      "points": 225,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and Light Armour",
+          "name_de": "Hand weapon and Light Armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand Weapon",
+          "name_de": "Additional hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "na",
+          "name_de": "na",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magic Items",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Jabberslythe",
+      "name_de": "Jabberslythe",
+      "id": "jabberslythe",
+      "points": 195,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked Claws, Slithery tongue, Scaly Skin",
+          "name_de": "Wicked Claws, Slithery tonge, Scaly Skin",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Cygor",
+      "name_de": "Cygor",
+      "id": "cygor",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (",
+          "name_de": "Claws (counts as Hand Weapon), Hurl Attack, and Calloused hide",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "name_de": "Chaos Giant",
+      "id": "chaos-giant-",
+      "points": 198,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Giant's Club and Calloused Hide",
+          "name_de": "Giant's Club and Calloused Hide",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ghorgon",
+      "name_de": "Ghorgon",
+      "id": "ghorgon",
+      "points": 265,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaver hands and Calloused Hide",
+          "name_de": "Cleaver hands and Calloused Hide",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
