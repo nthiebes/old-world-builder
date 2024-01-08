@@ -1156,7 +1156,7 @@
       "name_en": "Dragon Ogres",
       "name_de": "Dragon Ogres",
       "id": "dragon-ogres",
-      "points": 55,
+      "points": 56,
       "minimum": 1,
       "maximum": 9,
       "command": [
@@ -1174,15 +1174,6 @@
             ],
             "maxPoints": 25
           }
-        },
-        {
-          "name_en": "na",
-          "name_de": "na",
-          "points": 0,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
         }
       ],
       "equipment": [
@@ -1194,8 +1185,8 @@
           "active": false
         },
         {
-          "name_en": "Hand weapon and light Armour",
-          "name_de": "Hand weapon and light Armour",
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1203,7 +1194,7 @@
         {
           "name_en": "Great Weapons",
           "name_de": "Great Weapons",
-          "points": 3,
+          "points": 4,
           "perModel": true,
           "active": false
         },
@@ -1213,6 +1204,15 @@
           "points": 3,
           "perModel": true,
           "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
         },
         {
           "name_en": "Heavy Armour",
