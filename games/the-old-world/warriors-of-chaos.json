@@ -1,8 +1,2450 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Chaos Lord",
+      "name_de": "Chaos Lord",
+      "id": "chaos-lord",
+      "points": 195,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Daemonic Mount",
+          "name_de": "Daemonic Mount",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_de": "Chaos Chariot",
+          "points": 110,
+          "active": false
+        },
+        {
+          "name_en": "Gorebeast Chariot",
+          "name_de": "Gorebeast Chariot",
+          "points": 135,
+          "active": false
+        },
+        {
+          "name_en": "Manticore",
+          "name_de": "Manticore",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Dragon",
+          "name_de": "Chaos Dragon",
+          "points": 285,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Exalted Champion",
+      "name_de": "Exalted Champion",
+      "id": "exalted-champion",
+      "points": 125,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Daemonic Mount",
+          "name_de": "Daemonic Mount",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_de": "Chaos Chariot",
+          "points": 110,
+          "active": false
+        },
+        {
+          "name_en": "Gorebeast Chariot",
+          "name_de": "Gorebeast Chariot",
+          "points": 135,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 75
+      }
+    },
+    {
+      "name_en": "Aspiring Champion",
+      "name_de": "Aspiring Champion",
+      "id": "aspiring-champion",
+      "points": 70,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_de": "Chaos Chariot",
+          "points": 110,
+          "active": false
+        },
+        {
+          "name_en": "Gorebeast Chariot",
+          "name_de": "Gorebeast Chariot",
+          "points": 135,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Daemon Prince",
+      "name_de": "Daemon Prince",
+      "id": "daemon-prince",
+      "points": 215,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 6,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Fly (9)",
+          "name_de": "Fly (9)",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 1",
+          "name_de": "Wizard Level 1",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 2",
+          "name_de": "Wizard Level 2",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 3",
+          "name_de": "Wizard Level 3",
+          "points": 75,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 4",
+          "name_de": "Wizard Level 4",
+          "points": 100,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Chaos Sorcerer",
+      "name_de": "Chaos Sorcerer",
+      "id": "chaos-sorcerer",
+      "points": 195,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 4",
+          "name_de": "Wizard Level 4",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Daemonic Mount",
+          "name_de": "Daemonic Mount",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_de": "Chaos Chariot",
+          "points": 110,
+          "active": false
+        },
+        {
+          "name_en": "Manticore",
+          "name_de": "Manticore",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Dragon",
+          "name_de": "Chaos Dragon",
+          "points": 285,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Exalted Sorcerer",
+      "name_de": "Exalted Sorcerer",
+      "id": "exalted-sorcerer",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 2",
+          "name_de": "Wizard Level 2",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Daemonic Mount",
+          "name_de": "Daemonic Mount",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_de": "Chaos Chariot",
+          "points": 110,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "gift-of-chaos"
+        ],
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Chaos Warriors",
+      "name_de": "Chaos Warriors",
+      "id": "chaos-warriors",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Knights",
+      "name_de": "Chaos Knights",
+      "id": "chaos-knights",
+      "points": 27,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Marauders",
+      "name_de": "Chaos Marauders",
+      "id": "chaos-marauders",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Marauder Chieftain",
+          "name_de": "Marauder Chieftain",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Replace Close Order with Skirmishers",
+          "name_de": "Replace Close Order with Skirmishers",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Replace Close Order with Open Order",
+          "name_de": "Replace Close Order with Open Order",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Marauder Horsemen",
+      "name_de": "Marauder Horsemen",
+      "id": "marauder-horsemen",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Marauder Horsemaster",
+          "name_de": "Marauder Horsemaster",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing Spear",
+          "name_de": "Throwing Spear",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing axe",
+          "name_de": "Throwing axe",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Javelin",
+          "name_de": "Javelin",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Warhounds",
+      "name_de": "Chaos Warhounds",
+      "id": "chaos-warhounds",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Chaos Warhound Handler",
+          "name_de": "Chaos Warhound Handler",
+          "points": 15,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Claws and fangs (hand weapon)",
+          "name_de": "Claws and fangs (hand weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Armoured Hide (1)",
+          "name_de": "Armoured Hide (1)",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "name_de": "Poisoned Attacks",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Vanguard",
+          "name_de": "Vanguard",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Forsaken",
+      "name_de": "Forsaken",
+      "id": "forsaken",
+      "points": 19,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Mutated weapons (hand weapon)",
+          "name_de": "Mutated weapons (hand weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Forsaken by Khorne",
+          "name_de": "Forsaken by Khorne",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Forsaken by Nurgle",
+          "name_de": "Forsaken by Nurgle",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Forsaken by Slaanesh",
+          "name_de": "Forsaken by Slaanesh",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Forsaken by Tzeentch",
+          "name_de": "Forsaken by Tzeentch",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Chosen Chaos Warriors",
+      "name_de": "Chosen Chaos Warriors",
+      "id": "chosen-chaos-warriors",
+      "points": 17,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chosen Chaos Knights",
+      "name_de": "Chosen Chaos Knights",
+      "id": "chosen-chaos-knights",
+      "points": 36,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Chaos Steed",
+          "name_de": "Chaos Steed",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Chariot",
+      "name_de": "Chaos Chariot",
+      "id": "chaos-chariot",
+      "points": 110,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Armour value 3+",
+          "name_de": "Armour value 3+",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Chaos Steeds",
+          "name_de": "Chaos Steeds",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Ogres",
+      "name_de": "Chaos Ogres",
+      "id": "chaos-ogres",
+      "points": 33,
+      "minimum": 3,
+      "maximum": 15,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Trolls",
+      "name_de": "Chaos Trolls",
+      "id": "chaos-trolls",
+      "points": 41,
+      "minimum": 1,
+      "maximum": 9,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Troll vomit",
+          "name_de": "Troll vomit",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hides (light armour)",
+          "name_de": "Calloused hides (light armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Spawn",
+      "name_de": "Chaos Spawn",
+      "id": "chaos-spawn",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 4,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Flailing appendages (hand weapon)",
+          "name_de": "Flailing appendages (hand weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (heavy armour)",
+          "name_de": "Scaly skin (heavy armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Dragon Ogres",
+      "name_de": "Dragon Ogres",
+      "id": "dragon-ogres",
+      "points": 56,
+      "minimum": 1,
+      "maximum": 9,
+      "command": [
+        {
+          "name_en": "Shartak",
+          "name_de": "Shartak",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item",
+              "chaos-mutations"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chimera",
+      "name_de": "Chimera",
+      "id": "chimera",
+      "points": 180,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws and fangs (hand weapon)",
+          "name_de": "Claws and fangs (hand weapon)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (heavy armour)",
+          "name_de": "Scaly skin (heavy armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Flaming Breath",
+          "name_de": "Flaming Breath",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Fiend Tail",
+          "name_de": "Fiend Tail",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Regeneration (5+)",
+          "name_de": "Regeneration (5+)",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "name_de": "Poisoned Attacks",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Gorebeast Chariot",
+      "name_de": "Gorebeast Chariot",
+      "id": "gorebeast-chariot",
+      "points": 135,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Armour value 3+",
+          "name_de": "Armour value 3+",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Gorebeast",
+          "name_de": "Gorebeast",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Hellcannon",
+      "name_de": "Hellcannon",
+      "id": "hellcannon",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Doomfire",
+          "name_de": "Doomfire",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Armour value 4+",
+          "name_de": "Armour value 4+",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Dragon Ogre Shaggoth",
+      "name_de": "Dragon Ogre Shaggoth",
+      "id": "dragon-ogre-shaggoth",
+      "points": 225,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 6,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "artifact",
+          "enchanted-item",
+          "chaos-mutations"
+        ],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "name_de": "Chaos Giant",
+      "id": "chaos-giant",
+      "points": 200,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Giant's club",
+          "name_de": "Giant's club",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (light armour)",
+          "name_de": "Calloused hide (light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Scaly skin (heavy armour)",
+          "name_de": "Scaly skin (heavy armour)",
+          "points": 10,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Regeneration (6+)",
+          "name_de": "Regeneration (6+)",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
