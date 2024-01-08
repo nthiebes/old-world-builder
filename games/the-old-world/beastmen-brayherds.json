@@ -664,7 +664,8 @@
           "points": 1,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": true
         },
         {
           "name_en": "Veteran",
@@ -672,7 +673,8 @@
           "points": 1,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1074,6 +1076,93 @@
     }
   ],
   "special": [
+    {
+      "name_en": "Bestigor Herds",
+      "name_de": "Bestigor Herds",
+      "id": "bestigor-herds",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Gouge-horn",
+          "name_de": "Gouge-horn",
+          "points": 8,
+          "magic": {
+            "types": [
+              "enchanted-item",
+              "artifact",
+              "talisman",
+              "armor",
+              "weapon",
+              "chaos-mutation"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and great weapon",
+          "name_de": "Hand weapon and great weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
     {
       "name_en": "Harpies",
       "name_de": "Harpies",
