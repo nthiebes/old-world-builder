@@ -660,23 +660,28 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
+        }
+      ],
+      "armor": [
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [
         {
           "name_en": "Bretonnian Warhorse",
@@ -826,8 +831,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hans Weapon",
-          "name_de": "Hans Weapon",
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
           "points": 0,
           "perModel": true,
           "active": true
@@ -838,10 +843,12 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
+        }
+      ],
+      "armor": [
         {
-          "name_en": "Light Armour",
-          "name_de": "Light Armour",
+          "name_en": "Light armour",
+          "name_de": "Light armour",
           "points": 1,
           "perModel": true,
           "active": false
@@ -924,28 +931,33 @@
           "active": true
         },
         {
-          "name_en": "Heavy Armour",
-          "name_de": "Heavy Armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
           "name_en": "Lance",
           "name_de": "Lance",
-          "points": -1,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
-      "options": [],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [
         {
           "name_en": "Bretonnian Warhorse",
@@ -960,8 +972,494 @@
       }
     }
   ],
-  "special": [],
-  "rare": [],
+  "special": [
+    {
+      "name_en": "Pegasus knights",
+      "name_de": "Pegasus knights",
+      "id": "pegasus-knights",
+      "points": 55,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "First knight",
+          "name_de": "First knight",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances",
+          "name_de": "Lances",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Questing Knights",
+      "name_de": "Questing Knights",
+      "id": "questing-knights",
+      "points": 28,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Paragon",
+          "name_de": "Paragon",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Mounted Yeomen",
+      "name_de": "Mounted Yeomen",
+      "id": "mounted-yeomen",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Warden",
+          "name_de": "Warden",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shortbows",
+          "name_de": "Shortbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "stackable": 90,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Feigned flight (+2 per model)",
+          "name_de": "Feigned flight",
+          "points": 2,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Battle Pilgrims",
+      "name_de": "Battle Pilgrims",
+      "id": "battle-pilgrims",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 30,
+      "command": [
+        {
+          "name_en": "Grail Relaquae",
+          "name_de": "Grail Relaquae",
+          "points": 65,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Squires",
+      "name_de": "Squires",
+      "id": "squires",
+      "points": 7,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Esquire",
+          "name_de": "Esquire",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Scouts (+1 per model)",
+          "name_de": "Scouts (+1 per model)",
+          "points": 1,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire and flee (+1 per model)",
+          "name_de": "Fire and flee (+1 per model)",
+          "points": 1,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Field Trebuchet",
+      "name_de": "Field Trebuchet",
+      "id": "field-trebuchet",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Field Trebuchet",
+          "name_de": "Field Trebuchet",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Grail Knights",
+      "name_de": "Grail Knights",
+      "id": "grail-knights",
+      "points": 38,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Grail Guardian",
+          "name_de": "Grail Guardian",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
