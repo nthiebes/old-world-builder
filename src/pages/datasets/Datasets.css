@@ -78,3 +78,20 @@
 .datasets__unit > .expandable__summary {
   font-weight: normal;
 }
+
+.dataset__unit-header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 1rem);
+}
+
+.dataset__unit-header .button {
+  padding: 0;
+  height: 22px;
+  margin-left: 0.5rem;
+}
+
+.dataset__unit-header > span {
+  flex-shrink: 0;
+}

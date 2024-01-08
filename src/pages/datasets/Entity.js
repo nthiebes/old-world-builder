@@ -40,7 +40,7 @@ const getRandomId = () =>
     ""
   );
 
-export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
+export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
   const randomId = getRandomId();
   const [unit, setUnit] = useState(
     existingUnit ? { ...initialUnitState, ...existingUnit } : initialUnitState
@@ -239,6 +239,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           name_en: "",
           name_de: "",
           points: 1,
+          perModel: true,
           stackable: false,
           minimum: 0,
           maximum: 0,
@@ -836,6 +837,30 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
             }
             required
           />
+          {type !== "characters" ? (
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                id={`options-perModel${index}-${randomId}`}
+                onChange={() =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "options",
+                    field: "perModel",
+                    value: !option.perModel,
+                  })
+                }
+                checked={option.perModel}
+                className="checkbox__input"
+              />
+              <label
+                htmlFor={`options-perModel${index}-${randomId}`}
+                className="checkbox__label"
+              >
+                Points count for each model
+              </label>
+            </div>
+          ) : null}
           <div className="checkbox">
             <input
               type="checkbox"
@@ -1098,16 +1123,6 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       >
         {existingUnit ? "Update unit" : "Add unit"}
       </Button>
-      {existingUnit ? (
-        <Button
-          type="text"
-          color="dark"
-          spaceBottom
-          icon="delete"
-          label="Delete unit"
-          onClick={() => onDelete({ type, id: unit.id })}
-        />
-      ) : null}
     </form>
   );
 };
