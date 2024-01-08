@@ -15,6 +15,7 @@ const initialUnitState = {
   maximum: 0,
   command: [],
   equipment: [],
+  armor: [],
   options: [],
   mounts: [],
   magic: {
@@ -96,6 +97,12 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
     setUnit({
       ...unit,
       [key]: newEntries,
+    });
+  };
+  const handleSecondLevelDelete = ({ index, key }) => {
+    setUnit({
+      ...unit,
+      [key]: unit[key].filter((_, entryIndex) => entryIndex !== index),
     });
   };
   const handleSecondLevelNameBlur = ({ index, value, key }) => {
@@ -198,6 +205,21 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
       ...unit,
       equipment: [
         ...unit.equipment,
+        {
+          name_en: "",
+          name_de: "",
+          points: 1,
+          perModel: true,
+          active: false,
+        },
+      ],
+    });
+  };
+  const handleNewArmor = () => {
+    setUnit({
+      ...unit,
+      armor: [
+        ...unit.armor,
         {
           name_en: "",
           name_de: "",
@@ -432,6 +454,19 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
                   }
                 />
               </Expandable>
+              {existingUnit ? (
+                <Button
+                  type="text"
+                  color="dark"
+                  spaceBottom
+                  icon="delete"
+                  onClick={() =>
+                    handleSecondLevelDelete({ index, key: "command" })
+                  }
+                >
+                  Remove entry
+                </Button>
+              ) : null}
             </div>
           ))}
           <Button
@@ -448,9 +483,10 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
 
       <hr />
 
-      <h3>Equipment</h3>
+      <h3>Weapon</h3>
       <p className="datasets__paragraph">
-        All equipment options are mutually exclusive.
+        All weapon options are mutually exclusive and you should add a default
+        weapon.
         <br />
         <i>(e.g. "Hand weapon" or "Great weapon")</i>
       </p>
@@ -563,6 +599,20 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           <p>
             <i>(e.g. when "Hand weapon" is the default equipment)</i>
           </p>
+          {existingUnit ? (
+            <Button
+              type="text"
+              color="dark"
+              spaceBottom
+              icon="delete"
+              spaceTop
+              onClick={() =>
+                handleSecondLevelDelete({ index, key: "equipment" })
+              }
+            >
+              Remove entry
+            </Button>
+          ) : null}
         </div>
       ))}
       <Button
@@ -572,7 +622,149 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
         spaceBottom
         className="entity__second-level-button"
       >
-        New equipment
+        New weapon
+      </Button>
+
+      <hr />
+
+      <h3>Armor</h3>
+      <p className="datasets__paragraph">
+        All armor options are mutually exclusive and you should add a default
+        armor.
+        <br />
+        <i>(e.g. "Light armour" or "Heavy armour")</i>
+      </p>
+      {unit.armor.map((armor, index) => (
+        <div className="entity__second-level" key={index}>
+          <label htmlFor={`armor-name_en${index}-${randomId}`}>
+            Name English
+          </label>
+          <input
+            type="text"
+            id={`armor-name_en${index}-${randomId}`}
+            className="input"
+            value={armor.name_en}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "name_en",
+                value: event.target.value,
+              })
+            }
+            onBlur={(event) =>
+              handleSecondLevelNameBlur({
+                index,
+                key: "armor",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+            required
+          />
+          <label htmlFor={`armor-name_de${index}-${randomId}`}>
+            Name German
+          </label>
+          <input
+            type="text"
+            id={`armor-name_de${index}-${randomId}`}
+            className="input"
+            value={armor.name_de}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "name_de",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+            required
+          />
+          <label htmlFor={`armor-points${index}-${randomId}`}>Points</label>
+          <NumberInput
+            id={`armor-points${index}-${randomId}`}
+            className="input"
+            value={armor.points}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "points",
+                value: Number(event.target.value),
+              })
+            }
+            required
+          />
+          <div className="checkbox">
+            <input
+              type="checkbox"
+              id={`armor-perModel${index}-${randomId}`}
+              onChange={() =>
+                handleSecondLevelFieldChange({
+                  index,
+                  key: "armor",
+                  field: "perModel",
+                  value: !armor.perModel,
+                })
+              }
+              checked={armor.perModel}
+              className="checkbox__input"
+            />
+            <label
+              htmlFor={`armor-perModel${index}-${randomId}`}
+              className="checkbox__label"
+            >
+              Points count for each model
+            </label>
+          </div>
+          <div className="checkbox">
+            <input
+              type="checkbox"
+              id={`armor-active${index}-${randomId}`}
+              onChange={() =>
+                handleSecondLevelFieldChange({
+                  index,
+                  key: "armor",
+                  field: "active",
+                  value: !armor.active,
+                })
+              }
+              checked={armor.active}
+              className="checkbox__input"
+            />
+            <label
+              htmlFor={`armor-active${index}-${randomId}`}
+              className="checkbox__label"
+            >
+              Selected by default
+            </label>
+          </div>
+          <p>
+            <i>(e.g. when "Light armour" is the default equipment)</i>
+          </p>
+          {existingUnit ? (
+            <Button
+              type="text"
+              color="dark"
+              spaceBottom
+              spaceTop
+              icon="delete"
+              onClick={() => handleSecondLevelDelete({ index, key: "armor" })}
+            >
+              Remove entry
+            </Button>
+          ) : null}
+        </div>
+      ))}
+      <Button
+        type="secondary"
+        icon="add"
+        onClick={handleNewArmor}
+        spaceBottom
+        className="entity__second-level-button"
+      >
+        New armor
       </Button>
 
       <hr />
@@ -711,6 +903,18 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
               />
             </>
           )}
+          {existingUnit ? (
+            <Button
+              type="text"
+              color="dark"
+              spaceBottom
+              spaceTop
+              icon="delete"
+              onClick={() => handleSecondLevelDelete({ index, key: "options" })}
+            >
+              Remove entry
+            </Button>
+          ) : null}
         </div>
       ))}
       <Button
@@ -723,115 +927,130 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
         New option
       </Button>
 
-      <hr />
-
-      <h3>Mounts</h3>
-      <p className="datasets__paragraph">
-        All mount options are mutually exclusive.
-        <br />
-        <i>(e.g. "On foot" or "Hippogryph")</i>
-      </p>
-      {unit.mounts.map((mount, index) => (
-        <div className="entity__second-level" key={index}>
-          <label htmlFor={`mounts-name_en${index}-${randomId}`}>
-            Name English
-          </label>
-          <input
-            type="text"
-            id={`mounts-name_en${index}-${randomId}`}
-            className="input"
-            value={mount.name_en}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "mounts",
-                field: "name_en",
-                value: event.target.value,
-              })
-            }
-            onBlur={(event) =>
-              handleSecondLevelNameBlur({
-                index,
-                key: "mounts",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-            required
-          />
-          <label htmlFor={`mounts-name_de${index}-${randomId}`}>
-            Name German
-          </label>
-          <input
-            type="text"
-            id={`mounts-name_de${index}-${randomId}`}
-            className="input"
-            value={mount.name_de}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "mounts",
-                field: "name_de",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-            required
-          />
-          <label htmlFor={`mounts-points${index}-${randomId}`}>Points</label>
-          <NumberInput
-            id={`mounts-points${index}-${randomId}`}
-            className="input"
-            value={mount.points}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "mounts",
-                field: "points",
-                value: Number(event.target.value),
-              })
-            }
-            required
-          />
-          <div className="checkbox">
-            <input
-              type="checkbox"
-              id={`mounts-active${index}-${randomId}`}
-              onChange={() =>
-                handleSecondLevelFieldChange({
-                  index,
-                  key: "mounts",
-                  field: "active",
-                  value: !mount.active,
-                })
-              }
-              checked={mount.active}
-              className="checkbox__input"
-            />
-            <label
-              htmlFor={`mounts-active${index}-${randomId}`}
-              className="checkbox__label"
-            >
-              Selected by default
-            </label>
-          </div>
-          <p>
-            <i>(e.g. when "On foot" is the default mount)</i>
-          </p>
-        </div>
-      ))}
-      <Button
-        type="secondary"
-        icon="add"
-        onClick={handleNewMount}
-        spaceBottom
-        className="entity__second-level-button"
-      >
-        New mount
-      </Button>
-
       {type === "characters" && (
         <>
+          <hr />
+
+          <h3>Mounts</h3>
+          <p className="datasets__paragraph">
+            All mount options are mutually exclusive.
+            <br />
+            <i>(e.g. "On foot" or "Hippogryph")</i>
+          </p>
+          {unit.mounts.map((mount, index) => (
+            <div className="entity__second-level" key={index}>
+              <label htmlFor={`mounts-name_en${index}-${randomId}`}>
+                Name English
+              </label>
+              <input
+                type="text"
+                id={`mounts-name_en${index}-${randomId}`}
+                className="input"
+                value={mount.name_en}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "name_en",
+                    value: event.target.value,
+                  })
+                }
+                onBlur={(event) =>
+                  handleSecondLevelNameBlur({
+                    index,
+                    key: "mounts",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+                required
+              />
+              <label htmlFor={`mounts-name_de${index}-${randomId}`}>
+                Name German
+              </label>
+              <input
+                type="text"
+                id={`mounts-name_de${index}-${randomId}`}
+                className="input"
+                value={mount.name_de}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "name_de",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+                required
+              />
+              <label htmlFor={`mounts-points${index}-${randomId}`}>
+                Points
+              </label>
+              <NumberInput
+                id={`mounts-points${index}-${randomId}`}
+                className="input"
+                value={mount.points}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "points",
+                    value: Number(event.target.value),
+                  })
+                }
+                required
+              />
+              <div className="checkbox">
+                <input
+                  type="checkbox"
+                  id={`mounts-active${index}-${randomId}`}
+                  onChange={() =>
+                    handleSecondLevelFieldChange({
+                      index,
+                      key: "mounts",
+                      field: "active",
+                      value: !mount.active,
+                    })
+                  }
+                  checked={mount.active}
+                  className="checkbox__input"
+                />
+                <label
+                  htmlFor={`mounts-active${index}-${randomId}`}
+                  className="checkbox__label"
+                >
+                  Selected by default
+                </label>
+              </div>
+              <p>
+                <i>(e.g. when "On foot" is the default mount)</i>
+              </p>
+              {existingUnit ? (
+                <Button
+                  type="text"
+                  color="dark"
+                  spaceBottom
+                  spaceTop
+                  icon="delete"
+                  onClick={() =>
+                    handleSecondLevelDelete({ index, key: "mounts" })
+                  }
+                >
+                  Remove entry
+                </Button>
+              ) : null}
+            </div>
+          ))}
+          <Button
+            type="secondary"
+            icon="add"
+            onClick={handleNewMount}
+            spaceBottom
+            className="entity__second-level-button"
+          >
+            New mount
+          </Button>
           <hr />
           <h3>Allowed magic item categories</h3>
           {magicItemTypes.map((item, itemIndex) => (
@@ -888,7 +1107,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
           icon="delete"
           label="Delete unit"
           onClick={() => onDelete({ type, id: unit.id })}
-        ></Button>
+        />
       ) : null}
     </form>
   );
