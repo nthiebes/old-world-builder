@@ -27,6 +27,15 @@ export const getUnitPoints = (unit) => {
       }
     });
   }
+  if (unit.armor) {
+    unit.armor.forEach((option) => {
+      if (option.active && option.perModel) {
+        unitPoints += unit.strength * option.points;
+      } else if (option.active) {
+        unitPoints += option.points;
+      }
+    });
+  }
   if (unit.command) {
     unit.command.forEach((option) => {
       if (option.active) {

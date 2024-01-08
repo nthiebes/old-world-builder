@@ -19,6 +19,12 @@ export const updateIds = (type = []) => {
             id: index,
           }))
         : null,
+      armor: unit.armor
+        ? unit.armor.map((armorData, index) => ({
+            ...armorData,
+            id: index,
+          }))
+        : null,
       mounts: unit.mounts
         ? unit.mounts.map((mountsData, index) => ({
             ...mountsData,

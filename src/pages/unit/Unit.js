@@ -191,6 +191,21 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
+  const handleArmorChange = (id) => {
+    const armor = unit.armor.map((item) => ({
+      ...item,
+      active: item.id === id ? true : false,
+    }));
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        armor,
+      })
+    );
+  };
   const handleMountsChange = (id) => {
     const mounts = unit.mounts.map((item) => ({
       ...item,
@@ -319,6 +334,7 @@ export const Unit = ({ isMobile }) => {
         {!unit.minimum &&
           (!unit.command || (unit.command && !unit.command.length)) &&
           (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
+          (!unit.armor || (unit.armor && !unit.armor.length)) &&
           (!unit.mounts || (unit.mounts && !unit.mounts.length)) &&
           (!unit.magic || (unit.magic && !unit.magic.maxPoints)) &&
           (!unit.options || (unit.options && !unit.options.length)) && (
@@ -476,6 +492,46 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
+                    {language === "de" ? name_de : name_en}
+                    <i className="checkbox__points">
+                      {`${points} ${
+                        points === 1
+                          ? intl.formatMessage({
+                              id: "app.point",
+                            })
+                          : intl.formatMessage({
+                              id: "app.points",
+                            })
+                      }`}
+                      {perModel &&
+                        ` ${intl.formatMessage({
+                          id: "unit.perModel",
+                        })}`}
+                    </i>
+                  </label>
+                </div>
+              )
+            )}
+          </>
+        )}
+        {unit.armor && unit.armor.length > 0 && (
+          <>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.armor" />
+            </h2>
+            {unit.armor.map(
+              ({ name_de, name_en, points, perModel, id, active = false }) => (
+                <div className="radio" key={id}>
+                  <input
+                    type="radio"
+                    id={`armor-${id}`}
+                    name="armor"
+                    value={id}
+                    onChange={() => handleArmorChange(id)}
+                    checked={active}
+                    className="radio__input"
+                  />
+                  <label htmlFor={`armor-${id}`} className="radio__label">
                     {language === "de" ? name_de : name_en}
                     <i className="checkbox__points">
                       {`${points} ${
