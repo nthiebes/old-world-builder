@@ -54,8 +54,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate Armour",
-          "name_de": "Full plate Armour",
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -105,8 +105,8 @@
       ],
       "mounts": [
         {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_en": "Unmounted",
+          "name_de": "Unmounted",
           "points": 0,
           "active": true
         },
@@ -155,14 +155,14 @@
       ],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 100
+        "maxPoints": 150
       }
     },
     {
@@ -172,7 +172,17 @@
       "points": 125,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -219,8 +229,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate Armour",
-          "name_de": "Full plate Armour",
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -270,8 +280,8 @@
       ],
       "mounts": [
         {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_en": "Unmounted",
+          "name_de": "Unmounted",
           "points": 0,
           "active": true
         },
@@ -302,14 +312,14 @@
       ],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 75
+        "maxPoints": 125
       }
     },
     {
@@ -319,7 +329,17 @@
       "points": 70,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -366,8 +386,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate Armour",
-          "name_de": "Full plate Armour",
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -417,8 +437,8 @@
       ],
       "mounts": [
         {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_en": "Unmounted",
+          "name_de": "Unmounted",
           "points": 0,
           "active": true
         },
@@ -443,14 +463,14 @@
       ],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 50
+        "maxPoints": 100
       }
     },
     {
@@ -563,14 +583,14 @@
       "mounts": [],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 100
+        "maxPoints": 150
       }
     },
     {
@@ -635,8 +655,8 @@
       ],
       "mounts": [
         {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_en": "Unmounted",
+          "name_de": "Unmounted",
           "points": 0,
           "active": true
         },
@@ -679,14 +699,14 @@
       ],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 100
+        "maxPoints": 150
       }
     },
     {
@@ -751,8 +771,8 @@
       ],
       "mounts": [
         {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_en": "Unmounted",
+          "name_de": "Unmounted",
           "points": 0,
           "active": true
         },
@@ -777,14 +797,14 @@
       ],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
           "gift-of-chaos"
         ],
-        "maxPoints": 50
+        "maxPoints": 100
       }
     }
   ],
@@ -1028,14 +1048,7 @@
           "perModel": true
         }
       ],
-      "mounts": [
-        {
-          "name_en": "Chaos Steeds",
-          "name_de": "Chaos Steeds",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1102,8 +1115,8 @@
       ],
       "armor": [
         {
-          "name_en": "None",
-          "name_de": "None",
+          "name_en": "Unarmoured",
+          "name_de": "Unarmoured",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1232,6 +1245,41 @@
           "active": true
         },
         {
+          "name_en": "Hand Weapons and Throwing Axes",
+          "name_de": "Hand Weapons and Throwing Axes",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons and Javelins",
+          "name_de": "Hand Weapons and Javelins",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons and Throwing Spears",
+          "name_de": "Hand Weapons and Throwing Spears",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Throwing Spears and Throwing Axes",
+          "name_de": "Hand Weapons, Throwing Spears and Throwing Axes",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Throwing Spears and Javelins",
+          "name_de": "Hand Weapons, Throwing Spears and Javelins",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
           "points": 0,
@@ -1239,9 +1287,16 @@
           "active": false
         },
         {
-          "name_en": "Throwing Spears",
-          "name_de": "Throwing Spears",
-          "points": 0,
+          "name_en": "Cavalry Spears and Throwing Axes",
+          "name_de": "Cavalry Spears and Throwing Axes",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spears and Javelins",
+          "name_de": "Cavalry Spears and Javelins",
+          "points": 1,
           "perModel": true,
           "active": false
         },
@@ -1253,16 +1308,16 @@
           "active": false
         },
         {
-          "name_en": "Throwing Axes",
-          "name_de": "Throwing Axes",
-          "points": 1,
+          "name_en": "Flails and Throwing Axes",
+          "name_de": "Flails and Throwing Axes",
+          "points": 2,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Javelins",
-          "name_de": "Javelins",
-          "points": 1,
+          "name_en": "Flails and Javelins",
+          "name_de": "Flails and Javelins",
+          "points": 2,
           "perModel": true,
           "active": false
         }
@@ -1323,14 +1378,7 @@
           "perModel": true
         }
       ],
-      "mounts": [
-        {
-          "name_en": "Warhorses",
-          "name_de": "Warhorses",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1552,8 +1600,8 @@
           "active": true
         },
         {
-          "name_en": "Full plate Armour",
-          "name_de": "Full plate Armour",
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1688,8 +1736,8 @@
           "active": true
         },
         {
-          "name_en": "Full plate Armour",
-          "name_de": "Full plate Armour",
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1742,14 +1790,7 @@
           "perModel": true
         }
       ],
-      "mounts": [
-        {
-          "name_en": "Chaos Steeds",
-          "name_de": "Chaos Steeds",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1811,14 +1852,7 @@
           "perModel": false
         }
       ],
-      "mounts": [
-        {
-          "name_en": "Chaos Steeds",
-          "name_de": "Chaos Steeds",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2072,9 +2106,9 @@
               "talisman",
               "artifact",
               "enchanted-item",
-              "chaos-mutations"
+              "chaos-mutation"
             ],
-            "maxPoints": 25
+            "maxPoints": 50
           }
         }
       ],
@@ -2259,38 +2293,6 @@
           "perModel": false
         }
       ],
-      "mounts": [
-        {
-          "name_en": "Gorebeast",
-          "name_de": "Gorebeast",
-          "points": 0,
-          "active": true
-        }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Hellcannon",
-      "name_de": "Hellcannon",
-      "id": "hellcannon",
-      "points": 215,
-      "minimum": 1,
-      "maximum": 1,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Doomfire and Hand Weapons",
-          "name_de": "Doomfire and Hand Weapons",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -2348,14 +2350,14 @@
       "mounts": [],
       "magic": {
         "types": [
-          "Weapon",
+          "weapon",
           "armor",
           "talisman",
           "artifact",
           "enchanted-item",
-          "chaos-mutations"
+          "chaos-mutation"
         ],
-        "maxPoints": 50
+        "maxPoints": 100
       }
     },
     {
@@ -2402,6 +2404,31 @@
           "perModel": false
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Hellcannon",
+      "name_de": "Hellcannon",
+      "id": "hellcannon",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Doomfire and Hand Weapons",
+          "name_de": "Doomfire and Hand Weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
