@@ -485,7 +485,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
 
       <h3>Weapon</h3>
       <p className="datasets__paragraph">
-        All weapon options are mutually exclusive and you should add a default
+        All weapon options are mutually exclusive and please add a default
         weapon.
         <br />
         <i>(e.g. "Hand weapon" or "Great weapon")</i>
@@ -629,8 +629,7 @@ export const Entity = ({ onSubmit, onDelete, type, unit: existingUnit }) => {
 
       <h3>Armor</h3>
       <p className="datasets__paragraph">
-        All armor options are mutually exclusive and you should add a default
-        armor.
+        All armor options are mutually exclusive and please add a default armor.
         <br />
         <i>(e.g. "Light armour" or "Heavy armour")</i>
       </p>

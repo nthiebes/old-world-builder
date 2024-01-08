@@ -66,7 +66,7 @@ export const DuplicateList = ({ isMobile }) => {
       setName(
         `${intl.formatMessage({
           id: "duplicate.copyOf",
-        })} ${list.name}`
+        })} ${list?.name}`
       );
       setPoints(list.points);
       setDescription(list.description);
@@ -92,7 +92,7 @@ export const DuplicateList = ({ isMobile }) => {
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
       <Helmet>
-        <title>{`Old World Builder | ${list.name}`}</title>
+        <title>{`Old World Builder | ${list?.name}`}</title>
       </Helmet>
 
       {isMobile && (

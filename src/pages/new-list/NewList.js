@@ -179,7 +179,7 @@ export const NewList = ({ isMobile }) => {
             id="army"
             options={gameSystems.filter(({ id }) => id === game)[0].armies}
             onChange={handleArmyChange}
-            selected="kingdom-of-bretonnia"
+            selected="empire-of-man"
             spaceBottom
             required
           />
