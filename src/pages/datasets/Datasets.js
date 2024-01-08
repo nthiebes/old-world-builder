@@ -225,174 +225,182 @@ export const Datasets = ({ isMobile }) => {
             <header className="editor__header">
               <h2>Edit units</h2>
             </header>
-            {isLoading && <Spinner />}
-            {dataset.characters.length > 0 && (
-              <h3 className="datasets__edit-headline">Characters</h3>
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              <>
+                {dataset.characters.length > 0 && (
+                  <h3 className="datasets__edit-headline">Characters</h3>
+                )}
+                <ul>
+                  {dataset.characters.map((unit, index) => (
+                    <Expandable
+                      headline={
+                        <span className="dataset__unit-header">
+                          {unit.name_en}
+                          <span>
+                            <Button
+                              icon="delete"
+                              type="text"
+                              label="Delete unit"
+                              color="dark"
+                              onClick={() =>
+                                handleDelete({
+                                  type: "characters",
+                                  id: unit.id,
+                                })
+                              }
+                            />
+                            <Button
+                              icon="preview"
+                              type="text"
+                              label="Preview unit"
+                              color="dark"
+                              onClick={() => handlePreview({ unit })}
+                            />
+                          </span>
+                        </span>
+                      }
+                      noMargin
+                      className="datasets__unit-type datasets__unit"
+                      key={index}
+                    >
+                      <Entity
+                        unit={unit}
+                        type="characters"
+                        onSubmit={handleSubmit}
+                      />
+                    </Expandable>
+                  ))}
+                </ul>
+                {dataset.core.length > 0 && (
+                  <h3 className="datasets__edit-headline">Core Units</h3>
+                )}
+                <ul>
+                  {dataset.core.map((unit, index) => (
+                    <Expandable
+                      headline={
+                        <span className="dataset__unit-header">
+                          {unit.name_en}
+                          <span>
+                            <Button
+                              icon="delete"
+                              type="text"
+                              label="Delete unit"
+                              color="dark"
+                              onClick={() =>
+                                handleDelete({ type: "core", id: unit.id })
+                              }
+                            />
+                            <Button
+                              icon="preview"
+                              type="text"
+                              label="Preview unit"
+                              color="dark"
+                              onClick={() => handlePreview({ unit })}
+                            />
+                          </span>
+                        </span>
+                      }
+                      noMargin
+                      className="datasets__unit-type datasets__unit"
+                      key={index}
+                    >
+                      <Entity
+                        unit={unit}
+                        type="core"
+                        onSubmit={handleSubmit}
+                        onDelete={handleDelete}
+                      />
+                    </Expandable>
+                  ))}
+                </ul>
+                {dataset.special.length > 0 && (
+                  <h3 className="datasets__edit-headline">Special Units</h3>
+                )}
+                <ul>
+                  {dataset.special.map((unit, index) => (
+                    <Expandable
+                      headline={
+                        <span className="dataset__unit-header">
+                          {unit.name_en}
+                          <span>
+                            <Button
+                              icon="delete"
+                              type="text"
+                              label="Delete unit"
+                              color="dark"
+                              onClick={() =>
+                                handleDelete({ type: "special", id: unit.id })
+                              }
+                            />
+                            <Button
+                              icon="preview"
+                              type="text"
+                              label="Preview unit"
+                              color="dark"
+                              onClick={() => handlePreview({ unit })}
+                            />
+                          </span>
+                        </span>
+                      }
+                      noMargin
+                      className="datasets__unit-type datasets__unit"
+                      key={index}
+                    >
+                      <Entity
+                        unit={unit}
+                        type="special"
+                        onSubmit={handleSubmit}
+                        onDelete={handleDelete}
+                      />
+                    </Expandable>
+                  ))}
+                </ul>
+                {dataset.rare.length > 0 && (
+                  <h3 className="datasets__edit-headline">Rare Units</h3>
+                )}
+                <ul>
+                  {dataset.rare.map((unit, index) => (
+                    <Expandable
+                      headline={
+                        <span className="dataset__unit-header">
+                          {unit.name_en}
+                          <span>
+                            <Button
+                              icon="delete"
+                              type="text"
+                              label="Delete unit"
+                              color="dark"
+                              onClick={() =>
+                                handleDelete({ type: "rare", id: unit.id })
+                              }
+                            />
+                            <Button
+                              icon="preview"
+                              type="text"
+                              label="Preview unit"
+                              color="dark"
+                              onClick={() => handlePreview({ unit })}
+                            />
+                          </span>
+                        </span>
+                      }
+                      noMargin
+                      className="datasets__unit-type datasets__unit"
+                      key={index}
+                    >
+                      <Entity
+                        unit={unit}
+                        type="rare"
+                        onSubmit={handleSubmit}
+                        onDelete={handleDelete}
+                      />
+                    </Expandable>
+                  ))}
+                </ul>
+              </>
             )}
-            <ul>
-              {dataset.characters.map((unit, index) => (
-                <Expandable
-                  headline={
-                    <span className="dataset__unit-header">
-                      {unit.name_en}
-                      <span>
-                        <Button
-                          icon="delete"
-                          type="text"
-                          label="Delete unit"
-                          color="dark"
-                          onClick={() =>
-                            handleDelete({ type: "characters", id: unit.id })
-                          }
-                        />
-                        <Button
-                          icon="preview"
-                          type="text"
-                          label="Preview unit"
-                          color="dark"
-                          onClick={() => handlePreview({ unit })}
-                        />
-                      </span>
-                    </span>
-                  }
-                  noMargin
-                  className="datasets__unit-type datasets__unit"
-                  key={index}
-                >
-                  <Entity
-                    unit={unit}
-                    type="characters"
-                    onSubmit={handleSubmit}
-                  />
-                </Expandable>
-              ))}
-            </ul>
-            {dataset.core.length > 0 && (
-              <h3 className="datasets__edit-headline">Core Units</h3>
-            )}
-            <ul>
-              {dataset.core.map((unit, index) => (
-                <Expandable
-                  headline={
-                    <span className="dataset__unit-header">
-                      {unit.name_en}
-                      <span>
-                        <Button
-                          icon="delete"
-                          type="text"
-                          label="Delete unit"
-                          color="dark"
-                          onClick={() =>
-                            handleDelete({ type: "core", id: unit.id })
-                          }
-                        />
-                        <Button
-                          icon="preview"
-                          type="text"
-                          label="Preview unit"
-                          color="dark"
-                          onClick={() => handlePreview({ unit })}
-                        />
-                      </span>
-                    </span>
-                  }
-                  noMargin
-                  className="datasets__unit-type datasets__unit"
-                  key={index}
-                >
-                  <Entity
-                    unit={unit}
-                    type="core"
-                    onSubmit={handleSubmit}
-                    onDelete={handleDelete}
-                  />
-                </Expandable>
-              ))}
-            </ul>
-            {dataset.special.length > 0 && (
-              <h3 className="datasets__edit-headline">Special Units</h3>
-            )}
-            <ul>
-              {dataset.special.map((unit, index) => (
-                <Expandable
-                  headline={
-                    <span className="dataset__unit-header">
-                      {unit.name_en}
-                      <span>
-                        <Button
-                          icon="delete"
-                          type="text"
-                          label="Delete unit"
-                          color="dark"
-                          onClick={() =>
-                            handleDelete({ type: "special", id: unit.id })
-                          }
-                        />
-                        <Button
-                          icon="preview"
-                          type="text"
-                          label="Preview unit"
-                          color="dark"
-                          onClick={() => handlePreview({ unit })}
-                        />
-                      </span>
-                    </span>
-                  }
-                  noMargin
-                  className="datasets__unit-type datasets__unit"
-                  key={index}
-                >
-                  <Entity
-                    unit={unit}
-                    type="special"
-                    onSubmit={handleSubmit}
-                    onDelete={handleDelete}
-                  />
-                </Expandable>
-              ))}
-            </ul>
-            {dataset.rare.length > 0 && (
-              <h3 className="datasets__edit-headline">Rare Units</h3>
-            )}
-            <ul>
-              {dataset.rare.map((unit, index) => (
-                <Expandable
-                  headline={
-                    <span className="dataset__unit-header">
-                      {unit.name_en}
-                      <span>
-                        <Button
-                          icon="delete"
-                          type="text"
-                          label="Delete unit"
-                          color="dark"
-                          onClick={() =>
-                            handleDelete({ type: "rare", id: unit.id })
-                          }
-                        />
-                        <Button
-                          icon="preview"
-                          type="text"
-                          label="Preview unit"
-                          color="dark"
-                          onClick={() => handlePreview({ unit })}
-                        />
-                      </span>
-                    </span>
-                  }
-                  noMargin
-                  className="datasets__unit-type datasets__unit"
-                  key={index}
-                >
-                  <Entity
-                    unit={unit}
-                    type="rare"
-                    onSubmit={handleSubmit}
-                    onDelete={handleDelete}
-                  />
-                </Expandable>
-              ))}
-            </ul>
           </section>
 
           <section className="column datasets__column">
