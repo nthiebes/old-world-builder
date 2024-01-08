@@ -14,42 +14,40 @@
           "name_de": "Hand weapon",
           "points": 1,
           "perModel": true,
-          "active": false
-        }
-      ],
-      "options": [
+          "active": true
+        },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true,
+          "active": false
         },
         {
           "name_en": "Great Weapoon",
           "name_de": "Great Weapoon",
           "points": 4,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true,
+          "active": true
         },
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
           "points": 4,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
         {
           "name_en": "Shield",
           "name_de": "Shield",
@@ -76,6 +74,12 @@
         }
       ],
       "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
         {
           "name_en": "Tuskgor Chariot",
           "name_de": "Tuskgor Chariot",
