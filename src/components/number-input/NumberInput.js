@@ -36,7 +36,7 @@ export const NumberInput = (props) => {
         type="secondary"
         icon="up"
         label={intl.formatMessage({ id: "misc.increase" })}
-        disabled={props.value >= props.max}
+        disabled={props.value >= props.max && props.max !== 0}
         className="number-input__button number-input__button--up"
       />
       <Button

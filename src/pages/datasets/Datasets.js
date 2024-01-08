@@ -12,15 +12,17 @@ import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
 
 import { Entity } from "./Entity";
+import { UnitPreview } from "./UnitPreview";
 import "./Datasets.css";
 
 export const Datasets = ({ isMobile }) => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
+  const [previewUnit, setPreviewUnit] = useState(null);
   const [armyInput, setArmyInput] = useState("");
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
-  const [army, setArmy] = useState("kingdom-of-bretonnia");
+  const [army, setArmy] = useState("empire-of-man");
   const game = "the-old-world";
   const localDataset = localStorage.getItem("owb.dataset");
   const [dataset, setDataset] = useState({
@@ -109,6 +111,9 @@ export const Datasets = ({ isMobile }) => {
       console.log(error);
     }
   };
+  const handlePreview = ({ unit }) => {
+    setPreviewUnit(unit);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -185,7 +190,7 @@ export const Datasets = ({ isMobile }) => {
             <Select
               options={gameSystems.filter(({ id }) => id === game)[0].armies}
               onChange={handleArmyChange}
-              selected="kingdom-of-bretonnia"
+              selected="empire-of-man"
               spaceTop
               spaceBottom
               required
@@ -227,7 +232,29 @@ export const Datasets = ({ isMobile }) => {
             <ul>
               {dataset.characters.map((unit, index) => (
                 <Expandable
-                  headline={unit.name_en}
+                  headline={
+                    <span className="dataset__unit-header">
+                      {unit.name_en}
+                      <span>
+                        <Button
+                          icon="delete"
+                          type="text"
+                          label="Delete unit"
+                          color="dark"
+                          onClick={() =>
+                            handleDelete({ type: "characters", id: unit.id })
+                          }
+                        />
+                        <Button
+                          icon="preview"
+                          type="text"
+                          label="Preview unit"
+                          color="dark"
+                          onClick={() => handlePreview({ unit })}
+                        />
+                      </span>
+                    </span>
+                  }
                   noMargin
                   className="datasets__unit-type datasets__unit"
                   key={index}
@@ -236,7 +263,6 @@ export const Datasets = ({ isMobile }) => {
                     unit={unit}
                     type="characters"
                     onSubmit={handleSubmit}
-                    onDelete={handleDelete}
                   />
                 </Expandable>
               ))}
@@ -247,7 +273,29 @@ export const Datasets = ({ isMobile }) => {
             <ul>
               {dataset.core.map((unit, index) => (
                 <Expandable
-                  headline={unit.name_en}
+                  headline={
+                    <span className="dataset__unit-header">
+                      {unit.name_en}
+                      <span>
+                        <Button
+                          icon="delete"
+                          type="text"
+                          label="Delete unit"
+                          color="dark"
+                          onClick={() =>
+                            handleDelete({ type: "core", id: unit.id })
+                          }
+                        />
+                        <Button
+                          icon="preview"
+                          type="text"
+                          label="Preview unit"
+                          color="dark"
+                          onClick={() => handlePreview({ unit })}
+                        />
+                      </span>
+                    </span>
+                  }
                   noMargin
                   className="datasets__unit-type datasets__unit"
                   key={index}
@@ -267,7 +315,29 @@ export const Datasets = ({ isMobile }) => {
             <ul>
               {dataset.special.map((unit, index) => (
                 <Expandable
-                  headline={unit.name_en}
+                  headline={
+                    <span className="dataset__unit-header">
+                      {unit.name_en}
+                      <span>
+                        <Button
+                          icon="delete"
+                          type="text"
+                          label="Delete unit"
+                          color="dark"
+                          onClick={() =>
+                            handleDelete({ type: "special", id: unit.id })
+                          }
+                        />
+                        <Button
+                          icon="preview"
+                          type="text"
+                          label="Preview unit"
+                          color="dark"
+                          onClick={() => handlePreview({ unit })}
+                        />
+                      </span>
+                    </span>
+                  }
                   noMargin
                   className="datasets__unit-type datasets__unit"
                   key={index}
@@ -287,7 +357,29 @@ export const Datasets = ({ isMobile }) => {
             <ul>
               {dataset.rare.map((unit, index) => (
                 <Expandable
-                  headline={unit.name_en}
+                  headline={
+                    <span className="dataset__unit-header">
+                      {unit.name_en}
+                      <span>
+                        <Button
+                          icon="delete"
+                          type="text"
+                          label="Delete unit"
+                          color="dark"
+                          onClick={() =>
+                            handleDelete({ type: "rare", id: unit.id })
+                          }
+                        />
+                        <Button
+                          icon="preview"
+                          type="text"
+                          label="Preview unit"
+                          color="dark"
+                          onClick={() => handlePreview({ unit })}
+                        />
+                      </span>
+                    </span>
+                  }
                   noMargin
                   className="datasets__unit-type datasets__unit"
                   key={index}
@@ -341,15 +433,6 @@ export const Datasets = ({ isMobile }) => {
             <header className="editor__header">
               <h2>JSON output</h2>
             </header>
-
-            <textarea
-              className="datasets__output"
-              rows="10"
-              spellCheck="false"
-              data-gramm="false"
-              value={JSON.stringify(dataset, null, 2)}
-              onChange={() => {}}
-            />
             <Button
               icon={copied ? "check" : "copy"}
               centered
@@ -357,7 +440,7 @@ export const Datasets = ({ isMobile }) => {
               spaceBottom
               onClick={copyText}
             >
-              {copied ? "Copied" : "Copy"}
+              {copied ? "Copied" : "Copy JSON"}
             </Button>
             {copyError && (
               <p className="export__error">
@@ -375,7 +458,7 @@ export const Datasets = ({ isMobile }) => {
               </a>
               .
             </p>
-            <p>
+            <p className="datasets__paragraph">
               If you're a bit tech-savvy, you can also create a pull request
               directly in{" "}
               <a
@@ -387,8 +470,24 @@ export const Datasets = ({ isMobile }) => {
               </a>
               .
             </p>
+            <textarea
+              className="datasets__output"
+              rows="10"
+              spellCheck="false"
+              data-gramm="false"
+              value={JSON.stringify(dataset, null, 2)}
+              onChange={() => {}}
+            />
           </section>
         </div>
+
+        {previewUnit ? (
+          <UnitPreview
+            unit={{ ...previewUnit, strength: 0 }}
+            onClose={() => setPreviewUnit(null)}
+            coreUnits={dataset.core}
+          />
+        ) : null}
       </Main>
     </>
   );

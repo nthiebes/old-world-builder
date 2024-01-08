@@ -112,7 +112,6 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleDetachmentStrengthClick = ({ id, strength }) => {
-    console.log(id, strength);
     const unitDetachments = [...unit.detachments].map((detachment) =>
       detachment.id === id ? { ...detachment, strength } : detachment
     );
