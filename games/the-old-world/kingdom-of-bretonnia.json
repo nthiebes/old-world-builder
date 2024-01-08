@@ -1,10 +1,13 @@
 {
   "characters": [
     {
-      "id": "duke",
-      "name_de": "Duke",
       "name_en": "Duke",
-      "points": 99,
+      "name_de": "Duke",
+      "id": "duke",
+      "points": 175,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -20,12 +23,19 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
-          "points": 3
+          "points": 4
         },
         {
           "name_de": "Lance (if appropriately mounted)",
           "name_en": "Lance (if appropriately mounted)",
           "points": 4
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
       "options": [
@@ -37,7 +47,24 @@
         {
           "name_de": "Knightly Virtue",
           "name_en": "Knightly Virtue",
-          "points": 0
+          "points": 0,
+          "stackable": false
+        },
+        {
+          "name_en": "The Questing Vow",
+          "name_de": "The Questing Vow",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "The Grail Vow",
+          "name_de": "The Grail Vow",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -50,12 +77,30 @@
         {
           "name_de": "Hippogryph",
           "name_en": "Hippogryph",
-          "points": 0
+          "points": 120
         },
         {
           "name_de": "Hippogryph, barding",
           "name_en": "Hippogryph, barding",
-          "points": 15
+          "points": 135
+        },
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Barded Pegasus",
+          "name_de": "Barded Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Royal Pegasus",
+          "name_de": "Royal Pegasus",
+          "points": 60,
+          "active": false
         }
       ],
       "magic": {
@@ -64,10 +109,13 @@
       }
     },
     {
-      "id": "baron",
-      "name_de": "Baron",
       "name_en": "Baron",
-      "points": 99,
+      "name_de": "Baron",
+      "id": "baron",
+      "points": 100,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -83,12 +131,19 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
-          "points": 3
+          "points": 4
         },
         {
           "name_de": "Lance (if appropriately mounted)",
           "name_en": "Lance (if appropriately mounted)",
           "points": 4
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
       "options": [
@@ -123,12 +178,30 @@
         {
           "name_de": "Hippogryph",
           "name_en": "Hippogryph",
-          "points": 0
+          "points": 120
         },
         {
           "name_de": "Hippogryph, barding",
           "name_en": "Hippogryph, barding",
-          "points": 15
+          "points": 135
+        },
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Barded Pegasus",
+          "name_de": "Barded Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Royal Pegasus",
+          "name_de": "Royal Pegasus",
+          "points": 60,
+          "active": false
         }
       ],
       "magic": {
@@ -137,10 +210,13 @@
       }
     },
     {
-      "id": "paladin",
-      "name_de": "Paladin",
       "name_en": "Paladin",
-      "points": 99,
+      "name_de": "Paladin",
+      "id": "paladin",
+      "points": 60,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -156,12 +232,19 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
-          "points": 3
+          "points": 4
         },
         {
           "name_de": "Lance (if appropriately mounted)",
           "name_en": "Lance (if appropriately mounted)",
           "points": 4
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
       "options": [
@@ -184,6 +267,14 @@
           "name_de": "Knightly Virtue",
           "name_en": "Knightly Virtue",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -194,14 +285,20 @@
           "active": true
         },
         {
-          "name_de": "Hippogryph",
-          "name_en": "Hippogryph",
-          "points": 0
+          "name_de": "Bretonnian Warhorse",
+          "name_en": "Bretonnian Warhorse",
+          "points": 16
         },
         {
-          "name_de": "Hippogryph, barding",
-          "name_en": "Hippogryph, barding",
-          "points": 15
+          "name_de": "Barded Pegasus",
+          "name_en": "Barded Pegasus",
+          "points": 30
+        },
+        {
+          "name_en": "Royal Pegasus",
+          "name_de": "Royal Pegasus",
+          "points": 60,
+          "active": false
         }
       ],
       "magic": {
@@ -213,44 +310,222 @@
       "name_en": "Prophetess",
       "name_de": "Prophetess",
       "id": "prophetess",
-      "named": false,
-      "points": 99,
+      "points": 135,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Unicorn",
+          "name_de": "Unicorn",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Royal Pegasus",
+          "name_de": "Royal Pegasus",
+          "points": 60,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
+      },
+      "named": false
     },
     {
-      "name_en": "Sergeant at Arms",
-      "name_de": "Sergeant at Arms",
+      "name_en": "Damsel",
+      "name_de": "Damsel",
       "id": "sergeant-at-arms",
-      "named": false,
-      "points": 99,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Unicorn",
+          "name_de": "Unicorn",
+          "points": 35,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      },
+      "named": false
+    },
+    {
+      "name_en": "Seargeant-at-Arms",
+      "name_de": "Seargeant-at-Arms",
+      "id": "seargent-at-arms",
+      "points": 45,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Cavalry Spear (if mounted)",
+          "name_de": "Cavalry Spear (if mounted)",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "points": 12,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "artifact", "enchanted-item"],
+        "maxPoints": 25
       }
     }
   ],
   "core": [
     {
-      "id": "men-at-arms",
-      "name_de": "Men-At-Arms",
       "name_en": "Men-At-Arms",
-      "points": 99,
+      "name_de": "Men-At-Arms",
+      "id": "men-at-arms",
+      "points": 4,
       "minimum": 10,
+      "maximum": 0,
       "command": [
         {
           "name_de": "Yeoman",
@@ -288,7 +563,46 @@
             "maxPoints": 0
           }
         }
-      ]
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Polearm",
+          "name_de": "Polearm",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     },
     {
       "name_en": "Mounted Knights of the Realm",
@@ -377,16 +691,83 @@
       }
     },
     {
-      "name_en": "Knights of the Realm",
-      "name_de": "Knights of the Realm",
+      "name_en": "Knights of the Realm on Foot",
+      "name_de": "Knights of the Realm on Foot",
       "id": "knights-of-the-realm",
-      "named": false,
-      "points": 99,
-      "minimum": 0,
+      "points": 11,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "First Knight",
+          "name_de": "First Knight",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Great Weapon and Shield",
+          "name_de": "Great Weapon and Shield",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
@@ -399,6 +780,178 @@
           "name_de": "Mounted",
           "points": 99,
           "active": false
+        }
+      ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "named": false
+    },
+    {
+      "name_en": "Peasant Bowmen",
+      "name_de": "Peasant Bowmen",
+      "id": "peasant-bowmen",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Villein",
+          "name_de": "Villein",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hans Weapon",
+          "name_de": "Hans Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Defensive Stakes",
+          "name_de": "Defensive Stakes",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Burning Braziers",
+          "name_de": "Burning Braziers",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Replace Closed Order with Skirmishers",
+          "name_de": "Replace Closed Order with Skirmishers",
+          "points": 0,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Knights Errant",
+      "name_de": "Knights Errant",
+      "id": "knights-errant",
+      "points": 19,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Gallant",
+          "name_de": "Gallant",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": -1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
