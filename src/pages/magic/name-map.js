@@ -87,4 +87,8 @@ export const nameMap = {
     name_de: "Gift of Chaos",
     name_en: "Gift of Chaos",
   },
+  "forest-spites": {
+    name_de: "Forest Spites",
+    name_en: "Forest Spites",
+  },
 };
