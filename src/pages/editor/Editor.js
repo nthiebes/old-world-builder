@@ -118,12 +118,12 @@ export const Editor = ({ isMobile }) => {
   const mercenariesData = getMaxPercentData({
     type: "mercenaries",
     armyPoints: list.points,
-    points: rarePoints,
+    points: mercenariesPoints,
   });
   const alliesData = getMaxPercentData({
     type: "allies",
     armyPoints: list.points,
-    points: rarePoints,
+    points: alliesPoints,
   });
   const moreButtons = [
     {
