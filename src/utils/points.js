@@ -12,7 +12,7 @@ export const getUnitPoints = (unit) => {
         unitPoints +=
           (option.stackableCount || option.minimum || 0) * option.points;
       } else if (option.active && option.perModel) {
-        unitPoints += unit.strength * option.points;
+        unitPoints += (unit.strength || 1) * option.points;
       } else if (option.active) {
         unitPoints += option.points;
       }
@@ -21,7 +21,7 @@ export const getUnitPoints = (unit) => {
   if (unit.equipment) {
     unit.equipment.forEach((option) => {
       if (option.active && option.perModel) {
-        unitPoints += unit.strength * option.points;
+        unitPoints += (unit.strength || 1) * option.points;
       } else if (option.active) {
         unitPoints += option.points;
       }
@@ -30,7 +30,7 @@ export const getUnitPoints = (unit) => {
   if (unit.armor) {
     unit.armor.forEach((option) => {
       if (option.active && option.perModel) {
-        unitPoints += unit.strength * option.points;
+        unitPoints += (unit.strength || 1) * option.points;
       } else if (option.active) {
         unitPoints += option.points;
       }
