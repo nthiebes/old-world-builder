@@ -309,6 +309,8 @@
       "points": 154,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -367,7 +369,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "artifact"],
         "maxPoints": 149
       }
     },
@@ -378,6 +380,8 @@
       "points": 80,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -436,7 +440,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "artifact"],
         "maxPoints": 0
       }
     },
@@ -447,6 +451,8 @@
       "points": 85,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -478,7 +484,7 @@
       ],
       "mounts": [],
       "magic": {
-        "types": ["weapon", "talisman", "enchanted-item"],
+        "types": ["weapon", "talisman", "enchanted-item", "artifact"],
         "maxPoints": 100
       }
     },
@@ -1553,13 +1559,15 @@
       "points": 24,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Handmaiden of the Thorn",
           "name_de": "Handmaiden of the Thorn",
           "points": 6,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item"],
+            "types": ["weapon", "talisman", "enchanted-item", "artifact"],
             "maxPoints": 25
           }
         },
