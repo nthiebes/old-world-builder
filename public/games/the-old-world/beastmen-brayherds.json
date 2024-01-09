@@ -1556,19 +1556,21 @@
       "maximum": 1,
       "command": [
         {
-          "name_en": "Magic items and mutations",
-          "name_de": "Magic items and mutations",
+          "name_en": "Magic items",
+          "name_de": "Magic items",
           "points": 0,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "artifact",
-              "enchanted-item",
-              "chaos-mutation"
-            ],
-            "maxPoints": 100
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "points": 0,
+          "magic": {
+            "types": ["chaos-mutation"],
+            "maxPoints": 50
           }
         }
       ],
