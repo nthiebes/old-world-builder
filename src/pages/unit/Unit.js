@@ -642,8 +642,8 @@ export const Unit = ({ isMobile }) => {
               <FormattedMessage id="unit.detachments" />
             </h2>
             {detachments.map(({ name_de, name_en, id }) => (
-              <>
-                <div className="list" key={id}>
+              <Fragment key={id}>
+                <div className="list">
                   <div className="list__inner unit__detachments-header">
                     <b className="unit__magic-headline">
                       {language === "de" ? name_de : name_en}
@@ -705,7 +705,7 @@ export const Unit = ({ isMobile }) => {
                         </div>
                       </div>
                     ))}
-              </>
+              </Fragment>
             ))}
           </>
         )}

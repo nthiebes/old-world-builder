@@ -13,6 +13,8 @@ const initialUnitState = {
   points: 1,
   minimum: 0,
   maximum: 0,
+  regimentalUnit: false,
+  detachment: false,
   command: [],
   equipment: [],
   armor: [],
@@ -75,6 +77,12 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         event.target.type === "number"
           ? Number(event.target.value)
           : event.target.value,
+    });
+  };
+  const handleCheckboxChange = ({ field, value }) => {
+    setUnit({
+      ...unit,
+      [field]: value,
     });
   };
   const handleNameBlur = () => {
@@ -344,6 +352,46 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             onChange={handleFieldChange}
             required
           />
+          <div className="checkbox">
+            <input
+              type="checkbox"
+              id={`regimentalUnit-${randomId}`}
+              onChange={() =>
+                handleCheckboxChange({
+                  field: "regimentalUnit",
+                  value: !unit.regimentalUnit,
+                })
+              }
+              checked={unit.regimentalUnit}
+              className="checkbox__input"
+            />
+            <label
+              htmlFor={`regimentalUnit-${randomId}`}
+              className="checkbox__label"
+            >
+              Unit can have detachments
+            </label>
+          </div>
+          <div className="checkbox">
+            <input
+              type="checkbox"
+              id={`detachment-${randomId}`}
+              onChange={() =>
+                handleCheckboxChange({
+                  field: "detachment",
+                  value: !unit.detachment,
+                })
+              }
+              checked={unit.detachment}
+              className="checkbox__input"
+            />
+            <label
+              htmlFor={`detachment-${randomId}`}
+              className="checkbox__label"
+            >
+              Unit is a detachment
+            </label>
+          </div>
         </>
       )}
 
