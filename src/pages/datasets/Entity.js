@@ -33,6 +33,11 @@ const magicItemTypes = [
   "triptych",
   "chaos-mutation",
   "gift-of-chaos",
+  "weapon-runes",
+  "armor-runes",
+  "banner-runes",
+  "talismanic-runes",
+  "engineering-runes",
 ];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(

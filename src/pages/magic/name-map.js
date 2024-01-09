@@ -99,4 +99,8 @@ export const nameMap = {
     name_de: "Orc & Goblin Tribes",
     name_en: "Orc & Goblin Tribes",
   },
+  "dwarfen-mountain-holds": {
+    name_de: "Zwergenrunen",
+    name_en: "Runic Items",
+  },
 };
