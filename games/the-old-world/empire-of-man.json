@@ -4,16 +4,154 @@
       "name_en": "General of the Empire",
       "name_de": "General of the Empire",
       "id": "general-of-the-empire",
-      "points": 1,
+      "points": 90,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Handgun",
+          "name_de": "Handgun",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full Plate Armour",
+          "name_de": "Plate ",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_de": "Brace of pistols",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded warhorse",
+          "name_de": "Barded warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire warhorse",
+          "name_de": "Empire warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Imperial Griffon",
+          "name_de": "Imperial Griffon",
+          "points": 160,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
@@ -36,11 +174,12 @@
       "name_en": "Wizard Lord",
       "name_de": "Wizard Lord",
       "id": "wizard-lord",
-      "points": 1,
+      "points": 129,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -52,11 +191,12 @@
       "name_en": "Master Mage",
       "name_de": "Master Mage",
       "id": "master-mage",
-      "points": 1,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -68,11 +208,12 @@
       "name_en": "Grand Master",
       "name_de": "Grand Master",
       "id": "grand-master",
-      "points": 1,
+      "points": 145,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -84,11 +225,12 @@
       "name_en": "Chapter Master",
       "name_de": "Chapter Master",
       "id": "chapter-master",
-      "points": 1,
+      "points": 75,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -100,11 +242,12 @@
       "name_en": "Witch Hunter",
       "name_de": "Witch Hunter",
       "id": "witch-hunter",
-      "points": 1,
+      "points": 55,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -116,11 +259,12 @@
       "name_en": "Lector of Sigmar",
       "name_de": "Lector of Sigmar",
       "id": "lector-of-sigmar",
-      "points": 1,
+      "points": 110,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -132,11 +276,12 @@
       "name_en": "Priest of Sigmar",
       "name_de": "Priest of Sigmar",
       "id": "priest-of-sigmar",
-      "points": 1,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -148,11 +293,12 @@
       "name_en": "High Priest of Ulric",
       "name_de": "High Priest of Ulric",
       "id": "high-priest-of-ulric",
-      "points": 1,
+      "points": 110,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -164,11 +310,12 @@
       "name_en": "Priest of Ulric",
       "name_de": "Priest of Ulric",
       "id": "priest-of-ulric",
-      "points": 1,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -180,11 +327,12 @@
       "name_en": "Empire Engineer",
       "name_de": "Empire Engineer",
       "id": "empire-engineer",
-      "points": 1,
+      "points": 45,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -198,12 +346,90 @@
       "name_en": "State Troops",
       "name_de": "State Troops",
       "id": "state-troops",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "points": 5,
+      "minimum": 10,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Sergeant (Champion)",
+          "name_de": "Sergeant (Champion)",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_de": "Thrusting spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -214,11 +440,12 @@
       "name_en": "Veteran State Troops",
       "name_de": "Veteran State Troops",
       "id": "veteran-state-troops",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 7,
+      "minimum": 10,
+      "maximum": 101,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -230,11 +457,12 @@
       "name_en": "State Missile Troops",
       "name_de": "State Missile Troops",
       "id": "state-missile-troops",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 7,
+      "minimum": 10,
+      "maximum": 100,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -246,11 +474,12 @@
       "name_en": "Free Company Militia",
       "name_de": "Free Company Militia",
       "id": "free-company-militia",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 6,
+      "minimum": 10,
+      "maximum": 99,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -262,11 +491,12 @@
       "name_en": "Empire Archers",
       "name_de": "Empire Archers",
       "id": "empire-archers",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 7,
+      "minimum": 5,
+      "maximum": 99,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -280,11 +510,12 @@
       "name_en": "Empire Greatswords",
       "name_de": "Empire Greatswords",
       "id": "empire-greatswords",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 11,
+      "minimum": 5,
+      "maximum": 100,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -296,11 +527,12 @@
       "name_en": "Flagellants",
       "name_de": "Flagellants",
       "id": "flagellants",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 13,
+      "minimum": 5,
+      "maximum": 99,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -312,11 +544,12 @@
       "name_en": "Pistoliers",
       "name_de": "Pistoliers",
       "id": "pistoliers",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 16,
+      "minimum": 4,
+      "maximum": 100,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -328,11 +561,12 @@
       "name_en": "Outriders",
       "name_de": "Outriders",
       "id": "outriders",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 19,
+      "minimum": 4,
+      "maximum": 100,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -344,11 +578,12 @@
       "name_en": "Empire Knights",
       "name_de": "Empire Knights",
       "id": "empire-knights",
-      "points": 1,
-      "minimum": 0,
+      "points": 21,
+      "minimum": 3,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -360,11 +595,12 @@
       "name_en": "Inner Circle Knights",
       "name_de": "Inner Circle Knights",
       "id": "inner-circle-knights",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 29,
+      "minimum": 4,
+      "maximum": 100,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -376,11 +612,12 @@
       "name_en": "Demigryph Knights",
       "name_de": "Demigryph Knights",
       "id": "demigryph-knights",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 32,
+      "minimum": 2,
+      "maximum": 12,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -392,11 +629,12 @@
       "name_en": "War Altar of Sigmar",
       "name_de": "War Altar of Sigmar",
       "id": "war-altar-of-sigmar",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 135,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -408,11 +646,12 @@
       "name_en": "Great Cannon",
       "name_de": "Great Cannon",
       "id": "great-cannon",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -424,11 +663,12 @@
       "name_en": "Mortar",
       "name_de": "Mortar",
       "id": "mortar",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 95,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -442,11 +682,12 @@
       "name_en": "Steam Tank",
       "name_de": "Steam Tank",
       "id": "steam-tank",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 265,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -458,11 +699,12 @@
       "name_en": "Griffon",
       "name_de": "Griffon",
       "id": "griffon",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 129,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -474,11 +716,12 @@
       "name_en": "Imperial Griffon",
       "name_de": "Imperial Griffon",
       "id": "imperial-griffon",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 160,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -490,11 +733,12 @@
       "name_en": "Helblaster Volley Gun",
       "name_de": "Helblaster Volley Gun",
       "id": "helblaster-volley-gun",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -506,11 +750,12 @@
       "name_en": "Helstrom Rocket Battery",
       "name_de": "Helstrom Rocket Battery",
       "id": "helstrom-rocket-battery",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
