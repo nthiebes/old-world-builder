@@ -103,4 +103,16 @@ export const nameMap = {
     name_de: "Zwergenrunen",
     name_en: "Runic Items",
   },
+  "empire-of-man": {
+    name_de: "Empire of Man",
+    name_en: "Empire of Man",
+  },
+  "high-elf-realms": {
+    name_de: "High Elf Realms",
+    name_en: "High Elf Realms",
+  },
+  "tomb-kings-of-khemri": {
+    name_de: "Tomb Kings of Khemri",
+    name_en: "Tomb Kings of Khemri",
+  },
 };
