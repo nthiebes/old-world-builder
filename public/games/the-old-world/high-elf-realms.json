@@ -1,5 +1,724 @@
 {
-  "characters": [],
+  "characters": [
+    {
+      "name_en": "Prince",
+      "name_de": "Prince",
+      "id": "prince",
+      "points": 130,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear ",
+          "name_de": "Cavalry Spear ",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full Plate Armor",
+          "name_de": "Full Plate Armor",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Bow of Avelorn",
+          "name_de": "Bow of Avelorn",
+          "points": 12,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Elven Honors*",
+          "name_de": "*Elven Honors*",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_de": "Barded Elven Steed",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Tiranoc Chariot",
+          "name_de": "Tiranoc Chariot",
+          "points": 75,
+          "active": false
+        },
+        {
+          "name_en": "Lion Chariot of Chrace",
+          "name_de": "Lion Chariot of Chrace",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Lothern Skycutter",
+          "name_de": "Lothern Skycutter",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Flamsepyre Phoenix ",
+          "name_de": "Flamsephyre Phoenix ",
+          "points": 170,
+          "active": false
+        },
+        {
+          "name_en": "Frostheart Pheonix ",
+          "name_de": "Frostheart Pheonix ",
+          "points": 205,
+          "active": false
+        },
+        {
+          "name_en": "Sun Dragon",
+          "name_de": "Sun Dragon",
+          "points": 180,
+          "active": false
+        },
+        {
+          "name_en": "Moon Dragon",
+          "name_de": "Moon Dragon",
+          "points": 235,
+          "active": false
+        },
+        {
+          "name_en": "Star Dragon",
+          "name_de": "Star Dragon",
+          "points": 290,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Noble",
+      "name_de": "Noble",
+      "id": "noble",
+      "points": 70,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear ",
+          "name_de": "Cavalry Spear ",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full Plate Armor",
+          "name_de": "Full Plate Armor",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Bow of Avelorn",
+          "name_de": "Bow of Avelorn",
+          "points": 12,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Elven Honors*",
+          "name_de": "*Elven Honors*",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_de": "Barded Elven Steed",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Tiranoc Chariot",
+          "name_de": "Tiranoc Chariot",
+          "points": 75,
+          "active": false
+        },
+        {
+          "name_en": "Lion Chariot of Chrace",
+          "name_de": "Lion Chariot of Chrace",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Lothern Skycutter",
+          "name_de": "Lothern Skycutter",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Flamsepyre Phoenix ",
+          "name_de": "Flamsephyre Phoenix ",
+          "points": 170,
+          "active": false
+        },
+        {
+          "name_en": "Frostheart Pheonix ",
+          "name_de": "Frostheart Pheonix ",
+          "points": 205,
+          "active": false
+        },
+        {
+          "name_en": "Sun Dragon",
+          "name_de": "Sun Dragon",
+          "points": 180,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Archmage",
+      "name_de": "Archmage",
+      "id": "archmage",
+      "points": 155,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Upgrade to Level 4",
+          "name_de": "Upgrade to Level 4",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Elven Honor*",
+          "name_de": "*Elven Honor*",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_de": "Barded Elven Steed",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Lion Chariot of Chrace",
+          "name_de": "Lion Chariot of Chrace",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Lothern Skycutter",
+          "name_de": "Lothern Skycutter",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Flamsepyre Phoenix ",
+          "name_de": "Flamsephyre Phoenix ",
+          "points": 170,
+          "active": false
+        },
+        {
+          "name_en": "Frostheart Pheonix ",
+          "name_de": "Frostheart Pheonix ",
+          "points": 205,
+          "active": false
+        },
+        {
+          "name_en": "Sun Dragon",
+          "name_de": "Sun Dragon",
+          "points": 180,
+          "active": false
+        },
+        {
+          "name_en": "Moon Dragon",
+          "name_de": "Moon Dragon",
+          "points": 235,
+          "active": false
+        },
+        {
+          "name_en": "Star Dragon",
+          "name_de": "Star Dragon",
+          "points": 290,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "artifact"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Mage",
+      "name_de": "Mage",
+      "id": "mage",
+      "points": 80,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Upgrade to Level 2",
+          "name_de": "Upgrade to Level 2",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Elven Honor* ",
+          "name_de": "*Elven Honor* ",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_de": "Barded Elven Steed",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Lion Chariot of Chrace",
+          "name_de": "Lion Chariot of Chrace",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Lothern Skycutter",
+          "name_de": "Lothern Skycutter",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Flamsepyre Phoenix ",
+          "name_de": "Flamsephyre Phoenix ",
+          "points": 170,
+          "active": false
+        },
+        {
+          "name_en": "Frostheart Pheonix ",
+          "name_de": "Frostheart Pheonix ",
+          "points": 205,
+          "active": false
+        },
+        {
+          "name_en": "Sun Dragon",
+          "name_de": "Sun Dragon",
+          "points": 180,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Dragon Mage",
+      "name_de": "Dragon Mage",
+      "id": "dragon-mage",
+      "points": 275,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Upgrade to Level 2",
+          "name_de": "Upgrade to Level 2",
+          "points": 29,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Sun Dragon",
+          "name_de": "Sun Dragon",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Handmaiden of the Everqueen",
+      "name_de": "Handmaiden of the Everqueen",
+      "id": "handmaiden-of-the-everqueen",
+      "points": 65,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Handmaiden's Spear",
+          "name_de": "Handmaiden's Spear",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Horn of Isha",
+          "name_de": "Horn of Isha",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
+      }
+    }
+  ],
   "core": [
     {
       "name_en": "Elven Spearmen",
