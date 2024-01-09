@@ -1,26 +1,1837 @@
 {
   "characters": [
     {
-      "name_en": "asd",
-      "name_de": "asd",
-      "id": "asd",
-      "points": 1,
+      "name_en": "Glade Lord",
+      "name_de": "Glade Lord",
+      "id": "glade-lord",
+      "points": 135,
       "minimum": 0,
       "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shot",
+          "name_de": "Moonfire Shot",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swfitshiver Shards",
+          "name_de": "Swfitshiver Shards",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbow",
+          "name_de": "Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Great Stag",
+          "name_de": "Great Stag",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Warhawk",
+          "name_de": "Warhawk",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Forest Dragon",
+          "name_de": "Forest Dragon",
+          "points": 275,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagles",
+          "name_de": "Great Eagles",
+          "points": 60,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 150
+      }
+    },
+    {
+      "name_en": "Glade Captain",
+      "name_de": "Glade Captain",
+      "id": "glade-captain",
+      "points": 70,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shot",
+          "name_de": "Moonfire Shot",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbow",
+          "name_de": "Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Great Stag",
+          "name_de": "Great Stag",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Warhawk",
+          "name_de": "Warhawk",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Forest Dragon",
+          "name_de": "Forest Dragon",
+          "points": 275,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 59,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Spellweaver",
+      "name_de": "Spellweaver",
+      "id": "spellweaver",
+      "points": 154,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Handweapon",
+          "name_de": "Handweapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Talismanic Tattoos",
+          "name_de": "Talismanic Tattoos",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Unicorn",
+          "name_de": "Unicorn",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Warhawk",
+          "name_de": "Warhawk",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 149
+      }
+    },
+    {
+      "name_en": "Spellsinger",
+      "name_de": "Spellsinger",
+      "id": "spellsinger",
+      "points": 80,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Talismanic Tattoos",
+          "name_de": "Talismanic Tattoos",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Elven Steed",
+          "name_de": "Elven Steed",
+          "points": 13,
+          "active": false
+        },
+        {
+          "name_en": "Unicorn",
+          "name_de": "Unicorn",
+          "points": 34,
+          "active": false
+        },
+        {
+          "name_en": "Warhawk",
+          "name_de": "Warhawk",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_de": "Great Eagle",
+          "points": 60,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Shadowdancer",
+      "name_de": "Shadowdancer",
+      "id": "shadowdancer",
+      "points": 85,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Spear of Loec",
+          "name_de": "Spear of Loec",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Trickster's Blades",
+          "name_de": "Trickster's Blades",
+          "points": -2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "talisman", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Waystalker",
+      "name_de": "Waystalker",
+      "id": "waystalker",
+      "points": 85,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbow",
+          "name_de": "Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shot",
+          "name_de": "Moonfire Shot",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers USR",
+          "name_de": "Ambushers USR",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Treeman Ancient",
+      "name_de": "Treeman Ancient",
+      "id": "treeman-ancient",
+      "points": 265,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wixard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Branchwraith",
+      "name_de": "Branchwraith",
+      "id": "branchwraith",
+      "points": 80,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 50
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Glade Guard",
+      "name_de": "Glade Guard",
+      "id": "glade-guard",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Lord's Bowmen",
+          "name_de": "Lord's Bowmen",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbow",
+          "name_de": "Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shot",
+          "name_de": "Moonfire Shot",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire and Flee USR",
+          "name_de": "Fire and Flee USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard USR",
+          "name_de": "Vanguard USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Deepwood Scouts",
+      "name_de": "Deepwood Scouts",
+      "id": "deepwood-scouts",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Lord's Bowmen",
+          "name_de": "Lord's Bowmen",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 24
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbow",
+          "name_de": "Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire and Flee USR",
+          "name_de": "Fire and Flee USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard USR",
+          "name_de": "Vanguard USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Eternal Guard",
+      "name_de": "Eternal Guard",
+      "id": "eternal-guard",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Eternal Warden",
+          "name_de": "Eternal Warden",
+          "points": 5,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Spears",
+          "name_de": "Asrai Spears",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled USR",
+          "name_de": "Drilled USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran USR",
+          "name_de": "Veteran USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Dryads",
+      "name_de": "Dryads",
+      "id": "dryads",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Nymph",
+          "name_de": "Nymph",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Sapwood Flesh (Light Armor)",
+          "name_de": "Sapwood Flesh (Light Armor)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Glade Riders",
+      "name_de": "Glade Riders",
+      "id": "glade-riders",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 96,
+      "command": [
+        {
+          "name_en": "Glade Knight",
+          "name_de": "Glade Knight",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Cavalry Spears",
+          "name_de": "Cavalry Spears",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbows",
+          "name_de": "Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shots",
+          "name_de": "Moonfire Shots",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers USR",
+          "name_de": "Ambushers USR",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled USR",
+          "name_de": "Drilled USR",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Reserved Move USR",
+          "name_de": "Reserved Move USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Deepwood Scouts",
+      "name_de": "Deepwood Scouts",
+      "id": "deepwood-scouts",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Lord's Bowmen",
+          "name_de": "Lord's Bowmen",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbows",
+          "name_de": "Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shots",
+          "name_de": "Moonfire Shots",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire and Flee USR",
+          "name_de": "Fire and Flee USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard USR",
+          "name_de": "Vanguard USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Wildwood Rangers",
+      "name_de": "Wildwood Rangers",
+      "id": "wildwood-rangers",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Wildwood Warden",
+          "name_de": "Wildwood Warden",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Wardancers",
+      "name_de": "Wardancers",
+      "id": "wardancers",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Bladesinger",
+          "name_de": "Bladesinger",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing javelin",
+          "name_de": "Throwing javelin",
+          "points": -1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Waywatchers",
+      "name_de": "Waywatchers",
+      "id": "waywatchers",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Sentinel",
+          "name_de": "Sentinel",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Asrai Longbows",
+          "name_de": "Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shots",
+          "name_de": "Moonfire Shots",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers USR",
+          "name_de": "Ambushers USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard USR",
+          "name_de": "Vanguard USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran USR",
+          "name_de": "Veteran USR",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Sisters of the Thorn",
+      "name_de": "Sisters of the Thorn",
+      "id": "sisters-of-the-thorn",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Handmaiden of the Thorn",
+          "name_de": "Handmaiden of the Thorn",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Blackbriar Javelins",
+          "name_de": "Blackbriar Javelins",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Wild Riders",
+      "name_de": "Wild Riders",
+      "id": "wild-riders",
+      "points": 27,
+      "minimum": 5,
+      "maximum": 98,
+      "command": [
+        {
+          "name_en": "Wild Hunter",
+          "name_de": "Wild Hunter",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hunting Spears",
+          "name_de": "Hunting Spears",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Warhawk Riders",
+      "name_de": "Warhawk Riders",
+      "id": "warhawk-riders",
+      "points": 44,
+      "minimum": 3,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Wind Rider",
+          "name_de": "Wind Rider",
+          "points": 8,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Cavalry Spears",
+          "name_de": "Cavalry Spears",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Asrai Longbows",
+          "name_de": "Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane bodkins",
+          "name_de": "Arcane bodkins",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shots",
+          "name_de": "Moonfire Shots",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Giant Eagle",
+      "name_de": "Giant Eagle",
+      "id": "giant-eagle",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
       "equipment": [],
       "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
-        "types": ["weapon"],
-        "maxPoints": 10
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Treeman",
+      "name_de": "Treeman",
+      "id": "treeman",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 100,
+      "command": [
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
       }
     }
   ],
-  "core": [],
-  "special": [],
-  "rare": [],
   "mercenaries": [],
   "allies": []
 }

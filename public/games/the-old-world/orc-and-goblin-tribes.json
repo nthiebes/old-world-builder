@@ -4,224 +4,975 @@
       "name_en": "Black Orc Warboss",
       "name_de": "Black Orc Warboss",
       "id": "black-orc-warboss",
-      "points": 1,
+      "points": 135,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Plate Armor",
+          "name_de": "Plate Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Black Orc Bigboss",
       "name_de": "Black Orc Bigboss",
       "id": "black-orc-bigboss",
-      "points": 1,
+      "points": 75,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Plate Armor",
+          "name_de": "Plate Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Orc Warboss",
       "name_de": "Orc Warboss",
       "id": "orc-warboss",
-      "points": 1,
+      "points": 110,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Orc Bigboss",
       "name_de": "Orc Bigboss",
       "id": "orc-bigboss",
-      "points": 1,
+      "points": 55,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Orc Weirdnob",
       "name_de": "Orc Weirdnob",
       "id": "orc-weirdnob",
-      "points": 1,
+      "points": 140,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Orc Weirdboy",
       "name_de": "Orc Weirdboy",
       "id": "orc-weirdboy",
-      "points": 1,
+      "points": 65,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Goblin Warboss",
       "name_de": "Goblin Warboss",
       "id": "goblin-warboss",
-      "points": 1,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Wolf",
+          "name_de": "Giant Wolf",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Gigantic Spider",
+          "name_de": "Gigantic Spider",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Wolf Chariot",
+          "name_de": "Wolf Chariot",
+          "points": 33,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Goblin Bigboss",
       "name_de": "Goblin Bigboss",
       "id": "goblin-bigboss",
-      "points": 1,
+      "points": 35,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Wolf",
+          "name_de": "Giant Wolf",
+          "points": 10,
+          "active": false
+        },
+        {
+          "name_en": "Gigantic Spider",
+          "name_de": "Gigantic Spider",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Wolf Chariot",
+          "name_de": "Wolf Chariot",
+          "points": 33,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["armor", "weapon", "talisman", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Goblin Oddnod",
       "name_de": "Goblin Oddnod",
       "id": "goblin-oddnod",
-      "points": 1,
+      "points": 135,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Wolf",
+          "name_de": "Giant Wolf",
+          "points": 10,
+          "active": false
+        },
+        {
+          "name_en": "Wolf Chariot",
+          "name_de": "Wolf Chariot",
+          "points": 33,
+          "active": false
+        },
+        {
+          "name_en": "Arachnarok Spider",
+          "name_de": "Arachnarok Spider",
+          "points": 320,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Goblin Oddgit",
       "name_de": "Goblin Oddgit",
       "id": "goblin-oddgit",
-      "points": 1,
+      "points": 60,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Wolf",
+          "name_de": "Giant Wolf",
+          "points": 10,
+          "active": false
+        },
+        {
+          "name_en": "Wolf Chariot",
+          "name_de": "Wolf Chariot",
+          "points": 33,
+          "active": false
+        },
+        {
+          "name_en": "Arachanarok Spider",
+          "name_de": "Arachanarok Spider",
+          "points": 320,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Night Goblin Warboss",
       "name_de": "Night Goblin Warboss",
       "id": "night-goblin-warboss",
-      "points": 1,
+      "points": 55,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Cave Squig",
+          "name_de": "Giant Cave Squig",
+          "points": 25,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["armor", "talisman", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Night Goblin Bigboss",
       "name_de": "Night Goblin Bigboss",
       "id": "night-goblin-bigboss",
-      "points": 1,
+      "points": 30,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Giant Cave Squig",
+          "name_de": "Giant Cave Squig",
+          "points": 25,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["armor", "weapon", "talisman", "enchanted-item"],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Night Goblin Oddnob",
       "name_de": "Night Goblin Oddnob",
       "id": "night-goblin-oddnob",
-      "points": 1,
+      "points": 130,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 100
       }
     },
     {
       "name_en": "Night Goblin Oddgit",
       "name_de": "Night Goblin Oddgit",
       "id": "night-goblin-oddgit",
-      "points": 1,
+      "points": 65,
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "options": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "maxPoints": 50
       }
     }
   ],
@@ -230,12 +981,113 @@
       "name_en": "Orc Mob",
       "name_de": "Orc Mob",
       "id": "orc-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 5,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Warbow",
+          "name_de": "Warbow",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Thrusting Spear",
+          "name_de": "Thrusting Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Throwing Spears",
+          "name_de": "Throwing Spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Big Stabba",
+          "name_de": "Big Stabba",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -246,12 +1098,72 @@
       "name_en": "Goblin Mob",
       "name_de": "Goblin Mob",
       "id": "goblin-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 3,
+      "minimum": 10,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Throwing Spear",
+          "name_de": "Throwing Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Nasty Skulker",
+          "name_de": "Nasty Skulker",
+          "points": 10,
+          "perModel": false,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -262,11 +1174,27 @@
       "name_en": "Snotling Mob",
       "name_de": "Snotling Mob",
       "id": "snotling-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 35,
+      "minimum": 2,
       "maximum": 0,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Throwing Weapon",
+          "name_de": "Throwing Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -278,12 +1206,90 @@
       "name_en": "Night Goblin Mob",
       "name_de": "Night Goblin Mob",
       "id": "night-goblin-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 3,
+      "minimum": 10,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting Spear",
+          "name_de": "Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Netters",
+          "name_de": "Netters",
+          "points": 20,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fanatics",
+          "name_de": "Fanatics",
+          "points": 25,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -294,11 +1300,77 @@
       "name_en": "Orc Boar Boy Mob",
       "name_de": "Orc Boar Boy Mob",
       "id": "orc-boar-boy-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 15,
+      "minimum": 4,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 8,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Tusks",
+          "name_de": "Tusks",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -310,11 +1382,75 @@
       "name_en": "Goblin Spider Rider Mob",
       "name_de": "Goblin Spider Rider Mob",
       "id": "goblin-spider-rider-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 12,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Poisonous Fangs",
+          "name_de": "Poisonous Fangs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -326,12 +1462,104 @@
       "name_en": "Goblin Wolf Rider Mob",
       "name_de": "Goblin Wolf Rider Mob",
       "id": "goblin-wolf-rider-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 10,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Claws and Fangs",
+          "name_de": "Claws and Fangs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Feigned Flight",
+          "name_de": "Feigned Flight",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Reserve Move",
+          "name_de": "Reserve Move",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -344,28 +1572,88 @@
       "name_en": "Black Orc Mob",
       "name_de": "Black Orc Mob",
       "id": "black-orc-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 12,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Troll Mob",
-      "name_de": "Troll Mob",
-      "id": "troll-mob",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full Plate",
+          "name_de": "Full Plate",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -376,11 +1664,58 @@
       "name_en": "Night Goblin Squig Hopper Mob",
       "name_de": "Night Goblin Squig Hopper Mob",
       "id": "night-goblin-squig-hopper-mob",
-      "points": 1,
-      "minimum": 0,
+      "points": 12,
+      "minimum": 5,
       "maximum": 0,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Huge Gob",
+          "name_de": "Huge Gob",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -392,11 +1727,117 @@
       "name_en": "Orc Boar Chariots",
       "name_de": "Orc Boar Chariots",
       "id": "orc-boar-chariots",
-      "points": 1,
-      "minimum": 0,
+      "points": 90,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crew Member",
+          "name_de": "Crew Member",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Tusks",
+          "name_de": "Tusks",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 2,
+          "perModel": false,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Common Troll Mob",
+      "name_de": "Common Troll Mob",
+      "id": "common-troll-mob",
+      "points": 41,
+      "minimum": 1,
       "maximum": 0,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Troll Vomit",
+          "name_de": "Troll Vomit",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -405,14 +1846,106 @@
       }
     },
     {
-      "name_en": "Nasty Skulkers",
-      "name_de": "Nasty Skulkers",
-      "id": "nasty-skulkers",
-      "points": 1,
-      "minimum": 0,
+      "name_en": "River Troll Mob",
+      "name_de": "River Troll Mob",
+      "id": "river-troll-mob",
+      "points": 49,
+      "minimum": 1,
       "maximum": 0,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Troll Vomit",
+          "name_de": "Troll Vomit",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Stone Troll Mob",
+      "name_de": "Stone Troll Mob",
+      "id": "stone-troll-mob",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Troll Vomit",
+          "name_de": "Troll Vomit",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": -1,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -426,11 +1959,28 @@
       "name_en": "Giant",
       "name_de": "Giant",
       "id": "giant",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 200,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Giants Club",
+          "name_de": "Giants Club",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -442,11 +1992,22 @@
       "name_en": "Goblin Bolt Throwa",
       "name_de": "Goblin Bolt Throwa",
       "id": "goblin-bolt-throwa",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
+      "points": 45,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [
+        {
+          "name_en": "Bully",
+          "name_de": "Bully",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -458,11 +2019,22 @@
       "name_en": "Doom Diver Catapult",
       "name_de": "Doom Diver Catapult",
       "id": "doom-diver-catapult",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
+      "points": 95,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [
+        {
+          "name_en": "Bully",
+          "name_de": "Bully",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -474,11 +2046,22 @@
       "name_en": "Goblin Rock Lobber",
       "name_de": "Goblin Rock Lobber",
       "id": "goblin-rock-lobber",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
+      "points": 75,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [
+        {
+          "name_en": "Bully",
+          "name_de": "Bully",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -487,14 +2070,94 @@
       }
     },
     {
-      "name_en": "Orc Bully",
-      "name_de": "Orc Bully",
-      "id": "orc-bully",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "name_en": "Arachnarok Spider",
+      "name_de": "Arachnarok Spider",
+      "id": "arachnarok-spider",
+      "points": 320,
+      "minimum": 1,
+      "maximum": 1,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Poisonous Fangs",
+          "name_de": "Poisonous Fangs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Venomous Surge",
+          "name_de": "Venom Surge",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Spidersilk Lobber",
+          "name_de": "Spiderrsilk Lobber",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Mangler Squigs",
+      "name_de": "Mangler Squigs",
+      "id": "mangler-squigs",
+      "points": 95,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Colossal Fang Filled Gob",
+          "name_de": "Colossal Fang Filled Gob",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
