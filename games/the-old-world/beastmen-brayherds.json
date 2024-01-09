@@ -95,8 +95,6 @@
       "magic": {
         "types": [
           "enchanted-item",
-          "artifact",
-          "banner",
           "talisman",
           "armor",
           "weapon",
@@ -175,6 +173,15 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -202,7 +209,6 @@
           "weapon",
           "armor",
           "talisman",
-          "artifact",
           "banner",
           "enchanted-item",
           "chaos-mutation"
@@ -271,9 +277,9 @@
           "weapon",
           "armor",
           "talisman",
-          "artifact",
-          "banner",
-          "chaos-mutation"
+          "chaos-mutation",
+          "enchanted-item",
+          "artifact"
         ],
         "maxPoints": 150
       }
@@ -291,7 +297,7 @@
           "name_en": "Braystaff",
           "name_de": "Braystaff",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -339,9 +345,9 @@
           "weapon",
           "armor",
           "talisman",
-          "artifact",
           "enchanted-item",
-          "chaos-mutation"
+          "chaos-mutation",
+          "artifact"
         ],
         "maxPoints": 100
       }
@@ -358,7 +364,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
-          "points": -2,
+          "points": 0,
           "perModel": false,
           "active": true
         },
@@ -416,7 +422,6 @@
           "weapon",
           "armor",
           "talisman",
-          "artifact",
           "enchanted-item",
           "chaos-mutation"
         ],
@@ -493,7 +498,6 @@
           "weapon",
           "armor",
           "talisman",
-          "artifact",
           "enchanted-item",
           "chaos-mutation"
         ],
@@ -586,8 +590,6 @@
           "weapon",
           "armor",
           "talisman",
-          "banner",
-          "artifact",
           "enchanted-item",
           "chaos-mutation"
         ],
@@ -611,7 +613,6 @@
           "magic": {
             "types": [
               "enchanted-item",
-              "artifact",
               "talisman",
               "armor",
               "weapon",
@@ -696,13 +697,7 @@
           "name_de": "True-horn",
           "points": 7,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "artifact",
-              "talisman",
-              "enchanted-item"
-            ],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         },
@@ -986,9 +981,7 @@
               "weapon",
               "armor",
               "talisman",
-              "artifact",
-              "enchanted-item",
-              "banner"
+              "enchanted-item"
             ],
             "maxPoints": 50
           }
@@ -1091,7 +1084,6 @@
           "magic": {
             "types": [
               "enchanted-item",
-              "artifact",
               "talisman",
               "armor",
               "weapon",
@@ -1206,9 +1198,7 @@
               "weapon",
               "armor",
               "talisman",
-              "artifact",
-              "enchanted-item",
-              "banner"
+              "enchanted-item"
             ],
             "maxPoints": 50
           }
@@ -1307,7 +1297,7 @@
           "name_en": "Claws (counts as hand weapons), Petrifying gaze",
           "name_de": "Claws (counts as hand weapons), Petrifying gaze",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1316,7 +1306,7 @@
           "name_en": "Scaly skin (counts as heavy armour)",
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1324,8 +1314,8 @@
         {
           "name_en": "Acidic vomit",
           "name_de": "Acidic vomit",
-          "points": 19,
-          "perModel": true,
+          "points": 20,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -1334,7 +1324,7 @@
           "name_en": "Poisoned attacks",
           "name_de": "Poisoned attacks",
           "points": 10,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -1359,13 +1349,7 @@
           "name_de": "Gorehoof",
           "points": 8,
           "magic": {
-            "types": [
-              "artifact",
-              "enchanted-item",
-              "armor",
-              "weapon",
-              "talisman"
-            ],
+            "types": ["enchanted-item", "armor", "weapon", "talisman"],
             "maxPoints": 25
           }
         },
@@ -1462,7 +1446,6 @@
               "weapon",
               "armor",
               "talisman",
-              "artifact",
               "enchanted-item",
               "chaos-mutation"
             ],
@@ -1502,15 +1485,15 @@
       ],
       "armor": [
         {
-          "name_en": "Light Armour",
-          "name_de": "Light Armour",
+          "name_en": "Light armour",
+          "name_de": "Light armour",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Heavy Armour",
-          "name_de": "Heavy Armour",
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1594,21 +1577,21 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -1617,14 +1600,14 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -1648,7 +1631,7 @@
           "name_en": "Wicked claws and slithery tongue",
           "name_de": "Wicked claws and slithery tongue",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1657,7 +1640,7 @@
           "name_en": "Scaly skin (counts as heavy armour)",
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1681,7 +1664,7 @@
           "name_en": "Claws (counts as hand weapon), Hurl attack",
           "name_de": "Claws (counts as hand weapon), Hurl attack",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1690,7 +1673,7 @@
           "name_en": "Calloused hide (counts as light armour)",
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1714,7 +1697,7 @@
           "name_en": "Giant's club",
           "name_de": "Giant's club",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1723,14 +1706,14 @@
           "name_en": "Calloused hide (counts as light armour)",
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
           "name_en": "Scaly skin (counts as heavy armour)",
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 10,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -1739,7 +1722,7 @@
           "name_en": "Regeneration (6+)",
           "name_de": "Regeneration (6+)",
           "points": 20,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -1764,7 +1747,7 @@
           "name_en": "Cleaver-limbs",
           "name_de": "Cleaver-limbs",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1773,7 +1756,7 @@
           "name_en": "Calloused hide (counts as light armour)",
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
