@@ -895,9 +895,7 @@
         "types": [],
         "maxPoints": 0
       }
-    }
-  ],
-  "special": [
+    },
     {
       "name_en": "Skeleton Chariots",
       "name_de": "Skeleton Chariots",
@@ -979,63 +977,6 @@
       }
     },
     {
-      "name_en": "Ushabti",
-      "name_de": "Ushabti",
-      "id": "ushabti",
-      "points": 49,
-      "minimum": 3,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "Ancient (Champion)",
-          "name_de": "Ancient (Champion)",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Greatbows",
-          "name_de": "Greatbows",
-          "points": 0,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Ritual Blades",
-          "name_de": "Ritual Blades",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy Armour",
-          "name_de": "Heavy Armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
       "name_en": "Tomb Swarms",
       "name_de": "Tomb Swarms",
       "id": "tomb-swarms",
@@ -1064,31 +1005,6 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Carrion",
-      "name_de": "Carrion",
-      "id": "carrion",
-      "points": 27,
-      "minimum": 2,
-      "maximum": 0,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Beaks and Talons (Counts as Hand Weapons)",
-          "name_de": "Beaks and Talons (Counts as Hand Weapons)",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1273,7 +1189,93 @@
         "types": [],
         "maxPoints": 0
       }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Ushabti",
+      "name_de": "Ushabti",
+      "id": "ushabti",
+      "points": 49,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Ancient (Champion)",
+          "name_de": "Ancient (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Greatbows",
+          "name_de": "Greatbows",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ritual Blades",
+          "name_de": "Ritual Blades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     },
+
+    {
+      "name_en": "Carrion",
+      "name_de": "Carrion",
+      "id": "carrion",
+      "points": 27,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Beaks and Talons (Counts as Hand Weapons)",
+          "name_de": "Beaks and Talons (Counts as Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+
     {
       "name_en": "Necropolis Knights",
       "name_de": "Necropolis Knights",
