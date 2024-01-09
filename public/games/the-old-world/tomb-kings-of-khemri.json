@@ -7,6 +7,8 @@
       "points": 160,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -62,7 +64,38 @@
         }
       ],
       "options": [],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Skeleton Chariot",
+          "name_de": "Skeleton Chariot",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_de": "Necrolith Bone Dragon",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Khemrian Warsphinx",
+          "name_de": "Khemrian Warsphinx",
+          "points": 175,
+          "active": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -82,6 +115,8 @@
       "points": 90,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -130,7 +165,38 @@
         }
       ],
       "options": [],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Skeleton Chariot",
+          "name_de": "Skeleton Chariot",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_de": "Necrolith Bone Dragon",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Khemrian Warsphinx",
+          "name_de": "Khemrian Warsphinx",
+          "points": 175,
+          "active": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -150,6 +216,8 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -198,7 +266,26 @@
         }
       ],
       "options": [],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Skeletal Chariot",
+          "name_de": "Skeletal Chariot",
+          "points": 35,
+          "active": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -218,6 +305,8 @@
       "points": 140,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -241,7 +330,20 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_de": "Necrolith Bone Dragon",
+          "points": 195,
+          "active": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -261,6 +363,8 @@
       "points": 53,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -284,7 +388,20 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_de": "Necrolith Bone Dragon",
+          "points": 195,
+          "active": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -421,8 +538,10 @@
       "name_de": "Skeleton Archers",
       "id": "skeleton-archers",
       "points": 5,
-      "minimum": 200,
-      "maximum": 10,
+      "minimum": 10,
+      "maximum": 200,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Master of Arms",
@@ -590,9 +709,62 @@
         "types": [],
         "maxPoints": 0
       }
-    }
-  ],
-  "special": [
+    },
+    {
+      "name_en": "Skeleton Horse Archers",
+      "name_de": "Skeleton Horse Archers",
+      "id": "skeleton-horse-archers",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Master of Horse",
+          "name_de": "Master of Horse",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Chariot Runners",
+          "name_de": "Chariot Runners",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
     {
       "name_en": "Skeleton Chariots",
       "name_de": "Skeleton Chariots",
@@ -645,6 +817,140 @@
       }
     },
     {
+      "name_en": "Tomb Swarms",
+      "name_de": "Tomb Swarms",
+      "id": "tomb-swarms",
+      "points": 37,
+      "minimum": 2,
+      "maximum": 10,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Sepulchral Stalkers",
+      "name_de": "Sepulchral Stalkers",
+      "id": "sepulchral-stalkers",
+      "points": 52,
+      "minimum": 2,
+      "maximum": 200,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Tomb Guard",
+      "name_de": "Tomb Guard",
+      "id": "tomb-guard",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Tomb Captain",
+          "name_de": "Tomb Captain",
+          "points": 6,
+          "magic": {
+            "types": [
+              "talisman",
+              "armor",
+              "weapon",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Drilled (one per 1000pts)",
+          "name_de": "Drilled (one per 1000pts)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Nehekharan Phalanx (one per 1000pts)",
+          "name_de": "Nehekharan Phalanx (one per 1000pts)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
       "name_en": "Ushabti",
       "name_de": "Ushabti",
       "id": "ushabti",
@@ -687,33 +993,6 @@
       }
     },
     {
-      "name_en": "Tomb Swarms",
-      "name_de": "Tomb Swarms",
-      "id": "tomb-swarms",
-      "points": 37,
-      "minimum": 2,
-      "maximum": 10,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Ambushers",
-          "name_de": "Ambushers",
-          "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
       "name_en": "Carrion",
       "name_de": "Carrion",
       "id": "carrion",
@@ -724,61 +1003,6 @@
       "equipment": [],
       "armor": [],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Skeleton Horse Archers",
-      "name_de": "Skeleton Horse Archers",
-      "id": "skeleton-horse-archers",
-      "points": 11,
-      "minimum": 5,
-      "maximum": 200,
-      "command": [
-        {
-          "name_en": "Master of Horse",
-          "name_de": "Master of Horse",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Chariot Runners",
-          "name_de": "Chariot Runners",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -846,20 +1070,78 @@
       }
     },
     {
-      "name_en": "Sepulchral Stalkers",
-      "name_de": "Sepulchral Stalkers",
-      "id": "sepulchral-stalkers",
-      "points": 52,
-      "minimum": 2,
-      "maximum": 200,
+      "name_en": "Tomb Scorpion",
+      "name_de": "Tomb Scorpion",
+      "id": "tomb-scorpion",
+      "points": 70,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
       "options": [
         {
-          "name_en": "Ambushers",
-          "name_de": "Ambushers",
-          "points": 2,
+          "name_en": "Ambusher",
+          "name_de": "Ambusher",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Khemrian Warsphinx",
+      "name_de": "Khemrian Warsphinx",
+      "id": "khemrian-warsphinx",
+      "points": 175,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Additional Crew x1",
+          "name_de": "Additional Crew x1",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Additional Crew x2",
+          "name_de": "Additional Crew x2",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Envenomed Sting",
+          "name_de": "Envenomed Sting",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fiery Roar",
+          "name_de": "Fiery Roar",
+          "points": 20,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -873,7 +1155,104 @@
       }
     }
   ],
-  "rare": [],
+  "rare": [
+    {
+      "name_en": "Necrolith Colossus",
+      "name_de": "Necrolith Colossus",
+      "id": "necrolith-colossus",
+      "points": 160,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Screaming Skull Catapult",
+      "name_de": "Screaming Skull Catapult",
+      "id": "screaming-skull-catapult",
+      "points": 105,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Skulls of the Foe",
+          "name_de": "Skulls of the Foe",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Casket of Souls",
+      "name_de": "Casket of Souls",
+      "id": "casket-of-souls",
+      "points": 135,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Necrosphinx",
+      "name_de": "Necrosphinx",
+      "id": "necrosphinx",
+      "points": 195,
+      "minimum": 1,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ensorcelled Sting",
+          "name_de": "Ensorcelled Sting",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
