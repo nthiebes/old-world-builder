@@ -91,4 +91,12 @@ export const nameMap = {
     name_de: "Forest Spites",
     name_en: "Forest Spites",
   },
+  "beastmen-brayherds": {
+    name_de: "Beastmen Brayherds",
+    name_en: "Beastmen Brayherds",
+  },
+  "orc-and-goblin-tribes": {
+    name_de: "Orc & Goblin Tribes",
+    name_en: "Orc & Goblin Tribes",
+  },
 };
