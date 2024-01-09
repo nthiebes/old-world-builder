@@ -1384,6 +1384,8 @@
       "points": 16,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Bladesinger",
@@ -1424,7 +1426,7 @@
         {
           "name_en": "Throwing javelin",
           "name_de": "Throwing javelin",
-          "points": -1,
+          "points": 0,
           "perModel": true,
           "active": false
         }
@@ -1787,6 +1789,51 @@
           "maximum": 0
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Treekin",
+      "name_de": "Treekin",
+      "id": "treekin",
+      "points": 51,
+      "minimum": 2,
+      "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Elder",
+          "name_de": "Elder",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Hardwood Flesh (Heavy Armor)",
+          "name_de": "Hardwood Flesh (Heavy Armor)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
