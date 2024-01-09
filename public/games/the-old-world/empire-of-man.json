@@ -267,6 +267,15 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard",
+          "name_de": "Battle Standard",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -496,7 +505,7 @@
           "name_de": "Sergeant (Champion)",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": ["banner", "weapon"],
             "maxPoints": 0
           }
         },
@@ -505,8 +514,8 @@
           "name_de": "Standard bearer",
           "points": 5,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
@@ -555,15 +564,6 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Drilled",
-          "name_de": "Drilled",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -686,10 +686,73 @@
       "points": 7,
       "minimum": 10,
       "maximum": 100,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "regimentalUnit": true,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Sergeant (Champion)",
+          "name_de": "Sergeant (Champion)",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Crossbows",
+          "name_de": "Crossbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -703,8 +766,28 @@
       "points": 6,
       "minimum": 10,
       "maximum": 99,
-      "command": [],
-      "equipment": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Militia leader (Champion)",
+          "name_de": "Militia leader (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Mixed weapons",
+          "name_de": "Mixed weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -720,10 +803,157 @@
       "points": 7,
       "minimum": 5,
       "maximum": 99,
-      "command": [],
-      "equipment": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Marksman (Champion)",
+          "name_de": "Marksman (Champion)",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Warbow",
+          "name_de": "Warbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Fire & Flee",
+          "name_de": "Fire & flee",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts",
+          "name_de": "Scouts",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Empire Knights",
+      "name_de": "Empire Knights",
+      "id": "empire-knights",
+      "points": 21,
+      "minimum": 4,
+      "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Preceptor (Champion)",
+          "name_de": "Preceptor (Champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances",
+          "name_de": "Lances",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Iron shod hooves",
+          "name_de": "Iron shod hooves",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Barding",
+          "name_de": "Barding",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -801,23 +1031,6 @@
       }
     },
     {
-      "name_en": "Empire Knights",
-      "name_de": "Empire Knights",
-      "id": "empire-knights",
-      "points": 21,
-      "minimum": 3,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
       "name_en": "Inner Circle Knights",
       "name_de": "Inner Circle Knights",
       "id": "inner-circle-knights",
@@ -838,9 +1051,11 @@
       "name_en": "Demigryph Knights",
       "name_de": "Demigryph Knights",
       "id": "demigryph-knights",
-      "points": 32,
+      "points": 58,
       "minimum": 2,
       "maximum": 12,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -958,9 +1173,9 @@
       }
     },
     {
-      "name_en": "Hellblaster Volley Gun",
-      "name_de": "Hellblaster Volley Gun",
-      "id": "hellblaster-volley-gun",
+      "name_en": "Helblaster Volley Gun",
+      "name_de": "Helblaster Volley Gun",
+      "id": "helblaster-volley-gun",
       "points": 125,
       "minimum": 1,
       "maximum": 1,
@@ -975,9 +1190,9 @@
       }
     },
     {
-      "name_en": "Hellstrom Rocket Battery",
-      "name_de": "Hellstrom Rocket Battery",
-      "id": "hellstrom-rocket-battery",
+      "name_en": "Helstrom Rocket Battery",
+      "name_de": "Helstrom Rocket Battery",
+      "id": "helstrom-rocket-battery",
       "points": 125,
       "minimum": 1,
       "maximum": 1,
