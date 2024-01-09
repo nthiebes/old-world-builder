@@ -472,8 +472,641 @@
       }
     }
   ],
-  "special": [],
-  "rare": [],
+  "special": [
+    {
+      "name_en": "Dragon Princes",
+      "name_de": "Dragon Princes",
+      "id": "dragon-princes",
+      "points": 37,
+      "minimum": 5,
+      "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Drakemaster",
+          "name_de": "Drakemaster",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician ",
+          "name_de": "Musician ",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full Plate Armor",
+          "name_de": "Full Plate Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 0,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Barding",
+          "name_de": "Barding",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Swordsmasters",
+      "name_de": "Swordsmasters",
+      "id": "swordsmasters",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Bladelord",
+          "name_de": "Bladelord",
+          "points": 6,
+          "magic": {
+            "types": ["weapon"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician ",
+          "name_de": "Musician ",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Sword of Hoeth",
+          "name_de": "Sword of Hoeth",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Phoenix Guard",
+      "name_de": "Phoenix Guard",
+      "id": "phoenix-guard",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Keeper of the Flame",
+          "name_de": "Keeper of the Flame",
+          "points": 7,
+          "magic": {
+            "types": ["weapon"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician ",
+          "name_de": "Musician ",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Ceremonial Halberds",
+          "name_de": "Ceremonial Halberds",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full Plate Armor",
+          "name_de": "Full Plate Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "White Lions",
+      "name_de": "White Lions",
+      "id": "white-lions",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Guardian",
+          "name_de": "Guardian",
+          "points": 6,
+          "magic": {
+            "types": ["weapon"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Chracian Great Blades",
+          "name_de": "Chracian Great Blades",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Replace \"Valor of Ages\" with \"Veteran\"",
+          "name_de": "Replace \"Valor of Ages\" with \"Veteran\"",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Shadow Warriors",
+      "name_de": "Shadow Warriors",
+      "id": "shadow-warriors",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Shadow Walker",
+          "name_de": "Shadow Walker",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers (0-1 unit)",
+          "name_de": "Ambushers (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Chariot Runners (0-1 unit)",
+          "name_de": "Chariot Runners (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Feigned Flight (0-1 unit)",
+          "name_de": "Feigned Flight",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Tiranoc Chariots",
+      "name_de": "Tiranoc Chariots",
+      "id": "tiranoc-chariots",
+      "points": 75,
+      "minimum": 1,
+      "maximum": 4,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Sister of Avelorn",
+      "name_de": "Sister of Avelorn",
+      "id": "sister-of-avelorn",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "High Sister",
+          "name_de": "High Sister",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Bow of Avelorn",
+          "name_de": "Bow of Avelorn",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn (0-1 unit)",
+          "name_de": "Stubborn (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers (0-1 unit)",
+          "name_de": "Ambushers (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Lion Chariot of Chrace",
+      "name_de": "Lion Chariot of Chrace",
+      "id": "lion-chariot-of-chrace",
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Chracian Great Blade",
+          "name_de": "Chracian Great Blade",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Flamespyre Phoenix",
+      "name_de": "Flamespyre Phoenix",
+      "id": "flamespyre-phoenix",
+      "points": 170,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Frostheart Phoenix ",
+      "name_de": "Frostheart Phoenix ",
+      "id": "frostheart-phoenix-",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [
+        {
+          "name_en": "Full plate armor",
+          "name_de": "Full plate armor",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Great Eagle",
+      "name_de": "Great Eagle",
+      "id": "great-eagle",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Eagle Claw Bolt Thrower",
+      "name_de": "Eagle Claw Bolt Thrower",
+      "id": "eagle-claw-bolt-thrower",
+      "points": 80,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Lothern Skycutters",
+      "name_de": "Lothern Skycutters",
+      "id": "lothern-skycutters",
+      "points": 90,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavalry Spears",
+          "name_de": "Cavalry Spears",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Shortbows",
+          "name_de": "Shortbows",
+          "points": 0,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Eagle Eye Bolt Thrower",
+          "name_de": "Eagle Eye Bolt Thrower",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
