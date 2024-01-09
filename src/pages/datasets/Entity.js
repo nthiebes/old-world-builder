@@ -1010,14 +1010,14 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         New option
       </Button>
 
-      {type === "characters" && (
+      {type === "characters" ? (
         <>
           <hr />
 
           <h3>Mounts</h3>
           <p className="datasets__paragraph">
-          <p className="datasets__paragraph">
-            All mount options are mutually exclusive and please add a default mount.
+            All mount options are mutually exclusive and please add a default
+            mount.
             <br />
             <i>(e.g. "On foot" or "Hippogryph")</i>
           </p>
@@ -1174,7 +1174,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
           />
         </>
-      )}
+      ) : null}
 
       <Button
         submitButton
