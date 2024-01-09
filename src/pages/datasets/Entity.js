@@ -1016,7 +1016,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
 
           <h3>Mounts</h3>
           <p className="datasets__paragraph">
-            All mount options are mutually exclusive.
+          <p className="datasets__paragraph">
+            All mount options are mutually exclusive and please add a default mount.
             <br />
             <i>(e.g. "On foot" or "Hippogryph")</i>
           </p>
