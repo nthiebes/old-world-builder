@@ -1,19 +1,324 @@
 {
   "characters": [
     {
-      "name_en": "Nekaph, Emissary of Settra",
-      "name_de": "Nekaph, Emissary of Settra",
-      "id": "nekaph-emissary-of-settra",
-      "points": 99,
+      "name_en": "Tomb King",
+      "name_de": "Tomb King",
+      "id": "tomb-king",
+      "points": 160,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "None",
+          "name_de": "None",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "enchanted-item",
+          "artifact"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Tomb Prince",
+      "name_de": "Tomb Prince",
+      "id": "tomb-prince",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Royal Herald",
+      "name_de": "Royal Herald",
+      "id": "royal-herald",
+      "points": 60,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "enchanted-item",
+          "artifact"
+        ],
+        "maxPoints": 75
+      }
+    },
+    {
+      "name_en": "High Priest",
+      "name_de": "High Priest",
+      "id": "high-priest",
+      "points": 140,
       "minimum": 0,
       "maximum": 0,
       "command": [],
       "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
+      }
+    },
+    {
+      "name_en": "Mortuary Priest",
+      "name_de": "Mortuary Priest",
+      "id": "mortuary-priest",
+      "points": 53,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
+    },
+    {
+      "name_en": "Necrotect",
+      "name_de": "Necrotect",
+      "id": "necrotect",
+      "points": 55,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "banner",
+          "talisman",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     }
   ],
@@ -22,12 +327,89 @@
       "name_en": "Skeleton Warriors",
       "name_de": "Skeleton Warriors",
       "id": "skeleton-warriors",
-      "points": 99,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "options": [],
+      "points": 4,
+      "minimum": 10,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Master of Arms",
+          "name_de": "Master of Arms",
+          "points": 4,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Thrusting Spears",
+          "name_de": "Thrusting Spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Nehekharan Phalanx (one per 1000pts)",
+          "name_de": "Nehekharan Phalanx",
+          "points": 10,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -38,12 +420,171 @@
       "name_en": "Skeleton Archers",
       "name_de": "Skeleton Archers",
       "id": "skeleton-archers",
-      "points": 99,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
+      "points": 5,
+      "minimum": 200,
+      "maximum": 10,
+      "command": [
+        {
+          "name_en": "Master of Arms",
+          "name_de": "Master of Arms",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Tomb Guard",
+      "name_de": "Tomb Guard",
+      "id": "tomb-guard",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Tomb Captain",
+          "name_de": "Tomb Captain",
+          "points": 6,
+          "magic": {
+            "types": [
+              "talisman",
+              "armor",
+              "weapon",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Drilled (one per 1000pts)",
+          "name_de": "Drilled (one per 1000pts)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Nehekharan Phalanx (one per 1000pts)",
+          "name_de": "Nehekharan Phalanx (one per 1000pts)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Skeleton Skirmishers",
+      "name_de": "Skeleton Skirmishers",
+      "id": "skeleton-skirmishers",
+      "points": 4,
+      "minimum": 5,
+      "maximum": 20,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Warbows",
+          "name_de": "Warbows",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -53,14 +594,49 @@
   ],
   "special": [
     {
-      "name_en": "Skeleton Horsemen",
-      "name_de": "Skeleton Horsemen",
-      "id": "skeleton-horsemen",
-      "points": 99,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
+      "name_en": "Skeleton Chariots",
+      "name_de": "Skeleton Chariots",
+      "id": "skeleton-chariots",
+      "points": 43,
+      "minimum": 3,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Master Charioteer",
+          "name_de": "Master Charioteer",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -69,15 +645,227 @@
       }
     },
     {
-      "name_en": "Skeleton Chariots",
-      "name_de": "Skeleton Chariots",
-      "id": "skeleton-chariots",
-      "points": 99,
-      "minimum": 0,
-      "maximum": 0,
+      "name_en": "Ushabti",
+      "name_de": "Ushabti",
+      "id": "ushabti",
+      "points": 49,
+      "minimum": 3,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Ancient",
+          "name_de": "Ancient",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Greatbows",
+          "name_de": "Greatbows",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ritual Blades",
+          "name_de": "Ritual Blades",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Tomb Swarms",
+      "name_de": "Tomb Swarms",
+      "id": "tomb-swarms",
+      "points": 37,
+      "minimum": 2,
+      "maximum": 10,
       "command": [],
       "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Carrion",
+      "name_de": "Carrion",
+      "id": "carrion",
+      "points": 27,
+      "minimum": 2,
+      "maximum": 200,
+      "command": [],
+      "equipment": [],
+      "armor": [],
       "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Skeleton Horse Archers",
+      "name_de": "Skeleton Horse Archers",
+      "id": "skeleton-horse-archers",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 200,
+      "command": [
+        {
+          "name_en": "Master of Horse",
+          "name_de": "Master of Horse",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Chariot Runners",
+          "name_de": "Chariot Runners",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Necropolis Knights",
+      "name_de": "Necropolis Knights",
+      "id": "necropolis-knights",
+      "points": 54,
+      "minimum": 2,
+      "maximum": 198,
+      "command": [
+        {
+          "name_en": "Necropolis Captain",
+          "name_de": "Necropolis Captain",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "artifact",
+              "enchanted-item",
+              "banner"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great Weapon for Captain only",
+          "name_de": "Great Weapon for Captain only",
+          "points": 7,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Sepulchral Stalkers",
+      "name_de": "Sepulchral Stalkers",
+      "id": "sepulchral-stalkers",
+      "points": 52,
+      "minimum": 2,
+      "maximum": 200,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
