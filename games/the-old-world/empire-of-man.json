@@ -7,6 +7,8 @@
       "points": 90,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -19,7 +21,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
-          "points": 2,
+          "points": 3,
           "perModel": true,
           "active": false
         },
@@ -158,25 +160,162 @@
       "name_en": "Captain of the Empire",
       "name_de": "Captain of the Empire",
       "id": "captain-of-the-empire",
-      "points": 1,
+      "points": 45,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "equipment": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Handgun",
+          "name_de": "Handgun",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_de": "Brace of pistols",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded warhorse",
+          "name_de": "Barded warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire warhorse",
+          "name_de": "Empire warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Griffon",
+          "name_de": "Griffon",
+          "points": 130,
+          "active": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "banner",
+          "artifact",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     },
     {
       "name_en": "Wizard Lord",
       "name_de": "Wizard Lord",
       "id": "wizard-lord",
-      "points": 129,
+      "points": 130,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -349,6 +488,8 @@
       "points": 5,
       "minimum": 10,
       "maximum": 100,
+      "regimentalUnit": true,
+      "detachment": false,
       "command": [
         {
           "name_en": "Sergeant (Champion)",
@@ -443,10 +584,95 @@
       "points": 7,
       "minimum": 10,
       "maximum": 101,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "regimentalUnit": true,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Sergeant (Champion)",
+          "name_de": "Sergeant (Champion)",
+          "points": 5,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item",
+              "banner"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_de": "Thrusting spears",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -699,9 +925,11 @@
       "name_en": "Griffon",
       "name_de": "Griffon",
       "id": "griffon",
-      "points": 129,
+      "points": 130,
       "minimum": 1,
       "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -730,9 +958,9 @@
       }
     },
     {
-      "name_en": "Helblaster Volley Gun",
-      "name_de": "Helblaster Volley Gun",
-      "id": "helblaster-volley-gun",
+      "name_en": "Hellblaster Volley Gun",
+      "name_de": "Hellblaster Volley Gun",
+      "id": "hellblaster-volley-gun",
       "points": 125,
       "minimum": 1,
       "maximum": 1,
@@ -747,9 +975,9 @@
       }
     },
     {
-      "name_en": "Helstrom Rocket Battery",
-      "name_de": "Helstrom Rocket Battery",
-      "id": "helstrom-rocket-battery",
+      "name_en": "Hellstrom Rocket Battery",
+      "name_de": "Hellstrom Rocket Battery",
+      "id": "hellstrom-rocket-battery",
       "points": 125,
       "minimum": 1,
       "maximum": 1,
