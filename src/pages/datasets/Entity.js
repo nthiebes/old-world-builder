@@ -319,7 +319,9 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         placeholder="Automatically filled"
         required
       />
-      <label htmlFor={`points-${randomId}`}>Points per model</label>
+      <label htmlFor={`points-${randomId}`}>
+        {type === "characters" ? "Points" : "Points per model"}
+      </label>
       <NumberInput
         id={`points-${randomId}`}
         className="input"
@@ -606,28 +608,30 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             required
           />
-          <div className="checkbox">
-            <input
-              type="checkbox"
-              id={`equipment-perModel${index}-${randomId}`}
-              onChange={() =>
-                handleSecondLevelFieldChange({
-                  index,
-                  key: "equipment",
-                  field: "perModel",
-                  value: !equipment.perModel,
-                })
-              }
-              checked={equipment.perModel}
-              className="checkbox__input"
-            />
-            <label
-              htmlFor={`equipment-perModel${index}-${randomId}`}
-              className="checkbox__label"
-            >
-              Points count for each model
-            </label>
-          </div>
+          {type !== "characters" ? (
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                id={`equipment-perModel${index}-${randomId}`}
+                onChange={() =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "equipment",
+                    field: "perModel",
+                    value: !equipment.perModel,
+                  })
+                }
+                checked={equipment.perModel}
+                className="checkbox__input"
+              />
+              <label
+                htmlFor={`equipment-perModel${index}-${randomId}`}
+                className="checkbox__label"
+              >
+                Points count for each model
+              </label>
+            </div>
+          ) : null}
           <div className="checkbox">
             <input
               type="checkbox"
@@ -749,28 +753,30 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             required
           />
-          <div className="checkbox">
-            <input
-              type="checkbox"
-              id={`armor-perModel${index}-${randomId}`}
-              onChange={() =>
-                handleSecondLevelFieldChange({
-                  index,
-                  key: "armor",
-                  field: "perModel",
-                  value: !armor.perModel,
-                })
-              }
-              checked={armor.perModel}
-              className="checkbox__input"
-            />
-            <label
-              htmlFor={`armor-perModel${index}-${randomId}`}
-              className="checkbox__label"
-            >
-              Points count for each model
-            </label>
-          </div>
+          {type !== "characters" ? (
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                id={`armor-perModel${index}-${randomId}`}
+                onChange={() =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "armor",
+                    field: "perModel",
+                    value: !armor.perModel,
+                  })
+                }
+                checked={armor.perModel}
+                className="checkbox__input"
+              />
+              <label
+                htmlFor={`armor-perModel${index}-${randomId}`}
+                className="checkbox__label"
+              >
+                Points count for each model
+              </label>
+            </div>
+          ) : null}
           <div className="checkbox">
             <input
               type="checkbox"
