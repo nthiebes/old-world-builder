@@ -1970,6 +1970,103 @@
         "types": [],
         "maxPoints": 0
       }
+    },
+    {
+      "name_en": "Goblin Wolf Chariot",
+      "name_de": "Goblin Wolf Chariot",
+      "id": "goblin-wolf-chariot",
+      "points": 33,
+      "minimum": 1,
+      "maximum": 5,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Claws and Fangs",
+          "name_de": "Claws and Fangs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Third Wolf",
+          "name_de": "Third Wolf",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Night Goblin Squig Herd",
+      "name_de": "Night Goblin Squig Herd",
+      "id": "night-goblin-squig-herd",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Squig Herder",
+          "name_de": "Squig Herder",
+          "points": 3,
+          "perModel": true,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "rare": [
@@ -2176,6 +2273,40 @@
           "active": true
         }
       ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Snotling Pump Wagon",
+      "name_de": "Snotling Pump Wagon",
+      "id": "snotling-pump-wagon",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 5,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Throwing Weapon",
+          "name_de": "Throwing Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
