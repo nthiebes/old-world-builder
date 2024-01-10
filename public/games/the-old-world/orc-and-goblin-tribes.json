@@ -1066,6 +1066,8 @@
       "points": 5,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Boss",
@@ -1164,6 +1166,15 @@
           "name_en": "Big Stabba",
           "name_de": "Big Stabba",
           "points": 5,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
