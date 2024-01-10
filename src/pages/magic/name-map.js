@@ -115,4 +115,8 @@ export const nameMap = {
     name_de: "Tomb Kings of Khemri",
     name_en: "Tomb Kings of Khemri",
   },
+  "warriors-of-chaos": {
+    name_de: "Warriors of Chaos",
+    name_en: "Warriors of Chaos",
+  },
 };
