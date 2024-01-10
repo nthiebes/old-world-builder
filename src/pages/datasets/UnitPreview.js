@@ -19,11 +19,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
   const detachments = coreUnits.filter((coreUnit) => coreUnit.detachment);
   let magicPoints = 0;
 
-  unit?.magic?.items &&
-    unit?.magic?.items.forEach((option) => {
-      magicPoints += option.points;
-    });
-
   return (
     <>
       <button onClick={onClose} className="unit-preview-background" />
@@ -429,45 +424,41 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               )}
             </>
           )}
-          {unit.magic?.maxPoints ? (
-            <List
-              // to={`/editor/${listId}/${type}/${unitId}/magic`}
-              className="editor__list unit__link"
-              active={false}
-            >
-              <div className="editor__list-inner">
-                <b className="unit__magic-headline">
-                  <FormattedMessage id="unit.magicItems" />
-                </b>
-                <i className="checkbox__points">
-                  <span
-                    className={classNames(
-                      magicPoints > unit.magic.maxPoints && "editor__error"
+          {unit.magic && unit.magic.length
+            ? unit.magic.map((magic, magicIndex) => (
+                <List
+                  className="editor__list unit__link"
+                  active={false}
+                  key={magicIndex}
+                >
+                  <div className="editor__list-inner">
+                    <b className="unit__magic-headline">
+                      <FormattedMessage id="unit.magicItems" />
+                    </b>
+                    <i className="checkbox__points">
+                      <span>{magicPoints}</span> / {magic.maxPoints}{" "}
+                      <FormattedMessage id="app.points" />
+                    </i>
+                    {magicPoints > magic.maxPoints && (
+                      <Icon
+                        symbol="error"
+                        color="red"
+                        className="unit__magic-icon"
+                      />
                     )}
-                  >
-                    {magicPoints}
-                  </span>{" "}
-                  / {unit.magic.maxPoints} <FormattedMessage id="app.points" />
-                </i>
-                {magicPoints > unit.magic.maxPoints && (
-                  <Icon
-                    symbol="error"
-                    color="red"
-                    className="unit__magic-icon"
-                  />
-                )}
-              </div>
-              {unit.magic.items && (
-                <p>
-                  {unit.magic.items
-                    .map(({ name_de, name_en }) =>
-                      language === "de" ? name_de : name_en
-                    )
-                    .join(", ")}
-                </p>
-              )}
-            </List>
-          ) : null}
+                  </div>
+                  {magic.items && (
+                    <p>
+                      {magic.items
+                        .map(({ name_de, name_en }) =>
+                          language === "de" ? name_de : name_en
+                        )
+                        .join(", ")}
+                    </p>
+                  )}
+                </List>
+              ))
+            : null}
         </>
       </div>
     </>

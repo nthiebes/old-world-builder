@@ -221,6 +221,8 @@ export const Unit = ({ isMobile }) => {
     );
   };
 
+  console.log(unit?.magic);
+
   unit?.magic?.items &&
     unit?.magic?.items.forEach((option) => {
       magicPoints += option.points;
@@ -467,6 +469,70 @@ export const Unit = ({ isMobile }) => {
                         )}
                       </List>
                     ) : null}
+                    {magic && magic.length
+                      ? magic.map((magicEntry, magicIndex) => (
+                          <List
+                            to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+                            className="editor__list unit__link"
+                            active={location.pathname.includes("magic")}
+                          >
+                            <div className="editor__list-inner">
+                              <b>
+                                {magicEntry.types
+                                  .map(
+                                    (type) => nameMap[type][`name_${language}`]
+                                  )
+                                  .join(", ")}
+                              </b>
+                              <i className="checkbox__points">
+                                <span
+                                  className={classNames(
+                                    commandMagicPoints > magicEntry.maxPoints &&
+                                      "editor__error"
+                                  )}
+                                >
+                                  {getUnitCommandPoints(
+                                    unit?.magic?.items.filter(
+                                      ({
+                                        command,
+                                        magicIndex: magicItemMagicIndex,
+                                      }) =>
+                                        command === index &&
+                                        magicItemMagicIndex === magicIndex
+                                    )
+                                  )}
+                                </span>{" "}
+                                / {magicEntry.maxPoints}{" "}
+                                <FormattedMessage id="app.points" />
+                              </i>
+                              {commandMagicPoints > magicEntry.maxPoints && (
+                                <Icon
+                                  symbol="error"
+                                  color="red"
+                                  className="unit__magic-icon"
+                                />
+                              )}
+                            </div>
+                            {unit?.magic?.items && (
+                              <p>
+                                {unit.magic.items
+                                  .filter(
+                                    ({
+                                      command,
+                                      magicIndex: magicItemMagicIndex,
+                                    }) =>
+                                      command === index &&
+                                      magicItemMagicIndex === magicIndex
+                                  )
+                                  .map(({ name_de, name_en }) =>
+                                    language === "de" ? name_de : name_en
+                                  )
+                                  .join(", ")}
+                              </p>
+                            )}
+                          </List>
+                        ))
+                      : null}
                   </Fragment>
                 );
               }
@@ -774,6 +840,48 @@ export const Unit = ({ isMobile }) => {
             )}
           </List>
         ) : null}
+        {unit.magic && unit.magic.length
+          ? unit.magic.map((magic, magicIndex) => (
+              <List
+                to={`/editor/${listId}/${type}/${unitId}/magic`}
+                className="editor__list unit__link"
+                active={location.pathname.includes("magic")}
+                key={magicIndex}
+              >
+                <div className="editor__list-inner">
+                  <b className="unit__magic-headline">
+                    {language === "de" ? magic.name_de : magic.name_en}
+                  </b>
+                  <i className="checkbox__points">
+                    <span
+                      className={classNames(
+                        magicPoints > magic.maxPoints && "editor__error"
+                      )}
+                    >
+                      {magicPoints}
+                    </span>{" "}
+                    / {magic.maxPoints} <FormattedMessage id="app.points" />
+                  </i>
+                  {magicPoints > magic.maxPoints && (
+                    <Icon
+                      symbol="error"
+                      color="red"
+                      className="unit__magic-icon"
+                    />
+                  )}
+                </div>
+                {magic.items && (
+                  <p>
+                    {magic.items
+                      .map(({ name_de, name_en }) =>
+                        language === "de" ? name_de : name_en
+                      )
+                      .join(", ")}
+                  </p>
+                )}
+              </List>
+            ))
+          : null}
       </MainComponent>
     </>
   );
