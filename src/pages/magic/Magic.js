@@ -50,7 +50,7 @@ export const Magic = ({ isMobile }) => {
   const { language } = useLanguage();
   const intl = useIntl();
   const [isLoading, setIsLoading] = useState(true);
-  const { listId, type, unitId, command } = useParams();
+  const { listId, type, unitId, command, group } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -63,41 +63,80 @@ export const Magic = ({ isMobile }) => {
   const items = useSelector((state) => state.items);
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
-  const maxMagicPoints =
-    (unit &&
-      unit.command &&
-      unit.command[command] &&
-      unit.command[command]?.magic?.maxPoints) ||
-    (unit && unit.magic.maxPoints);
-  const handleMagicChange = (event, magicItem) => {
+  let maxMagicPoints = 0;
+  const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
 
     if (event.target.checked) {
-      magicItems = [
-        ...(unit?.magic?.items || []),
-        {
-          ...magicItem,
-          command: Number(command),
-          id: event.target.value,
-        },
-      ];
+      if (isCommand) {
+        magicItems = [
+          ...(unit.command[command].magic.selected || []),
+          {
+            ...magicItem,
+            id: event.target.value,
+          },
+        ];
+      } else {
+        magicItems = [
+          ...(unit.items[group].selected || []),
+          {
+            ...magicItem,
+            id: event.target.value,
+          },
+        ];
+      }
     } else {
-      magicItems = unit.magic.items.filter(
-        ({ id }) => id !== event.target.value
-      );
+      if (isCommand) {
+        magicItems = unit.command[command].magic.selected.filter(
+          ({ id }) => id !== event.target.value
+        );
+      } else {
+        magicItems = unit.items[group].selected.filter(
+          ({ id }) => id !== event.target.value
+        );
+      }
     }
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        magic: {
-          ...unit.magic,
-          items: magicItems,
-        },
-      })
-    );
+    if (isCommand) {
+      const newCommand = unit.command.map((entry, entryIndex) =>
+        entryIndex === Number(command)
+          ? {
+              ...entry,
+              magic: {
+                ...entry.magic,
+                selected: magicItems,
+              },
+            }
+          : entry
+      );
+
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          command: newCommand,
+        })
+      );
+    } else {
+      const newItems = unit.items.map((entry, entryIndex) =>
+        entryIndex === Number(group)
+          ? {
+              ...entry,
+              selected: magicItems,
+            }
+          : entry
+      );
+
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          items: newItems,
+        })
+      );
+    }
   };
 
   useEffect(() => {
@@ -147,11 +186,25 @@ export const Magic = ({ isMobile }) => {
   }
 
   const getCheckbox = ({ unit, magicItem, itemGroup, isConditional }) => {
-    const isChecked = unit?.magic?.items
-      ? unit.magic.items.find(
+    let isChecked = false;
+    let isCommand = false;
+
+    if (
+      unit?.command &&
+      unit.command[command] &&
+      unit.command[command]?.magic?.maxPoints
+    ) {
+      isChecked =
+        (unit.command[command].magic.selected || []).find(
           ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-        ) || false
-      : false;
+        ) || false;
+      isCommand = true;
+    } else if (unit?.items?.length) {
+      isChecked =
+        unit.items[group].selected.find(
+          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+        ) || false;
+    }
 
     return (
       <div
@@ -165,7 +218,7 @@ export const Magic = ({ isMobile }) => {
           type="checkbox"
           id={`${itemGroup.id}-${magicItem.id}`}
           value={`${itemGroup.id}-${magicItem.id}`}
-          onChange={(event) => handleMagicChange(event, magicItem)}
+          onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
           checked={isChecked}
           className="checkbox__input"
         />
@@ -183,7 +236,27 @@ export const Magic = ({ isMobile }) => {
       </div>
     );
   };
-  const hasPointsError = getUnitMagicPoints({ unit, command }) > maxMagicPoints;
+
+  let hasPointsError = false;
+  let unitMagicPoints = 0;
+
+  if (
+    unit?.command &&
+    unit.command[command] &&
+    unit.command[command]?.magic?.maxPoints
+  ) {
+    maxMagicPoints = unit.command[command].magic.maxPoints;
+    unitMagicPoints = getUnitMagicPoints({
+      selected: unit.command[command].magic.selected,
+    });
+    hasPointsError = unitMagicPoints > maxMagicPoints;
+  } else if (unit?.items?.length) {
+    maxMagicPoints = unit.items[group].maxPoints;
+    unitMagicPoints = getUnitMagicPoints({
+      selected: unit.items[group].selected,
+    });
+    hasPointsError = unitMagicPoints > maxMagicPoints;
+  }
 
   return (
     <>
@@ -194,9 +267,11 @@ export const Magic = ({ isMobile }) => {
       {isMobile && (
         <Header
           to={`/editor/${listId}/${type}/${unitId}`}
-          headline={intl.formatMessage({
-            id: "unit.magicItems",
-          })}
+          headline={
+            language === "de"
+              ? unit.items[group].name_de
+              : unit.items[group].name_en
+          }
           subheadline={
             <>
               <span
@@ -205,7 +280,7 @@ export const Magic = ({ isMobile }) => {
                   hasPointsError && "magic__header-points--error"
                 )}
               >
-                {`${getUnitMagicPoints({ unit, command })}`}&nbsp;
+                {`${unitMagicPoints}`}&nbsp;
               </span>
               {`/ ${maxMagicPoints} ${intl.formatMessage({
                 id: "app.points",
@@ -221,9 +296,19 @@ export const Magic = ({ isMobile }) => {
           <Header
             isSection
             to={`/editor/${listId}/${type}/${unitId}`}
-            headline={intl.formatMessage({
-              id: "unit.magicItems",
-            })}
+            headline={
+              language === "de"
+                ? unit?.items
+                  ? [group].name_de
+                  : intl.formatMessage({
+                      id: "unit.magicItems",
+                    })
+                : unit?.items
+                ? [group].name_en
+                : intl.formatMessage({
+                    id: "unit.magicItems",
+                  })
+            }
             subheadline={
               <>
                 <span
@@ -232,7 +317,7 @@ export const Magic = ({ isMobile }) => {
                     hasPointsError && "magic__header-points--error"
                   )}
                 >
-                  {`${getUnitMagicPoints({ unit, command })}`}&nbsp;
+                  {`${unitMagicPoints}`}&nbsp;
                 </span>
                 {`/ ${maxMagicPoints} ${intl.formatMessage({
                   id: "app.points",
@@ -266,18 +351,29 @@ export const Magic = ({ isMobile }) => {
 
               // Filter magic items
               if (
-                unit?.magic?.types &&
-                unit?.magic?.types.length &&
-                !unit.magic.types.includes(magicItem.type)
+                unit?.items?.length &&
+                !unit.items[group].types.includes(magicItem.type)
               ) {
                 return null;
               }
 
-              const isChecked = unit?.magic?.items
-                ? unit.magic.items.find(
+              let isChecked = false;
+
+              if (
+                unit?.command &&
+                unit.command[command] &&
+                unit.command[command]?.magic?.maxPoints
+              ) {
+                isChecked =
+                  (unit.command[command].magic.selected || []).find(
                     ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-                  ) || false
-                : false;
+                  ) || false;
+              } else if (unit?.items?.length) {
+                isChecked =
+                  unit.items[group].selected.find(
+                    ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                  ) || false;
+              }
 
               return (
                 <Fragment key={magicItem.name_de}>
@@ -288,10 +384,10 @@ export const Magic = ({ isMobile }) => {
                   )}
                   {getCheckbox({ unit, magicItem, itemGroup })}
                   {magicItem.conditional && isChecked
-                    ? magicItem.conditional.map((confitionalItem) =>
+                    ? magicItem.conditional.map((conditionalItem) =>
                         getCheckbox({
                           unit,
-                          magicItem: confitionalItem,
+                          magicItem: conditionalItem,
                           itemGroup,
                           isConditional: true,
                         })

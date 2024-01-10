@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
-import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
+import { getUnitPoints, getUnitMagicPoints } from "../../utils/points";
 import { List } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -37,7 +37,6 @@ export const Unit = ({ isMobile }) => {
   const army = useSelector((state) => state.army);
   const detachments =
     army && army.core.filter((coreUnit) => coreUnit.detachment);
-  let magicPoints = 0;
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -221,13 +220,6 @@ export const Unit = ({ isMobile }) => {
     );
   };
 
-  console.log(unit?.magic);
-
-  unit?.magic?.items &&
-    unit?.magic?.items.forEach((option) => {
-      magicPoints += option.points;
-    });
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -337,7 +329,8 @@ export const Unit = ({ isMobile }) => {
           (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
           (!unit.armor || (unit.armor && !unit.armor.length)) &&
           (!unit.mounts || (unit.mounts && !unit.mounts.length)) &&
-          (!unit.magic || (unit.magic && !unit.magic.maxPoints)) &&
+          (!unit.magic ||
+            (unit.magic && !unit.magic.maxPoints && !unit.items?.length)) &&
           (!unit.options || (unit.options && !unit.options.length)) && (
             <i className="unit__empty">
               <FormattedMessage id="unit.noOptions" />
@@ -376,15 +369,9 @@ export const Unit = ({ isMobile }) => {
                 },
                 index
               ) => {
-                let commandMagicPoints = 0;
-
-                if (unit.magic && unit.magic.items) {
-                  unit.magic.items
-                    .filter((item) => item.command === index)
-                    .forEach(({ points }) => {
-                      commandMagicPoints = commandMagicPoints + points;
-                    });
-                }
+                const commandMagicPoints = getUnitMagicPoints({
+                  selected: magic?.selected,
+                });
 
                 return (
                   <Fragment key={id}>
@@ -439,11 +426,7 @@ export const Unit = ({ isMobile }) => {
                                   "editor__error"
                               )}
                             >
-                              {getUnitCommandPoints(
-                                unit?.magic?.items.filter(
-                                  ({ command }) => command === index
-                                )
-                              )}
+                              {commandMagicPoints}
                             </span>{" "}
                             / {unit.command[index].magic.maxPoints}{" "}
                             <FormattedMessage id="app.points" />
@@ -457,10 +440,9 @@ export const Unit = ({ isMobile }) => {
                             />
                           )}
                         </div>
-                        {unit?.magic?.items && (
+                        {magic?.selected && (
                           <p>
-                            {unit.magic.items
-                              .filter(({ command }) => command === index)
+                            {magic.selected
                               .map(({ name_de, name_en }) =>
                                 language === "de" ? name_de : name_en
                               )
@@ -469,70 +451,6 @@ export const Unit = ({ isMobile }) => {
                         )}
                       </List>
                     ) : null}
-                    {magic && magic.length
-                      ? magic.map((magicEntry, magicIndex) => (
-                          <List
-                            to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                            className="editor__list unit__link"
-                            active={location.pathname.includes("magic")}
-                          >
-                            <div className="editor__list-inner">
-                              <b>
-                                {magicEntry.types
-                                  .map(
-                                    (type) => nameMap[type][`name_${language}`]
-                                  )
-                                  .join(", ")}
-                              </b>
-                              <i className="checkbox__points">
-                                <span
-                                  className={classNames(
-                                    commandMagicPoints > magicEntry.maxPoints &&
-                                      "editor__error"
-                                  )}
-                                >
-                                  {getUnitCommandPoints(
-                                    unit?.magic?.items.filter(
-                                      ({
-                                        command,
-                                        magicIndex: magicItemMagicIndex,
-                                      }) =>
-                                        command === index &&
-                                        magicItemMagicIndex === magicIndex
-                                    )
-                                  )}
-                                </span>{" "}
-                                / {magicEntry.maxPoints}{" "}
-                                <FormattedMessage id="app.points" />
-                              </i>
-                              {commandMagicPoints > magicEntry.maxPoints && (
-                                <Icon
-                                  symbol="error"
-                                  color="red"
-                                  className="unit__magic-icon"
-                                />
-                              )}
-                            </div>
-                            {unit?.magic?.items && (
-                              <p>
-                                {unit.magic.items
-                                  .filter(
-                                    ({
-                                      command,
-                                      magicIndex: magicItemMagicIndex,
-                                    }) =>
-                                      command === index &&
-                                      magicItemMagicIndex === magicIndex
-                                  )
-                                  .map(({ name_de, name_en }) =>
-                                    language === "de" ? name_de : name_en
-                                  )
-                                  .join(", ")}
-                              </p>
-                            )}
-                          </List>
-                        ))
-                      : null}
                   </Fragment>
                 );
               }
@@ -805,82 +723,53 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
-        {unit.magic?.maxPoints ? (
-          <List
-            to={`/editor/${listId}/${type}/${unitId}/magic`}
-            className="editor__list unit__link"
-            active={location.pathname.includes("magic")}
-          >
-            <div className="editor__list-inner">
-              <b className="unit__magic-headline">
-                <FormattedMessage id="unit.magicItems" />
-              </b>
-              <i className="checkbox__points">
-                <span
-                  className={classNames(
-                    magicPoints > unit.magic.maxPoints && "editor__error"
-                  )}
+        {unit.items && unit.items.length
+          ? unit.items.map((item, itemIndex) => {
+              const itemsPoints = getUnitMagicPoints({
+                selected: item.selected,
+              });
+
+              return (
+                <List
+                  to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
+                  className="editor__list unit__link"
+                  active={location.pathname.includes("items")}
+                  key={itemIndex}
                 >
-                  {magicPoints}
-                </span>{" "}
-                / {unit.magic.maxPoints} <FormattedMessage id="app.points" />
-              </i>
-              {magicPoints > unit.magic.maxPoints && (
-                <Icon symbol="error" color="red" className="unit__magic-icon" />
-              )}
-            </div>
-            {unit.magic.items && (
-              <p>
-                {unit.magic.items
-                  .map(({ name_de, name_en }) =>
-                    language === "de" ? name_de : name_en
-                  )
-                  .join(", ")}
-              </p>
-            )}
-          </List>
-        ) : null}
-        {unit.magic && unit.magic.length
-          ? unit.magic.map((magic, magicIndex) => (
-              <List
-                to={`/editor/${listId}/${type}/${unitId}/magic`}
-                className="editor__list unit__link"
-                active={location.pathname.includes("magic")}
-                key={magicIndex}
-              >
-                <div className="editor__list-inner">
-                  <b className="unit__magic-headline">
-                    {language === "de" ? magic.name_de : magic.name_en}
-                  </b>
-                  <i className="checkbox__points">
-                    <span
-                      className={classNames(
-                        magicPoints > magic.maxPoints && "editor__error"
-                      )}
-                    >
-                      {magicPoints}
-                    </span>{" "}
-                    / {magic.maxPoints} <FormattedMessage id="app.points" />
-                  </i>
-                  {magicPoints > magic.maxPoints && (
-                    <Icon
-                      symbol="error"
-                      color="red"
-                      className="unit__magic-icon"
-                    />
+                  <div className="editor__list-inner">
+                    <b className="unit__magic-headline">
+                      {language === "de" ? item.name_de : item.name_en}
+                    </b>
+                    <i className="checkbox__points">
+                      <span
+                        className={classNames(
+                          itemsPoints > item.maxPoints && "editor__error"
+                        )}
+                      >
+                        {itemsPoints}
+                      </span>{" "}
+                      / {item.maxPoints} <FormattedMessage id="app.points" />
+                    </i>
+                    {itemsPoints > item.maxPoints && (
+                      <Icon
+                        symbol="error"
+                        color="red"
+                        className="unit__magic-icon"
+                      />
+                    )}
+                  </div>
+                  {item.selected && (
+                    <p>
+                      {item.selected
+                        .map(({ name_de, name_en }) =>
+                          language === "de" ? name_de : name_en
+                        )
+                        .join(", ")}
+                    </p>
                   )}
-                </div>
-                {magic.items && (
-                  <p>
-                    {magic.items
-                      .map(({ name_de, name_en }) =>
-                        language === "de" ? name_de : name_en
-                      )
-                      .join(", ")}
-                  </p>
-                )}
-              </List>
-            ))
+                </List>
+              );
+            })
           : null}
       </MainComponent>
     </>

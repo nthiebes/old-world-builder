@@ -64,23 +64,13 @@ export const getUnitPoints = (unit) => {
   return unitPoints;
 };
 
-export const getUnitMagicPoints = ({ unit, command }) => {
-  const commandIndex = Number(command);
+export const getUnitMagicPoints = ({ selected }) => {
   let unitPoints = 0;
 
-  if (unit?.magic?.items) {
-    if (commandIndex >= 0) {
-      unit.magic.items.forEach((option) => {
-        if (option.command === commandIndex) {
-          unitPoints += option.points;
-        }
-      });
-    } else {
-      unit.magic.items.forEach((option) => {
-        unitPoints += option.points;
-      });
-    }
-  }
+  selected &&
+    selected.forEach((option) => {
+      unitPoints += option.points;
+    });
 
   return unitPoints;
 };

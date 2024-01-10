@@ -46,6 +46,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
             (!unit.armor || (unit.armor && !unit.armor.length)) &&
             (!unit.mounts || (unit.mounts && !unit.mounts.length)) &&
             (!unit.magic || (unit.magic && !unit.magic.maxPoints)) &&
+            (!unit.items || (unit.items && !unit.items.length)) &&
             (!unit.options || (unit.options && !unit.options.length)) && (
               <i className="unit__empty">
                 <FormattedMessage id="unit.noOptions" />
@@ -140,7 +141,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                                 )}
                               >
                                 {getUnitCommandPoints(
-                                  unit?.magic?.items.filter(
+                                  unit?.magic?.selected.filter(
                                     ({ command }) => command === index
                                   )
                                 )}
@@ -424,32 +425,25 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               )}
             </>
           )}
-          {unit.magic && unit.magic.length
-            ? unit.magic.map((magic, magicIndex) => (
+          {unit.items && unit.items.length
+            ? unit.items.map((item, itemIndex) => (
                 <List
                   className="editor__list unit__link"
                   active={false}
-                  key={magicIndex}
+                  key={itemIndex}
                 >
                   <div className="editor__list-inner">
                     <b className="unit__magic-headline">
                       <FormattedMessage id="unit.magicItems" />
                     </b>
                     <i className="checkbox__points">
-                      <span>{magicPoints}</span> / {magic.maxPoints}{" "}
+                      <span>{magicPoints}</span> / {item.maxPoints}{" "}
                       <FormattedMessage id="app.points" />
                     </i>
-                    {magicPoints > magic.maxPoints && (
-                      <Icon
-                        symbol="error"
-                        color="red"
-                        className="unit__magic-icon"
-                      />
-                    )}
                   </div>
-                  {magic.items && (
+                  {item.items && (
                     <p>
-                      {magic.items
+                      {item.items
                         .map(({ name_de, name_en }) =>
                           language === "de" ? name_de : name_en
                         )
