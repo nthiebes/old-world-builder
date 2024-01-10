@@ -498,7 +498,7 @@
       "minimum": 10,
       "maximum": 100,
       "regimentalUnit": true,
-      "detachment": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Sergeant (Champion)",
@@ -585,7 +585,7 @@
       "minimum": 10,
       "maximum": 101,
       "regimentalUnit": true,
-      "detachment": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Sergeant (Champion)",
@@ -687,14 +687,14 @@
       "minimum": 10,
       "maximum": 100,
       "regimentalUnit": true,
-      "detachment": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Sergeant (Champion)",
           "name_de": "Sergeant (Champion)",
           "points": 5,
           "magic": {
-            "types": [],
+            "types": ["banner"],
             "maxPoints": 0
           }
         },
@@ -703,8 +703,8 @@
           "name_de": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 25
           }
         },
         {
@@ -715,22 +715,49 @@
             "types": [],
             "maxPoints": 0
           }
+        },
+        {
+          "name_en": "Sergeant (Champion) with brace of pistols",
+          "name_de": "Sergeant (Champion) with brace of pistols",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Sergeant (Champion) with Hochland long rifle",
+          "name_de": "Sergeant (Champion) with Hochland long rifle",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Sergeant (Champion) with repeater handgun",
+          "name_de": "Sergeant (Champion) with repeater handgun",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
+          "name_en": "Hand weapons and crossbows",
           "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Crossbows",
-          "name_de": "Crossbows",
-          "points": 0,
+          "name_en": "Hand weapons and handguns",
+          "name_de": "Hand weapons and handguns",
+          "points": 1,
           "perModel": true,
-          "active": true
+          "active": false
         }
       ],
       "armor": [
@@ -767,7 +794,7 @@
       "minimum": 10,
       "maximum": 99,
       "regimentalUnit": false,
-      "detachment": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Militia leader (Champion)",
@@ -804,7 +831,7 @@
       "minimum": 5,
       "maximum": 99,
       "regimentalUnit": false,
-      "detachment": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Marksman (Champion)",
@@ -818,15 +845,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Warbow",
-          "name_de": "Warbow",
+          "name_en": "Hand weapon and warbows",
+          "name_de": "Hand weapon and warbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -874,8 +894,8 @@
           "name_de": "Preceptor (Champion)",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
           }
         },
         {
@@ -883,8 +903,8 @@
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 25
           }
         },
         {
@@ -918,13 +938,6 @@
           "points": 1,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Iron shod hooves",
-          "name_de": "Iron shod hooves",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -934,19 +947,21 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Barding",
-          "name_de": "Barding",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "options": [
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Replace shields with great weapons",
+          "name_de": "Replace shields with great weapons",
           "points": 0,
           "perModel": true,
           "stackable": false,
@@ -969,6 +984,8 @@
       "points": 11,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": true,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -986,8 +1003,37 @@
       "points": 13,
       "minimum": 5,
       "maximum": 99,
-      "command": [],
-      "equipment": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Prophet of Doom (Champion)",
+          "name_de": "Prophet of Doom (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and flails",
+          "name_de": "Hand weapons and flails",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -1003,10 +1049,84 @@
       "points": 16,
       "minimum": 4,
       "maximum": 100,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Veteran (Champion)",
+          "name_de": "Veteran (Champion)",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Veteran (Champion) with repeater pistol",
+          "name_de": "Veteran (Champion) with repeater pistol",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Veteran (Champion) with grenade launching blunderbuss",
+          "name_de": "Veteran (Champion) with grenade launching blunderbuss",
+          "points": 13,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Veteran (Champion) with repeater handgun",
+          "name_de": "Veteran (Champion) with repeater handgun",
+          "points": 13,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and brace of pistols",
+          "name_de": "Hand weapons and brace of pistols",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Vanguard",
+          "name_de": "Vanguard",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1020,9 +1140,73 @@
       "points": 19,
       "minimum": 4,
       "maximum": 100,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Sharpshooter (Champion)",
+          "name_de": "Sharpshooter (Champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Sharpshooter (champion) with brace of pistols",
+          "name_de": "Sharpshooter (champion) with brace of pistols",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Sharpshooter (Champion) with repeater pistol",
+          "name_de": "Sharpshooter (Champion) with repeater pistol",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Sharpshooter (Champion) with grenade launching blunderbuss",
+          "name_de": "Sharpshooter (Champion) with grenade launching blunderbuss",
+          "points": 16,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, pistols, and repeater handguns",
+          "name_de": "Hand weapons, pistols, and repeater handguns",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
