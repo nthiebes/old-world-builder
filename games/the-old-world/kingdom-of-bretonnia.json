@@ -1,8 +1,8 @@
 {
   "characters": [
     {
-      "name_en": "Duke",
-      "name_de": "Duke",
+      "name_en": "Duke (0-1)",
+      "name_de": "Duke (0-1)",
       "id": "duke",
       "points": 175,
       "minimum": 0,
@@ -11,30 +11,39 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Hand weapon",
+          "name_en": "Hand Weapon",
           "points": 0,
+          "perModel": false,
           "active": true
         },
         {
-          "name_de": "Morning star",
-          "name_en": "Morning star",
-          "points": 3
+          "name_de": "Morning Star",
+          "name_en": "Morning Star",
+          "points": 3,
+          "perModel": false,
+          "active": false
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Great weapon",
-          "points": 4
+          "name_en": "Great Weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
         },
         {
-          "name_de": "Lance (if appropriately mounted)",
-          "name_en": "Lance (if appropriately mounted)",
-          "points": 4
-        },
+          "name_de": "Lance",
+          "name_en": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -42,13 +51,10 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
-          "points": 2
-        },
-        {
-          "name_de": "Knightly Virtue",
-          "name_en": "Knightly Virtue",
-          "points": 0,
-          "stackable": false
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
           "name_en": "The Questing Vow",
@@ -61,7 +67,119 @@
         {
           "name_en": "The Grail Vow",
           "name_de": "The Grail Vow",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Knightly Temper",
+          "name_de": "Virtue of Knightly Temper",
+          "points": 70,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Heroism",
+          "name_de": "Virtue of Heroism",
+          "points": 60,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Stoicism",
+          "name_de": "Virtue of Stoicism",
+          "points": 55,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Penitent",
+          "name_de": "Virtue of the Penitent",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Ideal",
+          "name_de": "Virtue of the Ideal",
+          "points": 45,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Impetuous Knight",
+          "name_de": "Virtue of the Impetuous Knight",
+          "points": 40,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Audacity",
+          "name_de": "Virtue of Audacity",
+          "points": 35,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Purity",
+          "name_de": "Virtue of Purity",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Duty",
+          "name_de": "Virtue of Duty",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Joust",
+          "name_de": "Virtue of the Joust",
           "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Confidence",
+          "name_de": "Virtue of Confidence",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Noble Disdain",
+          "name_de": "Virtue of Noble Disdain",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Discipline",
+          "name_de": "Virtue of Discipline",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Empathy",
+          "name_de": "Virtue of Empathy",
+          "points": 5,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -70,19 +188,9 @@
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "On foot",
+          "name_en": "On Foot",
           "points": 0,
           "active": true
-        },
-        {
-          "name_de": "Hippogryph",
-          "name_en": "Hippogryph",
-          "points": 120
-        },
-        {
-          "name_de": "Hippogryph, barding",
-          "name_en": "Hippogryph, barding",
-          "points": 135
         },
         {
           "name_en": "Bretonnian Warhorse",
@@ -101,6 +209,16 @@
           "name_de": "Royal Pegasus",
           "points": 60,
           "active": false
+        },
+        {
+          "name_de": "Hippogryph",
+          "name_en": "Hippogryph",
+          "points": 120
+        },
+        {
+          "name_de": "Hippogryph with Barding",
+          "name_en": "Hippogryph with Barding",
+          "points": 135
         }
       ],
       "magic": {
@@ -109,8 +227,8 @@
       }
     },
     {
-      "name_en": "Baron",
-      "name_de": "Baron",
+      "name_en": "Baron (0-1* per 1000 points)",
+      "name_de": "Baron (0-1* per 1000 points)",
       "id": "baron",
       "points": 100,
       "minimum": 0,
@@ -119,30 +237,39 @@
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Hand weapon",
+          "name_en": "Hand Weapon",
           "points": 0,
+          "perModel": false,
           "active": true
         },
         {
-          "name_de": "Morning star",
-          "name_en": "Morning star",
-          "points": 3
+          "name_de": "Morning Star",
+          "name_en": "Morning Star",
+          "points": 3,
+          "perModel": false,
+          "active": false
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Great weapon",
-          "points": 4
+          "name_en": "Great Weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
         },
         {
-          "name_de": "Lance (if appropriately mounted)",
-          "name_en": "Lance (if appropriately mounted)",
-          "points": 4
-        },
+          "name_de": "Lance",
+          "name_en": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -150,40 +277,146 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
-          "points": 2
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "The Questing Vow",
           "name_en": "The Questing Vow",
-          "points": 15
+          "name_de": "The Questing Vow",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "The Grail Vow",
           "name_en": "The Grail Vow",
-          "points": 20
+          "name_de": "The Grail Vow",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "Knightly Virtue",
-          "name_en": "Knightly Virtue",
-          "points": 0
+          "name_en": "Virtue of Knightly Temper",
+          "name_de": "Virtue of Knightly Temper",
+          "points": 70,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Heroism",
+          "name_de": "Virtue of Heroism",
+          "points": 60,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Stoicism",
+          "name_de": "Virtue of Stoicism",
+          "points": 55,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Penitent",
+          "name_de": "Virtue of the Penitent",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Ideal",
+          "name_de": "Virtue of the Ideal",
+          "points": 45,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Impetuous Knight",
+          "name_de": "Virtue of the Impetuous Knight",
+          "points": 40,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Audacity",
+          "name_de": "Virtue of Audacity",
+          "points": 35,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Purity",
+          "name_de": "Virtue of Purity",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Duty",
+          "name_de": "Virtue of Duty",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Joust",
+          "name_de": "Virtue of the Joust",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Confidence",
+          "name_de": "Virtue of Confidence",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Noble Disdain",
+          "name_de": "Virtue of Noble Disdain",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Discipline",
+          "name_de": "Virtue of Discipline",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Empathy",
+          "name_de": "Virtue of Empathy",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "On foot",
+          "name_en": "On Foot",
           "points": 0,
           "active": true
-        },
-        {
-          "name_de": "Hippogryph",
-          "name_en": "Hippogryph",
-          "points": 120
-        },
-        {
-          "name_de": "Hippogryph, barding",
-          "name_en": "Hippogryph, barding",
-          "points": 135
         },
         {
           "name_en": "Bretonnian Warhorse",
@@ -202,11 +435,91 @@
           "name_de": "Royal Pegasus",
           "points": 60,
           "active": false
+        },
+        {
+          "name_de": "Hippogryph",
+          "name_en": "Hippogryph",
+          "points": 120
+        },
+        {
+          "name_de": "Hippogryph with Barding",
+          "name_en": "Hippogryph with Barding",
+          "points": 135
         }
       ],
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 75
+      }
+    },
+    {
+      "name_en": "Prophetess (0-1* per 1000 points)",
+      "name_de": "Prophetess (0-1* per 1000 points)",
+      "id": "prophetess",
+      "points": 135,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Wizard Level 4",
+          "name_de": "Wizard Level 4",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Bretonnian Warhorse",
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Unicorn",
+          "name_de": "Unicorn",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Royal Pegasus",
+          "name_de": "Royal Pegasus",
+          "points": 60,
+          "active": false
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
       }
     },
     {
@@ -216,34 +529,53 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 0,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
-          "name_en": "Hand weapon",
+          "name_en": "Hand Weapon",
           "points": 0,
+          "perModel": false,
           "active": true
         },
         {
-          "name_de": "Morning star",
-          "name_en": "Morning star",
-          "points": 3
+          "name_de": "Morning Star",
+          "name_en": "Morning Star",
+          "points": 3,
+          "perModel": false,
+          "active": false
         },
         {
           "name_de": "Zweihandwaffe",
-          "name_en": "Great weapon",
-          "points": 4
+          "name_en": "Great Weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
         },
         {
-          "name_de": "Lance (if appropriately mounted)",
-          "name_en": "Lance (if appropriately mounted)",
-          "points": 4
-        },
+          "name_de": "Lance",
+          "name_en": "Lance",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -251,27 +583,135 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
-          "points": 2
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "The Questing Vow",
           "name_en": "The Questing Vow",
-          "points": 15
+          "name_de": "The Questing Vow",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "The Grail Vow",
           "name_en": "The Grail Vow",
-          "points": 20
+          "name_de": "The Grail Vow",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_de": "Knightly Virtue",
-          "name_en": "Knightly Virtue",
-          "points": 0
+          "name_en": "Virtue of Knightly Temper",
+          "name_de": "Virtue of Knightly Temper",
+          "points": 70,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         },
         {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 0,
+          "name_en": "Virtue of Heroism",
+          "name_de": "Virtue of Heroism",
+          "points": 60,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Stoicism",
+          "name_de": "Virtue of Stoicism",
+          "points": 55,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Penitent",
+          "name_de": "Virtue of the Penitent",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Ideal",
+          "name_de": "Virtue of the Ideal",
+          "points": 45,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Impetuous Knight",
+          "name_de": "Virtue of the Impetuous Knight",
+          "points": 40,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Audacity",
+          "name_de": "Virtue of Audacity",
+          "points": 35,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Purity",
+          "name_de": "Virtue of Purity",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Duty",
+          "name_de": "Virtue of Duty",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of the Joust",
+          "name_de": "Virtue of the Joust",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Confidence",
+          "name_de": "Virtue of Confidence",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Noble Disdain",
+          "name_de": "Virtue of Noble Disdain",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Discipline",
+          "name_de": "Virtue of Discipline",
+          "points": 5,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Virtue of Empathy",
+          "name_de": "Virtue of Empathy",
+          "points": 5,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -280,19 +720,21 @@
       "mounts": [
         {
           "name_de": "Zu Fuß",
-          "name_en": "On foot",
+          "name_en": "On Foot",
           "points": 0,
           "active": true
         },
         {
-          "name_de": "Bretonnian Warhorse",
           "name_en": "Bretonnian Warhorse",
-          "points": 16
+          "name_de": "Bretonnian Warhorse",
+          "points": 16,
+          "active": false
         },
         {
-          "name_de": "Barded Pegasus",
           "name_en": "Barded Pegasus",
-          "points": 30
+          "name_de": "Barded Pegasus",
+          "points": 30,
+          "active": false
         },
         {
           "name_en": "Royal Pegasus",
@@ -307,88 +749,9 @@
       }
     },
     {
-      "name_en": "Prophetess",
-      "name_de": "Prophetess",
-      "id": "prophetess",
-      "points": 135,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Level 3 Wizard",
-          "name_de": "Level 3 Wizard",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "On Foot",
-          "name_de": "On Foot",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Warhorse",
-          "name_de": "Warhorse",
-          "points": 12,
-          "active": false
-        },
-        {
-          "name_en": "Bretonnian Warhorse",
-          "name_de": "Bretonnian Warhorse",
-          "points": 16,
-          "active": false
-        },
-        {
-          "name_en": "Unicorn",
-          "name_de": "Unicorn",
-          "points": 35,
-          "active": false
-        },
-        {
-          "name_en": "Royal Pegasus",
-          "name_de": "Royal Pegasus",
-          "points": 60,
-          "active": false
-        }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 100
-      },
-      "named": false
-    },
-    {
       "name_en": "Damsel",
       "name_de": "Damsel",
-      "id": "sergeant-at-arms",
+      "id": "damsel",
       "points": 60,
       "minimum": 0,
       "maximum": 0,
@@ -396,24 +759,16 @@
       "equipment": [
         {
           "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
+          "name_de": "Handwaffe",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_de": "Level 1 Wizard",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
+          "name_en": "Wizard Level 2",
+          "name_de": "Wizard Level 2",
           "points": 30,
           "stackable": false,
           "minimum": 0,
@@ -423,7 +778,7 @@
       "mounts": [
         {
           "name_en": "On Foot",
-          "name_de": "On Foot",
+          "name_de": "Zu Fuß",
           "points": 0,
           "active": true
         },
@@ -455,13 +810,12 @@
           "enchanted-item"
         ],
         "maxPoints": 50
-      },
-      "named": false
+      }
     },
     {
-      "name_en": "Seargeant-at-Arms",
-      "name_de": "Seargeant-at-Arms",
-      "id": "seargent-at-arms",
+      "name_en": "Sergeant-at-Arms",
+      "name_de": "Sergeant-at-Arms",
+      "id": "sergeant-at-arms",
       "points": 45,
       "minimum": 0,
       "maximum": 0,
@@ -469,47 +823,46 @@
       "equipment": [
         {
           "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
+          "name_de": "Handwaffe",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
-        {
-          "name_en": "Light Armour",
-          "name_de": "Light Armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
           "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": false,
+          "active": false
         },
         {
           "name_en": "Additional Hand Weapon",
           "name_de": "Additional Hand Weapon",
           "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": false,
+          "active": false
         },
         {
-          "name_en": "Cavalry Spear (if mounted)",
-          "name_de": "Cavalry Spear (if mounted)",
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
           "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
         {
           "name_en": "Shield",
-          "name_de": "Shield",
+          "name_de": "Schild",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -518,6 +871,12 @@
       ],
       "mounts": [
         {
+          "name_en": "On Foot",
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
           "points": 12,
@@ -525,15 +884,15 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "arcane-item", "enchanted-item"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 25
       }
     }
   ],
   "core": [
     {
-      "name_en": "Men-At-Arms",
-      "name_de": "Men-At-Arms",
+      "name_en": "Men-At-Arms (1+*)",
+      "name_de": "Men-At-Arms (1+*)",
       "id": "men-at-arms",
       "points": 4,
       "minimum": 10,
@@ -546,15 +905,6 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          }
-        },
-        {
-          "name_de": "Grail Monk",
-          "name_en": "Grail Monk",
-          "points": 7,
-          "magic": {
-            "types": ["triptych"],
-            "maxPoints": 25
           }
         },
         {
@@ -574,22 +924,33 @@
             "types": [],
             "maxPoints": 0
           }
+        },
+        {
+          "name_de": "Grail Monk",
+          "name_en": "Grail Monk",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_de": "Grail Monk with Blessed Triptych",
+          "name_en": "Grail Monk with Blessed Triptych",
+          "points": 32,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
+          "name_en": "Hand Weapons, Polearms, Shields",
+          "name_de": "Hand Weapons, Polearms, Shields",
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Polearm",
-          "name_de": "Polearm",
-          "points": 0,
-          "perModel": true,
-          "active": false
         }
       ],
       "armor": [
@@ -601,15 +962,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -617,197 +970,8 @@
       }
     },
     {
-      "name_en": "Mounted Knights of the Realm",
-      "name_de": "Mounted Knights of the Realm",
-      "id": "mounted-knights-of-the-realm",
-      "points": 24,
-      "minimum": 5,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "First Knight",
-          "name_de": "First Knight",
-          "points": 7,
-          "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "arcane-item",
-              "enchanted-item"
-            ],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 7,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lance",
-          "name_de": "Lance",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy Armour",
-          "name_de": "Heavy Armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "Bretonnian Warhorse",
-          "name_de": "Bretonnian Warhorse",
-          "points": 0,
-          "active": true
-        }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Knights of the Realm on Foot",
-      "name_de": "Knights of the Realm on Foot",
-      "id": "knights-of-the-realm",
-      "points": 11,
-      "minimum": 5,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "First Knight",
-          "name_de": "First Knight",
-          "points": 6,
-          "magic": {
-            "types": ["weapon", "armor", "enchanted-item"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 6,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Heavy Armour",
-          "name_de": "Heavy Armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Great Weapon and Shield",
-          "name_de": "Great Weapon and Shield",
-          "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Great Weapon",
-          "name_de": "Great Weapon",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_de": "Zu Fuß",
-          "name_en": "On foot",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Mounted",
-          "name_de": "Mounted",
-          "points": 99,
-          "active": false
-        }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      },
-      "named": false
-    },
-    {
-      "name_en": "Peasant Bowmen",
-      "name_de": "Peasant Bowmen",
+      "name_en": "Peasant Bowmen (1+*)",
+      "name_de": "Peasant Bowmen (1+*)",
       "id": "peasant-bowmen",
       "points": 5,
       "minimum": 10,
@@ -823,8 +987,8 @@
           }
         },
         {
-          "name_en": "Musician",
-          "name_de": "Musician",
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -832,8 +996,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Musician",
+          "name_de": "Musiker",
           "points": 5,
           "magic": {
             "types": [],
@@ -843,15 +1007,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Longbow",
-          "name_de": "Longbow",
+          "name_en": "Hand Weapons, Longbows",
+          "name_de": "Hand Weapons, Longbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -859,8 +1016,15 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_en": "Unarmoured",
+          "name_de": "Unarmoured",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
           "points": 1,
           "perModel": true,
           "active": false
@@ -873,7 +1037,8 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": false
         },
         {
           "name_en": "Burning Braziers",
@@ -881,15 +1046,17 @@
           "points": 20,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": false
         },
         {
-          "name_en": "Replace Closed Order with Skirmishers",
-          "name_de": "Replace Closed Order with Skirmishers",
+          "name_en": "Skirmishers",
+          "name_de": "Skirmishers",
           "points": 0,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": false
         }
       ],
       "mounts": [],
@@ -899,8 +1066,144 @@
       }
     },
     {
-      "name_en": "Knights Errant",
-      "name_de": "Knights Errant",
+      "name_en": "Knights of the Realm on Foot (1+**)",
+      "name_de": "Knights of the Realm on Foot (1+**)",
+      "id": "knights-of-the-realm",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "First Knight",
+          "name_de": "First Knight",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Shields",
+          "name_de": "Hand Weapons, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand Weapons, Great Weapons",
+          "name_de": "Hand Weapons, Great Weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Great Weapons, Shields",
+          "name_de": "Hand Weapons, Great Weapons, Shields",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armour": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Mounted Knights of the Realm (1+**)",
+      "name_de": "Mounted Knights of the Realm (1+**)",
+      "id": "mounted-knights-of-the-realm",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "First Knight",
+          "name_de": "First Knight",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Lances, Shields",
+          "name_de": "Hand Weapons, Lances, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Knights Errant (0-1 per unit of Knights of the Realm",
+      "name_de": "Knights Errant (0-1 per unit of Knights of the Realm",
       "id": "knights-errant",
       "points": 19,
       "minimum": 5,
@@ -916,15 +1219,6 @@
           }
         },
         {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
           "points": 6,
@@ -932,19 +1226,21 @@
             "types": ["banner"],
             "maxPoints": 25
           }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lance",
-          "name_de": "Lance",
+          "name_en": "Hand Weapons, Lances, Shields",
+          "name_de": "Hand Weapons, Lances, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -954,30 +1250,13 @@
         {
           "name_en": "Heavy Armour",
           "name_de": "Heavy Armour",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
           "points": 0,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "Bretonnian Warhorse",
-          "name_de": "Bretonnian Warhorse",
-          "points": 0,
           "active": true
         }
       ],
+      "options": [],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -985,83 +1264,6 @@
     }
   ],
   "special": [
-    {
-      "name_en": "Pegasus knights",
-      "name_de": "Pegasus knights",
-      "id": "pegasus-knights",
-      "points": 55,
-      "minimum": 3,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "First knight",
-          "name_de": "First knight",
-          "points": 7,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 7,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
     {
       "name_en": "Questing Knights",
       "name_de": "Questing Knights",
@@ -1075,17 +1277,8 @@
           "name_de": "Paragon",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
           }
         },
         {
@@ -1096,19 +1289,21 @@
             "types": ["banner"],
             "maxPoints": 100
           }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Great Weapon",
-          "name_de": "Great Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
+          "name_en": "Hand Weapons, Great Weapons, Shields",
+          "name_de": "Hand Weapons, Great Weapons, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1125,14 +1320,147 @@
       ],
       "options": [
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
-          "stackable": true,
+          "name_en": "Paragon - Virtue of Knightly Temper",
+          "name_de": "Paragon - Virtue of Knightly Temper",
+          "points": 70,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Heroism",
+          "name_de": "Paragon - Virtue of Heroism",
+          "points": 60,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Stoicism",
+          "name_de": "Paragon - Virtue of Stoicism",
+          "points": 55,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of the Impetuous Knight",
+          "name_de": "Paragon - Virtue of the Impetuous Knight",
+          "points": 40,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Audacity",
+          "name_de": "Paragon - Virtue of Audacity",
+          "points": 35,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Purity",
+          "name_de": "Paragon - Virtue of Purity",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of the Joust",
+          "name_de": "Paragon - Virtue of the Joust",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Confidence",
+          "name_de": "Paragon - Virtue of Confidence",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Noble Disdain",
+          "name_de": "Paragon - Virtue of Noble Disdain",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Paragon - Virtue of Discipline",
+          "name_de": "Paragon - Virtue of Discipline",
+          "points": 5,
+          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Pegasus Knights",
+      "name_de": "Pegasus Knights",
+      "id": "pegasus-knights",
+      "points": 55,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "First Knight",
+          "name_de": "First Knight",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon, Lances, Shields",
+          "name_de": "Hand Weapon, Lances, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1150,16 +1478,7 @@
         {
           "name_en": "Warden",
           "name_de": "Warden",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 6,
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -1168,7 +1487,16 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
-          "points": 6,
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -1177,22 +1505,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Cavalry spears",
-          "name_de": "Cavalry spears",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Shortbows",
-          "name_de": "Shortbows",
+          "name_en": "Hand Weapons, Cavalry Spears, Shortbows",
+          "name_de": "Hand Weapons, Cavalry Spears, Shortbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1200,8 +1514,15 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_en": "Unarmoured",
+          "name_de": "Unarmoured",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1209,72 +1530,22 @@
       ],
       "options": [
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
+          "name_en": "Shields",
+          "name_de": "Shields",
           "points": 1,
-          "stackable": 90,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Feigned flight (+2 per model)",
-          "name_de": "Feigned flight",
-          "points": 2,
-          "stackable": 1,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Battle Pilgrims",
-      "name_de": "Battle Pilgrims",
-      "id": "battle-pilgrims",
-      "points": 8,
-      "minimum": 5,
-      "maximum": 30,
-      "command": [
-        {
-          "name_en": "Grail Relaquae",
-          "name_de": "Grail Relaquae",
-          "points": 65,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 1,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 0,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Feigned Flight",
+          "name_de": "Feigned Flight",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1301,8 +1572,8 @@
           }
         },
         {
-          "name_en": "Musician",
-          "name_de": "Musician",
+          "name_en": "Standard bearer",
+          "name_de": "Standartenträger",
           "points": 5,
           "magic": {
             "types": [],
@@ -1310,8 +1581,8 @@
           }
         },
         {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
+          "name_en": "Musician",
+          "name_de": "Musiker",
           "points": 5,
           "magic": {
             "types": [],
@@ -1321,15 +1592,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Longbow",
-          "name_de": "Longbow",
+          "name_en": "Hand Weapons, Longbows",
+          "name_de": "Hand Weapons, Longbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1338,22 +1602,67 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Scouts (+1 per model)",
-          "name_de": "Scouts (+1 per model)",
+          "name_en": "Fire and Flee",
+          "name_de": "Fire and Flee",
           "points": 1,
-          "stackable": true,
+          "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": true
         },
         {
-          "name_en": "Fire and flee (+1 per model)",
-          "name_de": "Fire and flee (+1 per model)",
+          "name_en": "Scouts",
+          "name_de": "Scouts",
           "points": 1,
-          "stackable": true,
+          "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "perModel": true
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Battle Pilgrims (0-2 per 1000 points)",
+      "name_de": "Battle Pilgrims (0-2 per 1000 points)",
+      "id": "battle-pilgrims",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 30,
+      "command": [
+        {
+          "name_en": "Grail Reliquae",
+          "name_de": "Grail Reliquae",
+          "points": 65,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Shields",
+          "name_de": "Hand Weapons, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1362,38 +1671,6 @@
     }
   ],
   "rare": [
-    {
-      "name_en": "Field Trebuchet",
-      "name_de": "Field Trebuchet",
-      "id": "field-trebuchet",
-      "points": 100,
-      "minimum": 1,
-      "maximum": 1,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Field Trebuchet",
-          "name_de": "Field Trebuchet",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
     {
       "name_en": "Grail Knights",
       "name_de": "Grail Knights",
@@ -1407,17 +1684,8 @@
           "name_de": "Grail Guardian",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
           }
         },
         {
@@ -1428,19 +1696,21 @@
             "types": ["banner"],
             "maxPoints": 100
           }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lance",
-          "name_de": "Lance",
+          "name_en": "Hand Weapons, Lances, Shields",
+          "name_de": "Hand Weapons, Lances, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1457,14 +1727,111 @@
       ],
       "options": [
         {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "points": 0,
+          "name_en": "Grail Guardian - Virtue of Knightly Temper",
+          "name_de": "Grail Guardian - Virtue of Knightly Temper",
+          "points": 70,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Heroism",
+          "name_de": "Grail Guardian - Virtue of Heroism",
+          "points": 60,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Stoicism",
+          "name_de": "Grail Guardian - Virtue of Stoicism",
+          "points": 55,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of the Impetuous Knight",
+          "name_de": "Grail Guardian - Virtue of the Impetuous Knight",
+          "points": 40,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Audacity",
+          "name_de": "Grail Guardian - Virtue of Audacity",
+          "points": 35,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Purity",
+          "name_de": "Grail Guardian - Virtue of Purity",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of the Joust",
+          "name_de": "Grail Guardian - Virtue of the Joust",
+          "points": 20,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Confidence",
+          "name_de": "Grail Guardian - Virtue of Confidence",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Noble Disdain",
+          "name_de": "Grail Guardian - Virtue of Noble Disdain",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Grail Guardian - Virtue of Discipline",
+          "name_de": "Grail Guardian - Virtue of Discipline",
+          "points": 5,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Field Trebuchet (0-1 per 1000 points)",
+      "name_de": "Field Trebuchet (0-1 per 1000 points)",
+      "id": "field-trebuchet",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Field Trebuchet, Hand Weapons",
+          "name_de": "Field Trebuchet, Hand Weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
