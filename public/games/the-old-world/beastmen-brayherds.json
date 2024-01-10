@@ -286,8 +286,8 @@
       }
     },
     {
-      "name_en": "Bray Shaman",
-      "name_de": "Bray Shaman",
+      "name_en": "Bray-Shaman",
+      "name_de": "Bray-Shaman",
       "id": "bray-shaman",
       "points": 65,
       "minimum": 0,
@@ -1656,6 +1656,105 @@
           "maximum": 0
         }
       ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_de": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "id": "jabberslythe",
+      "points": 195,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws and slithery tongue",
+          "name_de": "Wicked claws and slithery tongue",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (counts as heavy armour)",
+          "name_de": "Scaly skin (counts as heavy armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "id": "cygor",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as hand weapon), Hurl attack",
+          "name_de": "Claws (counts as hand weapon), Hurl attack",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "id": "ghorgon",
+      "points": 245,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaver-limbs",
+          "name_de": "Cleaver-limbs",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],

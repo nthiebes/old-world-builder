@@ -240,6 +240,13 @@
           "points": 3,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 3,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
@@ -247,15 +254,6 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 3,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -359,6 +357,13 @@
           "points": 3,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 3,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
@@ -434,21 +439,36 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "no armour",
+          "name_de": "no armour",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [
         {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 0,
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
         {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "points": 30,
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -499,21 +519,36 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "no armour",
+          "name_de": "no armour",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [
         {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 0,
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "points": 30,
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1183,18 +1218,16 @@
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 1,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
-        {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
@@ -1226,6 +1259,15 @@
           "name_en": "Big 'Uns",
           "name_de": "Big 'Uns",
           "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Skirmisher",
+          "name_de": "Skirmisher",
+          "points": 0,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1917,6 +1959,13 @@
           "points": 1,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 1,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
@@ -1933,15 +1982,6 @@
           "name_en": "Big 'Uns",
           "name_de": "Big 'Uns",
           "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
