@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 
 import { NumberInput } from "../../components/number-input";
 import { Button } from "../../components/button";
 import { Expandable } from "../../components/expandable";
+
+import { nameMap } from "../../pages/magic/name-map";
 
 import "./Entity.css";
 
@@ -20,17 +22,21 @@ const initialUnitState = {
   armor: [],
   options: [],
   mounts: [],
-  magic: {
-    types: [],
-    maxPoints: 0,
-  },
+  magic: [
+    {
+      name_en: nameMap.general.name_en,
+      name_de: nameMap.general.name_de,
+      types: [],
+      maxPoints: 0,
+    },
+  ],
 };
 const magicItemTypes = [
   "weapon",
   "armor",
   "talisman",
   "banner",
-  "artifact",
+  "arcane-item",
   "enchanted-item",
   "triptych",
   "chaos-mutation",
@@ -175,25 +181,23 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       command: newCommandEntries,
     });
   };
-  const handleMagicChange = ({ value, item }) => {
-    setUnit({
-      ...unit,
-      magic: {
-        ...unit.magic,
-        types:
-          value === "on"
-            ? [...unit.magic.types, item]
-            : unit.magic.types.filter((name) => name !== item),
-      },
+  const handleMagicChange = ({ value, item, magicIndex }) => {
+    const newEntries = unit.magic.map((entry, entryIndex) => {
+      if (magicIndex === entryIndex) {
+        return {
+          ...entry,
+          types:
+            value === "on"
+              ? [...unit.magic[magicIndex].types, item]
+              : unit.magic[magicIndex].types.filter((name) => name !== item),
+        };
+      }
+      return entry;
     });
-  };
-  const handleMagicPointsChange = ({ value }) => {
+
     setUnit({
       ...unit,
-      magic: {
-        ...unit.magic,
-        maxPoints: value,
-      },
+      magic: newEntries,
     });
   };
   const handleNewCommand = () => {
@@ -205,10 +209,14 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_en: "",
           name_de: "",
           points: 1,
-          magic: {
-            types: [],
-            maxPoints: 0,
-          },
+          magic: [
+            {
+              name_en: nameMap.general.name_en,
+              name_de: nameMap.general.name_de,
+              types: [],
+              maxPoints: 0,
+            },
+          ],
         },
       ],
     });
@@ -270,6 +278,20 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           points: 1,
           active: false,
+        },
+      ],
+    });
+  };
+  const handleNewMagicItemCategory = () => {
+    setUnit({
+      ...unit,
+      magic: [
+        ...unit.magic,
+        {
+          name_en: nameMap.general.name_en,
+          name_de: nameMap.general.name_de,
+          types: [],
+          maxPoints: 0,
         },
       ],
     });
@@ -1136,43 +1158,103 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             New mount
           </Button>
           <hr />
-          <h3>Allowed magic item categories</h3>
-          {magicItemTypes.map((item, itemIndex) => (
-            <div className="checkbox" key={item}>
+
+          <h3>Magic items</h3>
+          <p className="datasets__paragraph">
+            Specify what types of items are allowed. Can also be used for chaos
+            mutations similar.
+          </p>
+          {unit.magic.map((magic, magicIndex) => (
+            <div className="entity__second-level" key={magicIndex}>
+              <label htmlFor={`magic-name_en-${magicIndex}-${randomId}`}>
+                Name English
+              </label>
               <input
-                type="checkbox"
-                id={`${item}-${itemIndex}-${randomId}`}
+                type="text"
+                id={`magic-name_en-${magicIndex}-${randomId}`}
+                className="input"
+                value={magic.name_en}
                 onChange={(event) =>
-                  handleMagicChange({
-                    value: unit.magic.types.includes(item) ? "off" : "on",
-                    item,
+                  handleSecondLevelFieldChange({
+                    index: magicIndex,
+                    key: "magic",
+                    field: "name_en",
+                    value: event.target.value,
                   })
                 }
-                checked={unit.magic.types.includes(item)}
-                className="checkbox__input"
+                autoComplete="off"
+                required
               />
-              <label
-                htmlFor={`${item}-${itemIndex}-${randomId}`}
-                className="checkbox__label"
-              >
-                {item}
+              <label htmlFor={`magic-name_de-${magicIndex}-${randomId}`}>
+                Name German
               </label>
+              <input
+                type="text"
+                id={`magic-name_de-${magicIndex}-${randomId}`}
+                className="input"
+                value={magic.name_de}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: magicIndex,
+                    key: "magic",
+                    field: "name_de",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+                required
+              />
+              <Expandable headline="Allowed magic item types">
+                {magicItemTypes.map((item, itemIndex) => (
+                  <div className="checkbox" key={item}>
+                    <input
+                      type="checkbox"
+                      id={`${item}-${itemIndex}-${magicIndex}-${randomId}`}
+                      onChange={() =>
+                        handleMagicChange({
+                          value: magic.types.includes(item) ? "off" : "on",
+                          item,
+                          magicIndex,
+                        })
+                      }
+                      checked={magic.types.includes(item)}
+                      className="checkbox__input"
+                    />
+                    <label
+                      htmlFor={`${item}-${itemIndex}-${magicIndex}-${randomId}`}
+                      className="checkbox__label"
+                    >
+                      {item}
+                    </label>
+                  </div>
+                ))}
+              </Expandable>
+              <label htmlFor={`magic-points-${randomId}`}>Max. points</label>
+              <NumberInput
+                id={`magic-points-${magicIndex}-${randomId}`}
+                className="input"
+                min={0}
+                value={magic.maxPoints}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: magicIndex,
+                    key: "magic",
+                    field: "maxPoints",
+                    value: Number(event.target.value),
+                  })
+                }
+              />
             </div>
           ))}
-          <label htmlFor={`magic-points-${randomId}`}>
-            Max. magic item points
-          </label>
-          <NumberInput
-            id={`magic-points-${randomId}`}
-            className="input"
-            min={0}
-            value={unit.magic.maxPoints}
-            onChange={(event) =>
-              handleMagicPointsChange({
-                value: Number(event.target.value),
-              })
-            }
-          />
+          <Button
+            type="secondary"
+            icon="add"
+            onClick={handleNewMagicItemCategory}
+            spaceBottom
+            className="entity__second-level-button"
+          >
+            New category
+          </Button>
         </>
       ) : null}
 
