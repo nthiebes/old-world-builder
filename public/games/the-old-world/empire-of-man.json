@@ -992,10 +992,79 @@
       "maximum": 100,
       "regimentalUnit": true,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Count's Champion (Champion)",
+          "name_de": "Count's Champion (Champion)",
+          "points": 6,
+          "magic": {
+            "types": [
+              "arcane-item",
+              "enchanted-item",
+              "talisman",
+              "weapon",
+              "armor"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Muscian",
+          "name_de": "Muscian",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1227,10 +1296,86 @@
       "points": 29,
       "minimum": 4,
       "maximum": 100,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (Champion)",
+          "name_de": "Inner Circle Preceptor (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great weapon (no shield)",
+          "name_de": "Great weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapon and shield",
+          "name_de": "Great weapon and shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance and shield",
+          "name_de": "Lance and shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1246,9 +1391,73 @@
       "maximum": 12,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (Champion)",
+          "name_de": "Demigryph Preceptor (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lances",
+          "name_de": "Lances",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -1316,10 +1525,40 @@
       "points": 265,
       "minimum": 1,
       "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Hochland long rifle",
+          "name_de": "Hochland long rifle",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pigeon bombs",
+          "name_de": "Pigeon bombs",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater pistol",
+          "name_de": "Repeater pistol",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
