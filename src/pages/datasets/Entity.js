@@ -30,7 +30,7 @@ const magicItemTypes = [
   "armor",
   "talisman",
   "banner",
-  "artifact",
+  "arcane-item",
   "enchanted-item",
   "triptych",
   "chaos-mutation",
