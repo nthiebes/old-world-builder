@@ -984,6 +984,99 @@
   ],
   "special": [
     {
+      "name_en": "Inner Circle Knights",
+      "name_de": "Inner Circle Knights",
+      "id": "inner-circle-knights",
+      "points": 29,
+      "minimum": 4,
+      "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (Champion)",
+          "name_de": "Inner Circle Preceptor (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great weapon, Hand weapon",
+          "name_de": "Great weapon, Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapon, Hand weapon, Shield",
+          "name_de": "Great weapon, Hand weapon, Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance, Hand weapon, Shield",
+          "name_de": "Lance, Hand weapon, Shield",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
       "name_en": "Empire Greatswords",
       "name_de": "Empire Greatswords",
       "id": "empire-greatswords",
