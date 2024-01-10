@@ -1856,6 +1856,8 @@
       "points": 15,
       "minimum": 4,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Boss",
@@ -1917,14 +1919,51 @@
           "active": true
         },
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
           "points": 1,
           "perModel": true,
           "active": false
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Big 'Uns",
+          "name_de": "Big 'Uns",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
