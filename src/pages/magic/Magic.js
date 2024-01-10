@@ -266,6 +266,7 @@ export const Magic = ({ isMobile }) => {
 
               // Filter magic items
               if (
+                !command &&
                 unit?.magic?.types &&
                 unit?.magic?.types.length &&
                 !unit.magic.types.includes(magicItem.type)
