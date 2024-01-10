@@ -35,7 +35,7 @@ export const nameMap = {
     name_de: "Magische Standarten",
     name_en: "Magic Standards",
   },
-  artifact: {
+  "arcane-item": {
     name_de: "Arkane Artifakte",
     name_en: "Arcane Items",
   },

@@ -374,7 +374,13 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
         "maxPoints": 100
       },
       "named": false
@@ -441,7 +447,13 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "artifact", "enchanted-item"],
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       },
       "named": false
@@ -513,7 +525,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "artifact", "enchanted-item"],
+        "types": ["weapon", "armor", "arcane-item", "enchanted-item"],
         "maxPoints": 25
       }
     }
@@ -621,7 +633,7 @@
               "weapon",
               "armor",
               "talisman",
-              "artifact",
+              "arcane-item",
               "enchanted-item"
             ],
             "maxPoints": 25
