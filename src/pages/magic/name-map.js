@@ -84,6 +84,14 @@ export const nameMap = {
     name_de: "Chaos Mutation",
     name_en: "Chaos Mutation",
   },
+  "chaos-mutation-character": {
+    name_de: "Chaos Mutation",
+    name_en: "Chaos Mutation",
+  },
+  "chaos-mutation-chieftain": {
+    name_de: "Chaos Mutation",
+    name_en: "Chaos Mutation",
+  },
   "gifts-of-chaos": {
     name_de: "Gifts of Chaos",
     name_en: "Gifts of Chaos",
@@ -123,5 +131,13 @@ export const nameMap = {
   "warriors-of-chaos": {
     name_de: "Warriors of Chaos",
     name_en: "Warriors of Chaos",
+  },
+  "knightly-virtue": {
+    name_de: "Knightly Virtue",
+    name_en: "Knightly Virtue",
+  },
+  "knightly-virtue-character": {
+    name_de: "Knightly Virtue",
+    name_en: "Knightly Virtue",
   },
 };
