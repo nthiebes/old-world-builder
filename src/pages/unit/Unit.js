@@ -747,14 +747,17 @@ export const Unit = ({ isMobile }) => {
                     <i className="checkbox__points">
                       <span
                         className={classNames(
-                          itemsPoints > item.maxPoints && "editor__error"
+                          itemsPoints > item.maxPoints &&
+                            item.maxPoints > 0 &&
+                            "editor__error"
                         )}
                       >
                         {itemsPoints}
-                      </span>{" "}
-                      / {item.maxPoints} <FormattedMessage id="app.points" />
+                      </span>
+                      {item.maxPoints > 0 && <>{` / ${item.maxPoints}`}</>}{" "}
+                      <FormattedMessage id="app.points" />
                     </i>
-                    {itemsPoints > item.maxPoints && (
+                    {itemsPoints > item.maxPoints && item.maxPoints > 0 && (
                       <Icon
                         symbol="error"
                         color="red"

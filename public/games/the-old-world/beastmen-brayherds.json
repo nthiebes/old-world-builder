@@ -109,7 +109,7 @@
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": true
+          "mutuallyExclusive": false
         }
       ]
     },
@@ -215,17 +215,24 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "banner",
-          "enchanted-item",
-          "chaos-mutation"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Great Bray-Shaman",
@@ -283,17 +290,30 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "chaos-mutation",
-          "enchanted-item",
-          "arcane-item"
-        ],
-        "maxPoints": 150
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Bray-Shaman",
@@ -351,17 +371,30 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "chaos-mutation",
-          "arcane-item"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Doombull",
@@ -428,16 +461,24 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "chaos-mutation"
-        ],
-        "maxPoints": 150
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Gorebull",
@@ -504,16 +545,24 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "chaos-mutation"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Centigor Chieftain",
@@ -596,16 +645,24 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "chaos-mutation"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     }
   ],
   "core": [
@@ -622,14 +679,8 @@
           "name_de": "Gouge-horn",
           "points": 8,
           "magic": {
-            "types": [
-              "enchanted-item",
-              "talisman",
-              "armor",
-              "weapon",
-              "chaos-mutation"
-            ],
-            "maxPoints": 50
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
           }
         },
         {
@@ -987,14 +1038,8 @@
           "name_de": "Bloodkine",
           "points": 6,
           "magic": {
-            "types": [
-              "chaos-mutation",
-              "weapon",
-              "armor",
-              "talisman",
-              "enchanted-item"
-            ],
-            "maxPoints": 50
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
           }
         },
         {
@@ -1093,14 +1138,8 @@
           "name_de": "Gouge-horn",
           "points": 8,
           "magic": {
-            "types": [
-              "enchanted-item",
-              "talisman",
-              "armor",
-              "weapon",
-              "chaos-mutation"
-            ],
-            "maxPoints": 50
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
           }
         },
         {
@@ -1204,14 +1243,8 @@
           "name_de": "Bloodkine",
           "points": 6,
           "magic": {
-            "types": [
-              "chaos-mutation",
-              "weapon",
-              "armor",
-              "talisman",
-              "enchanted-item"
-            ],
-            "maxPoints": 50
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
           }
         },
         {
@@ -1360,7 +1393,7 @@
           "name_de": "Gorehoof",
           "points": 8,
           "magic": {
-            "types": ["enchanted-item", "armor", "weapon", "talisman"],
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
           }
         },
@@ -1455,14 +1488,8 @@
           "name_de": "Shartak",
           "points": 7,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "enchanted-item",
-              "chaos-mutation"
-            ],
-            "maxPoints": 50
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
           }
         }
       ],
@@ -1786,7 +1813,7 @@
           "name_de": "Magic items",
           "points": 0,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 50
           }
         },

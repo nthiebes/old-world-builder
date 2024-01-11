@@ -499,7 +499,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     <input
                       type="checkbox"
                       id={`${item}${itemIndex}-${randomId}`}
-                      onChange={(event) =>
+                      onChange={() =>
                         handleCommandMagicChange({
                           index,
                           value: command.magic.types.includes(item)

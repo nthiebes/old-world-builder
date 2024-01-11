@@ -436,7 +436,8 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                   <div className="editor__list-inner">
                     <b className="unit__magic-headline">{item.name_en}</b>
                     <i className="checkbox__points">
-                      <span>{magicPoints}</span> / {item.maxPoints}{" "}
+                      <span>{magicPoints}</span>
+                      {item.maxPoints > 0 && <>{` / ${item.maxPoints}`}</>}{" "}
                       <FormattedMessage id="app.points" />
                     </i>
                   </div>
