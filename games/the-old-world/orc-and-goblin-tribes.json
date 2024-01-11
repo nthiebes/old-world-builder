@@ -1783,6 +1783,35 @@
         "types": [],
         "maxPoints": 0
       }
+    },
+    {
+      "name_en": "Night Goblin Squig Herd",
+      "name_de": "Night Goblin Squig Herd",
+      "id": "night-goblin-squig-herd",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Squig Herder",
+          "name_de": "Squig Herder",
+          "points": 3,
+          "perModel": true,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "special": [
@@ -2367,28 +2396,60 @@
       }
     },
     {
-      "name_en": "Night Goblin Squig Herd",
-      "name_de": "Night Goblin Squig Herd",
-      "id": "night-goblin-squig-herd",
-      "points": 10,
-      "minimum": 5,
-      "maximum": 0,
+      "name_en": "Snotling Pump Wagon",
+      "name_de": "Snotling Pump Wagon",
+      "id": "snotling-pump-wagon",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 5,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [
+      "equipment": [
         {
-          "name_en": "Squig Herder",
-          "name_de": "Squig Herder",
-          "points": 3,
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
           "perModel": true,
-          "stackable": 1,
-          "minimum": 0,
-          "maximum": 0
+          "active": true
+        },
+        {
+          "name_en": "Throwing Weapon",
+          "name_de": "Throwing Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Goblin Bolt Throwa",
+      "name_de": "Goblin Bolt Throwa",
+      "id": "goblin-bolt-throwa",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [
+        {
+          "name_en": "Bully",
+          "name_de": "Bully",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -2423,33 +2484,6 @@
           "active": true
         }
       ],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Goblin Bolt Throwa",
-      "name_de": "Goblin Bolt Throwa",
-      "id": "goblin-bolt-throwa",
-      "points": 45,
-      "minimum": 1,
-      "maximum": 1,
-      "command": [
-        {
-          "name_en": "Bully",
-          "name_de": "Bully",
-          "points": 10,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [],
-      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -2600,40 +2634,6 @@
           "active": true
         }
       ],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Snotling Pump Wagon",
-      "name_de": "Snotling Pump Wagon",
-      "id": "snotling-pump-wagon",
-      "points": 35,
-      "minimum": 1,
-      "maximum": 5,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Throwing Weapon",
-          "name_de": "Throwing Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
