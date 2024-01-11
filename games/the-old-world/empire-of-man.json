@@ -151,6 +151,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -310,6 +320,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -332,10 +352,57 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
-      "options": [],
-      "mounts": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Imperial Griffon",
+          "name_de": "Imperial Griffon",
+          "points": 160,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -348,11 +415,54 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
-      "options": [],
-      "mounts": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Empire Horse",
+          "name_de": "Empire Horse",
+          "points": 10,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -365,14 +475,105 @@
       "points": 145,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "points": 50,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
       }
     },
     {
@@ -382,14 +583,105 @@
       "points": 75,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full Plate Armour",
+          "name_de": "Full Plate Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "points": 50,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     },
     {
@@ -400,13 +692,109 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Crossbow (Don't take handgun)",
+          "name_de": "Crossbow (Don't take handgun)",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Handgun (Don't take crossbow)",
+          "name_de": "Handgun (Don't take crossbow)",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pistol (Don't take brace)",
+          "name_de": "Pistol (Don't take brace)",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Pistols (Don't take pistol)",
+          "name_de": "Brace of Pistols (Don't take pistol)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "points": 30,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     },
     {
@@ -417,13 +805,95 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "War Alter of Sigmar",
+          "name_de": "War Alter of Sigmar",
+          "points": 135,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
       }
     },
     {
@@ -434,13 +904,95 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "points": 50,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     },
     {
@@ -451,13 +1003,89 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
       }
     },
     {
@@ -468,13 +1096,89 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire Warhorse",
+          "points": 12,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     },
     {
@@ -485,13 +1189,83 @@
       "minimum": 0,
       "maximum": 0,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Grendade Launching Blunderbuss",
+          "name_de": "Grendade Launching Blunderbuss",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hochland Long Rifle",
+          "name_de": "Hochland Long Rifle",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Repeater Handgun",
+          "name_de": "Repeater Handgun",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Repeater Pistol",
+          "name_de": "Repeater Pistol",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_de": "Light Armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Pigeon Bombs",
+          "name_de": "Pigeon Bombs",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
-        "types": [],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
       }
     }
   ],
@@ -1383,99 +2157,6 @@
       }
     },
     {
-      "name_en": "Inner Circle Knights",
-      "name_de": "Inner Circle Knights",
-      "id": "inner-circle-knights",
-      "points": 29,
-      "minimum": 4,
-      "maximum": 100,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Inner Circle Preceptor (Champion)",
-          "name_de": "Inner Circle Preceptor (Champion)",
-          "points": 7,
-          "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "arcane-item",
-              "enchanted-item"
-            ],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "points": 7,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Great weapon (no shield)",
-          "name_de": "Great weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Great weapon and shield",
-          "name_de": "Great weapon and shield",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Lance and shield",
-          "name_de": "Lance and shield",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Stubborn",
-          "name_de": "Stubborn",
-          "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
       "name_en": "Demigryph Knights",
       "name_de": "Demigryph Knights",
       "id": "demigryph-knights",
@@ -1585,7 +2266,17 @@
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veterans",
+          "name_de": "Veterans",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1602,7 +2293,17 @@
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veterans",
+          "name_de": "Veterans",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
