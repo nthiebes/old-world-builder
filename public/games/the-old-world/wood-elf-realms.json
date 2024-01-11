@@ -326,7 +326,7 @@
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
-          "points": 59,
+          "points": 60,
           "active": false
         },
         {
@@ -345,7 +345,7 @@
       "name_en": "Spellweaver",
       "name_de": "Spellweaver",
       "id": "spellweaver",
-      "points": 154,
+      "points": 155,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
@@ -414,7 +414,13 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "artifact"],
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "enchanted-item",
+          "arcane-item"
+        ],
         "maxPoints": 149
       }
     },
@@ -462,13 +468,13 @@
         {
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
-          "points": 13,
+          "points": 14,
           "active": false
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
-          "points": 34,
+          "points": 35,
           "active": false
         },
         {
@@ -491,8 +497,14 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "artifact"],
-        "maxPoints": 0
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "enchanted-item",
+          "arcane-item"
+        ],
+        "maxPoints": 100
       }
     },
     {
@@ -535,7 +547,7 @@
       ],
       "mounts": [],
       "magic": {
-        "types": ["weapon", "talisman", "enchanted-item", "artifact"],
+        "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
         "maxPoints": 100
       }
     },
@@ -632,7 +644,7 @@
         {
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
-          "points": 4,
+          "points": 3,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -885,6 +897,8 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -930,6 +944,51 @@
           "name_en": "Asrai Longbow",
           "name_de": "Asrai Longbow",
           "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Arcane Bodkins",
+          "name_de": "Arcane Bodkins",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_de": "Hagbane Tips",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Moonfire Shots",
+          "name_de": "Moonfire Shots",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_de": "Trueflight Arrows",
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1066,6 +1125,8 @@
       "points": 13,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Nymph",
@@ -1081,7 +1142,7 @@
         {
           "name_en": "Hand Weapon",
           "name_de": "Hand Weapon",
-          "points": 1,
+          "points": 0,
           "perModel": true,
           "active": true
         }
@@ -1106,9 +1167,11 @@
       "name_en": "Glade Riders",
       "name_de": "Glade Riders",
       "id": "glade-riders",
-      "points": 15,
+      "points": 18,
       "minimum": 5,
       "maximum": 96,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Glade Knight",
@@ -1256,6 +1319,8 @@
       "points": 13,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1345,7 +1410,7 @@
         {
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
-          "points": 0,
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1542,7 +1607,7 @@
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
-          "points": 1,
+          "points": 2,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1631,9 +1696,9 @@
         {
           "name_en": "Handmaiden of the Thorn",
           "name_de": "Handmaiden of the Thorn",
-          "points": 6,
+          "points": 8,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item", "artifact"],
+            "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
             "maxPoints": 25
           }
         },
@@ -1658,15 +1723,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Blackbriar Javelins",
-          "name_de": "Blackbriar Javelins",
+          "name_en": "Hand Weapons and Blackbriar Javelins",
+          "name_de": "Hand Weapons and Blackbriar Javelins",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1687,6 +1745,8 @@
       "points": 27,
       "minimum": 5,
       "maximum": 98,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Wild Hunter",
@@ -1726,7 +1786,7 @@
           "active": true
         },
         {
-          "name_en": "Shields",
+          "name_en": "Light Armor and Shields",
           "name_de": "Shields",
           "points": 1,
           "perModel": true,

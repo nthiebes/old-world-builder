@@ -110,7 +110,17 @@
       "points": 55,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -170,15 +180,6 @@
           "name_en": "Ambusher",
           "name_de": "Ambusher",
           "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -279,14 +280,14 @@
           "talisman",
           "chaos-mutation",
           "enchanted-item",
-          "artifact"
+          "arcane-item"
         ],
         "maxPoints": 150
       }
     },
     {
-      "name_en": "Bray Shaman",
-      "name_de": "Bray Shaman",
+      "name_en": "Bray-Shaman",
+      "name_de": "Bray-Shaman",
       "id": "bray-shaman",
       "points": 65,
       "minimum": 0,
@@ -347,7 +348,7 @@
           "talisman",
           "enchanted-item",
           "chaos-mutation",
-          "artifact"
+          "arcane-item"
         ],
         "maxPoints": 100
       }
@@ -1436,6 +1437,8 @@
       "points": 56,
       "minimum": 1,
       "maximum": 9,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Shartak",
@@ -1462,8 +1465,8 @@
           "active": true
         },
         {
-          "name_en": "Addional hand weapons",
-          "name_de": "Addional hand weapons",
+          "name_en": "Additional hand weapons",
+          "name_de": "Additional hand weapons",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1538,6 +1541,219 @@
         }
       ],
       "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Ogres",
+      "name_de": "Chaos Ogres",
+      "id": "chaos-ogres",
+      "points": 33,
+      "minimum": 3,
+      "maximum": 15,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_de": "Champion",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_de": "Additional hand weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "*Replace Undivided with Khorne (only select one)",
+          "name_de": "*Replace Undivided with Khorne (only select one)",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Replace Undivided with Nurgle (only select one)",
+          "name_de": "*Replace Undivided with Nurgle (only select one)",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Replace Undivided with Slaanesh (only select one)",
+          "name_de": "*Replace Undivided with Slaanesh (only select one)",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Replace Undivided with Tzeentch (only select one)",
+          "name_de": "*Replace Undivided with Tzeentch (only select one)",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_de": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "id": "jabberslythe",
+      "points": 195,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws and slithery tongue",
+          "name_de": "Wicked claws and slithery tongue",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (counts as heavy armour)",
+          "name_de": "Scaly skin (counts as heavy armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "id": "cygor",
+      "points": 215,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as hand weapon), Hurl attack",
+          "name_de": "Claws (counts as hand weapon), Hurl attack",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "id": "ghorgon",
+      "points": 245,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaver-limbs",
+          "name_de": "Cleaver-limbs",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "magic": {
@@ -1763,6 +1979,127 @@
         }
       ],
       "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Trolls",
+      "name_de": "Chaos Trolls",
+      "id": "chaos-trolls",
+      "points": 41,
+      "minimum": 1,
+      "maximum": 9,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_de": "Additional hand weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Chaos Spawn",
+      "name_de": "Chaos Spawn",
+      "id": "chaos-spawn",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 4,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Flailing appendages (counts as hand weapon)",
+          "name_de": "Flailing appendages (counts as hand weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (counts as heavy armour)",
+          "name_de": "Scaly skin (counts as heavy armour)",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "*Spawn of Khorne (only select one)",
+          "name_de": "*Spawn of Khorne (only select one)",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Spawn of Nurgle (only select one)",
+          "name_de": "*Spawn of Nurgle (only select one)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Spawn of Slaanesh (only select one)",
+          "name_de": "*Spawn of Slaanesh (only select one)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "*Spawn of Tzeentch (only select one)",
+          "name_de": "*Spawn of Tzeentch (only select one)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],

@@ -35,7 +35,7 @@ export const nameMap = {
     name_de: "Magische Standarten",
     name_en: "Magic Standards",
   },
-  artifact: {
+  "arcane-item": {
     name_de: "Arkane Artifakte",
     name_en: "Arcane Items",
   },
@@ -114,5 +114,9 @@ export const nameMap = {
   "tomb-kings-of-khemri": {
     name_de: "Tomb Kings of Khemri",
     name_en: "Tomb Kings of Khemri",
+  },
+  "warriors-of-chaos": {
+    name_de: "Warriors of Chaos",
+    name_en: "Warriors of Chaos",
   },
 };

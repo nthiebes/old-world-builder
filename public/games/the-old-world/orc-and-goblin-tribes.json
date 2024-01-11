@@ -100,7 +100,17 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -230,6 +240,13 @@
           "points": 3,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 3,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
@@ -237,15 +254,6 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 3,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -301,7 +309,17 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -336,6 +354,13 @@
         {
           "name_en": "Heavy Armor",
           "name_de": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
           "points": 3,
           "perModel": true,
           "active": false
@@ -414,21 +439,36 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "no armour",
+          "name_de": "no armour",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [
         {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 0,
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "points": 30,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
         {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "points": 30,
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -456,7 +496,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -479,21 +519,36 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "no armour",
+          "name_de": "no armour",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [
         {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 0,
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "points": 30,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "points": 30,
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 5,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -515,7 +570,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
       }
     },
@@ -526,6 +581,8 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -593,7 +650,7 @@
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
-          "points": 33,
+          "points": 53,
           "active": false
         }
       ],
@@ -611,7 +668,17 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -678,7 +745,7 @@
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
-          "points": 33,
+          "points": 53,
           "active": false
         },
         {
@@ -734,7 +801,7 @@
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
-          "points": 33,
+          "points": 53,
           "active": false
         },
         {
@@ -751,7 +818,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -796,7 +863,7 @@
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
-          "points": 33,
+          "points": 53,
           "active": false
         },
         {
@@ -807,7 +874,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
       }
     },
@@ -899,7 +966,17 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -1009,7 +1086,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
       }
     },
@@ -1053,7 +1130,7 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "artifact", "enchanted-item"],
+        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
       }
     }
@@ -1141,18 +1218,16 @@
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
+          "points": 1,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
-        {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
@@ -1174,6 +1249,129 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Big 'Uns",
+          "name_de": "Big 'Uns",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Skirmisher",
+          "name_de": "Skirmisher",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Black Orc Mob",
+      "name_de": "Black Orc Mob",
+      "id": "black-orc-mob",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full Plate",
+          "name_de": "Full Plate",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1585,6 +1783,35 @@
         "types": [],
         "maxPoints": 0
       }
+    },
+    {
+      "name_en": "Night Goblin Squig Herd",
+      "name_de": "Night Goblin Squig Herd",
+      "id": "night-goblin-squig-herd",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Squig Herder",
+          "name_de": "Squig Herder",
+          "points": 3,
+          "perModel": true,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "special": [
@@ -1595,6 +1822,8 @@
       "points": 12,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Boss",
@@ -1602,7 +1831,7 @@
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 50
+            "maxPoints": 25
           }
         },
         {
@@ -1654,13 +1883,6 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 1,
-          "perModel": true,
-          "active": false
         }
       ],
       "options": [
@@ -1681,6 +1903,15 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -1696,6 +1927,8 @@
       "points": 15,
       "minimum": 4,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Boss",
@@ -1739,13 +1972,6 @@
           "points": 1,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Tusks",
-          "name_de": "Tusks",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -1757,14 +1983,49 @@
           "active": true
         },
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Frenzy (no armour)",
+          "name_de": "Frenzy (no armour)",
           "points": 1,
           "perModel": true,
           "active": false
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Big 'Uns",
+          "name_de": "Big 'Uns",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "magic": {
         "types": [],
@@ -1788,7 +2049,7 @@
               "weapon",
               "armor",
               "talisman",
-              "artifact",
+              "arcane-item",
               "enchanted-item"
             ],
             "maxPoints": 25
@@ -2017,6 +2278,8 @@
       "points": 45,
       "minimum": 1,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2052,7 +2315,7 @@
         {
           "name_en": "Light Armor",
           "name_de": "Light Armor",
-          "points": -1,
+          "points": 0,
           "perModel": true,
           "active": true
         }
@@ -2068,7 +2331,7 @@
       "name_en": "Goblin Wolf Chariot",
       "name_de": "Goblin Wolf Chariot",
       "id": "goblin-wolf-chariot",
-      "points": 33,
+      "points": 53,
       "minimum": 1,
       "maximum": 5,
       "regimentalUnit": false,
@@ -2133,28 +2396,60 @@
       }
     },
     {
-      "name_en": "Night Goblin Squig Herd",
-      "name_de": "Night Goblin Squig Herd",
-      "id": "night-goblin-squig-herd",
-      "points": 10,
-      "minimum": 5,
-      "maximum": 0,
+      "name_en": "Snotling Pump Wagon",
+      "name_de": "Snotling Pump Wagon",
+      "id": "snotling-pump-wagon",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 5,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [
+      "equipment": [
         {
-          "name_en": "Squig Herder",
-          "name_de": "Squig Herder",
-          "points": 3,
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
           "perModel": true,
-          "stackable": 1,
-          "minimum": 0,
-          "maximum": 0
+          "active": true
+        },
+        {
+          "name_en": "Throwing Weapon",
+          "name_de": "Throwing Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Goblin Bolt Throwa",
+      "name_de": "Goblin Bolt Throwa",
+      "id": "goblin-bolt-throwa",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 1,
+      "command": [
+        {
+          "name_en": "Bully",
+          "name_de": "Bully",
+          "points": 10,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [],
       "mounts": [],
       "magic": {
         "types": [],
@@ -2189,33 +2484,6 @@
           "active": true
         }
       ],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Goblin Bolt Throwa",
-      "name_de": "Goblin Bolt Throwa",
-      "id": "goblin-bolt-throwa",
-      "points": 45,
-      "minimum": 1,
-      "maximum": 1,
-      "command": [
-        {
-          "name_en": "Bully",
-          "name_de": "Bully",
-          "points": 10,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [],
-      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {
@@ -2366,40 +2634,6 @@
           "active": true
         }
       ],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Snotling Pump Wagon",
-      "name_de": "Snotling Pump Wagon",
-      "id": "snotling-pump-wagon",
-      "points": 35,
-      "minimum": 1,
-      "maximum": 5,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Throwing Weapon",
-          "name_de": "Throwing Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
       "options": [],
       "mounts": [],
       "magic": {

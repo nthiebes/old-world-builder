@@ -359,6 +359,7 @@ export const Magic = ({ isMobile }) => {
 
               // Filter magic items
               if (
+                !command &&
                 unit?.items?.length &&
                 !unit.items[group].types.includes(magicItem.type)
               ) {
