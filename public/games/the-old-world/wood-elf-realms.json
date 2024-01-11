@@ -161,6 +161,24 @@
           "active": true
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 150
@@ -336,6 +354,24 @@
           "active": true
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
         "maxPoints": 150
@@ -411,6 +447,24 @@
           "name_de": "Unmounted",
           "points": 0,
           "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
         }
       ],
       "magic": {
@@ -496,6 +550,24 @@
           "active": true
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -546,6 +618,24 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
         "maxPoints": 100
@@ -587,24 +677,6 @@
         }
       ],
       "options": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbow",
-          "name_de": "Asrai Longbow",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
@@ -661,6 +733,24 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
@@ -673,6 +763,8 @@
       "points": 265,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -697,6 +789,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 100
@@ -709,6 +811,8 @@
       "points": 80,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -724,6 +828,13 @@
           "points": 4,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
       "armor": [
@@ -737,15 +848,6 @@
       ],
       "options": [
         {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "points": 30,
@@ -756,6 +858,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Forest Spites",
+          "name_de": "Forest Spites",
+          "types": ["forest-spite"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 50
@@ -770,6 +882,8 @@
       "points": 11,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -799,27 +913,17 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Asrai Longbows",
+          "name_de": "Hand Weapon and Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbow",
-          "name_de": "Asrai Longbow",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
@@ -885,6 +989,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -906,7 +1020,7 @@
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
-            "maxPoints": 24
+            "maxPoints": 23
           }
         },
         {
@@ -928,27 +1042,17 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Asrai Longbows",
+          "name_de": "Hand Weapon and Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
-        {
-          "name_en": "Hand Weapon",
-          "name_de": "Hand Weapon",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbow",
-          "name_de": "Asrai Longbow",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
@@ -1014,6 +1118,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1057,7 +1171,15 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Asrai Spears",
+          "name_de": "Hand Weapon and Asrai Spears",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [
         {
           "name_en": "Light Armor",
@@ -1065,29 +1187,13 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Light Armor & Shields",
-          "name_de": "Light Armor & Shields",
-          "points": 1,
-          "perModel": true,
-          "active": false
         }
       ],
       "options": [
         {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Spears",
-          "name_de": "Asrai Spears",
-          "points": 0,
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1113,6 +1219,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1133,7 +1249,7 @@
           "name_de": "Nymph",
           "points": 5,
           "magic": {
-            "types": [],
+            "types": ["forest-spite"],
             "maxPoints": 25
           }
         }
@@ -1158,6 +1274,16 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1201,36 +1327,17 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon, Cavalry Spears and Asrai Longbows",
+          "name_de": "Hand Weapon, Cavalry Spears and Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
-        {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbows",
-          "name_de": "Asrai Longbows",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
@@ -1305,6 +1412,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1327,7 +1444,7 @@
           "name_de": "Lord's Bowmen",
           "points": 6,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item"],
+            "types": ["weapon", "talisman", "enchanted-item", "armor"],
             "maxPoints": 25
           }
         },
@@ -1350,27 +1467,17 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Asrai Longbows",
+          "name_de": "Hand Weapon and Asrai Longbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
-        {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbows",
-          "name_de": "Asrai Longbows",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
@@ -1436,6 +1543,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1448,6 +1565,8 @@
       "points": 14,
       "minimum": 5,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Wildwood Warden",
@@ -1477,7 +1596,15 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Ranger's Glaive",
+          "name_de": "Hand Weapon and Ranger's Glaive",
+          "points": -2,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "armor": [
         {
           "name_en": "Light Armor",
@@ -1499,6 +1626,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1544,30 +1681,45 @@
       ],
       "equipment": [
         {
-          "name_en": "Additional Hand Weapon",
-          "name_de": "Additional Hand Weapon",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Throwing javelin",
-          "name_de": "Throwing javelin",
-          "points": 0,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Default Weapons",
-          "name_de": "Default Weapons",
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "points": 1,
+          "perModel": false,
+          "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Throwing Spear",
+          "name_de": "Throwing Spear",
+          "points": 0,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1595,8 +1747,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Asrai Longbows",
-          "name_de": "Asrai Longbows",
+          "name_en": "Hand Weapon and Asrai Longbows",
+          "name_de": "Hand Weapon and Asrai Longbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1678,6 +1830,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1733,6 +1895,16 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1776,7 +1948,15 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon and Hunting Spear",
+          "name_de": "Hand Weapon and Hunting Spear",
+          "points": -2,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [
         {
           "name_en": "Light Armor",
@@ -1784,29 +1964,13 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Light Armor and Shields",
-          "name_de": "Shields",
-          "points": 1,
-          "perModel": true,
-          "active": false
         }
       ],
       "options": [
         {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Hunting Spears",
-          "name_de": "Hunting Spears",
-          "points": 0,
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1814,6 +1978,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1826,6 +2000,8 @@
       "points": 44,
       "minimum": 3,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Wind Rider",
@@ -1837,36 +2013,17 @@
           }
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon, Cavalry Spear and Asrai Longbow",
+          "name_de": "Hand Weapon, Cavalry Spear and Asrai Longbow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
-        {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Asrai Longbows",
-          "name_de": "Asrai Longbows",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Arcane bodkins",
           "name_de": "Arcane bodkins",
@@ -1914,6 +2071,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1934,7 +2101,7 @@
           "name_de": "Elder",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": ["forest-spite"],
             "maxPoints": 25
           }
         }
@@ -1959,6 +2126,16 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1990,13 +2167,15 @@
       "points": 215,
       "minimum": 1,
       "maximum": 100,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "points": 0,
           "magic": {
-            "types": [],
+            "types": ["forest-spite"],
             "maxPoints": 50
           }
         }
@@ -2005,6 +2184,16 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
