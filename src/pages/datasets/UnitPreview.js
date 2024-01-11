@@ -19,11 +19,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
   const detachments = coreUnits.filter((coreUnit) => coreUnit.detachment);
   let magicPoints = 0;
 
-  unit?.magic?.items &&
-    unit?.magic?.items.forEach((option) => {
-      magicPoints += option.points;
-    });
-
   return (
     <>
       <button onClick={onClose} className="unit-preview-background" />
@@ -51,6 +46,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
             (!unit.armor || (unit.armor && !unit.armor.length)) &&
             (!unit.mounts || (unit.mounts && !unit.mounts.length)) &&
             (!unit.magic || (unit.magic && !unit.magic.maxPoints)) &&
+            (!unit.items || (unit.items && !unit.items.length)) &&
             (!unit.options || (unit.options && !unit.options.length)) && (
               <i className="unit__empty">
                 <FormattedMessage id="unit.noOptions" />
@@ -145,7 +141,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                                 )}
                               >
                                 {getUnitCommandPoints(
-                                  unit?.magic?.items.filter(
+                                  unit?.magic?.selected.filter(
                                     ({ command }) => command === index
                                   )
                                 )}
@@ -429,45 +425,33 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               )}
             </>
           )}
-          {unit.magic?.maxPoints ? (
-            <List
-              // to={`/editor/${listId}/${type}/${unitId}/magic`}
-              className="editor__list unit__link"
-              active={false}
-            >
-              <div className="editor__list-inner">
-                <b className="unit__magic-headline">
-                  <FormattedMessage id="unit.magicItems" />
-                </b>
-                <i className="checkbox__points">
-                  <span
-                    className={classNames(
-                      magicPoints > unit.magic.maxPoints && "editor__error"
-                    )}
-                  >
-                    {magicPoints}
-                  </span>{" "}
-                  / {unit.magic.maxPoints} <FormattedMessage id="app.points" />
-                </i>
-                {magicPoints > unit.magic.maxPoints && (
-                  <Icon
-                    symbol="error"
-                    color="red"
-                    className="unit__magic-icon"
-                  />
-                )}
-              </div>
-              {unit.magic.items && (
-                <p>
-                  {unit.magic.items
-                    .map(({ name_de, name_en }) =>
-                      language === "de" ? name_de : name_en
-                    )
-                    .join(", ")}
-                </p>
-              )}
-            </List>
-          ) : null}
+          {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
+          {unit.items && unit.items.length
+            ? unit.items.map((item, itemIndex) => (
+                <List
+                  className="editor__list unit__link"
+                  active={false}
+                  key={itemIndex}
+                >
+                  <div className="editor__list-inner">
+                    <b className="unit__magic-headline">{item.name_en}</b>
+                    <i className="checkbox__points">
+                      <span>{magicPoints}</span> / {item.maxPoints}{" "}
+                      <FormattedMessage id="app.points" />
+                    </i>
+                  </div>
+                  {item.items && (
+                    <p>
+                      {item.items
+                        .map(({ name_de, name_en }) =>
+                          language === "de" ? name_de : name_en
+                        )
+                        .join(", ")}
+                    </p>
+                  )}
+                </List>
+              ))
+            : null}
         </>
       </div>
     </>

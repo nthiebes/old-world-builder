@@ -60,7 +60,7 @@ export const App = () => {
           <Route path="/editor/:listId/:type/:unitId/rename">
             {<Rename isMobile />}
           </Route>
-          <Route path="/editor/:listId/:type/:unitId/magic">
+          <Route path="/editor/:listId/:type/:unitId/items/:group">
             {<Magic isMobile />}
           </Route>
           <Route path="/editor/:listId/:type/:unitId">
@@ -118,7 +118,7 @@ export const App = () => {
                   <Route path="/editor/:listId/:type/:unitId/rename">
                     {<Rename />}
                   </Route>
-                  <Route path="/editor/:listId/:type/:unitId/magic">
+                  <Route path="/editor/:listId/:type/:unitId/items/:group">
                     {<Magic />}
                   </Route>
                 </Switch>

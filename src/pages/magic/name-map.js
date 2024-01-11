@@ -16,8 +16,8 @@ export const nameMap = {
     name_en: "Runic Items",
   },
   general: {
-    name_de: "Magische Gegenstände",
-    name_en: "Magic Items",
+    name_de: "Gewöhnliche Magische Gegenstände",
+    name_en: "Common Magic Items",
   },
   weapon: {
     name_de: "Magische Waffen",
@@ -34,6 +34,11 @@ export const nameMap = {
   banner: {
     name_de: "Magische Standarten",
     name_en: "Magic Standards",
+  },
+  artifact: {
+    // deprecated
+    name_de: "Arkane Artifakte",
+    name_en: "Arcane Items",
   },
   "arcane-item": {
     name_de: "Arkane Artifakte",
@@ -79,6 +84,14 @@ export const nameMap = {
     name_de: "Chaos Mutation",
     name_en: "Chaos Mutation",
   },
+  "chaos-mutation-character": {
+    name_de: "Chaos Mutation",
+    name_en: "Chaos Mutation",
+  },
+  "chaos-mutation-chieftain": {
+    name_de: "Chaos Mutation",
+    name_en: "Chaos Mutation",
+  },
   "gifts-of-chaos": {
     name_de: "Gifts of Chaos",
     name_en: "Gifts of Chaos",
@@ -90,6 +103,10 @@ export const nameMap = {
   "forest-spites": {
     name_de: "Forest Spites",
     name_en: "Forest Spites",
+  },
+  "forest-spite": {
+    name_de: "Forest Spite",
+    name_en: "Forest Spite",
   },
   "beastmen-brayherds": {
     name_de: "Beastmen Brayherds",
@@ -118,5 +135,13 @@ export const nameMap = {
   "warriors-of-chaos": {
     name_de: "Warriors of Chaos",
     name_en: "Warriors of Chaos",
+  },
+  "knightly-virtue": {
+    name_de: "Knightly Virtue",
+    name_en: "Knightly Virtue",
+  },
+  "knightly-virtue-character": {
+    name_de: "Knightly Virtue",
+    name_en: "Knightly Virtue",
   },
 };

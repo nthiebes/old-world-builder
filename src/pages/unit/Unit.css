@@ -31,10 +31,6 @@
   margin-top: 1rem;
 }
 
-.unit__link .list__inner {
-  border-top: 2px solid var(--color-list);
-}
-
 .unit__link .list__inner label {
   cursor: pointer;
 }
@@ -101,4 +97,8 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.unit__hr {
+  margin: 0 -1rem;
 }

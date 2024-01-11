@@ -1,5 +1,5 @@
 export const getAllOptions = (
-  { mounts, equipment, armor, options, command, magic, detachments },
+  { mounts, equipment, armor, options, command, items, detachments },
   { asString, noMagic } = {}
 ) => {
   const language = localStorage.getItem("lang");
@@ -8,6 +8,21 @@ export const getAllOptions = (
         .filter(({ active }) => active)
         .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
     : [];
+
+  if (command) {
+    command.forEach(({ name_de, name_en, active, magic }) => {
+      if (active) {
+        allCommand.push(language === "de" ? name_de : name_en);
+      }
+      if (magic && magic?.selected?.length) {
+        magic.selected.forEach((selected) => {
+          allCommand.push(
+            language === "de" ? selected.name_de : selected.name_en
+          );
+        });
+      }
+    });
+  }
   const allEquipment = equipment
     ? equipment
         .filter(({ active }) => active)
@@ -36,11 +51,14 @@ export const getAllOptions = (
         .filter(({ active }) => active)
         .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
     : [];
-  const allMagicItems = magic?.items
-    ? magic.items.map(({ name_de, name_en }) =>
-        language === "de" ? name_de : name_en
-      )
-    : [];
+  const allItems = [];
+  if (items?.length) {
+    items.forEach((item) => {
+      (item.selected || []).forEach(({ name_de, name_en }) => {
+        allItems.push(language === "de" ? name_de : name_en);
+      });
+    });
+  }
   const allDetachments = detachments
     ? detachments
         .filter(({ strength }) => strength > 0)
@@ -56,7 +74,7 @@ export const getAllOptions = (
     ...allStackableOptions,
     ...allCommand,
     ...allMounts,
-    ...(!noMagic ? allMagicItems : []),
+    ...(!noMagic ? allItems : []),
     ...allDetachments,
   ];
   const allOptionsString = allOptionsArray.join(", ");

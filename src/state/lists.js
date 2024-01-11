@@ -87,6 +87,7 @@ export const listsSlice = createSlice({
         command,
         mounts,
         magic,
+        items,
         name,
         detachments,
       } = payload;
@@ -98,6 +99,7 @@ export const listsSlice = createSlice({
         command,
         mounts,
         magic,
+        items,
         detachments,
         name_de: name,
         name_en: name,

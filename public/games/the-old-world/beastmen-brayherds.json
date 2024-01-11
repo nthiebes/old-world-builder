@@ -7,6 +7,8 @@
       "points": 115,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -92,16 +94,24 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "enchanted-item",
-          "talisman",
-          "armor",
-          "weapon",
-          "chaos-mutation"
-        ],
-        "maxPoints": 150
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Wargor",

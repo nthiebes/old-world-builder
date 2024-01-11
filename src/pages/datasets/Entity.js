@@ -20,10 +20,16 @@ const initialUnitState = {
   armor: [],
   options: [],
   mounts: [],
-  magic: {
-    types: [],
-    maxPoints: 0,
-  },
+  items: [
+    {
+      name_en: "Magic Items",
+      name_de: "Magische Gegenstände",
+      types: [],
+      selected: [],
+      maxPoints: 0,
+      mutuallyExclusive: false,
+    },
+  ],
 };
 const magicItemTypes = [
   "weapon",
@@ -32,14 +38,19 @@ const magicItemTypes = [
   "banner",
   "arcane-item",
   "enchanted-item",
-  "triptych",
-  "chaos-mutation",
-  "gift-of-chaos",
   "weapon-runes",
   "armor-runes",
   "banner-runes",
   "talismanic-runes",
   "engineering-runes",
+  "triptych",
+  "knightly-virtue",
+  "knightly-virtue-character",
+  "chaos-mutation",
+  "chaos-mutation-character",
+  "chaos-mutation-chieftain",
+  "gift-of-chaos",
+  "forest-spite",
 ];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(
@@ -175,25 +186,23 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       command: newCommandEntries,
     });
   };
-  const handleMagicChange = ({ value, item }) => {
-    setUnit({
-      ...unit,
-      magic: {
-        ...unit.magic,
-        types:
-          value === "on"
-            ? [...unit.magic.types, item]
-            : unit.magic.types.filter((name) => name !== item),
-      },
+  const handleItemsChange = ({ value, type, itemIndex }) => {
+    const newEntries = unit.items.map((entry, entryIndex) => {
+      if (itemIndex === entryIndex) {
+        return {
+          ...entry,
+          types:
+            value === "on"
+              ? [...unit.items[itemIndex].types, type]
+              : unit.items[itemIndex].types.filter((name) => name !== type),
+        };
+      }
+      return entry;
     });
-  };
-  const handleMagicPointsChange = ({ value }) => {
+
     setUnit({
       ...unit,
-      magic: {
-        ...unit.magic,
-        maxPoints: value,
-      },
+      items: newEntries,
     });
   };
   const handleNewCommand = () => {
@@ -270,6 +279,22 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           points: 1,
           active: false,
+        },
+      ],
+    });
+  };
+  const handleNewMagicItemCategory = () => {
+    setUnit({
+      ...unit,
+      items: [
+        ...unit.items,
+        {
+          name_en: "Magic Items",
+          name_de: "Magische Gegenstände",
+          types: [],
+          selected: [],
+          mutuallyExclusive: false,
+          maxPoints: 0,
         },
       ],
     });
@@ -1136,43 +1161,129 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             New mount
           </Button>
           <hr />
-          <h3>Allowed magic item categories</h3>
-          {magicItemTypes.map((item, itemIndex) => (
-            <div className="checkbox" key={item}>
-              <input
-                type="checkbox"
-                id={`${item}-${itemIndex}-${randomId}`}
-                onChange={(event) =>
-                  handleMagicChange({
-                    value: unit.magic.types.includes(item) ? "off" : "on",
-                    item,
-                  })
-                }
-                checked={unit.magic.types.includes(item)}
-                className="checkbox__input"
-              />
-              <label
-                htmlFor={`${item}-${itemIndex}-${randomId}`}
-                className="checkbox__label"
-              >
-                {item}
-              </label>
-            </div>
-          ))}
-          <label htmlFor={`magic-points-${randomId}`}>
-            Max. magic item points
-          </label>
-          <NumberInput
-            id={`magic-points-${randomId}`}
-            className="input"
-            min={0}
-            value={unit.magic.maxPoints}
-            onChange={(event) =>
-              handleMagicPointsChange({
-                value: Number(event.target.value),
-              })
-            }
-          />
+
+          <h3>(Magic) items</h3>
+          <p className="datasets__paragraph">
+            Specify what types of items are allowed. Can also be used for chaos
+            mutations, knightly vitues or similar.
+          </p>
+          {unit.items && unit.items.length
+            ? unit.items.map((item, itemIndex) => (
+                <div className="entity__second-level" key={itemIndex}>
+                  <label htmlFor={`magic-name_en-${itemIndex}-${randomId}`}>
+                    Name English
+                  </label>
+                  <input
+                    type="text"
+                    id={`magic-name_en-${itemIndex}-${randomId}`}
+                    className="input"
+                    value={item.name_en}
+                    onChange={(event) =>
+                      handleSecondLevelFieldChange({
+                        index: itemIndex,
+                        key: "items",
+                        field: "name_en",
+                        value: event.target.value,
+                      })
+                    }
+                    autoComplete="off"
+                    required
+                  />
+                  <label htmlFor={`magic-name_de-${itemIndex}-${randomId}`}>
+                    Name German
+                  </label>
+                  <input
+                    type="text"
+                    id={`magic-name_de-${itemIndex}-${randomId}`}
+                    className="input"
+                    value={item.name_de}
+                    onChange={(event) =>
+                      handleSecondLevelFieldChange({
+                        index: itemIndex,
+                        key: "items",
+                        field: "name_de",
+                        value: event.target.value,
+                      })
+                    }
+                    autoComplete="off"
+                    required
+                  />
+                  <Expandable headline="Allowed (magic) item types">
+                    {magicItemTypes.map((type, typeIndex) => (
+                      <div className="checkbox" key={type}>
+                        <input
+                          type="checkbox"
+                          id={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
+                          onChange={() =>
+                            handleItemsChange({
+                              value: item.types.includes(type) ? "off" : "on",
+                              type,
+                              itemIndex,
+                            })
+                          }
+                          checked={item.types.includes(type)}
+                          className="checkbox__input"
+                        />
+                        <label
+                          htmlFor={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
+                          className="checkbox__label"
+                        >
+                          {type}
+                        </label>
+                      </div>
+                    ))}
+                  </Expandable>
+                  <div className="checkbox">
+                    <input
+                      type="checkbox"
+                      id={`mutually-exclusive-${itemIndex}-${randomId}`}
+                      onChange={(event) =>
+                        handleSecondLevelFieldChange({
+                          index: itemIndex,
+                          key: "items",
+                          field: "mutuallyExclusive",
+                          value: !item.mutuallyExclusive,
+                        })
+                      }
+                      checked={item.mutuallyExclusive}
+                      className="checkbox__input"
+                    />
+                    <label
+                      htmlFor={`mutually-exclusive-${itemIndex}-${randomId}`}
+                      className="checkbox__label"
+                    >
+                      Mutually exclusive
+                    </label>
+                  </div>
+                  <label htmlFor={`magic-points-${randomId}`}>
+                    Max. points
+                  </label>
+                  <NumberInput
+                    id={`magic-points-${itemIndex}-${randomId}`}
+                    className="input"
+                    min={0}
+                    value={item.maxPoints}
+                    onChange={(event) =>
+                      handleSecondLevelFieldChange({
+                        index: itemIndex,
+                        key: "items",
+                        field: "maxPoints",
+                        value: Number(event.target.value),
+                      })
+                    }
+                  />
+                </div>
+              ))
+            : null}
+          <Button
+            type="secondary"
+            icon="add"
+            onClick={handleNewMagicItemCategory}
+            spaceBottom
+            className="entity__second-level-button"
+          >
+            New category
+          </Button>
         </>
       ) : null}
 
