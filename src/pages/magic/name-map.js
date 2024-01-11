@@ -104,6 +104,10 @@ export const nameMap = {
     name_de: "Forest Spites",
     name_en: "Forest Spites",
   },
+  "forest-spite": {
+    name_de: "Forest Spite",
+    name_en: "Forest Spite",
+  },
   "beastmen-brayherds": {
     name_de: "Beastmen Brayherds",
     name_en: "Beastmen Brayherds",

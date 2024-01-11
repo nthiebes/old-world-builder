@@ -50,6 +50,7 @@ const magicItemTypes = [
   "chaos-mutation-character",
   "chaos-mutation-chieftain",
   "gift-of-chaos",
+  "forest-spite",
 ];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(
