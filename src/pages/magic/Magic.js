@@ -270,12 +270,12 @@ export const Magic = ({ isMobile }) => {
           headline={
             language === "de"
               ? unit?.items
-                ? [group].name_de
+                ? unit.items[group].name_de
                 : intl.formatMessage({
                     id: "unit.magicItems",
                   })
               : unit?.items
-              ? [group].name_en
+              ? unit.items[group].name_en
               : intl.formatMessage({
                   id: "unit.magicItems",
                 })
@@ -307,12 +307,12 @@ export const Magic = ({ isMobile }) => {
             headline={
               language === "de"
                 ? unit?.items
-                  ? [group].name_de
+                  ? unit.items[group].name_de
                   : intl.formatMessage({
                       id: "unit.magicItems",
                     })
                 : unit?.items
-                ? [group].name_en
+                ? unit.items[group].name_en
                 : intl.formatMessage({
                     id: "unit.magicItems",
                   })
