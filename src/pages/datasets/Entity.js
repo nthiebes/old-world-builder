@@ -1,10 +1,8 @@
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState } from "react";
 
 import { NumberInput } from "../../components/number-input";
 import { Button } from "../../components/button";
 import { Expandable } from "../../components/expandable";
-
-import { nameMap } from "../../pages/magic/name-map";
 
 import "./Entity.css";
 
@@ -24,8 +22,8 @@ const initialUnitState = {
   mounts: [],
   items: [
     {
-      name_en: nameMap.general.name_en,
-      name_de: nameMap.general.name_de,
+      name_en: "Magic Items",
+      name_de: "Magische Gegenstände",
       types: [],
       selected: [],
       maxPoints: 0,
@@ -286,8 +284,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       items: [
         ...unit.items,
         {
-          name_en: nameMap.general.name_en,
-          name_de: nameMap.general.name_de,
+          name_en: "Magic Items",
+          name_de: "Magische Gegenstände",
           types: [],
           selected: [],
           mutuallyExclusive: false,

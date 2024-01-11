@@ -16,8 +16,8 @@ export const nameMap = {
     name_en: "Runic Items",
   },
   general: {
-    name_de: "Magische Gegenstände",
-    name_en: "Magic Items",
+    name_de: "Gewöhnliche Magische Gegenstände",
+    name_en: "Common Magic Items",
   },
   weapon: {
     name_de: "Magische Waffen",

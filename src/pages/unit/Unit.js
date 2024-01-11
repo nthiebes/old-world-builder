@@ -723,6 +723,7 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
+        {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
               const itemsPoints = getUnitMagicPoints({
