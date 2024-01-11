@@ -425,6 +425,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               )}
             </>
           )}
+          {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
           {unit.items && unit.items.length
             ? unit.items.map((item, itemIndex) => (
                 <List

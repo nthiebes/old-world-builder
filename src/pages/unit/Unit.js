@@ -415,7 +415,10 @@ export const Unit = ({ isMobile }) => {
                         <div className="editor__list-inner">
                           <b>
                             {magic.types
-                              .map((type) => nameMap[type][`name_${language}`])
+                              .map(
+                                (itemType) =>
+                                  nameMap[itemType][`name_${language}`]
+                              )
                               .join(", ")}
                           </b>
                           <i className="checkbox__points">

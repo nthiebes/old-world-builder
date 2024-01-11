@@ -66,24 +66,43 @@ export const Magic = ({ isMobile }) => {
   let maxMagicPoints = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
+    const inputType = event.target.type;
 
     if (event.target.checked) {
       if (isCommand) {
-        magicItems = [
-          ...(unit.command[command].magic.selected || []),
-          {
-            ...magicItem,
-            id: event.target.value,
-          },
-        ];
+        if (inputType === "radio") {
+          magicItems = [
+            {
+              ...magicItem,
+              id: event.target.value,
+            },
+          ];
+        } else {
+          magicItems = [
+            ...(unit.command[command].magic.selected || []),
+            {
+              ...magicItem,
+              id: event.target.value,
+            },
+          ];
+        }
       } else {
-        magicItems = [
-          ...(unit.items[group].selected || []),
-          {
-            ...magicItem,
-            id: event.target.value,
-          },
-        ];
+        if (inputType === "radio") {
+          magicItems = [
+            {
+              ...magicItem,
+              id: event.target.value,
+            },
+          ];
+        } else {
+          magicItems = [
+            ...(unit.items[group].selected || []),
+            {
+              ...magicItem,
+              id: event.target.value,
+            },
+          ];
+        }
       }
     } else {
       if (isCommand) {
@@ -225,6 +244,53 @@ export const Magic = ({ isMobile }) => {
         <label
           htmlFor={`${itemGroup.id}-${magicItem.id}`}
           className="checkbox__label"
+        >
+          {language === "de" ? magicItem.name_de : magicItem.name_en}
+          <i className="checkbox__points">{`${
+            magicItem.points
+          } ${intl.formatMessage({
+            id: "app.points",
+          })}`}</i>
+        </label>
+      </div>
+    );
+  };
+
+  const getRadio = ({ unit, magicItem, itemGroup }) => {
+    let isChecked = false;
+    let isCommand = false;
+
+    if (
+      unit?.command &&
+      unit.command[command] &&
+      unit.command[command]?.magic?.maxPoints
+    ) {
+      isChecked =
+        (unit.command[command].magic.selected || []).find(
+          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+        ) || false;
+      isCommand = true;
+    } else if (unit?.items?.length) {
+      isChecked =
+        unit.items[group].selected.find(
+          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+        ) || false;
+    }
+
+    return (
+      <div className="radio" key={magicItem.id}>
+        <input
+          type="radio"
+          id={`${itemGroup.id}-${magicItem.id}`}
+          value={`${itemGroup.id}-${magicItem.id}`}
+          onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
+          checked={isChecked}
+          name={itemGroup.id}
+          className="radio__input"
+        />
+        <label
+          htmlFor={`${itemGroup.id}-${magicItem.id}`}
+          className="radio__label"
         >
           {language === "de" ? magicItem.name_de : magicItem.name_en}
           <i className="checkbox__points">{`${
@@ -384,6 +450,9 @@ export const Magic = ({ isMobile }) => {
                   ) || false;
               }
 
+              const mutuallyExclusive =
+                unit?.items && unit.items[group].mutuallyExclusive;
+
               return (
                 <Fragment key={magicItem.name_de}>
                   {isFirstItemType && (
@@ -391,7 +460,9 @@ export const Magic = ({ isMobile }) => {
                       {nameMap[magicItem.type][`name_${language}`]}
                     </h3>
                   )}
-                  {getCheckbox({ unit, magicItem, itemGroup })}
+                  {mutuallyExclusive
+                    ? getRadio({ unit, magicItem, itemGroup })
+                    : getCheckbox({ unit, magicItem, itemGroup })}
                   {magicItem.conditional && isChecked
                     ? magicItem.conditional.map((conditionalItem) =>
                         getCheckbox({
