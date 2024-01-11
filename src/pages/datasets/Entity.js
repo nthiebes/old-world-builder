@@ -20,16 +20,7 @@ const initialUnitState = {
   armor: [],
   options: [],
   mounts: [],
-  items: [
-    {
-      name_en: "Magic Items",
-      name_de: "Magische Gegenstände",
-      types: [],
-      selected: [],
-      maxPoints: 0,
-      mutuallyExclusive: false,
-    },
-  ],
+  items: [],
 };
 const magicItemTypes = [
   "weapon",
