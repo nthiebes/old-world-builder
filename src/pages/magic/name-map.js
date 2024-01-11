@@ -124,6 +124,10 @@ export const nameMap = {
     name_de: "Empire of Man",
     name_en: "Empire of Man",
   },
+  "wood-elf-realms": {
+    name_de: "Wood Elf Realms",
+    name_en: "Wood Elf Realms",
+  },
   "high-elf-realms": {
     name_de: "High Elf Realms",
     name_en: "High Elf Realms",
