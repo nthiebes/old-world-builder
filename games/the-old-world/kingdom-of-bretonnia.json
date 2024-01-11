@@ -71,118 +71,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Knightly Temper",
-          "name_de": "Virtue of Knightly Temper",
-          "points": 70,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Heroism",
-          "name_de": "Virtue of Heroism",
-          "points": 60,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Stoicism",
-          "name_de": "Virtue of Stoicism",
-          "points": 55,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Penitent",
-          "name_de": "Virtue of the Penitent",
-          "points": 50,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Ideal",
-          "name_de": "Virtue of the Ideal",
-          "points": 45,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Impetuous Knight",
-          "name_de": "Virtue of the Impetuous Knight",
-          "points": 40,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Audacity",
-          "name_de": "Virtue of Audacity",
-          "points": 35,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Purity",
-          "name_de": "Virtue of Purity",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Duty",
-          "name_de": "Virtue of Duty",
-          "points": 25,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Joust",
-          "name_de": "Virtue of the Joust",
-          "points": 20,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Confidence",
-          "name_de": "Virtue of Confidence",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Noble Disdain",
-          "name_de": "Virtue of Noble Disdain",
-          "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Discipline",
-          "name_de": "Virtue of Discipline",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Empathy",
-          "name_de": "Virtue of Empathy",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -221,10 +109,24 @@
           "points": 135
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Knightly Virtues",
+          "name_de": "Knightly Virtues",
+          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Baron (0-1* per 1000 points)",
@@ -297,118 +199,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Knightly Temper",
-          "name_de": "Virtue of Knightly Temper",
-          "points": 70,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Heroism",
-          "name_de": "Virtue of Heroism",
-          "points": 60,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Stoicism",
-          "name_de": "Virtue of Stoicism",
-          "points": 55,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Penitent",
-          "name_de": "Virtue of the Penitent",
-          "points": 50,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Ideal",
-          "name_de": "Virtue of the Ideal",
-          "points": 45,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Impetuous Knight",
-          "name_de": "Virtue of the Impetuous Knight",
-          "points": 40,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Audacity",
-          "name_de": "Virtue of Audacity",
-          "points": 35,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Purity",
-          "name_de": "Virtue of Purity",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Duty",
-          "name_de": "Virtue of Duty",
-          "points": 25,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Joust",
-          "name_de": "Virtue of the Joust",
-          "points": 20,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Confidence",
-          "name_de": "Virtue of Confidence",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Noble Disdain",
-          "name_de": "Virtue of Noble Disdain",
-          "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Discipline",
-          "name_de": "Virtue of Discipline",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Empathy",
-          "name_de": "Virtue of Empathy",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -447,10 +237,24 @@
           "points": 135
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 75
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Knightly Virtues",
+          "name_de": "Knightly Virtues",
+          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Prophetess (0-1* per 1000 points)",
@@ -511,16 +315,22 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Paladin",
@@ -529,17 +339,7 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 0,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -605,113 +405,9 @@
           "maximum": 0
         },
         {
-          "name_en": "Virtue of Knightly Temper",
-          "name_de": "Virtue of Knightly Temper",
-          "points": 70,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Heroism",
-          "name_de": "Virtue of Heroism",
-          "points": 60,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Stoicism",
-          "name_de": "Virtue of Stoicism",
-          "points": 55,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Penitent",
-          "name_de": "Virtue of the Penitent",
-          "points": 50,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Ideal",
-          "name_de": "Virtue of the Ideal",
-          "points": 45,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Impetuous Knight",
-          "name_de": "Virtue of the Impetuous Knight",
-          "points": 40,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Audacity",
-          "name_de": "Virtue of Audacity",
-          "points": 35,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Purity",
-          "name_de": "Virtue of Purity",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Duty",
-          "name_de": "Virtue of Duty",
-          "points": 25,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of the Joust",
-          "name_de": "Virtue of the Joust",
-          "points": 20,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Confidence",
-          "name_de": "Virtue of Confidence",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Noble Disdain",
-          "name_de": "Virtue of Noble Disdain",
-          "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Discipline",
-          "name_de": "Virtue of Discipline",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Virtue of Empathy",
-          "name_de": "Virtue of Empathy",
-          "points": 5,
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 0,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -743,10 +439,32 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "BSB Magic Standard",
+          "name_de": "BSB Magic Standard",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
+          "name_en": "Knightly Virtues",
+          "name_de": "Knightly Virtues",
+          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Damsel",
@@ -801,16 +519,22 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Sergeant-at-Arms",
@@ -883,10 +607,16 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 25
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 25,
+          "mutuallyExclusive": false
+        }
+      ]
     }
   ],
   "core": [
@@ -963,11 +693,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Peasant Bowmen (1+*)",
@@ -1059,11 +785,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Knights of the Realm on Foot (1+**)",
@@ -1078,8 +800,8 @@
           "name_de": "First Knight",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "enchanted-item"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["weapon", "armor", "talisman", "enchanted-item"]
           }
         },
         {
@@ -1087,8 +809,8 @@
           "name_de": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["banner"]
           }
         },
         {
@@ -1134,11 +856,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Mounted Knights of the Realm (1+**)",
@@ -1153,8 +871,8 @@
           "name_de": "First Knight",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["weapon", "armor", "talisman", "enchanted-item"]
           }
         },
         {
@@ -1162,8 +880,8 @@
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["banner"]
           }
         },
         {
@@ -1195,11 +913,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Knights Errant (0-1 per unit of Knights of the Realm",
@@ -1223,8 +937,8 @@
           "name_de": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["banner"]
           }
         },
         {
@@ -1256,11 +970,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "special": [
@@ -1277,8 +987,8 @@
           "name_de": "Paragon",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "types": ["weapon", "armor", "talisman", "enchanted-item"]
           }
         },
         {
@@ -1286,8 +996,8 @@
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
+            "maxPoints": 100,
+            "types": ["banner"]
           }
         },
         {
@@ -1400,11 +1110,7 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Pegasus Knights",
@@ -1428,8 +1134,8 @@
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "types": ["banner"]
           }
         },
         {
@@ -1461,11 +1167,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Mounted Yeomen",
@@ -1548,11 +1250,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Squires",
@@ -1620,11 +1318,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Battle Pilgrims (0-2 per 1000 points)",
@@ -1663,11 +1357,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "rare": [
@@ -1684,8 +1374,8 @@
           "name_de": "Grail Guardian",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "types": ["weapon", "armor", "talisman", "enchanted-item"]
           }
         },
         {
@@ -1693,8 +1383,8 @@
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
+            "maxPoints": 100,
+            "types": ["banner"]
           }
         },
         {
@@ -1725,93 +1415,8 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Grail Guardian - Virtue of Knightly Temper",
-          "name_de": "Grail Guardian - Virtue of Knightly Temper",
-          "points": 70,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Heroism",
-          "name_de": "Grail Guardian - Virtue of Heroism",
-          "points": 60,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Stoicism",
-          "name_de": "Grail Guardian - Virtue of Stoicism",
-          "points": 55,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of the Impetuous Knight",
-          "name_de": "Grail Guardian - Virtue of the Impetuous Knight",
-          "points": 40,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Audacity",
-          "name_de": "Grail Guardian - Virtue of Audacity",
-          "points": 35,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Purity",
-          "name_de": "Grail Guardian - Virtue of Purity",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of the Joust",
-          "name_de": "Grail Guardian - Virtue of the Joust",
-          "points": 20,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Confidence",
-          "name_de": "Grail Guardian - Virtue of Confidence",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Noble Disdain",
-          "name_de": "Grail Guardian - Virtue of Noble Disdain",
-          "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Grail Guardian - Virtue of Discipline",
-          "name_de": "Grail Guardian - Virtue of Discipline",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "options": [],
+      "mounts": []
     },
     {
       "name_en": "Field Trebuchet (0-1 per 1000 points)",
@@ -1832,11 +1437,7 @@
       ],
       "armor": [],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "mercenaries": [],
