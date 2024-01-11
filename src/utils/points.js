@@ -41,6 +41,11 @@ export const getUnitPoints = (unit) => {
       if (option.active) {
         unitPoints += option.points;
       }
+      if (option.magic && option.magic?.selected?.length) {
+        option.magic.selected.forEach((selected) => {
+          unitPoints += selected.points;
+        });
+      }
     });
   }
   if (unit.mounts) {
@@ -50,9 +55,11 @@ export const getUnitPoints = (unit) => {
       }
     });
   }
-  if (unit?.magic?.items) {
-    unit.magic.items.forEach((option) => {
-      unitPoints += option.points;
+  if (unit?.items && unit?.items.length) {
+    unit.items.forEach((item) => {
+      (item.selected || []).forEach((selected) => {
+        unitPoints += selected.points;
+      });
     });
   }
   if (unit.detachments) {
