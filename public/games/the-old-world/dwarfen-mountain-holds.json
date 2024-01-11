@@ -7,6 +7,8 @@
       "points": 125,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -85,6 +87,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 125,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 125
@@ -97,6 +109,8 @@
       "points": 235,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -118,6 +132,16 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 100
@@ -130,6 +154,8 @@
       "points": 120,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -182,6 +208,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 125,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 125
@@ -194,6 +230,8 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Battle Standard Bearer",
@@ -282,6 +320,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 75,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 75
@@ -294,6 +342,8 @@
       "points": 65,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -346,6 +396,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 75,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 75
@@ -358,6 +418,8 @@
       "points": 130,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -385,6 +447,24 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon Runes",
+          "name_de": "Weapon Runes",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Talismanic Runes",
+          "name_de": "Talismanic Runes",
+          "types": ["talismanic-runes"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 25
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "talismanic-runes"],
         "maxPoints": 125
@@ -397,6 +477,8 @@
       "points": 70,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -424,6 +506,16 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon Runes",
+          "name_de": "Weapon Runes",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 75,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes"],
         "maxPoints": 75
@@ -436,6 +528,8 @@
       "points": 50,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -488,6 +582,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
         "maxPoints": 50
@@ -1352,10 +1456,12 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
-          "name_en": "Royal Champion",
-          "name_de": "Royal Champion",
+          "name_en": "Royal Champion (25pts per rune type max)",
+          "name_de": "Royal Champion (25pts per rune type max)",
           "points": 7,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
@@ -1429,6 +1535,16 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
+        }
+      ],
       "magic": {
         "types": [],
         "maxPoints": 0
