@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
@@ -321,7 +321,7 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
-    hasPointsError = unitMagicPoints > maxMagicPoints;
+    hasPointsError = unitMagicPoints > maxMagicPoints && maxMagicPoints > 0;
   }
 
   return (
@@ -335,12 +335,12 @@ export const Magic = ({ isMobile }) => {
           to={`/editor/${listId}/${type}/${unitId}`}
           headline={
             language === "de"
-              ? unit?.items
+              ? unit?.items?.length
                 ? unit.items[group].name_de
                 : intl.formatMessage({
                     id: "unit.magicItems",
                   })
-              : unit?.items
+              : unit?.items?.length
               ? unit.items[group].name_en
               : intl.formatMessage({
                   id: "unit.magicItems",
@@ -356,9 +356,8 @@ export const Magic = ({ isMobile }) => {
               >
                 {`${unitMagicPoints}`}&nbsp;
               </span>
-              {`/ ${maxMagicPoints} ${intl.formatMessage({
-                id: "app.points",
-              })}`}
+              {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
+              <FormattedMessage id="app.points" />
             </>
           }
           hasPointsError={hasPointsError}
@@ -372,12 +371,12 @@ export const Magic = ({ isMobile }) => {
             to={`/editor/${listId}/${type}/${unitId}`}
             headline={
               language === "de"
-                ? unit?.items
+                ? unit?.items?.length
                   ? unit.items[group].name_de
                   : intl.formatMessage({
                       id: "unit.magicItems",
                     })
-                : unit?.items
+                : unit?.items?.length
                 ? unit.items[group].name_en
                 : intl.formatMessage({
                     id: "unit.magicItems",
@@ -393,9 +392,8 @@ export const Magic = ({ isMobile }) => {
                 >
                   {`${unitMagicPoints}`}&nbsp;
                 </span>
-                {`/ ${maxMagicPoints} ${intl.formatMessage({
-                  id: "app.points",
-                })}`}
+                {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
+                <FormattedMessage id="app.points" />
               </>
             }
             hasPointsError={hasPointsError}
@@ -451,7 +449,7 @@ export const Magic = ({ isMobile }) => {
               }
 
               const mutuallyExclusive =
-                unit?.items && unit.items[group].mutuallyExclusive;
+                unit?.items?.length && unit.items[group].mutuallyExclusive;
 
               return (
                 <Fragment key={magicItem.name_de}>
