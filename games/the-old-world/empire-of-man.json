@@ -391,8 +391,18 @@
           "name_de": "Imperial Griffon",
           "points": 160,
           "active": false
+        },
+        {
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -402,11 +412,7 @@
           "maxPoints": 100,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      ]
     },
     {
       "name_en": "Master Mage",
@@ -451,8 +457,18 @@
           "name_de": "Pegasus",
           "points": 30,
           "active": false
+        },
+        {
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -462,11 +478,7 @@
           "maxPoints": 50,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      ]
     },
     {
       "name_en": "Grand Master",
@@ -553,16 +565,12 @@
           "name_de": "Demigryph",
           "points": 50,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 100,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -574,7 +582,17 @@
           "enchanted-item"
         ],
         "maxPoints": 100
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Chapter Master",
@@ -661,16 +679,12 @@
           "name_de": "Demigryph",
           "points": 50,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -682,7 +696,17 @@
           "enchanted-item"
         ],
         "maxPoints": 50
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Witch Hunter",
@@ -691,6 +715,8 @@
       "points": 55,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -774,16 +800,12 @@
           "name_de": "Pegasus",
           "points": 30,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -795,7 +817,17 @@
           "enchanted-item"
         ],
         "maxPoints": 50
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Lector of Sigmar",
@@ -804,6 +836,8 @@
       "points": 110,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -873,16 +907,12 @@
           "name_de": "War Alter of Sigmar",
           "points": 135,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 100,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -894,7 +924,17 @@
           "enchanted-item"
         ],
         "maxPoints": 100
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Priest of Sigmar",
@@ -903,6 +943,8 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -968,20 +1010,10 @@
           "active": false
         },
         {
-          "name_en": "Demigryph",
-          "name_de": "Demigryph",
-          "points": 50,
-          "active": false
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 1,
+          "active": true
         }
       ],
       "magic": {
@@ -993,7 +1025,17 @@
           "enchanted-item"
         ],
         "maxPoints": 50
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "High Priest of Ulric",
@@ -1002,6 +1044,8 @@
       "points": 110,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1065,16 +1109,12 @@
           "name_de": "Empire Warhorse",
           "points": 12,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 100,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -1086,7 +1126,17 @@
           "enchanted-item"
         ],
         "maxPoints": 100
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Priest of Ulric",
@@ -1095,6 +1145,8 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1158,16 +1210,12 @@
           "name_de": "Empire Warhorse",
           "points": 12,
           "active": false
-        }
-      ],
-      "items": [
+        },
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50,
-          "mutuallyExclusive": false
+          "name_en": "Foot",
+          "name_de": "Foot",
+          "points": 0,
+          "active": true
         }
       ],
       "magic": {
@@ -1179,7 +1227,17 @@
           "enchanted-item"
         ],
         "maxPoints": 50
-      }
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Empire Engineer",
