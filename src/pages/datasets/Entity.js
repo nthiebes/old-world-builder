@@ -1151,132 +1151,130 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           >
             New mount
           </Button>
-          <hr />
+        </>
+      ) : null}
+      <hr />
 
-          <h3>(Magic) items</h3>
-          <p className="datasets__paragraph">
-            Specify what types of items are allowed. Can also be used for chaos
-            mutations, knightly vitues or similar.
-          </p>
-          {unit.items && unit.items.length
-            ? unit.items.map((item, itemIndex) => (
-                <div className="entity__second-level" key={itemIndex}>
-                  <label htmlFor={`magic-name_en-${itemIndex}-${randomId}`}>
-                    Name English
-                  </label>
-                  <input
-                    type="text"
-                    id={`magic-name_en-${itemIndex}-${randomId}`}
-                    className="input"
-                    value={item.name_en}
-                    onChange={(event) =>
-                      handleSecondLevelFieldChange({
-                        index: itemIndex,
-                        key: "items",
-                        field: "name_en",
-                        value: event.target.value,
-                      })
-                    }
-                    autoComplete="off"
-                    required
-                  />
-                  <label htmlFor={`magic-name_de-${itemIndex}-${randomId}`}>
-                    Name German
-                  </label>
-                  <input
-                    type="text"
-                    id={`magic-name_de-${itemIndex}-${randomId}`}
-                    className="input"
-                    value={item.name_de}
-                    onChange={(event) =>
-                      handleSecondLevelFieldChange({
-                        index: itemIndex,
-                        key: "items",
-                        field: "name_de",
-                        value: event.target.value,
-                      })
-                    }
-                    autoComplete="off"
-                    required
-                  />
-                  <Expandable headline="Allowed (magic) item types">
-                    {magicItemTypes.map((type, typeIndex) => (
-                      <div className="checkbox" key={type}>
-                        <input
-                          type="checkbox"
-                          id={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
-                          onChange={() =>
-                            handleItemsChange({
-                              value: item.types.includes(type) ? "off" : "on",
-                              type,
-                              itemIndex,
-                            })
-                          }
-                          checked={item.types.includes(type)}
-                          className="checkbox__input"
-                        />
-                        <label
-                          htmlFor={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
-                          className="checkbox__label"
-                        >
-                          {type}
-                        </label>
-                      </div>
-                    ))}
-                  </Expandable>
-                  <div className="checkbox">
+      <h3>(Magic) items</h3>
+      <p className="datasets__paragraph">
+        Specify what types of items are allowed. Can also be used for chaos
+        mutations, knightly vitues or similar.
+      </p>
+      {unit.items && unit.items.length
+        ? unit.items.map((item, itemIndex) => (
+            <div className="entity__second-level" key={itemIndex}>
+              <label htmlFor={`magic-name_en-${itemIndex}-${randomId}`}>
+                Name English
+              </label>
+              <input
+                type="text"
+                id={`magic-name_en-${itemIndex}-${randomId}`}
+                className="input"
+                value={item.name_en}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "name_en",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+                required
+              />
+              <label htmlFor={`magic-name_de-${itemIndex}-${randomId}`}>
+                Name German
+              </label>
+              <input
+                type="text"
+                id={`magic-name_de-${itemIndex}-${randomId}`}
+                className="input"
+                value={item.name_de}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "name_de",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+                required
+              />
+              <Expandable headline="Allowed (magic) item types">
+                {magicItemTypes.map((type, typeIndex) => (
+                  <div className="checkbox" key={type}>
                     <input
                       type="checkbox"
-                      id={`mutually-exclusive-${itemIndex}-${randomId}`}
-                      onChange={(event) =>
-                        handleSecondLevelFieldChange({
-                          index: itemIndex,
-                          key: "items",
-                          field: "mutuallyExclusive",
-                          value: !item.mutuallyExclusive,
+                      id={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
+                      onChange={() =>
+                        handleItemsChange({
+                          value: item.types.includes(type) ? "off" : "on",
+                          type,
+                          itemIndex,
                         })
                       }
-                      checked={item.mutuallyExclusive}
+                      checked={item.types.includes(type)}
                       className="checkbox__input"
                     />
                     <label
-                      htmlFor={`mutually-exclusive-${itemIndex}-${randomId}`}
+                      htmlFor={`${type}-${typeIndex}-${itemIndex}-${randomId}`}
                       className="checkbox__label"
                     >
-                      Mutually exclusive
+                      {type}
                     </label>
                   </div>
-                  <label htmlFor={`magic-points-${randomId}`}>
-                    Max. points
-                  </label>
-                  <NumberInput
-                    id={`magic-points-${itemIndex}-${randomId}`}
-                    className="input"
-                    min={0}
-                    value={item.maxPoints}
-                    onChange={(event) =>
-                      handleSecondLevelFieldChange({
-                        index: itemIndex,
-                        key: "items",
-                        field: "maxPoints",
-                        value: Number(event.target.value),
-                      })
-                    }
-                  />
-                </div>
-              ))
-            : null}
-          <Button
-            type="secondary"
-            icon="add"
-            onClick={handleNewMagicItemCategory}
-            spaceBottom
-            className="entity__second-level-button"
-          >
-            New category
-          </Button>
-        </>
-      ) : null}
+                ))}
+              </Expandable>
+              <div className="checkbox">
+                <input
+                  type="checkbox"
+                  id={`mutually-exclusive-${itemIndex}-${randomId}`}
+                  onChange={(event) =>
+                    handleSecondLevelFieldChange({
+                      index: itemIndex,
+                      key: "items",
+                      field: "mutuallyExclusive",
+                      value: !item.mutuallyExclusive,
+                    })
+                  }
+                  checked={item.mutuallyExclusive}
+                  className="checkbox__input"
+                />
+                <label
+                  htmlFor={`mutually-exclusive-${itemIndex}-${randomId}`}
+                  className="checkbox__label"
+                >
+                  Mutually exclusive
+                </label>
+              </div>
+              <label htmlFor={`magic-points-${randomId}`}>Max. points</label>
+              <NumberInput
+                id={`magic-points-${itemIndex}-${randomId}`}
+                className="input"
+                min={0}
+                value={item.maxPoints}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "maxPoints",
+                    value: Number(event.target.value),
+                  })
+                }
+              />
+            </div>
+          ))
+        : null}
+      <Button
+        type="secondary"
+        icon="add"
+        onClick={handleNewMagicItemCategory}
+        spaceBottom
+        className="entity__second-level-button"
+      >
+        New category
+      </Button>
 
       <Button
         submitButton

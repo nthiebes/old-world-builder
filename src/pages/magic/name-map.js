@@ -149,8 +149,8 @@ export const nameMap = {
     name_en: "Knightly Virtue",
   },
   "knightly-virtue-character": {
-    name_de: "Knightly Virtue",
-    name_en: "Knightly Virtue",
+    name_de: "Knightly Virtue (Characters only)",
+    name_en: "Knightly Virtue (Characters only)",
   },
   "elven-honours": {
     name_de: "Elven Honours",

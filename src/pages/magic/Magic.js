@@ -335,12 +335,12 @@ export const Magic = ({ isMobile }) => {
           to={`/editor/${listId}/${type}/${unitId}`}
           headline={
             language === "de"
-              ? unit?.items?.length
+              ? unit?.items?.length && !unit?.command?.length
                 ? unit.items[group].name_de
                 : intl.formatMessage({
                     id: "unit.magicItems",
                   })
-              : unit?.items?.length
+              : unit?.items?.length && !unit?.command?.length
               ? unit.items[group].name_en
               : intl.formatMessage({
                   id: "unit.magicItems",
@@ -371,12 +371,12 @@ export const Magic = ({ isMobile }) => {
             to={`/editor/${listId}/${type}/${unitId}`}
             headline={
               language === "de"
-                ? unit?.items?.length
+                ? unit?.items?.length && !unit?.command?.length
                   ? unit.items[group].name_de
                   : intl.formatMessage({
                       id: "unit.magicItems",
                     })
-                : unit?.items?.length
+                : unit?.items?.length && !unit?.command?.length
                 ? unit.items[group].name_en
                 : intl.formatMessage({
                     id: "unit.magicItems",
@@ -430,7 +430,8 @@ export const Magic = ({ isMobile }) => {
                 return null;
               }
 
-              let isChecked = false;
+              let isChecked = false,
+                mutuallyExclusive = false;
 
               if (
                 unit?.command &&
@@ -441,15 +442,15 @@ export const Magic = ({ isMobile }) => {
                   (unit.command[command].magic.selected || []).find(
                     ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                   ) || false;
+                mutuallyExclusive =
+                  unit.command[command].magic.mutuallyExclusive;
               } else if (unit?.items?.length) {
                 isChecked =
                   unit.items[group].selected.find(
                     ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                   ) || false;
+                mutuallyExclusive = unit.items[group].mutuallyExclusive;
               }
-
-              const mutuallyExclusive =
-                unit?.items?.length && unit.items[group].mutuallyExclusive;
 
               return (
                 <Fragment key={magicItem.name_de}>
