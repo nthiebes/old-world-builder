@@ -133,18 +133,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 150
-      }
+      ]
     },
     {
       "name_en": "Chaos Lord (0-1*)",
@@ -366,17 +355,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 150
-      }
+      ]
     },
     {
       "name_en": "Sorcerer Lord (0-1** per 1000 points)",
@@ -531,18 +510,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 150
-      }
+      ]
     },
     {
       "name_en": "Exalted Champion (0-1** per 1000 points)",
@@ -553,17 +521,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -654,6 +612,14 @@
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
           "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -749,24 +715,22 @@
           "mutuallyExclusive": false
         },
         {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
-          "maxPoints": 0
+          "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 125
-      }
+      ]
     },
     {
       "name_en": "Exalted Sorcerer",
@@ -903,18 +867,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 100
-      }
+      ]
     },
     {
       "name_en": "Aspiring Champion",
@@ -925,17 +878,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -1029,6 +972,14 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -1115,6 +1066,14 @@
           "mutuallyExclusive": false
         },
         {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
@@ -1122,17 +1081,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "gift-of-chaos"
-        ],
-        "maxPoints": 100
-      }
+      ]
     }
   ],
   "core": [
@@ -1258,11 +1207,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Knights",
@@ -1363,11 +1308,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Marauders",
@@ -1509,11 +1450,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Marauder Horsemen",
@@ -1693,11 +1630,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Warhounds",
@@ -1774,11 +1707,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Forsaken",
@@ -1844,11 +1773,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "special": [
@@ -1990,11 +1915,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chosen Chaos Knights (0-1)",
@@ -2111,11 +2032,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Chariot",
@@ -2173,11 +2090,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Ogres",
@@ -2201,7 +2114,7 @@
           "name_de": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [],
             "maxPoints": 0
           }
         },
@@ -2285,11 +2198,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Trolls",
@@ -2332,11 +2241,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Spawn",
@@ -2402,11 +2307,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Dragon Ogres",
@@ -2421,14 +2322,8 @@
           "name_de": "Shartak",
           "points": 7,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "enchanted-item",
-              "chaos-mutation"
-            ],
-            "maxPoints": 50
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
           }
         }
       ],
@@ -2480,10 +2375,16 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "items": [
+        {
+          "name_en": "Shartak's Chaos Mutations",
+          "name_de": "Shartak's Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 25
+        }
+      ]
     },
     {
       "name_en": "Chimera",
@@ -2549,11 +2450,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "rare": [
@@ -2613,11 +2510,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Chaos Giant (0-1 per 1000 points)",
@@ -2663,11 +2556,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Dragon Ogre Shaggoth (0-1 per unit of Dragon Ogres)",
@@ -2718,16 +2607,24 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "chaos-mutation"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ]
     },
     {
       "name_en": "Hellcannon (0-1 per 1000 points)",
@@ -2748,11 +2645,7 @@
       ],
       "armor": [],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "mercenaries": [],
