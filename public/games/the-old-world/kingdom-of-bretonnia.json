@@ -449,8 +449,8 @@
           "mutuallyExclusive": false
         },
         {
-          "name_en": "BSB Magic Standard",
-          "name_de": "BSB Magic Standard",
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -1028,89 +1028,18 @@
           "active": true
         }
       ],
-      "options": [
+      "options": [],
+      "mounts": [],
+      "items": [
         {
-          "name_en": "Paragon - Virtue of Knightly Temper",
-          "name_de": "Paragon - Virtue of Knightly Temper",
-          "points": 70,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Heroism",
-          "name_de": "Paragon - Virtue of Heroism",
-          "points": 60,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Stoicism",
-          "name_de": "Paragon - Virtue of Stoicism",
-          "points": 55,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of the Impetuous Knight",
-          "name_de": "Paragon - Virtue of the Impetuous Knight",
-          "points": 40,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Audacity",
-          "name_de": "Paragon - Virtue of Audacity",
-          "points": 35,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Purity",
-          "name_de": "Paragon - Virtue of Purity",
-          "points": 30,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of the Joust",
-          "name_de": "Paragon - Virtue of the Joust",
-          "points": 20,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Confidence",
-          "name_de": "Paragon - Virtue of Confidence",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Noble Disdain",
-          "name_de": "Paragon - Virtue of Noble Disdain",
-          "points": 10,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Paragon - Virtue of Discipline",
-          "name_de": "Paragon - Virtue of Discipline",
-          "points": 5,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Paragon's Knightly Virtues",
+          "name_de": "Paragon's Knightly Virtues",
+          "types": ["knightly-virtue"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
-      ],
-      "mounts": []
+      ]
     },
     {
       "name_en": "Pegasus Knights",
@@ -1416,7 +1345,17 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Grail Guardian's Knightly Virtues",
+          "name_de": "Grail Guardian's Knightly Virtues",
+          "types": ["knightly-virtue"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Field Trebuchet (0-1 per 1000 points)",
