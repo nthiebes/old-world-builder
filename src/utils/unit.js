@@ -3,11 +3,7 @@ export const getAllOptions = (
   { asString, noMagic } = {}
 ) => {
   const language = localStorage.getItem("lang");
-  const allCommand = command
-    ? command
-        .filter(({ active }) => active)
-        .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
-    : [];
+  const allCommand = [];
 
   if (command) {
     command.forEach(({ name_de, name_en, active, magic }) => {
