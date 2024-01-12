@@ -96,11 +96,7 @@
           "maxPoints": 125,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 125
-      }
+      ]
     },
     {
       "name_en": "Anvil of Doom (0-1* per 1000 points)",
@@ -141,11 +137,7 @@
           "maxPoints": 100,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 100
-      }
+      ]
     },
     {
       "name_en": "Runelord (0-1* per 1000 points)",
@@ -217,11 +209,7 @@
           "maxPoints": 125,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 125
-      }
+      ]
     },
     {
       "name_en": "Thane",
@@ -232,17 +220,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner-runes"],
-            "maxPoints": 200
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand Weapon",
@@ -298,6 +276,14 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -328,12 +314,16 @@
           "selected": [],
           "maxPoints": 75,
           "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Standard Runes (BSB)",
+          "name_de": "Standard Runes (BSB)",
+          "types": ["banner-runes"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 75
-      }
+      ]
     },
     {
       "name_en": "Runesmith",
@@ -405,11 +395,7 @@
           "maxPoints": 75,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 75
-      }
+      ]
     },
     {
       "name_en": "Daemon Slayer",
@@ -464,11 +450,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 25
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "talismanic-runes"],
-        "maxPoints": 125
-      }
+      ]
     },
     {
       "name_en": "Dragon Slayer",
@@ -515,11 +497,7 @@
           "maxPoints": 75,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes"],
-        "maxPoints": 75
-      }
+      ]
     },
     {
       "name_en": "Engineer",
@@ -591,11 +569,7 @@
           "maxPoints": 50,
           "mutuallyExclusive": false
         }
-      ],
-      "magic": {
-        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-        "maxPoints": 50
-      }
+      ]
     }
   ],
   "core": [
@@ -691,11 +665,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Quarrellers",
@@ -789,11 +759,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Thunderers",
@@ -887,11 +853,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Long Beards (0-1 if General is a King)",
@@ -976,11 +938,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Rangers (0-1)",
@@ -1088,11 +1046,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "special": [
@@ -1179,11 +1133,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Ironbreakers",
@@ -1277,11 +1227,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Miners",
@@ -1375,11 +1321,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Slayers",
@@ -1443,11 +1385,7 @@
           "perModel": false
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Hammerers (0-1 per King or Thane)",
@@ -1460,8 +1398,8 @@
       "detachment": false,
       "command": [
         {
-          "name_en": "Royal Champion (25pts per rune type max)",
-          "name_de": "Royal Champion (25pts per rune type max)",
+          "name_en": "Royal Champion (Up to 25pts of each rune type)",
+          "name_de": "Royal Champion (Up to 25pts of each rune type)",
           "points": 7,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
@@ -1534,21 +1472,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": [],
-          "selected": [],
-          "maxPoints": 0,
-          "mutuallyExclusive": false
-        }
-      ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Gyrocopters",
@@ -1591,11 +1515,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Bolt Thrower (0-3 warmachines per 1000 points)",
@@ -1625,10 +1545,16 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": ["engineering-runes"],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Engineering Runes",
+          "name_de": "Engineering Runes",
+          "types": ["engineering-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Grudge Thrower (0-3 warmachines per 1000 points)",
@@ -1658,10 +1584,16 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": ["engineering-runes"],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Engineering Runes",
+          "name_de": "Engineering Runes",
+          "types": ["engineering-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Cannon (0-3 warmachines per 1000 points)",
@@ -1691,10 +1623,16 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": ["engineering-runes"],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Engineering Runes",
+          "name_de": "Engineering Runes",
+          "types": ["engineering-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ]
     }
   ],
   "rare": [
@@ -1804,11 +1742,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Irondrakes",
@@ -1902,11 +1836,7 @@
           "perModel": true
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Gyrobomber",
@@ -1949,11 +1879,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Organ Gun (0-2 warmachines per 1000 points)",
@@ -1982,11 +1908,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Flame Cannon (0-2 warmachines per 1000 points)",
@@ -2015,11 +1937,7 @@
         }
       ],
       "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "mercenaries": [],
