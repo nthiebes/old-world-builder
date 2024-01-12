@@ -378,7 +378,8 @@
       "name_de": "Gauntlet of the Duel*",
       "name_en": "Gauntlet of the Duel*",
       "points": 5,
-      "type": "enchanted-item"
+      "type": "enchanted-item",
+      "stackable": true
     },
     {
       "name_de": "Silver Mirror",
@@ -390,7 +391,8 @@
       "name_de": "Sacrament of the Lady*",
       "name_en": "Sacrament of the Lady*",
       "points": 30,
-      "type": "arcane-item"
+      "type": "arcane-item",
+      "stackable": true
     },
     {
       "name_de": "Prayer Icon of Quenelles",
@@ -419,6 +421,18 @@
       "type": "knightly-virtue"
     },
     {
+      "name_en": "Virtue of the Penitent",
+      "name_de": "Virtue of the Penitent",
+      "points": 50,
+      "type": "knightly-virtue-character"
+    },
+    {
+      "name_en": "Virtue of the Ideal",
+      "name_de": "Virtue of the Ideal",
+      "points": 45,
+      "type": "knightly-virtue-character"
+    },
+    {
       "name_en": "Virtue of the Impetuous Knight",
       "name_de": "Virtue of the Impetuous Knight",
       "points": 40,
@@ -435,6 +449,12 @@
       "name_de": "Virtue of Purity",
       "points": 30,
       "type": "knightly-virtue"
+    },
+    {
+      "name_en": "Virtue of Duty",
+      "name_de": "Virtue of Duty",
+      "points": 25,
+      "type": "knightly-virtue-character"
     },
     {
       "name_en": "Virtue of the Joust",
@@ -459,6 +479,12 @@
       "name_de": "Virtue of Discipline",
       "points": 5,
       "type": "knightly-virtue"
+    },
+    {
+      "name_en": "Virtue of Empathy",
+      "name_de": "Virtue of Empathy",
+      "points": 5,
+      "type": "knightly-virtue-character"
     }
   ],
   "knightly-virtues-character": [
@@ -644,55 +670,82 @@
       "name_de": "Rune of Parrying",
       "name_en": "Rune of Parrying",
       "points": 35,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Banishment",
       "name_en": "Rune of Banishment",
       "points": 25,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Fury*",
       "name_en": "Rune of Fury*",
       "points": 25,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Grudge Rune*",
       "name_en": "Grudge Rune*",
       "points": 20,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Might*",
       "name_en": "Rune of Might*",
       "points": 20,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Cleaving*",
       "name_en": "Rune of Cleaving*",
       "points": 15,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Striking*",
       "name_en": "Rune of Striking*",
       "points": 15,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Fire",
       "name_en": "Rune of Fire",
       "points": 10,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Speed*",
       "name_en": "Rune of Speed*",
       "points": 5,
-      "type": "weapon-runes"
+      "type": "weapon-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Master Rune of Adamant",
@@ -710,31 +763,46 @@
       "name_de": "Rune of Iron",
       "name_en": "Rune of Iron",
       "points": 35,
-      "type": "armor-runes"
+      "type": "armor-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Fortitude*",
       "name_en": "Rune of Fortitude*",
       "points": 30,
-      "type": "armor-runes"
+      "type": "armor-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Preservation",
       "name_en": "Rune of Preservation",
       "points": 25,
-      "type": "armor-runes"
+      "type": "armor-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Shielding*",
       "name_en": "Rune of Shielding*",
       "points": 15,
-      "type": "armor-runes"
+      "type": "armor-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Stone*",
       "name_en": "Rune of Stone*",
       "points": 5,
-      "type": "armor-runes"
+      "type": "armor-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Master Rune of Calm",
@@ -758,31 +826,46 @@
       "name_de": "Rune of Spellbreaking*",
       "name_en": "Rune of Spellbreaking*",
       "points": 25,
-      "type": "talismanic-runes"
+      "type": "talismanic-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Warding*",
       "name_en": "Rune of Warding*",
       "points": 20,
-      "type": "talismanic-runes"
+      "type": "talismanic-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Luck*",
       "name_en": "Rune of Luck*",
       "points": 15,
-      "type": "talismanic-runes"
+      "type": "talismanic-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of the Furnace",
       "name_en": "Rune of the Furnace",
       "points": 5,
-      "type": "talismanic-runes"
+      "type": "talismanic-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Passage",
       "name_en": "Rune of Passage",
       "points": 5,
-      "type": "talismanic-runes"
+      "type": "talismanic-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Master Rune of Grungni",
@@ -806,31 +889,46 @@
       "name_de": "Rune of Confusion",
       "name_en": "Rune of Confusion",
       "points": 35,
-      "type": "banner-runes"
+      "type": "banner-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Fear",
       "name_en": "Rune of Fear",
       "points": 30,
-      "type": "banner-runes"
+      "type": "banner-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Battle",
       "name_en": "Rune of Battle",
       "points": 25,
-      "type": "banner-runes"
+      "type": "banner-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Strollaz' Rune",
       "name_en": "Strollaz' Rune",
       "points": 25,
-      "type": "banner-runes"
+      "type": "banner-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Courage",
       "name_en": "Rune of Courage",
       "points": 15,
-      "type": "banner-runes"
+      "type": "banner-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Master Rune of Immolation",
@@ -848,31 +946,46 @@
       "name_de": "Rune of Skewering",
       "name_en": "Rune of Skewering",
       "points": 20,
-      "type": "engineering-runes"
+      "type": "engineering-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Forging*",
       "name_en": "Rune of Forging*",
       "points": 15,
-      "type": "engineering-runes"
+      "type": "engineering-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Burning",
       "name_en": "Rune of Burning",
       "points": 10,
-      "type": "engineering-runes"
+      "type": "engineering-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Rune of Reloading",
       "name_en": "Rune of Reloading",
       "points": 5,
-      "type": "engineering-runes"
+      "type": "engineering-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     },
     {
       "name_de": "Stalwart Rune",
       "name_en": "Stalwart Rune",
       "points": 5,
-      "type": "engineering-runes"
+      "type": "engineering-runes",
+      "stackable": true,
+      "minimum": 0,
+      "maximum": 3
     }
   ],
   "orc-and-goblin-tribes": [
@@ -1214,7 +1327,8 @@
       "name_de": "Brazen Collar*",
       "name_en": "Brazen Collar*",
       "points": 20,
-      "type": "talisman"
+      "type": "talisman",
+      "stackable": true
     },
     {
       "name_de": "Banner of the Gods",
@@ -1256,7 +1370,8 @@
       "name_de": "Favor of the Gods*",
       "name_en": "Favor of the Gods*",
       "points": 5,
-      "type": "enchanted-item"
+      "type": "enchanted-item",
+      "stackable": true
     },
     {
       "name_de": "Skull of Katam",
@@ -1274,7 +1389,8 @@
       "name_de": "Spell Familiar*",
       "name_en": "Spell Familiar*",
       "points": 15,
-      "type": "arcane-item"
+      "type": "arcane-item",
+      "stackable": true
     }
   ],
   "gifts-of-chaos": [
