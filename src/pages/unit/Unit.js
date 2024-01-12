@@ -410,7 +410,7 @@ export const Unit = ({ isMobile }) => {
                       <List
                         to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                         className="editor__list unit__link"
-                        active={location.pathname.includes("magic")}
+                        active={location.pathname.includes(`magic/${index}`)}
                       >
                         <div className="editor__list-inner">
                           <b>
@@ -737,7 +737,7 @@ export const Unit = ({ isMobile }) => {
                 <List
                   to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
                   className="editor__list unit__link"
-                  active={location.pathname.includes("items")}
+                  active={location.pathname.includes(`items/${itemIndex}`)}
                   key={itemIndex}
                 >
                   <div className="editor__list-inner">
