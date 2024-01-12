@@ -140,6 +140,10 @@ export const nameMap = {
     name_de: "Warriors of Chaos",
     name_en: "Warriors of Chaos",
   },
+  "knightly-virtues": {
+    name_de: "Knightly Virtues",
+    name_en: "Knightly Virtues",
+  },
   "knightly-virtue": {
     name_de: "Knightly Virtue",
     name_en: "Knightly Virtue",
