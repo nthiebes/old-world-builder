@@ -240,10 +240,24 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Elven Honours",
+          "name_de": "Elven Honours",
+          "types": ["elven-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Noble",
@@ -473,10 +487,24 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Elven Honours",
+          "name_de": "Elven Honours",
+          "types": ["elven-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Archmage",
@@ -637,16 +665,30 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "enchanted-item",
-          "arcane-item"
-        ],
-        "maxPoints": 100
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Elven Honours",
+          "name_de": "Elven Honours",
+          "types": ["elven-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Mage",
@@ -795,16 +837,30 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Elven Honours",
+          "name_de": "Elven Honours",
+          "types": ["elven-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "Dragon Mage",
@@ -853,16 +909,22 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     },
     {
       "name_en": "Handmaiden of the Everqueen",
@@ -911,16 +973,16 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        }
+      ]
     }
   ],
   "core": [
@@ -1219,7 +1281,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 1,
+          "points": 6,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -1655,6 +1717,15 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician ",
+          "name_de": "Musician ",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
           }
         }
       ],
