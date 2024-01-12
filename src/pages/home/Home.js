@@ -127,8 +127,19 @@ export const Home = ({ isMobile }) => {
             )
           )}
         </ul>
-        <Button centered to="/new" icon="new-list" spaceTop spaceBottom>
+        <Button centered to="/new" icon="new-list" spaceTop>
           <FormattedMessage id="home.newList" />
+        </Button>
+        <Button
+          centered
+          to="/import"
+          type="text"
+          icon="import"
+          color="dark"
+          spaceTop
+          spaceBottom
+        >
+          <FormattedMessage id="home.import" />
         </Button>
       </MainComponent>
     </>

@@ -260,6 +260,27 @@ ${intl.formatMessage({
   }
 };
 
+const share = async () => {
+  console.log("share");
+  const shareData = {
+    title: "MDN",
+    text: "Learn web development on MDN!",
+    url: "https://developer.mozilla.org",
+  };
+
+  if (!navigator.canShare) {
+    console.log("can't share");
+    return;
+  }
+
+  try {
+    await navigator.share(shareData);
+    console.log("success");
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
 export const Export = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const intl = useIntl();
@@ -286,6 +307,13 @@ export const Export = ({ isMobile }) => {
         }
       );
   };
+  const JSONFile = URL.createObjectURL(
+    new Blob([JSON.stringify(list)], { type: "application/json" })
+  );
+  const fileName = `${list?.name
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/,/g, "")}.owb.json`;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -320,9 +348,55 @@ export const Export = ({ isMobile }) => {
             })}
           />
         )}
+        <Button icon="download" href={JSONFile} download={fileName} spaceTop>
+          <FormattedMessage id="export.download" />
+        </Button>
+        <p>
+          <i>
+            <FormattedMessage id="export.dowloadInfo" />
+          </i>
+        </p>
+
+        <h2>
+          <FormattedMessage id="export.copyTitle" />
+        </h2>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="show"
+            onChange={() => setIsShowList(!isShowList)}
+            checked={isShowList}
+            className="checkbox__input"
+          />
+          <label htmlFor="show" className="checkbox__label">
+            <FormattedMessage id="export.visibleList" />
+          </label>
+        </div>
+        <p className="export__visible-description">
+          <i>
+            (<FormattedMessage id="export.visibleListDescription" />)
+          </i>
+        </p>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="show"
+            onChange={() => setIsShowList(!isShowList)}
+            checked={isShowList}
+            className="checkbox__input"
+          />
+          <label htmlFor="show" className="checkbox__label">
+            <FormattedMessage id="export.forumText" />
+          </label>
+        </div>
+        <p className="export__visible-description">
+          <i>
+            (<FormattedMessage id="export.forumTextDescription" />)
+          </i>
+        </p>
+
         <Button
           icon={copied ? "check" : "copy"}
-          centered
           spaceTop
           spaceBottom
           onClick={copyText}
@@ -341,21 +415,12 @@ export const Export = ({ isMobile }) => {
           </p>
         )}
 
-        <div className="checkbox export__visible-checkbox">
-          <input
-            type="checkbox"
-            id="show"
-            onChange={() => setIsShowList(!isShowList)}
-            checked={isShowList}
-            className="checkbox__input"
-          />
-          <label htmlFor="show" className="checkbox__label">
-            <FormattedMessage id="export.visibleList" />
-          </label>
-        </div>
-        <p className="export__visible-description">
+        <Button icon="share" spaceTop onClick={share}>
+          <FormattedMessage id="export.share" />
+        </Button>
+        <p>
           <i>
-            (<FormattedMessage id="export.visibleListDescription" />)
+            (<FormattedMessage id="export.shareDescription" />)
           </i>
         </p>
 

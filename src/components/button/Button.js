@@ -11,6 +11,7 @@ export const Button = ({
   className,
   type,
   to,
+  href,
   onClick,
   children,
   spaceBottom,
@@ -23,11 +24,12 @@ export const Button = ({
   submitButton,
   disabled,
   size,
+  download,
 }) => {
-  const Component = to ? Link : "button";
+  const Component = to || href ? (to ? Link : "a") : "button";
   const buttonProps = {};
 
-  if (!to) {
+  if (!to && !href) {
     if (submitButton) {
       buttonProps.type = "submit";
     } else {
@@ -51,9 +53,11 @@ export const Button = ({
       )}
       onClick={onClick}
       to={to}
+      href={href}
       aria-label={label}
       title={label}
       disabled={disabled}
+      download={download}
       {...buttonProps}
     >
       {icon && (
@@ -71,6 +75,7 @@ Button.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string,
   to: PropTypes.string,
+  href: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.node,
   spaceBottom: PropTypes.bool,
@@ -82,6 +87,7 @@ Button.propTypes = {
   submitButton: PropTypes.bool,
   disabled: PropTypes.bool,
   size: PropTypes.string,
+  download: PropTypes.string,
 };
 
 Button.defaultProps = {
