@@ -1,4 +1,5 @@
-.button {
+.button,
+.input[type="file"]::file-selector-button {
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border-radius: 5px;
@@ -34,19 +35,22 @@
 }
 
 .button--secondary,
-.button--secondary:visited {
+.button--secondary:visited,
+.input[type="file"]::file-selector-button {
   background-color: var(--color-button-secondary);
   color: var(--color-font-light);
 }
 
 @media (hover: hover) {
-  .button--secondary:hover {
+  .button--secondary:hover,
+  .input[type="file"]::file-selector-button:hover {
     color: var(--color-button);
   }
 }
 
 .button--secondary:focus,
-.button--secondary:active {
+.button--secondary:active,
+.input[type="file"]::file-selector-button:active {
   color: var(--color-button);
 }
 

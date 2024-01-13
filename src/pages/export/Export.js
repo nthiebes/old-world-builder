@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { Expandable } from "../../components/expandable";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
@@ -260,15 +261,35 @@ ${intl.formatMessage({
   }
 };
 
+const getFile = ({ list, listText, asText }) => {
+  const fileName = `${list?.name
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/,/g, "")}.${asText ? "txt" : "owb.json"}`;
+  const file = new File([asText ? listText : JSON.stringify(list)], fileName, {
+    type: asText ? "text/plain" : "application/json",
+  });
+  const fileUrl = URL.createObjectURL(file);
+
+  return {
+    file,
+    fileUrl,
+    fileName,
+  };
+};
+
 export const Export = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const intl = useIntl();
   const location = useLocation();
   const { language } = useLanguage();
+  const { listId } = useParams();
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+  const [shareError, setShareError] = useState(false);
+  const [shareOwbError, setOwbShareError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
-  const { listId } = useParams();
+  // const [isForumList, setIsForumList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -285,6 +306,36 @@ export const Export = ({ isMobile }) => {
           setCopyError(true);
         }
       );
+  };
+  const { file, fileUrl, fileName } = getFile({ list });
+  const { fileName: textFileName, fileUrl: textFileUrl } = getFile({
+    list,
+    listText,
+    asText: true,
+  });
+  const share = async ({ asText }) => {
+    const shareData = {};
+
+    asText ? setShareError(false) : setOwbShareError(false);
+
+    if (asText) {
+      shareData.text = listText;
+    } else {
+      shareData.title = list.name;
+      shareData.files = [file];
+      shareData.text = list.description;
+    }
+
+    if (!navigator.canShare) {
+      asText ? setShareError(true) : setOwbShareError(true);
+      return;
+    }
+
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      asText ? setShareError(true) : setOwbShareError(true);
+    }
   };
 
   useEffect(() => {
@@ -320,27 +371,10 @@ export const Export = ({ isMobile }) => {
             })}
           />
         )}
-        <Button
-          icon={copied ? "check" : "copy"}
-          centered
-          spaceTop
-          spaceBottom
-          onClick={copyText}
-        >
-          {copied
-            ? intl.formatMessage({
-                id: "export.copied",
-              })
-            : intl.formatMessage({
-                id: "export.copy",
-              })}
-        </Button>
-        {copyError && (
-          <p className="export__error">
-            <FormattedMessage id="export.error" />
-          </p>
-        )}
 
+        <h2 className="export__subtitle">
+          <FormattedMessage id="export.copyTitle" />
+        </h2>
         <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"
@@ -353,13 +387,104 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.visibleList" />
           </label>
         </div>
-        <p className="export__visible-description">
+        <p className="export__description">
           <i>
             (<FormattedMessage id="export.visibleListDescription" />)
           </i>
         </p>
+        {/* <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="forum"
+            onChange={() => setIsForumList(!isForumList)}
+            checked={isForumList}
+            className="checkbox__input"
+          />
+          <label htmlFor="forum" className="checkbox__label">
+            <FormattedMessage id="export.forumText" />
+          </label>
+        </div>
+        <p className="export__description">
+          <i>
+            <FormattedMessage id="export.forumTextDescription" />
+          </i>
+        </p> */}
+        <Button icon="share" onClick={() => share({ asText: true })} spaceTop>
+          <FormattedMessage id="export.shareText" />
+        </Button>
+        <p>
+          <i>
+            <FormattedMessage id="export.shareDescription" />
+          </i>
+        </p>
+        {shareError && (
+          <p className="export__error">
+            <FormattedMessage id="export.error" />
+          </p>
+        )}
+        <Button
+          icon={copied ? "check" : "copy"}
+          onClick={copyText}
+          spaceTop
+          spaceBottom
+        >
+          {copied
+            ? intl.formatMessage({
+                id: "export.copied",
+              })
+            : intl.formatMessage({
+                id: "export.copy",
+              })}
+        </Button>
+        <br />
+        {copyError && (
+          <p className="export__error">
+            <FormattedMessage id="export.error" />
+          </p>
+        )}
+        <Button
+          icon="download"
+          href={textFileUrl}
+          download={textFileName}
+          spaceBottom
+        >
+          <FormattedMessage id="export.downloadAsText" />
+        </Button>
+        <Expandable headline={<FormattedMessage id="export.preview" />}>
+          <textarea className="export__text" value={listText} readOnly />
+        </Expandable>
 
-        <textarea className="export__text" value={listText} readOnly />
+        <h2 className="export__subtitle">
+          <FormattedMessage id="export.owbTitle" />
+        </h2>
+        <p>
+          <i>
+            <FormattedMessage id="export.dowloadInfo" />
+          </i>
+        </p>
+        <Button
+          icon="download"
+          href={fileUrl}
+          download={fileName}
+          spaceBottom
+          spaceTop
+        >
+          <FormattedMessage id="export.download" />
+        </Button>
+        <br />
+        <Button icon="share" onClick={share}>
+          <FormattedMessage id="export.shareOwb" />
+        </Button>
+        <p>
+          <i>
+            <FormattedMessage id="export.shareDescription" />
+          </i>
+        </p>
+        {shareOwbError && (
+          <p className="export__error">
+            <FormattedMessage id="export.error" />
+          </p>
+        )}
       </MainComponent>
     </>
   );

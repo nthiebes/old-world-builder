@@ -36,7 +36,8 @@ a,
 }
 
 input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus,
+input[type="file"]:focus {
   outline: 2px dotted var(--color-font);
 }
 
@@ -240,6 +241,13 @@ hr {
 .input:disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.input[type="file"] {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .checkbox {
