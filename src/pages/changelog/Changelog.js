@@ -36,6 +36,62 @@ export const Changelog = () => {
         <h2 className="page-headline">
           <FormattedMessage id="changelog.title" />
         </h2>
+        <h3>v0.5.0</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2024-01-13 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change4"
+              values={{ b: (msg) => <b>{msg}</b> }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change5"
+              values={{ b: (msg) => <b>{msg}</b> }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change6"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+        <p>
+          <i>
+            <FormattedMessage
+              id="changelog.change7"
+              values={{
+                discord: (
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://discord.gg/87nUyjUxTU"
+                  >
+                    Discord
+                  </a>
+                ),
+              }}
+            />
+          </i>
+        </p>
+
+        <hr />
+
         <h3>v0.4.2</h3>
         <p>
           <time>
@@ -49,7 +105,7 @@ export const Changelog = () => {
             </i>
           </time>
         </p>
-        <ul>
+        <ul className="changelog__list">
           <li>
             <FormattedMessage
               id="changelog.change0"
