@@ -306,6 +306,15 @@
           "name_de": "Bow of Avelorn",
           "points": 12,
           "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "perModel": true,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -395,6 +404,14 @@
           "selected": [],
           "maxPoints": 0,
           "mutuallyExclusive": true
+        },
+        {
+          "name_en": "Magical Banners",
+          "name_de": "Magical Banners",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 0
         }
       ]
     },
