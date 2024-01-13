@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { Expandable } from "../../components/expandable";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
@@ -260,25 +261,25 @@ ${intl.formatMessage({
   }
 };
 
-const share = async () => {
-  console.log("share");
-  const shareData = {
-    title: "MDN",
-    text: "Learn web development on MDN!",
-    url: "https://developer.mozilla.org",
+const getFile = ({ list, listText, asText }) => {
+  const file = URL.createObjectURL(
+    asText
+      ? new Blob([listText], {
+          type: "text/plain",
+        })
+      : new Blob([JSON.stringify(list)], {
+          type: "application/json",
+        })
+  );
+  const fileName = `${list?.name
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/,/g, "")}.${asText ? "txt" : "json"}`;
+
+  return {
+    file,
+    fileName,
   };
-
-  if (!navigator.canShare) {
-    console.log("can't share");
-    return;
-  }
-
-  try {
-    await navigator.share(shareData);
-    console.log("success");
-  } catch (error) {
-    console.log("error", error);
-  }
 };
 
 export const Export = ({ isMobile }) => {
@@ -288,6 +289,7 @@ export const Export = ({ isMobile }) => {
   const { language } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+  const [shareError, setShareError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
   const { listId } = useParams();
   const list = useSelector((state) =>
@@ -307,13 +309,36 @@ export const Export = ({ isMobile }) => {
         }
       );
   };
-  const JSONFile = URL.createObjectURL(
-    new Blob([JSON.stringify(list)], { type: "application/json" })
-  );
-  const fileName = `${list?.name
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/,/g, "")}.owb.json`;
+  const { file, fileName } = getFile({ list });
+  const { file: textFile, fileName: textFileName } = getFile({
+    list,
+    listText,
+    asText: true,
+  });
+  const share = async ({ asText }) => {
+    const shareData = {};
+
+    if (asText) {
+      shareData.text = listText;
+      setShareError(false);
+    } else {
+      shareData.title = list.name;
+      shareData.files = file;
+      shareData.text = list.description;
+    }
+
+    if (!navigator.canShare) {
+      setShareError(true);
+      return;
+    }
+
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      console.log(error);
+      setShareError(true);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -348,16 +373,8 @@ export const Export = ({ isMobile }) => {
             })}
           />
         )}
-        <Button icon="download" href={JSONFile} download={fileName} spaceTop>
-          <FormattedMessage id="export.download" />
-        </Button>
-        <p>
-          <i>
-            <FormattedMessage id="export.dowloadInfo" />
-          </i>
-        </p>
 
-        <h2>
+        <h2 className="export__stitle">
           <FormattedMessage id="export.copyTitle" />
         </h2>
         <div className="checkbox export__visible-checkbox">
@@ -372,7 +389,7 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.visibleList" />
           </label>
         </div>
-        <p className="export__visible-description">
+        <p className="export__description">
           <i>
             (<FormattedMessage id="export.visibleListDescription" />)
           </i>
@@ -389,17 +406,24 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.forumText" />
           </label>
         </div>
-        <p className="export__visible-description">
+        <p className="export__description">
           <i>
             (<FormattedMessage id="export.forumTextDescription" />)
           </i>
         </p>
-
+        <Button icon="share" onClick={() => share({ asText: true })} spaceTop>
+          <FormattedMessage id="export.shareText" />
+        </Button>
+        <p>
+          <i>
+            <FormattedMessage id="export.shareDescription" />
+          </i>
+        </p>
         <Button
           icon={copied ? "check" : "copy"}
+          onClick={copyText}
           spaceTop
           spaceBottom
-          onClick={copyText}
         >
           {copied
             ? intl.formatMessage({
@@ -414,17 +438,47 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.error" />
           </p>
         )}
-
-        <Button icon="share" spaceTop onClick={share}>
-          <FormattedMessage id="export.share" />
+        <Button
+          icon="download"
+          href={textFile}
+          download={textFileName}
+          spaceBottom
+        >
+          <FormattedMessage id="export.downloadAsText" />
         </Button>
+        <Expandable headline={<FormattedMessage id="export.preview" />}>
+          <textarea className="export__text" value={listText} readOnly />
+        </Expandable>
+
+        <h2 className="export__subtitle">
+          <FormattedMessage id="export.owbTitle" />
+        </h2>
         <p>
           <i>
-            (<FormattedMessage id="export.shareDescription" />)
+            <FormattedMessage id="export.dowloadInfo" />
           </i>
         </p>
-
-        <textarea className="export__text" value={listText} readOnly />
+        <Button
+          icon="download"
+          href={file}
+          download={fileName}
+          spaceBottom
+          spaceTop
+        >
+          <FormattedMessage id="export.download" />
+        </Button>
+        <Button icon="share" onClick={share} spaceBottom>
+          <FormattedMessage id="export.shareOwb" />
+        </Button>
+        <Button icon={copied ? "check" : "copy"} onClick={copyText}>
+          {copied
+            ? intl.formatMessage({
+                id: "export.copied",
+              })
+            : intl.formatMessage({
+                id: "export.copyOwb",
+              })}
+        </Button>
       </MainComponent>
     </>
   );
