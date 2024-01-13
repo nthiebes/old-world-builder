@@ -19,6 +19,7 @@ import { Datasets } from "./pages/datasets";
 import { NotFound } from "./pages/not-found";
 import { Privacy } from "./pages/privacy";
 import { Changelog } from "./pages/changelog";
+import { Import } from "./pages/import";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -32,8 +33,6 @@ export const App = () => {
 
   useEffect(() => {
     const localLists = localStorage.getItem("owb.lists");
-
-    localStorage.setItem("owb.lists", localLists);
 
     dispatch(setLists(JSON.parse(localLists)));
   }, [dispatch]);
@@ -67,6 +66,7 @@ export const App = () => {
             {<Unit isMobile />}
           </Route>
           <Route path="/editor/:listId">{<Editor isMobile />}</Route>
+          <Route path="/import">{<Import isMobile />}</Route>
           <Route path="/new">{<NewList isMobile />}</Route>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
@@ -96,6 +96,7 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/new">{<NewList />}</Route>
+                  <Route path="/import">{<Import />}</Route>
                   <Route path="/editor/:listId">{<Editor />}</Route>
                 </Switch>
               </section>

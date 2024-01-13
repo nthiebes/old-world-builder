@@ -265,7 +265,7 @@ const getFile = ({ list, listText, asText }) => {
   const fileName = `${list?.name
     .toLowerCase()
     .replace(/ /g, "-")
-    .replace(/,/g, "")}.${asText ? "txt" : "json"}`;
+    .replace(/,/g, "")}.${asText ? "txt" : "owb.json"}`;
   const file = new File([asText ? listText : JSON.stringify(list)], fileName, {
     type: asText ? "text/plain" : "application/json",
   });
@@ -285,9 +285,7 @@ export const Export = ({ isMobile }) => {
   const { language } = useLanguage();
   const { listId } = useParams();
   const [copied, setCopied] = useState(false);
-  const [owbCopied, setOwbCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
-  const [owbCopyError, setOwbCopyError] = useState(false);
   const [shareError, setShareError] = useState(false);
   const [shareOwbError, setOwbShareError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
@@ -306,17 +304,6 @@ export const Export = ({ isMobile }) => {
         },
         () => {
           setCopyError(true);
-        }
-      );
-  };
-  const copyOwbText = () => {
-    navigator.clipboard &&
-      navigator.clipboard.writeText(JSON.stringify(list)).then(
-        () => {
-          setOwbCopied(true);
-        },
-        () => {
-          setOwbCopyError(true);
         }
       );
   };
@@ -494,24 +481,6 @@ export const Export = ({ isMobile }) => {
           </i>
         </p>
         {shareOwbError && (
-          <p className="export__error">
-            <FormattedMessage id="export.error" />
-          </p>
-        )}
-        <Button
-          icon={owbCopied ? "check" : "copy"}
-          onClick={copyOwbText}
-          spaceTop
-        >
-          {owbCopied
-            ? intl.formatMessage({
-                id: "export.copied",
-              })
-            : intl.formatMessage({
-                id: "export.copyOwb",
-              })}
-        </Button>
-        {owbCopyError && (
           <p className="export__error">
             <FormattedMessage id="export.error" />
           </p>
