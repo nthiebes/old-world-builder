@@ -142,13 +142,6 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
-        id: "misc.delete",
-      }),
-      icon: "delete",
-      callback: handleDelete,
-    },
-    {
-      name: intl.formatMessage({
         id: "misc.export",
       }),
       icon: "export",
@@ -160,6 +153,13 @@ export const Editor = ({ isMobile }) => {
       }),
       icon: "print",
       to: `/print/${listId}`,
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.delete",
+      }),
+      icon: "delete",
+      callback: handleDelete,
     },
   ];
 
