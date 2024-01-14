@@ -160,9 +160,6 @@ export const Changelog = () => {
               }}
             />
           </li>
-          <li>
-            <FormattedMessage id="changelog.change3" />
-          </li>
         </ul>
       </Main>
     </>
