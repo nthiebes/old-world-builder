@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -16,8 +16,6 @@ import gameSystems from "../../assets/armies.json";
 
 import { nameMap } from "./name-map";
 import "./Magic.css";
-
-let prevItemType, isFirstItemType;
 
 const updateIds = (items) => {
   return items.map((item) => ({
@@ -45,6 +43,7 @@ const updateIds = (items) => {
 };
 
 export const Magic = ({ isMobile }) => {
+  let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
   const location = useLocation();
   const { language } = useLanguage();
@@ -305,18 +304,20 @@ export const Magic = ({ isMobile }) => {
 
   let hasPointsError = false;
   let unitMagicPoints = 0;
-
-  if (
+  const hasCommandMagicItems = Boolean(
     unit?.command &&
-    unit.command[command] &&
-    unit.command[command]?.magic?.maxPoints
-  ) {
+      unit.command[command] &&
+      unit.command[command]?.magic?.maxPoints
+  );
+  const hasMagicItems = Boolean(unit?.items?.length);
+
+  if (hasCommandMagicItems) {
     maxMagicPoints = unit.command[command].magic.maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.command[command].magic.selected,
     });
     hasPointsError = unitMagicPoints > maxMagicPoints;
-  } else if (unit?.items?.length) {
+  } else if (hasMagicItems) {
     maxMagicPoints = unit.items[group].maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
@@ -399,84 +400,84 @@ export const Magic = ({ isMobile }) => {
             hasPointsError={hasPointsError}
           />
         )}
-        {items.map((itemGroup) => (
-          <Fragment key={itemGroup.name_de}>
-            <h2 className="unit__subline">
-              {language === "de" ? itemGroup.name_de : itemGroup.name_en}
-            </h2>
-            {itemGroup.items.map((magicItem) => {
-              if (prevItemType !== magicItem.type) {
-                prevItemType = magicItem.type;
-                isFirstItemType = true;
-              } else {
-                isFirstItemType = false;
-              }
+        {items.map((itemGroup) => {
+          const commandMagicItems = itemGroup.items.filter(
+            (item) =>
+              hasCommandMagicItems &&
+              unit.command[command].magic.types.includes(item.type)
+          );
+          const magicItems = itemGroup.items.filter(
+            (item) =>
+              hasMagicItems && unit.items[group].types.includes(item.type)
+          );
+          const itemGroupItems = hasCommandMagicItems
+            ? commandMagicItems
+            : magicItems;
 
-              // Filter command magic items
-              if (
-                unit?.command &&
-                unit?.command[command] &&
-                !unit.command[command].magic.types.includes(magicItem.type)
-              ) {
-                return null;
-              }
+          if (itemGroupItems.length > 0) {
+            prevItemType = null;
+            isFirstItemType = false;
+          }
 
-              // Filter magic items
-              if (
-                !command &&
-                unit?.items?.length &&
-                !unit.items[group].types.includes(magicItem.type)
-              ) {
-                return null;
-              }
+          return (
+            <Fragment key={itemGroup.name_de}>
+              {itemGroupItems.length > 0 && (
+                <h2 className="unit__subline">
+                  {language === "de" ? itemGroup.name_de : itemGroup.name_en}
+                </h2>
+              )}
+              {itemGroupItems.map((magicItem) => {
+                if (prevItemType !== magicItem.type) {
+                  prevItemType = magicItem.type;
+                  isFirstItemType = true;
+                } else {
+                  isFirstItemType = false;
+                }
 
-              let isChecked = false,
-                mutuallyExclusive = false;
+                let isChecked = false,
+                  mutuallyExclusive = false;
 
-              if (
-                unit?.command &&
-                unit.command[command] &&
-                unit.command[command]?.magic?.maxPoints
-              ) {
-                isChecked =
-                  (unit.command[command].magic.selected || []).find(
-                    ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-                  ) || false;
-                mutuallyExclusive =
-                  unit.command[command].magic.mutuallyExclusive;
-              } else if (unit?.items?.length) {
-                isChecked =
-                  unit.items[group].selected.find(
-                    ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-                  ) || false;
-                mutuallyExclusive = unit.items[group].mutuallyExclusive;
-              }
+                if (hasCommandMagicItems) {
+                  isChecked =
+                    (unit.command[command].magic.selected || []).find(
+                      ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                    ) || false;
+                  mutuallyExclusive =
+                    unit.command[command].magic.mutuallyExclusive;
+                } else if (hasMagicItems) {
+                  isChecked =
+                    unit.items[group].selected.find(
+                      ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                    ) || false;
+                  mutuallyExclusive = unit.items[group].mutuallyExclusive;
+                }
 
-              return (
-                <Fragment key={magicItem.name_de}>
-                  {isFirstItemType && (
-                    <h3 className="magic__type">
-                      {nameMap[magicItem.type][`name_${language}`]}
-                    </h3>
-                  )}
-                  {mutuallyExclusive
-                    ? getRadio({ unit, magicItem, itemGroup })
-                    : getCheckbox({ unit, magicItem, itemGroup })}
-                  {magicItem.conditional && isChecked
-                    ? magicItem.conditional.map((conditionalItem) =>
-                        getCheckbox({
-                          unit,
-                          magicItem: conditionalItem,
-                          itemGroup,
-                          isConditional: true,
-                        })
-                      )
-                    : null}
-                </Fragment>
-              );
-            })}
-          </Fragment>
-        ))}
+                return (
+                  <Fragment key={magicItem.name_de}>
+                    {isFirstItemType && (
+                      <h3 className="magic__type">
+                        {nameMap[magicItem.type][`name_${language}`]}
+                      </h3>
+                    )}
+                    {mutuallyExclusive
+                      ? getRadio({ unit, magicItem, itemGroup })
+                      : getCheckbox({ unit, magicItem, itemGroup })}
+                    {magicItem.conditional && isChecked
+                      ? magicItem.conditional.map((conditionalItem) =>
+                          getCheckbox({
+                            unit,
+                            magicItem: conditionalItem,
+                            itemGroup,
+                            isConditional: true,
+                          })
+                        )
+                      : null}
+                  </Fragment>
+                );
+              })}
+            </Fragment>
+          );
+        })}
       </MainComponent>
     </>
   );
