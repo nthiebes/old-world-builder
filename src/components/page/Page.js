@@ -64,6 +64,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
               <label htmlFor="english" className="radio__label">
                 <img
                   width="24"
+                  height="19"
                   alt=""
                   src={usa}
                   className="footer__language-icon"
@@ -84,6 +85,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
               <label htmlFor="deutsch" className="radio__label">
                 <img
                   width="24"
+                  height="19"
                   alt=""
                   src={germany}
                   className="footer__language-icon"

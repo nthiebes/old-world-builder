@@ -16,20 +16,16 @@ import German from "./i18n/de.json";
 Sentry.init({
   dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
   integrations: [
-    new Sentry.BrowserTracing({
-      // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
-      tracePropagationTargets: [
-        "localhost",
-        /^https:\/\/old-world-builder\.com/,
-      ],
-    }),
-    new Sentry.Replay({
-      maskAllText: false,
-      blockAllMedia: false,
-    }),
+    // new Sentry.BrowserTracing({
+    //   // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+    //   tracePropagationTargets: [
+    //     "localhost",
+    //     /^https:\/\/old-world-builder\.com/,
+    //   ],
+    // }),
   ],
   // Performance Monitoring
-  tracesSampleRate: 1.0, //  Capture 100% of the transactions
+  // tracesSampleRate: 1.0, //  Capture 100% of the transactions
 });
 
 const metaDescription = {
