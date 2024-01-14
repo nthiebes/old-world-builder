@@ -1,6 +1,7 @@
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
@@ -8,6 +9,8 @@ import { Button } from "../../components/button";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { getAllPoints } from "../../utils/points";
+import { setArmy } from "../../state/army";
+import { setItems } from "../../state/items";
 import warhammerFantasy from "../../assets/warhammer-fantasy.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
@@ -55,6 +58,11 @@ export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
+  const dispatch = useDispatch();
+  const handleListClick = () => {
+    dispatch(setArmy(null));
+    dispatch(setItems(null));
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -92,6 +100,7 @@ export const Home = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${id}`}
                 active={location.pathname.includes(id)}
+                onClick={handleListClick}
               >
                 <span className="home__list-item">
                   <h2 className="home__headline">{name}</h2>
