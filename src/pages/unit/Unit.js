@@ -16,7 +16,7 @@ import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateList } from "../../utils/list";
+import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
 
 import "./Unit.css";
@@ -225,11 +225,12 @@ export const Unit = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateList(list);
+    list && updateLocalList(list);
   }, [list]);
 
   useEffect(() => {
     list &&
+      !army &&
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
@@ -247,7 +248,7 @@ export const Unit = ({ isMobile }) => {
           );
         },
       });
-  }, [list, dispatch]);
+  }, [list, army, dispatch]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;

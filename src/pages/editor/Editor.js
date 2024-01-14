@@ -15,7 +15,7 @@ import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { deleteList } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
-import { removeList, updateList } from "../../utils/list";
+import { removeFromLocalList, updateLocalList } from "../../utils/list";
 
 import "./Editor.css";
 
@@ -34,7 +34,7 @@ export const Editor = ({ isMobile }) => {
 
   const handleDelete = () => {
     dispatch(deleteList(listId));
-    removeList(listId);
+    removeFromLocalList(listId);
     setRedirect(true);
   };
 
@@ -51,7 +51,7 @@ export const Editor = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateList(list);
+    list && updateLocalList(list);
   }, [list]);
 
   if (redirect) {

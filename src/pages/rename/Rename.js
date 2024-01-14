@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { editUnit } from "../../state/lists";
-import { updateList } from "../../utils/list";
+import { updateLocalList } from "../../utils/list";
 import { useLanguage } from "../../utils/useLanguage";
 
 import "./Rename.css";
@@ -41,7 +41,7 @@ export const Rename = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateList(list);
+    list && updateLocalList(list);
   }, [list]);
 
   if (!list) {

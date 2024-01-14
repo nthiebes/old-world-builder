@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { updateList } from "../../state/lists";
-import { updateList as updateLocalList } from "../../utils/list";
+import { updateLocalList } from "../../utils/list";
 
 import "./EditList.css";
 

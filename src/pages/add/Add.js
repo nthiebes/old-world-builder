@@ -41,6 +41,7 @@ export const Add = ({ isMobile }) => {
 
   useEffect(() => {
     list &&
+      !army &&
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
@@ -58,7 +59,7 @@ export const Add = ({ isMobile }) => {
           );
         },
       });
-  }, [list, dispatch]);
+  }, [list, army, dispatch]);
 
   if (redirect) {
     return <Redirect to={`/editor/${listId}/${type}/${redirect.id}`} />;
