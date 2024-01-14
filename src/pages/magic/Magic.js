@@ -11,7 +11,7 @@ import { Header, Main } from "../../components/page";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateList } from "../../utils/list";
+import { updateLocalList } from "../../utils/list";
 import gameSystems from "../../assets/armies.json";
 
 import { nameMap } from "./name-map";
@@ -49,7 +49,6 @@ export const Magic = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const intl = useIntl();
-  const [isLoading, setIsLoading] = useState(true);
   const { listId, type, unitId, command, group } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
@@ -163,11 +162,13 @@ export const Magic = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateList(list);
+    list && updateLocalList(list);
   }, [list]);
 
   useEffect(() => {
     army &&
+      list &&
+      !items &&
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
@@ -181,12 +182,11 @@ export const Magic = ({ isMobile }) => {
           });
 
           dispatch(setItems(updateIds(allItems)));
-          setIsLoading(false);
         },
       });
-  }, [army, dispatch, list, setIsLoading, unit, language]);
+  }, [army, list, items, dispatch]);
 
-  if (isLoading) {
+  if (!unit || !army || !items) {
     if (isMobile) {
       return (
         <>

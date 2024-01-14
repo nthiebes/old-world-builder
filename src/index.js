@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider as ReduxProvider } from "react-redux";
 import { IntlProvider } from "react-intl";
 import { HelmetProvider } from "react-helmet-async";
+import * as Sentry from "@sentry/react";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -11,6 +12,21 @@ import store from "./store";
 
 import English from "./i18n/en.json";
 import German from "./i18n/de.json";
+
+Sentry.init({
+  dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
+  integrations: [
+    // new Sentry.BrowserTracing({
+    //   // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+    //   tracePropagationTargets: [
+    //     "localhost",
+    //     /^https:\/\/old-world-builder\.com/,
+    //   ],
+    // }),
+  ],
+  // Performance Monitoring
+  // tracesSampleRate: 1.0, //  Capture 100% of the transactions
+});
 
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",

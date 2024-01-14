@@ -1,11 +1,13 @@
 {
   "name": "old-world-builder",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "author": "Nico Thiebes",
   "homepage": "https://old-world-builder.com",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
+    "@sentry/cli": "^2.25.0",
+    "@sentry/react": "^7.93.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -36,11 +38,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && yarn sentry:sourcemaps",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project old-world-builder ./build && sentry-cli sourcemaps upload --org booky --project old-world-builder ./build"
   },
   "eslintConfig": {
     "extends": [
