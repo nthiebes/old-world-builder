@@ -25,6 +25,7 @@ const initialUnitState = {
 const magicItemTypes = [
   "weapon",
   "armor",
+  "armor-mages",
   "talisman",
   "banner",
   "arcane-item",

@@ -27,6 +27,10 @@ export const nameMap = {
     name_de: "Magische Rüstungen",
     name_en: "Magic Armour",
   },
+  "armor-mages": {
+    name_de: "Magische Rüstungen",
+    name_en: "Magic Armour",
+  },
   talisman: {
     name_de: "Talismane",
     name_en: "Talismans",
