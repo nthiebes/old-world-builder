@@ -1357,20 +1357,6 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Additional Hand Weapons",
-          "name_de": "Additional Hand Weapons",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Great Weapons",
-          "name_de": "Great Weapons",
-          "points": 2,
-          "perModel": true,
-          "active": false
         }
       ],
       "armor": [],
@@ -1379,6 +1365,24 @@
           "name_en": "Giant Slayers",
           "name_de": "Giant Slayers",
           "points": 7,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Additional Hand Weapons",
+          "name_de": "Additional Hand Weapons",
+          "points": 1,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": false
+        },
+        {
+          "name_en": "Great Weapons",
+          "name_de": "Great Weapons",
+          "points": 2,
           "stackable": true,
           "minimum": 0,
           "maximum": 0,
