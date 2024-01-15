@@ -128,6 +128,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 100
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -230,6 +240,16 @@
           "name_de": "Skeleton Chariot",
           "points": 35,
           "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 48
         }
       ],
       "magic": {
@@ -406,6 +426,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -463,6 +493,16 @@
           "active": false
         }
       ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -482,6 +522,8 @@
       "points": 55,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -510,6 +552,16 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 0
+        }
+      ],
       "magic": {
         "types": [
           "weapon",
@@ -1251,7 +1303,6 @@
         "maxPoints": 0
       }
     },
-
     {
       "name_en": "Carrion",
       "name_de": "Carrion",
@@ -1277,7 +1328,6 @@
         "maxPoints": 0
       }
     },
-
     {
       "name_en": "Necropolis Knights",
       "name_de": "Necropolis Knights",
