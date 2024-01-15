@@ -342,8 +342,8 @@
           "mutuallyExclusive": false
         },
         {
-          "name_en": "Magic Banners (BSB)",
-          "name_de": "Magic Banners (BSB)",
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
           "types": ["banner"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -427,7 +427,13 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100,
           "mutuallyExclusive": false
@@ -493,7 +499,13 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50,
           "mutuallyExclusive": false
@@ -1956,7 +1968,7 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
-          "points": 5,
+          "points": 6,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
