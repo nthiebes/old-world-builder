@@ -155,8 +155,8 @@
           "active": false
         },
         {
-          "name_en": "Unmounted",
-          "name_de": "Unmounted",
+          "name_en": "On foot",
+          "name_de": "On foot",
           "points": 0,
           "active": true
         }
@@ -199,28 +199,28 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
           "points": 2,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Default Weapons",
           "name_de": "Default Weapons",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -229,7 +229,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -238,7 +238,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "points": 2,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -247,7 +247,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -256,7 +256,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -265,7 +265,7 @@
           "name_en": "Moonfire Shot",
           "name_de": "Moonfire Shot",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -274,7 +274,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -283,7 +283,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -292,7 +292,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -301,7 +301,7 @@
           "name_en": "Asrai Longbow",
           "name_de": "Asrai Longbow",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -317,6 +317,12 @@
         }
       ],
       "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
         {
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
@@ -346,12 +352,6 @@
           "name_de": "Great Eagle",
           "points": 60,
           "active": false
-        },
-        {
-          "name_en": "Unmounted",
-          "name_de": "Unmounted",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -364,6 +364,14 @@
           "mutuallyExclusive": false
         },
         {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magische Standarte (AST)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "types": ["forest-spite"],
@@ -371,11 +379,7 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
-        "maxPoints": 150
-      }
+      ]
     },
     {
       "name_en": "Spellweaver",
@@ -443,8 +447,8 @@
           "active": false
         },
         {
-          "name_en": "Unmounted",
-          "name_de": "Unmounted",
+          "name_en": "On foot",
+          "name_de": "On foot",
           "points": 0,
           "active": true
         }
@@ -544,8 +548,8 @@
           "active": false
         },
         {
-          "name_en": "Unmounted",
-          "name_de": "Unmounted",
+          "name_en": "On foot",
+          "name_de": "On foot",
           "points": 0,
           "active": true
         }
@@ -1751,7 +1755,7 @@
         {
           "name_en": "Hand Weapon and Hunting Spear",
           "name_de": "Hand Weapon and Hunting Spear",
-          "points": -2,
+          "points": 0,
           "perModel": true,
           "active": true
         }

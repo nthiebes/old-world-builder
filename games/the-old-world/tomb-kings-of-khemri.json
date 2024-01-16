@@ -279,42 +279,42 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Flail",
           "name_de": "Flail",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
           "name_en": "Cavalry Spear (if appropriately mounted)",
           "name_de": "Cavalry Spear (if appropriately mounted)",
           "points": 2,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -323,7 +323,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -332,15 +332,17 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "points": 2,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
-          "name_en": "May be BSB",
-          "name_de": "May be BSB",
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
           "points": 25,
-          "perModel": true,
-          "active": false
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -363,17 +365,30 @@
           "active": false
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "banner",
-          "enchanted-item",
-          "arcane-item"
-        ],
-        "maxPoints": 75
-      }
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 75,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magische Standarte (AST)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ]
     },
     {
       "name_en": "High Priest",
