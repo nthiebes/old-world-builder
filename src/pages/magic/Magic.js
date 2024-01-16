@@ -408,7 +408,9 @@ export const Magic = ({ isMobile }) => {
           );
           const magicItems = itemGroup.items.filter(
             (item) =>
-              hasMagicItems && unit.items[group].types.includes(item.type)
+              hasMagicItems &&
+              !command &&
+              unit.items[group].types.includes(item.type)
           );
           const itemGroupItems = hasCommandMagicItems
             ? commandMagicItems
