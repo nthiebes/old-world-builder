@@ -106,17 +106,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -165,6 +155,14 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -195,6 +193,14 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ]
     },
@@ -327,17 +333,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -395,10 +391,9 @@
           "maximum": 0
         },
         {
-          "name_en": "Frenzy",
-          "name_de": "Frenzy",
-          "points": 3,
-          "perModel": true,
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -441,6 +436,14 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ]
     },
@@ -688,6 +691,12 @@
           "name_de": "Wolf Chariot",
           "points": 53,
           "active": false
+        },
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": false
         }
       ],
       "items": [
@@ -710,17 +719,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -769,6 +768,14 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -805,6 +812,14 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ]
     },
@@ -1032,17 +1047,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 100
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1091,6 +1096,14 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -1115,6 +1128,14 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ]
     },
@@ -2254,18 +2275,13 @@
       "points": 41,
       "minimum": 1,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Troll Vomit",
-          "name_de": "Troll Vomit",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2285,17 +2301,10 @@
           "active": false
         }
       ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
+      "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2308,18 +2317,13 @@
       "points": 49,
       "minimum": 1,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Troll Vomit",
-          "name_de": "Troll Vomit",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2339,17 +2343,10 @@
           "active": false
         }
       ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": false
-        }
-      ],
+      "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2374,13 +2371,6 @@
           "active": true
         },
         {
-          "name_en": "Troll Vomit",
-          "name_de": "Troll Vomit",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
@@ -2395,17 +2385,10 @@
           "active": false
         }
       ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
+      "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
