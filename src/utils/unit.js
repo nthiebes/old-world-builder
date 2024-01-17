@@ -11,9 +11,11 @@ export const getAllOptions = (
         allCommand.push(language === "de" ? name_de : name_en);
       }
       if (magic && magic?.selected?.length) {
-        magic.selected.forEach((selected) => {
+        magic.selected.forEach((selectedItem) => {
           allCommand.push(
-            language === "de" ? selected.name_de : selected.name_en
+            selectedItem.amount > 1
+              ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`]
+              : selectedItem[`name_${language}`]
           );
         });
       }
@@ -50,8 +52,12 @@ export const getAllOptions = (
   const allItems = [];
   if (items?.length) {
     items.forEach((item) => {
-      (item.selected || []).forEach(({ name_de, name_en }) => {
-        allItems.push(language === "de" ? name_de : name_en);
+      (item.selected || []).forEach((selectedItem) => {
+        allItems.push(
+          selectedItem.amount > 1
+            ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`]
+            : selectedItem[`name_${language}`]
+        );
       });
     });
   }

@@ -59,7 +59,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               </label>
               <NumberInput
                 id="strength"
-                className="input"
                 min={unit.minimum}
                 max={unit.maximum}
                 value={unit.strength}
@@ -328,7 +327,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                       </label>
                       <NumberInput
                         id={`options-${index}`}
-                        className="input"
                         min={minimum}
                         max={maximum}
                         value={stackableCount}
@@ -370,7 +368,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                           <div className="list__inner unit__detachments">
                             <NumberInput
                               id={`strength-${id}`}
-                              className="input"
                               min={5}
                               value={strength}
                               onChange={() => {}}

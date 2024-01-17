@@ -43,7 +43,9 @@ export const getUnitPoints = (unit) => {
       }
       if (option.magic && option.magic?.selected?.length) {
         option.magic.selected.forEach((selected) => {
-          unitPoints += selected.points;
+          unitPoints += selected.amount
+            ? selected.amount * selected.points
+            : selected.points;
         });
       }
     });
@@ -58,7 +60,9 @@ export const getUnitPoints = (unit) => {
   if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {
       (item.selected || []).forEach((selected) => {
-        unitPoints += selected.points;
+        unitPoints += selected.amount
+          ? selected.amount * selected.points
+          : selected.points;
       });
     });
   }
@@ -76,7 +80,9 @@ export const getUnitMagicPoints = ({ selected }) => {
 
   selected &&
     selected.forEach((option) => {
-      unitPoints += option.points;
+      unitPoints += option.amount
+        ? option.amount * option.points
+        : option.points;
     });
 
   return unitPoints;

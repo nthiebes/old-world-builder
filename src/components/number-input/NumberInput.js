@@ -5,38 +5,57 @@ import { Button } from "../button";
 
 import "./NumberInput.css";
 
-export const NumberInput = (props) => {
+export const NumberInput = ({
+  onChange,
+  value,
+  id,
+  max,
+  min,
+  readOnly,
+  required,
+}) => {
   const intl = useIntl();
   const handleOnUpClick = (event) => {
     event.preventDefault();
 
-    props.onChange({
+    onChange({
       target: {
-        value: Number(props.value) + 1,
-        id: props.id,
+        value: Number(value) + 1,
+        id,
       },
     });
   };
   const handleOnDownClick = (event) => {
     event.preventDefault();
 
-    props.onChange({
+    onChange({
       target: {
-        value: Number(props.value) - 1,
-        id: props.id,
+        value: Number(value) - 1,
+        id,
       },
     });
   };
 
   return (
     <div className="number-input">
-      <input {...props} type="number" pattern="[0-9]*" />
+      <input
+        type="number"
+        pattern="[0-9]*"
+        min={min}
+        max={max}
+        value={value}
+        onChange={onChange}
+        id={id}
+        readOnly={readOnly}
+        required={required}
+        className="input"
+      />
       <Button
         onClick={handleOnUpClick}
         type="secondary"
         icon="up"
         label={intl.formatMessage({ id: "misc.increase" })}
-        disabled={props.value >= props.max && props.max !== 0}
+        disabled={value >= max && max !== 0}
         className="number-input__button number-input__button--up"
       />
       <Button
@@ -44,7 +63,7 @@ export const NumberInput = (props) => {
         type="secondary"
         icon="down"
         label={intl.formatMessage({ id: "misc.decrease" })}
-        disabled={props.value <= props.min}
+        disabled={value <= min}
         className="number-input__button number-input__button--down"
       />
     </div>

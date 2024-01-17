@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
+import { NumberInput } from "../../components/number-input";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
@@ -155,6 +156,70 @@ export const Magic = ({ isMobile }) => {
       );
     }
   };
+  const handleAmountChange = ({ event, parentId, isCommand }) => {
+    let magicItems;
+
+    if (isCommand) {
+      magicItems = (unit.command[command].magic.selected || []).map((item) =>
+        item.id === parentId
+          ? {
+              ...item,
+              amount: event.target.value,
+            }
+          : item
+      );
+    } else {
+      magicItems = (unit.items[group].selected || []).map((item) =>
+        item.id === parentId
+          ? {
+              ...item,
+              amount: event.target.value,
+            }
+          : item
+      );
+    }
+
+    if (isCommand) {
+      const newCommand = unit.command.map((entry, entryIndex) =>
+        entryIndex === Number(command)
+          ? {
+              ...entry,
+              magic: {
+                ...entry.magic,
+                selected: magicItems,
+              },
+            }
+          : entry
+      );
+
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          command: newCommand,
+        })
+      );
+    } else {
+      const newItems = unit.items.map((entry, entryIndex) =>
+        entryIndex === Number(group)
+          ? {
+              ...entry,
+              selected: magicItems,
+            }
+          : entry
+      );
+
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          items: newItems,
+        })
+      );
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -206,52 +271,72 @@ export const Magic = ({ isMobile }) => {
   const getCheckbox = ({ unit, magicItem, itemGroup, isConditional }) => {
     let isChecked = false;
     let isCommand = false;
+    let amount;
 
     if (
       unit?.command &&
       unit.command[command] &&
       unit.command[command]?.magic?.maxPoints
     ) {
-      isChecked =
-        (unit.command[command].magic.selected || []).find(
-          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-        ) || false;
+      const selectedItem = (unit.command[command].magic.selected || []).find(
+        ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+      );
+      isChecked = Boolean(selectedItem);
       isCommand = true;
+      amount = selectedItem?.amount || 1;
     } else if (unit?.items?.length) {
-      isChecked =
-        unit.items[group].selected.find(
-          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-        ) || false;
+      const selectedItem = unit.items[group].selected.find(
+        ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+      );
+      isChecked = Boolean(selectedItem);
+      amount = selectedItem?.amount || 1;
     }
 
     return (
-      <div
-        className={classNames(
-          "checkbox",
-          isConditional && "checkbox--conditional"
-        )}
-        key={magicItem.id}
-      >
-        <input
-          type="checkbox"
-          id={`${itemGroup.id}-${magicItem.id}`}
-          value={`${itemGroup.id}-${magicItem.id}`}
-          onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
-          checked={isChecked}
-          className="checkbox__input"
-        />
-        <label
-          htmlFor={`${itemGroup.id}-${magicItem.id}`}
-          className="checkbox__label"
+      <>
+        <div
+          className={classNames(
+            "checkbox",
+            isConditional && "checkbox--conditional"
+          )}
+          key={magicItem.id}
         >
-          {language === "de" ? magicItem.name_de : magicItem.name_en}
-          <i className="checkbox__points">{`${
-            magicItem.points
-          } ${intl.formatMessage({
-            id: "app.points",
-          })}`}</i>
-        </label>
-      </div>
+          <input
+            type="checkbox"
+            id={`${itemGroup.id}-${magicItem.id}`}
+            value={`${itemGroup.id}-${magicItem.id}`}
+            onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
+            checked={isChecked}
+            className="checkbox__input"
+          />
+          <label
+            htmlFor={`${itemGroup.id}-${magicItem.id}`}
+            className="checkbox__label"
+          >
+            {language === "de" ? magicItem.name_de : magicItem.name_en}
+            <i className="checkbox__points">{`${
+              magicItem.points
+            } ${intl.formatMessage({
+              id: "app.points",
+            })}`}</i>
+          </label>
+        </div>
+        {magicItem.stackable && isChecked && (
+          <NumberInput
+            id={`${itemGroup.id}-${magicItem.id}-amount`}
+            min={1}
+            max={3}
+            value={amount}
+            onChange={(event) => {
+              handleAmountChange({
+                parentId: `${itemGroup.id}-${magicItem.id}`,
+                event,
+                isCommand,
+              });
+            }}
+          />
+        )}
+      </>
     );
   };
 
