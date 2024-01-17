@@ -59,7 +59,7 @@ export const Home = ({ isMobile }) => {
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
   const dispatch = useDispatch();
-  const handleListClick = () => {
+  const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
   };
@@ -100,7 +100,7 @@ export const Home = ({ isMobile }) => {
                 key={index}
                 to={`/editor/${id}`}
                 active={location.pathname.includes(id)}
-                onClick={handleListClick}
+                onClick={resetState}
               >
                 <span className="home__list-item">
                   <h2 className="home__headline">{name}</h2>
@@ -136,7 +136,13 @@ export const Home = ({ isMobile }) => {
             )
           )}
         </ul>
-        <Button centered to="/new" icon="new-list" spaceTop>
+        <Button
+          centered
+          to="/new"
+          icon="new-list"
+          spaceTop
+          onClick={resetState}
+        >
           <FormattedMessage id="home.newList" />
         </Button>
         <Button
@@ -147,6 +153,7 @@ export const Home = ({ isMobile }) => {
           color="dark"
           spaceTop
           spaceBottom
+          onClick={resetState}
         >
           <FormattedMessage id="home.import" />
         </Button>
