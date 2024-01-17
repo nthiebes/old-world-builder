@@ -38,7 +38,7 @@ export const NumberInput = ({
   };
   const handleOnChange = (event) => {
     let newValue = Number(event.target.value);
-    const maxValue = max > 0 ? max : 1000;
+    const maxValue = max > 0 ? max : 100000;
 
     if (newValue > maxValue) {
       newValue = maxValue;
@@ -61,7 +61,7 @@ export const NumberInput = ({
         type="number"
         pattern="[0-9]*"
         min={min}
-        max={max > 0 ? max : 1000}
+        max={max > 0 ? max : 100000}
         value={value}
         onChange={handleOnChange}
         id={id}
@@ -101,5 +101,5 @@ NumberInput.propTypes = {
 
 NumberInput.defaultProps = {
   min: 0,
-  max: 1000,
+  max: 100000,
 };
