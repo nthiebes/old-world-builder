@@ -57,22 +57,6 @@ export const About = () => {
             }}
           />
         </p>
-        <p>
-          <FormattedMessage
-            id="about.text2"
-            values={{
-              github: (
-                <a
-                  href="https://github.com/nthiebes/old-world-builder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              ),
-            }}
-          />
-        </p>
 
         <h2>
           <FormattedMessage id="about.support" />
@@ -103,6 +87,22 @@ export const About = () => {
         </div>
 
         <h2>Credits</h2>
+        <p>
+          <FormattedMessage
+            id="about.text2"
+            values={{
+              github: (
+                <a
+                  href="https://github.com/nthiebes/old-world-builder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              ),
+            }}
+          />
+        </p>
         <p>
           <FormattedMessage
             id="about.credits"
