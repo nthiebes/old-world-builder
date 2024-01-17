@@ -90,6 +90,7 @@ export const listsSlice = createSlice({
         items,
         name,
         detachments,
+        activeLore,
       } = payload;
       const newValues = {
         strength,
@@ -101,6 +102,7 @@ export const listsSlice = createSlice({
         magic,
         items,
         detachments,
+        activeLore,
         name_de: name,
         name_en: name,
       };

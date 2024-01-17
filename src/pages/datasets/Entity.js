@@ -21,6 +21,7 @@ const initialUnitState = {
   options: [],
   mounts: [],
   items: [],
+  lores: [],
 };
 const magicItemTypes = [
   "weapon",
@@ -44,6 +45,7 @@ const magicItemTypes = [
   "gift-of-chaos",
   "forest-spite",
 ];
+const loresOfMagic = ["daemonology", "dark-magic", "elementalism"];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(
     /[^a-z]+/g,

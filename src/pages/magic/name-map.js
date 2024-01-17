@@ -164,4 +164,16 @@ export const nameMap = {
     name_de: "Elven Honour",
     name_en: "Elven Honour",
   },
+  daemonology: {
+    name_de: "Daemonology",
+    name_en: "Daemonology",
+  },
+  "dark-magic": {
+    name_de: "Dark Magic",
+    name_en: "Dark Magic",
+  },
+  elementalism: {
+    name_de: "Elementalism",
+    name_en: "Elementalism",
+  },
 };

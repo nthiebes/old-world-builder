@@ -1,5 +1,17 @@
+import { nameMap } from "../pages/magic";
+
 export const getAllOptions = (
-  { mounts, equipment, armor, options, command, items, detachments },
+  {
+    mounts,
+    equipment,
+    armor,
+    options,
+    command,
+    items,
+    detachments,
+    activeLore,
+    lores,
+  },
   { asString, noMagic } = {}
 ) => {
   const language = localStorage.getItem("lang");
@@ -69,6 +81,13 @@ export const getAllOptions = (
             `${strength} ${language === "de" ? name_de : name_en}`
         )
     : [];
+  const lore = [];
+  if (activeLore) {
+    lore.push(nameMap[activeLore][`name_${language}`]);
+  } else if (lores.length) {
+    lore.push(nameMap[lores[0]][`name_${language}`]);
+  }
+
   const allOptionsArray = [
     ...allEquipment,
     ...allArmor,
@@ -78,6 +97,7 @@ export const getAllOptions = (
     ...allMounts,
     ...(!noMagic ? allItems : []),
     ...allDetachments,
+    ...lore,
   ];
   const allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
 
