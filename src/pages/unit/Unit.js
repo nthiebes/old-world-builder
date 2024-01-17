@@ -407,55 +407,58 @@ export const Unit = ({ isMobile }) => {
                       </label>
                     </div>
                     {magic?.maxPoints && active ? (
-                      <List
-                        to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                        className="editor__list unit__link"
-                        active={location.pathname.includes(`magic/${index}`)}
-                      >
-                        <div className="editor__list-inner">
-                          <b>
-                            {magic.types
-                              .map(
-                                (itemType) =>
-                                  nameMap[itemType][`name_${language}`]
-                              )
-                              .join(", ")}
-                          </b>
-                          <i className="checkbox__points">
-                            <span
-                              className={classNames(
-                                commandMagicPoints >
-                                  unit.command[index].magic.maxPoints &&
-                                  "editor__error"
-                              )}
-                            >
-                              {commandMagicPoints}
-                            </span>{" "}
-                            / {unit.command[index].magic.maxPoints}{" "}
-                            <FormattedMessage id="app.points" />
-                          </i>
-                          {commandMagicPoints >
-                            unit.command[index].magic.maxPoints && (
-                            <Icon
-                              symbol="error"
-                              color="red"
-                              className="unit__magic-icon"
-                            />
+                      <>
+                        <hr class="unit__hr" />
+                        <List
+                          to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+                          className="editor__list unit__link"
+                          active={location.pathname.includes(`magic/${index}`)}
+                        >
+                          <div className="editor__list-inner">
+                            <b>
+                              {magic.types
+                                .map(
+                                  (itemType) =>
+                                    nameMap[itemType][`name_${language}`]
+                                )
+                                .join(", ")}
+                            </b>
+                            <i className="checkbox__points">
+                              <span
+                                className={classNames(
+                                  commandMagicPoints >
+                                    unit.command[index].magic.maxPoints &&
+                                    "editor__error"
+                                )}
+                              >
+                                {commandMagicPoints}
+                              </span>{" "}
+                              / {unit.command[index].magic.maxPoints}{" "}
+                              <FormattedMessage id="app.points" />
+                            </i>
+                            {commandMagicPoints >
+                              unit.command[index].magic.maxPoints && (
+                              <Icon
+                                symbol="error"
+                                color="red"
+                                className="unit__magic-icon"
+                              />
+                            )}
+                          </div>
+                          {magic?.selected && (
+                            <p>
+                              {magic.selected
+                                .map((selectedItem) =>
+                                  selectedItem.amount > 1
+                                    ? `${selectedItem.amount}x ` +
+                                      selectedItem[`name_${language}`]
+                                    : selectedItem[`name_${language}`]
+                                )
+                                .join(", ")}
+                            </p>
                           )}
-                        </div>
-                        {magic?.selected && (
-                          <p>
-                            {magic.selected
-                              .map((selectedItem) =>
-                                selectedItem.amount > 1
-                                  ? `${selectedItem.amount}x ` +
-                                    selectedItem[`name_${language}`]
-                                  : selectedItem[`name_${language}`]
-                              )
-                              .join(", ")}
-                          </p>
-                        )}
-                      </List>
+                        </List>
+                      </>
                     ) : null}
                   </Fragment>
                 );
