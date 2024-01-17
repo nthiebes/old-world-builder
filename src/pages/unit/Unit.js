@@ -408,7 +408,7 @@ export const Unit = ({ isMobile }) => {
                     </div>
                     {magic?.maxPoints && active ? (
                       <>
-                        <hr class="unit__hr" />
+                        <hr className="unit__hr" />
                         <List
                           to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                           className="editor__list unit__link"

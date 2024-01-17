@@ -39,6 +39,43 @@ export const Changelog = () => {
 
         <hr />
 
+        <h3>v0.6.11</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2024-01-17 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change9"
+              values={{ b: (msg) => <b>{msg}</b> }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change10"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+                about: (
+                  <Link to="/about">
+                    <FormattedMessage id="footer.about" />
+                  </Link>
+                ),
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
         <h3>v0.6.0</h3>
         <p>
           <time>
