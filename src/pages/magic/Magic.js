@@ -325,7 +325,7 @@ export const Magic = ({ isMobile }) => {
           <NumberInput
             id={`${itemGroup.id}-${magicItem.id}-amount`}
             min={1}
-            max={3}
+            max={magicItem.maximum}
             value={amount}
             onChange={(event) => {
               handleAmountChange({
