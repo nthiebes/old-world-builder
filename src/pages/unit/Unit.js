@@ -454,7 +454,8 @@ export const Unit = ({ isMobile }) => {
                                       selectedItem[`name_${language}`]
                                     : selectedItem[`name_${language}`]
                                 )
-                                .join(", ")}
+                                .join(", ")
+                                .replace(/\*/g, "")}
                             </p>
                           )}
                         </List>
@@ -778,7 +779,8 @@ export const Unit = ({ isMobile }) => {
                               selectedItem[`name_${language}`]
                             : selectedItem[`name_${language}`]
                         )
-                        .join(", ")}
+                        .join(", ")
+                        .replace(/\*/g, "")}
                     </p>
                   )}
                 </List>

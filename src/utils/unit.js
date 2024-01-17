@@ -79,7 +79,7 @@ export const getAllOptions = (
     ...(!noMagic ? allItems : []),
     ...allDetachments,
   ];
-  const allOptionsString = allOptionsArray.join(", ");
+  const allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
 
   if (allOptionsString) {
     if (asString) {
