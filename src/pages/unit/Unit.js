@@ -344,7 +344,6 @@ export const Unit = ({ isMobile }) => {
             </label>
             <NumberInput
               id="strength"
-              className="input"
               min={unit.minimum}
               max={unit.maximum}
               value={unit.strength}
@@ -447,8 +446,11 @@ export const Unit = ({ isMobile }) => {
                         {magic?.selected && (
                           <p>
                             {magic.selected
-                              .map(({ name_de, name_en }) =>
-                                language === "de" ? name_de : name_en
+                              .map((selectedItem) =>
+                                selectedItem.amount > 1
+                                  ? `${selectedItem.amount}x ` +
+                                    selectedItem[`name_${language}`]
+                                  : selectedItem[`name_${language}`]
                               )
                               .join(", ")}
                           </p>
@@ -608,7 +610,6 @@ export const Unit = ({ isMobile }) => {
                     </label>
                     <NumberInput
                       id={`options-${id}`}
-                      className="input"
                       min={minimum}
                       max={maximum}
                       value={stackableCount}
@@ -660,7 +661,6 @@ export const Unit = ({ isMobile }) => {
                         <div className="list__inner unit__detachments">
                           <NumberInput
                             id={`strength-${id}`}
-                            className="input"
                             min={5}
                             value={strength}
                             onChange={(event) =>
@@ -769,8 +769,11 @@ export const Unit = ({ isMobile }) => {
                   {item.selected && (
                     <p>
                       {item.selected
-                        .map(({ name_de, name_en }) =>
-                          language === "de" ? name_de : name_en
+                        .map((selectedItem) =>
+                          selectedItem.amount > 1
+                            ? `${selectedItem.amount}x ` +
+                              selectedItem[`name_${language}`]
+                            : selectedItem[`name_${language}`]
                         )
                         .join(", ")}
                     </p>

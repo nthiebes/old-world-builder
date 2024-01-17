@@ -123,7 +123,6 @@ export const EditList = ({ isMobile }) => {
         </label>
         <NumberInput
           id="points"
-          className="input"
           min={0}
           value={list.points}
           onChange={handlePointsChange}

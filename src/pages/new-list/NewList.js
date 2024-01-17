@@ -166,7 +166,6 @@ export const NewList = ({ isMobile }) => {
           </label>
           <NumberInput
             id="points"
-            className="input"
             min={0}
             value={points}
             onChange={handlePointsChange}

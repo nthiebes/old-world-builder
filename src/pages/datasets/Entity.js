@@ -341,7 +341,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       </label>
       <NumberInput
         id={`points-${randomId}`}
-        className="input"
         min={1}
         value={unit.points}
         onChange={handleFieldChange}
@@ -354,7 +353,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           </label>
           <NumberInput
             id={`minimum-${randomId}`}
-            className="input"
             min={0}
             value={unit.minimum}
             onChange={handleFieldChange}
@@ -365,7 +363,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           </label>
           <NumberInput
             id={`maximum-${randomId}`}
-            className="input"
             min={0}
             value={unit.maximum}
             onChange={handleFieldChange}
@@ -473,7 +470,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               </label>
               <NumberInput
                 id={`command-points${index}-${randomId}`}
-                className="input"
                 value={command.points}
                 onChange={(event) =>
                   handleSecondLevelFieldChange({
@@ -516,7 +512,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 </label>
                 <NumberInput
                   id={`command-magic-points-${index}-${randomId}`}
-                  className="input"
                   min={0}
                   value={command.magic.maxPoints}
                   onChange={(event) =>
@@ -613,7 +608,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <label htmlFor={`equipment-points${index}-${randomId}`}>Points</label>
           <NumberInput
             id={`equipment-points${index}-${randomId}`}
-            className="input"
             value={equipment.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -758,7 +752,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <label htmlFor={`armor-points${index}-${randomId}`}>Points</label>
           <NumberInput
             id={`armor-points${index}-${randomId}`}
-            className="input"
             value={armor.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -901,7 +894,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           <label htmlFor={`options-points${index}-${randomId}`}>Points</label>
           <NumberInput
             id={`options-points${index}-${randomId}`}
-            className="input"
             value={option.points}
             onChange={(event) =>
               handleSecondLevelFieldChange({
@@ -970,7 +962,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               </label>
               <NumberInput
                 id={`options-minimum${index}-${randomId}`}
-                className="input"
                 min={0}
                 value={option.minimum}
                 onChange={(event) =>
@@ -988,7 +979,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               </label>
               <NumberInput
                 id={`options-maximum${index}-${randomId}`}
-                className="input"
                 min={0}
                 value={option.maximum}
                 onChange={(event) =>
@@ -1090,7 +1080,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               </label>
               <NumberInput
                 id={`mounts-points${index}-${randomId}`}
-                className="input"
                 value={mount.points}
                 onChange={(event) =>
                   handleSecondLevelFieldChange({
@@ -1252,7 +1241,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
               <label htmlFor={`magic-points-${randomId}`}>Max. points</label>
               <NumberInput
                 id={`magic-points-${itemIndex}-${randomId}`}
-                className="input"
                 min={0}
                 value={item.maxPoints}
                 onChange={(event) =>

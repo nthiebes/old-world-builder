@@ -13,20 +13,25 @@ import store from "./store";
 import English from "./i18n/en.json";
 import German from "./i18n/de.json";
 
-Sentry.init({
-  dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
-  integrations: [
-    // new Sentry.BrowserTracing({
-    //   // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
-    //   tracePropagationTargets: [
-    //     "localhost",
-    //     /^https:\/\/old-world-builder\.com/,
-    //   ],
-    // }),
-  ],
-  // Performance Monitoring
-  // tracesSampleRate: 1.0, //  Capture 100% of the transactions
-});
+// Initialize Sentry error tracking
+if (process.env.NODE_ENV !== "development") {
+  Sentry.init({
+    dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
+    integrations: [
+      // new Sentry.BrowserTracing({
+      //   // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+      //   tracePropagationTargets: [
+      //     "localhost",
+      //     /^https:\/\/old-world-builder\.com/,
+      //   ],
+      // }),
+    ],
+    environment: process.env.NODE_ENV,
+    release: `booky@${process.env.VERSION}`,
+    // Performance Monitoring
+    // tracesSampleRate: 1.0, //  Capture 100% of the transactions
+  });
+}
 
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
