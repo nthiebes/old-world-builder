@@ -306,7 +306,7 @@
           "name_de": "Bow of Avelorn",
           "points": 12,
           "perModel": true,
-          "stackable": true,
+          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -794,6 +794,8 @@
       "points": 9,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": true,
+      "detachment": false,
       "command": [
         {
           "name_en": "Sentinel (Champion)",
@@ -876,6 +878,7 @@
         }
       ],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -888,6 +891,8 @@
       "points": 10,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": true,
       "command": [
         {
           "name_en": "Sentinel (champion)",
@@ -954,6 +959,7 @@
         }
       ],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1361,7 +1367,7 @@
           "name_de": "Bladelord",
           "points": 6,
           "magic": {
-            "types": ["weapon"],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 50
           }
         },
@@ -1371,7 +1377,7 @@
           "points": 6,
           "magic": {
             "types": ["banner"],
-            "maxPoints": 0
+            "maxPoints": 50
           }
         },
         {
@@ -1414,6 +1420,7 @@
         }
       ],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1434,7 +1441,7 @@
           "name_de": "Keeper of the Flame",
           "points": 7,
           "magic": {
-            "types": ["weapon"],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         },
@@ -1487,6 +1494,7 @@
         }
       ],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1507,7 +1515,7 @@
           "name_de": "Guardian",
           "points": 6,
           "magic": {
-            "types": ["weapon"],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         },
@@ -1560,6 +1568,7 @@
         }
       ],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1743,8 +1752,8 @@
       "name_de": "Lion Chariot of Chrace",
       "id": "lion-chariot-of-chrace",
       "points": 125,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1752,14 +1761,15 @@
         {
           "name_en": "Chracian Great Blade",
           "name_de": "Chracian Great Blade",
-          "points": 1,
-          "perModel": true,
-          "active": false
+          "points": 0,
+          "perModel": false,
+          "active": true
         }
       ],
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1770,8 +1780,8 @@
       "name_de": "Flamespyre Phoenix",
       "id": "flamespyre-phoenix",
       "points": 170,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1797,8 +1807,8 @@
       "name_de": "Frostheart Phoenix ",
       "id": "frostheart-phoenix-",
       "points": 205,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1824,8 +1834,8 @@
       "name_de": "Great Eagle",
       "id": "great-eagle",
       "points": 60,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1843,8 +1853,8 @@
       "name_de": "Eagle Claw Bolt Thrower",
       "id": "eagle-claw-bolt-thrower",
       "points": 80,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1862,8 +1872,8 @@
       "name_de": "Lothern Skycutters",
       "id": "lothern-skycutters",
       "points": 90,
-      "minimum": 0,
-      "maximum": 0,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
