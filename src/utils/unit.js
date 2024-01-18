@@ -84,7 +84,7 @@ export const getAllOptions = (
   const lore = [];
   if (activeLore) {
     lore.push(nameMap[activeLore][`name_${language}`]);
-  } else if (lores.length) {
+  } else if (lores?.length) {
     lore.push(nameMap[lores[0]][`name_${language}`]);
   }
 

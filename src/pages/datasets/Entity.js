@@ -45,7 +45,16 @@ const magicItemTypes = [
   "gift-of-chaos",
   "forest-spite",
 ];
-const loresOfMagic = ["daemonology", "dark-magic", "elementalism"];
+const loresOfMagic = [
+  "daemonology",
+  "dark-magic",
+  "elementalism",
+  "battle-magic",
+  "high-magic",
+  "illusion",
+  "necromancy",
+  "waaagh-magic",
+];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(
     /[^a-z]+/g,
@@ -89,6 +98,19 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       ...unit,
       [field]: value,
     });
+  };
+  const handleLoresOfMagicChange = ({ lore }) => {
+    if (unit.lores.includes(lore)) {
+      setUnit({
+        ...unit,
+        lores: unit.lores.filter((loreName) => loreName !== lore),
+      });
+    } else {
+      setUnit({
+        ...unit,
+        lores: [...unit.lores, lore],
+      });
+    }
   };
   const handleNameBlur = () => {
     const isNew = !Boolean(existingUnit);
@@ -411,6 +433,31 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             </label>
           </div>
         </>
+      )}
+      {type === "characters" && (
+        <Expandable headline="Allowed Lores of Magic">
+          {loresOfMagic.map((lore, loreIndex) => (
+            <div className="checkbox" key={lore}>
+              <input
+                type="checkbox"
+                id={`${lore}-${loreIndex}-${randomId}`}
+                onChange={() =>
+                  handleLoresOfMagicChange({
+                    lore,
+                  })
+                }
+                checked={unit.lores.includes(lore)}
+                className="checkbox__input"
+              />
+              <label
+                htmlFor={`${lore}-${loreIndex}-${randomId}`}
+                className="checkbox__label"
+              >
+                {lore}
+              </label>
+            </div>
+          ))}
+        </Expandable>
       )}
 
       {type !== "characters" && (

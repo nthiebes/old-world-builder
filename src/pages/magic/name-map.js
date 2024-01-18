@@ -176,4 +176,24 @@ export const nameMap = {
     name_de: "Elementalism",
     name_en: "Elementalism",
   },
+  "battle-magic": {
+    name_de: "Battle Magic",
+    name_en: "Battle Magic",
+  },
+  "high-magic": {
+    name_de: "High Magic",
+    name_en: "High Magic",
+  },
+  illusion: {
+    name_de: "Illusion",
+    name_en: "Illusion",
+  },
+  necromancy: {
+    name_de: "Necromancy",
+    name_en: "Necromancy",
+  },
+  "waaagh-magic": {
+    name_de: "Waaagh! Magic",
+    name_en: "Waaagh! Magic",
+  },
 };
