@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Button } from "../button";
+import { ErrorMessage } from "../error-message";
 
 import "./NumberInput.css";
 
@@ -14,6 +15,7 @@ export const NumberInput = ({
   min,
   readOnly,
   required,
+  noError,
 }) => {
   const intl = useIntl();
   const handleOnUpClick = (event) => {
@@ -43,9 +45,6 @@ export const NumberInput = ({
     if (newValue > maxValue) {
       newValue = maxValue;
     }
-    if (newValue < min) {
-      newValue = min;
-    }
 
     onChange({
       target: {
@@ -56,36 +55,48 @@ export const NumberInput = ({
   };
 
   return (
-    <div className="number-input">
-      <input
-        type="number"
-        pattern="[0-9]*"
-        min={min}
-        max={max > 0 ? max : 100000}
-        value={value}
-        onChange={handleOnChange}
-        id={id}
-        readOnly={readOnly}
-        required={required}
-        className="input"
-      />
-      <Button
-        onClick={handleOnUpClick}
-        type="secondary"
-        icon="up"
-        label={intl.formatMessage({ id: "misc.increase" })}
-        disabled={value >= max && max !== 0}
-        className="number-input__button number-input__button--up"
-      />
-      <Button
-        onClick={handleOnDownClick}
-        type="secondary"
-        icon="down"
-        label={intl.formatMessage({ id: "misc.decrease" })}
-        disabled={value <= min}
-        className="number-input__button number-input__button--down"
-      />
-    </div>
+    <>
+      <div className="number-input">
+        <input
+          type="number"
+          pattern="[0-9]*"
+          min={0}
+          max={max > 0 ? max : 100000}
+          value={value}
+          onChange={handleOnChange}
+          id={id}
+          readOnly={readOnly}
+          required={required}
+          className="input"
+        />
+        <Button
+          onClick={handleOnUpClick}
+          type="secondary"
+          icon="up"
+          label={intl.formatMessage({ id: "misc.increase" })}
+          disabled={value >= max && max !== 0}
+          className="number-input__button number-input__button--up"
+        />
+        <Button
+          onClick={handleOnDownClick}
+          type="secondary"
+          icon="down"
+          label={intl.formatMessage({ id: "misc.decrease" })}
+          disabled={value <= min}
+          className="number-input__button number-input__button--down"
+        />
+      </div>
+      {value < min && !noError && (
+        <ErrorMessage>
+          <FormattedMessage
+            id="misc.minError"
+            values={{
+              min,
+            }}
+          />
+        </ErrorMessage>
+      )}
+    </>
   );
 };
 
@@ -97,6 +108,7 @@ NumberInput.propTypes = {
   min: PropTypes.number,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
+  noError: PropTypes.bool,
 };
 
 NumberInput.defaultProps = {

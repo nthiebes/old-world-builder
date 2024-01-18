@@ -293,13 +293,12 @@ export const Magic = ({ isMobile }) => {
     }
 
     return (
-      <>
+      <Fragment key={magicItem.id}>
         <div
           className={classNames(
             "checkbox",
             isConditional && "checkbox--conditional"
           )}
-          key={magicItem.id}
         >
           <input
             type="checkbox"
@@ -336,7 +335,7 @@ export const Magic = ({ isMobile }) => {
             }}
           />
         )}
-      </>
+      </Fragment>
     );
   };
 

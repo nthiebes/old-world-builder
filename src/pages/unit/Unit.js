@@ -219,6 +219,16 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
+  const handleLoresChange = (lore) => {
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        activeLore: lore,
+      })
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -326,6 +336,7 @@ export const Unit = ({ isMobile }) => {
           />
         )}
         {!unit.minimum &&
+          !unit.lores &&
           (!unit.command || (unit.command && !unit.command.length)) &&
           (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
           (!unit.armor || (unit.armor && !unit.armor.length)) &&
@@ -664,6 +675,7 @@ export const Unit = ({ isMobile }) => {
                       <div className="list" key={id}>
                         <div className="list__inner unit__detachments">
                           <NumberInput
+                            noError
                             id={`strength-${id}`}
                             min={5}
                             value={strength}
@@ -731,6 +743,29 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
+        {unit.lores && unit.lores.length ? (
+          <>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.lore" />
+            </h2>
+            {unit.lores.map((lore) => (
+              <div className="radio" key={lore}>
+                <input
+                  type="radio"
+                  id={`lore-${lore}`}
+                  name="lores"
+                  value={lore}
+                  onChange={() => handleLoresChange(lore)}
+                  checked={(unit.activeLore || unit.lores[0]) === lore}
+                  className="radio__input"
+                />
+                <label htmlFor={`lore-${lore}`} className="radio__label">
+                  {nameMap[lore][`name_${language}`]}
+                </label>
+              </div>
+            ))}
+          </>
+        ) : null}
         {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
