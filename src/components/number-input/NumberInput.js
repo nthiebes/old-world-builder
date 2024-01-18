@@ -15,6 +15,7 @@ export const NumberInput = ({
   min,
   readOnly,
   required,
+  noError,
 }) => {
   const intl = useIntl();
   const handleOnUpClick = (event) => {
@@ -85,7 +86,7 @@ export const NumberInput = ({
           className="number-input__button number-input__button--down"
         />
       </div>
-      {value < min && (
+      {value < min && !noError && (
         <ErrorMessage>
           <FormattedMessage
             id="misc.minError"
@@ -107,6 +108,7 @@ NumberInput.propTypes = {
   min: PropTypes.number,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
+  noError: PropTypes.bool,
 };
 
 NumberInput.defaultProps = {

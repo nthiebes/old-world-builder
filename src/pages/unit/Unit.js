@@ -675,6 +675,7 @@ export const Unit = ({ isMobile }) => {
                       <div className="list" key={id}>
                         <div className="list__inner unit__detachments">
                           <NumberInput
+                            noError
                             id={`strength-${id}`}
                             min={5}
                             value={strength}
