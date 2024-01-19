@@ -16,6 +16,7 @@ export const Print = () => {
   const { language } = useLanguage();
   const [isPrinting, setIsPrinting] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
+  const [showSpecialRules, setShowSpecialRules] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -79,9 +80,22 @@ export const Print = () => {
             </div>
             <p className="print-checkbox-description">
               <i>
-                (<FormattedMessage id="export.visibleListDescription" />)
+                <FormattedMessage id="export.visibleListDescription" />
               </i>
             </p>
+            <div className="checkbox print-checkbox">
+              <input
+                type="checkbox"
+                id="specialRules"
+                onChange={() => setShowSpecialRules(!showSpecialRules)}
+                checked={showSpecialRules}
+                className="checkbox__input"
+              />
+              <label htmlFor="specialRules" className="checkbox__label">
+                <FormattedMessage id="export.specialRules" />
+              </label>
+            </div>
+            <p className="print-checkbox-description"></p>
             <Button
               onClick={handlePrintClick}
               centered
@@ -131,6 +145,14 @@ export const Print = () => {
                     )}
                   </h3>
                   {getAllOptions(unit)}
+                  {showSpecialRules && unit.specialRules ? (
+                    <p>
+                      <b>
+                        <FormattedMessage id="unit.specialRules" />:
+                      </b>{" "}
+                      {unit.specialRules}
+                    </p>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -159,6 +181,14 @@ export const Print = () => {
                       )}
                     </h3>
                     {getAllOptions(unit)}
+                    {showSpecialRules && unit.specialRules ? (
+                      <p>
+                        <b>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </b>{" "}
+                        {unit.specialRules}
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -186,6 +216,14 @@ export const Print = () => {
                       )}
                     </h3>
                     {getAllOptions(unit)}
+                    {showSpecialRules && unit.specialRules ? (
+                      <p>
+                        <b>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </b>{" "}
+                        {unit.specialRules}
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -206,10 +244,11 @@ export const Print = () => {
             {list.core.map((unit) => (
               <li key={unit.id}>
                 <h3>
-                  <span className="print__strength">
-                    {(unit.strength || unit.minimum) &&
-                      `${unit.strength || unit.minimum} `}
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span className="print__strength">
+                      {`${unit.strength || unit.minimum} `}
+                    </span>
+                  ) : null}
                   {language === "de" ? unit.name_de : unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
@@ -219,6 +258,14 @@ export const Print = () => {
                   )}
                 </h3>
                 {getAllOptions(unit)}
+                {showSpecialRules && unit.specialRules ? (
+                  <p>
+                    <b>
+                      <FormattedMessage id="unit.specialRules" />:
+                    </b>{" "}
+                    {unit.specialRules}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -237,10 +284,11 @@ export const Print = () => {
             {list.special.map((unit) => (
               <li key={unit.id}>
                 <h3>
-                  <span className="print__strength">
-                    {(unit.strength || unit.minimum) &&
-                      `${unit.strength || unit.minimum} `}
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span className="print__strength">
+                      {`${unit.strength || unit.minimum} `}
+                    </span>
+                  ) : null}
                   {language === "de" ? unit.name_de : unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
@@ -250,6 +298,14 @@ export const Print = () => {
                   )}
                 </h3>
                 {getAllOptions(unit)}
+                {showSpecialRules && unit.specialRules ? (
+                  <p>
+                    <b>
+                      <FormattedMessage id="unit.specialRules" />:
+                    </b>{" "}
+                    {unit.specialRules}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -268,10 +324,11 @@ export const Print = () => {
             {list.rare.map((unit) => (
               <li key={unit.id}>
                 <h3>
-                  <span className="print__strength">
-                    {(unit.strength || unit.minimum) &&
-                      `${unit.strength || unit.minimum} `}
-                  </span>
+                  {unit.strength || unit.minimum ? (
+                    <span className="print__strength">
+                      {`${unit.strength || unit.minimum} `}
+                    </span>
+                  ) : null}
                   {language === "de" ? unit.name_de : unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
@@ -281,6 +338,14 @@ export const Print = () => {
                   )}
                 </h3>
                 {getAllOptions(unit)}
+                {showSpecialRules && unit.specialRules ? (
+                  <p>
+                    <b>
+                      <FormattedMessage id="unit.specialRules" />:
+                    </b>{" "}
+                    {unit.specialRules}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -301,10 +366,11 @@ export const Print = () => {
                 {list.mercenaries.map((unit) => (
                   <li key={unit.id}>
                     <h3>
-                      <span className="print__strength">
-                        {(unit.strength || unit.minimum) &&
-                          `${unit.strength || unit.minimum} `}
-                      </span>
+                      {unit.strength || unit.minimum ? (
+                        <span className="print__strength">
+                          {`${unit.strength || unit.minimum} `}
+                        </span>
+                      ) : null}
                       {language === "de" ? unit.name_de : unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
@@ -314,6 +380,14 @@ export const Print = () => {
                       )}
                     </h3>
                     {getAllOptions(unit)}
+                    {showSpecialRules && unit.specialRules ? (
+                      <p>
+                        <b>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </b>{" "}
+                        {unit.specialRules}
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -332,10 +406,11 @@ export const Print = () => {
                 {list.allies.map((unit) => (
                   <li key={unit.id}>
                     <h3>
-                      <span className="print__strength">
-                        {(unit.strength || unit.minimum) &&
-                          `${unit.strength || unit.minimum} `}
-                      </span>
+                      {unit.strength || unit.minimum ? (
+                        <span className="print__strength">
+                          {`${unit.strength || unit.minimum} `}
+                        </span>
+                      ) : null}
                       {language === "de" ? unit.name_de : unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
@@ -345,6 +420,14 @@ export const Print = () => {
                       )}
                     </h3>
                     {getAllOptions(unit)}
+                    {showSpecialRules && unit.specialRules ? (
+                      <p>
+                        <b>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </b>{" "}
+                        {unit.specialRules}
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
