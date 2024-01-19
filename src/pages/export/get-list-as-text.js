@@ -6,6 +6,7 @@ const getUnitsString = ({
   units,
   isShowList,
   isCompactList,
+  showSpecialRules,
   intl,
   language,
 }) => {
@@ -23,6 +24,11 @@ const getUnitsString = ({
         } else {
           optionsString = `- ${allOptions.split(", ").join("\n- ")}\n`;
         }
+      }
+      if (showSpecialRules && unit.specialRules) {
+        optionsString += `${intl.formatMessage({
+          id: "unit.specialRules",
+        })}: ${unit.specialRules}\n`;
       }
 
       // prettier-ignore
@@ -42,6 +48,7 @@ export const getListAsText = ({
   isCompactList,
   intl,
   language,
+  showSpecialRules,
 }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
@@ -84,6 +91,7 @@ ${game.name}, ${armyName}
     
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.characters,
       isShowList,
       intl,
@@ -104,6 +112,7 @@ ${game.name}, ${armyName}
     
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.lords,
       isShowList,
       intl,
@@ -124,6 +133,7 @@ ${game.name}, ${armyName}
     
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.heroes,
       isShowList,
       intl,
@@ -144,6 +154,7 @@ ${game.name}, ${armyName}
     
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.core,
       isShowList,
       intl,
@@ -164,6 +175,7 @@ ${game.name}, ${armyName}
     
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.special,
       isShowList,
       intl,
@@ -184,6 +196,7 @@ ${game.name}, ${armyName}
   
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.rare,
       isShowList,
       intl,
@@ -204,6 +217,7 @@ ${game.name}, ${armyName}
   
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.mercenaries,
       isShowList,
       intl,
@@ -224,6 +238,7 @@ ${game.name}, ${armyName}
 
     listString += `${getUnitsString({
       isCompactList,
+      showSpecialRules,
       units: list.allies,
       isShowList,
       intl,

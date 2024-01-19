@@ -22,6 +22,7 @@ const initialUnitState = {
   mounts: [],
   items: [],
   lores: [],
+  specialRules: "",
 };
 const magicItemTypes = [
   "weapon",
@@ -459,6 +460,16 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           ))}
         </Expandable>
       )}
+      <label htmlFor={`specialRules-${randomId}`}>Special Rules</label>
+      <input
+        type="text"
+        id={`specialRules-${randomId}`}
+        className="input"
+        value={unit.specialRules}
+        onChange={handleFieldChange}
+        placeholder="e.g. Stubborn, Regiment, etc."
+        autoComplete="off"
+      />
 
       {type !== "characters" && (
         <>

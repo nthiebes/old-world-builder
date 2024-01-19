@@ -42,12 +42,20 @@ export const Export = ({ isMobile }) => {
   const [shareOwbError, setOwbShareError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
   const [isCompactList, setIsCompactList] = useState(false);
+  const [showSpecialRules, setShowSpecialRules] = useState(false);
   // const [isForumList, setIsForumList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
   const listText = list
-    ? getListAsText({ list, isShowList, isCompactList, intl, language })
+    ? getListAsText({
+        list,
+        isShowList,
+        isCompactList,
+        showSpecialRules,
+        intl,
+        language,
+      })
     : "";
   const copyText = () => {
     navigator.clipboard &&
@@ -179,6 +187,19 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.forumTextDescription" />
           </i>
         </p> */}
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="specialRules"
+            onChange={() => setShowSpecialRules(!showSpecialRules)}
+            checked={showSpecialRules}
+            className="checkbox__input"
+          />
+          <label htmlFor="specialRules" className="checkbox__label">
+            <FormattedMessage id="export.specialRules" />
+          </label>
+        </div>
+        <p className="export__description"></p>
         <Expandable headline={<FormattedMessage id="export.preview" />}>
           <textarea className="export__text" value={listText} readOnly />
         </Expandable>
