@@ -196,4 +196,12 @@ export const nameMap = {
     name_de: "Waaagh! Magic",
     name_en: "Waaagh! Magic",
   },
+  "errantry-crusades": {
+    name_en: "Errantry Crusades",
+    name_de: "Errantry Crusades",
+  },
+  "bretonnian-exiles": {
+    name_en: "Bretonnian Exiles",
+    name_de: "Bretonnian Exiles",
+  },
 };

@@ -13,6 +13,32 @@ import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
 
+const getArmyData = ({ data, arcaneJournal }) => {
+  const characters = data.characters.filter(
+    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+  );
+  const core = data.core.filter(
+    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+  );
+  const special = data.special.filter(
+    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+  );
+  const rare = data.rare.filter(
+    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+  );
+
+  return {
+    lords: updateIds(data.lords),
+    heroes: updateIds(data.heroes),
+    characters: updateIds(characters),
+    core: updateIds(core),
+    special: updateIds(special),
+    rare: updateIds(rare),
+    mercenaries: updateIds(data.mercenaries),
+    allies: updateIds(data.allies),
+  };
+};
+
 export const Add = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type } = useParams();
@@ -45,18 +71,12 @@ export const Add = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
-          dispatch(
-            setArmy({
-              lords: updateIds(data.lords),
-              heroes: updateIds(data.heroes),
-              characters: updateIds(data.characters),
-              core: updateIds(data.core),
-              special: updateIds(data.special),
-              rare: updateIds(data.rare),
-              mercenaries: updateIds(data.mercenaries),
-              allies: updateIds(data.allies),
-            })
-          );
+          const armyData = getArmyData({
+            data,
+            arcaneJournal: list.arcaneJournal,
+          });
+
+          dispatch(setArmy(armyData));
         },
       });
   }, [list, army, dispatch]);
