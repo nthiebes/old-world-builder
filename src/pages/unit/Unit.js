@@ -841,7 +841,7 @@ export const Unit = ({ isMobile }) => {
               );
             })
           : null}
-        {unit.specialRules ? (
+        {unit.specialRules && unit.specialRules.name_en ? (
           <>
             <h2 className="unit__subline unit__subline--space-before">
               <FormattedMessage id="unit.specialRules" />
