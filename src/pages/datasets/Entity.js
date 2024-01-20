@@ -9,6 +9,8 @@ import "./Entity.css";
 const initialUnitState = {
   name_en: "",
   name_de: "",
+  name_es: "",
+  name_fr: "",
   id: "",
   points: 1,
   minimum: 0,
@@ -122,6 +124,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ? unit.name_en.toLowerCase().replace(/ /g, "-").replace(/,/g, "")
         : unit.id,
       name_de: !unit.name_de ? unit.name_en : unit.name_de,
+      name_es: !unit.name_es ? unit.name_en : unit.name_es,
+      name_fr: !unit.name_fr ? unit.name_en : unit.name_fr,
     });
   };
   const handleSecondLevelFieldChange = ({ key, field, value, index }) => {
@@ -152,6 +156,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         return {
           ...entry,
           name_de: !entry.name_de ? value : entry.name_de,
+          name_es: !entry.name_es ? value : entry.name_es,
+          name_fr: !entry.name_fr ? value : entry.name_fr,
         };
       }
       return entry;
@@ -230,6 +236,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "",
           name_de: "",
+          name_es: "",
+          name_fr: "",
           points: 1,
           magic: {
             types: [],
@@ -247,6 +255,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "",
           name_de: "",
+          name_es: "",
+          name_fr: "",
           points: 1,
           perModel: true,
           active: false,
@@ -262,6 +272,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "",
           name_de: "",
+          name_es: "",
+          name_fr: "",
           points: 1,
           perModel: true,
           active: false,
@@ -277,6 +289,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "",
           name_de: "",
+          name_es: "",
+          name_fr: "",
           points: 1,
           perModel: true,
           stackable: false,
@@ -294,6 +308,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "",
           name_de: "",
+          name_es: "",
+          name_fr: "",
           points: 1,
           active: false,
         },
@@ -308,6 +324,8 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         {
           name_en: "Magic Items",
           name_de: "Magische Gegenstände",
+          name_es: "Objetos mágicos",
+          name_fr: "Objets magiques",
           types: [],
           selected: [],
           mutuallyExclusive: false,
@@ -342,6 +360,26 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         id={`name_de-${randomId}`}
         className="input"
         value={unit.name_de}
+        onChange={handleFieldChange}
+        autoComplete="off"
+        required
+      />
+      <label htmlFor={`name_es-${randomId}`}>Name Spanish</label>
+      <input
+        type="text"
+        id={`name_es-${randomId}`}
+        className="input"
+        value={unit.name_es}
+        onChange={handleFieldChange}
+        autoComplete="off"
+        required
+      />
+      <label htmlFor={`name_fr-${randomId}`}>Name French</label>
+      <input
+        type="text"
+        id={`name_fr-${randomId}`}
+        className="input"
+        value={unit.name_fr}
         onChange={handleFieldChange}
         autoComplete="off"
         required
@@ -525,6 +563,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
+              <label htmlFor={`command-name_es${index}-${randomId}`}>
+                Name Spanish
+              </label>
+              <input
+                type="text"
+                id={`command-name_es${index}-${randomId}`}
+                className="input"
+                value={command.name_es}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "command",
+                    field: "name_es",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
+              <label htmlFor={`command-name_fr${index}-${randomId}`}>
+                Name French
+              </label>
+              <input
+                type="text"
+                id={`command-name_fr${index}-${randomId}`}
+                className="input"
+                value={command.name_fr}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "command",
+                    field: "name_fr",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
               <label htmlFor={`command-points${index}-${randomId}`}>
                 Points
               </label>
@@ -664,6 +738,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             autoComplete="off"
             required
+          />
+          <label htmlFor={`equipment-name_es${index}-${randomId}`}>
+            Name Spanish
+          </label>
+          <input
+            type="text"
+            id={`equipment-name_es${index}-${randomId}`}
+            className="input"
+            value={equipment.name_es}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "equipment",
+                field: "name_es",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
+          <label htmlFor={`equipment-name_fr${index}-${randomId}`}>
+            Name French
+          </label>
+          <input
+            type="text"
+            id={`equipment-name_fr${index}-${randomId}`}
+            className="input"
+            value={equipment.name_fr}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "equipment",
+                field: "name_fr",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
           />
           <label htmlFor={`equipment-points${index}-${randomId}`}>Points</label>
           <NumberInput
@@ -809,6 +919,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
+          <label htmlFor={`armor-name_es${index}-${randomId}`}>
+            Name Spanish
+          </label>
+          <input
+            type="text"
+            id={`armor-name_es${index}-${randomId}`}
+            className="input"
+            value={armor.name_es}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "name_es",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
+          <label htmlFor={`armor-name_fr${index}-${randomId}`}>
+            Name French
+          </label>
+          <input
+            type="text"
+            id={`armor-name_fr${index}-${randomId}`}
+            className="input"
+            value={armor.name_fr}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "name_fr",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
           <label htmlFor={`armor-points${index}-${randomId}`}>Points</label>
           <NumberInput
             id={`armor-points${index}-${randomId}`}
@@ -950,6 +1096,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             autoComplete="off"
             required
+          />
+          <label htmlFor={`options-name_es${index}-${randomId}`}>
+            Name Spanish
+          </label>
+          <input
+            type="text"
+            id={`options-name_es${index}-${randomId}`}
+            className="input"
+            value={option.name_es}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "options",
+                field: "name_es",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
+          <label htmlFor={`options-name_fr${index}-${randomId}`}>
+            Name French
+          </label>
+          <input
+            type="text"
+            id={`options-name_fr${index}-${randomId}`}
+            className="input"
+            value={option.name_fr}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "options",
+                field: "name_fr",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
           />
           <label htmlFor={`options-points${index}-${randomId}`}>Points</label>
           <NumberInput
@@ -1135,6 +1317,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
+              <label htmlFor={`mounts-name_es${index}-${randomId}`}>
+                Name Spanish
+              </label>
+              <input
+                type="text"
+                id={`mounts-name_es${index}-${randomId}`}
+                className="input"
+                value={mount.name_es}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "name_es",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
+              <label htmlFor={`mounts-name_fr${index}-${randomId}`}>
+                Name French
+              </label>
+              <input
+                type="text"
+                id={`mounts-name_fr${index}-${randomId}`}
+                className="input"
+                value={mount.name_fr}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "name_fr",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
               <label htmlFor={`mounts-points${index}-${randomId}`}>
                 Points
               </label>
@@ -1250,6 +1468,42 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 }
                 autoComplete="off"
                 required
+              />
+              <label htmlFor={`magic-name_es-${itemIndex}-${randomId}`}>
+                Name Spanish
+              </label>
+              <input
+                type="text"
+                id={`magic-name_es-${itemIndex}-${randomId}`}
+                className="input"
+                value={item.name_es}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "name_es",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
+              <label htmlFor={`magic-name_fr-${itemIndex}-${randomId}`}>
+                Name French
+              </label>
+              <input
+                type="text"
+                id={`magic-name_fr-${itemIndex}-${randomId}`}
+                className="input"
+                value={item.name_fr}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "name_fr",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
               />
               <Expandable headline="Allowed (magic) item types">
                 {magicItemTypes.map((type, typeIndex) => (

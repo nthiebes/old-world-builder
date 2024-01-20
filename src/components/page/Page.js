@@ -8,7 +8,7 @@ import { Spinner } from "../../components/spinner";
 import { useLanguage } from "../../utils/useLanguage";
 import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
-import spain from "../../assets/spain.svg";
+// import spain from "../../assets/spain.svg";
 // import france from "../../assets/france.svg";
 
 import "./Page.css";
@@ -95,7 +95,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 Deutsch
               </label>
             </div>
-            <div className="radio">
+            {/* <div className="radio">
               <input
                 type="radio"
                 id="spanish"
@@ -115,7 +115,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 />
                 Español
               </label>
-            </div>
+            </div> */}
             {/* <div className="radio">
               <input
                 type="radio"
