@@ -312,7 +312,7 @@ export const Magic = ({ isMobile }) => {
             htmlFor={`${itemGroup.id}-${magicItem.id}`}
             className="checkbox__label"
           >
-            {language === "de" ? magicItem.name_de : magicItem.name_en}
+            {magicItem[`name_${language}`] || magicItem.name_en}
             <i className="checkbox__points">{`${
               magicItem.points
             } ${intl.formatMessage({
@@ -375,7 +375,7 @@ export const Magic = ({ isMobile }) => {
           htmlFor={`${itemGroup.id}-${magicItem.id}`}
           className="radio__label"
         >
-          {language === "de" ? magicItem.name_de : magicItem.name_en}
+          {magicItem[`name_${language}`] || magicItem.name_en}
           <i className="checkbox__points">{`${
             magicItem.points
           } ${intl.formatMessage({
@@ -419,14 +419,9 @@ export const Magic = ({ isMobile }) => {
         <Header
           to={`/editor/${listId}/${type}/${unitId}`}
           headline={
-            language === "de"
-              ? unit?.items?.length && !unit?.command?.length
-                ? unit.items[group].name_de
-                : intl.formatMessage({
-                    id: "unit.magicItems",
-                  })
-              : unit?.items?.length && !unit?.command?.length
-              ? unit.items[group].name_en
+            unit?.items?.length && !unit?.command?.length
+              ? unit.items[group][`name_${language}`] ||
+                unit.items[group].name_en
               : intl.formatMessage({
                   id: "unit.magicItems",
                 })
@@ -455,14 +450,9 @@ export const Magic = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}/${type}/${unitId}`}
             headline={
-              language === "de"
-                ? unit?.items?.length && !unit?.command?.length
-                  ? unit.items[group].name_de
-                  : intl.formatMessage({
-                      id: "unit.magicItems",
-                    })
-                : unit?.items?.length && !unit?.command?.length
-                ? unit.items[group].name_en
+              unit?.items?.length && !unit?.command?.length
+                ? unit.items[group][`name_${language}`] ||
+                  unit.items[group].name_en
                 : intl.formatMessage({
                     id: "unit.magicItems",
                   })
@@ -512,7 +502,7 @@ export const Magic = ({ isMobile }) => {
             <Fragment key={itemGroup.name_de}>
               {itemGroupItems.length > 0 && (
                 <h2 className="unit__subline">
-                  {language === "de" ? itemGroup.name_de : itemGroup.name_en}
+                  {itemGroup[`name_${language}`] || itemGroup.name_en}
                 </h2>
               )}
               {itemGroupItems.map((magicItem) => {
@@ -545,7 +535,8 @@ export const Magic = ({ isMobile }) => {
                   <Fragment key={magicItem.name_de}>
                     {isFirstItemType && (
                       <h3 className="magic__type">
-                        {nameMap[magicItem.type][`name_${language}`]}
+                        {nameMap[magicItem.type][`name_${language}`] ||
+                          nameMap[magicItem.type].name_en}
                       </h3>
                     )}
                     {mutuallyExclusive

@@ -16,6 +16,7 @@ export const NumberInput = ({
   readOnly,
   required,
   noError,
+  interval,
 }) => {
   const intl = useIntl();
   const handleOnUpClick = (event) => {
@@ -23,7 +24,7 @@ export const NumberInput = ({
 
     onChange({
       target: {
-        value: Number(value) + 1,
+        value: Number(value) + (interval ? interval : 1),
         id,
       },
     });
@@ -33,7 +34,7 @@ export const NumberInput = ({
 
     onChange({
       target: {
-        value: Number(value) - 1,
+        value: Number(value) - (interval ? interval : 1),
         id,
       },
     });

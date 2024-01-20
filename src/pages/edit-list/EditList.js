@@ -127,6 +127,7 @@ export const EditList = ({ isMobile }) => {
           value={list.points}
           onChange={handlePointsChange}
           required
+          interval={50}
         />
       </MainComponent>
     </>

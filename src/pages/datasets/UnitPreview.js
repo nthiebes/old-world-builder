@@ -26,7 +26,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
         <>
           <Header
             isSection
-            headline={unit[`name_${language}`]}
+            headline={unit[`name_${language}`] || unit.name_en}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -41,6 +41,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
           />
 
           {!unit.minimum &&
+            !unit.lores &&
             (!unit.command || (unit.command && !unit.command.length)) &&
             (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
             (!unit.armor || (unit.armor && !unit.armor.length)) &&
@@ -63,6 +64,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                 max={unit.maximum}
                 value={unit.strength}
                 onChange={() => {}}
+                noError
               />
             </>
           ) : null}
@@ -73,7 +75,14 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               </h2>
               {unit.command.map(
                 (
-                  { name_de, name_en, points, perModel, active = false, magic },
+                  {
+                    name_en,
+                    points,
+                    perModel,
+                    active = false,
+                    magic,
+                    ...command
+                  },
                   index
                 ) => {
                   let commandMagicPoints = 0;
@@ -99,7 +108,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                           htmlFor={`command-${index}`}
                           className="checkbox__label"
                         >
-                          {language === "de" ? name_de : name_en}
+                          {command[`name_${language}`] || name_en}
                           <i className="checkbox__points">
                             {`${points} ${
                               points === 1
@@ -119,7 +128,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                       </div>
                       {magic?.maxPoints && active ? (
                         <List
-                          // to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                           className="editor__list unit__link"
                           active={false}
                         >
@@ -127,7 +135,9 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                             <b>
                               {magic.types
                                 .map(
-                                  (type) => nameMap[type][`name_${language}`]
+                                  (type) =>
+                                    nameMap[type][`name_${language}`] ||
+                                    nameMap[type].name_en
                                 )
                                 .join(", ")}
                             </b>
@@ -161,8 +171,9 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                             <p>
                               {unit.magic.items
                                 .filter(({ command }) => command === index)
-                                .map(({ name_de, name_en }) =>
-                                  language === "de" ? name_de : name_en
+                                .map(
+                                  ({ name_en, ...item }) =>
+                                    item[`name_${language}`] || name_en
                                 )
                                 .join(", ")}
                             </p>
@@ -182,7 +193,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               </h2>
               {unit.equipment.map(
                 (
-                  { name_de, name_en, points, perModel, active = false },
+                  { name_en, points, perModel, active = false, ...equipment },
                   index
                 ) => (
                   <div className="radio" key={index}>
@@ -197,7 +208,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                       htmlFor={`equipment-${index}`}
                       className="radio__label"
                     >
-                      {language === "de" ? name_de : name_en}
+                      {equipment[`name_${language}`] || name_en}
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -226,7 +237,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               </h2>
               {unit.armor.map(
                 (
-                  { name_de, name_en, points, perModel, active = false },
+                  { name_en, points, perModel, active = false, ...equipment },
                   index
                 ) => (
                   <div className="radio" key={index}>
@@ -238,7 +249,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                       className="radio__input"
                     />
                     <label htmlFor={`armor-${index}`} className="radio__label">
-                      {language === "de" ? name_de : name_en}
+                      {equipment[`name_${language}`] || name_en}
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -268,7 +279,6 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               {unit.options.map(
                 (
                   {
-                    name_de,
                     name_en,
                     points,
                     perModel,
@@ -277,6 +287,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                     minimum = 0,
                     stackableCount = minimum || 0,
                     active = false,
+                    ...equipment
                   },
                   index
                 ) =>
@@ -292,7 +303,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                         htmlFor={`options-${index}`}
                         className="checkbox__label"
                       >
-                        {language === "de" ? name_de : name_en}
+                        {equipment[`name_${language}`] || name_en}
                         <i className="checkbox__points">
                           {`${points} ${
                             points === 1
@@ -316,7 +327,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                         htmlFor={`options-${index}`}
                         className="unit__special-option"
                       >
-                        {language === "de" ? name_de : name_en}:
+                        {equipment[`name_${language}`] || name_en}:
                         <i className="checkbox__points">
                           {`${points} ${intl.formatMessage({
                             id: "app.points",
@@ -342,12 +353,12 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               <h2 className="unit__subline unit__detachments-headline">
                 <FormattedMessage id="unit.detachments" />
               </h2>
-              {detachments.map(({ name_de, name_en, id }) => (
+              {detachments.map(({ name_en, id, ...regiment }) => (
                 <>
                   <div className="list" key={id}>
                     <div className="list__inner unit__detachments-header">
                       <b className="unit__magic-headline">
-                        {language === "de" ? name_de : name_en}
+                        {regiment[`name_${language}`] || name_en}
                       </b>
                       <Button
                         type="secondary"
@@ -363,33 +374,39 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                         (detachment) =>
                           detachment.id.split(".")[0] === id.split(".")[0]
                       )
-                      .map(({ name_de, name_en, strength, id, points }) => (
-                        <div className="list" key={id}>
-                          <div className="list__inner unit__detachments">
-                            <NumberInput
-                              id={`strength-${id}`}
-                              min={5}
-                              value={strength}
-                              onChange={() => {}}
-                            />
-                            <span>
-                              <b>{language === "de" ? name_de : name_en}</b>
-                              <i>{`${getUnitPoints({
-                                strength,
-                                points,
-                              })} ${intl.formatMessage({
-                                id: "app.points",
-                              })}`}</i>
-                            </span>
-                            <Button
-                              type="secondary"
-                              icon="close"
-                              label={intl.formatMessage({ id: "misc.remove" })}
-                              size="small"
-                            />
+                      .map(
+                        ({ name_en, strength, id, points, ...detachment }) => (
+                          <div className="list" key={id}>
+                            <div className="list__inner unit__detachments">
+                              <NumberInput
+                                id={`strength-${id}`}
+                                min={5}
+                                value={strength}
+                                onChange={() => {}}
+                              />
+                              <span>
+                                <b>
+                                  {detachment[`name_${language}`] || name_en}
+                                </b>
+                                <i>{`${getUnitPoints({
+                                  strength,
+                                  points,
+                                })} ${intl.formatMessage({
+                                  id: "app.points",
+                                })}`}</i>
+                              </span>
+                              <Button
+                                type="secondary"
+                                icon="close"
+                                label={intl.formatMessage({
+                                  id: "misc.remove",
+                                })}
+                                size="small"
+                              />
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        )
+                      )}
                 </>
               ))}
             </>
@@ -400,7 +417,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                 <FormattedMessage id="unit.mount" />
               </h2>
               {unit.mounts.map(
-                ({ name_de, name_en, points, active = false }, index) => (
+                ({ name_en, points, active = false, ...mounts }, index) => (
                   <div className="radio" key={index}>
                     <input
                       type="radio"
@@ -410,7 +427,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                       className="radio__input"
                     />
                     <label htmlFor={`mounts-${index}`} className="radio__label">
-                      {language === "de" ? name_de : name_en}
+                      {mounts[`name_${language}`] || name_en}
                       <i className="checkbox__points">{`${points} ${intl.formatMessage(
                         {
                           id: "app.points",
@@ -422,6 +439,29 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
               )}
             </>
           )}
+          {unit.lores && unit.lores.length ? (
+            <>
+              <h2 className="unit__subline">
+                <FormattedMessage id="unit.lore" />
+              </h2>
+              {unit.lores.map((lore) => (
+                <div className="radio" key={lore}>
+                  <input
+                    type="radio"
+                    id={`lore-${lore}`}
+                    name="lores"
+                    value={lore}
+                    onChange={() => {}}
+                    checked={(unit.activeLore || unit.lores[0]) === lore}
+                    className="radio__input"
+                  />
+                  <label htmlFor={`lore-${lore}`} className="radio__label">
+                    {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
+                  </label>
+                </div>
+              ))}
+            </>
+          ) : null}
           {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
           {unit.items && unit.items.length
             ? unit.items.map((item, itemIndex) => (
@@ -431,7 +471,9 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                   key={itemIndex}
                 >
                   <div className="editor__list-inner">
-                    <b className="unit__magic-headline">{item.name_en}</b>
+                    <b className="unit__magic-headline">
+                      {item[`name_${language}`] || item.name_en}
+                    </b>
                     <i className="checkbox__points">
                       <span>{magicPoints}</span>
                       {item.maxPoints > 0 && <>{` / ${item.maxPoints}`}</>}{" "}
@@ -441,8 +483,9 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                   {item.items && (
                     <p>
                       {item.items
-                        .map(({ name_de, name_en }) =>
-                          language === "de" ? name_de : name_en
+                        .map(
+                          ({ name_en, ...entity }) =>
+                            entity[`name_${language}`] || name_en
                         )
                         .join(", ")}
                     </p>
@@ -450,6 +493,14 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                 </List>
               ))
             : null}
+          {unit.specialRules ? (
+            <>
+              <h2 className="unit__subline unit__subline--space-before">
+                <FormattedMessage id="unit.specialRules" />
+              </h2>
+              <p>{unit.specialRules}</p>
+            </>
+          ) : null}
         </>
       </div>
     </>

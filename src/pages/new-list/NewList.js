@@ -178,6 +178,7 @@ export const NewList = ({ isMobile }) => {
             value={points}
             onChange={handlePointsChange}
             required
+            interval={50}
           />
           <label htmlFor="army">
             <FormattedMessage id="new.army" />
