@@ -194,7 +194,7 @@ export const NewList = ({ isMobile }) => {
           {journalArmies ? (
             <>
               <label htmlFor="arcane-journal">
-                <FormattedMessage id="new.arcaneJournal" />
+                <FormattedMessage id="new.armyOfInfamy" />
               </label>
               <Select
                 id="arcane-journal"
@@ -207,6 +207,8 @@ export const NewList = ({ isMobile }) => {
                     id: army,
                     name_en: nameMap[army].name_en,
                     name_de: nameMap[army].name_de,
+                    name_es: nameMap[army].name_es,
+                    name_fr: nameMap[army].name_fr,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
