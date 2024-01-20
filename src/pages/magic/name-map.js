@@ -204,4 +204,20 @@ export const nameMap = {
     name_en: "Bretonnian Exiles",
     name_de: "Bretonnian Exiles",
   },
+  "nehekharan-royal-hosts": {
+    name_en: "Nehekharan Royal Hosts",
+    name_de: "Nehekharan Royal Hosts",
+  },
+  "mortuary-cults": {
+    name_en: "Mortuary Cults",
+    name_de: "Mortuary Cults",
+  },
+  "nomadic-waaagh": {
+    name_en: "Nomadic Waaagh!",
+    name_de: "Nomadic Waaagh!",
+  },
+  "troll-horde": {
+    name_en: "Troll Horde",
+    name_de: "Troll Horde",
+  },
 };

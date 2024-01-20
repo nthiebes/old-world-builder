@@ -653,6 +653,152 @@
         "list": "bretonnian-exiles",
         "category": "characters"
       }
+    },
+    {
+      "name_en": "The Green Knight",
+      "name_de": "The Green Knight",
+      "name_es": "The Green Knight",
+      "name_fr": "The Green Knight",
+      "id": "the-green-knight",
+      "points": 275,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": "Aura of the Fay, Blessed Knight, Ethereal, Guardian of the Sacred Sites, Immune to Psychology, Loner, Move through Cover, Rallying Cry, Terror, Unbreakable, Unstable"
+    },
+    {
+      "name_en": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "name_de": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "name_es": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "name_fr": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "id": "sir-cecil-gastonne-the-wyrm-slayer",
+      "points": 165,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": "Blessings of the Lady, Rallying Cry, The Wyrm Slayer, the Exile’s Vow"
+    },
+    {
+      "name_en": "Lady Élisse Duachaard",
+      "name_de": "Lady Élisse Duachaard",
+      "name_es": "Lady Élisse Duachaard",
+      "name_fr": "Lady Élisse Duachaard",
+      "id": "lady-élisse-duachaard",
+      "points": 225,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": "Arcane Backlash, Armour Bane (2, Ariandir only), Armoured Hide (1), Aura of the Lady, Beguiling Aura, Blessings of the Lady, Counter Charge, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady, Stomp Attacks (1), Swiftstride"
+    },
+    {
+      "name_en": "Outcast Wizard",
+      "name_de": "Outcast Wizard",
+      "name_es": "Outcast Wizard",
+      "name_fr": "Outcast Wizard",
+      "id": "outcast-wizard",
+      "points": 45,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "name_es": "Warhorse",
+          "name_fr": "Warhorse",
+          "points": 12,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist"
     }
   ],
   "core": [
