@@ -29,7 +29,7 @@ if (process.env.NODE_ENV !== "development") {
       // }),
     ],
     environment: process.env.NODE_ENV,
-    release: `booky@${process.env.VERSION}`,
+    release: `owb@${process.env.REACT_APP_VERSION}`,
     // Performance Monitoring
     // tracesSampleRate: 1.0, //  Capture 100% of the transactions
   });
