@@ -29,10 +29,10 @@ export const NewList = ({ isMobile }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
-  const [arcaneJournal, setArcaneJournal] = useState("none");
+  const [armyComposition, setArmyComposition] = useState("none");
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
-  const journalArmies = armies.find(({ id }) => army === id)?.arcaneJournal;
+  const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
   const createList = () => {
     const newId = getRandomId();
     const newList = {
@@ -62,7 +62,7 @@ export const NewList = ({ isMobile }) => {
         mercenaries: [],
         allies: [],
         id: newId,
-        arcaneJournal: arcaneJournal,
+        armyComposition: armyComposition,
       },
     };
     const newLists = [...lists, newList[game]];
@@ -82,7 +82,7 @@ export const NewList = ({ isMobile }) => {
     setArmy(value);
   };
   const handleArcaneJournalChange = (value) => {
-    setArcaneJournal(value);
+    setArmyComposition(value);
   };
   const handlePointsChange = (event) => {
     setPoints(event.target.value);
@@ -194,14 +194,14 @@ export const NewList = ({ isMobile }) => {
           {journalArmies ? (
             <>
               <label htmlFor="arcane-journal">
-                <FormattedMessage id="new.armyOfInfamy" />
+                <FormattedMessage id="new.armyComposition" />
               </label>
               <Select
                 id="arcane-journal"
                 options={[
                   {
-                    id: "none",
-                    name_en: "-",
+                    id: "grand-army",
+                    name_en: intl.formatMessage({ id: "new.grandArmy" }),
                   },
                   ...journalArmies.map((army) => ({
                     id: army,
@@ -212,7 +212,7 @@ export const NewList = ({ isMobile }) => {
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
-                selected="none"
+                selected="grand-army"
                 spaceBottom
               />
             </>

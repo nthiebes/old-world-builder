@@ -66,10 +66,12 @@ export const getListAsText = ({
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
-  const arcaneJournalName = nameMap[list.arcaneJournal]
-    ? nameMap[list.arcaneJournal][`name_${language}`]
+  const armyCompositionName = nameMap[list.armyComposition]
+    ? nameMap[list.armyComposition][`name_${language}`]
     : "";
-  const arcaneJournalString = arcaneJournalName ? `, ${arcaneJournalName}` : "";
+  const armyCompositionString = armyCompositionName
+    ? `, ${armyCompositionName}`
+    : "";
   let listString = "";
 
   // HEADER
@@ -79,7 +81,7 @@ export const getListAsText = ({
 ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}${arcaneJournalString}
+${game.name}, ${armyName}${armyCompositionString}
 ===
 
 `;

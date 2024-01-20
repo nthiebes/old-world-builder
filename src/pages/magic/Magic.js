@@ -490,7 +490,8 @@ export const Magic = ({ isMobile }) => {
             hasCommandMagicItems ? commandMagicItems : magicItems
           ).filter(
             (item) =>
-              item?.arcaneJournal === list?.arcaneJournal || !item.arcaneJournal
+              item?.armyComposition === list?.armyComposition ||
+              !item.armyComposition
           );
 
           if (itemGroupItems.length > 0) {

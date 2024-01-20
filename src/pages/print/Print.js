@@ -39,8 +39,8 @@ export const Print = () => {
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
-  const arcaneJournalName = nameMap[list.arcaneJournal]
-    ? nameMap[list.arcaneJournal][`name_${language}`]
+  const armyCompositionName = nameMap[list.armyComposition]
+    ? nameMap[list.armyComposition][`name_${language}`]
     : "";
   const handlePrintClick = () => {
     setIsPrinting(true);
@@ -124,7 +124,7 @@ export const Print = () => {
         </h1>
         <p className="print__subheader">
           {game.name}, {armyName}
-          {arcaneJournalName ? `, ${arcaneJournalName}` : ""}
+          {armyCompositionName ? `, ${armyCompositionName}` : ""}
         </p>
 
         {list.game === "the-old-world" ? (

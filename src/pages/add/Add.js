@@ -13,27 +13,31 @@ import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
 
-const getArmyData = ({ data, arcaneJournal }) => {
+const getArmyData = ({ data, armyComposition }) => {
   const characters = data.characters.filter(
-    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+    (unit) =>
+      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
   );
   const core = data.core.filter(
-    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+    (unit) =>
+      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
   );
   const special = data.special.filter(
-    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+    (unit) =>
+      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
   );
   const rare = data.rare.filter(
-    (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
+    (unit) =>
+      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
   );
   const specialToCore = special.filter(
-    (unit) => unit?.arcaneJournal?.category === "core"
+    (unit) => unit?.armyComposition?.category === "core"
   );
   const rareToCore = rare.filter(
-    (unit) => unit?.arcaneJournal?.category === "rare"
+    (unit) => unit?.armyComposition?.category === "rare"
   );
   const rareToSpecial = rare.filter(
-    (unit) => unit?.arcaneJournal?.category === "special"
+    (unit) => unit?.armyComposition?.category === "special"
   );
 
   return {
@@ -82,7 +86,7 @@ export const Add = ({ isMobile }) => {
         onSuccess: (data) => {
           const armyData = getArmyData({
             data,
-            arcaneJournal: list.arcaneJournal,
+            armyComposition: list.armyComposition,
           });
 
           dispatch(setArmy(armyData));
