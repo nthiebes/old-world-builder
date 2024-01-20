@@ -9,7 +9,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
 // import spain from "../../assets/spain.svg";
-// import france from "../../assets/france.svg";
+import france from "../../assets/france.svg";
 
 import "./Page.css";
 
@@ -116,7 +116,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 Español
               </label>
             </div> */}
-            {/* <div className="radio">
+            <div className="radio">
               <input
                 type="radio"
                 id="french"
@@ -136,7 +136,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 />
                 Français
               </label>
-            </div> */}
+            </div>
           </div>
         </footer>
       )}
