@@ -155,7 +155,8 @@ export const Print = () => {
                       <b>
                         <FormattedMessage id="unit.specialRules" />:
                       </b>{" "}
-                      {unit.specialRules}
+                      {unit.specialRules[`name_${language}`] ||
+                        unit.specialRules.name_en}
                     </p>
                   ) : null}
                 </li>
@@ -191,7 +192,8 @@ export const Print = () => {
                         <b>
                           <FormattedMessage id="unit.specialRules" />:
                         </b>{" "}
-                        {unit.specialRules}
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
                       </p>
                     ) : null}
                   </li>
@@ -226,7 +228,8 @@ export const Print = () => {
                         <b>
                           <FormattedMessage id="unit.specialRules" />:
                         </b>{" "}
-                        {unit.specialRules}
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
                       </p>
                     ) : null}
                   </li>
@@ -268,7 +271,8 @@ export const Print = () => {
                     <b>
                       <FormattedMessage id="unit.specialRules" />:
                     </b>{" "}
-                    {unit.specialRules}
+                    {unit.specialRules[`name_${language}`] ||
+                      unit.specialRules.name_en}
                   </p>
                 ) : null}
               </li>
@@ -308,7 +312,8 @@ export const Print = () => {
                     <b>
                       <FormattedMessage id="unit.specialRules" />:
                     </b>{" "}
-                    {unit.specialRules}
+                    {unit.specialRules[`name_${language}`] ||
+                      unit.specialRules.name_en}
                   </p>
                 ) : null}
               </li>
@@ -348,7 +353,8 @@ export const Print = () => {
                     <b>
                       <FormattedMessage id="unit.specialRules" />:
                     </b>{" "}
-                    {unit.specialRules}
+                    {unit.specialRules[`name_${language}`] ||
+                      unit.specialRules.name_en}
                   </p>
                 ) : null}
               </li>
@@ -390,7 +396,8 @@ export const Print = () => {
                         <b>
                           <FormattedMessage id="unit.specialRules" />:
                         </b>{" "}
-                        {unit.specialRules}
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
                       </p>
                     ) : null}
                   </li>
@@ -430,7 +437,8 @@ export const Print = () => {
                         <b>
                           <FormattedMessage id="unit.specialRules" />:
                         </b>{" "}
-                        {unit.specialRules}
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
                       </p>
                     ) : null}
                   </li>
