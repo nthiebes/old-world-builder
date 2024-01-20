@@ -38,7 +38,8 @@ if (process.env.NODE_ENV !== "development") {
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
   en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
-  es: "Constructor de ejércitos para Warhammer: The Old World y Warhammer Fantasy Battles.",
+  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World' et 'Warhammer Fantaisie'.",
+  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
 };
 
 // Language detection
