@@ -26,13 +26,22 @@ const getArmyData = ({ data, arcaneJournal }) => {
   const rare = data.rare.filter(
     (unit) => unit?.arcaneJournal?.list === arcaneJournal || !unit.arcaneJournal
   );
+  const specialToCore = special.filter(
+    (unit) => unit?.arcaneJournal?.category === "core"
+  );
+  const rareToCore = rare.filter(
+    (unit) => unit?.arcaneJournal?.category === "rare"
+  );
+  const rareToSpecial = rare.filter(
+    (unit) => unit?.arcaneJournal?.category === "special"
+  );
 
   return {
     lords: updateIds(data.lords),
     heroes: updateIds(data.heroes),
     characters: updateIds(characters),
-    core: updateIds(core),
-    special: updateIds(special),
+    core: updateIds([...core, ...specialToCore, ...rareToCore]),
+    special: updateIds([...special, ...rareToSpecial]),
     rare: updateIds(rare),
     mercenaries: updateIds(data.mercenaries),
     allies: updateIds(data.allies),
