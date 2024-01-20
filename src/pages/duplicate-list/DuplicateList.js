@@ -149,6 +149,7 @@ export const DuplicateList = ({ isMobile }) => {
             value={points}
             onChange={handlePointsChange}
             required
+            interval={50}
           />
           <Button centered icon="duplicate" submitButton>
             <FormattedMessage id="misc.duplicate" />
