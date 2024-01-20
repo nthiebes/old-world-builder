@@ -8,7 +8,7 @@ import { Spinner } from "../../components/spinner";
 import { useLanguage } from "../../utils/useLanguage";
 import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
-// import spain from "../../assets/spain.svg";
+import spain from "../../assets/spain.svg";
 import france from "../../assets/france.svg";
 
 import "./Page.css";
@@ -95,27 +95,6 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 Deutsch
               </label>
             </div>
-            {/* <div className="radio">
-              <input
-                type="radio"
-                id="spanish"
-                name="languages"
-                value="es"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "es"}
-                className="radio__input"
-              />
-              <label htmlFor="spanish" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={spain}
-                  className="footer__language-icon"
-                />
-                Español
-              </label>
-            </div> */}
             <div className="radio">
               <input
                 type="radio"
@@ -135,6 +114,27 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                   className="footer__language-icon"
                 />
                 Français
+              </label>
+            </div>
+            <div className="radio">
+              <input
+                type="radio"
+                id="spanish"
+                name="languages"
+                value="es"
+                onChange={handleLanguageChange}
+                defaultChecked={language === "es"}
+                className="radio__input"
+              />
+              <label htmlFor="spanish" className="radio__label">
+                <img
+                  width="24"
+                  height="19"
+                  alt=""
+                  src={spain}
+                  className="footer__language-icon"
+                />
+                Español
               </label>
             </div>
           </div>

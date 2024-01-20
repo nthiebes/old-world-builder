@@ -42,7 +42,7 @@ const metaDescription = {
 };
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr"];
+const supportedLanguages = ["en", "de", "fr", "es"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
