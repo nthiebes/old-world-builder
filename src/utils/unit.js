@@ -42,12 +42,12 @@ export const getAllOptions = (
   const allArmor = armor
     ? armor
         .filter(({ active }) => active)
-        .map(({ name_en, ...item }) => [`name_${language}`] || name_en)
+        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allOptions = options
     ? options
         .filter(({ active }) => active)
-        .map(({ name_en, ...item }) => [`name_${language}`] || name_en)
+        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allStackableOptions = options
     ? options
