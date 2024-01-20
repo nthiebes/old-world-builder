@@ -846,7 +846,10 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline unit__subline--space-before">
               <FormattedMessage id="unit.specialRules" />
             </h2>
-            <p>{unit.specialRules}</p>
+            <p>
+              {unit.specialRules[`name_${language}`] ||
+                unit.specialRules.name_en}
+            </p>
           </>
         ) : null}
       </MainComponent>

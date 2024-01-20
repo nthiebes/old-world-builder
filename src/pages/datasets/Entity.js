@@ -24,7 +24,12 @@ const initialUnitState = {
   mounts: [],
   items: [],
   lores: [],
-  specialRules: "",
+  specialRules: {
+    name_en: "",
+    name_de: "",
+    name_es: "",
+    name_fr: "",
+  },
 };
 const magicItemTypes = [
   "weapon",
@@ -94,6 +99,15 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         event.target.type === "number"
           ? Number(event.target.value)
           : event.target.value,
+    });
+  };
+  const handleSpecialRulesChange = ({ field, value }) => {
+    setUnit({
+      ...unit,
+      specialRules: {
+        ...unit.specialRules,
+        [field]: value,
+      },
     });
   };
   const handleCheckboxChange = ({ field, value }) => {
@@ -498,16 +512,68 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           ))}
         </Expandable>
       )}
-      <label htmlFor={`specialRules-${randomId}`}>Special Rules</label>
-      <input
-        type="text"
-        id={`specialRules-${randomId}`}
-        className="input"
-        value={unit.specialRules}
-        onChange={handleFieldChange}
-        placeholder="e.g. Stubborn, Regiment, etc."
-        autoComplete="off"
-      />
+      <Expandable headline="Special Rules">
+        <label htmlFor={`specialRules-en-${randomId}`}>English</label>
+        <input
+          type="text"
+          id={`specialRules-en-${randomId}`}
+          className="input"
+          value={unit.specialRules?.name_en}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_en",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
+        <label htmlFor={`specialRules-de-${randomId}`}>German</label>
+        <input
+          type="text"
+          id={`specialRules-de-${randomId}`}
+          className="input"
+          value={unit.specialRules?.name_de}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_de",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
+        <label htmlFor={`specialRules-es-${randomId}`}>Spanish</label>
+        <input
+          type="text"
+          id={`specialRules-es-${randomId}`}
+          className="input"
+          value={unit.specialRules?.name_es}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_es",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
+        <label htmlFor={`specialRules-fr-${randomId}`}>French</label>
+        <input
+          type="text"
+          id={`specialRules-fr-${randomId}`}
+          className="input"
+          value={unit.specialRules?.name_fr}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_fr",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
+      </Expandable>
 
       {type !== "characters" && (
         <>

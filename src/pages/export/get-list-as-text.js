@@ -28,7 +28,9 @@ const getUnitsString = ({
       if (showSpecialRules && unit.specialRules) {
         optionsString += `${intl.formatMessage({
           id: "unit.specialRules",
-        })}: ${unit.specialRules}\n`;
+        })}: ${
+          unit.specialRules[`name_${language}`] || unit.specialRules.name_en
+        }\n`;
       }
 
       // prettier-ignore
