@@ -33,7 +33,7 @@ const getUnitsString = ({
 
       // prettier-ignore
       return `${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
-}${unit[`name_${language}`]}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
+}${unit[`name_${language}`] || unit.name_en}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
 ${optionsString}

@@ -18,16 +18,17 @@ export const getAllOptions = (
   const allCommand = [];
 
   if (command) {
-    command.forEach(({ name_de, name_en, active, magic }) => {
+    command.forEach(({ active, magic, name_en, ...entry }) => {
       if (active) {
-        allCommand.push(language === "de" ? name_de : name_en);
+        allCommand.push(entry[`name_${language}`] || name_en);
       }
       if (magic && magic?.selected?.length) {
         magic.selected.forEach((selectedItem) => {
           allCommand.push(
             selectedItem.amount > 1
-              ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`]
-              : selectedItem[`name_${language}`]
+              ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`] ||
+                  selectedItem.name_en
+              : selectedItem[`name_${language}`] || selectedItem.name_en
           );
         });
       }
@@ -36,30 +37,30 @@ export const getAllOptions = (
   const allEquipment = equipment
     ? equipment
         .filter(({ active }) => active)
-        .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
+        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allArmor = armor
     ? armor
         .filter(({ active }) => active)
-        .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
+        .map(({ name_en, ...item }) => [`name_${language}`] || name_en)
     : [];
   const allOptions = options
     ? options
         .filter(({ active }) => active)
-        .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
+        .map(({ name_en, ...item }) => [`name_${language}`] || name_en)
     : [];
   const allStackableOptions = options
     ? options
         .filter(({ stackableCount }) => stackableCount > 0)
         .map(
-          ({ name_de, name_en, stackableCount }) =>
-            `${stackableCount} ${language === "de" ? name_de : name_en}`
+          ({ name_en, stackableCount, ...item }) =>
+            `${stackableCount} ${item[`name_${language}`] || name_en}`
         )
     : [];
   const allMounts = mounts
     ? mounts
         .filter(({ active }) => active)
-        .map(({ name_de, name_en }) => (language === "de" ? name_de : name_en))
+        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allItems = [];
   if (items?.length) {
@@ -67,8 +68,9 @@ export const getAllOptions = (
       (item.selected || []).forEach((selectedItem) => {
         allItems.push(
           selectedItem.amount > 1
-            ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`]
-            : selectedItem[`name_${language}`]
+            ? `${selectedItem.amount}x ` +
+                (selectedItem[`name_${language}`] || selectedItem.name_en)
+            : selectedItem[`name_${language}`] || selectedItem.name_en
         );
       });
     });
@@ -77,15 +79,19 @@ export const getAllOptions = (
     ? detachments
         .filter(({ strength }) => strength > 0)
         .map(
-          ({ name_de, name_en, strength }) =>
-            `${strength} ${language === "de" ? name_de : name_en}`
+          ({ name_en, strength, ...item }) =>
+            `${strength} ${item[`name_${language}`] || name_en}`
         )
     : [];
   const lore = [];
   if (activeLore) {
-    lore.push(nameMap[activeLore][`name_${language}`]);
+    lore.push(
+      nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
+    );
   } else if (lores?.length) {
-    lore.push(nameMap[lores[0]][`name_${language}`]);
+    lore.push(
+      nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
+    );
   }
 
   const allOptionsArray = [

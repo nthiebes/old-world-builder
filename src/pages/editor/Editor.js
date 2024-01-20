@@ -257,7 +257,7 @@ export const Editor = ({ isMobile }) => {
                   active={location.pathname.includes(unit.id)}
                 >
                   <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`]}</b>
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
                     <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                       id: "app.points",
                     })}`}</i>
@@ -308,7 +308,7 @@ export const Editor = ({ isMobile }) => {
                   active={location.pathname.includes(unit.id)}
                 >
                   <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`]}</b>
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
                     <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                       id: "app.points",
                     })}`}</i>
@@ -359,7 +359,7 @@ export const Editor = ({ isMobile }) => {
                   active={location.pathname.includes(unit.id)}
                 >
                   <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`]}</b>
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
                     <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                       id: "app.points",
                     })}`}</i>
@@ -414,7 +414,7 @@ export const Editor = ({ isMobile }) => {
                     <span>{`${unit.strength || unit.minimum}`}</span>
                   ) : null}
 
-                  <b>{unit[`name_${language}`]}</b>
+                  <b>{unit[`name_${language}`] || unit.name_en}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -466,7 +466,7 @@ export const Editor = ({ isMobile }) => {
                   {unit.strength || unit.minimum ? (
                     <span>{`${unit.strength || unit.minimum}`}</span>
                   ) : null}
-                  <b>{unit[`name_${language}`]}</b>
+                  <b>{unit[`name_${language}`] || unit.name_en}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -518,7 +518,7 @@ export const Editor = ({ isMobile }) => {
                   {unit.strength || unit.minimum ? (
                     <span>{`${unit.strength || unit.minimum}`}</span>
                   ) : null}
-                  <b>{unit[`name_${language}`]}</b>
+                  <b>{unit[`name_${language}`] || unit.name_en}</b>
                   <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                     id: "app.points",
                   })}`}</i>
@@ -570,7 +570,7 @@ export const Editor = ({ isMobile }) => {
                   active={location.pathname.includes(unit.id)}
                 >
                   <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`]}</b>
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
                     <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                       id: "app.points",
                     })}`}</i>
@@ -622,7 +622,7 @@ export const Editor = ({ isMobile }) => {
                   active={location.pathname.includes(unit.id)}
                 >
                   <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`]}</b>
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
                     <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
                       id: "app.points",
                     })}`}</i>

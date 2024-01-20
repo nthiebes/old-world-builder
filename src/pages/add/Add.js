@@ -109,11 +109,11 @@ export const Add = ({ isMobile }) => {
           />
         )}
         <ul>
-          {army[type].map(({ name_de, name_en, id, minimum, points }) => (
+          {army[type].map(({ id, minimum, points, name_en, ...army }) => (
             <List key={id} onClick={() => handleAdd(id)}>
               <span className="unit__name">
                 {minimum ? `${minimum} ` : null}
-                <b>{language === "de" ? name_de : name_en}</b>
+                <b>{army[`name_${language}`] || name_en}</b>
               </span>
               <i className="unit__points">{`${
                 minimum ? points * minimum : points

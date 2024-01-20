@@ -40,9 +40,9 @@ export const Select = ({
         className
       )}
     >
-      {options.map(({ name_de, name_en, id: optionValue }) => (
+      {options.map(({ id: optionValue, ...option }) => (
         <option key={optionValue} value={optionValue}>
-          {language === "de" ? name_de : name_en}
+          {option[`name_${language}`] || option.name_en}
         </option>
       ))}
     </select>

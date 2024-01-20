@@ -12,6 +12,7 @@ import store from "./store";
 
 import English from "./i18n/en.json";
 import German from "./i18n/de.json";
+import Spanish from "./i18n/es.json";
 
 // Initialize Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -36,10 +37,11 @@ if (process.env.NODE_ENV !== "development") {
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
   en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
+  es: "Constructor de ejércitos para Warhammer: The Old World y Warhammer Fantasy Battles.",
 };
 
 // Language detection
-const supportedLanguages = ["en", "de"];
+const supportedLanguages = ["en", "de", "es"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -57,6 +59,8 @@ document
 let messages;
 if (language === "de") {
   messages = German;
+} else if (language === "es") {
+  messages = Spanish;
 } else {
   messages = English;
 }
