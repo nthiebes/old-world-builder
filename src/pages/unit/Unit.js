@@ -316,7 +316,7 @@ export const Unit = ({ isMobile }) => {
         <Header
           to={`/editor/${listId}`}
           moreButton={moreButtons}
-          headline={unit[`name_${language}`]}
+          headline={unit[`name_${language}`] || unit.name_en}
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -329,7 +329,7 @@ export const Unit = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}`}
             moreButton={moreButtons}
-            headline={unit[`name_${language}`]}
+            headline={unit[`name_${language}`] || unit.name_en}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -370,13 +370,13 @@ export const Unit = ({ isMobile }) => {
             {unit.command.map(
               (
                 {
-                  name_de,
                   name_en,
                   points,
                   perModel,
                   id,
                   active = false,
                   magic,
+                  ...command
                 },
                 index
               ) => {
@@ -399,7 +399,7 @@ export const Unit = ({ isMobile }) => {
                         htmlFor={`command-${id}`}
                         className="checkbox__label"
                       >
-                        {language === "de" ? name_de : name_en}
+                        {command[`name_${language}`] || name_en}
                         <i className="checkbox__points">
                           {`${points} ${
                             points === 1
@@ -430,7 +430,8 @@ export const Unit = ({ isMobile }) => {
                               {magic.types
                                 .map(
                                   (itemType) =>
-                                    nameMap[itemType][`name_${language}`]
+                                    nameMap[itemType][`name_${language}`] ||
+                                    nameMap[itemType].name_en
                                 )
                                 .join(", ")}
                             </b>
@@ -462,8 +463,10 @@ export const Unit = ({ isMobile }) => {
                                 .map((selectedItem) =>
                                   selectedItem.amount > 1
                                     ? `${selectedItem.amount}x ` +
-                                      selectedItem[`name_${language}`]
-                                    : selectedItem[`name_${language}`]
+                                      (selectedItem[`name_${language}`] ||
+                                        selectedItem.name_en)
+                                    : selectedItem[`name_${language}`] ||
+                                      selectedItem.name_en
                                 )
                                 .join(", ")
                                 .replace(/\*/g, "")}
@@ -484,7 +487,14 @@ export const Unit = ({ isMobile }) => {
               <FormattedMessage id="unit.equipment" />
             </h2>
             {unit.equipment.map(
-              ({ name_de, name_en, points, perModel, id, active = false }) => (
+              ({
+                name_en,
+                points,
+                perModel,
+                id,
+                active = false,
+                ...equipment
+              }) => (
                 <div className="radio" key={id}>
                   <input
                     type="radio"
@@ -496,7 +506,7 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
-                    {language === "de" ? name_de : name_en}
+                    {equipment[`name_${language}`] || name_en}
                     <i className="checkbox__points">
                       {`${points} ${
                         points === 1
@@ -524,7 +534,14 @@ export const Unit = ({ isMobile }) => {
               <FormattedMessage id="unit.armor" />
             </h2>
             {unit.armor.map(
-              ({ name_de, name_en, points, perModel, id, active = false }) => (
+              ({
+                name_en,
+                points,
+                perModel,
+                id,
+                active = false,
+                ...equipment
+              }) => (
                 <div className="radio" key={id}>
                   <input
                     type="radio"
@@ -536,7 +553,7 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`armor-${id}`} className="radio__label">
-                    {language === "de" ? name_de : name_en}
+                    {equipment[`name_${language}`] || name_en}
                     <i className="checkbox__points">
                       {`${points} ${
                         points === 1
@@ -565,7 +582,6 @@ export const Unit = ({ isMobile }) => {
             </h2>
             {unit.options.map(
               ({
-                name_de,
                 name_en,
                 points,
                 perModel,
@@ -575,6 +591,7 @@ export const Unit = ({ isMobile }) => {
                 minimum = 0,
                 stackableCount = minimum || 0,
                 active = false,
+                ...equipment
               }) =>
                 !stackable ? (
                   <div className="checkbox" key={id}>
@@ -590,7 +607,7 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="checkbox__label"
                     >
-                      {language === "de" ? name_de : name_en}
+                      {equipment[`name_${language}`] || name_en}
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -614,7 +631,7 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="unit__special-option"
                     >
-                      {language === "de" ? name_de : name_en}:
+                      {equipment[`name_${language}`] || name_en}:
                       <i className="checkbox__points">
                         {`${points} ${intl.formatMessage({
                           id: "app.points",
@@ -645,12 +662,12 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline unit__detachments-headline">
               <FormattedMessage id="unit.detachments" />
             </h2>
-            {detachments.map(({ name_de, name_en, id }) => (
+            {detachments.map(({ name_en, id, ...detachment }) => (
               <Fragment key={id}>
                 <div className="list">
                   <div className="list__inner unit__detachments-header">
                     <b className="unit__magic-headline">
-                      {language === "de" ? name_de : name_en}
+                      {detachment[`name_${language}`] || name_en}
                     </b>
                     <Button
                       onClick={() =>
@@ -671,7 +688,7 @@ export const Unit = ({ isMobile }) => {
                       (detachment) =>
                         detachment.id.split(".")[0] === id.split(".")[0]
                     )
-                    .map(({ name_de, name_en, strength, id, points }) => (
+                    .map(({ name_en, strength, id, points, ...detachment }) => (
                       <div className="list" key={id}>
                         <div className="list__inner unit__detachments">
                           <NumberInput
@@ -687,7 +704,7 @@ export const Unit = ({ isMobile }) => {
                             }
                           />
                           <span>
-                            <b>{language === "de" ? name_de : name_en}</b>
+                            <b>{detachment[`name_${language}`] || name_en}</b>
                             <i>{`${getUnitPoints({
                               strength,
                               points,
@@ -719,7 +736,7 @@ export const Unit = ({ isMobile }) => {
               <FormattedMessage id="unit.mount" />
             </h2>
             {unit.mounts.map(
-              ({ name_de, name_en, points, id, active = false }) => (
+              ({ name_en, points, id, active = false, ...mount }) => (
                 <div className="radio" key={id}>
                   <input
                     type="radio"
@@ -731,7 +748,7 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`mounts-${id}`} className="radio__label">
-                    {language === "de" ? name_de : name_en}
+                    {mount[`name_${language}`] || name_en}
                     <i className="checkbox__points">{`${points} ${intl.formatMessage(
                       {
                         id: "app.points",
@@ -760,7 +777,7 @@ export const Unit = ({ isMobile }) => {
                   className="radio__input"
                 />
                 <label htmlFor={`lore-${lore}`} className="radio__label">
-                  {nameMap[lore][`name_${language}`]}
+                  {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
                 </label>
               </div>
             ))}
@@ -782,7 +799,7 @@ export const Unit = ({ isMobile }) => {
                 >
                   <div className="editor__list-inner">
                     <b className="unit__magic-headline">
-                      {language === "de" ? item.name_de : item.name_en}
+                      {item[`name_${language}`] || item.name_en}
                     </b>
                     <i className="checkbox__points">
                       <span
@@ -811,8 +828,10 @@ export const Unit = ({ isMobile }) => {
                         .map((selectedItem) =>
                           selectedItem.amount > 1
                             ? `${selectedItem.amount}x ` +
-                              selectedItem[`name_${language}`]
-                            : selectedItem[`name_${language}`]
+                              (selectedItem[`name_${language}`] ||
+                                selectedItem.name_en)
+                            : selectedItem[`name_${language}`] ||
+                              selectedItem.name_en
                         )
                         .join(", ")
                         .replace(/\*/g, "")}

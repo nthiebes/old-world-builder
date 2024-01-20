@@ -136,7 +136,7 @@ export const Print = () => {
               {list.characters.map((unit) => (
                 <li key={unit.id}>
                   <h3>
-                    {language === "de" ? unit.name_de : unit.name_en}
+                    {unit[`name_${language}`] || unit.name_en}
                     {!isShowList && (
                       <span className="print__points">
                         [{getUnitPoints(unit)}{" "}
@@ -172,7 +172,7 @@ export const Print = () => {
                 {list.lords.map((unit) => (
                   <li key={unit.id}>
                     <h3>
-                      {language === "de" ? unit.name_de : unit.name_en}
+                      {unit[`name_${language}`] || unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
                           [{getUnitPoints(unit)}{" "}
@@ -207,7 +207,7 @@ export const Print = () => {
                 {list.heroes.map((unit) => (
                   <li key={unit.id}>
                     <h3>
-                      {language === "de" ? unit.name_de : unit.name_en}
+                      {unit[`name_${language}`] || unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
                           [{getUnitPoints(unit)}{" "}
@@ -249,7 +249,7 @@ export const Print = () => {
                       {`${unit.strength || unit.minimum} `}
                     </span>
                   ) : null}
-                  {language === "de" ? unit.name_de : unit.name_en}
+                  {unit[`name_${language}`] || unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
                       [{getUnitPoints(unit)}{" "}
@@ -289,7 +289,7 @@ export const Print = () => {
                       {`${unit.strength || unit.minimum} `}
                     </span>
                   ) : null}
-                  {language === "de" ? unit.name_de : unit.name_en}
+                  {unit[`name_${language}`] || unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
                       [{getUnitPoints(unit)}{" "}
@@ -329,7 +329,7 @@ export const Print = () => {
                       {`${unit.strength || unit.minimum} `}
                     </span>
                   ) : null}
-                  {language === "de" ? unit.name_de : unit.name_en}
+                  {unit[`name_${language}`] || unit.name_en}
                   {!isShowList && (
                     <span className="print__points">
                       [{getUnitPoints(unit)}{" "}
@@ -371,7 +371,7 @@ export const Print = () => {
                           {`${unit.strength || unit.minimum} `}
                         </span>
                       ) : null}
-                      {language === "de" ? unit.name_de : unit.name_en}
+                      {unit[`name_${language}`] || unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
                           [{getUnitPoints(unit)}{" "}
@@ -411,7 +411,7 @@ export const Print = () => {
                           {`${unit.strength || unit.minimum} `}
                         </span>
                       ) : null}
-                      {language === "de" ? unit.name_de : unit.name_en}
+                      {unit[`name_${language}`] || unit.name_en}
                       {!isShowList && (
                         <span className="print__points">
                           [{getUnitPoints(unit)}{" "}
