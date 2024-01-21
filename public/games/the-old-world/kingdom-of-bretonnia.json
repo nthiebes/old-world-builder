@@ -1159,23 +1159,106 @@
       "name_es": "Yeoman Guard",
       "name_fr": "Yeoman Guard",
       "id": "yeoman-guard",
-      "points": 1,
-      "minimum": 0,
+      "points": 5,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "Warden (champion)",
+          "name_de": "Warden (champion)",
+          "name_es": "Warden (champion)",
+          "name_fr": "Warden (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["banner", "triptych"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Grail Monk",
+          "name_de": "Grail Monk",
+          "name_es": "Grail Monk",
+          "name_fr": "Grail Monk",
+          "points": 7,
+          "magic": {
+            "types": ["triptych"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberts",
+          "name_de": "Hand weapons, Halberts",
+          "name_es": "Hand weapons, Halberts",
+          "name_fr": "Hand weapons, Halberts",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Polearms",
+          "name_de": "Hand weapons, Polearms",
+          "name_es": "Hand weapons, Polearms",
+          "name_fr": "Hand weapons, Polearms",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapons, Thrusting spears",
+          "name_de": "Hand weapons, Thrusting spears",
+          "name_es": "Hand weapons, Thrusting spears",
+          "name_fr": "Hand weapons, Thrusting spears",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour, Shields",
+          "name_de": "Light armour, Shields",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Light armour, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
+        "name_de": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
+        "name_es": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
+        "name_fr": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -1680,23 +1763,166 @@
       "name_es": "Border Princes Brigands",
       "name_fr": "Border Princes Brigands",
       "id": "border-princes-brigands",
-      "points": 1,
-      "minimum": 0,
+      "points": 4,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Desperado (champion)",
+          "name_de": "Desperado (champion)",
+          "name_es": "Desperado (champion)",
+          "name_fr": "Desperado (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
+          "points": 1,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pistols",
+          "name_de": "Pistols",
+          "name_es": "Pistols",
+          "name_fr": "Pistols",
+          "points": 2,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Blunderbusses",
+          "name_de": "Blunderbusses",
+          "name_es": "Blunderbusses",
+          "name_fr": "Blunderbusses",
+          "points": 4,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Crossbows",
+          "name_de": "Crossbows",
+          "name_es": "Crossbows",
+          "name_fr": "Crossbows",
+          "points": 3,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
+          "name_de": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
+          "name_es": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
+          "name_fr": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
+          "points": 0,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
+          "name_de": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
+          "name_es": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
+          "name_fr": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
+          "points": 0,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers (if Skirmisher)",
+          "name_de": "Ambushers (if Skirmisher)",
+          "name_es": "Ambushers (if Skirmisher)",
+          "name_fr": "Ambushers (if Skirmisher)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts (if Skirmishers)",
+          "name_de": "Scouts (if Skirmishers)",
+          "name_es": "Scouts (if Skirmishers)",
+          "name_fr": "Scouts (if Skirmishers)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_de": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_es": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_fr": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -1710,23 +1936,43 @@
       "name_es": "Border Princes Bombard",
       "name_fr": "Border Princes Bombard",
       "id": "border-princes-bombard",
-      "points": 1,
+      "points": 100,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Levies, Skirmishers",
+        "name_de": "Levies, Skirmishers",
+        "name_es": "Levies, Skirmishers",
+        "name_fr": "Levies, Skirmishers"
       },
       "armyComposition": {
         "bretonnian-exiles": {
