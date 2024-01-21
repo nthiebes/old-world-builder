@@ -93,7 +93,7 @@ const rules = {
     rare: {
       maxPercent: 33,
     },
-    allies: {
+    mercenaries: {
       maxPercent: 25,
       armies: ["empire-of-man"],
       units: "Empire Knights & Empire Inner Circle Knights ...",
@@ -108,7 +108,7 @@ const rules = {
     rare: {
       maxPercent: 33,
     },
-    allies: {
+    mercenaries: {
       maxPercent: 25,
       armies: ["empire-of-man"],
       units: "Free Company Militia & Empire Archers ...",

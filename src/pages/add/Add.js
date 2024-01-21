@@ -17,44 +17,65 @@ const getArmyData = ({ data, armyComposition }) => {
   // Remove units that don't belong to the army composition
   const characters = data.characters.filter(
     (unit) =>
-      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
   );
   const core = data.core.filter(
     (unit) =>
-      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
   );
   const special = data.special.filter(
     (unit) =>
-      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
   );
   const rare = data.rare.filter(
     (unit) =>
-      unit?.armyComposition?.list === armyComposition || !unit.armyComposition
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
   );
 
   // Get units moving category
   const specialToCore = special.filter(
-    (unit) => unit?.armyComposition?.category === "core"
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "core"
   );
   const rareToCore = rare.filter(
-    (unit) => unit?.armyComposition?.category === "rare"
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
   );
   const rareToSpecial = rare.filter(
-    (unit) => unit?.armyComposition?.category === "special"
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "special"
+  );
+  const specialToRare = special.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
   );
 
   // Remove units from old category
   const allCore = [...core, ...specialToCore, ...rareToCore].filter(
     (unit) =>
-      unit?.armyComposition?.category === "core" || !unit.armyComposition
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "core") ||
+      !unit.armyComposition
   );
   const allSpecial = [...special, ...rareToSpecial].filter(
     (unit) =>
-      unit?.armyComposition?.category === "special" || !unit.armyComposition
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "special") ||
+      !unit.armyComposition
   );
-  const allRare = rare.filter(
+  const allRare = [...rare, ...specialToRare].filter(
     (unit) =>
-      unit?.armyComposition?.category === "rare" || !unit.armyComposition
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "rare") ||
+      !unit.armyComposition
   );
 
   return {

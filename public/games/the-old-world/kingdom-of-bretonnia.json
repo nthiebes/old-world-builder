@@ -112,8 +112,9 @@
         }
       ],
       "armyComposition": {
-        "list": "kingdom-of-bretonnia",
-        "category": "characters"
+        "kingdom-of-bretonnia": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -324,8 +325,9 @@
       ],
       "lores": ["battle-magic", "elementalism", "illusion"],
       "armyComposition": {
-        "list": "kingdom-of-bretonnia",
-        "category": "characters"
+        "kingdom-of-bretonnia": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -764,8 +766,9 @@
       ],
       "specialRules": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
       "armyComposition": {
-        "list": "bretonnian-exiles",
-        "category": "characters"
+        "bretonnian-exiles": {
+          "category": "characters"
+        }
       }
     }
   ],
@@ -1121,6 +1124,36 @@
       ],
       "options": [],
       "mounts": []
+    },
+    {
+      "name_en": "Yeoman Guard",
+      "name_de": "Yeoman Guard",
+      "name_es": "Yeoman Guard",
+      "name_fr": "Yeoman Guard",
+      "id": "yeoman-guard",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "bretonnian-exiles": {
+          "category": "core"
+        }
+      }
     }
   ],
   "special": [
@@ -1189,7 +1222,15 @@
           "maxPoints": 0,
           "mutuallyExclusive": true
         }
-      ]
+      ],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "special"
+        },
+        "bretonnian-exiles": {
+          "category": "rare"
+        }
+      }
     },
     {
       "name_en": "Pegasus Knights",
@@ -1331,8 +1372,12 @@
       ],
       "mounts": [],
       "armyComposition": {
-        "list": "bretonnian-exiles",
-        "category": "core"
+        "kingdom-of-bretonnia": {
+          "category": "special"
+        },
+        "bretonnian-exiles": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1509,7 +1554,12 @@
           "maxPoints": 0,
           "mutuallyExclusive": true
         }
-      ]
+      ],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "rare"
+        }
+      }
     },
     {
       "name_en": "Field Trebuchet (0-1 per 1000 points)",
@@ -1531,6 +1581,66 @@
       "armor": [],
       "options": [],
       "mounts": []
+    },
+    {
+      "name_en": "Border Princes Brigands",
+      "name_de": "Border Princes Brigands",
+      "name_es": "Border Princes Brigands",
+      "name_fr": "Border Princes Brigands",
+      "id": "border-princes-brigands",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "bretonnian-exiles": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Border Princes Bombard",
+      "name_de": "Border Princes Bombard",
+      "name_es": "Border Princes Bombard",
+      "name_fr": "Border Princes Bombard",
+      "id": "border-princes-bombard",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "bretonnian-exiles": {
+          "category": "rare"
+        }
+      }
     }
   ],
   "mercenaries": [],
