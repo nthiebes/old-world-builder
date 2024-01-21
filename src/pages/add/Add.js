@@ -14,6 +14,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
 
 const getArmyData = ({ data, armyComposition }) => {
+  // Remove units that don't belong to the army composition
   const characters = data.characters.filter(
     (unit) =>
       unit?.armyComposition?.list === armyComposition || !unit.armyComposition
@@ -30,6 +31,8 @@ const getArmyData = ({ data, armyComposition }) => {
     (unit) =>
       unit?.armyComposition?.list === armyComposition || !unit.armyComposition
   );
+
+  // Get units moving category
   const specialToCore = special.filter(
     (unit) => unit?.armyComposition?.category === "core"
   );
@@ -40,13 +43,27 @@ const getArmyData = ({ data, armyComposition }) => {
     (unit) => unit?.armyComposition?.category === "special"
   );
 
+  // Remove units from old category
+  const allCore = [...core, ...specialToCore, ...rareToCore].filter(
+    (unit) =>
+      unit?.armyComposition?.category === "core" || !unit.armyComposition
+  );
+  const allSpecial = [...special, ...rareToSpecial].filter(
+    (unit) =>
+      unit?.armyComposition?.category === "special" || !unit.armyComposition
+  );
+  const allRare = rare.filter(
+    (unit) =>
+      unit?.armyComposition?.category === "rare" || !unit.armyComposition
+  );
+
   return {
     lords: updateIds(data.lords),
     heroes: updateIds(data.heroes),
     characters: updateIds(characters),
-    core: updateIds([...core, ...specialToCore, ...rareToCore]),
-    special: updateIds([...special, ...rareToSpecial]),
-    rare: updateIds(rare),
+    core: updateIds(allCore),
+    special: updateIds(allSpecial),
+    rare: updateIds(allRare),
     mercenaries: updateIds(data.mercenaries),
     allies: updateIds(data.allies),
   };
@@ -86,7 +103,7 @@ export const Add = ({ isMobile }) => {
         onSuccess: (data) => {
           const armyData = getArmyData({
             data,
-            armyComposition: list.armyComposition,
+            armyComposition: list.armyComposition || list.army,
           });
 
           dispatch(setArmy(armyData));

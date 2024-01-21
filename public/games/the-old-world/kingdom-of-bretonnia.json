@@ -110,7 +110,11 @@
           "maxPoints": 0,
           "mutuallyExclusive": true
         }
-      ]
+      ],
+      "armyComposition": {
+        "list": "kingdom-of-bretonnia",
+        "category": "characters"
+      }
     },
     {
       "name_en": "Baron (0-1* per 1000 points)",
@@ -318,7 +322,11 @@
           "mutuallyExclusive": false
         }
       ],
-      "lores": ["battle-magic", "elementalism", "illusion"]
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "armyComposition": {
+        "list": "kingdom-of-bretonnia",
+        "category": "characters"
+      }
     },
     {
       "name_en": "Paladin",
@@ -611,50 +619,6 @@
       ]
     },
     {
-      "name_en": "Arcane Journal 1 only",
-      "name_de": "Arcane Journal 1 only",
-      "id": "arcane-journal-1-only",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": "",
-      "armyComposition": {
-        "list": "errantry-crusades",
-        "category": "characters"
-      }
-    },
-    {
-      "name_en": "Arcane Journal 2 only",
-      "name_de": "Arcane Journal 2 only",
-      "id": "arcane-journal-2-only",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": "",
-      "armyComposition": {
-        "list": "bretonnian-exiles",
-        "category": "characters"
-      }
-    },
-    {
       "name_en": "The Green Knight",
       "name_de": "The Green Knight",
       "name_es": "The Green Knight",
@@ -798,7 +762,11 @@
         "illusion",
         "necromancy"
       ],
-      "specialRules": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist"
+      "specialRules": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
+      "armyComposition": {
+        "list": "bretonnian-exiles",
+        "category": "characters"
+      }
     }
   ],
   "core": [
@@ -1361,7 +1329,11 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "armyComposition": {
+        "list": "bretonnian-exiles",
+        "category": "core"
+      }
     },
     {
       "name_en": "Squires",
@@ -1469,28 +1441,6 @@
       ],
       "options": [],
       "mounts": []
-    },
-    {
-      "name_en": "Core in arcane journal 1",
-      "name_de": "Core in arcane journal 1",
-      "id": "core-in-arcane-journal-1",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": "",
-      "armyComposition": {
-        "list": "errantry-crusades",
-        "category": "core"
-      }
     }
   ],
   "rare": [
