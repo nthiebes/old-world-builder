@@ -486,9 +486,13 @@ export const Magic = ({ isMobile }) => {
               !command &&
               unit.items[group].types.includes(item.type)
           );
-          const itemGroupItems = hasCommandMagicItems
-            ? commandMagicItems
-            : magicItems;
+          const itemGroupItems = (
+            hasCommandMagicItems ? commandMagicItems : magicItems
+          ).filter(
+            (item) =>
+              item?.armyComposition === list?.armyComposition ||
+              !item.armyComposition
+          );
 
           if (itemGroupItems.length > 0) {
             prevItemType = null;

@@ -1,24 +1,170 @@
 const rules = {
-  lords: { maxPercent: 25 },
-  heroes: { maxPercent: 25 },
-  characters: { maxPercent: 50 },
-  core: { minPercent: 25 },
-  special: {
-    maxPercent: 50,
-    maxSame: 3,
-    maxSameLarge: 6,
+  "grand-army": {
+    lords: { maxPercent: 25 },
+    heroes: { maxPercent: 25 },
+    characters: { maxPercent: 50 },
+    core: { minPercent: 25 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
   },
-  rare: {
-    maxPercent: 25,
-    maxSame: 2,
-    maxSameLarge: 4,
+  "kingdom-of-bretonnia": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          id: "duke",
+          min: 0,
+          max: 1,
+        },
+        {
+          id: "baron",
+          min: 0,
+          max: 1,
+          perPoints: 1000,
+        },
+        {
+          id: "prophetees",
+          min: 0,
+          max: 1,
+          perPoints: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["knights-of-the-realm", "mounted-knights-of-the-realm"],
+          min: 1,
+        },
+        {
+          ids: ["men-at-arms", "peasant-bowmen"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          id: "battle-pilgrims",
+          min: 0,
+          max: 2,
+          perPoints: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          id: "field-trebuchet",
+          min: 0,
+          max: 1,
+          perPoints: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: {
+      maxPercent: 25,
+      armies: [
+        "errantry-crusades",
+        "bretonnian-exiles",
+        "dwarfen-mountain-holds",
+        "empire-of-man",
+        "high-elf-realms",
+        "wood-elf-realms",
+      ],
+    },
   },
-  mercenaries: { maxPercent: 20 },
-  allies: { maxPercent: 25 },
+  "errantry-crusades": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 33 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 33,
+    },
+    mercenaries: {
+      maxPercent: 25,
+      armies: ["empire-of-man"],
+      units: "Empire Knights & Empire Inner Circle Knights ...",
+    },
+  },
+  "bretonnian-exiles": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 25 },
+    special: {
+      maxPercent: 33,
+    },
+    rare: {
+      maxPercent: 33,
+    },
+    mercenaries: {
+      maxPercent: 25,
+      armies: ["empire-of-man"],
+      units: "Free Company Militia & Empire Archers ...",
+    },
+  },
+  "tomb-kings-of-khemri": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 25 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 20,
+    },
+    allies: {
+      maxPercent: 25,
+    },
+  },
+  "nehekharan-royal-hosts": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 33 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+  },
+  "mortuary-cults": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 33 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 33,
+    },
+  },
 };
 
-export const getMaxPercentData = ({ type, armyPoints, points }) => {
-  const maxPercent = rules[type].maxPercent;
+export const getMaxPercentData = ({
+  type,
+  armyPoints,
+  points,
+  armyComposition,
+}) => {
+  const categoryData = rules[armyComposition || "grand-army"][type];
+
+  if (!categoryData) {
+    return null;
+  }
+
+  const maxPercent = categoryData.maxPercent;
   const maxPoints = (armyPoints / 100) * maxPercent;
 
   return {
@@ -28,8 +174,13 @@ export const getMaxPercentData = ({ type, armyPoints, points }) => {
   };
 };
 
-export const getMinPercentData = ({ type, armyPoints, points }) => {
-  const minPercent = rules[type].minPercent;
+export const getMinPercentData = ({
+  type,
+  armyPoints,
+  points,
+  armyComposition,
+}) => {
+  const minPercent = rules[armyComposition || "grand-army"][type].minPercent;
   const minPoints = (armyPoints / 100) * minPercent;
 
   return {

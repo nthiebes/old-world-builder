@@ -14,6 +14,7 @@ import warhammerFantasy from "../../assets/warhammer-fantasy.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
 
 import "./NewList.css";
+import { nameMap } from "../magic";
 
 export const NewList = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -28,7 +29,10 @@ export const NewList = ({ isMobile }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
+  const [armyComposition, setArmyComposition] = useState();
   const [redirect, setRedirect] = useState(null);
+  const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
+  const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
   const createList = () => {
     const newId = getRandomId();
     const newList = {
@@ -58,6 +62,7 @@ export const NewList = ({ isMobile }) => {
         mercenaries: [],
         allies: [],
         id: newId,
+        armyComposition: armyComposition,
       },
     };
     const newLists = [...lists, newList[game]];
@@ -75,6 +80,10 @@ export const NewList = ({ isMobile }) => {
   };
   const handleArmyChange = (value) => {
     setArmy(value);
+    setArmyComposition(value);
+  };
+  const handleArcaneJournalChange = (value) => {
+    setArmyComposition(value);
   };
   const handlePointsChange = (event) => {
     setPoints(event.target.value);
@@ -177,12 +186,38 @@ export const NewList = ({ isMobile }) => {
           </label>
           <Select
             id="army"
-            options={gameSystems.filter(({ id }) => id === game)[0].armies}
+            options={armies}
             onChange={handleArmyChange}
             selected="empire-of-man"
             spaceBottom
             required
           />
+          {journalArmies ? (
+            <>
+              <label htmlFor="arcane-journal">
+                <FormattedMessage id="new.armyComposition" />
+              </label>
+              <Select
+                id="arcane-journal"
+                options={[
+                  {
+                    id: army,
+                    name_en: intl.formatMessage({ id: "new.grandArmy" }),
+                  },
+                  ...journalArmies.map((journalArmy) => ({
+                    id: journalArmy,
+                    name_en: nameMap[journalArmy].name_en,
+                    name_de: nameMap[journalArmy].name_de,
+                    name_es: nameMap[journalArmy].name_es,
+                    name_fr: nameMap[journalArmy].name_fr,
+                  })),
+                ]}
+                onChange={handleArcaneJournalChange}
+                selected={army}
+                spaceBottom
+              />
+            </>
+          ) : null}
           <Button centered icon="add-list" submitButton spaceBottom>
             <FormattedMessage id="new.create" />
           </Button>

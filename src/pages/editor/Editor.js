@@ -85,46 +85,64 @@ export const Editor = ({ isMobile }) => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
-  const lordsData = getMaxPercentData({
-    type: "lords",
-    armyPoints: list.points,
-    points: lordsPoints,
-  });
-  const heroesData = getMaxPercentData({
-    type: "heroes",
-    armyPoints: list.points,
-    points: heroesPoints,
-  });
-  const charactersData = getMaxPercentData({
-    type: "characters",
-    armyPoints: list.points,
-    points: charactersPoints,
-  });
+  const lordsData =
+    list.lords &&
+    getMaxPercentData({
+      type: "lords",
+      armyPoints: list.points,
+      points: lordsPoints,
+      armyComposition: list.armyComposition,
+    });
+  const heroesData =
+    list.lords &&
+    getMaxPercentData({
+      type: "heroes",
+      armyPoints: list.points,
+      points: heroesPoints,
+      armyComposition: list.armyComposition,
+    });
+  const charactersData =
+    list.characters &&
+    getMaxPercentData({
+      type: "characters",
+      armyPoints: list.points,
+      points: charactersPoints,
+      armyComposition: list.armyComposition,
+    });
   const coreData = getMinPercentData({
     type: "core",
     armyPoints: list.points,
     points: corePoints,
+    armyComposition: list.armyComposition,
   });
   const specialData = getMaxPercentData({
     type: "special",
     armyPoints: list.points,
     points: specialPoints,
+    armyComposition: list.armyComposition,
   });
   const rareData = getMaxPercentData({
     type: "rare",
     armyPoints: list.points,
     points: rarePoints,
+    armyComposition: list.armyComposition,
   });
-  const mercenariesData = getMaxPercentData({
-    type: "mercenaries",
-    armyPoints: list.points,
-    points: mercenariesPoints,
-  });
-  const alliesData = getMaxPercentData({
-    type: "allies",
-    armyPoints: list.points,
-    points: alliesPoints,
-  });
+  const mercenariesData =
+    list.mercenaries &&
+    getMaxPercentData({
+      type: "mercenaries",
+      armyPoints: list.points,
+      points: mercenariesPoints,
+      armyComposition: list.armyComposition,
+    });
+  const alliesData =
+    list.allies &&
+    getMaxPercentData({
+      type: "allies",
+      armyPoints: list.points,
+      points: alliesPoints,
+      armyComposition: list.armyComposition,
+    });
   const moreButtons = [
     {
       name: intl.formatMessage({
@@ -537,7 +555,7 @@ export const Editor = ({ isMobile }) => {
           </Button>
         </section>
 
-        {list.mercenaries && (
+        {list.mercenaries && mercenariesData && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -593,7 +611,7 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.allies && (
+        {list.allies && alliesData && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>

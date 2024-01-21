@@ -1,6 +1,7 @@
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import gameSystems from "../../assets/armies.json";
+import { nameMap } from "../magic";
 
 const getUnitsString = ({
   units,
@@ -65,6 +66,12 @@ export const getListAsText = ({
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
+  const armyCompositionName = nameMap[list.armyComposition]
+    ? nameMap[list.armyComposition][`name_${language}`]
+    : "";
+  const armyCompositionString = armyCompositionName
+    ? `, ${armyCompositionName}`
+    : "";
   let listString = "";
 
   // HEADER
@@ -74,7 +81,7 @@ export const getListAsText = ({
 ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}
+${game.name}, ${armyName}${armyCompositionString}
 ===
 
 `;

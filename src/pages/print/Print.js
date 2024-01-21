@@ -7,6 +7,7 @@ import { Button } from "../../components/button";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
+import { nameMap } from "../magic";
 import gameSystems from "../../assets/armies.json";
 
 import "./Print.css";
@@ -38,6 +39,9 @@ export const Print = () => {
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
+  const armyCompositionName = nameMap[list.armyComposition]
+    ? nameMap[list.armyComposition][`name_${language}`]
+    : "";
   const handlePrintClick = () => {
     setIsPrinting(true);
     document.title = `${list.name} - Old World Builder`;
@@ -120,6 +124,7 @@ export const Print = () => {
         </h1>
         <p className="print__subheader">
           {game.name}, {armyName}
+          {armyCompositionName ? `, ${armyCompositionName}` : ""}
         </p>
 
         {list.game === "the-old-world" ? (

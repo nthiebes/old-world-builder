@@ -13,6 +13,88 @@ import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
 
+const getArmyData = ({ data, armyComposition }) => {
+  // Remove units that don't belong to the army composition
+  const characters = data.characters.filter(
+    (unit) =>
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
+  );
+  const core = data.core.filter(
+    (unit) =>
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
+  );
+  const special = data.special.filter(
+    (unit) =>
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
+  );
+  const rare = data.rare.filter(
+    (unit) =>
+      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+      !unit.armyComposition
+  );
+
+  // Get units moving category
+  const specialToCore = special.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "core"
+  );
+  const rareToCore = rare.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
+  );
+  const rareToSpecial = rare.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "special"
+  );
+  const coreToSpecial = core.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "special"
+  );
+  const specialToRare = special.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
+  );
+
+  // Remove units from old category
+  const allCore = [...core, ...specialToCore, ...rareToCore].filter(
+    (unit) =>
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "core") ||
+      !unit.armyComposition
+  );
+  const allSpecial = [...special, ...coreToSpecial, ...rareToSpecial].filter(
+    (unit) =>
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "special") ||
+      !unit.armyComposition
+  );
+  const allRare = [...rare, ...specialToRare].filter(
+    (unit) =>
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "rare") ||
+      !unit.armyComposition
+  );
+
+  return {
+    lords: updateIds(data.lords),
+    heroes: updateIds(data.heroes),
+    characters: updateIds(characters),
+    core: updateIds(allCore),
+    special: updateIds(allSpecial),
+    rare: updateIds(allRare),
+    mercenaries: updateIds(data.mercenaries),
+    allies: updateIds(data.allies),
+  };
+};
+
 export const Add = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type } = useParams();
@@ -45,18 +127,12 @@ export const Add = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
-          dispatch(
-            setArmy({
-              lords: updateIds(data.lords),
-              heroes: updateIds(data.heroes),
-              characters: updateIds(data.characters),
-              core: updateIds(data.core),
-              special: updateIds(data.special),
-              rare: updateIds(data.rare),
-              mercenaries: updateIds(data.mercenaries),
-              allies: updateIds(data.allies),
-            })
-          );
+          const armyData = getArmyData({
+            data,
+            armyComposition: list.armyComposition || list.army,
+          });
+
+          dispatch(setArmy(armyData));
         },
       });
   }, [list, army, dispatch]);
