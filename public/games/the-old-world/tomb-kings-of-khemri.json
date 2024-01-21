@@ -3,6 +3,7 @@
     {
       "name_en": "Tomb King",
       "name_de": "Tomb King",
+      "name_fr": "Roi des Tombes",
       "id": "tomb-king",
       "points": 160,
       "minimum": 0,
@@ -14,6 +15,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -21,6 +23,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -28,6 +31,7 @@
         {
           "name_en": "Flail",
           "name_de": "Flail",
+          "name_fr": "Fléau",
           "points": 3,
           "perModel": true,
           "active": false
@@ -35,6 +39,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -42,6 +47,7 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3,
           "perModel": true,
           "active": false
@@ -49,6 +55,7 @@
         {
           "name_en": "Cavalry Spear (if appropriately mounted)",
           "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": true,
           "active": false
@@ -58,6 +65,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -67,6 +75,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "active": false
@@ -74,6 +83,7 @@
         {
           "name_en": "(Warsphinx only) May take up to two additional Tomb Guard Crew",
           "name_de": "(Warsphinx only) May take up to two additional Tomb Guard Crew",
+          "name_fr": "(Sphinx de guerre seulement) Peut ajouter jusqu'à 2 Gardiens des Tombes supplémentaires",
           "points": 10,
           "perModel": true,
           "active": false,
@@ -84,6 +94,7 @@
         {
           "name_en": "(Warsphinx only) May take Envenomed Sting",
           "name_de": "(Warsphinx only) May take Envenomed Sting",
+          "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Dard venimeux",
           "points": 5,
           "perModel": true,
           "active": false
@@ -91,6 +102,7 @@
         {
           "name_en": "(Warsphinx only) May take Fiery Roar",
           "name_de": "(Warsphinx only) May take Fiery Roar",
+          "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Rugissement Ardent",
           "points": 20,
           "perModel": true,
           "active": false
@@ -100,30 +112,35 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Skeletal Steed",
           "name_de": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Skeleton Chariot",
           "name_de": "Skeleton Chariot",
+          "name_fr": "Char Squelette",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Necrolith Bone Dragon",
           "name_de": "Necrolith Bone Dragon",
+          "name_fr": "Dragon d'Os Necrolithe",
           "points": 195,
           "active": false
         },
         {
           "name_en": "Khemrian Warsphinx",
           "name_de": "Khemrian Warsphinx",
+          "name_fr": "Sphinx de Guerre de Khemri",
           "points": 175,
           "active": false
         }
@@ -132,6 +149,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -153,6 +171,7 @@
     {
       "name_en": "Tomb Prince",
       "name_de": "Tomb Prince",
+      "name_fr": "Prince des Tombes",
       "id": "tomb-prince",
       "points": 90,
       "minimum": 0,
@@ -164,6 +183,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -171,6 +191,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -178,6 +199,7 @@
         {
           "name_en": "Flail",
           "name_de": "Flail",
+          "name_fr": "Fléau",
           "points": 3,
           "perModel": true,
           "active": false
@@ -185,6 +207,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -192,6 +215,7 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3,
           "perModel": true,
           "active": false
@@ -199,6 +223,7 @@
         {
           "name_en": "Cavalry Spear (if appropriately mounted)",
           "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": true,
           "active": false
@@ -208,6 +233,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -217,6 +243,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "active": false
@@ -226,18 +253,21 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Skeletal Steed",
           "name_de": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Skeleton Chariot",
           "name_de": "Skeleton Chariot",
+          "name_fr": "Char Squelette",
           "points": 35,
           "active": false
         }
@@ -246,6 +276,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -267,6 +298,7 @@
     {
       "name_en": "Royal Herald",
       "name_de": "Royal Herald",
+      "name_fr": "Herault Royal",
       "id": "royal-herald",
       "points": 60,
       "minimum": 0,
@@ -278,6 +310,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": false,
           "active": true
@@ -285,6 +318,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": false,
           "active": false
@@ -292,6 +326,7 @@
         {
           "name_en": "Flail",
           "name_de": "Flail",
+          "name_fr": "Fléau",
           "points": 3,
           "perModel": false,
           "active": false
@@ -299,6 +334,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": false,
           "active": false
@@ -306,6 +342,7 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3,
           "perModel": false,
           "active": false
@@ -313,6 +350,7 @@
         {
           "name_en": "Cavalry Spear (if appropriately mounted)",
           "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": false,
           "active": false
@@ -322,6 +360,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": false,
           "active": true
@@ -331,6 +370,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": false,
           "active": false
@@ -338,6 +378,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "perModel": false,
           "stackable": false,
@@ -349,18 +390,21 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Skeletal Steed",
           "name_de": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Skeletal Chariot",
           "name_de": "Skeletal Chariot",
+          "name_fr": "Char Squelette",
           "points": 35,
           "active": false
         }
@@ -369,6 +413,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "armor",
@@ -383,6 +428,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magische Standarte (AST)",
+          "name_fr": "Banniere Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -393,6 +439,7 @@
     {
       "name_en": "High Priest",
       "name_de": "High Priest",
+      "name_fr": "Grand Prêtre",
       "id": "high-priest",
       "points": 140,
       "minimum": 0,
@@ -404,6 +451,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -414,6 +462,7 @@
         {
           "name_en": "May be a Level 4 Wizard",
           "name_de": "May be a Level 4 Wizard",
+          "name_fr": "Peut devenir un Sorcier Niveau 4",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -425,18 +474,21 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Skeletal Steed",
           "name_de": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Necrolith Bone Dragon",
           "name_de": "Necrolith Bone Dragon",
+          "name_fr": "Dragon d'Os Necrolithe",
           "points": 195,
           "active": false
         }
@@ -445,6 +497,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -467,6 +520,7 @@
     {
       "name_en": "Mortuary Priest",
       "name_de": "Mortuary Priest",
+      "name_fr": "Prêtre Mortuaire",
       "id": "mortuary-priest",
       "points": 55,
       "minimum": 0,
@@ -478,6 +532,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -488,6 +543,7 @@
         {
           "name_en": "Be a Level 2 Wizard",
           "name_de": "Be a Level 2 Wizard",
+          "name_fr": "Peut devenir un Sorcier Niveau 2",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -499,12 +555,14 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Skeletal Steed",
           "name_de": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
           "points": 12,
           "active": false
         }
@@ -513,6 +571,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -535,6 +594,7 @@
     {
       "name_en": "Necrotect",
       "name_de": "Necrotect",
+      "name_fr": "Nécrotecte",
       "id": "necrotect",
       "points": 55,
       "minimum": 0,
@@ -546,6 +606,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -553,6 +614,7 @@
         {
           "name_en": "Whip",
           "name_de": "Whip",
+          "name_fr": "Fouet",
           "points": 0,
           "perModel": true,
           "active": true
@@ -562,6 +624,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -573,6 +636,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -596,6 +660,7 @@
     {
       "name_en": "Skeleton Warriors",
       "name_de": "Skeleton Warriors",
+      "name_fr": "Guerriers Squelettes",
       "id": "skeleton-warriors",
       "points": 4,
       "minimum": 10,
@@ -605,6 +670,7 @@
         {
           "name_en": "Master of Arms (Champion)",
           "name_de": "Master of Arms (Champion)",
+          "name_fr": "Maître d'armes (Champion)",
           "points": 5,
           "magic": {
             "types": [
@@ -620,6 +686,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -629,6 +696,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -640,6 +708,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -647,6 +716,7 @@
         {
           "name_en": "Thrusting Spears",
           "name_de": "Thrusting Spears",
+          "name_fr": "Lances d'Infanterie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -656,6 +726,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armures légères",
           "points": 1,
           "perModel": true,
           "active": false
@@ -665,6 +736,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -675,6 +747,7 @@
         {
           "name_en": "Nehekharan Phalanx (one per 1000pts)",
           "name_de": "Nehekharan Phalanx",
+          "name_fr": "Phalange de Nehekhara (une unité par tranche de 1000pts)",
           "points": 10,
           "perModel": false,
           "stackable": false,
@@ -691,6 +764,7 @@
     {
       "name_en": "Skeleton Archers",
       "name_de": "Skeleton Archers",
+      "name_fr": "Archers Squelettes",
       "id": "skeleton-archers",
       "points": 5,
       "minimum": 10,
@@ -701,6 +775,7 @@
         {
           "name_en": "Master of Arrows (Champion)",
           "name_de": "Master of Arrows (Champion)",
+          "name_fr": "Maître des Flèches (Champion)",
           "points": 5,
           "magic": {
             "types": [],
@@ -710,6 +785,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": [],
@@ -719,6 +795,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -730,6 +807,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -737,6 +815,7 @@
         {
           "name_en": "War Bows",
           "name_de": "War Bows",
+          "name_fr": "Arcs de Guerre",
           "points": 0,
           "perModel": true,
           "active": true
@@ -746,6 +825,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -761,6 +841,7 @@
     {
       "name_en": "Tomb Guard",
       "name_de": "Tomb Guard",
+      "name_fr": "Gardien des Tombes",
       "id": "tomb-guard",
       "points": 10,
       "minimum": 5,
@@ -770,6 +851,7 @@
         {
           "name_en": "Tomb Captain (Champion)",
           "name_de": "Tomb Captain (Champion)",
+          "name_fr": "Capitaine des Tombes (Champion)",
           "points": 6,
           "magic": {
             "types": [
@@ -785,6 +867,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -794,6 +877,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -805,6 +889,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -812,6 +897,7 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -821,6 +907,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -830,6 +917,7 @@
         {
           "name_en": "Have the Drilled Special Rule (one per 1000pts)",
           "name_de": "Have the Drilled Special Rule (one per 1000pts)",
+          "name_fr": "Avoir la règle Bien Entrainés (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -839,6 +927,7 @@
         {
           "name_en": "Have the Nehekharan Phalanx Special Rule (one per 1000pts)",
           "name_de": "Have the Nehekharan Phalanx Special Rule (one per 1000pts)",
+          "name_fr": "Avoir la règle Phalange de Nehekhara (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -855,6 +944,7 @@
     {
       "name_en": "Sepulchral Stalkers",
       "name_de": "Sepulchral Stalkers",
+      "name_fr": "Rôdeurs Sépulcraux",
       "id": "sepulchral-stalkers",
       "points": 52,
       "minimum": 2,
@@ -864,6 +954,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -871,6 +962,7 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -878,6 +970,7 @@
         {
           "name_en": "Writhing Tails",
           "name_de": "Writhing Tails",
+          "name_fr": "Queues Sinueuses",
           "points": 0,
           "perModel": true,
           "active": true
@@ -885,6 +978,7 @@
         {
           "name_en": "Petrifying Gaze",
           "name_de": "Petrifying Gaze",
+          "name_fr": "Regard pétrificateur",
           "points": 0,
           "perModel": true,
           "active": true
@@ -894,6 +988,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -903,6 +998,7 @@
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -919,6 +1015,7 @@
     {
       "name_en": "Skeleton Skirmishers",
       "name_de": "Skeleton Skirmishers",
+      "name_fr": "Tirailleurs Squelettes",
       "id": "skeleton-skirmishers",
       "points": 4,
       "minimum": 5,
@@ -928,6 +1025,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -935,6 +1033,7 @@
         {
           "name_en": "Warbows",
           "name_de": "Warbows",
+          "name_fr": "Arcs de guerre",
           "points": 1,
           "perModel": true,
           "active": false
@@ -945,6 +1044,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -954,6 +1054,7 @@
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -970,6 +1071,7 @@
     {
       "name_en": "Skeleton Chariots",
       "name_de": "Skeleton Chariots",
+      "name_fr": "Chars Squelettes",
       "id": "skeleton-chariots",
       "points": 43,
       "minimum": 1,
@@ -978,6 +1080,7 @@
         {
           "name_en": "Master Charioteer (Champion)",
           "name_de": "Master Charioteer (Champion)",
+          "name_fr": "Maïtre Aurige (Champion)",
           "points": 6,
           "magic": {
             "types": [
@@ -993,6 +1096,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1002,6 +1106,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1013,6 +1118,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1020,6 +1126,7 @@
         {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
+          "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1027,6 +1134,7 @@
         {
           "name_en": "Warbows",
           "name_de": "Warbows",
+          "name_fr": "Arcs de guerre",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1034,6 +1142,7 @@
         {
           "name_en": "Skeletal Hooves (Count as Hand Weapons)",
           "name_de": "Skeletal Hooves (Count as Hand Weapons)",
+          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1050,6 +1159,7 @@
     {
       "name_en": "Tomb Swarms",
       "name_de": "Tomb Swarms",
+      "name_fr": "Nuées des Tombes",
       "id": "tomb-swarms",
       "points": 37,
       "minimum": 2,
@@ -1059,6 +1169,7 @@
         {
           "name_en": "Venemous Bites and Stings (Counts as Hand Weapons)",
           "name_de": "Venemous Bites and Stings (Counts as Hand Weapons)",
+          "name_fr": "Morsures et dards venimeux (Compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1069,6 +1180,7 @@
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1085,6 +1197,7 @@
     {
       "name_en": "Skeleton Horsemen",
       "name_de": "Skeleton Horsemen",
+      "name_fr": "Cavaliers Squelettes",
       "id": "skeleton-horsemen",
       "points": 11,
       "minimum": 5,
@@ -1093,6 +1206,7 @@
         {
           "name_en": "Master of Horse (Champion)",
           "name_de": "Master of Horse (Champion)",
+          "name_fr": "Maître des Chevaux (Champion)",
           "points": 6,
           "magic": {
             "types": [
@@ -1108,6 +1222,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1117,6 +1232,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1128,6 +1244,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1135,6 +1252,7 @@
         {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
+          "name_fr": "Lances de cavalerie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1142,6 +1260,7 @@
         {
           "name_en": "Skeletal Hooves (Count as Hand Weapons)",
           "name_de": "Skeletal Hooves (Count as Hand Weapons)",
+          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1151,6 +1270,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1160,6 +1280,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1167,6 +1288,7 @@
         {
           "name_en": "Have the Counter Charge Special Rule (One per 1,000 Points)",
           "name_de": "Have the Counter Charge Special Rule (One per 1,000 Points)",
+          "name_fr": "Avoir la règle spéciale Contre-charge (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1181,6 +1303,7 @@
     {
       "name_en": "Skeleton Horse Archers",
       "name_de": "Skeleton Horse Archers",
+      "name_fr": "Archers Squelettes à Cheval",
       "id": "skeleton-horse-archers",
       "points": 11,
       "minimum": 5,
@@ -1189,6 +1312,7 @@
         {
           "name_en": "Master of Horse (Champion)",
           "name_de": "Master of Horse (Champion)",
+          "name_fr": "Maître des Chevaux (Champion)",
           "points": 6,
           "magic": {
             "types": [],
@@ -1198,6 +1322,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": [],
@@ -1207,6 +1332,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1218,6 +1344,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1225,6 +1352,7 @@
         {
           "name_en": "War Bows",
           "name_de": "War Bows",
+          "name_fr": "Arcs de Guerre",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1232,6 +1360,7 @@
         {
           "name_en": "Skeletal Hooves (Count as Hand Weapons)",
           "name_de": "Skeletal Hooves (Count as Hand Weapons)",
+          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1241,6 +1370,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1250,6 +1380,7 @@
         {
           "name_en": "Have the Chariot Runners Special Rule",
           "name_de": "Have the Chariot Runners Special Rule",
+          "name_fr": "Avoir la règle spéciale Escorteurs de Chars",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1266,6 +1397,7 @@
     {
       "name_en": "Ushabti",
       "name_de": "Ushabti",
+      "name_fr": "Ushabti",
       "id": "ushabti",
       "points": 49,
       "minimum": 3,
@@ -1274,6 +1406,7 @@
         {
           "name_en": "Ancient (Champion)",
           "name_de": "Ancient (Champion)",
+          "name_fr": "Ancien (Champion)",
           "points": 7,
           "magic": {
             "types": [],
@@ -1285,6 +1418,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1292,6 +1426,7 @@
         {
           "name_en": "Greatbows",
           "name_de": "Greatbows",
+          "name_fr": "Grands Arcs",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1299,6 +1434,7 @@
         {
           "name_en": "Ritual Blades",
           "name_de": "Ritual Blades",
+          "name_fr": "Lames Rituelles",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1308,6 +1444,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1323,6 +1460,7 @@
     {
       "name_en": "Carrion",
       "name_de": "Carrion",
+      "name_fr": "Charognards",
       "id": "carrion",
       "points": 27,
       "minimum": 2,
@@ -1332,6 +1470,7 @@
         {
           "name_en": "Beaks and Talons (Counts as Hand Weapons)",
           "name_de": "Beaks and Talons (Counts as Hand Weapons)",
+          "name_fr": "Becs et serres (Compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1348,6 +1487,7 @@
     {
       "name_en": "Necropolis Knights",
       "name_de": "Necropolis Knights",
+      "name_fr": "Chevaliers des Nécropoles",
       "id": "necropolis-knights",
       "points": 54,
       "minimum": 2,
@@ -1356,6 +1496,7 @@
         {
           "name_en": "Necropolis Captain (Champion)",
           "name_de": "Necropolis Captain (Champion)",
+          "name_fr": "Capitaine de la Nécropole (Champion)",
           "points": 7,
           "magic": {
             "types": [
@@ -1371,6 +1512,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1380,6 +1522,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 7,
           "magic": {
             "types": [],
@@ -1391,6 +1534,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1398,6 +1542,7 @@
         {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
+          "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1405,6 +1550,7 @@
         {
           "name_en": "Lashing Tails (Counts as Hand Weapons)",
           "name_de": "Lashing Tails (Counts as Hand Weapons)",
+          "name_fr": "Queues fouettardes (Compte comme des armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1414,6 +1560,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1423,6 +1570,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1430,6 +1578,7 @@
         {
           "name_en": "Great Weapon for Captain only",
           "name_de": "Great Weapon for Captain only",
+          "name_fr": "Arme Lourde (Capitaine seulement)",
           "points": 7,
           "perModel": false,
           "active": false
@@ -1444,6 +1593,7 @@
     {
       "name_en": "Tomb Guard",
       "name_de": "Tomb Guard",
+      "name_fr": "Guardes des Tombes",
       "id": "tomb-guard",
       "points": 10,
       "minimum": 5,
@@ -1453,6 +1603,7 @@
         {
           "name_en": "Tomb Captain (Champion)",
           "name_de": "Tomb Captain (Champion)",
+          "name_fr": "Capitaine des Tombes (Champion)",
           "points": 6,
           "magic": {
             "types": [
@@ -1468,6 +1619,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1477,6 +1629,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1488,6 +1641,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1495,6 +1649,7 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1504,6 +1659,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1513,6 +1669,7 @@
         {
           "name_en": "Have the Drilled Special Rule (one per 1000pts)",
           "name_de": "Have the Drilled Special Rule (one per 1000pts)",
+          "name_fr": "Avoir la règle Spéciale Bien Entrainés (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1522,6 +1679,7 @@
         {
           "name_en": "Have the Nehekharan Phalanx Special Rule (one per 1000pts)",
           "name_de": "Have the Nehekharan Phalanx Special Rule (one per 1000pts)",
+          "name_fr": "Avoir la règle Spéciale Phalange de Nehekhara (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1538,6 +1696,7 @@
     {
       "name_en": "Sepulchral Stalkers",
       "name_de": "Sepulchral Stalkers",
+      "name_fr": "Rôdeurs Sépulcraux",
       "id": "sepulchral-stalkers",
       "points": 52,
       "minimum": 2,
@@ -1547,6 +1706,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1554,6 +1714,7 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1561,6 +1722,7 @@
         {
           "name_en": "Writhing Tails",
           "name_de": "Writhing Tails",
+          "name_fr": "Queues Sinueuses",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1568,6 +1730,7 @@
         {
           "name_en": "Petrifying Gaze",
           "name_de": "Petrifying Gaze",
+          "name_fr": "Regard pétrificateur",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1577,6 +1740,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1586,6 +1750,7 @@
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1602,6 +1767,7 @@
     {
       "name_en": "Tomb Scorpion",
       "name_de": "Tomb Scorpion",
+      "name_fr": "Scorpion des Tombes",
       "id": "tomb-scorpion",
       "points": 70,
       "minimum": 0,
@@ -1613,6 +1779,7 @@
         {
           "name_en": "Decapitating Claws",
           "name_de": "Decapitating Claws",
+          "name_fr": "Pinces décapitantes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1620,6 +1787,7 @@
         {
           "name_en": "Envenomed Sting",
           "name_de": "Envenomed Sting",
+          "name_fr": "Dard empoisonné",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1629,6 +1797,7 @@
         {
           "name_en": "Bone Carapace (Counts as Heavy Armour)",
           "name_de": "Bone Carapace (Counts as Heavy Armour)",
+          "name_fr": "Carapace osseuse (Compte comme une Armure Lourde)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1638,6 +1807,7 @@
         {
           "name_en": "Ambusher",
           "name_de": "Ambusher",
+          "name_fr": "Embusqueur",
           "points": 5,
           "perModel": true,
           "active": false
@@ -1652,6 +1822,7 @@
     {
       "name_en": "Khemrian Warsphinx",
       "name_de": "Khemrian Warsphinx",
+      "name_fr": "Sphinx de Guerre de Khemri",
       "id": "khemrian-warsphinx",
       "points": 175,
       "minimum": 0,
@@ -1663,6 +1834,7 @@
         {
           "name_en": "Wicked Claws",
           "name_de": "Wicked Claws",
+          "name_fr": "Griffes cruelles",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1670,6 +1842,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1677,6 +1850,7 @@
         {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
+          "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1684,6 +1858,7 @@
         {
           "name_en": "Shortbows",
           "name_de": "Shortbows",
+          "name_fr": "Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1694,6 +1869,7 @@
         {
           "name_en": "May take up to two additional Tomb Guard Crew",
           "name_de": "May take up to two additional Tomb Guard Crew",
+          "name_fr": "Peut ajouter jusqu'à deux Guardes des Tombes supplémentaires",
           "points": 10,
           "perModel": true,
           "stackable": true,
@@ -1703,6 +1879,7 @@
         {
           "name_en": "Envenomed Sting",
           "name_de": "Envenomed Sting",
+          "name_fr": "Dard empoissonné",
           "points": 5,
           "perModel": true,
           "active": false
@@ -1710,6 +1887,7 @@
         {
           "name_en": "Fiery Roar",
           "name_de": "Fiery Roar",
+          "name_fr": "Rugissement Ardent",
           "points": 20,
           "perModel": true,
           "active": false
@@ -1726,6 +1904,7 @@
     {
       "name_en": "Necrolith Colossus",
       "name_de": "Necrolith Colossus",
+      "name_fr": "Colosse Nécrolithe",
       "id": "necrolith-colossus",
       "points": 160,
       "minimum": 0,
@@ -1737,6 +1916,7 @@
         {
           "name_en": "Paired Great Khopeshes",
           "name_de": "Paired Great Khopeshes",
+          "name_fr": "Paire de grands Khopeshs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1746,6 +1926,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1761,6 +1942,7 @@
     {
       "name_en": "Screaming Skull Catapult",
       "name_de": "Screaming Skull Catapult",
+      "name_fr": "Catapulte à Crânes Hurlants",
       "id": "screaming-skull-catapult",
       "points": 105,
       "minimum": 0,
@@ -1772,6 +1954,7 @@
         {
           "name_en": "Screaming Skull Catapult",
           "name_de": "Screaming Skull Catapult",
+          "name_fr": "Catapulte à Crânes Hurlants",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1779,6 +1962,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1788,6 +1972,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1797,6 +1982,7 @@
         {
           "name_en": "May Have the Skulls of the Foe Special Rule",
           "name_de": "May Have the Skulls of the Foe Special Rule",
+          "name_fr": "Peut avoir la Règle Spéciale Crânes de l'Ennemi",
           "points": 20,
           "perModel": true,
           "active": false
@@ -1811,6 +1997,7 @@
     {
       "name_en": "Casket of Souls",
       "name_de": "Casket of Souls",
+      "name_fr": "Arche des Ames Damnées",
       "id": "casket-of-souls",
       "points": 135,
       "minimum": 0,
@@ -1822,6 +2009,7 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1829,6 +2017,7 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_fr": "Armes lourdes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1838,6 +2027,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1853,6 +2043,7 @@
     {
       "name_en": "Necrosphinx",
       "name_de": "Necrosphinx",
+      "name_fr": "Nécrosphinx",
       "id": "necrosphinx",
       "points": 195,
       "minimum": 0,
@@ -1864,6 +2055,7 @@
         {
           "name_en": "Cleaving Blades",
           "name_de": "Cleaving Blades",
+          "name_fr": "Lames fendoirs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1871,6 +2063,7 @@
         {
           "name_en": "Decapitating Strike",
           "name_de": "Decapitating Strike",
+          "name_fr": "Frappe de décapitation",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1880,6 +2073,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure Lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1889,6 +2083,7 @@
         {
           "name_en": "Envenomed Sting",
           "name_de": "Envenomed Sting",
+          "name_fr": "Dard empoissonné",
           "points": 5,
           "perModel": true,
           "active": false
