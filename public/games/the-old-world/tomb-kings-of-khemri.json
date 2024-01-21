@@ -461,7 +461,13 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -537,7 +543,13 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -811,7 +823,6 @@
           "name_fr": "Objets magiques",
           "types": [
             "weapon",
-            "armor-mages",
             "talisman",
             "banner",
             "arcane-item",
