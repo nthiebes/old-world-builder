@@ -106,6 +106,14 @@
           "points": 20,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only) Arise!",
+          "name_de": "(Nehekharan Royal Host only) Arise!",
+          "name_fr": "(Nehekharan Royal Host only) Arise!",
+          "points": 35,
+          "perModel": false,
+          "active": false
         }
       ],
       "mounts": [
@@ -1307,9 +1315,9 @@
           "active": true
         },
         {
-          "name_en": "Warbows",
-          "name_de": "Warbows",
-          "name_fr": "Arcs de guerre",
+          "name_en": "Hand weapons, Warbows",
+          "name_de": "Hand weapons, Warbows",
+          "name_fr": "Armes de base, Arcs de guerre",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1332,6 +1340,16 @@
           "name_de": "Ambushers",
           "name_fr": "Embusqueurs",
           "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only, 0-1 per 1000 points) Ambushers",
+          "name_de": "(Nehekharan Royal Host only, 0-1 per 1000 points) Ambushers",
+          "name_fr": "(Nehekharan Royal Host only, 0-1 per 1000 points) Embusqueurs",
+          "points": 0,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1648,31 +1666,23 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_fr": "Armes de base",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "War Bows",
-          "name_de": "War Bows",
-          "name_fr": "Arcs de Guerre",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Skeletal Hooves (Count as Hand Weapons)",
-          "name_de": "Skeletal Hooves (Count as Hand Weapons)",
-          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
+          "name_en": "Hand weapons, Warbows",
+          "name_de": "Hand weapons, Warbows",
+          "name_fr": "Armes de base, Arcs de Guerre",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
       "armor": [
+        {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -1684,10 +1694,18 @@
       ],
       "options": [
         {
-          "name_en": "Have the Chariot Runners Special Rule",
-          "name_de": "Have the Chariot Runners Special Rule",
+          "name_en": "Chariot Runners Special Rule",
+          "name_de": "Chariot Runners Special Rule",
           "name_fr": "Avoir la règle spéciale Escorteurs de Chars",
           "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only, 0-1 per 1000 points) Chariot Runners Special Rule",
+          "name_de": "(Nehekharan Royal Host only, 0-1 per 1000 points) Chariot Runners Special Rule",
+          "name_fr": "(Nehekharan Royal Host only, 0-1 per 1000 points) Avoir la règle spéciale Escorteurs de Chars",
+          "points": 0,
           "perModel": true,
           "active": false
         }
