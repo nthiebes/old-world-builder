@@ -81,7 +81,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscador"
+          "name_es": "Emboscada"
         }
       ],
       "mounts": [
@@ -226,7 +226,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Esboscador"
+          "name_es": "Esboscada"
         }
       ],
       "mounts": [
@@ -311,7 +311,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscador"
+          "name_es": "Emboscada"
         },
         {
           "name_en": "Level 4 Wizard",
@@ -411,7 +411,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscador"
+          "name_es": "Emboscada"
         },
         {
           "name_en": "Level 2 Wizard",
@@ -483,14 +483,10 @@
     {
       "name_en": "Doombull",
       "name_de": "Doombull",
-      "name_es": "Minotauro de la Condenación",
-      "name_fr": "Doombull",
       "id": "doombull",
       "points": 210,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -498,24 +494,21 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
           "perModel": false,
-          "active": false,
-          "name_es": "Arma de mano adicional"
+          "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
           "perModel": false,
-          "active": false,
-          "name_es": "Arma a dos manos"
+          "active": false
         }
       ],
       "armor": [
@@ -524,24 +517,21 @@
           "name_de": "No armour",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Sin armadura"
+          "active": true
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 3,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura ligera"
+          "active": false
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 6,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura pesada"
+          "active": false
         }
       ],
       "options": [
@@ -551,8 +541,7 @@
           "points": 5,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Escudo"
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -563,8 +552,7 @@
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 100,
-          "mutuallyExclusive": false,
-          "name_es": "Objetos mágicos"
+          "mutuallyExclusive": false
         },
         {
           "name_en": "Chaos Mutations",
@@ -572,29 +560,17 @@
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": false,
-          "name_es": "Mutaciones del caos"
+          "mutuallyExclusive": false
         }
-      ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      }
+      ]
     },
     {
       "name_en": "Gorebull",
       "name_de": "Gorebull",
-      "name_es": "Minotauro destripador",
-      "name_fr": "Gorebull",
       "id": "gorebull",
       "points": 130,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -602,24 +578,21 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
           "perModel": false,
-          "active": false,
-          "name_es": "Arma de mano adicional"
+          "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 6,
           "perModel": false,
-          "active": false,
-          "name_es": "Arma a dos manos"
+          "active": false
         }
       ],
       "armor": [
@@ -628,24 +601,21 @@
           "name_de": "No armour",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Sin armadura"
+          "active": true
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 3,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura ligera"
+          "active": false
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 6,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura pesada"
+          "active": false
         }
       ],
       "options": [
@@ -655,8 +625,7 @@
           "points": 5,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Escudo"
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -667,8 +636,7 @@
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": false,
-          "name_es": "Objetos mágicos"
+          "mutuallyExclusive": false
         },
         {
           "name_en": "Chaos Mutations",
@@ -676,29 +644,17 @@
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": false,
-          "name_es": "Mutaciones del caos"
+          "mutuallyExclusive": false
         }
-      ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      }
+      ]
     },
     {
       "name_en": "Centigor Chieftain",
       "name_de": "Centigor Chieftain",
-      "name_es": "Centigor Chieftain",
-      "name_fr": "Centigor Chieftain",
       "id": "centigore-chieftain",
       "points": 75,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -706,24 +662,21 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         },
         {
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
           "points": 2,
           "perModel": false,
-          "active": false,
-          "name_es": "Lanza (montado)"
+          "active": false
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
           "perModel": false,
-          "active": false,
-          "name_es": "Arma a dos manos"
+          "active": false
         }
       ],
       "armor": [
@@ -732,24 +685,21 @@
           "name_de": "No armour",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Sin armadura"
+          "active": true
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 2,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura ligera"
+          "active": false
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 4,
           "perModel": false,
-          "active": false,
-          "name_es": "Armadura pesada"
+          "active": false
         }
       ],
       "options": [
@@ -759,8 +709,7 @@
           "points": 2,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Hachas arrojadizas o Jabalinas"
+          "maximum": 0
         },
         {
           "name_en": "Shield",
@@ -768,8 +717,7 @@
           "points": 2,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Escudo"
+          "maximum": 0
         },
         {
           "name_en": "Ambusher",
@@ -777,8 +725,7 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Emboscador"
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -789,8 +736,7 @@
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": false,
-          "name_es": "Objetos mágicos"
+          "mutuallyExclusive": false
         },
         {
           "name_en": "Chaos Mutations",
@@ -798,17 +744,9 @@
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "mutuallyExclusive": false,
-          "name_es": "Mutaciones del caos"
+          "mutuallyExclusive": false
         }
-      ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      }
+      ]
     }
   ],
   "core": [
@@ -884,7 +822,7 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Tozudos"
+          "name_es": "Tozudo"
         },
         {
           "name_en": "Veteran",
@@ -894,7 +832,7 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Veteranos"
+          "name_es": "Veterano"
         }
       ],
       "mounts": [],
@@ -961,7 +899,7 @@
           "points": 0,
           "perModel": true,
           "active": false,
-          "name_es": "Armas de mano adicionales"
+          "name_es": "Arma de mano adicional"
         },
         {
           "name_en": "Shields",
@@ -982,7 +920,7 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Emboscadores"
+          "name_es": "Emboscada"
         },
         {
           "name_en": "Great weapon on True-horn",
@@ -1066,7 +1004,7 @@
           "points": 1,
           "perModel": true,
           "active": false,
-          "name_es": "Lanzas (infantería)"
+          "name_es": "Lanzas"
         },
         {
           "name_en": "Throwing Spears",
@@ -1095,7 +1033,7 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Emboscadores"
+          "name_es": "Emboscada"
         }
       ],
       "mounts": [],
@@ -1115,14 +1053,10 @@
     {
       "name_en": "Warhounds",
       "name_de": "Warhounds",
-      "name_es": "Mastines del caos",
-      "name_fr": "Warhounds",
       "id": "warhounds",
       "points": 6,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -1134,8 +1068,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Pellejo duro"
+          "maximum": 0
         },
         {
           "name_en": "Poisoned attacks",
@@ -1144,8 +1077,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Ataques envenenados"
+          "maximum": 0
         },
         {
           "name_en": "Vanguard",
@@ -1154,19 +1086,10 @@
           "perModel": false,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Vanguardia"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1175,14 +1098,10 @@
     {
       "name_en": "Razorgor Herds",
       "name_de": "Razorgor Herds",
-      "name_es": "Rebaño de garragors",
-      "name_fr": "Razorgor Herds",
       "id": "razorgor-herds",
       "points": 52,
       "minimum": 1,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1190,8 +1109,7 @@
           "name_de": "Tusks (counts as a hand weapon)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Colmillos (cuenta como arma de mano)"
+          "active": true
         }
       ],
       "armor": [
@@ -1200,20 +1118,11 @@
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
+          "active": true
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1222,14 +1131,10 @@
     {
       "name_en": "Tuskgor Chariots",
       "name_de": "Tuskgor Chariots",
-      "name_es": "Carro de tuskgors",
-      "name_fr": "Tuskgor Chariots",
       "id": "tuskgor-chariots-",
       "points": 85,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1237,38 +1142,26 @@
           "name_de": "Bestigor Crew x 1 - Hand weapon and great weapons",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Tripulación bestigor x 1 - Arma de mano y arma a dos manos",
-          "name_fr": "Bestigor Crew x 1 - Hand weapon and great weapons"
+          "active": true
         },
         {
           "name_en": "Gor Crew x 1 - Hand weapon and cavalry spear",
           "name_de": "Gor Crew x 1 - Hand weapon and cavalry spear",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Tripulación gor x 1 - Arma de mano y lanza (montado)"
+          "active": true
         },
         {
           "name_en": "Tuskgor x 2 - Tusks (counts as hand weapon)",
           "name_de": "Tuskgor x 2 - Tusks (counts as hand weapon)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Tuskgor x 2 - Colmillos (cuenta como arma de mano)"
+          "active": true
         }
       ],
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1277,14 +1170,10 @@
     {
       "name_en": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
       "name_de": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
-      "name_es": "Rebaño de minotauros (0-1 si el General es un Minotauro de la condenación o un Minotauro destripador)",
-      "name_fr": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
       "id": "minotaur-herd-(0-1-if-general-is-doombull-or-gorebull)",
       "points": 47,
       "minimum": 2,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Bloodkine",
@@ -1293,8 +1182,7 @@
           "magic": {
             "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
-          },
-          "name_es": "Minotauro sangriento"
+          }
         },
         {
           "name_en": "Standard Bearer",
@@ -1303,8 +1191,7 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
-          },
-          "name_es": "Portaestandarte"
+          }
         },
         {
           "name_en": "Musician",
@@ -1313,8 +1200,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Músico"
+          }
         }
       ],
       "equipment": [
@@ -1323,8 +1209,7 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         }
       ],
       "armor": [
@@ -1333,8 +1218,7 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armadura ligera"
+          "active": true
         }
       ],
       "options": [
@@ -1345,8 +1229,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Arma de mano adicional"
+          "maximum": 0
         },
         {
           "name_en": "Great weapon",
@@ -1355,8 +1238,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Arma a dos manos"
+          "maximum": 0
         },
         {
           "name_en": "Shield",
@@ -1365,8 +1247,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Escudo"
+          "maximum": 0
         },
         {
           "name_en": "Ambushers",
@@ -1375,19 +1256,10 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Emboscadores"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1398,14 +1270,10 @@
     {
       "name_en": "Bestigor Herds",
       "name_de": "Bestigor Herds",
-      "name_es": "Rebaño de bestigors",
-      "name_fr": "Bestigor Herds",
       "id": "bestigor-herds",
       "points": 13,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Gouge-horn",
@@ -1414,8 +1282,7 @@
           "magic": {
             "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
-          },
-          "name_es": "Corneador"
+          }
         },
         {
           "name_en": "Standard Bearer",
@@ -1424,8 +1291,7 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
-          },
-          "name_es": "Portaestandarte"
+          }
         },
         {
           "name_en": "Musician",
@@ -1434,8 +1300,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Músico"
+          }
         }
       ],
       "equipment": [
@@ -1444,8 +1309,7 @@
           "name_de": "Hand weapon and great weapon",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano y arma a dos manos"
+          "active": true
         }
       ],
       "armor": [
@@ -1454,8 +1318,7 @@
           "name_de": "Heavy armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armadura pesada"
+          "active": true
         }
       ],
       "options": [
@@ -1466,8 +1329,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "perModel": true,
-          "name_es": "Tozudos"
+          "perModel": true
         },
         {
           "name_en": "Veteran",
@@ -1476,19 +1338,10 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "perModel": true,
-          "name_es": "Veteranos"
+          "perModel": true
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1497,14 +1350,10 @@
     {
       "name_en": "Harpies",
       "name_de": "Harpies",
-      "name_es": "Harpías",
-      "name_fr": "Harpies",
       "id": "harpies",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1512,21 +1361,12 @@
           "name_de": "Claws (counts as hand weapons)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Garras (cuenta como arma de mano)"
+          "active": true
         }
       ],
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1535,14 +1375,10 @@
     {
       "name_en": "Minotaur Herds",
       "name_de": "Minotaur Herds",
-      "name_es": "Rebaño de minotauros",
-      "name_fr": "Minotaur Herds",
       "id": "minotaur-herds",
       "points": 47,
       "minimum": 2,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Bloodkine",
@@ -1551,8 +1387,7 @@
           "magic": {
             "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
-          },
-          "name_es": "Minotauro sangriento"
+          }
         },
         {
           "name_en": "Standard Bearer",
@@ -1561,8 +1396,7 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
-          },
-          "name_es": "Portaestandarte"
+          }
         },
         {
           "name_en": "Musician",
@@ -1571,8 +1405,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Músico"
+          }
         }
       ],
       "equipment": [
@@ -1581,8 +1414,7 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         }
       ],
       "armor": [
@@ -1591,8 +1423,7 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armadura ligera"
+          "active": true
         }
       ],
       "options": [
@@ -1603,8 +1434,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Arma de mano adicional"
+          "maximum": 0
         },
         {
           "name_en": "Great weapon",
@@ -1613,8 +1443,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Arma a dos manos"
+          "maximum": 0
         },
         {
           "name_en": "Shield",
@@ -1623,8 +1452,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Escudo"
+          "maximum": 0
         },
         {
           "name_en": "Ambushers",
@@ -1633,19 +1461,10 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Emboscadores"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1654,14 +1473,10 @@
     {
       "name_en": "Cockatrice",
       "name_de": "Cockatrice",
-      "name_es": "Cocatriz",
-      "name_fr": "Cockatrice",
       "id": "cockatrice",
       "points": 170,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1669,8 +1484,7 @@
           "name_de": "Claws (counts as hand weapons), Petrifying gaze",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Garras (cuenta como arma de mano), Mirada petrificante"
+          "active": true
         }
       ],
       "armor": [
@@ -1679,8 +1493,7 @@
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Pellejo escamoso (cuenta como armadura pesada)"
+          "active": true
         }
       ],
       "options": [
@@ -1691,8 +1504,7 @@
           "perModel": false,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Vómito ácido"
+          "maximum": 0
         },
         {
           "name_en": "Poisoned attacks",
@@ -1701,19 +1513,10 @@
           "perModel": false,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Ataques envenenados"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1722,14 +1525,10 @@
     {
       "name_en": "Centigor Herds",
       "name_de": "Centigor Herds",
-      "name_es": "Rebaño de centigors",
-      "name_fr": "Centigor Herds",
       "id": "centigor-herds",
       "points": 19,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Gorehoof",
@@ -1738,8 +1537,7 @@
           "magic": {
             "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
-          },
-          "name_es": "Pezuña sangrienta"
+          }
         },
         {
           "name_en": "Standard Bearer",
@@ -1748,8 +1546,7 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
-          },
-          "name_es": "Portaestandarte"
+          }
         },
         {
           "name_en": "Musician",
@@ -1758,8 +1555,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Músico"
+          }
         }
       ],
       "equipment": [
@@ -1768,32 +1564,28 @@
           "name_de": "Hand weapons and shields",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano y escudo"
+          "active": true
         },
         {
           "name_en": "Cavalry spears",
           "name_de": "Cavalry spears",
           "points": 1,
           "perModel": true,
-          "active": false,
-          "name_es": "Lanzas (montado)"
+          "active": false
         },
         {
           "name_en": "Throwing spears",
           "name_de": "Throwing spears",
           "points": 1,
           "perModel": true,
-          "active": false,
-          "name_es": "Lanzas arrojadizas"
+          "active": false
         },
         {
           "name_en": "Replace shields with great weapons",
           "name_de": "Replace shields with Great Weapons",
           "points": 1,
           "perModel": true,
-          "active": false,
-          "name_es": "Cambiar escudo por arma a dos manos"
+          "active": false
         }
       ],
       "armor": [],
@@ -1805,8 +1597,7 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
-          "perModel": true,
-          "name_es": "Hachas arrojadizas o jabalinas"
+          "perModel": true
         },
         {
           "name_en": "Ambushers",
@@ -1815,19 +1606,10 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Emboscadores"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1836,8 +1618,6 @@
     {
       "name_en": "Dragon Ogres",
       "name_de": "Dragon Ogres",
-      "name_es": "Ogros dragón",
-      "name_fr": "Dragon Ogres",
       "id": "dragon-ogres",
       "points": 56,
       "minimum": 1,
@@ -1861,32 +1641,28 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
           "perModel": true,
-          "active": false,
-          "name_es": "Arma de mano adicional"
+          "active": false
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
           "perModel": true,
-          "active": false,
-          "name_es": "Arma a dos manos"
+          "active": false
         },
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
           "points": 3,
           "perModel": true,
-          "active": false,
-          "name_es": "Alabardas"
+          "active": false
         }
       ],
       "armor": [
@@ -1895,28 +1671,18 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armadura ligera"
+          "active": true
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 3,
           "perModel": true,
-          "active": false,
-          "name_es": "Armadura pesada"
+          "active": false
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1925,14 +1691,10 @@
     {
       "name_en": "Razorgor Chariot",
       "name_de": "Razorgor Chariot",
-      "name_es": "Carro de garragors",
-      "name_fr": "Razorgor Chariot",
       "id": "razergor-chariot",
       "points": 120,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1940,38 +1702,26 @@
           "name_de": "Bestigor Crew x 1 - Hand weapons and great weapons",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Tripulación bestigor x 1 - Arma de mano y arma a dos manos",
-          "name_fr": "Bestigor Crew x 1 - Hand weapons and great weapons"
+          "active": true
         },
         {
           "name_en": "Gor Crew x 1 - Hand weapons and cavalry spear",
           "name_de": "Gor Crew x 1 - Hand weapons and cavalry spear",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Tripulación gor x 1 - Arma de mano y lanza (montado)"
+          "active": true
         },
         {
           "name_en": "Razorgor x 1 - Tusks (counts as hand weapon)",
           "name_de": "Razorgor x 1 - Tusks (counts as hand weapon)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Garragor x 1 - Colmillos (cuenta como arma de mano)"
+          "active": true
         }
       ],
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1980,8 +1730,6 @@
     {
       "name_en": "Chaos Ogres",
       "name_de": "Chaos Ogres",
-      "name_es": "Ogros del caos",
-      "name_fr": "Chaos Ogres",
       "id": "chaos-ogres",
       "points": 33,
       "minimum": 3,
@@ -1996,8 +1744,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Campeón"
+          }
         },
         {
           "name_en": "Standard Bearer",
@@ -2006,8 +1753,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Portaestandarte"
+          }
         },
         {
           "name_en": "Musician",
@@ -2016,8 +1762,7 @@
           "magic": {
             "types": [],
             "maxPoints": 0
-          },
-          "name_es": "Músico"
+          }
         }
       ],
       "equipment": [
@@ -2026,24 +1771,21 @@
           "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano"
+          "active": true
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
           "perModel": true,
-          "active": false,
-          "name_es": "Arma de mano adicional"
+          "active": false
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
           "perModel": true,
-          "active": false,
-          "name_es": "Arma a dos manos"
+          "active": false
         }
       ],
       "armor": [
@@ -2052,8 +1794,7 @@
           "name_de": "Heavy armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armadura pesada"
+          "active": true
         }
       ],
       "options": [
@@ -2064,9 +1805,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Replace Undivided with Khorne (only select one)",
-          "name_fr": "*Replace Undivided with Khorne (only select one)"
+          "maximum": 0
         },
         {
           "name_en": "*Replace Undivided with Nurgle (only select one)",
@@ -2075,9 +1814,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Replace Undivided with Nurgle (only select one)",
-          "name_fr": "*Replace Undivided with Nurgle (only select one)"
+          "maximum": 0
         },
         {
           "name_en": "*Replace Undivided with Slaanesh (only select one)",
@@ -2086,9 +1823,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Replace Undivided with Slaanesh (only select one)",
-          "name_fr": "*Replace Undivided with Slaanesh (only select one)"
+          "maximum": 0
         },
         {
           "name_en": "*Replace Undivided with Tzeentch (only select one)",
@@ -2097,20 +1832,10 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Replace Undivided with Tzeentch (only select one)",
-          "name_fr": "*Replace Undivided with Tzeentch (only select one)"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2119,254 +1844,15 @@
     {
       "name_en": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "name_de": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_es": "Escuerzo alado (*0-1 si el General es un Gran chamán del rebaño o un Chamán del rebaño)",
-      "name_fr": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "id": "jabberslythe",
       "points": 195,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Wicked claws and slithery tongue",
           "name_de": "Wicked claws and slithery tongue",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Garras retorcidas y lengua escurridiza"
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Pellejo escamoso (cuenta como armadura pesada)"
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_es": "Cigor (*0-1 si el General es un Gran chamán del rebaño o un Chamán del rebaño)",
-      "name_fr": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "id": "cygor",
-      "points": 215,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Claws (counts as hand weapon), Hurl attack",
-          "name_de": "Claws (counts as hand weapon), Hurl attack",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Garras (cuenta como arma de mano), Araque a distancia"
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "name_es": "Gorgona (*0-1 si el General es un Gran chamán del rebaño o un Chamán del rebaño)",
-      "name_fr": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "id": "ghorgon",
-      "points": 245,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Cleaver-limbs",
-          "name_de": "Cleaver-limbs",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Extremidades cortantes"
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    }
-  ],
-  "rare": [
-    {
-      "name_en": "Dragon Ogre Shaggoth",
-      "name_de": "Dragon Ogre Shaggoth",
-      "name_es": "Ogro dragón Shaggoth",
-      "name_fr": "Dragon Ogre Shaggoth",
-      "id": "dragon-ogre-shaggoth-",
-      "points": 225,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Magic items",
-          "name_de": "Magic items",
-          "points": 0,
-          "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
-            "maxPoints": 50
-          },
-          "name_es": "Objetos mágicos"
-        },
-        {
-          "name_en": "Chaos Mutations",
-          "name_de": "Chaos Mutations",
-          "points": 0,
-          "magic": {
-            "types": ["chaos-mutation"],
-            "maxPoints": 50
-          },
-          "name_es": "Mutaciones del caos"
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Arma de mano"
-        },
-        {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
-          "points": 3,
-          "perModel": false,
-          "active": false,
-          "name_es": "Arma de mano adicional"
-        },
-        {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
-          "points": 4,
-          "perModel": false,
-          "active": false,
-          "name_es": "Arma a dos manos"
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Armadura ligera"
-        },
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 6,
-          "perModel": false,
-          "active": false,
-          "name_es": "Armadura pesada"
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Jabberslythe",
-      "name_de": "Jabberslythe",
-      "name_es": "Escuerzo alado",
-      "name_fr": "Jabberslythe",
-      "id": "jabberslythe",
-      "points": 195,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Wicked claws and slithery tongue",
-          "name_de": "Garras retorcidas y lengua escurridiza",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2378,20 +1864,185 @@
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Piel escamosa (cuenta como armadura pesada)"
+          "active": true
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "id": "cygor",
+      "points": 215,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as hand weapon), Hurl attack",
+          "name_de": "Claws (counts as hand weapon), Hurl attack",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "id": "ghorgon",
+      "points": 245,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaver-limbs",
+          "name_de": "Cleaver-limbs",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Dragon Ogre Shaggoth",
+      "name_de": "Dragon Ogre Shaggoth",
+      "id": "dragon-ogre-shaggoth-",
+      "points": 225,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Magic items",
+          "name_de": "Magic items",
+          "points": 0,
+          "magic": {
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "points": 0,
+          "magic": {
+            "types": ["chaos-mutation"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 6,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Jabberslythe",
+      "name_de": "Jabberslythe",
+      "id": "jabberslythe",
+      "points": 195,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws and slithery tongue",
+          "name_de": "Wicked claws and slithery tongue",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Scaly skin (counts as heavy armour)",
+          "name_de": "Scaly skin (counts as heavy armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2400,14 +2051,10 @@
     {
       "name_en": "Cygor",
       "name_de": "Cygor",
-      "name_es": "Cigor",
-      "name_fr": "Cygor",
       "id": "cygor",
       "points": 215,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2415,8 +2062,7 @@
           "name_de": "Claws (counts as hand weapon), Hurl attack",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Garras (cuenta como arma de mano), Araque a distancia"
+          "active": true
         }
       ],
       "armor": [
@@ -2425,20 +2071,11 @@
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
+          "active": true
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2447,14 +2084,10 @@
     {
       "name_en": "Chaos Giant",
       "name_de": "Chaos Giant",
-      "name_es": "Gigante del caos",
-      "name_fr": "Chaos Giant",
       "id": "chaos-giant-",
       "points": 200,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2462,8 +2095,7 @@
           "name_de": "Giant's club",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Gran garrote"
+          "active": true
         }
       ],
       "armor": [
@@ -2472,16 +2104,14 @@
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
+          "active": true
         },
         {
           "name_en": "Scaly skin (counts as heavy armour)",
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 10,
           "perModel": false,
-          "active": false,
-          "name_es": "Pellejo escamoso (cuenta como armadura pesada)"
+          "active": false
         }
       ],
       "options": [
@@ -2492,19 +2122,10 @@
           "perModel": false,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "Regeneración (6+)"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2513,14 +2134,10 @@
     {
       "name_en": "Ghorgon",
       "name_de": "Ghorgon",
-      "name_es": "Gorgona",
-      "name_fr": "Ghorgon",
       "id": "ghorgon",
       "points": 245,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2528,8 +2145,7 @@
           "name_de": "Cleaver-limbs",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Extremidades cortantes"
+          "active": true
         }
       ],
       "armor": [
@@ -2538,20 +2154,11 @@
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
+          "active": true
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2560,8 +2167,6 @@
     {
       "name_en": "Chaos Trolls",
       "name_de": "Chaos Trolls",
-      "name_es": "Trolls del caos",
-      "name_fr": "Chaos Trolls",
       "id": "chaos-trolls",
       "points": 41,
       "minimum": 1,
@@ -2575,24 +2180,21 @@
           "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Armas de mano"
+          "active": true
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
           "perModel": true,
-          "active": false,
-          "name_es": "Armas de mano adicionales"
+          "active": false
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
           "perModel": true,
-          "active": false,
-          "name_es": "Armas a dos manos"
+          "active": false
         }
       ],
       "armor": [
@@ -2601,20 +2203,11 @@
           "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Pellejo calloso (cuenta como armadura ligera)"
+          "active": true
         }
       ],
       "options": [],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2623,8 +2216,6 @@
     {
       "name_en": "Chaos Spawn",
       "name_de": "Chaos Spawn",
-      "name_es": "Engendro del caos",
-      "name_fr": "Chaos Spawn",
       "id": "chaos-spawn",
       "points": 50,
       "minimum": 1,
@@ -2638,8 +2229,7 @@
           "name_de": "Flailing appendages (counts as hand weapon)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Tentáculos, garras y dientes (cuentan como arma de mano)"
+          "active": true
         }
       ],
       "armor": [
@@ -2648,8 +2238,7 @@
           "name_de": "Scaly skin (counts as heavy armour)",
           "points": 1,
           "perModel": true,
-          "active": false,
-          "name_es": "Pellejo escamoso (cuenta como armadura pesada)"
+          "active": false
         }
       ],
       "options": [
@@ -2660,8 +2249,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Engendro de Khorne (selecciona solo una)"
+          "maximum": 0
         },
         {
           "name_en": "*Spawn of Nurgle (only select one)",
@@ -2670,8 +2258,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Engendro de Nurgle (selecciona solo una)"
+          "maximum": 0
         },
         {
           "name_en": "*Spawn of Slaanesh (only select one)",
@@ -2680,8 +2267,7 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Engendro de Slaanesh (selecciona solo una)"
+          "maximum": 0
         },
         {
           "name_en": "*Spawn of Tzeentch (only select one)",
@@ -2690,19 +2276,10 @@
           "perModel": true,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "name_es": "*Engendro de Tzeench (selecciona solo una)"
+          "maximum": 0
         }
       ],
       "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      },
       "magic": {
         "types": [],
         "maxPoints": 0
