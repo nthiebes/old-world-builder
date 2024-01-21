@@ -114,6 +114,9 @@
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "characters"
+        },
+        "errantry-crusades": {
+          "category": "characters"
         }
       }
     },
@@ -326,6 +329,9 @@
       "lores": ["battle-magic", "elementalism", "illusion"],
       "armyComposition": {
         "kingdom-of-bretonnia": {
+          "category": "characters"
+        },
+        "errantry-crusades": {
           "category": "characters"
         }
       }
@@ -846,7 +852,18 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "core"
+        },
+        "errantry-crusades": {
+          "category": "special"
+        },
+        "bretonnian-exiles": {
+          "category": "core"
+        }
+      }
     },
     {
       "name_en": "Peasant Bowmen (1+*)",
@@ -938,7 +955,18 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "core"
+        },
+        "errantry-crusades": {
+          "category": "special"
+        },
+        "bretonnian-exiles": {
+          "category": "core"
+        }
+      }
     },
     {
       "name_en": "Knights of the Realm on Foot (1+**)",
@@ -1154,6 +1182,50 @@
           "category": "core"
         }
       }
+    },
+    {
+      "name_en": "Battle Pilgrims (0-2 per 1000 points)",
+      "name_de": "Battle Pilgrims (0-2 per 1000 points)",
+      "id": "battle-pilgrims",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 30,
+      "command": [
+        {
+          "name_en": "Grail Reliquae",
+          "name_de": "Grail Reliquae",
+          "points": 65,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Shields",
+          "name_de": "Hand Weapons, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "armyComposition": {
+        "errantry-crusades": {
+          "category": "core"
+        }
+      }
     }
   ],
   "special": [
@@ -1229,6 +1301,9 @@
         },
         "bretonnian-exiles": {
           "category": "rare"
+        },
+        "errantry-crusades": {
+          "category": "special"
         }
       }
     },
@@ -1377,6 +1452,9 @@
         },
         "bretonnian-exiles": {
           "category": "core"
+        },
+        "errantry-crusades": {
+          "category": "rare"
         }
       }
     },
@@ -1446,7 +1524,18 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "special"
+        },
+        "errantry-crusades": {
+          "category": "core"
+        },
+        "bretonnian-exiles": {
+          "category": "special"
+        }
+      }
     },
     {
       "name_en": "Battle Pilgrims (0-2 per 1000 points)",
@@ -1557,6 +1646,9 @@
       ],
       "armyComposition": {
         "kingdom-of-bretonnia": {
+          "category": "rare"
+        },
+        "errantry-crusades": {
           "category": "rare"
         }
       }

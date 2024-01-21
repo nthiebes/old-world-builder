@@ -336,7 +336,7 @@ export const Unit = ({ isMobile }) => {
           />
         )}
         {!unit.minimum &&
-          !unit.lores &&
+          (!unit.lores || (unit.lores && !unit.lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
           (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
           (!unit.armor || (unit.armor && !unit.armor.length)) &&
