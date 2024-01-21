@@ -106,6 +106,14 @@
           "points": 20,
           "perModel": true,
           "active": false
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only) Arise!",
+          "name_de": "(Nehekharan Royal Host only) Arise!",
+          "name_fr": "(Nehekharan Royal Host only) Arise!",
+          "points": 35,
+          "perModel": false,
+          "active": false
         }
       ],
       "mounts": [
@@ -166,6 +174,14 @@
           "arcane-item"
         ],
         "maxPoints": 100
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "characters"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -434,7 +450,15 @@
           "maxPoints": 0,
           "mutuallyExclusive": true
         }
-      ]
+      ],
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "characters"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "characters"
+        }
+      }
     },
     {
       "name_en": "High Priest",
@@ -498,7 +522,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -515,6 +545,14 @@
           "enchanted-item"
         ],
         "maxPoints": 100
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "characters"
+        },
+        "mortuary-cults": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -572,7 +610,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -653,6 +697,225 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "characters"
+        },
+        "mortuary-cults": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_de": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_es": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_fr": "Settra The Imperishable, The Great King Of Nehekhara",
+      "id": "settra-the-imperishable-the-great-king-of-nehekhara",
+      "points": 445,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "The Blessed Blade of Ptra",
+          "name_de": "The Blessed Blade of Ptra",
+          "name_es": "The Blessed Blade of Ptra",
+          "name_fr": "The Blessed Blade of Ptra",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "The Crown of Nehekhara, The Scarab Brooch of Usirian",
+          "name_de": "The Crown of Nehekhara, The Scarab Brooch of Usirian",
+          "name_es": "The Crown of Nehekhara, The Scarab Brooch of Usirian",
+          "name_fr": "The Crown of Nehekhara, The Scarab Brooch of Usirian",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "The Chariot of the Gods",
+          "name_de": "The Chariot of the Gods",
+          "name_es": "The Chariot of the Gods",
+          "name_fr": "The Chariot of the Gods",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [],
+      "lores": ["necromancy"],
+      "specialRules": {
+        "name_en": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
+        "name_de": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
+        "name_es": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
+        "name_fr": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great"
+      }
+    },
+    {
+      "name_en": "Prince Apophas, The Cursed Scarab Lord",
+      "name_de": "Prince Apophas, The Cursed Scarab Lord",
+      "name_es": "Prince Apophas, The Cursed Scarab Lord",
+      "name_fr": "Prince Apophas, The Cursed Scarab Lord",
+      "id": "prince-apophas-the-cursed-scarab-lord",
+      "points": 130,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Swarming mass",
+          "name_de": "Hand weapon, Swarming mass",
+          "name_es": "Hand weapon, Swarming mass",
+          "name_fr": "Hand weapon, Swarming mass",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian’s Reaper, Terror",
+        "name_de": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian’s Reaper, Terror",
+        "name_es": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian’s Reaper, Terror",
+        "name_fr": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian’s Reaper, Terror"
+      }
+    },
+    {
+      "name_en": "Nekaph, Emissary Of Settra",
+      "name_de": "Nekaph, Emissary Of Settra",
+      "name_es": "Nekaph, Emissary Of Settra",
+      "name_fr": "Nekaph, Emissary Of Settra",
+      "id": "nekaph-emissary-of-settra",
+      "points": 120,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "The Flail of Conquered Kings",
+          "name_de": "The Flail of Conquered Kings",
+          "name_es": "The Flail of Conquered Kings",
+          "name_fr": "The Flail of Conquered Kings",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra’s Champion, Sworn Protector",
+        "name_de": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra’s Champion, Sworn Protector",
+        "name_es": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra’s Champion, Sworn Protector",
+        "name_fr": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra’s Champion, Sworn Protector"
+      }
+    },
+    {
+      "name_en": "Arch Necrotect",
+      "name_de": "Arch Necrotect",
+      "name_es": "Arch Necrotect",
+      "name_fr": "Arch Necrotect",
+      "id": "arch-necrotect",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Flammable, Immortal Overseer, Khopesh, Nehekharan Undead, Regeneration (5+), Stone Shaper",
+        "name_de": "Dry as Dust, Flammable, Immortal Overseer, Khopesh, Nehekharan Undead, Regeneration (5+), Stone Shaper",
+        "name_es": "Dry as Dust, Flammable, Immortal Overseer, Khopesh, Nehekharan Undead, Regeneration (5+), Stone Shaper",
+        "name_fr": "Dry as Dust, Flammable, Immortal Overseer, Khopesh, Nehekharan Undead, Regeneration (5+), Stone Shaper"
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "characters"
+        }
       }
     }
   ],
@@ -759,6 +1022,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "mortuary-cults": {
+          "category": "core"
+        }
       }
     },
     {
@@ -939,6 +1210,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1010,6 +1289,11 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1031,9 +1315,9 @@
           "active": true
         },
         {
-          "name_en": "Warbows",
-          "name_de": "Warbows",
-          "name_fr": "Arcs de guerre",
+          "name_en": "Hand weapons, Warbows",
+          "name_de": "Hand weapons, Warbows",
+          "name_fr": "Armes de base, Arcs de guerre",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1060,12 +1344,33 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only, 0-1 per 1000 points) Ambushers",
+          "name_de": "(Nehekharan Royal Host only, 0-1 per 1000 points) Ambushers",
+          "name_fr": "(Nehekharan Royal Host only, 0-1 per 1000 points) Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [],
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        },
+        "mortuary-cults": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1154,6 +1459,17 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "core"
+        },
+        "mortuary-cults": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1298,6 +1614,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "mortuary-cults": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1342,31 +1666,23 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_fr": "Armes de base",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "War Bows",
-          "name_de": "War Bows",
-          "name_fr": "Arcs de Guerre",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Skeletal Hooves (Count as Hand Weapons)",
-          "name_de": "Skeletal Hooves (Count as Hand Weapons)",
-          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
+          "name_en": "Hand weapons, Warbows",
+          "name_de": "Hand weapons, Warbows",
+          "name_fr": "Armes de base, Arcs de Guerre",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
       "armor": [
+        {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -1378,10 +1694,18 @@
       ],
       "options": [
         {
-          "name_en": "Have the Chariot Runners Special Rule",
-          "name_de": "Have the Chariot Runners Special Rule",
+          "name_en": "Chariot Runners Special Rule",
+          "name_de": "Chariot Runners Special Rule",
           "name_fr": "Avoir la règle spéciale Escorteurs de Chars",
           "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "(Nehekharan Royal Host only, 0-1 per 1000 points) Chariot Runners Special Rule",
+          "name_de": "(Nehekharan Royal Host only, 0-1 per 1000 points) Chariot Runners Special Rule",
+          "name_fr": "(Nehekharan Royal Host only, 0-1 per 1000 points) Avoir la règle spéciale Escorteurs de Chars",
+          "points": 0,
           "perModel": true,
           "active": false
         }
@@ -1390,6 +1714,407 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        },
+        "mortuary-cults": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Skeleton Infantry Cohorts",
+      "name_de": "Skeleton Infantry Cohorts",
+      "name_es": "Skeleton Infantry Cohorts",
+      "name_fr": "Skeleton Infantry Cohorts",
+      "id": "skeleton-infantry-cohorts",
+      "points": 0,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Master of Arms (champion)",
+          "name_de": "Master of Arms (champion)",
+          "name_es": "Master of Arms (champion)",
+          "name_fr": "Master of Arms (champion)",
+          "points": 5,
+          "magic": {
+            "types": ["weapon", "enchanted-item", "armor", "talisman"],
+            "maxPoints": 30
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
+          "name_de": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
+          "name_es": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
+          "name_fr": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (both), Shields (Warriors)",
+          "name_de": "Light armour (both), Shields (Warriors)",
+          "name_es": "Light armour (both), Shields (Warriors)",
+          "name_fr": "Light armour (both), Shields (Warriors)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Royal Host Warriors",
+          "name_de": "Royal Host Warriors",
+          "name_es": "Royal Host Warriors",
+          "name_fr": "Royal Host Warriors",
+          "points": 5,
+          "perModel": false,
+          "stackable": 1,
+          "minimum": 10,
+          "maximum": 0
+        },
+        {
+          "name_en": "Royal Host Archers",
+          "name_de": "Royal Host Archers",
+          "name_es": "Royal Host Archers",
+          "name_fr": "Royal Host Archers",
+          "points": 5,
+          "perModel": false,
+          "stackable": 1,
+          "minimum": 10,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline",
+        "name_de": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline",
+        "name_es": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline",
+        "name_fr": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline"
+      },
+      "armyComposition": {
+        "nehekharan-royal-hosts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Skeleton Cavalry Cohort",
+      "name_de": "Skeleton Cavalry Cohort",
+      "name_es": "Skeleton Cavalry Cohort",
+      "name_fr": "Skeleton Cavalry Cohort",
+      "id": "skeleton-cavalry-cohort",
+      "points": 0,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Master of Horse (champion)",
+          "name_de": "Master of Horse (champion)",
+          "name_es": "Master of Horse (champion)",
+          "name_fr": "Master of Horse (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 30
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 30
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
+          "name_de": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
+          "name_es": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
+          "name_fr": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (both), Shields (Horsemen)",
+          "name_de": "Light armour (both), Shields (Horsemen)",
+          "name_es": "Light armour (both), Shields (Horsemen)",
+          "name_fr": "Light armour (both), Shields (Horsemen)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Royal Host Horsemen",
+          "name_de": "Royal Host Horsemen",
+          "name_es": "Royal Host Horsemen",
+          "name_fr": "Royal Host Horsemen",
+          "points": 12,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 5,
+          "maximum": 0
+        },
+        {
+          "name_en": "Royal Host Horse Archers",
+          "name_de": "Royal Host Horse Archers",
+          "name_es": "Royal Host Horse Archers",
+          "name_fr": "Royal Host Horse Archers",
+          "points": 11,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 5,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Steadfast Discipline (see page 31), Swiftstride, Vanguard",
+        "name_de": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Steadfast Discipline (see page 31), Swiftstride, Vanguard",
+        "name_es": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Steadfast Discipline (see page 31), Swiftstride, Vanguard",
+        "name_fr": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Steadfast Discipline (see page 31), Swiftstride, Vanguard"
+      },
+      "armyComposition": {
+        "nehekharan-royal-hosts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Necroserpents",
+      "name_de": "Necroserpents",
+      "name_es": "Necroserpents",
+      "name_fr": "Necroserpents",
+      "id": "necroserpents",
+      "points": 38,
+      "minimum": 2,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lashing tails and venomous fangs (hand weapons)",
+          "name_de": "Lashing tails and venomous fangs (hand weapons)",
+          "name_es": "Lashing tails and venomous fangs (hand weapons)",
+          "name_fr": "Lashing tails and venomous fangs (hand weapons)",
+          "points": 1,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_de": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_es": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_fr": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride"
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Tomb Guard Chariots",
+      "name_de": "Tomb Guard Chariots",
+      "name_es": "Tomb Guard Chariots",
+      "name_fr": "Tomb Guard Chariots",
+      "id": "tomb-guard-chariots",
+      "points": 53,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Tomb Captain (champion)",
+          "name_de": "Tomb Captain (champion)",
+          "name_es": "Tomb Captain (champion)",
+          "name_fr": "Tomb Captain (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberts, Shields",
+          "name_de": "Hand weapons, Halberts, Shields",
+          "name_es": "Hand weapons, Halberts, Shields",
+          "name_fr": "Hand weapons, Halberts, Shields",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_de": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_es": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_fr": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride"
+      },
+      "armyComposition": {
+        "nehekharan-royal-hosts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Ushabti",
+      "name_de": "Ushabti",
+      "id": "ushabti",
+      "points": 49,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Ancient (Champion)",
+          "name_de": "Ancient (Champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Greatbows",
+          "name_de": "Greatbows",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ritual Blades",
+          "name_de": "Ritual Blades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "core"
+        }
       }
     }
   ],
@@ -1458,6 +2183,108 @@
       }
     },
     {
+      "name_en": "Venerable Ushabti",
+      "name_de": "Venerable Ushabti",
+      "name_es": "Venerable Ushabti",
+      "name_fr": "Venerable Ushabti",
+      "id": "venerable-ushabti",
+      "points": 56,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Venerable Ancient",
+          "name_de": "Venerable Ancient",
+          "name_es": "Venerable Ancient",
+          "name_fr": "Venerable Ancient",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Ritual blades",
+          "name_de": "Hand weapons, Ritual blades",
+          "name_es": "Hand weapons, Ritual blades",
+          "name_fr": "Hand weapons, Ritual blades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (1), Khopesh, Magic Resistance (2), Nehekharan Undead, Regeneration (6+)",
+        "name_de": "Close Order, Indomitable (1), Khopesh, Magic Resistance (2), Nehekharan Undead, Regeneration (6+)",
+        "name_es": "Close Order, Indomitable (1), Khopesh, Magic Resistance (2), Nehekharan Undead, Regeneration (6+)",
+        "name_fr": "Close Order, Indomitable (1), Khopesh, Magic Resistance (2), Nehekharan Undead, Regeneration (6+)"
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Tomb Swarms",
+      "name_de": "Tomb Swarms",
+      "id": "tomb-swarms",
+      "points": 37,
+      "minimum": 2,
+      "maximum": 10,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Venemous Bites and Stings (Counts as Hand Weapons)",
+          "name_de": "Venemous Bites and Stings (Counts as Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "special"
+        }
+      }
+    },
+    {
       "name_en": "Carrion",
       "name_de": "Carrion",
       "name_fr": "Charognards",
@@ -1482,6 +2309,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "special"
+        },
+        "mortuary-cults": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1588,6 +2423,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "special"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1691,6 +2534,54 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "special"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Necroserpents",
+      "name_de": "Necroserpents",
+      "name_es": "Necroserpents",
+      "name_fr": "Necroserpents",
+      "id": "necroserpents",
+      "points": 38,
+      "minimum": 2,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lashing tails and venomous fangs (hand weapons)",
+          "name_de": "Lashing tails and venomous fangs (hand weapons)",
+          "name_es": "Lashing tails and venomous fangs (hand weapons)",
+          "name_fr": "Lashing tails and venomous fangs (hand weapons)",
+          "points": 1,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_de": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_es": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_fr": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order,Poisoned Attacks, Regeneration (6+), Swiftstride"
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1897,6 +2788,183 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "special"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Tomb Guard Chariots",
+      "name_de": "Tomb Guard Chariots",
+      "name_es": "Tomb Guard Chariots",
+      "name_fr": "Tomb Guard Chariots",
+      "id": "tomb-guard-chariots",
+      "points": 53,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Tomb Captain (champion)",
+          "name_de": "Tomb Captain (champion)",
+          "name_es": "Tomb Captain (champion)",
+          "name_fr": "Tomb Captain (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberts, Shields",
+          "name_de": "Hand weapons, Halberts, Shields",
+          "name_es": "Hand weapons, Halberts, Shields",
+          "name_fr": "Hand weapons, Halberts, Shields",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_de": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_es": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_fr": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride"
+      },
+      "armyComposition": {
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Necrolith Colossus",
+      "name_de": "Necrolith Colossus",
+      "id": "necrolith-colossus",
+      "points": 160,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Paired Great Khopeshes",
+          "name_de": "Paired Great Khopeshes",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Necrosphinx",
+      "name_de": "Necrosphinx",
+      "id": "necrosphinx",
+      "points": 195,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaving Blades",
+          "name_de": "Cleaving Blades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Decapitating Strike",
+          "name_de": "Decapitating Strike",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Envenomed Sting",
+          "name_de": "Envenomed Sting",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "armyComposition": {
+        "mortuary-cults": {
+          "category": "special"
+        }
       }
     }
   ],
@@ -1937,6 +3005,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "rare"
+        },
+        "mortuary-cults": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2038,6 +3114,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "rare"
+        },
+        "mortuary-cults": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2093,6 +3177,14 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "rare"
+        },
+        "mortuary-cults": {
+          "category": "rare"
+        }
       }
     }
   ],
