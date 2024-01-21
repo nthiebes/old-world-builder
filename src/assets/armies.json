@@ -2,116 +2,6 @@
   {
     "id": "the-old-world",
     "name": "Warhammer: The Old World",
-    "armyComposition": {
-      "kingdom-of-bretonnia": {
-        "characters": {
-          "percentage": 50,
-          "units": [
-            {
-              "id": "duke",
-              "min": 0,
-              "max": 1
-            },
-            {
-              "id": "baron",
-              "min": 0,
-              "max": 1,
-              "perPoints": 1000
-            },
-            {
-              "id": "prophetees",
-              "min": 0,
-              "max": 1,
-              "perPoints": 1000
-            }
-          ]
-        },
-        "core": {
-          "percentage": 25,
-          "units": [
-            {
-              "ids": ["knights-of-the-realm", "mounted-knights-of-the-realm"],
-              "min": 1
-            },
-            {
-              "ids": ["men-at-arms", "peasant-bowmen"],
-              "min": 1
-            }
-          ]
-        },
-        "special": {
-          "percentage": 50,
-          "units": [
-            {
-              "id": "battle-pilgrims",
-              "min": 0,
-              "max": 2,
-              "perPoints": 1000
-            }
-          ]
-        },
-        "rare": {
-          "percentage": 25,
-          "units": [
-            {
-              "id": "field-trebuchet",
-              "min": 0,
-              "max": 1,
-              "perPoints": 1000
-            }
-          ]
-        },
-        "allies": {
-          "percentage": 25,
-          "armies": [
-            "errantry-crusades",
-            "bretonnian-exiles",
-            "dwarfen-mountain-holds",
-            "empire-of-man",
-            "high-elf-realms",
-            "wood-elf-realms"
-          ]
-        }
-      },
-      "errantry-crusades": {
-        "characters": {
-          "percentage": 50
-        },
-        "core": {
-          "percentage": 33
-        },
-        "special": {
-          "percentage": 50
-        },
-        "rare": {
-          "percentage": 33
-        },
-        "allies": {
-          "percentage": 25,
-          "armies": ["empire-of-man"],
-          "units": "Empire Knights & Empire Inner Circle Knights ..."
-        }
-      },
-      "bretonnian-exiles": {
-        "characters": {
-          "percentage": 50
-        },
-        "core": {
-          "percentage": 25
-        },
-        "special": {
-          "percentage": 33
-        },
-        "rare": {
-          "percentage": 33
-        },
-        "allies": {
-          "percentage": 25,
-          "armies": ["empire-of-man"],
-          "units": "Free Company Militia & Empire Archers ..."
-        }
-      }
-    },
     "armies": [
       {
         "id": "empire-of-man",
@@ -127,8 +17,7 @@
         "name_en": "Orc & Goblin Tribes",
         "name_es": "Orc & Goblin Tribes",
         "name_fr": "Orc & Goblin Tribes",
-        "items": ["general", "orc-and-goblin-tribes"],
-        "armyComposition": ["nomadic-waaagh", "troll-horde"]
+        "items": ["general", "orc-and-goblin-tribes"]
       },
       {
         "id": "dwarfen-mountain-holds",

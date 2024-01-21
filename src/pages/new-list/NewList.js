@@ -29,7 +29,7 @@ export const NewList = ({ isMobile }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
-  const [armyComposition, setArmyComposition] = useState("none");
+  const [armyComposition, setArmyComposition] = useState();
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
@@ -80,6 +80,7 @@ export const NewList = ({ isMobile }) => {
   };
   const handleArmyChange = (value) => {
     setArmy(value);
+    setArmyComposition(value);
   };
   const handleArcaneJournalChange = (value) => {
     setArmyComposition(value);
@@ -200,19 +201,19 @@ export const NewList = ({ isMobile }) => {
                 id="arcane-journal"
                 options={[
                   {
-                    id: "grand-army",
+                    id: army,
                     name_en: intl.formatMessage({ id: "new.grandArmy" }),
                   },
-                  ...journalArmies.map((army) => ({
-                    id: army,
-                    name_en: nameMap[army].name_en,
-                    name_de: nameMap[army].name_de,
-                    name_es: nameMap[army].name_es,
-                    name_fr: nameMap[army].name_fr,
+                  ...journalArmies.map((journalArmy) => ({
+                    id: journalArmy,
+                    name_en: nameMap[journalArmy].name_en,
+                    name_de: nameMap[journalArmy].name_de,
+                    name_es: nameMap[journalArmy].name_es,
+                    name_fr: nameMap[journalArmy].name_fr,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
-                selected="grand-army"
+                selected={army}
                 spaceBottom
               />
             </>
