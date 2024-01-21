@@ -129,7 +129,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -274,7 +274,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -374,7 +374,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism"],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Braystaff, Gaze of the Gods, Lore of the Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -474,7 +474,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism"],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -483,10 +483,14 @@
     {
       "name_en": "Doombull",
       "name_de": "Doombull",
+      "name_es": "Doombull",
+      "name_fr": "Doombull",
       "id": "doombull",
       "points": 210,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -562,15 +566,26 @@
           "maxPoints": 50,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Gorebull",
       "name_de": "Gorebull",
+      "name_es": "Gorebull",
+      "name_fr": "Gorebull",
       "id": "gorebull",
       "points": 130,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -646,15 +661,26 @@
           "maxPoints": 50,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Centigor Chieftain",
       "name_de": "Centigor Chieftain",
+      "name_es": "Centigor Chieftain",
+      "name_fr": "Centigor Chieftain",
       "id": "centigore-chieftain",
       "points": 75,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -746,7 +772,14 @@
           "maxPoints": 50,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Drunken, Fast Cavalry, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (1), Swiftstride, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "core": [
@@ -756,7 +789,7 @@
       "name_es": "Rebaño de bestigors (0-1 si el Genral es un Caudillo o Beligor)",
       "name_fr": "Bestigor Herds (0-1 if General is Beastlord or Wargor)",
       "id": "bestigor-herds",
-      "points": 12,
+      "points": 15,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
@@ -767,8 +800,14 @@
           "name_de": "Gouge-horn",
           "points": 8,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
-            "maxPoints": 25
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon",
+              "chaos-mutation"
+            ],
+            "maxPoints": 50
           },
           "name_es": "Corneador"
         },
@@ -839,7 +878,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Blood Rage, Close Order, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -936,7 +975,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Skirmishers, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1040,7 +1079,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
+        "name_en": "Chariot Runners, Horde, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Skirmishers, Warband",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1051,14 +1090,28 @@
       }
     },
     {
-      "name_en": "Warhounds",
-      "name_de": "Warhounds",
+      "name_en": "Chaos Warhounds",
+      "name_de": "Chaos Warhounds",
+      "name_es": "Chaos Warhounds",
+      "name_fr": "Chaos Warhounds",
       "id": "warhounds",
       "points": 6,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Claws and Fangs (counts as a hand weapon)",
+          "name_de": "Claws and Fangs (counts as a hand weapon)",
+          "name_es": "Claws and Fangs (counts as a hand weapon)",
+          "name_fr": "Claws and Fangs (counts as a hand weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
@@ -1090,6 +1143,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Loner, Move through Cover, Open Order, Swiftstride",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1098,10 +1159,14 @@
     {
       "name_en": "Razorgor Herds",
       "name_de": "Razorgor Herds",
+      "name_es": "Razorgor Herds",
+      "name_fr": "Razorgor Herds",
       "id": "razorgor-herds",
       "points": 52,
       "minimum": 1,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1123,6 +1188,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Foe Render, Impact Hits (D3), Loner, Open Order, Primal Fury, Razor Tusks, Swiftstride",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1131,10 +1204,14 @@
     {
       "name_en": "Tuskgor Chariots",
       "name_de": "Tuskgor Chariots",
+      "name_es": "Tuskgor Chariots",
+      "name_fr": "Tuskgor Chariots",
       "id": "tuskgor-chariots-",
       "points": 85,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1162,6 +1239,14 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided, Primal Fury, Razor Tusks, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1170,10 +1255,14 @@
     {
       "name_en": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
       "name_de": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
+      "name_es": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
+      "name_fr": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
       "id": "minotaur-herd-(0-1-if-general-is-doombull-or-gorebull)",
       "points": 47,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Bloodkine",
@@ -1260,6 +1349,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1270,18 +1367,28 @@
     {
       "name_en": "Bestigor Herds",
       "name_de": "Bestigor Herds",
+      "name_es": "Bestigor Herds",
+      "name_fr": "Bestigor Herds",
       "id": "bestigor-herds",
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Gouge-horn",
           "name_de": "Gouge-horn",
           "points": 8,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
-            "maxPoints": 25
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon",
+              "chaos-mutation"
+            ],
+            "maxPoints": 50
           }
         },
         {
@@ -1342,6 +1449,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Close Order, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1350,10 +1465,14 @@
     {
       "name_en": "Harpies",
       "name_de": "Harpies",
+      "name_es": "Harpies",
+      "name_fr": "Harpies",
       "id": "harpies",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1367,6 +1486,14 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1375,10 +1502,14 @@
     {
       "name_en": "Minotaur Herds",
       "name_de": "Minotaur Herds",
+      "name_es": "Minotaur Herds",
+      "name_fr": "Minotaur Herds",
       "id": "minotaur-herds",
       "points": 47,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Bloodkine",
@@ -1465,6 +1596,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1473,10 +1612,14 @@
     {
       "name_en": "Cockatrice",
       "name_de": "Cockatrice",
+      "name_es": "Cockatrice",
+      "name_fr": "Cockatrice",
       "id": "cockatrice",
       "points": 170,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1517,6 +1660,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (10), Large Target, Stomp Attacks (1), Stony Stare, Swifstride, Terror",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1525,10 +1676,14 @@
     {
       "name_en": "Centigor Herds",
       "name_de": "Centigor Herds",
+      "name_es": "Centigor Herds",
+      "name_fr": "Centigor Herds",
       "id": "centigor-herds",
       "points": 19,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Gorehoof",
@@ -1610,6 +1765,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Drunken, Fast Cavalry, Horde, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Skirmishers, Stomp Attacks (1), Swiftstride, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1618,6 +1781,8 @@
     {
       "name_en": "Dragon Ogres",
       "name_de": "Dragon Ogres",
+      "name_es": "Dragon Ogres",
+      "name_fr": "Dragon Ogres",
       "id": "dragon-ogres",
       "points": 56,
       "minimum": 1,
@@ -1683,6 +1848,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immine to Psychology, Stomp Attacks (2), The Quickening Storm",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1691,10 +1864,14 @@
     {
       "name_en": "Razorgor Chariot",
       "name_de": "Razorgor Chariot",
+      "name_es": "Razorgor Chariot",
+      "name_fr": "Razorgor Chariot",
       "id": "razergor-chariot",
       "points": 120,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1722,6 +1899,14 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1, Razorgor only), Close Order, Fear, First Charge, Foe Render (Razorgor only), Impact Hits (D6+2), Mark of Chaos Undivided, Primal Fury, Razor Tusks",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1730,6 +1915,8 @@
     {
       "name_en": "Chaos Ogres",
       "name_de": "Chaos Ogres",
+      "name_es": "Chaos Ogres",
+      "name_fr": "Chaos Ogres",
       "id": "chaos-ogres",
       "points": 33,
       "minimum": 3,
@@ -1836,6 +2023,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mark of Chaos Undivded, Ogre Charge",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1844,18 +2039,24 @@
     {
       "name_en": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "name_de": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_es": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_fr": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "id": "jabberslythe",
       "points": 195,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws and slithery tongue",
-          "name_de": "Wicked claws and slithery tongue",
+          "name_en": "Wicked claws and slithey tongue",
+          "name_de": "Wicked claws and slithey tongue",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Wicked claws and slithey tongue",
+          "name_fr": "Wicked claws and slithey tongue"
         }
       ],
       "armor": [
@@ -1869,6 +2070,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Large Target, Maddening Aura, Poisoned Attacks, Spurting Bile Blood, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1877,10 +2086,14 @@
     {
       "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_es": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_fr": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
       "id": "cygor",
       "points": 215,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1902,6 +2115,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ghostsight, Immune to Psychology, Large Target, Soul-eater, Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1910,10 +2131,14 @@
     {
       "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
       "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_es": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_fr": "Ghorgon (0-1 if General is Doombull or Gorebull)",
       "id": "ghorgon",
       "points": 245,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1935,6 +2160,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Close Order, Frenzy, Large Target, Primal Fury, Regeneration (6+), Stomp Attacks (D3), Stubborn, Swallow Whole, Terror, Timmm-berrr!",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1945,10 +2178,14 @@
     {
       "name_en": "Dragon Ogre Shaggoth",
       "name_de": "Dragon Ogre Shaggoth",
+      "name_es": "Dragon Ogre Shaggoth",
+      "name_fr": "Dragon Ogre Shaggoth",
       "id": "dragon-ogre-shaggoth-",
       "points": 225,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Magic items",
@@ -2010,6 +2247,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immine to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2018,18 +2263,24 @@
     {
       "name_en": "Jabberslythe",
       "name_de": "Jabberslythe",
+      "name_es": "Jabberslythe",
+      "name_fr": "Jabberslythe",
       "id": "jabberslythe",
       "points": 195,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws and slithery tongue",
-          "name_de": "Wicked claws and slithery tongue",
+          "name_en": "Wicked claws and slithey tongue",
+          "name_de": "Wicked claws and slithey tongue",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Wicked claws and slithey tongue",
+          "name_fr": "Wicked claws and slithey tongue"
         }
       ],
       "armor": [
@@ -2043,6 +2294,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Large Target, Maddening Aura, Poisoned Attacks, Spurting Bile Blood, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2051,10 +2310,14 @@
     {
       "name_en": "Cygor",
       "name_de": "Cygor",
+      "name_es": "Cygor",
+      "name_fr": "Cygor",
       "id": "cygor",
       "points": 215,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2076,6 +2339,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ghostsight, Immune to Psychology, Large Target, Soul-eater, Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2084,10 +2355,14 @@
     {
       "name_en": "Chaos Giant",
       "name_de": "Chaos Giant",
+      "name_es": "Chaos Giant",
+      "name_fr": "Chaos Giant",
       "id": "chaos-giant-",
       "points": 200,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2126,6 +2401,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2134,10 +2417,14 @@
     {
       "name_en": "Ghorgon",
       "name_de": "Ghorgon",
+      "name_es": "Ghorgon",
+      "name_fr": "Ghorgon",
       "id": "ghorgon",
       "points": 245,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2159,6 +2446,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Close Order, Frenzy, Large Target, Primal Fury, Regeneration (6+), Stomp Attacks (D3), Stubborn, Swallow Whole, Terror, Timmm-berrr!",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2167,6 +2462,8 @@
     {
       "name_en": "Chaos Trolls",
       "name_de": "Chaos Trolls",
+      "name_es": "Chaos Trolls",
+      "name_fr": "Chaos Trolls",
       "id": "chaos-trolls",
       "points": 41,
       "minimum": 1,
@@ -2208,6 +2505,14 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2216,6 +2521,8 @@
     {
       "name_en": "Chaos Spawn",
       "name_de": "Chaos Spawn",
+      "name_es": "Chaos Spawn",
+      "name_fr": "Chaos Spawn",
       "id": "chaos-spawn",
       "points": 50,
       "minimum": 1,
@@ -2280,6 +2587,14 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Fear, Immune to Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
