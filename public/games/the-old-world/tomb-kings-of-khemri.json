@@ -108,9 +108,9 @@
           "active": false
         },
         {
-          "name_en": "(Nehekharan Royal Host only) Arise!",
-          "name_de": "(Nehekharan Royal Host only) Arise!",
-          "name_fr": "(Nehekharan Royal Host only) Arise!",
+          "name_en": "(Nehekharan Royal Host only) Arise! Special Rule and Level 1 Wizard",
+          "name_de": "(Nehekharan Royal Host only) Arise! Special Rule and Level 1 Wizard",
+          "name_fr": "(Nehekharan Royal Host only) Arise! Special Rule and Level 1 Wizard",
           "points": 35,
           "perModel": false,
           "active": false
@@ -589,9 +589,9 @@
           "maximum": 0
         },
         {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Battle Standard Bearer",
+          "name_en": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_de": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_fr": "(Mortuary Cult Only) Battle Standard Bearer",
           "points": 25,
           "perModel": false,
           "stackable": false,
@@ -703,7 +703,7 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
-          "maxPoints": 0
+          "maxPoints": 50
         }
       ],
       "magic": {
@@ -1006,6 +1006,14 @@
       ],
       "armor": [
         {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armures légères",
@@ -1113,6 +1121,14 @@
       ],
       "armor": [
         {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
@@ -1204,6 +1220,17 @@
         }
       ],
       "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
         {
           "name_en": "Have the Drilled Special Rule (one per 1000pts)",
           "name_de": "Have the Drilled Special Rule (one per 1000pts)",
@@ -1603,6 +1630,14 @@
       ],
       "armor": [
         {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
@@ -1986,9 +2021,9 @@
       "armor": [],
       "options": [
         {
-          "name_en": "The Terrors Below (Mortuary Cult only)",
-          "name_de": "The Terrors Below (Mortuary Cult only)",
-          "name_fr": "The Terrors Below (Mortuary Cult only)",
+          "name_en": "(Mortuary Cult Only) The Terrors Below",
+          "name_de": "(Mortuary Cult Only) The Terrors Below",
+          "name_fr": "(Mortuary Cult Only) The Terrors Below",
           "points": 2,
           "perModel": true,
           "active": false
@@ -2538,6 +2573,14 @@
       ],
       "options": [
         {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
           "name_en": "Have the Drilled Special Rule (one per 1000pts)",
           "name_de": "Have the Drilled Special Rule (one per 1000pts)",
           "name_fr": "Avoir la règle Spéciale Bien Entrainés (une unité par tranche de 1000pts)",
@@ -2598,9 +2641,9 @@
       "armor": [],
       "options": [
         {
-          "name_en": "The Terrors Below (Mortuary Cult only)",
-          "name_de": "The Terrors Below (Mortuary Cult only)",
-          "name_fr": "The Terrors Below (Mortuary Cult only)",
+          "name_en": "(Mortuary Cult Only) The Terrors Below",
+          "name_de": "(Mortuary Cult Only) The Terrors Below",
+          "name_fr": "(Mortuary Cult Only) The Terrors Below",
           "points": 2,
           "perModel": true,
           "active": false
@@ -2741,9 +2784,9 @@
           "active": false
         },
         {
-          "name_en": "The Terrors Below (Mortuary Cult only)",
-          "name_de": "The Terrors Below (Mortuary Cult only)",
-          "name_fr": "The Terrors Below (Mortuary Cult only)",
+          "name_en": "(Mortuary Cult Only) The Terrors Below",
+          "name_de": "(Mortuary Cult Only) The Terrors Below",
+          "name_fr": "(Mortuary Cult Only) The Terrors Below",
           "points": 2,
           "perModel": true,
           "active": false
