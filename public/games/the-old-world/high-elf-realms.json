@@ -190,7 +190,13 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
           "selected": [],
           "maxPoints": 100,
           "mutuallyExclusive": false
@@ -1265,6 +1271,70 @@
         "types": [],
         "maxPoints": 0
       }
+    },
+    {
+      "name_en": "Sisters of Avelorn (0-1 with Everqueen)",
+      "name_de": "Sisters of Avelorn (0-1 with Everqueen)",
+      "id": "sister-of-avelorn",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "High Sister",
+          "name_de": "High Sister",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Bows of Avelorn",
+          "name_de": "Bows of Avelorn",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn (0-1 unit)",
+          "name_de": "Stubborn (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Ambushers (0-1 unit)",
+          "name_de": "Ambushers (0-1 unit)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
     }
   ],
   "special": [
@@ -1687,8 +1757,8 @@
   ],
   "rare": [
     {
-      "name_en": "Sister of Avelorn",
-      "name_de": "Sister of Avelorn",
+      "name_en": "Sisters of Avelorn",
+      "name_de": "Sisters of Avelorn",
       "id": "sister-of-avelorn",
       "points": 15,
       "minimum": 5,
@@ -1708,8 +1778,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Bow of Avelorn",
-          "name_de": "Bow of Avelorn",
+          "name_en": "Bows of Avelorn",
+          "name_de": "Bows of Avelorn",
           "points": 0,
           "perModel": false,
           "active": true
