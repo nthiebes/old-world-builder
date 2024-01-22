@@ -1,8 +1,1120 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Dark Elf Dreadlord",
+      "name_de": "Dark Elf Dreadlord",
+      "name_es": "Dark Elf Dreadlord",
+      "name_fr": "Dark Elf Dreadlord",
+      "id": "dark-elf-dreadlord",
+      "points": 130,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "name_es": "Lance",
+          "name_fr": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light Armour",
+          "name_es": "Light Armour",
+          "name_fr": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater crossbow",
+          "name_de": "Repeater crossbow",
+          "name_es": "Repeater crossbow",
+          "name_fr": "Repeater crossbow",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater handbow",
+          "name_de": "Repeater handbow",
+          "name_es": "Repeater handbow",
+          "name_fr": "Repeater handbow",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of repeater handbows",
+          "name_de": "Brace of repeater handbows",
+          "name_es": "Brace of repeater handbows",
+          "name_fr": "Brace of repeater handbows",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Sea Dragon Cloak",
+          "name_fr": "Sea Dragon Cloak",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Dark steed",
+          "name_de": "Dark streed",
+          "name_es": "Dark streed",
+          "name_fr": "Dark streed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Cold one",
+          "name_de": "Cold one",
+          "name_es": "Cold one",
+          "name_fr": "Cold one",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Cold one chariot",
+          "name_de": "Cold one chariot",
+          "name_es": "Cold one chariot",
+          "name_fr": "Cold one chariot",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Black dragon",
+          "name_de": "Black dragon",
+          "name_es": "Black dragon",
+          "name_fr": "Black dragon",
+          "points": 280,
+          "active": false
+        },
+        {
+          "name_en": "Manticore",
+          "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
+          "points": 130,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_de": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_es": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_fr": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*"
+      },
+      "notes": {
+        "name_en": "0-1 Dark Elf Dreadlord or Supreme Sorceress per 1,000 points : *These special rules do not apply to this model's mount (should it have one).",
+        "name_de": "*These special rules do not apply to this model's mount (should it have one).",
+        "name_es": "*These special rules do not apply to this model's mount (should it have one).",
+        "name_fr": "*These special rules do not apply to this model's mount (should it have one)."
+      }
+    },
+    {
+      "name_en": "Dark Elf Master",
+      "name_de": "Dark Elf Master",
+      "name_es": "Dark Elf Master",
+      "name_fr": "Dark Elf Master",
+      "id": "dark-elf-master",
+      "points": 70,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "name_es": "Lance",
+          "name_fr": "Lance",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light Armour",
+          "name_es": "Light Armour",
+          "name_fr": "Light Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater crossbow",
+          "name_de": "Repeater crossbow",
+          "name_es": "Repeater crossbow",
+          "name_fr": "Repeater crossbow",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater handbow",
+          "name_de": "Repeater handbow",
+          "name_es": "Repeater handbow",
+          "name_fr": "Repeater handbow",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of repeater handbows",
+          "name_de": "Brace of repeater handbows",
+          "name_es": "Brace of repeater handbows",
+          "name_fr": "Brace of repeater handbows",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Sea Dragon Cloak",
+          "name_fr": "Sea Dragon Cloak",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Dark steed",
+          "name_de": "Dark steed",
+          "name_es": "Dark steed",
+          "name_fr": "Dark steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Cold one",
+          "name_de": "Cold one",
+          "name_es": "Cold one",
+          "name_fr": "Cold one",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Cold one chariot",
+          "name_de": "Cold one chariot",
+          "name_es": "Cold one chariot",
+          "name_fr": "Cold one chariot",
+          "points": 125,
+          "active": false
+        },
+        {
+          "name_en": "Black dragon",
+          "name_de": "Black dragon",
+          "name_es": "Black dragon",
+          "name_fr": "Black dragon",
+          "points": 280,
+          "active": false
+        },
+        {
+          "name_en": "Manticore",
+          "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
+          "points": 130,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_de": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_es": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_fr": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*"
+      },
+      "notes": {
+        "name_en": "0-1 Dark Elf Dreadlord or Supreme Sorceress per 1,000 points *These special rules do not apply to this model's mount (should it have one).",
+        "name_de": "*These special rules do not apply to this model's mount (should it have one).",
+        "name_es": "*These special rules do not apply to this model's mount (should it have one).",
+        "name_fr": "*These special rules do not apply to this model's mount (should it have one)."
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Dark Elf Warriors",
+      "name_de": "Dark Elf Warriors",
+      "name_es": "Dark Elf Warriors",
+      "name_fr": "Dark Elf Warriors",
+      "id": "dark-elf-warriors",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Repeater Crossbowmen",
+      "name_de": "Repeater Crossbowmen",
+      "name_es": "Repeater Crossbowmen",
+      "name_fr": "Repeater Crossbowmen",
+      "id": "repeater-crossbowmen",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Black Ark Corsairs",
+      "name_de": "Black Ark Corsairs",
+      "name_es": "Black Ark Corsairs",
+      "name_fr": "Black Ark Corsairs",
+      "id": "black-ark-corsairs",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Dark Riders",
+      "name_de": "Dark Riders",
+      "name_es": "Dark Riders",
+      "name_fr": "Dark Riders",
+      "id": "dark-riders",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Witch Elves",
+      "name_de": "Witch Elves",
+      "name_es": "Witch Elves",
+      "name_fr": "Witch Elves",
+      "id": "witch-elves",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 if your army includes one or more Death Hags",
+        "name_de": "0-1 if your army includes one or more Death Hags",
+        "name_es": "0-1 if your army includes one or more Death Hags",
+        "name_fr": "0-1 if your army includes one or more Death Hags"
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Har Ganeth Executioners",
+      "name_de": "Har Ganeth Executioners",
+      "name_es": "Har Ganeth Executioners",
+      "name_fr": "Har Ganeth Executioners",
+      "id": "har-ganeth-executioners",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Witch Elves",
+      "name_de": "Witch Elves",
+      "name_es": "Witch Elves",
+      "name_fr": "Witch Elves",
+      "id": "witch-elves",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Dark Elf Shades",
+      "name_de": "Dark Elf Shades",
+      "name_es": "Dark Elf Shades",
+      "name_fr": "Dark Elf Shades",
+      "id": "dark-elf-shades",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Harpies",
+      "name_de": "Harpies",
+      "name_es": "Harpies",
+      "name_fr": "Harpies",
+      "id": "harpies",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Black Guard of Naggarond",
+      "name_de": "Black Guard of Naggarond",
+      "name_es": "Black Guard of Naggarond",
+      "name_fr": "Black Guard of Naggarond",
+      "id": "black-guard-of-naggarond",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per Dark Elf Noble",
+        "name_de": "0-1 per Dark Elf Noble",
+        "name_es": "0-1 per Dark Elf Noble",
+        "name_fr": "0-1 per Dark Elf Noble"
+      }
+    },
+    {
+      "name_en": "Cold One Knights",
+      "name_de": "Cold One Knights",
+      "name_es": "Cold One Knights",
+      "name_fr": "Cold One Knights",
+      "id": "cold-one-knights",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per 1,000 points",
+        "name_de": "0-1 per 1,000 points",
+        "name_es": "0-1 per 1,000 points",
+        "name_fr": "0-1 per 1,000 points"
+      }
+    },
+    {
+      "name_en": "Scourgerunner Chariots",
+      "name_de": "Scourgerunner Chariots",
+      "name_es": "Scourgerunner Chariots",
+      "name_fr": "Scourgerunner Chariots",
+      "id": "scourgerunner-chariots",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-2 per 1,000",
+        "name_de": "0-2 per 1,000",
+        "name_es": "0-2 per 1,000",
+        "name_fr": "0-2 per 1,000"
+      }
+    },
+    {
+      "name_en": "Cold One Chariots",
+      "name_de": "Cold One Chariots",
+      "name_es": "Cold One Chariots",
+      "name_fr": "Cold One Chariots",
+      "id": "cold-one-chariots",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-2 per 1,000",
+        "name_de": "0-2 per 1,000",
+        "name_es": "0-2 per 1,000",
+        "name_fr": "0-2 per 1,000"
+      }
+    },
+    {
+      "name_en": "War Hydra",
+      "name_de": "War Hydra",
+      "name_es": "War Hydra",
+      "name_fr": "War Hydra",
+      "id": "war-hydra",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 if your general is a High Beastmaster",
+        "name_de": "0-1 if your general is a High Beastmaster",
+        "name_es": "0-1 if your general is a High Beastmaster",
+        "name_fr": "0-1 if your general is a High Beastmaster"
+      }
+    },
+    {
+      "name_en": "Kharibdyss",
+      "name_de": "Kharibdyss",
+      "name_es": "Kharibdyss",
+      "name_fr": "Kharibdyss",
+      "id": "kharibdyss",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 if your general is a High Beastmaster",
+        "name_de": "0-1 if your general is a High Beastmaster",
+        "name_es": "0-1 if your general is a High Beastmaster",
+        "name_fr": "0-1 if your general is a High Beastmaster"
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Sisters of Slaughter",
+      "name_de": "Sisters of Slaughter",
+      "name_es": "Sisters of Slaughter",
+      "name_fr": "Sisters of Slaughter",
+      "id": "sisters-of-slaughter",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bloodwrack Shrines",
+      "name_de": "Bloodwrack Shrines",
+      "name_es": "Bloodwrack Shrines",
+      "name_fr": "Bloodwrack Shrines",
+      "id": "bloodwrack-shrines",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "War Hydras",
+      "name_de": "War Hydras",
+      "name_es": "War Hydras",
+      "name_fr": "War Hydras",
+      "id": "war-hydras",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Kharibdyss",
+      "name_de": "Kharybdiss",
+      "name_es": "Kharybdiss",
+      "name_fr": "Kharybdiss",
+      "id": "kharibdyss",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bloodwrack Medusas",
+      "name_de": "Bloodwrack Medusas",
+      "name_es": "Bloodwrack Medusas",
+      "name_fr": "Bloodwrack Medusas",
+      "id": "bloodwrack-medusas",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Doomfire Warlocks",
+      "name_de": "Doomfire Warlocks",
+      "name_es": "Doomfire Warlocks",
+      "name_fr": "Doomfire Warlocks",
+      "id": "doomfire-warlocks",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per 1,000",
+        "name_de": "0-1 per 1,000",
+        "name_es": "0-1 per 1,000",
+        "name_fr": "0-1 per 1,000"
+      }
+    },
+    {
+      "name_en": "Reaper Bolt Throwers",
+      "name_de": "Reaper Bolt Throwers",
+      "name_es": "Reaper Bolt Throwers",
+      "name_fr": "Reaper Bolt Throwers",
+      "id": "reaper-bolt-throwers",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-2 per 1,000",
+        "name_de": "0-2 per 1,000",
+        "name_es": "0-2 per 1,000",
+        "name_fr": "0-2 per 1,000"
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
