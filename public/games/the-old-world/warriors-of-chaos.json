@@ -1,8 +1,10 @@
 {
   "characters": [
     {
-      "name_en": "Daemon Prince (0-1*)",
-      "name_de": "Daemon Prince (0-1*)",
+      "name_en": "Daemon Prince",
+      "name_de": "Daemon Prince",
+      "name_es": "Daemon Prince",
+      "name_fr": "Daemon Prince",
       "id": "daemon-prince",
       "points": 215,
       "minimum": 0,
@@ -134,11 +136,25 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"]
+      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1*",
+        "name_de": "0-1*",
+        "name_es": "0-1*",
+        "name_fr": "0-1*"
+      }
     },
     {
-      "name_en": "Chaos Lord (0-1*)",
-      "name_de": "Chaos Lord (0-1*)",
+      "name_en": "Chaos Lord",
+      "name_de": "Chaos Lord",
+      "name_es": "Chaos Lord",
+      "name_fr": "Chaos Lord",
       "id": "chaos-lord",
       "points": 195,
       "minimum": 0,
@@ -356,11 +372,26 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1*",
+        "name_de": "0-1*",
+        "name_es": "0-1*",
+        "name_fr": "0-1*"
+      }
     },
     {
-      "name_en": "Sorcerer Lord (0-1** per 1000 points)",
-      "name_de": "Sorcerer Lord (0-1** per 1000 points)",
+      "name_en": "Sorcerer Lord",
+      "name_de": "Sorcerer Lord",
+      "name_es": "Sorcerer Lord",
+      "name_fr": "Sorcerer Lord",
       "id": "sorcerer-lord",
       "points": 195,
       "minimum": 0,
@@ -512,11 +543,25 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"]
+      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1** per 1000 points",
+        "name_de": "0-1** per 1000 points",
+        "name_es": "0-1** per 1000 points",
+        "name_fr": "0-1** per 1000 points"
+      }
     },
     {
-      "name_en": "Exalted Champion (0-1** per 1000 points)",
-      "name_de": "Exalted Champion (0-1** per 1000 points)",
+      "name_en": "Exalted Champion",
+      "name_de": "Exalted Champion",
+      "name_es": "Exalted Champion",
+      "name_fr": "Exalted Champion",
       "id": "exalted-champion",
       "points": 125,
       "minimum": 0,
@@ -732,7 +777,20 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1** per 1000 points",
+        "name_de": "0-1** per 1000 points",
+        "name_es": "0-1** per 1000 points",
+        "name_fr": "0-1** per 1000 points"
+      }
     },
     {
       "name_en": "Exalted Sorcerer",
@@ -1781,12 +1839,16 @@
   ],
   "special": [
     {
-      "name_en": "Chosen Chaos Warriors (0-1)",
-      "name_de": "Chosen Chaos Warriors (0-1)",
+      "name_en": "Chosen Chaos Warriors",
+      "name_de": "Chosen Chaos Warriors",
+      "name_es": "Chosen Chaos Warriors",
+      "name_fr": "Chosen Chaos Warriors",
       "id": "chosen-chaos-warriors",
       "points": 17,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Champion",
@@ -1918,15 +1980,33 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1",
+        "name_de": "0-1",
+        "name_es": "0-1",
+        "name_fr": "0-1"
+      }
     },
     {
-      "name_en": "Chosen Chaos Knights (0-1)",
-      "name_de": "Chosen Chaos Knights (0-1)",
+      "name_en": "Chosen Chaos Knights",
+      "name_de": "Chosen Chaos Knights",
+      "name_es": "Chosen Chaos Knights",
+      "name_fr": "Chosen Chaos Knights",
       "id": "chosen-chaos-knights",
       "points": 36,
       "minimum": 4,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Champion",
@@ -2035,7 +2115,21 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1",
+        "name_de": "0-1",
+        "name_es": "0-1",
+        "name_fr": "0-1"
+      }
     },
     {
       "name_en": "Chaos Chariot",
@@ -2516,12 +2610,16 @@
       "mounts": []
     },
     {
-      "name_en": "Chaos Giant (0-1 per 1000 points)",
-      "name_de": "Chaos Giant (0-1 per 1000 points)",
+      "name_en": "Chaos Giant",
+      "name_de": "Chaos Giant",
+      "name_es": "Chaos Giant",
+      "name_fr": "Chaos Giant",
       "id": "chaos-giant",
       "points": 200,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2559,15 +2657,33 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
     },
     {
-      "name_en": "Dragon Ogre Shaggoth (0-1 per unit of Dragon Ogres)",
-      "name_de": "Dragon Ogre Shaggoth (0-1 per unit of Dragon Ogres)",
+      "name_en": "Dragon Ogre Shaggoth",
+      "name_de": "Dragon Ogre Shaggoth",
+      "name_es": "Dragon Ogre Shaggoth",
+      "name_fr": "Dragon Ogre Shaggoth",
       "id": "dragon-ogre-shaggoth",
       "points": 225,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2627,15 +2743,32 @@
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per unit of Dragon Ogres",
+        "name_de": "0-1 per unit of Dragon Ogres",
+        "name_es": "0-1 per unit of Dragon Ogres",
+        "name_fr": "0-1 per unit of Dragon Ogres"
+      }
     },
     {
-      "name_en": "Hellcannon (0-1 per 1000 points)",
-      "name_de": "Hellcannon (0-1 per 1000 points)",
+      "name_en": "Hellcannon",
+      "name_de": "Hellcannon",
+      "name_es": "Hellcannon",
+      "name_fr": "Hellcannon",
       "id": "hellcannon",
       "points": 215,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2648,7 +2781,21 @@
       ],
       "armor": [],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
     }
   ],
   "mercenaries": [],

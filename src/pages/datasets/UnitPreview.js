@@ -41,7 +41,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
           />
 
           {!unit.minimum &&
-            !unit.lores &&
+            (!unit.lores || (unit.lores && !unit.lores.length)) &&
             (!unit.command || (unit.command && !unit.command.length)) &&
             (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
             (!unit.armor || (unit.armor && !unit.armor.length)) &&
@@ -53,6 +53,12 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                 <FormattedMessage id="unit.noOptions" />
               </i>
             )}
+          {unit.notes && unit.notes.name_en ? (
+            <p className="unit__notes">
+              <Icon symbol="error" className="unit__notes-icon" />
+              {unit.notes[`name_${language}`] || unit.notes.name_en}
+            </p>
+          ) : null}
           {unit.minimum ? (
             <>
               <label htmlFor="strength" className="unit__strength">

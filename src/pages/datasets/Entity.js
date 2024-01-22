@@ -30,6 +30,12 @@ const initialUnitState = {
     name_es: "",
     name_fr: "",
   },
+  notes: {
+    name_en: "",
+    name_de: "",
+    name_es: "",
+    name_fr: "",
+  },
 };
 const magicItemTypes = [
   "weapon",
@@ -101,12 +107,23 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           : event.target.value,
     });
   };
-  const handleSpecialRulesChange = ({ field, value }) => {
+  const handleSpecialRulesChange = ({ field, key, value }) => {
     setUnit({
       ...unit,
-      specialRules: {
-        ...unit.specialRules,
+      [key]: {
+        ...unit[key],
         [field]: value,
+      },
+    });
+  };
+  const handleSpecialRulesBlur = ({ key, value }) => {
+    setUnit({
+      ...unit,
+      [key]: {
+        ...unit[key],
+        name_de: !unit[key].name_de ? value : unit[key].name_de,
+        name_es: !unit[key].name_es ? value : unit[key].name_es,
+        name_fr: !unit[key].name_fr ? value : unit[key].name_fr,
       },
     });
   };
@@ -519,9 +536,16 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           id={`specialRules-en-${randomId}`}
           className="input"
           value={unit.specialRules?.name_en}
+          onBlur={(event) =>
+            handleSpecialRulesBlur({
+              key: "specialRules",
+              value: event.target.value,
+            })
+          }
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_en",
+              key: "specialRules",
               value: event.target.value,
             })
           }
@@ -537,6 +561,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_de",
+              key: "specialRules",
               value: event.target.value,
             })
           }
@@ -552,6 +577,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_es",
+              key: "specialRules",
               value: event.target.value,
             })
           }
@@ -567,10 +593,83 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_fr",
+              key: "specialRules",
               value: event.target.value,
             })
           }
           placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
+      </Expandable>
+      <Expandable headline="Notes">
+        <label htmlFor={`notes-en-${randomId}`}>English</label>
+        <input
+          type="text"
+          id={`notes-en-${randomId}`}
+          className="input"
+          value={unit.notes?.name_en}
+          onBlur={(event) =>
+            handleSpecialRulesBlur({
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_en",
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. '0-1 per 1000 points'"
+          autoComplete="off"
+        />
+        <label htmlFor={`notes-de-${randomId}`}>German</label>
+        <input
+          type="text"
+          id={`notes-de-${randomId}`}
+          className="input"
+          value={unit.notes?.name_de}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_de",
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. '0-1 per 1000 points'"
+          autoComplete="off"
+        />
+        <label htmlFor={`notes-es-${randomId}`}>Spanish</label>
+        <input
+          type="text"
+          id={`notes-es-${randomId}`}
+          className="input"
+          value={unit.notes?.name_es}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_es",
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. '0-1 per 1000 points'"
+          autoComplete="off"
+        />
+        <label htmlFor={`notes-fr-${randomId}`}>French</label>
+        <input
+          type="text"
+          id={`notes-fr-${randomId}`}
+          className="input"
+          value={unit.notes?.name_fr}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_fr",
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. '0-1 per 1000 points'"
           autoComplete="off"
         />
       </Expandable>
