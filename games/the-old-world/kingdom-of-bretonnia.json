@@ -3,6 +3,7 @@
     {
       "name_en": "Duke (0-1)",
       "name_de": "Duke (0-1)",
+      "name_fr": "Duc (0-1)",
       "id": "duke",
       "points": 175,
       "minimum": 0,
@@ -12,6 +13,7 @@
         {
           "name_de": "Handwaffe",
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": false,
           "active": true
@@ -19,6 +21,7 @@
         {
           "name_de": "Morning Star",
           "name_en": "Morning Star",
+          "name_fr": "Morgenstern",
           "points": 3,
           "perModel": false,
           "active": false
@@ -26,6 +29,7 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": false,
           "active": false
@@ -33,6 +37,7 @@
         {
           "name_de": "Lance",
           "name_en": "Lance",
+          "name_fr": "Lance De Joute",
           "points": 4,
           "perModel": false,
           "active": false
@@ -42,6 +47,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": false,
           "active": true
@@ -51,6 +57,7 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -61,35 +68,41 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_de": "Bretonnian Warhorse",
+          "name_fr": "Destrier Bretonnien",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Barded Pegasus",
           "name_de": "Barded Pegasus",
+          "name_fr": "Pégase caparaçonné",
           "points": 30,
           "active": false
         },
         {
           "name_en": "Royal Pegasus",
           "name_de": "Royal Pegasus",
+          "name_fr": "Pégase Royal",
           "points": 60,
           "active": false
         },
         {
           "name_de": "Hippogryph",
           "name_en": "Hippogryph",
+          "name_fr": "Hyppogryphe",
           "points": 120
         },
         {
           "name_de": "Hippogryph with Barding",
           "name_en": "Hippogryph with Barding",
+          "name_fr": "Hyppogryphe avec caparaçon",
           "points": 135
         }
       ],
@@ -97,6 +110,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 100,
@@ -105,6 +119,7 @@
         {
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
+          "name_fr": "Vertues Chevaleresques",
           "types": ["knightly-virtue", "knightly-virtue-character"],
           "selected": [],
           "maxPoints": 0,
@@ -132,6 +147,7 @@
         {
           "name_de": "Handwaffe",
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": false,
           "active": true
@@ -139,6 +155,7 @@
         {
           "name_de": "Morning Star",
           "name_en": "Morning Star",
+          "name_fr": "Morgenstern",
           "points": 3,
           "perModel": false,
           "active": false
@@ -146,6 +163,7 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": false,
           "active": false
@@ -153,6 +171,7 @@
         {
           "name_de": "Lance",
           "name_en": "Lance",
+          "name_fr": "Lance De Joute",
           "points": 4,
           "perModel": false,
           "active": false
@@ -162,6 +181,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": false,
           "active": true
@@ -171,6 +191,7 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -179,6 +200,7 @@
         {
           "name_en": "The Questing Vow",
           "name_de": "The Questing Vow",
+          "name_fr": "Serment de la Quête",
           "points": 15,
           "stackable": false,
           "minimum": 0,
@@ -187,6 +209,7 @@
         {
           "name_en": "The Grail Vow",
           "name_de": "The Grail Vow",
+          "name_fr": "Serment du Graal",
           "points": 20,
           "stackable": false,
           "minimum": 0,
@@ -197,35 +220,41 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_de": "Bretonnian Warhorse",
+          "name_fr": "Destrier Bretonnien",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Barded Pegasus",
           "name_de": "Barded Pegasus",
+          "name_fr": "Pégase caparaçonné",
           "points": 30,
           "active": false
         },
         {
           "name_en": "Royal Pegasus",
           "name_de": "Royal Pegasus",
+          "name_fr": "Pégase Royal",
           "points": 60,
           "active": false
         },
         {
           "name_de": "Hippogryph",
           "name_en": "Hippogryph",
+          "name_fr": "Hyppogryphe",
           "points": 120
         },
         {
           "name_de": "Hippogryph with Barding",
           "name_en": "Hippogryph with Barding",
+          "name_fr": "Hyppogryphe avec caparaçon",
           "points": 135
         }
       ],
@@ -233,6 +262,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 75,
@@ -241,6 +271,7 @@
         {
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
+          "name_fr": "Vertues Chevaleresques",
           "types": ["knightly-virtue", "knightly-virtue-character"],
           "selected": [],
           "maxPoints": 0,
@@ -251,6 +282,7 @@
     {
       "name_en": "Prophetess (0-1* per 1000 points)",
       "name_de": "Prophetess (0-1* per 1000 points)",
+      "name_fr": "Prophetesse (0-1* par tranche de 1000 points)",
       "id": "prophetess",
       "points": 135,
       "minimum": 0,
@@ -261,6 +293,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "name_de": "Handwaffe",
           "points": 0,
           "perModel": false,
@@ -272,6 +305,7 @@
         {
           "name_en": "Wizard Level 4",
           "name_de": "Wizard Level 4",
+          "name_fr": "Sorcier Niveau 4",
           "points": 30,
           "stackable": false,
           "minimum": 0,
@@ -281,6 +315,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -288,24 +323,28 @@
         {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
+          "name_fr": "Destrier",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_de": "Bretonnian Warhorse",
+          "name_fr": "Destrier Bretonnien",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
+          "name_fr": "Licorne",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Royal Pegasus",
           "name_de": "Royal Pegasus",
+          "name_fr": "Pégase Royal",
           "points": 60,
           "active": false
         }
@@ -314,6 +353,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "armor",
@@ -339,6 +379,7 @@
     {
       "name_en": "Paladin",
       "name_de": "Paladin",
+      "name_fr": "Paladin",
       "id": "paladin",
       "points": 60,
       "minimum": 0,
@@ -348,6 +389,7 @@
         {
           "name_de": "Handwaffe",
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": false,
           "active": true
@@ -355,6 +397,7 @@
         {
           "name_de": "Morning Star",
           "name_en": "Morning Star",
+          "name_fr": "Morgenstern",
           "points": 3,
           "perModel": false,
           "active": false
@@ -362,6 +405,7 @@
         {
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": false,
           "active": false
@@ -369,6 +413,7 @@
         {
           "name_de": "Lance",
           "name_en": "Lance",
+          "name_fr": "Lance De Joute",
           "points": 4,
           "perModel": false,
           "active": false
@@ -378,6 +423,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": false,
           "active": true
@@ -387,6 +433,7 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -395,6 +442,7 @@
         {
           "name_en": "The Questing Vow",
           "name_de": "The Questing Vow",
+          "name_fr": "Serment de la Quête",
           "points": 15,
           "stackable": false,
           "minimum": 0,
@@ -403,6 +451,7 @@
         {
           "name_en": "The Grail Vow",
           "name_de": "The Grail Vow",
+          "name_fr": "Serment du Graal",
           "points": 20,
           "stackable": false,
           "minimum": 0,
@@ -411,6 +460,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -421,24 +471,28 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_de": "Bretonnian Warhorse",
+          "name_fr": "Destrier Bretonnien",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Barded Pegasus",
           "name_de": "Barded Pegasus",
+          "name_fr": "Pégase caparaçonné",
           "points": 30,
           "active": false
         },
         {
           "name_en": "Royal Pegasus",
           "name_de": "Royal Pegasus",
+          "name_fr": "Pégase Royal",
           "points": 60,
           "active": false
         }
@@ -447,6 +501,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50,
@@ -455,6 +510,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -463,6 +519,7 @@
         {
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
+          "name_fr": "Vertues Chevaleresques",
           "types": ["knightly-virtue", "knightly-virtue-character"],
           "selected": [],
           "maxPoints": 0,
@@ -473,6 +530,7 @@
     {
       "name_en": "Damsel",
       "name_de": "Damsel",
+      "name_fr": "Demoiselle",
       "id": "damsel",
       "points": 60,
       "minimum": 0,
@@ -483,6 +541,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "name_de": "Handwaffe",
           "points": 0,
           "perModel": false,
@@ -494,6 +553,7 @@
         {
           "name_en": "Wizard Level 2",
           "name_de": "Wizard Level 2",
+          "name_fr": "Sorcier Niveau 2",
           "points": 30,
           "stackable": false,
           "minimum": 0,
@@ -503,6 +563,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -510,18 +571,21 @@
         {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
+          "name_fr": "Destrier",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_de": "Bretonnian Warhorse",
+          "name_fr": "Destrier Bretonnien",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
+          "name_fr": "Licorne",
           "points": 35,
           "active": false
         }
@@ -530,6 +594,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "armor",
@@ -547,6 +612,7 @@
     {
       "name_en": "Sergeant-at-Arms",
       "name_de": "Sergeant-at-Arms",
+      "name_fr": "Sergent d'Armes",
       "id": "sergeant-at-arms",
       "points": 45,
       "minimum": 0,
@@ -555,6 +621,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "name_de": "Handwaffe",
           "points": 0,
           "perModel": false,
@@ -563,6 +630,7 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 2,
           "perModel": false,
           "active": false
@@ -570,6 +638,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base Additionnelle",
           "points": 2,
           "perModel": false,
           "active": false
@@ -577,6 +646,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de Cavalerie",
           "points": 2,
           "perModel": false,
           "active": false
@@ -586,6 +656,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": false,
           "active": true
@@ -594,6 +665,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_fr": "Bouclier",
           "name_de": "Schild",
           "points": 2,
           "stackable": false,
@@ -604,6 +676,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_fr": "A pieds",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -611,6 +684,7 @@
         {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
+          "name_fr": "Destrier",
           "points": 12,
           "active": false
         }
@@ -619,6 +693,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 25,
@@ -630,7 +705,7 @@
       "name_en": "The Green Knight",
       "name_de": "The Green Knight",
       "name_es": "The Green Knight",
-      "name_fr": "The Green Knight",
+      "name_fr": "Le Chevalier de Sinople",
       "id": "the-green-knight",
       "points": 275,
       "minimum": 0,
@@ -650,7 +725,7 @@
       "name_en": "Sir Cecil Gastonne, The Wyrm Slayer",
       "name_de": "Sir Cecil Gastonne, The Wyrm Slayer",
       "name_es": "Sir Cecil Gastonne, The Wyrm Slayer",
-      "name_fr": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "name_fr": "Sir Cecil Gastonne, Le tueur de Dragon",
       "id": "sir-cecil-gastonne-the-wyrm-slayer",
       "points": 165,
       "minimum": 0,
@@ -670,7 +745,7 @@
       "name_en": "Lady Élisse Duachaard",
       "name_de": "Lady Élisse Duachaard",
       "name_es": "Lady Élisse Duachaard",
-      "name_fr": "Lady Élisse Duachaard",
+      "name_fr": "Dame Élisse Duachaard",
       "id": "lady-élisse-duachaard",
       "points": 225,
       "minimum": 0,
@@ -690,7 +765,7 @@
       "name_en": "Outcast Wizard",
       "name_de": "Outcast Wizard",
       "name_es": "Outcast Wizard",
-      "name_fr": "Outcast Wizard",
+      "name_fr": "Sorcier Paria",
       "id": "outcast-wizard",
       "points": 45,
       "minimum": 0,
@@ -701,9 +776,9 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -715,7 +790,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier Niveau 2",
           "points": 30,
           "perModel": false,
           "stackable": false,
@@ -726,7 +801,7 @@
           "name_en": "Level 3 Wizard",
           "name_de": "Level 3 Wizard",
           "name_es": "Level 3 Wizard",
-          "name_fr": "Level 3 Wizard",
+          "name_fr": "Sorcier Niveau 3",
           "points": 60,
           "perModel": false,
           "stackable": false,
@@ -738,8 +813,8 @@
         {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
+          "name_fr": "Destrier",
           "name_es": "Warhorse",
-          "name_fr": "Warhorse",
           "points": 12,
           "active": false
         }
@@ -748,8 +823,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
           "types": [
             "weapon",
             "talisman",
@@ -782,6 +857,7 @@
     {
       "name_en": "Men-At-Arms (1+*)",
       "name_de": "Men-At-Arms (1+*)",
+      "name_fr": "Hommes d'Armes (1+*)",
       "id": "men-at-arms",
       "points": 4,
       "minimum": 10,
@@ -790,6 +866,7 @@
         {
           "name_de": "Yeoman",
           "name_en": "Yeoman",
+          "name_fr": "Yeoman",
           "points": 7,
           "magic": {
             "types": [],
@@ -799,6 +876,7 @@
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": [],
@@ -808,6 +886,7 @@
         {
           "name_de": "Musiker",
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -817,6 +896,7 @@
         {
           "name_de": "Grail Monk",
           "name_en": "Grail Monk",
+          "name_fr": "Moine du Graal",
           "points": 7,
           "magic": {
             "types": [],
@@ -826,6 +906,7 @@
         {
           "name_de": "Grail Monk with Blessed Triptych",
           "name_en": "Grail Monk with Blessed Triptych",
+          "name_fr": "Moine du Graal avec Triptique béni",
           "points": 32,
           "magic": {
             "types": [],
@@ -837,6 +918,7 @@
         {
           "name_en": "Hand Weapons, Polearms, Shields",
           "name_de": "Hand Weapons, Polearms, Shields",
+          "name_fr": "Armes de base, Armes d'hast, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -846,6 +928,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -868,6 +951,7 @@
     {
       "name_en": "Peasant Bowmen (1+*)",
       "name_de": "Peasant Bowmen (1+*)",
+      "name_fr": "Archers paysan (1+*)",
       "id": "peasant-bowmen",
       "points": 5,
       "minimum": 10,
@@ -876,6 +960,7 @@
         {
           "name_en": "Villein",
           "name_de": "Villein",
+          "name_fr": "Vilain",
           "points": 7,
           "magic": {
             "types": [],
@@ -883,7 +968,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 5,
           "magic": {
@@ -893,6 +979,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 5,
           "magic": {
@@ -905,6 +992,7 @@
         {
           "name_en": "Hand Weapons, Longbows",
           "name_de": "Hand Weapons, Longbows",
+          "name_fr": "Armes de base, Arcs longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -914,6 +1002,7 @@
         {
           "name_en": "Unarmoured",
           "name_de": "Unarmoured",
+          "name_fr": "Sans protections",
           "points": 0,
           "perModel": true,
           "active": true
@@ -921,6 +1010,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -930,6 +1020,7 @@
         {
           "name_en": "Defensive Stakes",
           "name_de": "Defensive Stakes",
+          "name_fr": "Pieux de défenses",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -939,6 +1030,7 @@
         {
           "name_en": "Burning Braziers",
           "name_de": "Burning Braziers",
+          "name_fr": "Braseros",
           "points": 20,
           "stackable": false,
           "minimum": 0,
@@ -948,6 +1040,7 @@
         {
           "name_en": "Skirmishers",
           "name_de": "Skirmishers",
+          "name_fr": "Tirailleurs",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -971,6 +1064,7 @@
     {
       "name_en": "Knights of the Realm on Foot (1+**)",
       "name_de": "Knights of the Realm on Foot (1+**)",
+      "name_fr": "Chevaliers du Royaume à Pieds (1+**)",
       "id": "knights-of-the-realm",
       "points": 11,
       "minimum": 5,
@@ -979,6 +1073,7 @@
         {
           "name_en": "First Knight",
           "name_de": "First Knight",
+          "name_fr": "Premier Chevalier",
           "points": 6,
           "magic": {
             "maxPoints": 25,
@@ -986,7 +1081,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 6,
           "magic": {
@@ -996,6 +1092,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 6,
           "magic": {
@@ -1008,6 +1105,7 @@
         {
           "name_en": "Hand Weapons, Shields",
           "name_de": "Hand Weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1015,6 +1113,7 @@
         {
           "name_en": "Hand Weapons, Great Weapons",
           "name_de": "Hand Weapons, Great Weapons",
+          "name_fr": "Armes de base, Armes lourdes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1022,6 +1121,7 @@
         {
           "name_en": "Hand Weapons, Great Weapons, Shields",
           "name_de": "Hand Weapons, Great Weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1031,6 +1131,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1042,6 +1143,7 @@
     {
       "name_en": "Mounted Knights of the Realm (1+**)",
       "name_de": "Mounted Knights of the Realm (1+**)",
+      "name_fr": "Chevaliers du Royaume (1+**)",
       "id": "mounted-knights-of-the-realm",
       "points": 24,
       "minimum": 5,
@@ -1050,6 +1152,7 @@
         {
           "name_en": "First Knight",
           "name_de": "First Knight",
+          "name_fr": "Premier Chevalier",
           "points": 7,
           "magic": {
             "maxPoints": 25,
@@ -1057,7 +1160,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
@@ -1067,6 +1171,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 7,
           "magic": {
@@ -1079,6 +1184,7 @@
         {
           "name_en": "Hand Weapons, Lances, Shields",
           "name_de": "Hand Weapons, Lances, Shields",
+          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1088,6 +1194,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1099,6 +1206,7 @@
     {
       "name_en": "Knights Errant (0-1 per unit of Knights of the Realm",
       "name_de": "Knights Errant (0-1 per unit of Knights of the Realm",
+      "name_fr": "Chevaliers Errants (0-1 par unité de Chevaliers du Royaume (à pieds ou montés)",
       "id": "knights-errant",
       "points": 19,
       "minimum": 5,
@@ -1107,6 +1215,7 @@
         {
           "name_en": "Gallant",
           "name_de": "Gallant",
+          "name_fr": "Galant",
           "points": 6,
           "magic": {
             "types": [],
@@ -1114,7 +1223,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 6,
           "magic": {
@@ -1124,6 +1234,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 6,
           "magic": {
@@ -1136,6 +1247,7 @@
         {
           "name_en": "Hand Weapons, Lances, Shields",
           "name_de": "Hand Weapons, Lances, Shields",
+          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1145,6 +1257,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1157,7 +1270,7 @@
       "name_en": "Yeoman Guard",
       "name_de": "Yeoman Guard",
       "name_es": "Yeoman Guard",
-      "name_fr": "Yeoman Guard",
+      "name_fr": "Guardes Ecuyers",
       "id": "yeoman-guard",
       "points": 5,
       "minimum": 10,
@@ -1169,7 +1282,7 @@
           "name_en": "Warden (champion)",
           "name_de": "Warden (champion)",
           "name_es": "Warden (champion)",
-          "name_fr": "Warden (champion)",
+          "name_fr": "Protecteur (champion)",
           "points": 6,
           "magic": {
             "types": ["banner", "triptych"],
@@ -1178,9 +1291,9 @@
         },
         {
           "name_en": "Grail Monk",
+          "name_fr": "Moine du Graal",
           "name_de": "Grail Monk",
           "name_es": "Grail Monk",
-          "name_fr": "Grail Monk",
           "points": 7,
           "magic": {
             "types": ["triptych"],
@@ -1188,10 +1301,10 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "name_es": "Standard Bearer",
-          "name_fr": "Standard Bearer",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1200,9 +1313,9 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musician",
           "name_es": "Musician",
-          "name_fr": "Musician",
           "points": 6,
           "magic": {
             "types": [],
@@ -1224,7 +1337,7 @@
           "name_en": "Hand weapons, Polearms",
           "name_de": "Hand weapons, Polearms",
           "name_es": "Hand weapons, Polearms",
-          "name_fr": "Hand weapons, Polearms",
+          "name_fr": "Armes de Base, Armes d'Hast",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1233,7 +1346,7 @@
           "name_en": "Hand weapons, Thrusting spears",
           "name_de": "Hand weapons, Thrusting spears",
           "name_es": "Hand weapons, Thrusting spears",
-          "name_fr": "Hand weapons, Thrusting spears",
+          "name_fr": "Armes de Base, Lances d'infanterie",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1244,7 +1357,7 @@
           "name_en": "Light armour, Shields",
           "name_de": "Light armour, Shields",
           "name_es": "Light armour, Shields",
-          "name_fr": "Light armour, Shields",
+          "name_fr": "Armures légères, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1258,7 +1371,7 @@
         "name_en": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
         "name_de": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
         "name_es": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
-        "name_fr": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband"
+        "name_fr": "Ordre serré, Horde, Paysannerie, Mur de Boucliers, Veteran, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -1269,6 +1382,7 @@
     {
       "name_en": "Battle Pilgrims (0-2 per 1000 points)",
       "name_de": "Battle Pilgrims (0-2 per 1000 points)",
+      "name_fr": "Pélerins de bataille (0-2 par tranche de 1000 points)",
       "id": "battle-pilgrims",
       "points": 8,
       "minimum": 5,
@@ -1277,6 +1391,7 @@
         {
           "name_en": "Grail Reliquae",
           "name_de": "Grail Reliquae",
+          "name_fr": "Reliquaire du Graal",
           "points": 65,
           "magic": {
             "types": [],
@@ -1288,6 +1403,7 @@
         {
           "name_en": "Hand Weapons, Shields",
           "name_de": "Hand Weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1297,6 +1413,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1315,6 +1432,7 @@
     {
       "name_en": "Questing Knights",
       "name_de": "Questing Knights",
+      "name_fr": "Chevaliers de la Quête",
       "id": "questing-knights",
       "points": 26,
       "minimum": 5,
@@ -1323,6 +1441,7 @@
         {
           "name_en": "Paragon",
           "name_de": "Paragon",
+          "name_fr": "Paragon",
           "points": 7,
           "magic": {
             "maxPoints": 25,
@@ -1330,7 +1449,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
@@ -1340,6 +1460,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 7,
           "magic": {
@@ -1352,6 +1473,7 @@
         {
           "name_en": "Hand Weapons, Great Weapons, Shields",
           "name_de": "Hand Weapons, Great Weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1361,6 +1483,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1372,6 +1495,7 @@
         {
           "name_en": "Paragon's Knightly Virtues",
           "name_de": "Paragon's Knightly Virtues",
+          "name_fr": "Vertu Chevaleresque du Parangon",
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0,
@@ -1393,6 +1517,7 @@
     {
       "name_en": "Pegasus Knights",
       "name_de": "Pegasus Knights",
+      "name_fr": "Chevaliers Pégases",
       "id": "pegasus-knights",
       "points": 55,
       "minimum": 3,
@@ -1401,6 +1526,7 @@
         {
           "name_en": "First Knight",
           "name_de": "First Knight",
+          "name_fr": "Premier Chevalier",
           "points": 7,
           "magic": {
             "types": [],
@@ -1408,7 +1534,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
@@ -1418,6 +1545,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 7,
           "magic": {
@@ -1430,6 +1558,7 @@
         {
           "name_en": "Hand Weapon, Lances, Shields",
           "name_de": "Hand Weapon, Lances, Shields",
+          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1439,6 +1568,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1450,6 +1580,7 @@
     {
       "name_en": "Mounted Yeomen",
       "name_de": "Mounted Yeomen",
+      "name_fr": "Ecuyers montés",
       "id": "mounted-yeomen",
       "points": 13,
       "minimum": 5,
@@ -1458,6 +1589,7 @@
         {
           "name_en": "Warden",
           "name_de": "Warden",
+          "name_fr": "Protecteur",
           "points": 5,
           "magic": {
             "types": [],
@@ -1465,7 +1597,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 5,
           "magic": {
@@ -1475,6 +1608,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 5,
           "magic": {
@@ -1487,6 +1621,7 @@
         {
           "name_en": "Hand Weapons, Cavalry Spears, Shortbows",
           "name_de": "Hand Weapons, Cavalry Spears, Shortbows",
+          "name_fr": "Armes de Base, Lances de Cavalerie, Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1496,6 +1631,7 @@
         {
           "name_en": "Unarmoured",
           "name_de": "Unarmoured",
+          "name_fr": "Sans protections",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1503,6 +1639,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1512,6 +1649,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1521,6 +1659,7 @@
         {
           "name_en": "Feigned Flight",
           "name_de": "Feigned Flight",
+          "name_fr": "Fuite Feinte",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1544,6 +1683,7 @@
     {
       "name_en": "Squires",
       "name_de": "Squires",
+      "name_fr": "???",
       "id": "squires",
       "points": 7,
       "minimum": 5,
@@ -1552,6 +1692,7 @@
         {
           "name_en": "Esquire",
           "name_de": "Esquire",
+          "name_fr": "???",
           "points": 7,
           "magic": {
             "types": [],
@@ -1560,6 +1701,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standartenträger",
           "points": 5,
           "magic": {
@@ -1569,6 +1711,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 5,
           "magic": {
@@ -1581,6 +1724,7 @@
         {
           "name_en": "Hand Weapons, Longbows",
           "name_de": "Hand Weapons, Longbows",
+          "name_fr": "Armes de Base, Arcs longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1591,6 +1735,7 @@
         {
           "name_en": "Fire and Flee",
           "name_de": "Fire and Flee",
+          "name_fr": "Tir et Fuite",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1600,6 +1745,7 @@
         {
           "name_en": "Scouts",
           "name_de": "Scouts",
+          "name_fr": "Eclaireurs",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1623,6 +1769,7 @@
     {
       "name_en": "Battle Pilgrims (0-2 per 1000 points)",
       "name_de": "Battle Pilgrims (0-2 per 1000 points)",
+      "name_fr": "Pélerins ??? (0-2 par tranche de 1000 points)",
       "id": "battle-pilgrims",
       "points": 8,
       "minimum": 5,
@@ -1631,6 +1778,7 @@
         {
           "name_en": "Grail Reliquae",
           "name_de": "Grail Reliquae",
+          "name_fr": "Reliquaire du Graal",
           "points": 65,
           "magic": {
             "types": [],
@@ -1642,6 +1790,7 @@
         {
           "name_en": "Hand Weapons, Shields",
           "name_de": "Hand Weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1651,6 +1800,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1664,6 +1814,7 @@
     {
       "name_en": "Grail Knights",
       "name_de": "Grail Knights",
+      "name_fr": "Chevaliers du Graal",
       "id": "grail-knights",
       "points": 38,
       "minimum": 3,
@@ -1672,6 +1823,7 @@
         {
           "name_en": "Grail Guardian",
           "name_de": "Grail Guardian",
+          "name_fr": "Guardien du Graal",
           "points": 7,
           "magic": {
             "maxPoints": 50,
@@ -1679,7 +1831,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
@@ -1689,6 +1842,7 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musiker",
           "points": 7,
           "magic": {
@@ -1701,6 +1855,7 @@
         {
           "name_en": "Hand Weapons, Lances, Shields",
           "name_de": "Hand Weapons, Lances, Shields",
+          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1710,6 +1865,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1721,6 +1877,7 @@
         {
           "name_en": "Grail Guardian's Knightly Virtues",
           "name_de": "Grail Guardian's Knightly Virtues",
+          "name_fr": "Vertus Chevaleresque du Guradien du Graal",
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0,
@@ -1739,6 +1896,7 @@
     {
       "name_en": "Field Trebuchet (0-1 per 1000 points)",
       "name_de": "Field Trebuchet (0-1 per 1000 points)",
+      "name_fr": "Trébuchet (0-1 par tranche de 1000 points)",
       "id": "field-trebuchet",
       "points": 100,
       "minimum": 0,
@@ -1748,6 +1906,7 @@
         {
           "name_en": "Field Trebuchet, Hand Weapons",
           "name_de": "Field Trebuchet, Hand Weapons",
+          "name_fr": "Trébuchet, Armes de Base",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1761,7 +1920,7 @@
       "name_en": "Border Princes Brigands",
       "name_de": "Border Princes Brigands",
       "name_es": "Border Princes Brigands",
-      "name_fr": "Border Princes Brigands",
+      "name_fr": "Brigands des Principautés Frontalières",
       "id": "border-princes-brigands",
       "points": 4,
       "minimum": 10,
@@ -1781,10 +1940,10 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_fr": "Porte-étendard",
           "name_de": "Standard Bearer",
           "name_es": "Standard Bearer",
-          "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -1793,9 +1952,9 @@
         },
         {
           "name_en": "Musician",
+          "name_fr": "Musicien",
           "name_de": "Musician",
           "name_es": "Musician",
-          "name_fr": "Musician",
           "points": 5,
           "magic": {
             "types": [],
@@ -1808,7 +1967,7 @@
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1818,8 +1977,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "name_es": "Light armour",
-          "name_fr": "Light armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1829,8 +1988,8 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "name_es": "Shields",
-          "name_fr": "Shields",
           "points": 1,
           "perModel": false,
           "stackable": true,
@@ -1841,7 +2000,7 @@
           "name_en": "Pistols",
           "name_de": "Pistols",
           "name_es": "Pistols",
-          "name_fr": "Pistols",
+          "name_fr": "Pistolets",
           "points": 2,
           "perModel": false,
           "stackable": true,
@@ -1852,7 +2011,7 @@
           "name_en": "Blunderbusses",
           "name_de": "Blunderbusses",
           "name_es": "Blunderbusses",
-          "name_fr": "Blunderbusses",
+          "name_fr": "Tromblons",
           "points": 4,
           "perModel": false,
           "stackable": true,
@@ -1863,7 +2022,7 @@
           "name_en": "Crossbows",
           "name_de": "Crossbows",
           "name_es": "Crossbows",
-          "name_fr": "Crossbows",
+          "name_fr": "Arbalètes",
           "points": 3,
           "perModel": false,
           "stackable": true,
@@ -1874,7 +2033,7 @@
           "name_en": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
           "name_de": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
           "name_es": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
-          "name_fr": "Replace Open Order special rule with Close Order (0-1 per 1000 points)",
+          "name_fr": "Remplace la Règle Spéciale Ordre Dispersé par Ordre Serré (0-1 par tranche de 1000 points)",
           "points": 0,
           "perModel": false,
           "stackable": false,
@@ -1885,7 +2044,7 @@
           "name_en": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
           "name_de": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
           "name_es": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
-          "name_fr": "Replace Open Order special rule with Skirmishers (0-1 per 1000 points)",
+          "name_fr": "Remplace la Règle Spéciale Ordre Dispersé par Tirailleurs (0-1 par tranche de 1000 points)",
           "points": 0,
           "perModel": false,
           "stackable": false,
@@ -1896,7 +2055,7 @@
           "name_en": "Ambushers (if Skirmisher)",
           "name_de": "Ambushers (if Skirmisher)",
           "name_es": "Ambushers (if Skirmisher)",
-          "name_fr": "Ambushers (if Skirmisher)",
+          "name_fr": "Embusqueurs (si Tirailleurs)",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1907,7 +2066,7 @@
           "name_en": "Scouts (if Skirmishers)",
           "name_de": "Scouts (if Skirmishers)",
           "name_es": "Scouts (if Skirmishers)",
-          "name_fr": "Scouts (if Skirmishers)",
+          "name_fr": "Eclaireurs (si Tirailleurs)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1922,7 +2081,7 @@
         "name_en": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
         "name_de": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
         "name_es": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
-        "name_fr": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband"
+        "name_fr": "Horde, Impétueux, Levées, ???, Ordre Dispersé, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -1934,7 +2093,7 @@
       "name_en": "Border Princes Bombard",
       "name_de": "Border Princes Bombard",
       "name_es": "Border Princes Bombard",
-      "name_fr": "Border Princes Bombard",
+      "name_fr": "Bombarde des Principautés Frontalières",
       "id": "border-princes-bombard",
       "points": 100,
       "minimum": 0,
@@ -1947,7 +2106,7 @@
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1957,8 +2116,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "name_es": "Light armour",
-          "name_fr": "Light armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1972,7 +2131,7 @@
         "name_en": "Levies, Skirmishers",
         "name_de": "Levies, Skirmishers",
         "name_es": "Levies, Skirmishers",
-        "name_fr": "Levies, Skirmishers"
+        "name_fr": "Levées, Tirailleurs"
       },
       "armyComposition": {
         "bretonnian-exiles": {
