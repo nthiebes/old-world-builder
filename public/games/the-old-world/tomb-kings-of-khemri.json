@@ -572,18 +572,28 @@
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
       "armor": [],
       "options": [
         {
-          "name_en": "Be a Level 2 Wizard",
-          "name_de": "Be a Level 2 Wizard",
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
           "name_fr": "Peut devenir un Sorcier Niveau 2",
           "points": 30,
-          "perModel": true,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
+          "points": 25,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -620,6 +630,15 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magische Standarte (AST)",
+          "name_fr": "Banniere Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 0
         }
       ],
       "lores": ["elementalism", "illusion", "necromancy"],

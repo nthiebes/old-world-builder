@@ -3,6 +3,7 @@
     {
       "name_en": "Black Orc Warboss",
       "name_de": "Black Orc Warboss",
+      "name_fr": "Chef de Guerre Orque Noir",
       "id": "black-orc-warboss",
       "points": 135,
       "minimum": 0,
@@ -14,6 +15,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -21,6 +23,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -28,6 +31,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -35,6 +39,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -44,6 +49,7 @@
         {
           "name_en": "Plate armour",
           "name_de": "Plate armour",
+          "name_fr": "Armure de plate complète",
           "points": 0,
           "perModel": true,
           "active": true
@@ -53,6 +59,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -64,24 +71,28 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Boar Chariot",
           "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
           "points": 90,
           "active": false
         },
         {
           "name_en": "Wyvern",
           "name_de": "Wyvern",
+          "name_fr": "Vouivre",
           "points": 130,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -90,6 +101,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -100,6 +112,7 @@
     {
       "name_en": "Black Orc Bigboss",
       "name_de": "Black Orc Bigboss",
+      "name_fr": "Grand Chef Orque Noir",
       "id": "black-orc-bigboss",
       "points": 75,
       "minimum": 0,
@@ -111,6 +124,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -118,6 +132,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -125,6 +140,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -132,6 +148,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -141,6 +158,7 @@
         {
           "name_en": "Plate armour",
           "name_de": "Plate armour",
+          "name_fr": "Armure de plate complète",
           "points": 0,
           "perModel": true,
           "active": true
@@ -150,6 +168,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -159,6 +178,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -169,18 +189,21 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Boar Chariot",
           "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
           "points": 90,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -189,6 +212,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -197,6 +221,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -207,6 +232,7 @@
     {
       "name_en": "Orc Warboss",
       "name_de": "Orc Warboss",
+      "name_fr": "Chef de Guerre Orque",
       "id": "orc-warboss",
       "points": 110,
       "minimum": 0,
@@ -218,6 +244,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -225,6 +252,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -232,6 +260,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -239,6 +268,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -248,6 +278,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -255,6 +286,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 3,
           "perModel": true,
           "active": false
@@ -262,6 +294,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)",
           "points": 3,
           "perModel": true,
           "active": false
@@ -271,6 +304,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -280,6 +314,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 5,
           "perModel": true,
           "stackable": false,
@@ -291,24 +326,28 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Boar Chariot",
           "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
           "points": 90,
           "active": false
         },
         {
           "name_en": "Wyvern",
           "name_de": "Wyvern",
+          "name_fr": "Vouivre",
           "points": 130,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -317,6 +356,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -327,6 +367,7 @@
     {
       "name_en": "Orc Bigboss",
       "name_de": "Orc Bigboss",
+      "name_fr": "Grand Chef Orque",
       "id": "orc-bigboss",
       "points": 55,
       "minimum": 0,
@@ -338,6 +379,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -345,6 +387,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -352,6 +395,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -359,6 +403,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -368,6 +413,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 3,
           "perModel": true,
           "active": false
@@ -375,6 +421,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)",
           "points": 3,
           "perModel": true,
           "active": false
@@ -384,6 +431,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -393,6 +441,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -401,6 +450,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 5,
           "perModel": true,
           "stackable": false,
@@ -412,18 +462,21 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Boar Chariot",
           "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
           "points": 90,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -432,6 +485,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -440,6 +494,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -450,6 +505,7 @@
     {
       "name_en": "Orc Weirdnob",
       "name_de": "Orc Weirdnob",
+      "name_fr": "Bizarnob Orque",
       "id": "orc-weirdnob",
       "points": 140,
       "minimum": 0,
@@ -461,6 +517,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -470,6 +527,7 @@
         {
           "name_en": "No armour",
           "name_de": "No armour",
+          "name_fr": "Pas d'armure",
           "points": 0,
           "perModel": true,
           "active": false
@@ -477,6 +535,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)",
           "points": 0,
           "perModel": true,
           "active": false
@@ -486,6 +545,7 @@
         {
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
+          "name_fr": "Sorcier de niveau 4",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -495,6 +555,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 5,
           "perModel": true,
           "stackable": false,
@@ -506,18 +567,21 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Wyvern",
           "name_de": "Wyvern",
+          "name_fr": "Vouivre",
           "points": 130,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -526,6 +590,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -537,6 +602,7 @@
     {
       "name_en": "Orc Weirdboy",
       "name_de": "Orc Weirdboy",
+      "name_fr": "Bizarboy Orque",
       "id": "orc-weirdboy",
       "points": 65,
       "minimum": 0,
@@ -548,6 +614,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -557,6 +624,7 @@
         {
           "name_en": "No armour",
           "name_de": "No armour",
+          "name_fr": "Pas d'armure",
           "points": 0,
           "perModel": true,
           "active": false
@@ -564,6 +632,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)",
           "points": 0,
           "perModel": true,
           "active": false
@@ -573,6 +642,7 @@
         {
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
+          "name_fr": "Sorcier de niveau 2",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -582,6 +652,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 5,
           "perModel": true,
           "stackable": false,
@@ -593,12 +664,14 @@
         {
           "name_en": "War Boar",
           "name_de": "War Boar",
+          "name_fr": "Sanglier",
           "points": 16,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -607,6 +680,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -618,6 +692,7 @@
     {
       "name_en": "Goblin Warboss",
       "name_de": "Goblin Warboss",
+      "name_fr": "Chef de Guerre Gobelin",
       "id": "goblin-warboss",
       "points": 60,
       "minimum": 0,
@@ -629,6 +704,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -636,6 +712,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -643,6 +720,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -650,6 +728,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -659,6 +738,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 3,
           "perModel": true,
           "active": false
@@ -668,6 +748,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -679,24 +760,28 @@
         {
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
+          "name_fr": "Loup Géant",
           "points": 12,
           "active": false
         },
         {
           "name_en": "Gigantic Spider",
           "name_de": "Gigantic Spider",
+          "name_fr": "Araignée Géante",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
+          "name_fr": "Char à Loups",
           "points": 53,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": false
         }
@@ -705,6 +790,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -715,6 +801,7 @@
     {
       "name_en": "Goblin Bigboss",
       "name_de": "Goblin Bigboss",
+      "name_fr": "Grand Chef Gobelin",
       "id": "goblin-bigboss",
       "points": 35,
       "minimum": 0,
@@ -726,6 +813,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -733,6 +821,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -740,6 +829,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -747,6 +837,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -756,6 +847,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 3,
           "perModel": true,
           "active": false
@@ -765,6 +857,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -774,6 +867,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -784,24 +878,28 @@
         {
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
+          "name_fr": "Loup Géant",
           "points": 10,
           "active": false
         },
         {
           "name_en": "Gigantic Spider",
-          "name_de": "Gigantic Spider",
+          "name_de": "Giantic Spider",
+          "name_fr": "Araignée Géante",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
+          "name_fr": "Char à Loups",
           "points": 53,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": false
         }
@@ -810,6 +908,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -818,6 +917,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -828,6 +928,7 @@
     {
       "name_en": "Goblin Oddnod",
       "name_de": "Goblin Oddnod",
+      "name_fr": "Zarbnob Gobelin",
       "id": "goblin-oddnod",
       "points": 135,
       "minimum": 0,
@@ -839,6 +940,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -849,6 +951,7 @@
         {
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
+          "name_fr": "Sorcier de niveau 4",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -860,12 +963,14 @@
         {
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
+          "name_fr": "Loup Géant",
           "points": 10,
           "active": false
         },
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
+          "name_fr": "Char à Loups",
           "points": 53,
           "active": false
         },
@@ -878,6 +983,7 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": false
         }
@@ -886,6 +992,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -897,6 +1004,7 @@
     {
       "name_en": "Goblin Oddgit",
       "name_de": "Goblin Oddgit",
+      "name_fr": "Zarbzig Gobelin",
       "id": "goblin-oddgit",
       "points": 60,
       "minimum": 0,
@@ -908,6 +1016,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -918,6 +1027,7 @@
         {
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
+          "name_fr": "Sorcier de niveau 2",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -929,18 +1039,21 @@
         {
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
+          "name_fr": "Loup Géant",
           "points": 10,
           "active": false
         },
         {
           "name_en": "Wolf Chariot",
           "name_de": "Wolf Chariot",
+          "name_fr": "Char à Loups",
           "points": 53,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -949,6 +1062,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -960,6 +1074,7 @@
     {
       "name_en": "Night Goblin Warboss",
       "name_de": "Night Goblin Warboss",
+      "name_fr": "Chef de Guerre Gobelin de la Nuit",
       "id": "night-goblin-warboss",
       "points": 55,
       "minimum": 0,
@@ -971,6 +1086,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -978,6 +1094,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -985,6 +1102,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -992,6 +1110,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1001,6 +1120,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1010,6 +1130,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1021,12 +1142,14 @@
         {
           "name_en": "Giant Cave Squig",
           "name_de": "Giant Cave Squig",
+          "name_fr": "Squig des Cavernes Géant",
           "points": 25,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -1035,6 +1158,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -1045,6 +1169,7 @@
     {
       "name_en": "Night Goblin Bigboss",
       "name_de": "Night Goblin Bigboss",
+      "name_fr": "Grand Chef Gobelin de la Nuit",
       "id": "night-goblin-bigboss",
       "points": 30,
       "minimum": 0,
@@ -1056,6 +1181,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1063,6 +1189,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1070,6 +1197,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -1077,6 +1205,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1086,6 +1215,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 3,
           "perModel": true,
           "active": false
@@ -1095,6 +1225,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1104,6 +1235,7 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -1114,12 +1246,14 @@
         {
           "name_en": "Giant Cave Squig",
           "name_de": "Giant Cave Squig",
+          "name_fr": "Squig des Cavernes Géant",
           "points": 25,
           "active": false
         },
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": false
         }
@@ -1128,6 +1262,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -1136,6 +1271,7 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -1146,6 +1282,7 @@
     {
       "name_en": "Night Goblin Oddnob",
       "name_de": "Night Goblin Oddnob",
+      "name_fr": "Zarbnob Gobelin de la Nuit",
       "id": "night-goblin-oddnob",
       "points": 130,
       "minimum": 0,
@@ -1157,6 +1294,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1167,6 +1305,7 @@
         {
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
+          "name_fr": "Sorcier de niveau 4",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -1178,6 +1317,7 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -1186,6 +1326,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -1196,6 +1337,7 @@
     {
       "name_en": "Night Goblin Oddgit",
       "name_de": "Night Goblin Oddgit",
+      "name_fr": "Zarbzig Gobelin de la Nuit",
       "id": "night-goblin-oddgit",
       "points": 65,
       "minimum": 0,
@@ -1207,6 +1349,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1217,6 +1360,7 @@
         {
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
+          "name_fr": "Sorcier de niveau 2",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -1228,6 +1372,7 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_fr": "A pied",
           "points": 0,
           "active": true
         }
@@ -1236,6 +1381,7 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -1248,6 +1394,7 @@
     {
       "name_en": "Orc Mob",
       "name_de": "Orc Mob",
+      "name_fr": "Bandes d'Orques",
       "id": "orc-mob",
       "points": 5,
       "minimum": 5,
@@ -1258,6 +1405,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1267,6 +1415,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1276,6 +1425,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -1287,6 +1437,7 @@
         {
           "name_en": "Warbow",
           "name_de": "Warbow",
+          "name_fr": "Arcs de guerre",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1294,6 +1445,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1301,6 +1453,7 @@
         {
           "name_en": "Thrusting Spear",
           "name_de": "Thrusting Spear",
+          "name_fr": "Lance d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1308,6 +1461,7 @@
         {
           "name_en": "Throwing Spears",
           "name_de": "Throwing Spears",
+          "name_fr": "Javelots",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1315,6 +1469,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1324,6 +1479,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1331,6 +1487,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1340,6 +1497,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1349,6 +1507,7 @@
         {
           "name_en": "Big Stabba",
           "name_de": "Big Stabba",
+          "name_fr": "Grands Kitrou",
           "points": 5,
           "perModel": false,
           "stackable": false,
@@ -1358,6 +1517,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1367,6 +1527,7 @@
         {
           "name_en": "Big 'Uns",
           "name_de": "Big 'Uns",
+          "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1376,6 +1537,7 @@
         {
           "name_en": "Skirmisher",
           "name_de": "Skirmisher",
+          "name_fr": "Tirailleurs (remplace Ordre serré)",
           "points": 0,
           "perModel": true,
           "stackable": false,
@@ -1392,6 +1554,7 @@
     {
       "name_en": "Black Orc Mob",
       "name_de": "Black Orc Mob",
+      "name_fr": "Bandes d'Orques Noirs",
       "id": "black-orc-mob",
       "points": 12,
       "minimum": 5,
@@ -1402,6 +1565,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1411,6 +1575,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1420,6 +1585,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1431,6 +1597,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1440,6 +1607,7 @@
         {
           "name_en": "Full Plate",
           "name_de": "Full Plate",
+          "name_fr": "Armure de plate complète",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1449,6 +1617,7 @@
         {
           "name_en": "Stubborn",
           "name_de": "Stubborn",
+          "name_fr": "Obstiné (0-1 unité par armée)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1458,6 +1627,7 @@
         {
           "name_en": "Veteran",
           "name_de": "Veteran",
+          "name_fr": "Vétérans (0-1 unité par armée)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1467,6 +1637,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "perModel": false,
           "stackable": true,
@@ -1476,6 +1647,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 2,
           "perModel": false,
           "stackable": true,
@@ -1485,6 +1657,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 1,
           "perModel": false,
           "stackable": true,
@@ -1501,6 +1674,7 @@
     {
       "name_en": "Goblin Mob",
       "name_de": "Goblin Mob",
+      "name_fr": "Bandes de Gobelins",
       "id": "goblin-mob",
       "points": 3,
       "minimum": 10,
@@ -1509,6 +1683,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 7,
           "magic": {
             "types": [],
@@ -1518,6 +1693,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1527,6 +1703,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -1538,6 +1715,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1545,6 +1723,7 @@
         {
           "name_en": "Throwing Spear",
           "name_de": "Throwing Spear",
+          "name_fr": "Lances d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1552,6 +1731,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1561,6 +1741,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1570,9 +1751,20 @@
         {
           "name_en": "Nasty Skulker",
           "name_de": "Nasty Skulker",
+          "name_fr": "Zigouillards (0-3 par tranche de 1000pts)",
           "points": 10,
           "perModel": false,
           "stackable": 1,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Skirmisher",
+          "name_de": "Skirmisher",
+          "name_fr": "Tirailleurs (0-1 unité par armée)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1586,6 +1778,7 @@
     {
       "name_en": "Snotling Mob",
       "name_de": "Snotling Mob",
+      "name_fr": "Bandes de Snotlings",
       "id": "snotling-mob",
       "points": 35,
       "minimum": 2,
@@ -1595,6 +1788,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1602,6 +1796,7 @@
         {
           "name_en": "Throwing Weapon",
           "name_de": "Throwing Weapon",
+          "name_fr": "Armes de lancer",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1618,6 +1813,7 @@
     {
       "name_en": "Night Goblin Mob",
       "name_de": "Night Goblin Mob",
+      "name_fr": "Bandes de Gobelins de la Nuit",
       "id": "night-goblin-mob",
       "points": 3,
       "minimum": 10,
@@ -1626,6 +1822,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 7,
           "magic": {
             "types": [],
@@ -1635,6 +1832,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1644,6 +1842,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -1655,6 +1854,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1662,6 +1862,7 @@
         {
           "name_en": "Thrusting Spear",
           "name_de": "Spear",
+          "name_fr": "Lances d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1669,6 +1870,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts (remplace les Boucliers)",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1678,6 +1880,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1687,6 +1890,7 @@
         {
           "name_en": "Netters",
           "name_de": "Netters",
+          "name_fr": "Rétiaires",
           "points": 20,
           "perModel": false,
           "stackable": false,
@@ -1696,6 +1900,7 @@
         {
           "name_en": "Fanatics",
           "name_de": "Fanatics",
+          "name_fr": "Fanatiques (0-3 par unité)",
           "points": 25,
           "perModel": false,
           "stackable": true,
@@ -1712,6 +1917,7 @@
     {
       "name_en": "Goblin Spider Rider Mob",
       "name_de": "Goblin Spider Rider Mob",
+      "name_fr": "Bandes de Gobelins sur Araignée",
       "id": "goblin-spider-rider-mob",
       "points": 12,
       "minimum": 5,
@@ -1720,6 +1926,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1729,6 +1936,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1740,6 +1948,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1747,6 +1956,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1754,6 +1964,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1761,6 +1972,7 @@
         {
           "name_en": "Poisonous Fangs",
           "name_de": "Poisonous Fangs",
+          "name_fr": "Crochets empoisonnés (compte comme Arme de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1770,6 +1982,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1777,6 +1990,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1792,6 +2006,7 @@
     {
       "name_en": "Goblin Wolf Rider Mob",
       "name_de": "Goblin Wolf Rider Mob",
+      "name_fr": "Bandes de Gobelins sur Loup",
       "id": "goblin-wolf-rider-mob",
       "points": 10,
       "minimum": 5,
@@ -1800,6 +2015,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 7,
           "magic": {
             "types": [],
@@ -1809,6 +2025,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1818,6 +2035,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -1829,6 +2047,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1836,6 +2055,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1843,6 +2063,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1850,6 +2071,7 @@
         {
           "name_en": "Claws and Fangs",
           "name_de": "Claws and Fangs",
+          "name_fr": "Griffes et crocs (compte comme Arme de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1859,6 +2081,7 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_fr": "Bouclier",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1866,6 +2089,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1875,6 +2099,7 @@
         {
           "name_en": "Feigned Flight",
           "name_de": "Feigned Flight",
+          "name_fr": "Fuite feinte (0-1 par tranche de 1000 points)",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -1884,6 +2109,7 @@
         {
           "name_en": "Reserve Move",
           "name_de": "Reserve Move",
+          "name_fr": "Mouvement de réserve (0-1 par tranche de 1000 points)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -1900,6 +2126,7 @@
     {
       "name_en": "Night Goblin Squig Herd",
       "name_de": "Night Goblin Squig Herd",
+      "name_fr": "Troupeaux de Squigs Gobelins de la Nuit",
       "id": "night-goblin-squig-herd",
       "points": 10,
       "minimum": 5,
@@ -1913,6 +2140,7 @@
         {
           "name_en": "Squig Herder",
           "name_de": "Squig Herder",
+          "name_fr": "Berger Gobelin de la Nuit",
           "points": 3,
           "perModel": true,
           "stackable": 1,
@@ -1931,6 +2159,7 @@
     {
       "name_en": "Black Orc Mob",
       "name_de": "Black Orc Mob",
+      "name_fr": "Bandes d'Orques Noirs",
       "id": "black-orc-mob",
       "points": 12,
       "minimum": 5,
@@ -1941,6 +2170,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1950,6 +2180,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1959,6 +2190,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -1970,6 +2202,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1977,6 +2210,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1984,6 +2218,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1993,6 +2228,7 @@
         {
           "name_en": "Full Plate",
           "name_de": "Full Plate",
+          "name_fr": "Armure de plate complète",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2002,6 +2238,7 @@
         {
           "name_en": "Stubborn",
           "name_de": "Stubborn",
+          "name_fr": "Obstiné",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2011,6 +2248,7 @@
         {
           "name_en": "Veteran",
           "name_de": "Veteran",
+          "name_fr": "Vétérans",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2020,6 +2258,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2036,6 +2275,7 @@
     {
       "name_en": "Orc Boar Boy Mob",
       "name_de": "Orc Boar Boy Mob",
+      "name_fr": "Bandes d'Orques sur Sangliers",
       "id": "orc-boar-boy-mob",
       "points": 15,
       "minimum": 4,
@@ -2046,6 +2286,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 8,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -2055,6 +2296,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -2064,6 +2306,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_fr": "Musicien",
           "points": 6,
           "magic": {
             "types": [],
@@ -2075,6 +2318,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2082,6 +2326,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -2091,6 +2336,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2098,6 +2344,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 1,
           "perModel": true,
           "active": false
@@ -2105,6 +2352,7 @@
         {
           "name_en": "Frenzy (no armour)",
           "name_de": "Frenzy (no armour)",
+          "name_fr": "Frénétique (à la place de l'Armure légère)(0-1 par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "active": false
@@ -2114,6 +2362,7 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2123,6 +2372,7 @@
         {
           "name_en": "Big 'Uns",
           "name_de": "Big 'Uns",
+          "name_fr": "Kostos (0-1 par armée)",
           "points": 2,
           "perModel": true,
           "stackable": false,
@@ -2132,6 +2382,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre (seulement pour les unités ayant choisi Frénésie)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2148,6 +2399,7 @@
     {
       "name_en": "Night Goblin Squig Hopper Mob",
       "name_de": "Night Goblin Squig Hopper Mob",
+      "name_fr": "Bandes de Gobelins de la Nuit sur Squigs",
       "id": "night-goblin-squig-hopper-mob",
       "points": 12,
       "minimum": 5,
@@ -2156,6 +2408,7 @@
         {
           "name_en": "Boss",
           "name_de": "Boss",
+          "name_fr": "Chef",
           "points": 6,
           "magic": {
             "types": [
@@ -2173,6 +2426,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2180,6 +2434,7 @@
         {
           "name_en": "Huge Gob",
           "name_de": "Huge Gob",
+          "name_fr": "Énormes gueules",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2187,6 +2442,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 1,
           "perModel": true,
           "active": false
@@ -2196,6 +2452,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true,
           "active": false
@@ -2211,6 +2468,7 @@
     {
       "name_en": "Orc Boar Chariots",
       "name_de": "Orc Boar Chariots",
+      "name_fr": "Chars à Sangliers Orques",
       "id": "orc-boar-chariots",
       "points": 90,
       "minimum": 0,
@@ -2219,6 +2477,7 @@
         {
           "name_en": "Crew Member",
           "name_de": "Crew Member",
+          "name_fr": "Troisième Aurige",
           "points": 5,
           "magic": {
             "types": [],
@@ -2230,6 +2489,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2237,13 +2497,15 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
-          "points": 1,
+          "name_fr": "Lance de cavalerie",
+          "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Tusks",
           "name_de": "Tusks",
+          "name_fr": "Défenses (compte comme Arme de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2254,7 +2516,8 @@
         {
           "name_en": "Frenzy",
           "name_de": "Frenzy",
-          "points": 2,
+          "name_fr": "Frénétique (0-1 unité par tranche de 1000pts)",
+          "points": 4,
           "perModel": false,
           "stackable": 1,
           "minimum": 0,
@@ -2263,6 +2526,7 @@
         {
           "name_en": "Warpaint",
           "name_de": "Warpaint",
+          "name_fr": "Peinture de Guerre",
           "points": 10,
           "perModel": true,
           "stackable": false,
@@ -2279,6 +2543,7 @@
     {
       "name_en": "Common Troll Mob",
       "name_de": "Common Troll Mob",
+      "name_fr": "Bandes de Trolls",
       "id": "common-troll-mob",
       "points": 41,
       "minimum": 1,
@@ -2290,6 +2555,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2297,6 +2563,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2304,6 +2571,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2321,6 +2589,7 @@
     {
       "name_en": "River Troll Mob",
       "name_de": "River Troll Mob",
+      "name_fr": "Bandes de Trolls d'Eau",
       "id": "river-troll-mob",
       "points": 49,
       "minimum": 1,
@@ -2332,6 +2601,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2339,6 +2609,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2346,6 +2617,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2363,6 +2635,7 @@
     {
       "name_en": "Stone Troll Mob",
       "name_de": "Stone Troll Mob",
+      "name_fr": "Bandes de Trolls de Pierre",
       "id": "stone-troll-mob",
       "points": 45,
       "minimum": 1,
@@ -2374,6 +2647,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2381,6 +2655,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2388,6 +2663,7 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2405,6 +2681,7 @@
     {
       "name_en": "Goblin Wolf Chariot",
       "name_de": "Goblin Wolf Chariot",
+      "name_fr": "Char à Loups Gobelin",
       "id": "goblin-wolf-chariot",
       "points": 53,
       "minimum": 1,
@@ -2415,6 +2692,7 @@
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
             "types": [],
@@ -2426,6 +2704,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2433,6 +2712,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2440,6 +2720,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2447,6 +2728,7 @@
         {
           "name_en": "Claws and Fangs",
           "name_de": "Claws and Fangs",
+          "name_fr": "Griffes et crocs (compte comme Arme de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2457,6 +2739,7 @@
         {
           "name_en": "Third Wolf",
           "name_de": "Third Wolf",
+          "name_fr": "Troisième Loup Géant",
           "points": 5,
           "perModel": true,
           "stackable": false,
@@ -2473,6 +2756,7 @@
     {
       "name_en": "Snotling Pump Wagon",
       "name_de": "Snotling Pump Wagon",
+      "name_fr": "Chariots à Pompe Snotlings",
       "id": "snotling-pump-wagon",
       "points": 35,
       "minimum": 1,
@@ -2484,6 +2768,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2491,6 +2776,7 @@
         {
           "name_en": "Throwing Weapon",
           "name_de": "Throwing Weapon",
+          "name_fr": "Arme de lancer",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2507,6 +2793,7 @@
     {
       "name_en": "Goblin Bolt Throwa",
       "name_de": "Goblin Bolt Throwa",
+      "name_fr": "Baliste Gobeline",
       "id": "goblin-bolt-throwa",
       "points": 45,
       "minimum": 0,
@@ -2515,6 +2802,7 @@
         {
           "name_en": "Bully",
           "name_de": "Bully",
+          "name_fr": "Brute Orque",
           "points": 10,
           "magic": {
             "types": [],
@@ -2536,6 +2824,7 @@
     {
       "name_en": "Giant",
       "name_de": "Giant",
+      "name_fr": "Géant",
       "id": "giant",
       "points": 200,
       "minimum": 0,
@@ -2545,6 +2834,7 @@
         {
           "name_en": "Giants Club",
           "name_de": "Giants Club",
+          "name_fr": "Massue de Géant",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2554,6 +2844,7 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2569,6 +2860,7 @@
     {
       "name_en": "Doom Diver Catapult",
       "name_de": "Doom Diver Catapult",
+      "name_fr": "Catapultes à Plongeurs de la Mort",
       "id": "doom-diver-catapult",
       "points": 95,
       "minimum": 0,
@@ -2577,6 +2869,7 @@
         {
           "name_en": "Bully",
           "name_de": "Bully",
+          "name_fr": "Brute Orque",
           "points": 10,
           "magic": {
             "types": [],
@@ -2596,6 +2889,7 @@
     {
       "name_en": "Goblin Rock Lobber",
       "name_de": "Goblin Rock Lobber",
+      "name_fr": "Lance-Rocs Gobelins",
       "id": "goblin-rock-lobber",
       "points": 75,
       "minimum": 0,
@@ -2604,6 +2898,7 @@
         {
           "name_en": "Bully",
           "name_de": "Bully",
+          "name_fr": "Brute Orque",
           "points": 10,
           "magic": {
             "types": [],
@@ -2623,6 +2918,7 @@
     {
       "name_en": "Arachnarok Spider",
       "name_de": "Arachnarok Spider",
+      "name_fr": "Arachnarok",
       "id": "arachnarok-spider",
       "points": 320,
       "minimum": 0,
@@ -2632,6 +2928,7 @@
         {
           "name_en": "Poisonous Fangs",
           "name_de": "Poisonous Fangs",
+          "name_fr": "Crochets empoisonnés",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2639,6 +2936,7 @@
         {
           "name_en": "Venomous Surge",
           "name_de": "Venom Surge",
+          "name_fr": "Injection de venin",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2646,6 +2944,7 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2653,6 +2952,7 @@
         {
           "name_en": "Cavalry Spear",
           "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2660,6 +2960,7 @@
         {
           "name_en": "Shortbow",
           "name_de": "Shortbow",
+          "name_fr": "Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2670,6 +2971,7 @@
         {
           "name_en": "Spidersilk Lobber",
           "name_de": "Spiderrsilk Lobber",
+          "name_fr": "Catatoile",
           "points": 35,
           "perModel": true,
           "stackable": false,
@@ -2686,6 +2988,7 @@
     {
       "name_en": "Mangler Squigs",
       "name_de": "Mangler Squigs",
+      "name_fr": "Squigs Broyeur",
       "id": "mangler-squigs",
       "points": 95,
       "minimum": 0,
@@ -2695,6 +2998,7 @@
         {
           "name_en": "Colossal Fang Filled Gob",
           "name_de": "Colossal Fang Filled Gob",
+          "name_fr": "Colossale gueule garnie de crocs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2704,6 +3008,7 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
