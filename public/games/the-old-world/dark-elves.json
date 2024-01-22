@@ -425,6 +425,161 @@
         "name_es": "*These special rules do not apply to this model's mount (should it have one).",
         "name_fr": "*These special rules do not apply to this model's mount (should it have one)."
       }
+    },
+    {
+      "name_en": "Supreme Sorceress",
+      "name_de": "Supreme Sorceress",
+      "name_es": "Supreme Sorceress",
+      "name_fr": "Supreme Sorceress",
+      "id": "supreme-sorceress",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Sorceress",
+      "name_de": "Sorceress",
+      "name_es": "Sorceress",
+      "name_fr": "Sorceress",
+      "id": "sorceress",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "High Beastmaster",
+      "name_de": "High Beastmaster",
+      "name_es": "High Beastmaster",
+      "name_fr": "High Beastmaster",
+      "id": "high-beastmaster",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Death Hag",
+      "name_de": "Death Hag",
+      "name_es": "Death Hag",
+      "name_fr": "Death Hag",
+      "id": "death-hag",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Khainite Assassin",
+      "name_de": "Khainite Assassin",
+      "name_es": "Khainite Assassin",
+      "name_fr": "Khainite Assassin",
+      "id": "khainite-assassin",
+      "points": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "core": [
@@ -434,29 +589,92 @@
       "name_es": "Dark Elf Warriors",
       "name_fr": "Dark Elf Warriors",
       "id": "dark-elf-warriors",
-      "points": 1,
-      "minimum": 0,
+      "points": 8,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "Lordling (Champion)",
+          "name_de": "Lordling (Champion)",
+          "name_es": "Lordling (Champion)",
+          "name_fr": "Lordling (Champion)",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_de": "Thrusting spear",
+          "name_es": "Thrusting spear",
+          "name_fr": "Thrusting spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_es": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_fr": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 Dark Elf Warriors and Repeater Crossbowmen per 1,000 may have Veteran : 0-1 per 1,000 may purchase a magic standard worth up to 50 points",
+        "name_de": "0-1 per 1,000 may be",
+        "name_es": "0-1 per 1,000 may be",
+        "name_fr": "0-1 per 1,000 may be"
       }
     },
     {
@@ -465,29 +683,106 @@
       "name_es": "Repeater Crossbowmen",
       "name_fr": "Repeater Crossbowmen",
       "id": "repeater-crossbowmen",
-      "points": 1,
-      "minimum": 0,
+      "points": 8,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Lordling (Champion)",
+          "name_de": "Lordling (Champion)",
+          "name_es": "Lordling (Champion)",
+          "name_fr": "Lordling (Champion)",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and repeater crossbows",
+          "name_de": "Hand weapons and repeater crossbows",
+          "name_es": "Hand weapons and repeater crossbows",
+          "name_fr": "Hand weapons and repeater crossbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 0
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_es": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_fr": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 Dark Elf Warriors and Repeater Crossbowmen per 1,000 may have Veteran : 0-1 per 1,000 may purchase a magic standard worth up to 50 points",
+        "name_de": "0-1 per 1,000 may be",
+        "name_es": "0-1 per 1,000 may be",
+        "name_fr": "0-1 per 1,000 may be"
       }
     },
     {
@@ -496,23 +791,86 @@
       "name_es": "Black Ark Corsairs",
       "name_fr": "Black Ark Corsairs",
       "id": "black-ark-corsairs",
-      "points": 1,
-      "minimum": 0,
+      "points": 11,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "Reaver (champion)",
+          "name_de": "Reaver (champion)",
+          "name_es": "Reaver (champion)",
+          "name_fr": "Reaver (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and Additional hand weapon",
+          "name_de": "Hand weapon and Additional hand weapon",
+          "name_es": "Hand weapon and Additional hand weapon",
+          "name_fr": "Hand weapon and Additional hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapons and repeater handbows",
+          "name_de": "Hand weapons and repeater handbows",
+          "name_es": "Hand weapons and repeater handbows",
+          "name_fr": "Hand weapons and repeater handbows",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order, Sea Dragon Cloak",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak",
+        "name_es": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak",
+        "name_fr": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak"
       },
       "notes": {
         "name_en": "",
@@ -527,29 +885,126 @@
       "name_es": "Dark Riders",
       "name_fr": "Dark Riders",
       "id": "dark-riders",
-      "points": 1,
-      "minimum": 0,
+      "points": 15,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Herald (champion)",
+          "name_de": "Herald (champion)",
+          "name_es": "Herald (champion)",
+          "name_fr": "Herald (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and cavalry spears",
+          "name_de": "Hand weapons and cavalry spears",
+          "name_es": "Hand weapons and cavalry spears",
+          "name_fr": "Hand weapons and cavalry spears",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, cavalry spears, and repeater crossbows",
+          "name_de": "Hand weapons, cavalry spears, and repeater crossbows",
+          "name_es": "Hand weapons, cavalry spears, and repeater crossbows",
+          "name_fr": "Hand weapons, cavalry spears, and repeater crossbows",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire & Flee",
+          "name_de": "Fire & Fleet",
+          "name_es": "Fire & Fleet",
+          "name_fr": "Fire & Fleet",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts",
+          "name_de": "Scouts",
+          "name_es": "Scouts",
+          "name_fr": "Scouts",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
+        "name_de": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
+        "name_es": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
+        "name_fr": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 per 1,000 may have Fire & Flee : 0-1 per 1,000 may have Scouts",
+        "name_de": "0-1 per 1,000 may have Fire & Flee : 0-1 per 1,000 may have Scouts",
+        "name_es": "0-1 per 1,000 may have Fire & Flee : 0-1 per 1,000 may have Scouts",
+        "name_fr": "0-1 per 1,000 may have Fire & Flee : 0-1 per 1,000 may have Scouts"
       }
     },
     {
@@ -558,23 +1013,67 @@
       "name_es": "Witch Elves",
       "name_fr": "Witch Elves",
       "id": "witch-elves",
-      "points": 1,
-      "minimum": 0,
+      "points": 11,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Hag (champion)",
+          "name_de": "Hag (champion)",
+          "name_es": "Hag (champion)",
+          "name_fr": "Hag (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 49
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_de": "Two hand weapons",
+          "name_es": "Two hand weapons",
+          "name_fr": "Two hand weapons",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
+        "name_de": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
+        "name_es": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
+        "name_fr": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks"
       },
       "notes": {
         "name_en": "0-1 if your army includes one or more Death Hags",
@@ -796,7 +1295,7 @@
         "name_fr": ""
       },
       "notes": {
-        "name_en": "0-2 per 1,000",
+        "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1,000",
         "name_de": "0-2 per 1,000",
         "name_es": "0-2 per 1,000",
         "name_fr": "0-2 per 1,000"
@@ -827,7 +1326,7 @@
         "name_fr": ""
       },
       "notes": {
-        "name_en": "0-2 per 1,000",
+        "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1,000",
         "name_de": "0-2 per 1,000",
         "name_es": "0-2 per 1,000",
         "name_fr": "0-2 per 1,000"
@@ -858,7 +1357,7 @@
         "name_fr": ""
       },
       "notes": {
-        "name_en": "0-1 if your general is a High Beastmaster",
+        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
@@ -889,7 +1388,7 @@
         "name_fr": ""
       },
       "notes": {
-        "name_en": "0-1 if your general is a High Beastmaster",
+        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
