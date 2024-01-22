@@ -660,7 +660,19 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -1090,23 +1102,89 @@
       "name_es": "Har Ganeth Executioners",
       "name_fr": "Har Ganeth Executioners",
       "id": "har-ganeth-executioners",
-      "points": 1,
-      "minimum": 0,
+      "points": 15,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Draich Master (champion)",
+          "name_de": "Draich Master (champion)",
+          "name_es": "Draich Master (champion)",
+          "name_fr": "Draich Master (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and Har Ganeth greatswords",
+          "name_de": "Hand weapons and Har Ganeth greatswords",
+          "name_es": "Hand weapons and Har Ganeth greatswords",
+          "name_fr": "Hand weapons and Har Ganeth greatswords",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran",
+        "name_es": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran",
+        "name_fr": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran"
       },
       "notes": {
         "name_en": "",
@@ -1121,23 +1199,67 @@
       "name_es": "Witch Elves",
       "name_fr": "Witch Elves",
       "id": "witch-elves",
-      "points": 1,
-      "minimum": 0,
+      "points": 11,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Hag (champion)",
+          "name_de": "Hag (champion)",
+          "name_es": "Hag (champion)",
+          "name_fr": "Hag (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_de": "Two hand weapons",
+          "name_es": "Two hand weapons",
+          "name_fr": "Two hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
+        "name_de": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner,  Murderous, Poisoned Attacks",
+        "name_es": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner,  Murderous, Poisoned Attacks",
+        "name_fr": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner,  Murderous, Poisoned Attacks"
       },
       "notes": {
         "name_en": "",
@@ -1152,29 +1274,113 @@
       "name_es": "Dark Elf Shades",
       "name_fr": "Dark Elf Shades",
       "id": "dark-elf-shades",
-      "points": 1,
-      "minimum": 0,
+      "points": 15,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Bloodshade (champion)",
+          "name_de": "Bloodshade (champion)",
+          "name_es": "Bloodshade (champion)",
+          "name_fr": "Bloodshade (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and repeater crossbows",
+          "name_de": "Hand weapons and repeater crossbows",
+          "name_es": "Hand weapons and repeater crossbows",
+          "name_fr": "Hand weapons and repeater crossbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, repeater crossbows, and additional hand weapons",
+          "name_de": "Hand weapons, repeater crossbows, and additional hand weapons",
+          "name_es": "Hand weapons, repeater crossbows, and additional hand weapons",
+          "name_fr": "Hand weapons, repeater crossbows, and additional hand weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapons, repeater crossbows, and great weapons",
+          "name_de": "Hand weapons and repeater crossbows",
+          "name_es": "Hand weapons and repeater crossbows",
+          "name_fr": "Hand weapons and repeater crossbows",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Chariot Runners",
+          "name_de": "Chariot Runners",
+          "name_es": "Chariot Runners",
+          "name_fr": "Chariot Runners",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "name_es": "Veteran",
+          "name_fr": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
+        "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
+        "name_es": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
+        "name_fr": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 may have Ambushers : Chariot Runners : Veterans",
+        "name_de": "0-1 ",
+        "name_es": "0-1 ",
+        "name_fr": "0-1 "
       }
     },
     {
@@ -1183,23 +1389,33 @@
       "name_es": "Harpies",
       "name_fr": "Harpies",
       "id": "harpies",
-      "points": 1,
-      "minimum": 0,
+      "points": 11,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Claws (counts as hand weapons)",
+          "name_de": "Claws (counts as hand weapons)",
+          "name_es": "Claws (counts as hand weapons)",
+          "name_fr": "Claws (counts as hand weapons)",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_de": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_es": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_fr": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride"
       },
       "notes": {
         "name_en": "",
@@ -1214,26 +1430,92 @@
       "name_es": "Black Guard of Naggarond",
       "name_fr": "Black Guard of Naggarond",
       "id": "black-guard-of-naggarond",
-      "points": 1,
-      "minimum": 0,
+      "points": 15,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
+      "command": [
+        {
+          "name_en": "Tower Master (champion)",
+          "name_de": "Tower Master (champion)",
+          "name_es": "Tower Master (champion)",
+          "name_fr": "Tower Master (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and dread halberds",
+          "name_de": "Hand weapons and dread halberds",
+          "name_es": "Hand weapons and dread halberds",
+          "name_fr": "Hand weapons and dread halberds",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_es": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_fr": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn"
       },
       "notes": {
-        "name_en": "0-1 per Dark Elf Noble",
+        "name_en": "0-1 per Dark Elf Noble : A model wielding a dread halberd cannot make a supporting attack during a turn in which it charged",
         "name_de": "0-1 per Dark Elf Noble",
         "name_es": "0-1 per Dark Elf Noble",
         "name_fr": "0-1 per Dark Elf Noble"
@@ -1245,23 +1527,86 @@
       "name_es": "Cold One Knights",
       "name_fr": "Cold One Knights",
       "id": "cold-one-knights",
-      "points": 1,
-      "minimum": 0,
+      "points": 30,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "Dread Knight (champion)",
+          "name_de": "Dread Knight (champion)",
+          "name_es": "Dread Knight (champion)",
+          "name_fr": "Dread Knight (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and lances",
+          "name_de": "Hand weapons and lances",
+          "name_es": "Hand weapons and lances",
+          "name_fr": "Hand weapons and lances",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Armour Bane (1, Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+        "name_de": "Armour Bane (1, Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+        "name_es": "Armour Bane (1, Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+        "name_fr": "Armour Bane (1, Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride"
       },
       "notes": {
         "name_en": "0-1 per 1,000 points",
@@ -1276,26 +1621,46 @@
       "name_es": "Scourgerunner Chariots",
       "name_fr": "Scourgerunner Chariots",
       "id": "scourgerunner-chariots",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 85,
+      "minimum": 1,
+      "maximum": 3,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Ravager harpoon*, hand weapons, cavalry spears, and repeater crossbows",
+          "name_de": "Ravager harpoon, ",
+          "name_es": "Ravager harpoon, ",
+          "name_fr": "Ravager harpoon, ",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride",
+        "name_es": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride",
+        "name_fr": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride"
       },
       "notes": {
-        "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1,000",
+        "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1,000 : *During the Shooting phase, one of the Beastmaster Crew may fire this weapon instead of their repeater crossbow.",
         "name_de": "0-2 per 1,000",
         "name_es": "0-2 per 1,000",
         "name_fr": "0-2 per 1,000"
@@ -1307,23 +1672,43 @@
       "name_es": "Cold One Chariots",
       "name_fr": "Cold One Chariots",
       "id": "cold-one-chariots",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, cavalry spears and repeater crossbows",
+          "name_de": "Hand weapons, cavalry spears and repeater crossbows",
+          "name_es": "Hand weapons, cavalry spears and repeater crossbows",
+          "name_fr": "Hand weapons, cavalry spears and repeater crossbows",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Armour Bane (1, Cold One only), Close Order, Elven Reflexes, Fear,  First Charge, Hatred (High Elves), Impact Hits (D6+1), Stupidity",
+        "name_de": "Armour Bane (1, Cold One only), Close Order, Elven Reflexes, Fear,  First Charge, Hatred (High Elves), Impact Hits (D6+1), Stupidity",
+        "name_es": "Armour Bane (1, Cold One only), Close Order, Elven Reflexes, Fear,  First Charge, Hatred (High Elves), Impact Hits (D6+1), Stupidity",
+        "name_fr": "Armour Bane (1, Cold One only), Close Order, Elven Reflexes, Fear,  First Charge, Hatred (High Elves), Impact Hits (D6+1), Stupidity"
       },
       "notes": {
         "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1,000",
@@ -1338,23 +1723,43 @@
       "name_es": "War Hydra",
       "name_fr": "War Hydra",
       "id": "war-hydra",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 200,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, serrated maws, fiery breath, hand weapons and whips",
+          "name_de": "Wicked claws, serrated maws, fiery breath",
+          "name_es": "Wicked claws, serrated maws, fiery breath",
+          "name_fr": "Wicked claws, serrated maws, fiery breath",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
         "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
@@ -1369,23 +1774,43 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 194,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_de": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_es": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_fr": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
         "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
