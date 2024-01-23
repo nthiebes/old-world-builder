@@ -224,4 +224,32 @@ export const nameMap = {
     name_en: "Chaos Dwarfs",
     name_de: "Chaos Dwarfs",
   },
+  "vampire-counts": {
+    name_en: "Vampire Counts",
+    name_de: "Vampire Counts",
+  },
+  "vampiric-powers": {
+    name_en: "Vampiric Powers",
+    name_de: "Vampiric Powers",
+  },
+  "dark-elves": {
+    name_en: "Dark Elves",
+    name_de: "Dark Elves",
+  },
+  skaven: {
+    name_en: "Skaven",
+    name_de: "Skaven",
+  },
+  "daemons-of-chaos": {
+    name_en: "Daemons of Chaos",
+    name_de: "Daemons of Chaos",
+  },
+  "ogre-kingdoms": {
+    name_en: "Ogre Kingdoms",
+    name_de: "Ogre Kingdoms",
+  },
+  lizardmen: {
+    name_en: "Lizardmen",
+    name_de: "Lizardmen",
+  },
 };
