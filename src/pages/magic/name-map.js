@@ -220,4 +220,72 @@ export const nameMap = {
     name_en: "Troll Horde",
     name_de: "Troll Horde",
   },
+  "chaos-dwarfs": {
+    name_en: "Chaos Dwarfs",
+    name_de: "Chaos Dwarfs",
+  },
+  "vampire-counts": {
+    name_en: "Vampire Counts",
+    name_de: "Vampire Counts",
+  },
+  "vampiric-powers": {
+    name_en: "Vampiric Powers",
+    name_de: "Vampiric Powers",
+  },
+  "vampiric-power": {
+    name_en: "Vampiric Power",
+    name_de: "Vampiric Power",
+  },
+  "dark-elves": {
+    name_en: "Dark Elves",
+    name_de: "Dark Elves",
+  },
+  skaven: {
+    name_en: "Skaven",
+    name_de: "Skaven",
+  },
+  "daemons-of-chaos": {
+    name_en: "Daemons of Chaos",
+    name_de: "Daemons of Chaos",
+  },
+  "daemonic-gifts": {
+    name_en: "Daemonic Gifts",
+    name_de: "Daemonic Gifts",
+  },
+  "daemonic-gift": {
+    name_en: "Daemonic Gift",
+    name_de: "Daemonic Gift",
+  },
+  "forbidden-poisons": {
+    name_en: "Forbidden Poisons",
+    name_de: "Forbidden Poisons",
+  },
+  "gifts-of-khaine": {
+    name_en: "Gifts of Khaine",
+    name_de: "Gifts of Khaine",
+  },
+  "forbidden-poison": {
+    name_en: "Forbidden Poison",
+    name_de: "Forbidden Poison",
+  },
+  "gift-of-khaine": {
+    name_en: "Gift of Khaine",
+    name_de: "Gift of Khaine",
+  },
+  "ogre-kingdoms": {
+    name_en: "Ogre Kingdoms",
+    name_de: "Ogre Kingdoms",
+  },
+  "big-names": {
+    name_en: "Big Names",
+    name_de: "Big Names",
+  },
+  "big-name": {
+    name_en: "Big Name",
+    name_de: "Big Name",
+  },
+  lizardmen: {
+    name_en: "Lizardmen",
+    name_de: "Lizardmen",
+  },
 };

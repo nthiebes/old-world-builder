@@ -1,8 +1,2576 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Vampire Count",
+      "name_de": "Vampire Count",
+      "name_es": "Vampire Count",
+      "name_fr": "Vampire Count",
+      "id": "vampire-count",
+      "points": 160,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "name_es": "Additional Hand Weapon",
+          "name_fr": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_de": "Lance (when mounted)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance (when mounted)",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "name_es": "Light Armor",
+          "name_fr": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Level 1 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_de": "Nightmare",
+          "name_es": "Nightmare",
+          "name_fr": "Nightmare",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_de": "Coven Throne",
+          "name_es": "Coven Throne",
+          "name_fr": "Coven Throne",
+          "points": 210,
+          "active": false
+        },
+        {
+          "name_en": "Abyssal Terror",
+          "name_de": "Abyssal Terror",
+          "name_es": "Abyssal Terror",
+          "name_fr": "Abyssal Terror",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Zombie Dragon",
+          "name_de": "Zombie Dragon",
+          "name_es": "Zombie Dragon",
+          "name_fr": "Zombie Dragon",
+          "points": 215,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "armor-mages",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_de": "Vampiric Powers",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Vampiric Powers",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Dark Vitality, Flammable, Indomitable (2), Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Dark Vitality, Flammable, Indomitable (2), Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Dark Vitality, Flammable, Indomitable (2), Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Dark Vitality, Flammable, Indomitable (2), Lore of Undeath, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    },
+    {
+      "name_en": "Vampire Thrall",
+      "name_de": "Vampire Thrall",
+      "name_es": "Vampire Thrall",
+      "name_fr": "Vampire Thrall",
+      "id": "vampire-thrall",
+      "points": 75,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "name_es": "Additional Hand Weapon",
+          "name_fr": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_de": "Lance (when mounted)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance (when mounted)",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "name_es": "Light Armor",
+          "name_fr": "Light Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Level 1 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer (one per army)",
+          "name_de": "Battle Standard Bearer (one per army)",
+          "name_es": "Battle Standard Bearer (one per army)",
+          "name_fr": "Battle Standard Bearer (one per army)",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_de": "Nightmare",
+          "name_es": "Nightmare",
+          "name_fr": "Nightmare",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_de": "Coven Throne",
+          "name_es": "Coven Throne",
+          "name_fr": "Coven Throne",
+          "points": 210,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_de": "Vampiric Powers",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Vampiric Powers",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Banner of the Count, Dark Vitality, Flammable, Indomitable (1),  Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Banner of the Count, Dark Vitality, Flammable, Indomitable (1),  Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Banner of the Count, Dark Vitality, Flammable, Indomitable (1),  Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Banner of the Count, Dark Vitality, Flammable, Indomitable (1),  Lore of Undeath, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Master Necromancer",
+      "name_de": "Master Necromancer",
+      "name_es": "Master Necromancer",
+      "name_fr": "Master Necromancer",
+      "id": "master-necromancer",
+      "points": 130,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_de": "Nightmare",
+          "name_es": "Nightmare",
+          "name_fr": "Nightmare",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Mortis Engine",
+          "name_de": "Mortis Engine",
+          "name_es": "Mortis Engine",
+          "name_fr": "Mortis Engine",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Abyssal Terror",
+          "name_de": "Abyssal Terror",
+          "name_es": "Abyssal Terror",
+          "name_fr": "Abyssal Terror",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Zombie Dragon",
+          "name_de": "Zombie Dragon",
+          "name_es": "Zombie Dragon",
+          "name_fr": "Zombie Dragon",
+          "points": 215,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": ["weapon", "armor-mages", "arcane-item", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Level 3 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Level 3 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Level 3 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Level 3 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    },
+    {
+      "name_en": "Necromantic Acolyte",
+      "name_de": "Necromantic Acolyte",
+      "name_es": "Necromantic Acolyte",
+      "name_fr": "Necromantic Acolyte",
+      "id": "necromantic-acolyte",
+      "points": 60,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_de": "Nightmare",
+          "name_es": "Nightmare",
+          "name_fr": "Nightmare",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Mortis Engine",
+          "name_de": "Mortis Engine",
+          "name_es": "Mortis Engine",
+          "name_fr": "Mortis Engine",
+          "points": 195,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Level 1 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Level 1 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Level 1 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Level 1 Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Strigoi Ghoul King",
+      "name_de": "Strigoi Ghoul King",
+      "name_es": "Strigoi Ghoul King",
+      "name_fr": "Strigoi Ghoul King",
+      "id": "strigoi-ghoul-king",
+      "points": 145,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Level 1 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Terrorgheist",
+          "name_de": "Terrorgheist",
+          "name_es": "Terrorgheist",
+          "name_fr": "Terrorgheist",
+          "points": 205,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item",
+            "armor-mages"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_de": "Vampiric Powers",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Vampiric Powers",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
+      "lores": ["battle-magic", "dark-magic", "necromancy"],
+      "specialRules": {
+        "name_en": "Dark Vitality, Flammable, Hatred (all enemies), Indomitable (1),  Lore of Undeath, Necromantic Undead, Poisoned Attacks,  Regeneration (5+), the Hunger",
+        "name_de": "Dark Vitality, Flammable, Hatred (all enemies), Indomitable (1),  Lore of Undeath, Necromantic Undead, Poisoned Attacks,  Regeneration (5+), the Hunger",
+        "name_es": "Dark Vitality, Flammable, Hatred (all enemies), Indomitable (1),  Lore of Undeath, Necromantic Undead, Poisoned Attacks,  Regeneration (5+), the Hunger",
+        "name_fr": "Dark Vitality, Flammable, Hatred (all enemies), Indomitable (1),  Lore of Undeath, Necromantic Undead, Poisoned Attacks,  Regeneration (5+), the Hunger"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    },
+    {
+      "name_en": "Cairn Wraith",
+      "name_de": "Cairn Wraith",
+      "name_es": "Cairn Wraith",
+      "name_fr": "Cairn Wraith",
+      "id": "cairn-wraith",
+      "points": 50,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Spectral Scythe",
+          "name_de": "Spectral Scythe",
+          "name_es": "Spectral Scythe",
+          "name_fr": "Spectral Scythe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Indomitable (1), Necromantic Undead,  Regeneration (6+), Terror",
+        "name_de": "Ethereal, Indomitable (1), Necromantic Undead,  Regeneration (6+), Terror",
+        "name_es": "Ethereal, Indomitable (1), Necromantic Undead,  Regeneration (6+), Terror",
+        "name_fr": "Ethereal, Indomitable (1), Necromantic Undead,  Regeneration (6+), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Wight King",
+      "name_de": "Wight King",
+      "name_es": "Wight King",
+      "name_fr": "Wight King",
+      "id": "wight-king",
+      "points": 85,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "name_es": "Additional Hand Weapon",
+          "name_fr": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_de": "Lance (when mounted)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance (when mounted)",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "name_de": "On Foot",
+          "name_es": "On Foot",
+          "name_fr": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal",
+          "name_es": "Skeletal",
+          "name_fr": "Skeletal",
+          "points": 14,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Indomitable (1), Killing Blow, Necromantic Undead,  Regeneration (5+)",
+        "name_de": "Indomitable (1), Killing Blow, Necromantic Undead,  Regeneration (5+)",
+        "name_es": "Indomitable (1), Killing Blow, Necromantic Undead,  Regeneration (5+)",
+        "name_fr": "Indomitable (1), Killing Blow, Necromantic Undead,  Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    },
+    {
+      "name_en": "Wight Lord",
+      "name_de": "Wight Lord",
+      "name_es": "Wight Lord",
+      "name_fr": "Wight Lord",
+      "id": "wight-lord",
+      "points": 40,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_de": "Additional Hand Weapon",
+          "name_es": "Additional Hand Weapon",
+          "name_fr": "Additional Hand Weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Great Weapon",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_de": "Lance (when mounted)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance (when mounted)",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer (one per army)",
+          "name_de": "Battle Standard Bearer (one per army)",
+          "name_es": "Battle Standard Bearer (one per army)",
+          "name_fr": "Battle Standard Bearer (one per army)",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Skeletal Steed",
+          "name_de": "Skeletal Steed",
+          "name_es": "Skeletal Steed",
+          "name_fr": "Skeletal Steed",
+          "points": 14,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner",
+        "name_de": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner",
+        "name_es": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner",
+        "name_fr": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Tomb Banshee",
+      "name_de": "Tomb Banshee",
+      "name_es": "Tomb Banshee",
+      "name_fr": "Tomb Banshee",
+      "id": "tomb-banshee",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge",
+        "name_de": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge",
+        "name_es": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge",
+        "name_fr": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Skeleton Warriors",
+      "name_de": "Skeleton Warriors",
+      "name_es": "Skeleton Warriors",
+      "name_fr": "Skeleton Warriors",
+      "id": "skeleton-warriors",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Skeleton Champion",
+          "name_de": "Skeleton Champion",
+          "name_es": "Skeleton Champion",
+          "name_fr": "Skeleton Champion",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons & Shields",
+          "name_de": "Hand Weapons & Shields",
+          "name_es": "Hand Weapons & Shields",
+          "name_fr": "Hand Weapons & Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting Spears & Shields",
+          "name_de": "Thrusting Spears & Shields",
+          "name_es": "Thrusting Spears & Shields",
+          "name_fr": "Thrusting Spears & Shields",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armor",
+          "name_de": "Light Armor",
+          "name_es": "Light Armor",
+          "name_fr": "Light Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Magic Standard (1 per 1000pts)",
+          "name_de": "Magic Standard (1 per 1000pts)",
+          "name_es": "Magic Standard (1 per 1000pts)",
+          "name_fr": "Magic Standard (1 per 1000pts)",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Necromantic Undead, Regeneration (6+)",
+        "name_de": "Close Order, Horde, Necromantic Undead, Regeneration (6+)",
+        "name_es": "Close Order, Horde, Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Close Order, Horde, Necromantic Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Zombies",
+      "name_de": "Zombies",
+      "name_es": "Zombies",
+      "name_fr": "Zombies",
+      "id": "zombies",
+      "points": 3,
+      "minimum": 20,
+      "maximum": 40,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Necromantic Undead, Regeneration (6+),  the Newly Dead",
+        "name_de": "Close Order, Horde, Necromantic Undead, Regeneration (6+),  the Newly Dead",
+        "name_es": "Close Order, Horde, Necromantic Undead, Regeneration (6+),  the Newly Dead",
+        "name_fr": "Close Order, Horde, Necromantic Undead, Regeneration (6+),  the Newly Dead"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Crypt Ghouls",
+      "name_de": "Crypt Ghouls",
+      "name_es": "Crypt Ghouls",
+      "name_fr": "Crypt Ghouls",
+      "id": "crypt-ghouls",
+      "points": 9,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Crypt Ghast",
+          "name_de": "Crypt Ghast",
+          "name_es": "Crypt Ghast",
+          "name_fr": "Crypt Ghast",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "name_es": "Hand Weapons",
+          "name_fr": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Move through Cover, Necromantic Undead, Open Order,  Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers",
+        "name_de": "Move through Cover, Necromantic Undead, Open Order,  Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers",
+        "name_es": "Move through Cover, Necromantic Undead, Open Order,  Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers",
+        "name_fr": "Move through Cover, Necromantic Undead, Open Order,  Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bat Swarm",
+      "name_de": "Bat Swarm",
+      "name_es": "Bat Swarm",
+      "name_fr": "Bat Swarm",
+      "id": "bat-swarm",
+      "points": 39,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws and Fangs (Hand Weapons)",
+          "name_de": "Claws and Fangs (Hand Weapons)",
+          "name_es": "Claws and Fangs (Hand Weapons)",
+          "name_fr": "Claws and Fangs (Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_de": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_es": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_fr": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Dire Wolves",
+      "name_de": "Dire Wolves",
+      "name_es": "Dire Wolves",
+      "name_fr": "Dire Wolves",
+      "id": "dire-wolves",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 20,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Doom Wolf",
+          "name_de": "Doom Wolf",
+          "name_es": "Doom Wolf",
+          "name_fr": "Doom Wolf",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Claws and Fangs (Hand Weapons)",
+          "name_de": "Claws and Fangs (Hand Weapons)",
+          "name_es": "Claws and Fangs (Hand Weapons)",
+          "name_fr": "Claws and Fangs (Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard",
+        "name_de": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard",
+        "name_es": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard",
+        "name_fr": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Grave Guard",
+      "name_de": "Grave Guard",
+      "name_es": "Grave Guard",
+      "name_fr": "Grave Guard",
+      "id": "grave-guard",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Seneschal",
+          "name_de": "Seneschal",
+          "name_es": "Seneschal",
+          "name_fr": "Seneschal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "banner",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons & Shields",
+          "name_de": "Hand Weapons & Shields",
+          "name_es": "Hand Weapons & Shields",
+          "name_fr": "Hand Weapons & Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great Weapons (replace shields)",
+          "name_de": "Great Weapons (replace shields)",
+          "name_es": "Great Weapons (replace shields)",
+          "name_fr": "Great Weapons (replace shields)",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled (0-1 per 1000pts)",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Implacable Defense (0-1 per 1000pts)",
+          "name_de": "Implacable Defense",
+          "name_es": "Implacable Defense",
+          "name_fr": "Implacable Defense",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Standard",
+          "name_de": "Magic Standard",
+          "name_es": "Magic Standard",
+          "name_fr": "Magic Standard",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_de": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "0-1 per Wight (mutually exclusive with Black Knights)",
+        "name_de": "0-1 per Wight (mutually exclusive with Black Knights)",
+        "name_es": "0-1 per Wight (mutually exclusive with Black Knights)",
+        "name_fr": "0-1 per Wight (mutually exclusive with Black Knights)"
+      }
+    },
+    {
+      "name_en": "Black Knights",
+      "name_de": "Black Knights",
+      "name_es": "Black Knights",
+      "name_fr": "Black Knights",
+      "id": "black-knights",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Hell Knight",
+          "name_de": "Hell Knight",
+          "name_es": "Hell Knight",
+          "name_fr": "Hell Knight",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_de": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_es": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_fr": "Hand Weapons & Shields, Skeletal Hooves",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances & Shields, Skeletal Hooves",
+          "name_de": "Lances & Shields, Skeletal Hooves",
+          "name_es": "Lances & Shields, Skeletal Hooves",
+          "name_fr": "Lances & Shields, Skeletal Hooves",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Barding",
+          "name_de": "Barding",
+          "name_es": "Barding",
+          "name_fr": "Barding",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Standard",
+          "name_de": "Magic Standard",
+          "name_es": "Magic Standard",
+          "name_fr": "Magic Standard",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "0-1 per Wight (mutually exclusive with Grave Guard)",
+        "name_de": "0-1 per Wight (mutually exclusive with Grave Guard)",
+        "name_es": "0-1 per Wight (mutually exclusive with Grave Guard)",
+        "name_fr": "0-1 per Wight (mutually exclusive with Grave Guard)"
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Grave Guard",
+      "name_de": "Grave Guard",
+      "name_es": "Grave Guard",
+      "name_fr": "Grave Guard",
+      "id": "grave-guard",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Seneschal",
+          "name_de": "Seneschal",
+          "name_es": "Seneschal",
+          "name_fr": "Seneschal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons & Shields",
+          "name_de": "Hand Weapons & Shields",
+          "name_es": "Hand Weapons & Shields",
+          "name_fr": "Hand Weapons & Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great Weapons (replaces shields)",
+          "name_de": "Great Weapons (replaces shields)",
+          "name_es": "Great Weapons (replaces shields)",
+          "name_fr": "Great Weapons (replaces shields)",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled (0-1 per 1000pts)",
+          "name_de": "Drilled (0-1 per 1000pts)",
+          "name_es": "Drilled (0-1 per 1000pts)",
+          "name_fr": "Drilled (0-1 per 1000pts)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Implacable Defense (0-1 per 1000pts)",
+          "name_de": "Implacable Defense (0-1 per 1000pts)",
+          "name_es": "Implacable Defense (0-1 per 1000pts)",
+          "name_fr": "Implacable Defense (0-1 per 1000pts)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Standard",
+          "name_de": "Magic Standard",
+          "name_es": "Magic Standard",
+          "name_fr": "Magic Standard",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_de": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually exclusive with Black Knights)",
+        "name_de": "0-1 per 1000pts (mutually exclusive with Black Knights)",
+        "name_es": "0-1 per 1000pts (mutually exclusive with Black Knights)",
+        "name_fr": "0-1 per 1000pts (mutually exclusive with Black Knights)"
+      }
+    },
+    {
+      "name_en": "Black Knights",
+      "name_de": "Black Knights",
+      "name_es": "Black Knights",
+      "name_fr": "Black Knights",
+      "id": "black-knights",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Hell Knight",
+          "name_de": "Hell Knight",
+          "name_es": "Hell Knight",
+          "name_fr": "Hell Knight",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_de": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_es": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_fr": "Hand Weapons & Shields, Skeletal Hooves",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances & Shields, Skeletal Hooves",
+          "name_de": "Lances & Shields, Skeletal Hooves",
+          "name_es": "Lances & Shields, Skeletal Hooves",
+          "name_fr": "Lances & Shields, Skeletal Hooves",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Barding",
+          "name_de": "Barding",
+          "name_es": "Barding",
+          "name_fr": "Barding",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Standard",
+          "name_de": "Magic Standard",
+          "name_es": "Magic Standard",
+          "name_fr": "Magic Standard",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order,  First Charge, Necromantic Undead, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually exclusive with Grave Guard)",
+        "name_de": "0-1 per 1000pts (mutually exclusive with Grave Guard)",
+        "name_es": "0-1 per 1000pts (mutually exclusive with Grave Guard)",
+        "name_fr": "0-1 per 1000pts (mutually exclusive with Grave Guard)"
+      }
+    },
+    {
+      "name_en": "Crypt Horrors",
+      "name_de": "Crypt Horrors",
+      "name_es": "Crypt Horrors",
+      "name_fr": "Crypt Horrors",
+      "id": "crypt-horrors",
+      "points": 46,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Crypt Haunter",
+          "name_de": "Crypt Haunter",
+          "name_es": "Crypt Haunter",
+          "name_fr": "Crypt Haunter",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Filth-Encrusted Claws",
+          "name_de": "Filth-Encrusted Claws",
+          "name_es": "Filth-Encrusted Claws",
+          "name_fr": "Filth-Encrusted Claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Indomitable (1), Move through Cover, Necromantic Undead, Open Order, Regeneration (6+), Stomp Attacks (1)",
+        "name_de": "Indomitable (1), Move through Cover, Necromantic Undead, Open Order, Regeneration (6+), Stomp Attacks (1)",
+        "name_es": "Indomitable (1), Move through Cover, Necromantic Undead, Open Order, Regeneration (6+), Stomp Attacks (1)",
+        "name_fr": "Indomitable (1), Move through Cover, Necromantic Undead, Open Order, Regeneration (6+), Stomp Attacks (1)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually exclusive with Fell Bats)",
+        "name_de": "0-1 per 1000pts (mutually exclusive with Fell Bats)",
+        "name_es": "0-1 per 1000pts (mutually exclusive with Fell Bats)",
+        "name_fr": "0-1 per 1000pts (mutually exclusive with Fell Bats)"
+      }
+    },
+    {
+      "name_en": "Fell Bats",
+      "name_de": "Fell Bats",
+      "name_es": "Fell Bats",
+      "name_fr": "Fell Bats",
+      "id": "fell-bats",
+      "points": 15,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws and Fangs (Hand Weapons)",
+          "name_de": "Claws and Fangs (Hand Weapons)",
+          "name_es": "Claws and Fangs (Hand Weapons)",
+          "name_fr": "Claws and Fangs (Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_de": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually exclusive with Crypt Horrors)",
+        "name_de": "0-1 per 1000pts (mutually exclusive with Crypt Horrors)",
+        "name_es": "0-1 per 1000pts (mutually exclusive with Crypt Horrors)",
+        "name_fr": "0-1 per 1000pts (mutually exclusive with Crypt Horrors)"
+      }
+    },
+    {
+      "name_en": "Spirit Hosts",
+      "name_de": "Spirit Hosts",
+      "name_es": "Spirit Hosts",
+      "name_fr": "Spirit Hosts",
+      "id": "spirit-hosts",
+      "points": 49,
+      "minimum": 3,
+      "maximum": 6,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "name_es": "Hand Weapons",
+          "name_fr": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move",
+        "name_de": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move",
+        "name_es": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move",
+        "name_fr": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move"
+      },
+      "notes": {
+        "name_en": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_de": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_es": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_fr": "0-1 per Cairn Wraith or Tomb Banshee "
+      }
+    },
+    {
+      "name_en": "Vargheists",
+      "name_de": "Vargheists",
+      "name_es": "Vargheists",
+      "name_fr": "Vargheists",
+      "id": "vargheists",
+      "points": 61,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Vargoyle",
+          "name_de": "Vargoyle",
+          "name_es": "Vargoyle",
+          "name_fr": "Vargoyle",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Wicked Claws",
+          "name_de": "Wicked Claws",
+          "name_es": "Wicked Claws",
+          "name_fr": "Wicked Claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_de": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_es": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_fr": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Terrorgheist)",
+        "name_de": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Terrorgheist)",
+        "name_es": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Terrorgheist)",
+        "name_fr": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Terrorgheist)"
+      }
+    },
+    {
+      "name_en": "Terrorgheist",
+      "name_de": "Terrorgheist",
+      "name_es": "Terrorgheist",
+      "name_fr": "Terrorgheist",
+      "id": "terrorgheist",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Filth-encrusted talons, Rancid Maw",
+          "name_de": "Filth-encrusted talons, Rancid Maw",
+          "name_es": "Filth-encrusted talons, Rancid Maw",
+          "name_fr": "Filth-encrusted talons, Rancid Maw",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (light armor)",
+          "name_de": "Calloused Hide (light armor)",
+          "name_es": "Calloused Hide (light armor)",
+          "name_fr": "Calloused Hide (light armor)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge"
+      },
+      "notes": {
+        "name_en": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Vargheists)",
+        "name_de": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Vargheists)",
+        "name_es": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Vargheists)",
+        "name_fr": "0-1 if general is Strigoi Ghoul King (mutually exclusive with Vargheists)"
+      }
+    },
+    {
+      "name_en": "Corpse Cart",
+      "name_de": "Corpse Cart",
+      "name_es": "Corpse Cart",
+      "name_fr": "Corpse Cart",
+      "id": "corpse-cart",
+      "points": 115,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_de": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_es": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_fr": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_de": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_es": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_fr": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Level 1 Wizard (Necromancy), Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Lore of Undeath, Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+)",
+        "name_de": "Level 1 Wizard (Necromancy), Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Lore of Undeath, Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+)",
+        "name_es": "Level 1 Wizard (Necromancy), Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Lore of Undeath, Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+)",
+        "name_fr": "Level 1 Wizard (Necromancy), Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Lore of Undeath, Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "0-3",
+        "name_de": "0-3",
+        "name_es": "0-3",
+        "name_fr": "0-3"
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Vargheists",
+      "name_de": "Vargheists",
+      "name_es": "Vargheists",
+      "name_fr": "Vargheists",
+      "id": "vargheists",
+      "points": 61,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Vargoyle",
+          "name_de": "Vargoyle",
+          "name_es": "Vargoyle",
+          "name_fr": "Vargoyle",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Wicked Claws",
+          "name_de": "Wicked Claws",
+          "name_es": "Wicked Claws",
+          "name_fr": "Wicked Claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_de": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_es": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers",
+        "name_fr": "Armour Bane (2), Dark Vitality, Flammable, Fly (9), Frenzy, Indomitable (1), Necromantic Undead, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts",
+        "name_de": "0-1 per 1000pts",
+        "name_es": "0-1 per 1000pts",
+        "name_fr": "0-1 per 1000pts"
+      }
+    },
+    {
+      "name_en": "Black Coach",
+      "name_de": "Black Coach",
+      "name_es": "Black Coach",
+      "name_fr": "Black Coach",
+      "id": "black-coach",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_de": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_es": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_fr": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror",
+        "name_de": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror",
+        "name_es": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror",
+        "name_fr": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror"
+      },
+      "notes": {
+        "name_en": "0-2",
+        "name_de": "0-2",
+        "name_es": "0-2",
+        "name_fr": "0-2"
+      }
+    },
+    {
+      "name_en": "Terrorgheist",
+      "name_de": "Terrorgheist",
+      "name_es": "Terrorgheist",
+      "name_fr": "Terrorgheist",
+      "id": "terrorgheist",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Filth-encrusted talons, Rancid Maw",
+          "name_de": "Filth-encrusted talons, Rancid Maw",
+          "name_es": "Filth-encrusted talons, Rancid Maw",
+          "name_fr": "Filth-encrusted talons, Rancid Maw",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (light armor)",
+          "name_de": "Calloused Hide (light armor)",
+          "name_es": "Calloused Hide (light armor)",
+          "name_fr": "Calloused Hide (light armor)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge",
+        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually exclusive with Varghulf)",
+        "name_de": "0-1 per 1000pts (mutually exclusive with Varghulf)",
+        "name_es": "0-1 per 1000pts (mutually exclusive with Varghulf)",
+        "name_fr": "0-1 per 1000pts (mutually exclusive with Varghulf)"
+      }
+    },
+    {
+      "name_en": "Varghulf",
+      "name_de": "Varghulf",
+      "name_es": "Varghulf",
+      "name_fr": "Varghulf",
+      "id": "varghulf",
+      "points": 140,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked Claws",
+          "name_de": "Wicked Claws",
+          "name_es": "Wicked Claws",
+          "name_fr": "Wicked Claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (light armor)",
+          "name_de": "Calloused Hide (light armor)",
+          "name_es": "Calloused Hide (light armor)",
+          "name_fr": "Calloused Hide (light armor)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Frenzy, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror",
+        "name_de": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Frenzy, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror",
+        "name_es": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Frenzy, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror",
+        "name_fr": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Frenzy, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts (mutually Exclusive with Terrorgheist)",
+        "name_de": "0-1 per 1000pts (mutually Exclusive with Terrorgheist)",
+        "name_es": "0-1 per 1000pts (mutually Exclusive with Terrorgheist)",
+        "name_fr": "0-1 per 1000pts (mutually Exclusive with Terrorgheist)"
+      }
+    },
+    {
+      "name_en": "Blood Knights",
+      "name_de": "Blood Knights",
+      "name_es": "Blood Knights",
+      "name_fr": "Blood Knights",
+      "id": "blood-knights",
+      "points": 39,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Kastellan",
+          "name_de": "Kastellan",
+          "name_es": "Kastellan",
+          "name_fr": "Kastellan",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_de": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_es": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_fr": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Heavy Armor",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full Plate Armor",
+          "name_de": "Full Plate Armor",
+          "name_es": "Full Plate Armor",
+          "name_fr": "Full Plate Armor",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Barding",
+          "name_de": "Barding",
+          "name_es": "Barding",
+          "name_fr": "Barding",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Magic Standard",
+          "name_de": "Magic Standard",
+          "name_es": "Magic Standard",
+          "name_fr": "Magic Standard",
+          "points": 50,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_de": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_de": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_es": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_fr": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers"
+      }
+    },
+    {
+      "name_en": "Hexwraiths",
+      "name_de": "Hexwraiths",
+      "name_es": "Hexwraiths",
+      "name_fr": "Hexwraiths",
+      "id": "hexwraiths",
+      "points": 31,
+      "minimum": 5,
+      "maximum": 10,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Hellwraith",
+          "name_de": "Hellwraith",
+          "name_es": "Hellwraith",
+          "name_fr": "Hellwraith",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_de": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_es": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_fr": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror",
+        "name_de": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror",
+        "name_es": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror",
+        "name_fr": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_de": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_es": "0-1 per Cairn Wraith or Tomb Banshee",
+        "name_fr": "0-1 per Cairn Wraith or Tomb Banshee"
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }

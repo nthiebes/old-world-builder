@@ -2206,22 +2206,6 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
-          "name_fr": "Arme de base additionnelle",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
-          "name_fr": "Arme lourde",
-          "points": 2,
-          "perModel": true,
-          "active": false
         }
       ],
       "armor": [
@@ -2238,7 +2222,7 @@
         {
           "name_en": "Stubborn",
           "name_de": "Stubborn",
-          "name_fr": "Obstiné",
+          "name_fr": "Obstiné (0-1 unité par armée)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2248,7 +2232,7 @@
         {
           "name_en": "Veteran",
           "name_de": "Veteran",
-          "name_fr": "Vétérans",
+          "name_fr": "Vétérans (0-1 unité par armée)",
           "points": 1,
           "perModel": true,
           "stackable": false,
@@ -2260,8 +2244,28 @@
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "perModel": true,
-          "stackable": false,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 2,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 1,
+          "perModel": false,
+          "stackable": true,
           "minimum": 0,
           "maximum": 0
         }
