@@ -944,7 +944,14 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": [],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "banner",
+            "arcane-item",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -1064,10 +1071,10 @@
           "active": true
         },
         {
-          "name_en": "Thrusting Spears",
-          "name_de": "Thrusting Spears",
-          "name_es": "Thrusting Spears",
-          "name_fr": "Thrusting Spears",
+          "name_en": "Thrusting Spears & Shields",
+          "name_de": "Thrusting Spears & Shields",
+          "name_es": "Thrusting Spears & Shields",
+          "name_fr": "Thrusting Spears & Shields",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1514,31 +1521,22 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons & Shields",
-          "name_de": "Hand Weapons & Shields",
-          "name_es": "Hand Weapons & Shields",
-          "name_fr": "Hand Weapons & Shields",
+          "name_en": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_de": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_es": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_fr": "Hand Weapons & Shields, Skeletal Hooves",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "name_es": "Lances",
-          "name_fr": "Lances",
+          "name_en": "Lances & Shields, Skeletal Hooves",
+          "name_de": "Lances & Shields, Skeletal Hooves",
+          "name_es": "Lances & Shields, Skeletal Hooves",
+          "name_fr": "Lances & Shields, Skeletal Hooves",
           "points": 2,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Skeletal Hooves",
-          "name_de": "Skeletal Hooves",
-          "name_es": "Skeletal Hooves",
-          "name_fr": "Skeletal Hooves",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -1784,31 +1782,22 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons & Shields",
-          "name_de": "Hand Weapons & Shields",
-          "name_es": "Hand Weapons & Shields",
-          "name_fr": "Hand Weapons & Shields",
+          "name_en": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_de": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_es": "Hand Weapons & Shields, Skeletal Hooves",
+          "name_fr": "Hand Weapons & Shields, Skeletal Hooves",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "name_es": "Lances",
-          "name_fr": "Lances",
+          "name_en": "Lances & Shields, Skeletal Hooves",
+          "name_de": "Lances & Shields, Skeletal Hooves",
+          "name_es": "Lances & Shields, Skeletal Hooves",
+          "name_fr": "Lances & Shields, Skeletal Hooves",
           "points": 2,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Skeletal Hooves",
-          "name_de": "Skeletal Hooves",
-          "name_es": "Skeletal Hooves",
-          "name_fr": "Skeletal Hooves",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -2064,19 +2053,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Filth-encrusted talons",
-          "name_de": "Filth-encrusted talons",
-          "name_es": "Filth-encrusted talons",
-          "name_fr": "Filth-encrusted talons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Rancid Maw",
-          "name_de": "Rancid Maw",
-          "name_es": "Rancid Maw",
-          "name_fr": "Rancid Maw",
+          "name_en": "Filth-encrusted talons, Rancid Maw",
+          "name_de": "Filth-encrusted talons, Rancid Maw",
+          "name_es": "Filth-encrusted talons, Rancid Maw",
+          "name_fr": "Filth-encrusted talons, Rancid Maw",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2124,37 +2104,28 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand Weapon (Corpsemaster)",
-          "name_de": "Hand Weapon (Corpsemaster)",
-          "name_es": "Hand Weapon (Corpsemaster)",
-          "name_fr": "Hand Weapon (Corpsemaster)",
+          "name_en": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Hand Weapon (Corpsemaster), Hand Weapons (Restless Dead)",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand Weapons (Restless Dead)",
-          "name_de": "Hand Weapons (Restless Dead)",
-          "name_es": "Hand Weapons (Restless Dead)",
-          "name_fr": "Hand Weapons (Restless Dead)",
-          "points": 1,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Whip (Corpsemaster)",
-          "name_de": "Whip (Corpsemaster)",
-          "name_es": "Whip (Corpsemaster)",
-          "name_fr": "Whip (Corpsemaster)",
+          "name_en": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Whip (Corpsemaster), Hand Weapons (Restless Dead)",
           "points": 3,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Cavalry Spear (Corpsemaster)",
-          "name_de": "Cavalry Spear (Corpsemaster)",
-          "name_es": "Cavalry Spear (Corpsemaster)",
-          "name_fr": "Cavalry Spear (Corpsemaster)",
+          "name_en": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_de": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_es": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
+          "name_fr": "Cavalry Spear (Corpsemaster), Hand Weapons (Restless Dead)",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2163,10 +2134,10 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Balefire Brazier",
-          "name_de": "Balefire Brazier",
-          "name_es": "Balefire Brazier",
-          "name_fr": "Balefire Brazier",
+          "name_en": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_de": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_es": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
+          "name_fr": "Balefire Brazier (mutually exclusive with Warped Tintinnabulation)",
           "points": 10,
           "perModel": true,
           "stackable": false,
@@ -2174,10 +2145,10 @@
           "maximum": 0
         },
         {
-          "name_en": "Warped Tintinnabulation",
-          "name_de": "Warped Tintinnabulation",
-          "name_es": "Warped Tintinnabulation",
-          "name_fr": "Warped Tintinnabulation",
+          "name_en": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_de": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_es": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
+          "name_fr": "Warped Tintinnabulation (mutually exclusive with Balefire Brazier)",
           "points": 15,
           "perModel": true,
           "stackable": false,
@@ -2270,19 +2241,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Spectral Scythe",
-          "name_de": "Spectral Scythe",
-          "name_es": "Spectral Scythe",
-          "name_fr": "Spectral Scythe",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Iron-Shod Hooves (Hand Weapons) x 2",
-          "name_de": "Iron-Shod Hooves (Hand Weapons) x 2",
-          "name_es": "Iron-Shod Hooves (Hand Weapons) x 2",
-          "name_fr": "Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_en": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_de": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_es": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
+          "name_fr": "Spectral Scythe, Iron-Shod Hooves (Hand Weapons) x 2",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2320,19 +2282,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Filth-encrusted talons",
-          "name_de": "Filth-encrusted talons",
-          "name_es": "Filth-encrusted talons",
-          "name_fr": "Filth-encrusted talons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Rancid Maw",
-          "name_de": "Rancid Maw",
-          "name_es": "Rancid Maw",
-          "name_fr": "Rancid Maw",
+          "name_en": "Filth-encrusted talons, Rancid Maw",
+          "name_de": "Filth-encrusted talons, Rancid Maw",
+          "name_es": "Filth-encrusted talons, Rancid Maw",
+          "name_fr": "Filth-encrusted talons, Rancid Maw",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2472,28 +2425,10 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons & Shields",
-          "name_de": "Hand Weapons & Shields",
-          "name_es": "Hand Weapons & Shields",
-          "name_fr": "Hand Weapons & Shields",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "name_es": "Lances",
-          "name_fr": "Lances",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Iron-Shod Hooves",
-          "name_de": "Iron-Shod Hooves",
-          "name_es": "Iron-Shod Hooves",
-          "name_fr": "Iron-Shod Hooves",
+          "name_en": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_de": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_es": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
+          "name_fr": "Hand Weapons, Lances & Shields, Iron-Shod Hooves",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2564,10 +2499,10 @@
         "name_fr": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride"
       },
       "notes": {
-        "name_en": "0-1 per 1000pts",
-        "name_de": "0-1 per 1000pts",
-        "name_es": "0-1 per 1000pts",
-        "name_fr": "0-1 per 1000pts"
+        "name_en": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_de": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_es": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers",
+        "name_fr": "0-1 per 1000pts, Kastellan chooses 25pts Magic items and 25pts Vampiric Powers"
       }
     },
     {
@@ -2596,28 +2531,10 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons",
-          "name_de": "Hand Weapons",
-          "name_es": "Hand Weapons",
-          "name_fr": "Hand Weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Great Weapons",
-          "name_de": "Great Weapons",
-          "name_es": "Great Weapons",
-          "name_fr": "Great Weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Skeletal Hooves (Hand Weapons)",
-          "name_de": "Skeletal Hooves",
-          "name_es": "Skeletal Hooves",
-          "name_fr": "Skeletal Hooves",
+          "name_en": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_de": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_es": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
+          "name_fr": "Hand Weapons, Great Weapons, Skeletal Hooves (Hand Weapons)",
           "points": 0,
           "perModel": true,
           "active": true
