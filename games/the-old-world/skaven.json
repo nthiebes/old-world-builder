@@ -585,8 +585,697 @@
       }
     }
   ],
-  "core": [],
-  "special": [],
+  "core": [
+    {
+      "name_en": "Stormvermin",
+      "name_de": "Sturmratten",
+      "name_es": "Stormvermin",
+      "name_fr": "Stormvermin",
+      "id": "stormvermin",
+      "points": 10,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Fangleader",
+          "name_de": "Krallenführer",
+          "name_es": "Fangleader",
+          "name_fr": "Fangleader",
+          "points": 8,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item",
+              "banner"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standartenträger",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Handweapon, Halberds",
+          "name_de": "Handwaffe, Hellebarde",
+          "name_es": "Handweapon, Halberds",
+          "name_fr": "Handweapon, Halberds",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Schilde",
+          "name_es": "Shields",
+          "name_fr": "Shields",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
+        "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
+        "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
+        "name_fr": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Clanrats",
+      "name_de": "Klanratten",
+      "name_es": "Clanrats",
+      "name_fr": "Clanrats",
+      "id": "clanrats",
+      "points": 4,
+      "minimum": 20,
+      "maximum": 40,
+      "regimentalUnit": true,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Clawleader",
+          "name_de": "Klauenführer",
+          "name_es": "Clawleader",
+          "name_fr": "Clawleader",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standartenträger",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Thrusting spear",
+          "name_de": "Handwaffe, Stoßspeer",
+          "name_es": "Hand weapon, Thrusting spear",
+          "name_fr": "Hand weapon, Thrusting spear",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armor",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armor",
+          "name_fr": "Light armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Scurry Away, Warband",
+        "name_de": "Close Order, Horde, Scurry Away, Warband",
+        "name_es": "Close Order, Horde, Scurry Away, Warband",
+        "name_fr": "Close Order, Horde, Scurry Away, Warband"
+      },
+      "notes": {
+        "name_en": "1+ per 1000 points",
+        "name_de": "1+ pro 1000 Punkte",
+        "name_es": "1+ per 1000 points",
+        "name_fr": "1+ per 1000 points"
+      }
+    },
+    {
+      "name_en": "Weapon Team",
+      "name_de": "Waffenteam",
+      "name_es": "Weapon Team",
+      "name_fr": "Weapon Team",
+      "id": "weapon-team",
+      "points": 15,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": true,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons, Doom-flayer",
+          "name_de": "Handwaffen, Ding-schredder",
+          "name_es": "Hand Weapons, Doom-flayer",
+          "name_fr": "Hand Weapons, Doom-flayer",
+          "points": 40,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Poisoned Wind Mortar",
+          "name_de": "Handwaffe, Giftwindmörser",
+          "name_es": "Hand Weapons, Poisoned Wind Mortar",
+          "name_fr": "Hand Weapons, Poisoned Wind Mortar",
+          "points": 55,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Ratling Gun",
+          "name_de": "Handwaffen,  Ratlingkanone",
+          "name_es": "Hand Weapons, Ratling Gun",
+          "name_fr": "Hand Weapons, Ratling Gun",
+          "points": 50,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Warpfire Thrower",
+          "name_de": "Handwaffen, Warpflammenwerfer",
+          "name_es": "Hand Weapons, Warpfire Thrower",
+          "name_fr": "Hand Weapons, Warpfire Thrower",
+          "points": 60,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand Weapons, Warp Grinder",
+          "name_de": "Handwaffen, Warpbohrer",
+          "name_es": "Hand Weapons, Warp Grinder",
+          "name_fr": "Hand Weapons, Warp Grinder",
+          "points": 30,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armor",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armor",
+          "name_fr": "Light armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Loner, Open Order, Scurry Away",
+        "name_de": "Loner, Open Order, Scurry Away",
+        "name_es": "Loner, Open Order, Scurry Away",
+        "name_fr": "Loner, Open Order, Scurry Away"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Rat Swarms",
+      "name_de": "Rattenschwarm",
+      "name_es": "Rat Swarms",
+      "name_fr": "Rat Swarms",
+      "id": "rat-swarms",
+      "points": 36,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws and fangs (counts as hand weapons)",
+          "name_de": "Klauen und Zähne (zählt als Handwaffen)",
+          "name_es": "Claws and fangs (counts as hand weapons)",
+          "name_fr": "Claws and fangs (counts as hand weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_de": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_es": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_fr": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Giant Rats",
+      "name_de": "Riesenratten",
+      "name_es": "Giant Rats",
+      "name_fr": "Giant Rats",
+      "id": "giant-rats",
+      "points": 3,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Master Moulder",
+          "name_de": "Meisterzüchter",
+          "name_es": "Master Moulder",
+          "name_fr": "Master Moulder",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Claws and teeth (counts as hand weapons)",
+          "name_de": "Klauen und Zähne (zählt als Handwaffen)",
+          "name_es": "Claws and teeth (counts as hand weapons)",
+          "name_fr": "Claws and teeth (counts as hand weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Packmaster (Whip, 1 per 3 Giant rats)",
+          "name_de": "Meutenbändiger (Peitsche, 1 pro 3 Riesenratten)",
+          "name_es": "Packmaster (Whip, one per 3 Giant rats)",
+          "name_fr": "Packmaster (Whip, one per 3 Giant rats)",
+          "points": 5,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Packmaster (Things-catcher, 1 per 3 Giant rats)",
+          "name_de": "Meutenbändiger (Ding-Fänger, 1 per 3 Giant rats)",
+          "name_es": "Packmaster (Things-catcher, 1 per 3 Giant rats)",
+          "name_fr": "Packmaster (Things-catcher, 1 per 3 Giant rats)",
+          "points": 10,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
+        "name_de": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
+        "name_es": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
+        "name_fr": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Night Runners",
+      "name_de": "Schattenläufer",
+      "name_es": "Night Runners",
+      "name_fr": "Night Runners",
+      "id": "night-runners",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Nightleader",
+          "name_de": "Schattenführer",
+          "name_es": "Nightleader",
+          "name_fr": "Nightleader",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapon, Sling",
+          "name_de": "Handwaffe, Schleuder",
+          "name_es": "Hand weapon, Sling",
+          "name_fr": "Hand weapon, Sling",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapon, Throwing weapons",
+          "name_de": "Handwaffe, Wurfwaffen",
+          "name_es": "Hand weapon, Throwing weapons",
+          "name_fr": "Hand weapon, Throwing weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Additional hand weapon, Sling",
+          "name_de": "Zusätzliche Handwaffe, Schleuder",
+          "name_es": "Additional hand weapon, Sling",
+          "name_fr": "Additional hand weapon, Sling",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Additional hand weapon, Throwing weapons",
+          "name_de": "Zusätzliche Handwaffe, Wurfwaffen",
+          "name_es": "Additional hand weapon, Throwing weapons",
+          "name_fr": "Additional hand weapon, Throwing weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
+        "name_de": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
+        "name_es": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
+        "name_fr": "Evasive, Fire & Flee, Scurry Away, Skrimishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Gutter Runners",
+      "name_de": "Gutter Runners",
+      "name_es": "Gutter Runners",
+      "name_fr": "Gutter Runners",
+      "id": "gutter-runners",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Assassin",
+          "name_de": "Assassin",
+          "name_es": "Assassin",
+          "name_fr": "Assassin",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_de": "Two hand weapons",
+          "name_es": "Two hand weapons",
+          "name_fr": "Two hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Two hand weapons, Slings",
+          "name_de": "Two hand weapons, Slings",
+          "name_es": "Two hand weapons, Slings",
+          "name_fr": "Two hand weapons, Slings",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Two hand weapons, Throwing weapons",
+          "name_de": "Two hand weapons, Throwing weapons",
+          "name_es": "Two hand weapons, Throwing weapons",
+          "name_fr": "Two hand weapons, Throwing weapons",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "name_de": "Poisoned Attacks",
+          "name_es": "Poisoned Attacks",
+          "name_fr": "Poisoned Attacks",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_de": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_es": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_fr": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Rat Ogres",
+      "name_de": "Rat Ogres",
+      "name_es": "Rat Ogres",
+      "name_fr": "Rat Ogres",
+      "id": "rat-ogres",
+      "points": 48,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Master Moulder",
+          "name_de": "Master Moulder",
+          "name_es": "Master Moulder",
+          "name_fr": "Master Moulder",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapons",
+          "name_de": "Hand Weapons",
+          "name_es": "Hand Weapons",
+          "name_fr": "Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Mutated hides (counts as Heavy armour)",
+          "name_de": "Mutated hides (counts as Heavy armour)",
+          "name_es": "Mutated hides (counts as Heavy armour)",
+          "name_fr": "Mutated hides (counts as Heavy armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Pack Master (one for every two Rat Ogres)",
+          "name_de": "Pack Master",
+          "name_es": "Pack Master",
+          "name_fr": "Pack Master",
+          "points": 5,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
+        "name_de": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
+        "name_es": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
+        "name_fr": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband"
+      },
+      "notes": {
+        "name_en": "0-2 units of Rat Ogres per 1,000 points",
+        "name_de": "0-2 units of Rat Ogres per 1,000 points",
+        "name_es": "0-2 units of Rat Ogres per 1,000 points",
+        "name_fr": "0-2 units of Rat Ogres per 1,000 points"
+      }
+    }
+  ],
   "rare": [],
   "mercenaries": [],
   "allies": []
