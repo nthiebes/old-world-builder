@@ -248,13 +248,77 @@ export const nameMap = {
     name_en: "Daemons of Chaos",
     name_de: "Daemons of Chaos",
   },
-  "daemonic-gifts": {
-    name_en: "Daemonic Gifts",
-    name_de: "Daemonic Gifts",
+  "daemonic-gifts-common": {
+    name_en: "Chaotic Gifts",
+    name_de: "Chaotic Gifts",
   },
-  "daemonic-gift": {
-    name_en: "Daemonic Gift",
-    name_de: "Daemonic Gift",
+  "daemonic-gift-common": {
+    name_en: "Chaotic Gift",
+    name_de: "Chaotic Gift",
+  },
+  "daemonic-gifts-khorne": {
+    name_en: "Gifts Of Khorne",
+    name_de: "Gifts Of Khorne",
+  },
+  "daemonic-gift-khorne": {
+    name_en: "Gift Of Khorne",
+    name_de: "Gift Of Khorne",
+  },
+  "daemonic-icons-khorne": {
+    name_en: "Icons Of Khorne",
+    name_de: "Icons Of Khorne",
+  },
+  "daemonic-icon-khorne": {
+    name_en: "Icon Of Khorne",
+    name_de: "Icon Of Khorne",
+  },
+  "daemonic-gifts-nurgle": {
+    name_en: "Gifts Of Nurgle",
+    name_de: "Gifts Of Nurgle",
+  },
+  "daemonic-gift-nurgle": {
+    name_en: "Gift Of Nurgle",
+    name_de: "Gift Of Nurgle",
+  },
+  "daemonic-icons-nurgle": {
+    name_en: "Icons Of Nurgle",
+    name_de: "Icons Of Nurgle",
+  },
+  "daemonic-icon-nurgle": {
+    name_en: "Icon Of Nurgle",
+    name_de: "Icon Of Nurgle",
+  },
+  "daemonic-gifts-slaanesh": {
+    name_en: "Gifts Of Slaanesh",
+    name_de: "Gifts Of Slaanesh",
+  },
+  "daemonic-gift-slaanesh": {
+    name_en: "Gift Of Slaanesh",
+    name_de: "Gift Of Slaanesh",
+  },
+  "daemonic-icons-slaanesh": {
+    name_en: "Icons Of Slaanesh",
+    name_de: "Icons Of Slaanesh",
+  },
+  "daemonic-icon-slaanesh": {
+    name_en: "Icon Of Slaanesh",
+    name_de: "Icon Of Slaanesh",
+  },
+  "daemonic-gifts-tzeentch": {
+    name_en: "Gifts Of Tzeentch",
+    name_de: "Gifts Of Tzeentch",
+  },
+  "daemonic-gift-tzeentch": {
+    name_en: "Gift Of Tzeentch",
+    name_de: "Gift Of Tzeentch",
+  },
+  "daemonic-icons-tzeentch": {
+    name_en: "Icons Of Tzeentch",
+    name_de: "Icons Of Tzeentch",
+  },
+  "daemonic-icon-tzeentch": {
+    name_en: "Icon Of Tzeentch",
+    name_de: "Icon Of Tzeentch",
   },
   "forbidden-poisons": {
     name_en: "Forbidden Poisons",
