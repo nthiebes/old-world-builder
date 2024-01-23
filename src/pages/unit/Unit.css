@@ -94,6 +94,11 @@
 
 .unit__detachments {
   cursor: initial;
+  border-bottom: 0 none;
+}
+
+.unit__detachments:not(:first-child) {
+  border-top: 2px solid var(--color-list);
 }
 
 .unit__detachments .input {
@@ -114,6 +119,10 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.unit__detachments-wrapper {
+  flex-wrap: wrap;
 }
 
 .unit__hr {
