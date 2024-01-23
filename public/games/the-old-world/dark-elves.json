@@ -991,7 +991,9 @@
           "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1049,6 +1051,17 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "name_es": "Veteran",
+          "name_fr": "Veteran",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -1086,7 +1099,9 @@
           "name_fr": "Lordling (Champion)",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         },
@@ -1097,7 +1112,9 @@
           "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1141,7 +1158,18 @@
           "name_de": "Shields",
           "name_es": "Shields",
           "name_fr": "Shields",
-          "points": 0,
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "name_es": "Veteran",
+          "name_fr": "Veteran",
+          "points": 1,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1149,18 +1177,7 @@
         }
       ],
       "mounts": [],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 0
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
