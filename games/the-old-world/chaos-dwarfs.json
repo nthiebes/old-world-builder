@@ -148,7 +148,8 @@
             "talisman",
             "arcane-item",
             "enchanted-item",
-            "armor"
+            "armor",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -309,7 +310,8 @@
             "talisman",
             "arcane-item",
             "enchanted-item",
-            "armor"
+            "armor",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -450,8 +452,8 @@
             "weapon",
             "armor",
             "talisman",
-            "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -603,8 +605,8 @@
             "weapon",
             "armor",
             "talisman",
-            "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -615,7 +617,7 @@
           "name_de": "Battle Standard Bearer",
           "name_es": "Battle Standard Bearer",
           "name_fr": "Battle Standard Bearer",
-          "types": ["banner"],
+          "types": ["banner", "chaos-dwarfs"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 0
@@ -720,8 +722,8 @@
             "weapon",
             "armor",
             "talisman",
-            "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -866,8 +868,8 @@
             "weapon",
             "armor",
             "talisman",
-            "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "chaos-dwarfs"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -991,7 +993,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "chaos-dwarfs"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -1107,7 +1115,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "chaos-dwarfs"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -1150,11 +1164,10 @@
           "magic": {
             "types": [
               "weapon",
-              "armor-mages",
               "talisman",
-              "arcane-item",
               "armor",
-              "enchanted-item"
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1167,12 +1180,11 @@
           "points": 9,
           "magic": {
             "types": [
-              "arcane-item",
-              "enchanted-item",
+              "weapon",
               "talisman",
-              "armor-mages",
               "armor",
-              "weapon"
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1187,10 +1199,9 @@
             "types": [
               "weapon",
               "armor",
-              "armor-mages",
               "talisman",
-              "arcane-item",
-              "enchanted-item"
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1202,7 +1213,7 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": ["banner", "chaos-dwarfs"],
             "maxPoints": 50
           }
         },
@@ -1430,7 +1441,13 @@
           "name_fr": "Chef",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "talisman",
+              "armor",
+              "enchanted-item",
+              "chaos-dwarfs"
+            ],
             "maxPoints": 25
           }
         },
@@ -1440,7 +1457,7 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": ["banner", "chaos-dwarfs"],
             "maxPoints": 50
           }
         },
@@ -1569,12 +1586,11 @@
           "points": 7,
           "magic": {
             "types": [
-              "armor",
               "weapon",
-              "armor-mages",
               "talisman",
-              "arcane-item",
-              "enchanted-item"
+              "armor",
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1586,7 +1602,7 @@
           "name_fr": "Standard bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": ["banner", "chaos-dwarfs"],
             "maxPoints": 100
           }
         },
@@ -1609,12 +1625,11 @@
           "points": 10,
           "magic": {
             "types": [
-              "armor-mages",
-              "armor",
               "weapon",
               "talisman",
-              "arcane-item",
-              "enchanted-item"
+              "armor",
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1628,11 +1643,10 @@
           "magic": {
             "types": [
               "weapon",
-              "armor",
-              "armor-mages",
               "talisman",
-              "arcane-item",
-              "enchanted-item"
+              "armor",
+              "enchanted-item",
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1862,11 +1876,10 @@
           "magic": {
             "types": [
               "weapon",
-              "armor",
-              "armor-mages",
               "talisman",
+              "armor",
               "enchanted-item",
-              "arcane-item"
+              "chaos-dwarfs"
             ],
             "maxPoints": 25
           }
@@ -1878,7 +1891,7 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": ["banner", "chaos-dwarfs"],
             "maxPoints": 50
           }
         },
