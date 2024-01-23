@@ -333,13 +333,21 @@
             "armor",
             "armor-mages",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         },
         {
           "name_en": "Vampiric Powers",
@@ -948,13 +956,21 @@
             "weapon",
             "armor",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ],
       "lores": [],
