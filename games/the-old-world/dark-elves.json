@@ -1428,7 +1428,7 @@
           "points": 7,
           "magic": {
             "types": ["banner"],
-            "maxPoints": 49
+            "maxPoints": 50
           }
         },
         {
@@ -2205,29 +2205,75 @@
       "name_es": "Sisters of Slaughter",
       "name_fr": "Sisters of Slaughter",
       "id": "sisters-of-slaughter",
-      "points": 1,
-      "minimum": 0,
+      "points": 17,
+      "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Hag (champion)",
+          "name_de": "Hag (champion)",
+          "name_es": "Hag (champion)",
+          "name_fr": "Hag (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and lash & buckler",
+          "name_de": "Hand weapons and lash & buckler",
+          "name_es": "Hand weapons and lash & buckler",
+          "name_fr": "Hand weapons and lash & buckler",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
+        "name_de": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
+        "name_es": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
+        "name_fr": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_de": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_es": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_fr": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1."
       }
     },
     {
@@ -2236,91 +2282,151 @@
       "name_es": "Bloodwrack Shrines",
       "name_fr": "Bloodwrack Shrines",
       "id": "bloodwrack-shrines",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 175,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Cavalry spears and petrifying gaze",
+          "name_de": "Cavalry spears and petrifying gaze",
+          "name_es": "Cavalry spears and petrifying gaze",
+          "name_fr": "Cavalry spears and Petrifying gaze",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
+        "name_de": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
+        "name_es": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
+        "name_fr": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_de": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_es": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_fr": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative."
       }
     },
     {
-      "name_en": "War Hydras",
-      "name_de": "War Hydras",
-      "name_es": "War Hydras",
-      "name_fr": "War Hydras",
-      "id": "war-hydras",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "name_en": "War Hydra",
+      "name_de": "War Hydra",
+      "name_es": "War Hydra",
+      "name_fr": "War Hydra",
+      "id": "war-hydra",
+      "points": 200,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, serrated maws, fiery breath, hand weapons and whips",
+          "name_de": "Wicked claws, serrated maws, fiery breath",
+          "name_es": "Wicked claws, serrated maws, fiery breath",
+          "name_fr": "Wicked claws, serrated maws, fiery breath",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_de": "0-1 if your general is a High Beastmaster",
+        "name_es": "0-1 if your general is a High Beastmaster",
+        "name_fr": "0-1 if your general is a High Beastmaster"
       }
     },
     {
       "name_en": "Kharibdyss",
-      "name_de": "Kharybdiss",
-      "name_es": "Kharybdiss",
-      "name_fr": "Kharybdiss",
+      "name_de": "Kharibdyss",
+      "name_es": "Kharibdyss",
+      "name_fr": "Kharibdyss",
       "id": "kharibdyss",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 194,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_de": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_es": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "name_fr": "Cavernous maw, writhing tentacles, and hand weapons and whips",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_de": "0-1 if your general is a High Beastmaster",
+        "name_es": "0-1 if your general is a High Beastmaster",
+        "name_fr": "0-1 if your general is a High Beastmaster"
       }
     },
     {
@@ -2329,29 +2435,49 @@
       "name_es": "Bloodwrack Medusas",
       "name_fr": "Bloodwrack Medusas",
       "id": "bloodwrack-medusas",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 85,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and petrifying gaze",
+          "name_de": "Hand weapon and petrifying gaze",
+          "name_es": "Hand weapon and petrifying gaze",
+          "name_fr": "Hand weapon and petrifying gaze",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
+        "name_de": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
+        "name_es": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
+        "name_fr": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_de": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_es": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative.",
+        "name_fr": "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal). When making a roll To Wound for an attack made with Petrifying gaze, substitute the target’s Toughness with its Initiative."
       }
     },
     {
@@ -2360,29 +2486,56 @@
       "name_es": "Doomfire Warlocks",
       "name_fr": "Doomfire Warlocks",
       "id": "doomfire-warlocks",
-      "points": 1,
-      "minimum": 0,
+      "points": 22,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Master (champion)",
+          "name_de": "Master (champion)",
+          "name_es": "Master (champion)",
+          "name_fr": "Master (champion)",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks, Swiftstride",
+        "name_de": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks, Swiftstride",
+        "name_es": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks, Swiftstride",
+        "name_fr": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks, Swiftstride"
       },
       "notes": {
-        "name_en": "0-1 per 1,000",
-        "name_de": "0-1 per 1,000",
-        "name_es": "0-1 per 1,000",
-        "name_fr": "0-1 per 1,000"
+        "name_en": "0-1 per 1,000 Dark Runes: This unit has a 5+ Ward save against any wounds suffered that were caused by a nonmagical enemy attack. Cursed Coven: A unit of Doomfire Warlocks knows a single spell from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spell",
+        "name_de": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel",
+        "name_es": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel",
+        "name_fr": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel"
       }
     },
     {
@@ -2391,23 +2544,43 @@
       "name_es": "Reaper Bolt Throwers",
       "name_fr": "Reaper Bolt Throwers",
       "id": "reaper-bolt-throwers",
-      "points": 1,
-      "minimum": 0,
-      "maximum": 0,
+      "points": 80,
+      "minimum": 1,
+      "maximum": 1,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Repeater bolt thrower and hand weapons",
+          "name_de": "Repeater bolt thrower and hand weapons",
+          "name_es": "Repeater bolt thrower and hand weapons",
+          "name_fr": "Repeater bolt thrower and hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Hatred (High Elves), Skirmishers",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Skirmishers",
+        "name_es": "Elven Reflexes, Hatred (High Elves), Skirmishers",
+        "name_fr": "Elven Reflexes, Hatred (High Elves), Skirmishers"
       },
       "notes": {
         "name_en": "0-2 per 1,000",
