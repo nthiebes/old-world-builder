@@ -276,6 +276,14 @@ export const nameMap = {
     name_en: "Ogre Kingdoms",
     name_de: "Ogre Kingdoms",
   },
+  "big-names": {
+    name_en: "Big Names",
+    name_de: "Big Names",
+  },
+  "big-name": {
+    name_en: "Big Name",
+    name_de: "Big Name",
+  },
   lizardmen: {
     name_en: "Lizardmen",
     name_de: "Lizardmen",
