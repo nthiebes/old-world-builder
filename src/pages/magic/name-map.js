@@ -255,6 +255,14 @@ export const nameMap = {
   "daemonic-gift": {
     name_en: "Daemonic Gift",
     name_de: "Daemonic Gift",
+  }, 
+  "forbidden-poisons": {
+    name_en: "Forbidden Poisons",
+    name_de: "Forbidden Poisons",
+  },
+  "gifts-of-khaine": {
+    name_en: "Gifts of Khaine",
+    name_de: "Gifts of Khaine",
   },
   "ogre-kingdoms": {
     name_en: "Ogre Kingdoms",
