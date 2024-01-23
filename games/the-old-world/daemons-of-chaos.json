@@ -14,22 +14,13 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
+          "name_en": "Hand weapon, ensorcelled weapon",
+          "name_de": "Hand weapon, ensorcelled weapon",
           "points": 0,
           "perModel": false,
           "active": true,
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon"
-        },
-        {
-          "name_en": "Ensorcelled weapon",
-          "name_de": "Ensorcelled weapon",
-          "name_es": "Ensorcelled weapon",
-          "name_fr": "Ensorcelled weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
+          "name_es": "Hand weapon, ensorcelled weapon",
+          "name_fr": "Hand weapon, ensorcelled weapon"
         }
       ],
       "armor": [
@@ -145,16 +136,16 @@
             "enchanted-item"
           ],
           "selected": [],
-          "maxPoints": 100,
+          "maxPoints": 0,
           "mutuallyExclusive": false
         },
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": ["daemonic-gift"],
           "selected": [],
           "mutuallyExclusive": false,
-          "maxPoints": 50
+          "maxPoints": 100
         }
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
@@ -194,13 +185,13 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused Hide (counts as light armour)",
-          "name_de": "Calloused Hide (counts as light armour)",
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
           "points": 0,
           "perModel": false,
           "active": true,
-          "name_es": "Calloused Hide (counts as light armour)",
-          "name_fr": "Calloused Hide (counts as light armour)"
+          "name_es": "Calloused hide (counts as light armour)",
+          "name_fr": "Calloused hide (counts as light armour)"
         }
       ],
       "options": [
@@ -239,21 +230,21 @@
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 50,
+          "maxPoints": 0,
           "mutuallyExclusive": false
         },
         {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
           "types": ["banner"],
           "selected": [],
-          "maxPoints": 0,
+          "maxPoints": 25,
           "mutuallyExclusive": true
         },
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": ["daemonic-gift"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -461,23 +452,14 @@
           "maximum": 0
         }
       ],
-      "mounts": [
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_es": "On foot",
-          "name_fr": "On foot",
-          "points": 1,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "items": [
         {
           "name_en": "Daemonic Gifts",
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -554,6 +536,17 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
+          "name_es": "Daemonic Locus",
+          "name_fr": "Daemonic Locus",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -580,7 +573,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -741,6 +734,17 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
+          "name_es": "Daemonic Locus",
+          "name_fr": "Daemonic Locus",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -817,19 +821,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Staff of Tzeentch (counts as great weapon)",
-          "name_de": "Staff of Tzeentch (counts as great weapon)",
-          "name_es": "Staff of Tzeentch (counts as great weapon)",
-          "name_fr": "Staff of Tzeentch (counts as great weapon)",
+          "name_en": "Hand weapon, staff of Tzeentch (counts as great weapon)",
+          "name_de": "Hand weapon, staff of Tzeentch (counts as great weapon)",
+          "name_es": "Hand weapon, staff of Tzeentch (counts as great weapon)",
+          "name_fr": "Hand weapon, staff of Tzeentch (counts as great weapon)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -918,19 +913,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Flames of Tzeentch",
-          "name_de": "Flames of Tzeentch",
-          "name_es": "Flames of Tzeentch",
-          "name_fr": "Flames of Tzeentch",
+          "name_en": "Hand weapon, flames of Tzeentch",
+          "name_de": "Hand weapon, flames of Tzeentch",
+          "name_es": "Hand weapon, flames of Tzeentch",
+          "name_fr": "Hand weapon, flames of Tzeentch",
           "points": 0,
           "perModel": true,
           "active": true
@@ -955,6 +941,17 @@
           "name_es": "Level 3 Wizard",
           "name_fr": "Level 3 Wizard",
           "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
+          "name_es": "Daemonic Locus",
+          "name_fr": "Daemonic Locus",
+          "points": 25,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -1076,19 +1073,19 @@
           "name_en": "Hellblades",
           "name_de": "Hellblades",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Calloused Hide (counts as light armour)",
-          "name_de": "Calloused Hide (counts as light armour)",
+          "name_en": "Calloused hides (counts as light armour)",
+          "name_de": "Calloused hides (counts as light armour)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true,
-          "name_es": "Calloused Hide (counts as light armour)",
-          "name_fr": "Calloused Hide (counts as light armour)"
+          "name_es": "Calloused hides (counts as light armour)",
+          "name_fr": "Calloused hides (counts as light armour)"
         }
       ],
       "options": [],
@@ -1122,13 +1119,13 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Claws and Fangs (counts as hand weapons)",
-          "name_de": "Claws and Fangs (counts as hand weapons)",
+          "name_en": "Claws and fangs (counts as hand weapons)",
+          "name_de": "Claws and fangs (counts as hand weapons)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true,
-          "name_es": "Claws and Fangs (counts as hand weapons)",
-          "name_fr": "Claws and Fangs (counts as hand weapons)"
+          "name_es": "Claws and fangs (counts as hand weapons)",
+          "name_fr": "Claws and fangs (counts as hand weapons)"
         }
       ],
       "armor": [
@@ -1452,35 +1449,16 @@
       ],
       "equipment": [
         {
-          "name_en": "Piercing claws",
-          "name_de": "Piercing claws",
-          "name_es": "Piercing claws",
-          "name_fr": "Piercing claws",
+          "name_en": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_de": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_es": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_fr": "Piercing claws, claws and fangs (counts as hand weapons)",
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Claws and fangs",
-          "name_de": "Claws and fangs",
-          "name_es": "Claws and fangs",
-          "name_fr": "Claws and fangs",
-          "points": 0,
-          "perModel": false,
-          "active": true
         }
       ],
-      "armor": [
-        {
-          "name_en": "n/a",
-          "name_de": "n/a",
-          "name_es": "n/a",
-          "name_fr": "n/a",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        }
-      ],
+      "armor": [],
       "options": [],
       "mounts": [],
       "items": [
@@ -1557,19 +1535,10 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Flames of Tzeentch",
-          "name_de": "Flames of Tzeentch",
-          "name_es": "Flames of Tzeentch",
-          "name_fr": "Flames of Tzeentch",
+          "name_en": "Hand weapon, flames of Tzeentch",
+          "name_de": "Hand weapon, flames of Tzeentch",
+          "name_es": "Hand weapon, flames of Tzeentch",
+          "name_fr": "Hand weapon, flames of Tzeentch",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1630,21 +1599,12 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
+          "name_en": "Hand weapons, flames of Tzeentch",
+          "name_de": "Hand weapons, flames of Tzeentch",
+          "name_es": "Hand weapons, flames of Tzeentch",
+          "name_fr": "Hand weapons, flames of Tzeentch",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Flames of Tzeentch",
-          "name_de": "Flames of Tzeentch",
-          "name_es": "Flames of Tzeentch",
-          "name_fr": "Flames of Tzeentch",
-          "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -1658,102 +1618,6 @@
         "name_de": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order",
         "name_es": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order",
         "name_fr": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
-      }
-    },
-    {
-      "name_en": "Flamers of Tzeentch",
-      "name_de": "Flamers of Tzeentch",
-      "name_es": "Flamers of Tzeentch",
-      "name_fr": "Flamers of Tzeentch",
-      "id": "flamers-of-tzeentch",
-      "points": 40,
-      "minimum": 3,
-      "maximum": 6,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Pyroclaster (champion)",
-          "name_de": "Pyroclaster (champion)",
-          "name_es": "Pyroclaster (champion)",
-          "name_fr": "Pyroclaster (champion)",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Exalted Flamer (champion)",
-          "name_de": "Exalted Flamer (champion)",
-          "name_es": "Exalted Flamer (champion)",
-          "name_fr": "Exalted Flamer (champion)",
-          "points": 47,
-          "magic": {
-            "types": ["gift-of-chaos"],
-            "maxPoints": 50
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Warpflame",
-          "name_de": "Warpflame",
-          "name_es": "Warpflame",
-          "name_fr": "Warpflame",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
-          "points": 30,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_de": "Level 3 Wizard",
-          "name_es": "Level 3 Wizard",
-          "name_fr": "Level 3 Wizard",
-          "points": 60,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
-        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
-        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
-        "name_fr": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers"
       },
       "notes": {
         "name_en": "",
@@ -1935,40 +1799,24 @@
       ],
       "equipment": [
         {
-          "name_en": "Hellblades",
-          "name_de": "Hellblades",
+          "name_en": "Hellblades, brass bound hooves",
+          "name_de": "Hellblades, brass bound hooves",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Brass bound hooves",
-          "name_de": "Brass bound hooves",
-          "name_es": "Brass bound hooves",
-          "name_fr": "Brass bound hooves",
-          "points": 0,
-          "perModel": true,
-          "active": true
+          "perModel": false,
+          "active": true,
+          "name_es": "Hellblades, brass bound hooves",
+          "name_fr": "Hellblades, brass bound hooves"
         }
       ],
       "armor": [
         {
-          "name_en": "Calloused Hide (counts as light armour)",
-          "name_de": "Calloused Hide (counts as light armour)",
+          "name_en": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
+          "name_de": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true,
-          "name_es": "Calloused Hide (counts as light armour)",
-          "name_fr": "Calloused Hide (counts as light armour)"
-        },
-        {
-          "name_en": "Brazen hide (counts as barding)",
-          "name_de": "Brazen hide (counts as barding)",
-          "name_es": "Brazen hide (counts as barding)",
-          "name_fr": "Brazen hide (counts as barding)",
-          "points": 0,
-          "perModel": true,
-          "active": true
+          "name_es": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
+          "name_fr": "Calloused Hide (counts as light armour), brazen hide (counts as barding)"
         }
       ],
       "options": [],
@@ -2018,7 +1866,17 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, writhing tentacles",
+          "name_de": "Hand weapons, writhing tentacles",
+          "name_es": "Hand weapons, writhing tentacles",
+          "name_fr": "Hand weapons, writhing tentacles",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -2085,30 +1943,12 @@
       ],
       "equipment": [
         {
-          "name_en": "Plagueswords",
-          "name_de": "Plagueswords",
-          "name_es": "Plagueswords",
-          "name_fr": "Plagueswords",
+          "name_en": "Plagueswords, death's heads, filth-encrusted claws",
+          "name_de": "Plagueswords, death's heads, filth-encrusted claws",
+          "name_es": "Plagueswords, death's heads, filth-encrusted claws",
+          "name_fr": "Plagueswords, death's heads, filth-encrusted claws",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Death's heads",
-          "name_de": "Death's heads",
-          "name_es": "Death's heads",
-          "name_fr": "Death's heads",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Filth-encrusted claws",
-          "name_de": "Filth-encrusted claws",
-          "name_es": "Filth-encrusted claws",
-          "name_fr": "Filth-encrusted claws",
-          "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -2178,19 +2018,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Piercing claws",
-          "name_de": "Piercing claws",
-          "name_es": "Piercing claws",
-          "name_fr": "Piercing claws",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        },
-        {
-          "name_en": "Venomous tail",
-          "name_de": "Venomous tail",
-          "name_es": "Venomous tail",
-          "name_fr": "Venomous tail",
+          "name_en": "Piercing claws, venomous tail",
+          "name_de": "Piercing claws, venomous tail",
+          "name_es": "Piercing claws, venomous tail",
+          "name_fr": "Piercing claws, venomous tail",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2228,21 +2059,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Piercing claws",
-          "name_de": "Piercing claws",
-          "name_es": "Piercing claws",
-          "name_fr": "Piercing claws",
+          "name_en": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_de": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_es": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_fr": "Piercing claws, claws and fangs (counts as hand weapons)",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Claws and fangs",
-          "name_de": "Claws and fangs",
-          "name_es": "Claws and fangs",
-          "name_fr": "Claws and fangs",
-          "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -2314,6 +2136,134 @@
         "name_es": "",
         "name_fr": ""
       }
+    },
+    {
+      "name_en": "Flamers of Tzeentch",
+      "name_de": "Flamers of Tzeentch",
+      "name_es": "Flamers of Tzeentch",
+      "name_fr": "Flamers of Tzeentch",
+      "id": "flamers-of-tzeentch",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 6,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Pyroclaster (champion)",
+          "name_de": "Pyroclaster (champion)",
+          "name_es": "Pyroclaster (champion)",
+          "name_fr": "Pyroclaster (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Exalted Flamer (champion)",
+          "name_de": "Exalted Flamer (champion)",
+          "name_es": "Exalted Flamer (champion)",
+          "name_fr": "Exalted Flamer (champion)",
+          "points": 40,
+          "magic": {
+            "types": ["daemonic-gift"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, warpflame",
+          "name_de": "Hand weapons, warpflame",
+          "name_es": "Hand weapons, warpflame",
+          "name_fr": "Hand weapons, warpflame",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "points": 0,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": ["daemonic-gift"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Hellflayer of Slaanesh",
+      "name_de": "Hellflayer of Slaanesh",
+      "name_es": "Hellflayer of Slaanesh",
+      "name_fr": "Hellflayer of Slaanesh",
+      "id": "hellflayer-of-slaanesh",
+      "points": 145,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_de": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_es": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "name_fr": "Piercing claws, claws and fangs (counts as hand weapons)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1, Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_de": "Armour Bane (1, Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_es": "Armour Bane (1, Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_fr": "Armour Bane (1, Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "rare": [
@@ -2331,21 +2281,26 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Brazen wheels, Scything Blades (Hand Weapon), Cannon of Khorne",
-          "name_de": "Brazen wheels, Scything Blades (Hand Weapon), Cannon of Khorne",
+          "name_en": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
+          "name_de": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
           "points": 0,
           "perModel": false,
-          "active": true
-        },
+          "active": true,
+          "name_es": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
+          "name_fr": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades"
+        }
+      ],
+      "armor": [
         {
-          "name_en": "Hellblades",
-          "name_de": "Hellblades",
+          "name_en": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
           "points": 0,
           "perModel": false,
           "active": true
         }
       ],
-      "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
@@ -2377,39 +2332,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
+          "name_en": "Hand weapons, warpflame, flames of Tzeentch, lamprey's bite",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Hand weapon",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Warpflame",
-          "name_de": "Warpflame",
-          "name_es": "Warpflame",
-          "name_fr": "Warpflame",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Flames of Tzeentch",
-          "name_de": "Flames of Tzeentch",
-          "name_es": "Flames of Tzeentch",
-          "name_fr": "Flames of Tzeentch",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Lamprey's bite",
-          "name_de": "Lamprey's bite",
-          "name_es": "Lamprey's bite",
-          "name_fr": "Lamprey's bite",
-          "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -2420,7 +2348,7 @@
           "name_es": "4+",
           "name_fr": "4+",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -2455,7 +2383,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -2489,30 +2417,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapon, iron claw, harvester cannon",
+          "name_de": "Hand weapon, iron claw, harvester cannon",
+          "name_es": "Hand weapon, iron claw, harvester cannon",
+          "name_fr": "Hand weapon, iron claw, harvester cannon",
           "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Iron claw",
-          "name_de": "Iron claw",
-          "name_es": "Iron claw",
-          "name_fr": "Iron claw",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Harvester cannon",
-          "name_de": "Harvester cannon",
-          "name_es": "Harvester cannon",
-          "name_fr": "Harvester cannon",
-          "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -2521,7 +2431,7 @@
           "name_es": "Baleful torrent",
           "name_fr": "Baleful torrent",
           "points": 25,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -2530,7 +2440,7 @@
           "name_es": "Warp gaze",
           "name_fr": "Warp gaze",
           "points": 30,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -2540,12 +2450,57 @@
           "name_de": "Daemonic flesh (counts as heavy armour)",
           "name_es": "Daemonic flesh (counts as heavy armour)",
           "name_fr": "Daemonic flesh (counts as heavy armour)",
-          "points": 1,
-          "perModel": true,
+          "points": 0,
+          "perModel": false,
           "active": false
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Daemon of Khorne",
+          "name_de": "Daemon of Khorne",
+          "name_es": "Daemon of Khorne",
+          "name_fr": "Daemon of Khorne",
+          "points": 10,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemon of Nurgle",
+          "name_de": "Daemon of Nurgle",
+          "name_es": "Daemon of Nurgle",
+          "name_fr": "Daemon of Nurgle",
+          "points": 10,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemon of Slaanesh",
+          "name_de": "Daemon of Slaanesh",
+          "name_es": "Daemon of Slaanesh",
+          "name_fr": "Daemon of Slaanesh",
+          "points": 10,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemon of Tzeentch",
+          "name_de": "Daemon of Tzeentch",
+          "name_es": "Daemon of Tzeentch",
+          "name_fr": "Daemon of Tzeentch",
+          "points": 10,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
