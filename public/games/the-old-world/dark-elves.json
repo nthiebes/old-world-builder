@@ -193,7 +193,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -406,7 +411,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -432,29 +442,115 @@
       "name_es": "Supreme Sorceress",
       "name_fr": "Supreme Sorceress",
       "id": "supreme-sorceress",
-      "points": 1,
+      "points": 150,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Dark Steed",
+          "name_de": "Dark Steed",
+          "name_es": "Dark Steed",
+          "name_fr": "Dark Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Cold One",
+          "name_de": "Cold One",
+          "name_es": "Cold One",
+          "name_fr": "Cold One",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Dark Pegasus",
+          "name_de": "Dark Pegasus",
+          "name_es": "Dark Pegasus",
+          "name_fr": "Dark Pegasus",
+          "points": 35,
+          "active": false
+        },
+        {
+          "name_en": "Black Dragon",
+          "name_de": "Black Dragon",
+          "name_es": "Black Dragon",
+          "name_fr": "Black Dragon",
+          "points": 280,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "armor-mages"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "illusion"
+      ],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_es": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_fr": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 Supreme Sorceress per 1,000 points",
+        "name_de": "0-1 Supreme Sorceress per 1,000 points",
+        "name_es": "0-1 Supreme Sorceress per 1,000 points",
+        "name_fr": "0-1 Supreme Sorceress per 1,000 points"
       }
     },
     {
@@ -463,23 +559,101 @@
       "name_es": "Sorceress",
       "name_fr": "Sorceress",
       "id": "sorceress",
-      "points": 1,
+      "points": 75,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Dark Steed",
+          "name_de": "Dark Steed",
+          "name_es": "Dark Steed",
+          "name_fr": "Dark Steed",
+          "points": 14,
+          "active": false
+        },
+        {
+          "name_en": "Cold One",
+          "name_de": "Cold One",
+          "name_es": "Cold One",
+          "name_fr": "Cold One",
+          "points": 18,
+          "active": false
+        },
+        {
+          "name_en": "Dark Pegasus",
+          "name_de": "Dark Pegasus",
+          "name_es": "Dark Pegasus",
+          "name_fr": "Dark Pegasus",
+          "points": 35,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "battle-magic",
+        "illusion"
+      ],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_es": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous",
+        "name_fr": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti’s Blessing, Lore of Naggaroth, Murderous"
       },
       "notes": {
         "name_en": "",
@@ -494,29 +668,142 @@
       "name_es": "High Beastmaster",
       "name_fr": "High Beastmaster",
       "id": "high-beastmaster",
-      "points": 1,
+      "points": 75,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and Whip",
+          "name_de": "Hand weapon and Whip",
+          "name_es": "Hand weapon and Whip",
+          "name_fr": "Hand weapon and Whip",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "name_es": "Cavalry Spear",
+          "name_fr": "Cavalry Spear",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Repeater Crossbow",
+          "name_de": "Repeater Crossbow",
+          "name_es": "Repeater Crossbow",
+          "name_fr": "Repeater Crossbow",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Sea Dragon Cloak",
+          "name_fr": "Sea Dragon Cloak",
+          "points": 4,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Scourgerunner Chariot",
+          "name_de": "Scourgerunner Chariot",
+          "name_es": "Scourgerunner Chariot",
+          "name_fr": "Scourgerunner Chariot",
+          "points": 85,
+          "active": false
+        },
+        {
+          "name_en": "Manticore",
+          "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
+          "points": 130,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First* (*Note that these special rules do not apply to this model’s mount.)",
+        "name_de": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First* (*Note that these special rules do not apply to this model’s mount.)",
+        "name_es": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First* (*Note that these special rules do not apply to this model’s mount.)",
+        "name_fr": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First* (*Note that these special rules do not apply to this model’s mount.)"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Goad Beast: During the Command sub-phase of their turn, this character may goad a single friendly model whose troop type is ‘monster’ and that is within their Command range (including their own mount). Until the end of this turn, that model gains a +D3 modifier to its Attacks characteristic (to a maximum of 10).",
+        "name_de": "Goad Beast: During the Command sub-phase of their turn, this character may goad a single friendly model whose troop type is ‘monster’ and that is within their Command range (including their own mount). Until the end of this turn, that model gains a +D3 modifier to its Attacks characteristic (to a maximum of 10).",
+        "name_es": "Goad Beast: During the Command sub-phase of their turn, this character may goad a single friendly model whose troop type is ‘monster’ and that is within their Command range (including their own mount). Until the end of this turn, that model gains a +D3 modifier to its Attacks characteristic (to a maximum of 10).",
+        "name_fr": "Goad Beast: During the Command sub-phase of their turn, this character may goad a single friendly model whose troop type is ‘monster’ and that is within their Command range (including their own mount). Until the end of this turn, that model gains a +D3 modifier to its Attacks characteristic (to a maximum of 10)."
       }
     },
     {
@@ -525,60 +812,178 @@
       "name_es": "Death Hag",
       "name_fr": "Death Hag",
       "id": "death-hag",
-      "points": 1,
+      "points": 70,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_de": "Two hand weapons",
+          "name_es": "Two hand weapons",
+          "name_fr": "Two hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
-      "mounts": [],
-      "items": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Cauldron of Blood",
+          "name_de": "Cauldron of Blood",
+          "name_es": "Cauldron of Blood",
+          "name_fr": "Cauldron of Blood",
+          "points": 150,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Gifts Of Khaine",
+          "name_de": "Gifts Of Khaine",
+          "name_es": "Gifts Of Khaine",
+          "name_fr": "Gifts Of Khaine",
+          "types": [
+	 	"gift-of-khaine"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 20
+        },
+	{
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts Of Khaine",
+        "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts Of Khaine",
+        "name_es": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts Of Khaine",
+        "name_fr": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts Of Khaine"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 Cauldron of Blood per 1,000 points (taken as a mount for a Death Hag)",
+        "name_de": "0-1 Cauldron of Blood per 1,000 points (taken as a mount for a Death Hag)",
+        "name_es": "0-1 Cauldron of Blood per 1,000 points (taken as a mount for a Death Hag)",
+        "name_fr": "0-1 Cauldron of Blood per 1,000 points (taken as a mount for a Death Hag)"
       }
     },
-    {
+{
       "name_en": "Khainite Assassin",
       "name_de": "Khainite Assassin",
       "name_es": "Khainite Assassin",
       "name_fr": "Khainite Assassin",
       "id": "khainite-assassin",
-      "points": 1,
+      "points": 80,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and throwing weapons",
+          "name_de": "Hand weapon and throwing weapons",
+          "name_es": "Hand weapon and throwing weapons",
+          "name_fr": "Hand weapon and throwing weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Repeater handbow",
+          "name_de": "Repeater handbow",
+          "name_es": "Repeater handbow",
+          "name_fr": "Repeater handbow",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
       "armor": [],
       "options": [],
-      "mounts": [],
-      "items": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Forbidden Poisons",
+          "name_de": "Forbidden Poisons",
+          "name_es": "Forbidden Poisons",
+          "name_fr": "Forbidden Poisons",
+          "types": [
+	 	"forbidden-poison"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 15
+        },
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
+        "name_de": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
+        "name_es": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
+        "name_fr": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First"
       },
       "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Hidden: Khainite Assassins are not placed on the battlefield at the start of the game. Instead, they are ‘hidden’ within a friendly Dark Elf unit whose troop type is ‘infantry’ and that has a Unit Strength of ten or more (excluding Harpies).",
+        "name_de": "Hidden: Khainite Assassins are not placed on the battlefield at the start of the game. Instead, they are ‘hidden’ within a friendly Dark Elf unit whose troop type is ‘infantry’ and that has a Unit Strength of ten or more (excluding Harpies).",
+        "name_es": "Hidden: Khainite Assassins are not placed on the battlefield at the start of the game. Instead, they are ‘hidden’ within a friendly Dark Elf unit whose troop type is ‘infantry’ and that has a Unit Strength of ten or more (excluding Harpies).",
+        "name_fr": "Hidden: Khainite Assassins are not placed on the battlefield at the start of the game. Instead, they are ‘hidden’ within a friendly Dark Elf unit whose troop type is ‘infantry’ and that has a Unit Strength of ten or more (excluding Harpies)."
       }
     }
   ],
