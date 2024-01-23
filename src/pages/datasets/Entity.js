@@ -58,6 +58,7 @@ const magicItemTypes = [
   "chaos-mutation-chieftain",
   "gift-of-chaos",
   "forest-spite",
+  "chaos-dwarfs",
 ];
 const loresOfMagic = [
   "daemonology",

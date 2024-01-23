@@ -220,4 +220,8 @@ export const nameMap = {
     name_en: "Troll Horde",
     name_de: "Troll Horde",
   },
+  "chaos-dwarfs": {
+    name_en: "Chaos Dwarfs",
+    name_de: "Chaos Dwarfs",
+  },
 };

@@ -1,8 +1,2568 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Daemon Prince",
+      "name_de": "Daemon Prince",
+      "name_es": "Daemon Prince",
+      "name_fr": "Daemon Prince",
+      "id": "daemon-prince",
+      "points": 210,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true,
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon"
+        },
+        {
+          "name_en": "Ensorcelled weapon",
+          "name_de": "Ensorcelled weapon",
+          "name_es": "Ensorcelled weapon",
+          "name_fr": "Ensorcelled weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 6,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Fly (9)",
+          "name_de": "Fly (9)",
+          "points": 30,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Fly (9)",
+          "name_fr": "Fly (9)"
+        },
+        {
+          "name_en": "Daemon of Khorne",
+          "name_de": "Daemon of Khorne",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Daemon of Khorne",
+          "name_fr": "Daemon of Khorne"
+        },
+        {
+          "name_en": "Daemon of Nurgle",
+          "name_de": "Daemon of Nurgle",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Daemon of Nurgle",
+          "name_fr": "Daemon of Nurgle"
+        },
+        {
+          "name_en": "Daemon of Slaanesh",
+          "name_de": "Daemon of Slaanesh",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Daemon of Slaanesh",
+          "name_fr": "Daemon of Slaanesh"
+        },
+        {
+          "name_en": "Daemon of Tzeentch",
+          "name_de": "Daemon of Tzeentch",
+          "points": 10,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Daemon of Tzeentch",
+          "name_fr": "Daemon of Tzeentch"
+        },
+        {
+          "name_en": "Wizard Level 1",
+          "name_de": "Wizard Level 1",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 2",
+          "name_de": "Wizard Level 2",
+          "points": 50,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 3",
+          "name_de": "Wizard Level 3",
+          "points": 75,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard Level 4",
+          "name_de": "Wizard Level 4",
+          "points": 100,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Gifts of Chaos",
+          "name_de": "Gifts of Chaos",
+          "types": ["gift-of-chaos"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",
+        "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",
+        "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",
+        "name_fr": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons"
+      },
+      "notes": {
+        "name_en": "0-1*",
+        "name_de": "0-1*",
+        "name_es": "0-1*",
+        "name_fr": "0-1*"
+      }
+    },
+    {
+      "name_en": "Daemonic Herald Of Khorne",
+      "name_de": "Daemonic Herald Of Khorne",
+      "name_es": "Daemonic Herald Of Khorne",
+      "name_fr": "Daemonic Herald Of Khorne",
+      "id": "daemonic_herald_of_horne",
+      "points": 80,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hellblade",
+          "name_de": "Hellblade",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (counts as light armour)",
+          "name_de": "Calloused Hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true,
+          "name_es": "Calloused Hide (counts as light armour)",
+          "name_fr": "Calloused Hide (counts as light armour)"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Juggernaut Of Khorne",
+          "name_de": "Juggernaut Of Khorne",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Blood Throne of Khorne",
+          "name_de": "Blood Throne of Khorne",
+          "points": 160,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "mutuallyExclusive": false
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        },
+        {
+          "name_en": "Gifts of Chaos",
+          "name_de": "Gifts of Chaos",
+          "types": ["gift-of-chaos"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_de": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_es": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_fr": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bloodthirster",
+      "name_de": "Bloodthirster",
+      "name_es": "Bloodthirster",
+      "name_fr": "Bloodthirster",
+      "id": "bloodthirster",
+      "points": 355,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Bloodflail",
+          "name_de": "Bloodflail",
+          "name_es": "Bloodflail",
+          "name_fr": "Bloodflail",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great axe",
+          "name_de": "Great axe",
+          "name_es": "Great axe",
+          "name_fr": "Great axe",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Lash of Khorne",
+          "name_de": "Lash of Khorne",
+          "name_es": "Lash of Khorne",
+          "name_fr": "Lash of Khorne",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_de": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_es": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_fr": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Great Unclean One",
+      "name_de": "Great Unclean One",
+      "name_es": "Great Unclean One",
+      "name_fr": "Great Unclean One",
+      "id": "great-unclean-one",
+      "points": 330,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Bilesword",
+          "name_de": "Bilesword",
+          "name_es": "Bilesword",
+          "name_fr": "Bilesword",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Plagueflail",
+          "name_de": "Plagueflail",
+          "name_es": "Plagueflail",
+          "name_fr": "Plagueflail",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Level 4 Wizard",
+          "points": 90,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 1,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["daemonology", "battle-magic", "dark-magic"],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_fr": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Nurgle",
+      "name_de": "Daemonic Herald of Nurgle",
+      "name_es": "Daemonic Herald of Nurgle",
+      "name_fr": "Daemonic Herald of Nurgle",
+      "id": "daemonic-herald-of-nurgle",
+      "points": 95,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Plaguesword",
+          "name_de": "Plaguesword",
+          "name_es": "Plaguesword",
+          "name_fr": "Plaguesword",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Death's heads",
+          "name_de": "Death's heads",
+          "name_es": "Death's heads",
+          "name_fr": "Death's heads",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Level 1 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 1,
+          "active": true
+        },
+        {
+          "name_en": "Palanquin of Nurgle",
+          "name_de": "Palanquin of Nurgle",
+          "name_es": "Palanquin of Nurgle",
+          "name_fr": "Palanquin of Nurgle",
+          "points": 40,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "battle-magic"],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_fr": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Keeper of Secrets",
+      "name_de": "Keeper of Secrets",
+      "name_es": "Keeper of Secrets",
+      "name_fr": "Keeper of Secrets",
+      "id": "keeper-of-secrets",
+      "points": 330,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Impaling claws",
+          "name_de": "Impaling claws",
+          "name_es": "Impaling claws",
+          "name_fr": "Impaling claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Level 4 Wizard",
+          "points": 90,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "daemonology", "illusion"],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_fr": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Slaanesh",
+      "name_de": "Daemonic Herald of Slaanesh",
+      "name_es": "Daemonic Herald of Slaanesh",
+      "name_fr": "Daemonic Herald of Slaanesh",
+      "id": "daemonic-herald-of-slaanesh",
+      "points": 85,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Piercing claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Level 1 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Steed of Slaanesh",
+          "name_de": "Steed of Slaanesh",
+          "name_es": "Steed of Slaanesh",
+          "name_fr": "Steed of Slaanesh",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Seeker Chariot",
+          "name_de": "Seeker Chariot",
+          "name_es": "Seeker Chariot",
+          "name_fr": "Seeker Chariot",
+          "points": 100,
+          "active": false
+        },
+        {
+          "name_en": "Exalted Seeker Chariot",
+          "name_de": "Exalted Seeker Chariot",
+          "name_es": "Exalted Seeker Chariot",
+          "name_fr": "Exalted Seeker Chariot",
+          "points": 185,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "illusion"],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_fr": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Lord of Change",
+      "name_de": "Lord of Change",
+      "name_es": "Lord of Change",
+      "name_fr": "Lord of Change",
+      "id": "lord-of-change",
+      "points": 310,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Staff of Tzeentch (counts as great weapon)",
+          "name_de": "Staff of Tzeentch (counts as great weapon)",
+          "name_es": "Staff of Tzeentch (counts as great weapon)",
+          "name_fr": "Staff of Tzeentch (counts as great weapon)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Tzeentchian Wand",
+          "name_de": "Tzeentchian Wand",
+          "name_es": "Tzeentchian Wand",
+          "name_fr": "Tzeentchian Wand",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Level 4 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "battle-magic",
+        "illusion"
+      ],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_de": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_es": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_fr": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Tzeentch",
+      "name_de": "Daemonic Herald of Tzeentch",
+      "name_es": "Daemonic Herald of Tzeentch",
+      "name_fr": "Daemonic Herald of Tzeentch",
+      "id": "daemonic-herald-of-tzeentch",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Flames of Tzeentch",
+          "name_de": "Flames of Tzeentch",
+          "name_es": "Flames of Tzeentch",
+          "name_fr": "Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Disc of Tzeentch",
+          "name_de": "Disc of Tzeentch",
+          "name_es": "Disc of Tzeentch",
+          "name_fr": "Disc of Tzeentch",
+          "points": 20,
+          "active": false
+        },
+        {
+          "name_en": "Chariot of Tzeentch",
+          "name_de": "Chariot of Tzeentch",
+          "name_es": "Chariot of Tzeentch",
+          "name_fr": "Chariot of Tzeentch",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Burning Chariot of Tzeentch",
+          "name_de": "Burning Chariot of Tzeentch",
+          "name_es": "Burning Chariot of Tzeentch",
+          "name_fr": "Burning Chariot of Tzeentch",
+          "points": 190,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "battle-magic",
+        "illusion"
+      ],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_de": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_es": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_fr": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Bloodletters Of Khorne",
+      "name_de": "Bloodletters Of Khorne",
+      "name_es": "Bloodletters Of Khorne",
+      "name_fr": "Bloodletters Of Khorne",
+      "id": "bloodletters_of_khorne",
+      "points": 14,
+      "minimum": 8,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Bloodreaper (champion)",
+          "name_de": "Bloodreaper (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "name_es": "Bloodreaper (champion)",
+          "name_fr": "Bloodreaper (champion)"
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hellblades",
+          "name_de": "Hellblades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (counts as light armour)",
+          "name_de": "Calloused Hide (counts as light armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_es": "Calloused Hide (counts as light armour)",
+          "name_fr": "Calloused Hide (counts as light armour)"
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_fr": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Flesh Hounds Of Khorne",
+      "name_de": "Flesh Hounds Of Khorne",
+      "name_es": "Flesh Hounds Of Khorne",
+      "name_fr": "Flesh Hounds Of Khorne",
+      "id": "flesh_hounds_of_khorne",
+      "points": 32,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Claws and Fangs (counts as hand weapons)",
+          "name_de": "Claws and Fangs (counts as hand weapons)",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_es": "Claws and Fangs (counts as hand weapons)",
+          "name_fr": "Claws and Fangs (counts as hand weapons)"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (counts as light armour)",
+          "name_de": "Calloused Hide (counts as light armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_es": "Calloused Hide (counts as light armour)",
+          "name_fr": "Calloused Hide (counts as light armour)"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "points": 3,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Vanguard",
+          "name_de": "Vanguard",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Closer Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_de": "Armour Bane (1), Closer Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_es": "Armour Bane (1), Closer Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_fr": "Armour Bane (1), Closer Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Plaguebearers of Nurgle",
+      "name_de": "Plaguebearers of Nurgle",
+      "name_es": "Plaguebearers of Nurgle",
+      "name_fr": "Plaguebearers of Nurgle",
+      "id": "plaguebearers-of-nurgle",
+      "points": 13,
+      "minimum": 7,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Plagueridden (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plagueswords",
+          "name_de": "Plagueswords",
+          "name_es": "Plagueswords",
+          "name_fr": "Plagueswords",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "nil",
+          "name_de": "nilnil",
+          "name_es": "nil",
+          "name_fr": "nil",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "nil",
+          "name_de": "nil",
+          "name_es": "nil",
+          "name_fr": "nil",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_de": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_es": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_fr": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Nurglings",
+      "name_de": "Nurglings",
+      "name_es": "Nurglings",
+      "name_fr": "Nurglings",
+      "id": "nurglings",
+      "points": 45,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_fr": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Daemonettes of Slaanesh",
+      "name_de": "Daemonettes of Slaanesh",
+      "name_es": "Daemonettes of Slaanesh",
+      "name_fr": "Daemonettes of Slaanesh",
+      "id": "daemonettes-of-slaanesh",
+      "points": 11,
+      "minimum": 6,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Alluress (champion)",
+          "name_de": "Alluress (champion)",
+          "name_es": "Alluress (champion)",
+          "name_fr": "Alluress (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Piercing claws",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Slaanesh",
+        "name_de": "Close Order, Daemonic, Daemons of Slaanesh",
+        "name_es": "Close Order, Daemonic, Daemons of Slaanesh",
+        "name_fr": "Close Order, Daemonic, Daemons of Slaanesh"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Seekers of Slaanesh",
+      "name_de": "Seekers of Slaanesh",
+      "name_es": "Seekers of Slaanesh",
+      "name_fr": "Seekers of Slaanesh",
+      "id": "seekers-of-slaanesh",
+      "points": 21,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Heartseeker (champion)",
+          "name_de": "Heartseeker (champion)",
+          "name_es": "Heartseeker (champion)",
+          "name_fr": "Heartseeker (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Piercing claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Claws and fangs",
+          "name_de": "Claws and fangs",
+          "name_es": "Claws and fangs",
+          "name_fr": "Claws and fangs",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "n/a",
+          "name_de": "n/a",
+          "name_es": "n/a",
+          "name_fr": "n/a",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_de": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_es": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_fr": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Pink Horrors of Tzeentch",
+      "name_de": "Pink Horrors of Tzeentch",
+      "name_es": "Pink Horrors of Tzeentch",
+      "name_fr": "Pink Horrors of Tzeentch",
+      "id": "pink-horrors-of-tzeentch",
+      "points": 12,
+      "minimum": 9,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Iridescent Horror (champion)",
+          "name_de": "Iridescent Horror (champion)",
+          "name_es": "Iridescent Horror (champion)",
+          "name_fr": "Iridescent Horror (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Flames of Tzeentch",
+          "name_de": "Flames of Tzeentch",
+          "name_es": "Flames of Tzeentch",
+          "name_fr": "Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_de": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_es": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_fr": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Blue Horrors of Tzeentch",
+      "name_de": "Blue Horrors of Tzeentch",
+      "name_es": "Blue Horrors of Tzeentch",
+      "name_fr": "Blue Horrors of Tzeentch",
+      "id": "blue-horrors-of-tzeentch",
+      "points": 9,
+      "minimum": 9,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Ectoplasmic Horror (champion)",
+          "name_de": "Ectoplasmic Horror (champion)",
+          "name_es": "Ectoplasmic Horror (champion)",
+          "name_fr": "Ectoplasmic Horror (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Flames of Tzeentch",
+          "name_de": "Flames of Tzeentch",
+          "name_es": "Flames of Tzeentch",
+          "name_fr": "Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order",
+        "name_de": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order",
+        "name_es": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Move through Cover, Open Order"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Flamers of Tzeentch",
+      "name_de": "Flamers of Tzeentch",
+      "name_es": "Flamers of Tzeentch",
+      "name_fr": "Flamers of Tzeentch",
+      "id": "flamers-of-tzeentch",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 6,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Pyroclaster (champion)",
+          "name_de": "Pyroclaster (champion)",
+          "name_es": "Pyroclaster (champion)",
+          "name_fr": "Pyroclaster (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Exalted Flamer (champion)",
+          "name_de": "Exalted Flamer (champion)",
+          "name_es": "Exalted Flamer (champion)",
+          "name_fr": "Exalted Flamer (champion)",
+          "points": 47,
+          "magic": {
+            "types": ["gift-of-chaos"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Warpflame",
+          "name_de": "Warpflame",
+          "name_es": "Warpflame",
+          "name_fr": "Warpflame",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1, Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move through Cover, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Brimstone Horrors of Tzeentch",
+      "name_de": "Brimstone Horrors of Tzeentch",
+      "name_es": "Brimstone Horrors of Tzeentch",
+      "name_fr": "Brimstone Horrors of Tzeentch",
+      "id": "brimstone-horrors-of-tzeentch",
+      "points": 38,
+      "minimum": 2,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Chaos Furies",
+      "name_de": "Chaos Furies",
+      "name_es": "Chaos Furies",
+      "name_fr": "Chaos Furies",
+      "id": "chaos-furies",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Daemonic talons",
+          "name_de": "Daemonic talons",
+          "name_es": "Daemonic talons",
+          "name_fr": "Daemonic talons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Daemons of Khorne",
+          "name_de": "Daemons of Khorne",
+          "name_es": "Daemons of Khorne",
+          "name_fr": "Daemons of Khorne",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemons of Nurgle",
+          "name_de": "Daemons of Nurgle",
+          "name_es": "Daemons of Nurgle",
+          "name_fr": "Daemons of Nurgle",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemons of Slaanesh",
+          "name_de": "Daemons of Slaanesh",
+          "name_es": "Daemons of Slaanesh",
+          "name_fr": "Daemons of Slaanesh",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Daemons of Tzeentch",
+          "name_de": "Daemons of Tzeentch",
+          "name_es": "Daemons of Tzeentch",
+          "name_fr": "Daemons of Tzeentch",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard",
+        "name_de": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard",
+        "name_es": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard",
+        "name_fr": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Bloodcrushers Of Khorne",
+      "name_de": "Bloodcrushers Of Khorne",
+      "name_es": "Bloodcrushers Of Khorne",
+      "name_fr": "Bloodcrushers Of Khorne",
+      "id": "bloodcrushers_of_khorne",
+      "points": 65,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Bloodreaper (champion)",
+          "name_de": "Bloodreaper (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "name_es": "Bloodreaper (champion)",
+          "name_fr": "Bloodreaper (champion)"
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hellblades",
+          "name_de": "Hellblades",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Brass bound hooves",
+          "name_de": "Brass bound hooves",
+          "name_es": "Brass bound hooves",
+          "name_fr": "Brass bound hooves",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused Hide (counts as light armour)",
+          "name_de": "Calloused Hide (counts as light armour)",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_es": "Calloused Hide (counts as light armour)",
+          "name_fr": "Calloused Hide (counts as light armour)"
+        },
+        {
+          "name_en": "Brazen hide (counts as barding)",
+          "name_de": "Brazen hide (counts as barding)",
+          "name_es": "Brazen hide (counts as barding)",
+          "name_fr": "Brazen hide (counts as barding)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Juggernaut Of Khorne",
+          "name_de": "Juggernaut Of Khorne",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_fr": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Beasts of Nurgle",
+      "name_de": "Beasts of Nurgle",
+      "name_es": "Beasts of Nurgle",
+      "name_fr": "Beasts of Nurgle",
+      "id": "beasts-of-nurgle",
+      "points": 62,
+      "minimum": 2,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_fr": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Plague Drones of Nurgle",
+      "name_de": "Plague Drones of Nurgle",
+      "name_es": "Plague Drones of Nurgle",
+      "name_fr": "Plague Drones of Nurgle",
+      "id": "plague-drones-of-nurgle",
+      "points": 63,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Plagueridden (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plagueswords",
+          "name_de": "Plagueswords",
+          "name_es": "Plagueswords",
+          "name_fr": "Plagueswords",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Death's heads",
+          "name_de": "Death's heads",
+          "name_es": "Death's heads",
+          "name_fr": "Death's heads",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Filth-encrusted claws",
+          "name_de": "Filth-encrusted claws",
+          "name_es": "Filth-encrusted claws",
+          "name_fr": "Filth-encrusted claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Plague Proboscis (+1 Initiative)",
+          "name_de": "Plague Proboscis (+1 Initiative)",
+          "name_es": "Plague Proboscis (+1 Initiative)",
+          "name_fr": "Plague Proboscis (+1 Initiative)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Venom sting",
+          "name_de": "Venom sting",
+          "name_es": "Venom sting",
+          "name_fr": "Venom sting",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2, Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_de": "Armour Bane (2, Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Armour Bane (2, Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Armour Bane (2, Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Fiends of Slaanesh",
+      "name_de": "Fiends of Slaanesh",
+      "name_es": "Fiends of Slaanesh",
+      "name_fr": "Fiends of Slaanesh",
+      "id": "fiends-of-slaanesh",
+      "points": 66,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Piercing claws",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Venomous tail",
+          "name_de": "Venomous tail",
+          "name_es": "Venomous tail",
+          "name_fr": "Venomous tail",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_fr": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Seeker Chariot of Slaanesh",
+      "name_de": "Seeker Chariot of Slaanesh",
+      "name_es": "Seeker Chariot of Slaanesh",
+      "name_fr": "Seeker Chariot of Slaanesh",
+      "id": "seeker-chariot-of-slaanesh",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 3,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Piercing claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Claws and fangs",
+          "name_de": "Claws and fangs",
+          "name_es": "Claws and fangs",
+          "name_fr": "Claws and fangs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_de": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_es": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_fr": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Screamers of Tzeentch",
+      "name_de": "Screamers of Tzeentch",
+      "name_es": "Screamers of Tzeentch",
+      "name_fr": "Screamers of Tzeentch",
+      "id": "screamers-of-tzeentch",
+      "points": 44,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lamprey's bite",
+          "name_de": "Lamprey's bite",
+          "name_es": "Lamprey's bite",
+          "name_fr": "Lamprey's bite",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_de": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_es": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Skull Cannon Of Khorne",
+      "name_de": "Skull Cannon Of Khorne",
+      "name_es": "Skull Cannon Of Khorne",
+      "name_fr": "Skull Cannon Of Khorne",
+      "id": "skull_cannon_of_khorne",
+      "points": 185,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Brazen wheels, Scything Blades (Hand Weapon), Cannon of Khorne",
+          "name_de": "Brazen wheels, Scything Blades (Hand Weapon), Cannon of Khorne",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Hellblades",
+          "name_de": "Hellblades",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_fr": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Burning Chariot of Tzeentch",
+      "name_de": "Burning Chariot of Tzeentch",
+      "name_es": "Burning Chariot of Tzeentch",
+      "name_fr": "Burning Chariot of Tzeentch",
+      "id": "burning-chariot-of-tzeentch",
+      "points": 190,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Warpflame",
+          "name_de": "Warpflame",
+          "name_es": "Warpflame",
+          "name_fr": "Warpflame",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Flames of Tzeentch",
+          "name_de": "Flames of Tzeentch",
+          "name_es": "Flames of Tzeentch",
+          "name_fr": "Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lamprey's bite",
+          "name_de": "Lamprey's bite",
+          "name_es": "Lamprey's bite",
+          "name_fr": "Lamprey's bite",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Level 3 Wizard",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Daemonic Gifts",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_de": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_es": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_fr": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Soul Grinder",
+      "name_de": "Soul Grinder",
+      "name_es": "Soul Grinder",
+      "name_fr": "Soul Grinder",
+      "id": "soul-grinder",
+      "points": 255,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Iron claw",
+          "name_de": "Iron claw",
+          "name_es": "Iron claw",
+          "name_fr": "Iron claw",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Harvester cannon",
+          "name_de": "Harvester cannon",
+          "name_es": "Harvester cannon",
+          "name_fr": "Harvester cannon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Baleful torrent",
+          "name_de": "Baleful torrent",
+          "name_es": "Baleful torrent",
+          "name_fr": "Baleful torrent",
+          "points": 25,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Warp gaze",
+          "name_de": "Warp gaze",
+          "name_es": "Warp gaze",
+          "name_fr": "Warp gaze",
+          "points": 30,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Daemonic flesh (counts as heavy armour)",
+          "name_de": "Daemonic flesh (counts as heavy armour)",
+          "name_es": "Daemonic flesh (counts as heavy armour)",
+          "name_fr": "Daemonic flesh (counts as heavy armour)",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
+        "name_de": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
+        "name_es": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
+        "name_fr": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
