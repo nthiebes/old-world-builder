@@ -1,8 +1,2475 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Sorcerer-Prophet",
+      "name_de": "Sorcerer-Prophet",
+      "name_es": "Sorcerer-Prophet",
+      "name_fr": "Sorcerer-Prophet",
+      "id": "sorcerer-prophet",
+      "points": 195,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged weapon",
+          "name_de": "Darkforged weapon",
+          "name_es": "Darkforged weapon",
+          "name_fr": "Darkforged weapon",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Naptha bombs",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Naptha bombs",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Blood of Hashut",
+          "name_de": "Blood of Hashut",
+          "name_es": "Blood of Hashut",
+          "name_fr": "Blood of Hashut",
+          "points": 20,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Be a Level 4 Wizard",
+          "name_de": "Be a Level 4 Wizard",
+          "name_es": "Be a Level 4 Wizard",
+          "name_fr": "Be a Level 4 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Bale Taurus",
+          "name_de": "Bale Taurus",
+          "name_es": "Bale Taurus",
+          "name_fr": "Bale Taurus",
+          "points": 160,
+          "active": false
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Great Taurus",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Lammasu",
+          "name_de": "Lammasu",
+          "name_es": "Lammasu",
+          "name_fr": "Lammasu",
+          "points": 95,
+          "active": false,
+          "options": [
+            {
+              "name_en": "Mace tail",
+              "name_de": "Mace tail",
+              "name_es": "Mace tail",
+              "name_fr": "Mace tail",
+              "points": 10,
+              "perModel": true,
+              "stackable": false,
+              "minimum": 0,
+              "maximum": 0
+            },
+            {
+              "name_en": "Sorcerous Exhalation",
+              "name_de": "Sorcerous Exhalation",
+              "name_es": "Sorcerous Exhalation",
+              "name_fr": "Sorcerous Exhalation",
+              "points": 15,
+              "perModel": true,
+              "stackable": false,
+              "minimum": 0,
+              "maximum": 0
+            }
+          ]
+        },
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "armor"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_de": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_es": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_fr": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn"
+      },
+      "notes": {
+        "name_en": "0-1 or Infernal Castellan per 1000 points",
+        "name_de": "0-1 or Infernal Castellan per 1000 points",
+        "name_es": "0-1 or Infernal Castellan per 1000 points",
+        "name_fr": "0-1 or Infernal Castellan per 1000 points"
+      }
+    },
+    {
+      "name_en": "Daemonsmith Sorcerer",
+      "name_de": "Daemonsmith Sorcerer",
+      "name_es": "Daemonsmith Sorcerer",
+      "name_fr": "Daemonsmith Sorcerer",
+      "id": "daemonsmith-sorcerer",
+      "points": 85,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged weapon",
+          "name_de": "Darkforged weapon",
+          "name_es": "Darkforged weapon",
+          "name_fr": "Darkforged weapon",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Naptha bombs",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Naptha bombs",
+          "points": 15,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Blood of Hashut",
+          "name_de": "Blood of Hashut",
+          "name_es": "Blood of Hashut",
+          "name_fr": "Blood of Hashut",
+          "points": 20,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Be a Level 2 Wizard",
+          "name_de": "Be a Level 2 Wizard",
+          "name_es": "Be a Level 2 Wizard",
+          "name_fr": "Be a Level 2 Wizard",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Great Taurus",
+          "points": 120,
+          "active": false
+        },
+        {
+          "name_en": "Lammasu",
+          "name_de": "Lammasu",
+          "name_es": "Lammasu",
+          "name_fr": "Lammasu",
+          "points": 95,
+          "active": false,
+          "options": [
+            {
+              "name_en": "Mace tail",
+              "name_de": "Mace tail",
+              "name_es": "Mace tail",
+              "name_fr": "Mace tail",
+              "points": 10,
+              "perModel": true,
+              "stackable": false,
+              "minimum": 0,
+              "maximum": 0
+            },
+            {
+              "name_en": "Sorcerous Exhalation",
+              "name_de": "Sorcerous Exhalation",
+              "name_es": "Sorcerous Exhalation",
+              "name_fr": "Sorcerous Exhalation",
+              "points": 15,
+              "perModel": true,
+              "stackable": false,
+              "minimum": 0,
+              "maximum": 0
+            }
+          ]
+        },
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "armor"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_de": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_es": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn",
+        "name_fr": "Blackshard Armour. Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Sutbborn"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Infernal Castellan",
+      "name_de": "Infernal Castellan",
+      "name_es": "Infernal Castellan",
+      "name_fr": "Infernal Castellan",
+      "id": "infernal-castellan",
+      "points": 125,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged weapon",
+          "name_de": "Darkforged weapon",
+          "name_es": "Darkforged weapon",
+          "name_fr": "Darkforged weapon",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Pistol (not Naptha bombs)",
+          "name_de": "Pistol (not Naptha bombs)",
+          "name_es": "Pistol (not Naptha bombs)",
+          "name_fr": "Pistol (not Naptha bombs)",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Naptha bombs (not pistol)",
+          "name_de": "Naptha bombs (not pistol)",
+          "name_es": "Naptha bombs (not pistol)",
+          "name_fr": "Naptha bombs (not pistol)",
+          "points": 7,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fireglaive (not Hailshot blunderbuss)",
+          "name_de": "Fireglaive (not Hailshot blunderbuss)",
+          "name_es": "Fireglaive (not Hailshot blunderbuss)",
+          "name_fr": "Fireglaive (not Hailshot blunderbuss)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hailshot blunderbuss (not Fireglaive)",
+          "name_de": "Hailshot blunderbuss (not Fireglaive)",
+          "name_es": "Hailshot blunderbuss (not Fireglaive)",
+          "name_fr": "Hailshot blunderbuss (not Fireglaive)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_de": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_es": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_fr": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn"
+      },
+      "notes": {
+        "name_en": "0-1 or Sorcerer-Prophet per 1000 points",
+        "name_de": "0-1 or Sorcerer-Prophet per 1000 points",
+        "name_es": "0-1 or Sorcerer-Prophet per 1000 points",
+        "name_fr": "0-1 or Sorcerer-Prophet per 1000 points"
+      }
+    },
+    {
+      "name_en": "Infernal Seneschal",
+      "name_de": "Infernal Seneschal",
+      "name_es": "Infernal Seneschal",
+      "name_fr": "Infernal Seneschal",
+      "id": "infernal-seneschal",
+      "points": 60,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged weapon",
+          "name_de": "Darkforged weapon",
+          "name_es": "Darkforged weapon",
+          "name_fr": "Darkforged weapon",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Pistol (not Naptha bombs)",
+          "name_de": "Pistol (not Naptha bombs)",
+          "name_es": "Pistol (not Naptha bombs)",
+          "name_fr": "Pistol (not Naptha bombs)",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Naptha bombs (not pistol)",
+          "name_de": "Naptha bombs (not pistol)",
+          "name_es": "Naptha bombs (not pistol)",
+          "name_fr": "Naptha bombs (not pistol)",
+          "points": 7,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fireglaive (not Hailshot blunderbuss)",
+          "name_de": "Fireglaive (not Hailshot blunderbuss)",
+          "name_es": "Fireglaive (not Hailshot blunderbuss)",
+          "name_fr": "Fireglaive (not Hailshot blunderbuss)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hailshot blunderbuss (not Fireglaive)",
+          "name_de": "Hailshot blunderbuss (not Fireglaive)",
+          "name_es": "Hailshot blunderbuss (not Fireglaive)",
+          "name_fr": "Hailshot blunderbuss (not Fireglaive)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 0
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_de": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_es": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_fr": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bull Centaur Taur'ruk",
+      "name_de": "Bull Centaur Taur'ruk",
+      "name_es": "Bull Centaur Taur'ruk",
+      "name_fr": "Bull Centaur Taur'ruk",
+      "id": "bull-centaur-taur'ruk",
+      "points": 142,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged Weapon",
+          "name_de": "Darkforged Weapon",
+          "name_es": "Darkforged Weapon",
+          "name_fr": "Darkforged Weapon",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 75
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_de": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_es": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_fr": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride"
+      },
+      "notes": {
+        "name_en": "0-1 per unit of Bull Centaur Renders",
+        "name_de": "0-1 per unit of Bull Centaur Renders",
+        "name_es": "0-1 per unit of Bull Centaur Renders",
+        "name_fr": "0-1 per unit of Bull Centaur Renders"
+      }
+    },
+    {
+      "name_en": "Hobgoblin Khan",
+      "name_de": "Hobgoblin Khan",
+      "name_es": "Hobgoblin Khan",
+      "name_fr": "Hobgoblin Khan",
+      "id": "hobgoblin-khan",
+      "points": 45,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
+          "name_es": "Cavalry spear (if appropriately mounted)",
+          "name_fr": "Cavalry spear (if appropriately mounted)",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Throwing weapons (instead Shortbow)",
+          "name_de": "Throwing weapons (instead Shortbow)",
+          "name_es": "Throwing weapons (instead Shortbow)",
+          "name_fr": "Throwing weapons (instead Shortbow)",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shortbow (instead throwing weapons)",
+          "name_de": "Shortbow (instead throwing weapons)",
+          "name_es": "Shortbow (instead throwing weapons)",
+          "name_fr": "Shortbow (instead throwing weapons)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Giant Wolf",
+          "name_de": "Giant Wolf",
+          "name_es": "Giant Wolf",
+          "name_fr": "Giant Wolf",
+          "points": 10,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Backstab, Evasive, Levies, Warband",
+        "name_de": "Backstab, Evasive, Levies, Warband",
+        "name_es": "Backstab, Evasive, Levies, Warband",
+        "name_fr": "Backstab, Evasive, Levies, Warband"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Black Orc Warboss",
+      "name_de": "Black Orc Warboss",
+      "name_es": "Black Orc Warboss",
+      "name_fr": "Chef de Guerre Orque Noir",
+      "id": "black-orc-warboss",
+      "points": 135,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Plate armour",
+          "name_de": "Plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "name_fr": "Sanglier",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "Wyvern",
+          "name_de": "Wyvern",
+          "name_fr": "Vouivre",
+          "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pied",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 or Black Orc Bigboss",
+        "name_de": "0-1 or Black Orc Bigboss",
+        "name_es": "0-1 or Black Orc Bigboss",
+        "name_fr": "0-1 or Black Orc Bigboss"
+      }
+    },
+    {
+      "name_en": "Black Orc Bigboss",
+      "name_de": "Black Orc Bigboss",
+      "name_es": "Black Orc Bigboss",
+      "name_fr": "Grand Chef Orque Noir",
+      "id": "black-orc-bigboss",
+      "points": 75,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Cavalry Spear",
+          "name_de": "Cavalry Spear",
+          "name_fr": "Lance de cavalerie",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Plate armour",
+          "name_de": "Plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "War Boar",
+          "name_de": "War Boar",
+          "name_fr": "Sanglier",
+          "points": 16,
+          "active": false
+        },
+        {
+          "name_en": "Boar Chariot",
+          "name_de": "Boar Chariot",
+          "name_fr": "Char à Sangliers",
+          "points": 90,
+          "active": false
+        },
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pied",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 or Black Orc Warboss",
+        "name_de": "0-1 or Black Orc Warboss",
+        "name_es": "0-1 or Black Orc Warboss",
+        "name_fr": "0-1 or Black Orc Warboss"
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Infernal Guard",
+      "name_de": "Infernal Guard",
+      "name_es": "Infernal Guard",
+      "name_fr": "Infernal Guard",
+      "id": "infernal-guard",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "detachment": true,
+      "command": [
+        {
+          "name_en": "Deathmask",
+          "name_de": "Deathmask",
+          "name_es": "Deathmask",
+          "name_fr": "Deathmask",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor-mages",
+              "talisman",
+              "arcane-item",
+              "armor",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Deathmask (pistol)",
+          "name_de": "Deathmask (pistol)",
+          "name_es": "Deathmask (pistol)",
+          "name_fr": "Deathmask (pistol)",
+          "points": 9,
+          "magic": {
+            "types": [
+              "arcane-item",
+              "enchanted-item",
+              "talisman",
+              "armor-mages",
+              "armor",
+              "weapon"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Deathmask (Naphta bombs)",
+          "name_de": "Deathmask (Naphta bombs)",
+          "name_es": "Deathmask (Naphta bombs)",
+          "name_fr": "Deathmask (Naphta bombs)",
+          "points": 12,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "armor-mages",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Fireglaives",
+          "name_de": "Fireglaives",
+          "name_es": "Fireglaives",
+          "name_fr": "Fireglaives",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hailshot blunderbluss",
+          "name_de": "Hailshot blunderbluss",
+          "name_es": "Hailshot blunderbluss",
+          "name_fr": "Hailshot blunderbluss",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Drilled (0-1 per 1000 points)",
+          "name_de": "Drilled (0-1 per 1000 points)",
+          "name_es": "Drilled (0-1 per 1000 points)",
+          "name_fr": "Drilled (0-1 per 1000 points)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Blackshard Armour (0-1 per 1000 points)",
+          "name_de": "Blackshard Armour (0-1 per 1000 points)",
+          "name_es": "Blackshard Armour (0-1 per 1000 points)",
+          "name_fr": "Blackshard Armour (0-1 per 1000 points)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
+        "name_de": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
+        "name_es": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
+        "name_fr": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn"
+      },
+      "notes": {
+        "name_en": "1+",
+        "name_de": "1+",
+        "name_es": "1+",
+        "name_fr": "1+"
+      }
+    },
+    {
+      "name_en": "Hobgoblin Cutthroats",
+      "name_de": "Hobgoblin Cutthroats",
+      "name_es": "Hobgoblin Cutthroats",
+      "name_fr": "Hobgoblin Cutthroats",
+      "id": "hobgoblin-cutthroats",
+      "points": 3,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Boss (champion)",
+          "name_de": "Boss (champion)",
+          "name_es": "Boss (champion)",
+          "name_fr": "Boss (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and shields",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons and shortbow",
+          "name_de": "Hand weapons and shortbow",
+          "name_es": "Hand weapons and shortbow",
+          "name_fr": "Hand weapons and shortbow",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Backstab, Close Order, Horde, Levies, Warband",
+        "name_de": "Backstab, Close Order, Horde, Levies, Warband",
+        "name_es": "Backstab, Close Order, Horde, Levies, Warband",
+        "name_fr": "Backstab, Close Order, Horde, Levies, Warband"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Black Orc Mob",
+      "name_de": "Black Orc Mob",
+      "name_es": "Black Orc Mob",
+      "name_fr": "Bandes d'Orques Noirs",
+      "id": "black-orc-mob",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Boss",
+          "name_de": "Boss",
+          "name_fr": "Chef",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full Plate",
+          "name_de": "Full Plate",
+          "name_fr": "Armure de plate complète",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné (0-1 unité par armée)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "name_fr": "Vétérans (0-1 unité par armée)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 2,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 1,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1",
+        "name_de": "0-1",
+        "name_es": "0-1",
+        "name_fr": "0-1"
+      },
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Infernal Ironsworn",
+      "name_de": "Infernal Ironsworn",
+      "name_es": "Infernal Ironsworn",
+      "name_fr": "Infernal Ironsworn",
+      "id": "infernal-ironsworn",
+      "points": 19,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Overseer (champion)",
+          "name_de": "Overseer (champion)",
+          "name_es": "Overseer (champion)",
+          "name_fr": "Overseer (champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "armor",
+              "weapon",
+              "armor-mages",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Overseer (Pistol)",
+          "name_de": "Overseer (Pistol)",
+          "name_es": "Overseer (Pistol)",
+          "name_fr": "Overseer (Pistol)",
+          "points": 10,
+          "magic": {
+            "types": [
+              "armor-mages",
+              "armor",
+              "weapon",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Overseer (Naphta bombs)",
+          "name_de": "Overseer (Naphta bombs)",
+          "name_es": "Overseer (Naphta bombs)",
+          "name_fr": "Overseer (Naphta bombs)",
+          "points": 13,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "armor-mages",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
+          "points": 2,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Halberds",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_de": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_es": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_fr": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Sneaky Gits",
+      "name_de": "Sneaky Gits",
+      "name_es": "Sneaky Gits",
+      "name_fr": "Sneaky Gits",
+      "id": "sneaky-gits",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Murder Boss (champion)",
+          "name_de": "Murder Boss (champion)",
+          "name_es": "Murder Boss (champion)",
+          "name_fr": "Murder Boss (champion)",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons, throwing weapons",
+          "name_de": "Two hand weapons, throwing weapons",
+          "name_es": "Two hand weapons, throwing weapons",
+          "name_fr": "Two hand weapons, throwing weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Backstab, Evasive, Levies, Move through Cover, Skirmishers",
+        "name_de": "Ambushers, Backstab, Evasive, Levies, Move through Cover, Skirmishers",
+        "name_es": "Ambushers, Backstab, Evasive, Levies, Move through Cover, Skirmishers",
+        "name_fr": "Ambushers, Backstab, Evasive, Levies, Move through Cover, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "K'daai Fireborn",
+      "name_de": "K'daai Fireborn",
+      "name_es": "K'daai Fireborn",
+      "name_fr": "K'daai Fireborn",
+      "id": "k'daai-fireborn",
+      "points": 41,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Manburner (champion)",
+          "name_de": "Manburner (champion)",
+          "name_es": "Manburner (champion)",
+          "name_fr": "Manburner (champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "armor-mages",
+              "talisman",
+              "enchanted-item",
+              "arcane-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Inmune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_de": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Inmune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_es": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Inmune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_fr": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Inmune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bull Centaur Renders",
+      "name_de": "Bull Centaur Renders",
+      "name_es": "Bull Centaur Renders",
+      "name_fr": "Bull Centaur Renders",
+      "id": "bull-centaur-renders",
+      "points": 56,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Ba'hal",
+          "name_de": "Ba'hal",
+          "name_es": "Ba'hal",
+          "name_fr": "Ba'hal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "armor-mages",
+              "talisman",
+              "enchanted-item",
+              "arcane-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
+        "name_de": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
+        "name_es": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
+        "name_fr": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Iron Daemon",
+      "name_de": "Iron Daemon",
+      "name_es": "Iron Daemon",
+      "name_fr": "Iron Daemon",
+      "id": "iron-daemon",
+      "points": 275,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Steam Cannonade, Hand weapons",
+          "name_de": "Steam Cannonade, Hand weapons",
+          "name_es": "Steam Cannonade, Hand weapons",
+          "name_fr": "Steam Cannonade, Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Skullcracker, Hand weapons",
+          "name_de": "Skullcracker, Hand weapons",
+          "name_es": "Skullcracker, Hand weapons",
+          "name_fr": "Skullcracker, Hand weapons",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Hellbound",
+          "name_de": "Hellbound",
+          "name_es": "Hellbound",
+          "name_fr": "Hellbound",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Targer, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
+        "name_de": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Targer, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
+        "name_es": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Targer, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
+        "name_fr": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Targer, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Deathshrieker Rocket Launcher",
+      "name_de": "Deathshrieker Rocket Launcher",
+      "name_es": "Deathshrieker Rocket Launcher",
+      "name_fr": "Deathshrieker Rocket Launcher",
+      "id": "deathshrieker-rocket-launcher",
+      "points": 120,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
+          "name_de": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
+          "name_es": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
+          "name_fr": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hellbound",
+          "name_de": "Hellbound",
+          "name_es": "Hellbound",
+          "name_fr": "Hellbound",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Steam Carriage",
+          "name_de": "Steam Carriage",
+          "name_es": "Steam Carriage",
+          "name_fr": "Steam Carriage",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard armour, Skirmishers",
+        "name_de": "Blackshard armour, Skirmishers",
+        "name_es": "Blackshard armour, Skirmishers",
+        "name_fr": "Blackshard armour, Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen per 1000 points",
+        "name_de": "0-1 war machine chosen per 1000 points",
+        "name_es": "0-1 war machine chosen per 1000 points",
+        "name_fr": "0-1 war machine chosen per 1000 points"
+      }
+    },
+    {
+      "name_en": "Magma Cannon",
+      "name_de": "Magma Cannon",
+      "name_es": "Magma Cannon",
+      "name_fr": "Magma Cannon",
+      "id": "magma-cannon",
+      "points": 125,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Fire thrower, Hand weapons",
+          "name_de": "Fire thrower, Hand weapons",
+          "name_es": "Fire thrower, Hand weapons",
+          "name_fr": "Fire thrower, Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy Armour",
+          "name_de": "Heavy Armour",
+          "name_es": "Heavy Armour",
+          "name_fr": "Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hellbound",
+          "name_de": "Hellbound",
+          "name_es": "Hellbound",
+          "name_fr": "Hellbound",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Steam Carriage",
+          "name_de": "Steam Carriage",
+          "name_es": "Steam Carriage",
+          "name_fr": "Steam Carriage",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard armour, Skirmishers",
+        "name_de": "Blackshard armour, Skirmishers",
+        "name_es": "Blackshard armour, Skirmishers",
+        "name_fr": "Blackshard armour, Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen per 1000 points",
+        "name_de": "0-1 war machine chosen per 1000 points",
+        "name_es": "0-1 war machine chosen per 1000 points",
+        "name_fr": "0-1 war machine chosen per 1000 points"
+      }
+    },
+    {
+      "name_en": "Hobgoblin Bolt Thrower",
+      "name_de": "Hobgoblin Bolt Thrower",
+      "name_es": "Hobgoblin Bolt Thrower",
+      "name_fr": "Hobgoblin Bolt Thrower",
+      "id": "hobgoblin-bolt-thrower",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bolt thrower, Hand weapons",
+          "name_de": "Bolt thrower, Hand weapons",
+          "name_es": "Bolt thrower, Hand weapons",
+          "name_fr": "Bolt thrower, Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Levies, Skirmishers",
+        "name_de": "Levies, Skirmishers",
+        "name_es": "Levies, Skirmishers",
+        "name_fr": "Levies, Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-2 per 1000 points",
+        "name_de": "0-2 per 1000 points",
+        "name_es": "0-2 per 1000 points",
+        "name_fr": "0-2 per 1000 points"
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Hobgoblin Wolf Raiders",
+      "name_de": "Hobgoblin Wolf Raiders",
+      "name_es": "Hobgoblin Wolf Raiders",
+      "name_fr": "Hobgoblin Wolf Raiders",
+      "id": "hobgoblin-wolf-raiders",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [
+        {
+          "name_en": "Boss (champion",
+          "name_de": "Boss (champion",
+          "name_es": "Boss (champion",
+          "name_fr": "Boss (champion",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
+          "name_es": "Cavalry spears",
+          "name_fr": "Cavalry spears",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour and shield",
+          "name_de": "Light armour and shield",
+          "name_es": "Light armour and shield",
+          "name_fr": "Light armour and shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shortbow",
+          "name_de": "Shortbow",
+          "name_es": "Shortbow",
+          "name_fr": "Shortbow",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Feigned Flight (0-1 per 1000 points)",
+          "name_de": "Feigned Flight (0-1 per 1000 points)",
+          "name_es": "Feigned Flight (0-1 per 1000 points)",
+          "name_fr": "Feigned Flight (0-1 per 1000 points)",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Reserve Move (0-1 per 1000 points)",
+          "name_de": "Reserve Move (0-1 per 1000 points)",
+          "name_es": "Reserve Move (0-1 per 1000 points)",
+          "name_fr": "Reserve Move (0-1 per 1000 points)",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
+        "name_de": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
+        "name_es": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
+        "name_fr": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Dreadquake Mortar",
+      "name_de": "Dreadquake Mortar",
+      "name_es": "Dreadquake Mortar",
+      "name_fr": "Dreadquake Mortar",
+      "id": "dreadquake-mortar",
+      "points": 165,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Dreadquake Mortar, Hand Weapons",
+          "name_de": "Dreadquake Mortar, Hand Weapons",
+          "name_es": "Dreadquake Mortar, Hand Weapons",
+          "name_fr": "Dreadquake Mortar, Hand Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ogre Loader",
+          "name_de": "Ogre Loader",
+          "name_es": "Ogre Loader",
+          "name_fr": "Ogre Loader",
+          "points": 20,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Hellbound",
+          "name_de": "Hellbound",
+          "name_es": "Hellbound",
+          "name_fr": "Hellbound",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Steam Carriage",
+          "name_de": "Steam Carriage",
+          "name_es": "Steam Carriage",
+          "name_fr": "Steam Carriage",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Skirmishers",
+        "name_de": "Blackshard Armour, Skirmishers",
+        "name_es": "Blackshard Armour, Skirmishers",
+        "name_fr": "Blackshard Armour, Skirmishers"
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen per 1000 points",
+        "name_de": "0-1 war machine chosen per 1000 points",
+        "name_es": "0-1 war machine chosen per 1000 points",
+        "name_fr": "0-1 war machine chosen per 1000 points"
+      }
+    },
+    {
+      "name_en": "Hellcannon",
+      "name_de": "Hellcannon",
+      "name_es": "Hellcannon",
+      "name_fr": "Hellcannon",
+      "id": "hellcannon",
+      "points": 215,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Doomfire, Hand Weapons",
+          "name_de": "Doomfire, Hand Weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen per 1000 points",
+        "name_de": "0-1 war machine chosen per 1000 points",
+        "name_es": "0-1 war machine chosen per 1000 points",
+        "name_fr": "0-1 war machine chosen per 1000 points"
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
