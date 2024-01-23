@@ -1,5 +1,590 @@
 {
-  "characters": [],
+  "characters": [
+    {
+      "name_en": "Skaven Warlord",
+      "name_de": "Kriegsherr der Skaven",
+      "name_es": "Skaven Warlord",
+      "name_fr": "Skaven Warlord",
+      "id": "skaven-warlord",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great Weapon",
+          "name_fr": "Great Weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Hellebarde",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armor",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armor",
+          "name_fr": "Light armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armor",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armor",
+          "name_fr": "Heavy armor",
+          "points": 1,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_de": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_es": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_fr": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Skaven Chieftain",
+      "name_de": "Häuptling der Skaven",
+      "name_es": "Skaven Chieftain",
+      "name_fr": "Skaven Chieftain",
+      "id": "skaven-chieftain",
+      "points": 45,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Hellebarde",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armor",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armor",
+          "name_fr": "Light armor",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armor",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy Armor",
+          "name_fr": "Heavy Armor",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Shield",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_de": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_es": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_fr": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Grey Seer",
+      "name_de": "Grauer Prophet",
+      "name_es": "Grey Seer",
+      "name_fr": "Grey Seer",
+      "id": "grey-seer",
+      "points": 185,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "D3 Warpstone Tokens (default)",
+          "name_de": "W3 Warpsteinhappen (default)",
+          "name_es": "D3 Warpstone Tokens (default)",
+          "name_fr": "D3 Warpstone Tokens (default)",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 4",
+          "name_de": "Stufe 4",
+          "name_es": "Level 4",
+          "name_fr": "Level 4",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Screaming Bell",
+          "name_de": "Höllenglocke",
+          "name_es": "Screaming Bell",
+          "name_fr": "Screaming Bell",
+          "points": 185,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "illusion"
+      ],
+      "specialRules": {
+        "name_en": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valor, Warband, Warpstone Weapons (not for the Mount, if mounted)",
+        "name_de": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valor, Warband, Warpstone Weapons",
+        "name_es": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valor, Warband, Warpstone Weapons",
+        "name_fr": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valor, Warband, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Warlock Engineer",
+      "name_de": "Warlocktechniker",
+      "name_es": "Warlock Engineer",
+      "name_fr": "Warlock Engineer",
+      "id": "warlock-engineer",
+      "points": 35,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Warplock musket",
+          "name_de": "Handwaffe, Warpschloss Muskete",
+          "name_es": "Hand weapon, Warplock musket",
+          "name_fr": "Hand weapon, Warplock musket",
+          "points": 9,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapon, Warplock pistol",
+          "name_de": "Handwaffe, Warpschloss Pistole",
+          "name_es": "Hand weapon, Warplock pistol",
+          "name_fr": "Hand weapon, Warplock pistol",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1",
+          "name_de": "Stufe 1",
+          "name_es": "Level 1",
+          "name_fr": "Level 1",
+          "points": 40,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2",
+          "name_de": "Stufe 2",
+          "name_es": "Level 2",
+          "name_fr": "Level 2",
+          "points": 70,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "D3 Warpstone Tokens (default)",
+          "name_de": "W3 Warpsteinhappen (default)",
+          "name_es": "D3 Warpstone Tokens (default)",
+          "name_fr": "D3 Warpstone Tokens (default)",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["battle-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons",
+        "name_de": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons",
+        "name_es": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons",
+        "name_fr": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Master Assassin",
+      "name_de": "Meisterassassine",
+      "name_es": "Master Assassin",
+      "name_fr": "Master Assassin",
+      "id": "master-assassin",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons and throwing weapons",
+          "name_de": "Zwei Handwaffen und Wurfwaffen",
+          "name_es": "Two hand weapons and throwing weapons",
+          "name_fr": "Two hand weapons and throwing weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_de": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_es": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_fr": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Plague Priest",
+      "name_de": "Seuchenpriester",
+      "name_es": "Plague Priest",
+      "name_fr": "Plague Priest",
+      "id": "plague-priest",
+      "points": 60,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Hand weapon, Plague censer",
+          "name_de": "Handwaffe, Seuchenflegel",
+          "name_es": "Hand weapon, Plague censer",
+          "name_fr": "Hand weapon, Plague censer",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 1",
+          "name_de": "Stufe 1",
+          "name_es": "Level 1",
+          "name_fr": "Level 1",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 2",
+          "name_de": "Level 2",
+          "name_es": "Level 2",
+          "name_fr": "Level 2",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Plague Furnace",
+          "name_de": "Seuchenofen",
+          "name_es": "Plague Furnace",
+          "name_fr": "Plague Furnace",
+          "points": 170,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets magiques",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "battle-magic", "dark-magic"],
+      "specialRules": {
+        "name_en": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons (not for the Mount, if mounted)",
+        "name_de": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons (not for the Mount, if mounted)",
+        "name_es": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons (not for the Mount, if mounted)",
+        "name_fr": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valor, Warband, Warpstone Weapons (not for the Mount, if mounted)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      }
+    }
+  ],
   "core": [],
   "special": [],
   "rare": [],
