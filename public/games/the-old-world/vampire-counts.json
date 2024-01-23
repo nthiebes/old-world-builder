@@ -333,13 +333,21 @@
             "armor",
             "armor-mages",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         },
         {
           "name_en": "Vampiric Powers",
@@ -948,13 +956,21 @@
             "weapon",
             "armor",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_fr": "Bannière Magique (PGB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
         }
       ],
       "lores": [],
@@ -1044,8 +1060,8 @@
           "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1368,8 +1384,8 @@
           "name_fr": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1489,7 +1505,6 @@
               "weapon",
               "armor",
               "talisman",
-              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -1503,8 +1518,8 @@
           "name_fr": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1615,7 +1630,6 @@
               "weapon",
               "armor",
               "talisman",
-              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -1750,7 +1764,6 @@
               "weapon",
               "armor",
               "talisman",
-              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -2393,7 +2406,6 @@
               "weapon",
               "armor",
               "talisman",
-              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -2407,8 +2419,8 @@
           "name_fr": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
