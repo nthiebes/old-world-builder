@@ -59,6 +59,7 @@ const magicItemTypes = [
   "gift-of-chaos",
   "forest-spite",
   "vampiric-power",
+  "daemonic-gift",
 ];
 const loresOfMagic = [
   "daemonology",

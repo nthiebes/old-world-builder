@@ -248,6 +248,14 @@ export const nameMap = {
     name_en: "Daemons of Chaos",
     name_de: "Daemons of Chaos",
   },
+  "daemonic-gifts": {
+    name_en: "Daemonic Gifts",
+    name_de: "Daemonic Gifts",
+  },
+  "daemonic-gift": {
+    name_en: "Daemonic Gift",
+    name_de: "Daemonic Gift",
+  },
   "ogre-kingdoms": {
     name_en: "Ogre Kingdoms",
     name_de: "Ogre Kingdoms",
