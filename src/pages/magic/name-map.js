@@ -232,6 +232,10 @@ export const nameMap = {
     name_en: "Vampiric Powers",
     name_de: "Vampiric Powers",
   },
+  "vampiric-power": {
+    name_en: "Vampiric Power",
+    name_de: "Vampiric Power",
+  },
   "dark-elves": {
     name_en: "Dark Elves",
     name_de: "Dark Elves",
