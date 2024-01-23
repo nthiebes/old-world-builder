@@ -1,8 +1,1191 @@
 {
-  "characters": [],
-  "core": [],
-  "special": [],
-  "rare": [],
+  "characters": [
+    {
+      "name_en": "Tyrant",
+      "id": "tyrant",
+      "points": 185,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ironfist",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ogre pistol",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Ogre pistols",
+          "points": 12,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Stonehorn",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Thundertusk",
+          "points": 165,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Bruiser",
+      "id": "bruiser",
+      "points": 110,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ironfist",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ogre pistol",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Ogre pistols",
+          "points": 12,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Stonehorn",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Thundertusk",
+          "points": 165,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "maxPoints": 0,
+          "mutuallyExclusive": true
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge"
+      },
+      "notes": {
+        "name_en": ""
+      }
+    },
+    {
+      "name_en": "Slaughtermaster",
+      "id": "slaughtermaster",
+      "points": 230,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Butcher's Cauldron",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Be a Level 4 Wizard",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Butcher",
+      "id": "butcher",
+      "points": 105,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Butcher's Cauldron",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Be a Level 2 Wizard",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge"
+      },
+      "notes": {
+        "name_en": ""
+      }
+    },
+    {
+      "name_en": "Hunter",
+      "id": "hunter",
+      "points": 115,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Harpoon launcher",
+          "points": 10,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambusher",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On Foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Stonehorn",
+          "points": 195,
+          "active": false
+        },
+        {
+          "name_en": "Thundertusk",
+          "points": 165,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack"
+      },
+      "notes": {
+        "name_en": ""
+      }
+    },
+    {
+      "name_en": "Firebelly",
+      "id": "firebelly",
+      "points": 110,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon and flaming breath",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 6,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Be a Level 2 Wizard",
+          "points": 35,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": [],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["battle-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge"
+      },
+      "notes": {
+        "name_en": ""
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Ogre Bulls",
+      "id": "ogre-bulls",
+      "points": 31,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crusher",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Bellower",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ironfists",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Look-out Gnoblar (Standard Bearer)",
+          "points": 5,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "1+"
+      }
+    },
+    {
+      "name_en": "Ironguts",
+      "id": "ironguts",
+      "points": 39,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Gutlord",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Bellower",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Look-out Gnoblar (Standard Bearer)",
+          "points": 5,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Gnoblar Fighters",
+      "id": "gnoblar-fighters",
+      "points": 2,
+      "minimum": 20,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Groinbiter",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Gnoblar Trappers",
+      "id": "gnoblar-trappers",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Snarefinger",
+          "points": 5,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Sabretusk Packs",
+      "id": "sabretusk-packs",
+      "points": 17,
+      "minimum": 2,
+      "maximum": 10,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard",
+          "points": 1,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Leadbelchers",
+      "id": "leadbelchers",
+      "points": 41,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Thunderfist",
+          "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Bellower",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Veteran",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Maneaters",
+      "id": "maneaters",
+      "points": 54,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Maneater Captain",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Bellower",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ironfist",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Ogre pistol",
+          "points": 6,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Ogre pistols",
+          "points": 12,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Look-out Gnoblar (Standard Bearer)",
+          "points": 5,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Immune to Psychology",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Stubbon",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard",
+          "points": 0,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Mournfang Cavalry",
+      "id": "mournfang-cavalry",
+      "points": 64,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crusher",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Bellower",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Ironfist",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 3,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Brace of Ogre pistols (Crusher)",
+          "points": 12,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Yhetees",
+      "id": "yhetees",
+      "points": 46,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Greyback",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Scouts",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard",
+          "points": 2,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Ironblaster",
+      "id": "ironblaster",
+      "points": 185,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points"
+      }
+    },
+    {
+      "name_en": "Gnoblar Scraplauncher",
+      "id": "gnoblar-scraplauncher",
+      "points": 140,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points"
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Stonehorn Riders",
+      "id": "stonehorn-riders",
+      "points": 245,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon with chaintrap",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon with blood vulture",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Harpoon launcher",
+          "points": 8,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Thundertusk Riders",
+      "id": "thundertusk-riders",
+      "points": 215,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon with chaintrap",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon with blood vulture",
+          "points": 5,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Harpoon launcher",
+          "points": 8,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Giant",
+      "id": "giant",
+      "points": 200,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      }
+    },
+    {
+      "name_en": "Gorgers",
+      "id": "gorgers",
+      "points": 90,
+      "minimum": 0,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Scouts",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Vanguard",
+          "points": 3,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "magic": {
+        "types": [],
+        "maxPoints": 0
+      },
+      "notes": {
+        "name_en": "0-3"
+      }
+    }
+  ],
   "mercenaries": [],
   "allies": []
 }
