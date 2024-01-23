@@ -301,10 +301,12 @@
         {
           "name_en": "Daemonic Locus",
           "name_de": "Daemonic Locus",
-          "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-          "selected": [],
-          "maxPoints": 999,
-          "mutuallyExclusive": true
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "mutuallyExclusive": true,
+            "maxPoints": 999
+          }
         },
         {
           "name_en": "Daemonic Gifts",
