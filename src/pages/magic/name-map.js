@@ -256,6 +256,14 @@ export const nameMap = {
     name_en: "Chaotic Gift",
     name_de: "Chaotic Gift",
   },
+  "daemonic-icons-common": {
+    name_en: "Chaotic Icons",
+    name_de: "Chaotic Icons",
+  },
+  "daemonic-icon-common": {
+    name_en: "Chaotic Icon",
+    name_de: "Chaotic Icon",
+  },
   "daemonic-gifts-khorne": {
     name_en: "Gifts Of Khorne",
     name_de: "Gifts Of Khorne",

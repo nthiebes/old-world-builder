@@ -158,7 +158,6 @@
             "armor",
             "armor-mages",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
@@ -171,7 +170,7 @@
           "name_de": "Vampiric Powers",
           "name_es": "Vampiric Powers",
           "name_fr": "Vampiric Powers",
-          "types": [],
+          "types": ["vampiric-power"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -341,23 +340,24 @@
           "maxPoints": 50
         },
         {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
-          "name_fr": "Bannière Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0,
-          "mutuallyExclusive": true
-        },
-        {
           "name_en": "Vampiric Powers",
           "name_de": "Vampiric Powers",
           "name_es": "Vampiric Powers",
           "name_fr": "Vampiric Powers",
-          "types": [],
+          "types": ["vampiric-power"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (BSB)",
+          "name_de": "Magic Standard (BSB)",
+          "name_es": "Magic Standard (BSB)",
+          "name_fr": "Magic Standard (BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 0
         }
       ],
       "lores": ["dark-magic", "illusion", "necromancy"],
@@ -459,7 +459,14 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "armor-mages", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item",
+            "armor",
+            "talisman"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -552,9 +559,9 @@
             "weapon",
             "armor-mages",
             "talisman",
-            "banner",
             "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "armor"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -651,7 +658,6 @@
             "weapon",
             "armor",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item",
             "armor-mages"
@@ -665,7 +671,7 @@
           "name_de": "Vampiric Powers",
           "name_es": "Vampiric Powers",
           "name_fr": "Vampiric Powers",
-          "types": [],
+          "types": ["vampiric-power"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 75
@@ -828,7 +834,6 @@
             "weapon",
             "armor",
             "talisman",
-            "banner",
             "arcane-item",
             "enchanted-item"
           ],
@@ -966,11 +971,12 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
-          "name_fr": "Bannière Magique (PGB)",
+          "name_es": "Magic Standard (BSB)",
+          "name_fr": "Magic Standard (BSB)",
           "types": ["banner"],
           "selected": [],
-          "maxPoints": 0,
-          "mutuallyExclusive": true
+          "mutuallyExclusive": true,
+          "maxPoints": 0
         }
       ],
       "lores": [],
@@ -1049,7 +1055,7 @@
           "name_fr": "Skeleton Champion",
           "points": 5,
           "magic": {
-            "types": [],
+            "types": ["banner"],
             "maxPoints": 0
           }
         },
@@ -1107,19 +1113,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Magic Standard (1 per 1000pts)",
-          "name_de": "Magic Standard (1 per 1000pts)",
-          "name_es": "Magic Standard (1 per 1000pts)",
-          "name_fr": "Magic Standard (1 per 1000pts)",
-          "points": 50,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -1370,7 +1364,6 @@
               "weapon",
               "armor",
               "talisman",
-              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -1450,17 +1443,6 @@
           "name_fr": "Implacable Defense",
           "points": 1,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Magic Standard",
-          "name_de": "Magic Standard",
-          "name_es": "Magic Standard",
-          "name_fr": "Magic Standard",
-          "points": 50,
-          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -1576,17 +1558,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Magic Standard",
-          "name_de": "Magic Standard",
-          "name_es": "Magic Standard",
-          "name_fr": "Magic Standard",
-          "points": 50,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [],
@@ -1643,8 +1614,8 @@
           "name_fr": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1712,17 +1683,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Magic Standard",
-          "name_de": "Magic Standard",
-          "name_es": "Magic Standard",
-          "name_fr": "Magic Standard",
-          "points": 50,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [],
@@ -1764,6 +1724,7 @@
               "weapon",
               "armor",
               "talisman",
+              "banner",
               "arcane-item",
               "enchanted-item"
             ],
@@ -1777,8 +1738,8 @@
           "name_fr": "Standard Bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1832,17 +1793,6 @@
           "name_fr": "Barding",
           "points": 2,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Magic Standard",
-          "name_de": "Magic Standard",
-          "name_es": "Magic Standard",
-          "name_fr": "Magic Standard",
-          "points": 50,
-          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -2406,10 +2356,12 @@
               "weapon",
               "armor",
               "talisman",
+              "banner",
               "arcane-item",
-              "enchanted-item"
+              "enchanted-item",
+              "vampiric-power"
             ],
-            "maxPoints": 25
+            "maxPoints": 50
           }
         },
         {
@@ -2448,47 +2400,25 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy Armor",
-          "name_de": "Heavy Armor",
-          "name_es": "Heavy Armor",
-          "name_fr": "Heavy Armor",
+          "name_en": "Heavy Armor & Barding",
+          "name_de": "Heavy Armor & Barding",
+          "name_es": "Heavy Armor & Barding",
+          "name_fr": "Heavy Armor & Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full Plate Armor",
-          "name_de": "Full Plate Armor",
-          "name_es": "Full Plate Armor",
-          "name_fr": "Full Plate Armor",
+          "name_en": "Full Plate Armor & Barding",
+          "name_de": "Full Plate Armor & Barding",
+          "name_es": "Full Plate Armor & Barding",
+          "name_fr": "Full Plate Armor & Barding",
           "points": 5,
           "perModel": true,
           "active": false
         }
       ],
       "options": [
-        {
-          "name_en": "Barding",
-          "name_de": "Barding",
-          "name_es": "Barding",
-          "name_fr": "Barding",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Magic Standard",
-          "name_de": "Magic Standard",
-          "name_es": "Magic Standard",
-          "name_fr": "Magic Standard",
-          "points": 50,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
         {
           "name_en": "Drilled",
           "name_de": "Drilled",
