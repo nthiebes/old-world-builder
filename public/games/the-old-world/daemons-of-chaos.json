@@ -284,19 +284,14 @@
       ],
       "options": [
         {
-          "name_en": "Daemonic Locus (BSB)",
-          "name_de": "Daemonic Locus (BSB)",
-          "name_es": "Daemonic Locus (BSB)",
-          "name_fr": "Daemonic Locus (BSB)",
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
+          "name_es": "Daemonic Locus",
+          "name_fr": "Daemonic Locus",
           "points": 25,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-            "mutuallyExclusive": true,
-            "maxPoints": 0
-          }
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -327,6 +322,14 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Daemonic Icon (*if Daemonic Locus selected)",
+          "name_de": "Daemonic Icon (*if Daemonic Locus selected)",
+          "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 0
         }
       ],
       "lores": [],
