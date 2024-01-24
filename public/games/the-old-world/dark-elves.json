@@ -1226,7 +1226,7 @@
           "name_fr": "Reaver (champion)",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [],
             "maxPoints": 0
           }
         },
@@ -1237,8 +1237,8 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -1248,7 +1248,7 @@
           "name_fr": "Musician",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [],
             "maxPoints": 50
           }
         }
@@ -1290,7 +1290,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order, Sea Dragon Cloak",
-        "name_de": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order, Sea Dragon Cloak",
         "name_es": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak",
         "name_fr": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak"
       },
@@ -1307,7 +1307,7 @@
       "name_es": "Dark Riders",
       "name_fr": "Dark Riders",
       "id": "dark-riders",
-      "points": 15,
+      "points": 16,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
@@ -1448,7 +1448,7 @@
           "name_fr": "Hag (champion)",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [],
             "maxPoints": 0
           }
         },
@@ -1498,10 +1498,10 @@
         "name_fr": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks"
       },
       "notes": {
-        "name_en": "0-1 if your army includes one or more Death Hags",
-        "name_de": "0-1 if your army includes one or more Death Hags",
-        "name_es": "0-1 if your army includes one or more Death Hags",
-        "name_fr": "0-1 if your army includes one or more Death Hags"
+        "name_en": "0-1 Core choice if your army includes one or more Death Hags",
+        "name_de": "0-1 Core choice if your army includes one or more Death Hags",
+        "name_es": "0-1 Core choice if your army includes one or more Death Hags",
+        "name_fr": "0-1 Core choice if your army includes one or more Death Hags"
       }
     }
   ],
@@ -1723,9 +1723,9 @@
         },
         {
           "name_en": "Hand weapons, repeater crossbows, and great weapons",
-          "name_de": "Hand weapons and repeater crossbows",
-          "name_es": "Hand weapons and repeater crossbows",
-          "name_fr": "Hand weapons and repeater crossbows",
+          "name_de": "Hand weapons, repeater crossbows, and great weapons",
+          "name_es": "Hand weapons, repeater crossbows, and great weapons",
+          "name_fr": "Hand weapons, repeater crossbows, and great weapons",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1787,7 +1787,7 @@
         "name_fr": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers"
       },
       "notes": {
-        "name_en": "0-1 may have Ambushers : Chariot Runners : Veterans",
+        "name_en": "0-1 may have Ambushers and/or Chariot Runners and/or Veterans",
         "name_de": "0-1 ",
         "name_es": "0-1 ",
         "name_fr": "0-1 "
@@ -2172,7 +2172,7 @@
         "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
-        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_en": "0-1 Special Choice War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
@@ -2184,7 +2184,7 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
-      "points": 194,
+      "points": 195,
       "minimum": 1,
       "maximum": 1,
       "regimentalUnit": false,
@@ -2223,7 +2223,7 @@
         "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
-        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_en": "0-1 Special Choice War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
@@ -2300,10 +2300,10 @@
         "name_fr": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order"
       },
       "notes": {
-        "name_en": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
-        "name_de": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
-        "name_es": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
-        "name_fr": "Dance Of Death: If this unit makes a successful charge move (i.e., if the unit makes contact with the charge target), the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1."
+        "name_en": "Dance Of Death: If this unit makes a successful charge move, the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_de": "Dance Of Death: If this unit makes a successful charge move, the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_es": "Dance Of Death: If this unit makes a successful charge move, the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1.",
+        "name_fr": "Dance Of Death: If this unit makes a successful charge move, the charge target suffers a -1 modifier to its Maximum Rank Bonus until the end of the Combat phase of that turn. A model equipped with a lash & buckler improves its armour value by 1."
       }
     },
     {
@@ -2402,7 +2402,7 @@
         "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
-        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
@@ -2414,7 +2414,7 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
-      "points": 194,
+      "points": 195,
       "minimum": 1,
       "maximum": 1,
       "regimentalUnit": false,
@@ -2453,7 +2453,7 @@
         "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
-        "name_en": "0-1 War Hydra or Kharibdyss if your general is a High Beastmaster",
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 if your general is a High Beastmaster",
         "name_fr": "0-1 if your general is a High Beastmaster"
@@ -2557,7 +2557,7 @@
         "name_fr": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks, Swiftstride"
       },
       "notes": {
-        "name_en": "0-1 per 1,000 Dark Runes: This unit has a 5+ Ward save against any wounds suffered that were caused by a nonmagical enemy attack. Cursed Coven: A unit of Doomfire Warlocks knows a single spell from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spell",
+        "name_en": "0-1 per 1,000. Dark Runes: This unit has a 5+ Ward save against any wounds suffered that were caused by a nonmagical enemy attack. Cursed Coven: A unit of Doomfire Warlocks knows a single spell from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spell",
         "name_de": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel",
         "name_es": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel",
         "name_fr": "A unit of Doomfire Warlocks knows a single spell (chosen by their controlling player before armies are deployed) from either the Dark Magic or Daemonology Lore of Magic. The unit may cast this spell as a Bound spel"
