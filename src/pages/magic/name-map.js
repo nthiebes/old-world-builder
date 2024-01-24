@@ -228,10 +228,6 @@ export const nameMap = {
     name_en: "Vampire Counts",
     name_de: "Vampire Counts",
   },
-  "vampiric-powers": {
-    name_en: "Vampiric Powers",
-    name_de: "Vampiric Powers",
-  },
   "vampiric-power": {
     name_en: "Vampiric Power",
     name_de: "Vampiric Power",
@@ -327,14 +323,6 @@ export const nameMap = {
   "daemonic-icon-tzeentch": {
     name_en: "Icon Of Tzeentch",
     name_de: "Icon Of Tzeentch",
-  },
-  "forbidden-poisons": {
-    name_en: "Forbidden Poisons",
-    name_de: "Forbidden Poisons",
-  },
-  "gifts-of-khaine": {
-    name_en: "Gifts of Khaine",
-    name_de: "Gifts of Khaine",
   },
   "forbidden-poison": {
     name_en: "Forbidden Poison",
