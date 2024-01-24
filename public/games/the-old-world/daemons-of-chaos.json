@@ -261,7 +261,20 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "mutuallyExclusive": true,
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hellblade",
@@ -304,16 +317,6 @@
         }
       ],
       "items": [
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "points": 25,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-            "mutuallyExclusive": true,
-            "maxPoints": 999
-          }
-        },
         {
           "name_en": "Daemonic Gifts",
           "name_de": "Daemonic Gifts",
@@ -1038,7 +1041,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6,
+          "points": 7,
           "magic": {
             "types": [],
             "maxPoints": 0
