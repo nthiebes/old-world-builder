@@ -185,14 +185,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -222,14 +214,6 @@
           "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
           "selected": [],
           "maxPoints": 75,
-          "mutuallyExclusive": false
-        },
-        {
-          "name_en": "Standard Runes (BSB)",
-          "name_de": "Standard Runes (BSB)",
-          "types": ["banner-runes"],
-          "selected": [],
-          "maxPoints": 0,
           "mutuallyExclusive": false
         }
       ],
@@ -396,8 +380,8 @@
           "active": true
         },
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -447,7 +431,13 @@
           "maxPoints": 75,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_de": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_es": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_fr": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn"
+      }
     },
     {
       "name_en": "Daemon Slayer",
@@ -461,22 +451,22 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
+          "name_en": "Hand weapon, Hand weapon",
+          "name_de": "Hand weapon, Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
         },
         {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
+          "name_en": "Hand weapon, Additional hand weapon",
+          "name_de": "Hand weapon, Additional hand weapon",
           "points": 3,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -523,15 +513,15 @@
           "active": true
         },
         {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
+          "name_en": "Hand weapon, Additional hand weapon",
+          "name_de": "Hand weapon, Additional hand weapon",
           "points": 3,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -577,8 +567,8 @@
           "active": false
         },
         {
-          "name_en": "Hand weapon, Brace of Pistols",
-          "name_de": "Hand weapon, Brace of Pistols",
+          "name_en": "Hand weapon, Brace of pistols",
+          "name_de": "Hand weapon, Brace of pistols",
           "points": 10,
           "perModel": false,
           "active": false
@@ -632,6 +622,12 @@
       "points": 8,
       "minimum": 5,
       "maximum": 0,
+      "notes": {
+        "name_en": "0-1 unit per 1000 points can have Standard runes",
+        "name_de": "0-1 unit per 1000 points can have Standard runes",
+        "name_es": "0-1 unit per 1000 points can have Standard runes",
+        "name_fr": "0-1 unit per 1000 points can have Standard runes"
+      },
       "command": [
         {
           "name_en": "Veteran",
@@ -643,8 +639,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 5,
           "magic": {
             "types": ["banner-runes"],
@@ -717,7 +713,108 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_de": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_es": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_fr": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall"
+      }
+    },
+    {
+      "name_en": "Longbeards",
+      "name_de": "Longbeards",
+      "id": "long-beards",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "notes": {
+        "name_en": "0-1 if General is a King",
+        "name_de": "0-1 if General is a King",
+        "name_es": "0-1 if General is a King",
+        "name_fr": "0-1 if General is a King"
+      },
+      "command": [
+        {
+          "name_en": "Elder (champion)",
+          "name_de": "Elder (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon-runes", "talismanic-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "points": 0,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled (0-1 unit per 1000 points)",
+          "name_de": "Drilled (0-1 unit per 1000 points)",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_de": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_fr": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran"
+      }
     },
     {
       "name_en": "Quarrellers",
@@ -728,8 +825,8 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Veteran",
-          "name_de": "Veteran",
+          "name_en": "Veteran (champion)",
+          "name_de": "Veteran (champion)",
           "points": 5,
           "magic": {
             "types": [],
@@ -737,8 +834,8 @@
           }
         },
         {
-          "name_en": "Veteran with Pistol",
-          "name_de": "Veteran with Pistol",
+          "name_en": "Pistol for Veteran",
+          "name_de": "Pistol for Veteran",
           "points": 0,
           "magic": {
             "types": [],
@@ -746,17 +843,17 @@
           }
         },
         {
-          "name_en": "Veteran with Brace of Pistols",
-          "name_de": "Veteran with Brace of Pistols",
-          "points": 10,
+          "name_en": "Brace of pistols for Veteran",
+          "name_de": "Brace of pistols for Veteran",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -811,7 +908,13 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_de": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_es": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_fr": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute"
+      }
     },
     {
       "name_en": "Thunderers",
@@ -831,8 +934,8 @@
           }
         },
         {
-          "name_en": "Veteran with Pistol",
-          "name_de": "Veteran with Pistol",
+          "name_en": "Pistol for Veteran",
+          "name_de": "Pistol for Veteran",
           "points": 0,
           "magic": {
             "types": [],
@@ -840,17 +943,17 @@
           }
         },
         {
-          "name_en": "Veteran with Brace of Pistols",
-          "name_de": "Veteran with Brace of Pistols",
-          "points": 10,
+          "name_en": "Brace of pistols for Veteran",
+          "name_de": "Brace of pistols for Veteran",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -905,98 +1008,13 @@
           "perModel": true
         }
       ],
-      "mounts": []
-    },
-    {
-      "name_en": "Long Beards",
-      "name_de": "Long Beards",
-      "id": "long-beards",
-      "points": 12,
-      "minimum": 5,
-      "maximum": 0,
-      "notes": {
-        "name_en": "0-1 if General is a King",
-        "name_de": "0-1 if General is a King",
-        "name_es": "0-1 if General is a King",
-        "name_fr": "0-1 if General is a King"
-      },
-      "command": [
-        {
-          "name_en": "Elder",
-          "name_de": "Elder",
-          "points": 6,
-          "magic": {
-            "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 6,
-          "magic": {
-            "types": ["banner-runes"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Great weapons",
-          "name_de": "Great weapons",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Drilled (0-1 unit per 1000 points)",
-          "name_de": "Drilled (0-1 unit per 1000 points)",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        }
-      ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_de": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_es": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
+        "name_fr": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute"
+      }
     },
     {
       "name_en": "Rangers",
@@ -1013,8 +1031,8 @@
       },
       "command": [
         {
-          "name_en": "Ol' Deadeye",
-          "name_de": "Ol' Deadeye",
+          "name_en": "Ol' Deadeye (champion)",
+          "name_de": "Ol' Deadeye (champion)",
           "points": 6,
           "magic": {
             "types": [],
@@ -1022,26 +1040,26 @@
           }
         },
         {
-          "name_en": "Ol' Deadeye with Pistol",
-          "name_de": "Ol' Deadeye with Pistol",
-          "points": 6,
+          "name_en": "Pistol for Ol' Deadeye",
+          "name_de": "Pistol for Ol' Deadeye",
+          "points": 0,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Ol' Deadeye with Brace of Pistols",
-          "name_de": "Ol' Deadeye with Brace of Pistols",
-          "points": 11,
+          "name_en": "Brace of pistols for Ol' Deadeye",
+          "name_de": "Brace of pistols for Ol' Deadeye",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
@@ -1067,15 +1085,15 @@
           "active": true
         },
         {
-          "name_en": "Hand weapons, Throwing Axes",
-          "name_de": "Hand weapons, Throwing Axes",
+          "name_en": "Hand weapons, Throwing axes",
+          "name_de": "Hand weapons, Throwing axes",
           "points": 0,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Hand weapons, Crossbows, Throwing Axes",
-          "name_de": "Hand weapons, Crossbows, Throwing Axes",
+          "name_en": "Hand weapons, Crossbows, Throwing axes",
+          "name_de": "Hand weapons, Crossbows, Throwing axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1110,21 +1128,27 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_de": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_es": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_fr": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers"
+      }
     }
   ],
   "special": [
     {
-      "name_en": "Long Beards",
-      "name_de": "Long Beards",
+      "name_en": "Longbeards",
+      "name_de": "Longbeards",
       "id": "long-beards",
       "points": 12,
       "minimum": 5,
       "maximum": 0,
       "command": [
         {
-          "name_en": "Elder",
-          "name_de": "Elder",
+          "name_en": "Elder (champion)",
+          "name_de": "Elder (champion)",
           "points": 6,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
@@ -1132,8 +1156,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
@@ -1157,6 +1181,13 @@
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "points": 0,
+          "perModel": true,
+          "active": false
         }
       ],
       "armor": [
@@ -1169,15 +1200,6 @@
         }
       ],
       "options": [
-        {
-          "name_en": "Great weapons",
-          "name_de": "Great weapons",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
         {
           "name_en": "Shields",
           "name_de": "Shields",
@@ -1197,7 +1219,112 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_de": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
+        "name_fr": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran"
+      }
+    },
+    {
+      "name_en": "Hammerers",
+      "name_de": "Hammerers",
+      "id": "hammerers",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "notes": {
+        "name_en": "0-1 per King or Thane",
+        "name_de": "0-1 per King or Thane",
+        "name_es": "0-1 per King or Thane",
+        "name_fr": "0-1 per King or Thane"
+      },
+      "command": [
+        {
+          "name_en": "Royal Champion (Up to 25pts of each rune type)",
+          "name_de": "Royal Champion (Up to 25pts of each rune type)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon-runes", "talismanic-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 75
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great hammers",
+          "name_de": "Hand weapons, Great hammers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran",
+          "name_de": "Veteran",
+          "points": 1,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn",
+        "name_de": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn",
+        "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn",
+        "name_fr": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn"
+      }
     },
     {
       "name_en": "Ironbreakers",
@@ -1217,26 +1344,35 @@
           }
         },
         {
-          "name_en": "Ironbeard with Brace of Drakefire Pistols",
-          "name_de": "Ironbeard with Brace of Drakefire Pistols",
-          "points": 17,
+          "name_en": "Brace of drakefire pistols for Ironbeard",
+          "name_de": "Brace of drakefire pistols for Ironbeard",
+          "points": 10,
           "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
-          "name_en": "Ironbeard with Drakegun",
-          "name_de": "Ironbeard with Drakegun",
-          "points": 17,
+          "name_en": "Drakegun for Ironbeard",
+          "name_de": "Drakegun for Ironbeard",
+          "points": 10,
           "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Cinderblast bombs for Ironbeard",
+          "name_de": "Cinderblast bombs for Ironbeard",
+          "points": 15,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 7,
           "magic": {
             "types": ["banner-runes"],
@@ -1273,15 +1409,6 @@
       ],
       "options": [
         {
-          "name_en": "Ironbeard - Cinderblast Bombs",
-          "name_de": "Ironbeard - Cinderblast Bombs",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": false
-        },
-        {
           "name_en": "Drilled (0-1 unit per 1000 points)",
           "name_de": "Drilled (0-1 unit per 1000 points)",
           "points": 1,
@@ -1291,7 +1418,13 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Regimental Unit, Resolute, Runes of Protection, Shieldwall, Stubborn",
+        "name_de": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Regimental Unit, Resolute, Runes of Protection, Shieldwall, Stubborn",
+        "name_es": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Regimental Unit, Resolute, Runes of Protection, Shieldwall, Stubborn",
+        "name_fr": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Regimental Unit, Resolute, Runes of Protection, Shieldwall, Stubborn"
+      }
     },
     {
       "name_en": "Miners",
@@ -1320,8 +1453,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
@@ -1396,8 +1529,8 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
@@ -1451,99 +1584,6 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": false
-        }
-      ],
-      "mounts": []
-    },
-    {
-      "name_en": "Hammerers",
-      "name_de": "Hammerers",
-      "id": "hammerers",
-      "points": 16,
-      "minimum": 5,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "notes": {
-        "name_en": "0-1 per King or Thane",
-        "name_de": "0-1 per King or Thane",
-        "name_es": "0-1 per King or Thane",
-        "name_fr": "0-1 per King or Thane"
-      },
-      "command": [
-        {
-          "name_en": "Royal Champion (Up to 25pts of each rune type)",
-          "name_de": "Royal Champion (Up to 25pts of each rune type)",
-          "points": 7,
-          "magic": {
-            "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
-          "points": 7,
-          "magic": {
-            "types": ["banner-runes"],
-            "maxPoints": 75
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons, Great Hammers",
-          "name_de": "Hand weapons, Great Hammers",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Drilled",
-          "name_de": "Drilled",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Veteran",
-          "name_de": "Veteran",
-          "points": 1,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
         }
       ],
       "mounts": []
@@ -1737,8 +1777,8 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Ol' Deadeye",
-          "name_de": "Ol' Deadeye",
+          "name_en": "Ol' Deadeye (champion)",
+          "name_de": "Ol' Deadeye (champion)",
           "points": 6,
           "magic": {
             "types": [],
@@ -1746,26 +1786,26 @@
           }
         },
         {
-          "name_en": "Ol' Deadeye with Pistol",
-          "name_de": "Ol' Deadeye with Pistol",
-          "points": 6,
+          "name_en": "Pistol for Ol' Deadeye",
+          "name_de": "Pistol for Ol' Deadeye",
+          "points": 0,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Ol' Deadeye with Brace of Pistols",
-          "name_de": "Ol' Deadeye with Brace of Pistols",
-          "points": 11,
+          "name_en": "Brace of pistols for Ol' Deadeye",
+          "name_de": "Brace of pistols for Ol' Deadeye",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
@@ -1791,15 +1831,15 @@
           "active": true
         },
         {
-          "name_en": "Hand weapons, Throwing Axes",
-          "name_de": "Hand weapons, Throwing Axes",
+          "name_en": "Hand weapons, Throwing axes",
+          "name_de": "Hand weapons, Throwing axes",
           "points": 0,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Hand weapons, Crossbows, Throwing Axes",
-          "name_de": "Hand weapons, Crossbows, Throwing Axes",
+          "name_en": "Hand weapons, Crossbows, Throwing axes",
+          "name_de": "Hand weapons, Crossbows, Throwing axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1818,7 +1858,7 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
-          "points": 1,
+          "points": 2,
           "stackable": false,
           "minimum": 0,
           "maximum": 0,
@@ -1834,7 +1874,13 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_de": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_es": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers",
+        "name_fr": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move through Cover, Open Order, Resolute, Scouts, Skirmishers"
+      }
     },
     {
       "name_en": "Irondrakes",
@@ -1854,8 +1900,8 @@
           }
         },
         {
-          "name_en": "Ironwarden with Brace of Drakefire Pistols",
-          "name_de": "Ironwarden with Brace of Drakefire Pistols",
+          "name_en": "Ironwarden with Brace of drakefire pistols",
+          "name_de": "Ironwarden with Brace of drakefire pistols",
           "points": 11,
           "magic": {
             "types": ["weapon-runes"],
@@ -1872,8 +1918,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
