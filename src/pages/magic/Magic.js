@@ -14,6 +14,10 @@ import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import gameSystems from "../../assets/armies.json";
+import {
+  isMultipleAllowedItem,
+  maxAllowedOfItem,
+} from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
 import "./Magic.css";
@@ -278,11 +282,10 @@ export const Magic = ({ isMobile }) => {
   }) => {
     const isCommand = Boolean(unit?.command[command]?.magic?.maxpoints);
 
-    // If an item is stackable, we need to check how many of the item are already selected.
-    const allowedMaxOfStackableItem = Math.min(
-      magicItem.maximum ?? Infinity,
-      Math.floor(unitPointsRemaining / magicItem.points) + selectedAmount
-    );
+    const max = !maxMagicPoints
+      ? // No maximum of this item if there is no point max.
+        undefined
+      : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
 
     return (
       <Fragment key={magicItem.id}>
@@ -320,24 +323,21 @@ export const Magic = ({ isMobile }) => {
           </label>
         </div>
 
-        {magicItem.stackable &&
-          isChecked &&
-          allowedMaxOfStackableItem > 1 &&
-          ["arcane-item", "enchanted-item"].includes(magicItem.type) && (
-            <NumberInput
-              id={`${itemGroup.id}-${magicItem.id}-amount`}
-              min={1}
-              max={allowedMaxOfStackableItem}
-              value={selectedAmount}
-              onChange={(event) => {
-                handleAmountChange({
-                  parentId: `${itemGroup.id}-${magicItem.id}`,
-                  event,
-                  isCommand,
-                });
-              }}
-            />
-          )}
+        {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
+          <NumberInput
+            id={`${itemGroup.id}-${magicItem.id}-amount`}
+            min={1}
+            max={max}
+            value={selectedAmount}
+            onChange={(event) => {
+              handleAmountChange({
+                parentId: `${itemGroup.id}-${magicItem.id}`,
+                event,
+                isCommand,
+              });
+            }}
+          />
+        )}
       </Fragment>
     );
   };
@@ -483,9 +483,7 @@ export const Magic = ({ isMobile }) => {
                     {getCheckbox({
                       magicItem,
                       itemGroup,
-                      selectedAmount: selectedItem
-                        ? selectedItem.amount ?? 1
-                        : undefined,
+                      selectedAmount: selectedItem?.amount ?? 1,
                       isChecked,
                       isTypeLimitReached,
                     })}
@@ -495,7 +493,7 @@ export const Magic = ({ isMobile }) => {
                           getCheckbox({
                             magicItem: conditionalItem,
                             itemGroup,
-                            selectedAmount: selectedItem?.amount,
+                            selectedAmount: selectedItem?.amount ?? 1,
                             isChecked,
                             isConditional: true,
                             isTypeLimitReached,
