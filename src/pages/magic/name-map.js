@@ -356,6 +356,14 @@ export const nameMap = {
     name_en: "Big Name",
     name_de: "Big Name",
   },
+  "disciplines-old-ones": {
+    name_en: "Disciplines Of The Old Ones",
+    name_de: "Disciplines Of The Old Ones",
+  },
+  "discipline-old-ones": {
+    name_en: "Discipline Of The Old Ones",
+    name_de: "Discipline Of The Old Ones",
+  },
   lizardmen: {
     name_en: "Lizardmen",
     name_de: "Lizardmen",
