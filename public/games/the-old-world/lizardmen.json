@@ -24,85 +24,7 @@
         }
       ],
       "armor": [],
-      "options": [
-        {
-          "name_en": "Higher State Of Mind",
-          "name_de": "Higher State Of Mind",
-          "name_es": "Higher State Of Mind",
-          "name_fr": "Higher State Of Mind",
-          "points": 60,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Becalming Cogitation",
-          "name_de": "Becalming Cogitation",
-          "name_es": "Becalming Cogitation",
-          "name_fr": "Becalming Cogitation",
-          "points": 50,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Wandering Deliberations",
-          "name_de": "Wandering Deliberations",
-          "name_es": "Wandering Deliberations",
-          "name_fr": "Wandering Deliberations",
-          "points": 40,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Transcendent Healing",
-          "name_de": "Transcendent Healing",
-          "name_es": "Transcendent Healing",
-          "name_fr": "Transcendent Healing",
-          "points": 35,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Sorcerous Void",
-          "name_de": "Sorcerous Void",
-          "name_es": "Sorcerous Void",
-          "name_fr": "Sorcerous Void",
-          "points": 30,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Harrowing Scrutiny",
-          "name_de": "Harrowing Scrutiny",
-          "name_es": "Harrowing Scrutiny",
-          "name_fr": "Harrowing Scrutiny",
-          "points": 20,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Soul Of Stone",
-          "name_de": "Soul Of Stone",
-          "name_es": "Soul Of Stone",
-          "name_fr": "Soul Of Stone",
-          "points": 10,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [
         {
@@ -113,7 +35,7 @@
           "types": [
             "arcane-item",
             "weapon",
-            "armor",
+            "armor-mages",
             "talisman",
             "banner",
             "enchanted-item"
@@ -121,6 +43,16 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
+        },
+        {
+          "name_en": "Disciplines of the Old Ones",
+          "name_de": "Disciplines of the Old Ones",
+          "name_es": "Disciplines of the Old Ones",
+          "name_fr": "Disciplines of the Old Ones",
+          "types": ["discipline-old-ones"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 0
         }
       ],
       "lores": [
@@ -137,10 +69,10 @@
         "name_fr": "Arcane Shield, Cold Blooded, Fly (8), Large Target, Lore of Lustria"
       },
       "notes": {
-        "name_en": "May take a single Discipline of the Old Ones",
-        "name_de": "May take a single Discipline of the Old Ones",
-        "name_es": "May take a single Discipline of the Old Ones",
-        "name_fr": "May take a single Discipline of the Old Ones"
+        "name_en": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_de": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_es": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_fr": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save"
       }
     },
     {
@@ -1716,6 +1648,77 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Ancient Stegadon (0-1 Stegadon or Troglodon per 1,000 points)",
+      "name_de": "Ancient Stegadon (0-1 Stegadon or Troglodon per 1,000 points)",
+      "name_es": "Ancient Stegadon (0-1 Stegadon or Troglodon per 1,000 points)",
+      "name_fr": "Ancient Stegadon (0-1 Stegadon or Troglodon per 1,000 points)",
+      "id": "ancient-stegadon-(0-1-stegadon-or-troglodon-per-1000-points)",
+      "points": 230,
+      "minimum": 1,
+      "maximum": 1,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Great horns and giant bow",
+          "name_de": "Great horns and giant bow",
+          "name_es": "Great horns and giant bow",
+          "name_fr": "Great horns and giant bow",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Great horns and giant blowpipes",
+          "name_de": "Great horns and giant blowpipe",
+          "name_es": "Great horns and giant blowpipe",
+          "name_fr": "Great horns and giant blowpipe",
+          "points": 0,
+          "perModel": false,
+          "active": false
+        },
+        {
+          "name_en": "Great horns and Engine of the Gods",
+          "name_de": "Great horns and Engine of the Gods",
+          "name_es": "Great horns and Engine of the Gods",
+          "name_fr": "Great horns and Engine of the Gods",
+          "points": 25,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Skink Crew (x5) with hand weapons and javelins (required)",
+          "name_de": "Skink Crew (x5) with hand weapons and javelins (required)",
+          "name_es": "Skink Crew (x5) with hand weapons and javelins (required)",
+          "name_fr": "Skink Crew (x5) with hand weapons and javelins (required)",
+          "points": 0,
+          "perModel": false,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_fr": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (javelins only), Stomp Attacks (D3+2), Stubborn, Terror"
+      },
+      "notes": {
+        "name_en": "gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
+        "name_de": "gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
+        "name_es": "gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
+        "name_fr": "gains Burning Alignment special rule when choosing Engine of the Gods weapon option"
       }
     }
   ],
