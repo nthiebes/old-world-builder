@@ -33,15 +33,22 @@
 }
 
 .unit__notes {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@media (min-width: 1280px) {
+  .unit__notes {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .unit__notes-icon {
   margin-right: 5px;
+  margin-top: 1px;
 }
 
 .unit__strength {
