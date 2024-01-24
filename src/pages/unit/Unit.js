@@ -36,7 +36,10 @@ export const Unit = ({ isMobile }) => {
   const unit = units && units.find(({ id }) => id === unitId);
   const army = useSelector((state) => state.army);
   const detachments =
-    army && army.core.filter((coreUnit) => coreUnit.detachment);
+    army &&
+    [...army.core, ...army.special, ...army.rare].filter(
+      (coreUnit) => coreUnit.detachment
+    );
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
