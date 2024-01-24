@@ -276,7 +276,7 @@ export const Magic = ({ isMobile }) => {
     isConditional,
     isTypeLimitReached,
   }) => {
-    const isCommand = Boolean(unit?.command[command]);
+    const isCommand = Boolean(unit?.command[command]?.magic?.maxpoints);
 
     // If an item is stackable, we need to check how many of the item are already selected.
     const allowedMaxOfStackableItem = Math.min(
