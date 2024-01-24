@@ -20,6 +20,7 @@ export const Help = () => {
         <title>
           {`Old World Builder | ${intl.formatMessage({ id: "footer.help" })}`}
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/help" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation />

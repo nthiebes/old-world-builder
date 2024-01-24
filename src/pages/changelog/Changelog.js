@@ -24,6 +24,7 @@ export const Changelog = () => {
             id: "footer.changelog",
           })}`}
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/changelog" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation />

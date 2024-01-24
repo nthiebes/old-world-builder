@@ -22,6 +22,7 @@ export const Privacy = () => {
             id: "footer.privacy",
           })}`}
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/privacy" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation />
