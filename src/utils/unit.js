@@ -78,10 +78,42 @@ export const getAllOptions = (
   const allDetachments = detachments
     ? detachments
         .filter(({ strength }) => strength > 0)
-        .map(
-          ({ name_en, strength, ...item }) =>
-            `${strength} ${item[`name_${language}`] || name_en}`
-        )
+        .map(({ name_en, strength, equipment, armor, options, ...item }) => {
+          let equipmentSelection = [];
+
+          if (equipment && equipment.length) {
+            equipment.forEach((option) => {
+              option.active &&
+                equipmentSelection.push(
+                  `${option[`name_${language}`]}` || option.name_en
+                );
+            });
+          }
+          if (armor && armor.length) {
+            armor.forEach((option) => {
+              option.active &&
+                equipmentSelection.push(
+                  `${option[`name_${language}`]}` || option.name_en
+                );
+            });
+          }
+          if (options && options.length) {
+            options.forEach((option) => {
+              option.active &&
+                equipmentSelection.push(
+                  `${option[`name_${language}`]}` || option.name_en
+                );
+            });
+          }
+
+          return `${strength} ${item[`name_${language}`] || name_en}${
+            equipmentSelection.length
+              ? ` (${equipmentSelection
+                  .map((option) => option.replace(", ", " + "))
+                  .join(" + ")})`
+              : ""
+          }`;
+        })
     : [];
   const lore = [];
   if (activeLore) {

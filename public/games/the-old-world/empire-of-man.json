@@ -1429,8 +1429,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1589,8 +1589,8 @@
       "detachment": true,
       "command": [
         {
-          "name_en": "Sergeant (Champion)",
-          "name_de": "Sergeant (Champion)",
+          "name_en": "Sergeant (champion)",
+          "name_de": "Sergeant (champion)",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1598,8 +1598,8 @@
           }
         },
         {
-          "name_en": "Standard Bearer",
-          "name_de": "Standard Bearer",
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1616,8 +1616,8 @@
           }
         },
         {
-          "name_en": "Sergeant (Champion) with brace of pistols",
-          "name_de": "Sergeant (Champion) with brace of pistols",
+          "name_en": "Sergeant (champion), Brace of pistols",
+          "name_de": "Sergeant (champion), Brace of pistols",
           "points": 10,
           "magic": {
             "types": [],
@@ -1625,8 +1625,8 @@
           }
         },
         {
-          "name_en": "Sergeant (Champion) with Hochland long rifle",
-          "name_de": "Sergeant (Champion) with Hochland long rifle",
+          "name_en": "Sergeant (champion), Hochland long rifle",
+          "name_de": "Sergeant (champion), Hochland long rifle",
           "points": 8,
           "magic": {
             "types": [],
@@ -1634,8 +1634,8 @@
           }
         },
         {
-          "name_en": "Sergeant (Champion) with repeater handgun",
-          "name_de": "Sergeant (Champion) with repeater handgun",
+          "name_en": "Sergeant (champion), Repeater handgun",
+          "name_de": "Sergeant (champion), Repeater handgun",
           "points": 8,
           "magic": {
             "types": [],
@@ -1645,21 +1645,28 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons and crossbows",
-          "name_de": "Hand weapons",
+          "name_en": "Hand weapons, Crossbows",
+          "name_de": "Hand weapons, Crossbows",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand weapons and handguns",
-          "name_de": "Hand weapons and handguns",
+          "name_en": "Hand weapons, Handguns",
+          "name_de": "Hand weapons, Handguns",
           "points": 1,
           "perModel": true,
           "active": false
         }
       ],
       "armor": [
+        {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -2182,7 +2189,7 @@
         {
           "name_en": "Vanguard",
           "name_de": "Vanguard",
-          "points": 1,
+          "points": 2,
           "perModel": true,
           "stackable": false,
           "minimum": 0,

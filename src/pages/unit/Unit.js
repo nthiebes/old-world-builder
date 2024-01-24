@@ -85,6 +85,9 @@ export const Unit = ({ isMobile }) => {
       name_en: detachment.name_en,
       points: detachment.points,
       strength: 5,
+      equipment: detachment.equipment,
+      armor: detachment.armor,
+      options: detachment.options,
     });
 
     dispatch(
@@ -114,6 +117,46 @@ export const Unit = ({ isMobile }) => {
     const unitDetachments = [...unit.detachments].map((detachment) =>
       detachment.id === id ? { ...detachment, strength } : detachment
     );
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
+      })
+    );
+  };
+  const handleDetachmentEquipmentChange = ({
+    detachmentId,
+    equipmentId,
+    category,
+    isCheckbox,
+  }) => {
+    const unitDetachments = [...unit.detachments].map((detachment) => {
+      if (detachment.id === detachmentId) {
+        const equipment = detachment[category].map((item) => {
+          let active = false;
+
+          if (isCheckbox && item.id === equipmentId) {
+            active = !item.active;
+          } else if (item.id === equipmentId) {
+            active = true;
+          } else if (isCheckbox) {
+            active = item.active;
+          }
+
+          return {
+            ...item,
+            active,
+          };
+        });
+
+        return { ...detachment, [category]: equipment };
+      }
+
+      return detachment;
+    });
 
     dispatch(
       editUnit({
@@ -694,44 +737,206 @@ export const Unit = ({ isMobile }) => {
                       (detachment) =>
                         detachment.id.split(".")[0] === id.split(".")[0]
                     )
-                    .map(({ name_en, strength, id, points, ...detachment }) => (
-                      <div className="list" key={id}>
-                        <div className="list__inner unit__detachments">
-                          <NumberInput
-                            noError
-                            id={`strength-${id}`}
-                            min={5}
-                            value={strength}
-                            onChange={(event) =>
-                              handleDetachmentStrengthClick({
-                                id,
-                                strength: event.target.value,
-                              })
-                            }
-                          />
-                          <span>
-                            <b>{detachment[`name_${language}`] || name_en}</b>
-                            <i>{`${getUnitPoints({
-                              strength,
-                              points,
-                            })} ${intl.formatMessage({
-                              id: "app.points",
-                            })}`}</i>
-                          </span>
-                          <Button
-                            onClick={() =>
-                              handleDeleteDetachmentClick({
-                                id,
-                              })
-                            }
-                            type="secondary"
-                            icon="close"
-                            label={intl.formatMessage({ id: "misc.remove" })}
-                            size="small"
-                          />
+                    .map(
+                      ({
+                        name_en,
+                        strength,
+                        id,
+                        points,
+                        equipment: detachmentEquipment,
+                        armor: detachmentArmor,
+                        options: detachmentOptions,
+                        ...detachment
+                      }) => (
+                        <div
+                          className="list unit__detachments-wrapper"
+                          key={id}
+                        >
+                          <div className="list__inner unit__detachments">
+                            <NumberInput
+                              noError
+                              id={`strength-${id}`}
+                              min={5}
+                              max={Math.floor(unit.strength / 2)}
+                              value={strength}
+                              onChange={(event) =>
+                                handleDetachmentStrengthClick({
+                                  id,
+                                  strength: event.target.value,
+                                })
+                              }
+                            />
+                            <span>
+                              <b>{detachment[`name_${language}`] || name_en}</b>
+                              <i>{`${getUnitPoints({
+                                strength,
+                                points,
+                              })} ${intl.formatMessage({
+                                id: "app.points",
+                              })}`}</i>
+                            </span>
+                            <Button
+                              onClick={() =>
+                                handleDeleteDetachmentClick({
+                                  id,
+                                })
+                              }
+                              type="secondary"
+                              icon="close"
+                              label={intl.formatMessage({ id: "misc.remove" })}
+                              size="small"
+                            />
+                          </div>
+                          <div>
+                            {detachmentEquipment &&
+                              detachmentEquipment.length > 0 && (
+                                <>
+                                  <h3 className="unit__subline">
+                                    <FormattedMessage id="unit.equipment" />
+                                  </h3>
+                                  {detachmentEquipment.map((equipment) => (
+                                    <div className="radio" key={equipment.id}>
+                                      <input
+                                        type="radio"
+                                        id={`equipment-${id}-${equipment.id}`}
+                                        name={`equipment-${id}`}
+                                        value={equipment.id}
+                                        onChange={() =>
+                                          handleDetachmentEquipmentChange({
+                                            detachmentId: id,
+                                            equipmentId: equipment.id,
+                                            category: "equipment",
+                                          })
+                                        }
+                                        checked={equipment.active || false}
+                                        className="radio__input"
+                                      />
+                                      <label
+                                        htmlFor={`equipment-${id}-${equipment.id}`}
+                                        className="radio__label"
+                                      >
+                                        {equipment[`name_${language}`] ||
+                                          equipment.name_en}
+                                        <i className="checkbox__points">
+                                          {`${equipment.points} ${
+                                            equipment.points === 1
+                                              ? intl.formatMessage({
+                                                  id: "app.point",
+                                                })
+                                              : intl.formatMessage({
+                                                  id: "app.points",
+                                                })
+                                          }`}
+                                          {equipment.perModel &&
+                                            ` ${intl.formatMessage({
+                                              id: "unit.perModel",
+                                            })}`}
+                                        </i>
+                                      </label>
+                                    </div>
+                                  ))}
+                                </>
+                              )}
+                            {detachmentArmor && detachmentArmor.length > 0 && (
+                              <>
+                                <h3 className="unit__subline">
+                                  <FormattedMessage id="unit.armor" />
+                                </h3>
+                                {detachmentArmor.map((armor) => (
+                                  <div className="radio" key={armor.id}>
+                                    <input
+                                      type="radio"
+                                      id={`armor-${id}-${armor.id}`}
+                                      name={`armor-${id}`}
+                                      value={armor.id}
+                                      onChange={() =>
+                                        handleDetachmentEquipmentChange({
+                                          detachmentId: id,
+                                          equipmentId: armor.id,
+                                          category: "armor",
+                                        })
+                                      }
+                                      checked={armor.active}
+                                      className="radio__input"
+                                    />
+                                    <label
+                                      htmlFor={`armor-${id}-${armor.id}`}
+                                      className="radio__label"
+                                    >
+                                      {armor[`name_${language}`] ||
+                                        armor.name_en}
+                                      <i className="checkbox__points">
+                                        {`${armor.points} ${
+                                          armor.points === 1
+                                            ? intl.formatMessage({
+                                                id: "app.point",
+                                              })
+                                            : intl.formatMessage({
+                                                id: "app.points",
+                                              })
+                                        }`}
+                                        {armor.perModel &&
+                                          ` ${intl.formatMessage({
+                                            id: "unit.perModel",
+                                          })}`}
+                                      </i>
+                                    </label>
+                                  </div>
+                                ))}
+                              </>
+                            )}
+                            {detachmentOptions && detachmentOptions.length > 0 && (
+                              <>
+                                <h3 className="unit__subline">
+                                  <FormattedMessage id="unit.options" />
+                                </h3>
+                                {detachmentOptions.map((option) => (
+                                  <div className="checkbox" key={option.id}>
+                                    <input
+                                      type="checkbox"
+                                      id={`options-${id}-${option.id}`}
+                                      value={option.id}
+                                      onChange={() =>
+                                        handleDetachmentEquipmentChange({
+                                          detachmentId: id,
+                                          equipmentId: option.id,
+                                          category: "options",
+                                          isCheckbox: true,
+                                        })
+                                      }
+                                      checked={option.active || false}
+                                      className="checkbox__input"
+                                    />
+                                    <label
+                                      htmlFor={`options-${id}-${option.id}`}
+                                      className="checkbox__label"
+                                    >
+                                      {option[`name_${language}`] ||
+                                        option.name_en}
+                                      <i className="checkbox__points">
+                                        {`${option.points} ${
+                                          option.points === 1
+                                            ? intl.formatMessage({
+                                                id: "app.point",
+                                              })
+                                            : intl.formatMessage({
+                                                id: "app.points",
+                                              })
+                                        }`}
+                                        {option.perModel &&
+                                          ` ${intl.formatMessage({
+                                            id: "unit.perModel",
+                                          })}`}
+                                      </i>
+                                    </label>
+                                  </div>
+                                ))}
+                              </>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                    )}
               </Fragment>
             ))}
           </>

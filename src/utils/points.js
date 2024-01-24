@@ -67,9 +67,33 @@ export const getUnitPoints = (unit) => {
     });
   }
   if (unit.detachments) {
-    unit.detachments.forEach((detachment) => {
-      unitPoints += detachment.strength * detachment.points;
-    });
+    unit.detachments.forEach(
+      ({ strength, points, equipment, armor, options }) => {
+        unitPoints += strength * points;
+
+        if (equipment && equipment.length) {
+          equipment.forEach((option) => {
+            if (option.active) {
+              unitPoints += strength * option.points;
+            }
+          });
+        }
+        if (armor && armor.length) {
+          armor.forEach((option) => {
+            if (option.active) {
+              unitPoints += strength * option.points;
+            }
+          });
+        }
+        if (options && options.length) {
+          options.forEach((option) => {
+            if (option.active) {
+              unitPoints += strength * option.points;
+            }
+          });
+        }
+      }
+    );
   }
 
   return unitPoints;
