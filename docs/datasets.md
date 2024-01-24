@@ -69,7 +69,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "name_de": String,
       "name_de": String,
       "points": Number,
-      "stackable": Boolean, // Allows multiple selectins of this option
+      "stackable": Boolean, // Allows multiple selections of this option
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
     }

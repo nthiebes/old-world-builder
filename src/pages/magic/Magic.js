@@ -268,29 +268,21 @@ export const Magic = ({ isMobile }) => {
     }
   }
 
-  const getCheckbox = ({ unit, magicItem, itemGroup, isConditional }) => {
-    let isChecked = false;
-    let isCommand = false;
-    let amount;
+  const getCheckbox = ({
+    isChecked,
+    selectedAmount,
+    magicItem,
+    itemGroup,
+    isConditional,
+    isTypeLimitReached,
+  }) => {
+    const isCommand = Boolean(unit?.command[command]);
 
-    if (
-      unit?.command &&
-      unit.command[command] &&
-      unit.command[command]?.magic?.types.length
-    ) {
-      const selectedItem = (unit.command[command].magic.selected || []).find(
-        ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-      );
-      isChecked = Boolean(selectedItem);
-      isCommand = true;
-      amount = selectedItem?.amount || 1;
-    } else if (unit?.items?.length) {
-      const selectedItem = unit.items[group].selected.find(
-        ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-      );
-      isChecked = Boolean(selectedItem);
-      amount = selectedItem?.amount || 1;
-    }
+    // If an item is stackable, we need to check how many of the item are already selected.
+    const allowedMaxOfStackableItem = Math.min(
+      magicItem.maximum ?? Infinity,
+      Math.floor(unitPointsRemaining / magicItem.points) + selectedAmount
+    );
 
     return (
       <Fragment key={magicItem.id}>
@@ -307,6 +299,13 @@ export const Magic = ({ isMobile }) => {
             onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
             checked={isChecked}
             className="checkbox__input"
+            disabled={
+              !isChecked &&
+              // Sometimes there is no limit (often for magic banners),
+              // otherwise we need to check if the unit has enough points left.
+              ((maxMagicPoints && magicItem.points > unitPointsRemaining) ||
+                isTypeLimitReached)
+            }
           />
           <label
             htmlFor={`${itemGroup.id}-${magicItem.id}`}
@@ -320,69 +319,26 @@ export const Magic = ({ isMobile }) => {
             })}`}</i>
           </label>
         </div>
-        {magicItem.stackable && isChecked && (
-          <NumberInput
-            id={`${itemGroup.id}-${magicItem.id}-amount`}
-            min={1}
-            max={magicItem.maximum}
-            value={amount}
-            onChange={(event) => {
-              handleAmountChange({
-                parentId: `${itemGroup.id}-${magicItem.id}`,
-                event,
-                isCommand,
-              });
-            }}
-          />
-        )}
+
+        {magicItem.stackable &&
+          isChecked &&
+          allowedMaxOfStackableItem > 1 &&
+          ["arcane-item", "enchanted-item"].includes(magicItem.type) && (
+            <NumberInput
+              id={`${itemGroup.id}-${magicItem.id}-amount`}
+              min={1}
+              max={allowedMaxOfStackableItem}
+              value={selectedAmount}
+              onChange={(event) => {
+                handleAmountChange({
+                  parentId: `${itemGroup.id}-${magicItem.id}`,
+                  event,
+                  isCommand,
+                });
+              }}
+            />
+          )}
       </Fragment>
-    );
-  };
-
-  const getRadio = ({ unit, magicItem, itemGroup }) => {
-    let isChecked = false;
-    let isCommand = false;
-
-    if (
-      unit?.command &&
-      unit.command[command] &&
-      unit.command[command]?.magic?.types.length
-    ) {
-      isChecked =
-        (unit.command[command].magic.selected || []).find(
-          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-        ) || false;
-      isCommand = true;
-    } else if (unit?.items?.length) {
-      isChecked =
-        unit.items[group].selected.find(
-          ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-        ) || false;
-    }
-
-    return (
-      <div className="radio" key={magicItem.id}>
-        <input
-          type="radio"
-          id={`${itemGroup.id}-${magicItem.id}`}
-          value={`${itemGroup.id}-${magicItem.id}`}
-          onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
-          checked={isChecked}
-          name={itemGroup.id}
-          className="radio__input"
-        />
-        <label
-          htmlFor={`${itemGroup.id}-${magicItem.id}`}
-          className="radio__label"
-        >
-          {magicItem[`name_${language}`] || magicItem.name_en}
-          <i className="checkbox__points">{`${
-            magicItem.points
-          } ${intl.formatMessage({
-            id: "app.points",
-          })}`}</i>
-        </label>
-      </div>
     );
   };
 
@@ -408,6 +364,8 @@ export const Magic = ({ isMobile }) => {
     });
     hasPointsError = unitMagicPoints > maxMagicPoints && maxMagicPoints > 0;
   }
+
+  const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
 
   return (
     <>
@@ -490,14 +448,19 @@ export const Magic = ({ isMobile }) => {
             hasCommandMagicItems ? commandMagicItems : magicItems
           ).filter(
             (item) =>
-              item?.armyComposition === list?.armyComposition ||
-              !item.armyComposition
+              (!maxMagicPoints || item.points <= maxMagicPoints) &&
+              (item?.armyComposition === list?.armyComposition ||
+                !item.armyComposition)
           );
 
           if (itemGroupItems.length > 0) {
             prevItemType = null;
             isFirstItemType = false;
           }
+
+          const unitSelectedItems = hasCommandMagicItems
+            ? unit.command[command].magic.selected ?? []
+            : unit.items[group].selected ?? [];
 
           return (
             <Fragment key={itemGroup.name_de}>
@@ -514,23 +477,15 @@ export const Magic = ({ isMobile }) => {
                   isFirstItemType = false;
                 }
 
-                let isChecked = false,
-                  mutuallyExclusive = false;
+                const selectedItem = unitSelectedItems.find(
+                  ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                );
 
-                if (hasCommandMagicItems) {
-                  isChecked =
-                    (unit.command[command].magic.selected || []).find(
-                      ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-                    ) || false;
-                  mutuallyExclusive =
-                    unit.command[command].magic.mutuallyExclusive;
-                } else if (hasMagicItems) {
-                  isChecked =
-                    unit.items[group].selected.find(
-                      ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
-                    ) || false;
-                  mutuallyExclusive = unit.items[group].mutuallyExclusive;
-                }
+                const isChecked = Boolean(selectedItem);
+
+                const isTypeLimitReached = unitSelectedItems.some(
+                  (item) => !magicItem.stackable && item.type === magicItem.type
+                );
 
                 return (
                   <Fragment key={magicItem.name_de}>
@@ -540,16 +495,25 @@ export const Magic = ({ isMobile }) => {
                           nameMap[magicItem.type].name_en}
                       </h3>
                     )}
-                    {mutuallyExclusive
-                      ? getRadio({ unit, magicItem, itemGroup })
-                      : getCheckbox({ unit, magicItem, itemGroup })}
+                    {getCheckbox({
+                      magicItem,
+                      itemGroup,
+                      selectedAmount: selectedItem
+                        ? selectedItem.amount ?? 1
+                        : undefined,
+                      isChecked,
+                      isTypeLimitReached,
+                    })}
+
                     {magicItem.conditional && isChecked
                       ? magicItem.conditional.map((conditionalItem) =>
                           getCheckbox({
-                            unit,
                             magicItem: conditionalItem,
                             itemGroup,
+                            selectedAmount: selectedItem?.amount,
+                            isChecked,
                             isConditional: true,
+                            isTypeLimitReached,
                           })
                         )
                       : null}

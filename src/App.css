@@ -216,6 +216,11 @@ hr {
   align-items: center;
 }
 
+.radio__input:disabled + .radio__label,
+.checkbox__input:disabled + .checkbox__label {
+  opacity: 0.3;
+}
+
 .input {
   background-color: var(--color-white);
   display: block;
