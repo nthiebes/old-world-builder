@@ -1,8 +1,8 @@
 {
   "characters": [
     {
-      "name_en": "King (0-1* per 1000 points)",
-      "name_de": "King (0-1* per 1000 points)",
+      "name_en": "King",
+      "name_de": "King",
       "id": "king",
       "points": 125,
       "minimum": 0,
@@ -10,6 +10,14 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -99,8 +107,8 @@
       ]
     },
     {
-      "name_en": "Anvil of Doom (0-1* per 1000 points)",
-      "name_de": "Anvil of Doom (0-1* per 1000 points)",
+      "name_en": "Anvil of Doom",
+      "name_de": "Anvil of Doom",
       "id": "anvil-of-doom",
       "points": 235,
       "minimum": 0,
@@ -108,6 +116,14 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Hand Weapons, Shields",
@@ -140,8 +156,8 @@
       ]
     },
     {
-      "name_en": "Runelord (0-1* per 1000 points)",
-      "name_de": "Runelord (0-1* per 1000 points)",
+      "name_en": "Runelord",
+      "name_de": "Runelord",
       "id": "runelord",
       "points": 120,
       "minimum": 0,
@@ -149,6 +165,14 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -856,12 +880,20 @@
       "mounts": []
     },
     {
-      "name_en": "Long Beards (0-1 if General is a King)",
-      "name_de": "Long Beards (0-1 if General is a King)",
+      "name_en": "Long Beards",
+      "name_de": "Long Beards",
       "id": "long-beards",
       "points": 12,
       "minimum": 5,
       "maximum": 0,
+      "notes" = [
+        {
+        "name_en": "0-1 if General is a King",
+        "name_de": "0-1 if General is a King",
+        "name_es": "0-1 if General is a King",
+        "name_fr": "0-1 if General is a King",
+      }
+      ],
       "command": [
         {
           "name_en": "Elder",
@@ -941,12 +973,20 @@
       "mounts": []
     },
     {
-      "name_en": "Rangers (0-1)",
-      "name_de": "Rangers (0-1)",
+      "name_en": "Rangers",
+      "name_de": "Rangers",
       "id": "rangers",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "notes" = [
+        {
+        "name_en": "0-1 per army",
+        "name_de": "0-1 per army",
+        "name_es": "0-1 per army",
+        "name_fr": "0-1 per army",
+      }
+      ],
       "command": [
         {
           "name_en": "Ol' Deadeye",
@@ -1392,14 +1432,22 @@
       "mounts": []
     },
     {
-      "name_en": "Hammerers (0-1 per King or Thane)",
-      "name_de": "Hammerers (0-1 per King or Thane)",
+      "name_en": "Hammerers",
+      "name_de": "Hammerers",
       "id": "hammerers",
       "points": 16,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "notes" = [
+        {
+        "name_en": "0-1 per King or Thane",
+        "name_de": "0-1 per King or Thane",
+        "name_es": "0-1 per King or Thane",
+        "name_fr": "0-1 per King or Thane",
+      }
+      ],
       "command": [
         {
           "name_en": "Royal Champion (Up to 25pts of each rune type)",
@@ -1522,13 +1570,21 @@
       "mounts": []
     },
     {
-      "name_en": "Bolt Thrower (0-3 warmachines per 1000 points)",
-      "name_de": "Bolt Thrower (0-3 warmachines per 1000 points)",
+      "name_en": "Bolt Thrower",
+      "name_de": "Bolt Thrower",
       "id": "bolt-thrower",
       "points": 55,
       "minimum": 0,
       "maximum": 0,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-3 warmachines per 1000 points",
+        "name_de": "0-3 warmachines per 1000 points",
+        "name_es": "0-3 warmachines per 1000 points",
+        "name_fr": "0-3 warmachines per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Bolt Thrower, Hand Weapons",
@@ -1561,13 +1617,21 @@
       ]
     },
     {
-      "name_en": "Grudge Thrower (0-3 warmachines per 1000 points)",
-      "name_de": "Grudge Thrower (0-3 warmachines per 1000 points)",
+      "name_en": "Grudge Thrower",
+      "name_de": "Grudge Thrower",
       "id": "grudge-thrower",
       "points": 95,
       "minimum": 0,
       "maximum": 0,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-3 warmachines per 1000 points",
+        "name_de": "0-3 warmachines per 1000 points",
+        "name_es": "0-3 warmachines per 1000 points",
+        "name_fr": "0-3 warmachines per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Stone Thrower, Hand Weapons",
@@ -1600,13 +1664,21 @@
       ]
     },
     {
-      "name_en": "Cannon (0-3 warmachines per 1000 points)",
-      "name_de": "Cannon (0-3 warmachines per 1000 points)",
+      "name_en": "Cannon",
+      "name_de": "Cannon",
       "id": "cannon",
       "points": 100,
       "minimum": 0,
       "maximum": 0,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-3 warmachines per 1000 points",
+        "name_de": "0-3 warmachines per 1000 points",
+        "name_es": "0-3 warmachines per 1000 points",
+        "name_fr": "0-3 warmachines per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Cannon, Hand Weapons",
@@ -1886,13 +1958,21 @@
       "mounts": []
     },
     {
-      "name_en": "Organ Gun (0-2 warmachines per 1000 points)",
-      "name_de": "Organ Gun (0-2 warmachines per 1000 points)",
+      "name_en": "Organ Gun",
+      "name_de": "Organ Gun",
       "id": "organ-gun",
       "points": 120,
       "minimum": 0,
       "maximum": 0,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-2 warmachines per 1000 points",
+        "name_de": "0-2 warmachines per 1000 points",
+        "name_es": "0-2 warmachines per 1000 points",
+        "name_fr": "0-2 warmachines per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Organ Gun, Hand Weapons",
@@ -1915,13 +1995,21 @@
       "mounts": []
     },
     {
-      "name_en": "Flame Cannon (0-2 warmachines per 1000 points)",
-      "name_de": "Flame Cannon (0-2 warmachines per 1000 points)",
+      "name_en": "Flame Cannon",
+      "name_de": "Flame Cannon",
       "id": "flame-cannon",
       "points": 125,
       "minimum": 0,
       "maximum": 0,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-2 warmachines per 1000 points",
+        "name_de": "0-2 warmachines per 1000 points",
+        "name_es": "0-2 warmachines per 1000 points",
+        "name_fr": "0-2 warmachines per 1000 points",
+      }
+      ],
       "equipment": [
         {
           "name_en": "Fire Thrower, Hand Weapons",
