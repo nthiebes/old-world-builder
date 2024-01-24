@@ -130,19 +130,29 @@ export const Unit = ({ isMobile }) => {
   const handleDetachmentEquipmentChange = ({
     detachmentId,
     equipmentId,
-    type,
+    category,
+    isCheckbox,
   }) => {
     const unitDetachments = [...unit.detachments].map((detachment) => {
       if (detachment.id === detachmentId) {
-        console.log(detachment[type]);
-        const equipment = detachment[type].map((item) => ({
-          ...item,
-          active: item.id === equipmentId ? true : false,
-        }));
+        const equipment = detachment[category].map((item) => {
+          let active = false;
 
-        console.log({ ...detachment, [type]: equipment });
+          if (isCheckbox && item.id === equipmentId) {
+            active = !item.active;
+          } else if (item.id === equipmentId) {
+            active = true;
+          } else if (isCheckbox) {
+            active = item.active;
+          }
 
-        return { ...detachment, [type]: equipment };
+          return {
+            ...item,
+            active,
+          };
+        });
+
+        return { ...detachment, [category]: equipment };
       }
 
       return detachment;
@@ -797,7 +807,7 @@ export const Unit = ({ isMobile }) => {
                                           handleDetachmentEquipmentChange({
                                             detachmentId: id,
                                             equipmentId: equipment.id,
-                                            type: "equipment",
+                                            category: "equipment",
                                           })
                                         }
                                         checked={equipment.active || false}
@@ -845,7 +855,7 @@ export const Unit = ({ isMobile }) => {
                                         handleDetachmentEquipmentChange({
                                           detachmentId: id,
                                           equipmentId: armor.id,
-                                          type: "armor",
+                                          category: "armor",
                                         })
                                       }
                                       checked={armor.active}
@@ -868,6 +878,54 @@ export const Unit = ({ isMobile }) => {
                                               })
                                         }`}
                                         {armor.perModel &&
+                                          ` ${intl.formatMessage({
+                                            id: "unit.perModel",
+                                          })}`}
+                                      </i>
+                                    </label>
+                                  </div>
+                                ))}
+                              </>
+                            )}
+                            {detachmentOptions && detachmentOptions.length > 0 && (
+                              <>
+                                <h3 className="unit__subline">
+                                  <FormattedMessage id="unit.options" />
+                                </h3>
+                                {detachmentOptions.map((option) => (
+                                  <div className="checkbox" key={option.id}>
+                                    <input
+                                      type="checkbox"
+                                      id={`options-${id}-${option.id}`}
+                                      value={option.id}
+                                      onChange={() =>
+                                        handleDetachmentEquipmentChange({
+                                          detachmentId: id,
+                                          equipmentId: option.id,
+                                          category: "options",
+                                          isCheckbox: true,
+                                        })
+                                      }
+                                      checked={option.active || false}
+                                      className="checkbox__input"
+                                    />
+                                    <label
+                                      htmlFor={`options-${id}-${option.id}`}
+                                      className="checkbox__label"
+                                    >
+                                      {option[`name_${language}`] ||
+                                        option.name_en}
+                                      <i className="checkbox__points">
+                                        {`${option.points} ${
+                                          option.points === 1
+                                            ? intl.formatMessage({
+                                                id: "app.point",
+                                              })
+                                            : intl.formatMessage({
+                                                id: "app.points",
+                                              })
+                                        }`}
+                                        {option.perModel &&
                                           ` ${intl.formatMessage({
                                             id: "unit.perModel",
                                           })}`}
