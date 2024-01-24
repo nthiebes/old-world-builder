@@ -746,8 +746,6 @@ export const Unit = ({ isMobile }) => {
                         equipment: detachmentEquipment,
                         armor: detachmentArmor,
                         options: detachmentOptions,
-                        armor,
-                        options,
                         ...detachment
                       }) => (
                         <div
