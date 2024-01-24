@@ -787,7 +787,7 @@ export const Unit = ({ isMobile }) => {
                               size="small"
                             />
                           </div>
-                          <div>
+                          <div className="unit__detachments-section">
                             {detachmentEquipment &&
                               detachmentEquipment.length > 0 && (
                                 <>
