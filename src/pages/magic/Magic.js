@@ -342,7 +342,6 @@ export const Magic = ({ isMobile }) => {
     );
   };
 
-  let hasPointsError = false;
   let unitMagicPoints = 0;
   const hasCommandMagicItems = Boolean(
     unit?.command &&
@@ -356,13 +355,11 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.command[command].magic.selected,
     });
-    hasPointsError = unitMagicPoints > maxMagicPoints && maxMagicPoints > 0;
   } else if (hasMagicItems) {
     maxMagicPoints = unit.items[group].maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
-    hasPointsError = unitMagicPoints > maxMagicPoints && maxMagicPoints > 0;
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -386,19 +383,13 @@ export const Magic = ({ isMobile }) => {
           }
           subheadline={
             <>
-              <span
-                className={classNames(
-                  "magic__header-points",
-                  hasPointsError && "magic__header-points--error"
-                )}
-              >
-                {`${unitMagicPoints}`}&nbsp;
+              <span className="magic__header-points">
+                {unitMagicPoints}&nbsp;
               </span>
               {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
               <FormattedMessage id="app.points" />
             </>
           }
-          hasPointsError={hasPointsError}
         />
       )}
 
@@ -417,19 +408,13 @@ export const Magic = ({ isMobile }) => {
             }
             subheadline={
               <>
-                <span
-                  className={classNames(
-                    "magic__header-points",
-                    hasPointsError && "magic__header-points--error"
-                  )}
-                >
-                  {`${unitMagicPoints}`}&nbsp;
+                <span className="magic__header-points">
+                  {unitMagicPoints}&nbsp;
                 </span>
                 {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
                 <FormattedMessage id="app.points" />
               </>
             }
-            hasPointsError={hasPointsError}
           />
         )}
         {items.map((itemGroup) => {
