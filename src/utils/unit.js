@@ -22,7 +22,7 @@ export const getAllOptions = (
       if (active) {
         allCommand.push(entry[`name_${language}`] || name_en);
       }
-      if (magic && magic?.selected?.length) {
+      if (active && magic && magic?.selected?.length) {
         magic.selected.forEach((selectedItem) => {
           allCommand.push(
             selectedItem.amount > 1
