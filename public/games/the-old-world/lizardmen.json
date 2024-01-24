@@ -24,85 +24,7 @@
         }
       ],
       "armor": [],
-      "options": [
-        {
-          "name_en": "Higher State Of Mind",
-          "name_de": "Higher State Of Mind",
-          "name_es": "Higher State Of Mind",
-          "name_fr": "Higher State Of Mind",
-          "points": 60,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Becalming Cogitation",
-          "name_de": "Becalming Cogitation",
-          "name_es": "Becalming Cogitation",
-          "name_fr": "Becalming Cogitation",
-          "points": 50,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Wandering Deliberations",
-          "name_de": "Wandering Deliberations",
-          "name_es": "Wandering Deliberations",
-          "name_fr": "Wandering Deliberations",
-          "points": 40,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Transcendent Healing",
-          "name_de": "Transcendent Healing",
-          "name_es": "Transcendent Healing",
-          "name_fr": "Transcendent Healing",
-          "points": 35,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Sorcerous Void",
-          "name_de": "Sorcerous Void",
-          "name_es": "Sorcerous Void",
-          "name_fr": "Sorcerous Void",
-          "points": 30,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Harrowing Scrutiny",
-          "name_de": "Harrowing Scrutiny",
-          "name_es": "Harrowing Scrutiny",
-          "name_fr": "Harrowing Scrutiny",
-          "points": 20,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Soul Of Stone",
-          "name_de": "Soul Of Stone",
-          "name_es": "Soul Of Stone",
-          "name_fr": "Soul Of Stone",
-          "points": 10,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [
         {
@@ -113,7 +35,7 @@
           "types": [
             "arcane-item",
             "weapon",
-            "armor",
+            "armor-mages",
             "talisman",
             "banner",
             "enchanted-item"
@@ -121,6 +43,18 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
+        },
+        {
+          "name_en": "Disciplines of the Old Ones",
+          "name_de": "Disciplines of the Old Ones",
+          "name_es": "Disciplines of the Old Ones",
+          "name_fr": "Disciplines of the Old Ones",
+          "types": [
+            "discipline-old-ones"
+          ],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 60
         }
       ],
       "lores": [
@@ -137,10 +71,10 @@
         "name_fr": "Arcane Shield, Cold Blooded, Fly (8), Large Target, Lore of Lustria"
       },
       "notes": {
-        "name_en": "May take a single Discipline of the Old Ones",
-        "name_de": "May take a single Discipline of the Old Ones",
-        "name_es": "May take a single Discipline of the Old Ones",
-        "name_fr": "May take a single Discipline of the Old Ones"
+        "name_en": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_de": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_es": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save",
+        "name_fr": "May take a single Discipline of the Old Ones. Arcane Shield: This character has a 5+ Ward save"
       }
     },
     {
