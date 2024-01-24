@@ -356,6 +356,17 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [
@@ -410,6 +421,16 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
+        },
+        {
+          "name_en": "Battle Standard",
+          "name_de": "Battle Standard",
+          "name_es": "Battle Standard",
+          "name_fr": "Battle Standard",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": true,
+          "maxPoints": 70
         }
       ],
       "lores": [],
@@ -420,10 +441,10 @@
         "name_fr": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*"
       },
       "notes": {
-        "name_en": "0-1 Dark Elf Dreadlord or Supreme Sorceress per 1,000 points *These special rules do not apply to this model's mount (should it have one).",
-        "name_de": "*These special rules do not apply to this model's mount (should it have one).",
-        "name_es": "*These special rules do not apply to this model's mount (should it have one).",
-        "name_fr": "*These special rules do not apply to this model's mount (should it have one)."
+        "name_en": "*These special rules do not apply to this model's mount (should it have one). A single Dark Elf Master in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit.",
+        "name_de": "*These special rules do not apply to this model's mount (should it have one). A single Dark Elf Master in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit.",
+        "name_es": "*These special rules do not apply to this model's mount (should it have one). A single Dark Elf Master in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit.",
+        "name_fr": "*These special rules do not apply to this model's mount (should it have one). A single Dark Elf Master in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
       }
     },
     {
@@ -991,9 +1012,7 @@
           "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": [
-              "banner"
-            ],
+            "types": ["banner"],
             "maxPoints": 50
           }
         },
@@ -1086,7 +1105,7 @@
       "name_es": "Repeater Crossbowmen",
       "name_fr": "Repeater Crossbowmen",
       "id": "repeater-crossbowmen",
-      "points": 8,
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": false,
@@ -1099,9 +1118,7 @@
           "name_fr": "Lordling (Champion)",
           "points": 5,
           "magic": {
-            "types": [
-              "banner"
-            ],
+            "types": ["banner"],
             "maxPoints": 0
           }
         },
@@ -1112,9 +1129,7 @@
           "name_fr": "Standard Bearer",
           "points": 5,
           "magic": {
-            "types": [
-              "banner"
-            ],
+            "types": ["banner"],
             "maxPoints": 50
           }
         },
@@ -1922,7 +1937,7 @@
       "name_es": "Cold One Knights",
       "name_fr": "Cold One Knights",
       "id": "cold-one-knights",
-      "points": 30,
+      "points": 31,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
@@ -2246,9 +2261,7 @@
           "name_fr": "Standard bearer",
           "points": 7,
           "magic": {
-            "types": [
-              "banner"
-            ],
+            "types": ["banner"],
             "maxPoints": 50
           }
         },
@@ -2516,12 +2529,7 @@
           "name_fr": "Master (champion)",
           "points": 6,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "enchanted-item"
-            ],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         }

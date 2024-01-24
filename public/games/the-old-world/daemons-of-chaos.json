@@ -126,23 +126,9 @@
       "mounts": [],
       "items": [
         {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": [
-            "weapon",
-            "armor",
-            "talisman",
-            "arcane-item",
-            "enchanted-item"
-          ],
-          "selected": [],
-          "maxPoints": 0,
-          "mutuallyExclusive": false
-        },
-        {
-          "name_en": "Gifts of Chaos",
-          "name_de": "Gifts of Chaos",
-          "types": ["daemonic-gift"],
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-khorne", "daemonic-gift-nurgle", "daemonic-gift-slaanesh", "daemonic-gift-tzeentch"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -160,108 +146,6 @@
         "name_de": "0-1*",
         "name_es": "0-1*",
         "name_fr": "0-1*"
-      }
-    },
-    {
-      "name_en": "Daemonic Herald Of Khorne",
-      "name_de": "Daemonic Herald Of Khorne",
-      "name_es": "Daemonic Herald Of Khorne",
-      "name_fr": "Daemonic Herald Of Khorne",
-      "id": "daemonic_herald_of_horne",
-      "points": 80,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hellblade",
-          "name_de": "Hellblade",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
-          "points": 0,
-          "perModel": false,
-          "active": true,
-          "name_es": "Calloused hide (counts as light armour)",
-          "name_fr": "Calloused hide (counts as light armour)"
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Juggernaut Of Khorne",
-          "name_de": "Juggernaut Of Khorne",
-          "points": 50,
-          "active": false
-        },
-        {
-          "name_en": "Blood Throne of Khorne",
-          "name_de": "Blood Throne of Khorne",
-          "points": 160,
-          "active": false
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 0,
-          "mutuallyExclusive": false
-        },
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 25,
-          "mutuallyExclusive": true
-        },
-        {
-          "name_en": "Gifts of Chaos",
-          "name_de": "Gifts of Chaos",
-          "types": ["daemonic-gift"],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 50
-        }
-      ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
-        "name_de": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
-        "name_es": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
-        "name_fr": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
       }
     },
     {
@@ -340,7 +224,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -352,6 +236,93 @@
         "name_de": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
         "name_es": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
         "name_fr": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Daemonic Herald Of Khorne",
+      "name_de": "Daemonic Herald Of Khorne",
+      "name_es": "Daemonic Herald Of Khorne",
+      "name_fr": "Daemonic Herald Of Khorne",
+      "id": "daemonic-herald-of-khorne",
+      "points": 80,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hellblade",
+          "name_de": "Hellblade",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Calloused hide (counts as light armour)",
+          "name_de": "Calloused hide (counts as light armour)",
+          "name_es": "Calloused hide (counts as light armour)",
+          "name_fr": "Calloused hide (counts as light armour)",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Juggernaut Of Khorne",
+          "name_de": "Juggernaut Of Khorne",
+          "points": 50,
+          "active": false
+        },
+        {
+          "name_en": "Blood Throne of Khorne",
+          "name_de": "Blood Throne of Khorne",
+          "points": 160,
+          "active": false
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Locus",
+          "name_de": "Daemonic Locus",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "mutuallyExclusive": true,
+            "maxPoints": 999
+          }
+        },
+        {
+          "name_en": "Daemonic Gifts",
+          "name_de": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_de": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_es": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_fr": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)"
       },
       "notes": {
         "name_en": "",
@@ -459,7 +430,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": ["daemonic-gift"],
+          "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -1031,7 +1002,7 @@
       "name_de": "Bloodletters Of Khorne",
       "name_es": "Bloodletters Of Khorne",
       "name_fr": "Bloodletters Of Khorne",
-      "id": "bloodletters_of_khorne",
+      "id": "bloodletters-of-khorne",
       "points": 14,
       "minimum": 8,
       "maximum": 0,
@@ -1041,20 +1012,20 @@
         {
           "name_en": "Bloodreaper (champion)",
           "name_de": "Bloodreaper (champion)",
+          "name_es": "Bloodreaper (champion)",
+          "name_fr": "Bloodreaper (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
-          },
-          "name_es": "Bloodreaper (champion)",
-          "name_fr": "Bloodreaper (champion)"
+            "types": [],
+            "maxPoints": 0
+          }
         },
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
             "maxPoints": 50
           }
         },
@@ -1081,11 +1052,11 @@
         {
           "name_en": "Calloused hides (counts as light armour)",
           "name_de": "Calloused hides (counts as light armour)",
+          "name_es": "Calloused hides (counts as light armour)",
+          "name_fr": "Calloused hides (counts as light armour)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Calloused hides (counts as light armour)",
-          "name_fr": "Calloused hides (counts as light armour)"
+          "active": true
         }
       ],
       "options": [],
@@ -1110,7 +1081,7 @@
       "name_de": "Flesh Hounds Of Khorne",
       "name_es": "Flesh Hounds Of Khorne",
       "name_fr": "Flesh Hounds Of Khorne",
-      "id": "flesh_hounds_of_khorne",
+      "id": "flesh-hounds-of-khorne",
       "points": 32,
       "minimum": 5,
       "maximum": 0,
@@ -1121,22 +1092,22 @@
         {
           "name_en": "Claws and fangs (counts as hand weapons)",
           "name_de": "Claws and fangs (counts as hand weapons)",
+          "name_es": "Claws and fangs (counts as hand weapons)",
+          "name_fr": "Claws and fangs (counts as hand weapons)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Claws and fangs (counts as hand weapons)",
-          "name_fr": "Claws and fangs (counts as hand weapons)"
+          "active": true
         }
       ],
       "armor": [
         {
           "name_en": "Calloused Hide (counts as light armour)",
           "name_de": "Calloused Hide (counts as light armour)",
+          "name_es": "Calloused Hide (counts as light armour)",
+          "name_fr": "Calloused Hide (counts as light armour)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_es": "Calloused Hide (counts as light armour)",
-          "name_fr": "Calloused Hide (counts as light armour)"
+          "active": true
         }
       ],
       "options": [
@@ -1760,7 +1731,7 @@
       "name_de": "Bloodcrushers Of Khorne",
       "name_es": "Bloodcrushers Of Khorne",
       "name_fr": "Bloodcrushers Of Khorne",
-      "id": "bloodcrushers_of_khorne",
+      "id": "bloodcrushers-of-khorne",
       "points": 65,
       "minimum": 3,
       "maximum": 0,
@@ -1772,8 +1743,8 @@
           "name_de": "Bloodreaper (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
           },
           "name_es": "Bloodreaper (champion)",
           "name_fr": "Bloodreaper (champion)"
@@ -1783,7 +1754,7 @@
           "name_de": "Standard Bearer",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
             "maxPoints": 50
           }
         },
@@ -1801,22 +1772,22 @@
         {
           "name_en": "Hellblades, brass bound hooves",
           "name_de": "Hellblades, brass bound hooves",
+          "name_es": "Hellblades, brass bound hooves",
+          "name_fr": "Hellblades, brass bound hooves",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Hellblades, brass bound hooves",
-          "name_fr": "Hellblades, brass bound hooves"
+          "active": true
         }
       ],
       "armor": [
         {
           "name_en": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
           "name_de": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
+          "name_es": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
+          "name_fr": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Calloused Hide (counts as light armour), brazen hide (counts as barding)",
-          "name_fr": "Calloused Hide (counts as light armour), brazen hide (counts as barding)"
+          "active": true
         }
       ],
       "options": [],
@@ -1828,18 +1799,7 @@
           "active": true
         }
       ],
-      "items": [
-        {
-          "name_en": "Daemonic Icon",
-          "name_de": "Daemonic Icon",
-          "name_es": "Daemonic Icon",
-          "name_fr": "Daemonic Icon",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 50
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
@@ -2272,7 +2232,7 @@
       "name_de": "Skull Cannon Of Khorne",
       "name_es": "Skull Cannon Of Khorne",
       "name_fr": "Skull Cannon Of Khorne",
-      "id": "skull_cannon_of_khorne",
+      "id": "skull-cannon-of-khorne",
       "points": 185,
       "minimum": 1,
       "maximum": 1,
@@ -2283,11 +2243,11 @@
         {
           "name_en": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
           "name_de": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
+          "name_es": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
+          "name_fr": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
           "points": 0,
           "perModel": false,
-          "active": true,
-          "name_es": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades",
-          "name_fr": "Brazen wheels, scything blades (counts as a hand weapon), cannon of Khorne, hellblades"
+          "active": true
         }
       ],
       "armor": [
