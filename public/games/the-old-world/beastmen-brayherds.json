@@ -784,16 +784,24 @@
   ],
   "core": [
     {
-      "name_en": "Bestigor Herds (0-1 if General is Beastlord or Wargor)",
-      "name_de": "Bestigor Herds (0-1 if General is Beastlord or Wargor)",
-      "name_es": "Rebaño de bestigors (0-1 si el Genral es un Caudillo o Beligor)",
-      "name_fr": "Bestigor Herds (0-1 if General is Beastlord or Wargor)",
+      "name_en": "Bestigor Herds",
+      "name_de": "Bestigor Herds",
+      "name_es": "Rebaño de bestigors",
+      "name_fr": "Bestigor Herds",
       "id": "bestigor-herds",
       "points": 13,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "notes" = [
+        {
+        "name_en": "0-1 if General is Beastlord or Wargor",
+        "name_de": "0-1 if General is Beastlord or Wargor",
+        "name_es": "0-1 si el Genral es un Caudillo o Beligor",
+        "name_fr": "0-1 if General is Beastlord or Wargor"
+      }
+      ],
       "command": [
         {
           "name_en": "Gouge-horn",
@@ -1000,32 +1008,35 @@
         {
           "name_en": "Half-horn",
           "name_de": "Half-horn",
+          "name_es": "Mediocuerno",
           "points": 7,
           "magic": {
             "types": [],
             "maxPoints": 0
           },
-          "name_es": "Mediocuerno"
+          
         },
         {
           "name_en": "Standard Bearer",
           "name_de": "Standard Bearer",
+          "name_es": "Portaestandarte",
           "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           },
-          "name_es": "Portaestandarte"
+          
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Músico",
           "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
           },
-          "name_es": "Músico"
+          
         }
       ],
       "equipment": [
@@ -1253,16 +1264,24 @@
       }
     },
     {
-      "name_en": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
-      "name_de": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
-      "name_es": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
-      "name_fr": "Minotaur Herd (0-1 if General is Doombull or Gorebull)",
-      "id": "minotaur-herd-(0-1-if-general-is-doombull-or-gorebull)",
+      "name_en": "Minotaur Herd",
+      "name_de": "Minotaur Herd",
+      "name_es": "Minotaur Herd",
+      "name_fr": "Minotaur Herd",
+      "id": "minotaur-herd",
       "points": 47,
       "minimum": 2,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "notes" = [
+        {
+        "name_en": "0-1 if General is Doombull or Gorebull",
+        "name_de": "0-1 if General is Doombull or Gorebull",
+        "name_es": "0-1 if General is Doombull or Gorebull",
+        "name_fr": "0-1 if General is Doombull or Gorebull"
+      }
+      ],
       "command": [
         {
           "name_en": "Bloodkine",
@@ -2037,10 +2056,10 @@
       }
     },
     {
-      "name_en": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_de": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_es": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_fr": "Jabberslythe (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_en": "Jabberslythe",
+      "name_de": "Jabberslythe",
+      "name_es": "Jabberslythe",
+      "name_fr": "Jabberslythe",
       "id": "jabberslythe",
       "points": 195,
       "minimum": 0,
@@ -2048,6 +2067,14 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_de": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_es": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_fr": "0-1 if General is Great Bray-Shaman or Bray-Shaman"
+      }
+      ],
       "equipment": [
         {
           "name_en": "Wicked claws and slithey tongue",
@@ -2084,10 +2111,10 @@
       }
     },
     {
-      "name_en": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_de": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_es": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
-      "name_fr": "Cygor (*0-1 if General is Great Bray-Shaman or Bray-Shaman)",
+      "name_en": "Cygor",
+      "name_de": "Cygor",
+      "name_es": "Cygor",
+      "name_fr": "Cygor",
       "id": "cygor",
       "points": 215,
       "minimum": 0,
@@ -2095,6 +2122,14 @@
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
+      "notes" = [
+        {
+        "name_en": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_de": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_es": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
+        "name_fr": "0-1 if General is Great Bray-Shaman or Bray-Shaman"
+      }
+      ],
       "equipment": [
         {
           "name_en": "Claws (counts as hand weapon), Hurl attack",
@@ -2129,16 +2164,24 @@
       }
     },
     {
-      "name_en": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "name_de": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "name_es": "Ghorgon (0-1 if General is Doombull or Gorebull)",
-      "name_fr": "Ghorgon (0-1 if General is Doombull or Gorebull)",
+      "name_en": "Ghorgon",
+      "name_de": "Ghorgon",
+      "name_es": "Ghorgon",
+      "name_fr": "Ghorgon",
       "id": "ghorgon",
       "points": 245,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "notes" = [
+        {
+        "name_en": "0-1 if General is Doombull or Gorebull",
+        "name_de": "0-1 if General is Doombull or Gorebull",
+        "name_es": "0-1 if General is Doombull or Gorebull",
+        "name_fr": "0-1 if General is Doombull or Gorebull"
+      }
+      ],
       "command": [],
       "equipment": [
         {
