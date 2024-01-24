@@ -261,20 +261,7 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [
-        {
-          "name_en": "Daemonic Locus (BSB)",
-          "name_de": "Daemonic Locus (BSB)",
-          "name_es": "Daemonic Locus (BSB)",
-          "name_fr": "Daemonic Locus (BSB)",
-          "points": 25,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-            "mutuallyExclusive": true,
-            "maxPoints": 0
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hellblade",
@@ -295,7 +282,23 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "mutuallyExclusive": true,
+            "maxPoints": 0
+          }
+        }
+      ],
       "mounts": [
         {
           "name_en": "On foot",
