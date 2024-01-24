@@ -276,7 +276,7 @@ export const Magic = ({ isMobile }) => {
     if (
       unit?.command &&
       unit.command[command] &&
-      unit.command[command]?.magic?.maxPoints
+      unit.command[command]?.magic?.types.length
     ) {
       const selectedItem = (unit.command[command].magic.selected || []).find(
         ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
@@ -346,7 +346,7 @@ export const Magic = ({ isMobile }) => {
     if (
       unit?.command &&
       unit.command[command] &&
-      unit.command[command]?.magic?.maxPoints
+      unit.command[command]?.magic?.types.length
     ) {
       isChecked =
         (unit.command[command].magic.selected || []).find(
@@ -391,7 +391,7 @@ export const Magic = ({ isMobile }) => {
   const hasCommandMagicItems = Boolean(
     unit?.command &&
       unit.command[command] &&
-      unit.command[command]?.magic?.maxPoints
+      unit.command[command]?.magic?.types.length
   );
   const hasMagicItems = Boolean(unit?.items?.length);
 
@@ -400,7 +400,7 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.command[command].magic.selected,
     });
-    hasPointsError = unitMagicPoints > maxMagicPoints;
+    hasPointsError = unitMagicPoints > maxMagicPoints && maxMagicPoints > 0;
   } else if (hasMagicItems) {
     maxMagicPoints = unit.items[group].maxPoints;
     unitMagicPoints = getUnitMagicPoints({

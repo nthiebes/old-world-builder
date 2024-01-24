@@ -25,22 +25,22 @@
           "active": true
         },
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapon, Crossbow",
-          "name_de": "Hand Weapon, Crossbow",
+          "name_en": "Hand weapon, Crossbow",
+          "name_de": "Hand weapon, Crossbow",
           "points": 6,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapon, Handgun",
-          "name_de": "Hand Weapon, Handgun",
+          "name_en": "Hand weapon, Handgun",
+          "name_de": "Hand weapon, Handgun",
           "points": 6,
           "perModel": false,
           "active": false
@@ -48,8 +48,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -102,132 +102,13 @@
           "maxPoints": 125,
           "mutuallyExclusive": false
         }
-      ]
-    },
-    {
-      "name_en": "Anvil of Doom",
-      "name_de": "Anvil of Doom",
-      "id": "anvil-of-doom",
-      "points": 235,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
-      },
-      "equipment": [
-        {
-          "name_en": "Hand Weapons, Shields",
-          "name_de": "Hand Weapons, Shields",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        }
       ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [
-        {
-          "name_en": "Runes",
-          "name_de": "Runes",
-          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-          "selected": [],
-          "maxPoints": 100,
-          "mutuallyExclusive": false
-        }
-      ]
-    },
-    {
-      "name_en": "Runelord",
-      "name_de": "Runelord",
-      "id": "runelord",
-      "points": 120,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
-      },
-      "equipment": [
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        },
-        {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
-          "points": 4,
-          "perModel": false,
-          "active": false
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "points": 0,
-          "perModel": false,
-          "active": true
-        },
-        {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
-          "points": 3,
-          "perModel": false,
-          "active": false
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "points": 2,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Oathstone",
-          "name_de": "Oathstone",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [],
-      "items": [
-        {
-          "name_en": "Runes",
-          "name_de": "Runes",
-          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
-          "selected": [],
-          "maxPoints": 125,
-          "mutuallyExclusive": false
-        }
-      ]
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_de": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_es": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_fr": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn"
+      }
     },
     {
       "name_en": "Thane",
@@ -238,7 +119,17 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -248,22 +139,22 @@
           "active": true
         },
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapon, Crossbow",
-          "name_de": "Hand Weapon, Crossbow",
+          "name_en": "Hand weapon, Crossbow",
+          "name_de": "Hand weapon, Crossbow",
           "points": 6,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapon, Handgun",
-          "name_de": "Hand Weapon, Handgun",
+          "name_en": "Hand weapon, Handgun",
+          "name_de": "Hand weapon, Handgun",
           "points": 6,
           "perModel": false,
           "active": false
@@ -271,8 +162,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -312,8 +203,8 @@
           "active": true
         },
         {
-          "name_en": "Unmounted, Oathstone",
-          "name_de": "Unmounted, Oathstone",
+          "name_en": "Oathstone",
+          "name_de": "Oathstone",
           "points": 15,
           "active": false
         },
@@ -341,7 +232,150 @@
           "maxPoints": 0,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_de": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_es": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
+        "name_fr": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn"
+      }
+    },
+    {
+      "name_en": "Anvil of Doom",
+      "name_de": "Anvil of Doom",
+      "id": "anvil-of-doom",
+      "points": 235,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_de": "Hand weapons, Shields",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 100,
+          "mutuallyExclusive": false
+        }
+      ],
+      "specialRules": {
+        "name_en": "Ancestral Shield, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-3), Resolute, Rune Lore, Skirmishers, Strike the Runes, Unbreakable",
+        "name_de": "Ancestral Shield, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-3), Resolute, Rune Lore, Skirmishers, Strike the Runes, Unbreakable",
+        "name_es": "Ancestral Shield, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-3), Resolute, Rune Lore, Skirmishers, Strike the Runes, Unbreakable",
+        "name_fr": "Ancestral Shield, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-3), Resolute, Rune Lore, Skirmishers, Strike the Runes, Unbreakable"
+      }
+    },
+    {
+      "name_en": "Runelord",
+      "name_de": "Runelord",
+      "id": "runelord",
+      "points": 120,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
+          "points": 4,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "points": 3,
+          "perModel": false,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "points": 2,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Oathstone",
+          "name_de": "Oathstone",
+          "points": 15,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_de": "Runes",
+          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "selected": [],
+          "maxPoints": 125,
+          "mutuallyExclusive": false
+        }
+      ],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_de": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_es": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
+        "name_fr": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn"
+      }
     },
     {
       "name_en": "Runesmith",
@@ -378,8 +412,8 @@
           "active": true
         },
         {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
           "points": 3,
           "perModel": false,
           "active": false
@@ -536,15 +570,15 @@
           "active": true
         },
         {
-          "name_en": "Hand Weapon, Pistol",
-          "name_de": "Hand Weapon, Pistol",
+          "name_en": "Hand weapon, Pistol",
+          "name_de": "Hand weapon, Pistol",
           "points": 6,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapon, Brace of Pistols",
-          "name_de": "Hand Weapon, Brace of Pistols",
+          "name_en": "Hand weapon, Brace of Pistols",
+          "name_de": "Hand weapon, Brace of Pistols",
           "points": 10,
           "perModel": false,
           "active": false
@@ -741,8 +775,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Crossbows",
-          "name_de": "Hand Weapons, Crossbows",
+          "name_en": "Hand weapons, Crossbows",
+          "name_de": "Hand weapons, Crossbows",
           "points": 0,
           "perModel": true,
           "active": true
@@ -835,8 +869,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Handguns",
-          "name_de": "Hand Weapons, Handguns",
+          "name_en": "Hand weapons, Handguns",
+          "name_de": "Hand weapons, Handguns",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1026,22 +1060,22 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Crossbows",
-          "name_de": "Hand Weapons, Crossbows",
+          "name_en": "Hand weapons, Crossbows",
+          "name_de": "Hand weapons, Crossbows",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand Weapons, Throwing Axes",
-          "name_de": "Hand Weapons, Throwing Axes",
+          "name_en": "Hand weapons, Throwing Axes",
+          "name_de": "Hand weapons, Throwing Axes",
           "points": 0,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Hand Weapons, Crossbows, Throwing Axes",
-          "name_de": "Hand Weapons, Crossbows, Throwing Axes",
+          "name_en": "Hand weapons, Crossbows, Throwing Axes",
+          "name_de": "Hand weapons, Crossbows, Throwing Axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1221,8 +1255,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Shields",
-          "name_de": "Hand Weapons, Shields",
+          "name_en": "Hand weapons, Shields",
+          "name_de": "Hand weapons, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1230,8 +1264,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1306,8 +1340,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Great Weapons",
-          "name_de": "Hand Weapons, Great Weapons",
+          "name_en": "Hand weapons, Great Weapons",
+          "name_de": "Hand weapons, Great Weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1467,8 +1501,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Great Hammers",
-          "name_de": "Hand Weapons, Great Hammers",
+          "name_en": "Hand weapons, Great Hammers",
+          "name_de": "Hand weapons, Great Hammers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1524,22 +1558,22 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Steam Guns",
-          "name_de": "Hand Weapons, Steam Guns",
+          "name_en": "Hand weapons, Steam Guns",
+          "name_de": "Hand weapons, Steam Guns",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand Weapons, Brimstone Guns",
-          "name_de": "Hand Weapons, Brimstone Guns",
+          "name_en": "Hand weapons, Brimstone Guns",
+          "name_de": "Hand weapons, Brimstone Guns",
           "points": 5,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Hand Weapons, Clatterguns",
-          "name_de": "Hand Weapons, Clatterguns",
+          "name_en": "Hand weapons, Clatterguns",
+          "name_de": "Hand weapons, Clatterguns",
           "points": 10,
           "perModel": true,
           "active": false
@@ -1547,8 +1581,8 @@
       ],
       "armor": [
         {
-          "name_en": "Armoured Fuselage (Full Plate Armour)",
-          "name_de": "Armoured Fuselage (Full Plate Armour)",
+          "name_en": "Armoured Fuselage (Full plate armour)",
+          "name_de": "Armoured Fuselage (Full plate armour)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1573,8 +1607,8 @@
       },
       "equipment": [
         {
-          "name_en": "Bolt Thrower, Hand Weapons",
-          "name_de": "Bolt Thrower, Hand Weapons",
+          "name_en": "Bolt Thrower, Hand weapons",
+          "name_de": "Bolt Thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1618,8 +1652,8 @@
       },
       "equipment": [
         {
-          "name_en": "Stone Thrower, Hand Weapons",
-          "name_de": "Stone Thrower, Hand Weapons",
+          "name_en": "Stone Thrower, Hand weapons",
+          "name_de": "Stone Thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1663,8 +1697,8 @@
       },
       "equipment": [
         {
-          "name_en": "Cannon, Hand Weapons",
-          "name_de": "Cannon, Hand Weapons",
+          "name_en": "Cannon, Hand weapons",
+          "name_de": "Cannon, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1750,22 +1784,22 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Crossbows",
-          "name_de": "Hand Weapons, Crossbows",
+          "name_en": "Hand weapons, Crossbows",
+          "name_de": "Hand weapons, Crossbows",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand Weapons, Throwing Axes",
-          "name_de": "Hand Weapons, Throwing Axes",
+          "name_en": "Hand weapons, Throwing Axes",
+          "name_de": "Hand weapons, Throwing Axes",
           "points": 0,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Hand Weapons, Crossbows, Throwing Axes",
-          "name_de": "Hand Weapons, Crossbows, Throwing Axes",
+          "name_en": "Hand weapons, Crossbows, Throwing Axes",
+          "name_de": "Hand weapons, Crossbows, Throwing Axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1858,8 +1892,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Drakeguns",
-          "name_de": "Hand Weapons, Drakeguns",
+          "name_en": "Hand weapons, Drakeguns",
+          "name_de": "Hand weapons, Drakeguns",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1867,8 +1901,8 @@
       ],
       "armor": [
         {
-          "name_en": "Full Plate Armour",
-          "name_de": "Full Plate Armour",
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1906,22 +1940,22 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand Weapons, Steam Gun",
-          "name_de": "Hand Weapons, Steam Gun",
+          "name_en": "Hand weapons, Steam Gun",
+          "name_de": "Hand weapons, Steam Gun",
           "points": 0,
           "perModel": false,
           "active": true
         },
         {
-          "name_en": "Hand Weapons, Brimstone Gun",
-          "name_de": "Hand Weapons, Brimstone Gun",
+          "name_en": "Hand weapons, Brimstone Gun",
+          "name_de": "Hand weapons, Brimstone Gun",
           "points": 5,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hand Weapons, Clattergun",
-          "name_de": "Hand Weapons, Clattergun",
+          "name_en": "Hand weapons, Clattergun",
+          "name_de": "Hand weapons, Clattergun",
           "points": 10,
           "perModel": false,
           "active": false
@@ -1929,8 +1963,8 @@
       ],
       "armor": [
         {
-          "name_en": "Armoured Fuselage (Full Plate Armour)",
-          "name_de": "Armoured Fuselage (Full Plate Armour)",
+          "name_en": "Armoured Fuselage (Full plate armour)",
+          "name_de": "Armoured Fuselage (Full plate armour)",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1955,8 +1989,8 @@
       },
       "equipment": [
         {
-          "name_en": "Organ Gun, Hand Weapons",
-          "name_de": "Organ Gun, Hand Weapons",
+          "name_en": "Organ Gun, Hand weapons",
+          "name_de": "Organ Gun, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1990,8 +2024,8 @@
       },
       "equipment": [
         {
-          "name_en": "Fire Thrower, Hand Weapons",
-          "name_de": "Fire Thrower, Hand Weapons",
+          "name_en": "Fire Thrower, Hand weapons",
+          "name_de": "Fire Thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true

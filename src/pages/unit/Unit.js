@@ -413,9 +413,11 @@ export const Unit = ({ isMobile }) => {
         ) : null}
         {unit.command && unit.command.length > 0 && (
           <>
-            <h2 className="unit__subline">
-              <FormattedMessage id="unit.command" />
-            </h2>
+            {type !== "characters" && (
+              <h2 className="unit__subline">
+                <FormattedMessage id="unit.command" />
+              </h2>
+            )}
             {unit.command.map(
               (
                 {
@@ -435,7 +437,12 @@ export const Unit = ({ isMobile }) => {
 
                 return (
                   <Fragment key={id}>
-                    <div className="checkbox">
+                    <div
+                      className={classNames(
+                        "checkbox",
+                        type === "characters" && "unit__bsb"
+                      )}
+                    >
                       <input
                         type="checkbox"
                         id={`command-${id}`}
@@ -466,12 +473,12 @@ export const Unit = ({ isMobile }) => {
                         </i>
                       </label>
                     </div>
-                    {magic?.maxPoints && active ? (
+                    {magic?.types && magic.types.length && active ? (
                       <>
                         <hr className="unit__hr" />
                         <List
                           to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                          className="editor__list unit__link"
+                          className="editor__list unit__link unit__command-list"
                           active={location.pathname.includes(`magic/${index}`)}
                         >
                           <div className="editor__list-inner">
@@ -489,22 +496,26 @@ export const Unit = ({ isMobile }) => {
                                 className={classNames(
                                   commandMagicPoints >
                                     unit.command[index].magic.maxPoints &&
+                                    unit.command[index].magic.maxPoints > 0 &&
                                     "editor__error"
                                 )}
                               >
                                 {commandMagicPoints}
                               </span>{" "}
-                              / {unit.command[index].magic.maxPoints}{" "}
+                              {unit.command[index].magic.maxPoints > 0 && (
+                                <>{` / ${unit.command[index].magic.maxPoints}`}</>
+                              )}{" "}
                               <FormattedMessage id="app.points" />
                             </i>
                             {commandMagicPoints >
-                              unit.command[index].magic.maxPoints && (
-                              <Icon
-                                symbol="error"
-                                color="red"
-                                className="unit__magic-icon"
-                              />
-                            )}
+                              unit.command[index].magic.maxPoints &&
+                              unit.command[index].magic.maxPoints > 0 && (
+                                <Icon
+                                  symbol="error"
+                                  color="red"
+                                  className="unit__magic-icon"
+                                />
+                              )}
                           </div>
                           {magic?.selected && (
                             <p>
@@ -994,7 +1005,9 @@ export const Unit = ({ isMobile }) => {
             ))}
           </>
         ) : null}
-        {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
+        {unit.items && unit.items.length ? (
+          <hr className="unit__hr unit__hr--space-top" />
+        ) : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
               const itemsPoints = getUnitMagicPoints({

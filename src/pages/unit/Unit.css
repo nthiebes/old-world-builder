@@ -5,6 +5,7 @@
 @media (min-width: 1280px) {
   .unit__subline:first-of-type {
     padding-top: 0;
+    margin-top: 1rem;
   }
 }
 
@@ -33,7 +34,7 @@
 }
 
 .unit__notes {
-  margin-top: 1rem;
+  margin-top: calc(1rem + 3px);
   margin-bottom: 0.5rem;
   font-style: italic;
   display: flex;
@@ -57,6 +58,10 @@
 
 .unit__link .list__inner label {
   cursor: pointer;
+}
+
+.unit__command-list {
+  margin-bottom: 0.5rem;
 }
 
 .unit__special-option {
@@ -139,4 +144,14 @@
 .unit__hr {
   margin: 0 -1rem;
   border: 0 none;
+}
+
+.unit__hr--space-top {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1279px) {
+  .unit__bsb {
+    margin-top: 1rem;
+  }
 }
