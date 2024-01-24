@@ -127,6 +127,7 @@ export const Datasets = ({ isMobile }) => {
             id: "footer.datasets",
           })}`}
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/datasets" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation />

@@ -37,6 +37,7 @@ export const About = () => {
         <title>
           {`Old World Builder | ${intl.formatMessage({ id: "footer.about" })}`}
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/about" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation />

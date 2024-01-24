@@ -75,6 +75,7 @@ export const Home = ({ isMobile }) => {
           Old World Builder - Army builder for Warhammer Fantasy and Warhammer:
           The Old World
         </title>
+        <link rel="canonical" href="https://old-world-builder.com/" />
       </Helmet>
 
       {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
