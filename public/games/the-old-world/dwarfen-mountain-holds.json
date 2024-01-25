@@ -1337,8 +1337,8 @@
       "detachment": false,
       "command": [
         {
-          "name_en": "Ironbeard",
-          "name_de": "Ironbeard",
+          "name_en": "Ironbeard (champion)",
+          "name_de": "Ironbeard (champion)",
           "points": 7,
           "magic": {
             "types": ["weapon-runes"],
@@ -1437,8 +1437,8 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Prospector",
-          "name_de": "Prospector",
+          "name_en": "Prospector (champion)",
+          "name_de": "Prospector (champion)",
           "points": 6,
           "magic": {
             "types": [],
@@ -1446,9 +1446,9 @@
           }
         },
         {
-          "name_en": "Prospector with Steam Drill",
-          "name_de": "Prospector with Steam Drill",
-          "points": 26,
+          "name_en": "Steam drill for Prospector",
+          "name_de": "Steam drill for Prospector",
+          "points": 20,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -1475,8 +1475,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Great Weapons",
-          "name_de": "Hand weapons, Great Weapons",
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1502,8 +1502,8 @@
           "perModel": true
         },
         {
-          "name_en": "Open Order",
-          "name_de": "Open Order",
+          "name_en": "Open Order (0-1 unit per 1,000 points)",
+          "name_de": "Open Order (0-1 unit per 1,000 points)",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1511,8 +1511,8 @@
           "perModel": true
         },
         {
-          "name_en": "Veteran",
-          "name_de": "Veteran",
+          "name_en": "Veteran (0-1 unit per 1,000 points)",
+          "name_de": "Veteran (0-1 unit per 1,000 points)",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1520,7 +1520,19 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Ambushers, Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Vanguard",
+        "name_de": "Ambushers, Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Vanguard",
+        "name_es": "Ambushers, Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Vanguard",
+        "name_fr": "Ambushers, Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Vanguard"
+      },
+      "notes": {
+        "name_en": "0-1 unit per 1000 points can have Standard runes",
+        "name_de": "0-1 unit per 1000 points can have Standard runes",
+        "name_es": "0-1 unit per 1000 points can have Standard runes",
+        "name_fr": "0-1 unit per 1000 points can have Standard runes"
+      }
     },
     {
       "name_en": "Slayers",
@@ -1588,7 +1600,13 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Deathblow, “Fight Me!” (Giant Slayer), Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew*, Open Order, Resolute, Slayer, Unbreakable",
+        "name_de": "Deathblow, “Fight Me!” (Giant Slayer), Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew*, Open Order, Resolute, Slayer, Unbreakable",
+        "name_es": "Deathblow, “Fight Me!” (Giant Slayer), Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew*, Open Order, Resolute, Slayer, Unbreakable",
+        "name_fr": "Deathblow, “Fight Me!” (Giant Slayer), Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew*, Open Order, Resolute, Slayer, Unbreakable"
+      }
     },
     {
       "name_en": "Gyrocopters",
@@ -1600,15 +1618,15 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Steam Guns",
-          "name_de": "Hand weapons, Steam Guns",
+          "name_en": "Hand weapons, Steam guns",
+          "name_de": "Hand weapons, Steam guns",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Hand weapons, Brimstone Guns",
-          "name_de": "Hand weapons, Brimstone Guns",
+          "name_en": "Hand weapons, Brimstone guns",
+          "name_de": "Hand weapons, Brimstone guns",
           "points": 5,
           "perModel": true,
           "active": false
@@ -1631,7 +1649,13 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Skirmishers, Swiftstride, Vanguard",
+        "name_de": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Skirmishers, Swiftstride, Vanguard",
+        "name_es": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Skirmishers, Swiftstride, Vanguard",
+        "name_fr": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Skirmishers, Swiftstride, Vanguard"
+      }
     },
     {
       "name_en": "Bolt Thrower",
@@ -1649,8 +1673,8 @@
       },
       "equipment": [
         {
-          "name_en": "Bolt Thrower, Hand weapons",
-          "name_de": "Bolt Thrower, Hand weapons",
+          "name_en": "Bolt thrower, Hand weapons",
+          "name_de": "Bolt thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1676,7 +1700,13 @@
           "maxPoints": 100,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_de": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_fr": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn"
+      }
     },
     {
       "name_en": "Grudge Thrower",
@@ -1694,8 +1724,8 @@
       },
       "equipment": [
         {
-          "name_en": "Stone Thrower, Hand weapons",
-          "name_de": "Stone Thrower, Hand weapons",
+          "name_en": "Stone thrower, Hand weapons",
+          "name_de": "Stone thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1721,7 +1751,13 @@
           "maxPoints": 100,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_de": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_fr": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn"
+      }
     },
     {
       "name_en": "Cannon",
@@ -1766,7 +1802,13 @@
           "maxPoints": 100,
           "mutuallyExclusive": false
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_de": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_fr": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn"
+      }
     }
   ],
   "rare": [
@@ -1895,30 +1937,39 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Ironwarden",
-          "name_de": "Ironwarden",
+          "name_en": "Ironwarden (champion)",
+          "name_de": "Ironwarden (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
-          "name_en": "Ironwarden with Brace of drakefire pistols",
-          "name_de": "Ironwarden with Brace of drakefire pistols",
-          "points": 11,
+          "name_en": "Brace of drakefire pistols for Ironwarden",
+          "name_de": "Brace of drakefire pistols for Ironwarden",
+          "points": 5,
           "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
-          "name_en": "Ironwarden with Trollhammer Torpedo",
-          "name_de": "Ironwarden with Trollhammer Torpedo",
-          "points": 21,
+          "name_en": "Trollhammer torpedo for Ironwarden",
+          "name_de": "Trollhammer torpedo for Ironwarden",
+          "points": 15,
           "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Cinderblast bombs for Ironwarden",
+          "name_de": "Cinderblast bombs for Ironwarden",
+          "points": 15,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
@@ -1960,15 +2011,6 @@
       ],
       "options": [
         {
-          "name_en": "Ironwarden - Cinderblast Bombs",
-          "name_de": "Ironwarden - Cinderblast Bombs",
-          "points": 15,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": false
-        },
-        {
           "name_en": "Drilled (0-1 unit per 1000 points)",
           "name_de": "Drilled (0-1 unit per 1000 points)",
           "points": 1,
@@ -1978,7 +2020,19 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Runes of Warding, Stubborn",
+        "name_de": "Close Order, Detachment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Runes of Warding, Stubborn",
+        "name_es": "Close Order, Detachment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Runes of Warding, Stubborn",
+        "name_fr": "Close Order, Detachment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Runes of Warding, Stubborn"
+      },
+      "notes": {
+        "name_en": "0-1 unit per 1000 points can have Standard runes",
+        "name_de": "0-1 unit per 1000 points can have Standard runes",
+        "name_es": "0-1 unit per 1000 points can have Standard runes",
+        "name_fr": "0-1 unit per 1000 points can have Standard runes"
+      }
     },
     {
       "name_en": "Gyrobomber",
@@ -1990,15 +2044,15 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Steam Gun",
-          "name_de": "Hand weapons, Steam Gun",
+          "name_en": "Hand weapons, Steam gun",
+          "name_de": "Hand weapons, Steam gun",
           "points": 0,
           "perModel": false,
           "active": true
         },
         {
-          "name_en": "Hand weapons, Brimstone Gun",
-          "name_de": "Hand weapons, Brimstone Gun",
+          "name_en": "Hand weapons, Brimstone gun",
+          "name_de": "Hand weapons, Brimstone gun",
           "points": 5,
           "perModel": false,
           "active": false
@@ -2021,7 +2075,13 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
+        "name_de": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
+        "name_es": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
+        "name_fr": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride"
+      }
     },
     {
       "name_en": "Organ Gun",
@@ -2039,8 +2099,8 @@
       },
       "equipment": [
         {
-          "name_en": "Organ Gun, Hand weapons",
-          "name_de": "Organ Gun, Hand weapons",
+          "name_en": "Organ gun, Hand weapons",
+          "name_de": "Organ gun, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2056,7 +2116,13 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_de": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_fr": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn"
+      }
     },
     {
       "name_en": "Flame Cannon",
@@ -2074,8 +2140,8 @@
       },
       "equipment": [
         {
-          "name_en": "Fire Thrower, Hand weapons",
-          "name_de": "Fire Thrower, Hand weapons",
+          "name_en": "Fire thrower, Hand weapons",
+          "name_de": "Fire thrower, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2091,7 +2157,13 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_de": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
+        "name_fr": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn"
+      }
     }
   ],
   "mercenaries": [],
