@@ -18,7 +18,9 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon"
         }
       ],
       "armor": [
@@ -27,24 +29,30 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Light armour",
+          "name_fr": "Light armour"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 6,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour"
         }
       ],
       "options": [
         {
-          "name_en": "Wings",
-          "name_de": "Wings",
+          "name_en": "Wings (Fly 9)",
+          "name_de": "Wings (Fly 9)",
           "points": 30,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Wings (Fly 9)",
+          "name_fr": "Wings (Fly 9)"
         },
         {
           "name_en": "Mark of Khorne",
@@ -52,7 +60,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne"
         },
         {
           "name_en": "Mark of Nurgle",
@@ -60,7 +70,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle"
         },
         {
           "name_en": "Mark of Slaanesh",
@@ -68,7 +80,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh"
         },
         {
           "name_en": "Mark of Tzeentch",
@@ -76,7 +90,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch"
         },
         {
           "name_en": "Wizard Level 1",
@@ -84,7 +100,9 @@
           "points": 25,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Wizard Level 1",
+          "name_fr": "Wizard Level 1"
         },
         {
           "name_en": "Wizard Level 2",
@@ -92,7 +110,9 @@
           "points": 50,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Wizard Level 2",
+          "name_fr": "Wizard Level 2"
         },
         {
           "name_en": "Wizard Level 3",
@@ -100,7 +120,9 @@
           "points": 75,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Wizard Level 3",
+          "name_fr": "Wizard Level 3"
         },
         {
           "name_en": "Wizard Level 4",
@@ -108,7 +130,9 @@
           "points": 100,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Wizard Level 4",
+          "name_fr": "Wizard Level 4"
         }
       ],
       "mounts": [],
@@ -125,7 +149,9 @@
           ],
           "selected": [],
           "maxPoints": 100,
-          "mutuallyExclusive": false
+          "mutuallyExclusive": false,
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items"
         },
         {
           "name_en": "Gifts of Chaos",
@@ -133,21 +159,23 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos"
         }
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune to Psychology, Lore of Chaos, Mark of Chaos Undivided, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_de": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune to Psychology, Lore of Chaos, Mark of Chaos Undivided, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_es": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune to Psychology, Lore of Chaos, Mark of Chaos Undivided, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_fr": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune to Psychology, Lore of Chaos, Mark of Chaos Undivided, Regeneration (5+), Unbreakable, Unstable, Warp-spawned"
       },
       "notes": {
-        "name_en": "0-1*",
-        "name_de": "0-1*",
-        "name_es": "0-1*",
-        "name_fr": "0-1*"
+        "name_en": "0-1 Chaos Lord or Daemon Prince",
+        "name_de": "0-1 Chaos Lord or Daemon Prince",
+        "name_es": "0-1 Chaos Lord or Daemon Prince",
+        "name_fr": "0-1 Chaos Lord or Daemon Prince"
       }
     },
     {
@@ -168,42 +196,54 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon"
         },
         {
           "name_en": "Flail",
           "name_de": "Flail",
           "points": 3,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Flail",
+          "name_fr": "Flail"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon"
         },
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
           "points": 3,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Halberd",
+          "name_fr": "Halberd"
         },
         {
           "name_en": "Lance",
           "name_de": "Lance",
           "points": 4,
           "perModel": false,
-          "active": false
+          "active": false,
+          "name_es": "Lance",
+          "name_fr": "Lance"
         }
       ],
       "armor": [
@@ -212,7 +252,9 @@
           "name_de": "Full plate armour",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour"
         }
       ],
       "options": [
@@ -222,7 +264,9 @@
           "points": 2,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Shield",
+          "name_fr": "Shield"
         },
         {
           "name_en": "Mark of Khorne",
@@ -230,7 +274,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne"
         },
         {
           "name_en": "Mark of Nurgle",
@@ -238,7 +284,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle"
         },
         {
           "name_en": "Mark of Slaanesh",
@@ -246,7 +294,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh"
         },
         {
           "name_en": "Mark of Tzeentch",
@@ -254,7 +304,9 @@
           "points": 10,
           "stackable": false,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch"
         }
       ],
       "mounts": [
@@ -262,97 +314,129 @@
           "name_en": "On foot",
           "name_de": "On foot",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_es": "On foot",
+          "name_fr": "On foot"
         },
         {
           "name_en": "Chaos Steed",
           "name_de": "Chaos Steed",
           "points": 16,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Steed",
+          "name_fr": "Chaos Steed"
         },
         {
           "name_en": "Daemonic Mount",
           "name_de": "Daemonic Mount",
           "points": 35,
-          "active": false
+          "active": false,
+          "name_es": "Daemonic Mount",
+          "name_fr": "Daemonic Mount"
         },
         {
           "name_en": "Chaos Chariot - Undivided",
           "name_de": "Chaos Chariot - Undivided",
           "points": 110,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Chariot - Undivided",
+          "name_fr": "Chaos Chariot - Undivided"
         },
         {
           "name_en": "Chaos Chariot - Khorne",
           "name_de": "Chaos Chariot - Khorne",
           "points": 120,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Chariot - Khorne",
+          "name_fr": "Chaos Chariot - Khorne"
         },
         {
           "name_en": "Chaos Chariot - Nurgle",
           "name_de": "Chaos Chariot - Nurgle",
           "points": 120,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Chariot - Nurgle",
+          "name_fr": "Chaos Chariot - Nurgle"
         },
         {
           "name_en": "Chaos Chariot - Slaanesh",
           "name_de": "Chaos Chariot - Slaanesh",
           "points": 120,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Chariot - Slaanesh",
+          "name_fr": "Chaos Chariot - Slaanesh"
         },
         {
           "name_en": "Chaos Chariot - Tzeentch",
           "name_de": "Chaos Chariot - Tzeentch",
           "points": 120,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Chariot - Tzeentch",
+          "name_fr": "Chaos Chariot - Tzeentch"
         },
         {
           "name_en": "Gorebeast Chariot - Undivided",
           "name_de": "Gorebeast Chariot - Undivided",
           "points": 135,
-          "active": false
+          "active": false,
+          "name_es": "Gorebeast Chariot - Undivided",
+          "name_fr": "Gorebeast Chariot - Undivided"
         },
         {
           "name_en": "Gorebeast Chariot - Khorne",
           "name_de": "Gorebeast Chariot - Khorne",
           "points": 145,
-          "active": false
+          "active": false,
+          "name_es": "Gorebeast Chariot - Khorne",
+          "name_fr": "Gorebeast Chariot - Khorne"
         },
         {
           "name_en": "Gorebeast Chariot - Nurgle",
           "name_de": "Gorebeast Chariot - Nurgle",
           "points": 145,
-          "active": false
+          "active": false,
+          "name_es": "Gorebeast Chariot - Nurgle",
+          "name_fr": "Gorebeast Chariot - Nurgle"
         },
         {
           "name_en": "Gorebeast Chariot - Slaanesh",
           "name_de": "Gorebeast Chariot - Slaanesh",
           "points": 145,
-          "active": false
+          "active": false,
+          "name_es": "Gorebeast Chariot - Slaanesh",
+          "name_fr": "Gorebeast Chariot - Slaanesh"
         },
         {
           "name_en": "Gorebeast Chariot - Tzeentch",
           "name_de": "Gorebeast Chariot - Tzeentch",
           "points": 145,
-          "active": false
+          "active": false,
+          "name_es": "Gorebeast Chariot - Tzeentch",
+          "name_fr": "Gorebeast Chariot - Tzeentch"
         },
         {
           "name_en": "Manticore",
           "name_de": "Manticore",
           "points": 120,
-          "active": false
+          "active": false,
+          "name_es": "Manticore",
+          "name_fr": "Manticore"
         },
         {
           "name_en": "Manticore with Venomous Tail",
           "name_de": "Manticore with Venomous Tail",
           "points": 135,
-          "active": false
+          "active": false,
+          "name_es": "Manticore with Venomous Tail",
+          "name_fr": "Manticore with Venomous Tail"
         },
         {
           "name_en": "Chaos Dragon",
           "name_de": "Chaos Dragon",
           "points": 285,
-          "active": false
+          "active": false,
+          "name_es": "Chaos Dragon",
+          "name_fr": "Chaos Dragon"
         }
       ],
       "items": [
@@ -362,7 +446,9 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 100,
-          "mutuallyExclusive": false
+          "mutuallyExclusive": false,
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items"
         },
         {
           "name_en": "Gifts of Chaos",
@@ -370,21 +456,23 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos"
         }
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry"
       },
       "notes": {
-        "name_en": "0-1*",
-        "name_de": "0-1*",
-        "name_es": "0-1*",
-        "name_fr": "0-1*"
+        "name_en": "0-1 Chaos Lord or Daemon Prince",
+        "name_de": "0-1 Chaos Lord or Daemon Prince",
+        "name_es": "0-1 Chaos Lord or Daemon Prince",
+        "name_fr": "0-1 Chaos Lord or Daemon Prince"
       }
     },
     {
@@ -403,6 +491,8 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -412,6 +502,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -421,6 +513,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -429,6 +523,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -437,6 +533,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -445,6 +543,8 @@
         {
           "name_en": "Wizard Level 4",
           "name_de": "Wizard Level 4",
+          "name_es": "Wizard Level 4",
+          "name_fr": "Wizard Level 4",
           "points": 30,
           "stackable": false,
           "minimum": 0,
@@ -455,66 +555,88 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Chaos Steed",
           "name_de": "Chaos Steed",
+          "name_es": "Chaos Steed",
+          "name_fr": "Chaos Steed",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Daemonic Mount",
           "name_de": "Daemonic Mount",
+          "name_es": "Daemonic Mount",
+          "name_fr": "Daemonic Mount",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Undivided",
           "name_de": "Chaos Chariot - Undivided",
+          "name_es": "Chaos Chariot - Undivided",
+          "name_fr": "Chaos Chariot - Undivided",
           "points": 110,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Khorne",
           "name_de": "Chaos Chariot - Khorne",
+          "name_es": "Chaos Chariot - Khorne",
+          "name_fr": "Chaos Chariot - Khorne",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Nurgle",
           "name_de": "Chaos Chariot - Nurgle",
+          "name_es": "Chaos Chariot - Nurgle",
+          "name_fr": "Chaos Chariot - Nurgle",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Slaanesh",
           "name_de": "Chaos Chariot - Slaanesh",
+          "name_es": "Chaos Chariot - Slaanesh",
+          "name_fr": "Chaos Chariot - Slaanesh",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Tzeentch",
           "name_de": "Chaos Chariot - Tzeentch",
+          "name_es": "Chaos Chariot - Tzeentch",
+          "name_fr": "Chaos Chariot - Tzeentch",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Manticore",
           "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Manticore with Venomous Tail",
           "name_de": "Manticore with Venomous Tail",
+          "name_es": "Manticore with Venomous Tail",
+          "name_fr": "Manticore with Venomous Tail",
           "points": 135,
           "active": false
         },
         {
           "name_en": "Chaos Dragon",
           "name_de": "Chaos Dragon",
+          "name_es": "Chaos Dragon",
+          "name_fr": "Chaos Dragon",
           "points": 285,
           "active": false
         }
@@ -523,6 +645,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items",
           "types": [
             "weapon",
             "armor",
@@ -537,6 +661,8 @@
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -545,16 +671,16 @@
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided"
       },
       "notes": {
-        "name_en": "0-1** per 1000 points",
-        "name_de": "0-1** per 1000 points",
-        "name_es": "0-1** per 1000 points",
-        "name_fr": "0-1** per 1000 points"
+        "name_en": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_de": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_es": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_fr": "0-1 Exalted Champion or Sorcerer Lord per 1000 points"
       }
     },
     {
@@ -573,6 +699,8 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -580,6 +708,8 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
           "points": 3,
           "perModel": false,
           "active": false
@@ -587,6 +717,8 @@
         {
           "name_en": "Flail",
           "name_de": "Flail",
+          "name_es": "Flail",
+          "name_fr": "Flail",
           "points": 3,
           "perModel": false,
           "active": false
@@ -594,6 +726,8 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -601,6 +735,8 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
           "points": 3,
           "perModel": false,
           "active": false
@@ -608,6 +744,8 @@
         {
           "name_en": "Lance",
           "name_de": "Lance",
+          "name_es": "Lance",
+          "name_fr": "Lance",
           "points": 4,
           "perModel": false,
           "active": false
@@ -617,6 +755,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -626,6 +766,8 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -634,6 +776,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -642,6 +786,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -650,6 +796,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -658,6 +806,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -666,6 +816,8 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -676,78 +828,104 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Chaos Steed",
           "name_de": "Chaos Steed",
+          "name_es": "Chaos Steed",
+          "name_fr": "Chaos Steed",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Daemonic Mount",
           "name_de": "Daemonic Mount",
+          "name_es": "Daemonic Mount",
+          "name_fr": "Daemonic Mount",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Undivided",
           "name_de": "Chaos Chariot - Undivided",
+          "name_es": "Chaos Chariot - Undivided",
+          "name_fr": "Chaos Chariot - Undivided",
           "points": 110,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Khorne",
           "name_de": "Chaos Chariot - Khorne",
+          "name_es": "Chaos Chariot - Khorne",
+          "name_fr": "Chaos Chariot - Khorne",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Nurgle",
           "name_de": "Chaos Chariot - Nurgle",
+          "name_es": "Chaos Chariot - Nurgle",
+          "name_fr": "Chaos Chariot - Nurgle",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Slaanesh",
           "name_de": "Chaos Chariot - Slaanesh",
+          "name_es": "Chaos Chariot - Slaanesh",
+          "name_fr": "Chaos Chariot - Slaanesh",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Tzeentch",
           "name_de": "Chaos Chariot - Tzeentch",
+          "name_es": "Chaos Chariot - Tzeentch",
+          "name_fr": "Chaos Chariot - Tzeentch",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Undivided",
           "name_de": "Gorebeast Chariot - Undivided",
+          "name_es": "Gorebeast Chariot - Undivided",
+          "name_fr": "Gorebeast Chariot - Undivided",
           "points": 135,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Khorne",
           "name_de": "Gorebeast Chariot - Khorne",
+          "name_es": "Gorebeast Chariot - Khorne",
+          "name_fr": "Gorebeast Chariot - Khorne",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Nurgle",
           "name_de": "Gorebeast Chariot - Nurgle",
+          "name_es": "Gorebeast Chariot - Nurgle",
+          "name_fr": "Gorebeast Chariot - Nurgle",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Slaanesh",
           "name_de": "Gorebeast Chariot - Slaanesh",
+          "name_es": "Gorebeast Chariot - Slaanesh",
+          "name_fr": "Gorebeast Chariot - Slaanesh",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Tzeentch",
           "name_de": "Gorebeast Chariot - Tzeentch",
+          "name_es": "Gorebeast Chariot - Tzeentch",
+          "name_fr": "Gorebeast Chariot - Tzeentch",
           "points": 145,
           "active": false
         }
@@ -756,6 +934,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 75,
@@ -764,6 +944,8 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_es": "Magic Standard (BSB)",
+          "name_fr": "Magic Standard (BSB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -772,6 +954,8 @@
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -780,21 +964,23 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry"
       },
       "notes": {
-        "name_en": "0-1** per 1000 points",
-        "name_de": "0-1** per 1000 points",
-        "name_es": "0-1** per 1000 points",
-        "name_fr": "0-1** per 1000 points"
+        "name_en": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_de": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_es": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
+        "name_fr": "0-1 Exalted Champion or Sorcerer Lord per 1000 points"
       }
     },
     {
       "name_en": "Exalted Sorcerer",
       "name_de": "Exalted Sorcerer",
+      "name_es": "Exalted Sorcerer",
+      "name_fr": "Exalted Sorcerer",
       "id": "exalted-sorcerer",
       "points": 90,
       "minimum": 0,
@@ -806,6 +992,8 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -815,6 +1003,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -824,6 +1014,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -832,6 +1024,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -840,6 +1034,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -848,6 +1044,8 @@
         {
           "name_en": "Wizard Level 2",
           "name_de": "Wizard Level 2",
+          "name_es": "Wizard Level 2",
+          "name_fr": "Wizard Level 2",
           "points": 30,
           "stackable": false,
           "minimum": 0,
@@ -858,48 +1056,64 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Chaos Steed",
           "name_de": "Chaos Steed",
+          "name_es": "Chaos Steed",
+          "name_fr": "Chaos Steed",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Daemonic Mount",
           "name_de": "Daemonic Mount",
+          "name_es": "Daemonic Mount",
+          "name_fr": "Daemonic Mount",
           "points": 35,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Undivided",
           "name_de": "Chaos Chariot - Undivided",
+          "name_es": "Chaos Chariot - Undivided",
+          "name_fr": "Chaos Chariot - Undivided",
           "points": 110,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Khorne",
           "name_de": "Chaos Chariot - Khorne",
+          "name_es": "Chaos Chariot - Khorne",
+          "name_fr": "Chaos Chariot - Khorne",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Nurgle",
           "name_de": "Chaos Chariot - Nurgle",
+          "name_es": "Chaos Chariot - Nurgle",
+          "name_fr": "Chaos Chariot - Nurgle",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Slaanesh",
           "name_de": "Chaos Chariot - Slaanesh",
+          "name_es": "Chaos Chariot - Slaanesh",
+          "name_fr": "Chaos Chariot - Slaanesh",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Tzeentch",
           "name_de": "Chaos Chariot - Tzeentch",
+          "name_es": "Chaos Chariot - Tzeentch",
+          "name_fr": "Chaos Chariot - Tzeentch",
           "points": 120,
           "active": false
         }
@@ -908,6 +1122,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items",
           "types": [
             "weapon",
             "armor",
@@ -922,17 +1138,33 @@
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"]
+      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos, Mark of Chaos Undivided"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Aspiring Champion",
       "name_de": "Aspiring Champion",
+      "name_es": "Aspiring Champion",
+      "name_fr": "Aspiring Champion",
       "id": "aspiring-champion",
       "points": 70,
       "minimum": 0,
@@ -944,6 +1176,8 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -951,6 +1185,8 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
           "points": 3,
           "perModel": false,
           "active": false
@@ -958,6 +1194,8 @@
         {
           "name_en": "Flail",
           "name_de": "Flail",
+          "name_es": "Flail",
+          "name_fr": "Flail",
           "points": 3,
           "perModel": false,
           "active": false
@@ -965,6 +1203,8 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -972,6 +1212,8 @@
         {
           "name_en": "Halberd",
           "name_de": "Halberd",
+          "name_es": "Halberd",
+          "name_fr": "Halberd",
           "points": 3,
           "perModel": false,
           "active": false
@@ -979,6 +1221,8 @@
         {
           "name_en": "Lance",
           "name_de": "Lance",
+          "name_es": "Lance",
+          "name_fr": "Lance",
           "points": 4,
           "perModel": false,
           "active": false
@@ -988,6 +1232,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -997,6 +1243,8 @@
         {
           "name_en": "Shield",
           "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Shield",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1005,6 +1253,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -1013,6 +1263,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -1021,6 +1273,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -1029,6 +1283,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -1037,6 +1293,8 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
           "points": 25,
           "stackable": false,
           "minimum": 0,
@@ -1047,72 +1305,96 @@
         {
           "name_en": "On foot",
           "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Chaos Steed",
           "name_de": "Chaos Steed",
+          "name_es": "Chaos Steed",
+          "name_fr": "Chaos Steed",
           "points": 16,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Undivided",
           "name_de": "Chaos Chariot - Undivided",
+          "name_es": "Chaos Chariot - Undivided",
+          "name_fr": "Chaos Chariot - Undivided",
           "points": 110,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Khorne",
           "name_de": "Chaos Chariot - Khorne",
+          "name_es": "Chaos Chariot - Khorne",
+          "name_fr": "Chaos Chariot - Khorne",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Nurgle",
           "name_de": "Chaos Chariot - Nurgle",
+          "name_es": "Chaos Chariot - Nurgle",
+          "name_fr": "Chaos Chariot - Nurgle",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Slaanesh",
           "name_de": "Chaos Chariot - Slaanesh",
+          "name_es": "Chaos Chariot - Slaanesh",
+          "name_fr": "Chaos Chariot - Slaanesh",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Chaos Chariot - Tzeentch",
           "name_de": "Chaos Chariot - Tzeentch",
+          "name_es": "Chaos Chariot - Tzeentch",
+          "name_fr": "Chaos Chariot - Tzeentch",
           "points": 120,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Undivided",
           "name_de": "Gorebeast Chariot - Undivided",
+          "name_es": "Gorebeast Chariot - Undivided",
+          "name_fr": "Gorebeast Chariot - Undivided",
           "points": 135,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Khorne",
           "name_de": "Gorebeast Chariot - Khorne",
+          "name_es": "Gorebeast Chariot - Khorne",
+          "name_fr": "Gorebeast Chariot - Khorne",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Nurgle",
           "name_de": "Gorebeast Chariot - Nurgle",
+          "name_es": "Gorebeast Chariot - Nurgle",
+          "name_fr": "Gorebeast Chariot - Nurgle",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Slaanesh",
           "name_de": "Gorebeast Chariot - Slaanesh",
+          "name_es": "Gorebeast Chariot - Slaanesh",
+          "name_fr": "Gorebeast Chariot - Slaanesh",
           "points": 145,
           "active": false
         },
         {
           "name_en": "Gorebeast Chariot - Tzeentch",
           "name_de": "Gorebeast Chariot - Tzeentch",
+          "name_es": "Gorebeast Chariot - Tzeentch",
+          "name_fr": "Gorebeast Chariot - Tzeentch",
           "points": 145,
           "active": false
         }
@@ -1121,6 +1403,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50,
@@ -1129,6 +1413,8 @@
         {
           "name_en": "Magic Standard (BSB)",
           "name_de": "Magic Standard (BSB)",
+          "name_es": "Magic Standard (BSB)",
+          "name_fr": "Magic Standard (BSB)",
           "types": ["banner"],
           "selected": [],
           "maxPoints": 0,
@@ -1137,26 +1423,47 @@
         {
           "name_en": "Gifts of Chaos",
           "name_de": "Gifts of Chaos",
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Gifts of Chaos",
           "types": ["gift-of-chaos"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "core": [
     {
       "name_en": "Chaos Warriors",
       "name_de": "Chaos Warriors",
+      "name_es": "Chaos Warriors",
+      "name_fr": "Chaos Warriors",
       "id": "chaos-warriors",
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Champion",
           "name_de": "Champion",
+          "name_es": "Champion",
+          "name_fr": "Champion",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1166,6 +1473,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1175,6 +1484,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 6,
           "magic": {
             "types": [],
@@ -1186,6 +1497,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1193,6 +1506,8 @@
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1200,6 +1515,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1207,6 +1524,8 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Halberds",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1216,6 +1535,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1225,6 +1546,8 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1234,6 +1557,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1243,6 +1568,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1252,6 +1579,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1261,6 +1590,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1268,19 +1599,39 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ensorcelled Weapons, Mark of Chaos Undivided",
+        "name_de": "Close Order, Ensorcelled Weapons, Mark of Chaos Undivided",
+        "name_es": "Close Order, Ensorcelled Weapons, Mark of Chaos Undivided",
+        "name_fr": "Close Order, Ensorcelled Weapons, Mark of Chaos Undivided"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Knights",
       "name_de": "Chaos Knights",
+      "name_es": "Chaos Knights",
+      "name_fr": "Chaos Knights",
       "id": "chaos-knights",
       "points": 27,
       "minimum": 4,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Champion",
           "name_de": "Champion",
+          "name_es": "Champion",
+          "name_fr": "Champion",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1290,6 +1641,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1299,6 +1652,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 6,
           "magic": {
             "types": [],
@@ -1310,6 +1665,8 @@
         {
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
+          "name_es": "Hand weapons, Shields",
+          "name_fr": "Hand weapons, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1317,6 +1674,8 @@
         {
           "name_en": "Lances, Shields",
           "name_de": "Lances, Shields",
+          "name_es": "Lances, Shields",
+          "name_fr": "Lances, Shields",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1326,6 +1685,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1335,6 +1696,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1344,6 +1707,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1353,6 +1718,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1362,6 +1729,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1369,19 +1738,39 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Swiftstride",
+        "name_de": "Close Order, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Swiftstride",
+        "name_es": "Close Order, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Swiftstride",
+        "name_fr": "Close Order, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Marauders",
       "name_de": "Chaos Marauders",
+      "name_es": "Chaos Marauders",
+      "name_fr": "Chaos Marauders",
       "id": "chaos-marauders",
       "points": 6,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Marauder Chieftain",
           "name_de": "Marauder Chieftain",
+          "name_es": "Marauder Chieftain",
+          "name_fr": "Marauder Chieftain",
           "points": 7,
           "magic": {
             "types": [],
@@ -1391,6 +1780,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -1400,6 +1791,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 5,
           "magic": {
             "types": [],
@@ -1411,6 +1804,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1418,6 +1813,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1425,6 +1822,8 @@
         {
           "name_en": "Flails",
           "name_de": "Flails",
+          "name_es": "Flails",
+          "name_fr": "Flails",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1434,6 +1833,8 @@
         {
           "name_en": "Unarmoured",
           "name_de": "Unarmoured",
+          "name_es": "Unarmoured",
+          "name_fr": "Unarmoured",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1441,6 +1842,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1450,6 +1853,8 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1459,6 +1864,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1468,6 +1875,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1477,6 +1886,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1486,6 +1897,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1495,6 +1908,8 @@
         {
           "name_en": "Skirmishers (0-1* unit in your army)",
           "name_de": "Skirmishers (0-1* unit in your army)",
+          "name_es": "Skirmishers (0-1* unit in your army)",
+          "name_fr": "Skirmishers (0-1* unit in your army)",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1504,6 +1919,8 @@
         {
           "name_en": "Open Order (0-1* unit in your army)",
           "name_de": "Open Order (0-1* unit in your army)",
+          "name_es": "Open Order (0-1* unit in your army)",
+          "name_fr": "Open Order (0-1* unit in your army)",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1511,19 +1928,39 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_de": "Close Order, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_es": "Close Order, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_fr": "Close Order, Mark of Chaos Undivided, Shieldwall, Warband"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Marauder Horsemen",
       "name_de": "Marauder Horsemen",
+      "name_es": "Marauder Horsemen",
+      "name_fr": "Marauder Horsemen",
       "id": "marauder-horsemen",
       "points": 12,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Marauder Horsemaster",
           "name_de": "Marauder Horsemaster",
+          "name_es": "Marauder Horsemaster",
+          "name_fr": "Marauder Horsemaster",
           "points": 7,
           "magic": {
             "types": [],
@@ -1533,6 +1970,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 5,
           "magic": {
             "types": [],
@@ -1542,6 +1981,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 5,
           "magic": {
             "types": [],
@@ -1553,6 +1994,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1560,6 +2003,8 @@
         {
           "name_en": "Hand weapons, Throwing axes",
           "name_de": "Hand weapons, Throwing axes",
+          "name_es": "Hand weapons, Throwing axes",
+          "name_fr": "Hand weapons, Throwing axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1567,6 +2012,8 @@
         {
           "name_en": "Hand weapons, Javelins",
           "name_de": "Hand weapons, Javelins",
+          "name_es": "Hand weapons, Javelins",
+          "name_fr": "Hand weapons, Javelins",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1574,6 +2021,8 @@
         {
           "name_en": "Hand weapons, Throwing Spears",
           "name_de": "Hand weapons, Throwing Spears",
+          "name_es": "Hand weapons, Throwing Spears",
+          "name_fr": "Hand weapons, Throwing Spears",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1581,6 +2030,8 @@
         {
           "name_en": "Hand weapons, Throwing Spears, Throwing axes",
           "name_de": "Hand weapons, Throwing Spears, Throwing axes",
+          "name_es": "Hand weapons, Throwing Spears, Throwing axes",
+          "name_fr": "Hand weapons, Throwing Spears, Throwing axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1588,6 +2039,8 @@
         {
           "name_en": "Hand weapons, Throwing Spears, Javelins",
           "name_de": "Hand weapons, Throwing Spears, Javelins",
+          "name_es": "Hand weapons, Throwing Spears, Javelins",
+          "name_fr": "Hand weapons, Throwing Spears, Javelins",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1595,6 +2048,8 @@
         {
           "name_en": "Cavalry Spears",
           "name_de": "Cavalry Spears",
+          "name_es": "Cavalry Spears",
+          "name_fr": "Cavalry Spears",
           "points": 0,
           "perModel": true,
           "active": false
@@ -1602,6 +2057,8 @@
         {
           "name_en": "Cavalry Spears, Throwing axes",
           "name_de": "Cavalry Spears, Throwing axes",
+          "name_es": "Cavalry Spears, Throwing axes",
+          "name_fr": "Cavalry Spears, Throwing axes",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1609,6 +2066,8 @@
         {
           "name_en": "Cavalry Spears, Javelins",
           "name_de": "Cavalry Spears, Javelins",
+          "name_es": "Cavalry Spears, Javelins",
+          "name_fr": "Cavalry Spears, Javelins",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1616,6 +2075,8 @@
         {
           "name_en": "Flails",
           "name_de": "Flails",
+          "name_es": "Flails",
+          "name_fr": "Flails",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1623,6 +2084,8 @@
         {
           "name_en": "Flails, Throwing axes",
           "name_de": "Flails, Throwing axes",
+          "name_es": "Flails, Throwing axes",
+          "name_fr": "Flails, Throwing axes",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1630,6 +2093,8 @@
         {
           "name_en": "Flails, Javelins",
           "name_de": "Flails, Javelins",
+          "name_es": "Flails, Javelins",
+          "name_fr": "Flails, Javelins",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1639,6 +2104,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1648,6 +2115,8 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1657,6 +2126,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1666,6 +2137,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1675,6 +2148,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1684,6 +2159,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1691,19 +2168,39 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Skirmishers, Swiftstride, Warband",
+        "name_de": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Skirmishers, Swiftstride, Warband",
+        "name_es": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Skirmishers, Swiftstride, Warband",
+        "name_fr": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Skirmishers, Swiftstride, Warband"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Warhounds",
       "name_de": "Chaos Warhounds",
+      "name_es": "Chaos Warhounds",
+      "name_fr": "Chaos Warhounds",
       "id": "chaos-warhounds",
       "points": 6,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Handler with Hand weapon",
           "name_de": "Handler with Hand weapon",
+          "name_es": "Handler with Hand weapon",
+          "name_fr": "Handler with Hand weapon",
           "points": 15,
           "magic": {
             "types": [],
@@ -1713,6 +2210,8 @@
         {
           "name_en": "Handler with Additional Hand weapon",
           "name_de": "Handler with Additional Hand weapon",
+          "name_es": "Handler with Additional Hand weapon",
+          "name_fr": "Handler with Additional Hand weapon",
           "points": 15,
           "magic": {
             "types": [],
@@ -1722,6 +2221,8 @@
         {
           "name_en": "Handler with Whip",
           "name_de": "Handler with Whip",
+          "name_es": "Handler with Whip",
+          "name_fr": "Handler with Whip",
           "points": 15,
           "magic": {
             "types": [],
@@ -1733,6 +2234,8 @@
         {
           "name_en": "Claws and Fangs (Hand weapons)",
           "name_de": "Claws and Fangs (Hand weapons)",
+          "name_es": "Claws and Fangs (Hand weapons)",
+          "name_fr": "Claws and Fangs (Hand weapons)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1743,6 +2246,8 @@
         {
           "name_en": "Armoured Hide (1)",
           "name_de": "Armoured Hide (1)",
+          "name_es": "Armoured Hide (1)",
+          "name_fr": "Armoured Hide (1)",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1752,6 +2257,8 @@
         {
           "name_en": "Poisoned Attacks",
           "name_de": "Poisoned Attacks",
+          "name_es": "Poisoned Attacks",
+          "name_fr": "Poisoned Attacks",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1761,6 +2268,8 @@
         {
           "name_en": "Vanguard",
           "name_de": "Vanguard",
+          "name_es": "Vanguard",
+          "name_fr": "Vanguard",
           "points": 5,
           "stackable": false,
           "minimum": 0,
@@ -1768,20 +2277,40 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Loner, Move through Cover, Open Order, Swiftstride",
+        "name_de": "Loner, Move through Cover, Open Order, Swiftstride",
+        "name_es": "Loner, Move through Cover, Open Order, Swiftstride",
+        "name_fr": "Loner, Move through Cover, Open Order, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Forsaken",
       "name_de": "Forsaken",
+      "name_es": "Forsaken",
+      "name_fr": "Forsaken",
       "id": "forsaken",
       "points": 19,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Mutated Weapons (Hand weapons)",
           "name_de": "Mutated Weapons (Hand weapons)",
+          "name_es": "Mutated Weapons (Hand weapons)",
+          "name_fr": "Mutated Weapons (Hand weapons)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1791,6 +2320,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1800,6 +2331,8 @@
         {
           "name_en": "Forsaken by Khorne",
           "name_de": "Forsaken by Khorne",
+          "name_es": "Forsaken by Khorne",
+          "name_fr": "Forsaken by Khorne",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1809,6 +2342,8 @@
         {
           "name_en": "Forsaken by Nurgle",
           "name_de": "Forsaken by Nurgle",
+          "name_es": "Forsaken by Nurgle",
+          "name_fr": "Forsaken by Nurgle",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1818,6 +2353,8 @@
         {
           "name_en": "Forsaken by Slaanesh",
           "name_de": "Forsaken by Slaanesh",
+          "name_es": "Forsaken by Slaanesh",
+          "name_fr": "Forsaken by Slaanesh",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1827,6 +2364,8 @@
         {
           "name_en": "Forsaken by Tzeentch",
           "name_de": "Forsaken by Tzeentch",
+          "name_es": "Forsaken by Tzeentch",
+          "name_fr": "Forsaken by Tzeentch",
           "points": 0,
           "stackable": false,
           "minimum": 0,
@@ -1834,7 +2373,21 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune to Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
+        "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune to Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune to Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune to Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "special": [
@@ -1853,6 +2406,8 @@
         {
           "name_en": "Champion",
           "name_de": "Champion",
+          "name_es": "Champion",
+          "name_fr": "Champion",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1862,6 +2417,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1871,6 +2428,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 7,
           "magic": {
             "types": [],
@@ -1882,6 +2441,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1889,6 +2450,8 @@
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1896,6 +2459,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1903,6 +2468,8 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Halberds",
           "points": 1,
           "perModel": true,
           "active": false
@@ -1912,6 +2479,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1919,6 +2488,8 @@
         {
           "name_en": "Full plate armour",
           "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1928,6 +2499,8 @@
         {
           "name_en": "Shields",
           "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1937,6 +2510,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1946,6 +2521,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1955,6 +2532,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1964,6 +2543,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -1973,6 +2554,8 @@
         {
           "name_en": "Drilled",
           "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -1984,16 +2567,16 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Mark of Chaos Undivided, Stubborn",
+        "name_de": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Mark of Chaos Undivided, Stubborn",
+        "name_es": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Mark of Chaos Undivided, Stubborn",
+        "name_fr": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Mark of Chaos Undivided, Stubborn"
       },
       "notes": {
-        "name_en": "0-1",
-        "name_de": "0-1",
-        "name_es": "0-1",
-        "name_fr": "0-1"
+        "name_en": "0-1 unit of Chosen Chaos Warriors",
+        "name_de": "0-1 unit of Chosen Chaos Warriors",
+        "name_es": "0-1 unit of Chosen Chaos Warriors",
+        "name_fr": "0-1 unit of Chosen Chaos Warriors"
       }
     },
     {
@@ -2011,6 +2594,8 @@
         {
           "name_en": "Champion",
           "name_de": "Champion",
+          "name_es": "Champion",
+          "name_fr": "Champion",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -2020,6 +2605,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -2029,6 +2616,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 7,
           "magic": {
             "types": [],
@@ -2040,6 +2629,8 @@
         {
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
+          "name_es": "Hand weapons, Shields",
+          "name_fr": "Hand weapons, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2047,6 +2638,8 @@
         {
           "name_en": "Lances, Shields",
           "name_de": "Lances, Shields",
+          "name_es": "Lances, Shields",
+          "name_fr": "Lances, Shields",
           "points": 2,
           "perModel": true,
           "active": false
@@ -2056,6 +2649,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2063,6 +2658,8 @@
         {
           "name_en": "Full plate armour",
           "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2072,6 +2669,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2081,6 +2680,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2090,6 +2691,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2099,6 +2702,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2108,6 +2713,8 @@
         {
           "name_en": "Drilled",
           "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2119,30 +2726,36 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Stubborn, Swiftstride",
+        "name_de": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Stubborn, Swiftstride",
+        "name_es": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Stubborn, Swiftstride",
+        "name_fr": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Mark of Chaos Undivided, Stubborn, Swiftstride"
       },
       "notes": {
-        "name_en": "0-1",
-        "name_de": "0-1",
-        "name_es": "0-1",
-        "name_fr": "0-1"
+        "name_en": "0-1 unit of Chosen Chaos Knights",
+        "name_de": "0-1 unit of Chosen Chaos Knights",
+        "name_es": "0-1 unit of Chosen Chaos Knights",
+        "name_fr": "0-1 unit of Chosen Chaos Knights"
       }
     },
     {
       "name_en": "Chaos Chariot",
       "name_de": "Chaos Chariot",
+      "name_es": "Chaos Chariot",
+      "name_fr": "Chaos Chariot",
       "id": "chaos-chariot",
       "points": 110,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapons, Halberds",
           "name_de": "Hand weapons, Halberds",
+          "name_es": "Hand weapons, Halberds",
+          "name_fr": "Hand weapons, Halberds",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2153,6 +2766,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2162,6 +2777,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2171,6 +2788,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2180,6 +2799,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2187,11 +2808,27 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided",
+        "name_de": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided",
+        "name_es": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided",
+        "name_fr": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Ogres",
       "name_de": "Chaos Ogres",
+      "name_es": "Chaos Ogres",
+      "name_fr": "Chaos Ogres",
       "id": "chaos-ogres",
       "points": 33,
       "minimum": 3,
@@ -2200,6 +2837,8 @@
         {
           "name_en": "Champion",
           "name_de": "Champion",
+          "name_es": "Champion",
+          "name_fr": "Champion",
           "points": 6,
           "magic": {
             "types": [],
@@ -2209,6 +2848,8 @@
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
             "types": [],
@@ -2218,6 +2859,8 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
           "points": 6,
           "magic": {
             "types": [],
@@ -2229,6 +2872,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2236,6 +2881,8 @@
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2243,6 +2890,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2252,6 +2901,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2261,6 +2912,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2270,6 +2923,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2279,6 +2934,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2288,6 +2945,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2300,15 +2959,21 @@
     {
       "name_en": "Chaos Trolls",
       "name_de": "Chaos Trolls",
+      "name_es": "Chaos Trolls",
+      "name_fr": "Chaos Trolls",
       "id": "chaos-trolls",
       "points": 41,
       "minimum": 1,
       "maximum": 9,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2316,6 +2981,8 @@
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2323,6 +2990,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2332,26 +3001,48 @@
         {
           "name_en": "Calloused Hides (Light Armour)",
           "name_de": "Calloused Hides (Light Armour)",
+          "name_es": "Calloused Hides (Light Armour)",
+          "name_fr": "Calloused Hides (Light Armour)",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_fr": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Spawn",
       "name_de": "Chaos Spawn",
+      "name_es": "Chaos Spawn",
+      "name_fr": "Chaos Spawn",
       "id": "chaos-spawn",
       "points": 50,
       "minimum": 1,
       "maximum": 4,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Flailing Appendages (Hand weapons)",
           "name_de": "Flailing Appendages (Hand weapons)",
+          "name_es": "Flailing Appendages (Hand weapons)",
+          "name_fr": "Flailing Appendages (Hand weapons)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2361,6 +3052,8 @@
         {
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
+          "name_es": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Heavy Armour)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2370,6 +3063,8 @@
         {
           "name_en": "Spawn of Khorne",
           "name_de": "Spawn of Khorne",
+          "name_es": "Spawn of Khorne",
+          "name_fr": "Spawn of Khorne",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2379,6 +3074,8 @@
         {
           "name_en": "Spawn of Nurgle",
           "name_de": "Spawn of Nurgle",
+          "name_es": "Spawn of Nurgle",
+          "name_fr": "Spawn of Nurgle",
           "points": 2,
           "stackable": false,
           "minimum": 0,
@@ -2388,6 +3085,8 @@
         {
           "name_en": "Spawn of Slaanesh",
           "name_de": "Spawn of Slaanesh",
+          "name_es": "Spawn of Slaanesh",
+          "name_fr": "Spawn of Slaanesh",
           "points": 3,
           "stackable": false,
           "minimum": 0,
@@ -2397,6 +3096,8 @@
         {
           "name_en": "Spawn of Tzeentch",
           "name_de": "Spawn of Tzeentch",
+          "name_es": "Spawn of Tzeentch",
+          "name_fr": "Spawn of Tzeentch",
           "points": 1,
           "stackable": false,
           "minimum": 0,
@@ -2404,19 +3105,39 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Fear, Immune to Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
+        "name_de": "Armour Bane (2), Fear, Immune to Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
+        "name_es": "Armour Bane (2), Fear, Immune to Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
+        "name_fr": "Armour Bane (2), Fear, Immune to Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Dragon Ogres",
       "name_de": "Dragon Ogres",
+      "name_es": "Dragon Ogres",
+      "name_fr": "Dragon Ogres",
       "id": "dragon-ogres",
       "points": 56,
       "minimum": 1,
       "maximum": 9,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Shartak",
           "name_de": "Shartak",
+          "name_es": "Shartak",
+          "name_fr": "Shartak",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -2428,6 +3149,8 @@
         {
           "name_en": "Hand weapons",
           "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2435,6 +3158,8 @@
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2442,6 +3167,8 @@
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Great weapons",
           "points": 4,
           "perModel": true,
           "active": false
@@ -2449,6 +3176,8 @@
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Halberds",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2458,6 +3187,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2465,6 +3196,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 3,
           "perModel": true,
           "active": false
@@ -2476,25 +3209,46 @@
         {
           "name_en": "Shartak's Chaos Mutations",
           "name_de": "Shartak's Chaos Mutations",
+          "name_es": "Shartak's Chaos Mutations",
+          "name_fr": "Shartak's Chaos Mutations",
           "types": ["chaos-mutation"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 25
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune to Psychology, Stomp Attacks (2), The Quickening Storm",
+        "name_de": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune to Psychology, Stomp Attacks (2), The Quickening Storm",
+        "name_es": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune to Psychology, Stomp Attacks (2), The Quickening Storm",
+        "name_fr": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune to Psychology, Stomp Attacks (2), The Quickening Storm"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chimera",
       "name_de": "Chimera",
+      "name_es": "Chimera",
+      "name_fr": "Chimera",
       "id": "chimera",
       "points": 180,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Claws and Fangs (Hand weapon)",
           "name_de": "Claws and Fangs (Hand weapon)",
+          "name_es": "Claws and Fangs (Hand weapon)",
+          "name_fr": "Claws and Fangs (Hand weapon)",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2504,6 +3258,8 @@
         {
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
+          "name_es": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Heavy Armour)",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2513,6 +3269,8 @@
         {
           "name_en": "Flaming Breath",
           "name_de": "Flaming Breath",
+          "name_es": "Flaming Breath",
+          "name_fr": "Flaming Breath",
           "points": 20,
           "stackable": false,
           "minimum": 0,
@@ -2522,6 +3280,8 @@
         {
           "name_en": "Fiend Tail",
           "name_de": "Fiend Tail",
+          "name_es": "Fiend Tail",
+          "name_fr": "Fiend Tail",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2531,6 +3291,8 @@
         {
           "name_en": "Regeneration (5+)",
           "name_de": "Regeneration (5+)",
+          "name_es": "Regeneration (5+)",
+          "name_fr": "Regeneration (5+)",
           "points": 15,
           "stackable": false,
           "minimum": 0,
@@ -2540,6 +3302,8 @@
         {
           "name_en": "Poisoned Attacks",
           "name_de": "Poisoned Attacks",
+          "name_es": "Poisoned Attacks",
+          "name_fr": "Poisoned Attacks",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2547,22 +3311,42 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2, claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
+        "name_de": "Armour Bane (2, claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
+        "name_es": "Armour Bane (2, claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
+        "name_fr": "Armour Bane (2, claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "rare": [
     {
       "name_en": "Gorebeast Chariot",
       "name_de": "Gorebeast Chariot",
+      "name_es": "Gorebeast Chariot",
+      "name_fr": "Gorebeast Chariot",
       "id": "gorebeast-chariot",
       "points": 135,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapons, Halberds",
           "name_de": "Hand weapons, Halberds",
+          "name_es": "Hand weapons, Halberds",
+          "name_fr": "Hand weapons, Halberds",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2573,6 +3357,8 @@
         {
           "name_en": "Mark of Khorne",
           "name_de": "Mark of Khorne",
+          "name_es": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2582,6 +3368,8 @@
         {
           "name_en": "Mark of Nurgle",
           "name_de": "Mark of Nurgle",
+          "name_es": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2591,6 +3379,8 @@
         {
           "name_en": "Mark of Slaanesh",
           "name_de": "Mark of Slaanesh",
+          "name_es": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2600,6 +3390,8 @@
         {
           "name_en": "Mark of Tzeentch",
           "name_de": "Mark of Tzeentch",
+          "name_es": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
           "points": 10,
           "stackable": false,
           "minimum": 0,
@@ -2607,7 +3399,21 @@
           "perModel": false
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1, Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only), Mark of Chaos Undivided",
+        "name_de": "Armour Bane (1, Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only), Mark of Chaos Undivided",
+        "name_es": "Armour Bane (1, Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only), Mark of Chaos Undivided",
+        "name_fr": "Armour Bane (1, Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only), Mark of Chaos Undivided"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Chaos Giant",
@@ -2625,6 +3431,8 @@
         {
           "name_en": "Giant's Club",
           "name_de": "Giant's Club",
+          "name_es": "Giant's Club",
+          "name_fr": "Giant's Club",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2634,6 +3442,8 @@
         {
           "name_en": "Calloused Hide (Light Armour)",
           "name_de": "Calloused Hide (Light Armour)",
+          "name_es": "Calloused Hide (Light Armour)",
+          "name_fr": "Calloused Hide (Light Armour)",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2641,6 +3451,8 @@
         {
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
+          "name_es": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Heavy Armour)",
           "points": 10,
           "perModel": false,
           "active": false
@@ -2650,6 +3462,8 @@
         {
           "name_en": "Regeneration (6+)",
           "name_de": "Regeneration (6+)",
+          "name_es": "Regeneration (6+)",
+          "name_fr": "Regeneration (6+)",
           "points": 20,
           "stackable": false,
           "minimum": 0,
@@ -2661,16 +3475,16 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_es": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_fr": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
+        "name_en": "0-1 Chaos Giant per 1000 points",
+        "name_de": "0-1 Chaos Giant per 1000 points",
+        "name_es": "0-1 Chaos Giant per 1000 points",
+        "name_fr": "0-1 Chaos Giant per 1000 points"
       }
     },
     {
@@ -2689,6 +3503,8 @@
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2696,6 +3512,8 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
           "points": 3,
           "perModel": false,
           "active": false
@@ -2703,6 +3521,8 @@
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Great weapon",
           "points": 4,
           "perModel": false,
           "active": false
@@ -2712,6 +3532,8 @@
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2719,6 +3541,8 @@
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
           "points": 6,
           "perModel": false,
           "active": false
@@ -2730,6 +3554,8 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Magic Items",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50,
@@ -2738,6 +3564,8 @@
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
+          "name_es": "Chaos Mutations",
+          "name_fr": "Chaos Mutations",
           "types": ["chaos-mutation"],
           "selected": [],
           "mutuallyExclusive": false,
@@ -2746,16 +3574,16 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
+        "name_de": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
+        "name_es": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
+        "name_fr": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm"
       },
       "notes": {
-        "name_en": "0-1 per unit of Dragon Ogres",
-        "name_de": "0-1 per unit of Dragon Ogres",
-        "name_es": "0-1 per unit of Dragon Ogres",
-        "name_fr": "0-1 per unit of Dragon Ogres"
+        "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+        "name_de": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+        "name_es": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+        "name_fr": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres"
       }
     },
     {
@@ -2774,6 +3602,8 @@
         {
           "name_en": "Doomfire, Hand weapons",
           "name_de": "Doomfire, Hand weapons",
+          "name_es": "Doomfire, Hand weapons",
+          "name_fr": "Doomfire, Hand weapons",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2785,16 +3615,16 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
+        "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
+        "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
+        "name_fr": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
+        "name_en": "0-1 Hellcannon per 1000 points",
+        "name_de": "0-1 Hellcannon per 1000 points",
+        "name_es": "0-1 Hellcannon per 1000 points",
+        "name_fr": "0-1 Hellcannon per 1000 points"
       }
     }
   ],
