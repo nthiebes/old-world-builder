@@ -261,7 +261,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hellblade",
@@ -304,16 +316,6 @@
         }
       ],
       "items": [
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "points": 25,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-            "mutuallyExclusive": true,
-            "maxPoints": 999
-          }
-        },
         {
           "name_en": "Daemonic Gifts",
           "name_de": "Daemonic Gifts",
@@ -467,7 +469,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Plaguesword",
@@ -513,17 +527,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "name_es": "Daemonic Locus",
-          "name_fr": "Daemonic Locus",
-          "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -532,7 +535,7 @@
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "On foot",
-          "points": 1,
+          "points": 0,
           "active": true
         },
         {
@@ -550,7 +553,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": ["daemonic-gift"],
+          "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -629,23 +632,14 @@
           "maximum": 0
         }
       ],
-      "mounts": [
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_es": "On foot",
-          "name_fr": "On foot",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "items": [
         {
           "name_en": "Daemonic Gifts",
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -676,7 +670,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-slaanesh"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Piercing claws",
@@ -707,17 +713,6 @@
           "name_es": "Level 2 Wizard",
           "name_fr": "Level 2 Wizard",
           "points": 60,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "name_es": "Daemonic Locus",
-          "name_fr": "Daemonic Locus",
-          "points": 25,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -764,7 +759,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -850,7 +845,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 100
@@ -887,7 +882,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Daemonic Locus (BSB)",
+          "name_de": "Daemonic Locus (BSB)",
+          "name_es": "Daemonic Locus (BSB)",
+          "name_fr": "Daemonic Locus (BSB)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-tzeentch"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon, flames of Tzeentch",
@@ -918,17 +925,6 @@
           "name_es": "Level 3 Wizard",
           "name_fr": "Level 3 Wizard",
           "points": 60,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Daemonic Locus",
-          "name_de": "Daemonic Locus",
-          "name_es": "Daemonic Locus",
-          "name_fr": "Daemonic Locus",
-          "points": 25,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -975,7 +971,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": [],
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -1038,7 +1034,7 @@
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6,
+          "points": 7,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -1182,8 +1178,8 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
+            "maxPoints": 50
           }
         },
         {
@@ -1210,43 +1206,9 @@
         }
       ],
       "armor": [],
-      "options": [
-        {
-          "name_en": "nil",
-          "name_de": "nilnil",
-          "name_es": "nil",
-          "name_fr": "nil",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "nil",
-          "name_de": "nil",
-          "name_es": "nil",
-          "name_fr": "nil",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
-      "items": [
-        {
-          "name_en": "Daemonic Icon",
-          "name_de": "Daemonic Icon",
-          "name_es": "Daemonic Icon",
-          "name_fr": "Daemonic Icon",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": true,
-          "maxPoints": 50
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
@@ -1322,8 +1284,8 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["daemonic-icon-common", "daemonic-icon-slaanesh"],
+            "maxPoints": 50
           }
         },
         {
@@ -1352,18 +1314,7 @@
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [
-        {
-          "name_en": "Daemonic Icon",
-          "name_de": "Daemonic Icon",
-          "name_es": "Daemonic Icon",
-          "name_fr": "Daemonic Icon",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 50
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Daemonic, Daemons of Slaanesh",
@@ -1408,8 +1359,8 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["daemonic-icon-common", "daemonic-icon-slaanesh"],
+            "maxPoints": 50
           }
         },
         {
@@ -1438,18 +1389,7 @@
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [
-        {
-          "name_en": "Daemonic Icon",
-          "name_de": "Daemonic Icon",
-          "name_es": "Daemonic Icon",
-          "name_fr": "Daemonic Icon",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 50
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1, Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
@@ -1494,7 +1434,7 @@
           "name_fr": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
+            "types": ["daemonic-icon-common", "daemonic-icon-tzeentch"],
             "maxPoints": 0
           }
         },
@@ -1524,18 +1464,7 @@
       "armor": [],
       "options": [],
       "mounts": [],
-      "items": [
-        {
-          "name_en": "Daemonic Icon",
-          "name_de": "Daemonic Icon",
-          "name_es": "Daemonic Icon",
-          "name_fr": "Daemonic Icon",
-          "types": [],
-          "selected": [],
-          "mutuallyExclusive": false,
-          "maxPoints": 50
-        }
-      ],
+      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
@@ -1797,14 +1726,7 @@
         }
       ],
       "options": [],
-      "mounts": [
-        {
-          "name_en": "Juggernaut Of Khorne",
-          "name_de": "Juggernaut Of Khorne",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
@@ -1891,8 +1813,8 @@
           "name_fr": "Standard bearer",
           "points": 7,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
+            "maxPoints": 50
           }
         },
         {
@@ -2133,7 +2055,7 @@
           "name_fr": "Exalted Flamer (champion)",
           "points": 40,
           "magic": {
-            "types": ["daemonic-gift-tzeentch"],
+            "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
             "maxPoints": 50
           }
         }
@@ -2150,7 +2072,30 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard (Exalted Flamer)",
+          "name_de": "Level 2 Wizard (Exalted Flamer)",
+          "name_es": "Level 2 Wizard (Exalted Flamer)",
+          "name_fr": "Level 2 Wizard (Exalted Flamer)",
+          "points": 30,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 3 Wizard (Exalted Flamer)",
+          "name_de": "Level 3 Wizard (Exalted Flamer)",
+          "name_es": "Level 3 Wizard (Exalted Flamer)",
+          "name_fr": "Level 3 Wizard (Exalted Flamer)",
+          "points": 60,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -2275,10 +2220,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, warpflame, flames of Tzeentch, lamprey's bite",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_de": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_es": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_fr": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
           "points": 0,
           "perModel": false,
           "active": true
@@ -2297,10 +2242,10 @@
       ],
       "options": [
         {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_en": "Level 2 Wizard (Exalted Flamer)",
+          "name_de": "Level 2 Wizard (Exalted Flamer)",
+          "name_es": "Level 2 Wizard (Exalted Flamer)",
+          "name_fr": "Level 2 Wizard (Exalted Flamer)",
           "points": 30,
           "perModel": true,
           "stackable": false,
@@ -2308,10 +2253,10 @@
           "maximum": 0
         },
         {
-          "name_en": "Level 3 Wizard",
-          "name_de": "Level 3 Wizard",
-          "name_es": "Level 3 Wizard",
-          "name_fr": "Level 3 Wizard",
+          "name_en": "Level 3 Wizard (Exalted Flamer)",
+          "name_de": "Level 3 Wizard (Exalted Flamer)",
+          "name_es": "Level 3 Wizard (Exalted Flamer)",
+          "name_fr": "Level 3 Wizard (Exalted Flamer)",
           "points": 60,
           "perModel": true,
           "stackable": false,
@@ -2326,7 +2271,7 @@
           "name_de": "Daemonic Gifts",
           "name_es": "Daemonic Gifts",
           "name_fr": "Daemonic Gifts",
-          "types": ["daemonic-gift-tzeentch"],
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
