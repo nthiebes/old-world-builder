@@ -29,14 +29,6 @@ describe("isMultipleAllowedItem", () => {
     expect(isMultipleAllowedItem(item)).toBe(true);
   });
 
-  test("You can still only select 1 magic weapon even if it's very common.", () => {
-    const item = magicItems.general.find(
-      (item) => item.name_en === "Sword of Might*"
-    );
-
-    expect(isMultipleAllowedItem(item)).toBe(false);
-  });
-
   test("Some Dwarfen runes can be taken multiple times", () => {
     const item = magicItems["dwarfen-mountain-holds"].find(
       (item) => item.name_en === "Rune of Might*"

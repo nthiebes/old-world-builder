@@ -10,10 +10,7 @@
  * @returns {boolean}
  */
 export const isMultipleAllowedItem = ({ type, stackable, maximum }) =>
-  Boolean(stackable || maximum) &&
-  // You can have more than 1 scrolls, potions, runes etc for a unit.
-  (type.endsWith("-runes") || ["arcane-item", "enchanted-item"].includes(type));
-//
+  Boolean(stackable || maximum);
 
 /**
  * Calculates the maximum amount of a magic item that can be taken given the remaining points.
