@@ -191,6 +191,17 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Armeestandartenträger",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
+          "points": 25,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
         }
       ],
       "mounts": [],
@@ -204,6 +215,16 @@
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
+        },
+        {
+          "name_en": "Magic Standard (if BSB)",
+          "name_de": "Magische Standarten (als AST)",
+          "name_es": "Magic Standard (if BSB)",
+          "name_fr": "Magic Standard (if BSB)",
+          "types": ["banner"],
+          "selected": [],
+          "mutuallyExclusive": false,
+          "maxPoints": 0
         }
       ],
       "lores": [],
@@ -294,10 +315,10 @@
           "name_fr": "Objets magiques",
           "types": [
             "weapon",
-            "armor",
             "talisman",
             "arcane-item",
-            "enchanted-item"
+            "enchanted-item",
+            "armor-mages"
           ],
           "selected": [],
           "mutuallyExclusive": false,
@@ -408,7 +429,14 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+          "types": [
+            "weapon",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "armor-mages",
+            "armor"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -423,7 +451,7 @@
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
-        "name_de": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest pro 1000 Punkte",
+        "name_de": "0-1 Clan Skryre Warlocktechniker, Clan Eshin Meisterassassinen or Clan Pestilens Seuchenpriester pro 1000 Punkte",
         "name_es": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
         "name_fr": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
       }
@@ -475,7 +503,7 @@
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
-        "name_de": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest pro 1000 Punkte",
+        "name_de": "0-1 Clan Skryre Warlocktechniker, Clan Eshin Meisterassassinen or Clan Pestilens Seuchenpriester pro 1000 Punkte",
         "name_es": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
         "name_fr": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
       }
@@ -513,7 +541,7 @@
         },
         {
           "name_en": "Hand weapon, Plague censer",
-          "name_de": "Handwaffe, Seuchenflegel",
+          "name_de": "Handwaffe, Seuchenschleuder",
           "name_es": "Hand weapon, Plague censer",
           "name_fr": "Hand weapon, Plague censer",
           "points": 6,
@@ -536,7 +564,7 @@
         },
         {
           "name_en": "Level 2",
-          "name_de": "Level 2",
+          "name_de": "Stufe 2",
           "name_es": "Level 2",
           "name_fr": "Level 2",
           "points": 60,
@@ -557,7 +585,7 @@
         },
         {
           "name_en": "Plague Furnace",
-          "name_de": "Seuchenofen",
+          "name_de": "Seuchenmenetekel",
           "name_es": "Plague Furnace",
           "name_fr": "Plague Furnace",
           "points": 170,
@@ -570,7 +598,14 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "talisman",
+            "enchanted-item",
+            "armor",
+            "armor-mages",
+            "arcane-item"
+          ],
           "selected": [],
           "mutuallyExclusive": false,
           "maxPoints": 50
@@ -585,7 +620,7 @@
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
-        "name_de": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest pro 1000 Punkte",
+        "name_de": "0-1 Clan Skryre Warlocktechniker, Clan Eshin Meisterassassinen or Clan Pestilens Seuchenpriester pro 1000 Punkte",
         "name_es": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
         "name_fr": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
       }
@@ -1114,7 +1149,7 @@
   "special": [
     {
       "name_en": "Gutter Runners",
-      "name_de": "Gutter Runners",
+      "name_de": "Gossenläufer",
       "name_es": "Gutter Runners",
       "name_fr": "Gutter Runners",
       "id": "gutter-runners",
@@ -1126,7 +1161,7 @@
       "command": [
         {
           "name_en": "Assassin",
-          "name_de": "Assassin",
+          "name_de": "Assassine",
           "name_es": "Assassin",
           "name_fr": "Assassin",
           "points": 7,
@@ -1139,7 +1174,7 @@
       "equipment": [
         {
           "name_en": "Two hand weapons",
-          "name_de": "Two hand weapons",
+          "name_de": "Zwei Handwaffen",
           "name_es": "Two hand weapons",
           "name_fr": "Two hand weapons",
           "points": 0,
@@ -1147,17 +1182,17 @@
           "active": true
         },
         {
-          "name_en": "Two hand weapons, Slings",
-          "name_de": "Two hand weapons, Slings",
-          "name_es": "Two hand weapons, Slings",
-          "name_fr": "Two hand weapons, Slings",
+          "name_en": "Two hand weapons, Sling",
+          "name_de": "Zwei Handwaffen, Schleuder",
+          "name_es": "Two hand weapons, Sling",
+          "name_fr": "Two hand weapons, Sling",
           "points": 2,
           "perModel": true,
           "active": false
         },
         {
           "name_en": "Two hand weapons, Throwing weapons",
-          "name_de": "Two hand weapons, Throwing weapons",
+          "name_de": "Zwei Handwaffen, Wurfwaffen",
           "name_es": "Two hand weapons, Throwing weapons",
           "name_fr": "Two hand weapons, Throwing weapons",
           "points": 1,
@@ -1180,7 +1215,7 @@
         },
         {
           "name_en": "Poisoned Attacks",
-          "name_de": "Poisoned Attacks",
+          "name_de": "Giftattacken",
           "name_es": "Poisoned Attacks",
           "name_fr": "Poisoned Attacks",
           "points": 2,
@@ -1208,7 +1243,7 @@
     },
     {
       "name_en": "Rat Ogres",
-      "name_de": "Rat Ogres",
+      "name_de": "Rattenoger",
       "name_es": "Rat Ogres",
       "name_fr": "Rat Ogres",
       "id": "rat-ogres",
@@ -1217,11 +1252,29 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "Master Moulder",
+          "name_de": "Meisterzüchter",
+          "name_es": "Master Moulder",
+          "name_fr": "Master Moulder",
+          "points": 1,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
+          "name_de": "Handwaffen",
           "name_es": "Hand weapons",
           "name_fr": "Hand weapons",
           "points": 0,
@@ -1232,7 +1285,7 @@
       "armor": [
         {
           "name_en": "Mutated hides (counts as Heavy armour)",
-          "name_de": "Mutated hides (counts as Heavy armour)",
+          "name_de": "Mutierte Haut (zählt als schwere Rüstung)",
           "name_es": "Mutated hides (counts as Heavy armour)",
           "name_fr": "Mutated hides (counts as Heavy armour)",
           "points": 0,
@@ -1240,7 +1293,30 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Packmaster (Whip, 1 per 2 Rat Ogres)",
+          "name_de": "Meutenbändiger (Peitsche, 1 pro 2 Rattenoger)",
+          "name_es": "Packmaster (Whip, 1 per 2 Rat Ogres)",
+          "name_fr": "Packmaster (Whip, 1 per 2 Rat Ogres)",
+          "points": 5,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Packmaster (Things-catcher, 1 per 2 Rat Ogres)",
+          "name_de": "Meutenbändiger (Ding-Fänger, 1 pro 2 Rattenoger)",
+          "name_es": "Packmaster (Things-catcher, 1 per 2 Rat Ogres)",
+          "name_fr": "Packmaster (Things-catcher, 1 per 2 Rat Ogres)",
+          "points": 10,
+          "perModel": true,
+          "stackable": false,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -1252,95 +1328,14 @@
       },
       "notes": {
         "name_en": "0-2 units of Rat Ogres per 1,000 points",
-        "name_de": "0-2 units of Rat Ogres per 1,000 points",
+        "name_de": "0-2 Einheiten Rattenoger pro 1,000 points",
         "name_es": "0-2 units of Rat Ogres per 1,000 points",
         "name_fr": "0-2 units of Rat Ogres per 1,000 points"
       }
     },
     {
-      "name_en": "Packmasters & Master Moulders (Rat Ogres)",
-      "name_de": "Packmasters & Master Moulders",
-      "name_es": "Packmasters & Master Moulders",
-      "name_fr": "Packmasters & Master Moulders",
-      "id": "packmasters-&-master-moulders-(rat-ogres)",
-      "points": 5,
-      "minimum": 0,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Master Moulder",
-          "name_de": "Master Moulder",
-          "name_es": "Master Moulder",
-          "name_fr": "Master Moulder",
-          "points": 7,
-          "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Whip",
-          "name_de": "Whip",
-          "name_es": "Whip",
-          "name_fr": "Whip",
-          "points": 0,
-          "perModel": true,
-          "active": false
-        },
-        {
-          "name_en": "Things-catcher",
-          "name_de": "Things-catcher",
-          "name_es": "Things-catcher",
-          "name_fr": "Things-catcher",
-          "points": 5,
-          "perModel": true,
-          "active": false
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "name_es": "Light armour",
-          "name_fr": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Horde, Leader of the Pack, Motley Crew, Scurry Away, Warband",
-        "name_de": "Close Order, Horde, Leader of the Pack, Motley Crew, Scurry Away, Warband",
-        "name_es": "Close Order, Horde, Leader of the Pack, Motley Crew, Scurry Away, Warband",
-        "name_fr": "Close Order, Horde, Leader of the Pack, Motley Crew, Scurry Away, Warband"
-      },
-      "notes": {
-        "name_en": "May include one Packmaster for every two Rat Ogres",
-        "name_de": "May include one Packmaster for every two Rat Ogres",
-        "name_es": "May include one Packmaster for every two Rat Ogres",
-        "name_fr": "May include one Packmaster for every two Rat Ogres"
-      }
-    },
-    {
       "name_en": "Plague Monks",
-      "name_de": "Plague Monks",
+      "name_de": "Seuchenmönche",
       "name_es": "Plague Monks",
       "name_fr": "Plague Monks",
       "id": "plague-monks",
@@ -1352,18 +1347,18 @@
       "command": [
         {
           "name_en": "Plague Deacon",
-          "name_de": "Plague Deacon",
+          "name_de": "Seuchenprediger",
           "name_es": "Plague Deacon",
           "name_fr": "Plague Deacon",
           "points": 6,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item"],
+            "types": ["weapon", "talisman", "enchanted-item", "armor"],
             "maxPoints": 25
           }
         },
         {
           "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
+          "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Standard bearer",
           "points": 6,
@@ -1371,17 +1366,37 @@
             "types": ["banner"],
             "maxPoints": 50
           }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 6,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Additional hand weapons",
+          "points": 2,
+          "perModel": true,
+          "active": false
         }
       ],
       "armor": [],
@@ -1397,14 +1412,14 @@
       },
       "notes": {
         "name_en": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken",
-        "name_de": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken",
+        "name_de": "0-1 Einheit Seuchenmönche pro Klan Pestilens Seuchenpriester",
         "name_es": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken",
         "name_fr": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken"
       }
     },
     {
       "name_en": "Warplock Jezzails",
-      "name_de": "Warplock Jezzails",
+      "name_de": "Warpschloss Jezzails",
       "name_es": "Warplock Jezzails",
       "name_fr": "Warplock Jezzails",
       "id": "warplock-jezzails",
@@ -1417,7 +1432,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, warplock jezzails",
-          "name_de": "Hand weapons, warplock jezzails",
+          "name_de": "Handwaffen, Warpschloss Jezzails",
           "name_es": "Hand weapons, warplock jezzails",
           "name_fr": "Hand weapons, warplock jezzails",
           "points": 0,
@@ -1428,7 +1443,7 @@
       "armor": [
         {
           "name_en": "Pavise",
-          "name_de": "Pavise",
+          "name_de": "Pavese",
           "name_es": "Pavise",
           "name_fr": "Pavise",
           "points": 0,
@@ -1448,27 +1463,27 @@
       },
       "notes": {
         "name_en": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken",
-        "name_de": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken",
+        "name_de": "0-1 Einheit Warpschloss Jezzails pro Clan Skryre Warlocktechniker",
         "name_es": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken",
         "name_fr": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken"
       }
     },
     {
       "name_en": "Poisoned Wind Globadiers",
-      "name_de": "Poisoned Wind Globadiers",
+      "name_de": "Giftwindkrieger",
       "name_es": "Poisoned Wind Globadiers",
       "name_fr": "Poisoned Wind Globadiers",
       "id": "poisoned-wind-globadiers",
       "points": 10,
       "minimum": 2,
-      "maximum": 7,
+      "maximum": 10,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapons, Poisoned Wind globes",
-          "name_de": "Hand weapons, Poisoned Wind globes",
+          "name_de": "Handwaffe, Giftwindkugeln",
           "name_es": "Hand weapons, Poisoned Wind globes",
           "name_fr": "Hand weapons, Poisoned Wind globes",
           "points": 0,
@@ -1479,7 +1494,7 @@
       "armor": [
         {
           "name_en": "Light Armour",
-          "name_de": "Light Armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light Armour",
           "name_fr": "Light Armour",
           "points": 0,
@@ -1499,7 +1514,7 @@
       },
       "notes": {
         "name_en": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken",
-        "name_de": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken",
+        "name_de": "0-1 Einheit Giftwindkrieger pro Clan Skryre Warlocktechniker",
         "name_es": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken",
         "name_fr": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken"
       }
@@ -1508,7 +1523,7 @@
   "rare": [
     {
       "name_en": "Hell Pit Abomination",
-      "name_de": "Hell Pit Abomination",
+      "name_de": "Höllengrubenbrut",
       "name_es": "Hell Pit Abomination",
       "name_fr": "Hell Pit Abomination",
       "id": "hell-pit-abomination",
@@ -1521,7 +1536,7 @@
       "equipment": [
         {
           "name_en": "Warpstone claws",
-          "name_de": "Warpstone claws",
+          "name_de": "Warpstein Klauen",
           "name_es": "Warpstone claws",
           "name_fr": "Warpstone claws",
           "points": 0,
@@ -1542,14 +1557,14 @@
       },
       "notes": {
         "name_en": "0-1 Hell Pit Abomination per 1,000 points",
-        "name_de": "0-1 Hell Pit Abomination per 1,000 points",
+        "name_de": "0-1 Höllengrubenbrut pro 1,000 Punkte",
         "name_es": "0-1 Hell Pit Abomination per 1,000 points",
         "name_fr": "0-1 Hell Pit Abomination per 1,000 points"
       }
     },
     {
       "name_en": "Doomwheel",
-      "name_de": "Doomwheel",
+      "name_de": "Todesrad",
       "name_es": "Doomwheel",
       "name_fr": "Doomwheel",
       "id": "doomwheel",
@@ -1562,7 +1577,7 @@
       "equipment": [
         {
           "name_en": "Warlock: Hand weapon / Rats: Claws and fangs (counts as a hand weapon)",
-          "name_de": "Warlock: Hand weapon / Rats: Claws and fangs (counts as a hand weapon)",
+          "name_de": "Warlock: Handwaffe / Ratten: Klauen und Zähne (zählt als Handwaffe)",
           "name_es": "Warlock: Hand weapon / Rats: Claws and fangs (counts as a hand weapon)",
           "name_fr": "Warlock: Hand weapon / Rats: Claws and fangs (counts as a hand weapon)",
           "points": 0,
@@ -1583,14 +1598,14 @@
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
-        "name_de": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
+        "name_de": "Wenn deine Armee mindestes einen Clan Skryre Warlocktechniker enthält, können 0-1 Todesrad oder Warpblitzkanone pro 1,000 Punkte gewählt werden",
         "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
         "name_fr": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:"
       }
     },
     {
       "name_en": "Warp Lightning Cannon",
-      "name_de": "Warp Lightning Cannon",
+      "name_de": "Warpblitzkanone",
       "name_es": "Warp Lightning Cannon",
       "name_fr": "Warp Lightning Cannon",
       "id": "warp-lightning-cannon",
@@ -1603,7 +1618,7 @@
       "equipment": [
         {
           "name_en": "Warp Lightning Cannon, hand weapons",
-          "name_de": "Warp Lightning Cannon, hand weapons",
+          "name_de": "Warpblitzkanone, Handwaffen",
           "name_es": "Warp Lightning Cannon, hand weapons",
           "name_fr": "Warp Lightning Cannon, hand weapons",
           "points": 1,
@@ -1614,7 +1629,7 @@
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Light armour",
           "points": 0,
@@ -1634,14 +1649,14 @@
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
-        "name_de": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
+        "name_de": "Wenn deine Armee mindestes einen Clan Skryre Warlocktechniker enthält, können 0-1 Todesrad oder Warpblitzkanone pro 1,000 Punkte gewählt werden",
         "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
         "name_fr": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:"
       }
     },
     {
       "name_en": "Plagueclaw Catapult",
-      "name_de": "Plagueclaw Catapult",
+      "name_de": "Seuchenklauen Katapult",
       "name_es": "Plagueclaw Catapult",
       "name_fr": "Plagueclaw Catapult",
       "id": "plagueclaw-catapult",
@@ -1654,7 +1669,7 @@
       "equipment": [
         {
           "name_en": "Plagueclaw Catapult, hand weapons",
-          "name_de": "Plagueclaw Catapult, hand weapons",
+          "name_de": "Seuchenklauen Katapult, Handwaffen",
           "name_es": "Plagueclaw Catapult, hand weapons",
           "name_fr": "Plagueclaw Catapult, hand weapons",
           "points": 0,
@@ -1665,7 +1680,7 @@
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Light armour",
           "points": 0,
@@ -1685,14 +1700,14 @@
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
-        "name_de": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
+        "name_de": "Wenn deine Armee mindestes einen Clan Pestilens Seuchenpriester enthält, können 0-1 Seuchenklauen Katapult oder Seuchenschläuderer gewählt werden",
         "name_es": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
         "name_fr": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points"
       }
     },
     {
       "name_en": "Plague Censer Bearers",
-      "name_de": "Plague Censer Bearers",
+      "name_de": "Seuchenschleuderer",
       "name_es": "Plague Censer Bearers",
       "name_fr": "Plague Censer Bearers",
       "id": "plague-censer-bearers",
@@ -1704,10 +1719,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons and plague censers",
-          "name_de": "Hand weapons and plague censers",
-          "name_es": "Hand weapons and plague censers",
-          "name_fr": "Hand weapons and plague censers",
+          "name_en": "Hand weapons, plague censers",
+          "name_de": "Handwaffe, Seuchenschleuder",
+          "name_es": "Hand weapons, plague censers",
+          "name_fr": "Hand weapons, plague censers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1726,7 +1741,7 @@
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
-        "name_de": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
+        "name_de": "Wenn deine Armee mindestes einen Clan Pestilens Seuchenpriester enthält, können 0-1 Seuchenklauen Katapult oder Seuchenschläuderer gewählt werden",
         "name_es": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
         "name_fr": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points"
       }
