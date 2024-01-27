@@ -280,7 +280,7 @@ export const Magic = ({ isMobile }) => {
     isConditional,
     isTypeLimitReached,
   }) => {
-    const isCommand = Boolean(unit?.command[command]?.magic?.maxpoints);
+    const isCommand = Boolean(unit?.command[command]?.magic?.types.length);
 
     const max = !maxMagicPoints
       ? // No maximum of this item if there is no point max.
