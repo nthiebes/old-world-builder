@@ -139,23 +139,6 @@ export const Export = ({ isMobile }) => {
         <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"
-            id="show"
-            onChange={() => setIsShowList(!isShowList)}
-            checked={isShowList}
-            className="checkbox__input"
-          />
-          <label htmlFor="show" className="checkbox__label">
-            <FormattedMessage id="export.visibleList" />
-          </label>
-        </div>
-        <p className="export__description">
-          <i>
-            <FormattedMessage id="export.visibleListDescription" />
-          </i>
-        </p>
-        <div className="checkbox export__visible-checkbox">
-          <input
-            type="checkbox"
             id="compact"
             onChange={() => setIsCompactList(!isCompactList)}
             checked={isCompactList}
@@ -168,6 +151,23 @@ export const Export = ({ isMobile }) => {
         <p className="export__description">
           <i>
             <FormattedMessage id="export.compactListDescription" />
+          </i>
+        </p>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="show"
+            onChange={() => setIsShowList(!isShowList)}
+            checked={isShowList}
+            className="checkbox__input"
+          />
+          <label htmlFor="show" className="checkbox__label">
+            <FormattedMessage id="export.visibleList" />
+          </label>
+        </div>
+        <p className="export__description">
+          <i>
+            <FormattedMessage id="export.visibleListDescription" />
           </i>
         </p>
         {/* <div className="checkbox export__visible-checkbox">
