@@ -12,6 +12,7 @@ import { setArmy } from "../../state/army";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
+import gameSystems from "../../assets/armies.json";
 
 const getArmyData = ({ data, armyComposition }) => {
   // Remove units that don't belong to the army composition
@@ -107,6 +108,9 @@ export const Add = ({ isMobile }) => {
     state.lists.find(({ id }) => listId === id)
   );
   const army = useSelector((state) => state.army);
+  const game = gameSystems.find((game) => game.id === list?.game);
+  const allies =
+    game && game.armies.find((army) => army.id === list.army).allies;
   const handleAdd = (unitId) => {
     const unit = {
       ...army[type].find(({ id }) => unitId === id),
@@ -122,8 +126,7 @@ export const Add = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list &&
-      !army &&
+    if (list && !army && !allies) {
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
@@ -131,11 +134,11 @@ export const Add = ({ isMobile }) => {
             data,
             armyComposition: list.armyComposition || list.army,
           });
-
           dispatch(setArmy(armyData));
         },
       });
-  }, [list, army, dispatch]);
+    }
+  }, [list, army, allies, dispatch]);
 
   if (redirect) {
     return <Redirect to={`/editor/${listId}/${type}/${redirect.id}`} />;

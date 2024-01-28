@@ -555,6 +555,60 @@ export const Editor = ({ isMobile }) => {
           </Button>
         </section>
 
+        {list.allies && alliesData && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.allies" />
+              </h2>
+              <p className="editor__points">
+                {alliesData.diff > 0 ? (
+                  <>
+                    <strong>{alliesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{alliesData.points - alliesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+            <ul>
+              {list.allies.map((unit, index) => (
+                <List
+                  key={index}
+                  to={`/editor/${listId}/allies/${unit.id}`}
+                  className="editor__list"
+                  active={location.pathname.includes(unit.id)}
+                >
+                  <div className="editor__list-inner">
+                    <b>{unit[`name_${language}`] || unit.name_en}</b>
+                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                      id: "app.points",
+                    })}`}</i>
+                  </div>
+                  {getAllOptions(unit)}
+                </List>
+              ))}
+            </ul>
+            <p className="editor__soon">
+              <FormattedMessage id="editor.comingSoon" />
+            </p>
+            <Button
+              centered
+              to={`/editor/${listId}/add/allies`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
+
         {list.mercenaries && mercenariesData && (
           <section className="editor__section">
             <header className="editor__header">
@@ -603,60 +657,6 @@ export const Editor = ({ isMobile }) => {
             {/* <Button
               centered
               to={`/editor/${listId}/add/mercenaries`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button> */}
-          </section>
-        )}
-
-        {list.allies && alliesData && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.allies" />
-              </h2>
-              <p className="editor__points">
-                {alliesData.diff > 0 ? (
-                  <>
-                    <strong>{alliesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>{alliesData.points - alliesPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
-            <ul>
-              {list.allies.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/allies/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
-            <p className="editor__soon">
-              <FormattedMessage id="editor.comingSoon" />
-            </p>
-            {/* <Button
-              centered
-              to={`/editor/${listId}/add/allies`}
               icon="add"
               spaceTop
             >
