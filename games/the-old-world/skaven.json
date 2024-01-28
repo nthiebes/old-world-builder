@@ -637,6 +637,7 @@
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
+      "maxDetachments": 1,
       "detachment": false,
       "command": [
         {
@@ -741,6 +742,7 @@
       "minimum": 20,
       "maximum": 40,
       "regimentalUnit": true,
+      "maxDetachments": 1,
       "detachment": false,
       "command": [
         {
@@ -848,6 +850,8 @@
       "maximum": 1,
       "regimentalUnit": false,
       "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 1,
       "command": [],
       "equipment": [
         {
