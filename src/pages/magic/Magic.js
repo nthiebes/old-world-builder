@@ -327,7 +327,7 @@ export const Magic = ({ isMobile }) => {
           <NumberInput
             id={`${itemGroup.id}-${magicItem.id}-amount`}
             min={1}
-            max={max}
+            max={isTypeLimitReached ? selectedAmount : max}
             value={selectedAmount}
             onChange={(event) => {
               handleAmountChange({
@@ -465,11 +465,24 @@ export const Magic = ({ isMobile }) => {
                 const selectedItem = unitSelectedItems.find(
                   ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                 );
+                let runesAmountInCategory = 0;
 
+                unitSelectedItems.forEach(({ type: itemType, amount }) => {
+                  if (itemType === magicItem.type) {
+                    runesAmountInCategory += amount ?? 1;
+                  }
+                });
+                const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
+                const isRune = Boolean(magicItem.type.includes("runes"));
 
                 const isTypeLimitReached = unitSelectedItems.some(
-                  (item) => !magicItem.stackable && item.type === magicItem.type
+                  (item) =>
+                    (!magicItem.stackable &&
+                      !item.stackable &&
+                      item.type === magicItem.type &&
+                      !isRune) ||
+                    (isRune && runesAmountInCategory >= 3)
                 );
 
                 return (
@@ -483,7 +496,7 @@ export const Magic = ({ isMobile }) => {
                     {getCheckbox({
                       magicItem,
                       itemGroup,
-                      selectedAmount: selectedItem?.amount ?? 1,
+                      selectedAmount,
                       isChecked,
                       isTypeLimitReached,
                     })}
@@ -493,7 +506,7 @@ export const Magic = ({ isMobile }) => {
                           getCheckbox({
                             magicItem: conditionalItem,
                             itemGroup,
-                            selectedAmount: selectedItem?.amount ?? 1,
+                            selectedAmount,
                             isChecked,
                             isConditional: true,
                             isTypeLimitReached,
