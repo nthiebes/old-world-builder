@@ -753,7 +753,7 @@
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
-          "points": 12,
+          "points": 10,
           "active": false
         },
         {
@@ -915,8 +915,8 @@
       ]
     },
     {
-      "name_en": "Goblin Oddnod",
-      "name_de": "Goblin Oddnod",
+      "name_en": "Goblin Oddnob",
+      "name_de": "Goblin Oddnob",
       "name_fr": "Zarbnob Gobelin",
       "id": "goblin-oddnod",
       "points": 135,
@@ -966,7 +966,7 @@
         {
           "name_en": "Arachnarok Spider",
           "name_de": "Arachnarok Spider",
-          "points": 320,
+          "points": 310,
           "active": false
         },
         {
@@ -1338,7 +1338,7 @@
       "name_de": "Night Goblin Oddgit",
       "name_fr": "Zarbzig Gobelin de la Nuit",
       "id": "night-goblin-oddgit",
-      "points": 65,
+      "points": 55,
       "minimum": 0,
       "maximum": 0,
       "regimentalUnit": false,
@@ -1752,7 +1752,7 @@
           "name_fr": "Zigouillards (0-3 par tranche de 1000pts)",
           "points": 10,
           "perModel": false,
-          "stackable": 1,
+          "stackable": true,
           "minimum": 0,
           "maximum": 0
         },
@@ -1760,7 +1760,7 @@
           "name_en": "Skirmisher",
           "name_de": "Skirmisher",
           "name_fr": "Tirailleurs (0-1 unité par armée)",
-          "points": 1,
+          "points": 0,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -2150,8 +2150,18 @@
           "name_de": "Squig Herder",
           "name_fr": "Berger Gobelin de la Nuit",
           "points": 3,
-          "perModel": true,
-          "stackable": 1,
+          "perModel": false,
+          "stackable": true,
+          "minimum": 1,
+          "maximum": 0
+        },
+        {
+          "name_en": "Squig herder thrusting spears",
+          "name_de": "Squig herder thrusting spears",
+          "name_fr": "Squig herder thrusting spears",
+          "points": 1,
+          "perModel": false,
+          "stackable": true,
           "minimum": 0,
           "maximum": 0
         }
@@ -2531,7 +2541,7 @@
           "name_fr": "Frénétique (0-1 unité par tranche de 1000pts)",
           "points": 2,
           "perModel": false,
-          "stackable": 1,
+          "stackable": true,
           "minimum": 0,
           "maximum": 0
         },
@@ -2932,7 +2942,7 @@
       "name_de": "Arachnarok Spider",
       "name_fr": "Arachnarok",
       "id": "arachnarok-spider",
-      "points": 320,
+      "points": 310,
       "minimum": 0,
       "maximum": 0,
       "command": [],
