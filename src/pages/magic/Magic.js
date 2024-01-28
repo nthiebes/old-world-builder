@@ -476,14 +476,16 @@ export const Magic = ({ isMobile }) => {
                 const isChecked = Boolean(selectedItem);
                 const isRune = Boolean(magicItem.type.includes("runes"));
 
-                const isTypeLimitReached = unitSelectedItems.some(
-                  (item) =>
-                    (!magicItem.stackable &&
-                      !item.stackable &&
-                      item.type === magicItem.type &&
-                      !isRune) ||
-                    (isRune && runesAmountInCategory >= 3)
-                );
+                const isTypeLimitReached = magicItem.nonExclusive
+                  ? false
+                  : unitSelectedItems.some(
+                      (item) =>
+                        (!magicItem.stackable &&
+                          !item.stackable &&
+                          item.type === magicItem.type &&
+                          !isRune) ||
+                        (isRune && runesAmountInCategory >= 3)
+                    );
 
                 return (
                   <Fragment key={magicItem.name_de}>

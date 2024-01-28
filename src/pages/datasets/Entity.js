@@ -361,7 +361,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_fr: "Objets magiques",
           types: [],
           selected: [],
-          mutuallyExclusive: false,
           maxPoints: 0,
         },
       ],
@@ -1697,28 +1696,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                   </div>
                 ))}
               </Expandable>
-              <div className="checkbox">
-                <input
-                  type="checkbox"
-                  id={`mutually-exclusive-${itemIndex}-${randomId}`}
-                  onChange={(event) =>
-                    handleSecondLevelFieldChange({
-                      index: itemIndex,
-                      key: "items",
-                      field: "mutuallyExclusive",
-                      value: !item.mutuallyExclusive,
-                    })
-                  }
-                  checked={item.mutuallyExclusive}
-                  className="checkbox__input"
-                />
-                <label
-                  htmlFor={`mutually-exclusive-${itemIndex}-${randomId}`}
-                  className="checkbox__label"
-                >
-                  Mutually exclusive
-                </label>
-              </div>
               <label htmlFor={`magic-points-${randomId}`}>Max. points</label>
               <NumberInput
                 id={`magic-points-${itemIndex}-${randomId}`}
