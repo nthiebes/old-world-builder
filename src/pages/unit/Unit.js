@@ -87,7 +87,9 @@ export const Unit = ({ isMobile }) => {
       name_de: detachment.name_de,
       name_en: detachment.name_en,
       points: detachment.points,
-      strength: 5,
+      strength: detachment.minDetachmentSize || 5,
+      minDetachmentSize: detachment.minDetachmentSize || 5,
+      maxDetachmentSize: detachment.maxDetachmentSize,
       equipment: detachment.equipment,
       armor: detachment.armor,
       options: detachment.options,
@@ -742,6 +744,9 @@ export const Unit = ({ isMobile }) => {
                       icon="add"
                       label={intl.formatMessage({ id: "editor.add" })}
                       size="small"
+                      disabled={
+                        unit?.detachments?.length >= unit.maxDetachments
+                      }
                     />
                   </div>
                 </div>
@@ -757,6 +762,8 @@ export const Unit = ({ isMobile }) => {
                         strength,
                         id,
                         points,
+                        minDetachmentSize,
+                        maxDetachmentSize,
                         equipment: detachmentEquipment,
                         armor: detachmentArmor,
                         options: detachmentOptions,
@@ -770,8 +777,11 @@ export const Unit = ({ isMobile }) => {
                             <NumberInput
                               noError
                               id={`strength-${id}`}
-                              min={5}
-                              max={Math.floor(unit.strength / 2)}
+                              min={minDetachmentSize || 5}
+                              max={
+                                maxDetachmentSize ||
+                                Math.floor(unit.strength / 2)
+                              }
                               value={strength}
                               onChange={(event) =>
                                 handleDetachmentStrengthClick({
