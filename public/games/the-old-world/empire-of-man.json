@@ -2266,56 +2266,6 @@
       }
     },
     {
-      "name_en": "Flagellants",
-      "name_de": "Flagellants",
-      "name_fr": "Flagellants",
-      "id": "flagellants",
-      "points": 13,
-      "minimum": 5,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Prophet of Doom (champion)",
-          "name_de": "Prophet of Doom (champion)",
-          "name_fr": "Prophète de l'Apocalypse (champion)",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons and flails",
-          "name_de": "Hand weapons and flails",
-          "name_fr": "Armes de base et fléaux",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
       "name_en": "Pistoliers",
       "name_de": "Pistoliers",
       "name_fr": "Pistoliers",
@@ -2725,35 +2675,47 @@
       }
     },
     {
-      "name_en": "Griffon",
-      "name_de": "Griffon",
-      "name_fr": "Griffon",
-      "id": "griffon",
-      "points": 130,
-      "minimum": 0,
+      "name_en": "Flagellants",
+      "name_de": "Flagellants",
+      "name_fr": "Flagellants",
+      "id": "flagellants",
+      "points": 13,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Imperial Griffon",
-      "name_de": "Imperial Griffon",
-      "name_fr": "Griffon Impérial",
-      "id": "imperial-griffon",
-      "points": 160,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Prophet of Doom (champion)",
+          "name_de": "Prophet of Doom (champion)",
+          "name_fr": "Prophète de l'Apocalypse (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and flails",
+          "name_de": "Hand weapons and flails",
+          "name_fr": "Armes de base et fléaux",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
