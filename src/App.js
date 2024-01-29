@@ -38,9 +38,15 @@ export const App = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    window
-      .matchMedia("(max-width: 1279px)")
-      .addEventListener("change", (event) => setIsMobile(event.matches));
+    const mediaQuery = window.matchMedia("(max-width: 1279px)");
+
+    if (mediaQuery?.addEventListener) {
+      mediaQuery.addEventListener("change", (event) =>
+        setIsMobile(event.matches)
+      );
+    } else {
+      mediaQuery.addListener((event) => setIsMobile(event.matches));
+    }
   }, []);
 
   return (
