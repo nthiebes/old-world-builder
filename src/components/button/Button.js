@@ -25,6 +25,7 @@ export const Button = ({
   disabled,
   size,
   download,
+  autofocus,
 }) => {
   const Component = to || href ? (to ? Link : "a") : "button";
   const buttonProps = {};
@@ -58,6 +59,7 @@ export const Button = ({
       title={label}
       disabled={disabled}
       download={download}
+      autofocus={autofocus}
       {...buttonProps}
     >
       {icon && (
@@ -88,6 +90,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.string,
   download: PropTypes.string,
+  autofocus: PropTypes.bool,
 };
 
 Button.defaultProps = {
