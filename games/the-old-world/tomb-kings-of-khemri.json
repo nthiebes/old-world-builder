@@ -612,6 +612,16 @@
             "types": [],
             "maxPoints": 0
           }
+        },
+        {
+          "name_en": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_de": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_fr": "(Culte Mortuaire seulement) Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
@@ -631,16 +641,6 @@
           "name_de": "Level 2 Wizard",
           "name_fr": "Peut devenir un Sorcier Niveau 2",
           "points": 30,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "(Mortuary Cult Only) Battle Standard Bearer",
-          "name_de": "(Mortuary Cult Only) Battle Standard Bearer",
-          "name_fr": "(Culte Mortuaire seulement) Porteur de la Grande Bannière",
-          "points": 25,
           "perModel": false,
           "stackable": false,
           "minimum": 0,
@@ -677,28 +677,9 @@
           ],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magische Standarte (AST)",
-          "name_fr": "Banniere Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "banner",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "lores": ["elementalism", "illusion", "necromancy"]
     },
     {
       "name_en": "Necrotect",
