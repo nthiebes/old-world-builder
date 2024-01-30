@@ -12,7 +12,7 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
-import { RulesIndex } from "../../components/rules-index";
+import { RulesIndex, rulesMap } from "../../components/rules-index";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
@@ -283,11 +283,11 @@ export const Unit = ({ isMobile }) => {
     const specialRulesEn = unit.specialRules.name_en.split(", ");
     const specialRulesString =
       unit.specialRules[`name_${language}`] || unit.specialRules.name_en;
-    const specialRulesButtons = specialRulesString
-      .split(", ")
-      .map((rule, index) => (
-        <>
-          {index !== 0 && ", "}
+    let specialRulesButtons = specialRulesString.split(", ");
+
+    specialRulesButtons = specialRulesButtons.map((rule, index) => (
+      <>
+        {rulesMap[specialRulesEn[index]] ? (
           <button
             className="unit__special-rule"
             key={rule}
@@ -296,9 +296,16 @@ export const Unit = ({ isMobile }) => {
             }
           >
             {rule}
+            {index !== specialRulesButtons.length - 1 && ", "}
           </button>
-        </>
-      ));
+        ) : (
+          <>
+            {rule}
+            {index !== specialRulesButtons.length - 1 && ", "}
+          </>
+        )}
+      </>
+    ));
 
     return (
       <>
