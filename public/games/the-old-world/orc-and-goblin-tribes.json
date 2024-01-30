@@ -906,6 +906,14 @@
       ],
       "armor": [
         {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "Pas d'armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
@@ -1048,6 +1056,14 @@
         }
       ],
       "armor": [
+        {
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "Pas d'armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -2107,24 +2123,24 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
+          "name_en": "Hand weapon and shield",
+          "name_de": "Hand weapon und Schild",
+          "name_fr": "Arme de base et bouclier",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Thrusting Spear",
-          "name_de": "Thrusting Spear",
-          "name_fr": "Lances d'infanterie",
+          "name_en": "Thrusting Spear and shield",
+          "name_de": "Thrusting Spear und Schild",
+          "name_fr": "Lances et boucliers d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Shortbow",
-          "name_de": "Shortbow",
+          "name_en": "Shortbow (replaces shields)",
+          "name_de": "Shortbow (Ersetzt Schilde)",
           "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 1,
           "perModel": true,
@@ -2133,12 +2149,20 @@
       ],
       "armor": [
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_fr": "Bouclier",
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "Pas d'armure",
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 3,
+          "perModel": true,
+          "active": false
         }
       ],
       "options": [
@@ -2150,7 +2174,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 3
         },
         {
           "name_en": "Skirmisher",
@@ -2262,40 +2286,31 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
+          "name_en": "Hand weapon and shield",
+          "name_de": "Hand weapon und Schild",
+          "name_fr": "Arme de base et bouclier",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Thrusting Spear",
-          "name_de": "Spear",
-          "name_fr": "Lances d'infanterie",
+          "name_en": "Thrusting Spear and shield",
+          "name_de": "Thrusting Spear und Schild",
+          "name_fr": "Lances et boucliers d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Shortbow",
-          "name_de": "Shortbow",
-          "name_fr": "Arcs courts (remplace les Boucliers)",
+          "name_en": "Shortbow (replaces shields)",
+          "name_de": "Shortbow (Ersetzt Schilde)",
+          "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 1,
           "perModel": true,
           "active": false
         }
       ],
-      "armor": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_fr": "Bouclier",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
+      "armor": [],
       "options": [
         {
           "name_en": "Netters",
@@ -2315,7 +2330,7 @@
           "perModel": false,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 3
         }
       ],
       "mounts": [],
@@ -2374,9 +2389,20 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
+          "name_en": "Hand weapon and shield",
+          "name_de": "Hand weapon und Schild",
+          "name_fr": "Arme de base et bouclier",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Poisonous Fangs",
+          "name_de": "Poisonous Fangs",
+          "name_fr": "Crochets empoisonnés (compte comme Arme de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2396,25 +2422,7 @@
           "points": 1,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Poisonous Fangs",
-          "name_de": "Poisonous Fangs",
-          "name_fr": "Crochets empoisonnés (compte comme Arme de base)",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_fr": "Bouclier",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
+        } ,
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -2422,9 +2430,8 @@
           "points": 1,
           "perModel": true,
           "active": false
-        }
+        }       
       ],
-      "options": [],
       "mounts": [],
       "notes": {
         "name_en": "",
@@ -2481,43 +2488,35 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
+          "name_en": "Hand weapon and shield",
+          "name_de": "Hand weapon und Schild",
+          "name_fr": "Arme de base et bouclier",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
-          "name_fr": "Lance de cavalerie",
-          "points": 0,
+          "name_en": "Thrusting Spear and shield",
+          "name_de": "Thrusting Spear und Schild",
+          "name_fr": "Lances et boucliers d'infanterie",
+          "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Shortbow",
-          "name_de": "Shortbow",
-          "name_fr": "Arcs courts",
-          "points": 0,
+          "name_en": "Shortbow (replaces shields)",
+          "name_de": "Shortbow (Ersetzt Schilde)",
+          "name_fr": "Arcs courts (remplace les boucliers)",
+          "points": 1,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Claws and Fangs",
-          "name_de": "Claws and Fangs",
-          "name_fr": "Griffes et crocs (compte comme Arme de base)",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_fr": "Bouclier",
+          "name_en": "No armour",
+          "name_de": "No armour",
+          "name_fr": "Pas d'armure",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2532,6 +2531,14 @@
         }
       ],
       "options": [
+        {
+          "name_en": "Claws and Fangs",
+          "name_de": "Claws and Fangs",
+          "name_fr": "Griffes et crocs (compte comme Arme de base)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Feigned Flight",
           "name_de": "Feigned Flight",
