@@ -169,7 +169,7 @@ export const Changelog = () => {
               values={{ b: (msg) => <b>{msg}</b> }}
             />
           </li>
-          <li>
+          <li className="changelog__outdated">
             <FormattedMessage
               id="changelog.change10"
               values={{

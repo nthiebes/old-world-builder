@@ -29,8 +29,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -202,6 +202,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 150
+      },
+      "specialRules": {
+        "name_en": "The Arrow of Kurnous, Evasive, Fire & Flee, Ignores Cover, Move through Cover, Rallying Cry, Strike First"
       }
     },
     {
@@ -214,7 +217,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Additional hand weapon",
@@ -233,8 +257,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": false,
@@ -339,16 +363,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -405,14 +419,6 @@
           "maxPoints": 50
         },
         {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magische Standarte (AST)",
-          "name_fr": "Banière Magique",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
-        },
-        {
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
@@ -420,7 +426,10 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "The Arrow of Kurnous, Evasive, Fire & Flee, Ignores Cover, Move through Cover, Rallying Cry, Strike First"
+      }
     },
     {
       "name_en": "Spellweaver",
@@ -531,6 +540,9 @@
           "arcane-item"
         ],
         "maxPoints": 149
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Lore of Athel Loren, Magical Attacks, Move through Cover"
       }
     },
     {
@@ -642,6 +654,9 @@
           "arcane-item"
         ],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Lore of Athel Loren, Magical Attacks, Move through Cover"
       }
     },
     {
@@ -709,6 +724,9 @@
       "magic": {
         "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Evasive, Furios Charge, Immune to Psychology, Loner, Move Through Cover, Strike First, Talismanic Tattoos, Troubadour of Loec"
       }
     },
     {
@@ -834,6 +852,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Feigned Flight, Fire & Flee, Hawk-eyed Archer, Ignroes Cover, Move through Cover, Scouts"
       }
     },
     {
@@ -882,7 +903,10 @@
           "selected": [],
           "maxPoints": 100
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Close Order, Flammable, Immune to Psychology, Large Target, Lore of Athel Loren, Magical Attacks, Move through Cover, Regeneration (5+), Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!, Tree Spirit, Tree Whack"
+      }
     },
     {
       "name_en": "Branchwraith",
@@ -954,7 +978,10 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Fear, Flammable, Immune to Psychology, Lore of Athel Loren, Magical Attacks, Move through Cover, Regeneration (6+), Tree Spirit"
+      }
     }
   ],
   "core": [
@@ -1088,6 +1115,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Move through Cover, Open Order"
       }
     },
     {
@@ -1117,8 +1147,8 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
+            "types": [],
+            "maxPoints": 0
           }
         },
         {
@@ -1193,26 +1223,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Fire and Flee USR",
-          "name_de": "Fire and Flee USR",
-          "name_fr": "Tir & Fuite",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Vanguard USR",
-          "name_de": "Vanguard USR",
-          "name_fr": "Avant-garde",
-          "points": 1,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [],
@@ -1220,6 +1230,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Fire & Flee, Move through Cover, Scouts, Skirmishers"
       }
     },
     {
@@ -1321,6 +1334,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Move through Cover, Stubborn"
       }
     },
     {
@@ -1371,6 +1387,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Fear, Flammable, Immune to Psychology, Magical Attacks, Move through Cover, Open Order, Regeneration (6+), Skirmishers, Stubborn, Tree Spirit"
       }
     },
     {
@@ -1417,8 +1436,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Cavalry Spears and Asrai Longbows",
-          "name_de": "Hand weapon, Cavalry Spears and Asrai Longbows",
+          "name_en": "Hand weapon, Cavalry spears and Asrai Longbows",
+          "name_de": "Hand weapon, Cavalry spears and Asrai Longbows",
           "name_fr": "Arme de base, Lance de cavalier et Arc long Asrai",
           "points": 0,
           "perModel": true,
@@ -1513,6 +1532,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride"
       }
     }
   ],
@@ -1728,6 +1750,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Guardians of the Wildwood, Immune to Psychology, Move through Cover"
       }
     },
     {
@@ -1810,6 +1835,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Dances of Loec, Evasive, Furious Charge, Immune to Psychology, Loner, Motley Crew, Move through Cover, Open Order, Skirmishers, Strike First, Talismanic Tattoos"
       }
     },
     {
@@ -1871,6 +1899,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Daughters of Eternity, Deepwood Coven, Elven Reflexes, Fast Cavalry, Fire & Flee, Move through Cover, Open Order, Poisoned Attacks, Swiftstride"
       }
     },
     {
@@ -1952,6 +1983,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Counter Charge, Elven Reflexes, Fast Cavalry, Fear, Frenzy, Furious Charge (Wild Riders & Wild Hunter only), Move through Cover, Open Order, Swiftstride, Talismanic Tattoos"
       }
     },
     {
@@ -1978,8 +2012,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Cavalry Spear and Asrai Longbow",
-          "name_de": "Hand weapon, Cavalry Spear and Asrai Longbow",
+          "name_en": "Hand weapon, Cavalry spear and Asrai Longbow",
+          "name_de": "Hand weapon, Cavalry spear and Asrai Longbow",
           "name_fr": "Arme de base, Lance de cavalerie et Arc long Asrai",
           "points": 0,
           "perModel": true,
@@ -2044,6 +2078,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Fear, Feigned Flight, Fire & Flee, Fly (10), Skirmishers, Swiftstride"
       }
     },
     {
@@ -2094,6 +2131,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Armour Bane (2), Close Order, Fear, Flammable, Immune to Psychology, Magical Attacks, Move through Cover, Regeneration (5+), Stomp Attacks (1), Stubborn, Tree Spirit, Tree Whack"
       }
     }
   ],
@@ -2218,10 +2258,13 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Feigned Flight, Fire & Flee, Ignores Cover, Move through Cover, Scouts, Skirmishers"
       }
     },
     {
-      "name_en": "Giant Eagle",
+      "name_en": "Great Eagle",
       "name_de": "Giant Eagle",
       "name_fr": "Grand Aigle",
       "id": "giant-eagle",
@@ -2236,6 +2279,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Fear, Fly(10), Stomp Attacks (1), Swiftstride"
       }
     },
     {
@@ -2268,6 +2314,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Flammable, Immune to Psychology, Large Target, Magical Attacks, Move through Cover, Regeneration (5+), Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!, Tree Spirit, Tree Whack"
       }
     }
   ],

@@ -26,8 +26,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear ",
-          "name_de": "Cavalry Spear ",
+          "name_en": "Cavalry spear ",
+          "name_de": "Cavalry spear ",
           "points": 2,
           "perModel": true,
           "active": false
@@ -207,7 +207,10 @@
           "selected": [],
           "maxPoints": 0
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages"
+      }
     },
     {
       "name_en": "Noble",
@@ -218,7 +221,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -235,8 +259,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear ",
-          "name_de": "Cavalry Spear ",
+          "name_en": "Cavalry spear ",
+          "name_de": "Cavalry spear ",
           "points": 2,
           "perModel": true,
           "active": false
@@ -309,15 +333,6 @@
           "name_en": "Bow of Avelorn",
           "name_de": "Bow of Avelorn",
           "points": 12,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "points": 25,
           "perModel": true,
           "stackable": false,
           "minimum": 0,
@@ -406,15 +421,11 @@
           "types": ["elven-honour"],
           "selected": [],
           "maxPoints": 0
-        },
-        {
-          "name_en": "Magical Banners",
-          "name_de": "Magical Banners",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages"
+      }
     },
     {
       "name_en": "Archmage",
@@ -543,7 +554,10 @@
           "maxPoints": 0
         }
       ],
-      "lores": ["battle-magic", "elementalism", "high-magic", "illusion"]
+      "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages"
+      }
     },
     {
       "name_en": "Mage",
@@ -660,7 +674,10 @@
           "maxPoints": 0
         }
       ],
-      "lores": ["battle-magic", "elementalism", "high-magic", "illusion"]
+      "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages"
+      }
     },
     {
       "name_en": "Dragon Mage",
@@ -724,7 +741,10 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "elementalism"]
+      "lores": ["battle-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Blessings of Asuryan, Close Order, Dragon Armour, Elven Reflexes, Fly (10), Impetous, Ithilmar Weapons, Large Target, Lileath's Blessing, Lore of Saphery, Stomp Attacks (D6), Swiftstride, Terror, Valour of Ages"
+      }
     },
     {
       "name_en": "Handmaiden of the Everqueen",
@@ -781,7 +801,10 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First"
+      }
     }
   ],
   "core": [
@@ -880,6 +903,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Regimental Unit, Valour of Ages"
       }
     },
     {
@@ -968,6 +994,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Elven Reflexes, Valour of Ages"
       }
     },
     {
@@ -1062,6 +1091,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Naval Discipline, Valour of Ages"
       }
     },
     {
@@ -1109,8 +1141,8 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1174,6 +1206,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Fast Cavalry, Open Order, Swiftstride, Valour of Ages"
       }
     },
     {
@@ -1266,6 +1301,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, First Charge, Ithilmar Barding, Swiftstride, Valour of Ages"
       }
     },
     {
@@ -1425,10 +1463,13 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, Dragon Armour, Drilled, Elven Reflexes, First Charge, Impetous, Ithilmar Barding, Ithilmar Weapons, Sons of Caledor, Swiftstride, Valour of Ages"
       }
     },
     {
-      "name_en": "Swordmasters",
+      "name_en": "Swordmasters of Hoeth",
       "name_de": "Swordmasters",
       "id": "swordmasters",
       "points": 14,
@@ -1499,6 +1540,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Deflect Shots, Elven Reflexes, Ithilmar Armour, Magic Resistance (-1), Valour of Ages, Warriors of the White Tower"
       }
     },
     {
@@ -1573,10 +1617,13 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Blessings of Asuryan, Close Order, Elven Reflexes, Fear, Martial Prowess, Veteran, Witness to Destiny"
       }
     },
     {
-      "name_en": "White Lions",
+      "name_en": "White Lions of Chrace",
       "name_de": "White Lions",
       "id": "white-lions",
       "points": 14,
@@ -1647,6 +1694,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Chracian Warriors, Elven Reflexes, King's Guard, Lion Cloak, Move through Cover, Open Order, Stubborn, Valour of Ages"
       }
     },
     {
@@ -1720,6 +1770,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Fire & Flee, Ithilmar Weapons, Move through Cover, Scouts, Skirmishers, Veteran, Warriors of Nagarythe"
       }
     },
     {
@@ -1734,8 +1787,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1754,6 +1807,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Impact Hits (D6), Open Order, Quick Shot, Swiftstride, Valour of Ages"
       }
     }
   ],
@@ -1820,6 +1876,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First"
       }
     },
     {
@@ -1848,6 +1907,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Fear, First Charge, Impact Hits (D6), Lion Cloak, Stubborn, Valour of Ages"
       }
     },
     {
@@ -1875,6 +1937,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Blessings of Asuryan, Close Order, Fear, Flaming Attacks, Fly (10), From the Aashes, Large Target, Stomp Attacks (2), Swiftstride, Wake of Fire"
       }
     },
     {
@@ -1902,6 +1967,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Blizzard Aura, Close Order, Fear, Fly (9), Large Target, Stomp Attacks (2), Swiftstride"
       }
     },
     {
@@ -1921,6 +1989,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Fear, Fly (10), Stomp Attacks (1), Swiftstride"
       }
     },
     {
@@ -1940,6 +2011,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Elven Reflexes, Skirmishers, Valour of Ages"
       }
     },
     {
@@ -1954,8 +2028,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "points": 0,
           "perModel": false,
           "active": true
@@ -1984,6 +2058,9 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages"
       }
     }
   ],

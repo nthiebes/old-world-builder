@@ -8,13 +8,9 @@
       "points": 175,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
-      "notes": {
-        "name_en": "0-1 per army",
-        "name_de": "0-1 per army",
-        "name_es": "0-1 per army",
-        "name_fr": "0-1 par armée"
-      },
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -130,6 +126,15 @@
           "maxPoints": 0
         }
       ],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Rallying Cry, the Grail Vow"
+      },
+      "notes": {
+        "name_en": "0-1 per army",
+        "name_de": "0-1 per army",
+        "name_es": "0-1 per army",
+        "name_fr": "0-1 par armée"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "characters"
@@ -285,7 +290,10 @@
           "selected": [],
           "maxPoints": 0
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Rallying Cry, the Knight's Vow"
+      }
     },
     {
       "name_en": "Prophetess",
@@ -380,6 +388,9 @@
         }
       ],
       "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Aura of the Lady, Blessing of the Lady, Lore of the Lady, Magical Attacks, Magic Resistance(-2), Shield of the Lady"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "characters"
@@ -397,7 +408,28 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -469,15 +501,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -520,14 +543,6 @@
           "maxPoints": 50
         },
         {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
-          "name_fr": "Bannière Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
-        },
-        {
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
           "name_fr": "Vertues Chevaleresques",
@@ -535,7 +550,10 @@
           "selected": [],
           "maxPoints": 0
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Rallying Cry, the Knight's Vow"
+      }
     },
     {
       "name_en": "Damsel",
@@ -616,7 +634,10 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "elementalism", "illusion"]
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Aura of the Lady, Blessing of the Lady, Lore of the Lady, Magical Attacks, Magic Resistance(-2), Shield of the Lady"
+      }
     },
     {
       "name_en": "Sergeant-at-Arms",
@@ -653,8 +674,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
           "name_fr": "Lance de Cavalerie",
           "points": 2,
           "perModel": false,
@@ -707,7 +728,10 @@
           "selected": [],
           "maxPoints": 25
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Levies, Peasant's Duty, Peasantry, Warband"
+      }
     },
     {
       "name_en": "The Green Knight",
@@ -767,7 +791,7 @@
       "mounts": [],
       "items": [],
       "lores": [],
-      "specialRules": "Arcane Backlash, Armour Bane (2, Ariandir only), Armoured Hide (1), Aura of the Lady, Beguiling Aura, Blessings of the Lady, Counter Charge, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady, Stomp Attacks (1), Swiftstride"
+      "specialRules": "Arcane Backlash, Armour Bane (2, Ariandir only), Armoured Hide (1), Aura of the Lady, Beguiling Aura, Blessings of the Lady, Counter Charge, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady, Stomp Attacks (1), Swiftstride"
     },
     {
       "name_en": "Outcast Wizard",
@@ -943,6 +967,9 @@
       ],
       "options": [],
       "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Levies, Peasantry, Shieldwall, Warband"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "core"
@@ -1056,6 +1083,9 @@
         }
       ],
       "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Levies, Peasantry"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "core"
@@ -1145,7 +1175,10 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Close Order, Furious Charge, the Knight's Vow"
+      }
     },
     {
       "name_en": "Mounted Knights of the Realm (1+**)",
@@ -1208,7 +1241,10 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Knight's Vow"
+      }
     },
     {
       "name_en": "Knights Errant",
@@ -1277,10 +1313,13 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Close Order, Finest Warhorses, First Charge, Impetous, Lance Formation, Swiftstride, the Knight's Vow"
+      }
     },
     {
-      "name_en": "Yeoman Guard",
+      "name_en": "Yeomen Guard",
       "name_de": "Yeoman Guard",
       "name_es": "Yeoman Guard",
       "name_fr": "Guardes Ecuyers",
@@ -1440,6 +1479,9 @@
       ],
       "options": [],
       "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Hatred(All Enemies), Levies, Peasantry, Stubborn"
+      },
       "armyComposition": {
         "errantry-crusades": {
           "category": "core"
@@ -1520,6 +1562,9 @@
           "maxPoints": 0
         }
       ],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Close Order, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Questing Vow"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "special"
@@ -1593,7 +1638,10 @@
         }
       ],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly(10), Furios Charge (Pegasus Knights & First Knight only), Lance Formation, Skirmishers, Swiftstride, the Knight's Vow"
+      }
     },
     {
       "name_en": "Mounted Yeomen",
@@ -1637,8 +1685,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Cavalry Spears, Shortbows",
-          "name_de": "Hand weapons, Cavalry Spears, Shortbows",
+          "name_en": "Hand weapons, Cavalry spears, Shortbows",
+          "name_de": "Hand weapons, Cavalry spears, Shortbows",
           "name_fr": "Armes de Base, Lances de Cavalerie, Arcs courts",
           "points": 0,
           "perModel": true,
@@ -1686,6 +1734,9 @@
         }
       ],
       "mounts": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Levies, Open Order, Peasantry, Reserve Move, Skirmishers, Swiftstride"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "special"
@@ -1772,6 +1823,9 @@
         }
       ],
       "mounts": [],
+      "specialRules": {
+        "name_en": "Move through Cover, Open Order, Peasantry, Skirmishers, Vanguard"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "special"
@@ -1907,6 +1961,9 @@
           "maxPoints": 0
         }
       ],
+      "specialRules": {
+        "name_en": "Blessing of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Living Saints, Swiftstride, the Grail Vow"
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "rare"
@@ -1943,7 +2000,10 @@
       ],
       "armor": [],
       "options": [],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Levies, Peasantry, Skirmishers"
+      }
     },
     {
       "name_en": "Border Princes Brigands",

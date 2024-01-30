@@ -239,7 +239,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -371,17 +392,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_es": "Battle Standard Bearer",
-          "name_fr": "Battle Standard Bearer",
-          "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -427,15 +437,6 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Battle Standard",
-          "name_de": "Battle Standard",
-          "name_es": "Battle Standard",
-          "name_fr": "Battle Standard",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 70
         }
       ],
       "lores": [],
@@ -699,10 +700,10 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
-          "name_es": "Cavalry Spear",
-          "name_fr": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_es": "Cavalry spear",
+          "name_fr": "Cavalry spear",
           "points": 2,
           "perModel": true,
           "active": false
@@ -1809,9 +1810,9 @@
           "name_de": "Claws (counts as hand weapons)",
           "name_es": "Claws (counts as hand weapons)",
           "name_fr": "Claws (counts as hand weapons)",
-          "points": 1,
+          "points": 0,
           "perModel": true,
-          "active": false
+          "active": true
         }
       ],
       "armor": [],
