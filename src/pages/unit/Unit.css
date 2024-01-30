@@ -155,3 +155,25 @@
     margin-top: 1rem;
   }
 }
+
+.unit__special-rule {
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--color-headline);
+  transition: color 0.2s linear;
+}
+
+.unit__special-rule:focus,
+.unit__special-rule:active {
+  color: var(--color-button);
+}
+
+@media (hover: hover) {
+  .unit__special-rule:hover {
+    color: var(--color-button);
+  }
+}

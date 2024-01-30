@@ -12,9 +12,11 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { RulesIndex } from "../../components/rules-index";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
+import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
@@ -277,6 +279,36 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
+  const getSpecialRules = () => {
+    const specialRulesEn = unit.specialRules.name_en.split(", ");
+    const specialRulesString =
+      unit.specialRules[`name_${language}`] || unit.specialRules.name_en;
+    const specialRulesButtons = specialRulesString
+      .split(", ")
+      .map((rule, index) => (
+        <>
+          {index !== 0 && ", "}
+          <button
+            className="unit__special-rule"
+            key={rule}
+            onClick={() =>
+              dispatch(openRulesIndex({ activeRule: specialRulesEn[index] }))
+            }
+          >
+            {rule}
+          </button>
+        </>
+      ));
+
+    return (
+      <>
+        <h2 className="unit__subline unit__subline--space-before">
+          <FormattedMessage id="unit.specialRules" />
+        </h2>
+        <p>{specialRulesButtons.map((item) => item)}</p>
+      </>
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -370,6 +402,8 @@ export const Unit = ({ isMobile }) => {
           })}`}
         />
       )}
+
+      <RulesIndex />
 
       <MainComponent>
         {!isMobile && (
@@ -1078,17 +1112,9 @@ export const Unit = ({ isMobile }) => {
               );
             })
           : null}
-        {unit.specialRules && unit.specialRules.name_en ? (
-          <>
-            <h2 className="unit__subline unit__subline--space-before">
-              <FormattedMessage id="unit.specialRules" />
-            </h2>
-            <p>
-              {unit.specialRules[`name_${language}`] ||
-                unit.specialRules.name_en}
-            </p>
-          </>
-        ) : null}
+        {unit.specialRules && unit.specialRules.name_en
+          ? getSpecialRules()
+          : null}
       </MainComponent>
     </>
   );
