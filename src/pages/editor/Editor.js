@@ -10,6 +10,7 @@ import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
+import { Dialog } from "../../components/dialog";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
@@ -25,6 +26,7 @@ export const Editor = ({ isMobile }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const location = useLocation();
   const { language } = useLanguage();
   // const errors = useSelector((state) => state.errors);
@@ -32,7 +34,13 @@ export const Editor = ({ isMobile }) => {
     state.lists.find(({ id }) => listId === id)
   );
 
-  const handleDelete = () => {
+  const handleDeleteClick = (event) => {
+    event.preventDefault();
+    setIsDialogOpen(false);
+  };
+
+  const handleDeleteConfirm = () => {
+    setIsDialogOpen(false);
     dispatch(deleteList(listId));
     removeFromLocalList(listId);
     setRedirect(true);
@@ -177,7 +185,7 @@ export const Editor = ({ isMobile }) => {
         id: "misc.delete",
       }),
       icon: "delete",
-      callback: handleDelete,
+      callback: () => setIsDialogOpen(true),
     },
   ];
 
@@ -186,6 +194,37 @@ export const Editor = ({ isMobile }) => {
       <Helmet>
         <title>{`Old World Builder | ${list?.name}`}</title>
       </Helmet>
+
+      <Dialog open={isDialogOpen} onClose={() => setIsDialogOpen(false)}>
+        <p>
+          <FormattedMessage
+            id="editor.confirmDelete"
+            values={{
+              list: <b>{list.name}</b>,
+            }}
+          />
+        </p>
+        <div className="editor__delete-dialog">
+          <Button
+            type="text"
+            onClick={handleDeleteClick}
+            icon="close"
+            spaceTop
+            color="dark"
+          >
+            <FormattedMessage id="misc.cancel" />
+          </Button>
+          <Button
+            type="secondary"
+            submitButton
+            onClick={handleDeleteConfirm}
+            icon="delete"
+            spaceTop
+          >
+            <FormattedMessage id="misc.delete" />
+          </Button>
+        </div>
+      </Dialog>
 
       {isMobile && (
         <Header

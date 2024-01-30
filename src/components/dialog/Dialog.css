@@ -1,0 +1,28 @@
+.dialog {
+  z-index: 7;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-radius: 5px;
+  max-width: 90%;
+  min-width: 20rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 0%,
+    rgba(254, 245, 230, 1) 50%,
+    var(--color-background) 100%
+  );
+  border: 2px solid var(--color-list);
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
