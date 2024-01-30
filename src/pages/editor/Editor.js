@@ -204,11 +204,7 @@ export const Editor = ({ isMobile }) => {
             }}
           />
         </p>
-        <form
-          method="dialog"
-          onSubmit={handleDeleteConfirm}
-          className="dialog__form"
-        >
+        <div className="editor__delete-dialog">
           <Button
             type="text"
             onClick={handleDeleteClick}
@@ -221,14 +217,13 @@ export const Editor = ({ isMobile }) => {
           <Button
             type="secondary"
             submitButton
-            onClick={handleDeleteClick}
+            onClick={handleDeleteConfirm}
             icon="delete"
             spaceTop
-            autofocus
           >
             <FormattedMessage id="misc.delete" />
           </Button>
-        </form>
+        </div>
       </Dialog>
 
       {isMobile && (

@@ -1,9 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import classNames from "classnames";
 
-import { Icon } from "../icon";
 import { Button } from "../button";
 
 import "./Dialog.css";
@@ -25,7 +22,7 @@ export const Dialog = ({ open, onClose, children }) => {
   return (
     <dialog className="dialog" ref={dialogRef} onClose={handleClose}>
       <Button
-        className="unit-preview__close"
+        className="dialog__close"
         icon="close"
         type="text"
         label="Close dialog"
@@ -37,6 +34,8 @@ export const Dialog = ({ open, onClose, children }) => {
   );
 };
 
-Dialog.propTypes = {};
-
-Dialog.defaultProps = {};
+Dialog.propTypes = {
+  open: PropTypes.bool,
+  children: PropTypes.node,
+  onClose: PropTypes.func,
+};
