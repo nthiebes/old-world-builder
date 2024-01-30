@@ -314,38 +314,3 @@ hr {
   background-color: var(--color-list);
   height: 100%;
 }
-
-.dialog {
-  z-index: 7;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  padding: 1rem;
-  border-radius: 5px;
-  max-width: 90%;
-  background: linear-gradient(
-    90deg,
-    var(--color-background) 0%,
-    rgba(254, 245, 230, 1) 50%,
-    var(--color-background) 100%
-  );
-  border: 2px solid var(--color-list);
-}
-
-.dialog::before {
-  /* content: "";
-  position: fixed;
-  z-index: 7;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5); */
-}
-
-.dialog__form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}

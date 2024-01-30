@@ -10,6 +10,7 @@ import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { List } from "../../components/list";
 import { Header, Main } from "../../components/page";
+import { Dialog } from "../../components/dialog";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
@@ -194,7 +195,7 @@ export const Editor = ({ isMobile }) => {
         <title>{`Old World Builder | ${list?.name}`}</title>
       </Helmet>
 
-      <dialog open={isDialogOpen} className="dialog">
+      <Dialog open={isDialogOpen} onClose={() => setIsDialogOpen(false)}>
         <p>
           <FormattedMessage
             id="editor.confirmDelete"
@@ -228,7 +229,7 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="misc.delete" />
           </Button>
         </form>
-      </dialog>
+      </Dialog>
 
       {isMobile && (
         <Header
