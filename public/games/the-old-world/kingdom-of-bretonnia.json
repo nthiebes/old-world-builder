@@ -408,7 +408,28 @@
       "points": 60,
       "minimum": 0,
       "maximum": 0,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -480,15 +501,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "points": 0,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -529,14 +541,6 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
-          "name_fr": "Bannière Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         },
         {
           "name_en": "Knightly Virtues",

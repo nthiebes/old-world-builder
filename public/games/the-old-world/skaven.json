@@ -120,7 +120,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -190,17 +211,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Armeestandartenträger",
-          "name_es": "Battle Standard Bearer",
-          "name_fr": "Battle Standard Bearer",
-          "points": 25,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [],
@@ -213,15 +223,6 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (if BSB)",
-          "name_de": "Magische Standarten (als AST)",
-          "name_es": "Magic Standard (if BSB)",
-          "name_fr": "Magic Standard (if BSB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "lores": [],
