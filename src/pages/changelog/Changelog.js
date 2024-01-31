@@ -33,10 +33,52 @@ export const Changelog = () => {
         <Button to="/" icon="home" centered>
           <FormattedMessage id="misc.startpage" />
         </Button>
-
         <h2 className="page-headline">
           <FormattedMessage id="changelog.title" />
         </h2>
+
+        <hr />
+
+        <h3>v0.12</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2024-01-31 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change22"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+                rulesIndex: (
+                  <a
+                    href="https://www.whfb.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <b>Online Rules Index</b>
+                  </a>
+                ),
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change23"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
 
         <hr />
 
