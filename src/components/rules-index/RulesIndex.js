@@ -27,7 +27,7 @@ export const RulesIndex = () => {
           <iframe
             onLoad={() => setIsLoading(false)}
             className="rules-index__iframe"
-            src={`https://tow.whfb.app/${rulePath}?minimal=true`}
+            src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="test"
             height="500"
             width="500"
