@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const rulesIndexSlice = createSlice({
   name: "rulesIndex",
   initialState: {
-    activeRule: null,
+    activeRule: "",
     open: false,
   },
   reducers: {
@@ -11,7 +11,7 @@ export const rulesIndexSlice = createSlice({
       return { ...state, activeRule: payload.activeRule, open: true };
     },
     closeRulesIndex: (state) => {
-      return { ...state, activeRule: null, open: false };
+      return { ...state, activeRule: "", open: false };
     },
   },
 });

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { Dialog } from "../../components/dialog";
 import { Spinner } from "../../components/spinner";
+import { removeParens } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
 import { rulesMap } from "./rules-map";
@@ -17,17 +18,16 @@ export const RulesIndex = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-
-  console.log(isLoading);
+  const rulePath = rulesMap[removeParens(activeRule)];
 
   return (
     <Dialog open={open} onClose={handleClose}>
-      {rulesMap[activeRule] ? (
+      {rulesMap[removeParens(activeRule)] ? (
         <>
           <iframe
             onLoad={() => setIsLoading(false)}
             className="rules-index__iframe"
-            src={`https://tow.whfb.app/${rulesMap[activeRule]}?minimal=true`}
+            src={`https://tow.whfb.app/${rulePath}?minimal=true`}
             title="test"
             height="500"
             width="500"
