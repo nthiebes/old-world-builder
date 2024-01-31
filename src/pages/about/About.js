@@ -106,6 +106,22 @@ export const About = () => {
         </p>
         <p>
           <FormattedMessage
+            id="about.rulesIndex"
+            values={{
+              rulesIndex: (
+                <a
+                  href="https://www.whfb.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Online Rules Index
+                </a>
+              ),
+            }}
+          />
+        </p>
+        <p>
+          <FormattedMessage
             id="about.credits"
             values={{
               gameIcons: (
@@ -129,10 +145,27 @@ export const About = () => {
             }}
           />
         </p>
+        <br />
         <p>
           <b>
             <FormattedMessage id="about.disclaimer" />
           </b>
+        </p>
+        <p>
+          Warhammer: the Old World, Citadel, Forge World, Games Workshop, GW,
+          Warhammer, the 'winged-hammer' Warhammer logo, the Chaos devices, the
+          Chaos logo, Citadel Device, the Double-Headed/Imperial Eagle device,
+          'Eavy Metal, Games Workshop logo, Golden Demon, Great Unclean One, the
+          Hammer of Sigmar logo, Horned Rat logo, Keeper of Secrets, Khemri,
+          Khorne, Lord of Change, Nurgle, Skaven, the Skaven symbol devices,
+          Slaanesh, Tomb Kings, Trio of Warriors, Twin Tailed Comet Logo,
+          Tzeentch, Warhammer Online, Warhammer World logo, White Dwarf, the
+          White Dwarf logo, and all associated logos, marks, names, races, race
+          insignia, characters, vehicles, locations, units, illustrations and
+          images from the Warhammer world are either ®, TM and/or © Copyright
+          Games Workshop Ltd 2000-2013, variably registered in the UK and other
+          countries around the world. Used without permission. No challenge to
+          their status intended. All Rights Reserved to their respective owners.
         </p>
       </Main>
     </>
