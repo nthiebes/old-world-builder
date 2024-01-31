@@ -163,7 +163,7 @@ export const About = () => {
           White Dwarf logo, and all associated logos, marks, names, races, race
           insignia, characters, vehicles, locations, units, illustrations and
           images from the Warhammer world are either ®, TM and/or © Copyright
-          Games Workshop Ltd 2000-2013, variably registered in the UK and other
+          Games Workshop Ltd 2000-2024, variably registered in the UK and other
           countries around the world. Used without permission. No challenge to
           their status intended. All Rights Reserved to their respective owners.
         </p>
