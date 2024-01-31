@@ -13,15 +13,21 @@ export const RulesIndex = () => {
   const { open, activeRule } = useSelector((state) => state.rulesIndex);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
+  const handleClose = () => {
+    setIsLoading(true);
+    dispatch(closeRulesIndex());
+  };
+
+  console.log(isLoading);
 
   return (
-    <Dialog open={open} onClose={() => dispatch(closeRulesIndex())}>
+    <Dialog open={open} onClose={handleClose}>
       {rulesMap[activeRule] ? (
         <>
           <iframe
             onLoad={() => setIsLoading(false)}
             className="rules-index__iframe"
-            src={`https://tow.whfb.app/${rulesMap[activeRule]}`}
+            src={`https://tow.whfb.app/${rulesMap[activeRule]}?minimal=true`}
             title="test"
             height="500"
             width="500"

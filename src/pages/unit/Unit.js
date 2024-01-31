@@ -286,11 +286,10 @@ export const Unit = ({ isMobile }) => {
     let specialRulesButtons = specialRulesString.split(", ");
 
     specialRulesButtons = specialRulesButtons.map((rule, index) => (
-      <>
+      <Fragment key={rule}>
         {rulesMap[specialRulesEn[index]] ? (
           <button
             className="unit__special-rule"
-            key={rule}
             onClick={() =>
               dispatch(openRulesIndex({ activeRule: specialRulesEn[index] }))
             }
@@ -304,7 +303,7 @@ export const Unit = ({ isMobile }) => {
             {index !== specialRulesButtons.length - 1 && ", "}
           </>
         )}
-      </>
+      </Fragment>
     ));
 
     return (
