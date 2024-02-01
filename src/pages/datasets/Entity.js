@@ -11,6 +11,7 @@ const initialUnitState = {
   name_de: "",
   name_es: "",
   name_fr: "",
+  name_it: "",
   id: "",
   points: 1,
   minimum: 0,
@@ -29,12 +30,14 @@ const initialUnitState = {
     name_de: "",
     name_es: "",
     name_fr: "",
+    name_it: "",
   },
   notes: {
     name_en: "",
     name_de: "",
     name_es: "",
     name_fr: "",
+    name_it: "",
   },
 };
 const magicItemTypes = [
@@ -126,6 +129,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         name_de: !unit[key].name_de ? value : unit[key].name_de,
         name_es: !unit[key].name_es ? value : unit[key].name_es,
         name_fr: !unit[key].name_fr ? value : unit[key].name_fr,
+        name_it: !unit[key].name_it ? value : unit[key].name_it,
       },
     });
   };
@@ -159,6 +163,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       name_de: !unit.name_de ? unit.name_en : unit.name_de,
       name_es: !unit.name_es ? unit.name_en : unit.name_es,
       name_fr: !unit.name_fr ? unit.name_en : unit.name_fr,
+      name_it: !unit.name_it ? unit.name_en : unit.name_it,
     });
   };
   const handleSecondLevelFieldChange = ({ key, field, value, index }) => {
@@ -191,6 +196,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: !entry.name_de ? value : entry.name_de,
           name_es: !entry.name_es ? value : entry.name_es,
           name_fr: !entry.name_fr ? value : entry.name_fr,
+          name_it: !entry.name_it ? value : entry.name_it,
         };
       }
       return entry;
@@ -271,6 +277,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           name_es: "",
           name_fr: "",
+          name_it: "",
           points: 1,
           magic: {
             types: [],
@@ -290,6 +297,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           name_es: "",
           name_fr: "",
+          name_it: "",
           points: 1,
           perModel: true,
           active: false,
@@ -307,6 +315,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           name_es: "",
           name_fr: "",
+          name_it: "",
           points: 1,
           perModel: true,
           active: false,
@@ -324,6 +333,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           name_es: "",
           name_fr: "",
+          name_it: "",
           points: 1,
           perModel: true,
           stackable: false,
@@ -343,6 +353,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "",
           name_es: "",
           name_fr: "",
+          name_it: "",
           points: 1,
           active: false,
         },
@@ -359,6 +370,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           name_de: "Magische Gegenstände",
           name_es: "Objetos mágicos",
           name_fr: "Objets magiques",
+          name_it: "Oggetti magici",
           types: [],
           selected: [],
           maxPoints: 0,
@@ -412,6 +424,16 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         id={`name_fr-${randomId}`}
         className="input"
         value={unit.name_fr}
+        onChange={handleFieldChange}
+        autoComplete="off"
+        required
+      />
+      <label htmlFor={`name_it-${randomId}`}>Name Italian</label>
+      <input
+        type="text"
+        id={`name_it-${randomId}`}
+        className="input"
+        value={unit.name_it}
         onChange={handleFieldChange}
         autoComplete="off"
         required
@@ -601,6 +623,22 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           placeholder="e.g. Stubborn, Regiment, etc."
           autoComplete="off"
         />
+        <label htmlFor={`specialRules-it-${randomId}`}>Italian</label>
+        <input
+          type="text"
+          id={`specialRules-it-${randomId}`}
+          className="input"
+          value={unit.specialRules?.name_it}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_it",
+              key: "specialRules",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. Stubborn, Regiment, etc."
+          autoComplete="off"
+        />
       </Expandable>
       <Expandable headline="Notes">
         <label htmlFor={`notes-en-${randomId}`}>English</label>
@@ -666,6 +704,22 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_fr",
+              key: "notes",
+              value: event.target.value,
+            })
+          }
+          placeholder="e.g. '0-1 per 1000 points'"
+          autoComplete="off"
+        />
+        <label htmlFor={`notes-it-${randomId}`}>Italian</label>
+        <input
+          type="text"
+          id={`notes-it-${randomId}`}
+          className="input"
+          value={unit.notes?.name_it}
+          onChange={(event) =>
+            handleSpecialRulesChange({
+              field: "name_it",
               key: "notes",
               value: event.target.value,
             })
@@ -760,6 +814,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     index,
                     key: "command",
                     field: "name_fr",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
+              <label htmlFor={`command-name_it${index}-${randomId}`}>
+                Name Italian
+              </label>
+              <input
+                type="text"
+                id={`command-name_it${index}-${randomId}`}
+                className="input"
+                value={command.name_it}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "command",
+                    field: "name_it",
                     value: event.target.value,
                   })
                 }
@@ -936,6 +1008,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 index,
                 key: "equipment",
                 field: "name_fr",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
+          <label htmlFor={`equipment-name_it${index}-${randomId}`}>
+            Name Italian
+          </label>
+          <input
+            type="text"
+            id={`equipment-name_it${index}-${randomId}`}
+            className="input"
+            value={equipment.name_it}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "equipment",
+                field: "name_it",
                 value: event.target.value,
               })
             }
@@ -1121,6 +1211,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             }
             autoComplete="off"
           />
+          <label htmlFor={`armor-name_it${index}-${randomId}`}>
+            Name Italian
+          </label>
+          <input
+            type="text"
+            id={`armor-name_it${index}-${randomId}`}
+            className="input"
+            value={armor.name_it}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "armor",
+                field: "name_it",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
           <label htmlFor={`armor-points${index}-${randomId}`}>Points</label>
           <NumberInput
             id={`armor-points${index}-${randomId}`}
@@ -1294,6 +1402,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 index,
                 key: "options",
                 field: "name_fr",
+                value: event.target.value,
+              })
+            }
+            autoComplete="off"
+          />
+          <label htmlFor={`options-name_it${index}-${randomId}`}>
+            Name Italian
+          </label>
+          <input
+            type="text"
+            id={`options-name_it${index}-${randomId}`}
+            className="input"
+            value={option.name_it}
+            onChange={(event) =>
+              handleSecondLevelFieldChange({
+                index,
+                key: "options",
+                field: "name_it",
                 value: event.target.value,
               })
             }
@@ -1519,6 +1645,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 }
                 autoComplete="off"
               />
+              <label htmlFor={`mounts-name_it${index}-${randomId}`}>
+                Name Italian
+              </label>
+              <input
+                type="text"
+                id={`mounts-name_it${index}-${randomId}`}
+                className="input"
+                value={mount.name_it}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index,
+                    key: "mounts",
+                    field: "name_it",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
               <label htmlFor={`mounts-points${index}-${randomId}`}>
                 Points
               </label>
@@ -1666,6 +1810,24 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     index: itemIndex,
                     key: "items",
                     field: "name_fr",
+                    value: event.target.value,
+                  })
+                }
+                autoComplete="off"
+              />
+              <label htmlFor={`magic-name_it-${itemIndex}-${randomId}`}>
+                Name Italian
+              </label>
+              <input
+                type="text"
+                id={`magic-name_it-${itemIndex}-${randomId}`}
+                className="input"
+                value={item.name_it}
+                onChange={(event) =>
+                  handleSecondLevelFieldChange({
+                    index: itemIndex,
+                    key: "items",
+                    field: "name_it",
                     value: event.target.value,
                   })
                 }
