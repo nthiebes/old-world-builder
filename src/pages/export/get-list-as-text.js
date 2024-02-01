@@ -66,9 +66,10 @@ export const getListAsText = ({
   const armyName = game.armies.find((army) => army.id === list.army)[
     `name_${language}`
   ];
-  const armyCompositionName = nameMap[list.armyComposition]
-    ? nameMap[list.armyComposition][`name_${language}`]
-    : "";
+  const armyCompositionName =
+    list.army !== list.armyComposition && nameMap[list.armyComposition]
+      ? nameMap[list.armyComposition][`name_${language}`]
+      : "";
   const armyCompositionString = armyCompositionName
     ? `, ${armyCompositionName}`
     : "";

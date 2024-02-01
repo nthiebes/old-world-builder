@@ -634,9 +634,6 @@ export const Editor = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <p className="editor__soon">
-              <FormattedMessage id="editor.comingSoon" />
-            </p>
             <Button
               centered
               to={`/editor/${listId}/add/allies`}
