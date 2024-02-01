@@ -14,6 +14,7 @@ import English from "./i18n/en.json";
 import German from "./i18n/de.json";
 import Spanish from "./i18n/es.json";
 import French from "./i18n/fr.json";
+import Italian from "./i18n/it.json";
 
 // Initialize Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -37,13 +38,14 @@ if (process.env.NODE_ENV !== "development") {
 
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
-  en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
+  en: "Costruttore di eserciti per Warhammer: The Old World e Warhammer Fantasy Battles.",
   fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World' et 'Warhammer Fantaisie'.",
   es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
+  it: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
 };
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr", "es"];
+const supportedLanguages = ["en", "de", "fr", "es", "it"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -65,6 +67,8 @@ if (language === "de") {
   messages = Spanish;
 } else if (language === "fr") {
   messages = French;
+} else if (language === "it") {
+  messages = Italian;
 } else {
   messages = English;
 }
