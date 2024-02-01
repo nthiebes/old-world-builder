@@ -513,6 +513,7 @@ export const Unit = ({ isMobile }) => {
                                 })
                           }`}
                           {perModel &&
+                            type !== "characters" &&
                             ` ${intl.formatMessage({
                               id: "unit.perModel",
                             })}`}
@@ -624,6 +625,7 @@ export const Unit = ({ isMobile }) => {
                             })
                       }`}
                       {perModel &&
+                        type !== "characters" &&
                         ` ${intl.formatMessage({
                           id: "unit.perModel",
                         })}`}
@@ -671,6 +673,7 @@ export const Unit = ({ isMobile }) => {
                             })
                       }`}
                       {perModel &&
+                        type !== "characters" &&
                         ` ${intl.formatMessage({
                           id: "unit.perModel",
                         })}`}
@@ -725,6 +728,7 @@ export const Unit = ({ isMobile }) => {
                               })
                         }`}
                         {perModel &&
+                          type !== "characters" &&
                           ` ${intl.formatMessage({
                             id: "unit.perModel",
                           })}`}
@@ -893,6 +897,7 @@ export const Unit = ({ isMobile }) => {
                                                 })
                                           }`}
                                           {equipment.perModel &&
+                                            type !== "characters" &&
                                             ` ${intl.formatMessage({
                                               id: "unit.perModel",
                                             })}`}
@@ -941,6 +946,7 @@ export const Unit = ({ isMobile }) => {
                                               })
                                         }`}
                                         {armor.perModel &&
+                                          type !== "characters" &&
                                           ` ${intl.formatMessage({
                                             id: "unit.perModel",
                                           })}`}
@@ -989,6 +995,7 @@ export const Unit = ({ isMobile }) => {
                                               })
                                         }`}
                                         {option.perModel &&
+                                          type !== "characters" &&
                                           ` ${intl.formatMessage({
                                             id: "unit.perModel",
                                           })}`}
