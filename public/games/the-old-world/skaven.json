@@ -19,7 +19,7 @@
           "name_es": "Hand weapon",
           "name_fr": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -28,7 +28,7 @@
           "name_es": "Additional hand weapon",
           "name_fr": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -37,7 +37,7 @@
           "name_es": "Great Weapon",
           "name_fr": "Great Weapon",
           "points": 4,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -46,7 +46,7 @@
           "name_es": "Halberd",
           "name_fr": "Halberd",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -57,7 +57,7 @@
           "name_es": "Light armor",
           "name_fr": "Light armor",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -65,8 +65,8 @@
           "name_de": "Schwere Rüstung",
           "name_es": "Heavy armor",
           "name_fr": "Heavy armor",
-          "points": 1,
-          "perModel": true,
+          "points": 3,
+          "perModel": false,
           "active": false
         }
       ],
@@ -77,7 +77,7 @@
           "name_es": "Shield",
           "name_fr": "Shield",
           "points": 2,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -120,7 +120,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -128,7 +149,7 @@
           "name_es": "Hand weapon",
           "name_fr": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -137,7 +158,7 @@
           "name_es": "Additional hand weapon",
           "name_fr": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -146,7 +167,7 @@
           "name_es": "Great weapon",
           "name_fr": "Great weapon",
           "points": 4,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -155,7 +176,7 @@
           "name_es": "Halberd",
           "name_fr": "Halberd",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -166,7 +187,7 @@
           "name_es": "Light armor",
           "name_fr": "Light armor",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -175,7 +196,7 @@
           "name_es": "Heavy Armor",
           "name_fr": "Heavy Armor",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -186,18 +207,7 @@
           "name_es": "Shield",
           "name_fr": "Shield",
           "points": 2,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Armeestandartenträger",
-          "name_es": "Battle Standard Bearer",
-          "name_fr": "Battle Standard Bearer",
-          "points": 25,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -213,15 +223,6 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (if BSB)",
-          "name_de": "Magische Standarten (als AST)",
-          "name_es": "Magic Standard (if BSB)",
-          "name_fr": "Magic Standard (if BSB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "lores": [],
@@ -252,35 +253,24 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Handwaffe",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapon, D3 Warpstone Tokens",
+          "name_de": "Handwaffe, D3 Warpstone Tokens",
+          "name_es": "Hand weapon, D3 Warpstone Tokens",
+          "name_fr": "Hand weapon, D3 Warpstone Tokens",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
       "armor": [],
       "options": [
         {
-          "name_en": "D3 Warpstone Tokens (default)",
-          "name_de": "W3 Warpsteinhappen (default)",
-          "name_es": "D3 Warpstone Tokens (default)",
-          "name_fr": "D3 Warpstone Tokens (default)",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
           "name_en": "Level 4",
           "name_de": "Stufe 4",
           "name_es": "Level 4",
           "name_fr": "Level 4",
           "points": 30,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -289,7 +279,7 @@
       "mounts": [
         {
           "name_en": "On foot",
-          "name_de": "zu Fuß",
+          "name_de": "Zu Fuß",
           "name_es": "On foot",
           "name_fr": "On foot",
           "points": 0,
@@ -360,7 +350,7 @@
           "name_es": "Hand weapon",
           "name_fr": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -369,7 +359,7 @@
           "name_es": "Hand weapon, Warplock musket",
           "name_fr": "Hand weapon, Warplock musket",
           "points": 9,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -378,7 +368,7 @@
           "name_es": "Hand weapon, Warplock pistol",
           "name_fr": "Hand weapon, Warplock pistol",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -390,7 +380,7 @@
           "name_es": "Level 1",
           "name_fr": "Level 1",
           "points": 40,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -401,7 +391,7 @@
           "name_es": "Level 2",
           "name_fr": "Level 2",
           "points": 70,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -412,7 +402,7 @@
           "name_es": "D3 Warpstone Tokens (default)",
           "name_fr": "D3 Warpstone Tokens (default)",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -470,7 +460,7 @@
           "name_es": "Two hand weapons and throwing weapons",
           "name_fr": "Two hand weapons and throwing weapons",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         }
       ],
@@ -490,10 +480,10 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
-        "name_de": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
-        "name_es": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
-        "name_fr": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons"
+        "name_en": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move Through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_de": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move Through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_es": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move Through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons",
+        "name_fr": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden, Move Through Cover, Poisened Attacks, Scouts, Scurry Away, Verminous Valour, Warpstone Weapons"
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
@@ -521,7 +511,7 @@
           "name_es": "Hand weapon",
           "name_fr": "Hand weapon",
           "points": 0,
-          "perModel": true,
+          "perModel": false,
           "active": true
         },
         {
@@ -530,7 +520,7 @@
           "name_es": "Additional hand weapon",
           "name_fr": "Additional hand weapon",
           "points": 3,
-          "perModel": true,
+          "perModel": false,
           "active": false
         },
         {
@@ -539,7 +529,7 @@
           "name_es": "Hand weapon, Plague censer",
           "name_fr": "Hand weapon, Plague censer",
           "points": 6,
-          "perModel": true,
+          "perModel": false,
           "active": false
         }
       ],
@@ -551,7 +541,7 @@
           "name_es": "Level 1",
           "name_fr": "Level 1",
           "points": 30,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -562,7 +552,7 @@
           "name_es": "Level 2",
           "name_fr": "Level 2",
           "points": 60,
-          "perModel": true,
+          "perModel": false,
           "stackable": false,
           "minimum": 0,
           "maximum": 0
@@ -571,7 +561,7 @@
       "mounts": [
         {
           "name_en": "On foot",
-          "name_de": "zu Fuß",
+          "name_de": "Zu Fuß",
           "name_es": "On foot",
           "name_fr": "On foot",
           "points": 0,
@@ -950,10 +940,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
-        "name_de": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
-        "name_es": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
-        "name_fr": "Immune to Psychology, Loner, Skrimishers, Unbreakable, Vanguard"
+        "name_en": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_de": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_es": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
+        "name_fr": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard"
       },
       "notes": {
         "name_en": "",
@@ -975,10 +965,10 @@
       "detachment": false,
       "command": [
         {
-          "name_en": "Master Moulder",
-          "name_de": "Meisterzüchter",
-          "name_es": "Master Moulder",
-          "name_fr": "Master Moulder",
+          "name_en": "Master Moulder (Upgrade for one Packmaster)",
+          "name_de": "Meisterzüchter (Aufwertung für einen Meutenbändiger)",
+          "name_es": "Master Moulder (Upgrade for one Packmaster)",
+          "name_fr": "Master Moulder (Upgrade for one Packmaster)",
           "points": 7,
           "magic": {
             "types": [
@@ -1163,7 +1153,7 @@
           "name_fr": "Assassin",
           "points": 7,
           "magic": {
-            "types": [],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         }
@@ -1226,10 +1216,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
-        "name_de": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
-        "name_es": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers",
-        "name_fr": "Evasive, Feigned Flight, Fire & Flee, Move through Cover, Scouts, Scurry Away, Skirmishers"
+        "name_en": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_de": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_es": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_fr": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers"
       },
       "notes": {
         "name_en": "",
@@ -1251,10 +1241,10 @@
       "detachment": false,
       "command": [
         {
-          "name_en": "Master Moulder",
-          "name_de": "Meisterzüchter",
-          "name_es": "Master Moulder",
-          "name_fr": "Master Moulder",
+          "name_en": "Master Moulder (Upgrade for one Packmaster)",
+          "name_de": "Meisterzüchter (Aufwertung für einen Meutenbändiger)",
+          "name_es": "Master Moulder (Upgrade for one Packmaster)",
+          "name_fr": "Master Moulder (Upgrade for one Packmaster)",
           "points": 7,
           "magic": {
             "types": [
@@ -1547,10 +1537,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
-        "name_de": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
-        "name_es": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
-        "name_fr": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable"
+        "name_en": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
+        "name_de": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
+        "name_es": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
+        "name_fr": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable"
       },
       "notes": {
         "name_en": "0-1 Hell Pit Abomination per 1,000 points",
@@ -1588,10 +1578,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
-        "name_de": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
-        "name_es": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
-        "name_fr": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!"
+        "name_en": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
+        "name_de": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
+        "name_es": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
+        "name_fr": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
@@ -1618,7 +1608,7 @@
           "name_de": "Warpblitzkanone, Handwaffen",
           "name_es": "Warp Lightning Cannon, hand weapons",
           "name_fr": "Warp Lightning Cannon, hand weapons",
-          "points": 1,
+          "points": 0,
           "perModel": true,
           "active": true
         }

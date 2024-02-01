@@ -129,6 +129,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded warhorse",
           "name_de": "Barded warhorse",
           "name_fr": "Destrier caparaçonné",
@@ -152,7 +159,7 @@
         {
           "name_en": "Demigryph",
           "name_de": "Demigryph",
-          "name_fr": "Demi-griffon",
+          "name_fr": "Demigriffon",
           "points": 50,
           "active": false
         },
@@ -171,11 +178,11 @@
           "active": false
         },
         {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
+          "name_en": "Imperial Griffon, Two heads",
+          "name_de": "Imperial Griffon, Two heads",
+          "name_fr": "Griffon Impérial, Two heads",
+          "points": 180,
+          "active": false
         }
       ],
       "items": [
@@ -188,6 +195,19 @@
           "maxPoints": 100
         }
       ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "\"Hold the Line!\", Rallying Cry",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "\"Tenez la ligne!\", Cri de ralliement"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "magic": {
         "types": [
           "weapon",
@@ -209,7 +229,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -324,16 +365,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -361,7 +392,7 @@
         {
           "name_en": "Demigryph",
           "name_de": "Demigryph",
-          "name_fr": "Demi-griffon",
+          "name_fr": "Demigriffon",
           "points": 50,
           "active": false
         },
@@ -388,26 +419,20 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
-          "name_fr": "Bannière Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "banner",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
+      "lores": [],
+      "specialRules": {
+        "name_en": "\"Hold the Line!\", Rallying Cry",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "\"Tenez la ligne!\", Cri de ralliement"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -446,6 +471,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Empire Warhorse",
           "name_de": "Empire warhorse",
           "name_fr": "Destrier impérial",
@@ -467,11 +499,11 @@
           "active": false
         },
         {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
+          "name_en": "Imperial Griffon, Two heads",
+          "name_de": "Imperial Griffon, Two heads",
+          "name_fr": "Griffon Impérial, Two heads",
+          "points": 180,
+          "active": false
         }
       ],
       "items": [
@@ -498,9 +530,17 @@
         "illusion",
         "necromancy"
       ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1)",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Resistance Magique (-1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -584,9 +624,17 @@
         "illusion",
         "necromancy"
       ],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1)",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Resistance Magique (-1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -682,7 +730,7 @@
         {
           "name_en": "Demigryph",
           "name_de": "Demigryph",
-          "name_fr": "Demi-griffon",
+          "name_fr": "Demigriffon",
           "points": 50,
           "active": false
         },
@@ -694,16 +742,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 100
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -713,7 +751,30 @@
           "selected": [],
           "maxPoints": 100
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Counter Charge, First Charge, Immune To Psychology, Master of Battle, Rallying Cry, Stubborn, Swiftstride, Veteran",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Contre-Charge, Première Charge, Immunisé à la psychologie, Maître des Batailles, Cri de Ralliement, Obstiné, Rapide, Vétéran"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 100
+      }
     },
     {
       "name_en": "Chapter Master",
@@ -808,7 +869,7 @@
         {
           "name_en": "Demigryph",
           "name_de": "Demigryph",
-          "name_fr": "Demi-griffon",
+          "name_fr": "Demigriffon",
           "points": 50,
           "active": false
         },
@@ -820,16 +881,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -839,12 +890,35 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Counter Charge, First Charge, Immune To Psychology, Master of Battle, Rallying Cry, Stubborn, Swiftstride, Veteran",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Contre-Charge, Première Charge, Immunisé à la psychologie, Maître des Batailles, Cri de Ralliement, Obstiné, Rapide, Vétéran"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
     },
     {
       "name_en": "Witch Hunter",
       "name_de": "Witch Hunter",
-      "name_fr": "Chasseur de sorcière",
+      "name_fr": "Répurgateur",
       "id": "witch-hunter",
       "points": 55,
       "minimum": 0,
@@ -953,16 +1027,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -972,12 +1036,35 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Immune To Psychology, Killing Blow, Suffer Not...",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Immunisé à la psychologie, Coup Fatal, Ne Tolérez Pas..."
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "magic": {
+        "types": [
+          "weapon",
+          "armor",
+          "talisman",
+          "arcane-item",
+          "enchanted-item"
+        ],
+        "maxPoints": 50
+      }
     },
     {
       "name_en": "Lector of Sigmar",
       "name_de": "Lector of Sigmar",
-      "name_fr": "Prêcheur de Sigmar",
+      "name_fr": "Archidiacre de Sigmar",
       "id": "lector-of-sigmar",
       "points": 110,
       "minimum": 0,
@@ -1059,6 +1146,7 @@
         {
           "name_en": "War Alter of Sigmar",
           "name_de": "War Alter of Sigmar",
+          "name_fr": "Autel de Guerre de Sigmar",
           "points": 135,
           "active": false
         },
@@ -1070,16 +1158,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 100
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -1089,7 +1167,20 @@
           "selected": [],
           "maxPoints": 100
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Prayers of Sigmar",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières de Sigmar"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Priest of Sigmar",
@@ -1181,16 +1272,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -1200,12 +1281,25 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Prayers of Sigmar",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières de Sigmar"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "High Priest of Ulric",
       "name_de": "High Priest of Ulric",
-      "name_fr": "Haut Prêtre d'Ulric",
+      "name_fr": "Grand Prêtre d'Ulric",
       "id": "high-priest-of-ulric",
       "points": 110,
       "minimum": 0,
@@ -1292,16 +1386,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 100
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -1311,7 +1395,20 @@
           "selected": [],
           "maxPoints": 100
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Prayers of Ulric",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières d'Ulric"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Priest of Ulric",
@@ -1403,16 +1500,6 @@
           "active": true
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      },
       "items": [
         {
           "name_en": "Magic Items",
@@ -1422,16 +1509,31 @@
           "selected": [],
           "maxPoints": 50
         }
-      ]
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Prayers of Ulric",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières d'Ulric"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Empire Engineer",
       "name_de": "Empire Engineer",
-      "name_fr": "Ingénieur impérial",
+      "name_fr": "Ingénieur de l'Empire",
       "id": "empire-engineer",
       "points": 45,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1445,7 +1547,7 @@
         {
           "name_en": "Grendade Launching Blunderbuss",
           "name_de": "Grendade Launching Blunderbuss",
-          "name_fr": "Tromblon lance-grenade",
+          "name_fr": "Tromblon à grenade",
           "points": 10,
           "perModel": false,
           "active": false
@@ -1497,7 +1599,7 @@
         {
           "name_en": "Pigeon Bombs",
           "name_de": "Pigeon Bombs",
-          "name_fr": "Pigeon bombardier",
+          "name_fr": "Pigeons grenadiers",
           "points": 20,
           "perModel": false,
           "stackable": false,
@@ -1516,15 +1618,18 @@
           "maxPoints": 50
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
+      "lores": [],
+      "specialRules": {
+        "name_en": "Clouds of Soot & Smoke, Master of Ballistics",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Nuage de Suie et de Fumée, Maître en Balistique"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     }
   ],
@@ -1532,7 +1637,7 @@
     {
       "name_en": "State Troops",
       "name_de": "State Troops",
-      "name_fr": "Troupes Régulières ",
+      "name_fr": "Troupes Régulières",
       "id": "state-troops",
       "points": 5,
       "minimum": 10,
@@ -1620,15 +1725,25 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Regimental Unit",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Détachement, Unité Régimentaire"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "Veteran State Troops",
       "name_de": "Veteran State Troops",
-      "name_fr": "Troupes Régulières Vétérans",
+      "name_fr": "Vétérans des troupes Régulières",
       "id": "veteran-state-troops",
       "points": 7,
       "minimum": 10,
@@ -1726,15 +1841,25 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Regimental Unit, Veteran",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Vétérans"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "State Missile Troops",
       "name_de": "State Missile Troops",
-      "name_fr": "Troupes Régulières de tirs",
+      "name_fr": "Troupes de Tir de l'Empire",
       "id": "state-missile-troops",
       "points": 7,
       "minimum": 10,
@@ -1852,9 +1977,19 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Regimental Unit",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Détachement, Unité Régimentaire"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -1892,9 +2027,19 @@
       "armor": [],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Detachment, Horde, Impetous, Levies, Open Order, Warband",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Détachement, Horde, Impétueux, Conscrits, Ordre Dispersé, Bande de Guerre"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -1953,15 +2098,25 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Detachment, Move Through Cover, Open Order, Skirmishers, Vanguard",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Détachement, Mouvement à Couvert, Ordre Dispersé, Tirailleurs, Avant-garde"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "Empire Knights",
       "name_de": "Empire Knights",
-      "name_fr": "Chevaliers Impériaux",
+      "name_fr": "Chevaliers de l'Empire",
       "id": "empire-knights",
       "points": 21,
       "minimum": 4,
@@ -2059,9 +2214,19 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, First Charge, Swiftstride",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Contre-Charge, Première Charge, Rapide"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     }
   ],
@@ -2163,15 +2328,25 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Contre-Charge, Bien Entrainés, Première Charge, Cercle Intérieur, Rapide, Vétérans"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "Empire Greatswords",
       "name_de": "Empire Greatswords",
-      "name_fr": "Joueurs d'épées Impériaux",
+      "name_fr": "Joueurs d'épées de l'Empire",
       "id": "empire-greatswords",
       "points": 11,
       "minimum": 5,
@@ -2260,59 +2435,18 @@
       ],
       "mounts": [],
       "items": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Flagellants",
-      "name_de": "Flagellants",
-      "name_fr": "Flagellants",
-      "id": "flagellants",
-      "points": 13,
-      "minimum": 5,
-      "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
-      "command": [
-        {
-          "name_en": "Prophet of Doom (champion)",
-          "name_de": "Prophet of Doom (champion)",
-          "name_fr": "Prophète de l'Apocalypse (champion)",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons and flails",
-          "name_de": "Hand weapons and flails",
-          "name_fr": "Armes de base et fléaux",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Regimental Unit, Stubborn",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Unité Régimentaire, Obstiné"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2410,9 +2544,19 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Counter Charge, Fast Cavalry, Fire & Flee, Impetous, Open Order, Skirmishers, Swiftstride",
+        "name_de": "",
+        "name_es": "ers, Swiftstride",
+        "name_fr": "Contre-Charge, Cavalerie Rapide, Tir&Fuite, Impétueux, Ordre Dispersé, TIrailleurs, Rapide"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2429,7 +2573,7 @@
         {
           "name_en": "Sharpshooter (champion)",
           "name_de": "Sharpshooter (champion)",
-          "name_fr": "Tireur d'élite (champion)",
+          "name_fr": "Mitrailleur (champion)",
           "points": 6,
           "magic": {
             "types": [],
@@ -2439,7 +2583,7 @@
         {
           "name_en": "Sharpshooter (champion) with Brace of pistols",
           "name_de": "Sharpshooter (champion) with Brace of pistols",
-          "name_fr": "Tireur d'élite (champion) avec paire de pistolets",
+          "name_fr": "Mitrailleur (champion) avec paire de pistolets",
           "points": 6,
           "magic": {
             "types": [],
@@ -2449,7 +2593,7 @@
         {
           "name_en": "Sharpshooter (champion) with repeater pistol",
           "name_de": "Sharpshooter (champion) with repeater pistol",
-          "name_fr": "Tireur d'élite (champion) avec pistolet à répétition",
+          "name_fr": "Mitrailleur (champion) avec pistolet à répétition",
           "points": 6,
           "magic": {
             "types": [],
@@ -2459,7 +2603,7 @@
         {
           "name_en": "Sharpshooter (champion) with grenade launching blunderbuss",
           "name_de": "Sharpshooter (champion) with grenade launching blunderbuss",
-          "name_fr": "Tireur d'élite (champion) avec tromblon lance-grenade",
+          "name_fr": "Mitrailleur (champion) avec tromblon lance-grenade",
           "points": 16,
           "magic": {
             "types": [],
@@ -2499,15 +2643,25 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Vanguard",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Cavalerie Rapide, Tir&Fuite, Ordre Dispersé, Tirailleurs, Rapide, Avant-garde"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "Demigryph Knights",
       "name_de": "Demigryph Knights",
-      "name_fr": "Chevaliers Demi-griffons",
+      "name_fr": "Chevaliers Demigriffons",
       "id": "demigryph-knights",
       "points": 58,
       "minimum": 2,
@@ -2518,7 +2672,7 @@
         {
           "name_en": "Demigryph Preceptor (champion)",
           "name_de": "Demigryph Preceptor (champion)",
-          "name_fr": "Précepteur Demi-griffon (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
           "points": 7,
           "magic": {
             "types": [
@@ -2590,9 +2744,19 @@
       ],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, First Charge, Fear, Swiftstride",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Contre-Charge, Première Charge, Peur, Rapide"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2603,14 +2767,26 @@
       "points": 135,
       "minimum": 0,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Holy Fervour, Impact Hits(D6+1), Large Target, Magic Resistance (-2), Stubborn, Symbol of Might, Terror, Witch Bane",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Première Charge, Ferveur Sacrée, Touches d'Impact (D6+1), Grande Cible, Résistance à la Magie (-2), Obstiné, Symbole de Puissance, Terreur, Fléau des Sorciers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2636,11 +2812,7 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     },
     {
       "name_en": "Mortar",
@@ -2665,11 +2837,7 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
+      "mounts": []
     }
   ],
   "rare": [
@@ -2700,7 +2868,7 @@
         {
           "name_en": "Pigeon bombs",
           "name_de": "Pigeon Bombs",
-          "name_fr": "Pigeon bombardier",
+          "name_fr": "Pigeons grenadiers",
           "points": 20,
           "perModel": true,
           "stackable": false,
@@ -2719,53 +2887,85 @@
         }
       ],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Grinding Wheels, Immune To Psychology, Impact Hits(D6+1), Large Target, Steam Power, Stomp Attacks(D3+1), Temperamental, Terror, Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Roues Broyeuses, Immmunisé à la Psychologie, Touches d'Impact (D6+1), Grande Cible, Propulsion à Vapeur, Attaques de Piétinement (D3+1), Susceptible, Terreur, Indémoralisable"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
-      "name_en": "Griffon",
-      "name_de": "Griffon",
-      "name_fr": "Griffon",
-      "id": "griffon",
-      "points": 130,
-      "minimum": 0,
+      "name_en": "Flagellants",
+      "name_de": "Flagellants",
+      "name_fr": "Flagellants",
+      "id": "flagellants",
+      "points": 13,
+      "minimum": 5,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "Prophet of Doom (champion)",
+          "name_de": "Prophet of Doom (champion)",
+          "name_fr": "Prophète (champion)",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons and flails",
+          "name_de": "Hand weapons and flails",
+          "name_fr": "Armes de base et fléaux",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
-      }
-    },
-    {
-      "name_en": "Imperial Griffon",
-      "name_de": "Imperial Griffon",
-      "name_fr": "Griffon Impérial",
-      "id": "imperial-griffon",
-      "points": 160,
-      "minimum": 0,
-      "maximum": 0,
-      "command": [],
-      "equipment": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "magic": {
-        "types": [],
-        "maxPoints": 0
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fanatical Zeal, Feel No Pain, Furious Charge, Immune To Psychology, Impetous, Hatred (all enemies), Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Zèle Fanatique, Insensible à la Douleur, Charge Dévastatrice, Immunisé à la Psychologie, Impétueux, Haine (Tous les ennemis), Indémoralisable"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
       "name_en": "Helblaster Volley Gun",
       "name_de": "Helblaster Volley Gun",
-      "name_fr": "Canon Feu d'Enfer",
+      "name_fr": "Canon à Répétition Feu d'Enfer",
       "id": "helblaster-volley-gun",
       "points": 125,
       "minimum": 0,
@@ -2781,9 +2981,9 @@
       }
     },
     {
-      "name_en": "Helstrom Rocket Battery",
+      "name_en": "Helstorm Rocket Battery",
       "name_de": "Helstrom Rocket Battery",
-      "name_fr": "Batterie Tonnerre de Feu",
+      "name_fr": "Batteries Tonnerre de Feu",
       "id": "helstrom-rocket-battery",
       "points": 125,
       "minimum": 0,

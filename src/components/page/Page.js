@@ -10,6 +10,7 @@ import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
 import spain from "../../assets/spain.svg";
 import france from "../../assets/france.svg";
+import italy from "../../assets/italy.svg";
 
 import "./Page.css";
 
@@ -135,6 +136,27 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                   className="footer__language-icon"
                 />
                 Español
+              </label>
+            </div>
+            <div className="radio">
+              <input
+                type="radio"
+                id="italian"
+                name="languages"
+                value="it"
+                onChange={handleLanguageChange}
+                defaultChecked={language === "it"}
+                className="radio__input"
+              />
+              <label htmlFor="italian" className="radio__label">
+                <img
+                  width="24"
+                  height="19"
+                  alt=""
+                  src={italy}
+                  className="footer__language-icon"
+                />
+                Italiano
               </label>
             </div>
           </div>

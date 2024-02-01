@@ -193,6 +193,14 @@
           "name_fr": "Manticore",
           "points": 130,
           "active": false
+        },
+        {
+          "name_en": "Manticore with venomous tail",
+          "name_de": "Manticore with venomous tail",
+          "name_es": "Manticore with venomous tail",
+          "name_fr": "Manticore with venomous tail",
+          "points": 145,
+          "active": false
         }
       ],
       "items": [
@@ -231,7 +239,28 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -363,17 +392,6 @@
           "stackable": false,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_es": "Battle Standard Bearer",
-          "name_fr": "Battle Standard Bearer",
-          "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -419,15 +437,6 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Battle Standard",
-          "name_de": "Battle Standard",
-          "name_es": "Battle Standard",
-          "name_fr": "Battle Standard",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 70
         }
       ],
       "lores": [],
@@ -691,10 +700,10 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spear",
-          "name_de": "Cavalry Spear",
-          "name_es": "Cavalry Spear",
-          "name_fr": "Cavalry Spear",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_es": "Cavalry spear",
+          "name_fr": "Cavalry spear",
           "points": 2,
           "perModel": true,
           "active": false
@@ -770,6 +779,14 @@
           "name_es": "Manticore",
           "name_fr": "Manticore",
           "points": 130,
+          "active": false
+        },
+        {
+          "name_en": "Manticore with venomous tail",
+          "name_de": "Manticore with venomous tail",
+          "name_es": "Manticore with venomous tail",
+          "name_fr": "Manticore with venomous tail",
+          "points": 145,
           "active": false
         }
       ],
@@ -950,10 +967,10 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
-        "name_de": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
-        "name_es": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First",
-        "name_fr": "Eternal Hatred, Hatred (All Enemies), Hidden, Immune to Psychology, Murderous, Strike First"
+        "name_en": "Eternal Hatred, Hatred (all enemies), Hidden, Immune To Psychology, Murderous, Strike First",
+        "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune To Psychology, Murderous, Strike First",
+        "name_es": "Eternal Hatred, Hatred (all enemies), Hidden, Immune To Psychology, Murderous, Strike First",
+        "name_fr": "Eternal Hatred, Hatred (all enemies), Hidden, Immune To Psychology, Murderous, Strike First"
       },
       "notes": {
         "name_en": "",
@@ -1271,10 +1288,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order, Sea Dragon Cloak",
-        "name_de": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order, Sea Dragon Cloak",
-        "name_es": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak",
-        "name_fr": "Elven Reflexes, Hatred (High Elves), Move through Cover, Open Order,  Sea Dragon Cloak"
+        "name_en": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order, Sea Dragon Cloak",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order, Sea Dragon Cloak",
+        "name_es": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order,  Sea Dragon Cloak",
+        "name_fr": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order,  Sea Dragon Cloak"
       },
       "notes": {
         "name_en": "",
@@ -1763,10 +1780,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
-        "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
-        "name_es": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers",
-        "name_fr": "Elven Reflexes, Evasive, Hatred (High Elves), Move through Cover, Scouts, Skirmishers"
+        "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+        "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+        "name_es": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+        "name_fr": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers"
       },
       "notes": {
         "name_en": "0-1 may have Ambushers and/or Chariot Runners and/or Veterans",
@@ -1793,9 +1810,9 @@
           "name_de": "Claws (counts as hand weapons)",
           "name_es": "Claws (counts as hand weapons)",
           "name_fr": "Claws (counts as hand weapons)",
-          "points": 1,
+          "points": 0,
           "perModel": true,
-          "active": false
+          "active": true
         }
       ],
       "armor": [],
@@ -1804,10 +1821,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
-        "name_de": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
-        "name_es": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride",
-        "name_fr": " Fly (10), Move through Cover, Scouts, Skirmishers, Swiftstride"
+        "name_en": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_de": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_es": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_fr": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride"
       },
       "notes": {
         "name_en": "",
@@ -1901,10 +1918,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
-        "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
-        "name_es": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn",
-        "name_fr": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn"
+        "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune To Psychology, Martial Prowess, Stubborn",
+        "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune To Psychology, Martial Prowess, Stubborn",
+        "name_es": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune To Psychology, Martial Prowess, Stubborn",
+        "name_fr": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune To Psychology, Martial Prowess, Stubborn"
       },
       "notes": {
         "name_en": "0-1 per Dark Elf Noble : A model wielding a dread halberd cannot make a supporting attack during a turn in which it charged",
@@ -2148,10 +2165,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
         "name_en": "0-1 Special Choice War Hydra or Kharibdyss if your general is a High Beastmaster",
@@ -2199,10 +2216,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_es": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
+        "name_en": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_de": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
         "name_en": "0-1 Special Choice War Hydra or Kharibdyss if your general is a High Beastmaster",
@@ -2378,10 +2395,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
-        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Immune To Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3), Terror"
       },
       "notes": {
         "name_en": "0-1 Special choice War Hydra or Kharibdyss if your general is a High Beastmaster",
@@ -2429,10 +2446,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_es": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_fr": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
+        "name_en": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_de": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Abyssal Howl, Close Order, Immune To Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror"
       },
       "notes": {
         "name_en": "0-1 Special choice War Hydra or Kharibdyss if your general is a High Beastmaster",

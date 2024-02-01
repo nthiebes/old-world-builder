@@ -10,7 +10,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -53,8 +65,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear (if appropriately mounted)",
-          "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": true,
@@ -193,7 +205,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -236,8 +260,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear (if appropriately mounted)",
-          "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": true,
@@ -294,7 +318,7 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 48
+          "maxPoints": 50
         }
       ],
       "magic": {
@@ -319,7 +343,30 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -362,8 +409,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry Spear (if appropriately mounted)",
-          "name_de": "Cavalry Spear (if appropriately mounted)",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie (s'il est monté)",
           "points": 2,
           "perModel": false,
@@ -388,16 +435,6 @@
           "points": 2,
           "perModel": false,
           "active": false
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "points": 25,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -437,14 +474,6 @@
           ],
           "selected": [],
           "maxPoints": 75
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magische Standarte (AST)",
-          "name_fr": "Banniere Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "armyComposition": {
@@ -466,7 +495,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -560,7 +601,29 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_de": "(Mortuary Cult Only) Battle Standard Bearer",
+          "name_fr": "(Culte Mortuaire seulement) Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -578,16 +641,6 @@
           "name_de": "Level 2 Wizard",
           "name_fr": "Peut devenir un Sorcier Niveau 2",
           "points": 30,
-          "perModel": false,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "(Mortuary Cult Only) Battle Standard Bearer",
-          "name_de": "(Mortuary Cult Only) Battle Standard Bearer",
-          "name_fr": "(Culte Mortuaire seulement) Porteur de la Grande Bannière",
-          "points": 25,
           "perModel": false,
           "stackable": false,
           "minimum": 0,
@@ -624,28 +677,9 @@
           ],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magische Standarte (AST)",
-          "name_fr": "Banniere Magique (PGB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "talisman",
-          "banner",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      }
+      "lores": ["elementalism", "illusion", "necromancy"]
     },
     {
       "name_en": "Necrotect",
@@ -657,7 +691,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -698,17 +744,6 @@
           "maxPoints": 50
         }
       ],
-      "magic": {
-        "types": [
-          "weapon",
-          "armor",
-          "banner",
-          "talisman",
-          "arcane-item",
-          "enchanted-item"
-        ],
-        "maxPoints": 50
-      },
       "armyComposition": {
         "tomb-kings-of-khemri": {
           "category": "characters"
@@ -729,7 +764,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "The Blessed Blade of Ptra",
@@ -783,7 +830,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon, Swarming mass",
@@ -828,7 +887,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "The Flail of Conquered Kings",
@@ -873,7 +944,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -904,13 +987,7 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": [
-            "weapon",
-            "talisman",
-            "banner",
-            "arcane-item",
-            "enchanted-item"
-          ],
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 75
         }
@@ -987,8 +1064,8 @@
           "active": true
         },
         {
-          "name_en": "Thrusting Spears",
-          "name_de": "Thrusting Spears",
+          "name_en": "Thrusting spears",
+          "name_de": "Thrusting spears",
           "name_fr": "Lances d'Infanterie",
           "points": 1,
           "perModel": true,
@@ -1455,8 +1532,8 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
@@ -1592,8 +1669,8 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 1,
           "perModel": true,
@@ -2427,12 +2504,12 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": false
         },
         {
           "name_en": "Lashing Tails (Counts as Hand weapons)",
@@ -2450,7 +2527,7 @@
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": false
         }
       ],
       "options": [
@@ -2466,7 +2543,7 @@
           "name_en": "Great Weapon for Captain only",
           "name_de": "Great Weapon for Captain only",
           "name_fr": "Arme Lourde (Capitaine seulement)",
-          "points": 7,
+          "points": 3,
           "perModel": false,
           "active": false
         }
@@ -2808,8 +2885,8 @@
           "active": true
         },
         {
-          "name_en": "Cavalry Spears",
-          "name_de": "Cavalry Spears",
+          "name_en": "Cavalry spears",
+          "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 0,
           "perModel": true,
