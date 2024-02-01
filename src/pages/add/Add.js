@@ -155,7 +155,7 @@ export const Add = ({ isMobile }) => {
           dispatch(setArmy(armyData));
         },
       });
-    } else if (list && type === "allies" && allAllies.length === 0) {
+    } else if (list && type === "allies" && allAllies.length === 0 && allies) {
       setAlliesLoaded(false);
       allies.forEach((ally, index) => {
         fetcher({
