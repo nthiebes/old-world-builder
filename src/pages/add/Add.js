@@ -181,28 +181,29 @@ export const Add = ({ isMobile }) => {
       mercenaries
     ) {
       setMercenariesLoaded(false);
-      mercenaries[list.armyComposition].forEach((mercenary, index) => {
-        fetcher({
-          url: `games/${list.game}/${mercenary.army}`,
-          onSuccess: (data) => {
-            const armyData = getArmyData({
-              data,
-              armyComposition: mercenary.army,
-            });
-            const allUnits = [
-              ...armyData.characters,
-              ...armyData.core,
-              ...armyData.special,
-              ...armyData.rare,
-            ];
-            const mercenaryUnits = allUnits.filter((unit) =>
-              mercenary.units.includes(unit.id)
-            );
-            allMercenaries = [...allMercenaries, ...mercenaryUnits];
-            setMercenariesLoaded(index + 1);
-          },
+      mercenaries[list.armyComposition] &&
+        mercenaries[list.armyComposition].forEach((mercenary, index) => {
+          fetcher({
+            url: `games/${list.game}/${mercenary.army}`,
+            onSuccess: (data) => {
+              const armyData = getArmyData({
+                data,
+                armyComposition: mercenary.army,
+              });
+              const allUnits = [
+                ...armyData.characters,
+                ...armyData.core,
+                ...armyData.special,
+                ...armyData.rare,
+              ];
+              const mercenaryUnits = allUnits.filter((unit) =>
+                mercenary.units.includes(unit.id)
+              );
+              allMercenaries = [...allMercenaries, ...mercenaryUnits];
+              setMercenariesLoaded(index + 1);
+            },
+          });
         });
-      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list, army, allies, type]);
