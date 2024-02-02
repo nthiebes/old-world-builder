@@ -647,6 +647,7 @@ export const Editor = ({ isMobile }) => {
 
         {list.mercenaries &&
           mercenariesData &&
+          list.armyComposition &&
           list.army !== list.armyComposition && (
             <section className="editor__section">
               <header className="editor__header">

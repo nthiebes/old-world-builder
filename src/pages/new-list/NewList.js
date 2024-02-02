@@ -29,7 +29,7 @@ export const NewList = ({ isMobile }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
-  const [armyComposition, setArmyComposition] = useState();
+  const [armyComposition, setArmyComposition] = useState("empire-of-man");
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
