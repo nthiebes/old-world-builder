@@ -276,9 +276,10 @@ export const Add = ({ isMobile }) => {
                   <Fragment key={index}>
                     <header className="editor__header">
                       <h2>
-                        {game.armies.find((army) => army.id === ally)[
+                        {game?.armies.find((army) => army.id === ally)[
                           `name_${language}`
-                        ] || armyData.name_en}
+                        ] ||
+                          game?.armies.find((army) => army.id === ally).name_en}
                       </h2>
                     </header>
                     {characters.map((unit) => getUnit(unit))}
