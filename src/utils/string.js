@@ -1,3 +1,6 @@
-export const removeParens = (string = "") => {
-  return string.replace(/ *\([^)]*\) */g, "");
+export const normalizeRuleName = (string = "") => {
+  return string
+    .toLowerCase()
+    .replace(/ *\([^)]*\) */g, "")
+    .replace(/\*/g, "");
 };

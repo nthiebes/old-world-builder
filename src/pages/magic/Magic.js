@@ -9,10 +9,14 @@ import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { Button } from "../../components/button";
+import { RulesIndex, rulesMap } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
+import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
+import { normalizeRuleName } from "../../utils/string";
 import gameSystems from "../../assets/armies.json";
 import {
   isMultipleAllowedItem,
@@ -67,6 +71,9 @@ export const Magic = ({ isMobile }) => {
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
   let maxMagicPoints = 0;
+  const handleRulesClick = ({ name }) => {
+    dispatch(openRulesIndex({ activeRule: name }));
+  };
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
     const inputType = event.target.type;
@@ -314,12 +321,28 @@ export const Magic = ({ isMobile }) => {
             htmlFor={`${itemGroup.id}-${magicItem.id}`}
             className="checkbox__label"
           >
-            {magicItem[`name_${language}`] || magicItem.name_en}
+            <span className="magic__labe-text">
+              {magicItem[`name_${language}`] || magicItem.name_en}
+            </span>
             <i className="checkbox__points">{`${
               magicItem.points
             } ${intl.formatMessage({
               id: "app.points",
             })}`}</i>
+            {rulesMap[normalizeRuleName(magicItem.name_en)] ? (
+              <Button
+                type="text"
+                className="magic__rules"
+                color="dark"
+                label={intl.formatMessage({ id: "magic.showRules" })}
+                icon="preview"
+                onClick={() =>
+                  handleRulesClick({
+                    name: magicItem.name_en,
+                  })
+                }
+              />
+            ) : null}
           </label>
         </div>
 
@@ -371,26 +394,29 @@ export const Magic = ({ isMobile }) => {
       </Helmet>
 
       {isMobile && (
-        <Header
-          to={`/editor/${listId}/${type}/${unitId}`}
-          headline={
-            unit?.items?.length && !unit?.command?.length
-              ? unit.items[group][`name_${language}`] ||
-                unit.items[group].name_en
-              : intl.formatMessage({
-                  id: "unit.magicItems",
-                })
-          }
-          subheadline={
-            <>
-              <span className="magic__header-points">
-                {unitMagicPoints}&nbsp;
-              </span>
-              {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
-              <FormattedMessage id="app.points" />
-            </>
-          }
-        />
+        <>
+          <Header
+            to={`/editor/${listId}/${type}/${unitId}`}
+            headline={
+              unit?.items?.length && !unit?.command?.length
+                ? unit.items[group][`name_${language}`] ||
+                  unit.items[group].name_en
+                : intl.formatMessage({
+                    id: "unit.magicItems",
+                  })
+            }
+            subheadline={
+              <>
+                <span className="magic__header-points">
+                  {unitMagicPoints}&nbsp;
+                </span>
+                {maxMagicPoints > 0 && `/ ${maxMagicPoints} `}
+                <FormattedMessage id="app.points" />
+              </>
+            }
+          />
+          <RulesIndex />
+        </>
       )}
 
       <MainComponent>

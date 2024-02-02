@@ -20,7 +20,7 @@ import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
-import { removeParens } from "../../utils/string";
+import { normalizeRuleName } from "../../utils/string";
 
 import "./Unit.css";
 
@@ -288,7 +288,7 @@ export const Unit = ({ isMobile }) => {
 
     specialRulesButtons = specialRulesButtons.map((rule, index) => (
       <Fragment key={rule}>
-        {rulesMap[removeParens(specialRulesEn[index])] ? (
+        {rulesMap[normalizeRuleName(specialRulesEn[index])] ? (
           <button
             className="unit__special-rule"
             onClick={() =>

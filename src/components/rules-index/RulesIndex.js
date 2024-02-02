@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import { FormattedMessage } from "react-intl";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Dialog } from "../../components/dialog";
 import { Spinner } from "../../components/spinner";
-import { removeParens } from "../../utils/string";
+import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
 import { rulesMap } from "./rules-map";
 import "./RulesIndex.css";
-import { FormattedMessage } from "react-intl";
 
 export const RulesIndex = () => {
   const { open, activeRule } = useSelector((state) => state.rulesIndex);
@@ -18,11 +18,12 @@ export const RulesIndex = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-  const rulePath = rulesMap[removeParens(activeRule)];
+  const normalizedRuleName = normalizeRuleName(activeRule);
+  const rulePath = rulesMap[normalizedRuleName];
 
   return (
     <Dialog open={open} onClose={handleClose}>
-      {rulesMap[removeParens(activeRule)] ? (
+      {rulesMap[normalizedRuleName] ? (
         <>
           <iframe
             onLoad={() => setIsLoading(false)}

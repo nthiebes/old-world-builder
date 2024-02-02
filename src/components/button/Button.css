@@ -98,6 +98,10 @@
   padding: 2px;
 }
 
+.button__icon {
+  margin-right: 0.5rem;
+}
+
 .button--text.button--dark {
   color: var(--color-font);
 }
@@ -111,8 +115,4 @@
 .button--text.button--dark:focus,
 .button--text.button--dark:active {
   color: var(--color-button);
-}
-
-.button__icon {
-  margin-right: 0.5rem;
 }

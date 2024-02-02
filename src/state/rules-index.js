@@ -8,7 +8,11 @@ export const rulesIndexSlice = createSlice({
   },
   reducers: {
     openRulesIndex: (state, { payload }) => {
-      return { ...state, activeRule: payload.activeRule, open: true };
+      return {
+        ...state,
+        activeRule: payload.activeRule,
+        open: true,
+      };
     },
     closeRulesIndex: (state) => {
       return { ...state, activeRule: "", open: false };
