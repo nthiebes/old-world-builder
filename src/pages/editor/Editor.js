@@ -594,63 +594,7 @@ export const Editor = ({ isMobile }) => {
           </Button>
         </section>
 
-        {list.mercenaries && mercenariesData && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.mercenaries" />
-              </h2>
-              <p className="editor__points">
-                {mercenariesData.diff > 0 ? (
-                  <>
-                    <strong>{mercenariesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>
-                      {mercenariesData.points - mercenariesPoints}
-                    </strong>
-                    <FormattedMessage id="editor.availablePoints" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
-            <ul>
-              {list.mercenaries.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/mercenaries/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
-            <p className="editor__soon">
-              <FormattedMessage id="editor.comingSoon" />
-            </p>
-            {/* <Button
-              centered
-              to={`/editor/${listId}/add/mercenaries`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button> */}
-          </section>
-        )}
-
-        {list.allies && alliesData && (
+        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -690,19 +634,71 @@ export const Editor = ({ isMobile }) => {
                 </List>
               ))}
             </ul>
-            <p className="editor__soon">
-              <FormattedMessage id="editor.comingSoon" />
-            </p>
-            {/* <Button
+            <Button
               centered
               to={`/editor/${listId}/add/allies`}
               icon="add"
               spaceTop
             >
               <FormattedMessage id="editor.add" />
-            </Button> */}
+            </Button>
           </section>
         )}
+
+        {list.mercenaries &&
+          mercenariesData &&
+          list.army !== list.armyComposition && (
+            <section className="editor__section">
+              <header className="editor__header">
+                <h2>
+                  <FormattedMessage id="editor.mercenaries" />
+                </h2>
+                <p className="editor__points">
+                  {mercenariesData.diff > 0 ? (
+                    <>
+                      <strong>{mercenariesData.diff}</strong>
+                      <FormattedMessage id="editor.tooManyPoints" />
+                      <Icon symbol="error" color="red" />
+                    </>
+                  ) : (
+                    <>
+                      <strong>
+                        {mercenariesData.points - mercenariesPoints}
+                      </strong>
+                      <FormattedMessage id="editor.availablePoints" />
+                      <Icon symbol="check" />
+                    </>
+                  )}
+                </p>
+              </header>
+              <ul>
+                {list.mercenaries.map((unit, index) => (
+                  <List
+                    key={index}
+                    to={`/editor/${listId}/mercenaries/${unit.id}`}
+                    className="editor__list"
+                    active={location.pathname.includes(unit.id)}
+                  >
+                    <div className="editor__list-inner">
+                      <b>{unit[`name_${language}`] || unit.name_en}</b>
+                      <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                        id: "app.points",
+                      })}`}</i>
+                    </div>
+                    {getAllOptions(unit)}
+                  </List>
+                ))}
+              </ul>
+              <Button
+                centered
+                to={`/editor/${listId}/add/mercenaries`}
+                icon="add"
+                spaceTop
+              >
+                <FormattedMessage id="editor.add" />
+              </Button>
+            </section>
+          )}
       </MainComponent>
     </>
   );
