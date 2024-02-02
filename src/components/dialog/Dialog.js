@@ -15,7 +15,7 @@ export const Dialog = ({ open, onClose, children }) => {
   };
   useEffect(() => {
     if (open) {
-      dialogRef.current.showModal();
+      dialogRef?.current?.showModal && dialogRef.current.showModal();
     } else {
       dialogRef?.current?.close && dialogRef.current.close();
     }
