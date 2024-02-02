@@ -7,4 +7,10 @@
 .rules-index__iframe {
   max-width: 70vw;
   max-height: 70vh;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.rules-index__iframe--show {
+  opacity: 1;
 }

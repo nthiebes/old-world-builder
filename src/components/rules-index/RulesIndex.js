@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useSelector, useDispatch } from "react-redux";
+import classNames from "classnames";
 
 import { Dialog } from "../../components/dialog";
 import { Spinner } from "../../components/spinner";
@@ -27,7 +28,10 @@ export const RulesIndex = () => {
         <>
           <iframe
             onLoad={() => setIsLoading(false)}
-            className="rules-index__iframe"
+            className={classNames(
+              "rules-index__iframe",
+              !isLoading && "rules-index__iframe--show"
+            )}
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="test"
             height="500"
