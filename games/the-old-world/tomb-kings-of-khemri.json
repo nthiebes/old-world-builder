@@ -2,9 +2,10 @@
   "characters": [
     {
       "name_en": "Tomb King",
-      "name_it": "Re dei Sepolcri",
       "name_de": "Tomb King",
+      "name_es": "Tomb King",
       "name_fr": "Roi des Tombes",
+      "name_it": "Re dei Sepolcri",
       "id": "tomb-king",
       "points": 160,
       "minimum": 0,
@@ -190,11 +191,31 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100
         }
       ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_de": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_es": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_fr": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_it": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [
           "weapon",
@@ -217,9 +238,10 @@
     },
     {
       "name_en": "Tomb Prince",
-      "name_it": "Principe dei Sepolcri",
       "name_de": "Tomb Prince",
+      "name_es": "Tomb Prince",
       "name_fr": "Prince des Tombes",
+      "name_it": "Principe dei Sepolcri",
       "id": "tomb-prince",
       "points": 90,
       "minimum": 0,
@@ -350,11 +372,31 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_de": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_es": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_fr": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
+        "name_it": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [
           "weapon",
@@ -369,9 +411,10 @@
     },
     {
       "name_en": "Royal Herald",
-      "name_it": "Araldo Reale",
       "name_de": "Royal Herald",
+      "name_es": "Royal Herald",
       "name_fr": "Herault Royal",
+      "name_it": "Araldo Reale",
       "id": "royal-herald",
       "points": 60,
       "minimum": 0,
@@ -399,7 +442,9 @@
           "name_es": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -525,6 +570,21 @@
           "maxPoints": 75
         }
       ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector",
+        "name_de": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector",
+        "name_es": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector",
+        "name_fr": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector",
+        "name_it": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "armyComposition": {
         "tomb-kings-of-khemri": {
           "category": "characters"
@@ -536,9 +596,10 @@
     },
     {
       "name_en": "High Priest",
-      "name_it": "Sommo Sacerdote Liche",
       "name_de": "High Priest",
+      "name_es": "High Priest",
       "name_fr": "Grand Prêtre",
+      "name_it": "Sommo Sacerdote Liche",
       "id": "high-priest",
       "points": 140,
       "minimum": 0,
@@ -627,7 +688,25 @@
           "maxPoints": 100
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"],
+      "lores": [
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": {
+        "name_en": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_de": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_es": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_fr": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_it": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [
           "weapon",
@@ -650,9 +729,10 @@
     },
     {
       "name_en": "Mortuary Priest",
-      "name_it": "Sacerdote Liche",
       "name_de": "Mortuary Priest",
+      "name_es": "Mortuary Priest",
       "name_fr": "Prêtre Mortuaire",
+      "name_it": "Sacerdote Liche",
       "id": "mortuary-priest",
       "points": 55,
       "minimum": 0,
@@ -679,7 +759,9 @@
           "name_fr": "(Culte Mortuaire seulement) Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -744,13 +826,32 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"]
+      "lores": [
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": {
+        "name_en": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_de": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_es": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_fr": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
+        "name_it": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      }
     },
     {
       "name_en": "Necrotect",
-      "name_it": "Necrotect",
       "name_de": "Necrotect",
+      "name_es": "Necrotect",
       "name_fr": "Nécrotecte",
+      "name_it": "Necrotect",
       "id": "necrotect",
       "points": 55,
       "minimum": 0,
@@ -810,11 +911,31 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Eternal Taskmaster, Flammable, Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_de": "Dry as Dust, Eternal Taskmaster, Flammable, Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_es": "Dry as Dust, Eternal Taskmaster, Flammable, Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_fr": "Dry as Dust, Eternal Taskmaster, Flammable, Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_it": "Dry as Dust, Eternal Taskmaster, Flammable, Khopesh, Nehekharan Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "armyComposition": {
         "tomb-kings-of-khemri": {
           "category": "characters"
@@ -887,7 +1008,9 @@
         }
       ],
       "items": [],
-      "lores": ["necromancy"],
+      "lores": [
+        "necromancy"
+      ],
       "specialRules": {
         "name_en": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
         "name_it": "Comandante delle Legioni, Maledizione della Necropoli, Arido come Polvere, Infiammabile, Colpi da impatto (2D3), Costrutto (3), Sapere di Nehekhara, Sia fatta la mia volontà, Non morto di Nehekharan, Rigenerazione (5+), Settra non si inginocchia!, Settra il Grande",
@@ -1079,7 +1202,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 75
         }
@@ -1102,14 +1230,16 @@
   "core": [
     {
       "name_en": "Skeleton Warriors",
-      "name_it": "Guarrieri Scheletri",
       "name_de": "Skeleton Warriors",
+      "name_es": "Skeleton Warriors",
       "name_fr": "Guerriers Squelettes",
+      "name_it": "Guarrieri Scheletri",
       "id": "skeleton-warriors",
       "points": 4,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
+      "detachment": false,
       "command": [
         {
           "name_en": "Master of Arms (champion)",
@@ -1135,7 +1265,9 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1217,6 +1349,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_de": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_es": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_fr": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_it": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1232,9 +1380,10 @@
     },
     {
       "name_en": "Skeleton Archers",
-      "name_it": "Scheletri Arcieri",
       "name_de": "Skeleton Archers",
+      "name_es": "Skeleton Archers",
       "name_fr": "Archers Squelettes",
+      "name_it": "Scheletri Arcieri",
       "id": "skeleton-archers",
       "points": 5,
       "minimum": 10,
@@ -1318,6 +1467,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Detachment, Nehekharan Undead, Open Order, Regeneration (6+)",
+        "name_de": "Arrows of Asaph, Detachment, Nehekharan Undead, Open Order, Regeneration (6+)",
+        "name_es": "Arrows of Asaph, Detachment, Nehekharan Undead, Open Order, Regeneration (6+)",
+        "name_fr": "Arrows of Asaph, Detachment, Nehekharan Undead, Open Order, Regeneration (6+)",
+        "name_it": "Arrows of Asaph, Detachment, Nehekharan Undead, Open Order, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1325,14 +1490,16 @@
     },
     {
       "name_en": "Tomb Guard",
-      "name_it": "Guardia dei Sepolcri",
       "name_de": "Tomb Guard",
+      "name_es": "Tomb Guard",
       "name_fr": "Gardiens des Tombes",
+      "name_it": "Guardia dei Sepolcri",
       "id": "tomb-guard",
       "points": 10,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": true,
+      "detachment": false,
       "command": [
         {
           "name_en": "Tomb Captain (champion)",
@@ -1358,7 +1525,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1430,6 +1599,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_de": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_fr": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_it": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1445,13 +1630,16 @@
     },
     {
       "name_en": "Sepulchral Stalkers",
-      "name_it": "Cacciatore dei Sepolcri",
       "name_de": "Sepulchral Stalkers",
+      "name_es": "Sepulchral Stalkers",
       "name_fr": "Rôdeurs Sépulcraux",
+      "name_it": "Cacciatore dei Sepolcri",
       "id": "sepulchral-stalkers",
       "points": 52,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1516,6 +1704,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_de": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_it": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1528,13 +1732,16 @@
     },
     {
       "name_en": "Skeleton Skirmishers",
-      "name_it": "Scheletri Schermagliatori",
       "name_de": "Skeleton Skirmishers",
+      "name_es": "Skeleton Skirmishers",
       "name_fr": "Tirailleurs Squelettes",
+      "name_it": "Scheletri Schermagliatori",
       "id": "skeleton-skirmishers",
       "points": 4,
       "minimum": 5,
       "maximum": 20,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1593,6 +1800,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Charion Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
+        "name_de": "Arrows of Asaph, Charion Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
+        "name_es": "Arrows of Asaph, Charion Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
+        "name_fr": "Arrows of Asaph, Charion Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
+        "name_it": "Arrows of Asaph, Charion Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1611,13 +1834,16 @@
     },
     {
       "name_en": "Skeleton Chariots",
-      "name_it": "Carri Scheletrici",
       "name_de": "Skeleton Chariots",
+      "name_es": "Skeleton Chariots",
       "name_fr": "Chars Squelettes",
+      "name_it": "Carri Scheletrici",
       "id": "skeleton-chariots",
       "points": 43,
       "minimum": 1,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Master Charioteer (champion)",
@@ -1643,7 +1869,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1700,6 +1928,22 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Dry as Dust, Horde, Impact Hits (D3), Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_de": "Arrows of Asaph, Dry as Dust, Horde, Impact Hits (D3), Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_es": "Arrows of Asaph, Dry as Dust, Horde, Impact Hits (D3), Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_fr": "Arrows of Asaph, Dry as Dust, Horde, Impact Hits (D3), Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
+        "name_it": "Arrows of Asaph, Dry as Dust, Horde, Impact Hits (D3), Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1718,13 +1962,16 @@
     },
     {
       "name_en": "Tomb Swarms",
-      "name_it": "Sciami dei Sepolcri",
       "name_de": "Tomb Swarms",
+      "name_es": "Tomb Swarms",
       "name_fr": "Nuées des Tombes",
+      "name_it": "Sciami dei Sepolcri",
       "id": "tomb-swarms",
       "points": 37,
       "minimum": 2,
       "maximum": 10,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -1752,6 +1999,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_de": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_es": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_fr": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_it": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1759,13 +2022,16 @@
     },
     {
       "name_en": "Skeleton Horsemen",
-      "name_it": "Cavalieri Scheletrici",
       "name_de": "Skeleton Horsemen",
+      "name_es": "Skeleton Horsemen",
       "name_fr": "Cavaliers Squelettes",
+      "name_it": "Cavalieri Scheletrici",
       "id": "skeleton-horsemen",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Master of Horse (champion)",
@@ -1791,7 +2057,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 25
           }
         },
@@ -1877,6 +2145,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Swiftstride, Vanguard",
+        "name_de": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Swiftstride, Vanguard",
+        "name_es": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Swiftstride, Vanguard",
+        "name_fr": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Swiftstride, Vanguard",
+        "name_it": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Swiftstride, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -1892,13 +2176,16 @@
     },
     {
       "name_en": "Skeleton Horse Archers",
-      "name_it": "Arcieri a Cavallo Scheletrici",
       "name_de": "Skeleton Horse Archers",
+      "name_es": "Skeleton Horse Archers",
       "name_fr": "Archers Squelettes à Cheval",
+      "name_it": "Arcieri a Cavallo Scheletrici",
       "id": "skeleton-horse-archers",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Master of Horse (champion)",
@@ -1986,6 +2273,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Scouts, Skirmishers, Swiftstride",
+        "name_de": "Arrows of Asaph, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Scouts, Skirmishers, Swiftstride",
+        "name_es": "Arrows of Asaph, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Scouts, Skirmishers, Swiftstride",
+        "name_fr": "Arrows of Asaph, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Scouts, Skirmishers, Swiftstride",
+        "name_it": "Arrows of Asaph, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Scouts, Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2023,7 +2326,12 @@
           "name_fr": "Maître d'armes (champion)",
           "points": 5,
           "magic": {
-            "types": ["weapon", "enchanted-item", "armor", "talisman"],
+            "types": [
+              "weapon",
+              "enchanted-item",
+              "armor",
+              "talisman"
+            ],
             "maxPoints": 30
           }
         },
@@ -2035,7 +2343,9 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2139,7 +2449,12 @@
           "name_fr": "Maître des Chevaux (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 30
           }
         },
@@ -2151,7 +2466,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 30
           }
         },
@@ -2308,7 +2625,12 @@
           "name_fr": "Capitaine des Tombes (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 50
           }
         },
@@ -2320,7 +2642,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2369,13 +2693,16 @@
     },
     {
       "name_en": "Ushabti",
-      "name_it": "Ushabti",
       "name_de": "Ushabti",
+      "name_es": "Ushabti",
       "name_fr": "Ushabti",
+      "name_it": "Ushabti",
       "id": "ushabti",
       "points": 49,
       "minimum": 3,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Ancient (champion)",
@@ -2431,6 +2758,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_de": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_es": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_fr": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_it": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2445,13 +2788,16 @@
   "special": [
     {
       "name_en": "Ushabti",
-      "name_it": "Ushabti",
       "name_de": "Ushabti",
+      "name_es": "Ushabti",
       "name_fr": "Ushabti",
+      "name_it": "Ushabti",
       "id": "ushabti",
       "points": 49,
       "minimum": 3,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Ancient (champion)",
@@ -2507,6 +2853,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_de": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_es": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_fr": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)",
+        "name_it": "Arrows of Asaph, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2581,13 +2943,16 @@
     },
     {
       "name_en": "Tomb Swarms",
-      "name_it": "Tomb Swarms",
       "name_de": "Tomb Swarms",
+      "name_es": "Tomb Swarms",
       "name_fr": "Nuées des Tombes",
+      "name_it": "Tomb Swarms",
       "id": "tomb-swarms",
       "points": 37,
       "minimum": 2,
       "maximum": 10,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2615,6 +2980,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_de": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_es": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_fr": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers",
+        "name_it": "Dry as Dust, Nehekharan Undead, Poisoned Attacks, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2627,13 +3008,16 @@
     },
     {
       "name_en": "Carrion",
-      "name_it": "Carrion",
       "name_de": "Carrion",
+      "name_es": "Carrion",
       "name_fr": "Charognards",
+      "name_it": "Carrion",
       "id": "carrion",
       "points": 27,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -2649,6 +3033,22 @@
       "armor": [],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (10), Nehekharan Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_de": "Fly (10), Nehekharan Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Fly (10), Nehekharan Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Fly (10), Nehekharan Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_it": "Fly (10), Nehekharan Undead, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2664,13 +3064,16 @@
     },
     {
       "name_en": "Necropolis Knights",
-      "name_it": "Necropolis Knights",
       "name_de": "Necropolis Knights",
+      "name_es": "Necropolis Knights",
       "name_fr": "Chevaliers des Nécropoles",
+      "name_it": "Necropolis Knights",
       "id": "necropolis-knights",
       "points": 54,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "Necropolis Captain (champion)",
@@ -2696,7 +3099,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2773,6 +3178,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_de": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_es": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_fr": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
+        "name_it": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2788,14 +3209,16 @@
     },
     {
       "name_en": "Tomb Guard",
-      "name_it": "Tomb Guard",
       "name_de": "Tomb Guard",
+      "name_es": "Tom Guard",
       "name_fr": "Guardes des Tombes",
+      "name_it": "Tomb Guard",
       "id": "tomb-guard",
       "points": 10,
       "minimum": 5,
       "maximum": 0,
       "regimentalUnit": true,
+      "detachment": false,
       "command": [
         {
           "name_en": "Tomb Captain (champion)",
@@ -2821,7 +3244,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2893,6 +3318,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_de": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_fr": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
+        "name_it": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -2961,13 +3402,16 @@
     },
     {
       "name_en": "Sepulchral Stalkers",
-      "name_it": "Sepulchral Stalkers",
       "name_de": "Sepulchral Stalkers",
+      "name_es": "Sepulchral Stalkers",
       "name_fr": "Rôdeurs Sépulcraux",
+      "name_it": "Sepulchral Stalkers",
       "id": "sepulchral-stalkers",
       "points": 52,
       "minimum": 2,
       "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -3032,6 +3476,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_de": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride",
+        "name_it": "Close Order, Indomitable (1), Nehekharan Undead, Regeneration (6+), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3039,9 +3499,10 @@
     },
     {
       "name_en": "Tomb Scorpion",
-      "name_it": "Tomb Scorpion",
       "name_de": "Tomb Scorpion",
+      "name_es": "Tomb Scorpion",
       "name_fr": "Scorpion des Tombes",
+      "name_it": "Tomb Scorpion",
       "id": "tomb-scorpion",
       "points": 70,
       "minimum": 0,
@@ -3101,6 +3562,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (1), Magic Resistance (-1), Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Vanguard",
+        "name_de": "Close Order, Indomitable (1), Magic Resistance (-1), Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Vanguard",
+        "name_es": "Close Order, Indomitable (1), Magic Resistance (-1), Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Vanguard",
+        "name_fr": "Close Order, Indomitable (1), Magic Resistance (-1), Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Vanguard",
+        "name_it": "Close Order, Indomitable (1), Magic Resistance (-1), Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Vanguard"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3108,9 +3585,10 @@
     },
     {
       "name_en": "Khemrian Warsphinx",
-      "name_it": "Sfinge da Guerra Khemriana",
       "name_de": "Khemrian Warsphinx",
+      "name_es": "Khemrian Warsphinx",
       "name_fr": "Sphinx de Guerre de Khemri",
+      "name_it": "Sfinge da Guerra Khemriana",
       "id": "khemrian-warsphinx",
       "points": 175,
       "minimum": 0,
@@ -3189,6 +3667,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_de": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_es": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_fr": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_it": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3223,7 +3717,12 @@
           "name_fr": "Capitaine des Tombes (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 50
           }
         },
@@ -3235,7 +3734,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -3284,9 +3785,10 @@
     },
     {
       "name_en": "Necrolith Colossus",
-      "name_it": "Necrolith Colossus",
       "name_de": "Necrolith Colossus",
+      "name_es": "Necrolith Colossus",
       "name_fr": "Colosse Nécrolithe",
+      "name_it": "Necrolith Colossus",
       "id": "necrolith-colossus",
       "points": 160,
       "minimum": 0,
@@ -3318,6 +3820,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_de": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_es": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_fr": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_it": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3330,9 +3848,10 @@
     },
     {
       "name_en": "Necrosphinx",
-      "name_it": "Necrosphinx",
       "name_de": "Necrosphinx",
+      "name_es": "Necrosphinx",
       "name_fr": "Nécrosphinx",
+      "name_it": "Necrosphinx",
       "id": "necrosphinx",
       "points": 195,
       "minimum": 0,
@@ -3383,6 +3902,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_de": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_fr": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_it": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3397,9 +3932,10 @@
   "rare": [
     {
       "name_en": "Necrolith Colossus",
-      "name_it": "Necrolith Colossus",
       "name_de": "Necrolith Colossus",
+      "name_es": "Necrolith Colossus",
       "name_fr": "Colosse Nécrolithe",
+      "name_it": "Necrolith Colossus",
       "id": "necrolith-colossus",
       "points": 160,
       "minimum": 0,
@@ -3431,6 +3967,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_de": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_es": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_fr": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault",
+        "name_it": "Close Order, Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror, Timmm-berrr!, Unstoppable Assault"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3446,9 +3998,10 @@
     },
     {
       "name_en": "Screaming Skull Catapult",
-      "name_it": "Screaming Skull Catapult",
       "name_de": "Screaming Skull Catapult",
+      "name_es": "Screaming Skull Catapult",
       "name_fr": "Catapulte à Crânes Hurlants",
+      "name_it": "Screaming Skull Catapult",
       "id": "screaming-skull-catapult",
       "points": 105,
       "minimum": 0,
@@ -3499,6 +4052,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dry as Dust, Indomitable (1), Nehekharan Undead, Regeneration (6+), Skirmishers",
+        "name_de": "Dry as Dust, Indomitable (1), Nehekharan Undead, Regeneration (6+), Skirmishers",
+        "name_es": "Dry as Dust, Indomitable (1), Nehekharan Undead, Regeneration (6+), Skirmishers",
+        "name_fr": "Dry as Dust, Indomitable (1), Nehekharan Undead, Regeneration (6+), Skirmishers",
+        "name_it": "Dry as Dust, Indomitable (1), Nehekharan Undead, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3506,9 +4075,10 @@
     },
     {
       "name_en": "Casket of Souls",
-      "name_it": "Casket of Souls",
       "name_de": "Casket of Souls",
+      "name_es": "Casket of Souls",
       "name_fr": "Arche des Ames Damnées",
+      "name_it": "Casket of Souls",
       "id": "casket-of-souls",
       "points": 135,
       "minimum": 0,
@@ -3549,6 +4119,22 @@
       ],
       "options": [],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Covenant of Power, Dry as Dust, Immovable Object, Indomitable (2), Nehekharan Undead, Regeneration (5+), Skirmishers, Unbound Spirits, Vortex of Souls",
+        "name_de": "Cleaving Blow, Covenant of Power, Dry as Dust, Immovable Object, Indomitable (2), Nehekharan Undead, Regeneration (5+), Skirmishers, Unbound Spirits, Vortex of Souls",
+        "name_es": "Cleaving Blow, Covenant of Power, Dry as Dust, Immovable Object, Indomitable (2), Nehekharan Undead, Regeneration (5+), Skirmishers, Unbound Spirits, Vortex of Souls",
+        "name_fr": "Cleaving Blow, Covenant of Power, Dry as Dust, Immovable Object, Indomitable (2), Nehekharan Undead, Regeneration (5+), Skirmishers, Unbound Spirits, Vortex of Souls",
+        "name_it": "Cleaving Blow, Covenant of Power, Dry as Dust, Immovable Object, Indomitable (2), Nehekharan Undead, Regeneration (5+), Skirmishers, Unbound Spirits, Vortex of Souls"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
@@ -3564,9 +4150,10 @@
     },
     {
       "name_en": "Necrosphinx",
-      "name_it": "Necrosphinx",
       "name_de": "Necrosphinx",
+      "name_es": "Necroshpinx",
       "name_fr": "Nécrosphinx",
+      "name_it": "Necrosphinx",
       "id": "necrosphinx",
       "points": 195,
       "minimum": 0,
@@ -3617,6 +4204,22 @@
         }
       ],
       "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_de": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_fr": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
+        "name_it": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": ""
+      },
       "magic": {
         "types": [],
         "maxPoints": 0
