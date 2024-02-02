@@ -9,7 +9,12 @@
         "name_en": "Empire of Man",
         "name_es": "Empire of Man",
         "name_fr": "Empire of Man",
-        "items": ["general", "empire-of-man"]
+        "items": ["general", "empire-of-man"],
+        "allies": [
+          "dwarfen-mountain-holds",
+          "kingdom-of-bretonnia",
+          "wood-elf-realms"
+        ]
       },
       {
         "id": "orc-and-goblin-tribes",
@@ -17,7 +22,12 @@
         "name_en": "Orc & Goblin Tribes",
         "name_es": "Orc & Goblin Tribes",
         "name_fr": "Orc & Goblin Tribes",
-        "items": ["general", "orc-and-goblin-tribes"]
+        "items": ["general", "orc-and-goblin-tribes"],
+        "allies": [
+          "warriors-of-chaos",
+          "beastmen-brayherds",
+          "tomb-kings-of-khemri"
+        ]
       },
       {
         "id": "dwarfen-mountain-holds",
@@ -39,6 +49,11 @@
           "warriors-of-chaos",
           "gifts-of-chaos",
           "chaos-mutations"
+        ],
+        "allies": [
+          "orc-and-goblin-tribes",
+          "beastmen-brayherds",
+          "tomb-kings-of-khemri"
         ]
       },
       {
@@ -48,7 +63,13 @@
         "name_es": "Kingdom of Bretonnia",
         "name_fr": "Kingdom of Bretonnia",
         "items": ["general", "kingdom-of-bretonnia", "knightly-virtues"],
-        "armyComposition": ["errantry-crusades", "bretonnian-exiles"]
+        "armyComposition": ["errantry-crusades", "bretonnian-exiles"],
+        "allies": [
+          "dwarfen-mountain-holds",
+          "empire-of-man",
+          "high-elf-realms",
+          "wood-elf-realms"
+        ]
       },
       {
         "id": "beastmen-brayherds",
@@ -56,7 +77,12 @@
         "name_en": "Beastmen Brayherds",
         "name_es": "Beastmen Brayherds",
         "name_fr": "Beastmen Brayherds",
-        "items": ["general", "beastmen-brayherds", "chaos-mutations"]
+        "items": ["general", "beastmen-brayherds", "chaos-mutations"],
+        "allies": [
+          "orc-and-goblin-tribes",
+          "warriors-of-chaos",
+          "tomb-kings-of-khemri"
+        ]
       },
       {
         "id": "wood-elf-realms",
@@ -64,7 +90,8 @@
         "name_en": "Wood Elf Realms",
         "name_es": "Wood Elf Realms",
         "name_fr": "Wood Elf Realms",
-        "items": ["general", "wood-elf-realms", "forest-spites"]
+        "items": ["general", "wood-elf-realms", "forest-spites"],
+        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"]
       },
       {
         "id": "tomb-kings-of-khemri",
@@ -73,7 +100,12 @@
         "name_es": "Tomb Kings of Khemri",
         "name_fr": "Tomb Kings of Khemri",
         "items": ["general", "tomb-kings-of-khemri"],
-        "armyComposition": ["nehekharan-royal-hosts", "mortuary-cults"]
+        "armyComposition": ["nehekharan-royal-hosts", "mortuary-cults"],
+        "allies": [
+          "orc-and-goblin-tribes",
+          "warriors-of-chaos",
+          "beastmen-brayherds"
+        ]
       },
       {
         "id": "high-elf-realms",
@@ -81,7 +113,8 @@
         "name_en": "High Elf Realms",
         "name_es": "High Elf Realms",
         "name_fr": "High Elf Realms",
-        "items": ["general", "high-elf-realms", "elven-honours"]
+        "items": ["general", "high-elf-realms", "elven-honours"],
+        "allies": ["empire-of-man", "kingdom-of-bretonnia", "wood-elf-realms"]
       },
       {
         "id": "dark-elves",
@@ -94,7 +127,8 @@
           "dark-elves",
           "gifts-of-khaine",
           "forbidden-poisons"
-        ]
+        ],
+        "allies": ["warriors-of-chaos"]
       },
       {
         "id": "skaven",
@@ -102,7 +136,8 @@
         "name_en": "Skaven",
         "name_es": "Skaven",
         "name_fr": "Skaven",
-        "items": ["general", "skaven"]
+        "items": ["general", "skaven"],
+        "allies": ["warriors-of-chaos"]
       },
       {
         "id": "vampire-counts",
@@ -110,7 +145,8 @@
         "name_en": "Vampire Counts",
         "name_es": "Vampire Counts",
         "name_fr": "Vampire Counts",
-        "items": ["general", "vampire-counts", "vampiric-powers"]
+        "items": ["general", "vampire-counts", "vampiric-powers"],
+        "allies": ["tomb-kings-of-khemri"]
       },
       {
         "id": "daemons-of-chaos",
@@ -138,7 +174,8 @@
         "name_en": "Ogre Kingdoms",
         "name_es": "Ogre Kingdoms",
         "name_fr": "Ogre Kingdoms",
-        "items": ["general", "ogre-kingdoms", "big-names"]
+        "items": ["general", "ogre-kingdoms", "big-names"],
+        "allies": ["orc-and-goblin-tribes"]
       },
       {
         "id": "lizardmen",
@@ -146,7 +183,8 @@
         "name_en": "Lizardmen",
         "name_es": "Lizardmen",
         "name_fr": "Lizardmen",
-        "items": ["general", "lizardmen", "disciplines-old-ones"]
+        "items": ["general", "lizardmen", "disciplines-old-ones"],
+        "allies": ["high-elf-realms"]
       },
       {
         "id": "chaos-dwarfs",
@@ -154,7 +192,8 @@
         "name_en": "Chaos Dwarfs",
         "name_es": "Chaos Dwarfs",
         "name_fr": "Chaos Dwarfs",
-        "items": ["general", "chaos-dwarfs"]
+        "items": ["general", "chaos-dwarfs"],
+        "allies": ["warriors-of-chaos"]
       }
     ]
   },
