@@ -10,7 +10,7 @@ export const Dialog = ({ open, onClose, children }) => {
   const dialogRef = useRef(null);
   const intl = useIntl();
   const handleClose = () => {
-    dialogRef.current.close();
+    dialogRef?.current?.close && dialogRef.current.close();
     onClose();
   };
   useEffect(() => {

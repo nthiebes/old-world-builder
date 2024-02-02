@@ -98,6 +98,7 @@ const getArmyData = ({ data, armyComposition }) => {
 };
 
 let allAllies = [];
+let allMercenaries = [];
 
 export const Add = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -105,6 +106,7 @@ export const Add = ({ isMobile }) => {
   const dispatch = useDispatch();
   const [redirect, setRedirect] = useState(null);
   const [alliesLoaded, setAlliesLoaded] = useState(0);
+  const [mercenariesLoaded, setMercenariesLoaded] = useState(0);
   const intl = useIntl();
   const location = useLocation();
   const { language } = useLanguage();
@@ -115,6 +117,7 @@ export const Add = ({ isMobile }) => {
   const game = gameSystems.find((game) => game.id === list?.game);
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
+  const mercenaries = armyData?.mercenaries;
   const handleAdd = (unit) => {
     const newUnit = {
       ...unit,
@@ -141,6 +144,7 @@ export const Add = ({ isMobile }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     allAllies = [];
+    allMercenaries = [];
   }, [location.pathname]);
 
   useEffect(() => {
@@ -170,6 +174,35 @@ export const Add = ({ isMobile }) => {
           },
         });
       });
+    } else if (
+      list &&
+      type === "mercenaries" &&
+      allMercenaries.length === 0 &&
+      mercenaries
+    ) {
+      setMercenariesLoaded(false);
+      mercenaries[list.armyComposition].forEach((mercenary, index) => {
+        fetcher({
+          url: `games/${list.game}/${mercenary.army}`,
+          onSuccess: (data) => {
+            const armyData = getArmyData({
+              data,
+              armyComposition: mercenary.army,
+            });
+            const allUnits = [
+              ...armyData.characters,
+              ...armyData.core,
+              ...armyData.special,
+              ...armyData.rare,
+            ];
+            const mercenaryUnits = allUnits.filter((unit) =>
+              mercenary.units.includes(unit.id)
+            );
+            allMercenaries = [...allMercenaries, ...mercenaryUnits];
+            setMercenariesLoaded(index + 1);
+          },
+        });
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list, army, allies, type]);
@@ -179,11 +212,15 @@ export const Add = ({ isMobile }) => {
   }
 
   if (
-    (!army && type !== "allies") ||
+    (!army && type !== "allies" && type !== "mercenaries") ||
     (type === "allies" &&
       !allies &&
       alliesLoaded === 0 &&
-      allAllies.length !== allies?.length)
+      allAllies.length !== allies?.length) ||
+    (type === "mercenaries" &&
+      !mercenaries &&
+      mercenariesLoaded === 0 &&
+      allMercenaries.length !== mercenaries?.length)
   ) {
     if (isMobile) {
       return (
@@ -227,7 +264,7 @@ export const Add = ({ isMobile }) => {
             })}
           />
         )}
-        {type === "allies" ? (
+        {type === "allies" && (
           <>
             <p className="unit__notes">
               <Icon symbol="error" className="unit__notes-icon" />
@@ -253,7 +290,11 @@ export const Add = ({ isMobile }) => {
               )}
             </ul>
           </>
-        ) : (
+        )}
+        {type === "mercenaries" && (
+          <ul>{allMercenaries.map((unit) => getUnit(unit))}</ul>
+        )}
+        {type !== "allies" && type !== "mercenaries" && (
           <ul>{army[type].map((unit) => getUnit(unit))}</ul>
         )}
       </MainComponent>
