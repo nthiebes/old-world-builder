@@ -63,12 +63,12 @@ export const getListAsText = ({
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
   const game = gameSystems.find((game) => game.id === list.game);
-  const armyName = game.armies.find((army) => army.id === list.army)[
-    `name_${language}`
-  ];
+  const army = game.armies.find((army) => army.id === list.army);
+  const armyName = army[`name_${language}`] || army.name_en;
   const armyCompositionName =
     list.army !== list.armyComposition && nameMap[list.armyComposition]
-      ? nameMap[list.armyComposition][`name_${language}`]
+      ? nameMap[list.armyComposition][`name_${language}`] ||
+        nameMap[list.armyComposition].name_en
       : "";
   const armyCompositionString = armyCompositionName
     ? `, ${armyCompositionName}`
