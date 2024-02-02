@@ -10,7 +10,7 @@ import { Expandable } from "../../components/expandable";
 import { useLanguage } from "../../utils/useLanguage";
 
 import { getListAsText } from "./get-list-as-text";
-// import { getListAsBBCode } from "./get-list-as-bbcode";
+// import { getListAsMarkdown } from "./get-list-as-markdown";
 import "./Export.css";
 
 const getFile = ({ list, listText, asText }) => {
@@ -43,7 +43,7 @@ export const Export = ({ isMobile }) => {
   const [isShowList, setIsShowList] = useState(false);
   const [isCompactList, setIsCompactList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(false);
-  // const [isForumList, setIsForumList] = useState(false);
+  // const [isMarkdownList, setIsMarkdownList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
