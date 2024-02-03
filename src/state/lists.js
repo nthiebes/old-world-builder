@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { getRandomId } from "../utils/id";
+import { swap } from "../utils/collection";
 
 export const listsSlice = createSlice({
   name: "lists",
@@ -47,6 +48,20 @@ export const listsSlice = createSlice({
           return {
             ...list,
             [type]: [...list[type], newUnit],
+          };
+        }
+
+        return list;
+      });
+    },
+    moveUnit: (state, { payload }) => {
+      const { listId, type, sourceIndex, destinationIndex } = payload;
+
+      return state.map((list) => {
+        if (listId === list.id) {
+          return {
+            ...list,
+            [type]: swap([...list[type]], sourceIndex, destinationIndex),
           };
         }
 
@@ -164,6 +179,7 @@ export const listsSlice = createSlice({
 export const {
   setLists,
   addUnit,
+  moveUnit,
   editUnit,
   removeUnit,
   duplicateUnit,

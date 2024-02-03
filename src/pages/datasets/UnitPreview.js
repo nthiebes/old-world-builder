@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
 import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
-import { List } from "../../components/list";
+import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header } from "../../components/page";
@@ -133,7 +133,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                         </label>
                       </div>
                       {magic?.maxPoints && active ? (
-                        <List
+                        <ListItem
                           className="editor__list unit__link"
                           active={false}
                         >
@@ -184,7 +184,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                                 .join(", ")}
                             </p>
                           )}
-                        </List>
+                        </ListItem>
                       ) : null}
                     </Fragment>
                   );
@@ -471,7 +471,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
           {unit.items && unit.items.length ? <hr className="unit__hr" /> : null}
           {unit.items && unit.items.length
             ? unit.items.map((item, itemIndex) => (
-                <List
+                <ListItem
                   className="editor__list unit__link"
                   active={false}
                   key={itemIndex}
@@ -496,7 +496,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                         .join(", ")}
                     </p>
                   )}
-                </List>
+                </ListItem>
               ))
             : null}
           {unit.specialRules && unit.specialRules.name_en ? (

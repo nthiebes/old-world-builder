@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
 import { getUnitPoints, getUnitMagicPoints } from "../../utils/points";
-import { List } from "../../components/list";
+import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
@@ -523,7 +523,7 @@ export const Unit = ({ isMobile }) => {
                     {magic?.types && magic.types.length && active ? (
                       <>
                         <hr className="unit__hr" />
-                        <List
+                        <ListItem
                           to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                           className="editor__list unit__link unit__command-list"
                           active={location.pathname.includes(`magic/${index}`)}
@@ -579,7 +579,7 @@ export const Unit = ({ isMobile }) => {
                                 .replace(/\*/g, "")}
                             </p>
                           )}
-                        </List>
+                        </ListItem>
                       </>
                     ) : null}
                   </Fragment>
@@ -1076,7 +1076,7 @@ export const Unit = ({ isMobile }) => {
               });
 
               return (
-                <List
+                <ListItem
                   to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
                   className="editor__list unit__link"
                   active={location.pathname.includes(`items/${itemIndex}`)}
@@ -1122,7 +1122,7 @@ export const Unit = ({ isMobile }) => {
                         .replace(/\*/g, "")}
                     </p>
                   )}
-                </List>
+                </ListItem>
               );
             })
           : null}
