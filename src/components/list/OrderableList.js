@@ -45,13 +45,19 @@ export const OrderableList = ({ id, children, onMoved }) => {
                   draggableId={child.key}
                   index={index}
                 >
-                  {(provided, _snapshot) =>
-                    React.cloneElement(child, {
+                  {(provided, _snapshot) => {
+                    // Block horizontal movement
+                    const style = provided.draggableProps.style;
+                    if (style.transform) {
+                      style.transform = style.transform.replace(/\d+/, "0");
+                    }
+
+                    return React.cloneElement(child, {
                       ref: provided.innerRef,
                       ...provided.draggableProps,
                       ...provided.dragHandleProps,
-                    })
-                  }
+                    });
+                  }}
                 </Draggable>
               ) : (
                 child
