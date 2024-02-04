@@ -321,7 +321,7 @@ export const Magic = ({ isMobile }) => {
             htmlFor={`${itemGroup.id}-${magicItem.id}`}
             className="checkbox__label"
           >
-            <span className="magic__labe-text">
+            <span className="magic__label-text">
               {magicItem[`name_${language}`] || magicItem.name_en}
             </span>
             <i className="checkbox__points">{`${
@@ -334,7 +334,7 @@ export const Magic = ({ isMobile }) => {
                 type="text"
                 className="magic__rules"
                 color="dark"
-                label={intl.formatMessage({ id: "magic.showRules" })}
+                label={intl.formatMessage({ id: "misc.showRules" })}
                 icon="preview"
                 onClick={() =>
                   handleRulesClick({

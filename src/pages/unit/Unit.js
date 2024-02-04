@@ -43,6 +43,9 @@ export const Unit = ({ isMobile }) => {
     [...army.core, ...army.special, ...army.rare].filter(
       (coreUnit) => coreUnit.detachment
     );
+  const handleRulesClick = ({ name }) => {
+    dispatch(openRulesIndex({ activeRule: name }));
+  };
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -501,7 +504,9 @@ export const Unit = ({ isMobile }) => {
                         htmlFor={`command-${id}`}
                         className="checkbox__label"
                       >
-                        {command[`name_${language}`] || name_en}
+                        <span className="unit__label-text">
+                          {command[`name_${language}`] || name_en}
+                        </span>
                         <i className="checkbox__points">
                           {`${points} ${
                             points === 1
@@ -518,6 +523,20 @@ export const Unit = ({ isMobile }) => {
                               id: "unit.perModel",
                             })}`}
                         </i>
+                        {rulesMap[normalizeRuleName(name_en)] ? (
+                          <Button
+                            type="text"
+                            className="unit__rules"
+                            color="dark"
+                            label={intl.formatMessage({ id: "misc.showRules" })}
+                            icon="preview"
+                            onClick={() =>
+                              handleRulesClick({
+                                name: name_en,
+                              })
+                            }
+                          />
+                        ) : null}
                       </label>
                     </div>
                     {magic?.types && magic.types.length && active ? (
@@ -613,7 +632,9 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
-                    {equipment[`name_${language}`] || name_en}
+                    <span className="unit__label-text">
+                      {equipment[`name_${language}`] || name_en}
+                    </span>
                     <i className="checkbox__points">
                       {`${points} ${
                         points === 1
@@ -630,6 +651,20 @@ export const Unit = ({ isMobile }) => {
                           id: "unit.perModel",
                         })}`}
                     </i>
+                    {rulesMap[normalizeRuleName(name_en)] ? (
+                      <Button
+                        type="text"
+                        className="unit__rules"
+                        color="dark"
+                        label={intl.formatMessage({ id: "misc.showRules" })}
+                        icon="preview"
+                        onClick={() =>
+                          handleRulesClick({
+                            name: name_en,
+                          })
+                        }
+                      />
+                    ) : null}
                   </label>
                 </div>
               )
@@ -661,7 +696,9 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`armor-${id}`} className="radio__label">
-                    {equipment[`name_${language}`] || name_en}
+                    <span className="unit__label-text">
+                      {equipment[`name_${language}`] || name_en}
+                    </span>
                     <i className="checkbox__points">
                       {`${points} ${
                         points === 1
@@ -678,6 +715,20 @@ export const Unit = ({ isMobile }) => {
                           id: "unit.perModel",
                         })}`}
                     </i>
+                    {rulesMap[normalizeRuleName(name_en)] ? (
+                      <Button
+                        type="text"
+                        className="unit__rules"
+                        color="dark"
+                        label={intl.formatMessage({ id: "misc.showRules" })}
+                        icon="preview"
+                        onClick={() =>
+                          handleRulesClick({
+                            name: name_en,
+                          })
+                        }
+                      />
+                    ) : null}
                   </label>
                 </div>
               )
@@ -716,7 +767,9 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="checkbox__label"
                     >
-                      {equipment[`name_${language}`] || name_en}
+                      <span className="unit__label-text">
+                        {equipment[`name_${language}`] || name_en}
+                      </span>
                       <i className="checkbox__points">
                         {`${points} ${
                           points === 1
@@ -733,6 +786,20 @@ export const Unit = ({ isMobile }) => {
                             id: "unit.perModel",
                           })}`}
                       </i>
+                      {rulesMap[normalizeRuleName(name_en)] ? (
+                        <Button
+                          type="text"
+                          className="unit__rules"
+                          color="dark"
+                          label={intl.formatMessage({ id: "misc.showRules" })}
+                          icon="preview"
+                          onClick={() =>
+                            handleRulesClick({
+                              name: name_en,
+                            })
+                          }
+                        />
+                      ) : null}
                     </label>
                   </div>
                 ) : (
@@ -741,7 +808,9 @@ export const Unit = ({ isMobile }) => {
                       htmlFor={`options-${id}`}
                       className="unit__special-option"
                     >
-                      {equipment[`name_${language}`] || name_en}:
+                      <span className="unit__label-text">
+                        {equipment[`name_${language}`] || name_en}:
+                      </span>
                       <i className="checkbox__points">
                         {`${points} ${intl.formatMessage({
                           id: "app.points",
@@ -749,6 +818,20 @@ export const Unit = ({ isMobile }) => {
                           id: "unit.perModel",
                         })}`}
                       </i>
+                      {rulesMap[normalizeRuleName(name_en)] ? (
+                        <Button
+                          type="text"
+                          className="unit__rules"
+                          color="dark"
+                          label={intl.formatMessage({ id: "misc.showRules" })}
+                          icon="preview"
+                          onClick={() =>
+                            handleRulesClick({
+                              name: name_en,
+                            })
+                          }
+                        />
+                      ) : null}
                     </label>
                     <NumberInput
                       id={`options-${id}`}
@@ -1031,12 +1114,28 @@ export const Unit = ({ isMobile }) => {
                     className="radio__input"
                   />
                   <label htmlFor={`mounts-${id}`} className="radio__label">
-                    {mount[`name_${language}`] || name_en}
+                    <span className="unit__label-text">
+                      {mount[`name_${language}`] || name_en}
+                    </span>
                     <i className="checkbox__points">{`${points} ${intl.formatMessage(
                       {
                         id: "app.points",
                       }
                     )}`}</i>
+                    {rulesMap[normalizeRuleName(name_en)] ? (
+                      <Button
+                        type="text"
+                        className="unit__rules"
+                        color="dark"
+                        label={intl.formatMessage({ id: "misc.showRules" })}
+                        icon="preview"
+                        onClick={() =>
+                          handleRulesClick({
+                            name: name_en,
+                          })
+                        }
+                      />
+                    ) : null}
                   </label>
                 </div>
               )
@@ -1061,6 +1160,20 @@ export const Unit = ({ isMobile }) => {
                 />
                 <label htmlFor={`lore-${lore}`} className="radio__label">
                   {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
+                  {rulesMap[normalizeRuleName(nameMap[lore].name_en)] ? (
+                    <Button
+                      type="text"
+                      className="unit__rules"
+                      color="dark"
+                      label={intl.formatMessage({ id: "misc.showRules" })}
+                      icon="preview"
+                      onClick={() =>
+                        handleRulesClick({
+                          name: nameMap[lore].name_en,
+                        })
+                      }
+                    />
+                  ) : null}
                 </label>
               </div>
             ))}
