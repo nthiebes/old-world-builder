@@ -630,6 +630,9 @@ export const OrderableUnitList = ({ units, type, listId }) => {
           active={location.pathname.includes(unit.id)}
         >
           <div className="editor__list-inner">
+            {unit.strength || unit.minimum ? (
+              <span>{`${unit.strength || unit.minimum}`}</span>
+            ) : null}
             <b>{unit[`name_${language}`] || unit.name_en}</b>
             <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
