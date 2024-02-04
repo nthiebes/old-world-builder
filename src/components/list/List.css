@@ -46,6 +46,7 @@
   }
 }
 
+.list[dragging]>.list__inner::before,
 .list__inner:focus::before,
 .list__inner:active::before {
   opacity: 1;

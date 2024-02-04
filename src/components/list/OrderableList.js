@@ -45,7 +45,7 @@ export const OrderableList = ({ id, children, onMoved }) => {
                   draggableId={child.key}
                   index={index}
                 >
-                  {(provided, _snapshot) => {
+                  {(provided, snapshot) => {
                     // Block horizontal movement
                     const style = provided.draggableProps.style;
                     if (style.transform) {
@@ -53,6 +53,10 @@ export const OrderableList = ({ id, children, onMoved }) => {
                     }
 
                     return React.cloneElement(child, {
+                      // Add a dragging attribute for styling
+                      ...(snapshot.isDragging && !snapshot.isDropAnimating
+                        ? { dragging: "" }
+                        : {}),
                       ref: provided.innerRef,
                       ...provided.draggableProps,
                       ...provided.dragHandleProps,
