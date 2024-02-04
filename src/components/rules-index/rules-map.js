@@ -1,4 +1,4 @@
-export const rulesMap = {
+const rulesIndexExport = {
   ambushers: "special-rules/ambushers",
   "armour bane": "special-rules/armour-bane",
   "armoured hide": "special-rules/armoured-hide",
@@ -156,6 +156,9 @@ export const rulesMap = {
   "light armour": "weapons-of-war/light-armour",
   "heavy armour": "weapons-of-war/heavy-armour",
   "full plate armour": "weapons-of-war/full-plate-armour",
+};
+
+const additionalOWBRules = {
   "throwing spears": "weapons-of-war/throwing-spear",
   halberds: "weapons-of-war/halberd",
   "additional hand weapons":
@@ -204,4 +207,9 @@ export const rulesMap = {
   "level 2 wizard": "magic/levels-of-wizardry",
   "level 3 wizard": "magic/levels-of-wizardry",
   "level 4 wizard": "magic/levels-of-wizardry",
+};
+
+export const rulesMap = {
+  ...rulesIndexExport,
+  ...additionalOWBRules,
 };
