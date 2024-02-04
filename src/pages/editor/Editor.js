@@ -8,15 +8,16 @@ import { Helmet } from "react-helmet-async";
 import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
-import { List } from "../../components/list";
+import { OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
-import { deleteList } from "../../state/lists";
+import { deleteList, moveUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
+import { ListItem } from "../../components/list/ListItem";
 
 import "./Editor.css";
 
@@ -28,7 +29,6 @@ export const Editor = ({ isMobile }) => {
   const [redirect, setRedirect] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const location = useLocation();
-  const { language } = useLanguage();
   // const errors = useSelector((state) => state.errors);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -305,24 +305,13 @@ export const Editor = ({ isMobile }) => {
                 )}
               </p>
             </header>
-            <ul>
-              {list.lords.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/lords/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
+
+            <OrderableUnitList
+              units={list.lords}
+              type="lords"
+              listId={listId}
+            />
+
             <Button
               centered
               to={`/editor/${listId}/add/lords`}
@@ -356,24 +345,13 @@ export const Editor = ({ isMobile }) => {
                 )}
               </p>
             </header>
-            <ul>
-              {list.heroes.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/heroes/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
+
+            <OrderableUnitList
+              units={list.heroes}
+              type="heroes"
+              listId={listId}
+            />
+
             <Button
               centered
               to={`/editor/${listId}/add/heroes`}
@@ -407,24 +385,13 @@ export const Editor = ({ isMobile }) => {
                 )}
               </p>
             </header>
-            <ul>
-              {list.characters.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/characters/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
+
+            <OrderableUnitList
+              units={list.characters}
+              type="characters"
+              listId={listId}
+            />
+
             <Button
               centered
               to={`/editor/${listId}/add/characters`}
@@ -458,28 +425,9 @@ export const Editor = ({ isMobile }) => {
               )}
             </p>
           </header>
-          <ul>
-            {list.core.map((unit, index) => (
-              <List
-                key={index}
-                to={`/editor/${listId}/core/${unit.id}`}
-                className="editor__list"
-                active={location.pathname.includes(unit.id)}
-              >
-                <div className="editor__list-inner">
-                  {unit.strength || unit.minimum ? (
-                    <span>{`${unit.strength || unit.minimum}`}</span>
-                  ) : null}
 
-                  <b>{unit[`name_${language}`] || unit.name_en}</b>
-                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}</i>
-                </div>
-                {getAllOptions(unit)}
-              </List>
-            ))}
-          </ul>
+          <OrderableUnitList units={list.core} type="core" listId={listId} />
+
           <Button
             centered
             to={`/editor/${listId}/add/core`}
@@ -511,27 +459,13 @@ export const Editor = ({ isMobile }) => {
               )}
             </p>
           </header>
-          <ul>
-            {list.special.map((unit, index) => (
-              <List
-                key={index}
-                to={`/editor/${listId}/special/${unit.id}`}
-                className="editor__list"
-                active={location.pathname.includes(unit.id)}
-              >
-                <div className="editor__list-inner">
-                  {unit.strength || unit.minimum ? (
-                    <span>{`${unit.strength || unit.minimum}`}</span>
-                  ) : null}
-                  <b>{unit[`name_${language}`] || unit.name_en}</b>
-                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}</i>
-                </div>
-                {getAllOptions(unit)}
-              </List>
-            ))}
-          </ul>
+
+          <OrderableUnitList
+            units={list.special}
+            type="special"
+            listId={listId}
+          />
+
           <Button
             centered
             to={`/editor/${listId}/add/special`}
@@ -563,27 +497,9 @@ export const Editor = ({ isMobile }) => {
               )}
             </p>
           </header>
-          <ul>
-            {list.rare.map((unit, index) => (
-              <List
-                key={index}
-                to={`/editor/${listId}/rare/${unit.id}`}
-                className="editor__list"
-                active={location.pathname.includes(unit.id)}
-              >
-                <div className="editor__list-inner">
-                  {unit.strength || unit.minimum ? (
-                    <span>{`${unit.strength || unit.minimum}`}</span>
-                  ) : null}
-                  <b>{unit[`name_${language}`] || unit.name_en}</b>
-                  <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}</i>
-                </div>
-                {getAllOptions(unit)}
-              </List>
-            ))}
-          </ul>
+
+          <OrderableUnitList units={list.rare} type="rare" listId={listId} />
+
           <Button
             centered
             to={`/editor/${listId}/add/rare`}
@@ -616,24 +532,13 @@ export const Editor = ({ isMobile }) => {
                 )}
               </p>
             </header>
-            <ul>
-              {list.allies.map((unit, index) => (
-                <List
-                  key={index}
-                  to={`/editor/${listId}/allies/${unit.id}`}
-                  className="editor__list"
-                  active={location.pathname.includes(unit.id)}
-                >
-                  <div className="editor__list-inner">
-                    <b>{unit[`name_${language}`] || unit.name_en}</b>
-                    <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                      id: "app.points",
-                    })}`}</i>
-                  </div>
-                  {getAllOptions(unit)}
-                </List>
-              ))}
-            </ul>
+
+            <OrderableUnitList
+              units={list.allies}
+              type="allies"
+              listId={listId}
+            />
+
             <Button
               centered
               to={`/editor/${listId}/add/allies`}
@@ -672,24 +577,13 @@ export const Editor = ({ isMobile }) => {
                   )}
                 </p>
               </header>
-              <ul>
-                {list.mercenaries.map((unit, index) => (
-                  <List
-                    key={index}
-                    to={`/editor/${listId}/mercenaries/${unit.id}`}
-                    className="editor__list"
-                    active={location.pathname.includes(unit.id)}
-                  >
-                    <div className="editor__list-inner">
-                      <b>{unit[`name_${language}`] || unit.name_en}</b>
-                      <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-                        id: "app.points",
-                      })}`}</i>
-                    </div>
-                    {getAllOptions(unit)}
-                  </List>
-                ))}
-              </ul>
+
+              <OrderableUnitList
+                units={list.mercenaries}
+                type="mercenaries"
+                listId={listId}
+              />
+
               <Button
                 centered
                 to={`/editor/${listId}/add/mercenaries`}
@@ -702,5 +596,48 @@ export const Editor = ({ isMobile }) => {
           )}
       </MainComponent>
     </>
+  );
+};
+
+/**
+ * @param {object} props
+ * @param {object[]} props.units
+ * @param {string} props.type
+ * @param {string} props.listId
+ */
+export const OrderableUnitList = ({ units, type, listId }) => {
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const intl = useIntl();
+  const { language } = useLanguage();
+
+  const handleMoved = (indexes) =>
+    dispatch(
+      moveUnit({
+        listId,
+        type,
+        ...indexes,
+      })
+    );
+
+  return (
+    <OrderableList id={type} onMoved={handleMoved}>
+      {units.map((unit, index) => (
+        <ListItem
+          key={index}
+          to={`/editor/${listId}/${type}/${unit.id}`}
+          className="editor__list"
+          active={location.pathname.includes(unit.id)}
+        >
+          <div className="editor__list-inner">
+            <b>{unit[`name_${language}`] || unit.name_en}</b>
+            <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+              id: "app.points",
+            })}`}</i>
+          </div>
+          {getAllOptions(unit)}
+        </ListItem>
+      ))}
+    </OrderableList>
   );
 };

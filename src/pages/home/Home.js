@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Button } from "../../components/button";
-import { List } from "../../components/list";
+import { ListItem, OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { getAllPoints } from "../../utils/points";
 import { setArmy } from "../../state/army";
@@ -29,6 +29,8 @@ import vampireCounts from "../../assets/army-icons/vampire-counts.svg";
 import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
+import { swap } from "../../utils/collection";
+import { setLists } from "../../state/lists";
 
 import "./Home.css";
 
@@ -68,6 +70,12 @@ export const Home = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const handleListMoved = ({ sourceIndex, destinationIndex }) => {
+    const newLists = swap(lists, sourceIndex, destinationIndex);
+    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    return dispatch(setLists(newLists));
+  };
+
   return (
     <>
       <Helmet>
@@ -94,10 +102,10 @@ export const Home = ({ isMobile }) => {
             </i>
           </>
         )}
-        <ul>
+        <OrderableList id="armies" onMoved={handleListMoved}>
           {lists.map(
             ({ id, name, description, points, game, army, ...list }, index) => (
-              <List
+              <ListItem
                 key={index}
                 to={`/editor/${id}`}
                 active={location.pathname.includes(id)}
@@ -133,10 +141,10 @@ export const Home = ({ isMobile }) => {
                   />
                   <img height="40" width="40" src={armyIconMap[army]} alt="" />
                 </div>
-              </List>
+              </ListItem>
             )
           )}
-        </ul>
+        </OrderableList>
         <Button
           centered
           to="/new"

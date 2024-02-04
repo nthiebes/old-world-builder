@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
-import { List } from "../../components/list";
+import { ListItem } from "../../components/list";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { addUnit } from "../../state/lists";
@@ -128,7 +128,7 @@ export const Add = ({ isMobile }) => {
     setRedirect(newUnit.id);
   };
   const getUnit = (unit) => (
-    <List key={unit.id} onClick={() => handleAdd(unit)}>
+    <ListItem key={unit.id} onClick={() => handleAdd(unit)}>
       <span className="unit__name">
         {unit.minimum ? `${unit.minimum} ` : null}
         <b>{unit[`name_${language}`] || unit.name_en}</b>
@@ -138,7 +138,7 @@ export const Add = ({ isMobile }) => {
       } ${intl.formatMessage({
         id: "app.points",
       })}`}</i>
-    </List>
+    </ListItem>
   );
 
   useEffect(() => {
