@@ -873,7 +873,7 @@ export const Unit = ({ isMobile }) => {
                                         </span>
                                         <i className="checkbox__points">
                                           {getPointsText({
-                                            points,
+                                            points: equipment.points,
                                             perModel: equipment.perModel,
                                           })}
                                         </i>
@@ -915,7 +915,7 @@ export const Unit = ({ isMobile }) => {
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
-                                          points,
+                                          points: armor.points,
                                           perModel: armor.perModel,
                                         })}
                                       </i>
@@ -957,7 +957,7 @@ export const Unit = ({ isMobile }) => {
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
-                                          points,
+                                          points: option.points,
                                           perModel: option.perModel,
                                         })}
                                       </i>
