@@ -10,7 +10,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -18,7 +30,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -45,8 +58,8 @@
           "active": false
         },
         {
-          "name_en": "Lance",
-          "name_de": "Lance",
+          "name_en": "Lance (if appropriately mounted)",
+          "name_de": "Lance (if appropriately mounted",
           "name_fr": "Lance de joute",
           "points": 4,
           "perModel": true,
@@ -136,8 +149,8 @@
           "active": true
         },
         {
-          "name_en": "Barded warhorse",
-          "name_de": "Barded warhorse",
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -258,7 +271,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -285,8 +299,8 @@
           "active": false
         },
         {
-          "name_en": "Lance",
-          "name_de": "Lance",
+          "name_en": "Lance (if appropriately mounted)",
+          "name_de": "Lance (if appropriately mounted)",
           "name_fr": "Lance de joute",
           "points": 4,
           "perModel": true,
@@ -369,8 +383,15 @@
       ],
       "mounts": [
         {
-          "name_en": "Barded warhorse",
-          "name_de": "Barded warhorse",
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -402,13 +423,6 @@
           "name_fr": "Griffon",
           "points": 130,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -429,7 +443,7 @@
         "name_fr": "\"Tenez la ligne!\", Cri de ralliement"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 General of the Empire or Grand Master per 1,000 points",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -445,7 +459,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -553,7 +579,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -579,6 +617,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Empire Horse",
           "name_de": "Empire Horse",
           "name_fr": "Cheval impérial",
@@ -591,13 +636,6 @@
           "name_fr": "Pégase",
           "points": 30,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -647,7 +685,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -655,7 +705,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -714,8 +765,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -733,13 +791,6 @@
           "name_fr": "Demigriffon",
           "points": 50,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -760,7 +811,7 @@
         "name_fr": "Contre-Charge, Première Charge, Immunisé à la psychologie, Maître des Batailles, Cri de Ralliement, Obstiné, Rapide, Vétéran"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 General of the Empire or Grand Master per 1,000 points",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -786,7 +837,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -794,7 +857,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -853,8 +917,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -872,13 +943,6 @@
           "name_fr": "Demigriffon",
           "points": 50,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -925,7 +989,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -933,7 +1009,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1006,6 +1083,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Empire Warhorse",
           "name_de": "Empire warhorse",
           "name_fr": "Destrier impérial",
@@ -1018,13 +1102,6 @@
           "name_fr": "Pégase",
           "points": 30,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -1071,7 +1148,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1079,7 +1168,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1130,8 +1220,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -1149,13 +1246,6 @@
           "name_fr": "Autel de Guerre de Sigmar",
           "points": 135,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -1176,7 +1266,7 @@
         "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières de Sigmar"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1192,7 +1282,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1200,7 +1302,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1251,8 +1354,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -1263,13 +1373,6 @@
           "name_fr": "Destrier impérial",
           "points": 12,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -1306,7 +1409,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1314,7 +1429,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1365,8 +1481,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -1377,13 +1500,6 @@
           "name_fr": "Destrier impérial",
           "points": 12,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -1404,7 +1520,7 @@
         "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières d'Ulric"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1420,7 +1536,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1428,7 +1556,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1479,8 +1608,15 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Barded Warhorse",
-          "name_de": "Barded warhorse",
+          "name_de": "Barded Warhorse",
           "name_fr": "Destrier caparaçonné",
           "points": 16,
           "active": false
@@ -1491,13 +1627,6 @@
           "name_fr": "Destrier impérial",
           "points": 12,
           "active": false
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pieds",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -1534,7 +1663,19 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1542,35 +1683,36 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
-          "name_en": "Grendade Launching Blunderbuss",
-          "name_de": "Grendade Launching Blunderbuss",
+          "name_en": "Grendade launching blunderbuss",
+          "name_de": "Grendade launching blunderbuss",
           "name_fr": "Tromblon à grenade",
           "points": 10,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Hochland Long Rifle",
-          "name_de": "Hochland Long Rifle",
+          "name_en": "Hochland long rifle",
+          "name_de": "Hochland long rifle",
           "name_fr": "Long fusil de Hochland",
           "points": 10,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Repeater Handgun",
-          "name_de": "Repeater Handgun",
+          "name_en": "Repeater handgun",
+          "name_de": "Repeater handgun",
           "name_fr": "Arquebuse à répétition",
           "points": 5,
           "perModel": false,
           "active": false
         },
         {
-          "name_en": "Repeater Pistol",
-          "name_de": "Repeater Pistol",
+          "name_en": "Repeater pistol",
+          "name_de": "Repeater pistol",
           "name_fr": "Pistolet à répétition",
           "points": 5,
           "perModel": false,
@@ -1597,8 +1739,8 @@
       ],
       "options": [
         {
-          "name_en": "Pigeon Bombs",
-          "name_de": "Pigeon Bombs",
+          "name_en": "Pigeon bombs",
+          "name_de": "Pigeon bombs",
           "name_fr": "Pigeons grenadiers",
           "points": 20,
           "perModel": false,
@@ -1683,7 +1825,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Halberds",
@@ -1789,7 +1932,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Halberds",
@@ -1850,7 +1994,7 @@
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Vétérans"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 unit of Veteran State Troops per 1,000 points",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1871,26 +2015,6 @@
           "name_en": "Sergeant (champion)",
           "name_de": "Sergeant (champion)",
           "name_fr": "Sergent (champion)",
-          "points": 5,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 0
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "points": 5,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "name_fr": "Musicien",
           "points": 5,
           "magic": {
             "types": [],
@@ -1922,6 +2046,26 @@
           "name_de": "Sergeant (champion), Repeater handgun",
           "name_fr": "Sergent (champion), Arquebuse à répétition",
           "points": 8,
+          "magic": {
+            "types": [],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "points": 5,
           "magic": {
             "types": [],
             "maxPoints": 0
@@ -2016,9 +2160,9 @@
       ],
       "equipment": [
         {
-          "name_en": "Mixed weapons",
-          "name_de": "Mixed weapons",
-          "name_fr": "Armes mixtes",
+          "name_en": "Additional hand weapons, Throwing weapons (mixed weapons)",
+          "name_de": "Additional hand weapons, Throwing weapons (mixed weapons)",
+          "name_fr": "Additional hand weapons, Throwing weapons (mixed weapons)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2066,8 +2210,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon and warbows",
-          "name_de": "Hand weapon and warbows",
+          "name_en": "Hand weapons, Warbows",
+          "name_de": "Hand weapons, Warbows",
           "name_fr": "Armes de base et Arcs de Guerre",
           "points": 0,
           "perModel": true,
@@ -2157,26 +2301,26 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_fr": "Armes de base",
-          "points": 0,
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Lance de joute, Arme de base, Bouclier",
+          "points": 1,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "name_fr": "Lances de joute",
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Arme lourde, Arme de base, Bouclier",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Great weapons",
-          "name_de": "Great weapons",
-          "name_fr": "Armes lourde",
-          "points": 1,
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Arme lourde, Arme de base",
+          "points": 0,
           "perModel": true,
           "active": false
         }
@@ -2191,28 +2335,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "name_fr": "Boucliers",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Replace shields with great weapons",
-          "name_de": "Replace shields with great weapons",
-          "name_fr": "Remplacer les boucliers par des armes lourdes",
-          "points": 0,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -2281,26 +2404,26 @@
       ],
       "equipment": [
         {
-          "name_en": "Great weapon, Hand weapon",
-          "name_de": "Great weapon, Hand weapon",
-          "name_fr": "Arme lourde, Arme de base",
-          "points": 0,
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Lance de joute, Arme de base, Bouclier",
+          "points": 1,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Great weapon, Hand weapon, Shield",
-          "name_de": "Great weapon, Hand weapon, Shield",
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
           "name_fr": "Arme lourde, Arme de base, Bouclier",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Lance, Hand weapon, Shield",
-          "name_de": "Lance, Hand weapon, Shield",
-          "name_fr": "Lance de joute, Arme de base, Bouclier",
-          "points": 1,
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Arme lourde, Arme de base",
+          "points": 0,
           "perModel": true,
           "active": false
         }
@@ -2337,7 +2460,7 @@
         "name_fr": "Ordre Serré, Contre-Charge, Bien Entrainés, Première Charge, Cercle Intérieur, Rapide, Vétérans"
       },
       "notes": {
-        "name_en": "",
+        "name_en": "0-1 unit of Inner Circle Knights per 1,000 points",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -2393,8 +2516,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
           "name_fr": "Arme lourde",
           "points": 0,
           "perModel": true,
@@ -2471,8 +2594,8 @@
           }
         },
         {
-          "name_en": "Veteran (champion) with repeater pistol",
-          "name_de": "Veteran (champion) with repeater pistol",
+          "name_en": "Veteran (champion), Repeater pistol",
+          "name_de": "Veteran (champion), Repeater pistol",
           "name_fr": "Vétéran (champion) avec pistolet à répétition",
           "points": 8,
           "magic": {
@@ -2481,8 +2604,8 @@
           }
         },
         {
-          "name_en": "Veteran (champion) with grenade launching blunderbuss",
-          "name_de": "Veteran (champion) with grenade launching blunderbuss",
+          "name_en": "Veteran (champion), Grenade launching blunderbuss",
+          "name_de": "Veteran (champion), Grenade launching blunderbuss",
           "name_fr": "Vétéran (champion) avec Tromblon lance-grenade",
           "points": 13,
           "magic": {
@@ -2491,8 +2614,8 @@
           }
         },
         {
-          "name_en": "Veteran (champion) with repeater handgun",
-          "name_de": "Veteran (champion) with repeater handgun",
+          "name_en": "Veteran (champion), Repeater handgun",
+          "name_de": "Veteran (champion), Repeater handgun",
           "name_fr": "Vétéran (champion) avec arquebuse à répétition",
           "points": 13,
           "magic": {
@@ -2513,8 +2636,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons and Brace of pistols",
-          "name_de": "Hand weapons and Brace of pistols",
+          "name_en": "Hand weapons, Brace of pistols",
+          "name_de": "Hand weapons, Brace of pistols",
           "name_fr": "Armes de base et paire de pistolets",
           "points": 0,
           "perModel": true,
@@ -2581,8 +2704,8 @@
           }
         },
         {
-          "name_en": "Sharpshooter (champion) with Brace of pistols",
-          "name_de": "Sharpshooter (champion) with Brace of pistols",
+          "name_en": "Sharpshooter (champion), Brace of pistols",
+          "name_de": "Sharpshooter (champion), Brace of pistols",
           "name_fr": "Mitrailleur (champion) avec paire de pistolets",
           "points": 6,
           "magic": {
@@ -2591,8 +2714,8 @@
           }
         },
         {
-          "name_en": "Sharpshooter (champion) with repeater pistol",
-          "name_de": "Sharpshooter (champion) with repeater pistol",
+          "name_en": "Sharpshooter (champion), Repeater pistol",
+          "name_de": "Sharpshooter (champion), Repeater pistol",
           "name_fr": "Mitrailleur (champion) avec pistolet à répétition",
           "points": 6,
           "magic": {
@@ -2601,8 +2724,8 @@
           }
         },
         {
-          "name_en": "Sharpshooter (champion) with grenade launching blunderbuss",
-          "name_de": "Sharpshooter (champion) with grenade launching blunderbuss",
+          "name_en": "Sharpshooter (champion), Grenade launching blunderbuss",
+          "name_de": "Sharpshooter (champion), Grenade launching blunderbuss",
           "name_fr": "Mitrailleur (champion) avec tromblon lance-grenade",
           "points": 16,
           "magic": {
@@ -2623,8 +2746,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, pistols, and repeater handguns",
-          "name_de": "Hand weapons, pistols, and repeater handguns",
+          "name_en": "Hand weapons, Pistols, Repeater handguns",
+          "name_de": "Hand weapons, Pistols, Repeater handguns",
           "name_fr": "Armes de bases, pistolets et pistolets à répétition",
           "points": 0,
           "perModel": true,
@@ -2708,17 +2831,17 @@
       ],
       "equipment": [
         {
-          "name_en": "Halberds",
-          "name_de": "Halberds",
-          "name_fr": "Hallebardes",
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute",
           "points": 0,
           "perModel": true,
-          "active": false
+          "active": true
         },
         {
-          "name_en": "Lances",
-          "name_de": "Lances",
-          "name_fr": "Lances de joute",
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes",
           "points": 0,
           "perModel": true,
           "active": false
@@ -2802,8 +2925,8 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Veterans",
-          "name_de": "Veterans",
+          "name_en": "Veteran",
+          "name_de": "Veteran",
           "name_fr": "Vétérans",
           "points": 10,
           "perModel": true,
@@ -2812,7 +2935,19 @@
           "maximum": 0
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Skirmishers",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-3 war machines chosen from the following list per 1,000 points: Great Cannon, Mortar",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "name_en": "Mortar",
@@ -2827,8 +2962,8 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Veterans",
-          "name_de": "Veterans",
+          "name_en": "Veteran",
+          "name_de": "Veteran",
           "name_fr": "Vétérans",
           "points": 10,
           "perModel": true,
@@ -2837,7 +2972,19 @@
           "maximum": 0
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Skirmishers",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-3 war machines chosen from the following list per 1,000 points: Great Cannon, Mortar",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "rare": [
@@ -2857,7 +3004,7 @@
       "options": [
         {
           "name_en": "Hochland long rifle",
-          "name_de": "Hochland Long Rifle",
+          "name_de": "Hochland long rifle",
           "name_fr": "Long fusil de Hochland",
           "points": 10,
           "perModel": true,
@@ -2877,7 +3024,7 @@
         },
         {
           "name_en": "Repeater pistol",
-          "name_de": "Repeater Pistol",
+          "name_de": "Repeater pistol",
           "name_fr": "Pistolet à répétition",
           "points": 5,
           "perModel": true,
@@ -2936,8 +3083,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons and flails",
-          "name_de": "Hand weapons and flails",
+          "name_en": "Hand weapons, Flails",
+          "name_de": "Hand weapons, Flails",
           "name_fr": "Armes de base et fléaux",
           "points": 0,
           "perModel": true,
@@ -2978,6 +3125,18 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Skirmishers",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2996,6 +3155,18 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "specialRules": {
+        "name_en": "Skirmishers",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "notes": {
+        "name_en": "0-1 war machine chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     }
   ],

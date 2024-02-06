@@ -156,7 +156,7 @@
   }
 }
 
-.unit__special-rule {
+.unit__rule {
   background-color: transparent;
   font-size: 1rem;
   font-family: var(--font-family);
@@ -167,13 +167,13 @@
   transition: color 0.2s linear;
 }
 
-.unit__special-rule:focus,
-.unit__special-rule:active {
+.unit__rule:focus,
+.unit__rule:active {
   color: var(--color-button);
 }
 
 @media (hover: hover) {
-  .unit__special-rule:hover {
+  .unit__rule:hover {
     color: var(--color-button);
   }
 }
@@ -184,6 +184,16 @@
 
 .unit__rules {
   padding: 0;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   height: auto;
+}
+
+.unit__default-equipment {
+  margin-bottom: 0.5rem;
+}
+
+.unit__rule-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
 }

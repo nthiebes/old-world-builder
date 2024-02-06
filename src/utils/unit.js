@@ -36,7 +36,7 @@ export const getAllOptions = (
   }
   const allEquipment = equipment
     ? equipment
-        .filter(({ active }) => active)
+        .filter(({ active, equippedDefault }) => active || equippedDefault)
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allArmor = armor
@@ -83,7 +83,7 @@ export const getAllOptions = (
 
           if (equipment && equipment.length) {
             equipment.forEach((option) => {
-              option.active &&
+              (option.active || option.equippedDefault) &&
                 equipmentSelection.push(
                   `${option[`name_${language}`]}` || option.name_en
                 );
