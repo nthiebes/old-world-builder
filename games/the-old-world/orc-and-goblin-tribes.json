@@ -30,7 +30,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -49,8 +50,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -173,7 +174,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -192,8 +194,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -298,7 +300,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -467,7 +470,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -495,6 +499,14 @@
         }
       ],
       "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
@@ -843,7 +855,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -862,8 +875,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -994,7 +1007,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1013,8 +1027,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -1326,7 +1340,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1345,8 +1360,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -1463,7 +1478,8 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1482,8 +1498,8 @@
           "active": false
         },
         {
-          "name_en": "Cavalry spear",
-          "name_de": "Cavalry spear",
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_de": "Cavalry spear (if appropriately mounted)",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
@@ -1761,44 +1777,45 @@
       ],
       "equipment": [
         {
-          "name_en": "Warbow",
-          "name_de": "Warbow",
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Warbows",
+          "name_de": "Warbows",
           "name_fr": "Arcs de guerre",
           "points": 0,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
+          "name_en": "Additional hand weapons",
+          "name_de": "Additional hand weapons",
           "name_fr": "Arme de base additionnelle",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Thrusting spear",
-          "name_de": "Thrusting spear",
+          "name_en": "Thrusting spears",
+          "name_de": "Thrusting spears",
           "name_fr": "Lance d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Throwing Spears",
-          "name_de": "Throwing Spears",
+          "name_en": "Throwing spears",
+          "name_de": "Throwing spears",
           "name_fr": "Javelots",
           "points": 1,
           "perModel": true,
           "active": false
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -1841,8 +1858,8 @@
           "maximum": 0
         },
         {
-          "name_en": "Shield",
-          "name_de": "Shield",
+          "name_en": "Shields",
+          "name_de": "Shields",
           "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
@@ -2063,16 +2080,16 @@
           "active": true
         },
         {
-          "name_en": "Thrusting spears, Shields",
-          "name_de": "Thrusting spears, Shields",
+          "name_en": "Hand weapons, Thrusting spears, Shields",
+          "name_de": "Hand weapons, Thrusting spears, Shields",
           "name_fr": "Lances et boucliers d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Shortbows (replaces shields)",
-          "name_de": "Shortbows (ersetzt Schilde)",
+          "name_en": "Hand weapons, Shortbows",
+          "name_de": "Hand weapons, Shortbows",
           "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 1,
           "perModel": true,
@@ -2218,16 +2235,16 @@
           "active": true
         },
         {
-          "name_en": "Thrusting spears, Shields",
-          "name_de": "Thrusting spears, Shields",
+          "name_en": "Hand weapons, Thrusting spears, Shields",
+          "name_de": "Hand weapons, Thrusting spears, Shields",
           "name_fr": "Lances et boucliers d'infanterie",
           "points": 1,
           "perModel": true,
           "active": false
         },
         {
-          "name_en": "Shortbows (replaces shields)",
-          "name_de": "Shortbows (ersetzt Schilde)",
+          "name_en": "Hand weapons, Shortbows",
+          "name_de": "Hand weapons, Shortbows",
           "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 1,
           "perModel": true,
@@ -2420,8 +2437,8 @@
           "active": false
         },
         {
-          "name_en": "Hand weapons, Shortbows (replaces shields)",
-          "name_de": "Hand weapons, Shortbows (ersetzt Schilde)",
+          "name_en": "Hand weapons, Shortbows",
+          "name_de": "Hand weapons, Shortbows",
           "name_fr": "Arcs courts (remplace les boucliers)",
           "points": 0,
           "perModel": true,
@@ -2507,9 +2524,9 @@
           "maximum": 0
         },
         {
-          "name_en": "Squig herder thrusting spears",
-          "name_de": "Squig herder thrusting spears",
-          "name_fr": "Squig herder thrusting spears",
+          "name_en": "Thrusting spears for Squig Herder",
+          "name_de": "Thrusting spears for Squig Herder",
+          "name_fr": "Thrusting spears for Squig Herder",
           "points": 1,
           "perModel": false,
           "stackable": true,
