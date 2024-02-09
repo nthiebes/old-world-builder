@@ -82,8 +82,8 @@ export const Home = ({ isMobile }) => {
     <>
       <Helmet>
         <title>
-          Old World Builder - Army builder for Warhammer Fantasy and Warhammer:
-          The Old World
+          Old World Builder - Army builder for Warhammer: The Old World and
+          Warhammer Fantasy Battles
         </title>
         <link rel="canonical" href="https://old-world-builder.com/" />
       </Helmet>
