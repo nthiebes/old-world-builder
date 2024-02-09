@@ -2,7 +2,7 @@ import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Button } from "../../components/button";
@@ -29,6 +29,7 @@ import vampireCounts from "../../assets/army-icons/vampire-counts.svg";
 import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
+import forg3dBanner from "../../assets/forg3d.jpg";
 import { swap } from "../../utils/collection";
 import { setLists } from "../../state/lists";
 
@@ -61,6 +62,7 @@ export const Home = ({ isMobile }) => {
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
   const dispatch = useDispatch();
+  const intl = useIntl();
   const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
@@ -161,11 +163,32 @@ export const Home = ({ isMobile }) => {
           icon="import"
           color="dark"
           spaceTop
-          spaceBottom
           onClick={resetState}
         >
           <FormattedMessage id="home.import" />
         </Button>
+
+        <hr />
+
+        <p>
+          <b>
+            <i>
+              <FormattedMessage id="home.sponsored" />
+            </i>
+          </b>
+        </p>
+        <a
+          className="home__banner-link"
+          href="https://tinyurl.com/Forg3dOWB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={forg3dBanner}
+            className="home__banner-image"
+            alt={intl.formatMessage({ id: "home.forg3d" })}
+          />
+        </a>
       </MainComponent>
     </>
   );
