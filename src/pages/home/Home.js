@@ -187,6 +187,7 @@ export const Home = ({ isMobile }) => {
             src={forg3dBanner}
             className="home__banner-image"
             alt={intl.formatMessage({ id: "home.forg3d" })}
+            loading="lazy"
           />
         </a>
       </MainComponent>
