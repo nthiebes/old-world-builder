@@ -5,13 +5,24 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { loadScript } from "../../utils/script";
+
+window["stg"] = window["stg"] || {};
+window["stg"].optedOutCheckboxText = "You're opted out. Uncheck to opt in.";
+window["stg"].optedInCheckboxText = "Opt out of data collection and usage";
+window["stg"].isGlobal = false;
+window["stg"].instanceHostname = "https://owb.containers.piwik.pro";
 
 export const Privacy = () => {
   const location = useLocation();
   const intl = useIntl();
+  const handleOptOut = () => {
+    window.parent.storeUserOptOutPreferences();
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    loadScript("https://owb.containers.piwik.pro/privacy/script.v2.js");
   }, [location.pathname]);
 
   return (
@@ -68,7 +79,8 @@ export const Privacy = () => {
               rel="noopener noreferrer"
             >
               Google Play Services
-            </a>
+            </a>{" "}
+            (Android App)
           </li>
           <li>
             <a
@@ -77,7 +89,8 @@ export const Privacy = () => {
               rel="noopener noreferrer"
             >
               Sentry
-            </a>
+            </a>{" "}
+            (error tracking)
           </li>
         </ul>
         <br />
@@ -99,6 +112,69 @@ export const Privacy = () => {
           memory.
         </p>
         <p>This Service does not use these “cookies”.</p>
+
+        <h3>Piwik PRO Analytics</h3>
+        <p>
+          We use Piwik PRO Analytics Suite as our website/app analytics
+          software. The collected information may include an anonymized
+          visitor's IP address, operating system, browser ID, browsing activity
+          and other information. See the{" "}
+          <a
+            href="https://help.piwik.pro/support/getting-started/what-data-does-piwik-pro-collect/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            scope of data collected by Piwik PRO
+          </a>
+          .
+        </p>
+        <p>
+          We calculate metrics like bounce rate, page views, sessions and the
+          like to understand how our website/app is used.
+        </p>
+        <p>
+          We host our solution on Microsoft Azure in Germany/Netherlands/United
+          States/Hong Kong/ElastX in Sweden, and the data is stored for 14/25
+          months.
+        </p>
+        <p>
+          The purpose of data processing: analytics. Legal basis: Art. 6 (1)(a)
+          GDPR.
+        </p>
+        <p>
+          Piwik PRO does not send the data about you to any other sub-processors
+          or third parties and does not use it for its own purposes. For more,
+          read{" "}
+          <a
+            href="https://piwik.pro/privacy-policy/?pk_vid=b9514cbe42ac928e17075637164eac6f#product"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Piwik PRO's privacy policy
+          </a>
+          .
+        </p>
+
+        <div id="_stg_opt_out_iframe_content" style={{ display: "none" }}>
+          <p>
+            Privacy on this site: We collect and process your data on this site
+            to better understand how it is used. You can opt-in or opt-out at
+            any time.
+          </p>
+          <div className="checkbox">
+            <input
+              id="_stg_optout_checkbox"
+              onChange={handleOptOut}
+              type="checkbox"
+              className="checkbox__input"
+            />
+            <label
+              className="checkbox__label"
+              id="_stg_optout_checkbox_label"
+              htmlFor="_stg_optout_checkbox"
+            ></label>
+          </div>
+        </div>
 
         <h3>Links to Other Sites</h3>
         <p>
