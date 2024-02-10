@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
+import { Breadcrumbs } from "../../components/breadcrumbs";
 
 export const Help = () => {
   const location = useLocation();
@@ -26,9 +26,7 @@ export const Help = () => {
       <Header headline="Old World Builder" hasMainNavigation />
 
       <Main compact>
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
+        <Breadcrumbs pagename="footer.help" />
 
         <h2 className="page-headline">
           <FormattedMessage id="help.title" />

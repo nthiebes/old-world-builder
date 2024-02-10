@@ -62,6 +62,7 @@ export const Print = () => {
           icon="back"
           spaceTop
           spaceBottom
+          type="secondary"
         >
           <FormattedMessage id="header.back" />
         </Button>
@@ -107,6 +108,7 @@ export const Print = () => {
               icon="print"
               spaceTop
               spaceBottom
+              size="large"
             >
               <FormattedMessage id="misc.print" />
             </Button>
@@ -129,19 +131,148 @@ export const Print = () => {
         </p>
 
         {list.game === "the-old-world" ? (
+          list.characters.length > 0 && (
+            <section>
+              <h2>
+                <FormattedMessage id="editor.characters" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{charactersPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+              <ul>
+                {list.characters.map((unit) => (
+                  <li key={unit.id}>
+                    <h3>
+                      {unit[`name_${language}`] || unit.name_en}
+                      {!isShowList && (
+                        <span className="print__points">
+                          [{getUnitPoints(unit)}{" "}
+                          <FormattedMessage id="app.points" />]
+                        </span>
+                      )}
+                    </h3>
+                    {getAllOptions(unit, { noMagic: isShowList })}
+                    {showSpecialRules && unit.specialRules ? (
+                      <p className="print__special-rules">
+                        <b>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </b>{" "}
+                        <i>
+                          {unit.specialRules[`name_${language}`] ||
+                            unit.specialRules.name_en}
+                        </i>
+                      </p>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        ) : (
+          <>
+            {list.lords.length > 0 && (
+              <section>
+                <h2>
+                  <FormattedMessage id="editor.lords" />{" "}
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{lordsPoints} <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h2>
+                <ul>
+                  {list.lords.map((unit) => (
+                    <li key={unit.id}>
+                      <h3>
+                        {unit[`name_${language}`] || unit.name_en}
+                        {!isShowList && (
+                          <span className="print__points">
+                            [{getUnitPoints(unit)}{" "}
+                            <FormattedMessage id="app.points" />]
+                          </span>
+                        )}
+                      </h3>
+                      {getAllOptions(unit, { noMagic: isShowList })}
+                      {showSpecialRules && unit.specialRules ? (
+                        <p className="print__special-rules">
+                          <b>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </b>{" "}
+                          <i>
+                            {unit.specialRules[`name_${language}`] ||
+                              unit.specialRules.name_en}
+                          </i>
+                        </p>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {list.heroes.length > 0 && (
+              <section>
+                <h2>
+                  <FormattedMessage id="editor.heroes" />{" "}
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{heroesPoints} <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h2>
+                <ul>
+                  {list.heroes.map((unit) => (
+                    <li key={unit.id}>
+                      <h3>
+                        {unit[`name_${language}`] || unit.name_en}
+                        {!isShowList && (
+                          <span className="print__points">
+                            [{getUnitPoints(unit)}{" "}
+                            <FormattedMessage id="app.points" />]
+                          </span>
+                        )}
+                      </h3>
+                      {getAllOptions(unit, { noMagic: isShowList })}
+                      {showSpecialRules && unit.specialRules ? (
+                        <p className="print__special-rules">
+                          <b>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </b>{" "}
+                          <i>
+                            {unit.specialRules[`name_${language}`] ||
+                              unit.specialRules.name_en}
+                          </i>
+                        </p>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </>
+        )}
+
+        {list.core.length > 0 && (
           <section>
             <h2>
-              <FormattedMessage id="editor.characters" />{" "}
+              <FormattedMessage id="editor.core" />{" "}
               {!isShowList && (
                 <span className="print__points">
-                  [{charactersPoints} <FormattedMessage id="app.points" />]
+                  [{corePoints} <FormattedMessage id="app.points" />]
                 </span>
               )}
             </h2>
             <ul>
-              {list.characters.map((unit) => (
+              {list.core.map((unit) => (
                 <li key={unit.id}>
                   <h3>
+                    {unit.strength || unit.minimum ? (
+                      <span className="print__strength">
+                        {`${unit.strength || unit.minimum} `}
+                      </span>
+                    ) : null}
                     {unit[`name_${language}`] || unit.name_en}
                     {!isShowList && (
                       <span className="print__points">
@@ -150,7 +281,7 @@ export const Print = () => {
                       </span>
                     )}
                   </h3>
-                  {getAllOptions(unit)}
+                  {getAllOptions(unit, { noMagic: isShowList })}
                   {showSpecialRules && unit.specialRules ? (
                     <p className="print__special-rules">
                       <b>
@@ -166,319 +297,205 @@ export const Print = () => {
               ))}
             </ul>
           </section>
-        ) : (
-          <>
-            <section>
-              <h2>
-                <FormattedMessage id="editor.lords" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{lordsPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              <ul>
-                {list.lords.map((unit) => (
-                  <li key={unit.id}>
-                    <h3>
-                      {unit[`name_${language}`] || unit.name_en}
-                      {!isShowList && (
-                        <span className="print__points">
-                          [{getUnitPoints(unit)}{" "}
-                          <FormattedMessage id="app.points" />]
-                        </span>
-                      )}
-                    </h3>
-                    {getAllOptions(unit)}
-                    {showSpecialRules && unit.specialRules ? (
-                      <p className="print__special-rules">
-                        <b>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </b>{" "}
-                        <i>
-                          {unit.specialRules[`name_${language}`] ||
-                            unit.specialRules.name_en}
-                        </i>
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            <section>
-              <h2>
-                <FormattedMessage id="editor.heroes" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{heroesPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              <ul>
-                {list.heroes.map((unit) => (
-                  <li key={unit.id}>
-                    <h3>
-                      {unit[`name_${language}`] || unit.name_en}
-                      {!isShowList && (
-                        <span className="print__points">
-                          [{getUnitPoints(unit)}{" "}
-                          <FormattedMessage id="app.points" />]
-                        </span>
-                      )}
-                    </h3>
-                    {getAllOptions(unit)}
-                    {showSpecialRules && unit.specialRules ? (
-                      <p className="print__special-rules">
-                        <b>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </b>{" "}
-                        <i>
-                          {unit.specialRules[`name_${language}`] ||
-                            unit.specialRules.name_en}
-                        </i>
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          </>
         )}
 
-        <section>
-          <h2>
-            <FormattedMessage id="editor.core" />{" "}
-            {!isShowList && (
-              <span className="print__points">
-                [{corePoints} <FormattedMessage id="app.points" />]
-              </span>
-            )}
-          </h2>
-          <ul>
-            {list.core.map((unit) => (
-              <li key={unit.id}>
-                <h3>
-                  {unit.strength || unit.minimum ? (
-                    <span className="print__strength">
-                      {`${unit.strength || unit.minimum} `}
-                    </span>
+        {list.special.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.special" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{specialPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            <ul>
+              {list.special.map((unit) => (
+                <li key={unit.id}>
+                  <h3>
+                    {unit.strength || unit.minimum ? (
+                      <span className="print__strength">
+                        {`${unit.strength || unit.minimum} `}
+                      </span>
+                    ) : null}
+                    {unit[`name_${language}`] || unit.name_en}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h3>
+                  {getAllOptions(unit, { noMagic: isShowList })}
+                  {showSpecialRules && unit.specialRules ? (
+                    <p className="print__special-rules">
+                      <b>
+                        <FormattedMessage id="unit.specialRules" />:
+                      </b>{" "}
+                      <i>
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
+                      </i>
+                    </p>
                   ) : null}
-                  {unit[`name_${language}`] || unit.name_en}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{getUnitPoints(unit)}{" "}
-                      <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h3>
-                {getAllOptions(unit)}
-                {showSpecialRules && unit.specialRules ? (
-                  <p className="print__special-rules">
-                    <b>
-                      <FormattedMessage id="unit.specialRules" />:
-                    </b>{" "}
-                    <i>
-                      {unit.specialRules[`name_${language}`] ||
-                        unit.specialRules.name_en}
-                    </i>
-                  </p>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-        </section>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-        <section>
-          <h2>
-            <FormattedMessage id="editor.special" />{" "}
-            {!isShowList && (
-              <span className="print__points">
-                [{specialPoints} <FormattedMessage id="app.points" />]
-              </span>
-            )}
-          </h2>
-          <ul>
-            {list.special.map((unit) => (
-              <li key={unit.id}>
-                <h3>
-                  {unit.strength || unit.minimum ? (
-                    <span className="print__strength">
-                      {`${unit.strength || unit.minimum} `}
-                    </span>
+        {list.rare.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.rare" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{rarePoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            <ul>
+              {list.rare.map((unit) => (
+                <li key={unit.id}>
+                  <h3>
+                    {unit.strength || unit.minimum ? (
+                      <span className="print__strength">
+                        {`${unit.strength || unit.minimum} `}
+                      </span>
+                    ) : null}
+                    {unit[`name_${language}`] || unit.name_en}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h3>
+                  {getAllOptions(unit, { noMagic: isShowList })}
+                  {showSpecialRules && unit.specialRules ? (
+                    <p className="print__special-rules">
+                      <b>
+                        <FormattedMessage id="unit.specialRules" />:
+                      </b>{" "}
+                      <i>
+                        {unit.specialRules[`name_${language}`] ||
+                          unit.specialRules.name_en}
+                      </i>
+                    </p>
                   ) : null}
-                  {unit[`name_${language}`] || unit.name_en}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{getUnitPoints(unit)}{" "}
-                      <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h3>
-                {getAllOptions(unit)}
-                {showSpecialRules && unit.specialRules ? (
-                  <p className="print__special-rules">
-                    <b>
-                      <FormattedMessage id="unit.specialRules" />:
-                    </b>{" "}
-                    <i>
-                      {unit.specialRules[`name_${language}`] ||
-                        unit.specialRules.name_en}
-                    </i>
-                  </p>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2>
-            <FormattedMessage id="editor.rare" />{" "}
-            {!isShowList && (
-              <span className="print__points">
-                [{rarePoints} <FormattedMessage id="app.points" />]
-              </span>
-            )}
-          </h2>
-          <ul>
-            {list.rare.map((unit) => (
-              <li key={unit.id}>
-                <h3>
-                  {unit.strength || unit.minimum ? (
-                    <span className="print__strength">
-                      {`${unit.strength || unit.minimum} `}
-                    </span>
-                  ) : null}
-                  {unit[`name_${language}`] || unit.name_en}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{getUnitPoints(unit)}{" "}
-                      <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h3>
-                {getAllOptions(unit)}
-                {showSpecialRules && unit.specialRules ? (
-                  <p className="print__special-rules">
-                    <b>
-                      <FormattedMessage id="unit.specialRules" />:
-                    </b>{" "}
-                    <i>
-                      {unit.specialRules[`name_${language}`] ||
-                        unit.specialRules.name_en}
-                    </i>
-                  </p>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-        </section>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {list.game === "the-old-world" && (
           <>
-            <section>
-              <h2>
-                <FormattedMessage id="editor.allies" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{alliesPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              <ul>
-                {list.allies.map((unit) => (
-                  <li key={unit.id}>
-                    <h3>
-                      {unit.strength || unit.minimum ? (
-                        <span className="print__strength">
-                          {`${unit.strength || unit.minimum} `}
-                        </span>
+            {list.allies.length > 0 && (
+              <section>
+                <h2>
+                  <FormattedMessage id="editor.allies" />{" "}
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{alliesPoints} <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h2>
+                <ul>
+                  {list.allies.map((unit) => (
+                    <li key={unit.id}>
+                      <h3>
+                        {unit.strength || unit.minimum ? (
+                          <span className="print__strength">
+                            {`${unit.strength || unit.minimum} `}
+                          </span>
+                        ) : null}
+                        {unit[`name_${language}`] || unit.name_en}
+                        {!isShowList && (
+                          <span className="print__points">
+                            [{getUnitPoints(unit)}{" "}
+                            <FormattedMessage id="app.points" />]
+                          </span>
+                        )}
+                      </h3>
+                      {getAllOptions(unit, { noMagic: isShowList })}
+                      {showSpecialRules && unit.specialRules ? (
+                        <p className="print__special-rules">
+                          <b>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </b>{" "}
+                          <i>
+                            {unit.specialRules[`name_${language}`] ||
+                              unit.specialRules.name_en}
+                          </i>
+                        </p>
                       ) : null}
-                      {unit[`name_${language}`] || unit.name_en}
-                      {!isShowList && (
-                        <span className="print__points">
-                          [{getUnitPoints(unit)}{" "}
-                          <FormattedMessage id="app.points" />]
-                        </span>
-                      )}
-                    </h3>
-                    {getAllOptions(unit)}
-                    {showSpecialRules && unit.specialRules ? (
-                      <p className="print__special-rules">
-                        <b>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </b>{" "}
-                        <i>
-                          {unit.specialRules[`name_${language}`] ||
-                            unit.specialRules.name_en}
-                        </i>
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </section>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
-            <section>
-              <h2>
-                <FormattedMessage id="editor.mercenaries" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              <ul>
-                {list.mercenaries.map((unit) => (
-                  <li key={unit.id}>
-                    <h3>
-                      {unit.strength || unit.minimum ? (
-                        <span className="print__strength">
-                          {`${unit.strength || unit.minimum} `}
-                        </span>
+            {list.mercenaries.length > 0 && (
+              <section>
+                <h2>
+                  <FormattedMessage id="editor.mercenaries" />{" "}
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h2>
+                <ul>
+                  {list.mercenaries.map((unit) => (
+                    <li key={unit.id}>
+                      <h3>
+                        {unit.strength || unit.minimum ? (
+                          <span className="print__strength">
+                            {`${unit.strength || unit.minimum} `}
+                          </span>
+                        ) : null}
+                        {unit[`name_${language}`] || unit.name_en}
+                        {!isShowList && (
+                          <span className="print__points">
+                            [{getUnitPoints(unit)}{" "}
+                            <FormattedMessage id="app.points" />]
+                          </span>
+                        )}
+                      </h3>
+                      {getAllOptions(unit, { noMagic: isShowList })}
+                      {showSpecialRules && unit.specialRules ? (
+                        <p className="print__special-rules">
+                          <b>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </b>{" "}
+                          <i>
+                            {unit.specialRules[`name_${language}`] ||
+                              unit.specialRules.name_en}
+                          </i>
+                        </p>
                       ) : null}
-                      {unit[`name_${language}`] || unit.name_en}
-                      {!isShowList && (
-                        <span className="print__points">
-                          [{getUnitPoints(unit)}{" "}
-                          <FormattedMessage id="app.points" />]
-                        </span>
-                      )}
-                    </h3>
-                    {getAllOptions(unit)}
-                    {showSpecialRules && unit.specialRules ? (
-                      <p className="print__special-rules">
-                        <b>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </b>{" "}
-                        <i>
-                          {unit.specialRules[`name_${language}`] ||
-                            unit.specialRules.name_en}
-                        </i>
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </section>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </>
         )}
+        <div className="print-footer">
+          <p>
+            <FormattedMessage id="export.createdWith" />{" "}
+            <b>"Old World Builder"</b>
+          </p>
+          <p>
+            [
+            <a href="https://old-world-builder.com">
+              <i>old-world-builder.com</i>
+            </a>
+            ]
+          </p>
+        </div>
       </main>
-
-      <footer className="print-footer">
-        <p>
-          <FormattedMessage id="export.createdWith" />{" "}
-          <b>"Old World Builder"</b>
-        </p>
-        <p>
-          [
-          <a href="https://old-world-builder.com">
-            <i>old-world-builder.com</i>
-          </a>
-          ]
-        </p>
-      </footer>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
+import { Breadcrumbs } from "../../components/breadcrumbs";
 import { loadScript } from "../../utils/script";
 
 window["stg"] = window["stg"] || {};
@@ -39,9 +39,8 @@ export const Privacy = () => {
       <Header headline="Old World Builder" hasMainNavigation />
 
       <Main compact>
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
+        <Breadcrumbs pagename="footer.changelog" />
+
         <h2 className="page-headline">
           <FormattedMessage id="footer.privacy" />
         </h2>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
@@ -78,7 +78,19 @@ export const Header = ({
         <>{navigation && <div className="header__empty-icon" />}</>
       )}
       <div className="header__text">
-        {headline && <h1 className="header__name">{headline}</h1>}
+        {headline && (
+          <>
+            {headline === "Old World Builder" ? (
+              <h1 className="header__name">
+                <Link className="header__name-link" to="/">
+                  {headline}
+                </Link>
+              </h1>
+            ) : (
+              <h1 className="header__name">{headline}</h1>
+            )}
+          </>
+        )}
         {subheadline && (
           <p className="header__points">
             {subheadline}{" "}

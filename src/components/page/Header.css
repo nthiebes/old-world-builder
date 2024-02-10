@@ -55,6 +55,18 @@
   text-overflow: ellipsis;
 }
 
+.header__name-link,
+.header__name-link:visited {
+  color: var(--color-font-light);
+  text-decoration: none;
+}
+
+.header__name-link:hover,
+.header__name-link:visited:hover {
+  color: var(--color-font-light);
+  text-decoration: underline;
+}
+
 .header__points {
   display: flex;
   justify-content: center;

@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
+import { Breadcrumbs } from "../../components/breadcrumbs";
 // import { loadScript } from "../../utils/script";
 
 import "./About.css";
@@ -43,9 +43,7 @@ export const About = () => {
       <Header headline="Old World Builder" hasMainNavigation />
 
       <Main compact>
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
+        <Breadcrumbs pagename="footer.about" />
 
         <h2 className="page-headline">
           <FormattedMessage id="about.title" />

@@ -9,9 +9,13 @@
 }
 
 @media screen {
-  .print,
-  .print-footer {
-    display: none;
+  .print {
+    background-color: #fff;
+    margin: 1rem;
+  }
+
+  .hide-for-printing {
+    padding: 1rem;
   }
 }
 
@@ -87,5 +91,5 @@
 }
 
 .print__special-rules {
-  margin-top: 0.5rem;
+  margin-top: 5px;
 }

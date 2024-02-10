@@ -25,6 +25,7 @@ export const Button = ({
   disabled,
   size,
   download,
+  value,
 }) => {
   const Component = to || href ? (to ? Link : "a") : "button";
   const buttonProps = {};
@@ -58,6 +59,7 @@ export const Button = ({
       title={label}
       disabled={disabled}
       download={download}
+      value={value}
       {...buttonProps}
     >
       {icon && (
@@ -88,9 +90,10 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.string,
   download: PropTypes.string,
+  value: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
 };
 
 Button.defaultProps = {
   type: "primary",
-  size: "large",
+  size: "medium",
 };

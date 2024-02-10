@@ -156,6 +156,7 @@ export const Home = ({ isMobile }) => {
           icon="new-list"
           spaceTop
           onClick={resetState}
+          size="large"
         >
           <FormattedMessage id="home.newList" />
         </Button>

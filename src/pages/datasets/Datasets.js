@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { Select } from "../../components/select";
 import { Expandable } from "../../components/expandable";
 import { Spinner } from "../../components/spinner";
+import { Breadcrumbs } from "../../components/breadcrumbs";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
 
@@ -133,11 +134,9 @@ export const Datasets = ({ isMobile }) => {
       <Header headline="Old World Builder" hasMainNavigation />
 
       <Main className="datasets">
-        <Button to="/" icon="home" centered spaceBottom>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
-
         <div className="datasets__info">
+          <Breadcrumbs pagename="footer.datasets" />
+
           <h2 className="page-headline">Datasets Editor</h2>
           <p className="datasets__paragraph">
             Thank you for taking the time to improve the{" "}

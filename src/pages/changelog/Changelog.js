@@ -4,7 +4,7 @@ import { FormattedMessage, FormattedDate, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
+import { Breadcrumbs } from "../../components/breadcrumbs";
 
 import "./Changelog.css";
 
@@ -30,9 +30,8 @@ export const Changelog = () => {
       <Header headline="Old World Builder" hasMainNavigation />
 
       <Main compact className="changelog">
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
+        <Breadcrumbs pagename="footer.changelog" />
+
         <h2 className="page-headline">
           <FormattedMessage id="changelog.title" />
         </h2>
