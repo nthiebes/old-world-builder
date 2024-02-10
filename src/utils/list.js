@@ -1,14 +1,16 @@
 export const updateLocalList = (updatedList) => {
   const localLists = JSON.parse(localStorage.getItem("owb.lists"));
-  const updatedLists = localLists.map((list) => {
-    if (list.id === updatedList.id) {
-      return updatedList;
-    } else {
-      return list;
-    }
-  });
+  const updatedLists =
+    localLists &&
+    localLists.map((list) => {
+      if (list.id === updatedList.id) {
+        return updatedList;
+      } else {
+        return list;
+      }
+    });
 
-  localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+  localLists && localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
 };
 
 export const removeFromLocalList = (listId) => {
