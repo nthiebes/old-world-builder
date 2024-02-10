@@ -141,16 +141,17 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
+                disabled={id === "warhammer-fantasy"}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
-                  <img height="20" src={warhammerFantasy} alt={name} />
+                  <>
+                    <img height="20" src={warhammerFantasy} alt={name} />
+                    <p className="new-list__beta">(8.Edition)</p>
+                  </>
                 )}
                 {id === "the-old-world" && (
-                  <>
-                    <img height="35" src={warhammerTheOldWorld} alt={name} />
-                    <p className="new-list__beta">Beta</p>
-                  </>
+                  <img height="35" src={warhammerTheOldWorld} alt={name} />
                 )}
               </label>
             </div>
