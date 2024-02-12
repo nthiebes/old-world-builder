@@ -4,7 +4,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { IntlProvider } from "react-intl";
 import { HelmetProvider } from "react-helmet-async";
 import * as Sentry from "@sentry/react";
-import PiwikPro from "@piwikpro/react-piwik-pro";
+// import PiwikPro from "@piwikpro/react-piwik-pro";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -28,10 +28,10 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 // Analytics
-PiwikPro.initialize(
-  "b926228f-3567-4df1-b4e5-5ea40019bffb",
-  "https://owb.piwik.pro"
-);
+// PiwikPro.initialize(
+//   "b926228f-3567-4df1-b4e5-5ea40019bffb",
+//   "https://owb.piwik.pro"
+// );
 
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",

@@ -5,24 +5,24 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
-import { loadScript } from "../../utils/script";
+// import { loadScript } from "../../utils/script";
 
-window["stg"] = window["stg"] || {};
-window["stg"].optedOutCheckboxText = "You're opted out. Uncheck to opt in.";
-window["stg"].optedInCheckboxText = "Opt out of data collection and usage";
-window["stg"].isGlobal = false;
-window["stg"].instanceHostname = "https://owb.containers.piwik.pro";
+// window["stg"] = window["stg"] || {};
+// window["stg"].optedOutCheckboxText = "You're opted out. Uncheck to opt in.";
+// window["stg"].optedInCheckboxText = "Opt out of data collection and usage";
+// window["stg"].isGlobal = false;
+// window["stg"].instanceHostname = "https://owb.containers.piwik.pro";
 
 export const Privacy = () => {
   const location = useLocation();
   const intl = useIntl();
-  const handleOptOut = () => {
-    window.parent.storeUserOptOutPreferences();
-  };
+  // const handleOptOut = () => {
+  //   window.parent.storeUserOptOutPreferences();
+  // };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    loadScript("https://owb.containers.piwik.pro/privacy/script.v2.js");
+    // loadScript("https://owb.containers.piwik.pro/privacy/script.v2.js");
   }, [location.pathname]);
 
   return (
@@ -113,7 +113,7 @@ export const Privacy = () => {
         </p>
         <p>This Service does not use these “cookies”.</p>
 
-        <h3>Piwik PRO Analytics</h3>
+        {/* <h3>Piwik PRO Analytics</h3>
         <p>
           We use Piwik PRO Analytics Suite as our website/app analytics
           software. The collected information may include an anonymized
@@ -153,9 +153,9 @@ export const Privacy = () => {
             Piwik PRO's privacy policy
           </a>
           .
-        </p>
+        </p> */}
 
-        <div id="_stg_opt_out_iframe_content" style={{ display: "none" }}>
+        {/* <div id="_stg_opt_out_iframe_content" style={{ display: "none" }}>
           <p>
             Privacy on this site: We collect and process your data on this site
             to better understand how it is used. You can opt-in or opt-out at
@@ -174,7 +174,7 @@ export const Privacy = () => {
               htmlFor="_stg_optout_checkbox"
             ></label>
           </div>
-        </div>
+        </div> */}
 
         <h3>Links to Other Sites</h3>
         <p>
