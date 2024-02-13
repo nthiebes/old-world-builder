@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
-import { CustomEvent } from "@piwikpro/react-piwik-pro";
+// import { CustomEvent } from "@piwikpro/react-piwik-pro";
 
 import { Button } from "../../components/button";
 import { ListItem, OrderableList } from "../../components/list";
@@ -74,7 +74,7 @@ export const Home = ({ isMobile }) => {
     return dispatch(setLists(newLists));
   };
   const handleForg3dClick = () => {
-    CustomEvent.trackEvent("affiliate_link", "click", "forg3d");
+    // CustomEvent.trackEvent("affiliate_link", "click", "forg3d");
   };
 
   useEffect(() => {
