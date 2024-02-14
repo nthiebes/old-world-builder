@@ -168,3 +168,12 @@ export const getAllOptions = (
   }
   return null;
 };
+
+/**
+ *
+ * @param {Unit} unit
+ */
+export const isDetachment = (unit) =>
+  unit.options?.some(
+    (option) => option.name_en === "Detachment" && option.active
+  );

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
-import { getUnitPoints, getUnitCommandPoints } from "../../utils/points";
+import { sumUnitPoints, sumAmountPoints } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -27,7 +27,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
           <Header
             isSection
             headline={unit[`name_${language}`] || unit.name_en}
-            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+            subheadline={`${sumUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
           />
@@ -155,7 +155,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                                     "editor__error"
                                 )}
                               >
-                                {getUnitCommandPoints(
+                                {sumAmountPoints(
                                   unit?.magic?.selected.filter(
                                     ({ command }) => command === index
                                   )
@@ -394,7 +394,7 @@ export const UnitPreview = ({ unit, coreUnits, onClose }) => {
                                 <b>
                                   {detachment[`name_${language}`] || name_en}
                                 </b>
-                                <i>{`${getUnitPoints({
+                                <i>{`${sumUnitPoints({
                                   strength,
                                   points,
                                 })} ${intl.formatMessage({

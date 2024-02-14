@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import { getUnitMagicPoints } from "../../utils/points";
+import { sumAmountPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
@@ -381,14 +381,10 @@ export const Magic = ({ isMobile }) => {
 
   if (hasCommandMagicItems) {
     maxMagicPoints = unit.command[command].magic.maxPoints;
-    unitMagicPoints = getUnitMagicPoints({
-      selected: unit.command[command].magic.selected,
-    });
+    unitMagicPoints = sumAmountPoints(unit.command[command].magic.selected);
   } else if (hasMagicItems) {
     maxMagicPoints = unit.items[group].maxPoints;
-    unitMagicPoints = getUnitMagicPoints({
-      selected: unit.items[group].selected,
-    });
+    unitMagicPoints = sumAmountPoints(unit.items[group].selected);
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;

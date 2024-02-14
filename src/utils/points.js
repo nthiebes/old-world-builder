@@ -1,172 +1,144 @@
-export const getUnitPoints = (unit) => {
-  const detachmentActive =
-    unit?.options?.length > 0 &&
-    Boolean(
-      unit.options.find(
-        (option) => option.name_en === "Detachment" && option.active
-      )
-    );
-  let unitPoints = 0;
+/** @typedef {import('../../types').ArmyList} ArmyList */
+/** @typedef {import('../../types').Category} Category */
+/** @typedef {import('../../types').Unit} Unit */
 
-  if (unit.strength) {
-    unitPoints = unit.strength * unit.points;
-  } else {
-    unitPoints = unit.points;
-  }
-  if (unit.options) {
-    unit.options.forEach((option) => {
-      if (option.stackable) {
-        unitPoints +=
-          (option.stackableCount || option.minimum || 0) * option.points;
-      } else if (option.active && option.perModel) {
-        unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.equipment) {
-    unit.equipment.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.armor) {
-    unit.armor.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit.command && !detachmentActive) {
-    unit.command.forEach((option) => {
-      if (option.active) {
-        unitPoints += option.points;
-      }
-      if (option.active && option.magic && option.magic?.selected?.length) {
-        option.magic.selected.forEach((selected) => {
-          unitPoints += selected.amount
-            ? selected.amount * selected.points
-            : selected.points;
-        });
-      }
-      if (option.active && option.options && option.options.length > 0) {
-        option.options.forEach((commandOption) => {
-          if (commandOption.active) {
-            unitPoints += commandOption.points;
-          }
-        });
-      }
-    });
-  }
-  if (unit.mounts) {
-    unit.mounts.forEach((option) => {
-      if (option.active) {
-        unitPoints += option.points;
-      }
-    });
-  }
-  if (unit?.items && unit?.items.length) {
-    unit.items.forEach((item) => {
-      (item.selected || []).forEach((selected) => {
-        unitPoints += selected.amount
-          ? selected.amount * selected.points
-          : selected.points;
-      });
-    });
-  }
-  if (unit.detachments) {
-    unit.detachments.forEach(
-      ({ strength, points, equipment, armor, options }) => {
-        unitPoints += strength * points;
+import { sum } from "./math";
+import { isDetachment } from "./unit";
+import { getMaxPercent, getMinPercent } from "./rules";
 
-        if (equipment && equipment.length) {
-          equipment.forEach((option) => {
-            if (option.active) {
-              unitPoints += strength * option.points;
-            }
-          });
-        }
-        if (armor && armor.length) {
-          armor.forEach((option) => {
-            if (option.active) {
-              unitPoints += strength * option.points;
-            }
-          });
-        }
-        if (options && options.length) {
-          options.forEach((option) => {
-            if (option.active) {
-              unitPoints += strength * option.points;
-            }
-          });
-        }
-      }
-    );
-  }
-
-  return unitPoints;
-};
-
-export const getUnitMagicPoints = ({ selected }) => {
-  let unitPoints = 0;
-
-  selected &&
-    selected.forEach((option) => {
-      unitPoints += option.amount
-        ? option.amount * option.points
-        : option.points;
-    });
-
-  return unitPoints;
-};
-
-export const getUnitCommandPoints = (items) => {
-  let commandPoints = 0;
-
-  if (items) {
-    items.forEach((option) => {
-      commandPoints += option.points;
-    });
-  }
-
-  return commandPoints;
-};
-
-export const getPoints = ({ type, list }) => {
-  let points = 0;
-
-  list[type] &&
-    list[type].forEach((unit) => {
-      points += getUnitPoints(unit);
-    });
-
-  return points;
-};
-
-export const getAllPoints = (list) => {
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
-  const corePoints = getPoints({ list, type: "core" });
-  const specialPoints = getPoints({ list, type: "special" });
-  const rarePoints = getPoints({ list, type: "rare" });
-  const charactersPoints = getPoints({ list, type: "characters" });
-  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
-  const alliesPoints = getPoints({ list, type: "allies" });
-
-  return (
-    lordsPoints +
-    heroesPoints +
-    corePoints +
-    specialPoints +
-    rarePoints +
-    charactersPoints +
-    mercenariesPoints +
-    alliesPoints
+/**
+ * Sum all points from the items multiplied by their amounts.
+ *
+ * @param {Array<{amount?: number; points: number} | undefined> | undefined} items
+ */
+export const sumAmountPoints = (items) =>
+  sum(
+    items?.filter(Boolean) ?? [],
+    (option) => (option.amount ?? 1) * option.points
   );
-};
+
+/**
+ * Sums the points of a unit,
+ * including weapon and command options, selected magic items etc.
+ *
+ * @param {Unit} unit
+ */
+export const sumUnitPoints = (unit) =>
+  // We concat all subdivided points of this unit
+  sumAmountPoints(
+    [
+      // basic unit strength points
+      { amount: unit.strength || 1, points: unit.points },
+
+      // options
+      unit.options?.filter(onlyActive).map(withOptionAmount(unit.strength)),
+      // equipment
+      unit.equipment?.filter(onlyActive).map(withAmount(unit.strength)),
+      // armor
+      unit.armor?.filter(onlyActive).map(withAmount(unit.strength)),
+      // mounts
+      unit.mounts?.filter(onlyActive),
+
+      // command options
+      !isDetachment(unit)
+        ? unit.command
+            ?.filter(onlyActive)
+            .map((command) => [
+              command,
+              command.options,
+              command.magic?.selected,
+            ])
+        : undefined,
+
+      // magic items
+      unit.items?.map(({ selected }) => selected),
+
+      // detachments
+      unit.detachments?.map(
+        ({ points, strength, equipment, armor, options }) => [
+          // basic detachment strength points
+          { points, amount: strength },
+          // detachment equipment
+          equipment?.map(withAmount(strength)),
+          // detachment armor
+          armor?.map(withAmount(strength)),
+          // detachment options
+          options?.map(withAmount(strength)),
+        ]
+      ),
+    ].flat(3)
+  );
+
+const onlyActive = (item) => Boolean(item?.active);
+
+const withAmount = (amount) => (option) => ({
+  ...option,
+  amount,
+});
+
+const withOptionAmount =
+  (strength) =>
+  ({ perModel, stackable, stackableCount, minimum, ...option }) => ({
+    ...option,
+    amount: perModel
+      ? strength
+      : stackable
+      ? stackableCount || minimum
+      : undefined,
+  });
+
+/**
+ * Get all points within a category.
+ *
+ * @param {ArmyList} armyList
+ * @param {Category} category
+ */
+export const sumCategoryPoints = (armyList, category) =>
+  sum(armyList[category] ?? [], sumUnitPoints);
+
+/**
+ * The total amount of points spend in this army list.
+ *
+ * @param {ArmyList} armyList
+ */
+export const sumArmyListPoints = (armyList) =>
+  sum(
+    [
+      "lords",
+      "heroes",
+      "core",
+      "special",
+      "rare",
+      "characters",
+      "mercenaries",
+      "allies",
+    ],
+    (category) => sumCategoryPoints(armyList, category)
+  );
+
+/**
+ * Get the amount of points for this army list left to spend.
+ *
+ * @param {ArmyList} armyList
+ */
+export const getArmyListLeftPoints = (armyList) =>
+  armyList.points - sumArmyListPoints(armyList);
+
+/**
+ * Get all points within a category.
+ *
+ * @param {Category} category
+ * @param {ArmyList} armyList
+ */
+export const getAvailablePoints = (armyList, category) =>
+  getMaxPercent(category, armyList.armyComposition) * armyList.points -
+  sumCategoryPoints(armyList, category);
+
+/**
+ * Get all points within a category.
+ *
+ * @param {Category} category
+ * @param {ArmyList} armyList
+ */
+export const getRequiredPoints = (armyList, category) =>
+  getMinPercent(category, armyList.armyComposition) * armyList.points;
