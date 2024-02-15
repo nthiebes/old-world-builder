@@ -324,11 +324,15 @@ export const Magic = ({ isMobile }) => {
             <span className="magic__label-text">
               {magicItem[`name_${language}`] || magicItem.name_en}
             </span>
-            <i className="checkbox__points">{`${
-              magicItem.points
-            } ${intl.formatMessage({
-              id: "app.points",
-            })}`}</i>
+            <i className="checkbox__points">
+              {magicItem.points === 0
+                ? intl.formatMessage({
+                    id: "app.free",
+                  })
+                : `${magicItem.points} ${intl.formatMessage({
+                    id: "app.points",
+                  })}`}
+            </i>
             {rulesMap[normalizeRuleName(magicItem.name_en)] ? (
               <Button
                 type="text"

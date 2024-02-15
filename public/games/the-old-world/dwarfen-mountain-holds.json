@@ -1358,34 +1358,33 @@
           "magic": {
             "types": ["weapon-runes"],
             "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Ironbeard (champion), Brace of drakefire pistols",
-          "name_de": "Ironbeard (champion), Brace of drakefire pistols",
-          "points": 17,
-          "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Ironbeard (champion), Drakegun",
-          "name_de": "Ironbeard (champion), Ironbeard",
-          "points": 17,
-          "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Ironbeard (champion), Cinderblast bombs",
-          "name_de": "Ironbeard (champion), Cinderblast bombs",
-          "points": 22,
-          "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
-          }
+          },
+          "options": [
+            {
+              "name_en": "Shield",
+              "name_de": "Shield",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of drakefire pistols",
+              "name_de": "Brace of drakefire pistols",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Drakegun",
+              "name_de": "Drakegun",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Cinderblast bombs",
+              "name_de": "Cinderblast bombs",
+              "points": 15
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1921,22 +1920,33 @@
         {
           "name_en": "Ironwarden (champion)",
           "name_de": "Ironwarden (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ironwarden (champion), Brace of drakefire pistols",
-          "name_de": "Ironwarden (champion), Brace of drakefire pistols",
-          "points": 11
-        },
-        {
-          "name_en": "Ironwarden (champion), Trollhammer torpedo",
-          "name_de": "Ironwarden (champion), Trollhammer torpedo",
-          "points": 21
-        },
-        {
-          "name_en": "Ironwarden (champion), Cinderblast bombs",
-          "name_de": "Ironwarden (champion), Cinderblast bombs",
-          "points": 21
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Drakegun",
+              "name_de": "Drakegun",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of drakefire pistols",
+              "name_de": "Brace of drakefire pistols",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Trollhammer torpedo",
+              "name_de": "Trollhammer torpedo",
+              "points": 15,
+              "exclusive": true
+            },
+            {
+              "name_en": "Cinderblast bombs",
+              "name_de": "Cinderblast bombs",
+              "points": 15
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",

@@ -48,6 +48,13 @@ export const getUnitPoints = (unit) => {
             : selected.points;
         });
       }
+      if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((commandOption) => {
+          if (commandOption.active) {
+            unitPoints += commandOption.points;
+          }
+        });
+      }
     });
   }
   if (unit.mounts) {

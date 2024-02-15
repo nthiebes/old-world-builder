@@ -198,22 +198,47 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const handleCommandChange = (id) => {
+  const handleCommandChange = (id, optionIndex) => {
     let magicItems = unit.magic?.items || [];
-    const command = unit.command.map((option, index) => {
-      if (option.id === id) {
-        // Also remove banner runes
-        if (option.active) {
-          magicItems = magicItems.filter(({ command }) => command !== index);
-        }
+    let command;
 
-        return {
-          ...option,
-          active: option.active ? false : true,
-        };
-      }
-      return option;
-    });
+    if (optionIndex !== undefined) {
+      command = unit.command.map((commandOption) => {
+        if (commandOption.id === id) {
+          const options = commandOption.options.map((option, index) => {
+            if (index === optionIndex) {
+              return {
+                ...option,
+                active: option.active ? false : true,
+              };
+            }
+
+            return option;
+          });
+
+          return {
+            ...commandOption,
+            options,
+          };
+        }
+        return commandOption;
+      });
+    } else {
+      command = unit.command.map((option, index) => {
+        if (option.id === id) {
+          // Also remove banner runes
+          if (option.active) {
+            magicItems = magicItems.filter(({ command }) => command !== index);
+          }
+
+          return {
+            ...option,
+            active: option.active ? false : true,
+          };
+        }
+        return option;
+      });
+    }
 
     dispatch(
       editUnit({
@@ -522,7 +547,15 @@ export const Unit = ({ isMobile }) => {
             )}
             {unit.command.map(
               (
-                { points, perModel, id, active = false, magic, ...command },
+                {
+                  points,
+                  perModel,
+                  id,
+                  active = false,
+                  magic,
+                  options,
+                  ...command
+                },
                 index
               ) => {
                 const commandMagicPoints = getUnitMagicPoints({
@@ -619,6 +652,52 @@ export const Unit = ({ isMobile }) => {
                         </ListItem>
                       </>
                     ) : null}
+                    {options?.length > 0 && active && (
+                      <Fragment>
+                        {options.map((option, optionIndex) => {
+                          const exclusiveCheckedOption = options.find(
+                            (exclusiveOption) =>
+                              exclusiveOption.exclusive &&
+                              exclusiveOption.active
+                          );
+
+                          return (
+                            <div
+                              className="checkbox checkbox--conditional"
+                              key={option.name_en}
+                            >
+                              <input
+                                type="checkbox"
+                                id={`command-${id}-option-${optionIndex}`}
+                                value={`${id}-${optionIndex}`}
+                                onChange={() =>
+                                  handleCommandChange(id, optionIndex)
+                                }
+                                checked={Boolean(option.active)}
+                                className="checkbox__input"
+                                disabled={
+                                  exclusiveCheckedOption &&
+                                  option.exclusive &&
+                                  !option.active
+                                }
+                              />
+                              <label
+                                htmlFor={`command-${id}-option-${optionIndex}`}
+                                className="checkbox__label"
+                              >
+                                <span className="unit__label-text">
+                                  {getRulesIcon(option).map((item) => item)}
+                                </span>
+                                <i className="checkbox__points">
+                                  {getPointsText({ points: option.points })}
+                                </i>
+                              </label>
+                            </div>
+                          );
+                        })}
+                        <hr className="unit__command-option-hr" />
+                      </Fragment>
+                    )}
                   </Fragment>
                 );
               }
