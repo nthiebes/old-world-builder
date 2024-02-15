@@ -118,17 +118,18 @@ export const Add = ({ isMobile }) => {
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
   const mercenaries = armyData?.mercenaries;
-  const handleAdd = (unit) => {
+  const handleAdd = (unit, ally) => {
     const newUnit = {
       ...unit,
+      army: ally,
       id: `${unit.id}.${getRandomId()}`,
     };
 
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = (unit) => (
-    <ListItem key={unit.id} onClick={() => handleAdd(unit)}>
+  const getUnit = (unit, ally) => (
+    <ListItem key={unit.id} onClick={() => handleAdd(unit, ally)}>
       <span className="unit__name">
         {unit.minimum ? `${unit.minimum} ` : null}
         <b>{unit[`name_${language}`] || unit.name_en}</b>
@@ -199,7 +200,9 @@ export const Add = ({ isMobile }) => {
               const mercenaryUnits = allUnits.filter((unit) =>
                 mercenary.units.includes(unit.id)
               );
-              allMercenaries = [...allMercenaries, ...mercenaryUnits];
+              allMercenaries = [...allMercenaries, ...mercenaryUnits].map(
+                (mercenaryUnit) => ({ ...mercenaryUnit, army: mercenary.army })
+              );
               setMercenariesLoaded(index + 1);
             },
           });
@@ -283,10 +286,10 @@ export const Add = ({ isMobile }) => {
                           game?.armies.find((army) => army.id === ally).name_en}
                       </h2>
                     </header>
-                    {characters.map((unit) => getUnit(unit))}
-                    {core.map((unit) => getUnit(unit))}
-                    {special.map((unit) => getUnit(unit))}
-                    {rare.map((unit) => getUnit(unit))}
+                    {characters.map((unit) => getUnit(unit, ally))}
+                    {core.map((unit) => getUnit(unit, ally))}
+                    {special.map((unit) => getUnit(unit, ally))}
+                    {rare.map((unit) => getUnit(unit, ally))}
                   </Fragment>
                 )
               )}
@@ -294,7 +297,7 @@ export const Add = ({ isMobile }) => {
           </>
         )}
         {type === "mercenaries" && (
-          <ul>{allMercenaries.map((unit) => getUnit(unit))}</ul>
+          <ul>{allMercenaries.map((unit) => getUnit(unit, unit.army))}</ul>
         )}
         {type !== "allies" && type !== "mercenaries" && (
           <ul>{army[type].map((unit) => getUnit(unit))}</ul>
