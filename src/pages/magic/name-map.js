@@ -76,6 +76,10 @@ export const nameMap = {
     name_de: "Triptych",
     name_en: "Triptych",
   },
+  triptychs: {
+    name_de: "Triptychs",
+    name_en: "Triptychs",
+  },
   "kingdom-of-bretonnia": {
     name_de: "Kingdom of Bretonnia",
     name_en: "Kingdom of Bretonnia",
