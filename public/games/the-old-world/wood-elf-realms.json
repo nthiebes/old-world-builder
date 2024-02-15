@@ -8,8 +8,6 @@
       "points": 135,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -17,24 +15,21 @@
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Hand weapon",
@@ -62,7 +57,6 @@
           "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -72,7 +66,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -82,7 +75,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -92,7 +84,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 3,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -102,7 +93,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -112,7 +102,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 3,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -122,7 +111,6 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -132,7 +120,6 @@
           "name_fr": "Arc long Asrai",
           "points": 0,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -142,36 +129,31 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
-          "points": 14,
-          "active": false
+          "points": 14
         },
         {
           "name_en": "Great Stag",
           "name_de": "Great Stag",
           "name_fr": "Grand cerf",
-          "points": 50,
-          "active": false
+          "points": 50
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de Guerre",
-          "points": 30,
-          "active": false
+          "points": 30
         },
         {
           "name_en": "Forest Dragon",
           "name_de": "Forest Dragon",
           "name_fr": "Dragon des Forêts",
-          "points": 275,
-          "active": false
+          "points": 275
         },
         {
           "name_en": "Great Eagles",
           "name_de": "Great Eagles",
           "name_fr": "Grand aigle",
-          "points": 60,
-          "active": false
+          "points": 60
         },
         {
           "name_en": "On foot",
@@ -218,19 +200,13 @@
       "points": 70,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "General",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
-          "points": 0,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 0
         },
         {
           "name_en": "Battle Standard Bearer",
@@ -247,32 +223,25 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
-          "points": 3,
-          "perModel": false,
-          "active": false
+          "points": 3
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
-          "points": 4,
-          "perModel": false,
-          "active": false
+          "points": 4
         },
         {
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
-          "points": 2,
-          "perModel": false,
-          "active": false
+          "points": 2
         },
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
-          "perModel": false,
           "active": true
         }
       ],
@@ -282,7 +251,6 @@
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
-          "perModel": false,
           "active": true
         }
       ],
@@ -292,8 +260,6 @@
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -302,8 +268,6 @@
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
           "points": 6,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -312,8 +276,6 @@
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
           "points": 6,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -322,8 +284,6 @@
           "name_de": "Moonfire Shot",
           "name_fr": "Traits de Feu Lunaire",
           "points": 3,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -332,8 +292,6 @@
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 6,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -342,8 +300,6 @@
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
           "points": 3,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -352,8 +308,6 @@
           "name_de": "Hand weapon",
           "name_fr": "Arme lourde",
           "points": 0,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -362,8 +316,6 @@
           "name_de": "Asrai Longbow",
           "name_fr": "Arc long Asrai",
           "points": 0,
-          "perModel": false,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -380,36 +332,31 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
-          "points": 14,
-          "active": false
+          "points": 14
         },
         {
           "name_en": "Great Stag",
           "name_de": "Great Stag",
           "name_fr": "Grand cerf",
-          "points": 50,
-          "active": false
+          "points": 50
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
-          "points": 30,
-          "active": false
+          "points": 30
         },
         {
           "name_en": "Forest Dragon",
           "name_de": "Forest Dragon",
           "name_fr": "Dragon des Fôrets",
-          "points": 275,
-          "active": false
+          "points": 275
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
-          "points": 60,
-          "active": false
+          "points": 60
         }
       ],
       "items": [
@@ -445,8 +392,6 @@
       "points": 155,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -466,7 +411,6 @@
           "name_fr": "Tatouages Talismaniques",
           "points": 15,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -476,7 +420,6 @@
           "name_fr": "Sorcier de niveau 4",
           "points": 30,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -486,29 +429,25 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
-          "points": 14,
-          "active": false
+          "points": 14
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
           "name_fr": "Licorne",
-          "points": 35,
-          "active": false
+          "points": 35
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
-          "points": 30,
-          "active": false
+          "points": 30
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
-          "points": 60,
-          "active": false
+          "points": 60
         },
         {
           "name_en": "On foot",
@@ -562,8 +501,6 @@
       "points": 80,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -583,7 +520,6 @@
           "name_fr": "Tatouages Talismaniques",
           "points": 15,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -593,7 +529,6 @@
           "name_fr": "Sorcier de niveau 2",
           "points": 30,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -603,29 +538,25 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
-          "points": 14,
-          "active": false
+          "points": 14
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
           "name_fr": "Licorne",
-          "points": 35,
-          "active": false
+          "points": 35
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
-          "points": 30,
-          "active": false
+          "points": 30
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
-          "points": 60,
-          "active": false
+          "points": 60
         },
         {
           "name_en": "On foot",
@@ -679,8 +610,6 @@
       "points": 85,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -696,8 +625,7 @@
           "name_de": "Trickster's Blades",
           "name_fr": "Lame du Trompeur",
           "points": 0,
-          "perModel": true,
-          "active": false
+          "perModel": true
         }
       ],
       "armor": [],
@@ -708,7 +636,6 @@
           "name_fr": "Sorcier niveau 1",
           "points": 35,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -752,8 +679,6 @@
       "points": 85,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -761,8 +686,7 @@
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Hand weapon",
@@ -779,8 +703,7 @@
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 3,
-          "perModel": true,
-          "active": false
+          "perModel": true
         }
       ],
       "options": [
@@ -790,7 +713,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -800,7 +722,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -810,7 +731,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 3,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -820,7 +740,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 6,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -830,7 +749,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 3,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -840,7 +758,6 @@
           "name_fr": "Embusqueurs",
           "points": 10,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -883,8 +800,6 @@
       "points": 265,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],
@@ -895,7 +810,6 @@
           "name_fr": "Sorcier de niveau 3",
           "points": 30,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -905,7 +819,6 @@
           "name_fr": "Sorcier de Niveau 4",
           "points": 60,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -937,8 +850,6 @@
       "points": 80,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -946,16 +857,14 @@
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Hand weapon",
@@ -983,7 +892,6 @@
           "name_fr": "Sorcier de niveau 2",
           "points": 30,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1017,8 +925,6 @@
       "points": 11,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1044,11 +950,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1069,7 +971,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1079,7 +980,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1089,7 +989,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1099,7 +998,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1109,7 +1007,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1119,7 +1016,6 @@
           "name_fr": "Tir & Fuite",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1129,7 +1025,6 @@
           "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1155,8 +1050,6 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1172,21 +1065,13 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1207,7 +1092,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1217,7 +1101,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1227,7 +1110,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1237,7 +1119,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1247,7 +1128,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1273,8 +1153,6 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Eternal Warden (champion)",
@@ -1300,11 +1178,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 5,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 5
         }
       ],
       "equipment": [
@@ -1334,7 +1208,6 @@
           "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1344,7 +1217,6 @@
           "name_fr": "Bien Entraînés",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1354,7 +1226,6 @@
           "name_fr": "Vétéran",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1380,8 +1251,6 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Nymph",
@@ -1436,8 +1305,6 @@
       "points": 18,
       "minimum": 5,
       "maximum": 96,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Glade Knight",
@@ -1463,11 +1330,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1488,7 +1351,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1498,7 +1360,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1508,7 +1369,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1518,7 +1378,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1528,7 +1387,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1538,7 +1396,6 @@
           "name_fr": "Embusqueurs",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1548,7 +1405,6 @@
           "name_fr": "Bien Entraînés",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1558,7 +1414,6 @@
           "name_fr": "Mouvement de Réserve",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1586,8 +1441,6 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1613,11 +1466,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1638,7 +1487,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1648,7 +1496,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1658,7 +1505,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1668,7 +1514,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -1678,7 +1523,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1704,8 +1548,6 @@
       "points": 14,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Wildwood Warden",
@@ -1731,11 +1573,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1765,7 +1603,6 @@
           "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -1788,8 +1625,6 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Bladesinger",
@@ -1815,11 +1650,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1839,7 +1670,6 @@
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 1,
-          "perModel": false,
           "stackable": true,
           "minimum": 0,
           "maximum": 0
@@ -1849,7 +1679,6 @@
           "name_de": "Throwing Spear",
           "name_fr": "Javelot",
           "points": 0,
-          "perModel": false,
           "stackable": true,
           "minimum": 0,
           "maximum": 0
@@ -1876,8 +1705,6 @@
       "points": 24,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Handmaiden of the Thorn",
@@ -1903,11 +1730,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 6,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 6
         }
       ],
       "equipment": [
@@ -1943,8 +1766,6 @@
       "points": 27,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Wild Hunter",
@@ -1970,11 +1791,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
-          "points": 7,
-          "magic": {
-            "types": [],
-            "maxPoints": 0
-          }
+          "points": 7
         }
       ],
       "equipment": [
@@ -2004,7 +1821,6 @@
           "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -2030,8 +1846,6 @@
       "points": 44,
       "minimum": 3,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Wind Rider",
@@ -2062,7 +1876,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2072,7 +1885,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2082,7 +1894,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2092,7 +1903,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2102,7 +1912,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -2128,8 +1937,6 @@
       "points": 51,
       "minimum": 2,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Elder",
@@ -2186,8 +1993,6 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [
         {
           "name_en": "Sentinel",
@@ -2218,7 +2023,6 @@
           "name_fr": "Bodkins Cabalistiques",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2228,7 +2032,6 @@
           "name_fr": "Flèches de Fléau des Furies",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2238,7 +2041,6 @@
           "name_fr": "Traits de Feu Lunaire",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2248,7 +2050,6 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "points": 2,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2258,7 +2059,6 @@
           "name_fr": "Pointes de Parabole Pure",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2268,7 +2068,6 @@
           "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2278,7 +2077,6 @@
           "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         },
@@ -2288,7 +2086,6 @@
           "name_fr": "Vétéran",
           "points": 1,
           "perModel": true,
-          "stackable": false,
           "minimum": 0,
           "maximum": 0
         }
@@ -2338,8 +2135,6 @@
       "points": 215,
       "minimum": 0,
       "maximum": 0,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [],
       "armor": [],

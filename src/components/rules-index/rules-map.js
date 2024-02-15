@@ -892,6 +892,7 @@ const additionalOWBRules = {
   nymph: "command-groups/champions",
   "pack leader": "command-groups/champions",
   "grail guardian": "command-groups/champions",
+  champion: "command-groups/champions",
   desperado: "command-groups/champions",
   "wild hunter": "command-groups/champions",
   "wind rider": "command-groups/champions",
