@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Breadcrumbs } from "../../components/breadcrumbs";
-// import { loadScript } from "../../utils/script";
+import { loadScript } from "../../utils/script";
 
 import "./About.css";
 
@@ -17,19 +17,19 @@ export const About = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // useEffect(() => {
-  //   loadScript("https://www.paypalobjects.com/donate/sdk/donate-sdk.js", () => {
-  //     window.PayPal.Donation.Button({
-  //       env: "production",
-  //       hosted_button_id: "VU2Z6Q32Q656A",
-  //       image: {
-  //         src: "https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif",
-  //         alt: "Donate with PayPal button",
-  //         title: "PayPal - The safer, easier way to pay online!",
-  //       },
-  //     }).render("#donate-button");
-  //   });
-  // }, []);
+  useEffect(() => {
+    loadScript("https://www.paypalobjects.com/donate/sdk/donate-sdk.js", () => {
+      window.PayPal.Donation.Button({
+        env: "production",
+        hosted_button_id: "VU2Z6Q32Q656A",
+        image: {
+          src: "https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif",
+          alt: "Donate with PayPal button",
+          title: "PayPal - The safer, easier way to pay online!",
+        },
+      }).render("#donate-button");
+    });
+  }, []);
 
   return (
     <>
@@ -78,12 +78,12 @@ export const About = () => {
             }}
           />
         </p>
-        {/* <p>
+        <p>
           <FormattedMessage id="about.donation" />
         </p>
         <div id="donate-button-container" className="about__donation">
           <div id="donate-button"></div>
-        </div> */}
+        </div>
 
         <h2>Credits</h2>
         <p>

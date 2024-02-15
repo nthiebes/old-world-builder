@@ -62,14 +62,15 @@ export const Magic = ({ isMobile }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
+  const units = list ? list[type] : null;
+  const unit = units && units.find(({ id }) => id === unitId);
+  const armyId = unit?.army || list?.army;
   const army =
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => list.army === id);
+      .armies.find(({ id }) => armyId === id);
   const items = useSelector((state) => state.items);
-  const units = list ? list[type] : null;
-  const unit = units && units.find(({ id }) => id === unitId);
   let maxMagicPoints = 0;
   const handleRulesClick = ({ name }) => {
     dispatch(openRulesIndex({ activeRule: name }));
@@ -243,7 +244,8 @@ export const Magic = ({ isMobile }) => {
   useEffect(() => {
     army &&
       list &&
-      !items &&
+      unit &&
+      (!items || unit.army !== list.army) &&
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
@@ -259,7 +261,7 @@ export const Magic = ({ isMobile }) => {
           dispatch(setItems(updateIds(allItems)));
         },
       });
-  }, [army, list, items, dispatch]);
+  }, [army, list, unit, items, dispatch]);
 
   if (!unit || !army || !items) {
     if (isMobile) {
