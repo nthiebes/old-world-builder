@@ -32,24 +32,28 @@ export const Header = ({
         id: "footer.about",
       }),
       to: "/about",
+      icon: "about",
     },
     {
       name: intl.formatMessage({
         id: "footer.help",
       }),
       to: "/help",
+      icon: "help",
     },
     {
       name: intl.formatMessage({
         id: "footer.datasets",
       }),
       to: "/datasets",
+      icon: "datasets",
     },
     {
       name: intl.formatMessage({
         id: "footer.changelog",
       }),
       to: "/changelog",
+      icon: "news",
     },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;

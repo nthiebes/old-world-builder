@@ -313,7 +313,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
-              type={isMobile ? "primary" : "secondary"}
+              type="primary"
               centered
               to={`/editor/${listId}/add/lords`}
               icon="add"
@@ -354,7 +354,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
-              type={isMobile ? "primary" : "secondary"}
+              type="primary"
               centered
               to={`/editor/${listId}/add/heroes`}
               icon="add"
@@ -395,7 +395,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
-              type={isMobile ? "primary" : "secondary"}
+              type="primary"
               centered
               to={`/editor/${listId}/add/characters`}
               icon="add"
@@ -432,7 +432,7 @@ export const Editor = ({ isMobile }) => {
           <OrderableUnitList units={list.core} type="core" listId={listId} />
 
           <Button
-            type={isMobile ? "primary" : "secondary"}
+            type="primary"
             centered
             to={`/editor/${listId}/add/core`}
             icon="add"
@@ -471,7 +471,7 @@ export const Editor = ({ isMobile }) => {
           />
 
           <Button
-            type={isMobile ? "primary" : "secondary"}
+            type="primary"
             centered
             to={`/editor/${listId}/add/special`}
             icon="add"
@@ -506,7 +506,7 @@ export const Editor = ({ isMobile }) => {
           <OrderableUnitList units={list.rare} type="rare" listId={listId} />
 
           <Button
-            type={isMobile ? "primary" : "secondary"}
+            type="primary"
             centered
             to={`/editor/${listId}/add/rare`}
             icon="add"
@@ -546,7 +546,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
-              type={isMobile ? "primary" : "secondary"}
+              type="primary"
               centered
               to={`/editor/${listId}/add/allies`}
               icon="add"
@@ -592,7 +592,7 @@ export const Editor = ({ isMobile }) => {
               />
 
               <Button
-                type={isMobile ? "primary" : "secondary"}
+                type="primary"
                 centered
                 to={`/editor/${listId}/add/mercenaries`}
                 icon="add"

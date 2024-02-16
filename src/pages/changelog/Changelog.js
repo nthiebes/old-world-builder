@@ -278,7 +278,7 @@ export const Changelog = () => {
               values={{ b: (msg) => <b>{msg}</b> }}
             />
           </li>
-          <li className="changelog__outdated">
+          <li>
             <FormattedMessage
               id="changelog.change10"
               values={{
