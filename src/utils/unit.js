@@ -31,7 +31,7 @@ export const getAllOptions = (
           });
         }
 
-        if (magic && magic?.selected?.length) {
+        if (magic && magic?.selected?.length && !noMagic) {
           magic.selected.forEach((selectedItem) => {
             selectedOptions.push(
               selectedItem.amount > 1

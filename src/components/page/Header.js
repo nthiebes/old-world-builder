@@ -18,6 +18,7 @@ export const Header = ({
   isSection,
   hasPointsError,
   hasMainNavigation,
+  filters,
 }) => {
   const intl = useIntl();
   const location = useLocation();
@@ -112,9 +113,19 @@ export const Header = ({
           onClick={handleMenuClick}
         />
       ) : (
-        <>{to && <div className="header__empty-icon" />}</>
+        <>{to && !filters && <div className="header__empty-icon" />}</>
       )}
-      {showMenu && (
+      {filters && (
+        <Button
+          type="text"
+          className={classNames(showMenu && "header__more-button")}
+          color={isSection ? "dark" : "light"}
+          label={intl.formatMessage({ id: "header.filter" })}
+          icon="filter"
+          onClick={handleMenuClick}
+        />
+      )}
+      {showMenu && navigation && (
         <ul
           className={classNames(
             "header__more",
@@ -135,6 +146,31 @@ export const Header = ({
           ))}
         </ul>
       )}
+      {showMenu && filters && (
+        <ul
+          className={classNames(
+            "header__more",
+            !hasMainNavigation && "header__more--secondary-navigation"
+          )}
+        >
+          {filters.map(({ callback, name, id, checked }) => (
+            <li key={id}>
+              <div className="checkbox header__checkbox">
+                <input
+                  type="checkbox"
+                  id={id}
+                  onChange={callback}
+                  checked={checked}
+                  className="checkbox__input"
+                />
+                <label htmlFor={id} className="checkbox__label">
+                  {name}
+                </label>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </Component>
   );
 };
@@ -146,6 +182,7 @@ Header.propTypes = {
   subheadline: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
   moreButton: PropTypes.array,
+  filters: PropTypes.array,
   isSection: PropTypes.bool,
   hasPointsError: PropTypes.bool,
   hasMainNavigation: PropTypes.bool,

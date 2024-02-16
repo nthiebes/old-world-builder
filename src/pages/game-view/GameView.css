@@ -1,0 +1,35 @@
+.game-view {
+  margin-bottom: 4rem;
+}
+
+.game-view__details {
+  padding-top: 5px;
+  padding-left: 0.5rem;
+}
+
+.game-view__list-inner {
+  display: block;
+}
+
+.game-view__list-inner::before {
+  display: none;
+}
+
+.game-view__list-inner {
+  cursor: initial;
+}
+
+.game-view__points {
+  margin-left: 5px;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+.game-view__strength {
+  font-weight: normal;
+}
+
+.game-view__special-rules {
+  margin-top: 5px;
+}

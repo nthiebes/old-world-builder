@@ -20,6 +20,7 @@ import { NotFound } from "./pages/not-found";
 import { Privacy } from "./pages/privacy";
 import { Changelog } from "./pages/changelog";
 import { Import } from "./pages/import";
+import { GameView } from "./pages/game-view";
 import { setLists } from "./state/lists";
 import { Header, Main } from "./components/page";
 
@@ -80,6 +81,7 @@ export const App = () => {
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
+          <Route path="/game-view/:listId">{<GameView />}</Route>
           <Route path="/" exact>
             {<Home isMobile />}
           </Route>
@@ -93,6 +95,7 @@ export const App = () => {
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
+          <Route path="/game-view/:listId">{<GameView />}</Route>
           <Route path="/">
             <Header headline="Old World Builder" hasMainNavigation />
             <Main isDesktop>

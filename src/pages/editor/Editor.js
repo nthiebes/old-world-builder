@@ -11,13 +11,13 @@ import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
+import { ListItem } from "../../components/list/ListItem";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { deleteList, moveUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
-import { ListItem } from "../../components/list/ListItem";
 
 import "./Editor.css";
 
@@ -165,6 +165,13 @@ export const Editor = ({ isMobile }) => {
       }),
       icon: "duplicate",
       to: `/editor/${listId}/duplicate`,
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.gameView",
+      }),
+      icon: "shield",
+      to: `/game-view/${listId}`,
     },
     {
       name: intl.formatMessage({
