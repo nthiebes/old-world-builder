@@ -103,6 +103,9 @@ export const About = () => {
           />
         </p>
         <p>
+          <FormattedMessage id="about.community" />
+        </p>
+        <p>
           <FormattedMessage
             id="about.rulesIndex"
             values={{
