@@ -151,7 +151,7 @@ export const DuplicateList = ({ isMobile }) => {
             required
             interval={50}
           />
-          <Button centered icon="duplicate" submitButton>
+          <Button centered icon="duplicate" submitButton size="large">
             <FormattedMessage id="misc.duplicate" />
           </Button>
         </form>
