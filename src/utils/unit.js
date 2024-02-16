@@ -12,9 +12,9 @@ export const getAllOptions = (
     activeLore,
     lores,
   },
-  { asString, noMagic } = {}
+  { asString, noMagic, language: overrideLanguage } = {}
 ) => {
-  const language = localStorage.getItem("lang");
+  const language = overrideLanguage || localStorage.getItem("lang");
   const allCommand = [];
 
   if (command) {

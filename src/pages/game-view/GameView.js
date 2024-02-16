@@ -1,16 +1,18 @@
 import { useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { RulesIndex, rulesMap } from "../../components/rules-index";
+import {
+  RulesIndex,
+  RulesLinksText,
+  RulesWithIcon,
+} from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { normalizeRuleName } from "../../utils/string";
-import { openRulesIndex } from "../../state/rules-index";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -18,7 +20,6 @@ import "./GameView.css";
 export const GameView = () => {
   const { listId } = useParams();
   const { language } = useLanguage();
-  const dispatch = useDispatch();
   const intl = useIntl();
   const [showPoints, setShowPoints] = useState(true);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
@@ -74,34 +75,6 @@ export const GameView = () => {
       },
     },
   ];
-  const getRulesLinksText = (textObject) => {
-    const textEn = textObject.name_en.split(", ");
-    const ruleString = textObject[`name_${language}`] || textObject.name_en;
-    let ruleButtons = ruleString.split(", ");
-
-    ruleButtons = ruleButtons.map((rule, index) => (
-      <Fragment key={rule}>
-        {rulesMap[normalizeRuleName(textEn[index])] ? (
-          <button
-            className="unit__rule"
-            onClick={() =>
-              dispatch(openRulesIndex({ activeRule: textEn[index] }))
-            }
-          >
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </button>
-        ) : (
-          <>
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </>
-        )}
-      </Fragment>
-    ));
-
-    return ruleButtons;
-  };
   const getSection = ({ type }) => {
     const units = list[type];
 
@@ -124,7 +97,15 @@ export const GameView = () => {
                 )}
               </h3>
               <div className="game-view__details">
-                {getAllOptions(unit)}
+                <RulesWithIcon
+                  textObject={{
+                    name_en: getAllOptions(unit, {
+                      language: "en",
+                      asString: true,
+                    }),
+                    name_de: getAllOptions(unit, { asString: true }),
+                  }}
+                />
                 {showSpecialRules && unit.specialRules ? (
                   <p className="game-view__special-rules">
                     <b>
@@ -132,7 +113,7 @@ export const GameView = () => {
                         <FormattedMessage id="unit.specialRules" />:
                       </i>
                     </b>{" "}
-                    {getRulesLinksText(unit.specialRules).map((item) => item)}
+                    <RulesLinksText textObject={unit.specialRules} />
                   </p>
                 ) : null}
               </div>

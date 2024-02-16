@@ -12,7 +12,12 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
-import { RulesIndex, rulesMap } from "../../components/rules-index";
+import {
+  RulesIndex,
+  rulesMap,
+  RulesLinksText,
+  RulesWithIcon,
+} from "../../components/rules-index";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
@@ -308,69 +313,6 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const getRulesLinksText = (textObject) => {
-    const textEn = textObject.name_en.split(", ");
-    const ruleString = textObject[`name_${language}`] || textObject.name_en;
-    let ruleButtons = ruleString.split(", ");
-
-    ruleButtons = ruleButtons.map((rule, index) => (
-      <Fragment key={rule}>
-        {rulesMap[normalizeRuleName(textEn[index])] ? (
-          <button
-            className="unit__rule"
-            onClick={() =>
-              dispatch(openRulesIndex({ activeRule: textEn[index] }))
-            }
-          >
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </button>
-        ) : (
-          <>
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </>
-        )}
-      </Fragment>
-    ));
-
-    return ruleButtons;
-  };
-  const getRulesIcon = (textObject) => {
-    const textEn = textObject.name_en.split(", ");
-    const ruleString = textObject[`name_${language}`] || textObject.name_en;
-    let ruleButtons = ruleString.split(", ");
-
-    ruleButtons = ruleButtons.map((rule, index) => (
-      <Fragment key={rule}>
-        {rulesMap[normalizeRuleName(textEn[index])] ? (
-          <span className="unit__rule-wrapper">
-            {rule}
-            <Button
-              type="text"
-              className="unit__rules"
-              color="dark"
-              label={intl.formatMessage({ id: "misc.showRules" })}
-              icon="preview"
-              onClick={() =>
-                handleRulesClick({
-                  name: rule,
-                })
-              }
-            />
-            {index !== ruleButtons.length - 1 && ","}
-          </span>
-        ) : (
-          <>
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </>
-        )}
-      </Fragment>
-    ));
-
-    return ruleButtons;
-  };
   const getPointsText = ({ points, perModel }) => {
     if (points === 0) {
       return intl.formatMessage({
@@ -583,7 +525,7 @@ export const Unit = ({ isMobile }) => {
                         className="checkbox__label"
                       >
                         <span className="unit__label-text">
-                          {getRulesIcon(command).map((item) => item)}
+                          <RulesWithIcon textObject={command} />
                         </span>
                         <i className="checkbox__points">
                           {getPointsText({ points })}
@@ -686,7 +628,7 @@ export const Unit = ({ isMobile }) => {
                                 className="checkbox__label"
                               >
                                 <span className="unit__label-text">
-                                  {getRulesIcon(option).map((item) => item)}
+                                  <RulesWithIcon textObject={option} />
                                 </span>
                                 <i className="checkbox__points">
                                   {getPointsText({ points: option.points })}
@@ -723,7 +665,7 @@ export const Unit = ({ isMobile }) => {
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
                     <span className="unit__label-text">
-                      {getRulesIcon(equipment).map((item) => item)}
+                      <RulesWithIcon textObject={equipment} />
                     </span>
                     <i className="checkbox__points">
                       {getPointsText({ points, perModel })}
@@ -753,7 +695,7 @@ export const Unit = ({ isMobile }) => {
                   />
                   <label htmlFor={`armor-${id}`} className="radio__label">
                     <span className="unit__label-text">
-                      {getRulesIcon(equipment).map((item) => item)}
+                      <RulesWithIcon textObject={equipment} />
                     </span>
                     <i className="checkbox__points">
                       {getPointsText({ points, perModel })}
@@ -796,7 +738,7 @@ export const Unit = ({ isMobile }) => {
                       className="checkbox__label"
                     >
                       <span className="unit__label-text">
-                        {getRulesIcon(equipment).map((item) => item)}
+                        <RulesWithIcon textObject={equipment} />
                       </span>
                       <i className="checkbox__points">
                         {getPointsText({ points, perModel })}
@@ -810,7 +752,7 @@ export const Unit = ({ isMobile }) => {
                       className="unit__special-option"
                     >
                       <span className="unit__label-text">
-                        {getRulesIcon(equipment).map((item) => item)}
+                        <RulesWithIcon textObject={equipment} />
                       </span>
                       <i className="checkbox__points">
                         {getPointsText({ points, perModel })}
@@ -946,9 +888,9 @@ export const Unit = ({ isMobile }) => {
                                         className="radio__label"
                                       >
                                         <span className="unit__label-text">
-                                          {getRulesIcon(equipment).map(
-                                            (item) => item
-                                          )}
+                                          <RulesWithIcon
+                                            textObject={equipment}
+                                          />
                                         </span>
                                         <i className="checkbox__points">
                                           {getPointsText({
@@ -988,9 +930,7 @@ export const Unit = ({ isMobile }) => {
                                       className="radio__label"
                                     >
                                       <span className="unit__label-text">
-                                        {getRulesIcon(armor).map(
-                                          (item) => item
-                                        )}
+                                        <RulesWithIcon textObject={armor} />
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
@@ -1030,9 +970,7 @@ export const Unit = ({ isMobile }) => {
                                       className="checkbox__label"
                                     >
                                       <span className="unit__label-text">
-                                        {getRulesIcon(option).map(
-                                          (item) => item
-                                        )}
+                                        <RulesWithIcon textObject={option} />
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
@@ -1071,7 +1009,7 @@ export const Unit = ({ isMobile }) => {
                 />
                 <label htmlFor={`mounts-${id}`} className="radio__label">
                   <span className="unit__label-text">
-                    {getRulesIcon(mount).map((item) => item)}
+                    <RulesWithIcon textObject={mount} />
                   </span>
                   <i className="checkbox__points">
                     {getPointsText({ points })}
@@ -1183,7 +1121,9 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline unit__subline--space-before">
               <FormattedMessage id="unit.specialRules" />
             </h2>
-            <p>{getRulesLinksText(unit.specialRules).map((item) => item)}</p>
+            <p>
+              <RulesLinksText textObject={unit.specialRules} />
+            </p>
           </>
         ) : null}
       </MainComponent>
