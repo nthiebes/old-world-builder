@@ -222,7 +222,7 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="misc.cancel" />
           </Button>
           <Button
-            type="secondary"
+            type="primary"
             submitButton
             onClick={handleDeleteConfirm}
             icon="delete"
