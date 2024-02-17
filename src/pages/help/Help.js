@@ -4,7 +4,6 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Breadcrumbs } from "../../components/breadcrumbs";
 
 export const Help = () => {
   const location = useLocation();
@@ -23,11 +22,9 @@ export const Help = () => {
         <link rel="canonical" href="https://old-world-builder.com/help" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation />
+      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact>
-        <Breadcrumbs pagename="footer.help" />
-
         <h2 className="page-headline">
           <FormattedMessage id="help.title" />
         </h2>

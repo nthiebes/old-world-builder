@@ -18,6 +18,7 @@ export const Header = ({
   isSection,
   hasPointsError,
   hasMainNavigation,
+  hasHomeButton,
   filters,
 }) => {
   const intl = useIntl();
@@ -80,7 +81,20 @@ export const Header = ({
           icon={isSection ? "close" : "back"}
         />
       ) : (
-        <>{navigation && <div className="header__empty-icon" />}</>
+        <>
+          {hasHomeButton && (
+            <Button
+              type="text"
+              to="/"
+              label={intl.formatMessage({ id: "misc.startpage" })}
+              color="light"
+              icon="home"
+            />
+          )}
+          {navigation && !hasHomeButton && (
+            <div className="header__empty-icon" />
+          )}
+        </>
       )}
       <div className="header__text">
         {headline && (
@@ -153,7 +167,7 @@ export const Header = ({
             !hasMainNavigation && "header__more--secondary-navigation"
           )}
         >
-          {filters.map(({ callback, name, id, checked }) => (
+          {filters.map(({ callback, name, description, id, checked }) => (
             <li key={id}>
               <div className="checkbox header__checkbox">
                 <input
@@ -167,6 +181,9 @@ export const Header = ({
                   {name}
                 </label>
               </div>
+              {description && (
+                <i className="header__filter-description">{description}</i>
+              )}
             </li>
           ))}
         </ul>
@@ -186,4 +203,5 @@ Header.propTypes = {
   isSection: PropTypes.bool,
   hasPointsError: PropTypes.bool,
   hasMainNavigation: PropTypes.bool,
+  hasHomeButton: PropTypes.bool,
 };

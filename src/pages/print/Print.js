@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
+import { Header } from "../../components/page";
 import { Button } from "../../components/button";
 import { Stats } from "../../components/stats";
 import { getAllOptions } from "../../utils/unit";
@@ -16,6 +17,7 @@ import "./Print.css";
 export const Print = () => {
   const { listId } = useParams();
   const { language } = useLanguage();
+  const intl = useIntl();
   const [isPrinting, setIsPrinting] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
@@ -25,7 +27,13 @@ export const Print = () => {
   );
 
   if (!list) {
-    return null;
+    return (
+      <Header
+        headline={intl.formatMessage({
+          id: "print.title",
+        })}
+      />
+    );
   }
 
   const allPoints = getAllPoints(list);
@@ -45,6 +53,41 @@ export const Print = () => {
       ? nameMap[list.armyComposition][`name_${language}`] ||
         nameMap[list.armyComposition].name_en
       : "";
+  const filters = [
+    {
+      name: intl.formatMessage({
+        id: "export.specialRules",
+      }),
+      id: "specialRules",
+      checked: showSpecialRules,
+      callback: () => {
+        setShowSpecialRules(!showSpecialRules);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "export.showStats",
+      }),
+      id: "stats",
+      checked: showStats,
+      callback: () => {
+        setShowStats(!showStats);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "export.visibleList",
+      }),
+      description: intl.formatMessage({
+        id: "export.visibleListDescription",
+      }),
+      id: "isShowList",
+      checked: isShowList,
+      callback: () => {
+        setIsShowList(!isShowList);
+      },
+    },
+  ];
   const handlePrintClick = () => {
     setIsPrinting(true);
     document.title = `${list.name} - Old World Builder`;
@@ -112,75 +155,32 @@ export const Print = () => {
   return (
     <>
       <div className="hide-for-printing">
-        <Button
+        <Header
           to={`/editor/${listId}`}
+          headline={intl.formatMessage({
+            id: "print.title",
+          })}
+          filters={filters}
+        />
+
+        <Button
+          onClick={handlePrintClick}
           centered
-          icon="back"
+          icon="print"
           spaceTop
           spaceBottom
-          type="secondary"
+          size="large"
+          disabled={isPrinting}
         >
-          <FormattedMessage id="header.back" />
-        </Button>
-        {isPrinting ? (
-          <p className="print-info">
+          {isPrinting ? (
             <FormattedMessage id="print.printing" />
-          </p>
-        ) : (
-          <>
-            <div className="checkbox print-checkbox">
-              <input
-                type="checkbox"
-                id="show"
-                onChange={() => setIsShowList(!isShowList)}
-                checked={isShowList}
-                className="checkbox__input"
-              />
-              <label htmlFor="show" className="checkbox__label">
-                <FormattedMessage id="export.visibleList" />
-              </label>
-            </div>
-            <p className="print-checkbox-description">
-              <i>
-                <FormattedMessage id="export.visibleListDescription" />
-              </i>
-            </p>
-            <div className="checkbox print-checkbox">
-              <input
-                type="checkbox"
-                id="specialRules"
-                onChange={() => setShowSpecialRules(!showSpecialRules)}
-                checked={showSpecialRules}
-                className="checkbox__input"
-              />
-              <label htmlFor="specialRules" className="checkbox__label">
-                <FormattedMessage id="export.specialRules" />
-              </label>
-            </div>
-            <div className="checkbox print-checkbox">
-              <input
-                type="checkbox"
-                id="showStats"
-                onChange={() => setShowStats(!showStats)}
-                checked={showStats}
-                className="checkbox__input"
-              />
-              <label htmlFor="showStats" className="checkbox__label">
-                <FormattedMessage id="export.showStats" />
-              </label>
-            </div>
-            <Button
-              onClick={handlePrintClick}
-              centered
-              icon="print"
-              spaceTop
-              spaceBottom
-              size="large"
-            >
-              <FormattedMessage id="misc.print" />
-            </Button>
-          </>
-        )}
+          ) : (
+            <FormattedMessage id="misc.print" />
+          )}
+        </Button>
+        <h2>
+          <FormattedMessage id="print.preview" />
+        </h2>
       </div>
 
       <main className="print">
