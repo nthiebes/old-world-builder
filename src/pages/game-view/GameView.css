@@ -1,5 +1,5 @@
 .game-view {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .game-view__details {
@@ -9,6 +9,10 @@
 
 .game-view__list-inner {
   display: block;
+}
+
+.game-view li:last-of-type .game-view__list-inner {
+  border-bottom: 0 none;
 }
 
 .game-view__list-inner::before {
@@ -32,4 +36,8 @@
 
 .game-view__special-rules {
   margin-top: 5px;
+}
+
+.game-view__section {
+  margin-bottom: 1rem;
 }

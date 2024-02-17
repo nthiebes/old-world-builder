@@ -146,7 +146,7 @@ export const GameView = () => {
       <Main className="game-view">
         {list.game === "the-old-world" ? (
           list.characters.length > 0 && (
-            <section>
+            <section className="game-view__section">
               <header className="editor__header">
                 <h2>
                   <FormattedMessage id="editor.characters" />{" "}
@@ -163,7 +163,7 @@ export const GameView = () => {
         ) : (
           <>
             {list.lords.length > 0 && (
-              <section>
+              <section className="game-view__section">
                 <header className="editor__header">
                   <h2>
                     <FormattedMessage id="editor.lords" />{" "}
@@ -179,7 +179,7 @@ export const GameView = () => {
             )}
 
             {list.heroes.length > 0 && (
-              <section>
+              <section className="game-view__section">
                 <header className="editor__header">
                   <h2>
                     <FormattedMessage id="editor.heroes" />{" "}
@@ -197,7 +197,7 @@ export const GameView = () => {
         )}
 
         {list.core.length > 0 && (
-          <section>
+          <section className="game-view__section">
             <header className="editor__header">
               <h2>
                 <FormattedMessage id="editor.core" />{" "}
@@ -213,7 +213,7 @@ export const GameView = () => {
         )}
 
         {list.special.length > 0 && (
-          <section>
+          <section className="game-view__section">
             <header className="editor__header">
               <h2>
                 <FormattedMessage id="editor.special" />{" "}
@@ -229,7 +229,7 @@ export const GameView = () => {
         )}
 
         {list.rare.length > 0 && (
-          <section>
+          <section className="game-view__section">
             <header className="editor__header">
               <h2>
                 <FormattedMessage id="editor.rare" />{" "}
@@ -247,7 +247,7 @@ export const GameView = () => {
         {list.game === "the-old-world" && (
           <>
             {list.allies.length > 0 && (
-              <section>
+              <section className="game-view__section">
                 <header className="editor__header">
                   <h2>
                     <FormattedMessage id="editor.allies" />{" "}
@@ -263,7 +263,7 @@ export const GameView = () => {
             )}
 
             {list.mercenaries.length > 0 && (
-              <section>
+              <section className="game-view__section">
                 <header className="editor__header">
                   <h2>
                     <FormattedMessage id="editor.mercenaries" />{" "}

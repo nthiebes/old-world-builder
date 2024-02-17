@@ -862,13 +862,13 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                       onChange={() =>
                         handleCommandMagicChange({
                           index,
-                          value: command.magic.types.includes(item)
+                          value: command?.magic?.types.includes(item)
                             ? "off"
                             : "on",
                           item,
                         })
                       }
-                      checked={command.magic.types.includes(item)}
+                      checked={command?.magic?.types.includes(item)}
                       className="checkbox__input"
                     />
                     <label
@@ -885,7 +885,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 <NumberInput
                   id={`command-magic-points-${index}-${randomId}`}
                   min={0}
-                  value={command.magic.maxPoints}
+                  value={command?.magic?.maxPoints}
                   onChange={(event) =>
                     handleCommandMagicPointsChange({
                       index,
