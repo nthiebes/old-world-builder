@@ -3,7 +3,21 @@
 }
 
 .new-list__beta {
-  color: var(--color-error);
-  font-weight: bold;
+  /* color: var(--color-error); */
+  /* font-weight: bold; */
   font-style: italic;
+}
+
+.new-list__quick-actions {
+  margin-bottom: 1rem;
+}
+
+.new-list__quick-action {
+  padding: 5px 5px;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.new-list__quick-actions-label {
+  display: block;
+  margin-bottom: 5px;
 }

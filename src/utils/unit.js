@@ -12,25 +12,46 @@ export const getAllOptions = (
     activeLore,
     lores,
   },
-  { asString, noMagic } = {}
+  { asString, noMagic, language: overrideLanguage } = {}
 ) => {
-  const language = localStorage.getItem("lang");
+  const language = overrideLanguage || localStorage.getItem("lang");
+  const detachmentActive =
+    options?.length > 0 &&
+    Boolean(
+      options.find((option) => option.name_en === "Detachment" && option.active)
+    );
   const allCommand = [];
 
-  if (command) {
-    command.forEach(({ active, magic, name_en, ...entry }) => {
+  if (command && !detachmentActive) {
+    command.forEach(({ active, magic, name_en, options, ...entry }) => {
       if (active) {
-        allCommand.push(entry[`name_${language}`] || name_en);
-      }
-      if (active && magic && magic?.selected?.length) {
-        magic.selected.forEach((selectedItem) => {
-          allCommand.push(
-            selectedItem.amount > 1
-              ? `${selectedItem.amount}x ` + selectedItem[`name_${language}`] ||
-                  selectedItem.name_en
-              : selectedItem[`name_${language}`] || selectedItem.name_en
-          );
-        });
+        let commandEntry = entry[`name_${language}`] || name_en;
+        const selectedOptions = [];
+
+        if (options && options.length > 0) {
+          options.forEach((option) => {
+            if (option.active) {
+              selectedOptions.push(option.name_en);
+            }
+          });
+        }
+
+        if (magic && magic?.selected?.length && !noMagic) {
+          magic.selected.forEach((selectedItem) => {
+            selectedOptions.push(
+              selectedItem.amount > 1
+                ? `${selectedItem.amount}x ` +
+                    selectedItem[`name_${language}`] || selectedItem.name_en
+                : selectedItem[`name_${language}`] || selectedItem.name_en
+            );
+          });
+        }
+
+        if (selectedOptions.length) {
+          commandEntry += ` [${selectedOptions.join(" + ")}]`;
+        }
+
+        allCommand.push(commandEntry);
       }
     });
   }
@@ -108,9 +129,9 @@ export const getAllOptions = (
 
           return `${strength} ${item[`name_${language}`] || name_en}${
             equipmentSelection.length
-              ? ` (${equipmentSelection
+              ? ` [${equipmentSelection
                   .map((option) => option.replace(", ", " + "))
-                  .join(" + ")})`
+                  .join(" + ")}]`
               : ""
           }`;
         })

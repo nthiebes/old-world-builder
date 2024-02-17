@@ -12,14 +12,19 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
-import { RulesIndex, rulesMap } from "../../components/rules-index";
+import {
+  RulesIndex,
+  rulesMap,
+  RulesLinksText,
+  RulesWithIcon,
+} from "../../components/rules-index";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { updateIds, getRandomId } from "../../utils/id";
+import { updateIds } from "../../utils/id";
 import { normalizeRuleName } from "../../utils/string";
 
 import "./Unit.css";
@@ -38,11 +43,19 @@ export const Unit = ({ isMobile }) => {
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
   const army = useSelector((state) => state.army);
-  const detachments =
-    army &&
-    [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment
+  const detachmentActive =
+    unit &&
+    unit?.options?.length > 0 &&
+    Boolean(
+      unit.options.find(
+        (option) => option.name_en === "Detachment" && option.active
+      )
     );
+  // const detachments =
+  //   army &&
+  //   [...army.core, ...army.special, ...army.rare].filter(
+  //     (coreUnit) => coreUnit.detachment
+  //   );
   const handleRulesClick = ({ name }) => {
     dispatch(openRulesIndex({ activeRule: name }));
   };
@@ -84,100 +97,100 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const handleAddDetachmentClick = ({ id }) => {
-    const detachment = detachments.find((detachment) => detachment.id === id);
-    const unitDetachments = unit.detachments ? [...unit.detachments] : [];
+  // const handleAddDetachmentClick = ({ id }) => {
+  //   const detachment = detachments.find((detachment) => detachment.id === id);
+  //   const unitDetachments = unit.detachments ? [...unit.detachments] : [];
 
-    unitDetachments.push({
-      id: `${id}.${getRandomId()}`,
-      name_de: detachment.name_de,
-      name_en: detachment.name_en,
-      points: detachment.points,
-      strength: detachment.minDetachmentSize || 5,
-      minDetachmentSize: detachment.minDetachmentSize || 5,
-      maxDetachmentSize: detachment.maxDetachmentSize,
-      equipment: detachment.equipment,
-      armor: detachment.armor,
-      options: detachment.options,
-    });
+  //   unitDetachments.push({
+  //     id: `${id}.${getRandomId()}`,
+  //     name_de: detachment.name_de,
+  //     name_en: detachment.name_en,
+  //     points: detachment.points,
+  //     strength: detachment.minDetachmentSize || 5,
+  //     minDetachmentSize: detachment.minDetachmentSize || 5,
+  //     maxDetachmentSize: detachment.maxDetachmentSize,
+  //     equipment: detachment.equipment,
+  //     armor: detachment.armor,
+  //     options: detachment.options,
+  //   });
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDeleteDetachmentClick = ({ id }) => {
-    const unitDetachments = [...unit.detachments].filter(
-      (detachment) => detachment.id !== id
-    );
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDeleteDetachmentClick = ({ id }) => {
+  //   const unitDetachments = [...unit.detachments].filter(
+  //     (detachment) => detachment.id !== id
+  //   );
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDetachmentStrengthClick = ({ id, strength }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) =>
-      detachment.id === id ? { ...detachment, strength } : detachment
-    );
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDetachmentStrengthClick = ({ id, strength }) => {
+  //   const unitDetachments = [...unit.detachments].map((detachment) =>
+  //     detachment.id === id ? { ...detachment, strength } : detachment
+  //   );
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDetachmentEquipmentChange = ({
-    detachmentId,
-    equipmentId,
-    category,
-    isCheckbox,
-  }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) => {
-      if (detachment.id === detachmentId) {
-        const equipment = detachment[category].map((item) => {
-          let active = false;
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDetachmentEquipmentChange = ({
+  //   detachmentId,
+  //   equipmentId,
+  //   category,
+  //   isCheckbox,
+  // }) => {
+  //   const unitDetachments = [...unit.detachments].map((detachment) => {
+  //     if (detachment.id === detachmentId) {
+  //       const equipment = detachment[category].map((item) => {
+  //         let active = false;
 
-          if (isCheckbox && item.id === equipmentId) {
-            active = !item.active;
-          } else if (item.id === equipmentId) {
-            active = true;
-          } else if (isCheckbox) {
-            active = item.active;
-          }
+  //         if (isCheckbox && item.id === equipmentId) {
+  //           active = !item.active;
+  //         } else if (item.id === equipmentId) {
+  //           active = true;
+  //         } else if (isCheckbox) {
+  //           active = item.active;
+  //         }
 
-          return {
-            ...item,
-            active,
-          };
-        });
+  //         return {
+  //           ...item,
+  //           active,
+  //         };
+  //       });
 
-        return { ...detachment, [category]: equipment };
-      }
+  //       return { ...detachment, [category]: equipment };
+  //     }
 
-      return detachment;
-    });
+  //     return detachment;
+  //   });
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
   const handleOptionsChange = (id) => {
     const options = unit.options.map((option) => {
       if (option.id === id) {
@@ -198,22 +211,47 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const handleCommandChange = (id) => {
+  const handleCommandChange = (id, optionIndex) => {
     let magicItems = unit.magic?.items || [];
-    const command = unit.command.map((option, index) => {
-      if (option.id === id) {
-        // Also remove banner runes
-        if (option.active) {
-          magicItems = magicItems.filter(({ command }) => command !== index);
-        }
+    let command;
 
-        return {
-          ...option,
-          active: option.active ? false : true,
-        };
-      }
-      return option;
-    });
+    if (optionIndex !== undefined) {
+      command = unit.command.map((commandOption) => {
+        if (commandOption.id === id) {
+          const options = commandOption.options.map((option, index) => {
+            if (index === optionIndex) {
+              return {
+                ...option,
+                active: option.active ? false : true,
+              };
+            }
+
+            return option;
+          });
+
+          return {
+            ...commandOption,
+            options,
+          };
+        }
+        return commandOption;
+      });
+    } else {
+      command = unit.command.map((option, index) => {
+        if (option.id === id) {
+          // Also remove banner runes
+          if (option.active) {
+            magicItems = magicItems.filter(({ command }) => command !== index);
+          }
+
+          return {
+            ...option,
+            active: option.active ? false : true,
+          };
+        }
+        return option;
+      });
+    }
 
     dispatch(
       editUnit({
@@ -282,69 +320,6 @@ export const Unit = ({ isMobile }) => {
         activeLore: lore,
       })
     );
-  };
-  const getRulesLinksText = (textObject) => {
-    const textEn = textObject.name_en.split(", ");
-    const ruleString = textObject[`name_${language}`] || textObject.name_en;
-    let ruleButtons = ruleString.split(", ");
-
-    ruleButtons = ruleButtons.map((rule, index) => (
-      <Fragment key={rule}>
-        {rulesMap[normalizeRuleName(textEn[index])] ? (
-          <button
-            className="unit__rule"
-            onClick={() =>
-              dispatch(openRulesIndex({ activeRule: textEn[index] }))
-            }
-          >
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </button>
-        ) : (
-          <>
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </>
-        )}
-      </Fragment>
-    ));
-
-    return ruleButtons;
-  };
-  const getRulesIcon = (textObject) => {
-    const textEn = textObject.name_en.split(", ");
-    const ruleString = textObject[`name_${language}`] || textObject.name_en;
-    let ruleButtons = ruleString.split(", ");
-
-    ruleButtons = ruleButtons.map((rule, index) => (
-      <Fragment key={rule}>
-        {rulesMap[normalizeRuleName(textEn[index])] ? (
-          <span className="unit__rule-wrapper">
-            {rule}
-            <Button
-              type="text"
-              className="unit__rules"
-              color="dark"
-              label={intl.formatMessage({ id: "misc.showRules" })}
-              icon="preview"
-              onClick={() =>
-                handleRulesClick({
-                  name: rule,
-                })
-              }
-            />
-            {index !== ruleButtons.length - 1 && ","}
-          </span>
-        ) : (
-          <>
-            {rule}
-            {index !== ruleButtons.length - 1 && ", "}
-          </>
-        )}
-      </Fragment>
-    ));
-
-    return ruleButtons;
   };
   const getPointsText = ({ points, perModel }) => {
     if (points === 0) {
@@ -522,7 +497,15 @@ export const Unit = ({ isMobile }) => {
             )}
             {unit.command.map(
               (
-                { points, perModel, id, active = false, magic, ...command },
+                {
+                  points,
+                  perModel,
+                  id,
+                  active = false,
+                  magic,
+                  options,
+                  ...command
+                },
                 index
               ) => {
                 const commandMagicPoints = getUnitMagicPoints({
@@ -544,13 +527,14 @@ export const Unit = ({ isMobile }) => {
                         onChange={() => handleCommandChange(id)}
                         checked={active}
                         className="checkbox__input"
+                        disabled={detachmentActive}
                       />
                       <label
                         htmlFor={`command-${id}`}
                         className="checkbox__label"
                       >
                         <span className="unit__label-text">
-                          {getRulesIcon(command).map((item) => item)}
+                          <RulesWithIcon textObject={command} />
                         </span>
                         <i className="checkbox__points">
                           {getPointsText({ points })}
@@ -564,6 +548,7 @@ export const Unit = ({ isMobile }) => {
                           to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                           className="editor__list unit__link unit__command-list"
                           active={location.pathname.includes(`magic/${index}`)}
+                          disabled={detachmentActive}
                         >
                           <div className="editor__list-inner">
                             <b>
@@ -619,6 +604,53 @@ export const Unit = ({ isMobile }) => {
                         </ListItem>
                       </>
                     ) : null}
+                    {options?.length > 0 && active && (
+                      <Fragment>
+                        {options.map((option, optionIndex) => {
+                          const exclusiveCheckedOption = options.find(
+                            (exclusiveOption) =>
+                              exclusiveOption.exclusive &&
+                              exclusiveOption.active
+                          );
+
+                          return (
+                            <div
+                              className="checkbox checkbox--conditional"
+                              key={option.name_en}
+                            >
+                              <input
+                                type="checkbox"
+                                id={`command-${id}-option-${optionIndex}`}
+                                value={`${id}-${optionIndex}`}
+                                onChange={() =>
+                                  handleCommandChange(id, optionIndex)
+                                }
+                                checked={Boolean(option.active)}
+                                className="checkbox__input"
+                                disabled={
+                                  (exclusiveCheckedOption &&
+                                    option.exclusive &&
+                                    !option.active) ||
+                                  detachmentActive
+                                }
+                              />
+                              <label
+                                htmlFor={`command-${id}-option-${optionIndex}`}
+                                className="checkbox__label"
+                              >
+                                <span className="unit__label-text">
+                                  <RulesWithIcon textObject={option} />
+                                </span>
+                                <i className="checkbox__points">
+                                  {getPointsText({ points: option.points })}
+                                </i>
+                              </label>
+                            </div>
+                          );
+                        })}
+                        <hr className="unit__command-option-hr" />
+                      </Fragment>
+                    )}
                   </Fragment>
                 );
               }
@@ -644,7 +676,7 @@ export const Unit = ({ isMobile }) => {
                   />
                   <label htmlFor={`equipment-${id}`} className="radio__label">
                     <span className="unit__label-text">
-                      {getRulesIcon(equipment).map((item) => item)}
+                      <RulesWithIcon textObject={equipment} />
                     </span>
                     <i className="checkbox__points">
                       {getPointsText({ points, perModel })}
@@ -674,7 +706,7 @@ export const Unit = ({ isMobile }) => {
                   />
                   <label htmlFor={`armor-${id}`} className="radio__label">
                     <span className="unit__label-text">
-                      {getRulesIcon(equipment).map((item) => item)}
+                      <RulesWithIcon textObject={equipment} />
                     </span>
                     <i className="checkbox__points">
                       {getPointsText({ points, perModel })}
@@ -717,7 +749,7 @@ export const Unit = ({ isMobile }) => {
                       className="checkbox__label"
                     >
                       <span className="unit__label-text">
-                        {getRulesIcon(equipment).map((item) => item)}
+                        <RulesWithIcon textObject={equipment} />
                       </span>
                       <i className="checkbox__points">
                         {getPointsText({ points, perModel })}
@@ -731,7 +763,7 @@ export const Unit = ({ isMobile }) => {
                       className="unit__special-option"
                     >
                       <span className="unit__label-text">
-                        {getRulesIcon(equipment).map((item) => item)}
+                        <RulesWithIcon textObject={equipment} />
                       </span>
                       <i className="checkbox__points">
                         {getPointsText({ points, perModel })}
@@ -754,7 +786,7 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
-        {unit.regimentalUnit && (
+        {/* {unit.regimentalUnit && (
           <>
             <h2 className="unit__subline unit__detachments-headline">
               <FormattedMessage id="unit.detachments" />
@@ -867,9 +899,9 @@ export const Unit = ({ isMobile }) => {
                                         className="radio__label"
                                       >
                                         <span className="unit__label-text">
-                                          {getRulesIcon(equipment).map(
-                                            (item) => item
-                                          )}
+                                          <RulesWithIcon
+                                            textObject={equipment}
+                                          />
                                         </span>
                                         <i className="checkbox__points">
                                           {getPointsText({
@@ -909,9 +941,7 @@ export const Unit = ({ isMobile }) => {
                                       className="radio__label"
                                     >
                                       <span className="unit__label-text">
-                                        {getRulesIcon(armor).map(
-                                          (item) => item
-                                        )}
+                                        <RulesWithIcon textObject={armor} />
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
@@ -951,9 +981,7 @@ export const Unit = ({ isMobile }) => {
                                       className="checkbox__label"
                                     >
                                       <span className="unit__label-text">
-                                        {getRulesIcon(option).map(
-                                          (item) => item
-                                        )}
+                                        <RulesWithIcon textObject={option} />
                                       </span>
                                       <i className="checkbox__points">
                                         {getPointsText({
@@ -973,7 +1001,7 @@ export const Unit = ({ isMobile }) => {
               </Fragment>
             ))}
           </>
-        )}
+        )} */}
         {unit.mounts && unit.mounts.length > 0 && (
           <>
             <h2 className="unit__subline">
@@ -992,7 +1020,7 @@ export const Unit = ({ isMobile }) => {
                 />
                 <label htmlFor={`mounts-${id}`} className="radio__label">
                   <span className="unit__label-text">
-                    {getRulesIcon(mount).map((item) => item)}
+                    <RulesWithIcon textObject={mount} />
                   </span>
                   <i className="checkbox__points">
                     {getPointsText({ points })}
@@ -1104,7 +1132,9 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline unit__subline--space-before">
               <FormattedMessage id="unit.specialRules" />
             </h2>
-            <p>{getRulesLinksText(unit.specialRules).map((item) => item)}</p>
+            <p>
+              <RulesLinksText textObject={unit.specialRules} />
+            </p>
           </>
         ) : null}
       </MainComponent>

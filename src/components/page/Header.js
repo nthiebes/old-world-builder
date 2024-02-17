@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
@@ -18,6 +18,8 @@ export const Header = ({
   isSection,
   hasPointsError,
   hasMainNavigation,
+  hasHomeButton,
+  filters,
 }) => {
   const intl = useIntl();
   const location = useLocation();
@@ -32,24 +34,28 @@ export const Header = ({
         id: "footer.about",
       }),
       to: "/about",
+      icon: "about",
     },
     {
       name: intl.formatMessage({
         id: "footer.help",
       }),
       to: "/help",
+      icon: "help",
     },
     {
       name: intl.formatMessage({
         id: "footer.datasets",
       }),
       to: "/datasets",
+      icon: "datasets",
     },
     {
       name: intl.formatMessage({
         id: "footer.changelog",
       }),
       to: "/changelog",
+      icon: "news",
     },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
@@ -75,10 +81,35 @@ export const Header = ({
           icon={isSection ? "close" : "back"}
         />
       ) : (
-        <>{navigation && <div className="header__empty-icon" />}</>
+        <>
+          {hasHomeButton && (
+            <Button
+              type="text"
+              to="/"
+              label={intl.formatMessage({ id: "misc.startpage" })}
+              color="light"
+              icon="home"
+            />
+          )}
+          {navigation && !hasHomeButton && (
+            <div className="header__empty-icon" />
+          )}
+        </>
       )}
       <div className="header__text">
-        {headline && <h1 className="header__name">{headline}</h1>}
+        {headline && (
+          <>
+            {headline === "Old World Builder" ? (
+              <h1 className="header__name">
+                <Link className="header__name-link" to="/">
+                  {headline}
+                </Link>
+              </h1>
+            ) : (
+              <h1 className="header__name">{headline}</h1>
+            )}
+          </>
+        )}
         {subheadline && (
           <p className="header__points">
             {subheadline}{" "}
@@ -96,9 +127,19 @@ export const Header = ({
           onClick={handleMenuClick}
         />
       ) : (
-        <>{to && <div className="header__empty-icon" />}</>
+        <>{to && !filters && <div className="header__empty-icon" />}</>
       )}
-      {showMenu && (
+      {filters && (
+        <Button
+          type="text"
+          className={classNames(showMenu && "header__more-button")}
+          color={isSection ? "dark" : "light"}
+          label={intl.formatMessage({ id: "header.filter" })}
+          icon="filter"
+          onClick={handleMenuClick}
+        />
+      )}
+      {showMenu && navigation && (
         <ul
           className={classNames(
             "header__more",
@@ -119,6 +160,34 @@ export const Header = ({
           ))}
         </ul>
       )}
+      {showMenu && filters && (
+        <ul
+          className={classNames(
+            "header__more",
+            !hasMainNavigation && "header__more--secondary-navigation"
+          )}
+        >
+          {filters.map(({ callback, name, description, id, checked }) => (
+            <li key={id}>
+              <div className="checkbox header__checkbox">
+                <input
+                  type="checkbox"
+                  id={id}
+                  onChange={callback}
+                  checked={checked}
+                  className="checkbox__input"
+                />
+                <label htmlFor={id} className="checkbox__label">
+                  {name}
+                </label>
+              </div>
+              {description && (
+                <i className="header__filter-description">{description}</i>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </Component>
   );
 };
@@ -130,7 +199,9 @@ Header.propTypes = {
   subheadline: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
   moreButton: PropTypes.array,
+  filters: PropTypes.array,
   isSection: PropTypes.bool,
   hasPointsError: PropTypes.bool,
   hasMainNavigation: PropTypes.bool,
+  hasHomeButton: PropTypes.bool,
 };

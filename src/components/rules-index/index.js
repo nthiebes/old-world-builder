@@ -1,2 +1,4 @@
 export * from "./RulesIndex";
 export * from "./rules-map";
+export * from "./RulesLinksText";
+export * from "./RulesWithIcon";

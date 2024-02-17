@@ -1,4 +1,11 @@
 export const getUnitPoints = (unit) => {
+  const detachmentActive =
+    unit?.options?.length > 0 &&
+    Boolean(
+      unit.options.find(
+        (option) => option.name_en === "Detachment" && option.active
+      )
+    );
   let unitPoints = 0;
 
   if (unit.strength) {
@@ -36,7 +43,7 @@ export const getUnitPoints = (unit) => {
       }
     });
   }
-  if (unit.command) {
+  if (unit.command && !detachmentActive) {
     unit.command.forEach((option) => {
       if (option.active) {
         unitPoints += option.points;
@@ -46,6 +53,13 @@ export const getUnitPoints = (unit) => {
           unitPoints += selected.amount
             ? selected.amount * selected.points
             : selected.points;
+        });
+      }
+      if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((commandOption) => {
+          if (commandOption.active) {
+            unitPoints += commandOption.points;
+          }
         });
       }
     });

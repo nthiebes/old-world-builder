@@ -1,0 +1,31 @@
+.stats {
+  text-align: center;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+
+.stats th,
+.stats td {
+  width: 30px;
+  height: 30px;
+}
+
+.stats th {
+  padding: 0;
+  font-style: italic;
+}
+
+.stats td {
+  padding: 3px 5px;
+  border: 1px solid var(--color-background);
+  background-color: var(--color-list);
+}
+
+.stats--print-page {
+  border-spacing: 2px;
+}
+
+.stats--print-page td {
+  border: 1px solid var(--color-font);
+  background-color: transparent;
+}

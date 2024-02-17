@@ -11,13 +11,13 @@ import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
+import { ListItem } from "../../components/list/ListItem";
 import { getAllOptions } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { deleteList, moveUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
-import { ListItem } from "../../components/list/ListItem";
 
 import "./Editor.css";
 
@@ -168,6 +168,13 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
+        id: "misc.gameView",
+      }),
+      icon: "shield",
+      to: `/game-view/${listId}`,
+    },
+    {
+      name: intl.formatMessage({
         id: "misc.export",
       }),
       icon: "export",
@@ -215,7 +222,7 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="misc.cancel" />
           </Button>
           <Button
-            type="secondary"
+            type="primary"
             submitButton
             onClick={handleDeleteConfirm}
             icon="delete"
@@ -313,6 +320,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
+              type="primary"
               centered
               to={`/editor/${listId}/add/lords`}
               icon="add"
@@ -353,6 +361,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
+              type="primary"
               centered
               to={`/editor/${listId}/add/heroes`}
               icon="add"
@@ -393,6 +402,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
+              type="primary"
               centered
               to={`/editor/${listId}/add/characters`}
               icon="add"
@@ -429,6 +439,7 @@ export const Editor = ({ isMobile }) => {
           <OrderableUnitList units={list.core} type="core" listId={listId} />
 
           <Button
+            type="primary"
             centered
             to={`/editor/${listId}/add/core`}
             icon="add"
@@ -467,6 +478,7 @@ export const Editor = ({ isMobile }) => {
           />
 
           <Button
+            type="primary"
             centered
             to={`/editor/${listId}/add/special`}
             icon="add"
@@ -501,6 +513,7 @@ export const Editor = ({ isMobile }) => {
           <OrderableUnitList units={list.rare} type="rare" listId={listId} />
 
           <Button
+            type="primary"
             centered
             to={`/editor/${listId}/add/rare`}
             icon="add"
@@ -540,6 +553,7 @@ export const Editor = ({ isMobile }) => {
             />
 
             <Button
+              type="primary"
               centered
               to={`/editor/${listId}/add/allies`}
               icon="add"
@@ -585,6 +599,7 @@ export const Editor = ({ isMobile }) => {
               />
 
               <Button
+                type="primary"
                 centered
                 to={`/editor/${listId}/add/mercenaries`}
                 icon="add"

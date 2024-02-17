@@ -816,17 +816,28 @@
         {
           "name_en": "Veteran (champion)",
           "name_de": "Veteran (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Pistol",
-          "name_de": "Veteran (champion), Pistol",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Brace of pistols",
-          "name_de": "Veteran (champion), Brace of pistols",
-          "points": 10
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -894,17 +905,28 @@
         {
           "name_en": "Veteran (champion)",
           "name_de": "Veteran (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Pistol",
-          "name_de": "Veteran (champion), Pistol",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Brace of pistols",
-          "name_de": "Veteran (champion), Brace of pistols",
-          "points": 10
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Handgun",
+              "name_de": "Handgun",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -978,17 +1000,28 @@
         {
           "name_en": "Ol' Deadeye (champion)",
           "name_de": "Ol' Deadeye (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Pistol",
-          "name_de": "Ol' Deadeye (champion), Pistol",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Brace of pistols",
-          "name_de": "Ol' Deadeye (champion), Brace of pistols",
-          "points": 11
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1258,30 +1291,33 @@
           "magic": {
             "types": ["weapon-runes"],
             "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Ironbeard (champion), Brace of drakefire pistols",
-          "name_de": "Ironbeard (champion), Brace of drakefire pistols",
-          "points": 17,
-          "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Ironbeard (champion), Drakegun",
-          "name_de": "Ironbeard (champion), Ironbeard",
-          "points": 17,
-          "magic": {
-            "types": ["weapon-runes"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Cinderblast bombs (for Ironbeard)",
-          "name_de": "Cinderblast bombs (for Ironbeard)",
-          "points": 15
+          },
+          "options": [
+            {
+              "name_en": "Shield",
+              "name_de": "Shield",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of drakefire pistols",
+              "name_de": "Brace of drakefire pistols",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Drakegun",
+              "name_de": "Drakegun",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Cinderblast bombs",
+              "name_de": "Cinderblast bombs",
+              "points": 15
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1345,12 +1381,14 @@
         {
           "name_en": "Prospector (champion)",
           "name_de": "Prospector (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Prospector (champion), Steam drill",
-          "name_de": "Prospector (champion), Steam drill",
-          "points": 26
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Steam drill",
+              "name_de": "Steam drill",
+              "points": 20
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1702,17 +1740,28 @@
         {
           "name_en": "Ol' Deadeye (champion)",
           "name_de": "Ol' Deadeye (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Pistol",
-          "name_de": "Ol' Deadeye (champion), Pistol",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Brace of pistols",
-          "name_de": "Ol' Deadeye (champion), Brace of pistols",
-          "points": 11
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1797,22 +1846,33 @@
         {
           "name_en": "Ironwarden (champion)",
           "name_de": "Ironwarden (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ironwarden (champion), Brace of drakefire pistols",
-          "name_de": "Ironwarden (champion), Brace of drakefire pistols",
-          "points": 11
-        },
-        {
-          "name_en": "Ironwarden (champion), Trollhammer torpedo",
-          "name_de": "Ironwarden (champion), Trollhammer torpedo",
-          "points": 21
-        },
-        {
-          "name_en": "Cinderblast bombs (for Ironwarden)",
-          "name_de": "Cinderblast bombs (for Ironwarden)",
-          "points": 15
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Drakegun",
+              "name_de": "Drakegun",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of drakefire pistols",
+              "name_de": "Brace of drakefire pistols",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Trollhammer torpedo",
+              "name_de": "Trollhammer torpedo",
+              "points": 15,
+              "exclusive": true
+            },
+            {
+              "name_en": "Cinderblast bombs",
+              "name_de": "Cinderblast bombs",
+              "points": 15
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1855,6 +1915,12 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true
+        },
+        {
+          "name_en": "Detachment",
+          "name_de": "Detachment",
+          "name_fr": "Détachement",
+          "points": 0
         }
       ],
       "mounts": [],

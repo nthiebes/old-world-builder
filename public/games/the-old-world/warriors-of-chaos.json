@@ -2093,25 +2093,31 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Handler with Hand weapon",
-          "name_de": "Handler with Hand weapon",
-          "name_es": "Handler with Hand weapon",
-          "name_fr": "Handler with Hand weapon",
-          "points": 15
-        },
-        {
-          "name_en": "Handler with Additional Hand weapon",
-          "name_de": "Handler with Additional Hand weapon",
-          "name_es": "Handler with Additional Hand weapon",
-          "name_fr": "Handler with Additional Hand weapon",
-          "points": 15
-        },
-        {
-          "name_en": "Handler with Whip",
-          "name_de": "Handler with Whip",
-          "name_es": "Handler with Whip",
-          "name_fr": "Handler with Whip",
-          "points": 15
+          "name_en": "Handler",
+          "name_de": "Handler",
+          "name_es": "Handler",
+          "name_fr": "Handler",
+          "points": 15,
+          "options": [
+            {
+              "name_en": "Hand weapon",
+              "name_de": "Hand weapon",
+              "points": 0,
+              "active": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "name_de": "Additional hand weapon",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Whip",
+              "name_de": "Whip",
+              "points": 0,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "equipment": [

@@ -41,6 +41,7 @@ export const Export = ({ isMobile }) => {
   const [shareError, setShareError] = useState(false);
   const [shareOwbError, setOwbShareError] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
+  const [showStats, setShowStats] = useState(false);
   const [isCompactList, setIsCompactList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(false);
   // const [isMarkdownList, setIsMarkdownList] = useState(false);
@@ -55,6 +56,7 @@ export const Export = ({ isMobile }) => {
         showSpecialRules,
         intl,
         language,
+        showStats,
       })
     : "";
   const copyText = () => {
@@ -197,6 +199,18 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="specialRules" className="checkbox__label">
             <FormattedMessage id="export.specialRules" />
+          </label>
+        </div>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="showStats"
+            onChange={() => setShowStats(!showStats)}
+            checked={showStats}
+            className="checkbox__input"
+          />
+          <label htmlFor="showStats" className="checkbox__label">
+            <FormattedMessage id="export.showStats" />
           </label>
         </div>
         <p className="export__description"></p>

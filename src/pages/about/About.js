@@ -4,7 +4,6 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
 import { loadScript } from "../../utils/script";
 
 import "./About.css";
@@ -15,9 +14,7 @@ export const About = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]);
 
-  useEffect(() => {
     loadScript("https://www.paypalobjects.com/donate/sdk/donate-sdk.js", () => {
       window.PayPal.Donation.Button({
         env: "production",
@@ -29,7 +26,7 @@ export const About = () => {
         },
       }).render("#donate-button");
     });
-  }, []);
+  }, [location.pathname]);
 
   return (
     <>
@@ -40,13 +37,9 @@ export const About = () => {
         <link rel="canonical" href="https://old-world-builder.com/about" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation />
+      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact>
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
-
         <h2 className="page-headline">
           <FormattedMessage id="about.title" />
         </h2>
@@ -103,6 +96,9 @@ export const About = () => {
               ),
             }}
           />
+        </p>
+        <p>
+          <FormattedMessage id="about.community" />
         </p>
         <p>
           <FormattedMessage

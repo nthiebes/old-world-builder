@@ -130,13 +130,9 @@ export const Datasets = ({ isMobile }) => {
         <link rel="canonical" href="https://old-world-builder.com/datasets" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation />
+      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main className="datasets">
-        <Button to="/" icon="home" centered spaceBottom>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
-
         <div className="datasets__info">
           <h2 className="page-headline">Datasets Editor</h2>
           <p className="datasets__paragraph">

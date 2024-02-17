@@ -9,9 +9,13 @@
 }
 
 @media screen {
-  .print,
-  .print-footer {
-    display: none;
+  .print {
+    background-color: #fff;
+    margin: 1rem;
+  }
+
+  .hide-for-printing {
+    padding: 5rem 1rem 0 1rem;
   }
 }
 
@@ -72,20 +76,6 @@
   text-align: center;
 }
 
-.print-info,
-.print-checkbox-description {
-  text-align: center;
-}
-
-.print-checkbox {
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.print-checkbox .checkbox__label {
-  width: auto;
-}
-
 .print__special-rules {
-  margin-top: 0.5rem;
+  margin-top: 5px;
 }

@@ -98,7 +98,7 @@ export const Import = ({ isMobile }) => {
               <FormattedMessage id="export.error" />
             </p>
           )}
-          <Button centered icon="add-list" submitButton spaceTop>
+          <Button centered icon="add-list" submitButton spaceTop size="large">
             <FormattedMessage id="import.button" />
           </Button>
         </form>

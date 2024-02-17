@@ -4,7 +4,6 @@ import { FormattedMessage, FormattedDate, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
-import { Button } from "../../components/button";
 
 import "./Changelog.css";
 
@@ -27,15 +26,94 @@ export const Changelog = () => {
         <link rel="canonical" href="https://old-world-builder.com/changelog" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation />
+      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact className="changelog">
-        <Button to="/" icon="home" centered>
-          <FormattedMessage id="misc.startpage" />
-        </Button>
         <h2 className="page-headline">
           <FormattedMessage id="changelog.title" />
         </h2>
+
+        <hr />
+
+        <h3>v1.0</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2024-02-18 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change28"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change29"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change30"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change31"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change32"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change33"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change34"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change35"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
 
         <hr />
 
@@ -279,7 +357,7 @@ export const Changelog = () => {
               values={{ b: (msg) => <b>{msg}</b> }}
             />
           </li>
-          <li className="changelog__outdated">
+          <li>
             <FormattedMessage
               id="changelog.change10"
               values={{

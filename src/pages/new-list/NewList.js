@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
+import { useLanguage } from "../../utils/useLanguage";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
@@ -21,6 +22,7 @@ export const NewList = ({ isMobile }) => {
   const location = useLocation();
   const dispatch = useDispatch();
   const intl = useIntl();
+  const { language } = useLanguage();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState("the-old-world");
   const [army, setArmy] = useState(
@@ -33,11 +35,15 @@ export const NewList = ({ isMobile }) => {
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
+  const listsPoints = [...lists.map((list) => list.points)].reverse();
+  const quickActions = lists.length
+    ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
+    : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
     const newList = {
       "warhammer-fantasy": {
-        name: name,
+        name: name || nameMap[army][language] || nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -50,7 +56,7 @@ export const NewList = ({ isMobile }) => {
         id: newId,
       },
       "the-old-world": {
-        name: name,
+        name: name || nameMap[army][language] || nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -98,6 +104,10 @@ export const NewList = ({ isMobile }) => {
     event.preventDefault();
     createList();
   };
+  const handleQuickActionClick = (event) => {
+    event.preventDefault();
+    setPoints(Number(event.target.value));
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -131,56 +141,21 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
+                disabled={id === "warhammer-fantasy"}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
-                  <img height="20" src={warhammerFantasy} alt={name} />
+                  <>
+                    <img height="20" src={warhammerFantasy} alt={name} />
+                    <p className="new-list__beta">(8.Edition)</p>
+                  </>
                 )}
                 {id === "the-old-world" && (
-                  <>
-                    <img height="35" src={warhammerTheOldWorld} alt={name} />
-                    <p className="new-list__beta">Beta</p>
-                  </>
+                  <img height="35" src={warhammerTheOldWorld} alt={name} />
                 )}
               </label>
             </div>
           ))}
-          <label htmlFor="name">
-            <FormattedMessage id="misc.name" />
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="input"
-            value={name}
-            onChange={handleNameChange}
-            autoComplete="off"
-            required
-            maxLength="100"
-          />
-          <label htmlFor="description">
-            <FormattedMessage id="misc.description" />
-          </label>
-          <input
-            type="text"
-            id="description"
-            className="input"
-            value={description}
-            onChange={handleDescriptionChange}
-            autoComplete="off"
-            maxLength="255"
-          />
-          <label htmlFor="points">
-            <FormattedMessage id="misc.points" />
-          </label>
-          <NumberInput
-            id="points"
-            min={0}
-            value={points}
-            onChange={handlePointsChange}
-            required
-            interval={50}
-          />
           <label htmlFor="army">
             <FormattedMessage id="new.army" />
           </label>
@@ -218,7 +193,65 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
-          <Button centered icon="add-list" submitButton spaceBottom>
+          <label htmlFor="points">
+            <FormattedMessage id="misc.points" />
+          </label>
+          <NumberInput
+            id="points"
+            min={0}
+            value={points}
+            onChange={handlePointsChange}
+            required
+            interval={50}
+          />
+          <p className="new-list__quick-actions">
+            <i className="new-list__quick-actions-label">{"Vorschläge: "}</i>
+            {quickActions.map((points, index) => (
+              <Button
+                type="tertiary"
+                size="small"
+                color="dark"
+                className="new-list__quick-action"
+                value={points}
+                onClick={handleQuickActionClick}
+                key={index}
+              >
+                {points}
+              </Button>
+            ))}
+          </p>
+
+          <label htmlFor="name">
+            <FormattedMessage id="misc.name" />
+          </label>
+          <input
+            type="text"
+            id="name"
+            className="input"
+            value={name}
+            onChange={handleNameChange}
+            autoComplete="off"
+            maxLength="100"
+          />
+          <label htmlFor="description">
+            <FormattedMessage id="misc.description" />
+          </label>
+          <input
+            type="text"
+            id="description"
+            className="input"
+            value={description}
+            onChange={handleDescriptionChange}
+            autoComplete="off"
+            maxLength="255"
+          />
+          <Button
+            centered
+            icon="add-list"
+            submitButton
+            spaceBottom
+            size="large"
+          >
             <FormattedMessage id="new.create" />
           </Button>
         </form>

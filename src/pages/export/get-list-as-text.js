@@ -10,6 +10,7 @@ const getUnitsString = ({
   showSpecialRules,
   intl,
   language,
+  showStats,
 }) => {
   return units
     .map((unit) => {
@@ -33,6 +34,12 @@ const getUnitsString = ({
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
         }\n`;
       }
+      if (showStats) {
+        // prettier-ignore
+        optionsString += `
+${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ws"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.bs"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.s"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.t"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.w"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.i"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.a"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ld"})}(${'\xa0'})
+`;
+      }
 
       // prettier-ignore
       return `${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
@@ -52,6 +59,7 @@ export const getListAsText = ({
   intl,
   language,
   showSpecialRules,
+  showStats,
 }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
@@ -105,7 +113,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.characters,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -126,7 +134,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.lords,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -168,7 +176,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.core,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -189,7 +197,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.special,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -210,7 +218,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.rare,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -231,7 +239,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.mercenaries,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 
@@ -252,7 +260,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       units: list.allies,
       isShowList,
       intl,
-      language,
+      language,showStats
     })}`;
   }
 

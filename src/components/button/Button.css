@@ -54,6 +54,30 @@
   color: var(--color-button);
 }
 
+.button--tertiary,
+.button--tertiary:visited,
+.input[type="file"]::file-selector-button {
+  background-color: transparent;
+  border: 1px solid var(--color-button-secondary);
+  color: var(--color-font);
+  font-weight: normal;
+}
+
+@media (hover: hover) {
+  .button--tertiary:hover,
+  .input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-button-secondary);
+    color: var(--color-font-light);
+  }
+}
+
+.button--tertiary:focus,
+.button--tertiary:active,
+.input[type="file"]::file-selector-button:active {
+  background-color: var(--color-button-secondary);
+  color: var(--color-font-light);
+}
+
 .button--text,
 .button--text:visited {
   background-color: transparent;
@@ -97,6 +121,17 @@
   height: auto;
   padding: 2px;
 }
+
+.button--large {
+  width: 100%;
+  height: 48px;
+}
+
+/* @media (min-width: 1280px) { */
+.button--large {
+  max-width: 25rem;
+}
+/* } */
 
 .button__icon {
   margin-right: 0.5rem;
