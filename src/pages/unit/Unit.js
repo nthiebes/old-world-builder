@@ -24,7 +24,7 @@ import { setArmy } from "../../state/army";
 import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { updateIds, getRandomId } from "../../utils/id";
+import { updateIds } from "../../utils/id";
 import { normalizeRuleName } from "../../utils/string";
 
 import "./Unit.css";
@@ -43,11 +43,19 @@ export const Unit = ({ isMobile }) => {
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
   const army = useSelector((state) => state.army);
-  const detachments =
-    army &&
-    [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment
+  const detachmentActive =
+    unit &&
+    unit?.options?.length > 0 &&
+    Boolean(
+      unit.options.find(
+        (option) => option.name_en === "Detachment" && option.active
+      )
     );
+  // const detachments =
+  //   army &&
+  //   [...army.core, ...army.special, ...army.rare].filter(
+  //     (coreUnit) => coreUnit.detachment
+  //   );
   const handleRulesClick = ({ name }) => {
     dispatch(openRulesIndex({ activeRule: name }));
   };
@@ -89,100 +97,100 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const handleAddDetachmentClick = ({ id }) => {
-    const detachment = detachments.find((detachment) => detachment.id === id);
-    const unitDetachments = unit.detachments ? [...unit.detachments] : [];
+  // const handleAddDetachmentClick = ({ id }) => {
+  //   const detachment = detachments.find((detachment) => detachment.id === id);
+  //   const unitDetachments = unit.detachments ? [...unit.detachments] : [];
 
-    unitDetachments.push({
-      id: `${id}.${getRandomId()}`,
-      name_de: detachment.name_de,
-      name_en: detachment.name_en,
-      points: detachment.points,
-      strength: detachment.minDetachmentSize || 5,
-      minDetachmentSize: detachment.minDetachmentSize || 5,
-      maxDetachmentSize: detachment.maxDetachmentSize,
-      equipment: detachment.equipment,
-      armor: detachment.armor,
-      options: detachment.options,
-    });
+  //   unitDetachments.push({
+  //     id: `${id}.${getRandomId()}`,
+  //     name_de: detachment.name_de,
+  //     name_en: detachment.name_en,
+  //     points: detachment.points,
+  //     strength: detachment.minDetachmentSize || 5,
+  //     minDetachmentSize: detachment.minDetachmentSize || 5,
+  //     maxDetachmentSize: detachment.maxDetachmentSize,
+  //     equipment: detachment.equipment,
+  //     armor: detachment.armor,
+  //     options: detachment.options,
+  //   });
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDeleteDetachmentClick = ({ id }) => {
-    const unitDetachments = [...unit.detachments].filter(
-      (detachment) => detachment.id !== id
-    );
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDeleteDetachmentClick = ({ id }) => {
+  //   const unitDetachments = [...unit.detachments].filter(
+  //     (detachment) => detachment.id !== id
+  //   );
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDetachmentStrengthClick = ({ id, strength }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) =>
-      detachment.id === id ? { ...detachment, strength } : detachment
-    );
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDetachmentStrengthClick = ({ id, strength }) => {
+  //   const unitDetachments = [...unit.detachments].map((detachment) =>
+  //     detachment.id === id ? { ...detachment, strength } : detachment
+  //   );
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
-  const handleDetachmentEquipmentChange = ({
-    detachmentId,
-    equipmentId,
-    category,
-    isCheckbox,
-  }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) => {
-      if (detachment.id === detachmentId) {
-        const equipment = detachment[category].map((item) => {
-          let active = false;
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
+  // const handleDetachmentEquipmentChange = ({
+  //   detachmentId,
+  //   equipmentId,
+  //   category,
+  //   isCheckbox,
+  // }) => {
+  //   const unitDetachments = [...unit.detachments].map((detachment) => {
+  //     if (detachment.id === detachmentId) {
+  //       const equipment = detachment[category].map((item) => {
+  //         let active = false;
 
-          if (isCheckbox && item.id === equipmentId) {
-            active = !item.active;
-          } else if (item.id === equipmentId) {
-            active = true;
-          } else if (isCheckbox) {
-            active = item.active;
-          }
+  //         if (isCheckbox && item.id === equipmentId) {
+  //           active = !item.active;
+  //         } else if (item.id === equipmentId) {
+  //           active = true;
+  //         } else if (isCheckbox) {
+  //           active = item.active;
+  //         }
 
-          return {
-            ...item,
-            active,
-          };
-        });
+  //         return {
+  //           ...item,
+  //           active,
+  //         };
+  //       });
 
-        return { ...detachment, [category]: equipment };
-      }
+  //       return { ...detachment, [category]: equipment };
+  //     }
 
-      return detachment;
-    });
+  //     return detachment;
+  //   });
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      })
-    );
-  };
+  //   dispatch(
+  //     editUnit({
+  //       listId,
+  //       type,
+  //       unitId,
+  //       detachments: unitDetachments,
+  //     })
+  //   );
+  // };
   const handleOptionsChange = (id) => {
     const options = unit.options.map((option) => {
       if (option.id === id) {
@@ -519,6 +527,7 @@ export const Unit = ({ isMobile }) => {
                         onChange={() => handleCommandChange(id)}
                         checked={active}
                         className="checkbox__input"
+                        disabled={detachmentActive}
                       />
                       <label
                         htmlFor={`command-${id}`}
@@ -539,6 +548,7 @@ export const Unit = ({ isMobile }) => {
                           to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                           className="editor__list unit__link unit__command-list"
                           active={location.pathname.includes(`magic/${index}`)}
+                          disabled={detachmentActive}
                         >
                           <div className="editor__list-inner">
                             <b>
@@ -618,9 +628,10 @@ export const Unit = ({ isMobile }) => {
                                 checked={Boolean(option.active)}
                                 className="checkbox__input"
                                 disabled={
-                                  exclusiveCheckedOption &&
-                                  option.exclusive &&
-                                  !option.active
+                                  (exclusiveCheckedOption &&
+                                    option.exclusive &&
+                                    !option.active) ||
+                                  detachmentActive
                                 }
                               />
                               <label
@@ -775,7 +786,7 @@ export const Unit = ({ isMobile }) => {
             )}
           </>
         )}
-        {unit.regimentalUnit && (
+        {/* {unit.regimentalUnit && (
           <>
             <h2 className="unit__subline unit__detachments-headline">
               <FormattedMessage id="unit.detachments" />
@@ -990,7 +1001,7 @@ export const Unit = ({ isMobile }) => {
               </Fragment>
             ))}
           </>
-        )}
+        )} */}
         {unit.mounts && unit.mounts.length > 0 && (
           <>
             <h2 className="unit__subline">

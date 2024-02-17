@@ -6,7 +6,10 @@ import classNames from "classnames";
 import "./List.css";
 
 export const ListItem = forwardRef(
-  ({ to, onClick, children, className, active, ...attributes }, ref) => {
+  (
+    { to, onClick, children, className, active, disabled, ...attributes },
+    ref
+  ) => {
     const Component = to ? Link : "button";
 
     return (
@@ -15,7 +18,14 @@ export const ListItem = forwardRef(
         ref={ref}
         className={classNames("list", active && "list--active", className)}
       >
-        <Component to={to} className="list__inner" onClick={onClick}>
+        <Component
+          to={to}
+          className={classNames(
+            "list__inner",
+            disabled && "list__inner--disabled"
+          )}
+          onClick={onClick}
+        >
           {children}
         </Component>
       </li>
@@ -29,4 +39,5 @@ ListItem.propTypes = {
   onClick: PropTypes.func,
   to: PropTypes.string,
   active: PropTypes.bool,
+  disabled: PropTypes.bool,
 };

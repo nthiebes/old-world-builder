@@ -46,7 +46,7 @@
   }
 }
 
-.list[dragging]>.list__inner::before,
+.list[dragging] > .list__inner::before,
 .list__inner:focus::before,
 .list__inner:active::before {
   opacity: 1;
@@ -71,4 +71,10 @@
     border-bottom: 15px solid transparent;
     border-left: 15px solid var(--color-list);
   }
+}
+
+.list__inner--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: initial;
 }

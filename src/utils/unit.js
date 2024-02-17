@@ -15,9 +15,14 @@ export const getAllOptions = (
   { asString, noMagic, language: overrideLanguage } = {}
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
+  const detachmentActive =
+    options?.length > 0 &&
+    Boolean(
+      options.find((option) => option.name_en === "Detachment" && option.active)
+    );
   const allCommand = [];
 
-  if (command) {
+  if (command && !detachmentActive) {
     command.forEach(({ active, magic, name_en, options, ...entry }) => {
       if (active) {
         let commandEntry = entry[`name_${language}`] || name_en;
