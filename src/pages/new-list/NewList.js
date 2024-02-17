@@ -147,7 +147,9 @@ export const NewList = ({ isMobile }) => {
                 {id === "warhammer-fantasy" && (
                   <>
                     <img height="20" src={warhammerFantasy} alt={name} />
-                    <p className="new-list__beta">(8.Edition)</p>
+                    <p className="new-list__beta">
+                      <FormattedMessage id="new.8th" />
+                    </p>
                   </>
                 )}
                 {id === "the-old-world" && (
