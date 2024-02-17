@@ -1,0 +1,22 @@
+.stats {
+  text-align: center;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+
+.stats th,
+.stats td {
+  width: 36px;
+  height: 2rem;
+  padding: 3px;
+}
+
+.stats th {
+  padding-bottom: 0;
+  font-style: italic;
+}
+
+.stats td {
+  border: 1px solid var(--color-background);
+  background-color: var(--color-list);
+}

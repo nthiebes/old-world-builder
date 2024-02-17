@@ -5,6 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
+import { Stats } from "../../components/stats";
 import {
   RulesIndex,
   RulesLinksText,
@@ -23,6 +24,7 @@ export const GameView = () => {
   const intl = useIntl();
   const [showPoints, setShowPoints] = useState(true);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
+  const [showStats, setShowStats] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -62,6 +64,16 @@ export const GameView = () => {
       checked: showSpecialRules,
       callback: () => {
         setShowSpecialRules(!showSpecialRules);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "export.showStats",
+      }),
+      id: "stats",
+      checked: showStats,
+      callback: () => {
+        setShowStats(!showStats);
       },
     },
     {
@@ -116,6 +128,22 @@ export const GameView = () => {
                     <RulesLinksText textObject={unit.specialRules} />
                   </p>
                 ) : null}
+                {showStats && (
+                  <Stats
+                    values={{
+                      name: "",
+                      M: "",
+                      WS: "",
+                      BS: "",
+                      S: "",
+                      T: "",
+                      W: "",
+                      I: "",
+                      A: "",
+                      LD: "",
+                    }}
+                  />
+                )}
               </div>
             </div>
           </li>
