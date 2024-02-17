@@ -6,17 +6,26 @@
 
 .stats th,
 .stats td {
-  width: 36px;
-  height: 2rem;
-  padding: 3px;
+  width: 30px;
+  height: 30px;
 }
 
 .stats th {
-  padding-bottom: 0;
+  padding: 0;
   font-style: italic;
 }
 
 .stats td {
+  padding: 3px 5px;
   border: 1px solid var(--color-background);
   background-color: var(--color-list);
+}
+
+.stats--print-page {
+  border-spacing: 2px;
+}
+
+.stats--print-page td {
+  border: 1px solid var(--color-font);
+  background-color: transparent;
 }

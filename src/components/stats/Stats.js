@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
 
 import "./Stats.css";
 
-export const Stats = ({ values }) => {
+export const Stats = ({ values, isPrintPage }) => {
   return (
-    <table className="stats">
+    <table className={classNames("stats", isPrintPage && "stats--print-page")}>
       <thead>
         <tr>
           <th>

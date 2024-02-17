@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { FormattedMessage } from "react-intl";
 
 import { Button } from "../../components/button";
+import { Stats } from "../../components/stats";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
@@ -17,7 +18,8 @@ export const Print = () => {
   const { language } = useLanguage();
   const [isPrinting, setIsPrinting] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
-  const [showSpecialRules, setShowSpecialRules] = useState(false);
+  const [showSpecialRules, setShowSpecialRules] = useState(true);
+  const [showStats, setShowStats] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -51,6 +53,60 @@ export const Print = () => {
       setIsPrinting(false);
     };
     window.print();
+  };
+  const getSection = ({ type }) => {
+    const units = list[type];
+
+    return (
+      <ul>
+        {units.map((unit) => (
+          <li key={unit.id}>
+            <h3>
+              {unit.strength || unit.minimum ? (
+                <span className="print__strength">
+                  {`${unit.strength || unit.minimum} `}
+                </span>
+              ) : null}
+              {unit[`name_${language}`] || unit.name_en}
+              {!isShowList && (
+                <span className="print__points">
+                  [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h3>
+            {getAllOptions(unit, { noMagic: isShowList })}
+            {showSpecialRules && unit.specialRules ? (
+              <p className="print__special-rules">
+                <i>
+                  <b>
+                    <FormattedMessage id="unit.specialRules" />:
+                  </b>{" "}
+                  {unit.specialRules[`name_${language}`] ||
+                    unit.specialRules.name_en}
+                </i>
+              </p>
+            ) : null}
+            {showStats && (
+              <Stats
+                isPrintPage
+                values={{
+                  name: "",
+                  M: "",
+                  WS: "",
+                  BS: "",
+                  S: "",
+                  T: "",
+                  W: "",
+                  I: "",
+                  A: "",
+                  LD: "",
+                }}
+              />
+            )}
+          </li>
+        ))}
+      </ul>
+    );
   };
 
   return (
@@ -101,7 +157,18 @@ export const Print = () => {
                 <FormattedMessage id="export.specialRules" />
               </label>
             </div>
-            <p className="print-checkbox-description"></p>
+            <div className="checkbox print-checkbox">
+              <input
+                type="checkbox"
+                id="showStats"
+                onChange={() => setShowStats(!showStats)}
+                checked={showStats}
+                className="checkbox__input"
+              />
+              <label htmlFor="showStats" className="checkbox__label">
+                <FormattedMessage id="export.showStats" />
+              </label>
+            </div>
             <Button
               onClick={handlePrintClick}
               centered
@@ -141,33 +208,7 @@ export const Print = () => {
                   </span>
                 )}
               </h2>
-              <ul>
-                {list.characters.map((unit) => (
-                  <li key={unit.id}>
-                    <h3>
-                      {unit[`name_${language}`] || unit.name_en}
-                      {!isShowList && (
-                        <span className="print__points">
-                          [{getUnitPoints(unit)}{" "}
-                          <FormattedMessage id="app.points" />]
-                        </span>
-                      )}
-                    </h3>
-                    {getAllOptions(unit, { noMagic: isShowList })}
-                    {showSpecialRules && unit.specialRules ? (
-                      <p className="print__special-rules">
-                        <b>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </b>{" "}
-                        <i>
-                          {unit.specialRules[`name_${language}`] ||
-                            unit.specialRules.name_en}
-                        </i>
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
+              {getSection({ type: "characters" })}
             </section>
           )
         ) : (
@@ -182,33 +223,7 @@ export const Print = () => {
                     </span>
                   )}
                 </h2>
-                <ul>
-                  {list.lords.map((unit) => (
-                    <li key={unit.id}>
-                      <h3>
-                        {unit[`name_${language}`] || unit.name_en}
-                        {!isShowList && (
-                          <span className="print__points">
-                            [{getUnitPoints(unit)}{" "}
-                            <FormattedMessage id="app.points" />]
-                          </span>
-                        )}
-                      </h3>
-                      {getAllOptions(unit, { noMagic: isShowList })}
-                      {showSpecialRules && unit.specialRules ? (
-                        <p className="print__special-rules">
-                          <b>
-                            <FormattedMessage id="unit.specialRules" />:
-                          </b>{" "}
-                          <i>
-                            {unit.specialRules[`name_${language}`] ||
-                              unit.specialRules.name_en}
-                          </i>
-                        </p>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                {getSection({ type: "lords" })}
               </section>
             )}
 
@@ -222,33 +237,7 @@ export const Print = () => {
                     </span>
                   )}
                 </h2>
-                <ul>
-                  {list.heroes.map((unit) => (
-                    <li key={unit.id}>
-                      <h3>
-                        {unit[`name_${language}`] || unit.name_en}
-                        {!isShowList && (
-                          <span className="print__points">
-                            [{getUnitPoints(unit)}{" "}
-                            <FormattedMessage id="app.points" />]
-                          </span>
-                        )}
-                      </h3>
-                      {getAllOptions(unit, { noMagic: isShowList })}
-                      {showSpecialRules && unit.specialRules ? (
-                        <p className="print__special-rules">
-                          <b>
-                            <FormattedMessage id="unit.specialRules" />:
-                          </b>{" "}
-                          <i>
-                            {unit.specialRules[`name_${language}`] ||
-                              unit.specialRules.name_en}
-                          </i>
-                        </p>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                {getSection({ type: "heroes" })}
               </section>
             )}
           </>
@@ -264,38 +253,7 @@ export const Print = () => {
                 </span>
               )}
             </h2>
-            <ul>
-              {list.core.map((unit) => (
-                <li key={unit.id}>
-                  <h3>
-                    {unit.strength || unit.minimum ? (
-                      <span className="print__strength">
-                        {`${unit.strength || unit.minimum} `}
-                      </span>
-                    ) : null}
-                    {unit[`name_${language}`] || unit.name_en}
-                    {!isShowList && (
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h3>
-                  {getAllOptions(unit, { noMagic: isShowList })}
-                  {showSpecialRules && unit.specialRules ? (
-                    <p className="print__special-rules">
-                      <b>
-                        <FormattedMessage id="unit.specialRules" />:
-                      </b>{" "}
-                      <i>
-                        {unit.specialRules[`name_${language}`] ||
-                          unit.specialRules.name_en}
-                      </i>
-                    </p>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
+            {getSection({ type: "core" })}
           </section>
         )}
 
@@ -309,38 +267,7 @@ export const Print = () => {
                 </span>
               )}
             </h2>
-            <ul>
-              {list.special.map((unit) => (
-                <li key={unit.id}>
-                  <h3>
-                    {unit.strength || unit.minimum ? (
-                      <span className="print__strength">
-                        {`${unit.strength || unit.minimum} `}
-                      </span>
-                    ) : null}
-                    {unit[`name_${language}`] || unit.name_en}
-                    {!isShowList && (
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h3>
-                  {getAllOptions(unit, { noMagic: isShowList })}
-                  {showSpecialRules && unit.specialRules ? (
-                    <p className="print__special-rules">
-                      <b>
-                        <FormattedMessage id="unit.specialRules" />:
-                      </b>{" "}
-                      <i>
-                        {unit.specialRules[`name_${language}`] ||
-                          unit.specialRules.name_en}
-                      </i>
-                    </p>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
+            {getSection({ type: "special" })}
           </section>
         )}
 
@@ -354,38 +281,7 @@ export const Print = () => {
                 </span>
               )}
             </h2>
-            <ul>
-              {list.rare.map((unit) => (
-                <li key={unit.id}>
-                  <h3>
-                    {unit.strength || unit.minimum ? (
-                      <span className="print__strength">
-                        {`${unit.strength || unit.minimum} `}
-                      </span>
-                    ) : null}
-                    {unit[`name_${language}`] || unit.name_en}
-                    {!isShowList && (
-                      <span className="print__points">
-                        [{getUnitPoints(unit)}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h3>
-                  {getAllOptions(unit, { noMagic: isShowList })}
-                  {showSpecialRules && unit.specialRules ? (
-                    <p className="print__special-rules">
-                      <b>
-                        <FormattedMessage id="unit.specialRules" />:
-                      </b>{" "}
-                      <i>
-                        {unit.specialRules[`name_${language}`] ||
-                          unit.specialRules.name_en}
-                      </i>
-                    </p>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
+            {getSection({ type: "rare" })}
           </section>
         )}
 
@@ -401,38 +297,7 @@ export const Print = () => {
                     </span>
                   )}
                 </h2>
-                <ul>
-                  {list.allies.map((unit) => (
-                    <li key={unit.id}>
-                      <h3>
-                        {unit.strength || unit.minimum ? (
-                          <span className="print__strength">
-                            {`${unit.strength || unit.minimum} `}
-                          </span>
-                        ) : null}
-                        {unit[`name_${language}`] || unit.name_en}
-                        {!isShowList && (
-                          <span className="print__points">
-                            [{getUnitPoints(unit)}{" "}
-                            <FormattedMessage id="app.points" />]
-                          </span>
-                        )}
-                      </h3>
-                      {getAllOptions(unit, { noMagic: isShowList })}
-                      {showSpecialRules && unit.specialRules ? (
-                        <p className="print__special-rules">
-                          <b>
-                            <FormattedMessage id="unit.specialRules" />:
-                          </b>{" "}
-                          <i>
-                            {unit.specialRules[`name_${language}`] ||
-                              unit.specialRules.name_en}
-                          </i>
-                        </p>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                {getSection({ type: "allies" })}
               </section>
             )}
 
@@ -446,38 +311,7 @@ export const Print = () => {
                     </span>
                   )}
                 </h2>
-                <ul>
-                  {list.mercenaries.map((unit) => (
-                    <li key={unit.id}>
-                      <h3>
-                        {unit.strength || unit.minimum ? (
-                          <span className="print__strength">
-                            {`${unit.strength || unit.minimum} `}
-                          </span>
-                        ) : null}
-                        {unit[`name_${language}`] || unit.name_en}
-                        {!isShowList && (
-                          <span className="print__points">
-                            [{getUnitPoints(unit)}{" "}
-                            <FormattedMessage id="app.points" />]
-                          </span>
-                        )}
-                      </h3>
-                      {getAllOptions(unit, { noMagic: isShowList })}
-                      {showSpecialRules && unit.specialRules ? (
-                        <p className="print__special-rules">
-                          <b>
-                            <FormattedMessage id="unit.specialRules" />:
-                          </b>{" "}
-                          <i>
-                            {unit.specialRules[`name_${language}`] ||
-                              unit.specialRules.name_en}
-                          </i>
-                        </p>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                {getSection({ type: "mercenaries" })}
               </section>
             )}
           </>

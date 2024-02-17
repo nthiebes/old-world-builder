@@ -43,7 +43,7 @@ export const Changelog = () => {
           <time>
             <i>
               <FormattedDate
-                value={new Date("2024-02-16 11:11:11")}
+                value={new Date("2024-02-17 11:11:11")}
                 month="long"
                 day="2-digit"
                 year="numeric"
@@ -95,6 +95,22 @@ export const Changelog = () => {
           <li>
             <FormattedMessage
               id="changelog.change33"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change34"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change35"
               values={{
                 b: (msg) => <b>{msg}</b>,
               }}
