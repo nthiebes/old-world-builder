@@ -1815,25 +1815,34 @@
           "name_en": "Sergeant (champion)",
           "name_de": "Sergeant (champion)",
           "name_fr": "Sergent (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Sergeant (champion), Brace of pistols",
-          "name_de": "Sergeant (champion), Brace of pistols",
-          "name_fr": "Sergent (champion), Paire de pistolets",
-          "points": 10
-        },
-        {
-          "name_en": "Sergeant (champion), Hochland long rifle",
-          "name_de": "Sergeant (champion), Hochland long rifle",
-          "name_fr": "Sergent (champion), Long fusil de Hochland",
-          "points": 8
-        },
-        {
-          "name_en": "Sergeant (champion), Repeater handgun",
-          "name_de": "Sergeant (champion), Repeater handgun",
-          "name_fr": "Sergent (champion), Arquebuse à répétition",
-          "points": 8
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Crossbow/Handgun",
+              "name_de": "Crossbow/Handgun",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Hochland long rifle",
+              "name_de": "Hochland long rifle",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_de": "Repeater handgun",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -2345,25 +2354,34 @@
           "name_en": "Veteran (champion)",
           "name_de": "Veteran (champion)",
           "name_fr": "Vétéran (champion)",
-          "points": 8
-        },
-        {
-          "name_en": "Veteran (champion), Repeater pistol",
-          "name_de": "Veteran (champion), Repeater pistol",
-          "name_fr": "Vétéran (champion) avec pistolet à répétition",
-          "points": 8
-        },
-        {
-          "name_en": "Veteran (champion), Grenade launching blunderbuss",
-          "name_de": "Veteran (champion), Grenade launching blunderbuss",
-          "name_fr": "Vétéran (champion) avec Tromblon lance-grenade",
-          "points": 13
-        },
-        {
-          "name_en": "Veteran (champion), Repeater handgun",
-          "name_de": "Veteran (champion), Repeater handgun",
-          "name_fr": "Vétéran (champion) avec arquebuse à répétition",
-          "points": 13
+          "points": 8,
+          "options": [
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Grenade launching blunderbuss",
+              "name_de": "Grenade launching blunderbuss",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_de": "Repeater handgun",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_de": "Repeater pistol",
+              "points": 0,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Musician",
@@ -2432,25 +2450,34 @@
           "name_en": "Sharpshooter (champion)",
           "name_de": "Sharpshooter (champion)",
           "name_fr": "Mitrailleur (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Sharpshooter (champion), Brace of pistols",
-          "name_de": "Sharpshooter (champion), Brace of pistols",
-          "name_fr": "Mitrailleur (champion) avec paire de pistolets",
-          "points": 6
-        },
-        {
-          "name_en": "Sharpshooter (champion), Repeater pistol",
-          "name_de": "Sharpshooter (champion), Repeater pistol",
-          "name_fr": "Mitrailleur (champion) avec pistolet à répétition",
-          "points": 6
-        },
-        {
-          "name_en": "Sharpshooter (champion), Grenade launching blunderbuss",
-          "name_de": "Sharpshooter (champion), Grenade launching blunderbuss",
-          "name_fr": "Mitrailleur (champion) avec tromblon lance-grenade",
-          "points": 16
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Repeater handgun",
+              "name_de": "Repeater handgun",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Grenade launching blunderbuss",
+              "name_de": "Grenade launching blunderbuss",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_de": "Repeater pistol",
+              "points": 0,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Musician",

@@ -816,17 +816,28 @@
         {
           "name_en": "Veteran (champion)",
           "name_de": "Veteran (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Pistol",
-          "name_de": "Veteran (champion), Pistol",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Brace of pistols",
-          "name_de": "Veteran (champion), Brace of pistols",
-          "points": 10
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -894,17 +905,28 @@
         {
           "name_en": "Veteran (champion)",
           "name_de": "Veteran (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Pistol",
-          "name_de": "Veteran (champion), Pistol",
-          "points": 5
-        },
-        {
-          "name_en": "Veteran (champion), Brace of pistols",
-          "name_de": "Veteran (champion), Brace of pistols",
-          "points": 10
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Handgun",
+              "name_de": "Handgun",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -978,17 +1000,28 @@
         {
           "name_en": "Ol' Deadeye (champion)",
           "name_de": "Ol' Deadeye (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Pistol",
-          "name_de": "Ol' Deadeye (champion), Pistol",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Brace of pistols",
-          "name_de": "Ol' Deadeye (champion), Brace of pistols",
-          "points": 11
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1348,12 +1381,14 @@
         {
           "name_en": "Prospector (champion)",
           "name_de": "Prospector (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Prospector (champion), Steam drill",
-          "name_de": "Prospector (champion), Steam drill",
-          "points": 26
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Steam drill",
+              "name_de": "Steam drill",
+              "points": 20
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1705,17 +1740,28 @@
         {
           "name_en": "Ol' Deadeye (champion)",
           "name_de": "Ol' Deadeye (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Pistol",
-          "name_de": "Ol' Deadeye (champion), Pistol",
-          "points": 6
-        },
-        {
-          "name_en": "Ol' Deadeye (champion), Brace of pistols",
-          "name_de": "Ol' Deadeye (champion), Brace of pistols",
-          "points": 11
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
