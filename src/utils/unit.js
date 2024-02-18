@@ -1,4 +1,17 @@
+/** @typedef {import("../../types").Category} Category */
 import { nameMap } from "../pages/magic";
+
+/** @type {Array<Category>} */
+export const categories = [
+  "characters",
+  "lords",
+  "heroes",
+  "core",
+  "special",
+  "rare",
+  "mercenaries",
+  "allies",
+];
 
 export const getAllOptions = (
   {

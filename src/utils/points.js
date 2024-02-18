@@ -3,7 +3,7 @@
 /** @typedef {import('../../types').Unit} Unit */
 
 import { sum } from "./math";
-import { isDetachment } from "./unit";
+import { categories, isDetachment } from "./unit";
 import { getMaxPercent, getMinPercent } from "./rules";
 
 /**
@@ -102,19 +102,7 @@ export const sumCategoryPoints = (armyList, category) =>
  * @param {ArmyList} armyList
  */
 export const sumArmyListPoints = (armyList) =>
-  sum(
-    [
-      "lords",
-      "heroes",
-      "core",
-      "special",
-      "rare",
-      "characters",
-      "mercenaries",
-      "allies",
-    ],
-    (category) => sumCategoryPoints(armyList, category)
-  );
+  sum(categories, (category) => sumCategoryPoints(armyList, category));
 
 /**
  * Get the amount of points for this army list left to spend.
