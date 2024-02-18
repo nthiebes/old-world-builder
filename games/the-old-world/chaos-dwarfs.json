@@ -1084,29 +1084,21 @@
           "magic": {
             "types": ["weapon", "talisman", "armor", "enchanted-item"],
             "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Deathmask (pistol)",
-          "name_de": "Deathmask (pistol)",
-          "name_es": "Deathmask (pistol)",
-          "name_fr": "Deathmask (pistol)",
-          "points": 9,
-          "magic": {
-            "types": ["weapon", "talisman", "armor", "enchanted-item"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Deathmask (Naphta bombs)",
-          "name_de": "Deathmask (Naphta bombs)",
-          "name_es": "Deathmask (Naphta bombs)",
-          "name_fr": "Deathmask (Naphta bombs)",
-          "points": 12,
-          "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
-          }
+          },
+          "options": [
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Naptha bombs",
+              "name_de": "Naptha bombs",
+              "points": 6,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1203,6 +1195,12 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Detachment",
+          "name_de": "Detachment",
+          "name_fr": "Détachement",
+          "points": 0
         }
       ],
       "mounts": [],
@@ -1445,7 +1443,21 @@
           "magic": {
             "types": ["weapon", "talisman", "armor", "enchanted-item"],
             "maxPoints": 25
-          }
+          },
+          "options": [
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Naptha bombs",
+              "name_de": "Naptha bombs",
+              "points": 6,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1464,28 +1476,6 @@
           "name_es": "Musician",
           "name_fr": "Musician",
           "points": 7
-        },
-        {
-          "name_en": "Overseer (Pistol)",
-          "name_de": "Overseer (Pistol)",
-          "name_es": "Overseer (Pistol)",
-          "name_fr": "Overseer (Pistol)",
-          "points": 10,
-          "magic": {
-            "types": ["weapon", "talisman", "armor", "enchanted-item"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Overseer (Naphta bombs)",
-          "name_de": "Overseer (Naphta bombs)",
-          "name_es": "Overseer (Naphta bombs)",
-          "name_fr": "Overseer (Naphta bombs)",
-          "points": 13,
-          "magic": {
-            "types": ["weapon", "talisman", "armor", "enchanted-item"],
-            "maxPoints": 25
-          }
         }
       ],
       "equipment": [

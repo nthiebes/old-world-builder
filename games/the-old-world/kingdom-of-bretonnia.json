@@ -889,13 +889,15 @@
           "name_de": "Grail Monk",
           "name_en": "Grail Monk",
           "name_fr": "Moine du Graal",
-          "points": 7
-        },
-        {
-          "name_de": "Grail Monk with Blessed Triptych",
-          "name_en": "Grail Monk with Blessed Triptych",
-          "name_fr": "Moine du Graal avec Triptyque Béni",
-          "points": 32
+          "points": 7,
+          "options": [
+            {
+              "name_en": "Blessed Triptych",
+              "name_de": "Blessed Triptych",
+              "points": 25,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "equipment": [
@@ -1289,13 +1291,15 @@
           "name_fr": "Moine du Graal",
           "name_de": "Grail Monk",
           "name_es": "Grail Monk",
-          "points": 7
-        },
-        {
-          "name_de": "Grail Monk with Blessed Triptych",
-          "name_en": "Grail Monk with Blessed Triptych",
-          "name_fr": "Moine du Graal avec Triptyque Béni",
-          "points": 32
+          "points": 7,
+          "options": [
+            {
+              "name_en": "Blessed Triptych",
+              "name_de": "Blessed Triptych",
+              "points": 25,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
