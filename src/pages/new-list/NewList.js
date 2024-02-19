@@ -207,7 +207,10 @@ export const NewList = ({ isMobile }) => {
             interval={50}
           />
           <p className="new-list__quick-actions">
-            <i className="new-list__quick-actions-label">{"Vorschläge: "}</i>
+            <i className="new-list__quick-actions-label">
+              <FormattedMessage id="misc.suggestions" />
+              {": "}
+            </i>
             {quickActions.map((points, index) => (
               <Button
                 type="tertiary"
