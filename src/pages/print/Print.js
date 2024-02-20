@@ -6,9 +6,11 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Header } from "../../components/page";
 import { Button } from "../../components/button";
 import { Stats } from "../../components/stats";
+import { rulesMap, synonyms } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
+import { normalizeRuleName } from "../../utils/string";
 import { nameMap } from "../magic";
 import gameSystems from "../../assets/armies.json";
 
@@ -102,52 +104,63 @@ export const Print = () => {
 
     return (
       <ul>
-        {units.map((unit) => (
-          <li key={unit.id}>
-            <h3>
-              {unit.strength || unit.minimum ? (
-                <span className="print__strength">
-                  {`${unit.strength || unit.minimum} `}
-                </span>
+        {units.map((unit) => {
+          const normalizedName = normalizeRuleName(unit.name_en);
+          const synonym = synonyms[normalizedName];
+          const stats = rulesMap[synonym || normalizedName]?.stats;
+
+          return (
+            <li key={unit.id}>
+              <h3>
+                {unit.strength || unit.minimum ? (
+                  <span className="print__strength">
+                    {`${unit.strength || unit.minimum} `}
+                  </span>
+                ) : null}
+                {unit[`name_${language}`] || unit.name_en}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h3>
+              {getAllOptions(unit, { noMagic: isShowList })}
+              {showSpecialRules && unit.specialRules ? (
+                <p className="print__special-rules">
+                  <i>
+                    <b>
+                      <FormattedMessage id="unit.specialRules" />:
+                    </b>{" "}
+                    {unit.specialRules[`name_${language}`] ||
+                      unit.specialRules.name_en}
+                  </i>
+                </p>
               ) : null}
-              {unit[`name_${language}`] || unit.name_en}
-              {!isShowList && (
-                <span className="print__points">
-                  [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h3>
-            {getAllOptions(unit, { noMagic: isShowList })}
-            {showSpecialRules && unit.specialRules ? (
-              <p className="print__special-rules">
-                <i>
-                  <b>
-                    <FormattedMessage id="unit.specialRules" />:
-                  </b>{" "}
-                  {unit.specialRules[`name_${language}`] ||
-                    unit.specialRules.name_en}
-                </i>
-              </p>
-            ) : null}
-            {showStats && (
-              <Stats
-                isPrintPage
-                values={{
-                  name: "",
-                  M: "",
-                  WS: "",
-                  BS: "",
-                  S: "",
-                  T: "",
-                  W: "",
-                  I: "",
-                  A: "",
-                  LD: "",
-                }}
-              />
-            )}
-          </li>
-        ))}
+              {showStats &&
+                (stats?.length > 0 ? (
+                  <Stats isPrintPage values={stats} />
+                ) : (
+                  <Stats
+                    isPrintPage
+                    values={[
+                      {
+                        name: "",
+                        M: "",
+                        WS: "",
+                        BS: "",
+                        S: "",
+                        T: "",
+                        W: "",
+                        I: "",
+                        A: "",
+                        LD: "",
+                      },
+                    ]}
+                  />
+                ))}
+            </li>
+          );
+        })}
       </ul>
     );
   };

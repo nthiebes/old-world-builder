@@ -5,7 +5,7 @@ import { normalizeRuleName } from "../../utils/string";
 import { useLanguage } from "../../utils/useLanguage";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap } from "./rules-map";
+import { rulesMap, synonyms } from "./rules-map";
 
 export const RulesLinksText = ({ textObject }) => {
   const dispatch = useDispatch();
@@ -21,7 +21,8 @@ export const RulesLinksText = ({ textObject }) => {
 
   return ruleButtons.map((rule, index) => (
     <Fragment key={rule}>
-      {rulesMap[normalizeRuleName(textEn[index])] ? (
+      {rulesMap[normalizeRuleName(textEn[index])] ||
+      rulesMap[synonyms[normalizeRuleName(textEn[index])]] ? (
         <button
           className="unit__rule"
           onClick={() =>

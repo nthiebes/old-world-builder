@@ -8,7 +8,7 @@ import { Spinner } from "../../components/spinner";
 import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
-import { rulesMap } from "./rules-map";
+import { rulesMap, synonyms } from "./rules-map";
 import "./RulesIndex.css";
 
 export const RulesIndex = () => {
@@ -19,12 +19,14 @@ export const RulesIndex = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-  const normalizedRuleName = normalizeRuleName(activeRule);
-  const rulePath = rulesMap[normalizedRuleName];
+  const normalizedName = normalizeRuleName(activeRule);
+  const synonym = synonyms[normalizedName];
+  const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
+  const rulePath = ruleData?.url;
 
   return (
     <Dialog open={open} onClose={handleClose}>
-      {rulesMap[normalizedRuleName] ? (
+      {rulePath ? (
         <>
           <iframe
             onLoad={() => setIsLoading(false)}

@@ -36,11 +36,12 @@
   flex-grow: 1;
 }
 
-.header__text * {
+.header__text .header__name-text,
+.header__text .header__points {
   color: var(--color-font-light);
 }
 
-.column-header .header__name {
+.column-header .header__name-text {
   color: var(--color-header);
 }
 

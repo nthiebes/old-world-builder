@@ -7,13 +7,16 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 import { Stats } from "../../components/stats";
 import {
+  rulesMap,
   RulesIndex,
   RulesLinksText,
   RulesWithIcon,
+  synonyms,
 } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
+import { normalizeRuleName } from "../../utils/string";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -92,62 +95,74 @@ export const GameView = () => {
 
     return (
       <ul>
-        {units.map((unit, index) => (
-          <li key={index} className="list">
-            <div className="list__inner game-view__list-inner">
-              <h3>
-                {unit.strength || unit.minimum ? (
-                  <span className="game-view__strength">
-                    {`${unit.strength || unit.minimum} `}
-                  </span>
-                ) : null}
-                {unit[`name_${language}`] || unit.name_en}
-                {showPoints && (
-                  <span className="game-view__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h3>
-              <div className="game-view__details">
-                <RulesWithIcon
-                  textObject={{
-                    name_en: getAllOptions(unit, {
-                      language: "en",
-                      asString: true,
-                    }),
-                    name_de: getAllOptions(unit, { asString: true }),
-                  }}
-                />
-                {showSpecialRules && unit.specialRules ? (
-                  <p className="game-view__special-rules">
-                    <b>
-                      <i>
-                        <FormattedMessage id="unit.specialRules" />:
-                      </i>
-                    </b>{" "}
-                    <RulesLinksText textObject={unit.specialRules} />
-                  </p>
-                ) : null}
-                {showStats && (
-                  <Stats
-                    values={{
-                      name: "",
-                      M: "",
-                      WS: "",
-                      BS: "",
-                      S: "",
-                      T: "",
-                      W: "",
-                      I: "",
-                      A: "",
-                      LD: "",
+        {units.map((unit, index) => {
+          const normalizedName = normalizeRuleName(unit.name_en);
+          const synonym = synonyms[normalizedName];
+          const stats = rulesMap[synonym || normalizedName]?.stats;
+
+          return (
+            <li key={index} className="list">
+              <div className="list__inner game-view__list-inner">
+                <h3>
+                  {unit.strength || unit.minimum ? (
+                    <span className="game-view__strength">
+                      {`${unit.strength || unit.minimum} `}
+                    </span>
+                  ) : null}
+                  {unit[`name_${language}`] || unit.name_en}
+                  {showPoints && (
+                    <span className="game-view__points">
+                      [{getUnitPoints(unit)}{" "}
+                      <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h3>
+                <div className="game-view__details">
+                  <RulesWithIcon
+                    textObject={{
+                      name_en: getAllOptions(unit, {
+                        language: "en",
+                        asString: true,
+                      }),
+                      name_de: getAllOptions(unit, { asString: true }),
                     }}
                   />
-                )}
+                  {showSpecialRules && unit.specialRules ? (
+                    <p className="game-view__special-rules">
+                      <b>
+                        <i>
+                          <FormattedMessage id="unit.specialRules" />:
+                        </i>
+                      </b>{" "}
+                      <RulesLinksText textObject={unit.specialRules} />
+                    </p>
+                  ) : null}
+                  {showStats &&
+                    (stats?.length > 0 ? (
+                      <Stats values={stats} />
+                    ) : (
+                      <Stats
+                        values={[
+                          {
+                            name: "",
+                            M: "",
+                            WS: "",
+                            BS: "",
+                            S: "",
+                            T: "",
+                            W: "",
+                            I: "",
+                            A: "",
+                            LD: "",
+                          },
+                        ]}
+                      />
+                    ))}
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     );
   };

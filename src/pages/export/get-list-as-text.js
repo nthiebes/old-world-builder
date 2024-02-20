@@ -1,5 +1,8 @@
+import { rulesMap, synonyms } from "../../components/rules-index";
+
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import { normalizeRuleName } from "../../utils/string";
 import gameSystems from "../../assets/armies.json";
 import { nameMap } from "../magic";
 
@@ -35,10 +38,23 @@ const getUnitsString = ({
         }\n`;
       }
       if (showStats) {
-        // prettier-ignore
-        optionsString += `
+        const normalizedName = normalizeRuleName(unit.name_en);
+        const synonym = synonyms[normalizedName];
+        const stats = rulesMap[synonym || normalizedName]?.stats;
+
+        if (stats?.length > 0) {
+          stats.forEach((unitStats, index) => {
+            // prettier-ignore
+            optionsString += `
+[${unitStats.Name.replace(/ /g, '\xa0')}]\xa0${intl.formatMessage({id: "unit.m"})}(${unitStats.M})\xa0${intl.formatMessage({id: "unit.ws"})}(${unitStats.WS})\xa0${intl.formatMessage({id: "unit.bs"})}(${unitStats.BS})\xa0${intl.formatMessage({id: "unit.s"})}(${unitStats.S})\xa0${intl.formatMessage({id: "unit.t"})}(${unitStats.T})\xa0${intl.formatMessage({id: "unit.w"})}(${unitStats.W})\xa0${intl.formatMessage({id: "unit.i"})}(${unitStats.I})\xa0${intl.formatMessage({id: "unit.a"})}(${unitStats.A})\xa0${intl.formatMessage({id: "unit.ld"})}(${unitStats.Ld})
+`;
+          });
+        } else {
+          // prettier-ignore
+          optionsString += `
 ${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ws"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.bs"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.s"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.t"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.w"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.i"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.a"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ld"})}(${'\xa0'})
 `;
+        }
       }
 
       // prettier-ignore
