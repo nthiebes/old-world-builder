@@ -7,59 +7,65 @@ import "./Stats.css";
 
 export const Stats = ({ values, isPrintPage }) => {
   return (
-    <table className={classNames("stats", isPrintPage && "stats--print-page")}>
-      <thead>
-        <tr>
-          <th>
-            <FormattedMessage id="unit.model" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.m" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.ws" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.bs" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.s" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.t" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.w" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.i" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.a" />
-          </th>
-          <th>
-            <FormattedMessage id="unit.ld" />
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{values.name}</td>
-          <td>{values.M}</td>
-          <td>{values.WS}</td>
-          <td>{values.BS}</td>
-          <td>{values.S}</td>
-          <td>{values.T}</td>
-          <td>{values.W}</td>
-          <td>{values.I}</td>
-          <td>{values.A}</td>
-          <td>{values.LD}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="stats-wrapper">
+      <table
+        className={classNames("stats", isPrintPage && "stats--print-page")}
+      >
+        <thead>
+          <tr>
+            <th>
+              <FormattedMessage id="unit.model" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.m" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.ws" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.bs" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.s" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.t" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.w" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.i" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.a" />
+            </th>
+            <th>
+              <FormattedMessage id="unit.ld" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {values.map((stats, index) => (
+            <tr key={`${stats.name}${index}`}>
+              <td>{stats.Name}</td>
+              <td>{stats.M}</td>
+              <td>{stats.WS}</td>
+              <td>{stats.BS}</td>
+              <td>{stats.S}</td>
+              <td>{stats.T}</td>
+              <td>{stats.W}</td>
+              <td>{stats.I}</td>
+              <td>{stats.A}</td>
+              <td>{stats.Ld}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
 Stats.propTypes = {
-  values: PropTypes.object,
+  values: PropTypes.array,
 };

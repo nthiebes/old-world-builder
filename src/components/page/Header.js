@@ -12,6 +12,7 @@ import "./Header.css";
 export const Header = ({
   className,
   headline,
+  headlineIcon,
   subheadline,
   moreButton,
   to,
@@ -106,7 +107,10 @@ export const Header = ({
                 </Link>
               </h1>
             ) : (
-              <h1 className="header__name">{headline}</h1>
+              <h1 className="header__name">
+                {headlineIcon && headlineIcon}
+                <span className="header__name-text">{headline}</span>
+              </h1>
             )}
           </>
         )}
@@ -196,6 +200,7 @@ Header.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string,
   headline: PropTypes.string,
+  headlineIcon: PropTypes.node,
   subheadline: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
   moreButton: PropTypes.array,

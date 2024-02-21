@@ -17,6 +17,7 @@ import {
   rulesMap,
   RulesLinksText,
   RulesWithIcon,
+  RuleWithIcon,
 } from "../../components/rules-index";
 import { nameMap } from "../../pages/magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
@@ -435,6 +436,7 @@ export const Unit = ({ isMobile }) => {
           to={`/editor/${listId}`}
           moreButton={moreButtons}
           headline={unit[`name_${language}`] || unit.name_en}
+          headlineIcon={<RuleWithIcon name={unit.name_en} />}
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -450,6 +452,7 @@ export const Unit = ({ isMobile }) => {
             to={`/editor/${listId}`}
             moreButton={moreButtons}
             headline={unit[`name_${language}`] || unit.name_en}
+            headlineIcon={<RuleWithIcon name={unit.name_en} isDark />}
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -481,7 +484,11 @@ export const Unit = ({ isMobile }) => {
             </label>
             <NumberInput
               id="strength"
-              min={unit.minimum}
+              min={
+                detachmentActive && unit.minDetachmentSize
+                  ? unit.minDetachmentSize
+                  : unit.minimum
+              }
               max={unit.maximum}
               value={unit.strength}
               onChange={handleStrengthChange}

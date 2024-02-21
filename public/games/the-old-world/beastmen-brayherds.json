@@ -689,8 +689,8 @@
       ],
       "options": [
         {
-          "name_en": "Throwing axes or Javelins",
-          "name_de": "Throwing axes or Javelins",
+          "name_en": "Throwing axes, Javelins",
+          "name_de": "Throwing axes, Javelins",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -738,10 +738,10 @@
   ],
   "core": [
     {
-      "name_en": "Bestigor Herds",
-      "name_de": "Bestigor Herds",
+      "name_en": "Bestigor Herd",
+      "name_de": "Bestigor Herd",
       "name_es": "Rebaño de bestigors",
-      "name_fr": "Bestigor Herds",
+      "name_fr": "Bestigor Herd",
       "id": "bestigor-herds",
       "points": 13,
       "minimum": 5,
@@ -767,7 +767,14 @@
             ],
             "maxPoints": 50
           },
-          "name_es": "Corneador"
+          "name_es": "Corneador",
+          "options": [
+            {
+              "name_en": "Great weapon",
+              "name_de": "Great weapon",
+              "points": 0
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -784,16 +791,6 @@
           "name_de": "Musician",
           "points": 6,
           "name_es": "Músico"
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapon and great weapon",
-          "name_de": "Hand weapon and great weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "name_es": "Arma de mano y arma a dos manos"
         }
       ],
       "armor": [
@@ -841,10 +838,10 @@
       }
     },
     {
-      "name_en": "Gor Herds",
-      "name_de": "Gor Herds",
+      "name_en": "Gor Herd",
+      "name_de": "Gor Herd",
       "name_es": "Rebaño de gors",
-      "name_fr": "Gor Herds",
+      "name_fr": "Gor Herd",
       "id": "gor-herds",
       "points": 7,
       "minimum": 5,
@@ -858,7 +855,14 @@
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           },
-          "name_es": "Desgarrador"
+          "name_es": "Desgarrador",
+          "options": [
+            {
+              "name_en": "Great weapon",
+              "name_de": "Great weapon",
+              "points": 0
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -878,6 +882,15 @@
         }
       ],
       "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true,
+          "name_es": "Escudos"
+        },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
@@ -903,14 +916,6 @@
           "maximum": 0,
           "perModel": true,
           "name_es": "Emboscada"
-        },
-        {
-          "name_en": "Great weapon on True-horn",
-          "name_de": "Great weapon on True-horn",
-          "points": 0,
-          "minimum": 0,
-          "maximum": 0,
-          "name_es": "Arma a dos manos en Desgarrador"
         }
       ],
       "mounts": [],
@@ -958,30 +963,30 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon and shield",
-          "name_de": "Hand weapon and shield",
+          "name_en": "Hand weapons, Shield",
+          "name_de": "Hand weapons, Shield",
           "points": 0,
           "perModel": true,
           "active": true,
           "name_es": "Arma de mano y escudo"
         },
         {
-          "name_en": "Thrusting spears",
-          "name_de": "Thrusting spears",
+          "name_en": "Thrusting spears, Shield",
+          "name_de": "Thrusting spears, Shield",
           "points": 1,
           "perModel": true,
           "name_es": "Lanzas"
         },
         {
-          "name_en": "Throwing spears",
-          "name_de": "Throwing spears",
+          "name_en": "Throwing spears, Shield",
+          "name_de": "Throwing spears, Shield",
           "points": 1,
           "perModel": true,
           "name_es": "Lanzas arrojadizas"
         },
         {
-          "name_en": "Replace shields with shortbows",
-          "name_de": "Replace shields with shortbows",
+          "name_en": "Shortbows",
+          "name_de": "Shortbows",
           "points": 0,
           "perModel": true,
           "name_es": "Cambiar escudos por arcos cortos"
@@ -1025,10 +1030,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Claws and Fangs (counts as a hand weapon)",
-          "name_de": "Claws and Fangs (counts as a hand weapon)",
-          "name_es": "Claws and Fangs (counts as a hand weapon)",
-          "name_fr": "Claws and Fangs (counts as a hand weapon)",
+          "name_en": "Hand weapons (Claws and Fangs)",
+          "name_de": "Hand weapons (Claws and Fangs)",
+          "name_es": "Hand weapons (Claws and Fangs)",
+          "name_fr": "Hand weapons (Claws and Fangs)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1075,10 +1080,10 @@
       }
     },
     {
-      "name_en": "Razorgor Herds",
-      "name_de": "Razorgor Herds",
-      "name_es": "Razorgor Herds",
-      "name_fr": "Razorgor Herds",
+      "name_en": "Razorgor Herd",
+      "name_de": "Razorgor Herd",
+      "name_es": "Razorgor Herd",
+      "name_fr": "Razorgor Herd",
       "id": "razorgor-herds",
       "points": 52,
       "minimum": 1,
@@ -1086,8 +1091,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Tusks (counts as a hand weapon)",
-          "name_de": "Tusks (counts as a hand weapon)",
+          "name_en": "Hand weapons (tusks)",
+          "name_de": "Hand weapons (tusks)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1095,8 +1100,8 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1118,10 +1123,10 @@
       }
     },
     {
-      "name_en": "Tuskgor Chariots",
-      "name_de": "Tuskgor Chariots",
-      "name_es": "Tuskgor Chariots",
-      "name_fr": "Tuskgor Chariots",
+      "name_en": "Tuskgor Chariot",
+      "name_de": "Tuskgor Chariot",
+      "name_es": "Tuskgor Chariot",
+      "name_fr": "Tuskgor Chariot",
       "id": "tuskgor-chariots-",
       "points": 85,
       "minimum": 0,
@@ -1129,8 +1134,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Bestigor Crew x 1 - Hand weapon and great weapons",
-          "name_de": "Bestigor Crew x 1 - Hand weapon and great weapons",
+          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weaponss",
+          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weaponss",
           "points": 0,
           "active": true
         },
@@ -1141,8 +1146,8 @@
           "active": true
         },
         {
-          "name_en": "Tuskgor x 2 - Tusks (counts as hand weapon)",
-          "name_de": "Tuskgor x 2 - Tusks (counts as hand weapon)",
+          "name_en": "Tuskgor x 2 - Hand weapon (tusks)",
+          "name_de": "Tuskgor x 2 - Hand weapon (tusks)",
           "points": 0,
           "active": true
         }
@@ -1272,10 +1277,10 @@
   ],
   "special": [
     {
-      "name_en": "Bestigor Herds",
-      "name_de": "Bestigor Herds",
-      "name_es": "Bestigor Herds",
-      "name_fr": "Bestigor Herds",
+      "name_en": "Bestigor Herd",
+      "name_de": "Bestigor Herd",
+      "name_es": "Bestigor Herd",
+      "name_fr": "Bestigor Herd",
       "id": "bestigor-herds",
       "points": 13,
       "minimum": 5,
@@ -1313,8 +1318,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon and great weapon",
-          "name_de": "Hand weapon and great weapon",
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1373,8 +1378,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Claws (counts as hand weapons)",
-          "name_de": "Claws (counts as hand weapons)",
+          "name_en": "Hand weapons (claws)",
+          "name_de": "Hand weapons (claws)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1397,10 +1402,10 @@
       }
     },
     {
-      "name_en": "Minotaur Herds",
-      "name_de": "Minotaur Herds",
-      "name_es": "Minotaur Herds",
-      "name_fr": "Minotaur Herds",
+      "name_en": "Minotaur Herd",
+      "name_de": "Minotaur Herd",
+      "name_es": "Minotaur Herd",
+      "name_fr": "Minotaur Herd",
       "id": "minotaur-herds",
       "points": 47,
       "minimum": 2,
@@ -1508,16 +1513,16 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Claws (counts as hand weapons), Petrifying gaze",
-          "name_de": "Claws (counts as hand weapons), Petrifying gaze",
+          "name_en": "Hand weapons (claws), Petrifying gaze",
+          "name_de": "Hand weapons (claws), Petrifying gaze",
           "points": 0,
           "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
           "points": 0,
           "active": true
         }
@@ -1553,10 +1558,10 @@
       }
     },
     {
-      "name_en": "Centigor Herds",
-      "name_de": "Centigor Herds",
-      "name_es": "Centigor Herds",
-      "name_fr": "Centigor Herds",
+      "name_en": "Centigor Herd",
+      "name_de": "Centigor Herd",
+      "name_es": "Centigor Herd",
+      "name_fr": "Centigor Herd",
       "id": "centigor-herds",
       "points": 19,
       "minimum": 5,
@@ -1595,20 +1600,20 @@
           "active": true
         },
         {
-          "name_en": "Cavalry spears",
-          "name_de": "Cavalry spears",
+          "name_en": "Hand weapons, Cavalry spears",
+          "name_de": "Hand weapons, Cavalry spears",
           "points": 1,
           "perModel": true
         },
         {
-          "name_en": "Throwing spears",
-          "name_de": "Throwing spears",
+          "name_en": "Hand weapons, Throwing spears",
+          "name_de": "Hand weapons, Throwing spears",
           "points": 1,
           "perModel": true
         },
         {
-          "name_en": "Replace shields with great weapons",
-          "name_de": "Replace shields with Great weapons",
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
           "points": 1,
           "perModel": true
         }
@@ -1616,8 +1621,8 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Throwing axes or javelins",
-          "name_de": "Throwing axes or javelins",
+          "name_en": "Throwing axes, Javelins",
+          "name_de": "Throwing axes, Javelins",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -1735,21 +1740,21 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Bestigor Crew x 1 - Hand weapons and great weapons",
-          "name_de": "Bestigor Crew x 1 - Hand weapons and great weapons",
+          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
           "points": 0,
           "active": true
         },
         {
-          "name_en": "Gor Crew x 1 - Hand weapons and cavalry spear",
-          "name_de": "Gor Crew x 1 - Hand weapons and cavalry spear",
+          "name_en": "Gor Crew x 1 - Hand weapons, Cavalry spear",
+          "name_de": "Gor Crew x 1 - Hand weapons, Cavalry spear",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Razorgor x 1 - Tusks (counts as hand weapon)",
-          "name_de": "Razorgor x 1 - Tusks (counts as hand weapon)",
+          "name_en": "Razorgor x 1 - Hand weapon (tusks)",
+          "name_de": "Razorgor x 1 - Hand weapon (tusks)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1903,8 +1908,8 @@
       ],
       "armor": [
         {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
           "points": 0,
           "active": true
         }
@@ -1942,16 +1947,16 @@
       },
       "equipment": [
         {
-          "name_en": "Claws (counts as hand weapon), Hurl attack",
-          "name_de": "Claws (counts as hand weapon), Hurl attack",
+          "name_en": "Hand weapon (claws), Hurl attack",
+          "name_de": "Hand weapon (claws), Hurl attack",
           "points": 0,
           "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "active": true
         }
@@ -1997,8 +2002,8 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "active": true
         }
@@ -2029,26 +2034,7 @@
       "points": 225,
       "minimum": 0,
       "maximum": 0,
-      "command": [
-        {
-          "name_en": "Magic items",
-          "name_de": "Magic items",
-          "points": 0,
-          "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Chaos Mutations",
-          "name_de": "Chaos Mutations",
-          "points": 0,
-          "magic": {
-            "types": ["chaos-mutation"],
-            "maxPoints": 50
-          }
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -2082,7 +2068,22 @@
       ],
       "options": [],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Magic items",
+          "name_de": "Magic items",
+          "points": 0,
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_de": "Chaos Mutations",
+          "points": 0,
+          "types": ["chaos-mutation"],
+          "maxPoints": 50
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immine to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
@@ -2117,8 +2118,8 @@
       ],
       "armor": [
         {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
           "points": 0,
           "active": true
         }
@@ -2150,16 +2151,16 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Claws (counts as hand weapon), Hurl attack",
-          "name_de": "Claws (counts as hand weapon), Hurl attack",
+          "name_en": "Hand weapon (claws), Hurl attack",
+          "name_de": "Hand weapon (claws), Hurl attack",
           "points": 0,
           "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "active": true
         }
@@ -2199,14 +2200,14 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "active": true
         },
         {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
           "points": 10
         }
       ],
@@ -2253,8 +2254,8 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "active": true
         }
@@ -2307,8 +2308,8 @@
       ],
       "armor": [
         {
-          "name_en": "Calloused hide (counts as light armour)",
-          "name_de": "Calloused hide (counts as light armour)",
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2341,8 +2342,8 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Flailing appendages (counts as hand weapon)",
-          "name_de": "Flailing appendages (counts as hand weapon)",
+          "name_en": "Hand weapon (flailing appendages)",
+          "name_de": "Hand weapon (flailing appendages)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2350,8 +2351,8 @@
       ],
       "armor": [
         {
-          "name_en": "Scaly skin (counts as heavy armour)",
-          "name_de": "Scaly skin (counts as heavy armour)",
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
           "points": 1,
           "perModel": true
         }
