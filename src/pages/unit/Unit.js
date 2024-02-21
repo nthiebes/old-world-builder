@@ -484,7 +484,11 @@ export const Unit = ({ isMobile }) => {
             </label>
             <NumberInput
               id="strength"
-              min={unit.minimum}
+              min={
+                detachmentActive && unit.minDetachmentSize
+                  ? unit.minDetachmentSize
+                  : unit.minimum
+              }
               max={unit.maximum}
               value={unit.strength}
               onChange={handleStrengthChange}
