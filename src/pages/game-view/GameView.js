@@ -11,6 +11,7 @@ import {
   RulesIndex,
   RulesLinksText,
   RulesWithIcon,
+  RuleWithIcon,
   synonyms,
 } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
@@ -109,13 +110,20 @@ export const GameView = () => {
                       {`${unit.strength || unit.minimum} `}
                     </span>
                   ) : null}
-                  {unit[`name_${language}`] || unit.name_en}
-                  {showPoints && (
-                    <span className="game-view__points">
-                      [{getUnitPoints(unit)}{" "}
-                      <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
+                  <span className="game-view__name">
+                    <span>{unit[`name_${language}`] || unit.name_en}</span>
+                    <RuleWithIcon
+                      name={unit.name_en}
+                      isDark
+                      className="game-view__rule-icon"
+                    />
+                    {showPoints && (
+                      <span className="game-view__points">
+                        [{getUnitPoints(unit)}{" "}
+                        <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </span>
                 </h3>
                 <div className="game-view__details">
                   <RulesWithIcon

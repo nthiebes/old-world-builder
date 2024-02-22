@@ -436,7 +436,12 @@ export const Unit = ({ isMobile }) => {
           to={`/editor/${listId}`}
           moreButton={moreButtons}
           headline={unit[`name_${language}`] || unit.name_en}
-          headlineIcon={<RuleWithIcon name={unit.name_en} />}
+          headlineIcon={
+            <RuleWithIcon
+              name={unit.name_en}
+              className="unit__header-rule-icon"
+            />
+          }
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -452,7 +457,13 @@ export const Unit = ({ isMobile }) => {
             to={`/editor/${listId}`}
             moreButton={moreButtons}
             headline={unit[`name_${language}`] || unit.name_en}
-            headlineIcon={<RuleWithIcon name={unit.name_en} isDark />}
+            headlineIcon={
+              <RuleWithIcon
+                name={unit.name_en}
+                isDark
+                className="unit__header-rule-icon"
+              />
+            }
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
