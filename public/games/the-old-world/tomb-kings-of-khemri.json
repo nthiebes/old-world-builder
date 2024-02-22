@@ -103,23 +103,23 @@
           "maximum": 2
         },
         {
-          "name_en": "(Warsphinx only) May take Envenomed Sting",
+          "name_en": "Envenomed Sting (Warsphinx only)",
           "name_it": "(solo se su Sfinge da Guerra) Può prendere Puntura Avvelenata",
-          "name_de": "(Warsphinx only) May take Envenomed Sting",
+          "name_de": "Envenomed Sting (Warsphinx only)",
           "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Dard venimeux",
           "points": 5,
           "perModel": true
         },
         {
-          "name_en": "(Warsphinx only) May take Fiery Roar",
+          "name_en": "Fiery Roar (Warsphinx only)",
           "name_it": "(solo se su Sfinge da Guerra) Può prendere Ruggito Infuocato",
-          "name_de": "(Warsphinx only) May take Fiery Roar",
+          "name_de": "Fiery Roar (Warsphinx only)",
           "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Rugissement Ardent",
           "points": 20,
           "perModel": true
         },
         {
-          "name_en": "(Nehekharan Royal Host only) Arise! Special Rule and Level 1 Wizard",
+          "name_en": "Arise! (and Level 1 Wizard - Nehekharan Royal Host only)",
           "name_it": "(solo lista dello Schieramento Reale di Nehekharan) La Lingua dei Scerdoti - Alzati! ed essere un Mago di 1°",
           "name_de": "(Nehekharan Royal Host only) Arise! Special Rule and Level 1 Wizard",
           "name_fr": "(Ost Royal de Nehekhara seulement) Règle Spéciale Levez-vous! et Sorcier Niveau 1",
@@ -837,11 +837,11 @@
       }
     },
     {
-      "name_en": "Settra The Imperishable",
-      "name_it": "Settra L'Imperituro",
-      "name_de": "Settra The Imperishable",
-      "name_es": "Settra The Imperishable",
-      "name_fr": "Settra l'Imprérissable",
+      "name_en": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_it": "Settra L'Imperituro, Il Grande Re di Nehekhara",
+      "name_de": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_es": "Settra The Imperishable, The Great King Of Nehekhara",
+      "name_fr": "Settra l'Imprérissable, Le Haut Roi de Khemri",
       "id": "settra-the-imperishable-the-great-king-of-nehekhara",
       "points": 445,
       "minimum": 0,
@@ -901,11 +901,11 @@
       }
     },
     {
-      "name_en": "Prince Apophas",
-      "name_it": "Prince Apophas",
-      "name_de": "Prince Apophas",
-      "name_es": "Prince Apophas",
-      "name_fr": "Prince Apophas",
+      "name_en": "Prince Apophas, The Cursed Scarab Lord",
+      "name_it": "Prince Apophas, The Cursed Scarab Lord",
+      "name_de": "Prince Apophas, The Cursed Scarab Lord",
+      "name_es": "Prince Apophas, The Cursed Scarab Lord",
+      "name_fr": "Prince Apophas, Le Seigneur scarabée Maudit",
       "id": "prince-apophas-the-cursed-scarab-lord",
       "points": 130,
       "minimum": 0,
@@ -955,11 +955,11 @@
       }
     },
     {
-      "name_en": "Nekaph",
-      "name_it": "Nekaph",
-      "name_de": "Nekaph",
-      "name_es": "Nekaph",
-      "name_fr": "Nekaph",
+      "name_en": "Nekaph, Emissary Of Settra",
+      "name_it": "Nekaph, Emissary Of Settra",
+      "name_de": "Nekaph, Emissary Of Settra",
+      "name_es": "Nekaph, Emissary Of Settra",
+      "name_fr": "Nekaph, Emissaire de Settra",
       "id": "nekaph-emissary-of-settra",
       "points": 120,
       "minimum": 0,
@@ -1231,7 +1231,6 @@
       "minimum": 10,
       "maximum": 0,
       "detachment": true,
-      "minDetachmentSize": 5,
       "command": [
         {
           "name_en": "Master of Arrows (champion)",
@@ -1824,6 +1823,17 @@
       "magic": {
         "types": [],
         "maxPoints": 0
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "core"
+        },
+        "nehekharan-royal-hosts": {
+          "category": ""
+        },
+        "mortuary-cults": {
+          "category": "core"
+        }
       }
     },
     {
@@ -2170,6 +2180,16 @@
           "points": 5,
           "stackable": true,
           "minimum": 10,
+          "maximum": 0
+        },
+        {
+          "name_en": "Have the Nehekharan Phalanx Special Rule",
+          "name_it": "Have the Nehekharan Phalanx Special Rule",
+          "name_de": "Have the Nehekharan Phalanx Special Rule",
+          "name_fr": "Avoir la règle Spéciale Phalange de Nehekhara",
+          "points": 10,
+          "perModel": false,
+          "minimum": 0,
           "maximum": 0
         }
       ],
@@ -3264,37 +3284,10 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked Claws",
-          "name_it": "Wicked Claws",
-          "name_de": "Wicked Claws",
-          "name_fr": "Griffes cruelles",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons",
-          "name_it": "Arma Bianca",
-          "name_de": "Hand weapons",
-          "name_fr": "Armes de base",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Cavalry spears",
-          "name_it": "Lance da Cavaliere",
-          "name_de": "Cavalry spears",
-          "name_fr": "Lances de cavalerie",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Shortbows",
-          "name_it": "Shortbows",
-          "name_de": "Shortbows",
-          "name_fr": "Arcs courts",
+          "name_en": "Wicked Claws (Warsphinx), Hand weapons (Tomb Guard Crew Only), Cavalry spears (Tomb Guard Crew Only), Shortbows (Tomb Guard Crew Only)",
+          "name_it": "Wicked Claws, Arma Bianca, Lance da Cavaliere, Shortbows",
+          "name_de": "Wicked Claws (Warsphinx), Hand weapons (Tomb Guard Crew Only), Cavalry spears (Tomb Guard Crew Only), Shortbows (Tomb Guard Crew Only)",
+          "name_fr": "Griffes cruelles, Armes de base, Lances de cavalerie, Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3334,11 +3327,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
-        "name_de": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
-        "name_es": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_en": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_de": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
+        "name_es": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
         "name_fr": "Flèches d'Asaph, Coup Fendoir (équipage Guardes des Tombes uniquement), Ordre Serré, Howdah, Indomptable (2), Khopesh, Grande Cible, Morts-vivants de Nehekhara, Régénération (6+), Attaques de Piétinement (D3), Terreur",
-        "name_it": "Arrows of Asaph, Cleaving Blow, Close Order, Howdah, Indomitable (2), Khopesh, Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror"
+        "name_it": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror"
       },
       "notes": {
         "name_en": "0-2 Khemrian Warsphinx (not counting character mounts) per 1,000 points",
