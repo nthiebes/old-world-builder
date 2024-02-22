@@ -165,6 +165,10 @@
   text-decoration: underline;
   color: var(--color-headline);
   transition: color 0.2s linear;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .unit__rule:focus,
