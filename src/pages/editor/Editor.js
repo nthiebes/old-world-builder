@@ -254,6 +254,7 @@ export const Editor = ({ isMobile }) => {
           }
           hasPointsError={allPoints > list.points}
           moreButton={moreButtons}
+          navigationIcon="more"
         />
       )}
 
@@ -280,6 +281,7 @@ export const Editor = ({ isMobile }) => {
             }
             hasPointsError={allPoints > list.points}
             moreButton={moreButtons}
+            navigationIcon="more"
           />
         )}
         {/* <section>

@@ -445,6 +445,7 @@ export const Unit = ({ isMobile }) => {
           subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
+          navigationIcon="more"
         />
       )}
 
@@ -467,6 +468,7 @@ export const Unit = ({ isMobile }) => {
             subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
+            navigationIcon="more"
           />
         )}
         {!unit.minimum &&

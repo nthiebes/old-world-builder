@@ -19,6 +19,7 @@ export const Header = ({
   isSection,
   hasPointsError,
   hasMainNavigation,
+  navigationIcon,
   hasHomeButton,
   filters,
 }) => {
@@ -127,7 +128,7 @@ export const Header = ({
           className={classNames(showMenu && "header__more-button")}
           color={isSection ? "dark" : "light"}
           label={intl.formatMessage({ id: "header.more" })}
-          icon="more"
+          icon={navigationIcon ? navigationIcon : "menu"}
           onClick={handleMenuClick}
         />
       ) : (
@@ -209,4 +210,5 @@ Header.propTypes = {
   hasPointsError: PropTypes.bool,
   hasMainNavigation: PropTypes.bool,
   hasHomeButton: PropTypes.bool,
+  navigationIcon: PropTypes.string,
 };
