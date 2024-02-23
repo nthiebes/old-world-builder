@@ -60,6 +60,8 @@ const additionalOWBRules = {
   "standard bearer": { url: "command-groups/standard-bearers" },
   musician: { url: "command-groups/musicians" },
   bellower: { url: "special-rules/bellowers-and-musicians" },
+  "stone thrower": { url: "war-machines/stone-throwers" },
+  "fire thrower": { url: "war-machines/fire-throwers" },
   "level 1 wizard": { url: "magic/levels-of-wizardry" },
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
