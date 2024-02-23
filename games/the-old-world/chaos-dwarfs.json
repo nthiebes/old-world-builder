@@ -708,13 +708,14 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapon, Throwing weapons",
+          "name_de": "Hand weapon, Throwing weapons",
+          "name_es": "Hand weapon, Throwing weapons",
+          "name_fr": "Hand weapon, Throwing weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -741,7 +742,8 @@
           "perModel": true
         }
       ],
-      "armor": [
+      "armor": [],
+      "options": [
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -749,28 +751,14 @@
           "name_fr": "Light armour",
           "points": 3,
           "perModel": true
-        }
-      ],
-      "options": [
+        },
         {
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Shield",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Throwing weapons (instead Shortbow)",
-          "name_de": "Throwing weapons (instead Shortbow)",
-          "name_es": "Throwing weapons (instead Shortbow)",
-          "name_fr": "Throwing weapons (instead Shortbow)",
-          "points": 0,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Shortbow (instead throwing weapons)",
@@ -778,9 +766,7 @@
           "name_es": "Shortbow (instead throwing weapons)",
           "name_fr": "Shortbow (instead throwing weapons)",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
