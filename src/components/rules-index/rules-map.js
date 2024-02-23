@@ -33,7 +33,7 @@ const additionalOWBRules = {
   "great hammers": { url: "weapons-of-war/great-hammer" },
   "brimstone guns": { url: "weapons-of-war/brimstone-gun" },
   clatterguns: { url: "weapons-of-war/clattergun" },
-  "steam guns": { url: "weapons-of-war/steam-gun-dwarfs" },
+  "steam guns dwarfs": { url: "weapons-of-war/steam-gun-dwarfs" },
   crossbows: { url: "weapons-of-war/crossbow" },
   "throwing weapons": { url: "weapons-of-war/throwing-weapons" },
   slings: { url: "weapons-of-war/sling" },
