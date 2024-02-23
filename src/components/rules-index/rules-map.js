@@ -69,7 +69,6 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
-  engineer: "engineer dwarfs",
   gyrocopters: "gyrocopter",
   boss: "champions",
   marksman: "champions",
