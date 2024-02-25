@@ -69,6 +69,7 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  plagueswords: "plaguesword",
   gyrocopters: "gyrocopter",
   boss: "champions",
   marksman: "champions",
