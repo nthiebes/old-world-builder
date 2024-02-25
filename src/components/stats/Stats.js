@@ -5,9 +5,9 @@ import { FormattedMessage } from "react-intl";
 
 import "./Stats.css";
 
-export const Stats = ({ values, isPrintPage }) => {
+export const Stats = ({ values, isPrintPage, className }) => {
   return (
-    <div className="stats-wrapper">
+    <div className={classNames("stats-wrapper", className && className)}>
       <table
         className={classNames("stats", isPrintPage && "stats--print-page")}
       >
@@ -68,4 +68,6 @@ export const Stats = ({ values, isPrintPage }) => {
 
 Stats.propTypes = {
   values: PropTypes.array,
+  isPrintPage: PropTypes.bool,
+  className: PropTypes.string,
 };
