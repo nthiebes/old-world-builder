@@ -300,7 +300,7 @@ export const Add = ({ isMobile }) => {
           <ul>{allMercenaries.map((unit) => getUnit(unit, unit.army))}</ul>
         )}
         {type !== "allies" && type !== "mercenaries" && (
-          <ul>{army[type].map((unit) => getUnit(unit))}</ul>
+          <ul>{army[type].map((unit) => !unit.detachment && getUnit(unit))}</ul>
         )}
       </MainComponent>
     </>
