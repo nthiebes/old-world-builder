@@ -70,6 +70,7 @@ const additionalOWBRules = {
 
 export const synonyms = {
   plagueswords: "plaguesword",
+  "steam tank": "empire steam tank",
   gyrocopters: "gyrocopter",
   boss: "champions",
   marksman: "champions",
