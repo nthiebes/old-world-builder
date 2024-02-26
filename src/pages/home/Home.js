@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "../../components/button";
 import { ListItem, OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
-import { getAllPoints } from "../../utils/points";
+import { sumArmyListPoints } from "../../utils/points";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
 import warhammerFantasy from "../../assets/warhammer-fantasy.png";
@@ -122,7 +122,7 @@ export const Home = ({ isMobile }) => {
                     <p className="home__description">{description}</p>
                   )}
                   <p className="home__points">
-                    {getAllPoints({
+                    {sumArmyListPoints({
                       ...list,
                       points,
                     })}{" "}

@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
-import { getUnitPoints, getUnitMagicPoints } from "../../utils/points";
+import { sumUnitPoints, sumAmountPoints } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -442,7 +442,7 @@ export const Unit = ({ isMobile }) => {
               className="unit__header-rule-icon"
             />
           }
-          subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+          subheadline={`${sumUnitPoints(unit)} ${intl.formatMessage({
             id: "app.points",
           })}`}
           navigationIcon="more"
@@ -465,7 +465,7 @@ export const Unit = ({ isMobile }) => {
                 className="unit__header-rule-icon"
               />
             }
-            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+            subheadline={`${sumUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}
             navigationIcon="more"
@@ -528,9 +528,7 @@ export const Unit = ({ isMobile }) => {
                 },
                 index
               ) => {
-                const commandMagicPoints = getUnitMagicPoints({
-                  selected: magic?.selected,
-                });
+                const commandMagicPoints = sumAmountPoints(magic?.selected);
 
                 return (
                   <Fragment key={id}>
@@ -1092,9 +1090,7 @@ export const Unit = ({ isMobile }) => {
         ) : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
-              const itemsPoints = getUnitMagicPoints({
-                selected: item.selected,
-              });
+              const itemsPoints = sumAmountPoints(item.selected);
 
               return (
                 <ListItem

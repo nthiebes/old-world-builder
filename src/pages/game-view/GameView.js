@@ -15,7 +15,11 @@ import {
   synonyms,
 } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
-import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import {
+  sumUnitPoints,
+  sumCategoryPoints,
+  sumArmyListPoints,
+} from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { normalizeRuleName } from "../../utils/string";
 import gameSystems from "../../assets/armies.json";
@@ -47,15 +51,15 @@ export const GameView = () => {
     );
   }
 
-  const allPoints = getAllPoints(list);
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
-  const charactersPoints = getPoints({ list, type: "characters" });
-  const corePoints = getPoints({ list, type: "core" });
-  const specialPoints = getPoints({ list, type: "special" });
-  const rarePoints = getPoints({ list, type: "rare" });
-  const mercenariesPoints = getPoints({ list, type: "mercenaries" });
-  const alliesPoints = getPoints({ list, type: "allies" });
+  const allPoints = sumArmyListPoints(list);
+  const lordsPoints = sumCategoryPoints(list, "lords");
+  const heroesPoints = sumCategoryPoints(list, "heroes");
+  const charactersPoints = sumCategoryPoints(list, "characters");
+  const corePoints = sumCategoryPoints(list, "core");
+  const specialPoints = sumCategoryPoints(list, "special");
+  const rarePoints = sumCategoryPoints(list, "rare");
+  const mercenariesPoints = sumCategoryPoints(list, "mercenaries");
+  const alliesPoints = sumCategoryPoints(list, "allies");
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
@@ -119,7 +123,7 @@ export const GameView = () => {
                     />
                     {showPoints && (
                       <span className="game-view__points">
-                        [{getUnitPoints(unit)}{" "}
+                        [{sumUnitPoints(unit)}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
                     )}

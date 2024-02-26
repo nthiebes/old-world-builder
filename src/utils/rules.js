@@ -1,4 +1,7 @@
-const rules = {
+/** @typedef {import('../../types').ArmyComposition} ArmyComposition */
+/** @typedef {import('../../types').Category} Category */
+
+export const rules = {
   "grand-army": {
     lords: { maxPercent: 25 },
     heroes: { maxPercent: 25 },
@@ -152,44 +155,24 @@ const rules = {
   },
 };
 
-export const getMaxPercentData = ({
-  type,
-  armyPoints,
-  points,
-  armyComposition,
-}) => {
-  const categoryData = rules[armyComposition]
-    ? rules[armyComposition][type]
-    : rules["grand-army"][type];
+/**
+ * Get the max percent for a given type and army composition
+ *
+ * @param {Category} category
+ * @param {ArmyComposition} armyComposition
+ * @returns
+ */
+export const getMaxPercent = (category, armyComposition) =>
+  (rules[armyComposition]?.[category].maxPercent ??
+    rules["grand-army"][category].maxPercent) / 100;
 
-  if (!categoryData) {
-    return null;
-  }
-
-  const maxPercent = categoryData.maxPercent;
-  const maxPoints = (armyPoints / 100) * maxPercent;
-
-  return {
-    points: Math.floor(maxPoints),
-    overLimit: points > maxPoints,
-    diff: points > maxPoints ? Math.ceil(points - maxPoints) : 0,
-  };
-};
-
-export const getMinPercentData = ({
-  type,
-  armyPoints,
-  points,
-  armyComposition,
-}) => {
-  const minPercent = rules[armyComposition]
-    ? rules[armyComposition][type].minPercent
-    : rules["grand-army"][type].minPercent;
-  const minPoints = (armyPoints / 100) * minPercent;
-
-  return {
-    points: Math.floor(minPoints),
-    overLimit: points <= minPoints,
-    diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
-  };
-};
+/**
+ * Get the min percent for a given type and army composition
+ *
+ * @param {Category} category
+ * @param {ArmyComposition} armyComposition
+ * @returns
+ */
+export const getMinPercent = (category, armyComposition) =>
+  (rules[armyComposition]?.[category].minPercent ??
+    rules["grand-army"][category].minPercent) / 100;
