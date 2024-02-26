@@ -33,7 +33,7 @@ const additionalOWBRules = {
   "great hammers": { url: "weapons-of-war/great-hammer" },
   "brimstone guns": { url: "weapons-of-war/brimstone-gun" },
   clatterguns: { url: "weapons-of-war/clattergun" },
-  "steam guns": { url: "weapons-of-war/steam-gun-dwarfs" },
+  "steam guns dwarfs": { url: "weapons-of-war/steam-gun-dwarfs" },
   crossbows: { url: "weapons-of-war/crossbow" },
   "throwing weapons": { url: "weapons-of-war/throwing-weapons" },
   slings: { url: "weapons-of-war/sling" },
@@ -59,6 +59,8 @@ const additionalOWBRules = {
   "standard bearer": { url: "command-groups/standard-bearers" },
   musician: { url: "command-groups/musicians" },
   bellower: { url: "special-rules/bellowers-and-musicians" },
+  "stone thrower": { url: "war-machines/stone-throwers" },
+  "fire thrower": { url: "war-machines/fire-throwers" },
   "level 1 wizard": { url: "magic/levels-of-wizardry" },
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
@@ -66,7 +68,8 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
-  engineer: "engineer dwarfs",
+  plagueswords: "plaguesword",
+  "steam tank": "empire steam tank",
   gyrocopters: "gyrocopter",
   boss: "champions",
   marksman: "champions",

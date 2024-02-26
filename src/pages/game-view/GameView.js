@@ -147,9 +147,10 @@ export const GameView = () => {
                   ) : null}
                   {showStats &&
                     (stats?.length > 0 ? (
-                      <Stats values={stats} />
+                      <Stats values={stats} className="game-view__stats" />
                     ) : (
                       <Stats
+                        className="game-view__stats"
                         values={[
                           {
                             name: "",

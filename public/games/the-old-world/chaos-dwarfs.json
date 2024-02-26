@@ -708,13 +708,14 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapon, Throwing weapons",
+          "name_de": "Hand weapon, Throwing weapons",
+          "name_es": "Hand weapon, Throwing weapons",
+          "name_fr": "Hand weapon, Throwing weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -741,7 +742,8 @@
           "perModel": true
         }
       ],
-      "armor": [
+      "armor": [],
+      "options": [
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -749,28 +751,14 @@
           "name_fr": "Light armour",
           "points": 3,
           "perModel": true
-        }
-      ],
-      "options": [
+        },
         {
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Shield",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Throwing weapons (instead Shortbow)",
-          "name_de": "Throwing weapons (instead Shortbow)",
-          "name_es": "Throwing weapons (instead Shortbow)",
-          "name_fr": "Throwing weapons (instead Shortbow)",
-          "points": 0,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Shortbow (instead throwing weapons)",
@@ -778,9 +766,7 @@
           "name_es": "Shortbow (instead throwing weapons)",
           "name_fr": "Shortbow (instead throwing weapons)",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
@@ -1072,8 +1058,6 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      "regimentalUnit": true,
-      "detachment": true,
       "minDetachmentSize": 5,
       "command": [
         {
@@ -1416,10 +1400,6 @@
         "name_de": "0-1",
         "name_es": "0-1",
         "name_fr": "0-1"
-      },
-      "magic": {
-        "types": [],
-        "maxPoints": 0
       }
     }
   ],
@@ -1433,7 +1413,6 @@
       "points": 19,
       "minimum": 10,
       "maximum": 0,
-      "regimentalUnit": true,
       "command": [
         {
           "name_en": "Overseer (champion)",
@@ -1771,8 +1750,6 @@
       "name_fr": "Iron Daemon",
       "id": "iron-daemon",
       "points": 275,
-      "minimum": 1,
-      "maximum": 1,
       "command": [],
       "equipment": [
         {
@@ -1829,8 +1806,6 @@
       "name_fr": "Deathshrieker Rocket Launcher",
       "id": "deathshrieker-rocket-launcher",
       "points": 120,
-      "minimum": 1,
-      "maximum": 1,
       "command": [],
       "equipment": [
         {
@@ -1899,8 +1874,6 @@
       "name_fr": "Magma Cannon",
       "id": "magma-cannon",
       "points": 125,
-      "minimum": 1,
-      "maximum": 1,
       "command": [],
       "equipment": [
         {
@@ -1969,8 +1942,6 @@
       "name_fr": "Hobgoblin Bolt Thrower",
       "id": "hobgoblin-bolt-thrower",
       "points": 45,
-      "minimum": 1,
-      "maximum": 1,
       "command": [],
       "equipment": [
         {
@@ -2014,20 +1985,20 @@
   ],
   "rare": [
     {
-      "name_en": "Hobgoblin Wolf Raiders",
-      "name_de": "Hobgoblin Wolf Raiders",
-      "name_es": "Hobgoblin Wolf Raiders",
-      "name_fr": "Hobgoblin Wolf Raiders",
+      "name_en": "Hobgoblin Wolf Riders",
+      "name_de": "Hobgoblin Wolf Riders",
+      "name_es": "Hobgoblin Wolf Riders",
+      "name_fr": "Hobgoblin Wolf Riders",
       "id": "hobgoblin-wolf-raiders",
       "points": 12,
       "minimum": 5,
       "maximum": 0,
       "command": [
         {
-          "name_en": "Boss (champion",
-          "name_de": "Boss (champion",
-          "name_es": "Boss (champion",
-          "name_fr": "Boss (champion",
+          "name_en": "Boss (champion)",
+          "name_de": "Boss (champion)",
+          "name_es": "Boss (champion)",
+          "name_fr": "Boss (champion)",
           "points": 8
         },
         {
@@ -2047,13 +2018,14 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Cavalry spears",
@@ -2066,10 +2038,10 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour and shield",
-          "name_de": "Light armour and shield",
-          "name_es": "Light armour and shield",
-          "name_fr": "Light armour and shield",
+          "name_en": "Light armour, Shields",
+          "name_de": "Light armour, Shields",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Light armour, Shields",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2130,8 +2102,6 @@
       "name_fr": "Dreadquake Mortar",
       "id": "dreadquake-mortar",
       "points": 165,
-      "minimum": 1,
-      "maximum": 1,
       "command": [],
       "equipment": [
         {
