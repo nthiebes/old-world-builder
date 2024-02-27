@@ -48,7 +48,7 @@ export const getAllOptions = (
         }
 
         if (selectedOptions.length) {
-          commandEntry += ` [${selectedOptions.join(" + ")}]`;
+          commandEntry += ` + ${selectedOptions.join(" + ")}`;
         }
 
         allCommand.push(commandEntry);
