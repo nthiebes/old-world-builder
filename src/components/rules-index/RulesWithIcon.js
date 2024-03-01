@@ -18,9 +18,9 @@ export const RulesWithIcon = ({ textObject }) => {
     return [];
   }
 
-  const textEn = textObject.name_en.split(/, | \+ | \[/);
+  const textEn = textObject.name_en.split(/, | \+ |\[/);
   const ruleString = textObject[`name_${language}`] || textObject.name_en;
-  let ruleButtons = ruleString.split(/, | \+ | \[/);
+  let ruleButtons = ruleString.split(/, | \+ |\[/);
 
   return ruleButtons.map((rule, index) => {
     return (

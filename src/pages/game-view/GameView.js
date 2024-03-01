@@ -29,6 +29,7 @@ export const GameView = () => {
   const [showPoints, setShowPoints] = useState(true);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
   const [showStats, setShowStats] = useState(true);
+  const [showPageNumbers, setShowPageNumbers] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -90,6 +91,16 @@ export const GameView = () => {
         setShowPoints(!showPoints);
       },
     },
+    {
+      name: intl.formatMessage({
+        id: "export.showPageNumbers",
+      }),
+      id: "pages",
+      checked: showPageNumbers,
+      callback: () => {
+        setShowPageNumbers(!showPageNumbers);
+      },
+    },
   ];
   const getSection = ({ type }) => {
     const units = list[type];
@@ -142,7 +153,10 @@ export const GameView = () => {
                           <FormattedMessage id="unit.specialRules" />:
                         </i>
                       </b>{" "}
-                      <RulesLinksText textObject={unit.specialRules} />
+                      <RulesLinksText
+                        textObject={unit.specialRules}
+                        showPageNumbers={showPageNumbers}
+                      />
                     </p>
                   ) : null}
                   {showStats &&

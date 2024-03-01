@@ -7,7 +7,7 @@ import { openRulesIndex } from "../../state/rules-index";
 
 import { rulesMap, synonyms } from "./rules-map";
 
-export const RulesLinksText = ({ textObject }) => {
+export const RulesLinksText = ({ textObject, showPageNumbers }) => {
   const dispatch = useDispatch();
   const { language } = useLanguage();
 
@@ -19,25 +19,33 @@ export const RulesLinksText = ({ textObject }) => {
   const ruleString = textObject[`name_${language}`] || textObject.name_en;
   let ruleButtons = ruleString.split(", ");
 
-  return ruleButtons.map((rule, index) => (
-    <Fragment key={rule}>
-      {rulesMap[normalizeRuleName(textEn[index])] ||
-      rulesMap[synonyms[normalizeRuleName(textEn[index])]] ? (
-        <button
-          className="unit__rule"
-          onClick={() =>
-            dispatch(openRulesIndex({ activeRule: textEn[index] }))
-          }
-        >
-          {rule}
-          {index !== ruleButtons.length - 1 && ", "}
-        </button>
-      ) : (
-        <>
-          {rule}
-          {index !== ruleButtons.length - 1 && ", "}
-        </>
-      )}
-    </Fragment>
-  ));
+  return ruleButtons.map((rule, index) => {
+    const normalizedName = normalizeRuleName(textEn[index]);
+    const synonym = synonyms[normalizedName];
+    const ruleData = rulesMap[synonym || normalizedName];
+
+    return (
+      <Fragment key={rule}>
+        {ruleData ? (
+          <>
+            <button
+              className="unit__rule"
+              onClick={() =>
+                dispatch(openRulesIndex({ activeRule: textEn[index] }))
+              }
+            >
+              {rule}
+            </button>
+            {showPageNumbers && ` [${ruleData.page}]`}
+            {index !== ruleButtons.length - 1 && ", "}
+          </>
+        ) : (
+          <>
+            {rule}
+            {index !== ruleButtons.length - 1 && ", "}
+          </>
+        )}
+      </Fragment>
+    );
+  });
 };
