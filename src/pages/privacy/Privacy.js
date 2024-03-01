@@ -6,22 +6,12 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 // import { loadScript } from "../../utils/script";
 
-// window["stg"] = window["stg"] || {};
-// window["stg"].optedOutCheckboxText = "You're opted out. Uncheck to opt in.";
-// window["stg"].optedInCheckboxText = "Opt out of data collection and usage";
-// window["stg"].isGlobal = false;
-// window["stg"].instanceHostname = "https://owb.containers.piwik.pro";
-
 export const Privacy = () => {
   const location = useLocation();
   const intl = useIntl();
-  // const handleOptOut = () => {
-  //   window.parent.storeUserOptOutPreferences();
-  // };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // loadScript("https://owb.containers.piwik.pro/privacy/script.v2.js");
   }, [location.pathname]);
 
   return (

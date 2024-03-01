@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
-// import { CustomEvent } from "@piwikpro/react-piwik-pro";
 
 import { Button } from "../../components/button";
 import { ListItem, OrderableList } from "../../components/list";
@@ -72,9 +71,6 @@ export const Home = ({ isMobile }) => {
     const newLists = swap(lists, sourceIndex, destinationIndex);
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     return dispatch(setLists(newLists));
-  };
-  const handleForg3dClick = () => {
-    // CustomEvent.trackEvent("affiliate_link", "click", "forg3d");
   };
 
   useEffect(() => {
@@ -186,7 +182,6 @@ export const Home = ({ isMobile }) => {
           href="https://tinyurl.com/Forg3dOWB"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={handleForg3dClick}
         >
           <img
             src={forg3dBanner}

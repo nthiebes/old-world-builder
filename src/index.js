@@ -4,7 +4,6 @@ import { Provider as ReduxProvider } from "react-redux";
 import { IntlProvider } from "react-intl";
 import { HelmetProvider } from "react-helmet-async";
 import * as Sentry from "@sentry/react";
-// import PiwikPro from "@piwikpro/react-piwik-pro";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -16,6 +15,7 @@ import German from "./i18n/de.json";
 import Spanish from "./i18n/es.json";
 import French from "./i18n/fr.json";
 import Italian from "./i18n/it.json";
+import Polish from "./i18n/pl.json";
 
 // Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -27,22 +27,17 @@ if (process.env.NODE_ENV !== "development") {
   });
 }
 
-// Analytics
-// PiwikPro.initialize(
-//   "b926228f-3567-4df1-b4e5-5ea40019bffb",
-//   "https://owb.piwik.pro"
-// );
-
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
-  en: "Costruttore di eserciti per Warhammer: The Old World e Warhammer Fantasy Battles.",
+  en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
   fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World' et 'Warhammer Fantaisie'.",
   es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
-  it: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
+  it: "Costruttore di eserciti per Warhammer: The Old World e Warhammer Fantasy Battles.",
+  pl: "Konstruktor armii dla Warhammer: The Old World i Warhammer Fantasy Battles.",
 };
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr", "es", "it"];
+const supportedLanguages = ["en", "de", "fr", "es", "it", "pl"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -66,6 +61,8 @@ if (language === "de") {
   messages = French;
 } else if (language === "it") {
   messages = Italian;
+} else if (language === "pl") {
+  messages = Polish;
 } else {
   messages = English;
 }
