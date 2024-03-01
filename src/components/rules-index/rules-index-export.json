@@ -1977,7 +1977,33 @@
     "page": "FoF, p. 147"
   },
   "warp lightning cannon": {
-    "url": "weapons-of-war/warp-lightning-cannon",
+    "url": "unit/warp-lightning-cannon",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "-",
+        "T": "6",
+        "W": "4",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Warp Lightning Cannon"
+      },
+      {
+        "A": "3",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "3",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Engineer & Crew"
+      }
+    ],
     "page": "SK, p. 19"
   },
   "ensorcelled weapon": {
@@ -1998,7 +2024,33 @@
   },
   "ironfist": { "url": "weapons-of-war/ironfist", "page": "OK, p. 26" },
   "plagueclaw catapult": {
-    "url": "weapons-of-war/plagueclaw-catapult",
+    "url": "unit/plagueclaw-catapult",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "-",
+        "T": "6",
+        "W": "4",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Plagueclaw Catapult"
+      },
+      {
+        "A": "D3+3",
+        "I": "2",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "3",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Plague Monk Crew"
+      }
+    ],
     "page": "SK, p. 19"
   },
   "thrusting spear": {
@@ -3721,6 +3773,24 @@
     "url": "magic-item/wyrmbreath-vial",
     "page": "AJ:KoB, p. 48"
   },
+  "abyssal terror": {
+    "url": "unit/abyssal-terror",
+    "stats": [
+      {
+        "A": "3",
+        "I": "2",
+        "M": "6",
+        "S": "5",
+        "T": "(+1)",
+        "W": "(+4)",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "4",
+        "Name": "Abyssal Terror"
+      }
+    ],
+    "page": "VC, p. 22"
+  },
   "ancient stegadon": {
     "url": "unit/ancient-stegadon",
     "stats": [
@@ -3985,6 +4055,24 @@
     ],
     "page": "LM, p. 14"
   },
+  "bat swarms": {
+    "url": "unit/bat-swarms",
+    "stats": [
+      {
+        "A": "5",
+        "I": "4",
+        "M": "1",
+        "S": "2",
+        "T": "2",
+        "W": "5",
+        "BS": "0",
+        "Ld": "3",
+        "WS": "3",
+        "Name": "Bat Swarm"
+      }
+    ],
+    "page": "VC, p. 11"
+  },
   "battle pilgrims": {
     "url": "unit/battle-pilgrims",
     "stats": [
@@ -4111,6 +4199,48 @@
     ],
     "page": "DE, p. 10"
   },
+  "black coach": {
+    "url": "unit/black-coach",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "5",
+        "T": "6",
+        "W": "4",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Black Coach"
+      },
+      {
+        "A": "2",
+        "I": "2",
+        "M": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Wraith (x1)"
+      },
+      {
+        "A": "1",
+        "I": "2",
+        "M": "8",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Nightmares (x2)"
+      }
+    ],
+    "page": "VC, p. 19"
+  },
   "black dragon": {
     "url": "unit/black-dragon",
     "stats": [
@@ -4158,6 +4288,48 @@
       }
     ],
     "page": "DE, p. 10"
+  },
+  "black knights": {
+    "url": "unit/black-knights",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Black Knight"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Hell Knight"
+      },
+      {
+        "A": "1",
+        "I": "2",
+        "M": "7",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "2",
+        "Name": "Skeletal Steed"
+      }
+    ],
+    "page": "VC, p. 14"
   },
   "black orc bigboss": {
     "url": "unit/black-orc-bigboss",
@@ -4224,6 +4396,48 @@
       }
     ],
     "page": "RH, p. 12"
+  },
+  "blood knights": {
+    "url": "unit/blood-knights",
+    "stats": [
+      {
+        "A": "2",
+        "I": "4",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "5",
+        "Name": "Blood Knight"
+      },
+      {
+        "A": "3",
+        "I": "4",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "5",
+        "Name": "Kastellan"
+      },
+      {
+        "A": "1",
+        "I": "2",
+        "M": "7",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Nightmare"
+      }
+    ],
+    "page": "VC, p. 13"
   },
   "blood throne of khorne": {
     "url": "unit/blood-throne-of-khorne",
@@ -4668,6 +4882,42 @@
       }
     ],
     "page": "DoC, p. 23"
+  },
+  "butcher": {
+    "url": "unit/butcher",
+    "stats": [
+      {
+        "A": "3",
+        "I": "2",
+        "M": "6",
+        "S": "4",
+        "T": "5",
+        "W": "4",
+        "BS": "2",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Butcher"
+      }
+    ],
+    "page": "OK, p. 4"
+  },
+  "cairn wraith": {
+    "url": "unit/cairn-wraith",
+    "stats": [
+      {
+        "A": "2",
+        "I": "2",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "3",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "4",
+        "Name": "Cairn Wraith"
+      }
+    ],
+    "page": "VC, p. 6"
   },
   "cannon": {
     "url": "unit/cannon",
@@ -5365,6 +5615,36 @@
     ],
     "page": "RH, p. 61"
   },
+  "clanrats": {
+    "url": "unit/clanrats",
+    "stats": [
+      {
+        "A": "1",
+        "I": "4",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "4",
+        "WS": "3",
+        "Name": "Clanrat"
+      },
+      {
+        "A": "2",
+        "I": "4",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Clawleader"
+      }
+    ],
+    "page": "SK, p. 7"
+  },
   "cockatrice": {
     "url": "unit/cockatrice",
     "stats": [
@@ -5562,6 +5842,150 @@
       }
     ],
     "page": "RH, p. 28"
+  },
+  "corpse cart": {
+    "url": "unit/corpse-cart",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "4",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Corpse Cart"
+      },
+      {
+        "A": "1",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Corpsemaster (x1)"
+      },
+      {
+        "A": "2D6",
+        "I": "1",
+        "M": "4",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "-",
+        "WS": "1",
+        "Name": "The Restless Dead"
+      }
+    ],
+    "page": "VC, p. 18"
+  },
+  "coven throne": {
+    "url": "unit/coven-throne",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "5",
+        "T": "5",
+        "W": "5",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Coven Throne"
+      },
+      {
+        "A": "2",
+        "I": "5",
+        "M": "-",
+        "S": "5",
+        "T": "-",
+        "W": "-",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "5",
+        "Name": "Pallid Handmaidens (x2)"
+      },
+      {
+        "A": "D6",
+        "I": "1",
+        "M": "6",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Spirit Horde"
+      }
+    ],
+    "page": "VC, p. 16"
+  },
+  "crypt ghouls": {
+    "url": "unit/crypt-ghouls",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Crypt Ghoul"
+      },
+      {
+        "A": "3",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Crypt Ghast"
+      }
+    ],
+    "page": "VC, p. 11"
+  },
+  "crypt horrors": {
+    "url": "unit/crypt-horrors",
+    "stats": [
+      {
+        "A": "3",
+        "I": "2",
+        "M": "6",
+        "S": "4",
+        "T": "5",
+        "W": "3",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Crypt Horror"
+      },
+      {
+        "A": "4",
+        "I": "2",
+        "M": "6",
+        "S": "4",
+        "T": "5",
+        "W": "3",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Crypt Haunter"
+      }
+    ],
+    "page": "VC, p. 11"
   },
   "cygor": {
     "url": "unit/cygor",
@@ -6103,6 +6527,36 @@
     ],
     "page": "FoF, p. 66"
   },
+  "dire wolves": {
+    "url": "unit/dire-wolves",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "9",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "3",
+        "WS": "3",
+        "Name": "Dire Wolf"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "9",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "3",
+        "WS": "3",
+        "Name": "Doom Wolf"
+      }
+    ],
+    "page": "VC, p. 14"
+  },
   "disc of tzeentch": {
     "url": "unit/disc-of-tzeentch",
     "stats": [
@@ -6210,6 +6664,48 @@
       }
     ],
     "page": "DE, p. 14"
+  },
+  "doomwheel": {
+    "url": "unit/doomwheel",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "3D6",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Doomwheel"
+      },
+      {
+        "A": "1",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Warlock (x1)"
+      },
+      {
+        "A": "2D6",
+        "I": "4",
+        "M": "-",
+        "S": "2",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "2",
+        "Name": "Rats"
+      }
+    ],
+    "page": "SK, p. 17"
   },
   "dragon mage": {
     "url": "unit/dragon-mage",
@@ -6889,6 +7385,24 @@
     ],
     "page": "RH, p. 26"
   },
+  "fell bats": {
+    "url": "unit/fell-bats",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "1",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "0",
+        "Ld": "3",
+        "WS": "3",
+        "Name": "Fell Bat"
+      }
+    ],
+    "page": "VC, p. 12"
+  },
   "fiends of slaanesh": {
     "url": "unit/fiends-of-slaanesh",
     "stats": [
@@ -7200,6 +7714,24 @@
       }
     ],
     "page": "RH, p. 20"
+  },
+  "giant rats": {
+    "url": "unit/giant-rats",
+    "stats": [
+      {
+        "A": "1",
+        "I": "4",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "3",
+        "WS": "3",
+        "Name": "Giant Rat"
+      }
+    ],
+    "page": "SK, p. 12"
   },
   "giant wolf": {
     "url": "unit/giant-wolf",
@@ -7783,6 +8315,36 @@
     ],
     "page": "FoF, p. 50"
   },
+  "grave guard": {
+    "url": "unit/grave-guard",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "4",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Grave Guard"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "4",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Seneschal"
+      }
+    ],
+    "page": "VC, p. 9"
+  },
   "great bray-shaman": {
     "url": "unit/great-bray-shaman",
     "stats": [
@@ -7903,6 +8465,24 @@
     ],
     "page": "DoC, p. 9"
   },
+  "grey seer": {
+    "url": "unit/grey-seer",
+    "stats": [
+      {
+        "A": "2",
+        "I": "5",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "3",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Grey Seer"
+      }
+    ],
+    "page": "SK, p. 3"
+  },
   "griffon empire": {
     "url": "unit/griffon-empire",
     "stats": [
@@ -7968,6 +8548,36 @@
       }
     ],
     "page": "FoF, p. 30"
+  },
+  "gutter runners": {
+    "url": "unit/gutter-runners",
+    "stats": [
+      {
+        "A": "1",
+        "I": "5",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Gutter Runner"
+      },
+      {
+        "A": "2",
+        "I": "5",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Assassin"
+      }
+    ],
+    "page": "SK, p. 13"
   },
   "gyrobomber": {
     "url": "unit/gyrobomber",
@@ -8083,6 +8693,24 @@
     ],
     "page": "RH, p. 98, DE, p. 12"
   },
+  "hell pit abomination": {
+    "url": "unit/hell-pit-abomination",
+    "stats": [
+      {
+        "A": "D6+1",
+        "I": "4",
+        "M": "3D6",
+        "S": "6",
+        "T": "5",
+        "W": "6",
+        "BS": "1",
+        "Ld": "8",
+        "WS": "3",
+        "Name": "Hell Pit Abomination"
+      }
+    ],
+    "page": "SK, p. 18"
+  },
   "hellcannon": {
     "url": "unit/hellcannon",
     "stats": [
@@ -8166,6 +8794,48 @@
       }
     ],
     "page": "DoC, p. 16"
+  },
+  "hexwraiths": {
+    "url": "unit/hexwraiths",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "-",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Hexwraith"
+      },
+      {
+        "Name": "Hellwraith",
+        "M": "-",
+        "WS": "3",
+        "BS": "0",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "2",
+        "A": "2",
+        "Ld": "5"
+      },
+      {
+        "Name": "Spectral Steed",
+        "M": "8",
+        "WS": "2",
+        "BS": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "I": "2",
+        "A": "1",
+        "Ld": "-"
+      }
+    ],
+    "page": "VC, p. 15"
   },
   "high beastmaster": {
     "url": "unit/high-beastmaster",
@@ -9277,6 +9947,24 @@
     ],
     "page": "RH, p. 69"
   },
+  "master assassin": {
+    "url": "unit/master-assassin",
+    "stats": [
+      {
+        "A": "3",
+        "I": "8",
+        "M": "6",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "BS": "7",
+        "Ld": "7",
+        "WS": "8",
+        "Name": "Master Assassin"
+      }
+    ],
+    "page": "SK, p. 5"
+  },
   "master mage": {
     "url": "unit/master-mage",
     "stats": [
@@ -9294,6 +9982,42 @@
       }
     ],
     "page": "FoF, p. 49"
+  },
+  "master moulder": {
+    "url": "unit/master-moulder",
+    "stats": [
+      {
+        "A": "2",
+        "I": "4",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Master Moulder"
+      }
+    ],
+    "page": "SK, p. 11"
+  },
+  "master necromancer": {
+    "url": "unit/master-necromancer",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "4",
+        "S": "3",
+        "T": "4",
+        "W": "3",
+        "BS": "3",
+        "Ld": "8",
+        "WS": "3",
+        "Name": "Master Necromancer"
+      }
+    ],
+    "page": "VC, p. 5"
   },
   "men-at-arms": {
     "url": "unit/men-at-arms",
@@ -9444,6 +10168,48 @@
       }
     ],
     "page": "FoF, p. 71"
+  },
+  "mortis engine": {
+    "url": "unit/mortis-engine",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "5",
+        "T": "5",
+        "W": "5",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Mortis Engine"
+      },
+      {
+        "A": "1",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Banshees (x3)"
+      },
+      {
+        "A": "D6",
+        "I": "1",
+        "M": "6",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Spirit Horde"
+      }
+    ],
+    "page": "VC, p. 17"
   },
   "mortuary priest": {
     "url": "unit/mortuary-priest",
@@ -9600,6 +10366,24 @@
       }
     ],
     "page": "RH, p. 145"
+  },
+  "necromantic acolyte": {
+    "url": "unit/necromantic-acolyte",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "4",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Necromantic Acolyte"
+      }
+    ],
+    "page": "VC, p. 5"
   },
   "necropolis knights": {
     "url": "unit/necropolis-knights",
@@ -9876,6 +10660,54 @@
       }
     ],
     "page": "RH, p. 17"
+  },
+  "night runners": {
+    "url": "unit/night-runners",
+    "stats": [
+      {
+        "A": "1",
+        "I": "5",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Night Runner"
+      },
+      {
+        "A": "2",
+        "I": "5",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Nightleader"
+      }
+    ],
+    "page": "SK, p. 13"
+  },
+  "nightmare": {
+    "url": "unit/nightmare",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "7",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Nightmare"
+      }
+    ],
+    "page": "VC, p. 8"
   },
   "noble": {
     "url": "unit/noble",
@@ -10207,6 +11039,24 @@
     ],
     "page": "FoF, p. 63"
   },
+  "packmaster": {
+    "url": "unit/packmaster",
+    "stats": [
+      {
+        "A": "1",
+        "I": "4",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Packmaster"
+      }
+    ],
+    "page": "SK, p. 11"
+  },
   "paladin": {
     "url": "unit/paladin",
     "stats": [
@@ -10435,6 +11285,24 @@
     ],
     "page": "FoF, p. 62"
   },
+  "plague censer bearers": {
+    "url": "unit/plague-censer-bearers",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Plague Censer Bearer"
+      }
+    ],
+    "page": "SK, p. 14"
+  },
   "plague drones of nurgle": {
     "url": "unit/plague-drones-of-nurgle",
     "stats": [
@@ -10477,6 +11345,84 @@
     ],
     "page": "DoC, p. 12"
   },
+  "plague furnace": {
+    "url": "unit/plague-furnace",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "2",
+        "S": "5",
+        "T": "6",
+        "W": "5",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Plague Furnace"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Plague Monk Crew (x3)"
+      }
+    ],
+    "page": "SK, p. 16"
+  },
+  "plague monks": {
+    "url": "unit/plague-monks",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Plague Monk"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Plague Deacon"
+      }
+    ],
+    "page": "SK, p. 14"
+  },
+  "plague priest": {
+    "url": "unit/plague-priest",
+    "stats": [
+      {
+        "A": "3",
+        "I": "5",
+        "M": "5",
+        "S": "4",
+        "T": "5",
+        "W": "2",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "5",
+        "Name": "Plague Priest"
+      }
+    ],
+    "page": "SK, p. 6"
+  },
   "plaguebearers of nurgle": {
     "url": "unit/plaguebearers-of-nurgle",
     "stats": [
@@ -10506,6 +11452,24 @@
       }
     ],
     "page": "DoC, p. 11"
+  },
+  "poisoned wind globadiers": {
+    "url": "unit/poisoned-wind-globadiers",
+    "stats": [
+      {
+        "A": "1",
+        "I": "4",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Globadier"
+      }
+    ],
+    "page": "SK, p. 10"
   },
   "priest of sigmar": {
     "url": "unit/priest-of-sigmar",
@@ -10699,8 +11663,44 @@
     ],
     "page": "FoF, p. 22"
   },
-  "razordon packs": {
-    "url": "unit/razordon-packs",
+  "rat ogres": {
+    "url": "unit/rat-ogres",
+    "stats": [
+      {
+        "A": "3",
+        "I": "4",
+        "M": "6",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "BS": "1",
+        "Ld": "5",
+        "WS": "4",
+        "Name": "Rat Ogre"
+      }
+    ],
+    "page": "SK, p. 12"
+  },
+  "rat swarms": {
+    "url": "unit/rat-swarms",
+    "stats": [
+      {
+        "A": "5",
+        "I": "4",
+        "M": "6",
+        "S": "2",
+        "T": "2",
+        "W": "5",
+        "BS": "0",
+        "Ld": "4",
+        "WS": "2",
+        "Name": "Rat Swarm"
+      }
+    ],
+    "page": "SK, p. 11"
+  },
+  "razordon pack": {
+    "url": "unit/razordon-pack",
     "stats": [
       {
         "A": "1",
@@ -11155,6 +12155,36 @@
     ],
     "page": "DoC, p. 22"
   },
+  "screaming bell": {
+    "url": "unit/screaming-bell",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "2",
+        "S": "5",
+        "T": "6",
+        "W": "5",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Screaming Bell"
+      },
+      {
+        "A": "3",
+        "I": "4",
+        "M": "-",
+        "S": "5",
+        "T": "-",
+        "W": "-",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Rat Ogre Crew (x1)"
+      }
+    ],
+    "page": "SK, p. 15"
+  },
   "seeker chariot of slaanesh": {
     "url": "unit/seeker-chariot-of-slaanesh",
     "stats": [
@@ -11545,8 +12575,44 @@
     ],
     "page": "FoF, p. 135"
   },
-  "skeletal steed": {
-    "url": "unit/skeletal-steed",
+  "skaven chieftain": {
+    "url": "unit/skaven-chieftain",
+    "stats": [
+      {
+        "A": "3",
+        "I": "6",
+        "M": "5",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "6",
+        "WS": "5",
+        "Name": "Skaven Chieftain"
+      }
+    ],
+    "page": "SK, p. 3"
+  },
+  "skaven warlord": {
+    "url": "unit/skaven-warlord",
+    "stats": [
+      {
+        "A": "4",
+        "I": "7",
+        "M": "5",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "6",
+        "Name": "Skaven Warlord"
+      }
+    ],
+    "page": "SK, p. 3"
+  },
+  "skeletal steed tomb kings": {
+    "url": "unit/skeletal-steed-tomb-kings",
     "stats": [
       {
         "A": "1",
@@ -11562,6 +12628,24 @@
       }
     ],
     "page": "RH, p. 131"
+  },
+  "skeletal steed vampire counts": {
+    "url": "unit/skeletal-steed-vampire-counts",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "7",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "2",
+        "Name": "Skeletal Steed"
+      }
+    ],
+    "page": "VC, p. 8"
   },
   "skeleton archers": {
     "url": "unit/skeleton-archers",
@@ -11875,8 +12959,8 @@
     ],
     "page": "RH, p. 134"
   },
-  "skeleton warriors": {
-    "url": "unit/skeleton-warriors",
+  "skeleton warriors tomb kings": {
+    "url": "unit/skeleton-warriors-tomb-kings",
     "stats": [
       {
         "A": "1",
@@ -11904,6 +12988,36 @@
       }
     ],
     "page": "RH, p. 133"
+  },
+  "skeleton warriors vampire counts": {
+    "url": "unit/skeleton-warriors-vampire-counts",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "5",
+        "WS": "2",
+        "Name": "Skeleton Warrior"
+      },
+      {
+        "A": "2",
+        "I": "2",
+        "M": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "5",
+        "WS": "2",
+        "Name": "Skeleton Champion"
+      }
+    ],
+    "page": "VC, p. 10"
   },
   "skink chief": {
     "url": "unit/skink-chief",
@@ -12235,6 +13349,24 @@
     ],
     "page": "FoF, p. 121"
   },
+  "spirit hosts": {
+    "url": "unit/spirit-hosts",
+    "stats": [
+      {
+        "A": "4",
+        "I": "1",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "4",
+        "BS": "0",
+        "Ld": "4",
+        "WS": "3",
+        "Name": "Spirit Host"
+      }
+    ],
+    "page": "VC, p. 12"
+  },
   "squires": {
     "url": "unit/squires",
     "stats": [
@@ -12409,6 +13541,114 @@
     ],
     "page": "RH, p. 28"
   },
+  "stonehorn": {
+    "url": "unit/stonehorn",
+    "stats": [
+      {
+        "A": "4",
+        "I": "2",
+        "M": "7",
+        "S": "6",
+        "T": "(+1)",
+        "W": "(+4)",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Stonehorn"
+      }
+    ],
+    "page": "OK, p. 7"
+  },
+  "stonehorn riders": {
+    "url": "unit/stonehorn-riders",
+    "stats": [
+      {
+        "A": "4",
+        "I": "2",
+        "M": "7",
+        "S": "6",
+        "T": "6",
+        "W": "6",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Stonehorn"
+      },
+      {
+        "A": "3",
+        "I": "2",
+        "M": "-",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Ogre Beast Rider (x1)"
+      },
+      {
+        "A": "3",
+        "I": "2",
+        "M": "-",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Ogre Crew (x1)"
+      }
+    ],
+    "page": "OK, p. 15"
+  },
+  "stormvermin": {
+    "url": "unit/stormvermin",
+    "stats": [
+      {
+        "A": "1",
+        "I": "5",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "4",
+        "Name": "Stormvermin"
+      },
+      {
+        "A": "2",
+        "I": "5",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "3",
+        "Ld": "6",
+        "WS": "4",
+        "Name": "Fangleader"
+      }
+    ],
+    "page": "SK, p. 7"
+  },
+  "strigoi ghoul king": {
+    "url": "unit/strigoi-ghoul-king",
+    "stats": [
+      {
+        "A": "5",
+        "I": "7",
+        "M": "6",
+        "S": "5",
+        "T": "5",
+        "W": "3",
+        "BS": "3",
+        "Ld": "8",
+        "WS": "6",
+        "Name": "Strigoi Ghoul King"
+      }
+    ],
+    "page": "VC, p. 6"
+  },
   "sun dragon": {
     "url": "unit/sun-dragon",
     "stats": [
@@ -12565,6 +13805,24 @@
     ],
     "page": "LM, p. 5"
   },
+  "terrorgheist": {
+    "url": "unit/terrorgheist-mount",
+    "stats": [
+      {
+        "A": "4",
+        "I": "3",
+        "M": "6",
+        "S": "5",
+        "T": "(+1)",
+        "W": "(+5)",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Terrorgheist (Mount)"
+      }
+    ],
+    "page": "VC, p. 21"
+  },
   "thane": {
     "url": "unit/thane",
     "stats": [
@@ -12684,6 +13942,24 @@
       }
     ],
     "page": "FoF, p. 171"
+  },
+  "tomb banshee": {
+    "url": "unit/tomb-banshee",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "6",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Tomb Banshee"
+      }
+    ],
+    "page": "VC, p. 7"
   },
   "tomb guard": {
     "url": "unit/tomb-guard",
@@ -13069,6 +14345,90 @@
     ],
     "page": "RH, p. 135"
   },
+  "vampire count": {
+    "url": "unit/vampire-count",
+    "stats": [
+      {
+        "A": "4",
+        "I": "6",
+        "M": "6",
+        "S": "5",
+        "T": "5",
+        "W": "3",
+        "BS": "5",
+        "Ld": "8",
+        "WS": "7",
+        "Name": "Vampire Count"
+      }
+    ],
+    "page": "VC, p. 3"
+  },
+  "vampire thrall": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "3",
+        "I": "5",
+        "M": "6",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "6",
+        "Name": "Vampire Thrall"
+      }
+    ],
+    "page": "VC, p. 3"
+  },
+  "vargheists": {
+    "url": "unit/vargheists",
+    "stats": [
+      {
+        "A": "3",
+        "I": "4",
+        "M": "6",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "BS": "0",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Vargheist"
+      },
+      {
+        "A": "4",
+        "I": "4",
+        "M": "6",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "BS": "0",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Vargoyle"
+      }
+    ],
+    "page": "VC, p. 12"
+  },
+  "varghulf": {
+    "url": "unit/varghulf",
+    "stats": [
+      {
+        "A": "4",
+        "I": "4",
+        "M": "8",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "0",
+        "Ld": "4",
+        "WS": "5",
+        "Name": "Varghulf"
+      }
+    ],
+    "page": "VC, p. 22"
+  },
   "venerable ushabti": {
     "url": "unit/venerable-ushabti",
     "stats": [
@@ -13281,8 +14641,8 @@
         "I": "4",
         "M": "-",
         "S": "3",
-        "T": "3",
-        "W": "1",
+        "T": "4",
+        "W": "2",
         "BS": "4",
         "Ld": "8",
         "WS": "4",
@@ -13293,8 +14653,8 @@
         "I": "4",
         "M": "-",
         "S": "3",
-        "T": "3",
-        "W": "1",
+        "T": "4",
+        "W": "2",
         "BS": "5",
         "Ld": "8",
         "WS": "4",
@@ -13351,6 +14711,42 @@
     ],
     "page": "FoF, p. 89"
   },
+  "warlock engineer": {
+    "url": "unit/warlock-engineer",
+    "stats": [
+      {
+        "A": "2",
+        "I": "4",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Warlock Engineer"
+      }
+    ],
+    "page": "SK, p. 4"
+  },
+  "warplock jezzails": {
+    "url": "unit/warplock-jezzails",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "3",
+        "Ld": "5",
+        "WS": "3",
+        "Name": "Jezzail Team"
+      }
+    ],
+    "page": "SK, p. 10"
+  },
   "waystalker": {
     "url": "unit/waystalker",
     "stats": [
@@ -13399,6 +14795,24 @@
     ],
     "page": "FoF, p. 132"
   },
+  "weapon team": {
+    "url": "unit/weapon-team",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "5",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "3",
+        "Ld": "4",
+        "WS": "3",
+        "Name": "Weapon Team Crew"
+      }
+    ],
+    "page": "SK, p. 8"
+  },
   "white lions of chrace": {
     "url": "unit/white-lions-of-chrace",
     "stats": [
@@ -13428,6 +14842,42 @@
       }
     ],
     "page": "FoF, p. 163"
+  },
+  "wight king": {
+    "url": "unit/wight-king",
+    "stats": [
+      {
+        "A": "3",
+        "I": "4",
+        "M": "4",
+        "S": "5",
+        "T": "5",
+        "W": "3",
+        "BS": "0",
+        "Ld": "9",
+        "WS": "5",
+        "Name": "Wight King"
+      }
+    ],
+    "page": "VC, p. 7"
+  },
+  "wight lord": {
+    "url": "unit/wight-lord",
+    "stats": [
+      {
+        "A": "2",
+        "I": "4",
+        "M": "4",
+        "S": "4",
+        "T": "5",
+        "W": "2",
+        "BS": "0",
+        "Ld": "8",
+        "WS": "4",
+        "Name": "Wight Lord"
+      }
+    ],
+    "page": "VC, p. 7"
   },
   "wild riders": {
     "url": "unit/wild-riders",
@@ -13626,5 +15076,71 @@
       }
     ],
     "page": "AJ:KoB, p. 43"
+  },
+  "yhetees": {
+    "url": "unit/yhetees",
+    "stats": [
+      {
+        "A": "3",
+        "I": "4",
+        "M": "7",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "BS": "0",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Yhetee"
+      },
+      {
+        "A": "4",
+        "I": "4",
+        "M": "7",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "BS": "0",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Greyback"
+      }
+    ],
+    "page": "OK, p. 11"
+  },
+  "zombie dragon": {
+    "url": "unit/zombie-dragon",
+    "stats": [
+      {
+        "A": "5",
+        "I": "2",
+        "M": "6",
+        "S": "6",
+        "T": "(+1)",
+        "W": "(+5)",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "4",
+        "Name": "Zombie Dragon"
+      }
+    ],
+    "page": "VC, p. 20"
+  },
+  "zombies": {
+    "url": "unit/zombies",
+    "stats": [
+      {
+        "A": "1",
+        "I": "1",
+        "M": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "2",
+        "WS": "2",
+        "Name": "Zombies"
+      }
+    ],
+    "page": "VC, p. 10"
   }
 }
