@@ -283,10 +283,18 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleArmorChange = (id) => {
-    const armor = unit.armor.map((item) => ({
-      ...item,
-      active: item.id === id ? true : false,
-    }));
+    let armor;
+    if (unit.armor.length === 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? !item.active : item.active,
+      }));
+    } else if (unit.armor.length > 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? true : false,
+      }));
+    } 
 
     dispatch(
       editUnit({
@@ -706,8 +714,37 @@ export const Unit = ({ isMobile }) => {
               )
             )}
           </>
+        )}           
+        {unit.armor && unit.armor.length === 1 && (
+          <>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.armor" /> 
+            </h2>
+            {unit.armor.map(
+              ({ points, perModel, id, active = false, ...equipment }) => (    
+                <div className="checkbox" key={id}>
+                  <input
+                    type="checkbox"
+                    id={`armor-${id}`}
+                    value={id}
+                    onChange={() => handleArmorChange(id)}
+                    checked={active}                    
+                    className="checkbox__input"
+                  />
+                  <label htmlFor={`armor-${id}`} className="checkbox__label">
+                    <span className="unit__label-text">
+                      <RulesWithIcon textObject={equipment} />
+                    </span>
+                    <i className="checkbox__points">
+                      {getPointsText({ points, perModel })}
+                    </i>
+                  </label>
+                </div>
+              )
+            )}
+          </>
         )}
-        {unit.armor && unit.armor.length > 0 && (
+        {unit.armor && unit.armor.length > 1 && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.armor" />
