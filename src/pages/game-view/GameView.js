@@ -7,17 +7,15 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 import { Stats } from "../../components/stats";
 import {
-  rulesMap,
   RulesIndex,
   RulesLinksText,
   RulesWithIcon,
   RuleWithIcon,
-  synonyms,
 } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { normalizeRuleName } from "../../utils/string";
+import { getStats } from "../../utils/unit";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -108,9 +106,7 @@ export const GameView = () => {
     return (
       <ul>
         {units.map((unit, index) => {
-          const normalizedName = normalizeRuleName(unit.name_en);
-          const synonym = synonyms[normalizedName];
-          const stats = rulesMap[synonym || normalizedName]?.stats;
+          const stats = getStats(unit);
 
           return (
             <li key={index} className="list">

@@ -37,7 +37,7 @@ export const RulesIndex = () => {
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="test"
             height="500"
-            width="500"
+            width="600"
           />
           {isLoading && <Spinner className="rules-index__spinner" />}
         </>

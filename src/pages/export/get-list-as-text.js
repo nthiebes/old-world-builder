@@ -1,8 +1,6 @@
-import { rulesMap, synonyms } from "../../components/rules-index";
-
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
-import { normalizeRuleName } from "../../utils/string";
+import { getStats } from "../../utils/unit";
 import gameSystems from "../../assets/armies.json";
 import { nameMap } from "../magic";
 
@@ -38,9 +36,7 @@ const getUnitsString = ({
         }\n`;
       }
       if (showStats) {
-        const normalizedName = normalizeRuleName(unit.name_en);
-        const synonym = synonyms[normalizedName];
-        const stats = rulesMap[synonym || normalizedName]?.stats;
+        const stats = getStats(unit);
 
         if (stats?.length > 0) {
           stats.forEach((unitStats, index) => {

@@ -6,11 +6,10 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Header } from "../../components/page";
 import { Button } from "../../components/button";
 import { Stats } from "../../components/stats";
-import { rulesMap, synonyms } from "../../components/rules-index";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { normalizeRuleName } from "../../utils/string";
+import { getStats } from "../../utils/unit";
 import { nameMap } from "../magic";
 import gameSystems from "../../assets/armies.json";
 
@@ -105,9 +104,7 @@ export const Print = () => {
     return (
       <ul>
         {units.map((unit) => {
-          const normalizedName = normalizeRuleName(unit.name_en);
-          const synonym = synonyms[normalizedName];
-          const stats = rulesMap[synonym || normalizedName]?.stats;
+          const stats = getStats(unit);
 
           return (
             <li key={unit.id}>
