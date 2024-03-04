@@ -974,7 +974,7 @@ export const Unit = ({ isMobile }) => {
                             {detachmentArmor && detachmentArmor.length > 0 && (
                               <>
                                 <h3 className="unit__subline">
-                                  <FormattedMessage id="unit.armor" />
+                                  <FormattedMessage id="unit.armor" />                                                                   
                                 </h3>
                                 {detachmentArmor.map((armor) => (
                                   <div className="radio" key={armor.id}>
