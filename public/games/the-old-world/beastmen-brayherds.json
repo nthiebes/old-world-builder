@@ -1575,20 +1575,22 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Throwing axes, Javelins",
-          "name_de": "Throwing axes, Javelins",
+          "name_en": "Throwing axes (excludes javelins)",
+          "name_de": "Throwing axes (excludes javelins)",
           "points": 1,
-          "minimum": 0,
-          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Javelins (excludes throwing axes)",
+          "name_de": "Javelins (excludes throwing axes)",
+          "points": 1,
           "perModel": true
         },
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -2269,7 +2271,7 @@
         {
           "name_en": "*Spawn of Slaanesh (only select one)",
           "name_de": "*Spawn of Slaanesh (only select one)",
-          "points": 1,
+          "points": 3,
           "perModel": true,
           "minimum": 0,
           "maximum": 0
