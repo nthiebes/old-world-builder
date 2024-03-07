@@ -297,11 +297,36 @@ export const Unit = ({ isMobile }) => {
       })
     );
   };
-  const handleMountsChange = (id) => {
-    const mounts = unit.mounts.map((item) => ({
-      ...item,
-      active: item.id === id ? true : false,
-    }));
+  const handleMountsChange = (id, optionIndex) => {
+    let mounts;
+
+    if (optionIndex !== undefined) {
+      mounts = unit.mounts.map((mountOption) => {
+        if (mountOption.id === id) {
+          const options = mountOption.options.map((option, index) => {
+            if (index === optionIndex) {
+              return {
+                ...option,
+                active: option.active ? false : true,
+              };
+            }
+
+            return option;
+          });
+
+          return {
+            ...mountOption,
+            options,
+          };
+        }
+        return mountOption;
+      });
+    } else {
+      mounts = unit.mounts.map((item) => ({
+        ...item,
+        active: item.id === id ? true : false,
+      }));
+    }
 
     dispatch(
       editUnit({
@@ -974,46 +999,47 @@ export const Unit = ({ isMobile }) => {
                                 ))}
                               </>
                             )}
-                            {detachmentOptions && detachmentOptions.length > 0 && (
-                              <>
-                                <h3 className="unit__subline">
-                                  <FormattedMessage id="unit.options" />
-                                </h3>
-                                {detachmentOptions.map((option) => (
-                                  <div className="checkbox" key={option.id}>
-                                    <input
-                                      type="checkbox"
-                                      id={`options-${id}-${option.id}`}
-                                      value={option.id}
-                                      onChange={() =>
-                                        handleDetachmentEquipmentChange({
-                                          detachmentId: id,
-                                          equipmentId: option.id,
-                                          category: "options",
-                                          isCheckbox: true,
-                                        })
-                                      }
-                                      checked={option.active || false}
-                                      className="checkbox__input"
-                                    />
-                                    <label
-                                      htmlFor={`options-${id}-${option.id}`}
-                                      className="checkbox__label"
-                                    >
-                                      <span className="unit__label-text">
-                                        <RulesWithIcon textObject={option} />
-                                      </span>
-                                      <i className="checkbox__points">
-                                        {getPointsText({
-                                          points: option.points,
-                                          perModel: option.perModel,
-                                        })}
-                                      </i>
-                                    </label>
-                                  </div>
-                                ))}
-                              </>
-                            )}
+                            {detachmentOptions &&
+                              detachmentOptions.length > 0 && (
+                                <>
+                                  <h3 className="unit__subline">
+                                    <FormattedMessage id="unit.options" />
+                                  </h3>
+                                  {detachmentOptions.map((option) => (
+                                    <div className="checkbox" key={option.id}>
+                                      <input
+                                        type="checkbox"
+                                        id={`options-${id}-${option.id}`}
+                                        value={option.id}
+                                        onChange={() =>
+                                          handleDetachmentEquipmentChange({
+                                            detachmentId: id,
+                                            equipmentId: option.id,
+                                            category: "options",
+                                            isCheckbox: true,
+                                          })
+                                        }
+                                        checked={option.active || false}
+                                        className="checkbox__input"
+                                      />
+                                      <label
+                                        htmlFor={`options-${id}-${option.id}`}
+                                        className="checkbox__label"
+                                      >
+                                        <span className="unit__label-text">
+                                          <RulesWithIcon textObject={option} />
+                                        </span>
+                                        <i className="checkbox__points">
+                                          {getPointsText({
+                                            points: option.points,
+                                            perModel: option.perModel,
+                                          })}
+                                        </i>
+                                      </label>
+                                    </div>
+                                  ))}
+                                </>
+                              )}
                           </div>
                         </div>
                       )
@@ -1027,27 +1053,77 @@ export const Unit = ({ isMobile }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.mount" />
             </h2>
-            {unit.mounts.map(({ points, id, active = false, ...mount }) => (
-              <div className="radio" key={id}>
-                <input
-                  type="radio"
-                  id={`mounts-${id}`}
-                  name="mounts"
-                  value={id}
-                  onChange={() => handleMountsChange(id)}
-                  checked={active}
-                  className="radio__input"
-                />
-                <label htmlFor={`mounts-${id}`} className="radio__label">
-                  <span className="unit__label-text">
-                    <RulesWithIcon textObject={mount} />
-                  </span>
-                  <i className="checkbox__points">
-                    {getPointsText({ points })}
-                  </i>
-                </label>
-              </div>
-            ))}
+            {unit.mounts.map(
+              ({ points, id, active = false, options, ...mount }) => (
+                <Fragment key={id}>
+                  <div className="radio">
+                    <input
+                      type="radio"
+                      id={`mounts-${id}`}
+                      name="mounts"
+                      value={id}
+                      onChange={() => handleMountsChange(id)}
+                      checked={active}
+                      className="radio__input"
+                    />
+                    <label htmlFor={`mounts-${id}`} className="radio__label">
+                      <span className="unit__label-text">
+                        <RulesWithIcon textObject={mount} />
+                      </span>
+                      <i className="checkbox__points">
+                        {getPointsText({ points })}
+                      </i>
+                    </label>
+                  </div>
+                  {options?.length > 0 && active && (
+                    <Fragment>
+                      {options.map((option, optionIndex) => {
+                        const exclusiveCheckedOption = options.find(
+                          (exclusiveOption) =>
+                            exclusiveOption.exclusive && exclusiveOption.active
+                        );
+
+                        return (
+                          <div
+                            className="checkbox checkbox--conditional"
+                            key={option.name_en}
+                          >
+                            <input
+                              type="checkbox"
+                              id={`mount-${id}-option-${optionIndex}`}
+                              value={`${id}-${optionIndex}`}
+                              onChange={() =>
+                                handleMountsChange(id, optionIndex)
+                              }
+                              checked={Boolean(option.active)}
+                              className="checkbox__input"
+                              disabled={
+                                (exclusiveCheckedOption &&
+                                  option.exclusive &&
+                                  !option.active) ||
+                                detachmentActive
+                              }
+                            />
+                            <label
+                              htmlFor={`mount-${id}-option-${optionIndex}`}
+                              className="checkbox__label"
+                            >
+                              <span className="unit__label-text">
+                                <RulesWithIcon textObject={option} />
+                              </span>
+                              <i className="checkbox__points">
+                                {getPointsText({ points: option.points })}
+                              </i>
+                            </label>
+                          </div>
+                        );
+                      })}
+                      <hr className="unit__command-option-hr" />
+                    </Fragment>
+                  )}
+                </Fragment>
+              )
+            )}
           </>
         )}
         {unit.lores && unit.lores.length ? (

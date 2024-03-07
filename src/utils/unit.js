@@ -23,6 +23,7 @@ export const getAllOptions = (
       options.find((option) => option.name_en === "Detachment" && option.active)
     );
   const allCommand = [];
+  const allMounts = [];
 
   if (command && !detachmentActive) {
     command.forEach(({ active, magic, name_en, options, ...entry }) => {
@@ -80,11 +81,30 @@ export const getAllOptions = (
             `${stackableCount} ${item[`name_${language}`] || name_en}`
         )
     : [];
-  const allMounts = mounts
-    ? mounts
-        .filter(({ active }) => active)
-        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
-    : [];
+
+  if (mounts) {
+    mounts.forEach(({ active, name_en, options, ...entry }) => {
+      if (active) {
+        let mountEntry = entry[`name_${language}`] || name_en;
+        const selectedOptions = [];
+
+        if (options && options.length > 0) {
+          options.forEach((option) => {
+            if (option.active) {
+              selectedOptions.push(option.name_en);
+            }
+          });
+        }
+
+        if (selectedOptions.length) {
+          mountEntry += ` [${selectedOptions.join(" + ")}]`;
+        }
+
+        allMounts.push(mountEntry);
+      }
+    });
+  }
+
   const allItems = [];
   if (items?.length) {
     items.forEach((item) => {

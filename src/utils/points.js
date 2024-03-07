@@ -69,6 +69,13 @@ export const getUnitPoints = (unit) => {
       if (option.active) {
         unitPoints += option.points;
       }
+      if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((mountOption) => {
+          if (mountOption.active) {
+            unitPoints += mountOption.points;
+          }
+        });
+      }
     });
   }
   if (unit?.items && unit?.items.length) {
