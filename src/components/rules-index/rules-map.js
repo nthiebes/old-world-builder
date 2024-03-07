@@ -69,6 +69,8 @@ const additionalOWBRules = {
 
 export const synonyms = {
   plagueswords: "plaguesword",
+  "leadbelcher guns": "leadbelcher gun",
+  "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",
   gyrocopters: "gyrocopter",
