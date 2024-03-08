@@ -166,6 +166,14 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Cold-One",
           "name_de": "Cold-One",
           "name_es": "Cold-One",
@@ -178,14 +186,6 @@
           "name_es": "Carnosaur",
           "name_fr": "Carnosaur",
           "points": 170
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_es": "On foot",
-          "name_fr": "On foot",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -413,21 +413,24 @@
           "name_de": "Ancient Stegadon",
           "name_es": "Ancient Stegadon",
           "name_fr": "Ancient Stegadon",
-          "points": 230
-        },
-        {
-          "name_en": "Ancient Stegadon with Giant blowpipes",
-          "name_de": "Ancient Stegadon with Giant blowpipes",
-          "name_es": "Ancient Stegadon with Giant blowpipes",
-          "name_fr": "Ancient Stegadon with Giant blowpipes",
-          "points": 230
-        },
-        {
-          "name_en": "Ancient Stegadon with Engine of the Gods",
-          "name_de": "Ancient Stegadon with Engine of the Gods",
-          "name_es": "Ancient Stegadon with Engine of the Gods",
-          "name_fr": "Ancient Stegadon with Engine of the Gods",
-          "points": 255
+          "points": 230,
+          "options": [
+            {
+              "name_en": "Giant bow",
+              "points": 230,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Giant blowpipes",
+              "exclusive": true,
+              "points": 230
+            },
+            {
+              "name_en": "Engine of the Gods",
+              "points": 25
+            }
+          ]
         }
       ],
       "items": [
@@ -456,10 +459,10 @@
         "name_fr": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria"
       },
       "notes": {
-        "name_en": "*Note that a Skink Priest can make Casting and Dispel rolls as normal. Whilst their calloused hide is as protective as a suit of light armour, they do not wear armour., **Note that this special rule does not apply to this models mount (should it have one)",
-        "name_de": "*Note that a Skink Priest can make Casting and Dispel rolls as normal. Whilst their calloused hide is as protective as a suit of light armour, they do not wear armour., **Note that this special rule does not apply to this models mount (should it have one)",
-        "name_es": "*Note that a Skink Priest can make Casting and Dispel rolls as normal. Whilst their calloused hide is as protective as a suit of light armour, they do not wear armour., **Note that this special rule does not apply to this models mount (should it have one)",
-        "name_fr": "*Note that a Skink Priest can make Casting and Dispel rolls as normal. Whilst their calloused hide is as protective as a suit of light armour, they do not wear armour., **Note that this special rule does not apply to this models mount (should it have one)"
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {

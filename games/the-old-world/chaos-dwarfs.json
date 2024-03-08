@@ -107,21 +107,23 @@
           "name_de": "Lammasu",
           "name_es": "Lammasu",
           "name_fr": "Lammasu",
-          "points": 95
-        },
-        {
-          "name_en": "Lammasu with mace tail",
-          "name_de": "Lammasu with mace tail",
-          "name_es": "Lammasu with mace tail",
-          "name_fr": "Lammasu with mace tail",
-          "points": 105
-        },
-        {
-          "name_en": "Lammasu Sorcerous Exhalation",
-          "name_de": "Lammasu Sorcerous Exhalation",
-          "name_es": "Lammasu Sorcerous Exhalation",
-          "name_fr": "Lammasu Sorcerous Exhalation",
-          "points": 110
+          "points": 95,
+          "options": [
+            {
+              "name_en": "Mace tail",
+              "name_de": "Mace tail",
+              "name_es": "Mace tail",
+              "name_fr": "Mace tail",
+              "points": 10
+            },
+            {
+              "name_en": "Sorcerous Exhalation",
+              "name_de": "Sorcerous Exhalation",
+              "name_es": "Sorcerous Exhalation",
+              "name_fr": "Sorcerous Exhalation",
+              "points": 15
+            }
+          ]
         }
       ],
       "items": [
@@ -256,21 +258,23 @@
           "name_de": "Lammasu",
           "name_es": "Lammasu",
           "name_fr": "Lammasu",
-          "points": 95
-        },
-        {
-          "name_en": "Lammasu with mace tail",
-          "name_de": "Lammasu with mace tail",
-          "name_es": "Lammasu with mace tail",
-          "name_fr": "Lammasu with mace tail",
-          "points": 105
-        },
-        {
-          "name_en": "Lammasu Sorcerous Exhalation",
-          "name_de": "Lammasu Sorcerous Exhalation",
-          "name_es": "Lammasu Sorcerous Exhalation",
-          "name_fr": "Lammasu Sorcerous Exhalation",
-          "points": 110
+          "points": 95,
+          "options": [
+            {
+              "name_en": "Mace tail",
+              "name_de": "Mace tail",
+              "name_es": "Mace tail",
+              "name_fr": "Mace tail",
+              "points": 10
+            },
+            {
+              "name_en": "Sorcerous Exhalation",
+              "name_de": "Sorcerous Exhalation",
+              "name_es": "Sorcerous Exhalation",
+              "name_fr": "Sorcerous Exhalation",
+              "points": 15
+            }
+          ]
         }
       ],
       "items": [
@@ -869,6 +873,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pied",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "War Boar",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
@@ -885,13 +896,6 @@
           "name_de": "Wyvern",
           "name_fr": "Vouivre",
           "points": 130
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pied",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
@@ -988,6 +992,13 @@
       ],
       "mounts": [
         {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "A pied",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "War Boar",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
@@ -998,13 +1009,6 @@
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90
-        },
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "A pied",
-          "points": 0,
-          "active": true
         }
       ],
       "items": [
