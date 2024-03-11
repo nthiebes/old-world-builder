@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { Stats } from "../../components/stats";
+import { Button } from "../../components/button";
+import { NumberInput } from "../../components/number-input";
 import {
   RulesIndex,
   RulesLinksText,
@@ -26,8 +28,11 @@ export const GameView = () => {
   const intl = useIntl();
   const [showPoints, setShowPoints] = useState(true);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
+  const [banners, setBanners] = useState(0);
+  const [scenarioPoints, setScenarioPoints] = useState(0);
   const [showStats, setShowStats] = useState(true);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
+  const [victoryPoints, setVictoryPoints] = useState({});
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -177,6 +182,7 @@ export const GameView = () => {
                         ]}
                       />
                     ))}
+                  {getVictoryButtons(unit)}
                 </div>
               </div>
             </li>
@@ -185,6 +191,69 @@ export const GameView = () => {
       </ul>
     );
   };
+  const updateVictoryPoints = ({ unit, value }) => {
+    let unitPoints = victoryPoints[unit.id] || {
+      100: 0,
+      fleeing: 0,
+      25: 0,
+    };
+
+    // eslint-disable-next-line default-case
+    switch (value) {
+      case "100": {
+        unitPoints["100"] = unitPoints["100"] ? 0 : getUnitPoints(unit);
+        break;
+      }
+      case "fleeing": {
+        unitPoints.fleeing = unitPoints.fleeing
+          ? 0
+          : Math.round(getUnitPoints(unit) / 2);
+        break;
+      }
+      case "25": {
+        unitPoints["25"] = unitPoints["25"]
+          ? 0
+          : Math.round(getUnitPoints(unit) / 4);
+      }
+    }
+
+    setVictoryPoints({
+      ...victoryPoints,
+      [unit.id]: unitPoints,
+    });
+  };
+  const getVictoryButtons = (unit) => {
+    return (
+      <>
+        <Button
+          className="game-view__victory-button"
+          type={victoryPoints[unit.id]?.["100"] ? "secondary" : "tertiary"}
+          spaceTop
+          onClick={() => updateVictoryPoints({ unit, value: "100" })}
+        >
+          <FormattedMessage id="misc.100" />
+        </Button>
+        <Button
+          className="game-view__victory-button"
+          type={victoryPoints[unit.id]?.fleeing ? "secondary" : "tertiary"}
+          spaceTop
+          onClick={() => updateVictoryPoints({ unit, value: "fleeing" })}
+        >
+          <FormattedMessage id="misc.fleeing" />
+        </Button>
+        <Button
+          className="game-view__victory-button"
+          type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
+          spaceTop
+          onClick={() => updateVictoryPoints({ unit, value: "25" })}
+        >
+          <FormattedMessage id="misc.25" />
+        </Button>
+      </>
+    );
+  };
+
+  console.log(victoryPoints);
 
   return (
     <>
@@ -342,6 +411,42 @@ export const GameView = () => {
             )}
           </>
         )}
+
+        <section className="game-view__section">
+          <header className="editor__header">
+            <h2>
+              <FormattedMessage id="misc.victoryPoints" />{" "}
+            </h2>
+          </header>
+          <ul>
+            <li className="list">
+              <label htmlFor="banners">
+                <FormattedMessage id="misc.banners" />
+              </label>
+              <NumberInput
+                id="banners"
+                min={0}
+                value={banners}
+                onChange={(event) => {
+                  setBanners(event.target.value);
+                }}
+              />
+            </li>
+            <li className="list">
+              <label htmlFor="scenarioPoints">
+                <FormattedMessage id="misc.scenarioPoints" />
+              </label>
+              <NumberInput
+                id="scenarioPoints"
+                min={0}
+                value={scenarioPoints}
+                onChange={(event) => {
+                  setScenarioPoints(event.target.value);
+                }}
+              />
+            </li>
+          </ul>
+        </section>
       </Main>
     </>
   );
