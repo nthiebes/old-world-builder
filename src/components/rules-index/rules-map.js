@@ -69,6 +69,9 @@ const additionalOWBRules = {
 
 export const synonyms = {
   plagueswords: "plaguesword",
+  "dread halberds": "dread halberd",
+  fanatics: "fanatic",
+  "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
