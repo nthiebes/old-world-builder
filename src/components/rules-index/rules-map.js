@@ -65,6 +65,9 @@ const additionalOWBRules = {
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
   "level 4 wizard": { url: "magic/levels-of-wizardry" },
+  "skeletal steed": { url: "unit/skeletal-steed-tomb-kings"},
+  "skeletal steed vc": { url: "unit/skeletal-steed-vampire-counts"}
+
 };
 
 export const synonyms = {
