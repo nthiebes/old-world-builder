@@ -1848,7 +1848,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Cavalry spears",
@@ -1857,46 +1858,28 @@
           "name_fr": "Lances de cavalerie",
           "points": 1,
           "perModel": true
-        },
-        {
-          "name_en": "Skeletal Hooves (Count as Hand weapons)",
-          "name_it": "Zoccoli scheletrici(contano come armi bianche)",
-          "name_de": "Skeletal Hooves (Count as Hand weapons)",
-          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "No armour",
-          "name_it": "Senza Armatura",
-          "name_de": "No armour",
-          "name_fr": "No armour",
+          "name_en": "No armour, Shields",
+          "name_it": "Senza Armatura, Scudi",
+          "name_de": "No armour, Shields",
+          "name_fr": "No armour, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Light armour",
-          "name_it": "Armatura Leggera",
-          "name_de": "Light armour",
-          "name_fr": "Armure légère",
+          "name_en": "Light armour, Shields",
+          "name_it": "Armatura Leggera, Scudi",
+          "name_de": "Light armour, Shields",
+          "name_fr": "Armure légère, Boucliers",
           "points": 1,
           "perModel": true
         }
       ],
       "options": [
-        {
-          "name_en": "Shields",
-          "name_it": "Scudi",
-          "name_de": "Shields",
-          "name_fr": "Boucliers",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
         {
           "name_en": "Counter Charge (One per 1,000 Points)",
           "name_it": "Possono avere la regola speciale Contro Carica (Una ogni 1.000pti)",
