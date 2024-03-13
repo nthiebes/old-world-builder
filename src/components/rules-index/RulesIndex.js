@@ -35,7 +35,6 @@ export const RulesIndex = () => {
               !isLoading && "rules-index__iframe--show"
             )}
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
-            title="test"
             height="500"
             width="600"
           />

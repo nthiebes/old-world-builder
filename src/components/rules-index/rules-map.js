@@ -69,6 +69,7 @@ const additionalOWBRules = {
 
 export const synonyms = {
   plagueswords: "plaguesword",
+  "har ganeth greatswords": "har ganeth greatsword",
   "dread halberds": "dread halberd",
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
