@@ -90,33 +90,6 @@
           "perModel": true
         },
         {
-          "name_en": "May take up to two additional Tomb Guard Crew (Warsphinx only)",
-          "name_it": "(solo se su Sfinge da Guerra) Può aggiungere fino a due guardie del Sepolcro",
-          "name_de": "May take up to two additional Tomb Guard Crew (Warsphinx only)",
-          "name_fr": "(Sphinx de guerre seulement) Peut ajouter jusqu'à 2 Gardiens des Tombes supplémentaires",
-          "points": 10,
-          "perModel": true,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 2
-        },
-        {
-          "name_en": "Envenomed Sting (Warsphinx only)",
-          "name_it": "(solo se su Sfinge da Guerra) Può prendere Puntura Avvelenata",
-          "name_de": "Envenomed Sting (Warsphinx only)",
-          "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Dard venimeux",
-          "points": 5,
-          "perModel": true
-        },
-        {
-          "name_en": "Fiery Roar (Warsphinx only)",
-          "name_it": "(solo se su Sfinge da Guerra) Può prendere Ruggito Infuocato",
-          "name_de": "Fiery Roar (Warsphinx only)",
-          "name_fr": "(Sphinx de guerre seulement) Peut prendre l'amélioration Rugissement Ardent",
-          "points": 20,
-          "perModel": true
-        },
-        {
           "name_en": "Arise! (and Level 1 Wizard - Nehekharan Royal Host only)",
           "name_it": "(solo lista dello Schieramento Reale di Nehekharan) La Lingua dei Scerdoti - Alzati! ed essere un Mago di 1°",
           "name_de": "(Nehekharan Royal Host only) Arise! and Level 1 Wizard",
@@ -159,7 +132,37 @@
           "name_it": "Sfinge da Guerra Khemriana",
           "name_de": "Khemrian Warsphinx",
           "name_fr": "Sphinx de Guerre de Khemri",
-          "points": 175
+          "points": 175,
+          "options": [
+            {
+              "name_en": "Additional Tomb Guard Crew #1",
+              "name_it": "Può aggiungere fino a due guardie del Sepolcro",
+              "name_de": "May take up to two additional Tomb Guard Crew",
+              "name_fr": "Peut ajouter jusqu'à 2 Gardiens des Tombes supplémentaires",
+              "points": 10
+            },
+            {
+              "name_en": "Additional Tomb Guard Crew #2",
+              "name_it": "Può aggiungere fino a due guardie del Sepolcro",
+              "name_de": "May take up to two additional Tomb Guard Crew",
+              "name_fr": "Peut ajouter jusqu'à 2 Gardiens des Tombes supplémentaires",
+              "points": 10
+            },
+            {
+              "name_en": "Envenomed Sting",
+              "name_it": "Può prendere Puntura Avvelenata",
+              "name_de": "Envenomed Sting",
+              "name_fr": "Peut prendre l'amélioration Dard venimeux",
+              "points": 5
+            },
+            {
+              "name_en": "Fiery Roar",
+              "name_it": "Può prendere Ruggito Infuocato",
+              "name_de": "Fiery Roar",
+              "name_fr": "Peut prendre l'amélioration Rugissement Ardent",
+              "points": 20
+            }
+          ]
         }
       ],
       "items": [
@@ -1845,7 +1848,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Cavalry spears",
@@ -1854,46 +1858,28 @@
           "name_fr": "Lances de cavalerie",
           "points": 1,
           "perModel": true
-        },
-        {
-          "name_en": "Skeletal Hooves (Count as Hand weapons)",
-          "name_it": "Zoccoli scheletrici(contano come armi bianche)",
-          "name_de": "Skeletal Hooves (Count as Hand weapons)",
-          "name_fr": "Sabots squelettiques (compte comme des armes de base)",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "No armour",
-          "name_it": "Senza Armatura",
-          "name_de": "No armour",
-          "name_fr": "No armour",
+          "name_en": "No armour, Shields",
+          "name_it": "Senza Armatura, Scudi",
+          "name_de": "No armour, Shields",
+          "name_fr": "No armour, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Light armour",
-          "name_it": "Armatura Leggera",
-          "name_de": "Light armour",
-          "name_fr": "Armure légère",
+          "name_en": "Light armour, Shields",
+          "name_it": "Armatura Leggera, Scudi",
+          "name_de": "Light armour, Shields",
+          "name_fr": "Armure légère, Boucliers",
           "points": 1,
           "perModel": true
         }
       ],
       "options": [
-        {
-          "name_en": "Shields",
-          "name_it": "Scudi",
-          "name_de": "Shields",
-          "name_fr": "Boucliers",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
         {
           "name_en": "Counter Charge (One per 1,000 Points)",
           "name_it": "Possono avere la regola speciale Contro Carica (Una ogni 1.000pti)",
