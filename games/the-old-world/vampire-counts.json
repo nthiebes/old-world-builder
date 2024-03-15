@@ -202,6 +202,15 @@
           "name_fr": "General",
           "name_es": "General",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
@@ -286,16 +295,6 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer (one per army)",
-          "name_de": "Battle Standard Bearer (one per army)",
-          "name_es": "Battle Standard Bearer (one per army)",
-          "name_fr": "Battle Standard Bearer (one per army)",
-          "points": 25,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
         }
       ],
       "mounts": [
@@ -346,15 +345,6 @@
           "types": ["vampiric-power"],
           "selected": [],
           "maxPoints": 50
-        },
-        {
-          "name_en": "Magic Standard (BSB)",
-          "name_de": "Magic Standard (BSB)",
-          "name_es": "Magic Standard (BSB)",
-          "name_fr": "Magic Standard (BSB)",
-          "types": ["banner"],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "lores": ["dark-magic", "illusion", "necromancy"],
@@ -1383,7 +1373,7 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0,
-          "active": true    
+          "active": true
         },
         {
           "name_en": "Drilled (0-1 per 1000pts)",
@@ -1614,7 +1604,7 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0,
-          "active": true    
+          "active": true
         },
         {
           "name_en": "Drilled (0-1 per 1000pts)",
