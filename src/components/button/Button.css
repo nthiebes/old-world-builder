@@ -44,14 +44,14 @@
 @media (hover: hover) {
   .button--secondary:hover,
   .input[type="file"]::file-selector-button:hover {
-    color: var(--color-button);
+    color: var(--color-font-medium);
   }
 }
 
 .button--secondary:focus,
 .button--secondary:active,
 .input[type="file"]::file-selector-button:active {
-  color: var(--color-button);
+  color: var(--color-font-medium);
 }
 
 .button--tertiary,
