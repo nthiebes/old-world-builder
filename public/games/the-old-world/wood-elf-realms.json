@@ -4,6 +4,7 @@
       "name_en": "Glade Lord",
       "name_de": "Glade Lord",
       "name_fr": "Seigneur Sylvain",
+      "name_pl": "Władca Polan",
       "id": "glade-lord",
       "points": 135,
       "command": [],
@@ -12,6 +13,7 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
           "points": 3,
           "perModel": true
         },
@@ -19,6 +21,7 @@
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
+          "name_pl": "Broń ciężka",
           "points": 4,
           "perModel": true
         },
@@ -26,6 +29,7 @@
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
+          "name_pl": "Lanca",
           "points": 2,
           "perModel": true
         },
@@ -33,6 +37,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -43,6 +48,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "perModel": true,
           "active": true
@@ -53,6 +59,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_fr": "Bouclier",
+          "name_pl": "Tarcza",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -62,6 +69,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -71,6 +79,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -80,6 +89,7 @@
           "name_en": "Moonfire Shot",
           "name_de": "Moonfire Shot",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 3,
           "perModel": true,
           "minimum": 0,
@@ -89,6 +99,7 @@
           "name_en": "Swfitshiver Shards",
           "name_de": "Swfitshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -98,6 +109,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 3,
           "perModel": true,
           "minimum": 0,
@@ -107,6 +119,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "minimum": 0,
@@ -116,6 +129,7 @@
           "name_en": "Asrai Longbow",
           "name_de": "Asrai Longbow",
           "name_fr": "Arc long Asrai",
+          "name_pl": "Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "minimum": 0,
@@ -127,6 +141,7 @@
           "name_en": "On foot",
           "name_de": "On foot",
           "name_fr": "A pied",
+          "name_pl": "Pieszo",
           "points": 0,
           "active": true
         },
@@ -134,30 +149,35 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
+          "name_pl": "Elficki rumak",
           "points": 14
         },
         {
           "name_en": "Great Stag",
           "name_de": "Great Stag",
           "name_fr": "Grand cerf",
+          "name_pl": "Wielki jeleń",
           "points": 50
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de Guerre",
+          "name_pl": "Jastrząb bojowy",
           "points": 30
         },
         {
           "name_en": "Forest Dragon",
           "name_de": "Forest Dragon",
           "name_fr": "Dragon des Forêts",
+          "name_pl": "Leśny smok",
           "points": 275
         },
         {
           "name_en": "Great Eagles",
           "name_de": "Great Eagles",
           "name_fr": "Grand aigle",
+          "name_pl": "Wielki orzeł",
           "points": 60
         }
       ],
@@ -166,6 +186,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 100
@@ -174,6 +195,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -187,13 +209,15 @@
         "name_en": "The Arrow of Kurnous, Evasive, Fire & Flee, Ignores Cover, Move Through Cover, Rallying Cry, Strike First",
         "name_de": "",
         "name_es": "",
-        "name_fr": "La Flèche de Kurnous, Esquiveur, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Cri de Ralliement, Frappe en Premier"
+        "name_fr": "La Flèche de Kurnous, Esquiveur, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Cri de Ralliement, Frappe en Premier",
+        "name_pl": "Strzały Kurnous, Nieuchwytny, Strzał i Ucieczka, Ignorowanie Zasłon, Przechodzenie przez Zasłony, Okrzyk Bojowy, Pierwszeństwo Ataku"
       }
     },
     {
       "name_en": "Glade Captain",
       "name_de": "Glade Captain",
       "name_fr": "Capitaine Sylvain",
+      "name_pl": "Kapitan Polany",
       "id": "glade-captain",
       "points": 70,
       "command": [
@@ -202,11 +226,13 @@
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
+          "name_pl": "Generał",
           "points": 0
         },
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
+          "name_pl": "Chorąży",
           "points": 25,
           "magic": {
             "types": ["banner"],
@@ -219,24 +245,28 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
           "points": 3
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
+          "name_pl": "Broń ciężka",
           "points": 4
         },
         {
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
+          "name_pl": "Lanca",
           "points": 2
         },
         {
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "active": true
         }
@@ -246,6 +276,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "active": true
         }
@@ -255,6 +286,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_fr": "Bouclier",
+          "name_pl": "Tarcza",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -263,6 +295,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 6,
           "minimum": 0,
           "maximum": 0
@@ -271,6 +304,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 6,
           "minimum": 0,
           "maximum": 0
@@ -279,6 +313,7 @@
           "name_en": "Moonfire Shot",
           "name_de": "Moonfire Shot",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 3,
           "minimum": 0,
           "maximum": 0
@@ -287,6 +322,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 6,
           "minimum": 0,
           "maximum": 0
@@ -295,6 +331,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 3,
           "minimum": 0,
           "maximum": 0
@@ -303,6 +340,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme lourde",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "minimum": 0,
           "maximum": 0
@@ -311,6 +349,7 @@
           "name_en": "Asrai Longbow",
           "name_de": "Asrai Longbow",
           "name_fr": "Arc long Asrai",
+          "name_pl": "Długi łuk Asrai",
           "points": 0,
           "minimum": 0,
           "maximum": 0
@@ -321,6 +360,7 @@
           "name_en": "On foot",
           "name_de": "On foot",
           "name_fr": "A pied",
+          "name_pl": "Pieszo",
           "points": 0,
           "active": true
         },
@@ -328,30 +368,35 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
+          "name_pl": "Elficki rumak",
           "points": 14
         },
         {
           "name_en": "Great Stag",
           "name_de": "Great Stag",
           "name_fr": "Grand cerf",
+          "name_pl": "Wielki jeleń",
           "points": 50
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
+          "name_pl": "Jastrząb bojowy",
           "points": 30
         },
         {
           "name_en": "Forest Dragon",
           "name_de": "Forest Dragon",
           "name_fr": "Dragon des Fôrets",
+          "name_pl": "Leśny smok",
           "points": 275
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
+          "name_pl": "Wielki orzeł",
           "points": 60
         }
       ],
@@ -360,6 +405,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
@@ -368,6 +414,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -377,13 +424,15 @@
         "name_en": "The Arrow of Kurnous, Evasive, Fire & Flee, Ignores Cover, Move Through Cover, Rallying Cry, Strike First",
         "name_de": "",
         "name_es": "",
-        "name_fr": "La Flèche de Kurnous, Esquiveur, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Cri de Ralliement, Frappe en Premier"
+        "name_fr": "La Flèche de Kurnous, Esquiveur, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Cri de Ralliement, Frappe en Premier",
+        "name_pl": "Strzały Kurnous, Nieuchwytny, Strzał i Ucieczka, Ignorowanie Zasłon, Przechodzenie przez Zasłony, Okrzyk Bojowy, Pierwszeństwo Ataku"
       }
     },
     {
       "name_en": "Spellweaver",
       "name_de": "Spellweaver",
       "name_fr": "Tisseur de Charmes",
+      "name_pl": "Tkacz Uroków",
       "id": "spellweaver",
       "points": 155,
       "command": [],
@@ -392,6 +441,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -403,6 +453,7 @@
           "name_en": "Talismanic Tattoos",
           "name_de": "Talismanic Tattoos",
           "name_fr": "Tatouages Talismaniques",
+          "name_pl": "Talizmanowe tatuaże",
           "points": 15,
           "perModel": true,
           "minimum": 0,
@@ -412,6 +463,7 @@
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
           "name_fr": "Sorcier de niveau 4",
+          "name_pl": "Czarodziej poziomu 4",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -423,6 +475,7 @@
           "name_en": "On foot",
           "name_de": "On foot",
           "name_fr": "A pied",
+          "name_pl": "Pieszo",
           "points": 0,
           "active": true
         },
@@ -430,24 +483,28 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
+          "name_pl": "Elficki rumak",
           "points": 14
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
           "name_fr": "Licorne",
+          "name_pl": "Jednorożec",
           "points": 35
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
+          "name_pl": "Jastrząb bojowy",
           "points": 30
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
+          "name_pl": "Wielki orzeł",
           "points": 60
         }
       ],
@@ -456,6 +513,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "maxPoints": 100
@@ -464,6 +522,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -484,13 +543,15 @@
         "name_en": "Elven Reflexes, Lore of Athel Loren, Magical Attacks, Move Through Cover",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert"
+        "name_fr": "Réflexes Elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert",
+        "name_pl": "Elickie Refleksy, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony"
       }
     },
     {
       "name_en": "Spellsinger",
       "name_de": "Spellsinger",
       "name_fr": "Chanteur de Sorts",
+      "name_pl": "Pieśniarz Zaklęć",
       "id": "spellsinger",
       "points": 80,
       "command": [],
@@ -499,6 +560,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -510,6 +572,7 @@
           "name_en": "Talismanic Tattoos",
           "name_de": "Talismanic Tattoos",
           "name_fr": "Tatouages Talismaniques",
+          "name_pl": "Talizmanowe tatuaże",
           "points": 15,
           "perModel": true,
           "minimum": 0,
@@ -519,6 +582,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_fr": "Sorcier de niveau 2",
+          "name_pl": "Czarodziej poziomu 2",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -530,6 +594,7 @@
           "name_en": "On foot",
           "name_de": "On foot",
           "name_fr": "A pied",
+          "name_pl": "Pieszo",
           "points": 0,
           "active": true
         },
@@ -537,24 +602,28 @@
           "name_en": "Elven Steed",
           "name_de": "Elven Steed",
           "name_fr": "Coursier elfique",
+          "name_pl": "Elficki rumak",
           "points": 14
         },
         {
           "name_en": "Unicorn",
           "name_de": "Unicorn",
           "name_fr": "Licorne",
+          "name_pl": "Jednorożec",
           "points": 35
         },
         {
           "name_en": "Warhawk",
           "name_de": "Warhawk",
           "name_fr": "Faucon de guerre",
+          "name_pl": "Jastrząb bojowy",
           "points": 30
         },
         {
           "name_en": "Great Eagle",
           "name_de": "Great Eagle",
           "name_fr": "Grand aigle",
+          "name_pl": "Wielki orzeł",
           "points": 60
         }
       ],
@@ -563,6 +632,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
@@ -571,6 +641,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -591,13 +662,15 @@
         "name_en": "Elven Reflexes, Lore of Athel Loren, Magical Attacks, Move Through Cover",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert"
+        "name_fr": "Réflexes elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert",
+        "name_pl": "Elickie Refleksy, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony"
       }
     },
     {
       "name_en": "Shadowdancer",
       "name_de": "Shadowdancer",
       "name_fr": "Danseur des Ombres",
+      "name_pl": "Tancerz Cienia",
       "id": "shadowdancer",
       "points": 85,
       "command": [],
@@ -606,6 +679,7 @@
           "name_en": "Spear of Loec",
           "name_de": "Spear of Loec",
           "name_fr": "Lance de Loec",
+          "name_pl": "Włócznia Loeca",
           "points": 0,
           "perModel": true,
           "active": true
@@ -614,6 +688,7 @@
           "name_en": "Trickster's Blades",
           "name_de": "Trickster's Blades",
           "name_fr": "Lame du Trompeur",
+          "name_pl": "Ostrza oszusta",
           "points": 0,
           "perModel": true
         }
@@ -624,6 +699,7 @@
           "name_en": "Level 1 Wizard",
           "name_de": "Level 1 Wizard",
           "name_fr": "Sorcier niveau 1",
+          "name_pl": "Czarodziej poziomu 1",
           "points": 35,
           "perModel": true,
           "minimum": 0,
@@ -636,6 +712,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
@@ -644,6 +721,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -658,13 +736,15 @@
         "name_en": "Evasive, Furious Charge, Immune To Psychology, Loner, Move Through Cover, Strike First, Talismanic Tattoos, Troubadour of Loec",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Esquiveur, Charge Dévastatrice, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Frappe en Premier, Tatouages Talismaniques, Troubadour de Loec"
+        "name_fr": "Esquiveur, Charge Dévastatrice, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Frappe en Premier, Tatouages Talismaniques, Troubadour de Loec",
+        "name_pl": "Nieuchwytny, Wściekła Szarża, Odporność na Psychologię, Samotnik, Przechodzenie przez Zasłony, Pierwszeństwo Ataku, Talizmanowe Tatuaże, Trubadurzy Loeca"
       }
     },
     {
       "name_en": "Waystalker",
       "name_de": "Waystalker",
       "name_fr": "Rôdeur Sylvain",
+      "name_pl": "Czatownik",
       "id": "waystalker",
       "points": 85,
       "command": [],
@@ -673,6 +753,7 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
           "points": 3,
           "perModel": true
         },
@@ -680,6 +761,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -690,6 +772,7 @@
           "name_en": "No armour",
           "name_de": "No armour",
           "name_fr": "No armour",
+          "name_pl": "Bez zbroi",
           "points": 0,
           "active": true
         },
@@ -697,6 +780,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 3
         }
       ],
@@ -705,6 +789,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -714,6 +799,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -723,6 +809,7 @@
           "name_en": "Moonfire Shot",
           "name_de": "Moonfire Shot",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 3,
           "perModel": true,
           "minimum": 0,
@@ -732,6 +819,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 6,
           "perModel": true,
           "minimum": 0,
@@ -741,6 +829,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 3,
           "perModel": true,
           "minimum": 0,
@@ -750,6 +839,7 @@
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "name_fr": "Embusqueurs",
+          "name_pl": "Zasadzka",
           "points": 10,
           "perModel": true,
           "minimum": 0,
@@ -762,6 +852,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
@@ -770,6 +861,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -783,13 +875,15 @@
         "name_en": "Elven Reflexes, Evasive, Feigned Flight, Fire & Flee, Hawk-eyed Archer, Ignroes Cover, Move Through Cover, Scouts",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir&Fuite, Archer à l'Oeil de Faucon, Ignore le Couvert, Mouvement à Couvert, Eclaireur"
+        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir&Fuite, Archer à l'Oeil de Faucon, Ignore le Couvert, Mouvement à Couvert, Eclaireur",
+        "name_pl": "Elfickie Refleksy, Nieuchwytny, Udawana Ucieczka, Strzał i Ucieczka, Sokole Oko, Ignorowanie Zasłon, Przechodzenie przez Zasłony, Zwiadowcy"
       }
     },
     {
       "name_en": "Treeman Ancient",
       "name_de": "Treeman Ancient",
       "name_fr": "Homme-Arbre Vénérable",
+      "name_pl": "Starożytny Drzewiec",
       "id": "treeman-ancient",
       "points": 265,
       "command": [],
@@ -800,6 +894,7 @@
           "name_en": "Level 3 Wizard",
           "name_de": "Level 3 Wixard",
           "name_fr": "Sorcier de niveau 3",
+          "name_pl": "Czarodziej poziomu 3",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -809,6 +904,7 @@
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
           "name_fr": "Sorcier de Niveau 4",
+          "name_pl": "Czarodziej poziomu 4",
           "points": 60,
           "perModel": true,
           "minimum": 0,
@@ -822,6 +918,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 100
@@ -831,13 +928,15 @@
         "name_en": "Close Order, Flammable, Immune To Psychology, Large Target, Lore of Athel Loren, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!, Tree Spirit, Tree Whack",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Fôrets, Abattage"
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Fôrets, Abattage",
+        "name_pl": "Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr!, Duch Drzew, Drzewne Uderzenie"
       }
     },
     {
       "name_en": "Branchwraith",
       "name_de": "Branchwraith",
       "name_fr": "Branchimère",
+      "name_pl": "Upiór Konaru",
       "id": "branchwraith",
       "points": 80,
       "command": [],
@@ -846,6 +945,7 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
           "points": 3,
           "perModel": true
         },
@@ -853,6 +953,7 @@
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
+          "name_pl": "Broń ciężka",
           "points": 4,
           "perModel": true
         },
@@ -860,6 +961,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -870,6 +972,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "perModel": true,
           "active": true
@@ -880,6 +983,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_fr": "Sorcier de niveau 2",
+          "name_pl": "Czarodziej poziomu 2",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -893,6 +997,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -902,7 +1007,8 @@
         "name_en": "Fear, Flammable, Immune To Psychology, Lore of Athel Loren, Magical Attacks, Move Through Cover, Regeneration (6+), Tree Spirit",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régérantion (6+), Esprit des Forêts"
+        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régérantion (6+), Esprit des Forêts",
+        "name_pl": "Strach, Łatwopalny, Odporność na Psychologię, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłonę, Regeneracja (6+), Duch Drzew"
       }
     }
   ],
@@ -911,6 +1017,7 @@
       "name_en": "Glade Guard",
       "name_de": "Glade Guard",
       "name_fr": "Gardes Sylvains",
+      "name_pl": "Strażnik Polany",
       "id": "glade-guard",
       "points": 11,
       "minimum": 5,
@@ -920,6 +1027,7 @@
           "name_en": "Lord's Bowmen",
           "name_de": "Lord's Bowmen",
           "name_fr": "Féal",
+          "name_pl": "Łucznicy",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
@@ -930,6 +1038,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -940,6 +1049,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -948,6 +1058,7 @@
           "name_en": "Hand weapon, Asrai Longbows",
           "name_de": "Hand weapon, Asrai Longbows",
           "name_fr": "Arme de Base et Arc long Asrai",
+          "name_pl": "Broń ręczna, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -959,6 +1070,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -968,6 +1080,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -977,6 +1090,7 @@
           "name_en": "Moonfire Shot",
           "name_de": "Moonfire Shot",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -986,6 +1100,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -995,6 +1110,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1004,6 +1120,7 @@
           "name_en": "Fire & Flee",
           "name_de": "Fire & Flee",
           "name_fr": "Tir & Fuite",
+          "name_pl": "Strzał i Ucieczka",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1013,6 +1130,7 @@
           "name_en": "Vanguard",
           "name_de": "Vanguard",
           "name_fr": "Avant-garde",
+          "name_pl": "Awangarda",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1025,13 +1143,15 @@
         "name_en": "Elven Reflexes, Move Through Cover, Open Order",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Mouvement à Couvert, Ordre Dispersé"
+        "name_fr": "Réflexes Elfiques, Mouvement à Couvert, Ordre Dispersé",
+        "name_pl": "Elfickie Refleksy, Przechodzenie przez Zasłony, Luźny Szyk"
       }
     },
     {
       "name_en": "Deepwood Scouts",
       "name_de": "Deepwood Scouts",
       "name_fr": "Éclaireurs du Grand-bois",
+      "name_pl": "Zwiadowcy z Głębokiego Lasu",
       "id": "deepwood-scouts",
       "points": 13,
       "minimum": 5,
@@ -1041,6 +1161,7 @@
           "name_en": "Lord's Bowmen",
           "name_de": "Lord's Bowmen",
           "name_fr": "Féal",
+          "name_pl": "Łucznicy",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
@@ -1051,12 +1172,14 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1065,6 +1188,7 @@
           "name_en": "Hand weapon, Asrai Longbows",
           "name_de": "Hand weapon, Asrai Longbows",
           "name_fr": "Arme de base et Arc long Asrai",
+          "name_pl": "Broń ręczna, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1076,6 +1200,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1085,6 +1210,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1094,6 +1220,7 @@
           "name_en": "Moonfire Shots",
           "name_de": "Moonfire Shots",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1103,6 +1230,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1112,6 +1240,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1124,13 +1253,15 @@
         "name_en": "Elven Reflexes, Evasive, Fire & Flee, Move Through Cover, Scouts, Skirmishers",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Esquiveurs, Tir&Fuite, Mouvement à Couert, Eclaireur, Tirailleurs"
+        "name_fr": "Réflexes Elfiques, Esquiveurs, Tir&Fuite, Mouvement à Couert, Eclaireur, Tirailleurs",
+        "name_pl": "Elfickie Refleksy, Nieuchwytny, Strzał i Ucieczka, Przechodzenie przez Zasłony, Zwiadowcy, Harcownicy"
       }
     },
     {
       "name_en": "Eternal Guard",
       "name_de": "Eternal Guard",
       "name_fr": "Garde Eternelle",
+      "name_pl": "Wieczna Straż",
       "id": "eternal-guard",
       "points": 13,
       "minimum": 5,
@@ -1140,6 +1271,7 @@
           "name_en": "Eternal Warden (champion)",
           "name_de": "Eternal Warden (champion)",
           "name_fr": "Gardien Eternel",
+          "name_pl": "Wieczna Straż (champion)",
           "points": 5,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1150,6 +1282,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 5,
           "magic": {
             "types": ["banner"],
@@ -1160,6 +1293,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 5
         }
       ],
@@ -1168,6 +1302,7 @@
           "name_en": "Hand weapon, Asrai Spears",
           "name_de": "Hand weapon, Asrai Spears",
           "name_fr": "Arme de base et Lance Asrai",
+          "name_pl": "Broń Ręczna, Włócznia Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1178,6 +1313,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1188,6 +1324,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_fr": "Bouclier",
+          "name_pl": "Tarcze",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1197,6 +1334,7 @@
           "name_en": "Drilled",
           "name_de": "Drilled",
           "name_fr": "Bien Entraînés",
+          "name_pl": "Wymusztrowani",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1206,6 +1344,7 @@
           "name_en": "Veteran",
           "name_de": "Veteran",
           "name_fr": "Vétéran",
+          "name_pl": "Weterani",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1218,13 +1357,15 @@
         "name_en": "Close Order, Elven Reflexes, Martial Prowess, Move Through Cover, Stubborn",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Ordre Serré, Réflexes Elfiques, Prouesses Martiales, Mouvement à Couvert, Obstiné"
+        "name_fr": "Ordre Serré, Réflexes Elfiques, Prouesses Martiales, Mouvement à Couvert, Obstiné",
+        "name_pl": "Zwarty Szyk, Elfickie Refleksy, Bojowe Męstwo, Przechodzenie przez Zasłony, Upartość"
       }
     },
     {
       "name_en": "Dryads",
       "name_de": "Dryads",
       "name_fr": "Dryades",
+      "name_pl": "Driady",
       "id": "dryads",
       "points": 13,
       "minimum": 5,
@@ -1234,6 +1375,7 @@
           "name_en": "Nymph",
           "name_de": "Nymph",
           "name_fr": "Nymphe",
+          "name_pl": "Nimfa",
           "points": 5,
           "magic": {
             "types": ["forest-spite"],
@@ -1246,6 +1388,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1256,6 +1399,7 @@
           "name_en": "Light armour (Sapwood flesh)",
           "name_de": "Light armour (Sapwood flesh)",
           "name_fr": "Chair d'Aubier(Armure légère)",
+          "name_pl": "Lekka zbroja z bielu",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1268,13 +1412,15 @@
         "name_en": "Fear, Flammable, Immune To Psychology, Magical Attacks, Move Through Cover, Open Order, Regeneration (6+), Skirmishers, Stubborn, Tree Spirit",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Ordre Dispersé, Régénération (6+), Tirailleurs, Obstiné, Esprit des Forêts"
+        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Ordre Dispersé, Régénération (6+), Tirailleurs, Obstiné, Esprit des Forêts",
+        "name_pl": "Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Przeszkody, Luźny Szyk, Regeneracja (6+), Harcownicy, Upartość, Duch Drzew"
       }
     },
     {
       "name_en": "Glade Riders",
       "name_de": "Glade Riders",
       "name_fr": "Cavaliers Sylvains",
+      "name_pl": "Jeźdzcy Polany",
       "id": "glade-riders",
       "points": 18,
       "minimum": 5,
@@ -1284,6 +1430,7 @@
           "name_en": "Glade Knight",
           "name_de": "Glade Knight",
           "name_fr": "Chevalier Sylvain",
+          "name_pl": "Rycerz Polany",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1294,6 +1441,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1304,6 +1452,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1312,6 +1461,7 @@
           "name_en": "Hand weapon, Cavalry spears, Asrai Longbows",
           "name_de": "Hand weapon, Cavalry spears, Asrai Longbows",
           "name_fr": "Arme de base, Lance de cavalier et Arc long Asrai",
+          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1323,6 +1473,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1332,6 +1483,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1341,6 +1493,7 @@
           "name_en": "Moonfire Shots",
           "name_de": "Moonfire Shots",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1350,6 +1503,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1359,6 +1513,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1368,6 +1523,7 @@
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "name_fr": "Embusqueurs",
+          "name_pl": "Zasadzka",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1377,6 +1533,7 @@
           "name_en": "Drilled",
           "name_de": "Drilled",
           "name_fr": "Bien Entraînés",
+          "name_pl": "Wymusztrowani",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1386,6 +1543,7 @@
           "name_en": "Reserve Move",
           "name_de": "Reserve Move",
           "name_fr": "Mouvement de Réserve",
+          "name_pl": "Ruch Rezerwowy",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1398,7 +1556,8 @@
         "name_en": "Elven Reflexes, Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Cavalerie Rapide, Tir&Fuite, Ordre Dispersé, Tirailleurs, Rapide"
+        "name_fr": "Réflexes Elfiques, Cavalerie Rapide, Tir&Fuite, Ordre Dispersé, Tirailleurs, Rapide",
+        "name_pl": "Elfickie Refleksy, Szybka Kawaleria, Strzał i Ucieczka, Luźny Szyk, Harcownicy, Szybki Krok"
       }
     }
   ],
@@ -1407,6 +1566,7 @@
       "name_en": "Deepwood Scouts",
       "name_de": "Deepwood Scouts",
       "name_fr": "Éclaireurs du Grand-bois",
+      "name_pl": "Zwiadowcy z Głębokiego Lasu",
       "id": "deepwood-scouts",
       "points": 13,
       "minimum": 5,
@@ -1416,6 +1576,7 @@
           "name_en": "Lord's Bowmen",
           "name_de": "Lord's Bowmen",
           "name_fr": "Féal",
+          "name_pl": "Łucznicy",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item", "armor"],
@@ -1426,6 +1587,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1436,6 +1598,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1444,6 +1607,7 @@
           "name_en": "Hand weapon, Asrai Longbows",
           "name_de": "Hand weapon, Asrai Longbows",
           "name_fr": "Arme de base et Arc long Asrai",
+          "name_pl": "Broń ręczna, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1455,6 +1619,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1464,6 +1629,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1473,6 +1639,7 @@
           "name_en": "Moonfire Shots",
           "name_de": "Moonfire Shots",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1482,6 +1649,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1491,6 +1659,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1503,13 +1672,15 @@
         "name_en": "Elven Reflexes, Evasive, Fire & Flee, Move Through Cover, Scouts, Skirmishers",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Esquiveur, Tir&Fuite, Mouvement à Couvert, Eclaireur, Tirailleurs"
+        "name_fr": "Réflexes Elfiques, Esquiveur, Tir&Fuite, Mouvement à Couvert, Eclaireur, Tirailleurs",
+        "name_pl": "Elfickie Refleksy, Nieuchwytny, Strzał i Ucieczka, Przechodzenie przez Zasłony, Zwiadowcy, Harcownicy"
       }
     },
     {
       "name_en": "Wildwood Rangers",
       "name_de": "Wildwood Rangers",
       "name_fr": "Patrouilleurs du Bois-sauvage",
+      "name_pl": "Zwiadowcy z Dzikiego Lasu",
       "id": "wildwood-rangers",
       "points": 14,
       "minimum": 5,
@@ -1519,6 +1690,7 @@
           "name_en": "Wildwood Warden",
           "name_de": "Wildwood Warden",
           "name_fr": "Garde du Bois-sauvage",
+          "name_pl": "Strażnik Dzikiego Lasu",
           "points": 6,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1529,6 +1701,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1539,6 +1712,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1547,6 +1721,7 @@
           "name_en": "Hand weapon, Ranger's Glaive",
           "name_de": "Hand weapon, Ranger's Glaive",
           "name_fr": "Arme de base et Vouge du Patrouilleurss",
+          "name_pl": "Broń ręczna, Glewia Zwiadowcy",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1557,6 +1732,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1567,6 +1743,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_fr": "Bouclier",
+          "name_pl": "Tarcze",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1576,13 +1753,15 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Guardians of the Wildwood, Immune To Psychology, Move Through Cover"
+        "name_en": "Close Order, Elven Reflexes, Guardians of the Wildwood, Immune To Psychology, Move Through Cover",
+        "name_pl": "Zwarty Szyk, Elfickie Refleksy, Obrońcy Dzikiego Lasu, Odporność na Psychologię, Przechodzenie przez Zasłony"
       }
     },
     {
       "name_en": "Wardancers",
       "name_de": "Wardancers",
       "name_fr": "Danseurs de Guerre",
+      "name_pl": "Tancerze Wojny",
       "id": "wardancers",
       "points": 16,
       "minimum": 5,
@@ -1592,6 +1771,7 @@
           "name_en": "Bladesinger",
           "name_de": "Bladesinger",
           "name_fr": "Chantelame",
+          "name_pl": "Pieśniarz Klingi",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
@@ -1602,6 +1782,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1612,6 +1793,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1620,6 +1802,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1631,6 +1814,7 @@
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
           "points": 1,
           "stackable": true,
           "minimum": 0,
@@ -1640,6 +1824,7 @@
           "name_en": "Throwing Spear",
           "name_de": "Throwing Spear",
           "name_fr": "Javelot",
+          "name_pl": "Oszczep",
           "points": 0,
           "stackable": true,
           "minimum": 0,
@@ -1652,13 +1837,15 @@
         "name_en": "Dances of Loec, Evasive, Furious Charge, Immune To Psychology, Loner, Motley Crew, Move Through Cover, Open Order, Skirmishers, Strike First, Talismanic Tattoos",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Danses de Loec, Esquiveur, Charge Dévastatrice, Immunisé à la Psychologie, Solitaire, Bande Hétéroclite, Mouvement à Couvert, Ordre Dispersé, TIrailleurs, Frappe en Premier, Tatouages Talismaniques"
+        "name_fr": "Danses de Loec, Esquiveur, Charge Dévastatrice, Immunisé à la Psychologie, Solitaire, Bande Hétéroclite, Mouvement à Couvert, Ordre Dispersé, TIrailleurs, Frappe en Premier, Tatouages Talismaniques",
+        "name_pl": "Taniec Loeca, Nieuchwytny, Wściekła Szarża, Odporność na Psychologię, Samotnik, Pstrokata Załoga, Przechodzenie przez Zasłonę, Luźny Szyk, Harcownicy, Pierwszeństwo Ataku, Talizmanowe Tatuaże"
       }
     },
     {
       "name_en": "Sisters of the Thorn",
       "name_de": "Sisters of the Thorn",
       "name_fr": "Soeurs de l'Épine",
+      "name_pl": "Siostry Ciernia",
       "id": "sisters-of-the-thorn",
       "points": 24,
       "minimum": 5,
@@ -1668,6 +1855,7 @@
           "name_en": "Handmaiden of the Thorn",
           "name_de": "Handmaiden of the Thorn",
           "name_fr": "Suivante de l'Épine",
+          "name_pl": "Służka Ciernia",
           "points": 8,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
@@ -1678,6 +1866,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -1688,6 +1877,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 6
         }
       ],
@@ -1696,6 +1886,7 @@
           "name_en": "Hand weapons, Blackbriar Javelins",
           "name_de": "Hand weapons, Blackbriar Javelins",
           "name_fr": "Arme de base et Javeline de Bruyère Noire",
+          "name_pl": "Broń ręczna, Oszczep z czarnego wrzosu",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1709,13 +1900,15 @@
         "name_en": "Daughters of Eternity, Deepwood Coven, Elven Reflexes, Fast Cavalry, Fire & Flee, Move Through Cover, Open Order, Poisoned Attacks, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Fille de l'Eternité, Sabbat du Grand-bois, Réflexes Elfiques, Cavalerie Rapide, Tir&Fuite, Mouvement à Couvert, Ordre Dispersé, Attaques Empoisonnées, Rapide"
+        "name_fr": "Fille de l'Eternité, Sabbat du Grand-bois, Réflexes Elfiques, Cavalerie Rapide, Tir&Fuite, Mouvement à Couvert, Ordre Dispersé, Attaques Empoisonnées, Rapide",
+        "name_pl": "Córki Wiecznośći, Kowen Głębokiego Lasu, Elfickie Refleksy, Szybka Kawaleria, Strzał i Ucieczka, Przechodzenie przez Zasłony, Luźny Szyk, Trujące Ataki, Szybki Krok"
       }
     },
     {
       "name_en": "Wild Riders",
       "name_de": "Wild Riders",
       "name_fr": "Cavaliers Sauvage",
+      "name_pl": "Dzicy Jeźdzcy",
       "id": "wild-riders",
       "points": 27,
       "minimum": 5,
@@ -1725,6 +1918,7 @@
           "name_en": "Wild Hunter",
           "name_de": "Wild Hunter",
           "name_fr": "Chasseur Sauvage",
+          "name_pl": "Dziki Łowca",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1735,6 +1929,7 @@
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1745,6 +1940,7 @@
           "name_en": "Musician",
           "name_de": "Musician",
           "name_fr": "Musicien",
+          "name_pl": "Muzyk",
           "points": 7
         }
       ],
@@ -1753,6 +1949,7 @@
           "name_en": "Hand weapon, Hunting Spear",
           "name_de": "Hand weapon, Hunting Spear",
           "name_fr": "Arme de base et Lance de chasse",
+          "name_pl": "Broń ręczna, Włócznia myśliwska",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1763,6 +1960,7 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1773,6 +1971,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_fr": "Bouclier",
+          "name_pl": "Tarcze",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1785,13 +1984,15 @@
         "name_en": "Counter Charge, Elven Reflexes, Fast Cavalry, Fear, Frenzy, Furious Charge (Wild Riders & Wild Hunter only), Move Through Cover, Open Order, Swiftstride, Talismanic Tattoos",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Contre Charge, Réflexes Elfiques, Cavalerie Rapide, Peur, Charge Dévastatrice (Cavaliers uniquement), Frénésie, Mouvement à Couvert, Ordre Dispersé, Rapide, Tatouages Talismaniques"
+        "name_fr": "Contre Charge, Réflexes Elfiques, Cavalerie Rapide, Peur, Charge Dévastatrice (Cavaliers uniquement), Frénésie, Mouvement à Couvert, Ordre Dispersé, Rapide, Tatouages Talismaniques",
+        "name_pl": "Przeciwnatarcie, Elfickie Refleksy, Szybka Kawaleria, Strach, Szał, Wściekła Szarża (tylko Dzicy Jeźdzcy i Dziki Łowca), Przechodzenie przez Zasłony, Luźny Szyk, Szybki Krok, Talizmanowe Tatuaże"
       }
     },
     {
       "name_en": "Warhawk Riders",
       "name_de": "Warhawk Riders",
       "name_fr": "Guerriers Faucons",
+      "name_pl": "Jeźdzcy Jastrzębi",
       "id": "warhawk-riders",
       "points": 44,
       "minimum": 3,
@@ -1801,6 +2002,7 @@
           "name_en": "Wind Rider",
           "name_de": "Wind Rider",
           "name_fr": "Cavalier du Vent",
+          "name_pl": "Jeźdzcy Wiatru",
           "points": 8,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
@@ -1813,6 +2015,7 @@
           "name_en": "Hand weapon, Cavalry spear, Asrai Longbow",
           "name_de": "Hand weapon, Cavalry spear, Asrai Longbow",
           "name_fr": "Arme de base, Lance de cavalerie et Arc long Asrai",
+          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1824,6 +2027,7 @@
           "name_en": "Arcane bodkins",
           "name_de": "Arcane bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1833,6 +2037,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1842,6 +2047,7 @@
           "name_en": "Moonfire Shots",
           "name_de": "Moonfire Shots",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1851,6 +2057,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1860,6 +2067,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1872,13 +2080,15 @@
         "name_en": "Elven Reflexes, Evasive, Fear, Feigned Flight, Fire & Flee, Fly (10), Skirmishers, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfique, Esquiveur, Peur, Fuite Feinte, Tir&Fuite, Vol(10), Tirailleurs, Rapide"
+        "name_fr": "Réflexes Elfique, Esquiveur, Peur, Fuite Feinte, Tir&Fuite, Vol(10), Tirailleurs, Rapide",
+        "name_pl": "Elfickie Refleksy, Nieuchwytny, Strach, Udawana Ucieczka, Strzał i Ucieczka, Lot (10), Harcownicy, Szybki Krok"
       }
     },
     {
       "name_en": "Tree Kin",
       "name_de": "Tree Kin",
       "name_fr": "Lémure",
+      "name_pl": "Drzewne Bractwo",
       "id": "treekin",
       "points": 51,
       "minimum": 2,
@@ -1888,6 +2098,7 @@
           "name_en": "Elder",
           "name_de": "Elder",
           "name_fr": "Ancien",
+          "name_pl": "Starszy",
           "points": 7,
           "magic": {
             "types": ["forest-spite"],
@@ -1900,6 +2111,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1910,6 +2122,7 @@
           "name_en": "Heavy armour (Hardwood flesh)",
           "name_de": "Heavy armour (Hardwood flesh)",
           "name_fr": "Peau de Chêne",
+          "name_pl": "Ciężka zbroja z dębu",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1922,7 +2135,8 @@
         "name_en": "Armour Bane (2), Close Order, Fear, Flammable, Immune To Psychology, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (1), Stubborn, Tree Spirit, Tree Whack",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (1), Obstiné, Esprit de la Forêts, Abattage"
+        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (1), Obstiné, Esprit de la Forêts, Abattage",
+        "name_pl": "Przebicie Zbroi (2), Zwarty Szyk, Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (1), Upartość, Duch Drzew, Drzewne Uderzenie"
       }
     }
   ],
@@ -1931,6 +2145,7 @@
       "name_en": "Waywatchers",
       "name_de": "Waywatchers",
       "name_fr": "Forestiers",
+      "name_pl": "Strażnicy Ścieżek",
       "id": "waywatchers",
       "points": 16,
       "minimum": 5,
@@ -1940,6 +2155,7 @@
           "name_en": "Sentinel",
           "name_de": "Sentinel",
           "name_fr": "Sentinelle",
+          "name_pl": "Wartownik",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "enchanted-item"],
@@ -1952,6 +2168,7 @@
           "name_en": "Hand weapon, Asrai Longbows",
           "name_de": "Hand weapon, Asrai Longbows",
           "name_fr": "Arme de base et Arc long Asrai",
+          "name_pl": "Broń ręczna, Długi łuk Asrai",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1963,6 +2180,7 @@
           "name_en": "Arcane Bodkins",
           "name_de": "Arcane Bodkins",
           "name_fr": "Bodkins Cabalistiques",
+          "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1972,6 +2190,7 @@
           "name_en": "Hagbane Tips",
           "name_de": "Hagbane Tips",
           "name_fr": "Flèches de Fléau des Furies",
+          "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1981,6 +2200,7 @@
           "name_en": "Moonfire Shots",
           "name_de": "Moonfire Shots",
           "name_fr": "Traits de Feu Lunaire",
+          "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1990,6 +2210,7 @@
           "name_en": "Swiftshiver Shards",
           "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
+          "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1999,6 +2220,7 @@
           "name_en": "Trueflight Arrows",
           "name_de": "Trueflight Arrows",
           "name_fr": "Pointes de Parabole Pure",
+          "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -2008,6 +2230,7 @@
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "name_fr": "Embusqueurs",
+          "name_pl": "Zasadzka",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -2017,6 +2240,7 @@
           "name_en": "Vanguard",
           "name_de": "Vanguard",
           "name_fr": "Avant-garde",
+          "name_pl": "Awangarda",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -2026,6 +2250,7 @@
           "name_en": "Veteran",
           "name_de": "Veteran",
           "name_fr": "Vétéran",
+          "name_pl": "Weterani",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -2038,13 +2263,15 @@
         "name_en": "Elven Reflexes, Evasive, Feigned Flight, Fire & Flee, Ignores Cover, Move Through Cover, Scouts, Skirmishers",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Eclaireurs, Tirailleurs"
+        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir&Fuite, Ignore le Couvert, Mouvement à Couvert, Eclaireurs, Tirailleurs",
+        "name_pl": "Elfickie Refleksy, Nieuchwytny, Udawana Ucieczka, Strzał i Ucieczka, Ignorowanie Zasłony, Przechodzenie przez Zasłony, Zwiadowcy, Harcownicy"
       }
     },
     {
       "name_en": "Great Eagle",
       "name_de": "Giant Eagle",
       "name_fr": "Grand Aigle",
+      "name_pl": "Wielki Orzeł",
       "id": "giant-eagle",
       "points": 60,
       "command": [],
@@ -2056,13 +2283,15 @@
         "name_en": "Close Order, Fear, Fly(10), Stomp Attacks (1), Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Ordre Serré, Peur, Vol(10), Attaque de Piétinement(1), Rapide"
+        "name_fr": "Ordre Serré, Peur, Vol(10), Attaque de Piétinement(1), Rapide",
+        "name_pl": "Luźny Szyk, Strach, Lot (10), Zdeptanie (1), Szybki Krok"
       }
     },
     {
       "name_en": "Treeman",
       "name_de": "Treeman",
       "name_fr": "Homme-Arbre",
+      "name_pl": "Drzewiec",
       "id": "treeman",
       "points": 215,
       "command": [],
@@ -2075,6 +2304,7 @@
           "name_en": "Forest Spites",
           "name_de": "Forest Spites",
           "name_fr": "Fiel-follets des Fôrets",
+          "name_pl": "Leśne duchy",
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
@@ -2084,7 +2314,8 @@
         "name_en": "Armour Bane (1), Close Order, Flammable, Immune To Psychology, Large Target, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!, Tree Spirit, Tree Whack",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage",
+        "name_pl": "Przebicie Zbroi (1), Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr! Duch Drzew, Drzewne Uderzenie"
       }
     }
   ],
