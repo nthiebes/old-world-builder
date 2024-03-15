@@ -30,9 +30,11 @@ export const GameView = () => {
   const [showSpecialRules, setShowSpecialRules] = useState(true);
   const [banners, setBanners] = useState(0);
   const [scenarioPoints, setScenarioPoints] = useState(0);
+  const [generalDead, setGeneralDead] = useState(false);
   const [showStats, setShowStats] = useState(true);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [victoryPoints, setVictoryPoints] = useState({});
+  const [showVictoryPoints, setShowVictoryPoints] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -63,6 +65,36 @@ export const GameView = () => {
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
+  const getUnitVictoryPoints = (unitId) => {
+    let allPoints = 0;
+    const unitVictoryPoints = victoryPoints[unitId];
+
+    allPoints += unitVictoryPoints ? unitVictoryPoints["25"] : 0;
+    allPoints += unitVictoryPoints ? unitVictoryPoints["dead"] : 0;
+    allPoints += unitVictoryPoints ? unitVictoryPoints["fleeing"] : 0;
+
+    return allPoints;
+  };
+  const getAllVictoryPoints = () => {
+    let allVictoryPoints =
+      banners * 50 + scenarioPoints + (generalDead ? 100 : 0);
+
+    Object.keys(victoryPoints).forEach((unitId) => {
+      allVictoryPoints += getUnitVictoryPoints(unitId);
+    });
+
+    return allVictoryPoints;
+  };
+  const allUnits = [
+    ...(list["characters"] || []),
+    ...(list["lords"] || []),
+    ...(list["heroes"] || []),
+    ...(list["core"] || []),
+    ...(list["special"] || []),
+    ...(list["rare"] || []),
+    ...(list["mercenaries"] || []),
+    ...(list["allies"] || []),
+  ];
   const filters = [
     {
       name: intl.formatMessage({
@@ -102,6 +134,16 @@ export const GameView = () => {
       checked: showPageNumbers,
       callback: () => {
         setShowPageNumbers(!showPageNumbers);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "export.showVictoryPoints",
+      }),
+      id: "victory",
+      checked: showVictoryPoints,
+      callback: () => {
+        setShowVictoryPoints(!showVictoryPoints);
       },
     },
   ];
@@ -182,7 +224,20 @@ export const GameView = () => {
                         ]}
                       />
                     ))}
-                  {getVictoryButtons(unit)}
+                  {showVictoryPoints && (
+                    <>
+                      {getVictoryButtons(unit)}
+                      <p className="game-view__special-rules">
+                        <b>
+                          <i>
+                            <FormattedMessage id="misc.victoryPoints" />
+                            {": "}
+                          </i>
+                        </b>
+                        {getUnitVictoryPoints(unit.id)}
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </li>
@@ -193,27 +248,35 @@ export const GameView = () => {
   };
   const updateVictoryPoints = ({ unit, value }) => {
     let unitPoints = victoryPoints[unit.id] || {
-      100: 0,
+      dead: 0,
       fleeing: 0,
       25: 0,
     };
 
     // eslint-disable-next-line default-case
     switch (value) {
-      case "100": {
-        unitPoints["100"] = unitPoints["100"] ? 0 : getUnitPoints(unit);
+      case "dead": {
+        unitPoints = {
+          dead: unitPoints.dead ? 0 : getUnitPoints(unit),
+          fleeing: 0,
+          25: 0,
+        };
         break;
       }
       case "fleeing": {
-        unitPoints.fleeing = unitPoints.fleeing
-          ? 0
-          : Math.round(getUnitPoints(unit) / 2);
+        unitPoints = {
+          dead: 0,
+          fleeing: unitPoints.fleeing ? 0 : Math.round(getUnitPoints(unit) / 2),
+          25: 0,
+        };
         break;
       }
       case "25": {
-        unitPoints["25"] = unitPoints["25"]
-          ? 0
-          : Math.round(getUnitPoints(unit) / 4);
+        unitPoints = {
+          dead: 0,
+          fleeing: 0,
+          25: unitPoints["25"] ? 0 : Math.round(getUnitPoints(unit) / 4),
+        };
       }
     }
 
@@ -227,11 +290,11 @@ export const GameView = () => {
       <>
         <Button
           className="game-view__victory-button"
-          type={victoryPoints[unit.id]?.["100"] ? "secondary" : "tertiary"}
+          type={victoryPoints[unit.id]?.dead ? "secondary" : "tertiary"}
           spaceTop
-          onClick={() => updateVictoryPoints({ unit, value: "100" })}
+          onClick={() => updateVictoryPoints({ unit, value: "dead" })}
         >
-          <FormattedMessage id="misc.100" />
+          <FormattedMessage id="misc.dead" />
         </Button>
         <Button
           className="game-view__victory-button"
@@ -247,13 +310,11 @@ export const GameView = () => {
           spaceTop
           onClick={() => updateVictoryPoints({ unit, value: "25" })}
         >
-          <FormattedMessage id="misc.25" />
+          {"<25%"}
         </Button>
       </>
     );
   };
-
-  console.log(victoryPoints);
 
   return (
     <>
@@ -415,37 +476,70 @@ export const GameView = () => {
         <section className="game-view__section">
           <header className="editor__header">
             <h2>
-              <FormattedMessage id="misc.victoryPoints" />{" "}
+              <FormattedMessage id="misc.allVictoryPoints" />
+              {": "}
             </h2>
+            <strong>
+              {getAllVictoryPoints()} <FormattedMessage id="app.points" />
+            </strong>
           </header>
-          <ul>
-            <li className="list">
-              <label htmlFor="banners">
-                <FormattedMessage id="misc.banners" />
-              </label>
-              <NumberInput
-                id="banners"
-                min={0}
-                value={banners}
-                onChange={(event) => {
-                  setBanners(event.target.value);
+          <div className="game-view__victory-points">
+            <label htmlFor="banners">
+              <FormattedMessage id="misc.banners" />
+            </label>
+            <NumberInput
+              id="banners"
+              min={0}
+              value={banners}
+              onChange={(event) => {
+                setBanners(event.target.value);
+              }}
+            />
+            <label htmlFor="scenarioPoints">
+              <FormattedMessage id="misc.scenarioPoints" />
+            </label>
+            <NumberInput
+              id="scenarioPoints"
+              min={0}
+              value={scenarioPoints}
+              onChange={(event) => {
+                setScenarioPoints(event.target.value);
+              }}
+            />
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                id="general"
+                onChange={() => {
+                  setGeneralDead(!generalDead);
                 }}
+                checked={generalDead}
+                className="checkbox__input"
               />
-            </li>
-            <li className="list">
-              <label htmlFor="scenarioPoints">
-                <FormattedMessage id="misc.scenarioPoints" />
+              <label htmlFor="general" className="checkbox__label">
+                <FormattedMessage id="misc.general" />
               </label>
-              <NumberInput
-                id="scenarioPoints"
-                min={0}
-                value={scenarioPoints}
-                onChange={(event) => {
-                  setScenarioPoints(event.target.value);
-                }}
-              />
-            </li>
-          </ul>
+            </div>
+            {Object.keys(victoryPoints).map((unitId) => {
+              const unit = allUnits.find((unit) => unit.id === unitId);
+              const unitVictoryPoints = getUnitVictoryPoints(unitId);
+
+              if (unitVictoryPoints) {
+                return (
+                  <p key={unitId}>
+                    <b>
+                      <i>
+                        {unit[`name_${language}`] || unit.name_en}
+                        {": "}
+                      </i>
+                    </b>
+                    {unitVictoryPoints}
+                  </p>
+                );
+              }
+              return null;
+            })}
+          </div>
         </section>
       </Main>
     </>
