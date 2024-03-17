@@ -9,7 +9,7 @@ import { Stats } from "../../components/stats";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { getStats } from "../../utils/unit";
+import { getStats, getUnitName } from "../../utils/unit";
 import { nameMap } from "../magic";
 import gameSystems from "../../assets/armies.json";
 
@@ -114,7 +114,7 @@ export const Print = () => {
                     {`${unit.strength || unit.minimum} `}
                   </span>
                 ) : null}
-                {unit[`name_${language}`] || unit.name_en}
+                {getUnitName({ unit, language })}
                 {!isShowList && (
                   <span className="print__points">
                     [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]

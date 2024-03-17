@@ -34,7 +34,7 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
                 dispatch(openRulesIndex({ activeRule: textEn[index] }))
               }
             >
-              {rule}
+              {rule.replace(/ *\{[^)]*\}/g, "")}
             </button>
             {showPageNumbers && ` [${ruleData.page}]`}
             {index !== ruleButtons.length - 1 && ", "}

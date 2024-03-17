@@ -202,3 +202,10 @@ export const getStats = (unit) => {
 
   return [...stats, ...mountStats];
 };
+
+export const getUnitName = ({ unit, language }) => {
+  return (unit.name || unit[`name_${language}`] || unit.name_en).replace(
+    / *\{[^)]*\}/g,
+    ""
+  );
+};

@@ -118,8 +118,7 @@ export const listsSlice = createSlice({
         items,
         detachments,
         activeLore,
-        name_de: name,
-        name_en: name,
+        name,
       };
       const unit = state
         .find(({ id }) => id === listId)

@@ -1,6 +1,6 @@
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
-import { getStats } from "../../utils/unit";
+import { getStats, getUnitName } from "../../utils/unit";
 import gameSystems from "../../assets/armies.json";
 import { nameMap } from "../magic";
 
@@ -55,7 +55,7 @@ ${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "u
 
       // prettier-ignore
       return `${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
-}${unit[`name_${language}`] || unit.name_en}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
+}${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
 ${optionsString}

@@ -12,7 +12,7 @@ import { OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
 import { ListItem } from "../../components/list/ListItem";
-import { getAllOptions } from "../../utils/unit";
+import { getAllOptions, getUnitName } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { deleteList, moveUnit } from "../../state/lists";
@@ -650,7 +650,7 @@ export const OrderableUnitList = ({ units, type, listId }) => {
             {unit.strength || unit.minimum ? (
               <span>{`${unit.strength || unit.minimum}`}</span>
             ) : null}
-            <b>{unit[`name_${language}`] || unit.name_en}</b>
+            <b>{getUnitName({ unit, language })}</b>
             <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
               id: "app.points",
             })}`}</i>

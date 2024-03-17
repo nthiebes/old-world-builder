@@ -9,6 +9,7 @@ import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
+import { getUnitName } from "../../utils/unit";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
@@ -132,7 +133,7 @@ export const Add = ({ isMobile }) => {
     <ListItem key={unit.id} onClick={() => handleAdd(unit, ally)}>
       <span className="unit__name">
         {unit.minimum ? `${unit.minimum} ` : null}
-        <b>{unit[`name_${language}`] || unit.name_en}</b>
+        <b>{getUnitName({ unit, language })}</b>
       </span>
       <i className="unit__points">{`${
         unit.minimum ? unit.points * unit.minimum : unit.points

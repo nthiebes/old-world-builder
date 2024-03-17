@@ -33,7 +33,6 @@ const additionalOWBRules = {
   "great hammers": { url: "weapons-of-war/great-hammer" },
   "brimstone guns": { url: "weapons-of-war/brimstone-gun" },
   clatterguns: { url: "weapons-of-war/clattergun" },
-  "steam guns dwarfs": { url: "weapons-of-war/steam-gun-dwarfs" },
   crossbows: { url: "weapons-of-war/crossbow" },
   "throwing weapons": { url: "weapons-of-war/throwing-weapons" },
   slings: { url: "weapons-of-war/sling" },
@@ -65,12 +64,11 @@ const additionalOWBRules = {
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
   "level 4 wizard": { url: "magic/levels-of-wizardry" },
-  "skeletal steed": { url: "unit/skeletal-steed-tomb-kings" },
-  "skeletal steed vc": { url: "unit/skeletal-steed-vampire-counts" },
 };
 
 export const synonyms = {
   plagueswords: "plaguesword",
+  "steam guns dwarfs": "steam gun dwarfs",
   "har ganeth greatswords": "har ganeth greatsword",
   "dread halberds": "dread halberd",
   fanatics: "fanatic",

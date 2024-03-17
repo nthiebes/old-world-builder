@@ -17,7 +17,7 @@ import {
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { getStats } from "../../utils/unit";
+import { getStats, getUnitName } from "../../utils/unit";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -165,7 +165,7 @@ export const GameView = () => {
                     </span>
                   ) : null}
                   <span className="game-view__name">
-                    <span>{unit[`name_${language}`] || unit.name_en}</span>
+                    <span>{getUnitName({ unit, language })}</span>
                     <RuleWithIcon
                       name={unit.name_en}
                       isDark
@@ -186,7 +186,9 @@ export const GameView = () => {
                         language: "en",
                         asString: true,
                       }),
-                      name_de: getAllOptions(unit, { asString: true }),
+                      [`name_${language}`]: getAllOptions(unit, {
+                        asString: true,
+                      }),
                     }}
                   />
                   {showSpecialRules && unit.specialRules ? (
@@ -530,7 +532,9 @@ export const GameView = () => {
                     <p key={unitId}>
                       <b>
                         <i>
-                          {unit[`name_${language}`] || unit.name_en}
+                          {unit.name ||
+                            unit[`name_${language}`] ||
+                            unit.name_en}
                           {": "}
                         </i>
                       </b>

@@ -27,6 +27,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
 import { normalizeRuleName } from "../../utils/string";
+import { getUnitName } from "../../utils/unit";
 
 import "./Unit.css";
 
@@ -460,7 +461,7 @@ export const Unit = ({ isMobile }) => {
         <Header
           to={`/editor/${listId}`}
           moreButton={moreButtons}
-          headline={unit[`name_${language}`] || unit.name_en}
+          headline={getUnitName({ unit, language })}
           headlineIcon={
             <RuleWithIcon
               name={unit.name_en}
@@ -482,7 +483,7 @@ export const Unit = ({ isMobile }) => {
             isSection
             to={`/editor/${listId}`}
             moreButton={moreButtons}
-            headline={unit[`name_${language}`] || unit.name_en}
+            headline={getUnitName({ unit, language })}
             headlineIcon={
               <RuleWithIcon
                 name={unit.name_en}

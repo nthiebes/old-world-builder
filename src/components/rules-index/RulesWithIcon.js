@@ -20,7 +20,7 @@ export const RulesWithIcon = ({ textObject }) => {
 
   const textEn = textObject.name_en.split(/, | \+ |\[/);
   const ruleString = textObject[`name_${language}`] || textObject.name_en;
-  let ruleButtons = ruleString.split(/, | \+ |\[/);
+  const ruleButtons = ruleString.split(/, | \+ |\[/);
 
   return ruleButtons.map((rule, index) => {
     return (
@@ -28,14 +28,19 @@ export const RulesWithIcon = ({ textObject }) => {
         {rulesMap[normalizeRuleName(textEn[index])] ||
         rulesMap[synonyms[normalizeRuleName(textEn[index])]] ? (
           <span className="unit__rule-wrapper">
-            {rule.replace(/\[/g, "").replace(/\]/g, "")}
+            {rule
+              .replace(/\[/g, "")
+              .replace(/\]/g, "")
+              .replace(/ *\{[^)]*\}/g, "")}
             <Button
               type="text"
               className="unit__rules"
               color="dark"
               label={intl.formatMessage({ id: "misc.showRules" })}
               icon="preview"
-              onClick={() => dispatch(openRulesIndex({ activeRule: rule }))}
+              onClick={() =>
+                dispatch(openRulesIndex({ activeRule: textEn[index] }))
+              }
             />
             {index !== ruleButtons.length - 1 && ", "}
           </span>
