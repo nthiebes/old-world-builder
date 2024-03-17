@@ -182,6 +182,10 @@ export const GameView = () => {
                 <div className="game-view__details">
                   <RulesWithIcon
                     textObject={{
+                      name_en: getAllOptions(unit, {
+                        language: "en",
+                        removeFactionName: false,
+                      }),
                       [`name_${language}`]: getAllOptions(unit, {
                         removeFactionName: false,
                       }),
