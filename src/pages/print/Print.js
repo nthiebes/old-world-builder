@@ -128,8 +128,10 @@ export const Print = () => {
                     <b>
                       <FormattedMessage id="unit.specialRules" />:
                     </b>{" "}
-                    {unit.specialRules[`name_${language}`] ||
-                      unit.specialRules.name_en}
+                    {(
+                      unit.specialRules[`name_${language}`] ||
+                      unit.specialRules.name_en
+                    ).replace(/ *\{[^)]*\}/g, "")}
                   </i>
                 </p>
               ) : null}

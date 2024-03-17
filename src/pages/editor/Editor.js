@@ -655,7 +655,7 @@ export const OrderableUnitList = ({ units, type, listId }) => {
               id: "app.points",
             })}`}</i>
           </div>
-          {getAllOptions(unit)}
+          <p>{getAllOptions(unit)}</p>
         </ListItem>
       ))}
     </OrderableList>

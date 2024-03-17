@@ -14,7 +14,7 @@ export const getAllOptions = (
     activeLore,
     lores,
   },
-  { asString, noMagic, language: overrideLanguage } = {}
+  { removeFactionName = true, noMagic, language: overrideLanguage } = {}
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
   const detachmentActive =
@@ -180,13 +180,14 @@ export const getAllOptions = (
     ...allDetachments,
     ...lore,
   ];
-  const allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
+  let allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
+
+  if (removeFactionName) {
+    allOptionsString = allOptionsString.replace(/ *\{[^)]*\}/g, "");
+  }
 
   if (allOptionsString) {
-    if (asString) {
-      return allOptionsString;
-    }
-    return <p>{allOptionsString}</p>;
+    return allOptionsString;
   }
   return null;
 };

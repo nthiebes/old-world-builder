@@ -16,7 +16,6 @@ const getUnitsString = ({
   return units
     .map((unit) => {
       const allOptions = getAllOptions(unit, {
-        asString: true,
         noMagic: isShowList,
       });
       let optionsString = "";
@@ -31,9 +30,9 @@ const getUnitsString = ({
       if (showSpecialRules && unit.specialRules) {
         optionsString += `${intl.formatMessage({
           id: "unit.specialRules",
-        })}: ${
+        })}: ${(
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
-        }\n`;
+        ).replace(/ *\{[^)]*\}/g, "")}\n`;
       }
       if (showStats) {
         const stats = getStats(unit);
