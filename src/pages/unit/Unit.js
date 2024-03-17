@@ -573,7 +573,14 @@ export const Unit = ({ isMobile }) => {
                         onChange={() => handleCommandChange(id)}
                         checked={active}
                         className="checkbox__input"
-                        disabled={detachmentActive}
+                        disabled={
+                          detachmentActive ||
+                          (type === "characters" &&
+                            unit.command.find(
+                              (commandUnit) =>
+                                commandUnit.active && commandUnit.id !== id
+                            ))
+                        }
                       />
                       <label
                         htmlFor={`command-${id}`}

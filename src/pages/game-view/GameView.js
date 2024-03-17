@@ -31,6 +31,7 @@ export const GameView = () => {
   const [banners, setBanners] = useState(0);
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
+  const [BSBDead, setBSBDead] = useState(false);
   const [showStats, setShowStats] = useState(true);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [victoryPoints, setVictoryPoints] = useState({});
@@ -77,7 +78,10 @@ export const GameView = () => {
   };
   const getAllVictoryPoints = () => {
     let allVictoryPoints =
-      banners * 50 + scenarioPoints + (generalDead ? 100 : 0);
+      banners * 50 +
+      scenarioPoints +
+      (generalDead ? 100 : 0) +
+      (BSBDead ? 50 : 0);
 
     Object.keys(victoryPoints).forEach((unitId) => {
       allVictoryPoints += getUnitVictoryPoints(unitId);
@@ -254,6 +258,16 @@ export const GameView = () => {
       fleeing: 0,
       25: 0,
     };
+    const isGeneral = Boolean(
+      unit?.command?.length &&
+        unit.command.find((command) => command.name_en === "General")
+    );
+    const isBSB = Boolean(
+      unit?.command?.length &&
+        unit.command.find(
+          (command) => command.name_en === "Battle Standard Bearer"
+        )
+    );
 
     // eslint-disable-next-line default-case
     switch (value) {
@@ -263,6 +277,12 @@ export const GameView = () => {
           fleeing: 0,
           25: 0,
         };
+        if (isGeneral) {
+          setGeneralDead(Boolean(unitPoints.dead));
+        }
+        if (isBSB) {
+          setBSBDead(Boolean(unitPoints.dead));
+        }
         break;
       }
       case "fleeing": {
@@ -271,6 +291,12 @@ export const GameView = () => {
           fleeing: unitPoints.fleeing ? 0 : Math.round(getUnitPoints(unit) / 2),
           25: 0,
         };
+        if (isGeneral) {
+          setGeneralDead(Boolean(unitPoints.fleeing));
+        }
+        if (isBSB) {
+          setBSBDead(Boolean(unitPoints.fleeing));
+        }
         break;
       }
       case "25": {
@@ -284,7 +310,7 @@ export const GameView = () => {
 
     setVictoryPoints({
       ...victoryPoints,
-      [unit.id]: unitPoints,
+      [unit.id]: { ...unitPoints, isGeneral, isBSB },
     });
   };
   const getVictoryButtons = (unit) => {
@@ -509,20 +535,28 @@ export const GameView = () => {
                   setScenarioPoints(event.target.value);
                 }}
               />
-              <div className="checkbox">
-                <input
-                  type="checkbox"
-                  id="general"
-                  onChange={() => {
-                    setGeneralDead(!generalDead);
-                  }}
-                  checked={generalDead}
-                  className="checkbox__input"
-                />
-                <label htmlFor="general" className="checkbox__label">
-                  <FormattedMessage id="misc.general" />
-                </label>
-              </div>
+              {generalDead && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.generalDead" />
+                      {": "}
+                    </i>
+                  </b>
+                  100
+                </p>
+              )}
+              {BSBDead && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.bsbDead" />
+                      {": "}
+                    </i>
+                  </b>
+                  50
+                </p>
+              )}
               {Object.keys(victoryPoints).map((unitId) => {
                 const unit = allUnits.find((unit) => unit.id === unitId);
                 const unitVictoryPoints = getUnitVictoryPoints(unitId);
