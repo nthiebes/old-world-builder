@@ -45,7 +45,7 @@ export const Export = ({ isMobile }) => {
   const [isCompactList, setIsCompactList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(false);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
-  // const [isMarkdownList, setIsMarkdownList] = useState(false);
+  const [isMarkdownList, setIsMarkdownList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -56,6 +56,7 @@ export const Export = ({ isMobile }) => {
         isCompactList,
         showSpecialRules,
         showPageNumbers,
+        isMarkdownList,
         intl,
         language,
         showStats,
@@ -174,23 +175,18 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.visibleListDescription" />
           </i>
         </p>
-        {/* <div className="checkbox export__visible-checkbox">
+        <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"
-            id="forum"
-            onChange={() => setIsForumList(!isForumList)}
-            checked={isForumList}
+            id="isMarkdownList"
+            onChange={() => setIsMarkdownList(!isMarkdownList)}
+            checked={isMarkdownList}
             className="checkbox__input"
           />
-          <label htmlFor="forum" className="checkbox__label">
-            <FormattedMessage id="export.forumText" />
+          <label htmlFor="isMarkdownList" className="checkbox__label">
+            <FormattedMessage id="export.isMarkdownList" />
           </label>
         </div>
-        <p className="export__description">
-          <i>
-            <FormattedMessage id="export.forumTextDescription" />
-          </i>
-        </p> */}
         <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"

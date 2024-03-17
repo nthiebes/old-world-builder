@@ -10,6 +10,7 @@ const getUnitsString = ({
   isCompactList,
   showSpecialRules,
   showPageNumbers,
+  isMarkdownList,
   intl,
   language,
   showStats,
@@ -55,7 +56,7 @@ ${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "u
       }
 
       // prettier-ignore
-      return `${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
+      return `${isMarkdownList ? '### ' : ''}${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
 }${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
@@ -74,6 +75,7 @@ export const getListAsText = ({
   showSpecialRules,
   showPageNumbers,
   showStats,
+  isMarkdownList,
 }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
@@ -99,13 +101,22 @@ export const getListAsText = ({
 
   // HEADER
   // prettier-ignore
-  if (!isCompactList) {
+  if (!isCompactList && !isMarkdownList) {
     listString += `===
 ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
 ${game.name}, ${armyName}${armyCompositionString}
 ===
+
+`;
+  }
+  // prettier-ignore
+  if (!isCompactList && isMarkdownList) {
+    listString += `# ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
+  id: "app.points",
+}) + ']'}
+${game.name}, ${armyName}${armyCompositionString}
 
 `;
   }
@@ -125,6 +136,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.characters,
       isShowList,
       intl,
@@ -147,6 +159,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.lords,
       isShowList,
       intl,
@@ -169,6 +182,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.heroes,
       isShowList,
       intl,
@@ -191,6 +205,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.core,
       isShowList,
       intl,
@@ -213,6 +228,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.special,
       isShowList,
       intl,
@@ -235,6 +251,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.rare,
       isShowList,
       intl,
@@ -257,6 +274,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.mercenaries,
       isShowList,
       intl,
@@ -279,6 +297,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isCompactList,
       showSpecialRules,
       showPageNumbers,
+      isMarkdownList,
       units: list.allies,
       isShowList,
       intl,
@@ -292,6 +311,10 @@ ${intl.formatMessage({
 })} "Old World Builder"
 
 [https://old-world-builder.com]`;
+
+  if (isMarkdownList) {
+    listString = listString.replace(/ \+\+/g, "").replace(/\+\+/g, "##");
+  }
 
   return listString;
 };
