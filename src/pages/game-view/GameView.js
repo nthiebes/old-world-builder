@@ -308,6 +308,8 @@ export const GameView = () => {
           fleeing: 0,
           25: unitPoints["25"] ? 0 : Math.round(getUnitPoints(unit) / 4),
         };
+        setGeneralDead(false);
+        setBSBDead(false);
       }
     }
 
