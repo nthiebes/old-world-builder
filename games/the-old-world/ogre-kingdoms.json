@@ -442,7 +442,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon, Flaming breath Ogre Kingdoms",
+          "name_en": "Hand weapon, Flaming breath {ogre kingdoms}",
           "points": 0,
           "perModel": true,
           "active": true
@@ -988,16 +988,12 @@
       "detachment": false,
       "command": [
         {
-          "name_en": "Maneater Captain",
+          "name_en": "Maneater Captain (champion)",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 50
-          },
-          "name_de": "Maneater Captain",
-          "name_es": "Maneater Captain",
-          "name_fr": "Maneater Captain",
-          "name_it": "Maneater Captain"
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -1006,75 +1002,24 @@
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Standard bearer",
-          "name_it": "Standard bearer"
+          "options": [
+            {
+              "name_en": "Look-out Gnoblar",
+              "points": 5
+            }
+          ]
         },
         {
           "name_en": "Bellower (musician)",
-          "points": 7,
-          "name_de": "Bellower (musician)",
-          "name_es": "Bellower (musician)",
-          "name_fr": "Bellower (musician)",
-          "name_it": "Bellower (musician)"
+          "points": 7
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
+          "name_en": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
-          "name_it": "Hand weapon"
-        },
-        {
-          "name_en": "Additional hand weapon",
-          "points": 3,
-          "perModel": true,
-          "name_de": "Additional hand weapon",
-          "name_es": "Additional hand weapon",
-          "name_fr": "Additional hand weapon",
-          "name_it": "Additional hand weapon"
-        },
-        {
-          "name_en": "Ironfist",
-          "points": 4,
-          "perModel": true,
-          "name_de": "Ironfist",
-          "name_es": "Ironfist",
-          "name_fr": "Ironfist",
-          "name_it": "Ironfist"
-        },
-        {
-          "name_en": "Great weapon",
-          "points": 4,
-          "perModel": true,
-          "name_de": "Great weapon",
-          "name_es": "Great weapon",
-          "name_fr": "Great weapon",
-          "name_it": "Great weapon"
-        },
-        {
-          "name_en": "Ogre pistol",
-          "points": 6,
-          "perModel": true,
-          "name_de": "Ogre pistol",
-          "name_es": "Ogre pistol",
-          "name_fr": "Ogre pistol",
-          "name_it": "Ogre pistol"
-        },
-        {
-          "name_en": "Brace of Ogre pistols",
-          "points": 12,
-          "perModel": true,
-          "name_de": "Brace of Ogre pistols",
-          "name_es": "Brace of Ogre pistols",
-          "name_fr": "Brace of Ogre pistols",
-          "name_it": "Brace of Ogre pistols"
+          "active": true
         }
       ],
       "armor": [
@@ -1082,66 +1027,55 @@
           "name_en": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_de": "Light armour",
-          "name_es": "Light armour",
-          "name_fr": "Light armour",
-          "name_it": "Light armour"
-        },
-        {
-          "name_en": "Heavy armour",
-          "points": 3,
-          "perModel": true,
-          "name_de": "Heavy armour",
-          "name_es": "Heavy armour",
-          "name_fr": "Heavy armour",
-          "name_it": "Heavy armour"
+          "active": true
         }
       ],
       "options": [
         {
-          "name_en": "Look-out Gnoblar (Standard bearer)",
-          "points": 5,
-          "name_de": "Look-out Gnoblar (Standard bearer)",
-          "name_es": "Look-out Gnoblar (Standard bearer)",
-          "name_fr": "Look-out Gnoblar (Standard bearer)",
-          "name_it": "Look-out Gnoblar (Standard bearer)"
-        },
-        {
           "name_en": "Immune To Psychology",
-          "points": 0,
-          "perModel": true,
-          "name_de": "Immune To Psychology",
-          "name_es": "Immune To Psychology",
-          "name_fr": "Immune To Psychology",
-          "name_it": "Immune To Psychology"
+          "points": 0
         },
         {
           "name_en": "Poisoned Attacks",
-          "points": 0,
-          "perModel": true,
-          "name_de": "Poisoned Attacks",
-          "name_es": "Poisoned Attacks",
-          "name_fr": "Poisoned Attacks",
-          "name_it": "Poisoned Attacks"
+          "points": 0
         },
         {
           "name_en": "Stubborn",
-          "points": 0,
-          "perModel": true,
-          "name_de": "Stubborn",
-          "name_es": "Stubborn",
-          "name_fr": "Stubborn",
-          "name_it": "Stubborn"
+          "points": 0
         },
         {
           "name_en": "Vanguard",
-          "points": 0,
-          "perModel": true,
-          "name_de": "Vanguard",
-          "name_es": "Vanguard",
-          "name_fr": "Vanguard",
-          "name_it": "Vanguard"
+          "points": 0
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "points": 3,
+          "stackable": true
+        },
+        {
+          "name_en": "Ironfists",
+          "points": 4,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "points": 4,
+          "stackable": true
+        },
+        {
+          "name_en": "Ogre pistols",
+          "points": 6,
+          "stackable": true
+        },
+        {
+          "name_en": "Brace of Ogre pistols",
+          "points": 12,
+          "stackable": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 3,
+          "stackable": true
         }
       ],
       "mounts": [],
@@ -1155,7 +1089,7 @@
         "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points"
+        "name_en": "0-1 per 1000 points, 0-1 unit per 1,000 points may purchase a magic standard worth up to 50 pts, Any unit may have 0-2 of the following special rules: Immune to Psychology, Poisoned Attacks, Stubborn, Vanguard"
       }
     },
     {
