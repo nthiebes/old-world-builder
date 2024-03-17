@@ -44,6 +44,7 @@ export const Export = ({ isMobile }) => {
   const [showStats, setShowStats] = useState(false);
   const [isCompactList, setIsCompactList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(false);
+  const [showPageNumbers, setShowPageNumbers] = useState(false);
   // const [isMarkdownList, setIsMarkdownList] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -54,6 +55,7 @@ export const Export = ({ isMobile }) => {
         isShowList,
         isCompactList,
         showSpecialRules,
+        showPageNumbers,
         intl,
         language,
         showStats,
@@ -211,6 +213,18 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="showStats" className="checkbox__label">
             <FormattedMessage id="export.showStats" />
+          </label>
+        </div>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="showPageNumbers"
+            onChange={() => setShowPageNumbers(!showPageNumbers)}
+            checked={showPageNumbers}
+            className="checkbox__input"
+          />
+          <label htmlFor="showPageNumbers" className="checkbox__label">
+            <FormattedMessage id="export.showPageNumbers" />
           </label>
         </div>
         <p className="export__description"></p>

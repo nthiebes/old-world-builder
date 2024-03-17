@@ -9,6 +9,7 @@ const getUnitsString = ({
   isShowList,
   isCompactList,
   showSpecialRules,
+  showPageNumbers,
   intl,
   language,
   showStats,
@@ -17,6 +18,7 @@ const getUnitsString = ({
     .map((unit) => {
       const allOptions = getAllOptions(unit, {
         noMagic: isShowList,
+        pageNumbers: showPageNumbers,
       });
       let optionsString = "";
 
@@ -70,6 +72,7 @@ export const getListAsText = ({
   intl,
   language,
   showSpecialRules,
+  showPageNumbers,
   showStats,
 }) => {
   const allPoints = getAllPoints(list);
@@ -121,6 +124,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.characters,
       isShowList,
       intl,
@@ -142,6 +146,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.lords,
       isShowList,
       intl,
@@ -163,6 +168,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.heroes,
       isShowList,
       intl,
@@ -184,6 +190,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.core,
       isShowList,
       intl,
@@ -205,6 +212,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.special,
       isShowList,
       intl,
@@ -226,6 +234,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.rare,
       isShowList,
       intl,
@@ -247,6 +256,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.mercenaries,
       isShowList,
       intl,
@@ -268,6 +278,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `${getUnitsString({
       isCompactList,
       showSpecialRules,
+      showPageNumbers,
       units: list.allies,
       isShowList,
       intl,

@@ -14,7 +14,12 @@ export const getAllOptions = (
     activeLore,
     lores,
   },
-  { removeFactionName = true, noMagic, language: overrideLanguage } = {}
+  {
+    removeFactionName = true,
+    noMagic,
+    language: overrideLanguage,
+    pageNumbers,
+  } = {}
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
   const detachmentActive =
@@ -169,7 +174,7 @@ export const getAllOptions = (
     );
   }
 
-  const allOptionsArray = [
+  let allOptionsArray = [
     ...allEquipment,
     ...allArmor,
     ...allOptions,
@@ -180,6 +185,18 @@ export const getAllOptions = (
     ...allDetachments,
     ...lore,
   ];
+
+  if (pageNumbers) {
+    allOptionsArray = allOptionsArray.map((option) => {
+      const page = getPage(option);
+
+      if (page) {
+        return `${option} [${page}]`;
+      }
+      return option;
+    });
+  }
+
   let allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
 
   if (removeFactionName) {
@@ -190,6 +207,14 @@ export const getAllOptions = (
     return allOptionsString;
   }
   return null;
+};
+
+export const getPage = (name) => {
+  const normalizedName = normalizeRuleName(name);
+  const synonym = synonyms[normalizedName];
+  const page = rulesMap[synonym || normalizedName]?.page || "";
+
+  return page.replace(/,/g, "");
 };
 
 export const getStats = (unit) => {

@@ -22,6 +22,7 @@ export const Print = () => {
   const [isPrinting, setIsPrinting] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
+  const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [showStats, setShowStats] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -77,6 +78,16 @@ export const Print = () => {
     },
     {
       name: intl.formatMessage({
+        id: "export.showPageNumbers",
+      }),
+      id: "pages",
+      checked: showPageNumbers,
+      callback: () => {
+        setShowPageNumbers(!showPageNumbers);
+      },
+    },
+    {
+      name: intl.formatMessage({
         id: "export.visibleList",
       }),
       description: intl.formatMessage({
@@ -121,7 +132,10 @@ export const Print = () => {
                   </span>
                 )}
               </h3>
-              {getAllOptions(unit, { noMagic: isShowList })}
+              {getAllOptions(unit, {
+                noMagic: isShowList,
+                pageNumbers: showPageNumbers,
+              })}
               {showSpecialRules && unit.specialRules ? (
                 <p className="print__special-rules">
                   <i>
