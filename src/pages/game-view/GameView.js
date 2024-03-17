@@ -260,12 +260,15 @@ export const GameView = () => {
     };
     const isGeneral = Boolean(
       unit?.command?.length &&
-        unit.command.find((command) => command.name_en === "General")
+        unit.command.find(
+          (command) => command.name_en === "General" && command.active
+        )
     );
     const isBSB = Boolean(
       unit?.command?.length &&
         unit.command.find(
-          (command) => command.name_en === "Battle Standard Bearer"
+          (command) =>
+            command.name_en === "Battle Standard Bearer" && command.active
         )
     );
 
