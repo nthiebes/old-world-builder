@@ -32,7 +32,7 @@ import { getUnitName } from "../../utils/unit";
 import "./Unit.css";
 
 export const Unit = ({ isMobile, previewData = {} }) => {
-  const isPreview = Boolean(previewData);
+  const isPreview = Boolean(previewData?.type);
   const { type: previewType, unit: previewUnit } = previewData;
   const MainComponent = isMobile ? Main : Fragment;
   const { listId, type = previewType, unitId } = useParams();
