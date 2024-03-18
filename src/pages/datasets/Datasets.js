@@ -8,17 +8,18 @@ import { Button } from "../../components/button";
 import { Select } from "../../components/select";
 import { Expandable } from "../../components/expandable";
 import { Spinner } from "../../components/spinner";
+import { Dialog } from "../../components/dialog";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
+import { Unit } from "../unit";
 
 import { Entity } from "./Entity";
-import { UnitPreview } from "./UnitPreview";
 import "./Datasets.css";
 
 export const Datasets = ({ isMobile }) => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
-  const [previewUnit, setPreviewUnit] = useState(null);
+  const [previewData, setPreviewData] = useState({});
   const [armyInput, setArmyInput] = useState("");
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
@@ -111,8 +112,11 @@ export const Datasets = ({ isMobile }) => {
       console.log(error);
     }
   };
-  const handlePreview = ({ unit }) => {
-    setPreviewUnit(unit);
+  const handlePreview = (data) => {
+    setPreviewData({
+      type: data.type,
+      unit: { ...data.unit, strength: data.unit.minimum || 0 },
+    });
   };
 
   useEffect(() => {
@@ -253,7 +257,9 @@ export const Datasets = ({ isMobile }) => {
                               type="text"
                               label="Preview unit"
                               color="dark"
-                              onClick={() => handlePreview({ unit })}
+                              onClick={() =>
+                                handlePreview({ unit, type: "characters" })
+                              }
                             />
                           </span>
                         </span>
@@ -294,7 +300,9 @@ export const Datasets = ({ isMobile }) => {
                               type="text"
                               label="Preview unit"
                               color="dark"
-                              onClick={() => handlePreview({ unit })}
+                              onClick={() =>
+                                handlePreview({ unit, type: "core" })
+                              }
                             />
                           </span>
                         </span>
@@ -336,7 +344,9 @@ export const Datasets = ({ isMobile }) => {
                               type="text"
                               label="Preview unit"
                               color="dark"
-                              onClick={() => handlePreview({ unit })}
+                              onClick={() =>
+                                handlePreview({ unit, type: "special" })
+                              }
                             />
                           </span>
                         </span>
@@ -378,7 +388,9 @@ export const Datasets = ({ isMobile }) => {
                               type="text"
                               label="Preview unit"
                               color="dark"
-                              onClick={() => handlePreview({ unit })}
+                              onClick={() =>
+                                handlePreview({ unit, type: "rare" })
+                              }
                             />
                           </span>
                         </span>
@@ -486,13 +498,14 @@ export const Datasets = ({ isMobile }) => {
           </section>
         </div>
 
-        {previewUnit ? (
-          <UnitPreview
-            unit={{ ...previewUnit, strength: 0 }}
-            onClose={() => setPreviewUnit(null)}
-            coreUnits={dataset.core}
-          />
-        ) : null}
+        <Dialog
+          open={Boolean(previewData.type)}
+          onClose={() => setPreviewData({})}
+        >
+          <div className="datasets__preview">
+            <Unit isMobile={false} previewData={previewData} />
+          </div>
+        </Dialog>
       </Main>
     </>
   );
