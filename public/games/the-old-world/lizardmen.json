@@ -11,12 +11,14 @@
         {
           "name_en": "General",
           "name_de": "General",
-          "points": 0
+          "points": 0,
+          "exclusive": false
         },
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
           "points": 25,
+          "exclusive": false,
           "magic": {
             "types": ["banner"],
             "maxPoints": 0
@@ -417,14 +419,14 @@
           "options": [
             {
               "name_en": "Giant bow",
-              "points": 230,
+              "points": 0,
               "exclusive": true,
               "active": true
             },
             {
               "name_en": "Giant blowpipes",
               "exclusive": true,
-              "points": 230
+              "points": 0
             },
             {
               "name_en": "Engine of the Gods",
@@ -582,7 +584,20 @@
           "name_de": "Stegadon",
           "name_es": "Stegadon",
           "name_fr": "Stegadon",
-          "points": 215
+          "points": 215,
+          "options": [
+            {
+              "name_en": "Giant bow",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Giant blowpipes",
+              "exclusive": true,
+              "points": 0
+            }
+          ]
         }
       ],
       "items": [
@@ -591,9 +606,9 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 0
+          "maxPoints": 50
         }
       ],
       "lores": [],
@@ -731,13 +746,7 @@
           "name_fr": "Revered Guardian (champion)",
           "points": 7,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "banner",
-              "enchanted-item"
-            ],
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 50
           }
         },
@@ -746,7 +755,11 @@
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Standard bearer",
-          "points": 7
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
         },
         {
           "name_en": "Musician",
@@ -873,7 +886,7 @@
         "name_fr": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers"
       },
       "notes": {
-        "name_en": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule. Choose hand weapons options if taking blowpipes.",
+        "name_en": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule",
         "name_de": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule",
         "name_es": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule",
         "name_fr": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule"
@@ -1331,10 +1344,10 @@
   ],
   "rare": [
     {
-      "name_en": "Salamander Packs",
-      "name_de": "Salamander Packs",
-      "name_es": "Salamander Packs",
-      "name_fr": "Salamander Packs",
+      "name_en": "Salamander Pack",
+      "name_de": "Salamander Pack",
+      "name_es": "Salamander Pack",
+      "name_fr": "Salamander Pack",
       "id": "salamander-packs",
       "points": 75,
       "minimum": 1,
@@ -1392,10 +1405,10 @@
       }
     },
     {
-      "name_en": "Razordon Packs",
-      "name_de": "Razordon Packs",
-      "name_es": "Razordon Packs",
-      "name_fr": "Razordon Packs",
+      "name_en": "Razordon Pack",
+      "name_de": "Razordon Pack",
+      "name_es": "Razordon Pack",
+      "name_fr": "Razordon Pack",
       "id": "razordon-packs",
       "points": 60,
       "minimum": 1,
@@ -1462,18 +1475,18 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Great horns and giant bow",
-          "name_de": "Great horns and giant bow",
-          "name_es": "Great horns and giant bow",
-          "name_fr": "Great horns and giant bow",
+          "name_en": "Great horns, Giant bow",
+          "name_de": "Great horns, Giant bow",
+          "name_es": "Great horns, Giant bow",
+          "name_fr": "Great horns, Giant bow",
           "points": 0,
           "active": true
         },
         {
-          "name_en": "Great horns with giant blowpipes",
-          "name_de": "Great horns with giant blowpipes",
-          "name_es": "Great horns with giant blowpipes",
-          "name_fr": "Great horns with giant blowpipes",
+          "name_en": "Great horns, Giant blowpipes",
+          "name_de": "Great horns, Giant blowpipes",
+          "name_es": "Great horns, Giant blowpipes",
+          "name_fr": "Great horns, Giant blowpipes",
           "points": 0
         }
       ],

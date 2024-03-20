@@ -67,6 +67,8 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  "repeater bolt thrower": "bolt throwers",
+  "bolt thrower": "bolt throwers",
   plagueswords: "plaguesword",
   "steam guns dwarfs": "steam gun dwarfs",
   "har ganeth greatswords": "har ganeth greatsword",

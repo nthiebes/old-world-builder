@@ -552,6 +552,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   magic,
                   options,
+                  exclusive = true,
                   ...command
                 },
                 index
@@ -578,6 +579,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         disabled={
                           detachmentActive ||
                           (type === "characters" &&
+                            exclusive &&
                             unit.command.find(
                               (commandUnit) =>
                                 commandUnit.active && commandUnit.id !== id
