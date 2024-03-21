@@ -67,6 +67,8 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  cannon: "cannons",
+  "great cannon": "cannons",
   "repeater bolt thrower": "bolt throwers",
   "bolt thrower": "bolt throwers",
   plagueswords: "plaguesword",
