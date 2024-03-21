@@ -2156,48 +2156,14 @@
   },
   "shield": { "url": "weapons-of-war/shield", "page": "RB, p. 221" },
   "barding": { "url": "weapons-of-war/barding", "page": "RB, p. 221" },
-  "bolt throwers": {
-    "url": "war-machines/bolt-throwers",
-    "page": "RB, p. 223"
-  },
-  "stone throwers": {
+  "bolt thrower": { "url": "war-machines/bolt-throwers", "page": "RB, p. 223" },
+  "stone thrower": {
     "url": "war-machines/stone-throwers",
     "page": "RB, p. 224"
   },
-  "cannon dwarfs": {
-    "url": "unit/cannon",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "-",
-        "S": "-",
-        "T": "7",
-        "W": "3",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Cannon"
-      },
-      {
-        "A": "3",
-        "I": "2",
-        "M": "3",
-        "S": "3",
-        "T": "4",
-        "W": "3",
-        "BS": "3",
-        "Ld": "9",
-        "WS": "3",
-        "Name": "Dwarf Crew"
-      }
-    ],
-    "page": "FoF, p. 31"
-  },
-  "fire throwers": {
-    "url": "war-machines/fire-throwers",
-    "page": "RB, p. 229"
-  },
+  "cannon": { "url": "war-machines/cannon", "page": "RB, p. 226" },
+  "mortar": { "url": "war-machines/mortars", "page": "RB, p. 228" },
+  "fire thrower": { "url": "war-machines/fire-throwers", "page": "RB, p. 229" },
   "lore of undeath": {
     "url": "the-lores-of-magic/lore-of-undeath",
     "page": "VC, p. 29"
@@ -5008,6 +4974,36 @@
       }
     ],
     "page": "VC, p. 6"
+  },
+  "cannon dwarfs": {
+    "url": "unit/cannon",
+    "stats": [
+      {
+        "A": "-",
+        "I": "-",
+        "M": "-",
+        "S": "-",
+        "T": "7",
+        "W": "3",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "-",
+        "Name": "Cannon"
+      },
+      {
+        "A": "3",
+        "I": "2",
+        "M": "3",
+        "S": "3",
+        "T": "4",
+        "W": "3",
+        "BS": "3",
+        "Ld": "9",
+        "WS": "3",
+        "Name": "Dwarf Crew"
+      }
+    ],
+    "page": "FoF, p. 31"
   },
   "captain of the empire": {
     "url": "unit/captain-of-the-empire",
