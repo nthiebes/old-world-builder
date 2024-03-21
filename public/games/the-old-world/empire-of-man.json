@@ -2646,13 +2646,19 @@
       }
     },
     {
-      "name_en": "Great Cannon",
+      "name_en": "Great Cannon {empire}",
       "name_de": "Great Cannon",
       "name_fr": "Grand Canon",
       "id": "great-cannon",
       "points": 125,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Great cannon, Hand weapons",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
@@ -2680,13 +2686,19 @@
       }
     },
     {
-      "name_en": "Mortar",
+      "name_en": "Mortar {empire}",
       "name_de": "Mortar",
       "name_fr": "Mortier",
       "id": "mortar",
       "points": 95,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Mortar, Hand weapons",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
