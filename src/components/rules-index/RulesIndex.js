@@ -37,7 +37,7 @@ export const RulesIndex = () => {
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="Warhammer: The Old World Online Rules Index"
             height="500"
-            width="600"
+            width="700"
           />
           {isLoading && <Spinner className="rules-index__spinner" />}
         </>

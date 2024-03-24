@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
-import { ListItem } from "../../components/list";
 import { Icon } from "../../components/icon";
+import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { Header, Main } from "../../components/page";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
@@ -15,6 +15,8 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateIds } from "../../utils/id";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
+
+import "./Add.css";
 
 const getArmyData = ({ data, armyComposition }) => {
   // Remove units that don't belong to the army composition
@@ -130,17 +132,23 @@ export const Add = ({ isMobile }) => {
     setRedirect(newUnit.id);
   };
   const getUnit = (unit, ally) => (
-    <ListItem key={unit.id} onClick={() => handleAdd(unit, ally)}>
-      <span className="unit__name">
-        {unit.minimum ? `${unit.minimum} ` : null}
-        <b>{getUnitName({ unit, language })}</b>
-      </span>
-      <i className="unit__points">{`${
-        unit.minimum ? unit.points * unit.minimum : unit.points
-      } ${intl.formatMessage({
-        id: "app.points",
-      })}`}</i>
-    </ListItem>
+    <li key={unit.id} className="list">
+      <button
+        className="list__inner add__list-inner"
+        onClick={() => handleAdd(unit, ally)}
+      >
+        <span className="add__name">
+          {unit.minimum ? `${unit.minimum} ` : null}
+          <b>{getUnitName({ unit, language })}</b>
+        </span>
+        <i className="unit__points">{`${
+          unit.minimum ? unit.points * unit.minimum : unit.points
+        } ${intl.formatMessage({
+          id: "app.points",
+        })}`}</i>
+      </button>
+      <RuleWithIcon name={unit.name_en} isDark className="add__rules-icon" />
+    </li>
   );
 
   useEffect(() => {
@@ -258,6 +266,8 @@ export const Add = ({ isMobile }) => {
           })}
         />
       )}
+
+      <RulesIndex />
 
       <MainComponent>
         {!isMobile && (
