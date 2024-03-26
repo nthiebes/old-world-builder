@@ -3121,6 +3121,198 @@
       }
     }
   ],
-  "mercenaries": [],
+  "mercenaries": [
+    {
+      "name_en": "Badland Ogre Bulls",
+      "name_de": "Badland Ogre Bulls",
+      "name_es": "Badland Ogre Bulls",
+      "name_fr": "Badland Ogre Bulls",
+      "name_it": "Badland Ogre Bulls",
+      "name_pl": "Badland Ogre Bulls",
+      "id": "badland-ogre-bulls",
+      "points": 31,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crusher (champion)",
+          "name_de": "Crusher (champion)",
+          "name_es": "Crusher (champion)",
+          "name_fr": "Crusher (champion)",
+          "name_it": "Crusher (champion)",
+          "name_pl": "Crusher (champion)",
+          "points": 6
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Bellower (musician)",
+          "name_de": "Bellower (musician)",
+          "name_es": "Bellower (musician)",
+          "name_fr": "Bellower (musician)",
+          "name_it": "Bellower (musician)",
+          "name_pl": "Bellower (musician)",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand Weapon",
+          "name_de": "Hand Weapon",
+          "name_es": "Hand Weapon",
+          "name_fr": "Hand Weapon",
+          "name_it": "Hand Weapon",
+          "name_pl": "Hand Weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Light armour",
+          "name_it": "Light armour",
+          "name_pl": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "name_it": "Heavy armour",
+          "name_pl": "Heavy armour",
+          "points": 4,
+          "perModel": true,
+          "active": false
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional Hand Weapons",
+          "name_de": "Additional Hand Weapons",
+          "name_es": "Additional Hand Weapons",
+          "name_fr": "Additional Hand Weapons",
+          "name_it": "Additional Hand Weapons",
+          "name_pl": "Additional Hand Weapons",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great Weapons",
+          "name_de": "Great Weapons",
+          "name_es": "Great Weapons",
+          "name_fr": "Great Weapons",
+          "name_it": "Great Weapons",
+          "name_pl": "Great Weapons",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Ironfists",
+          "name_de": "Ironfists",
+          "name_es": "Ironfists",
+          "name_fr": "Ironfists",
+          "name_it": "Ironfists",
+          "name_pl": "Ironfists",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_fr": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_pl": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      }
+    },
+    {
+      "name_en": "Bonegrinder Giant",
+      "name_de": "Bonegrinder Giant",
+      "name_es": "Bonegrinder Giant",
+      "name_fr": "Bonegrinder Giant",
+      "name_it": "Bonegrinder Giant",
+      "name_pl": "Bonegrinder Giant",
+      "id": "bonegrinder-giant",
+      "points": 300,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bonegrinders Giant's club",
+          "name_de": "Bonegrinders Giant's club",
+          "name_es": "Bonegrinders Giant's club",
+          "name_fr": "Bonegrinders Giant's club",
+          "name_it": "Bonegrinders Giant's club",
+          "name_pl": "Bonegrinders Giant's club",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (Calloused hide)",
+          "name_de": "Light armour (Calloused hide)",
+          "name_es": "Light armour (Calloused hide)",
+          "name_fr": "Light armour (Calloused hide)",
+          "name_it": "Light armour (Calloused hide)",
+          "name_pl": "Light armour (Calloused hide)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_es": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_fr": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_it": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_pl": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable"
+      },
+      "notes": {
+        "name_en": "0-1 Bonegrinder Giant",
+        "name_de": "0-1 Bonegrinder Giant",
+        "name_es": "0-1 Bonegrinder Giant",
+        "name_fr": "0-1 Bonegrinder Giant",
+        "name_it": "0-1 Bonegrinder Giant",
+        "name_pl": "0-1 Bonegrinder Giant"
+      }
+    }
+  ],
   "allies": []
 }

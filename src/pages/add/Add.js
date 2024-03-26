@@ -205,6 +205,7 @@ export const Add = ({ isMobile }) => {
                 ...armyData.core,
                 ...armyData.special,
                 ...armyData.rare,
+                ...armyData.mercenaries,
               ];
               const mercenaryUnits = allUnits.filter((unit) =>
                 mercenary.units.includes(unit.id)
