@@ -714,54 +714,25 @@ export const Unit = ({ isMobile }) => {
               )
             )}
           </>
-        )}           
-        {unit.armor && unit.armor.length === 1 && (
-          <>
-            <h2 className="unit__subline">
-              <FormattedMessage id="unit.armor" /> 
-            </h2>
-            {unit.armor.map(
-              ({ points, perModel, id, active = false, ...equipment }) => (    
-                <div className="checkbox" key={id}>
-                  <input
-                    type="checkbox"
-                    id={`armor-${id}`}
-                    value={id}
-                    onChange={() => handleArmorChange(id)}
-                    checked={active}                    
-                    className="checkbox__input"
-                  />
-                  <label htmlFor={`armor-${id}`} className="checkbox__label">
-                    <span className="unit__label-text">
-                      <RulesWithIcon textObject={equipment} />
-                    </span>
-                    <i className="checkbox__points">
-                      {getPointsText({ points, perModel })}
-                    </i>
-                  </label>
-                </div>
-              )
-            )}
-          </>
         )}
-        {unit.armor && unit.armor.length > 1 && (
+        {unit.armor && unit.armor.length > 0 && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.armor" />
             </h2>
             {unit.armor.map(
               ({ points, perModel, id, active = false, ...equipment }) => (
-                <div className="radio" key={id}>
+                <div className={unit.armor.length === 1 ? 'checkbox' : 'radio'} key={id}>
                   <input
-                    type="radio"
+                    type={unit.armor.length === 1 ? 'checkbox' : 'radio'}
                     id={`armor-${id}`}
                     name="armor"
                     value={id}
                     onChange={() => handleArmorChange(id)}
                     checked={active}
-                    className="radio__input"
+                    className={unit.armor.length === 1 ? 'checkbox__input' : 'radio__input'}
                   />
-                  <label htmlFor={`armor-${id}`} className="radio__label">
+                  <label htmlFor={`armor-${id}`} className={unit.armor.length === 1 ? 'checkbox__label' : 'radio__label'}>
                     <span className="unit__label-text">
                       <RulesWithIcon textObject={equipment} />
                     </span>
@@ -974,7 +945,7 @@ export const Unit = ({ isMobile }) => {
                             {detachmentArmor && detachmentArmor.length > 0 && (
                               <>
                                 <h3 className="unit__subline">
-                                  <FormattedMessage id="unit.armor" />                                                                   
+                                  <FormattedMessage id="unit.armor" />
                                 </h3>
                                 {detachmentArmor.map((armor) => (
                                   <div className="radio" key={armor.id}>
