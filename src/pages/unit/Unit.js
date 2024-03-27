@@ -286,10 +286,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     );
   };
   const handleArmorChange = (id) => {
-    const armor = unit.armor.map((item) => ({
-      ...item,
-      active: item.id === id ? true : false,
-    }));
+    let armor;
+    if (unit.armor.length === 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? !item.active : item.active,
+      }));
+    } else if (unit.armor.length > 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? true : false,
+      }));
+    } 
 
     dispatch(
       editUnit({
@@ -751,17 +759,17 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </h2>
             {unit.armor.map(
               ({ points, perModel, id, active = false, ...equipment }) => (
-                <div className="radio" key={id}>
+                <div className={unit.armor.length === 1 ? 'checkbox' : 'radio'} key={id}>
                   <input
-                    type="radio"
+                    type={unit.armor.length === 1 ? 'checkbox' : 'radio'}
                     id={`armor-${id}`}
                     name="armor"
                     value={id}
                     onChange={() => handleArmorChange(id)}
                     checked={active}
-                    className="radio__input"
+                    className={unit.armor.length === 1 ? 'checkbox__input' : 'radio__input'}
                   />
-                  <label htmlFor={`armor-${id}`} className="radio__label">
+                  <label htmlFor={`armor-${id}`} className={unit.armor.length === 1 ? 'checkbox__label' : 'radio__label'}>
                     <span className="unit__label-text">
                       <RulesWithIcon textObject={equipment} />
                     </span>
