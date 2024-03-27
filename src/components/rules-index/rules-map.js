@@ -59,16 +59,16 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  "chracian great blades": "chracian great blade",
+  "bows of avelorn": "bow of avelorn",
+  "ceremonial halberds": "ceremonial halberd",
   shields: "shield",
   bellower: "bellowers & musicians",
   "revered guardian": "battle standard bearer",
   "patrol leader": "battle standard bearer",
   "sky leader": "battle standard bearer",
-  "fire thrower": "fire throwers",
-  "stone thrower": "stone thrower",
-  cannon: "cannons",
-  "great cannon": "cannons",
-  "repeater bolt thrower": "bolt throwers",
+  "great cannon": "cannon",
+  "repeater bolt thrower": "bolt thrower",
   "bolt thrower": "bolt throwers",
   plagueswords: "plaguesword",
   "steam guns dwarfs": "steam gun dwarfs",

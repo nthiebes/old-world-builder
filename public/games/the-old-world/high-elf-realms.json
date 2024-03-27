@@ -687,8 +687,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Handmaiden's Spear",
-          "name_de": "Handmaiden's Spear",
+          "name_en": "Hand weapon, Handmaiden's spear, Bow of Avelorn",
+          "name_de": "Hand weapon, Handmaiden's spear, Bow of Avelorn",
           "points": 0,
           "perModel": true,
           "active": true
@@ -846,13 +846,6 @@
         }
       ],
       "armor": [
-        {
-          "name_en": "No armour",
-          "name_de": "No armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
@@ -1153,7 +1146,10 @@
           "perModel": true
         }
       ],
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First"
+      }
     }
   ],
   "special": [
@@ -1638,8 +1634,8 @@
       }
     },
     {
-      "name_en": "Lothern Skycutters",
-      "name_de": "Lothern Skycutters",
+      "name_en": "Lothern Skycutter",
+      "name_de": "Lothern Skycutter",
       "id": "lothern-skycutters",
       "points": 90,
       "command": [],

@@ -68,7 +68,7 @@ export const NewList = ({ isMobile }) => {
         mercenaries: [],
         allies: [],
         id: newId,
-        armyComposition: armyComposition,
+        armyComposition,
       },
     };
     const newLists = [...lists, newList[game]];

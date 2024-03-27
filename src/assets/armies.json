@@ -14,7 +14,15 @@
           "dwarfen-mountain-holds",
           "kingdom-of-bretonnia",
           "wood-elf-realms"
-        ]
+        ],
+        "mercenaries": {
+          "empire-of-man": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "orc-and-goblin-tribes",
@@ -27,7 +35,15 @@
           "warriors-of-chaos",
           "beastmen-brayherds",
           "tomb-kings-of-khemri"
-        ]
+        ],
+        "mercenaries": {
+          "orc-and-goblin-tribes": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ]
+        }
       },
       {
         "id": "dwarfen-mountain-holds",
@@ -36,7 +52,15 @@
         "name_es": "Dwarfen Mountain Holds",
         "name_fr": "Forteresses Naines",
         "items": ["dwarfen-mountain-holds"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"]
+        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
+        "mercenaries": {
+          "dwarfen-mountain-holds": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "warriors-of-chaos",
@@ -54,7 +78,15 @@
           "orc-and-goblin-tribes",
           "beastmen-brayherds",
           "tomb-kings-of-khemri"
-        ]
+        ],
+        "mercenaries": {
+          "warriors-of-chaos": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ]
+        }
       },
       {
         "id": "kingdom-of-bretonnia",
@@ -71,6 +103,12 @@
           "wood-elf-realms"
         ],
         "mercenaries": {
+          "kingdom-of-bretonnia": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
           "errantry-crusades": [
             {
               "army": "empire-of-man",
@@ -96,7 +134,15 @@
           "orc-and-goblin-tribes",
           "warriors-of-chaos",
           "tomb-kings-of-khemri"
-        ]
+        ],
+        "mercenaries": {
+          "beastmen-brayherds": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ]
+        }
       },
       {
         "id": "wood-elf-realms",
@@ -105,7 +151,15 @@
         "name_es": "Wood Elf Realms",
         "name_fr": "Royaumes Elfes Sylvains",
         "items": ["general", "wood-elf-realms", "forest-spites"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"]
+        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
+        "mercenaries": {
+          "wood-elf-realms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "tomb-kings-of-khemri",
@@ -119,7 +173,15 @@
           "orc-and-goblin-tribes",
           "warriors-of-chaos",
           "beastmen-brayherds"
-        ]
+        ],
+        "mercenaries": {
+          "tomb-kings-of-khemri": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "high-elf-realms",
@@ -128,7 +190,15 @@
         "name_es": "High Elf Realms",
         "name_fr": "Royaumes Hauts Elfes",
         "items": ["general", "high-elf-realms", "elven-honours"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "wood-elf-realms"]
+        "allies": ["empire-of-man", "kingdom-of-bretonnia", "wood-elf-realms"],
+        "mercenaries": {
+          "high-elf-realms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "dark-elves",
@@ -142,7 +212,15 @@
           "gifts-of-khaine",
           "forbidden-poisons"
         ],
-        "allies": ["warriors-of-chaos"]
+        "allies": ["warriors-of-chaos"],
+        "mercenaries": {
+          "dark-elves": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "skaven",
@@ -151,7 +229,15 @@
         "name_es": "Skaven",
         "name_fr": "Skaven",
         "items": ["general", "skaven"],
-        "allies": ["warriors-of-chaos"]
+        "allies": ["warriors-of-chaos"],
+        "mercenaries": {
+          "skaven": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "vampire-counts",
@@ -160,7 +246,15 @@
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": ["tomb-kings-of-khemri"]
+        "allies": ["tomb-kings-of-khemri"],
+        "mercenaries": {
+          "vampire-counts": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "daemons-of-chaos",
@@ -180,7 +274,15 @@
           "daemonic-icons-nurgle",
           "daemonic-icons-slaanesh",
           "daemonic-icons-tzeentch"
-        ]
+        ],
+        "mercenaries": {
+          "daemons-of-chaos": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "ogre-kingdoms",
@@ -189,7 +291,15 @@
         "name_es": "Ogre Kingdoms",
         "name_fr": "Royaumes Ogres",
         "items": ["general", "ogre-kingdoms", "big-names"],
-        "allies": ["orc-and-goblin-tribes"]
+        "allies": ["orc-and-goblin-tribes"],
+        "mercenaries": {
+          "ogre-kingdoms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "lizardmen",
@@ -198,7 +308,15 @@
         "name_es": "Lizardmen",
         "name_fr": "Hommes-Lézards",
         "items": ["general", "lizardmen", "disciplines-old-ones"],
-        "allies": ["high-elf-realms"]
+        "allies": ["high-elf-realms"],
+        "mercenaries": {
+          "lizardmen": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       },
       {
         "id": "chaos-dwarfs",
@@ -207,7 +325,15 @@
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
-        "allies": ["warriors-of-chaos"]
+        "allies": ["warriors-of-chaos"],
+        "mercenaries": {
+          "chaos-dwarfs": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ]
+        }
       }
     ]
   },

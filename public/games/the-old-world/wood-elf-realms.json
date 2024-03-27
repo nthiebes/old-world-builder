@@ -10,6 +10,16 @@
       "command": [],
       "equipment": [
         {
+          "name_en": "Hand weapon",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
           "name_en": "Additional hand weapon",
           "name_de": "Zusätzliche Handwaffe",
           "name_fr": "Arme de base additionnelle",
@@ -32,15 +42,6 @@
           "name_pl": "Lanca",
           "points": 2,
           "perModel": true
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
@@ -61,9 +62,7 @@
           "name_fr": "Bouclier",
           "name_pl": "Tarcza",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Arcane Bodkins",
@@ -71,9 +70,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -81,9 +78,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shot",
@@ -91,19 +86,15 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
-          "name_en": "Swfitshiver Shards",
-          "name_de": "Swfitshiver Shards",
+          "name_en": "Swiftshiver Shards",
+          "name_de": "Swiftshiver Shards",
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -111,19 +102,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Asrai Longbow",
@@ -131,9 +110,7 @@
           "name_fr": "Arc long Asrai",
           "name_pl": "Długi łuk Asrai",
           "points": 0,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
@@ -174,7 +151,7 @@
           "points": 275
         },
         {
-          "name_en": "Great Eagles",
+          "name_en": "Great Eagle",
           "name_de": "Riesenadler",
           "name_fr": "Grand aigle",
           "name_pl": "Wielki orzeł",
@@ -287,72 +264,56 @@
           "name_de": "Schild",
           "name_fr": "Bouclier",
           "name_pl": "Tarcza",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0
+          "points": 2
         },
         {
           "name_en": "Arcane Bodkins",
           "name_de": "Arkane Dolchpfeile",
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
-          "points": 6,
-          "minimum": 0,
-          "maximum": 0
+          "points": 6
         },
         {
           "name_en": "Hagbane Tips",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
-          "points": 6,
-          "minimum": 0,
-          "maximum": 0
+          "points": 6
         },
         {
           "name_en": "Moonfire Shot",
           "name_de": "Mondfeuerpfeile",
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
-          "points": 3,
-          "minimum": 0,
-          "maximum": 0
+          "points": 3
         },
         {
           "name_en": "Swiftshiver Shards",
           "name_de": "Geschwinde Pfeile",
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
-          "points": 6,
-          "minimum": 0,
-          "maximum": 0
+          "points": 6
         },
         {
           "name_en": "Trueflight Arrows",
           "name_de": "Jagende Pfeile",
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
-          "points": 3,
-          "minimum": 0,
-          "maximum": 0
+          "points": 3
         },
         {
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_fr": "Arme lourde",
           "name_pl": "Broń ręczna",
-          "points": 0,
-          "minimum": 0,
-          "maximum": 0
+          "points": 0
         },
         {
           "name_en": "Asrai Longbow",
           "name_de": "Asrai-Langbogen",
           "name_fr": "Arc long Asrai",
           "name_pl": "Długi łuk Asrai",
-          "points": 0,
-          "minimum": 0,
-          "maximum": 0
+          "points": 0
         }
       ],
       "mounts": [
@@ -455,9 +416,7 @@
           "name_fr": "Tatouages Talismaniques",
           "name_pl": "Talizmanowe tatuaże",
           "points": 15,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Level 4 Wizard",
@@ -465,9 +424,7 @@
           "name_fr": "Sorcier de niveau 4",
           "name_pl": "Czarodziej poziomu 4",
           "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
@@ -574,9 +531,7 @@
           "name_fr": "Tatouages Talismaniques",
           "name_pl": "Talizmanowe tatuaże",
           "points": 15,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Level 2 Wizard",
@@ -584,9 +539,7 @@
           "name_fr": "Sorcier de niveau 2",
           "name_pl": "Czarodziej poziomu 2",
           "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
@@ -701,9 +654,7 @@
           "name_fr": "Sorcier niveau 1",
           "name_pl": "Czarodziej poziomu 1",
           "points": 35,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -769,14 +720,6 @@
       ],
       "armor": [
         {
-          "name_en": "No armour",
-          "name_de": "ohne Rüstung",
-          "name_fr": "No armour",
-          "name_pl": "Bez zbroi",
-          "points": 0,
-          "active": true
-        },
-        {
           "name_en": "Light armour",
           "name_de": "Leichte Rüstung",
           "name_fr": "Armure légère",
@@ -791,9 +734,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -801,9 +742,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shot",
@@ -811,9 +750,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -821,9 +758,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -831,9 +766,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Ambushers",
@@ -841,9 +774,7 @@
           "name_fr": "Embusqueurs",
           "name_pl": "Zasadzka",
           "points": 10,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -896,9 +827,7 @@
           "name_fr": "Sorcier de niveau 3",
           "name_pl": "Czarodziej poziomu 3",
           "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Level 4 Wizard",
@@ -906,9 +835,7 @@
           "name_fr": "Sorcier de Niveau 4",
           "name_pl": "Czarodziej poziomu 4",
           "points": 60,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -985,9 +912,7 @@
           "name_fr": "Sorcier de niveau 2",
           "name_pl": "Czarodziej poziomu 2",
           "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1072,9 +997,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -1082,9 +1005,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shot",
@@ -1092,9 +1013,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1102,9 +1021,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1112,9 +1029,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Fire & Flee",
@@ -1122,9 +1037,7 @@
           "name_fr": "Tir & Fuite",
           "name_pl": "Strzał i Ucieczka",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Vanguard",
@@ -1132,9 +1045,7 @@
           "name_fr": "Avant-garde",
           "name_pl": "Awangarda",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1202,9 +1113,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -1212,9 +1121,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shots",
@@ -1222,9 +1129,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1232,9 +1137,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1242,9 +1145,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1326,9 +1227,7 @@
           "name_fr": "Bouclier",
           "name_pl": "Tarcze",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Drilled",
@@ -1336,9 +1235,7 @@
           "name_fr": "Bien Entraînés",
           "name_pl": "Wymusztrowani",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Veteran",
@@ -1346,9 +1243,7 @@
           "name_fr": "Vétéran",
           "name_pl": "Weterani",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1475,9 +1370,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -1485,9 +1378,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shots",
@@ -1495,9 +1386,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1505,9 +1394,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1515,9 +1402,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Ambushers",
@@ -1525,9 +1410,7 @@
           "name_fr": "Embusqueurs",
           "name_pl": "Zasadzka",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Drilled",
@@ -1535,9 +1418,7 @@
           "name_fr": "Bien Entraînés",
           "name_pl": "Wymusztrowani",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Reserve Move",
@@ -1545,9 +1426,7 @@
           "name_fr": "Mouvement de Réserve",
           "name_pl": "Ruch Rezerwowy",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1621,9 +1500,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -1631,9 +1508,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shots",
@@ -1641,9 +1516,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1651,9 +1524,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1661,9 +1532,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1745,9 +1614,7 @@
           "name_fr": "Bouclier",
           "name_pl": "Tarcze",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1817,9 +1684,7 @@
           "name_fr": "Arme de base additionnelle",
           "name_pl": "Dodatkowa broń ręczna",
           "points": 1,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Throwing Spear",
@@ -1827,9 +1692,7 @@
           "name_fr": "Javelot",
           "name_pl": "Oszczep",
           "points": 0,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         }
       ],
       "mounts": [],
@@ -1974,9 +1837,7 @@
           "name_fr": "Bouclier",
           "name_pl": "Tarcze",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -2030,9 +1891,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -2040,9 +1899,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shots",
@@ -2050,9 +1907,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2060,9 +1915,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2070,9 +1923,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -2183,9 +2034,7 @@
           "name_fr": "Bodkins Cabalistiques",
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Hagbane Tips",
@@ -2193,9 +2042,7 @@
           "name_fr": "Flèches de Fléau des Furies",
           "name_pl": "Zmora wiedźm",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Moonfire Shots",
@@ -2203,9 +2050,7 @@
           "name_fr": "Traits de Feu Lunaire",
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2213,9 +2058,7 @@
           "name_fr": "Échardes d'Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2223,9 +2066,7 @@
           "name_fr": "Pointes de Parabole Pure",
           "name_pl": "Strzały celnego lotu",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Ambushers",
@@ -2233,9 +2074,7 @@
           "name_fr": "Embusqueurs",
           "name_pl": "Zasadzka",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Vanguard",
@@ -2243,9 +2082,7 @@
           "name_fr": "Avant-garde",
           "name_pl": "Awangarda",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Veteran",
@@ -2253,9 +2090,7 @@
           "name_fr": "Vétéran",
           "name_pl": "Weterani",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],

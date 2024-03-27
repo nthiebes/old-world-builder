@@ -408,6 +408,53 @@ export const Datasets = ({ isMobile }) => {
                     </Expandable>
                   ))}
                 </ul>
+                {dataset.mercenaries.length > 0 && (
+                  <h3 className="datasets__edit-headline">Mercenaries</h3>
+                )}
+                <ul>
+                  {dataset.mercenaries.map((unit, index) => (
+                    <Expandable
+                      headline={
+                        <span className="dataset__unit-header">
+                          {unit.name_en}
+                          <span>
+                            <Button
+                              icon="delete"
+                              type="text"
+                              label="Delete unit"
+                              color="dark"
+                              onClick={() =>
+                                handleDelete({
+                                  type: "mercenaries",
+                                  id: unit.id,
+                                })
+                              }
+                            />
+                            <Button
+                              icon="preview"
+                              type="text"
+                              label="Preview unit"
+                              color="dark"
+                              onClick={() =>
+                                handlePreview({ unit, type: "mercenaries" })
+                              }
+                            />
+                          </span>
+                        </span>
+                      }
+                      noMargin
+                      className="datasets__unit-type datasets__unit"
+                      key={index}
+                    >
+                      <Entity
+                        unit={unit}
+                        type="mercenaries"
+                        onSubmit={handleSubmit}
+                        onDelete={handleDelete}
+                      />
+                    </Expandable>
+                  ))}
+                </ul>
               </>
             )}
           </section>
@@ -443,6 +490,13 @@ export const Datasets = ({ isMobile }) => {
               className="datasets__unit-type"
             >
               <Entity type="rare" onSubmit={handleSubmit} />
+            </Expandable>
+            <Expandable
+              headline="Mercenaries"
+              noMargin
+              className="datasets__unit-type"
+            >
+              <Entity type="mercenaries" onSubmit={handleSubmit} />
             </Expandable>
           </section>
 
