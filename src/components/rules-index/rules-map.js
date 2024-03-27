@@ -59,6 +59,9 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  "chracian great blades": "chracian great blade",
+  "bows of avelorn": "bow of avelorn",
+  "ceremonial halberds": "ceremonial halberd",
   shields: "shield",
   bellower: "bellowers & musicians",
   "revered guardian": "battle standard bearer",
