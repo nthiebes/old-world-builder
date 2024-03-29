@@ -68,7 +68,7 @@ export const synonyms = {
   "patrol leader": "battle standard bearer",
   "sky leader": "battle standard bearer",
   "great cannon": "cannon",
-  "repeater bolt thrower": "bolt throwers",
+  "repeater bolt thrower": "bolt thrower",
   "bolt thrower": "bolt throwers",
   plagueswords: "plaguesword",
   "steam guns dwarfs": "steam gun dwarfs",

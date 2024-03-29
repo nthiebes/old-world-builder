@@ -286,10 +286,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     );
   };
   const handleArmorChange = (id) => {
-    const armor = unit.armor.map((item) => ({
-      ...item,
-      active: item.id === id ? true : false,
-    }));
+    let armor;
+    if (unit.armor.length === 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? !item.active : item.active,
+      }));
+    } else if (unit.armor.length > 1) {
+      armor = unit.armor.map((item) => ({
+        ...item,
+        active: item.id === id ? true : false,
+      }));
+    }
 
     dispatch(
       editUnit({
@@ -750,27 +758,41 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.armor" />
             </h2>
             {unit.armor.map(
-              ({ points, perModel, id, active = false, ...equipment }) => (
-                <div className="radio" key={id}>
-                  <input
-                    type="radio"
-                    id={`armor-${id}`}
-                    name="armor"
-                    value={id}
-                    onChange={() => handleArmorChange(id)}
-                    checked={active}
-                    className="radio__input"
-                  />
-                  <label htmlFor={`armor-${id}`} className="radio__label">
-                    <span className="unit__label-text">
-                      <RulesWithIcon textObject={equipment} />
-                    </span>
-                    <i className="checkbox__points">
-                      {getPointsText({ points, perModel })}
-                    </i>
-                  </label>
-                </div>
-              )
+              ({
+                points,
+                perModel,
+                id,
+                activeDefault,
+                active = false,
+                ...equipment
+              }) => {
+                const isRadio = unit.armor.length > 1 || activeDefault;
+
+                return (
+                  <div className={isRadio ? "radio" : "checkbox"} key={id}>
+                    <input
+                      type={isRadio ? "radio" : "checkbox"}
+                      id={`armor-${id}`}
+                      name="armor"
+                      value={id}
+                      onChange={() => handleArmorChange(id)}
+                      checked={active}
+                      className={isRadio ? "radio__input" : "checkbox__input"}
+                    />
+                    <label
+                      htmlFor={`armor-${id}`}
+                      className={isRadio ? "radio__label" : "checkbox__label"}
+                    >
+                      <span className="unit__label-text">
+                        <RulesWithIcon textObject={equipment} />
+                      </span>
+                      <i className="checkbox__points">
+                        {getPointsText({ points, perModel })}
+                      </i>
+                    </label>
+                  </div>
+                );
+              }
             )}
           </>
         )}

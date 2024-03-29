@@ -22,6 +22,7 @@ export const updateIds = (type = []) => {
       armor: unit.armor
         ? unit.armor.map((armorData, index) => ({
             ...armorData,
+            activeDefault: armorData.active && unit.armor.length === 1,
             id: index,
           }))
         : null,

@@ -245,7 +245,7 @@ export const Magic = ({ isMobile }) => {
     army &&
       list &&
       unit &&
-      (!items || unit.army !== list.army) &&
+      !items &&
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
@@ -297,7 +297,7 @@ export const Magic = ({ isMobile }) => {
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
 
     return (
-      <Fragment key={magicItem.id}>
+      <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
         <div
           className={classNames(
             "checkbox",
@@ -520,7 +520,7 @@ export const Magic = ({ isMobile }) => {
                     );
 
                 return (
-                  <Fragment key={magicItem.name_de}>
+                  <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
                     {isFirstItemType && (
                       <h3 className="magic__type">
                         {nameMap[magicItem.type][`name_${language}`] ||
