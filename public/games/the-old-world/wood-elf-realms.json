@@ -694,21 +694,22 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Additional hand weapon",
-          "name_de": "Zusätzliche Handwaffe",
-          "name_fr": "Arme de base additionnelle",
-          "name_pl": "Dodatkowa broń ręczna",
-          "points": 3,
-          "perModel": true
-        },
-        {
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_fr": "Arme de base",
           "name_pl": "Broń ręczna",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_fr": "Arme de base additionnelle",
+          "name_pl": "Dodatkowa broń ręczna",
+          "points": 3,
+          "perModel": true
         }
       ],
       "armor": [
