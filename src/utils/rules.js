@@ -146,6 +146,21 @@ const rules = {
       maxPercent: 33,
     },
   },
+  "orc-and-goblin-tribes": {
+    characters: {
+      maxPercent: 50,
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: { maxPercent: 20 },
+  },
   "nomadic-waaagh": {
     characters: { maxPercent: 50 },
     core: { minPercent: 25 },
@@ -159,7 +174,7 @@ const rules = {
       maxPercent: 25,
     },
   },
-  "troll-horder": {
+  "troll-horde": {
     characters: { maxPercent: 50 },
     core: { minPercent: 33 },
     special: {

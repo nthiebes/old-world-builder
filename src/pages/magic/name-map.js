@@ -200,6 +200,10 @@ export const nameMap = {
     name_de: "Waaagh! Magic",
     name_en: "Waaagh! Magic",
   },
+  "troll-magic": {
+    name_de: "Troll Magic",
+    name_en: "Troll Magic",
+  },
   "errantry-crusades": {
     name_en: "Errantry Crusades",
     name_de: "Errantry Crusades",

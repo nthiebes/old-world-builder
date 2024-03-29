@@ -76,6 +76,7 @@ const loresOfMagic = [
   "illusion",
   "necromancy",
   "waaagh-magic",
+  "troll-magic",
 ];
 const getRandomId = () =>
   (Math.random().toString(36) + Math.random().toString(36)).replace(
