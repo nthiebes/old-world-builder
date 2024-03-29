@@ -460,6 +460,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       callback: () => handleRemove(unit.id),
     },
   ];
+  const notes =
+    unit.notes ||
+    (
+      unit.armyComposition &&
+      unit.armyComposition[list.armyComposition || list.army]
+    )?.notes;
 
   return (
     <>
@@ -520,10 +526,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.noOptions" />
             </i>
           )}
-        {unit.notes && unit.notes.name_en ? (
+        {notes && notes.name_en ? (
           <p className="unit__notes">
             <Icon symbol="error" className="unit__notes-icon" />
-            {unit.notes[`name_${language}`] || unit.notes.name_en}
+            {notes[`name_${language}`] || notes.name_en}
           </p>
         ) : null}
         {unit.minimum ? (

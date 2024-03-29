@@ -92,11 +92,17 @@ const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "rare") ||
       !unit.armyComposition
   );
+  const allCharacters = [...characters].filter(
+    (unit) =>
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "characters") ||
+      !unit.armyComposition
+  );
 
   return {
     lords: updateIds(data.lords),
     heroes: updateIds(data.heroes),
-    characters: updateIds(characters),
+    characters: updateIds(allCharacters),
     core: updateIds(allCore),
     special: updateIds(allSpecial),
     rare: updateIds(allRare),
