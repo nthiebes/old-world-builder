@@ -95,8 +95,6 @@ const rules = {
     },
     mercenaries: {
       maxPercent: 25,
-      armies: ["empire-of-man"],
-      units: "Empire Knights & Empire Inner Circle Knights ...",
     },
   },
   "bretonnian-exiles": {
@@ -110,8 +108,6 @@ const rules = {
     },
     mercenaries: {
       maxPercent: 25,
-      armies: ["empire-of-man"],
-      units: "Free Company Militia & Empire Archers ...",
     },
   },
   "tomb-kings-of-khemri": {
@@ -148,6 +144,47 @@ const rules = {
     },
     rare: {
       maxPercent: 33,
+    },
+  },
+  "orc-and-goblin-tribes": {
+    characters: {
+      maxPercent: 50,
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: { maxPercent: 20 },
+  },
+  "nomadic-waaagh": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 25 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 25,
+    },
+  },
+  "troll-horde": {
+    characters: { maxPercent: 50 },
+    core: { minPercent: 33 },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 25,
     },
   },
 };

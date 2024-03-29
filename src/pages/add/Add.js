@@ -50,7 +50,7 @@ const getArmyData = ({ data, armyComposition }) => {
   const rareToCore = rare.filter(
     (unit) =>
       unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
+      unit.armyComposition[armyComposition].category === "core"
   );
   const rareToSpecial = rare.filter(
     (unit) =>
@@ -63,6 +63,11 @@ const getArmyData = ({ data, armyComposition }) => {
       unit.armyComposition[armyComposition].category === "special"
   );
   const specialToRare = special.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
+  );
+  const charactersToRare = characters.filter(
     (unit) =>
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "rare"
@@ -81,17 +86,23 @@ const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "special") ||
       !unit.armyComposition
   );
-  const allRare = [...rare, ...specialToRare].filter(
+  const allRare = [...rare, ...specialToRare, ...charactersToRare].filter(
     (unit) =>
       (unit?.armyComposition &&
         unit.armyComposition[armyComposition].category === "rare") ||
+      !unit.armyComposition
+  );
+  const allCharacters = [...characters].filter(
+    (unit) =>
+      (unit?.armyComposition &&
+        unit.armyComposition[armyComposition].category === "characters") ||
       !unit.armyComposition
   );
 
   return {
     lords: updateIds(data.lords),
     heroes: updateIds(data.heroes),
-    characters: updateIds(characters),
+    characters: updateIds(allCharacters),
     core: updateIds(allCore),
     special: updateIds(allSpecial),
     rare: updateIds(allRare),

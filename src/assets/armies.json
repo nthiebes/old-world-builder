@@ -31,6 +31,7 @@
         "name_es": "Orc & Goblin Tribes",
         "name_fr": "Tribus des Orques & Gobelins",
         "items": ["general", "orc-and-goblin-tribes"],
+        "armyComposition": ["nomadic-waaagh", "troll-horde"],
         "allies": [
           "warriors-of-chaos",
           "beastmen-brayherds",
@@ -38,6 +39,18 @@
         ],
         "mercenaries": {
           "orc-and-goblin-tribes": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ],
+          "troll-horde": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ],
+          "nomadic-waaagh": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls", "bonegrinder-giant"]
