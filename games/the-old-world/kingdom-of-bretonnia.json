@@ -124,10 +124,10 @@
         "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Voeu du Chevalier"
       },
       "notes": {
-        "name_en": "0-1 per army",
-        "name_de": "0-1 per army",
-        "name_es": "0-1 per army",
-        "name_fr": "0-1 par armée"
+        "name_en": "0-1 Duke",
+        "name_de": "0-1 Duke",
+        "name_es": "0-1 Duke",
+        "name_fr": "0-1 Duc"
       },
       "armyComposition": {
         "kingdom-of-bretonnia": {
@@ -152,11 +152,34 @@
           "points": 0
         }
       ],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par 1000 points"
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Baron or Prophetess per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "errantry-crusades": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Baron or Prophetess per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Baron per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        }
       },
       "equipment": [
         {
@@ -294,12 +317,6 @@
           "points": 0
         }
       ],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -372,6 +389,12 @@
         "name_en": "Aura of the Lady, Blessings of the Lady, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady",
         "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       },
+      "notes": {
+        "name_en": "0-1 Baron or Prophetess per 1,000 points",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
           "category": "characters"
@@ -387,6 +410,23 @@
       "name_fr": "Paladin",
       "id": "paladin",
       "points": 60,
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "characters"
+        },
+        "errantry-crusades": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Paladin",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -519,6 +559,23 @@
       "name_fr": "Demoiselle",
       "id": "damsel",
       "points": 60,
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "characters"
+        },
+        "errantry-crusades": {
+          "category": "characters"
+        },
+        "bretonnian-exiles": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Damsel",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -898,15 +955,15 @@
         "name_en": "Close Order, Horde, Levies, Peasantry, Shieldwall, Warband",
         "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Bouclier, Bande de Guerre"
       },
-      "notes": {
-        "name_en": "1+*",
-        "name_de": "1+*",
-        "name_es": "1+*",
-        "name_fr": "1+*"
-      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Men-at-Arms and/or Peasant Bowmen",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         },
         "errantry-crusades": {
           "category": "special"
@@ -996,21 +1053,27 @@
         "name_en": "Close Order, Levies, Peasantry",
         "name_fr": "Ordre Serré, Conscrits, Paysannerie"
       },
-      "notes": {
-        "name_en": "1+*",
-        "name_de": "1+*",
-        "name_es": "1+*",
-        "name_fr": "1+*"
-      },
       "armyComposition": {
         "kingdom-of-bretonnia": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Men-at-Arms and/or Peasant Bowmen",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         },
         "errantry-crusades": {
           "category": "special"
         },
         "bretonnian-exiles": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Yeoman Guard and/or Peasant Bowmen",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         }
       }
     },
@@ -1022,6 +1085,29 @@
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "errantry-crusades": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "First Knight (champion)",
@@ -1089,12 +1175,6 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Furious Charge, the Knight's Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Charge Furieuse, le Voeu du Chevalier"
-      },
-      "notes": {
-        "name_en": "1+**",
-        "name_de": "1+**",
-        "name_es": "1+**",
-        "name_fr": "1+**"
       }
     },
     {
@@ -1105,6 +1185,29 @@
       "points": 24,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "errantry-crusades": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "First Knight (champion)",
@@ -1158,12 +1261,6 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Knight's Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre Charge, Destriers SUpérieurs, Première Charge, Formation en Fer de Lance, le Voeu du Chevalier"
-      },
-      "notes": {
-        "name_en": "1+**",
-        "name_de": "1+**",
-        "name_es": "1+**",
-        "name_fr": "1+**"
       }
     },
     {
@@ -1174,11 +1271,34 @@
       "points": 19,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 per unit of Knights of the Realm",
-        "name_de": "0-1 per unit of Knights of the Realm",
-        "name_es": "0-1 per unit of Knights of the Realm",
-        "name_fr": "0-1 par unité de Chevaliers du Royaume (à pieds ou montés)"
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Knights Errant per unit of Knights of the Realm on Foot or Mounted Knights of the Realm taken",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights Errant per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "errantry-crusades": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights Errant per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        }
       },
       "command": [
         {
@@ -1336,7 +1456,13 @@
       },
       "armyComposition": {
         "bretonnian-exiles": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Yeoman Guard and/or Peasant Bowmen",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         }
       }
     },
@@ -1348,12 +1474,6 @@
       "points": 8,
       "minimum": 5,
       "maximum": 30,
-      "notes": {
-        "name_en": "0-2 per 1000 points",
-        "name_de": "0-2 per 1000 points",
-        "name_es": "0-2 per 1000 points",
-        "name_fr": "0-2 par tranche de 1000 points"
-      },
       "command": [
         {
           "name_en": "Grail Reliquae",
@@ -1390,7 +1510,13 @@
       },
       "armyComposition": {
         "errantry-crusades": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Battle Pilgrims may be taken as a Core choice",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         }
       }
     }
@@ -1707,11 +1833,28 @@
       "points": 8,
       "minimum": 5,
       "maximum": 30,
-      "notes": {
-        "name_en": "0-2 per 1000 points",
-        "name_de": "0-2 per 1000 points",
-        "name_es": "0-2 per 1000 points",
-        "name_fr": "0-2 par tranche de 1000 points"
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 units of Battle Pilgrims per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 units of Battle Pilgrims per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
+        },
+        "errantry-crusades": {
+          "category": "special"
+        }
       },
       "command": [
         {
@@ -1834,11 +1977,34 @@
       "id": "field-trebuchet",
       "points": 100,
       "command": [],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Field Trebuchet per 1000 points",
+            "name_de": "0-1 Field Trebuchet per 1000 points",
+            "name_es": "0-1 Field Trebuchet per 1000 points",
+            "name_fr": "0-1 Trébuchet de Campagne par tranche de 1000 points"
+          }
+        },
+        "bretonnian-exiles": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Field Trebuchet per 1000 points",
+            "name_de": "0-1 Field Trebuchet per 1000 points",
+            "name_es": "0-1 Field Trebuchet per 1000 points",
+            "name_fr": "0-1 Trébuchet de Campagne par tranche de 1000 points"
+          }
+        },
+        "errantry-crusades": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Field Trebuchet",
+            "name_de": "0-1 Field Trebuchet",
+            "name_es": "0-1 Field Trebuchet",
+            "name_fr": "0-1 Trébuchet de Campagne"
+          }
+        }
       },
       "equipment": [
         {
@@ -2044,7 +2210,13 @@
       },
       "armyComposition": {
         "bretonnian-exiles": {
-          "category": "rare"
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Border Princes Bombard per 1,000 points",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         }
       }
     }
