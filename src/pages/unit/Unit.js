@@ -817,31 +817,44 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 minimum = 0,
                 stackableCount = minimum || 0,
                 active = false,
+                exclusive = false,
                 ...equipment
-              }) =>
-                !stackable ? (
-                  <div className="checkbox" key={id}>
-                    <input
-                      type="checkbox"
-                      id={`options-${id}`}
-                      value={id}
-                      onChange={() => handleOptionsChange(id)}
-                      checked={active}
-                      className="checkbox__input"
-                    />
-                    <label
-                      htmlFor={`options-${id}`}
-                      className="checkbox__label"
-                    >
-                      <span className="unit__label-text">
-                        <RulesWithIcon textObject={equipment} />
-                      </span>
-                      <i className="checkbox__points">
-                        {getPointsText({ points, perModel })}
-                      </i>
-                    </label>
-                  </div>
-                ) : (
+              }) => {
+                const exclusiveCheckedOption = unit.options.find(
+                  (exclusiveOption) =>
+                    exclusiveOption.exclusive && exclusiveOption.active
+                );
+
+                if (!stackable) {
+                  return (
+                    <div className="checkbox" key={id}>
+                      <input
+                        type="checkbox"
+                        id={`options-${id}`}
+                        value={id}
+                        onChange={() => handleOptionsChange(id)}
+                        checked={active}
+                        className="checkbox__input"
+                        disabled={
+                          exclusiveCheckedOption && exclusive && !active
+                        }
+                      />
+                      <label
+                        htmlFor={`options-${id}`}
+                        className="checkbox__label"
+                      >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={equipment} />
+                        </span>
+                        <i className="checkbox__points">
+                          {getPointsText({ points, perModel })}
+                        </i>
+                      </label>
+                    </div>
+                  );
+                }
+
+                return (
                   <Fragment key={id}>
                     <label
                       htmlFor={`options-${id}`}
@@ -867,7 +880,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       }
                     />
                   </Fragment>
-                )
+                );
+              }
             )}
           </>
         )}

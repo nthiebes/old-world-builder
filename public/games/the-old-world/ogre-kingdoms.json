@@ -53,16 +53,12 @@
         {
           "name_en": "Ogre pistol",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Brace of Ogre pistols",
           "points": 12,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -166,16 +162,12 @@
         {
           "name_en": "Ogre pistol",
           "points": 6,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Brace of Ogre pistols",
           "points": 12,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -359,7 +351,8 @@
           "name_en": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -370,6 +363,11 @@
           "name_en": "Harpoon launcher",
           "points": 10,
           "perModel": true
+        },
+        {
+          "name_en": "Additional hand weapon, Harpoon launcher",
+          "points": 14,
+          "perModel": true
         }
       ],
       "armor": [],
@@ -378,22 +376,19 @@
           "name_en": "Ambushers",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Scouts",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Vanguard",
           "points": 3,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [
