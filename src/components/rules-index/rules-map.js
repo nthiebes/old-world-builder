@@ -59,6 +59,7 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
