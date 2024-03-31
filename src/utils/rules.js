@@ -160,6 +160,7 @@ const rules = {
       maxPercent: 25,
     },
     mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
   },
   "nomadic-waaagh": {
     characters: { maxPercent: 50 },
