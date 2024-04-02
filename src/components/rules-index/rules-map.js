@@ -25,7 +25,6 @@ const additionalOWBRules = {
   longbows: { url: "weapons-of-war/longbow" },
   pistols: { url: "weapons-of-war/pistol" },
   "throwing axes": { url: "weapons-of-war/throwing-axe" },
-  warbows: { url: "weapons-of-war/warbow" },
   hellblades: { url: "weapons-of-war/hellblade" },
   "repeater pistols": { url: "weapons-of-war/repeater-pistol" },
   "blackbriar javelins": { url: "weapons-of-war/blackbriar-javelin" },
@@ -59,6 +58,7 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
   "bows of avelorn": "bow of avelorn",
