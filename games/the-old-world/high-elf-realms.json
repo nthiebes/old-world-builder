@@ -2,12 +2,14 @@
   "characters": [
     {
       "name_en": "Prince",
+      "name_it": "Prince",
       "name_de": "Prince",
       "id": "prince",
       "points": 130,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -17,6 +19,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
@@ -24,30 +27,35 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_it": "Arma Addizionale [Attacchi Aggiuntivi (+1), Richiede Due Mani]",
           "name_de": "Additional hand weapon",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Cavalry spear ",
+          "name_it": "Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose) ",
           "name_de": "Cavalry spear ",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Great weapon",
+          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
           "name_de": "Great weapon",
           "points": 4,
           "perModel": true
         },
         {
           "name_en": "Halberd",
+          "name_it": "Alabarda +1Fo PA-1 [Rottura dell'Armatura(1), Richiede Due Mani]",
           "name_de": "Halberd",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Lance",
+          "name_it": "Lancia Pesante +2Fo PA-2 solo in carica [Rottura dell'Armatura(1)](solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Lance",
           "points": 4,
           "perModel": true
@@ -56,6 +64,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
@@ -63,12 +72,14 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Full plate armour",
+          "name_it": "Armatura Completa (TA+3)",
           "name_de": "Full plate armour",
           "points": 6,
           "perModel": true
@@ -77,18 +88,21 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_it": "Scudo (TA+1)",
           "name_de": "Shield",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Longbow",
+          "name_it": "Arco Lungo G30” Fo3 [Rottura dell'Armatura (1), Rafica di Fuoco]",
           "name_de": "Longbow",
           "points": 4,
           "perModel": true
         },
         {
           "name_en": "Bow of Avelorn",
+          "name_it": "Arco di Avelorn",
           "name_de": "Bow of Avelorn",
           "points": 12,
           "perModel": true
@@ -97,67 +111,80 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_it": "A Piedi",
           "name_de": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Elven Steed",
+          "name_it": "Cavallo Elfico",
           "name_de": "Elven Steed",
           "points": 14
         },
         {
           "name_en": "Barded Elven Steed",
+          "name_it": "Cavallo Elfico Bardato",
           "name_de": "Barded Elven Steed",
           "points": 18
         },
         {
           "name_en": "Tiranoc Chariot",
+          "name_it": "Carro di Tiranoc",
           "name_de": "Tiranoc Chariot",
           "points": 75
         },
         {
           "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
           "name_de": "Lion Chariot of Chrace",
           "points": 125
         },
         {
           "name_en": "Lothern Skycutter",
+          "name_it": "Lothern Skycutter",
           "name_de": "Lothern Skycutter",
           "points": 90
         },
         {
           "name_en": "Great Eagle",
+          "name_it": "Grandi Aquile",
           "name_de": "Great Eagle",
           "points": 60
         },
         {
           "name_en": "Griffon {high elves}",
+          "name_it": "Grifone {high elves}",
           "name_de": "Griffon",
           "points": 130
         },
         {
           "name_en": "Flamespyre Phoenix",
+          "name_it": "Fenice di Fuoco",
           "name_de": "Flamsephyre Phoenix",
           "points": 170
         },
         {
           "name_en": "Frostheart Phoenix",
+          "name_it": "Fenice di Ghiaccio",
           "name_de": "Frostheart Phoenix",
           "points": 205
         },
         {
           "name_en": "Sun Dragon",
+          "name_it": "Drago del Sole",
           "name_de": "Sun Dragon",
           "points": 180
         },
         {
           "name_en": "Moon Dragon",
+          "name_it": "Drago della Luna",
           "name_de": "Moon Dragon",
           "points": 235
         },
         {
           "name_en": "Star Dragon",
+          "name_it": "Drago delle Stelle",
           "name_de": "Star Dragon",
           "points": 290
         }
@@ -165,6 +192,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": [
             "weapon",
@@ -178,6 +206,7 @@
         },
         {
           "name_en": "Elven Honours",
+          "name_it": "Onoroficenze Elfiche",
           "name_de": "Elven Honours",
           "types": ["elven-honour"],
           "selected": [],
@@ -185,17 +214,20 @@
         }
       ],
       "specialRules": {
-        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages"
+        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages",
+        "name_it": "Ithilmar Weapons, Attacca Per Primo, Valore delle Ere"
       }
     },
     {
       "name_en": "Noble",
+      "name_it": "Noble",
       "name_de": "Noble",
       "id": "noble",
       "points": 70,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -203,6 +235,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_it": "Stendardo da Battaglia",
           "name_de": "Battle Standard Bearer",
           "points": 25,
           "magic": {
@@ -214,6 +247,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
@@ -221,30 +255,35 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_it": "Arma Addizionale [Attacchi Aggiuntivi (+1), Richiede Due Mani]",
           "name_de": "Additional hand weapon",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Cavalry spear ",
+          "name_it": "Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose) ",
           "name_de": "Cavalry spear ",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Great weapon",
+          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
           "name_de": "Great weapon",
           "points": 4,
           "perModel": true
         },
         {
           "name_en": "Halberd",
+          "name_it": "Alabarda +1Fo PA-1 [Rottura dell'Armatura(1), Richiede Due Mani]",
           "name_de": "Halberd",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Lance",
+          "name_it": "Lancia Pesante +2Fo PA-2 solo in carica [Rottura dell'Armatura(1)](solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Lance",
           "points": 4,
           "perModel": true
@@ -253,6 +292,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
@@ -260,12 +300,14 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 3,
           "perModel": true
         },
         {
           "name_en": "Full plate armour",
+          "name_it": "Armatura Completa (TA+3)",
           "name_de": "Full plate armour",
           "points": 6,
           "perModel": true
@@ -274,18 +316,21 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_it": "Scudo (TA+1)",
           "name_de": "Shield",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Longbow",
+          "name_it": "Arco Lungo G30” Fo3 [Rottura dell'Armatura (1), Rafica di Fuoco]",
           "name_de": "Longbow",
           "points": 4,
           "perModel": true
         },
         {
           "name_en": "Bow of Avelorn",
+          "name_it": "Arco di Avelorn",
           "name_de": "Bow of Avelorn",
           "points": 12,
           "perModel": true
@@ -294,57 +339,68 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_it": "A Piedi",
           "name_de": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Elven Steed",
+          "name_it": "Cavallo Elfico",
           "name_de": "Elven Steed",
           "points": 14
         },
         {
           "name_en": "Barded Elven Steed",
+          "name_it": "Cavallo Elfico Bardato",
           "name_de": "Barded Elven Steed",
           "points": 18
         },
         {
           "name_en": "Tiranoc Chariot",
+          "name_it": "Carro di Tiranoc",
           "name_de": "Tiranoc Chariot",
           "points": 75
         },
         {
           "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
           "name_de": "Lion Chariot of Chrace",
           "points": 125
         },
         {
           "name_en": "Lothern Skycutter",
+          "name_it": "Lothern Skycutter",
           "name_de": "Lothern Skycutter",
           "points": 90
         },
         {
           "name_en": "Great Eagle",
+          "name_it": "Grandi Aquile",
           "name_de": "Great Eagle",
           "points": 60
         },
         {
           "name_en": "Griffon {high elves}",
+          "name_it": "Grifone {high elves}",
           "name_de": "Griffon",
           "points": 130
         },
         {
           "name_en": "Flamespyre Phoenix",
+          "name_it": "Fenice di Fuoco",
           "name_de": "Flamsephyre Phoenix",
           "points": 170
         },
         {
           "name_en": "Frostheart Phoenix",
+          "name_it": "Fenice di Ghiaccio",
           "name_de": "Frostheart Phoenix",
           "points": 205
         },
         {
           "name_en": "Sun Dragon",
+          "name_it": "Drago del Sole",
           "name_de": "Sun Dragon",
           "points": 180
         }
@@ -352,6 +408,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
@@ -359,6 +416,7 @@
         },
         {
           "name_en": "Elven Honours",
+          "name_it": "Onoroficenze Elfiche",
           "name_de": "Elven Honours",
           "types": ["elven-honour"],
           "selected": [],
@@ -366,17 +424,20 @@
         }
       ],
       "specialRules": {
-        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages"
+        "name_en": "Ithilmar Weapons, Strike First, Valour of Ages",
+        "name_it": "Ithilmar Weapons, Attacca Per Primo, Valore delle Ere"
       }
     },
     {
       "name_en": "Archmage",
+      "name_it": "Archmage",
       "name_de": "Archmage",
       "id": "archmage",
       "points": 155,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -386,6 +447,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
@@ -396,6 +458,7 @@
       "options": [
         {
           "name_en": "Level 4 Wizard",
+          "name_it": "Mago di 4° Livello",
           "name_de": "Level 4 Wizard",
           "points": 30,
           "perModel": true
@@ -404,62 +467,74 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_it": "A Piedi",
           "name_de": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Elven Steed",
+          "name_it": "Cavallo Elfico",
           "name_de": "Elven Steed",
           "points": 14
         },
         {
           "name_en": "Barded Elven Steed",
+          "name_it": "Cavallo Elfico Bardato",
           "name_de": "Barded Elven Steed",
           "points": 18
         },
         {
           "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
           "name_de": "Lion Chariot of Chrace",
           "points": 125
         },
         {
           "name_en": "Lothern Skycutter",
+          "name_it": "Lothern Skycutter",
           "name_de": "Lothern Skycutter",
           "points": 90
         },
         {
           "name_en": "Great Eagle",
+          "name_it": "Grandi Aquile",
           "name_de": "Great Eagle",
           "points": 60
         },
         {
           "name_en": "Griffon {high elves}",
+          "name_it": "Grifone {high elves}",
           "name_de": "Griffon",
           "points": 130
         },
         {
           "name_en": "Flamespyre Phoenix",
+          "name_it": "Fenice di Fuoco",
           "name_de": "Flamsephyre Phoenix",
           "points": 170
         },
         {
           "name_en": "Frostheart Phoenix",
+          "name_it": "Fenice di Ghiaccio",
           "name_de": "Frostheart Phoenix",
           "points": 205
         },
         {
           "name_en": "Sun Dragon",
+          "name_it": "Drago del Sole",
           "name_de": "Sun Dragon",
           "points": 180
         },
         {
           "name_en": "Moon Dragon",
+          "name_it": "Drago della Luna",
           "name_de": "Moon Dragon",
           "points": 235
         },
         {
           "name_en": "Star Dragon",
+          "name_it": "Drago delle Stelle",
           "name_de": "Star Dragon",
           "points": 290
         }
@@ -467,6 +542,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
           "selected": [],
@@ -474,6 +550,7 @@
         },
         {
           "name_en": "Elven Honours",
+          "name_it": "Onoroficenze Elfiche",
           "name_de": "Elven Honours",
           "types": ["elven-honour"],
           "selected": [],
@@ -482,17 +559,20 @@
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
       "specialRules": {
-        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages"
+        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages",
+        "name_it": "Riflessi Elfici, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valore delle Ere"
       }
     },
     {
       "name_en": "Mage",
+      "name_it": "Mage",
       "name_de": "Mage",
       "id": "mage",
       "points": 80,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -502,6 +582,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
@@ -512,6 +593,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_it": "Mago di 2° Livello",
           "name_de": "Level 2 Wizard",
           "points": 30,
           "perModel": true
@@ -520,52 +602,62 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_it": "A Piedi",
           "name_de": "On foot",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Elven Steed",
+          "name_it": "Cavallo Elfico",
           "name_de": "Elven Steed",
           "points": 14
         },
         {
           "name_en": "Barded Elven Steed",
+          "name_it": "Cavallo Elfico Bardato",
           "name_de": "Barded Elven Steed",
           "points": 18
         },
         {
           "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
           "name_de": "Lion Chariot of Chrace",
           "points": 125
         },
         {
           "name_en": "Lothern Skycutter",
+          "name_it": "Lothern Skycutter",
           "name_de": "Lothern Skycutter",
           "points": 90
         },
         {
           "name_en": "Great Eagle",
+          "name_it": "Grandi Aquile",
           "name_de": "Great Eagle",
           "points": 60
         },
         {
           "name_en": "Griffon {high elves}",
+          "name_it": "Grifone {high elves}",
           "name_de": "Griffon",
           "points": 130
         },
         {
           "name_en": "Flamespyre Phoenix",
+          "name_it": "Fenice di Fuoco",
           "name_de": "Flamsephyre Phoenix",
           "points": 170
         },
         {
           "name_en": "Frostheart Phoenix",
+          "name_it": "Fenice di Ghiaccio",
           "name_de": "Frostheart Phoenix",
           "points": 205
         },
         {
           "name_en": "Sun Dragon",
+          "name_it": "Drago del Sole",
           "name_de": "Sun Dragon",
           "points": 180
         }
@@ -573,6 +665,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
           "selected": [],
@@ -580,6 +673,7 @@
         },
         {
           "name_en": "Elven Honours",
+          "name_it": "Onoroficenze Elfiche",
           "name_de": "Elven Honours",
           "types": ["elven-honour"],
           "selected": [],
@@ -588,17 +682,20 @@
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
       "specialRules": {
-        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages"
+        "name_en": "Elven Reflexes, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valour of Ages",
+        "name_it": "Riflessi Elfici, Ithilmar Weapons, Lileath's Blessing, Lore of Saphery, Valore delle Ere"
       }
     },
     {
       "name_en": "Dragon Mage",
+      "name_it": "Mago Dragone",
       "name_de": "Dragon Mage",
       "id": "dragon-mage",
       "points": 275,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -608,6 +705,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
@@ -617,6 +715,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
@@ -626,6 +725,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_it": "Mago di 2° Livello",
           "name_de": "Level 2 Wizard",
           "points": 30,
           "perModel": true
@@ -634,6 +734,7 @@
       "mounts": [
         {
           "name_en": "Sun Dragon",
+          "name_it": "Drago del Sole",
           "name_de": "Sun Dragon",
           "points": 0,
           "active": true
@@ -642,6 +743,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": [
             "weapon",
@@ -656,17 +758,20 @@
       ],
       "lores": ["battle-magic", "elementalism"],
       "specialRules": {
-        "name_en": "Blessings of Asuryan, Close Order, Dragon Armour, Elven Reflexes, Fly (10), Impetuous, Ithilmar Weapons, Large Target, Lileath's Blessing, Lore of Saphery, Stomp Attacks (D6), Swiftstride, Terror, Valour of Ages"
+        "name_en": "Blessings of Asuryan, Close Order, Dragon Armour, Elven Reflexes, Fly (10), Impetuous, Ithilmar Weapons, Large Target, Lileath's Blessing, Lore of Saphery, Stomp Attacks (D6), Swiftstride, Terror, Valour of Ages",
+        "name_it": "Blessings of Asuryan, Formazione Serrata, Armatura del Drago, Riflessi Elfici, Volo (10), Impetuosi, Ithilmar Weapons, Bersaglio Grande, Lileath's Blessing, Lore of Saphery, Calpestamento (D6), Passo Rapido, Terrore, Valore delle Ere"
       }
     },
     {
       "name_en": "Handmaiden of the Everqueen",
+      "name_it": "Handmaiden of the Everqueen",
       "name_de": "Handmaiden of the Everqueen",
       "id": "handmaiden-of-the-everqueen",
       "points": 65,
       "command": [
         {
           "name_en": "General",
+          "name_it": "Generale",
           "name_de": "General",
           "name_fr": "General",
           "name_es": "General",
@@ -676,6 +781,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon, Handmaiden's spear, Bow of Avelorn",
+          "name_it": "Arma Bianca, Handmaiden's spear, Arco di Avelorn",
           "name_de": "Hand weapon, Handmaiden's spear, Bow of Avelorn",
           "points": 0,
           "perModel": true,
@@ -685,6 +791,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
@@ -692,6 +799,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 3,
           "perModel": true
@@ -700,6 +808,7 @@
       "options": [
         {
           "name_en": "Horn of Isha",
+          "name_it": "Corno di Isha",
           "name_de": "Horn of Isha",
           "points": 25,
           "perModel": true
@@ -709,6 +818,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
@@ -716,13 +826,15 @@
         }
       ],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First"
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First",
+        "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Attacca Per Primo"
       }
     }
   ],
   "core": [
     {
       "name_en": "Elven Spearmen",
+      "name_it": "Elven Spearmen",
       "name_de": "Elven Spearmen",
       "id": "elven-spearmen",
       "points": 9,
@@ -731,11 +843,13 @@
       "command": [
         {
           "name_en": "Sentinel (champion)",
+          "name_it": "Sentinel (campione)",
           "name_de": "Sentinel (champion)",
           "points": 5
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 5,
           "magic": {
@@ -745,6 +859,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 5
         }
@@ -752,12 +867,14 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_it": "Armi Bianche",
           "name_de": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Thrusting spears",
+          "name_it": "Picche [Combattere su Ranghi Extra]",
           "name_de": "Thrusting spears",
           "points": 0,
           "active": true
@@ -766,6 +883,7 @@
       "armor": [
         {
           "name_en": "Light armour, Shields",
+          "name_it": "Armatura Leggera (TA+1), Scudi (TA+1)",
           "name_de": "Light armour, Shields",
           "points": 0,
           "active": true
@@ -774,11 +892,13 @@
       "options": [
         {
           "name_en": "Shieldwall",
+          "name_it": "Muro di Scudi",
           "name_de": "Shieldwall",
           "points": 10
         },
         {
           "name_en": "Veteran",
+          "name_it": "Veterani",
           "name_de": "Veteran",
           "points": 1,
           "perModel": true
@@ -787,11 +907,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Regimental Unit, Valour of Ages"
+        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Regimental Unit, Valour of Ages",
+        "name_it": "Formazione Serrata, Riflessi Elfici, Martial Prowess, Unità Madre, Valore delle Ere"
       }
     },
     {
       "name_en": "Elven Archers",
+      "name_it": "Elven Archers",
       "name_de": "Elven Archers",
       "id": "elven-archers",
       "points": 10,
@@ -801,11 +923,13 @@
       "command": [
         {
           "name_en": "Sentinel (champion)",
+          "name_it": "Sentinel (campione)",
           "name_de": "Sentinel (champion)",
           "points": 5
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 5,
           "magic": {
@@ -815,6 +939,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 5
         }
@@ -822,12 +947,14 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_it": "Armi Bianche",
           "name_de": "Hand weapon",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Longbows",
+          "name_it": "Arco Lungo G30” Fo3 [Rottura dell'Armatura (1), Rafica di Fuoco]s",
           "name_de": "Longbow",
           "points": 0,
           "active": true
@@ -836,6 +963,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 1,
           "perModel": true
@@ -844,12 +972,14 @@
       "options": [
         {
           "name_en": "Veteran",
+          "name_it": "Veterani",
           "name_de": "Veteran",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Detachment",
+          "name_it": "Distaccamento",
           "name_de": "Detachment",
           "name_fr": "Détachement",
           "points": 0
@@ -858,11 +988,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Close Order, Detachment, Elven Reflexes, Valour of Ages"
+        "name_en": "Close Order, Detachment, Elven Reflexes, Valour of Ages",
+        "name_it": "Formazione Serrata, Distaccamento, Riflessi Elfici, Valore delle Ere"
       }
     },
     {
       "name_en": "Lothern Sea Guard",
+      "name_it": "Guardia del Mare di Lothern ",
       "name_de": "Lothern Sea Guard",
       "id": "lothern-sea-guard",
       "points": 11,
@@ -871,6 +1003,7 @@
       "command": [
         {
           "name_en": "Sea Master (champion)",
+          "name_it": "Sea Master (campione)",
           "name_de": "Sea Master (champion)",
           "points": 7,
           "magic": {
@@ -880,6 +1013,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 5,
           "magic": {
@@ -889,6 +1023,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 5
         }
@@ -896,18 +1031,21 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_it": "Armi Bianche",
           "name_de": "Hand weapons",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Thrusting spears",
+          "name_it": "Picche [Combattere su Ranghi Extra]",
           "name_de": "Thrusting spears",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Warbows",
+          "name_it": "Archi da Guerra G18” [Rafica di Fuoco]",
           "name_de": "Warbows",
           "points": 0,
           "active": true
@@ -916,6 +1054,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "active": true
@@ -924,12 +1063,14 @@
       "options": [
         {
           "name_en": "Shields",
+          "name_it": "Scudi (TA+1)",
           "name_de": "Shields",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Veteran",
+          "name_it": "Veterani",
           "name_de": "Veteran",
           "points": 1,
           "perModel": true
@@ -937,11 +1078,13 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Naval Discipline, Valour of Ages"
+        "name_en": "Close Order, Elven Reflexes, Martial Prowess, Naval Discipline, Valour of Ages",
+        "name_it": "Formazione Serrata, Riflessi Elfici, Martial Prowess, Naval Discipline, Valore delle Ere"
       }
     },
     {
       "name_en": "Ellyrian Reavers",
+      "name_it": "Ellyrian Reavers",
       "name_de": "Ellyrian Reavers",
       "id": "ellyrian-reavers",
       "points": 16,
@@ -950,6 +1093,7 @@
       "command": [
         {
           "name_en": "Harbinger (champion)",
+          "name_it": "Harbinger (campione)",
           "name_de": "Harbinger (champion)",
           "points": 8,
           "magic": {
@@ -959,6 +1103,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
@@ -968,6 +1113,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 6
         }
@@ -975,6 +1121,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Cavalry spears, Hand weapons (Hooves)",
+          "name_it": "Armi Bianche, Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose), Armi Bianche (Hooves)",
           "name_de": "Hand weapons, Cavalry spears, Hand weapons (Hooves)",
           "points": 0,
           "active": true
@@ -983,6 +1130,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "active": true
@@ -991,24 +1139,28 @@
       "options": [
         {
           "name_en": "Shortbows",
+          "name_it": "Archi Corti G18” Fo3 [Tiro Rapido, Rafica di Fuoco]",
           "name_de": "Shortbows",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Replace cavalry spears with shortbows",
+          "name_it": "Cambia Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose) Con Archi Corti G18” Fo3 [Tiro Rapido, Rafica di Fuoco]",
           "name_de": "Replace cavalry spears with shortbows",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Scouts",
+          "name_it": "Esploratori",
           "name_de": "Scouts",
           "points": 2,
           "perModel": true
         },
         {
           "name_en": "Skirmishes",
+          "name_it": "Skirmishes",
           "name_de": "Skirmishes",
           "points": 1,
           "perModel": true
@@ -1016,11 +1168,13 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Fast Cavalry, Open Order, Swiftstride, Valour of Ages"
+        "name_en": "Elven Reflexes, Fast Cavalry, Open Order, Swiftstride, Valour of Ages",
+        "name_it": "Riflessi Elfici, Cavalleria Veloce, Formazione Aperta, Passo Rapido, Valore delle Ere"
       }
     },
     {
       "name_en": "Silver Helms",
+      "name_it": "Elmi D'Argento",
       "name_de": "Silver Helms",
       "id": "silver-helms",
       "points": 23,
@@ -1029,6 +1183,7 @@
       "command": [
         {
           "name_en": "High Helm (champion)",
+          "name_it": "High Helm (campione)",
           "name_de": "High Helm (champion)",
           "points": 6,
           "magic": {
@@ -1038,6 +1193,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
@@ -1047,6 +1203,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 6
         }
@@ -1054,6 +1211,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Lances, Hand weapons (Hooves)",
+          "name_it": "Armi Bianche, Lancie Pesanti +2Fo PA-2 solo in carica [Rottura dell'Armatura(1)](solo a Cavallo, Carro o Cavalcature Mostruose), Armi Bianche (Hooves)",
           "name_de": "Hand weapons, Lances, Hand weapons (Hooves)",
           "points": 0,
           "active": true
@@ -1062,6 +1220,7 @@
       "armor": [
         {
           "name_en": "Heavy armour, Barding",
+          "name_it": "Armatura Pesante (TA+2), Bardatura (TA+1)",
           "name_de": "Heavy armour, Barding",
           "points": 0,
           "active": true
@@ -1070,6 +1229,7 @@
       "options": [
         {
           "name_en": "Shields",
+          "name_it": "Scudi (TA+1)",
           "name_de": "Shields",
           "points": 1,
           "perModel": true
@@ -1077,11 +1237,13 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, First Charge, Ithilmar Barding, Swiftstride, Valour of Ages"
+        "name_en": "Close Order, Elven Reflexes, First Charge, Ithilmar Barding, Swiftstride, Valour of Ages",
+        "name_it": "Formazione Serrata, Riflessi Elfici, Prima Carica, Ithilmar Bardatura (TA+1), Passo Rapido, Valore delle Ere"
       }
     },
     {
       "name_en": "Sisters of Avelorn",
+      "name_it": "Sorelle di Avelorn",
       "name_de": "Sisters of Avelorn",
       "id": "sister-of-avelorn",
       "points": 15,
@@ -1089,6 +1251,7 @@
       "maximum": 0,
       "notes": {
         "name_en": "0-1 with Everqueen",
+        "name_it": "0-1 Con Everqueen",
         "name_de": "0-1 with Everqueen",
         "name_es": "0-1 with Everqueen",
         "name_fr": "0-1 with Everqueen"
@@ -1096,6 +1259,7 @@
       "command": [
         {
           "name_en": "High Sister",
+          "name_it": "High Sister",
           "name_de": "High Sister",
           "points": 7,
           "magic": {
@@ -1107,6 +1271,7 @@
       "equipment": [
         {
           "name_en": "Bows of Avelorn",
+          "name_it": "Bows of Avelorn",
           "name_de": "Bows of Avelorn",
           "points": 0,
           "active": true
@@ -1115,6 +1280,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "active": true
@@ -1123,12 +1289,14 @@
       "options": [
         {
           "name_en": "Stubborn (0-1 unit)",
+          "name_it": "Determinato (0-1 unit)",
           "name_de": "Stubborn (0-1 unit)",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Ambushers (0-1 unit)",
+          "name_it": "Agguatatori (0-1 unit)",
           "name_de": "Ambushers (0-1 unit)",
           "points": 1,
           "perModel": true
@@ -1136,13 +1304,15 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First"
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
+        "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Formazione Aperta, Schermagliatori, Attacca Per Primo"
       }
     }
   ],
   "special": [
     {
       "name_en": "Dragon Princes",
+      "name_it": "Principi Drago",
       "name_de": "Dragon Princes",
       "id": "dragon-princes",
       "points": 37,
@@ -1151,6 +1321,7 @@
       "command": [
         {
           "name_en": "Drakemaster",
+          "name_it": "Drakemaster",
           "name_de": "Drakemaster",
           "points": 7,
           "magic": {
@@ -1160,6 +1331,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 7,
           "magic": {
@@ -1169,6 +1341,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 7
         }
@@ -1176,12 +1349,14 @@
       "equipment": [
         {
           "name_en": "Lance",
+          "name_it": "Lancia Pesante +2Fo PA-2 solo in carica [Rottura dell'Armatura(1)](solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Lance",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
           "name_de": "Hand weapon",
           "points": 0
         }
@@ -1189,6 +1364,7 @@
       "armor": [
         {
           "name_en": "Full plate armour, Barding",
+          "name_it": "Armatura Completa (TA+3), Bardatura (TA+1)",
           "name_de": "Full plate armour, Barding",
           "points": 0,
           "active": true
@@ -1197,17 +1373,20 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_it": "Scudo (TA+1)",
           "name_de": "Shield",
           "points": 0
         }
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, Counter Charge, Dragon Armour, Drilled, Elven Reflexes, First Charge, Impetuous, Ithilmar Barding, Ithilmar Weapons, Sons of Caledor, Swiftstride, Valour of Ages"
+        "name_en": "Close Order, Counter Charge, Dragon Armour, Drilled, Elven Reflexes, First Charge, Impetuous, Ithilmar Barding, Ithilmar Weapons, Sons of Caledor, Swiftstride, Valour of Ages",
+        "name_it": "Formazione Serrata, Controcarica, Armatura del Drago, Addestrati, Riflessi Elfici, Prima Carica, Impetuosi, Ithilmar Bardatura (TA+1), Ithilmar Weapons, Sons of Caledor, Passo Rapido, Valore delle Ere"
       }
     },
     {
       "name_en": "Swordmasters of Hoeth",
+      "name_it": "Maestri di Spada di Hoeth",
       "name_de": "Swordmasters",
       "id": "swordmasters",
       "points": 14,
@@ -1216,6 +1395,7 @@
       "command": [
         {
           "name_en": "Bladelord",
+          "name_it": "Bladelord",
           "name_de": "Bladelord",
           "points": 6,
           "magic": {
@@ -1225,6 +1405,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
@@ -1234,6 +1415,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 6
         }
@@ -1241,6 +1423,7 @@
       "equipment": [
         {
           "name_en": "Sword of Hoeth",
+          "name_it": "Sword of Hoeth",
           "name_de": "Sword of Hoeth",
           "points": 0,
           "active": true
@@ -1249,6 +1432,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 0,
           "active": true
@@ -1257,6 +1441,7 @@
       "options": [
         {
           "name_en": "Drilled",
+          "name_it": "Addestrati",
           "name_de": "Drilled",
           "points": 1,
           "perModel": true
@@ -1265,11 +1450,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Cleaving Blow, Close Order, Deflect Shots, Elven Reflexes, Ithilmar Armour, Magic Resistance (-1), Valour of Ages, Warriors of the White Tower"
+        "name_en": "Cleaving Blow, Close Order, Deflect Shots, Elven Reflexes, Ithilmar Armour, Magic Resistance (-1), Valour of Ages, Warriors of the White Tower",
+        "name_it": "Coplo di Grazia, Formazione Serrata, Deflect Shots, Riflessi Elfici, Ithilmar Armour, Resistenza alla Magia (-1), Valore delle Ere, Warriors of the White Tower"
       }
     },
     {
       "name_en": "Phoenix Guard",
+      "name_it": "Phoenix Guard",
       "name_de": "Phoenix Guard",
       "id": "phoenix-guard",
       "points": 16,
@@ -1278,6 +1465,7 @@
       "command": [
         {
           "name_en": "Keeper of the Flame",
+          "name_it": "Keeper of the Flame",
           "name_de": "Keeper of the Flame",
           "points": 7,
           "magic": {
@@ -1287,6 +1475,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 7,
           "magic": {
@@ -1296,6 +1485,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 7
         }
@@ -1303,6 +1493,7 @@
       "equipment": [
         {
           "name_en": "Ceremonial Halberds",
+          "name_it": "Ceremonial Alabarde +1Fo PA-1 [Rottura dell'Armatura(1), Richiede Due Mani]",
           "name_de": "Ceremonial Halberds",
           "points": 0,
           "active": true
@@ -1311,6 +1502,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_it": "Armatura Completa (TA+3)",
           "name_de": "Full plate armour",
           "points": 0,
           "active": true
@@ -1319,6 +1511,7 @@
       "options": [
         {
           "name_en": "Drilled",
+          "name_it": "Addestrati",
           "name_de": "Drilled",
           "points": 1,
           "perModel": true
@@ -1327,11 +1520,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Blessings of Asuryan, Close Order, Elven Reflexes, Fear, Martial Prowess, Veteran, Witness to Destiny"
+        "name_en": "Blessings of Asuryan, Close Order, Elven Reflexes, Fear, Martial Prowess, Veteran, Witness to Destiny",
+        "name_it": "Blessings of Asuryan, Formazione Serrata, Riflessi Elfici, Paura, Martial Prowess, Veterani, Witness to Destiny"
       }
     },
     {
       "name_en": "White Lions of Chrace",
+      "name_it": "Leoni Bianchi di Chrace",
       "name_de": "White Lions",
       "id": "white-lions",
       "points": 14,
@@ -1340,6 +1535,7 @@
       "command": [
         {
           "name_en": "Guardian",
+          "name_it": "Guardian",
           "name_de": "Guardian",
           "points": 6,
           "magic": {
@@ -1349,6 +1545,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_it": "Alfiere",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
@@ -1358,6 +1555,7 @@
         },
         {
           "name_en": "Musician",
+          "name_it": "Musico",
           "name_de": "Musician",
           "points": 6
         }
@@ -1365,6 +1563,7 @@
       "equipment": [
         {
           "name_en": "Chracian Great Blades",
+          "name_it": "Chracian Great Blades",
           "name_de": "Chracian Great Blades",
           "points": 0,
           "active": true
@@ -1373,6 +1572,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 0,
           "active": true
@@ -1381,6 +1581,7 @@
       "options": [
         {
           "name_en": "Replace \"Valor of Ages\" with \"Veteran\"",
+          "name_it": "Cambia \"Valor of Ages\" Con \"Veterani\"",
           "name_de": "Replace \"Valor of Ages\" with \"Veteran\"",
           "points": 1,
           "perModel": true
@@ -1389,11 +1590,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Chracian Warriors, Elven Reflexes, King's Guard, Lion Cloak, Move Through Cover, Open Order, Stubborn, Valour of Ages"
+        "name_en": "Chracian Warriors, Elven Reflexes, King's Guard, Lion Cloak, Move Through Cover, Open Order, Stubborn, Valour of Ages",
+        "name_it": "Chracian Warriors, Riflessi Elfici, King's Guard, Lion Cloak, Viaggiatore, Formazione Aperta, Determinato, Valore delle Ere"
       }
     },
     {
       "name_en": "Shadow Warriors",
+      "name_it": "Guerrieri Ombra",
       "name_de": "Shadow Warriors",
       "id": "shadow-warriors",
       "points": 14,
@@ -1402,6 +1605,7 @@
       "command": [
         {
           "name_en": "Shadow Walker",
+          "name_it": "Shadow Walker",
           "name_de": "Shadow Walker",
           "points": 6,
           "magic": {
@@ -1413,6 +1617,7 @@
       "equipment": [
         {
           "name_en": "Longbow",
+          "name_it": "Arco Lungo G30” Fo3 [Rottura dell'Armatura (1), Rafica di Fuoco]",
           "name_de": "Longbow",
           "points": 0,
           "active": true
@@ -1421,6 +1626,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "active": true
@@ -1429,18 +1635,21 @@
       "options": [
         {
           "name_en": "Ambushers (0-1 unit)",
+          "name_it": "Agguatatori (0-1 unit)",
           "name_de": "Ambushers (0-1 unit)",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Chariot Runners (0-1 unit)",
+          "name_it": "Scorta dei Carri (0-1 unit)",
           "name_de": "Chariot Runners (0-1 unit)",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Feigned Flight (0-1 unit)",
+          "name_it": "Feigned Flight (0-1 unit)",
           "name_de": "Feigned Flight",
           "points": 1,
           "perModel": true
@@ -1448,11 +1657,13 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Evasive, Fire & Flee, Ithilmar Weapons, Move Through Cover, Scouts, Skirmishers, Veteran, Warriors of Nagarythe"
+        "name_en": "Elven Reflexes, Evasive, Fire & Flee, Ithilmar Weapons, Move Through Cover, Scouts, Skirmishers, Veteran, Warriors of Nagarythe",
+        "name_it": "Riflessi Elfici, Evasione, Tirare e Fuggire, Ithilmar Weapons, Viaggiatore, Esploratori, Schermagliatori, Veterani, Warriors of Nagarythe"
       }
     },
     {
       "name_en": "Tiranoc Chariots",
+      "name_it": "Carri di Tiranoc",
       "name_de": "Tiranoc Chariots",
       "id": "tiranoc-chariots",
       "points": 75,
@@ -1462,6 +1673,7 @@
       "equipment": [
         {
           "name_en": "Cavalry spear, Longbow",
+          "name_it": "Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose), Arco Lungo G30” Fo3 [Rottura dell'Armatura (1), Rafica di Fuoco]",
           "name_de": "Cavalry spear, Longbow",
           "points": 0,
           "active": true
@@ -1471,13 +1683,15 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Impact Hits (D6), Open Order, Quick Shot, Swiftstride, Valour of Ages"
+        "name_en": "Elven Reflexes, Impact Hits (D6), Open Order, Quick Shot, Swiftstride, Valour of Ages",
+        "name_it": "Riflessi Elfici, Colpi da Impatto (D6), Formazione Aperta, Tiro Rapido, Passo Rapido, Valore delle Ere"
       }
     }
   ],
   "rare": [
     {
       "name_en": "Sisters of Avelorn",
+      "name_it": "Sorelle di Avelorn",
       "name_de": "Sisters of Avelorn",
       "id": "sister-of-avelorn",
       "points": 15,
@@ -1486,6 +1700,7 @@
       "command": [
         {
           "name_en": "High Sister",
+          "name_it": "High Sister",
           "name_de": "High Sister",
           "points": 7,
           "magic": {
@@ -1497,6 +1712,7 @@
       "equipment": [
         {
           "name_en": "Bows of Avelorn",
+          "name_it": "Bows of Avelorn",
           "name_de": "Bows of Avelorn",
           "points": 0,
           "active": true
@@ -1505,6 +1721,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_it": "Armatura Leggera (TA+1)",
           "name_de": "Light armour",
           "points": 0,
           "active": true
@@ -1513,12 +1730,14 @@
       "options": [
         {
           "name_en": "Stubborn (0-1 unit)",
+          "name_it": "Determinato (0-1 unit)",
           "name_de": "Stubborn (0-1 unit)",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Ambushers (0-1 unit)",
+          "name_it": "Agguatatori (0-1 unit)",
           "name_de": "Ambushers (0-1 unit)",
           "points": 1,
           "perModel": true
@@ -1526,11 +1745,13 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First"
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
+        "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Formazione Aperta, Schermagliatori, Attacca Per Primo"
       }
     },
     {
       "name_en": "Lion Chariot of Chrace",
+      "name_it": "Carro dei Leoni di Chrace",
       "name_de": "Lion Chariot of Chrace",
       "id": "lion-chariot-of-chrace",
       "points": 125,
@@ -1538,6 +1759,7 @@
       "equipment": [
         {
           "name_en": "Chracian Great Blade",
+          "name_it": "Chracian Great Blade",
           "name_de": "Chracian Great Blade",
           "points": 0,
           "active": true
@@ -1548,11 +1770,13 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Fear, First Charge, Impact Hits (D6), Lion Cloak, Stubborn, Valour of Ages"
+        "name_en": "Close Order, Elven Reflexes, Fear, First Charge, Impact Hits (D6), Lion Cloak, Stubborn, Valour of Ages",
+        "name_it": "Formazione Serrata, Riflessi Elfici, Paura, Prima Carica, Colpi da Impatto (D6), Lion Cloak, Determinato, Valore delle Ere"
       }
     },
     {
       "name_en": "Flamespyre Phoenix",
+      "name_it": "Fenice di Fuoco",
       "name_de": "Flamespyre Phoenix",
       "id": "flamespyre-phoenix",
       "points": 170,
@@ -1561,6 +1785,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
           "name_de": "Heavy armour",
           "points": 0,
           "active": true
@@ -1569,11 +1794,13 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of Asuryan, Close Order, Fear, Flaming Attacks, Fly (10), From the Aashes, Large Target, Stomp Attacks (2), Swiftstride, Wake of Fire"
+        "name_en": "Blessings of Asuryan, Close Order, Fear, Flaming Attacks, Fly (10), From the Aashes, Large Target, Stomp Attacks (2), Swiftstride, Wake of Fire",
+        "name_it": "Blessings of Asuryan, Formazione Serrata, Paura, Attacchi a Base di Fuoco, Volo (10), From the Aashes, Bersaglio Grande, Calpestamento (2), Passo Rapido, Wake of Fire"
       }
     },
     {
       "name_en": "Frostheart Phoenix",
+      "name_it": "Fenice di Ghiaccio",
       "name_de": "Frostheart Phoenix",
       "id": "frostheart-phoenix-",
       "points": 205,
@@ -1582,6 +1809,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_it": "Armatura Completa (TA+3)",
           "name_de": "Full plate armour",
           "points": 0,
           "active": true
@@ -1590,11 +1818,13 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blizzard Aura, Close Order, Fear, Fly (9), Large Target, Stomp Attacks (2), Swiftstride"
+        "name_en": "Blizzard Aura, Close Order, Fear, Fly (9), Large Target, Stomp Attacks (2), Swiftstride",
+        "name_it": "Blizzard Aura, Formazione Serrata, Paura, Volo (9), Bersaglio Grande, Calpestamento (2), Passo Rapido"
       }
     },
     {
       "name_en": "Great Eagle",
+      "name_it": "Grandi Aquile",
       "name_de": "Great Eagle",
       "id": "great-eagle",
       "points": 60,
@@ -1604,11 +1834,13 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, Fear, Fly (10), Stomp Attacks (1), Swiftstride"
+        "name_en": "Close Order, Fear, Fly (10), Stomp Attacks (1), Swiftstride",
+        "name_it": "Formazione Serrata, Paura, Volo (10), Calpestamento (1), Passo Rapido"
       }
     },
     {
       "name_en": "Eagle-Claw Bolt Thrower",
+      "name_it": "Eagle-Claw Balista G48” Fo6 PA-3 [Ingombrante, Muovere o Tirare, Ferite Multiple (2), Attraversa i Ranghi]",
       "name_de": "Eagle-Claw Bolt Thrower",
       "id": "eagle-claw-bolt-thrower",
       "points": 80,
@@ -1618,11 +1850,13 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Skirmishers, Valour of Ages"
+        "name_en": "Elven Reflexes, Skirmishers, Valour of Ages",
+        "name_it": "Riflessi Elfici, Schermagliatori, Valore delle Ere"
       }
     },
     {
       "name_en": "Lothern Skycutter",
+      "name_it": "Lothern Skycutter",
       "name_de": "Lothern Skycutter",
       "id": "lothern-skycutters",
       "points": 90,
@@ -1630,12 +1864,14 @@
       "equipment": [
         {
           "name_en": "Cavalry spears",
+          "name_it": "Lancia Leggera +1Fo PA-1 solo in carica [Combattere su Ranghi Extra](solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Cavalry spears",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Shortbows",
+          "name_it": "Archi Corti G18” Fo3 [Tiro Rapido, Rafica di Fuoco]",
           "name_de": "Shortbows",
           "points": 0
         }
@@ -1644,6 +1880,7 @@
       "options": [
         {
           "name_en": "Eagle-Eye Bolt Thrower",
+          "name_it": "Eagle-Eye Balista G48” Fo6 PA-3 [Ingombrante, Muovere o Tirare, Ferite Multiple (2), Attraversa i Ranghi]",
           "name_de": "Eagle-Eye Bolt Thrower",
           "points": 25,
           "perModel": true
@@ -1651,7 +1888,8 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages"
+        "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages",
+        "name_it": "Formazione Serrata, Paura, Volo (10), Riflessi Elfici (Sea Guard Crew only), Colpi da Impatto (D3+1), Passo Rapido, Valore delle Ere"
       }
     }
   ],
