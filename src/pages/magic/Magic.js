@@ -232,9 +232,15 @@ export const Magic = ({ isMobile }) => {
       );
     }
   };
+  const cleanup = () => {
+    dispatch(setItems(null));
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    return cleanup;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   useEffect(() => {
