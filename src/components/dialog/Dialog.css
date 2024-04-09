@@ -4,7 +4,7 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  padding: 2.5rem 1rem 1rem 1rem;
+  padding: 0;
   border-radius: 5px;
   max-width: 90%;
   max-height: 90%;
@@ -16,6 +16,10 @@
     var(--color-background) 100%
   );
   border: 2px solid var(--color-list);
+}
+
+.dialog__content {
+  padding: 2.5rem 1rem 1rem 1rem;
 }
 
 .dialog::backdrop {

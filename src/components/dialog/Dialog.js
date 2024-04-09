@@ -13,6 +13,11 @@ export const Dialog = ({ open, onClose, children }) => {
     dialogRef?.current?.close && dialogRef.current.close();
     onClose();
   };
+  const handleClick = (event) => {
+    if (event.target.className === "dialog") {
+      handleClose();
+    }
+  };
   useEffect(() => {
     if (open) {
       dialogRef?.current?.showModal && dialogRef.current.showModal();
@@ -22,16 +27,23 @@ export const Dialog = ({ open, onClose, children }) => {
   }, [open]);
 
   return (
-    <dialog className="dialog" ref={dialogRef} onClose={handleClose}>
-      <Button
-        className="dialog__close"
-        icon="close"
-        type="text"
-        label={intl.formatMessage({ id: "header.close" })}
-        color="dark"
-        onClick={handleClose}
-      />
-      {children}
+    <dialog
+      className="dialog"
+      ref={dialogRef}
+      onClose={handleClose}
+      onClick={handleClick}
+    >
+      <div className="dialog__content">
+        <Button
+          className="dialog__close"
+          icon="close"
+          type="text"
+          label={intl.formatMessage({ id: "header.close" })}
+          color="dark"
+          onClick={handleClose}
+        />
+        {children}
+      </div>
     </dialog>
   );
 };
