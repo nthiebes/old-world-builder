@@ -1189,8 +1189,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.mount" />
             </h2>
-            {unit.mounts.map(
-              ({ points, id, active = false, options, ...mount }) => (
+            {unit.mounts
+              .filter(
+                ({ armyComposition }) =>
+                  !armyComposition ||
+                  armyComposition.includes(list.armyComposition)
+              )
+              .map(({ points, id, active = false, options, ...mount }) => (
                 <Fragment key={id}>
                   <div className="radio">
                     <input
@@ -1258,8 +1263,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     </Fragment>
                   )}
                 </Fragment>
-              )
-            )}
+              ))}
           </>
         )}
         {unit.lores && unit.lores.length ? (
