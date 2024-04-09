@@ -29,6 +29,7 @@ export const getAllOptions = (
     );
   const allCommand = [];
   const allMounts = [];
+  const allOptions = [];
 
   if (command && !detachmentActive) {
     command.forEach(({ active, magic, name_en, options, ...entry }) => {
@@ -73,19 +74,35 @@ export const getAllOptions = (
         .filter(({ active }) => active)
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
-  const allOptions = options
-    ? options
-        .filter(({ active }) => active)
-        .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
-    : [];
-  const allStackableOptions = options
-    ? options
-        .filter(({ stackableCount }) => stackableCount > 0)
-        .map(
-          ({ name_en, stackableCount, ...item }) =>
-            `${stackableCount} ${item[`name_${language}`] || name_en}`
-        )
-    : [];
+
+  if (options) {
+    options.forEach(
+      ({ active, name_en, options: subOptions, stackableCount, ...entry }) => {
+        if (active) {
+          let optionEntry = entry[`name_${language}`] || name_en;
+          const selectedOptions = [];
+
+          if (subOptions && subOptions.length > 0) {
+            subOptions.forEach((option) => {
+              if (option.active) {
+                selectedOptions.push(option.name_en);
+              }
+            });
+          }
+
+          if (selectedOptions.length) {
+            optionEntry += ` [${selectedOptions.join(" + ")}]`;
+          }
+
+          allOptions.push(optionEntry);
+        } else if (stackableCount > 0) {
+          allOptions.push(
+            `${stackableCount} ${entry[`name_${language}`] || name_en}`
+          );
+        }
+      }
+    );
+  }
 
   if (mounts) {
     mounts.forEach(({ active, name_en, options, ...entry }) => {
@@ -178,7 +195,6 @@ export const getAllOptions = (
     ...allEquipment,
     ...allArmor,
     ...allOptions,
-    ...allStackableOptions,
     ...allCommand,
     ...allMounts,
     ...(!noMagic ? allItems : []),

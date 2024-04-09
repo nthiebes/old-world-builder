@@ -195,23 +195,48 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
-  const handleOptionsChange = (id) => {
-    const options = unit.options.map((option) => {
-      if (option.id === id) {
-        return {
-          ...option,
-          active: option.active ? false : true,
-        };
-      }
-      return option;
-    });
+  const handleOptionsChange = (id, optionIndex) => {
+    let newOptions;
+
+    if (optionIndex !== undefined) {
+      newOptions = unit.options.map((parentOption) => {
+        if (parentOption.id === id) {
+          const options = parentOption.options.map((option, index) => {
+            if (index === optionIndex) {
+              return {
+                ...option,
+                active: option.active ? false : true,
+              };
+            }
+
+            return option;
+          });
+
+          return {
+            ...parentOption,
+            options,
+          };
+        }
+        return parentOption;
+      });
+    } else {
+      newOptions = unit.options.map((option) => {
+        if (option.id === id) {
+          return {
+            ...option,
+            active: option.active ? false : true,
+          };
+        }
+        return option;
+      });
+    }
 
     dispatch(
       editUnit({
         listId,
         type,
         unitId,
-        options,
+        options: newOptions,
       })
     );
   };
@@ -818,6 +843,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 stackableCount = minimum || 0,
                 active = false,
                 exclusive = false,
+                options,
                 ...equipment
               }) => {
                 const exclusiveCheckedOption = unit.options.find(
@@ -827,30 +853,78 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
                 if (!stackable) {
                   return (
-                    <div className="checkbox" key={id}>
-                      <input
-                        type="checkbox"
-                        id={`options-${id}`}
-                        value={id}
-                        onChange={() => handleOptionsChange(id)}
-                        checked={active}
-                        className="checkbox__input"
-                        disabled={
-                          exclusiveCheckedOption && exclusive && !active
-                        }
-                      />
-                      <label
-                        htmlFor={`options-${id}`}
-                        className="checkbox__label"
-                      >
-                        <span className="unit__label-text">
-                          <RulesWithIcon textObject={equipment} />
-                        </span>
-                        <i className="checkbox__points">
-                          {getPointsText({ points, perModel })}
-                        </i>
-                      </label>
-                    </div>
+                    <Fragment key={id}>
+                      <div className="checkbox">
+                        <input
+                          type="checkbox"
+                          id={`options-${id}`}
+                          value={id}
+                          onChange={() => handleOptionsChange(id)}
+                          checked={active}
+                          className="checkbox__input"
+                          disabled={
+                            exclusiveCheckedOption && exclusive && !active
+                          }
+                        />
+                        <label
+                          htmlFor={`options-${id}`}
+                          className="checkbox__label"
+                        >
+                          <span className="unit__label-text">
+                            <RulesWithIcon textObject={equipment} />
+                          </span>
+                          <i className="checkbox__points">
+                            {getPointsText({ points, perModel })}
+                          </i>
+                        </label>
+                      </div>
+                      {options?.length > 0 && active && (
+                        <Fragment>
+                          {options.map((option, optionIndex) => {
+                            const exclusiveCheckedOption = options.find(
+                              (exclusiveOption) =>
+                                exclusiveOption.exclusive &&
+                                exclusiveOption.active
+                            );
+
+                            return (
+                              <div
+                                className="checkbox checkbox--conditional"
+                                key={option.name_en}
+                              >
+                                <input
+                                  type="checkbox"
+                                  id={`option-${id}-option-${optionIndex}`}
+                                  value={`${id}-${optionIndex}`}
+                                  onChange={() =>
+                                    handleOptionsChange(id, optionIndex)
+                                  }
+                                  checked={Boolean(option.active)}
+                                  className="checkbox__input"
+                                  disabled={
+                                    exclusiveCheckedOption &&
+                                    option.exclusive &&
+                                    !option.active
+                                  }
+                                />
+                                <label
+                                  htmlFor={`option-${id}-option-${optionIndex}`}
+                                  className="checkbox__label"
+                                >
+                                  <span className="unit__label-text">
+                                    <RulesWithIcon textObject={option} />
+                                  </span>
+                                  <i className="checkbox__points">
+                                    {getPointsText({ points: option.points })}
+                                  </i>
+                                </label>
+                              </div>
+                            );
+                          })}
+                          <hr className="unit__command-option-hr" />
+                        </Fragment>
+                      )}
+                    </Fragment>
                   );
                 }
 

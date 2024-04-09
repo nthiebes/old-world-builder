@@ -500,8 +500,23 @@
           "name_fr": "Level 1 Wizard",
           "points": 30,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "options": [
+            {
+              "name_en": "Daemonology",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Dark Magic",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Battle Magic",
+              "exclusive": true,
+              "points": 0
+            }
+          ]
         },
         {
           "name_en": "Level 2 Wizard",
@@ -510,8 +525,23 @@
           "name_fr": "Level 2 Wizard",
           "points": 60,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "options": [
+            {
+              "name_en": "Daemonology",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Dark Magic",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Battle Magic",
+              "exclusive": true,
+              "points": 0
+            }
+          ]
         }
       ],
       "mounts": [
@@ -542,7 +572,6 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["daemonology", "dark-magic", "battle-magic"],
       "specialRules": {
         "name_en": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
         "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
@@ -689,8 +718,23 @@
           "name_fr": "Level 1 Wizard",
           "points": 30,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "options": [
+            {
+              "name_en": "Daemonology",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Dark Magic",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Illusion",
+              "exclusive": true,
+              "points": 0
+            }
+          ]
         },
         {
           "name_en": "Level 2 Wizard",
@@ -699,8 +743,23 @@
           "name_fr": "Level 2 Wizard",
           "points": 60,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "options": [
+            {
+              "name_en": "Daemonology",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Dark Magic",
+              "exclusive": true,
+              "points": 0
+            },
+            {
+              "name_en": "Illusion",
+              "exclusive": true,
+              "points": 0
+            }
+          ]
         }
       ],
       "mounts": [
@@ -745,7 +804,6 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["daemonology", "dark-magic", "illusion"],
       "specialRules": {
         "name_en": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
         "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
@@ -2446,18 +2504,36 @@
           "name_de": "Pyroclaster (champion)",
           "name_es": "Pyroclaster (champion)",
           "name_fr": "Pyroclaster (champion)",
-          "points": 7
-        },
-        {
-          "name_en": "Exalted Flamer (champion)",
-          "name_de": "Exalted Flamer (champion)",
-          "name_es": "Exalted Flamer (champion)",
-          "name_fr": "Exalted Flamer (champion)",
-          "points": 40,
+          "points": 7,
           "magic": {
             "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
             "maxPoints": 50
-          }
+          },
+          "options": [
+            {
+              "name_en": "Exalted Flamer",
+              "name_de": "Exalted Flamer",
+              "name_es": "Exalted Flamer",
+              "name_fr": "Exalted Flamer",
+              "points": 40
+            },
+            {
+              "name_en": "Level 2 Wizard (Exalted Flamer)",
+              "name_de": "Level 2 Wizard (Exalted Flamer)",
+              "name_es": "Level 2 Wizard (Exalted Flamer)",
+              "name_fr": "Level 2 Wizard (Exalted Flamer)",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard (Exalted Flamer)",
+              "name_de": "Level 3 Wizard (Exalted Flamer)",
+              "name_es": "Level 3 Wizard (Exalted Flamer)",
+              "name_fr": "Level 3 Wizard (Exalted Flamer)",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "equipment": [
@@ -2471,29 +2547,10 @@
         }
       ],
       "armor": [],
-      "options": [
-        {
-          "name_en": "Level 2 Wizard (Exalted Flamer)",
-          "name_de": "Level 2 Wizard (Exalted Flamer)",
-          "name_es": "Level 2 Wizard (Exalted Flamer)",
-          "name_fr": "Level 2 Wizard (Exalted Flamer)",
-          "points": 30,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 3 Wizard (Exalted Flamer)",
-          "name_de": "Level 3 Wizard (Exalted Flamer)",
-          "name_es": "Level 3 Wizard (Exalted Flamer)",
-          "name_fr": "Level 3 Wizard (Exalted Flamer)",
-          "points": 60,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
-      "lores": [],
+      "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
@@ -2510,29 +2567,53 @@
   ],
   "rare": [
     {
-      "name_en": "Skull Cannon of Khorne",
-      "name_de": "Skull Cannon of Khorne",
-      "name_es": "Skull Cannon of Khorne",
-      "name_fr": "Skull Cannon of Khorne",
-      "id": "skull-cannon-of-khorne",
-      "points": 185,
-      "command": [],
+      "name_en": "Bloodcrushers Of Khorne",
+      "name_de": "Bloodcrushers Of Khorne",
+      "name_es": "Bloodcrushers Of Khorne",
+      "name_fr": "Bloodcrushers Of Khorne",
+      "id": "bloodcrushers-of-khorne",
+      "points": 65,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Bloodreaper (champion)",
+          "name_de": "Bloodreaper (champion)",
+          "points": 7,
+          "name_es": "Bloodreaper (champion)",
+          "name_fr": "Bloodreaper (champion)"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "points": 7
+        }
+      ],
       "equipment": [
         {
-          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
-          "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
-          "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
-          "name_fr": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
+          "name_en": "Hellblades, Brass bound hooves",
+          "name_de": "Hellblades, Brass bound hooves",
+          "name_es": "Hellblades, Brass bound hooves",
+          "name_fr": "Hellblades, Brass bound hooves",
           "points": 0,
           "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Plate armour",
-          "name_de": "Plate armour",
-          "name_es": "Plate armour",
-          "name_fr": "Plate armour",
+          "name_en": "Light armour (calloused hides), Barding (brazen hide)",
+          "name_de": "Light armour (calloused hides), Barding (brazen hide)",
+          "name_es": "Light armour (calloused hides), Barding (brazen hide)",
+          "name_fr": "Light armour (calloused hides), Barding (brazen hide)",
           "points": 0,
           "active": true
         }
@@ -2542,16 +2623,385 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
-        "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
-        "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
-        "name_fr": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)"
+        "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_fr": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Beasts of Nurgle",
+      "name_de": "Beasts of Nurgle",
+      "name_es": "Beasts of Nurgle",
+      "name_fr": "Beasts of Nurgle",
+      "id": "beasts-of-nurgle",
+      "points": 62,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Writhing tentacles {daemons of chaos}",
+          "name_de": "Hand weapons, Writhing tentacles",
+          "name_es": "Hand weapons, Writhing tentacles",
+          "name_fr": "Hand weapons, Writhing tentacles",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_fr": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Plague Drones of Nurgle",
+      "name_de": "Plague Drones of Nurgle",
+      "name_es": "Plague Drones of Nurgle",
+      "name_fr": "Plague Drones of Nurgle",
+      "id": "plague-drones-of-nurgle",
+      "points": 63,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Plagueridden (champion)",
+          "points": 7
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plagueswords, death's heads, Hand weapons (filth-encrusted claws)",
+          "name_de": "Plagueswords, death's heads, Hand weapons (filth-encrusted claws)",
+          "name_es": "Plagueswords, death's heads, Hand weapons (filth-encrusted claws)",
+          "name_fr": "Plagueswords, death's heads, Hand weapons (filth-encrusted claws)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Plague Proboscis (+1 Initiative)",
+          "name_de": "Plague Proboscis (+1 Initiative)",
+          "name_es": "Plague Proboscis (+1 Initiative)",
+          "name_fr": "Plague Proboscis (+1 Initiative)",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Venom sting",
+          "name_de": "Venom sting",
+          "name_es": "Venom sting",
+          "name_fr": "Venom sting",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Icon",
+          "name_de": "Daemonic Icon",
+          "name_es": "Daemonic Icon",
+          "name_fr": "Daemonic Icon",
+          "types": [],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2 - Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_de": "Armour Bane (2 - Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Armour Bane (2 - Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Armour Bane (2 - Rot Fly Only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Fiends of Slaanesh",
+      "name_de": "Fiends of Slaanesh",
+      "name_es": "Fiends of Slaanesh",
+      "name_fr": "Fiends of Slaanesh",
+      "id": "fiends-of-slaanesh",
+      "points": 66,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws, Venomous tail",
+          "name_de": "Piercing claws, Venomous tail",
+          "name_es": "Piercing claws, Venomous tail",
+          "name_fr": "Piercing claws, Venomous tail",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_fr": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Hellflayer of Slaanesh",
+      "name_de": "Hellflayer of Slaanesh",
+      "name_es": "Hellflayer of Slaanesh",
+      "name_fr": "Hellflayer of Slaanesh",
+      "id": "hellflayer-of-slaanesh",
+      "points": 145,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_de": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_es": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_fr": "Piercing claws, Hand weapons (claws and fangs)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_fr": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Seeker Chariot of Slaanesh",
+      "name_de": "Seeker Chariot of Slaanesh",
+      "name_es": "Seeker Chariot of Slaanesh",
+      "name_fr": "Seeker Chariot of Slaanesh",
+      "id": "seeker-chariot-of-slaanesh",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 3,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_de": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_es": "Piercing claws, Hand weapons (claws and fangs)",
+          "name_fr": "Piercing claws, Hand weapons (claws and fangs)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_fr": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Flamers of Tzeentch",
+      "name_de": "Flamers of Tzeentch",
+      "name_es": "Flamers of Tzeentch",
+      "name_fr": "Flamers of Tzeentch",
+      "id": "flamers-of-tzeentch",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 6,
+      "command": [
+        {
+          "name_en": "Pyroclaster (champion)",
+          "name_de": "Pyroclaster (champion)",
+          "name_es": "Pyroclaster (champion)",
+          "name_fr": "Pyroclaster (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+            "maxPoints": 50
+          },
+          "options": [
+            {
+              "name_en": "Exalted Flamer",
+              "name_de": "Exalted Flamer",
+              "name_es": "Exalted Flamer",
+              "name_fr": "Exalted Flamer",
+              "points": 40
+            },
+            {
+              "name_en": "Level 2 Wizard (Exalted Flamer)",
+              "name_de": "Level 2 Wizard (Exalted Flamer)",
+              "name_es": "Level 2 Wizard (Exalted Flamer)",
+              "name_fr": "Level 2 Wizard (Exalted Flamer)",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard (Exalted Flamer)",
+              "name_de": "Level 3 Wizard (Exalted Flamer)",
+              "name_es": "Level 3 Wizard (Exalted Flamer)",
+              "name_fr": "Level 3 Wizard (Exalted Flamer)",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Warpflame",
+          "name_de": "Hand weapons, Warpflame",
+          "name_es": "Hand weapons, Warpflame",
+          "name_fr": "Hand weapons, Warpflame",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
+        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
+        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Screamers of Tzeentch",
+      "name_de": "Screamers of Tzeentch",
+      "name_es": "Screamers of Tzeentch",
+      "name_fr": "Screamers of Tzeentch",
+      "id": "screamers-of-tzeentch",
+      "points": 44,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lamprey's bite",
+          "name_de": "Lamprey's bite",
+          "name_es": "Lamprey's bite",
+          "name_fr": "Lamprey's bite",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_de": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_es": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_fr": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -2616,7 +3066,7 @@
           "maxPoints": 50
         }
       ],
-      "lores": [],
+      "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_de": "Closer Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
@@ -2723,6 +3173,51 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Skull Cannon of Khorne",
+      "name_de": "Skull Cannon of Khorne",
+      "name_es": "Skull Cannon of Khorne",
+      "name_fr": "Skull Cannon of Khorne",
+      "id": "skull-cannon-of-khorne",
+      "points": 185,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
+          "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
+          "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
+          "name_fr": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, hellblades",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Plate armour",
+          "name_de": "Plate armour",
+          "name_es": "Plate armour",
+          "name_fr": "Plate armour",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_fr": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
       }
     }
   ],

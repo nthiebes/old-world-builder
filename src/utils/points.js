@@ -20,6 +20,12 @@ export const getUnitPoints = (unit) => {
           (option.stackableCount || option.minimum || 0) * option.points;
       } else if (option.active && option.perModel) {
         unitPoints += (unit.strength || 1) * option.points;
+      } else if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((subOption) => {
+          if (subOption.active) {
+            unitPoints += subOption.points;
+          }
+        });
       } else if (option.active) {
         unitPoints += option.points;
       }
