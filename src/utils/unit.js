@@ -97,7 +97,7 @@ export const getAllOptions = (
           allOptions.push(optionEntry);
         } else if (stackableCount > 0) {
           allOptions.push(
-            `${stackableCount} ${entry[`name_${language}`] || name_en}`
+            `${stackableCount}x ${entry[`name_${language}`] || name_en}`
           );
         }
       }
@@ -171,7 +171,7 @@ export const getAllOptions = (
             });
           }
 
-          return `${strength} ${item[`name_${language}`] || name_en}${
+          return `${strength}x ${item[`name_${language}`] || name_en}${
             equipmentSelection.length
               ? ` [${equipmentSelection
                   .map((option) => option.replace(", ", " + "))
@@ -241,8 +241,19 @@ export const getStats = (unit) => {
   const normalizedMountName = normalizeRuleName(activeMount?.name_en || "");
   const mountSynonym = synonyms[normalizedMountName];
   const mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  const detachments = unit.detachments || [];
+  const detachmentStats = [];
 
-  return [...stats, ...mountStats];
+  detachments.forEach((detachment) => {
+    const normalizedDetachment = normalizeRuleName(detachment?.name_en || "");
+    const detachmentSynonym = synonyms[normalizedDetachment];
+
+    detachmentStats.push(
+      ...(rulesMap[detachmentSynonym || normalizedDetachment]?.stats || [])
+    );
+  });
+
+  return [...stats, ...mountStats, ...detachmentStats];
 };
 
 export const getUnitName = ({ unit, language }) => {

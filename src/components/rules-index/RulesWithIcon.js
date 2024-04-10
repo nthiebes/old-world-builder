@@ -24,7 +24,7 @@ export const RulesWithIcon = ({ textObject }) => {
 
   return ruleButtons.map((rule, index) => {
     return (
-      <Fragment key={rule}>
+      <Fragment key={`${rule}-${index}`}>
         {rulesMap[normalizeRuleName(textEn[index])] ||
         rulesMap[synonyms[normalizeRuleName(textEn[index])]] ? (
           <span className="unit__rule-wrapper">
