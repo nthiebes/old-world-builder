@@ -58,7 +58,6 @@ const magicItemTypes = [
   "engineering-runes",
   "triptych",
   "knightly-virtue",
-  "knightly-virtue-character",
   "chaos-mutation",
   "chaos-mutation-character",
   "chaos-mutation-chieftain",
