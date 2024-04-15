@@ -114,7 +114,7 @@
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
           "name_fr": "Vertues Chevaleresques",
-          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
         }
@@ -292,7 +292,7 @@
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
           "name_fr": "Vertues Chevaleresques",
-          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
         }
@@ -543,7 +543,7 @@
           "name_en": "Knightly Virtues",
           "name_de": "Knightly Virtues",
           "name_fr": "Vertues Chevaleresques",
-          "types": ["knightly-virtue", "knightly-virtue-character"],
+          "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
         }
@@ -741,6 +741,93 @@
         "name_en": "Levies, Peasant's Duty, Peasantry, Warband"
       }
     },
+
+    {
+      "name_en": "Outcast Wizard",
+      "name_de": "Outcast Wizard",
+      "name_es": "Outcast Wizard",
+      "name_fr": "Sorcier Paria",
+      "id": "outcast-wizard",
+      "points": 45,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_fr": "Arme de base",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Sorcier Niveau 2",
+          "points": 30
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_de": "Level 3 Wizard",
+          "name_es": "Level 3 Wizard",
+          "name_fr": "Sorcier Niveau 3",
+          "points": 60
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "name_fr": "A pieds",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Warhorse",
+          "name_de": "Warhorse",
+          "name_fr": "Destrier",
+          "name_es": "Warhorse",
+          "points": 12
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos mágicos",
+          "types": [
+            "weapon",
+            "talisman",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
+        "name_fr": "Attaques Magiques, Résistance Magique (-1), Arcaniste Autodidacte"
+      },
+      "armyComposition": {
+        "bretonnian-exiles": {
+          "category": "characters"
+        }
+      }
+    },
     {
       "name_en": "The Green Knight",
       "name_de": "The Green Knight",
@@ -802,85 +889,6 @@
           "category": "characters"
         },
         "errantry-crusades": {
-          "category": "characters"
-        }
-      }
-    },
-    {
-      "name_en": "Outcast Wizard",
-      "name_de": "Outcast Wizard",
-      "name_es": "Outcast Wizard",
-      "name_fr": "Sorcier Paria",
-      "id": "outcast-wizard",
-      "points": 45,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand weapon",
-          "name_fr": "Arme de base",
-          "name_de": "Hand weapon",
-          "name_es": "Hand weapon",
-          "points": 0,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier Niveau 2",
-          "points": 30
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_de": "Level 3 Wizard",
-          "name_es": "Level 3 Wizard",
-          "name_fr": "Sorcier Niveau 3",
-          "points": 60
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "Warhorse",
-          "name_de": "Warhorse",
-          "name_fr": "Destrier",
-          "name_es": "Warhorse",
-          "points": 12
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_fr": "Objets Magiques",
-          "name_es": "Objetos mágicos",
-          "types": [
-            "weapon",
-            "talisman",
-            "armor-mages",
-            "arcane-item",
-            "enchanted-item"
-          ],
-          "selected": [],
-          "maxPoints": 75
-        }
-      ],
-      "lores": [
-        "battle-magic",
-        "daemonology",
-        "dark-magic",
-        "elementalism",
-        "illusion",
-        "necromancy"
-      ],
-      "specialRules": {
-        "name_en": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
-        "name_fr": "Attaques Magiques, Résistance Magique (-1), Arcaniste Autodidacte"
-      },
-      "armyComposition": {
-        "bretonnian-exiles": {
           "category": "characters"
         }
       }
