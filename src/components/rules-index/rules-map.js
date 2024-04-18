@@ -55,6 +55,9 @@ const additionalOWBRules = {
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
   "level 4 wizard": { url: "magic/levels-of-wizardry" },
+  "troll magic": {
+    url: "the-lores-of-magic/lore-of-troll-magic",
+  },
 };
 
 export const synonyms = {
