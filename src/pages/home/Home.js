@@ -199,8 +199,8 @@ export const Home = ({ isMobile }) => {
         </a>
 
         {timezone === "europe" ? (
-          {
-            /* <a
+          <>
+            {/* <a
             className="home__banner-link"
             href="https://www.fantasywelt.de"
             target="_blank"
@@ -212,8 +212,8 @@ export const Home = ({ isMobile }) => {
               alt={intl.formatMessage({ id: "home.fantasywelt" })}
               loading="lazy"
             />
-          </a> */
-          }
+          </a> */}
+          </>
         ) : (
           <></>
         )}

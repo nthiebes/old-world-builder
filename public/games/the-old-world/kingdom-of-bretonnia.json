@@ -749,7 +749,15 @@
       "name_fr": "Sorcier Paria",
       "id": "outcast-wizard",
       "points": 45,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -836,8 +844,20 @@
       "id": "the-green-knight",
       "points": 275,
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "The Dolorous Blade",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shield, Barding",
+          "active": true,
+          "points": 0
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -854,9 +874,29 @@
       "name_fr": "Sir Cecil Gastonne",
       "id": "sir-cecil-gastonne-the-wyrm-slayer",
       "points": 165,
-      "command": [],
-      "equipment": [],
-      "armor": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Sorrow's End",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Dragonhide Cloak, Heavy armour, Shield",
+          "active": true,
+          "points": 0
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -873,13 +913,27 @@
       "name_fr": "Dame Élisse Duchaard",
       "id": "lady-élisse-duachaard",
       "points": 225,
-      "command": [],
-      "equipment": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Chalice of Brionne, The Staff of the Elements",
+          "active": true,
+          "points": 0
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
       "items": [],
-      "lores": [],
+      "lores": ["elementalism"],
       "specialRules": {
         "name_en": "Arcane Backlash, Armour Bane (2 - Ariandir only), Armoured Hide (1), Aura of the Lady, Beguiling Aura, Blessings of the Lady, Counter Charge, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady, Stomp Attacks (1), Swiftstride",
         "name_fr": "Contrecoup Arcanique, Arme Perforante (2 - Ariandir Uniquement), Peau Blindée (1), Aura de la Dame, Aura Envoûtante, Bénédiction de la Dame, Contre Charge, Domaine de la Dame, Attaques Magiques, Résistance Magique (-2), Bouclier de la Dame, Attaques de Piétinement (1), Rapide"
