@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,7 +20,7 @@ import {
   RulesWithIcon,
   RuleWithIcon,
 } from "../../components/rules-index";
-import { nameMap } from "../../pages/magic";
+import { nameMap } from "../magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { openRulesIndex } from "../../state/rules-index";

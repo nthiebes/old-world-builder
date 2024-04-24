@@ -36,6 +36,15 @@ const metaDescription = {
   pl: "Konstruktor armii dla Warhammer: The Old World i Warhammer Fantasy Battles.",
 };
 
+try {
+  const timezone = Intl.DateTimeFormat()
+    .resolvedOptions()
+    .timeZone.toLowerCase()
+    .split("/")[0];
+
+  localStorage.setItem("timezone", timezone);
+} catch {}
+
 // Language detection
 const supportedLanguages = ["en", "de", "fr", "es", "it", "pl"];
 const localStorageLanguage = localStorage.getItem("lang");

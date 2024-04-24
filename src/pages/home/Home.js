@@ -9,6 +9,7 @@ import { Button } from "../../components/button";
 import { ListItem, OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { getAllPoints } from "../../utils/points";
+import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
 import warhammerFantasy from "../../assets/warhammer-fantasy.png";
@@ -30,7 +31,10 @@ import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
 import forg3dBanner from "../../assets/forg3d.jpg";
+// import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
+// import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import { swap } from "../../utils/collection";
+// import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 
 import "./Home.css";
@@ -61,6 +65,8 @@ export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
+  // const { language } = useLanguage();
+  const { timezone } = useTimezone();
   const dispatch = useDispatch();
   const intl = useIntl();
   const resetState = () => {
@@ -177,6 +183,7 @@ export const Home = ({ isMobile }) => {
             </i>
           </b>
         </p>
+
         <a
           className="home__banner-link"
           href="https://tinyurl.com/Forg3dOWB"
@@ -190,6 +197,26 @@ export const Home = ({ isMobile }) => {
             loading="lazy"
           />
         </a>
+
+        {timezone === "europe" ? (
+          {
+            /* <a
+            className="home__banner-link"
+            href="https://www.fantasywelt.de"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={language === "de" ? fantasyweltDe : fantasyweltEn}
+              className="home__banner-image"
+              alt={intl.formatMessage({ id: "home.fantasywelt" })}
+              loading="lazy"
+            />
+          </a> */
+          }
+        ) : (
+          <></>
+        )}
       </MainComponent>
     </>
   );
