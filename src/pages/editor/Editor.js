@@ -636,25 +636,26 @@ export const OrderableUnitList = ({ units, type, listId }) => {
 
   return (
     <OrderableList id={type} onMoved={handleMoved}>
-      {units.map((unit, index) => (
-        <ListItem
-          key={index}
-          to={`/editor/${listId}/${type}/${unit.id}`}
-          className="editor__list"
-          active={location.pathname.includes(unit.id)}
-        >
-          <div className="editor__list-inner">
-            {unit.strength || unit.minimum ? (
-              <span>{`${unit.strength || unit.minimum}`}</span>
-            ) : null}
-            <b>{getUnitName({ unit, language })}</b>
-            <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
-              id: "app.points",
-            })}`}</i>
-          </div>
-          <p>{getAllOptions(unit)}</p>
-        </ListItem>
-      ))}
+      {units?.length > 0 &&
+        units.map((unit, index) => (
+          <ListItem
+            key={index}
+            to={`/editor/${listId}/${type}/${unit.id}`}
+            className="editor__list"
+            active={location.pathname.includes(unit.id)}
+          >
+            <div className="editor__list-inner">
+              {unit.strength || unit.minimum ? (
+                <span>{`${unit.strength || unit.minimum}`}</span>
+              ) : null}
+              <b>{getUnitName({ unit, language })}</b>
+              <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+                id: "app.points",
+              })}`}</i>
+            </div>
+            <p>{getAllOptions(unit)}</p>
+          </ListItem>
+        ))}
     </OrderableList>
   );
 };
