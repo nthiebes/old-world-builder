@@ -833,131 +833,148 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.options" />
             </h2>
-            {unit.options.map(
-              ({
-                points,
-                perModel,
-                id,
-                stackable,
-                maximum,
-                minimum = 0,
-                stackableCount = minimum || 0,
-                active = false,
-                exclusive = false,
-                options,
-                ...equipment
-              }) => {
-                const exclusiveCheckedOption = unit.options.find(
-                  (exclusiveOption) =>
-                    exclusiveOption.exclusive && exclusiveOption.active
-                );
+            {unit.options
+              .filter(
+                (unitOption) =>
+                  !unitOption.armyComposition ||
+                  unitOption.armyComposition.includes(list.armyComposition)
+              )
+              .map(
+                ({
+                  points,
+                  perModel,
+                  id,
+                  stackable,
+                  maximum,
+                  minimum = 0,
+                  stackableCount = minimum || 0,
+                  active = false,
+                  exclusive = false,
+                  options,
+                  ...equipment
+                }) => {
+                  const exclusiveCheckedOption = unit.options.find(
+                    (exclusiveOption) =>
+                      exclusiveOption.exclusive && exclusiveOption.active
+                  );
 
-                if (!stackable) {
+                  if (!stackable) {
+                    return (
+                      <Fragment key={id}>
+                        <div className="checkbox">
+                          <input
+                            type="checkbox"
+                            id={`options-${id}`}
+                            value={id}
+                            onChange={() => handleOptionsChange(id)}
+                            checked={active}
+                            className="checkbox__input"
+                            disabled={
+                              exclusiveCheckedOption && exclusive && !active
+                            }
+                          />
+                          <label
+                            htmlFor={`options-${id}`}
+                            className="checkbox__label"
+                          >
+                            <span className="unit__label-text">
+                              <RulesWithIcon textObject={equipment} />
+                            </span>
+                            <i className="checkbox__points">
+                              {getPointsText({ points, perModel })}
+                            </i>
+                          </label>
+                        </div>
+                        {options?.length > 0 && active && (
+                          <>
+                            {options
+                              .filter(
+                                (option) =>
+                                  !option.armyComposition ||
+                                  option.armyComposition.includes(
+                                    list.armyComposition
+                                  )
+                              )
+                              .map((option, optionIndex) => {
+                                const exclusiveCheckedOption = options.find(
+                                  (exclusiveOption) =>
+                                    exclusiveOption.exclusive &&
+                                    exclusiveOption.active
+                                );
+
+                                return (
+                                  <Fragment key={option.name_en}>
+                                    <div className="checkbox checkbox--conditional">
+                                      <input
+                                        type="checkbox"
+                                        id={`option-${id}-option-${optionIndex}`}
+                                        value={`${id}-${optionIndex}`}
+                                        onChange={() =>
+                                          handleOptionsChange(id, optionIndex)
+                                        }
+                                        checked={Boolean(option.active)}
+                                        className="checkbox__input"
+                                        disabled={
+                                          exclusiveCheckedOption &&
+                                          option.exclusive &&
+                                          !option.active
+                                        }
+                                      />
+                                      <label
+                                        htmlFor={`option-${id}-option-${optionIndex}`}
+                                        className="checkbox__label"
+                                      >
+                                        <span className="unit__label-text">
+                                          <RulesWithIcon textObject={option} />
+                                        </span>
+                                        <i className="checkbox__points">
+                                          {getPointsText({
+                                            points: option.points,
+                                          })}
+                                        </i>
+                                      </label>
+                                    </div>
+                                    {optionIndex === options.length - 1 && (
+                                      <hr className="unit__command-option-hr" />
+                                    )}
+                                  </Fragment>
+                                );
+                              })}
+                          </>
+                        )}
+                      </Fragment>
+                    );
+                  }
+
                   return (
                     <Fragment key={id}>
-                      <div className="checkbox">
-                        <input
-                          type="checkbox"
-                          id={`options-${id}`}
-                          value={id}
-                          onChange={() => handleOptionsChange(id)}
-                          checked={active}
-                          className="checkbox__input"
-                          disabled={
-                            exclusiveCheckedOption && exclusive && !active
-                          }
-                        />
-                        <label
-                          htmlFor={`options-${id}`}
-                          className="checkbox__label"
-                        >
-                          <span className="unit__label-text">
-                            <RulesWithIcon textObject={equipment} />
-                          </span>
-                          <i className="checkbox__points">
-                            {getPointsText({ points, perModel })}
-                          </i>
-                        </label>
-                      </div>
-                      {options?.length > 0 && active && (
-                        <Fragment>
-                          {options.map((option, optionIndex) => {
-                            const exclusiveCheckedOption = options.find(
-                              (exclusiveOption) =>
-                                exclusiveOption.exclusive &&
-                                exclusiveOption.active
-                            );
-
-                            return (
-                              <div
-                                className="checkbox checkbox--conditional"
-                                key={option.name_en}
-                              >
-                                <input
-                                  type="checkbox"
-                                  id={`option-${id}-option-${optionIndex}`}
-                                  value={`${id}-${optionIndex}`}
-                                  onChange={() =>
-                                    handleOptionsChange(id, optionIndex)
-                                  }
-                                  checked={Boolean(option.active)}
-                                  className="checkbox__input"
-                                  disabled={
-                                    exclusiveCheckedOption &&
-                                    option.exclusive &&
-                                    !option.active
-                                  }
-                                />
-                                <label
-                                  htmlFor={`option-${id}-option-${optionIndex}`}
-                                  className="checkbox__label"
-                                >
-                                  <span className="unit__label-text">
-                                    <RulesWithIcon textObject={option} />
-                                  </span>
-                                  <i className="checkbox__points">
-                                    {getPointsText({ points: option.points })}
-                                  </i>
-                                </label>
-                              </div>
-                            );
-                          })}
-                          <hr className="unit__command-option-hr" />
-                        </Fragment>
-                      )}
+                      <label
+                        htmlFor={`options-${id}`}
+                        className="unit__special-option"
+                      >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={equipment} />
+                        </span>
+                        <i className="checkbox__points">
+                          {getPointsText({ points, perModel })}
+                        </i>
+                      </label>
+                      <NumberInput
+                        id={`options-${id}`}
+                        min={minimum}
+                        max={maximum}
+                        value={stackableCount}
+                        onChange={(event) =>
+                          handleStackableOptionChange({
+                            id,
+                            stackableCount: event.target.value,
+                          })
+                        }
+                      />
                     </Fragment>
                   );
                 }
-
-                return (
-                  <Fragment key={id}>
-                    <label
-                      htmlFor={`options-${id}`}
-                      className="unit__special-option"
-                    >
-                      <span className="unit__label-text">
-                        <RulesWithIcon textObject={equipment} />
-                      </span>
-                      <i className="checkbox__points">
-                        {getPointsText({ points, perModel })}
-                      </i>
-                    </label>
-                    <NumberInput
-                      id={`options-${id}`}
-                      min={minimum}
-                      max={maximum}
-                      value={stackableCount}
-                      onChange={(event) =>
-                        handleStackableOptionChange({
-                          id,
-                          stackableCount: event.target.value,
-                        })
-                      }
-                    />
-                  </Fragment>
-                );
-              }
-            )}
+              )}
           </>
         )}
         {unit.regimentalUnit && (
@@ -1218,50 +1235,60 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     </label>
                   </div>
                   {options?.length > 0 && active && (
-                    <Fragment>
-                      {options.map((option, optionIndex) => {
-                        const exclusiveCheckedOption = options.find(
-                          (exclusiveOption) =>
-                            exclusiveOption.exclusive && exclusiveOption.active
-                        );
+                    <>
+                      {options
+                        .filter(
+                          (option) =>
+                            !option.armyComposition ||
+                            option.armyComposition.includes(
+                              list.armyComposition
+                            )
+                        )
+                        .map((option, optionIndex) => {
+                          const exclusiveCheckedOption = options.find(
+                            (exclusiveOption) =>
+                              exclusiveOption.exclusive &&
+                              exclusiveOption.active
+                          );
 
-                        return (
-                          <div
-                            className="checkbox checkbox--conditional"
-                            key={option.name_en}
-                          >
-                            <input
-                              type="checkbox"
-                              id={`mount-${id}-option-${optionIndex}`}
-                              value={`${id}-${optionIndex}`}
-                              onChange={() =>
-                                handleMountsChange(id, optionIndex)
-                              }
-                              checked={Boolean(option.active)}
-                              className="checkbox__input"
-                              disabled={
-                                (exclusiveCheckedOption &&
-                                  option.exclusive &&
-                                  !option.active) ||
-                                detachmentActive
-                              }
-                            />
-                            <label
-                              htmlFor={`mount-${id}-option-${optionIndex}`}
-                              className="checkbox__label"
-                            >
-                              <span className="unit__label-text">
-                                <RulesWithIcon textObject={option} />
-                              </span>
-                              <i className="checkbox__points">
-                                {getPointsText({ points: option.points })}
-                              </i>
-                            </label>
-                          </div>
-                        );
-                      })}
-                      <hr className="unit__command-option-hr" />
-                    </Fragment>
+                          return (
+                            <Fragment key={option.name_en}>
+                              <div className="checkbox checkbox--conditional">
+                                <input
+                                  type="checkbox"
+                                  id={`mount-${id}-option-${optionIndex}`}
+                                  value={`${id}-${optionIndex}`}
+                                  onChange={() =>
+                                    handleMountsChange(id, optionIndex)
+                                  }
+                                  checked={Boolean(option.active)}
+                                  className="checkbox__input"
+                                  disabled={
+                                    (exclusiveCheckedOption &&
+                                      option.exclusive &&
+                                      !option.active) ||
+                                    detachmentActive
+                                  }
+                                />
+                                <label
+                                  htmlFor={`mount-${id}-option-${optionIndex}`}
+                                  className="checkbox__label"
+                                >
+                                  <span className="unit__label-text">
+                                    <RulesWithIcon textObject={option} />
+                                  </span>
+                                  <i className="checkbox__points">
+                                    {getPointsText({ points: option.points })}
+                                  </i>
+                                </label>
+                              </div>
+                              {optionIndex === options.length - 1 && (
+                                <hr className="unit__command-option-hr" />
+                              )}
+                            </Fragment>
+                          );
+                        })}
+                    </>
                   )}
                 </Fragment>
               ))}
