@@ -31,10 +31,10 @@ import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
 import forg3dBanner from "../../assets/forg3d.jpg";
-// import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
-// import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
+import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
+import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import { swap } from "../../utils/collection";
-// import { useLanguage } from "../../utils/useLanguage";
+import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 
 import "./Home.css";
@@ -65,7 +65,7 @@ export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const lists = useSelector((state) => state.lists);
   const location = useLocation();
-  // const { language } = useLanguage();
+  const { language } = useLanguage();
   const { timezone } = useTimezone();
   const dispatch = useDispatch();
   const intl = useIntl();
@@ -199,10 +199,9 @@ export const Home = ({ isMobile }) => {
         </a>
 
         {timezone === "europe" ? (
-          <>
-            {/* <a
+          <a
             className="home__banner-link"
-            href="https://www.fantasywelt.de"
+            href="https://www.fantasywelt.de/?wsa=jcdi7h53acjhc"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -212,8 +211,7 @@ export const Home = ({ isMobile }) => {
               alt={intl.formatMessage({ id: "home.fantasywelt" })}
               loading="lazy"
             />
-          </a> */}
-          </>
+          </a>
         ) : (
           <></>
         )}
