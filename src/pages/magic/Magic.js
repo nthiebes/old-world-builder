@@ -255,12 +255,21 @@ export const Magic = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
-          const allItems = army.items.map((item) => {
+          let itemCategories = army.items;
+
+          if (unit.magicItemsArmy) {
+            itemCategories = itemCategories.filter(
+              (itemCategory) => itemCategory !== army.id
+            );
+            itemCategories.push(unit.magicItemsArmy);
+          }
+
+          const allItems = itemCategories.map((itemCategory) => {
             return {
-              items: data[item],
-              name_de: nameMap[item].name_de,
-              name_en: nameMap[item].name_en,
-              id: item,
+              items: data[itemCategory],
+              name_de: nameMap[itemCategory].name_de,
+              name_en: nameMap[itemCategory].name_en,
+              id: itemCategory,
             };
           });
 
