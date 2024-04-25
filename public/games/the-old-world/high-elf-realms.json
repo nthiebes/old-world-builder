@@ -1414,6 +1414,9 @@
       "specialRules": {
         "name_en": "Close Order, Counter Charge, Dragon Armour, Drilled, Elven Reflexes, First Charge, Impetuous, Ithilmar Barding, Ithilmar Weapons, Sons of Caledor, Swiftstride, Valour of Ages",
         "name_it": "Formazione Serrata, Controcarica, Armatura del Drago, Addestrati, Riflessi Elfici, Prima Carica, Impetuosi, Ithilmar Bardatura, Ithilmar Weapons, Sons of Caledor, Passo Rapido, Valore delle Ere"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Dragon Princes of Caledor per 1,000 points"
       }
     },
     {
@@ -1718,6 +1721,69 @@
         "name_en": "Elven Reflexes, Impact Hits (D6), Open Order, Quick Shot, Swiftstride, Valour of Ages",
         "name_it": "Riflessi Elfici, Colpi da Impatto (D6), Formazione Aperta, Tiro Rapido, Passo Rapido, Valore delle Ere"
       }
+    },
+    {
+      "name_en": "Lion Chariot of Chrace",
+      "name_it": "Carro dei Leoni di Chrace",
+      "name_de": "Lion Chariot of Chrace",
+      "id": "lion-chariot-of-chrace",
+      "points": 125,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Chracian Great Blade",
+          "name_it": "Chracian Great Blade",
+          "name_de": "Chracian Great Blade",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Fear, First Charge, Impact Hits (D6), Lion Cloak, Stubborn, Valour of Ages",
+        "name_it": "Formazione Serrata, Riflessi Elfici, Paura, Prima Carica, Colpi da Impatto (D6), Lion Cloak, Determinato, Valore delle Ere"
+      },
+      "notes": {
+        "name_en": "If your General has the Chracian Hunter Elven Honour, 0-1 Lion Chariot of Chrace may be taken as a Special choice per 1,000 points"
+      }
+    },
+    {
+      "name_en": "Lothern Skycutter",
+      "name_it": "Lothern Skycutter",
+      "name_de": "Lothern Skycutter",
+      "id": "lothern-skycutters",
+      "points": 90,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavalry spears, Shortbows",
+          "name_it": "Lancia Leggera, Archi Corti",
+          "name_de": "Cavalry spears, Shortbows",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Eagle-Eye Bolt Thrower",
+          "name_it": "Eagle-Eye Balista",
+          "name_de": "Eagle-Eye Bolt Thrower",
+          "points": 25,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages",
+        "name_it": "Formazione Serrata, Paura, Volo (10), Riflessi Elfici (Sea Guard Crew only), Colpi da Impatto (D3+1), Passo Rapido, Valore delle Ere"
+      },
+      "notes": {
+        "name_en": "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice"
+      }
     }
   ],
   "rare": [
@@ -1895,17 +1961,11 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry spears",
-          "name_it": "Lancia Leggera",
-          "name_de": "Cavalry spears",
+          "name_en": "Cavalry spears, Shortbows",
+          "name_it": "Lancia Leggera, Archi Corti",
+          "name_de": "Cavalry spears, Shortbows",
           "points": 0,
           "active": true
-        },
-        {
-          "name_en": "Shortbows",
-          "name_it": "Archi Corti",
-          "name_de": "Shortbows",
-          "points": 0
         }
       ],
       "armor": [],
