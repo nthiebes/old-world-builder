@@ -201,7 +201,9 @@ export const Home = ({ isMobile }) => {
         {timezone === "europe" ? (
           <a
             className="home__banner-link"
-            href="https://www.fantasywelt.de/?wsa=jcdi7h53acjhc"
+            href={`https://www.fantasywelt.de/?wsa=jcdi7h53acjhc${
+              language === "de" ? "&lang=ger" : "&lang=eng"
+            }`}
             target="_blank"
             rel="noopener noreferrer"
           >
