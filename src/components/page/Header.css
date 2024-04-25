@@ -51,9 +51,9 @@
 
 .header__name {
   margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__name-link,
@@ -66,6 +66,12 @@
 .header__name-link:visited:hover {
   color: var(--color-font-light);
   text-decoration: underline;
+}
+
+.header__name-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header__points {
