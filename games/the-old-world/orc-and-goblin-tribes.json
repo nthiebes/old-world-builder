@@ -83,9 +83,7 @@
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [
@@ -1001,7 +999,14 @@
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
-          "points": 10
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "points": 10,
+              "armyComposition": ["nomadic-waaagh"]
+            }
+          ]
         },
         {
           "name_en": "Gigantic Spider",
@@ -1131,7 +1136,14 @@
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
-          "points": 10
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "points": 10,
+              "armyComposition": ["nomadic-waaagh"]
+            }
+          ]
         },
         {
           "name_en": "Gigantic Spider",
@@ -1220,7 +1232,14 @@
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
-          "points": 10
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "points": 10,
+              "armyComposition": ["nomadic-waaagh"]
+            }
+          ]
         },
         {
           "name_en": "Wolf Chariot",
@@ -1318,7 +1337,14 @@
           "name_en": "Giant Wolf",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
-          "points": 10
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "points": 10,
+              "armyComposition": ["nomadic-waaagh"]
+            }
+          ]
         },
         {
           "name_en": "Wolf Chariot",
@@ -2769,18 +2795,25 @@
           "name_de": "Feigned Flight (0-1 unit per 1,000 points may)",
           "name_fr": "Fuite feinte (0-1 par tranche de 1000 points)",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Reserve Move (0-1 unit per 1,000 points may)",
           "name_de": "Reserve Move (0-1 unit per 1,000 points may)",
           "name_fr": "Mouvement de réserve (0-1 par tranche de 1000 points)",
           "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Ambushers",
+          "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "armyComposition": ["nomadic-waaagh"]
+        },
+        {
+          "name_en": "Close Order, Horde (no Open Order and Skirmishers)",
+          "points": 0,
+          "armyComposition": ["nomadic-waaagh"]
         }
       ],
       "mounts": [],
@@ -2907,6 +2940,12 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Ambushers (0-1 per 1000 points)",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": ["nomadic-waaagh"]
         }
       ],
       "mounts": [],
@@ -3297,6 +3336,12 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Ambushers (0-1 per 1000 points)",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": ["nomadic-waaagh"]
         }
       ],
       "mounts": [],
