@@ -46,6 +46,7 @@ export const Export = ({ isMobile }) => {
   const [showSpecialRules, setShowSpecialRules] = useState(false);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [isMarkdownList, setIsMarkdownList] = useState(false);
+  const [showCustomNotes, setShowCustomNotes] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -56,6 +57,7 @@ export const Export = ({ isMobile }) => {
         isCompactList,
         showSpecialRules,
         showPageNumbers,
+        showCustomNotes,
         isMarkdownList,
         intl,
         language,
@@ -221,6 +223,18 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="showPageNumbers" className="checkbox__label">
             <FormattedMessage id="export.showPageNumbers" />
+          </label>
+        </div>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="showCustomNotes"
+            onChange={() => setShowCustomNotes(!showCustomNotes)}
+            checked={showCustomNotes}
+            className="checkbox__input"
+          />
+          <label htmlFor="showCustomNotes" className="checkbox__label">
+            <FormattedMessage id="export.showCustomNotes" />
           </label>
         </div>
         <p className="export__description"></p>

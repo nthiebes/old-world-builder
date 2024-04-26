@@ -82,6 +82,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
+  const handleCustomNoteChange = (event) => {
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        customNote: event.target.value,
+      })
+    );
+  };
   const handleStackableOptionChange = ({ id, stackableCount }) => {
     const options = unit.options.map((option) => {
       if (option.id === id) {
@@ -1391,6 +1401,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               );
             })
           : null}
+
         {unit.specialRules && unit.specialRules.name_en ? (
           <>
             <h2 className="unit__subline unit__subline--space-before">
@@ -1401,6 +1412,20 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </p>
           </>
         ) : null}
+
+        <hr />
+        <label htmlFor="customNote">
+          <FormattedMessage id="unit.customNote" />
+        </label>
+        <input
+          type="text"
+          id="customNote"
+          className="input"
+          value={unit.customNote || ""}
+          onChange={handleCustomNoteChange}
+          autoComplete="off"
+          maxLength="200"
+        />
       </MainComponent>
     </>
   );

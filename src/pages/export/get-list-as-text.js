@@ -14,6 +14,7 @@ const getUnitsString = ({
   intl,
   language,
   showStats,
+  showCustomNotes,
 }) => {
   return units
     .map((unit) => {
@@ -36,6 +37,11 @@ const getUnitsString = ({
         })}: ${(
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
         ).replace(/ *\{[^)]*\}/g, "")}\n`;
+      }
+      if (showCustomNotes && unit.customNote) {
+        optionsString += `${intl.formatMessage({
+          id: "unit.customNote",
+        })} ${unit.customNote}\n`;
       }
       if (showStats) {
         const stats = getStats(unit);
@@ -76,6 +82,7 @@ export const getListAsText = ({
   showPageNumbers,
   showStats,
   isMarkdownList,
+  showCustomNotes,
 }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
@@ -137,6 +144,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.characters,
       isShowList,
       intl,
@@ -160,6 +168,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.lords,
       isShowList,
       intl,
@@ -183,6 +192,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.heroes,
       isShowList,
       intl,
@@ -206,6 +216,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.core,
       isShowList,
       intl,
@@ -229,6 +240,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.special,
       isShowList,
       intl,
@@ -252,6 +264,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.rare,
       isShowList,
       intl,
@@ -275,6 +288,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.mercenaries,
       isShowList,
       intl,
@@ -298,6 +312,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       showSpecialRules,
       showPageNumbers,
       isMarkdownList,
+      showCustomNotes,
       units: list.allies,
       isShowList,
       intl,

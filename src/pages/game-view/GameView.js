@@ -1,6 +1,6 @@
 import { useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
@@ -18,6 +18,7 @@ import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
+import { editUnit } from "../../state/lists";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -26,6 +27,7 @@ export const GameView = () => {
   const { listId } = useParams();
   const { language } = useLanguage();
   const intl = useIntl();
+  const dispatch = useDispatch();
   const [showPoints, setShowPoints] = useState(true);
   const [showSpecialRules, setShowSpecialRules] = useState(true);
   const [banners, setBanners] = useState(0);
@@ -36,9 +38,20 @@ export const GameView = () => {
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [victoryPoints, setVictoryPoints] = useState({});
   const [showVictoryPoints, setShowVictoryPoints] = useState(true);
+  const [showCustomNotes, setShowCustomNotes] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
+  const handleCustomNoteChange = ({ value, type, unitId }) => {
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        customNote: value,
+      })
+    );
+  };
 
   if (!list) {
     return (
@@ -142,6 +155,16 @@ export const GameView = () => {
     },
     {
       name: intl.formatMessage({
+        id: "export.showCustomNotes",
+      }),
+      id: "customNotes",
+      checked: showCustomNotes,
+      callback: () => {
+        setShowCustomNotes(!showCustomNotes);
+      },
+    },
+    {
+      name: intl.formatMessage({
         id: "export.showVictoryPoints",
       }),
       id: "victory",
@@ -230,8 +253,35 @@ export const GameView = () => {
                         ]}
                       />
                     ))}
+                  {showCustomNotes && (
+                    <div>
+                      <label
+                        className="game-view__custom-note-label"
+                        htmlFor="customNote"
+                      >
+                        <i>
+                          <FormattedMessage id="unit.customNote" />
+                        </i>
+                      </label>
+                      <input
+                        type="text"
+                        id="customNote"
+                        className="input game-view__custom-note-input"
+                        value={unit.customNote || ""}
+                        onChange={(event) =>
+                          handleCustomNoteChange({
+                            value: event.target.value,
+                            type: type,
+                            unitId: unit.id,
+                          })
+                        }
+                        autoComplete="off"
+                        maxLength="200"
+                      />
+                    </div>
+                  )}
                   {showVictoryPoints && (
-                    <>
+                    <div>
                       {getVictoryButtons(unit)}
                       <p className="game-view__special-rules">
                         <b>
@@ -242,7 +292,7 @@ export const GameView = () => {
                         </b>
                         {getUnitVictoryPoints(unit.id)}
                       </p>
-                    </>
+                    </div>
                   )}
                 </div>
               </div>

@@ -24,6 +24,7 @@ export const Print = () => {
   const [showSpecialRules, setShowSpecialRules] = useState(true);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [showStats, setShowStats] = useState(true);
+  const [showCustomNotes, setShowCustomNotes] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -84,6 +85,16 @@ export const Print = () => {
       checked: showPageNumbers,
       callback: () => {
         setShowPageNumbers(!showPageNumbers);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "export.showCustomNotes",
+      }),
+      id: "customNotes",
+      checked: showCustomNotes,
+      callback: () => {
+        setShowCustomNotes(!showCustomNotes);
       },
     },
     {
@@ -171,6 +182,16 @@ export const Print = () => {
                     ]}
                   />
                 ))}
+              {showCustomNotes && unit.customNote && (
+                <p className="print__custom-note">
+                  <i>
+                    <b>
+                      <FormattedMessage id="unit.customNote" />:
+                    </b>{" "}
+                    {unit.customNote}
+                  </i>
+                </p>
+              )}
             </li>
           );
         })}
