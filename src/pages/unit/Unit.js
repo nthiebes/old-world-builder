@@ -1309,36 +1309,47 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.lore" />
             </h2>
-            {unit.lores.map((lore) => (
-              <div className="radio" key={lore}>
-                <input
-                  type="radio"
-                  id={`lore-${lore}`}
-                  name="lores"
-                  value={lore}
-                  onChange={() => handleLoresChange(lore)}
-                  checked={(unit.activeLore || unit.lores[0]) === lore}
-                  className="radio__input"
-                />
-                <label htmlFor={`lore-${lore}`} className="radio__label">
-                  {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
-                  {rulesMap[normalizeRuleName(nameMap[lore].name_en)] ? (
-                    <Button
-                      type="text"
-                      className="unit__rules"
-                      color="dark"
-                      label={intl.formatMessage({ id: "misc.showRules" })}
-                      icon="preview"
-                      onClick={() =>
-                        handleRulesClick({
-                          name: nameMap[lore].name_en,
-                        })
-                      }
-                    />
-                  ) : null}
-                </label>
-              </div>
-            ))}
+            {unit.lores
+              .filter((lore, index) => {
+                if (
+                  lore === "troll-magic" &&
+                  list.armyComposition !== "troll-horde" &&
+                  index !== 0
+                ) {
+                  return false;
+                }
+                return true;
+              })
+              .map((lore) => (
+                <div className="radio" key={lore}>
+                  <input
+                    type="radio"
+                    id={`lore-${lore}`}
+                    name="lores"
+                    value={lore}
+                    onChange={() => handleLoresChange(lore)}
+                    checked={(unit.activeLore || unit.lores[0]) === lore}
+                    className="radio__input"
+                  />
+                  <label htmlFor={`lore-${lore}`} className="radio__label">
+                    {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
+                    {rulesMap[normalizeRuleName(nameMap[lore].name_en)] ? (
+                      <Button
+                        type="text"
+                        className="unit__rules"
+                        color="dark"
+                        label={intl.formatMessage({ id: "misc.showRules" })}
+                        icon="preview"
+                        onClick={() =>
+                          handleRulesClick({
+                            name: nameMap[lore].name_en,
+                          })
+                        }
+                      />
+                    ) : null}
+                  </label>
+                </div>
+              ))}
           </>
         ) : null}
         {unit.items && unit.items.length ? (
