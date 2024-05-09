@@ -33,6 +33,7 @@ import bretonnia from "../../assets/army-icons/bretonnia.svg";
 import forg3dBanner from "../../assets/forg3d.jpg";
 import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
 import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
+import mwgForge from "../../assets/mwg-forge.gif";
 import { swap } from "../../utils/collection";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
@@ -215,7 +216,19 @@ export const Home = ({ isMobile }) => {
             />
           </a>
         ) : (
-          <></>
+          <a
+            className="home__banner-link"
+            href="https://miniwargamingforge.com?sca_ref=6115787.XxehNS6tUCHiFExD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={mwgForge}
+              className="home__banner-image"
+              alt={intl.formatMessage({ id: "home.mwgForge" })}
+              loading="lazy"
+            />
+          </a>
         )}
       </MainComponent>
     </>
