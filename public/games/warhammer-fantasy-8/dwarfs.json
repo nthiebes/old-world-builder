@@ -1,0 +1,769 @@
+{
+  "lords": [
+    {
+      "id": "thorgrim",
+      "name_de": "Thorgrim Grollbart",
+      "name_en": "Thorgrim Grudgebearer",
+      "points": 650,
+      "named": true
+    },
+    {
+      "id": "thorek",
+      "name_de": "Thorek Eisenstirn",
+      "name_en": "Thorek Ironbrow",
+      "points": 435,
+      "named": true
+    },
+    {
+      "id": "ungrim",
+      "name_de": "Ungrim Eisenfaust",
+      "name_en": "Ungrim Ironfist",
+      "points": 350,
+      "named": true
+    },
+    {
+      "id": "belegar",
+      "name_de": "Belegar Eisenhammer",
+      "name_en": "Belegar Ironhammer",
+      "points": 305,
+      "named": true
+    },
+    {
+      "id": "lord",
+      "name_de": "König",
+      "name_en": "Lord",
+      "points": 145,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenarmbrust",
+          "name_en": "Dwarf crossbow",
+          "points": 12
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Eidstein",
+          "name_en": "Oath Stone",
+          "points": 25
+        },
+        {
+          "name_de": "Schildträger",
+          "name_en": "Shieldbearers",
+          "points": 40
+        }
+      ],
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 125
+      }
+    },
+    {
+      "id": "runelord",
+      "name_de": "Runenmeister",
+      "name_en": "Runelord",
+      "points": 120,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Runenamboss",
+          "name_en": "Anvil of Doom",
+          "points": 170
+        }
+      ],
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 150
+      }
+    },
+    {
+      "id": "deamonslayer",
+      "name_de": "Dämonenslayer",
+      "name_en": "Daemon Slayer",
+      "points": 140,
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 100
+      }
+    }
+  ],
+  "heroes": [
+    {
+      "id": "josef",
+      "name_de": "Josef Bugman",
+      "name_en": "Josef Bugman",
+      "named": true,
+      "points": 165
+    },
+    {
+      "id": "grimm",
+      "name_de": "Grimm Burloksson",
+      "name_en": "Grimm Burloksson",
+      "named": true,
+      "points": 165
+    },
+    {
+      "id": "thane",
+      "name_de": "Thain",
+      "name_en": "Thane",
+      "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenarmbrust",
+          "name_en": "Dwarf crossbow",
+          "points": 12
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        },
+        {
+          "name_de": "Armeestandartenträger",
+          "name_en": "Battle standard bearer",
+          "points": 25
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Eidstein",
+          "name_en": "Oath Stone",
+          "points": 25
+        }
+      ],
+      "magic": {
+        "types": [
+          "weapon-runes",
+          "armor-runes",
+          "banner-runes",
+          "talismanic-runes"
+        ],
+        "maxPoints": 75
+      }
+    },
+    {
+      "id": "runesmith",
+      "name_de": "Runenschmied",
+      "name_en": "Runesmith",
+      "points": 60,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schild",
+          "name_en": "Shield",
+          "points": 3
+        }
+      ],
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 75
+      }
+    },
+    {
+      "id": "engineer",
+      "name_de": "Meistermaschinist",
+      "name_en": "Master Engineer",
+      "points": 70,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zwergenpistole",
+          "name_en": "Dwarf pistol",
+          "points": 6
+        },
+        {
+          "name_de": "Pistolenpaar (zwei Zwergenpistolen)",
+          "name_en": "Brace of Dwarf pistols",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zwergenmuskete",
+          "name_en": "Dwarf handgun",
+          "points": 12
+        }
+      ],
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "dragonslayer",
+      "name_de": "Drachenslayer",
+      "name_en": "Dragon Slayer",
+      "points": 70,
+      "magic": {
+        "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+        "maxPoints": 75
+      }
+    }
+  ],
+  "core": [
+    {
+      "id": "warriors",
+      "name_de": "Klankrieger",
+      "name_en": "Dwarf Warriors",
+      "points": 8,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "quarrellers",
+      "name_de": "Armbrustschützen",
+      "name_en": "Quarrellers",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "thunderers",
+      "name_de": "Musketenschützen",
+      "name_en": "Thunderers",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zwei Zwergenpistolen für den Veteran",
+          "name_en": "Brace of Dwarf pistols for Veteran",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "longbeards",
+      "name_de": "Langbärte",
+      "name_en": "Longbeards",
+      "points": 12,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Veteran",
+          "name_en": "Old Guard",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_de": "Zweihandwaffen",
+          "name_en": "Great weapons",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    }
+  ],
+  "special": [
+    {
+      "id": "hammerers",
+      "name_de": "Hammerträger",
+      "name_en": "Hammerers",
+      "points": 14,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Hüter des Tores",
+          "name_en": "Keeper of the Gate",
+          "points": 10,
+          "magic": {
+            "types": ["weapon-runes"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 75
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "ironbreakers",
+      "name_de": "Eisenbrecher",
+      "name_en": "Ironbreakers",
+      "points": 14,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Eisenbart",
+          "name_en": "Ironbeard",
+          "points": 10
+        },
+        {
+          "name_de": "Eisenbart, Brace of drakefire pistols",
+          "name_en": "Ironbeard, Brace of drakefire pistols",
+          "points": 10
+        },
+        {
+          "name_de": "Eisenbart, Cinderblast bombs",
+          "name_en": "Ironbeard, Cinderblast bombs",
+          "points": 25
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "miners",
+      "name_de": "Bergwerker",
+      "name_en": "Miners",
+      "points": 10,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Prospektor",
+          "name_en": "Prospector",
+          "points": 10
+        },
+        {
+          "name_de": "Prospektor, Dampfhammer",
+          "name_en": "Prospector, Steam drill",
+          "points": 35
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Sprengladungen",
+          "name_en": "Blasting charges",
+          "points": 2,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "slayers",
+      "name_de": "Slayers",
+      "name_en": "Slayers",
+      "points": 11,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Riesenslayer",
+          "name_en": "Giant Slayers",
+          "points": 12,
+          "perModel": true,
+          "stackable": true
+        }
+      ]
+    },
+    {
+      "id": "cannon",
+      "name_de": "Kanone",
+      "name_en": "Cannon",
+      "points": 120,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "gyro",
+      "name_de": "Gyrokopter",
+      "name_en": "Gyrocopter",
+      "points": 80,
+      "options": [
+        {
+          "name_de": "Brimstone gun",
+          "name_en": "Brimstone gun",
+          "points": 0
+        },
+        {
+          "name_de": "Vorhut",
+          "name_en": "Vanguard deployment",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "boltthrower",
+      "name_de": "Speerschleuder",
+      "name_en": "Bolt Thrower",
+      "points": 55,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    },
+    {
+      "id": "grudgethrower",
+      "name_de": "Grollschleuder",
+      "name_en": "Grudge Thrower",
+      "points": 80,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 100
+      }
+    }
+  ],
+  "rare": [
+    {
+      "id": "organgun",
+      "name_de": "Orgelkanone",
+      "name_en": "Organ Gun",
+      "points": 120,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "flamecanon",
+      "name_de": "Flammenkanone",
+      "name_en": "Flame Cannon",
+      "points": 140,
+      "magic": {
+        "types": ["engineering-runes"],
+        "maxPoints": 50
+      }
+    },
+    {
+      "id": "rangers",
+      "name_de": "Grenzläufer",
+      "name_en": "Rangers",
+      "points": 14,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Ol' Deadeye",
+          "name_en": "Ol' Deadeye",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "options": [
+        {
+          "name_de": "Schilde",
+          "name_en": "Shields",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "irondrakes",
+      "name_de": "Irondrakes",
+      "name_en": "Irondrakes",
+      "points": 15,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Ironwarden",
+          "name_en": "Ironwarden",
+          "points": 10
+        },
+        {
+          "name_de": "Ironwarden, Cinderblast bombs",
+          "name_en": "Ironwarden, Cinderblast bombs",
+          "points": 25
+        },
+        {
+          "name_de": "Ironwarden, Brace of drakefire pistols",
+          "name_en": "Ironwarden, Brace of drakefire pistols",
+          "points": 10
+        },
+        {
+          "name_de": "Ironwarden, Trollhammer torpedo",
+          "name_en": "Ironwarden, Trollhammer torpedo",
+          "points": 30
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "gyrobomber",
+      "name_de": "Gyrobomber",
+      "name_en": "Gyrobomber",
+      "points": 125
+    }
+  ]
+}

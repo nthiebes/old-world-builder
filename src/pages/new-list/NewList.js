@@ -11,7 +11,8 @@ import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../assets/armies.json";
 import { setLists } from "../../state/lists";
-import warhammerFantasy from "../../assets/warhammer-fantasy.png";
+import warhammerFantasySix from "../../assets/warhammer-fantasy-6.png";
+import warhammerFantasyEight from "../../assets/warhammer-fantasy-8.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
 
 import "./NewList.css";
@@ -42,7 +43,20 @@ export const NewList = ({ isMobile }) => {
   const createList = () => {
     const newId = getRandomId();
     const newList = {
-      "warhammer-fantasy": {
+      "warhammer-fantasy-8": {
+        name: name || nameMap[army][language] || nameMap[army].name_en,
+        description: description,
+        game: game,
+        points: points,
+        army: army,
+        lords: [],
+        heroes: [],
+        core: [],
+        special: [],
+        rare: [],
+        id: newId,
+      },
+      "warhammer-fantasy-6": {
         name: name || nameMap[army][language] || nameMap[army].name_en,
         description: description,
         game: game,
@@ -141,14 +155,22 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "warhammer-fantasy"}
+                //disabled={id === "warhammer-fantasy"}
               />
               <label htmlFor={id} className="radio__label">
-                {id === "warhammer-fantasy" && (
+                {id === "warhammer-fantasy-8" && (
                   <>
-                    <img height="20" src={warhammerFantasy} alt={name} />
+                    <img height="20" src={warhammerFantasyEight} alt={name} />
                     <p className="new-list__beta">
                       <FormattedMessage id="new.8th" />
+                    </p>
+                  </>
+                )}
+                {id === "warhammer-fantasy-6" && (
+                  <>
+                    <img height="20" src={warhammerFantasySix} alt={name} />
+                    <p className="new-list__beta">
+                      <FormattedMessage id="new.6th" />
                     </p>
                   </>
                 )}

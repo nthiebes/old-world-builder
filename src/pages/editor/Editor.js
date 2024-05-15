@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
+import { getMaxPercentData, getMinPercentData, getSlots } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -84,6 +84,7 @@ export const Editor = ({ isMobile }) => {
     }
   }
 
+  const gameMode = list.game;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -93,6 +94,8 @@ export const Editor = ({ isMobile }) => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+  // Split out defintion to separate files and load only those required
+  // for the the list
   const lordsData =
     list.lords &&
     getMaxPercentData({
@@ -150,6 +153,30 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points,
       points: alliesPoints,
       armyComposition: list.armyComposition,
+    });
+  const sixthLordData =
+    list.lords &&
+    getSlots({
+      type: "lords",
+      armyPoints: list.points
+    });
+  const sixthHeroesData =
+    list.heroes &&
+    getSlots({
+      type: "heroes",
+      armyPoints: list.points
+    });
+  const sixthCoreData = getSlots({
+      type: "core",
+      armyPoints: list.points
+    });
+  const sixthSpecialData = getSlots({
+      type: "special",
+      armyPoints: list.points
+    });
+  const sixthRareData = getSlots({
+      type: "rare",
+      armyPoints: list.points
     });
   const moreButtons = [
     {
@@ -299,16 +326,32 @@ export const Editor = ({ isMobile }) => {
                 <FormattedMessage id="editor.lords" />
               </h2>
               <p className="editor__points">
-                {lordsData.diff > 0 ? (
+                {lordsData.diff > 0 || sixthLordData.diff > 0 ? (
                   <>
-                    <strong>{lordsData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
+                    <strong>{
+                      gameMode === "warhammer-fantasy-6"
+                        ? sixthLordData.diff
+                        : lordsData.diff
+                    }</strong>
+                    <FormattedMessage id={
+                      gameMode === "warhammer-fantasy-6"
+                        ? "editor.tooManySlots"
+                        : "editor.tooManyPoints"
+                    }/>
                     <Icon symbol="error" color="red" />
                   </>
                 ) : (
                   <>
-                    <strong>{lordsData.points - lordsPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
+                    <strong>{
+                      gameMode === "warhammer-fantasy-6"
+                        ? sixthLordData.maxSlots
+                        : lordsData.points - lordsPoints
+                    }</strong>
+                    <FormattedMessage id={
+                      gameMode === "warhammer-fantasy-6"
+                        ? "editor.availableSlots"
+                        : "editor.availablePoints"
+                    }/>
                     <Icon symbol="check" />
                   </>
                 )}
@@ -340,16 +383,32 @@ export const Editor = ({ isMobile }) => {
                 <FormattedMessage id="editor.heroes" />
               </h2>
               <p className="editor__points">
-                {heroesData.diff > 0 ? (
+                {heroesData.diff > 0 || sixthHeroesData.diff > 0 ? (
                   <>
-                    <strong>{heroesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
+                    <strong>{
+                      gameMode === "warhammer-fantasy-6"
+                        ? sixthHeroesData.diff
+                        : lordsData.diff
+                    }</strong>
+                    <FormattedMessage id={
+                      gameMode === "warhammer-fantasy-6"
+                        ? "editor.tooManySlots"
+                        : "editor.tooManyPoints"
+                    }/>
                     <Icon symbol="error" color="red" />
                   </>
                 ) : (
                   <>
-                    <strong>{heroesData.points - heroesPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
+                    <strong>{
+                      gameMode === "warhammer-fantasy-6"
+                        ? sixthHeroesData.maxSlots
+                        : heroesData.points - heroesPoints
+                    }</strong>
+                    <FormattedMessage id={
+                      gameMode === "warhammer-fantasy-6"
+                        ? "editor.availableSlots"
+                        : "editor.availablePoints"
+                    } />
                     <Icon symbol="check" />
                   </>
                 )}
@@ -421,10 +480,18 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.core" />
             </h2>
             <p className="editor__points">
-              {coreData.diff > 0 ? (
+              {coreData.diff > 0 || sixthCoreData.minSlots < sixthCoreData.diff ? (
                 <>
-                  <strong>{coreData.diff}</strong>
-                  <FormattedMessage id="editor.missingPoints" />
+                  <strong>{
+                    gameMode === "warhammer-fantasy-6"
+                      ? sixthCoreData.minSlots
+                      : coreData.diff
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.tooFewSlots"
+                      : "editor.tooManyPoints"
+                  }/>
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
@@ -457,16 +524,32 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.special" />
             </h2>
             <p className="editor__points">
-              {specialData.diff > 0 ? (
+              {specialData.diff > 0 || sixthSpecialData.diff > 0 ? (
                 <>
-                  <strong>{specialData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
+                  <strong>{
+                    gameMode === "warhammer-fantasy-6"
+                      ? sixthSpecialData.diff
+                      : specialData.diff
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.tooManySlots"
+                      : "editor.tooManyPoints"
+                  }/>
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{specialData.points - specialPoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
+                  <strong>{
+                    gameMode === "warhammer-fantasy-6"
+                      ? sixthSpecialData.maxSlots
+                      : specialData.points - specialPoints
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.availableSlots"
+                      : "editor.availablePoints"
+                  }/>
                   <Icon symbol="check" />
                 </>
               )}
@@ -496,16 +579,32 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.rare" />
             </h2>
             <p className="editor__points">
-              {rareData.diff > 0 ? (
+              {rareData.diff > 0 || sixthRareData.diff > 0 ? (
                 <>
-                  <strong>{rareData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
+                  <strong>{
+                    gameMode === "warhammer-fantasy-6"
+                      ? sixthRareData.diff
+                      : rareData.diff
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.tooManySlots"
+                      : "editor.tooManyPoints"
+                  }/>
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{rareData.points - rarePoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
+                  <strong>{
+                      gameMode === "warhammer-fantasy-6"
+                        ? sixthRareData.maxSlots
+                        : rareData.points - rarePoints
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.availableSlots"
+                      : "editor.availablePoints"
+                  }/>
                   <Icon symbol="check" />
                 </>
               )}

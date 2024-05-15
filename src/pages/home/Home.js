@@ -12,7 +12,8 @@ import { getAllPoints } from "../../utils/points";
 import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
-import warhammerFantasy from "../../assets/warhammer-fantasy.png";
+import warhammerFantasySix from "../../assets/warhammer-fantasy-6.png";
+import warhammerFantasyEight from "../../assets/warhammer-fantasy-8.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
 import dwarfs from "../../assets/army-icons/dwarfs.svg";
@@ -84,6 +85,18 @@ export const Home = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  function getLogo({ game }) {
+    let logo;
+    if (game === "warhammer-fantasy") {
+      logo = warhammerFantasyEight;
+    } else if (game === "warhammer-fantasy-6"){
+      logo = warhammerTheOldWorld;
+    } else {
+      logo = warhammerTheOldWorld;
+    }
+    return logo
+  }
+
   return (
     <>
       <Helmet>
@@ -136,14 +149,18 @@ export const Home = ({ isMobile }) => {
                   <img
                     width="70"
                     src={
-                      game === "warhammer-fantasy"
-                        ? warhammerFantasy
-                        : warhammerTheOldWorld
+                      game === "the-old-world"
+                        ? warhammerTheOldWorld 
+                        : game === "warhammer-fantasy-8" 
+                          ? warhammerFantasyEight 
+                          : warhammerFantasySix
                     }
                     alt={
-                      game === "warhammer-fantasy"
-                        ? "Warhammer Fantasy"
-                        : "Warhammer: The Old World"
+                      game === "the-old-world"
+                        ? "Warhammer: The Old World"
+                        : game === "warhammer-fantasy-8" 
+                          ? "Warhammer Fantasy Eighth" 
+                          : "Warhammer Fantasy Sixth"
                     }
                     className="home__game"
                   />
