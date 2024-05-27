@@ -1235,9 +1235,7 @@
           "name_it": "Level 2 Wizard",
           "name_pl": "Level 2 Wizard",
           "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Level 3 Wizard",
@@ -1247,9 +1245,7 @@
           "name_it": "Level 3 Wizard",
           "name_pl": "Level 3 Wizard",
           "points": 60,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -1288,7 +1284,29 @@
           "name_fr": "Char Incendiaire de Tzeentch",
           "name_it": "Burning Chariot of Tzeentch",
           "name_pl": "Burning Chariot of Tzeentch",
-          "points": 190
+          "points": 190,
+          "options": [
+            {
+              "name_en": "Level 2 Wizard",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "items": [
@@ -1299,6 +1317,17 @@
           "name_fr": "Dons Démoniaques",
           "name_it": "Daemonic Gifts",
           "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Daemonic Gifts (Burning Chariot of Tzeentch only)",
+          "name_de": "Daemonic Gifts (Burning Chariot of Tzeentch only)",
+          "name_es": "Daemonic Gifts (Burning Chariot of Tzeentch only)",
+          "name_fr": "Dons Démoniaques (Burning Chariot of Tzeentch only)",
+          "name_it": "Daemonic Gifts (Burning Chariot of Tzeentch only)",
+          "name_pl": "Daemonic Gifts (Burning Chariot of Tzeentch only)",
           "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
           "selected": [],
           "maxPoints": 50
