@@ -335,6 +335,11 @@ export const nameMap = {
     name_en: "Chaotic Icon",
     name_fr: "Icône du Chaos",
   },
+  "daemonic-locus-icon-common": {
+    name_de: "Chaotic Icon (Locus)",
+    name_en: "Chaotic Icon (Locus)",
+    name_fr: "Icône du Chaos (Locus)",
+  },
   "daemonic-gifts-khorne": {
     name_de: "Gifts Of Khorne",
     name_en: "Gifts Of Khorne",
