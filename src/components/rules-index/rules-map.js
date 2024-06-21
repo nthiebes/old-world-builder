@@ -190,6 +190,7 @@ export const synonyms = {
   "necropolis captain": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
+  fireglaives: "fireglaive",
 };
 
 export const rulesMap = {
