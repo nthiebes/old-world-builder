@@ -23,9 +23,13 @@ export const Rename = ({ isMobile }) => {
   );
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
-  const name = unit
-    ? unit.name || unit[`name_${language}`] || unit.name_en
-    : "";
+  let name = "";
+
+  if (unit && (unit.name || unit.name === "")) {
+    name = unit.name;
+  } else if (unit) {
+    name = unit[`name_${language}`] || unit.name_en;
+  }
 
   const handleNameChange = (event) => {
     dispatch(
