@@ -315,7 +315,7 @@
       "lores": ["battle-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge",
-        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de la Gueule, Charge Ogre"
+        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
@@ -397,7 +397,7 @@
       "lores": ["battle-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge",
-        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de la Gueule, Charge Ogre"
+        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre"
       },
       "notes": {
         "name_en": "",
@@ -584,7 +584,6 @@
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
             "types": ["banner"],
@@ -686,7 +685,6 @@
       "command": [
         {
           "name_en": "Gutlord",
-          "name_fr": "Ventre de fer",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -699,7 +697,6 @@
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1207,7 +1204,6 @@
       "command": [
         {
           "name_en": "Crusher (champion)",
-          "name_fr": "Broyeur (champion)",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1220,7 +1216,6 @@
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
             "types": ["banner"],
@@ -1484,15 +1479,15 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon, Chaintrap, Horns of stone, Harpoon launcher",
-          "name_fr": "Arme de base, Croque-monsieur, Cornes de pierre, Lance-harpon",
+          "name_en": "Hand weapon, Horns of stone (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Lance-harpon (Servant), Croque-monsieur (Chevaucheur Ogre)",
           "points": 0,
           "perModel": false,
           "active": true
         },
         {
-          "name_en": "Hand weapon, Blood vulture (Ogre Beast Rider), Horns of stone, Harpoon launcher",
-          "name_fr": "Arme de base, Vautour de sang (Chevaucheur Ogre), Cornes de pierre, Lance-harpon",
+          "name_en": "Hand weapon, Horns of stone (Thundertusk), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
+          "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Lance-harpon (Servant), Vautour de sang (Chevaucheur Ogre)",
           "points": 5,
           "perModel": false
         }
@@ -1531,7 +1526,7 @@
       "name_en": "Thundertusk Riders",
       "name_de": "Thundertusk Riders",
       "name_es": "Thundertusk Riders",
-      "name_fr": "Mégastodonte Riders",
+      "name_fr": "Chevaucheurs de Mégastodonte",
       "name_it": "Thundertusk Riders",
       "id": "thundertusk-riders",
       "points": 215,
@@ -1543,13 +1538,13 @@
       "equipment": [
         {
           "name_en": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
-          "name_fr": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Souffle glacial (Mégastodonte), Lance-harpon (Servant), Croque-monsieur (Chevaucheur Ogre)",
           "points": 0,
           "active": true
         },
         {
           "name_en": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
-          "name_fr": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
+          "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Souffle glacial (Mégastodonte), Lance-harpon (Servant), Vautour de sang  (Chevaucheur Ogre)",
           "points": 5,
           "perModel": false
         }
