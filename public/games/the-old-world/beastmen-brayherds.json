@@ -22,19 +22,22 @@
           "name_de": "Hand weapon",
           "points": 0,
           "active": true,
-          "name_es": "Arma de mano"
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "name_es": "Arma de mano adicional"
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
-          "name_es": "Arma a dos manos"
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -43,19 +46,22 @@
           "name_de": "No armour",
           "points": 0,
           "active": true,
-          "name_es": "Sin armadura"
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d'Armure"
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 2,
-          "name_es": "Armadura ligera"
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 4,
-          "name_es": "Armadura pesada"
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -65,7 +71,8 @@
           "points": 2,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Escudo"
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
         },
         {
           "name_en": "Ambushers",
@@ -73,7 +80,8 @@
           "points": 10,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscada"
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [
@@ -82,37 +90,49 @@
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true,
-          "name_es": "A pie"
+          "name_es": "A pie",
+          "name_fr": "À Pied"
         },
         {
           "name_en": "Tuskgor Chariot",
           "name_de": "Tuskgor Chariot",
           "points": 85,
-          "name_es": "Carro de Tuskgors"
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Tuskgor Chariot"
         },
         {
           "name_en": "Razorgor Chariot",
           "name_de": "Razorgor Chariot",
           "points": 120,
-          "name_es": "Carro de Garragors"
+          "name_es": "Carro de Garragors",
+          "name_fr": "Razorgor Chariot"
         }
       ],
       "items": [
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
           "selected": [],
           "maxPoints": 100,
-          "name_es": "Objetos mágicos"
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Mutaciones del caos"
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -120,7 +140,7 @@
         "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -143,9 +163,12 @@
           "name_de": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
-          }
+          },
+          "name_fr": "Porteur de la Grande Bannière"
         }
       ],
       "equipment": [
@@ -154,19 +177,22 @@
           "name_de": "Hand weapon",
           "points": 0,
           "active": true,
-          "name_es": "Arma de mano"
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
           "points": 3,
-          "name_es": "Arma de mano adicional"
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
           "points": 4,
-          "name_es": "Arma a dos manos"
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -175,19 +201,22 @@
           "name_de": "No armour",
           "points": 0,
           "active": true,
-          "name_es": "Sin armadura"
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d'Armure"
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 2,
-          "name_es": "Armadura ligera"
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 4,
-          "name_es": "Armadura pesada"
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -197,7 +226,8 @@
           "points": 2,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Escudo"
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
         },
         {
           "name_en": "Ambushers",
@@ -205,7 +235,8 @@
           "points": 10,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Esboscada"
+          "name_es": "Esboscada",
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [
@@ -214,37 +245,49 @@
           "name_de": "On foot",
           "points": 0,
           "active": true,
-          "name_es": "A pie"
+          "name_es": "A pie",
+          "name_fr": "À Pied"
         },
         {
           "name_en": "Tuskgor Chariot",
           "name_de": "Tuskgor Chariot",
           "points": 85,
-          "name_es": "Carro de Tuskgors"
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Tuskgor Chariot"
         },
         {
           "name_en": "Razorgor Chariot",
           "name_de": "Razorgor Chariot",
           "points": 120,
-          "name_es": "Carro de Garragors"
+          "name_es": "Carro de Garragors",
+          "name_fr": "Razorgor Chariot"
         }
       ],
       "items": [
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Objetos mágicos"
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Mutaciones del caos"
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -252,7 +295,7 @@
         "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -277,7 +320,8 @@
           "name_de": "Braystaff",
           "points": 0,
           "active": true,
-          "name_es": "Cayado de la manada"
+          "name_es": "Cayado de la manada",
+          "name_fr": "Braystaff"
         }
       ],
       "armor": [],
@@ -288,7 +332,8 @@
           "points": 10,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscada"
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
         },
         {
           "name_en": "Level 4 Wizard",
@@ -296,7 +341,8 @@
           "points": 30,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Hechicero de nivel 4"
+          "name_es": "Hechicero de nivel 4",
+          "name_fr": "Sorcier de Niveau 4"
         }
       ],
       "mounts": [
@@ -305,19 +351,22 @@
           "name_de": "On foot",
           "points": 0,
           "active": true,
-          "name_es": "A pie"
+          "name_es": "A pie",
+          "name_fr": "À Pied"
         },
         {
           "name_en": "Tuskgor Chariot",
           "name_de": "Tuskgor Chariot",
           "points": 85,
-          "name_es": "Carro de Tuskgors"
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Tuskgor Chariot"
         },
         {
           "name_en": "Razorgor Chariot",
           "name_de": "Razorgor Chariot",
           "points": 120,
-          "name_es": "Carro de Garragors"
+          "name_es": "Carro de Garragors",
+          "name_fr": "Razorgor Chariot"
         }
       ],
       "items": [
@@ -333,23 +382,31 @@
           ],
           "selected": [],
           "maxPoints": 100,
-          "name_es": "Objetos mágicos"
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Mutaciones del caos"
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Chaos Mutations"
         }
       ],
-      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism"
+      ],
       "specialRules": {
         "name_en": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -374,7 +431,8 @@
           "name_de": "Braystaff",
           "points": 0,
           "active": true,
-          "name_es": "Cayado de la manada"
+          "name_es": "Cayado de la manada",
+          "name_fr": "Braystaff"
         }
       ],
       "armor": [],
@@ -385,7 +443,8 @@
           "points": 10,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Emboscada"
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
         },
         {
           "name_en": "Level 2 Wizard",
@@ -393,7 +452,8 @@
           "points": 30,
           "minimum": 0,
           "maximum": 0,
-          "name_es": "Hechicero nivel 2"
+          "name_es": "Hechicero nivel 2",
+          "name_fr": "Sorcier de Niveau 2"
         }
       ],
       "mounts": [
@@ -402,19 +462,22 @@
           "name_de": "On foot",
           "points": 0,
           "active": true,
-          "name_es": "A pie"
+          "name_es": "A pie",
+          "name_fr": "À Pied"
         },
         {
           "name_en": "Tuskgor Chariot",
           "name_de": "Tuskgor Chariot",
           "points": 85,
-          "name_es": "Carro de Tuskgors"
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Tuskgor Chariot"
         },
         {
           "name_en": "Razorgor Chariot",
           "name_de": "Razorgor Chariot",
           "points": 120,
-          "name_es": "Carro de Garragors"
+          "name_es": "Carro de Garragors",
+          "name_fr": "Razorgor Chariot"
         }
       ],
       "items": [
@@ -430,23 +493,31 @@
           ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Objetos mágicos"
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 50,
-          "name_es": "Mutaciones del caos"
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Chaos Mutations"
         }
       ],
-      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism"
+      ],
       "specialRules": {
         "name_en": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -470,17 +541,20 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
-          "points": 3
+          "points": 3,
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
-          "points": 4
+          "points": 4,
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -488,17 +562,20 @@
           "name_en": "No armour",
           "name_de": "No armour",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Pas d'Armure"
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
-          "points": 3
+          "points": 3,
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
-          "points": 6
+          "points": 6,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -507,7 +584,8 @@
           "name_de": "Shield",
           "points": 5,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Bouclier"
         }
       ],
       "mounts": [],
@@ -515,16 +593,25 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -532,7 +619,7 @@
         "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Blood Greed, Blood Rage, Bull-gors, Peur, Foe Render, Gaze of the Gods, Touches d'Impact (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Bande de Guerre"
       }
     },
     {
@@ -556,17 +643,20 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
-          "points": 3
+          "points": 3,
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
-          "points": 4
+          "points": 4,
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -574,17 +664,20 @@
           "name_en": "No armour",
           "name_de": "No armour",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Pas d'Armure"
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
-          "points": 3
+          "points": 3,
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
-          "points": 6
+          "points": 6,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -593,7 +686,8 @@
           "name_de": "Shield",
           "points": 5,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Bouclier"
         }
       ],
       "mounts": [],
@@ -601,16 +695,25 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -618,7 +721,7 @@
         "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Blood Greed, Blood Rage, Bull-gors, Peur, Foe Render, Gaze of the Gods, Touches d'Impact (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Bande de Guerre"
       }
     },
     {
@@ -642,17 +745,20 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Cavalry spear",
           "name_de": "Cavalry spear",
-          "points": 2
+          "points": 2,
+          "name_fr": "Lance de Cavalerie"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
-          "points": 4
+          "points": 4,
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -660,17 +766,20 @@
           "name_en": "No armour",
           "name_de": "No armour",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Pas d'Armure"
         },
         {
           "name_en": "Light armour",
           "name_de": "Light armour",
-          "points": 2
+          "points": 2,
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
-          "points": 4
+          "points": 4,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -679,21 +788,24 @@
           "name_de": "Throwing axes, Javelins",
           "points": 2,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Haches de lancer, Javelines"
         },
         {
           "name_en": "Shield",
           "name_de": "Shield",
           "points": 2,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Bouclier"
         },
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -701,16 +813,25 @@
         {
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -718,7 +839,7 @@
         "name_en": "Drunken, Fast Cavalry, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover, Primal Fury, Stomp Attacks (1), Swiftstride, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Drunken, Cavalerie Rapide, Gaze of the Gods, Mark of Chaos Undivided, Mouvement à Couvert, Primal Fury, Attaques de Piétinement (1), Rapide, Bande de Guerre"
       }
     }
   ],
@@ -758,25 +879,31 @@
             {
               "name_en": "Great weapon",
               "name_de": "Great weapon",
-              "points": 0
+              "points": 0,
+              "name_fr": "Arme lourde"
             }
-          ]
+          ],
+          "name_fr": "Gouge-horn"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           },
-          "name_es": "Portaesdantarte"
+          "name_es": "Portaesdantarte",
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
           "points": 6,
-          "name_es": "Músico"
+          "name_es": "Músico",
+          "name_fr": "Musicien"
         }
       ],
       "armor": [
@@ -786,7 +913,8 @@
           "points": 0,
           "perModel": true,
           "active": true,
-          "name_es": "Armadura pesada"
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -797,7 +925,8 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Tozudo"
+          "name_es": "Tozudo",
+          "name_fr": "Obstiné"
         },
         {
           "name_en": "Veteran",
@@ -806,7 +935,8 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Veterano"
+          "name_es": "Veterano",
+          "name_fr": "Vétérans"
         }
       ],
       "mounts": [],
@@ -816,7 +946,7 @@
         "name_en": "Blood Rage, Close Order, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Rage, Ordre Serré, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -834,7 +964,12 @@
           "name_de": "True-horn",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           },
           "name_es": "Desgarrador",
@@ -842,25 +977,31 @@
             {
               "name_en": "Great weapon",
               "name_de": "Great weapon",
-              "points": 0
+              "points": 0,
+              "name_fr": "Arme lourde"
             }
-          ]
+          ],
+          "name_fr": "True-horn"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           },
-          "name_es": "Portaestandarte"
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
           "points": 5,
-          "name_es": "Músico"
+          "name_es": "Músico",
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -871,21 +1012,24 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true,
-          "name_es": "Escudos"
+          "name_es": "Escudos",
+          "name_fr": "Armes de base"
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 0,
           "perModel": true,
-          "name_es": "Arma de mano adicional"
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Armes de base additionnelles"
         },
         {
           "name_en": "Shields",
           "name_de": "Shields",
           "points": 0,
           "perModel": true,
-          "name_es": "Escudos"
+          "name_es": "Escudos",
+          "name_fr": "Boucliers"
         }
       ],
       "armor": [],
@@ -897,7 +1041,8 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Emboscada"
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -907,7 +1052,7 @@
         "name_en": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Mouvement à Couvert, Ordre Dispersé, Primal Fury, Tirailleurs, Bande de Guerre"
       }
     },
     {
@@ -924,19 +1069,22 @@
           "name_en": "Half-horn",
           "name_de": "Half-horn",
           "name_es": "Mediocuerno",
-          "points": 7
+          "points": 7,
+          "name_fr": "Half-horn"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "name_es": "Portaestandarte",
-          "points": 5
+          "points": 5,
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
           "name_es": "Músico",
-          "points": 5
+          "points": 5,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -946,28 +1094,32 @@
           "points": 0,
           "perModel": true,
           "active": true,
-          "name_es": "Arma de mano y escudo"
+          "name_es": "Arma de mano y escudo",
+          "name_fr": "Armes de base, Bouclier"
         },
         {
           "name_en": "Thrusting spears, Shield",
           "name_de": "Thrusting spears, Shield",
           "points": 1,
           "perModel": true,
-          "name_es": "Lanzas"
+          "name_es": "Lanzas",
+          "name_fr": "Lances d'Infanterie, Bouclier"
         },
         {
           "name_en": "Throwing spears, Shield",
           "name_de": "Throwing spears, Shield",
           "points": 1,
           "perModel": true,
-          "name_es": "Lanzas arrojadizas"
+          "name_es": "Lanzas arrojadizas",
+          "name_fr": "Throwing spears, Bouclier"
         },
         {
           "name_en": "Shortbows",
           "name_de": "Shortbows",
           "points": 0,
           "perModel": true,
-          "name_es": "Cambiar escudos por arcos cortos"
+          "name_es": "Cambiar escudos por arcos cortos",
+          "name_fr": "Arcs Courts"
         }
       ],
       "armor": [],
@@ -979,7 +1131,8 @@
           "minimum": 0,
           "maximum": 0,
           "perModel": true,
-          "name_es": "Emboscada"
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -989,7 +1142,7 @@
         "name_en": "Chariot Runners, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Escorteurs de Chars, Horde, Mark of Chaos Undivided, Mouvement à Couvert, Ordre Dispersé, Primal Fury, Tirailleurs, Bande de Guerre"
       }
     },
     {
@@ -1007,7 +1160,7 @@
           "name_en": "Hand weapons (Claws and Fangs)",
           "name_de": "Hand weapons (Claws and Fangs)",
           "name_es": "Hand weapons (Claws and Fangs)",
-          "name_fr": "Hand weapons (Claws and Fangs)",
+          "name_fr": "Armes de base (Claws and Fangs)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1021,7 +1174,8 @@
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Armoured hide"
         },
         {
           "name_en": "Poisoned attacks",
@@ -1029,14 +1183,16 @@
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Attaques Empoisonnées"
         },
         {
           "name_en": "Vanguard",
           "name_de": "Vanguard",
           "points": 5,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Avant-garde"
         }
       ],
       "mounts": [],
@@ -1046,7 +1202,7 @@
         "name_en": "Loner, Move Through Cover, Open Order, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Solitaire, Mouvement à Couvert, Ordre Dispersé, Rapide"
       }
     },
     {
@@ -1065,7 +1221,8 @@
           "name_de": "Hand weapons (tusks)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base (tusks)"
         }
       ],
       "armor": [
@@ -1074,7 +1231,8 @@
           "name_de": "Light armour (calloused hide)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -1085,7 +1243,7 @@
         "name_en": "Armour Bane (1), Fear, Foe Render, Impact Hits (D3), Loner, Open Order, Primal Fury, Razor Tusks, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Peur, Foe Render, Touches d'Impact (D3), Solitaire, Ordre Dispersé, Primal Fury, Razor Tusks, Rapide"
       }
     },
     {
@@ -1101,19 +1259,22 @@
           "name_en": "Bestigor Crew x 1 - Hand weapons, Great weaponss",
           "name_de": "Bestigor Crew x 1 - Hand weapons, Great weaponss",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Bestigor Crew x 1 - Hand weapons, Great weaponss"
         },
         {
           "name_en": "Gor Crew x 1 - Hand weapon and cavalry spear",
           "name_de": "Gor Crew x 1 - Hand weapon and cavalry spear",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Gor Crew x 1 - Hand weapon and cavalry spear"
         },
         {
           "name_en": "Tuskgor x 2 - Hand weapon (tusks)",
           "name_de": "Tuskgor x 2 - Hand weapon (tusks)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Tuskgor x 2 - Hand weapon (tusks)"
         }
       ],
       "armor": [],
@@ -1125,7 +1286,7 @@
         "name_en": "Close Order, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided, Primal Fury, Razor Tusks, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Première Charge, Touches d'Impact (D6+1), Mark of Chaos Undivided, Primal Fury, Razor Tusks, Bande de Guerre"
       }
     },
     {
@@ -1149,23 +1310,33 @@
           "name_de": "Bloodkine",
           "points": 6,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon"
+            ],
             "maxPoints": 25
-          }
+          },
+          "name_fr": "Bloodkine"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
-          }
+          },
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6
+          "points": 6,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -1174,7 +1345,8 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         }
       ],
       "armor": [
@@ -1183,7 +1355,8 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère"
         }
       ],
       "options": [
@@ -1193,7 +1366,8 @@
           "points": 3,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
@@ -1201,7 +1375,8 @@
           "points": 4,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Arme lourde"
         },
         {
           "name_en": "Shield",
@@ -1209,7 +1384,8 @@
           "points": 2,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Bouclier"
         },
         {
           "name_en": "Ambushers",
@@ -1217,7 +1393,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -1226,8 +1403,11 @@
           "name_en": "Chaos Mutations (Bloodkine)",
           "name_de": "Chaos Mutations (Bloodkine)",
           "points": 0,
-          "types": ["chaos-mutation"],
-          "maxPoints": 25
+          "types": [
+            "chaos-mutation"
+          ],
+          "maxPoints": 25,
+          "name_fr": "Chaos Mutations (Bloodkine)"
         }
       ],
       "lores": [],
@@ -1235,7 +1415,7 @@
         "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Greed, Blood Rage, Bull-gors, Ordre Serré, Peur, Foe Render, Touches d'Impact (1), Mark of Chaos Undivided, Bande Hétéroclite, Primal Fury, Bande de Guerre"
       }
     }
   ],
@@ -1263,21 +1443,26 @@
               "chaos-mutation"
             ],
             "maxPoints": 50
-          }
+          },
+          "name_fr": "Gouge-horn"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
-          }
+          },
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6
+          "points": 6,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -1286,7 +1471,8 @@
           "name_de": "Hand weapons, Great weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base, Armes lourdes"
         }
       ],
       "armor": [
@@ -1295,7 +1481,8 @@
           "name_de": "Heavy armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -1305,7 +1492,8 @@
           "points": 1,
           "minimum": 0,
           "maximum": 0,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Obstiné"
         },
         {
           "name_en": "Veteran",
@@ -1313,7 +1501,8 @@
           "points": 1,
           "minimum": 0,
           "maximum": 0,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Vétérans"
         }
       ],
       "mounts": [],
@@ -1323,7 +1512,7 @@
         "name_en": "Blood Rage, Close Order, Mark of Chaos Undivided, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Rage, Ordre Serré, Mark of Chaos Undivided, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -1342,7 +1531,8 @@
           "name_de": "Hand weapons (claws)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base (claws)"
         }
       ],
       "armor": [],
@@ -1354,7 +1544,7 @@
         "name_en": "Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Vol (10), Mouvement à Couvert, Éclaireurs, Tirailleurs, Rapide"
       }
     },
     {
@@ -1372,23 +1562,33 @@
           "name_de": "Bloodkine",
           "points": 6,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon"
+            ],
             "maxPoints": 25
-          }
+          },
+          "name_fr": "Bloodkine"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
-          }
+          },
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6
+          "points": 6,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -1397,7 +1597,8 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         }
       ],
       "armor": [
@@ -1406,7 +1607,8 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère"
         }
       ],
       "options": [
@@ -1416,7 +1618,8 @@
           "points": 3,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
@@ -1424,7 +1627,8 @@
           "points": 4,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Arme lourde"
         },
         {
           "name_en": "Shield",
@@ -1432,7 +1636,8 @@
           "points": 2,
           "stackable": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Bouclier"
         },
         {
           "name_en": "Ambushers",
@@ -1440,7 +1645,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -1449,8 +1655,11 @@
           "name_en": "Chaos Mutations (Bloodkine)",
           "name_de": "Chaos Mutations (Bloodkine)",
           "points": 0,
-          "types": ["chaos-mutation"],
-          "maxPoints": 25
+          "types": [
+            "chaos-mutation"
+          ],
+          "maxPoints": 25,
+          "name_fr": "Chaos Mutations (Bloodkine)"
         }
       ],
       "lores": [],
@@ -1458,7 +1667,7 @@
         "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Greed, Blood Rage, Bull-gors, Ordre Serré, Peur, Foe Render, Touches d'Impact (1), Mark of Chaos Undivided, Bande Hétéroclite, Primal Fury, Bande de Guerre"
       }
     },
     {
@@ -1474,7 +1683,8 @@
           "name_en": "Hand weapons (claws), Petrifying gaze",
           "name_de": "Hand weapons (claws), Petrifying gaze",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base (claws), Petrifying gaze"
         }
       ],
       "armor": [
@@ -1482,7 +1692,8 @@
           "name_en": "Heavy armour (scaly skin)",
           "name_de": "Heavy armour (scaly skin)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure lourde (scaly skin)"
         }
       ],
       "options": [
@@ -1491,14 +1702,16 @@
           "name_de": "Acidic vomit",
           "points": 20,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Acidic vomit"
         },
         {
           "name_en": "Poisoned attacks",
           "name_de": "Poisoned attacks",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Attaques Empoisonnées"
         }
       ],
       "mounts": [],
@@ -1508,7 +1721,7 @@
         "name_en": "Close Order, Fly (10), Large Target, Stomp Attacks (1), Stony Stare, Swifstride, Terror",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Vol (10), Grande Cible, Attaques de Piétinement (1), Stony Stare, Swifstride, Terreur"
       }
     },
     {
@@ -1526,23 +1739,33 @@
           "name_de": "Gorehoof",
           "points": 8,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon"
+            ],
             "maxPoints": 25
-          }
+          },
+          "name_fr": "Gorehoof"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
-          }
+          },
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6
+          "points": 6,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -1551,25 +1774,29 @@
           "name_de": "Hand weapons, Shields",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base, Boucliers"
         },
         {
           "name_en": "Hand weapons, Cavalry spears, Shields",
           "name_de": "Hand weapons, Cavalry spears, Shields",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base, Lances de Cavalerie, Boucliers"
         },
         {
           "name_en": "Hand weapons, Throwing spears, Shields",
           "name_de": "Hand weapons, Throwing spears, Shields",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base, Throwing spears, Boucliers"
         },
         {
           "name_en": "Hand weapons, Great weapons",
           "name_de": "Hand weapons, Great weapons",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base, Armes lourdes"
         }
       ],
       "armor": [],
@@ -1578,19 +1805,22 @@
           "name_en": "Throwing axes (excludes javelins)",
           "name_de": "Throwing axes (excludes javelins)",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Haches de lancer (excludes javelins)"
         },
         {
           "name_en": "Javelins (excludes throwing axes)",
           "name_de": "Javelins (excludes throwing axes)",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Javelines (excludes throwing axes)"
         },
         {
           "name_en": "Ambushers",
           "name_de": "Ambushers",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Embusqueurs"
         }
       ],
       "mounts": [],
@@ -1600,7 +1830,7 @@
         "name_en": "Drunken, Fast Cavalry, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Stomp Attacks (1), Swiftstride, Warband",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Drunken, Cavalerie Rapide, Horde, Mark of Chaos Undivided, Mouvement à Couvert, Ordre Dispersé, Primal Fury, Tirailleurs, Attaques de Piétinement (1), Rapide, Bande de Guerre"
       }
     },
     {
@@ -1618,9 +1848,15 @@
           "name_de": "Shartak",
           "points": 7,
           "magic": {
-            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon"
+            ],
             "maxPoints": 25
-          }
+          },
+          "name_fr": "Shartak"
         }
       ],
       "equipment": [
@@ -1629,25 +1865,29 @@
           "name_de": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base additionnelles"
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes lourdes"
         },
         {
           "name_en": "Halberds",
           "name_de": "Halberds",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Hallebardes"
         }
       ],
       "armor": [
@@ -1656,13 +1896,15 @@
           "name_de": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [],
@@ -1672,8 +1914,11 @@
           "name_en": "Chaos Mutations (for Shartak)",
           "name_de": "Chaos Mutations (for Shartak)",
           "points": 0,
-          "types": ["chaos-mutation"],
-          "maxPoints": 25
+          "types": [
+            "chaos-mutation"
+          ],
+          "maxPoints": 25,
+          "name_fr": "Chaos Mutations (for Shartak)"
         }
       ],
       "lores": [],
@@ -1681,7 +1926,7 @@
         "name_en": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune to Psychology, Stomp Attacks (2), The Quickening Storm",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Peau Blindée (2), Ordre Serré, Peur, Ensorcelled Weapons, Immune to Psychology, Attaques de Piétinement (2), The Quickening Storm"
       }
     },
     {
@@ -1697,21 +1942,24 @@
           "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
           "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Bestigor Crew x 1 - Hand weapons, Armes lourdes"
         },
         {
           "name_en": "Gor Crew x 1 - Hand weapons, Cavalry spear",
           "name_de": "Gor Crew x 1 - Hand weapons, Cavalry spear",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Gor Crew x 1 - Hand weapons, Lance de Cavalerie"
         },
         {
           "name_en": "Razorgor x 1 - Hand weapon (tusks)",
           "name_de": "Razorgor x 1 - Hand weapon (tusks)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Razorgor x 1 - Hand weapon (tusks)"
         }
       ],
       "armor": [],
@@ -1723,7 +1971,7 @@
         "name_en": "Armour Bane (1 - Razorgor only), Close Order, Fear, First Charge, Foe Render (Razorgor only), Impact Hits (D6+2), Mark of Chaos Undivided, Primal Fury, Razor Tusks",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1 - Razorgor only), Ordre Serré, Peur, Première Charge, Foe Render (Razorgor only), Touches d'Impact (D6+2), Mark of Chaos Undivided, Primal Fury, Razor Tusks"
       }
     },
     {
@@ -1739,17 +1987,20 @@
         {
           "name_en": "Champion",
           "name_de": "Champion",
-          "points": 6
+          "points": 6,
+          "name_fr": "Champion"
         },
         {
           "name_en": "Standard bearer",
           "name_de": "Standard bearer",
-          "points": 6
+          "points": 6,
+          "name_fr": "Porte-étendard"
         },
         {
           "name_en": "Musician",
           "name_de": "Musician",
-          "points": 6
+          "points": 6,
+          "name_fr": "Musicien"
         }
       ],
       "equipment": [
@@ -1758,19 +2009,22 @@
           "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base"
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base additionnelles"
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes lourdes"
         }
       ],
       "armor": [
@@ -1779,7 +2033,8 @@
           "name_de": "Heavy armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [
@@ -1789,7 +2044,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Replace Undivided with Khorne (only select one)"
         },
         {
           "name_en": "*Replace Undivided with Nurgle (only select one)",
@@ -1797,7 +2053,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Replace Undivided with Nurgle (only select one)"
         },
         {
           "name_en": "*Replace Undivided with Slaanesh (only select one)",
@@ -1805,7 +2062,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Replace Undivided with Slaanesh (only select one)"
         },
         {
           "name_en": "*Replace Undivided with Tzeentch (only select one)",
@@ -1813,7 +2071,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Replace Undivided with Tzeentch (only select one)"
         }
       ],
       "mounts": [],
@@ -1823,7 +2082,7 @@
         "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mark of Chaos Undivded, Ogre Charge",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Mark of Chaos Undivded, Ogre Charge"
       }
     },
     {
@@ -1855,7 +2114,8 @@
           "name_en": "Heavy armour (scaly skin)",
           "name_de": "Heavy armour (scaly skin)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure lourde (scaly skin)"
         }
       ],
       "options": [],
@@ -1866,7 +2126,7 @@
         "name_en": "Close Order, Fly (9), Large Target, Maddening Aura, Poisoned Attacks, Spurting Bile Blood, Stomp Attacks (D3), Swiftstride, Terror",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Vol (9), Grande Cible, Maddening Aura, Attaques Empoisonnées, Spurting Bile Blood, Attaques de Piétinement (D3), Rapide, Terreur"
       }
     },
     {
@@ -1888,7 +2148,8 @@
           "name_en": "Hand weapon (claws), Hurl attack",
           "name_de": "Hand weapon (claws), Hurl attack",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base (claws), Hurl attack"
         }
       ],
       "armor": [
@@ -1896,7 +2157,8 @@
           "name_en": "Light armour (calloused hide)",
           "name_de": "Light armour (calloused hide)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -1907,7 +2169,7 @@
         "name_en": "Close Order, Ghostsight, Immune To Psychology, Large Target, Soul-eater, Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Ghostsight, Immunisé à la Psychologie, Grande Cible, Soul-eater, Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!"
       }
     },
     {
@@ -1929,7 +2191,8 @@
           "name_en": "Cleaver-limbs",
           "name_de": "Cleaver-limbs",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Cleaver-limbs"
         }
       ],
       "armor": [
@@ -1937,7 +2200,8 @@
           "name_en": "Light armour (calloused hide)",
           "name_de": "Light armour (calloused hide)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -1948,7 +2212,7 @@
         "name_en": "Blood Greed, Close Order, Frenzy, Large Target, Primal Fury, Regeneration (6+), Stomp Attacks (D3), Stubborn, Swallow Whole, Terror, Timmm-berrr!",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Greed, Ordre Serré, Frénésie, Grande Cible, Primal Fury, Régénération (6+), Attaques de Piétinement (D3), Obstiné, Swallow Whole, Terreur, Timmm-berrr!"
       }
     }
   ],
@@ -1966,17 +2230,20 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base"
         },
         {
           "name_en": "Additional hand weapon",
           "name_de": "Additional hand weapon",
-          "points": 3
+          "points": 3,
+          "name_fr": "Arme de base additionnelle"
         },
         {
           "name_en": "Great weapon",
           "name_de": "Great weapon",
-          "points": 4
+          "points": 4,
+          "name_fr": "Arme lourde"
         }
       ],
       "armor": [
@@ -1984,12 +2251,14 @@
           "name_en": "Light armour",
           "name_de": "Light armour",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère"
         },
         {
           "name_en": "Heavy armour",
           "name_de": "Heavy armour",
-          "points": 6
+          "points": 6,
+          "name_fr": "Armure lourde"
         }
       ],
       "options": [],
@@ -1999,15 +2268,24 @@
           "name_en": "Magic items",
           "name_de": "Magic items",
           "points": 0,
-          "types": ["enchanted-item", "talisman", "armor", "weapon"],
-          "maxPoints": 50
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon"
+          ],
+          "maxPoints": 50,
+          "name_fr": "Objets Magiques"
         },
         {
           "name_en": "Chaos Mutations",
           "name_de": "Chaos Mutations",
           "points": 0,
-          "types": ["chaos-mutation"],
-          "maxPoints": 50
+          "types": [
+            "chaos-mutation"
+          ],
+          "maxPoints": 50,
+          "name_fr": "Chaos Mutations"
         }
       ],
       "lores": [],
@@ -2015,7 +2293,7 @@
         "name_en": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (2), Peau Blindée (2), Ordre Serré, Ensorcelled Weapons, Immune to Psychology, Grande Cible, Attaques de Piétinement (D3+1), Storm Call, Terreur, The Quickening Storm"
       }
     },
     {
@@ -2041,7 +2319,8 @@
           "name_en": "Heavy armour (scaly skin)",
           "name_de": "Heavy armour (scaly skin)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure lourde (scaly skin)"
         }
       ],
       "options": [],
@@ -2052,7 +2331,7 @@
         "name_en": "Close Order, Fly (9), Large Target, Maddening Aura, Poisoned Attacks, Spurting Bile Blood, Stomp Attacks (D3), Swiftstride, Terror",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Vol (9), Grande Cible, Maddening Aura, Attaques Empoisonnées, Spurting Bile Blood, Attaques de Piétinement (D3), Rapide, Terreur"
       }
     },
     {
@@ -2068,7 +2347,8 @@
           "name_en": "Hand weapon (claws), Hurl attack",
           "name_de": "Hand weapon (claws), Hurl attack",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base (claws), Hurl attack"
         }
       ],
       "armor": [
@@ -2076,7 +2356,8 @@
           "name_en": "Light armour (calloused hide)",
           "name_de": "Light armour (calloused hide)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -2087,7 +2368,7 @@
         "name_en": "Close Order, Ghostsight, Immune To Psychology, Large Target, Soul-eater, Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Ghostsight, Immunisé à la Psychologie, Grande Cible, Soul-eater, Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!"
       }
     },
     {
@@ -2103,7 +2384,8 @@
           "name_en": "Giant's club",
           "name_de": "Giant's club",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Giant's club"
         }
       ],
       "armor": [
@@ -2111,12 +2393,14 @@
           "name_en": "Light armour (calloused hide)",
           "name_de": "Light armour (calloused hide)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         },
         {
           "name_en": "Heavy armour (scaly skin)",
           "name_de": "Heavy armour (scaly skin)",
-          "points": 10
+          "points": 10,
+          "name_fr": "Armure lourde (scaly skin)"
         }
       ],
       "options": [
@@ -2125,7 +2409,8 @@
           "name_de": "Regeneration (6+)",
           "points": 20,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "Régénération (6+)"
         }
       ],
       "mounts": [],
@@ -2135,7 +2420,7 @@
         "name_en": "Close Order, Giant Attacks, Immune To Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Giant Attacks, Immunisé à la Psychologie, Grande Cible, Pick Up And..., Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
       }
     },
     {
@@ -2151,7 +2436,8 @@
           "name_en": "Cleaver-limbs",
           "name_de": "Cleaver-limbs",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Cleaver-limbs"
         }
       ],
       "armor": [
@@ -2159,7 +2445,8 @@
           "name_en": "Light armour (calloused hide)",
           "name_de": "Light armour (calloused hide)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -2170,7 +2457,7 @@
         "name_en": "Blood Greed, Close Order, Frenzy, Large Target, Primal Fury, Regeneration (6+), Stomp Attacks (D3), Stubborn, Swallow Whole, Terror, Timmm-berrr!",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Blood Greed, Ordre Serré, Frénésie, Grande Cible, Primal Fury, Régénération (6+), Attaques de Piétinement (D3), Obstiné, Swallow Whole, Terreur, Timmm-berrr!"
       }
     },
     {
@@ -2189,19 +2476,22 @@
           "name_de": "Hand weapons",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base"
         },
         {
           "name_en": "Additional hand weapons",
           "name_de": "Additional hand weapons",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes de base additionnelles"
         },
         {
           "name_en": "Great weapons",
           "name_de": "Great weapons",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_fr": "Armes lourdes"
         }
       ],
       "armor": [
@@ -2210,7 +2500,8 @@
           "name_de": "Light armour (calloused hide)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Armure légère (calloused hide)"
         }
       ],
       "options": [],
@@ -2221,7 +2512,7 @@
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
       }
     },
     {
@@ -2242,7 +2533,8 @@
           "name_de": "Hand weapon (flailing appendages)",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_fr": "Arme de base (flailing appendages)"
         }
       ],
       "armor": [
@@ -2250,7 +2542,7 @@
           "name_en": "Heavy armour (scaly skin)",
           "name_de": "Heavy armour (scaly skin)",
           "name_es": "Heavy armour (scaly skin)",
-          "name_fr": "Heavy armour (scaly skin)",
+          "name_fr": "Armure lourde (scaly skin)",
           "name_it": "Heavy armour (scaly skin)",
           "name_pl": "Heavy armour (scaly skin)",
           "points": 0,
@@ -2265,7 +2557,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Spawn of Khorne (only select one)"
         },
         {
           "name_en": "*Spawn of Nurgle (only select one)",
@@ -2273,7 +2566,8 @@
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Spawn of Nurgle (only select one)"
         },
         {
           "name_en": "*Spawn of Slaanesh (only select one)",
@@ -2281,7 +2575,8 @@
           "points": 3,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Spawn of Slaanesh (only select one)"
         },
         {
           "name_en": "*Spawn of Tzeentch (only select one)",
@@ -2289,7 +2584,8 @@
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_fr": "*Spawn of Tzeentch (only select one)"
         }
       ],
       "mounts": [],
@@ -2299,7 +2595,7 @@
         "name_en": "Armour Bane (2), Fear, Immune To Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Arme Perforante (2), Peur, Immunisé à la Psychologie, Ordre Dispersé, Attaques Aléatoires, Mouvement Aléatoire, Attaques de Piétinement (1), Indémoralisable"
       }
     }
   ],

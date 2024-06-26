@@ -21,7 +21,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -43,7 +43,7 @@
           "name_en": "Halberd",
           "name_de": "Hellebarde",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3
         }
       ],
@@ -69,7 +69,7 @@
           "name_en": "Shield",
           "name_de": "Schild",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -81,8 +81,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100
         }
@@ -92,7 +97,7 @@
         "name_en": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_de": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_es": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
-        "name_fr": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons"
+        "name_fr": "Scurry Away, Verminous Valour, Bande de Guerre, Warpstone Weapons"
       },
       "notes": {
         "name_en": "0-1 Skaven Warlord per 1,000 points",
@@ -121,9 +126,12 @@
           "name_de": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
-          }
+          },
+          "name_fr": "Porteur de la Grande Bannière"
         }
       ],
       "equipment": [
@@ -131,7 +139,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -153,7 +161,7 @@
           "name_en": "Halberd",
           "name_de": "Hellebarde",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3
         }
       ],
@@ -179,7 +187,7 @@
           "name_en": "Shield",
           "name_de": "Schild",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -191,8 +199,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -202,7 +215,7 @@
         "name_en": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_de": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_es": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
-        "name_fr": "Scurry Away, Verminous Valour, Warband, Warpstone Weapons"
+        "name_fr": "Scurry Away, Verminous Valour, Bande de Guerre, Warpstone Weapons"
       },
       "notes": {
         "name_en": "",
@@ -232,7 +245,7 @@
           "name_en": "Hand weapon, Warpstone Tokens (D3)",
           "name_de": "Handwaffe, Warpstone Tokens (D3)",
           "name_es": "Hand weapon, Warpstone Tokens (D3)",
-          "name_fr": "Hand weapon, Warpstone Tokens (D3)",
+          "name_fr": "Arme de base, Warpstone Tokens (D3)",
           "points": 0,
           "active": true
         }
@@ -243,7 +256,7 @@
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
           "name_es": "Level 4 Wizard",
-          "name_fr": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 30,
           "minimum": 0,
           "maximum": 0
@@ -271,7 +284,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "talisman",
@@ -294,13 +307,13 @@
         "name_en": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_de": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_es": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
-        "name_fr": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)"
+        "name_fr": "Lore of the Horned Rat, Attaques Magiques, Résistance à la Magie (-1), Scurry Away, Verminous Valour, Bande de Guerre, Warpstone Weapons (not for the mount)"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points"
       }
     },
     {
@@ -324,7 +337,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -332,14 +345,14 @@
           "name_en": "Hand weapon, Warplock musket",
           "name_de": "Handwaffe, Warpschloss Muskete",
           "name_es": "Hand weapon, Warplock musket",
-          "name_fr": "Hand weapon, Warplock musket",
+          "name_fr": "Arme de base, Warplock musket",
           "points": 9
         },
         {
           "name_en": "Hand weapon, Warplock pistol",
           "name_de": "Handwaffe, Warpschloss Pistole",
           "name_es": "Hand weapon, Warplock pistol",
-          "name_fr": "Hand weapon, Warplock pistol",
+          "name_fr": "Arme de base, Warplock pistol",
           "points": 6
         }
       ],
@@ -349,7 +362,7 @@
           "name_en": "Level 1 Wizard",
           "name_de": "Level 1 Wizard",
           "name_es": "Level 1 Wizard",
-          "name_fr": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
           "points": 40,
           "minimum": 0,
           "maximum": 0
@@ -358,7 +371,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 70,
           "minimum": 0,
           "maximum": 0
@@ -380,7 +393,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "talisman",
@@ -393,12 +406,15 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "elementalism"],
+      "lores": [
+        "battle-magic",
+        "elementalism"
+      ],
       "specialRules": {
         "name_en": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_de": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_es": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
-        "name_fr": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons"
+        "name_fr": "Lore of the Horned Rat, Attaques Magiques, Scurry Away, Verminous Valour, Bande de Guerre, Warpstone Weapons"
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
@@ -420,7 +436,7 @@
           "name_en": "Two hand weapons, Throwing weapons",
           "name_de": "Zwei Handwaffen, Wurfwaffen",
           "name_es": "Two hand weapons, Throwing weapons",
-          "name_fr": "Two hand weapons, Throwing weapons",
+          "name_fr": "Two hand weapons, Armes de lancer",
           "points": 0,
           "active": true
         }
@@ -433,8 +449,12 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "talisman", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -444,7 +464,7 @@
         "name_en": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons",
         "name_de": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons",
         "name_es": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons",
-        "name_fr": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons"
+        "name_fr": "Embusqueurs, Eshin Infiltration, Esquiveur, Fuite Feinte, Tir & Fuite, Hidden {skaven}, Mouvement à Couvert, Attaques Empoisonnées, Scurry Away, Verminous Valour, Warpstone Weapons"
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
@@ -474,7 +494,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -489,7 +509,7 @@
           "name_en": "Hand weapon, Plague censer",
           "name_de": "Handwaffe, Seuchenschleuder",
           "name_es": "Hand weapon, Plague censer",
-          "name_fr": "Hand weapon, Plague censer",
+          "name_fr": "Arme de base, Plague censer",
           "points": 6
         }
       ],
@@ -499,7 +519,7 @@
           "name_en": "Level 1 Wizard",
           "name_de": "Level 1 Wizard",
           "name_es": "Level 1 Wizard",
-          "name_fr": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
           "points": 30,
           "minimum": 0,
           "maximum": 0
@@ -508,7 +528,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 60,
           "minimum": 0,
           "maximum": 0
@@ -536,7 +556,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "talisman",
@@ -549,12 +569,16 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["daemonology", "battle-magic", "dark-magic"],
+      "lores": [
+        "daemonology",
+        "battle-magic",
+        "dark-magic"
+      ],
       "specialRules": {
         "name_en": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_de": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_es": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
-        "name_fr": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)"
+        "name_fr": "Cloud of Flies, Frénésie, Lore of the Horned Rat, Attaques Magiques, Scurry Away, Verminous Valour, Bande de Guerre, Warpstone Weapons (not for the mount)"
       },
       "notes": {
         "name_en": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
@@ -602,7 +626,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -619,7 +645,7 @@
           "name_en": "Hand weapons, Halberds",
           "name_de": "Handwaffe, Hellebarde",
           "name_es": "Hand weapons, Halberds",
-          "name_fr": "Hand weapons, Halberds",
+          "name_fr": "Armes de base, Hallebardes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -641,7 +667,7 @@
           "name_en": "Shields",
           "name_de": "Schilde",
           "name_es": "Shields",
-          "name_fr": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -655,13 +681,13 @@
         "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
-        "name_fr": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons"
+        "name_fr": "Ordre Serré, Horde, Scurry Away, Bande de Guerre, Warpstone Weapons"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points"
       }
     },
     {
@@ -703,7 +729,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -712,7 +738,7 @@
           "name_en": "Hand weapon, Thrusting spear",
           "name_de": "Handwaffe, Stoßspeer",
           "name_es": "Hand weapon, Thrusting spear",
-          "name_fr": "Hand weapon, Thrusting spear",
+          "name_fr": "Arme de base, Lance d'Infanterie",
           "points": 1,
           "perModel": true
         }
@@ -733,7 +759,7 @@
           "name_en": "Shield",
           "name_de": "Schild",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -747,7 +773,7 @@
         "name_en": "Close Order, Horde, Scurry Away, Warband",
         "name_de": "Close Order, Horde, Scurry Away, Warband",
         "name_es": "Close Order, Horde, Scurry Away, Warband",
-        "name_fr": "Close Order, Horde, Scurry Away, Warband"
+        "name_fr": "Ordre Serré, Horde, Scurry Away, Bande de Guerre"
       },
       "notes": {
         "name_en": "1+ per 1000 points",
@@ -772,7 +798,7 @@
           "name_en": "Hand weapons, Doom-flayer",
           "name_de": "Handwaffen, Ding-schredder",
           "name_es": "Hand weapons, Doom-flayer",
-          "name_fr": "Hand weapons, Doom-flayer",
+          "name_fr": "Armes de base, Doom-flayer",
           "points": 40,
           "perModel": true,
           "active": true
@@ -781,7 +807,7 @@
           "name_en": "Hand weapons, Poisoned Wind Mortar",
           "name_de": "Handwaffen, Giftwindmörser",
           "name_es": "Hand weapons, Poisoned Wind Mortar",
-          "name_fr": "Hand weapons, Poisoned Wind Mortar",
+          "name_fr": "Armes de base, Poisoned Wind Mortar",
           "points": 55,
           "perModel": true
         },
@@ -789,7 +815,7 @@
           "name_en": "Hand weapons, Ratling Gun",
           "name_de": "Handwaffen,  Ratlingkanone",
           "name_es": "Hand weapons, Ratling Gun",
-          "name_fr": "Hand weapons, Ratling Gun",
+          "name_fr": "Armes de base, Ratling Gun",
           "points": 50,
           "perModel": true
         },
@@ -797,7 +823,7 @@
           "name_en": "Hand weapons, Warpfire Thrower",
           "name_de": "Handwaffen, Warpflammenwerfer",
           "name_es": "Hand weapons, Warpfire Thrower",
-          "name_fr": "Hand weapons, Warpfire Thrower",
+          "name_fr": "Armes de base, Warpfire Thrower",
           "points": 60,
           "perModel": true
         },
@@ -805,7 +831,7 @@
           "name_en": "Hand weapons, Warp Grinder",
           "name_de": "Handwaffen, Warpbohrer",
           "name_es": "Hand weapons, Warp Grinder",
-          "name_fr": "Hand weapons, Warp Grinder",
+          "name_fr": "Armes de base, Warp Grinder",
           "points": 30,
           "perModel": true
         }
@@ -829,7 +855,7 @@
         "name_en": "Loner, Open Order, Scurry Away",
         "name_de": "Loner, Open Order, Scurry Away",
         "name_es": "Loner, Open Order, Scurry Away",
-        "name_fr": "Loner, Open Order, Scurry Away"
+        "name_fr": "Solitaire, Ordre Dispersé, Scurry Away"
       },
       "notes": {
         "name_en": "",
@@ -853,7 +879,7 @@
           "name_en": "Hand weapons (claws and fangs)",
           "name_de": "Hand weapons (claws and fangs)",
           "name_es": "Hand weapons (claws and fangs)",
-          "name_fr": "Hand weapons (claws and fangs)",
+          "name_fr": "Armes de base (claws and fangs)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -868,7 +894,7 @@
         "name_en": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
         "name_de": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
         "name_es": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard",
-        "name_fr": "Immune To Psychology, Loner, Skrimishers, Unbreakable, Vanguard"
+        "name_fr": "Immunisé à la Psychologie, Solitaire, Skrimishers, Indémoralisable, Avant-garde"
       },
       "notes": {
         "name_en": "",
@@ -910,7 +936,7 @@
           "name_en": "Hand weapons (claws and teeth)",
           "name_de": "Hand weapons (claws and teeth)",
           "name_es": "Hand weapons (claws and teeth)",
-          "name_fr": "Hand weapons (claws and teeth)",
+          "name_fr": "Armes de base (claws and teeth)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -948,7 +974,7 @@
         "name_en": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
         "name_de": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
         "name_es": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband",
-        "name_fr": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband"
+        "name_fr": "Ordre Serré, Fight in Extra Rank, Horde, Scurry Away, Bande de Guerre"
       },
       "notes": {
         "name_en": "",
@@ -980,7 +1006,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -997,7 +1023,7 @@
           "name_en": "Hand weapon, Sling",
           "name_de": "Handwaffe, Schleuder",
           "name_es": "Hand weapon, Sling",
-          "name_fr": "Hand weapon, Sling",
+          "name_fr": "Arme de base, Fronde",
           "points": 2,
           "perModel": true
         },
@@ -1005,7 +1031,7 @@
           "name_en": "Hand weapon, Throwing weapons",
           "name_de": "Handwaffe, Wurfwaffen",
           "name_es": "Hand weapon, Throwing weapons",
-          "name_fr": "Hand weapon, Throwing weapons",
+          "name_fr": "Arme de base, Armes de lancer",
           "points": 1,
           "perModel": true
         },
@@ -1013,7 +1039,7 @@
           "name_en": "Additional hand weapon, Sling",
           "name_de": "Zusätzliche Handwaffe, Schleuder",
           "name_es": "Additional hand weapon, Sling",
-          "name_fr": "Additional hand weapon, Sling",
+          "name_fr": "Arme de base additionnelle, Fronde",
           "points": 4,
           "perModel": true
         },
@@ -1021,7 +1047,7 @@
           "name_en": "Additional hand weapon, Throwing weapons",
           "name_de": "Zusätzliche Handwaffe, Wurfwaffen",
           "name_es": "Additional hand weapon, Throwing weapons",
-          "name_fr": "Additional hand weapon, Throwing weapons",
+          "name_fr": "Arme de base additionnelle, Armes de lancer",
           "points": 3,
           "perModel": true
         }
@@ -1035,7 +1061,7 @@
         "name_en": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
         "name_de": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
         "name_es": "Evasive, Fire & Flee, Scurry Away, Skrimishers",
-        "name_fr": "Evasive, Fire & Flee, Scurry Away, Skrimishers"
+        "name_fr": "Esquiveur, Tir & Fuite, Scurry Away, Skrimishers"
       },
       "notes": {
         "name_en": "",
@@ -1063,7 +1089,12 @@
           "name_fr": "Assassin",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         }
@@ -1082,7 +1113,7 @@
           "name_en": "Two hand weapons, Sling",
           "name_de": "Zwei Handwaffen, Schleuder",
           "name_es": "Two hand weapons, Sling",
-          "name_fr": "Two hand weapons, Sling",
+          "name_fr": "Two hand weapons, Fronde",
           "points": 2,
           "perModel": true
         },
@@ -1090,7 +1121,7 @@
           "name_en": "Two hand weapons, Throwing weapons",
           "name_de": "Zwei Handwaffen, Wurfwaffen",
           "name_es": "Two hand weapons, Throwing weapons",
-          "name_fr": "Two hand weapons, Throwing weapons",
+          "name_fr": "Two hand weapons, Armes de lancer",
           "points": 1,
           "perModel": true
         }
@@ -1125,7 +1156,7 @@
         "name_en": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
         "name_de": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
         "name_es": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
-        "name_fr": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers"
+        "name_fr": "Esquiveur, Fuite Feinte, Tir & Fuite, Mouvement à Couvert, Éclaireurs, Scurry Away, Tirailleurs"
       },
       "notes": {
         "name_en": "",
@@ -1178,7 +1209,7 @@
           "name_en": "Heavy armour (mutated hides)",
           "name_de": "Heavy armour (mutated hides)",
           "name_es": "Heavy armour (mutated hides)",
-          "name_fr": "Heavy armour (mutated hides)",
+          "name_fr": "Armure lourde (mutated hides)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1213,7 +1244,7 @@
         "name_en": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
         "name_de": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
         "name_es": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
-        "name_fr": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband"
+        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Frénésie, Horde, Safe from Harm, Scurry Away, Bande de Guerre"
       },
       "notes": {
         "name_en": "0-2 units of Rat Ogres per 1,000 points",
@@ -1239,7 +1270,12 @@
           "name_fr": "Plague Deacon",
           "points": 6,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item", "armor"],
+            "types": [
+              "weapon",
+              "talisman",
+              "enchanted-item",
+              "armor"
+            ],
             "maxPoints": 25
           }
         },
@@ -1250,7 +1286,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1267,7 +1305,7 @@
           "name_en": "Hand weapon",
           "name_de": "Handwaffe",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1290,7 +1328,7 @@
         "name_en": "Close Order, Frenzy, Horde, Scurry Away, Warband",
         "name_de": "Close Order, Frenzy, Horde, Scurry Away, Warband",
         "name_es": "Close Order, Frenzy, Horde, Scurry Away, Warband",
-        "name_fr": "Close Order, Frenzy, Horde, Scurry Away, Warband"
+        "name_fr": "Ordre Serré, Frénésie, Horde, Scurry Away, Bande de Guerre"
       },
       "notes": {
         "name_en": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken",
@@ -1314,7 +1352,7 @@
           "name_en": "Hand weapons, Warplock jezzails",
           "name_de": "Handwaffen, Warpschloss Jezzails",
           "name_es": "Hand weapons, Warplock jezzails",
-          "name_fr": "Hand weapons, Warplock jezzails",
+          "name_fr": "Armes de base, Warplock jezzails",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1339,7 +1377,7 @@
         "name_en": "Open Order, Scurry Away, Warband",
         "name_de": "Open Order, Scurry Away, Warband",
         "name_es": "Open Order, Scurry Away, Warband",
-        "name_fr": "Open Order, Scurry Away, Warband"
+        "name_fr": "Ordre Dispersé, Scurry Away, Bande de Guerre"
       },
       "notes": {
         "name_en": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken",
@@ -1363,7 +1401,7 @@
           "name_en": "Hand weapons, Poisoned Wind globes",
           "name_de": "Handwaffe, Giftwindkugeln",
           "name_es": "Hand weapons, Poisoned Wind globes",
-          "name_fr": "Hand weapons, Poisoned Wind globes",
+          "name_fr": "Armes de base, Poisoned Wind globes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1388,7 +1426,7 @@
         "name_en": "Scurry Away, Skirmishers, Warband",
         "name_de": "Scurry Away, Skirmishers, Warband",
         "name_es": "Scurry Away, Skirmishers, Warband",
-        "name_fr": "Scurry Away, Skirmishers, Warband"
+        "name_fr": "Scurry Away, Tirailleurs, Bande de Guerre"
       },
       "notes": {
         "name_en": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken",
@@ -1427,7 +1465,7 @@
         "name_en": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
         "name_de": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
         "name_es": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable",
-        "name_fr": "Abominable Attacks, Close Order, Immune To Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable"
+        "name_fr": "Abominable Attacks, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Résistance à la Magie (-1), Attaques Aléatoires, Mouvement Aléatoire, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Timmm-berrr!, Too Horrible to Die, Indémoralisable"
       },
       "notes": {
         "name_en": "0-1 Hell Pit Abomination per 1,000 points",
@@ -1449,7 +1487,7 @@
           "name_en": "Hand weapons (claws and fangs)",
           "name_de": "Hand weapons (claws and fangs)",
           "name_es": "Hand weapons (claws and fangs)",
-          "name_fr": "Hand weapons (claws and fangs)",
+          "name_fr": "Armes de base (claws and fangs)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1464,7 +1502,7 @@
         "name_en": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
         "name_de": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
         "name_es": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
-        "name_fr": "Close Order, Crushing Bulk, Immune To Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!"
+        "name_fr": "Ordre Serré, Crushing Bulk, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Aléatoires (Rats only), Mouvement Aléatoire, Attaques de Piétinement (2), Zzzzap!"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1,000 points:",
@@ -1486,7 +1524,7 @@
           "name_en": "Warp Lightning Cannon, Hand weapons",
           "name_de": "Warpblitzkanone, Handwaffen",
           "name_es": "Warp Lightning Cannon, Hand weapons",
-          "name_fr": "Warp Lightning Cannon, Hand weapons",
+          "name_fr": "Warp Lightning Cannon, Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1533,7 +1571,7 @@
           "name_en": "Plagueclaw Catapult, Hand weapons",
           "name_de": "Seuchenklauen Katapult, Handwaffen",
           "name_es": "Plagueclaw Catapult, Hand weapons",
-          "name_fr": "Plagueclaw Catapult, Hand weapons",
+          "name_fr": "Plagueclaw Catapult, Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1558,7 +1596,7 @@
         "name_en": "Random Attacks, Skirmishers, Stubborn",
         "name_de": "Random Attacks, Skirmishers, Stubborn",
         "name_es": "Random Attacks, Skirmishers, Stubborn",
-        "name_fr": "Random Attacks, Skirmishers, Stubborn"
+        "name_fr": "Attaques Aléatoires, Tirailleurs, Obstiné"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",
@@ -1582,7 +1620,7 @@
           "name_en": "Hand weapons, Plague censers",
           "name_de": "Handwaffe, Seuchenschleuder",
           "name_es": "Hand weapons, Plague censers",
-          "name_fr": "Hand weapons, Plague censers",
+          "name_fr": "Armes de base, Plague censers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1597,7 +1635,7 @@
         "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband",
         "name_de": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband",
         "name_es": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband",
-        "name_fr": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband"
+        "name_fr": "Frénésie, Scurry Away, Tirailleurs, Obstiné, Bande de Guerre"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or Unit of Plague Censer Bearers may be taken per 1,000 points",

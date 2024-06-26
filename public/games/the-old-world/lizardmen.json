@@ -12,7 +12,8 @@
           "name_en": "General",
           "name_de": "General",
           "points": 0,
-          "exclusive": false
+          "exclusive": false,
+          "name_fr": "Général"
         },
         {
           "name_en": "Battle Standard Bearer",
@@ -20,9 +21,12 @@
           "points": 25,
           "exclusive": false,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
-          }
+          },
+          "name_fr": "Porteur de la Grande Bannière"
         }
       ],
       "equipment": [
@@ -30,7 +34,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -44,7 +48,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
+          "name_fr": "Objets Magiques",
           "types": [
             "arcane-item",
             "weapon",
@@ -61,7 +65,9 @@
           "name_de": "Disciplines of the Old Ones",
           "name_es": "Disciplines of the Old Ones",
           "name_fr": "Disciplines of the Old Ones",
-          "types": ["discipline-old-ones"],
+          "types": [
+            "discipline-old-ones"
+          ],
           "selected": [],
           "maxPoints": 0
         }
@@ -77,7 +83,7 @@
         "name_en": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_de": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_es": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
-        "name_fr": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria"
+        "name_fr": "Arcane Shield, Cold Blooded, Ordre Serré, Vol (8), Grande Cible, Lore of Lustria"
       },
       "notes": {
         "name_en": "",
@@ -97,7 +103,8 @@
         {
           "name_en": "General",
           "name_de": "General",
-          "points": 0
+          "points": 0,
+          "name_fr": "Général"
         }
       ],
       "equipment": [
@@ -105,7 +112,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -122,7 +129,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_de": "Cavalry spear (if appropriately mounted)",
           "name_es": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Cavalry spear (if appropriately mounted)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 4,
           "perModel": true
         },
@@ -138,7 +145,7 @@
           "name_en": "Halberd",
           "name_de": "Halberd",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3,
           "perModel": true
         }
@@ -148,7 +155,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -159,7 +166,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -195,8 +202,14 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "banner",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100
         }
@@ -206,7 +219,7 @@
         "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
-        "name_fr": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry"
+        "name_fr": "Cold Blooded, Charge Dévastatrice*, Obsidian Blades, Cri de Ralliement"
       },
       "notes": {
         "name_en": "*Note that this special rule does not apply to this model's mount (should it have one)",
@@ -226,16 +239,20 @@
         {
           "name_en": "General",
           "name_de": "General",
-          "points": 0
+          "points": 0,
+          "name_fr": "Général"
         },
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
-          }
+          },
+          "name_fr": "Porteur de la Grande Bannière"
         }
       ],
       "equipment": [
@@ -243,7 +260,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -260,7 +277,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_de": "Cavalry spear (if appropriately mounted)",
           "name_es": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Cavalry spear (if appropriately mounted)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 4,
           "perModel": true
         },
@@ -276,7 +293,7 @@
           "name_en": "Halberd",
           "name_de": "Halberd",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3,
           "perModel": true
         }
@@ -286,7 +303,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -297,7 +314,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -333,8 +350,14 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "banner", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "banner",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -344,7 +367,7 @@
         "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
-        "name_fr": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry"
+        "name_fr": "Cold Blooded, Charge Dévastatrice*, Obsidian Blades, Cri de Ralliement"
       },
       "notes": {
         "name_en": "*Note that this special rule does not apply to this model's mount (should it have one)",
@@ -364,7 +387,8 @@
         {
           "name_en": "General",
           "name_de": "General",
-          "points": 0
+          "points": 0,
+          "name_fr": "Général"
         }
       ],
       "equipment": [
@@ -372,7 +396,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -383,7 +407,7 @@
           "name_en": "Light armour (Calloused hide)*",
           "name_de": "Light armour (Calloused hide)*",
           "name_es": "Light armour (Calloused hide)*",
-          "name_fr": "Light armour (Calloused hide)*",
+          "name_fr": "Armure légère (Peau calleuse)*",
           "points": 0,
           "perModel": true,
           "active": true
@@ -394,7 +418,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -421,16 +445,19 @@
               "name_en": "Giant bow",
               "points": 0,
               "exclusive": true,
-              "active": true
+              "active": true,
+              "name_fr": "Giant bow"
             },
             {
               "name_en": "Giant blowpipes",
               "exclusive": true,
-              "points": 0
+              "points": 0,
+              "name_fr": "Giant blowpipes"
             },
             {
               "name_en": "Engine of the Gods",
-              "points": 25
+              "points": 25,
+              "name_fr": "Engine of the Gods"
             }
           ]
         }
@@ -440,7 +467,7 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
+          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "armor",
@@ -453,7 +480,11 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["elementalism", "battle-magic", "illusion"],
+      "lores": [
+        "elementalism",
+        "battle-magic",
+        "illusion"
+      ],
       "specialRules": {
         "name_en": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
         "name_de": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
@@ -478,16 +509,20 @@
         {
           "name_en": "General",
           "name_de": "General",
-          "points": 0
+          "points": 0,
+          "name_fr": "Général"
         },
         {
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
-          }
+          },
+          "name_fr": "Porteur de la Grande Bannière"
         }
       ],
       "equipment": [
@@ -495,7 +530,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -512,7 +547,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_de": "Cavalry spear (if appropriately mounted)",
           "name_es": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Cavalry spear (if appropriately mounted)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 4,
           "perModel": true
         },
@@ -528,7 +563,7 @@
           "name_en": "Javelin",
           "name_de": "Javelins",
           "name_es": "Javelins",
-          "name_fr": "Javelins",
+          "name_fr": "Javeline",
           "points": 3,
           "perModel": true
         }
@@ -538,7 +573,7 @@
           "name_en": "Light armour (Calloused hide)",
           "name_de": "Light armour (Calloused hide)",
           "name_es": "Light armour (Calloused hide)",
-          "name_fr": "Light armour (Calloused hide)",
+          "name_fr": "Armure légère (Peau calleuse)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -549,7 +584,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -590,12 +625,14 @@
               "name_en": "Giant bow",
               "points": 0,
               "exclusive": true,
-              "active": true
+              "active": true,
+              "name_fr": "Giant bow"
             },
             {
               "name_en": "Giant blowpipes",
               "exclusive": true,
-              "points": 0
+              "points": 0,
+              "name_fr": "Giant blowpipes"
             }
           ]
         }
@@ -605,8 +642,13 @@
           "name_en": "Magic Items",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -616,7 +658,7 @@
         "name_en": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_de": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_es": "Aquatic**, Cold Blooded, Poisoned Attacks",
-        "name_fr": "Aquatic**, Cold Blooded, Poisoned Attacks"
+        "name_fr": "Aquatic**, Cold Blooded, Attaques Empoisonnées"
       },
       "notes": {
         "name_en": "**Note that this special rule does not apply to this models mount (should it have one)",
@@ -645,7 +687,12 @@
           "name_fr": "Spawn Leader (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           },
           "name_it": "Spawn Leader (champion)"
@@ -672,7 +719,7 @@
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
           "name_es": "Hand weapons, Shields",
-          "name_fr": "Hand weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -682,7 +729,7 @@
           "name_en": "Thrusting spears, Shields",
           "name_de": "Thrusting spears, Shields",
           "name_es": "Thrusting spears, Shields",
-          "name_fr": "Thrusting spears, Shields",
+          "name_fr": "Lances d'Infanterie, Boucliers",
           "points": 1,
           "perModel": true,
           "name_it": "Thrusting spears, Shields"
@@ -693,7 +740,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -705,7 +752,7 @@
           "name_en": "Shieldwall",
           "name_de": "Shieldwall",
           "name_es": "Shieldwall",
-          "name_fr": "Shieldwall",
+          "name_fr": "Mur de Boucliers",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -720,7 +767,7 @@
         "name_en": "Close Order, Cold Blooded, Obsidian Blades",
         "name_de": "",
         "name_es": "",
-        "name_fr": ""
+        "name_fr": "Ordre Serré, Cold Blooded, Obsidian Blades"
       },
       "notes": {
         "name_en": "0-1 unit per 1,000 points may have the Shieldwall special rule",
@@ -746,7 +793,12 @@
           "name_fr": "Revered Guardian (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 50
           }
         },
@@ -757,7 +809,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 100
           }
         },
@@ -774,7 +828,7 @@
           "name_en": "Hand weapons, Halberds, Shields",
           "name_de": "Hand weapons, Halberds, Shields",
           "name_es": "Hand weapons, Halberds, Shields",
-          "name_fr": "Hand weapons, Halberds, Shields",
+          "name_fr": "Armes de base, Hallebardes, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -785,7 +839,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -799,7 +853,7 @@
         "name_en": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
-        "name_fr": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn"
+        "name_fr": "Ordre Serré, Cold Blooded, Guardians, Obsidian Blades, Mur de Boucliers, Obstiné"
       },
       "notes": {
         "name_en": "",
@@ -831,7 +885,7 @@
           "name_en": "Hand weapons, Javelins, Shields",
           "name_de": "Hand weapons, Javelins, Shields",
           "name_es": "Hand weapons, Javelins, Shields",
-          "name_fr": "Hand weapons, Javelins, Shields",
+          "name_fr": "Armes de base, Javelines, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -840,7 +894,7 @@
           "name_en": "Hand weapons, Blowpipes",
           "name_de": "Hand weapons, Blowpipes",
           "name_es": "Hand weapons, Blowpipes",
-          "name_fr": "Hand weapons, Blowpipes",
+          "name_fr": "Armes de base, Blowpipes",
           "points": 1,
           "perModel": true
         }
@@ -850,7 +904,7 @@
           "name_en": "Light armour (Calloused hides)",
           "name_de": "Light armour (Calloused hides)",
           "name_es": "Light armour (Calloused hides)",
-          "name_fr": "Light armour (Calloused hides)",
+          "name_fr": "Armure légère (Peaux calleuses)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -883,7 +937,7 @@
         "name_en": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_de": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_es": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
-        "name_fr": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers"
+        "name_fr": "Cold Blooded, Mouvement à Couvert, Attaques Empoisonnées (Javelins only), Tirailleurs"
       },
       "notes": {
         "name_en": "0-1 unit per 1,000 points may have one of the following: The Scouts special rule, The Vanguards special rule",
@@ -921,7 +975,7 @@
         "name_en": "Cold Blooded, Immune To Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_de": "Cold Blooded, Immune To Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_es": "Cold Blooded, Immune To Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
-        "name_fr": "Cold Blooded, Immune To Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard"
+        "name_fr": "Cold Blooded, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Attaques Empoisonnées, Tirailleurs, Indémoralisable, Avant-garde"
       },
       "notes": {
         "name_en": "",
@@ -955,7 +1009,7 @@
           "name_en": "Blowpipes, Hand weapons",
           "name_de": "Blowpipes, Hand weapons",
           "name_es": "Blowpipes, Hand weapons",
-          "name_fr": "Blowpipes, Hand weapons",
+          "name_fr": "Blowpipes, Armes de base",
           "points": 0,
           "perModel": true,
           "active": true
@@ -966,7 +1020,7 @@
           "name_en": "Light armour (Calloused hides)",
           "name_de": "Light armour (Calloused hides)",
           "name_es": "Light armour (Calloused hides)",
-          "name_fr": "Light armour (Calloused hides)",
+          "name_fr": "Armure légère (Peaux calleuses)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -980,7 +1034,7 @@
         "name_en": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_de": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_es": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
-        "name_fr": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers"
+        "name_fr": "Cold Blooded, Esquiveur, Mouvement à Couvert, Éclaireurs, Tirailleurs"
       },
       "notes": {
         "name_en": "",
@@ -1023,7 +1077,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1037,7 +1091,7 @@
         "name_en": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_de": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_es": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
-        "name_fr": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen"
+        "name_fr": "Aquatic, Ordre Serré, Cold Blooded, Peur, Skirmish Screen"
       },
       "notes": {
         "name_en": "",
@@ -1069,7 +1123,7 @@
           "name_en": "Hand weapons, Javelins",
           "name_de": "Hand weapons, Javelins",
           "name_es": "Hand weapons, Javelins",
-          "name_fr": "Hand weapons, Javelins",
+          "name_fr": "Armes de base, Javelines",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1078,7 +1132,7 @@
           "name_en": "Hand weapons, Fireleech bolas",
           "name_de": "Hand weapons, Fireleech bolas",
           "name_es": "Hand weapons, Fireleech bolas",
-          "name_fr": "Hand weapons, Fireleech bolas",
+          "name_fr": "Armes de base, Fireleech bolas",
           "points": 1,
           "perModel": true
         }
@@ -1088,7 +1142,7 @@
           "name_en": "Light armour (Calloused hides)",
           "name_de": "Light armour (Calloused hides)",
           "name_es": "Light armour (Calloused hides)",
-          "name_fr": "Light armour (Calloused hides)",
+          "name_fr": "Armure légère (Peaux calleuses)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1102,7 +1156,7 @@
         "name_en": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_de": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_es": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
-        "name_fr": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride"
+        "name_fr": "Peau Blindée (1), Cold Blooded, Drop Rocks, Peur, Vol (10), Attaques Empoisonnées (Javelins only), Tirailleurs, Rapide"
       },
       "notes": {
         "name_en": "0-1 unit of Terradon Riders per Skink Hero taken",
@@ -1134,7 +1188,7 @@
           "name_en": "Cavalry spears, Shields",
           "name_de": "Cavalry spears, Shields",
           "name_es": "Cavalry spears, Shields",
-          "name_fr": "Cavalry spears, Shields",
+          "name_fr": "Lances de Cavalerie, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1145,7 +1199,7 @@
           "name_en": "Light armour (Calloused hides)",
           "name_de": "Light armour (Calloused hides)",
           "name_es": "Light armour (Calloused hides)",
-          "name_fr": "Light armour (Calloused hides)",
+          "name_fr": "Armure légère (Peaux calleuses)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1159,7 +1213,7 @@
         "name_en": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_de": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_es": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
-        "name_fr": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage"
+        "name_fr": "Peau Blindée (1), Coup de Fendoir (Ripperdactyl only), Cold Blooded, Peur, Vol (9), Charge Dévastatrice (Ripperdactyl only), Impétueux, Tirailleurs, Rapide, Toad Rage"
       },
       "notes": {
         "name_en": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
@@ -1215,7 +1269,7 @@
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
           "name_es": "Hand weapons, Shields",
-          "name_fr": "Hand weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1224,7 +1278,7 @@
           "name_en": "Cavalry spears, Shields",
           "name_de": "Cavalry spears, Shields",
           "name_es": "Cavalry spears, Shields",
-          "name_fr": "Cavalry spears, Shields",
+          "name_fr": "Lances de Cavalerie, Boucliers",
           "points": 1,
           "perModel": true
         }
@@ -1234,7 +1288,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1245,7 +1299,7 @@
           "name_en": "Drilled",
           "name_de": "Drilled",
           "name_es": "Drilled",
-          "name_fr": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 2,
           "perModel": true,
           "minimum": 0,
@@ -1258,8 +1312,10 @@
           "name_en": "Magical Standard",
           "name_de": "Magical Standard",
           "name_es": "Magical Standard",
-          "name_fr": "Magical Standard",
-          "types": ["banner"],
+          "name_fr": "Bannière Magique",
+          "types": [
+            "banner"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -1269,7 +1325,7 @@
         "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_es": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
-        "name_fr": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride"
+        "name_fr": "Arme Perforante (1 - Cold One only), Peau Blindée (1), Ordre Serré, Cold Blooded, Peur, Obsidian Blades, Stupidité, Rapide"
       },
       "notes": {
         "name_en": "",
@@ -1291,7 +1347,7 @@
           "name_en": "Hand weapons, Javelins, Thunderous bludgeon, Ark of Sotek",
           "name_de": "Hand weapons, Javelins, Thunderous bludgeon, Ark of Sotek",
           "name_es": "Hand weapons, Javelins, Thunderous bludgeon, Ark of Sotek",
-          "name_fr": "Hand weapons, Javelins, Thunderous bludgeon, Ark of Sotek",
+          "name_fr": "Armes de base, Javelines, Thunderous bludgeon, Ark of Sotek",
           "points": 0,
           "active": true
         },
@@ -1299,7 +1355,7 @@
           "name_en": "Hand weapons, Javelins, Thunderous bludgeon, Solar Engine",
           "name_de": "Hand weapons, Javelins, Thunderous bludgeon, Solar Engine",
           "name_es": "Hand weapons, Javelins, Thunderous bludgeon, Solar Engine",
-          "name_fr": "Hand weapons, Javelins, Thunderous bludgeon, Solar Engine",
+          "name_fr": "Armes de base, Javelines, Thunderous bludgeon, Solar Engine",
           "points": 15
         }
       ],
@@ -1320,7 +1376,7 @@
         "name_en": "Close Order, Cold Blooded, Immune To Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Immune To Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Immune To Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
-        "name_fr": "Close Order, Cold Blooded, Immune To Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror"
+        "name_fr": "Ordre Serré, Cold Blooded, Immunisé à la Psychologie, Touches d'Impact (D3), Impervious Defence, Grande Cible, Attaques Empoisonnées (Javelins only), Attaques de Piétinement (D3+1), Obstiné, Terreur"
       },
       "notes": {
         "name_en": "0-2 Bastiladons per 1,000 points",
@@ -1357,7 +1413,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1368,7 +1424,7 @@
           "name_en": "Skink Handlers with Hand weapons and Light armour (Calloused hides)",
           "name_de": "Skink Handlers with Hand weapons and Light armour (Calloused hides)",
           "name_es": "Skink Handlers with Hand weapons and Light armour (Calloused hides)",
-          "name_fr": "Skink Handlers with Hand weapons and Light armour (Calloused hides)",
+          "name_fr": "Skink Handlers with Hand weapons and Light armour (Peaux calleuses)",
           "points": 5,
           "perModel": true,
           "stackable": true
@@ -1381,7 +1437,7 @@
         "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
-        "name_fr": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers"
+        "name_fr": "Aquatic, Beast Handlers, Cold Blooded, Peur, Tirailleurs"
       },
       "notes": {
         "name_en": "0-1 Salamander Pack or Razordon Pack per 1,000 points, *When writing your muster list, a Salamander Pack must contain at least three Skink handlers for every one Salamander.",
@@ -1416,7 +1472,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1427,7 +1483,7 @@
           "name_en": "Skink Handler with Hand weapons and Light armour (Calloused hides)",
           "name_de": "Skink Handler with Hand weapons and Light armour (Calloused hides)",
           "name_es": "Skink Handler with Hand weapons and Light armour (Calloused hides)",
-          "name_fr": "Skink Handler with Hand weapons and Light armour (Calloused hides)",
+          "name_fr": "Skink Handler with Hand weapons and Light armour (Peaux calleuses)",
           "points": 5,
           "perModel": true,
           "stackable": true
@@ -1440,7 +1496,7 @@
         "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
-        "name_fr": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers"
+        "name_fr": "Aquatic, Beast Handlers, Cold Blooded, Peur, Tirailleurs"
       },
       "notes": {
         "name_en": "0-1 Salamander Pack or Razordon Pack per 1,000 points, *When writing your muster list, a Razordon Pack must contain at least three Skink handlers for every one Razordon.",
@@ -1462,7 +1518,7 @@
           "name_en": "Hand weapons, Javelins, Great horns, Giant bow",
           "name_de": "Hand weapons, Javelins, Great horns, Giant bow",
           "name_es": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_fr": "Hand weapons, Javelins, Great horns, Giant bow",
+          "name_fr": "Armes de base, Javelines, Great horns, Giant bow",
           "points": 0,
           "active": true
         },
@@ -1470,7 +1526,7 @@
           "name_en": "Hand weapons, Javelins, Great horns, Giant blowpipes",
           "name_de": "Hand weapons, Javelins, Great horns, Giant blowpipes",
           "name_es": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_fr": "Hand weapons, Javelins, Great horns, Giant blowpipes",
+          "name_fr": "Armes de base, Javelines, Great horns, Giant blowpipes",
           "points": 0
         }
       ],
@@ -1483,7 +1539,7 @@
         "name_en": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_fr": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror"
+        "name_fr": "Ordre Serré, Cold Blooded, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelins only), Attaques de Piétinement (D3+2), Obstiné, Terreur"
       },
       "notes": {
         "name_en": "0-1 Stegadon or Troglodon per 1,000 points",
@@ -1524,7 +1580,7 @@
           "name_en": "Heavy armour (Scaly skin)",
           "name_de": "Heavy armour (Scaly skin)",
           "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Scaly skin)",
           "points": 0,
           "active": true
         }
@@ -1537,7 +1593,7 @@
         "name_en": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune To Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_de": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune To Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_es": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune To Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
-        "name_fr": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune To Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror"
+        "name_fr": "Arcane Vassal, Aquatic, Ordre Serré, Cold Blooded, Immunisé à la Psychologie, Grande Cible, Lore of Lustria, Primeval Roar, Attaques de Piétinement (2), Obstiné, Terreur"
       },
       "notes": {
         "name_en": "0-1 Stegadon or Troglodon per 1,000 points",
@@ -1559,7 +1615,7 @@
           "name_en": "Hand weapons, Javelins, Great horns, Giant bow",
           "name_de": "Hand weapons, Javelins, Great horns, Giant bow",
           "name_es": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_fr": "Hand weapons, Javelins, Great horns, Giant bow",
+          "name_fr": "Armes de base, Javelines, Great horns, Giant bow",
           "points": 0,
           "active": true
         },
@@ -1567,14 +1623,14 @@
           "name_en": "Hand weapons, Javelins, Great horns, Giant blowpipes",
           "name_de": "Hand weapons, Javelins, Great horns, Giant blowpipes",
           "name_es": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_fr": "Hand weapons, Javelins, Great horns, Giant blowpipes",
+          "name_fr": "Armes de base, Javelines, Great horns, Giant blowpipes",
           "points": 0
         },
         {
           "name_en": "Hand weapons, Javelins, Great horns, Engine of the Gods",
           "name_de": "Hand weapons, Javelins, Great horns, Engine of the Gods",
           "name_es": "Hand weapons, Javelins, Great horns, Engine of the Gods",
-          "name_fr": "Hand weapons, Javelins, Great horns, Engine of the Gods",
+          "name_fr": "Armes de base, Javelines, Great horns, Engine of the Gods",
           "points": 25
         }
       ],
@@ -1587,7 +1643,7 @@
         "name_en": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_fr": "Close Order, Cold Blooded, Howdah, Immune To Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror"
+        "name_fr": "Ordre Serré, Cold Blooded, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelins only), Attaques de Piétinement (D3+2), Obstiné, Terreur"
       },
       "notes": {
         "name_en": "0-1 Stegadon or Troglodon per 1,000 points, gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
