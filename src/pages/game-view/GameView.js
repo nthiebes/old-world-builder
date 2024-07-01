@@ -263,8 +263,7 @@ export const GameView = () => {
                           <FormattedMessage id="unit.customNote" />
                         </i>
                       </label>
-                      <input
-                        type="text"
+                      <textarea
                         id="customNote"
                         className="input game-view__custom-note-input"
                         value={unit.customNote || ""}
