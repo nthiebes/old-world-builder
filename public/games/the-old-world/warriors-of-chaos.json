@@ -21,7 +21,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         }
@@ -103,7 +103,7 @@
           "name_en": "Level 1 Wizard",
           "name_de": "Level 1 Wizard",
           "name_es": "Level 1 Wizard",
-          "name_fr": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
           "points": 25,
           "minimum": 0,
           "maximum": 0
@@ -112,7 +112,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 50,
           "minimum": 0,
           "maximum": 0
@@ -121,7 +121,7 @@
           "name_en": "Level 3 Wizard",
           "name_de": "Level 3 Wizard",
           "name_es": "Level 3 Wizard",
-          "name_fr": "Level 3 Wizard",
+          "name_fr": "Sorcier de Niveau 3",
           "points": 75,
           "minimum": 0,
           "maximum": 0
@@ -130,7 +130,7 @@
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
           "name_es": "Level 4 Wizard",
-          "name_fr": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 100,
           "minimum": 0,
           "maximum": 0
@@ -158,17 +158,23 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic"
+      ],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune To Psychology, Lore of Chaos, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
         "name_de": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune To Psychology, Lore of Chaos, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
         "name_es": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune To Psychology, Lore of Chaos, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
-        "name_fr": "Chaos Armour (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune To Psychology, Lore of Chaos, Regeneration (5+), Unbreakable, Unstable, Warp-spawned"
+        "name_fr": "Chaos Armour (4+), Ensorcelled Weapons, Peur, Gaze of the Gods, Immunisé à la Psychologie, Lore of Chaos, Régénération (5+), Indémoralisable, Instables, Warp-spawned"
       },
       "notes": {
         "name_en": "0-1 Chaos Lord or Daemon Prince",
@@ -198,7 +204,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -213,7 +219,7 @@
           "name_en": "Flail",
           "name_de": "Flail",
           "name_es": "Flail",
-          "name_fr": "Flail",
+          "name_fr": "Fléau",
           "points": 3
         },
         {
@@ -227,14 +233,14 @@
           "name_en": "Halberd",
           "name_de": "Halberd",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3
         },
         {
           "name_en": "Lance",
           "name_de": "Lance",
           "name_es": "Lance",
-          "name_fr": "Lance",
+          "name_fr": "Lance de Joute",
           "points": 4
         }
       ],
@@ -243,7 +249,7 @@
           "name_en": "Full plate armour",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
-          "name_fr": "Full plate armour",
+          "name_fr": "Armure de plate complète",
           "points": 0,
           "active": true
         }
@@ -253,7 +259,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -456,7 +462,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Magic Items",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100
         },
@@ -465,7 +476,9 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -475,7 +488,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
-        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry"
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Cri de Ralliement"
       },
       "notes": {
         "name_en": "0-1 Chaos Lord or Daemon Prince",
@@ -505,7 +518,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         }
@@ -562,7 +575,7 @@
           "name_en": "Level 4 Wizard",
           "name_de": "Level 4 Wizard",
           "name_es": "Level 4 Wizard",
-          "name_fr": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 30,
           "minimum": 0,
           "maximum": 0
@@ -685,12 +698,18 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic"
+      ],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
@@ -723,10 +742,12 @@
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
           "name_es": "Battle Standard Bearer",
-          "name_fr": "Embusqueurs",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -736,7 +757,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -751,7 +772,7 @@
           "name_en": "Flail",
           "name_de": "Flail",
           "name_es": "Flail",
-          "name_fr": "Flail",
+          "name_fr": "Fléau",
           "points": 3
         },
         {
@@ -765,14 +786,14 @@
           "name_en": "Halberd",
           "name_de": "Halberd",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3
         },
         {
           "name_en": "Lance",
           "name_de": "Lance",
           "name_es": "Lance",
-          "name_fr": "Lance",
+          "name_fr": "Lance de Joute",
           "points": 4
         }
       ],
@@ -791,7 +812,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -971,7 +992,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Magic Items",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 75
         },
@@ -980,7 +1006,9 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -990,7 +1018,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
-        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry"
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Cri de Ralliement"
       },
       "notes": {
         "name_en": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
@@ -1020,7 +1048,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         }
@@ -1077,7 +1105,7 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30,
           "minimum": 0,
           "maximum": 0
@@ -1177,12 +1205,18 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic"
+      ],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
@@ -1209,10 +1243,12 @@
           "name_en": "Battle Standard Bearer",
           "name_de": "Battle Standard Bearer",
           "name_es": "Battle Standard Bearer",
-          "name_fr": "Embusqueurs",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -1222,7 +1258,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -1237,7 +1273,7 @@
           "name_en": "Flail",
           "name_de": "Flail",
           "name_es": "Flail",
-          "name_fr": "Flail",
+          "name_fr": "Fléau",
           "points": 3
         },
         {
@@ -1251,14 +1287,14 @@
           "name_en": "Halberd",
           "name_de": "Halberd",
           "name_es": "Halberd",
-          "name_fr": "Halberd",
+          "name_fr": "Hallebarde",
           "points": 3
         },
         {
           "name_en": "Lance",
           "name_de": "Lance",
           "name_es": "Lance",
-          "name_fr": "Lance",
+          "name_fr": "Lance de Joute",
           "points": 4
         }
       ],
@@ -1277,7 +1313,7 @@
           "name_en": "Shield",
           "name_de": "Shield",
           "name_es": "Shield",
-          "name_fr": "Shield",
+          "name_fr": "Bouclier",
           "points": 2,
           "minimum": 0,
           "maximum": 0
@@ -1450,7 +1486,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Magic Items",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         },
@@ -1459,7 +1500,9 @@
           "name_de": "Gifts of Chaos",
           "name_es": "Gifts of Chaos",
           "name_fr": "Gifts of Chaos",
-          "types": ["gift-of-chaos"],
+          "types": [
+            "gift-of-chaos"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -1469,7 +1512,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
         "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
-        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry"
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Cri de Ralliement"
       }
     }
   ],
@@ -1491,7 +1534,12 @@
           "name_fr": "Champion",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         },
@@ -1502,7 +1550,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1544,7 +1594,7 @@
           "name_en": "Halberds",
           "name_de": "Halberds",
           "name_es": "Halberds",
-          "name_fr": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 1,
           "perModel": true
         }
@@ -1565,7 +1615,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_es": "Shields",
-          "name_fr": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -1630,7 +1680,7 @@
         "name_en": "Close Order, Ensorcelled Weapons",
         "name_de": "Close Order, Ensorcelled Weapons",
         "name_es": "Close Order, Ensorcelled Weapons",
-        "name_fr": "Close Order, Ensorcelled Weapons"
+        "name_fr": "Ordre Serré, Ensorcelled Weapons"
       }
     },
     {
@@ -1650,7 +1700,12 @@
           "name_fr": "Champion",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         },
@@ -1661,7 +1716,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1678,7 +1735,7 @@
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
           "name_es": "Hand weapons, Shields",
-          "name_fr": "Hand weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1687,7 +1744,7 @@
           "name_en": "Lances, Shields",
           "name_de": "Lances, Shields",
           "name_es": "Lances, Shields",
-          "name_fr": "Lances, Shields",
+          "name_fr": "Lances de Joute, Boucliers",
           "points": 2,
           "perModel": true
         }
@@ -1763,7 +1820,7 @@
         "name_en": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
         "name_de": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
-        "name_fr": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride"
+        "name_fr": "Ordre Serré, Ensorcelled Weapons, Première Charge, Rapide"
       }
     },
     {
@@ -1820,7 +1877,7 @@
           "name_en": "Flails",
           "name_de": "Flails",
           "name_es": "Flails",
-          "name_fr": "Flails",
+          "name_fr": "Fléaux",
           "points": 1,
           "perModel": true
         }
@@ -1849,7 +1906,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_es": "Shields",
-          "name_fr": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -1932,7 +1989,7 @@
         "name_en": "Close Order, Shieldwall, Warband",
         "name_de": "Close Order, Shieldwall, Warband",
         "name_es": "Close Order, Shieldwall, Warband",
-        "name_fr": "Close Order, Shieldwall, Warband"
+        "name_fr": "Ordre Serré, Mur de Boucliers, Bande de Guerre"
       }
     },
     {
@@ -1981,7 +2038,7 @@
           "name_en": "Hand weapons, Throwing axes",
           "name_de": "Hand weapons, Throwing axes",
           "name_es": "Hand weapons, Throwing axes",
-          "name_fr": "Hand weapons, Throwing axes",
+          "name_fr": "Armes de base, Haches de lancer",
           "points": 1,
           "perModel": true
         },
@@ -1989,7 +2046,7 @@
           "name_en": "Hand weapons, Javelins",
           "name_de": "Hand weapons, Javelins",
           "name_es": "Hand weapons, Javelins",
-          "name_fr": "Hand weapons, Javelins",
+          "name_fr": "Armes de base, Javelines",
           "points": 1,
           "perModel": true
         },
@@ -1997,7 +2054,7 @@
           "name_en": "Hand weapons, Throwing spears",
           "name_de": "Hand weapons, Throwing spears",
           "name_es": "Hand weapons, Throwing spears",
-          "name_fr": "Hand weapons, Throwing spears",
+          "name_fr": "Armes de base, Throwing spears",
           "points": 0,
           "perModel": true
         },
@@ -2005,7 +2062,7 @@
           "name_en": "Hand weapons, Throwing spears, Throwing axes",
           "name_de": "Hand weapons, Throwing spears, Throwing axes",
           "name_es": "Hand weapons, Throwing spears, Throwing axes",
-          "name_fr": "Hand weapons, Throwing spears, Throwing axes",
+          "name_fr": "Armes de base, Throwing spears, Haches de lancer",
           "points": 1,
           "perModel": true
         },
@@ -2013,7 +2070,7 @@
           "name_en": "Hand weapons, Throwing spears, Javelins",
           "name_de": "Hand weapons, Throwing spears, Javelins",
           "name_es": "Hand weapons, Throwing spears, Javelins",
-          "name_fr": "Hand weapons, Throwing spears, Javelins",
+          "name_fr": "Armes de base, Throwing spears, Javelines",
           "points": 1,
           "perModel": true
         },
@@ -2021,7 +2078,7 @@
           "name_en": "Cavalry spears",
           "name_de": "Cavalry spears",
           "name_es": "Cavalry spears",
-          "name_fr": "Cavalry spears",
+          "name_fr": "Lances de Cavalerie",
           "points": 0,
           "perModel": true
         },
@@ -2029,7 +2086,7 @@
           "name_en": "Cavalry spears, Throwing axes",
           "name_de": "Cavalry spears, Throwing axes",
           "name_es": "Cavalry spears, Throwing axes",
-          "name_fr": "Cavalry spears, Throwing axes",
+          "name_fr": "Lances de Cavalerie, Haches de lancer",
           "points": 1,
           "perModel": true
         },
@@ -2037,7 +2094,7 @@
           "name_en": "Cavalry spears, Javelins",
           "name_de": "Cavalry spears, Javelins",
           "name_es": "Cavalry spears, Javelins",
-          "name_fr": "Cavalry spears, Javelins",
+          "name_fr": "Lances de Cavalerie, Javelines",
           "points": 1,
           "perModel": true
         },
@@ -2045,7 +2102,7 @@
           "name_en": "Flails",
           "name_de": "Flails",
           "name_es": "Flails",
-          "name_fr": "Flails",
+          "name_fr": "Fléaux",
           "points": 1,
           "perModel": true
         },
@@ -2053,7 +2110,7 @@
           "name_en": "Flails, Throwing axes",
           "name_de": "Flails, Throwing axes",
           "name_es": "Flails, Throwing axes",
-          "name_fr": "Flails, Throwing axes",
+          "name_fr": "Fléaux, Haches de lancer",
           "points": 2,
           "perModel": true
         },
@@ -2061,7 +2118,7 @@
           "name_en": "Flails, Javelins",
           "name_de": "Flails, Javelins",
           "name_es": "Flails, Javelins",
-          "name_fr": "Flails, Javelins",
+          "name_fr": "Fléaux, Javelines",
           "points": 2,
           "perModel": true
         }
@@ -2082,7 +2139,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_es": "Shields",
-          "name_fr": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -2147,7 +2204,7 @@
         "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband",
         "name_de": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband",
         "name_es": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband",
-        "name_fr": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband"
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Ordre Dispersé, Tirailleurs, Rapide, Bande de Guerre"
       }
     },
     {
@@ -2171,19 +2228,22 @@
               "name_en": "Hand weapon",
               "name_de": "Hand weapon",
               "points": 0,
-              "active": true
+              "active": true,
+              "name_fr": "Arme de base"
             },
             {
               "name_en": "Additional hand weapon",
               "name_de": "Additional hand weapon",
               "points": 0,
-              "exclusive": true
+              "exclusive": true,
+              "name_fr": "Arme de base additionnelle"
             },
             {
               "name_en": "Whip",
               "name_de": "Whip",
               "points": 0,
-              "exclusive": true
+              "exclusive": true,
+              "name_fr": "Fouet"
             }
           ]
         }
@@ -2193,7 +2253,7 @@
           "name_en": "Claws and Fangs (Hand weapons)",
           "name_de": "Claws and Fangs (Hand weapons)",
           "name_es": "Claws and Fangs (Hand weapons)",
-          "name_fr": "Claws and Fangs (Hand weapons)",
+          "name_fr": "Claws and Fangs (Armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2205,7 +2265,7 @@
           "name_en": "Armoured Hide (1)",
           "name_de": "Armoured Hide (1)",
           "name_es": "Armoured Hide (1)",
-          "name_fr": "Armoured Hide (1)",
+          "name_fr": "Peau Blindée (1)",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -2238,7 +2298,7 @@
         "name_en": "Loner, Move Through Cover, Open Order, Swiftstride",
         "name_de": "Loner, Move Through Cover, Open Order, Swiftstride",
         "name_es": "Loner, Move Through Cover, Open Order, Swiftstride",
-        "name_fr": "Loner, Move Through Cover, Open Order, Swiftstride"
+        "name_fr": "Solitaire, Mouvement à Couvert, Ordre Dispersé, Rapide"
       }
     },
     {
@@ -2256,7 +2316,7 @@
           "name_en": "Mutated weapons (Hand weapons)",
           "name_de": "Mutated weapons (Hand weapons)",
           "name_es": "Mutated weapons (Hand weapons)",
-          "name_fr": "Mutated weapons (Hand weapons)",
+          "name_fr": "Mutated weapons (Armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2318,7 +2378,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Furious Charge, Immune To Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
         "name_de": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune To Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
         "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune To Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn",
-        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Furious Charge, Immune To Psychology, Impetuous, Loner, Open Order, Rampant Mutation, Random Attacks, Stubborn"
+        "name_fr": "Chaos Armour (5+), Ensorcelled Weapons, Charge Dévastatrice, Immunisé à la Psychologie, Impétueux, Solitaire, Ordre Dispersé, Rampant Mutation, Attaques Aléatoires, Obstiné"
       }
     }
   ],
@@ -2340,7 +2400,12 @@
           "name_fr": "Champion",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         },
@@ -2351,7 +2416,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 100
           }
         },
@@ -2393,7 +2460,7 @@
           "name_en": "Halberds",
           "name_de": "Halberds",
           "name_es": "Halberds",
-          "name_fr": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 1,
           "perModel": true
         }
@@ -2412,7 +2479,7 @@
           "name_en": "Full plate armour",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
-          "name_fr": "Full plate armour",
+          "name_fr": "Armure de plate complète",
           "points": 2,
           "perModel": true
         }
@@ -2422,7 +2489,7 @@
           "name_en": "Shields",
           "name_de": "Shields",
           "name_es": "Shields",
-          "name_fr": "Shields",
+          "name_fr": "Boucliers",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -2483,7 +2550,7 @@
           "name_en": "Drilled",
           "name_de": "Drilled",
           "name_es": "Drilled",
-          "name_fr": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 1,
           "minimum": 0,
           "maximum": 0,
@@ -2497,7 +2564,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Ensorcelled Weapons, Stubborn",
         "name_de": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Stubborn",
         "name_es": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Stubborn",
-        "name_fr": "Chaos Armour (6+), Close Order, Ensorcelled Weapons, Stubborn"
+        "name_fr": "Chaos Armour (6+), Ordre Serré, Ensorcelled Weapons, Obstiné"
       },
       "notes": {
         "name_en": "0-1 unit of Chosen Chaos Warriors",
@@ -2523,7 +2590,12 @@
           "name_fr": "Champion",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         },
@@ -2534,7 +2606,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 100
           }
         },
@@ -2551,7 +2625,7 @@
           "name_en": "Hand weapons, Shields",
           "name_de": "Hand weapons, Shields",
           "name_es": "Hand weapons, Shields",
-          "name_fr": "Hand weapons, Shields",
+          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2560,7 +2634,7 @@
           "name_en": "Lances, Shields",
           "name_de": "Lances, Shields",
           "name_es": "Lances, Shields",
-          "name_fr": "Lances, Shields",
+          "name_fr": "Lances de Joute, Boucliers",
           "points": 2,
           "perModel": true
         }
@@ -2579,7 +2653,7 @@
           "name_en": "Full plate armour",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
-          "name_fr": "Full plate armour",
+          "name_fr": "Armure de plate complète",
           "points": 3,
           "perModel": true
         }
@@ -2640,7 +2714,7 @@
           "name_en": "Drilled",
           "name_de": "Drilled",
           "name_es": "Drilled",
-          "name_fr": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 2,
           "minimum": 0,
           "maximum": 0,
@@ -2654,7 +2728,7 @@
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride",
         "name_de": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride",
         "name_es": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride",
-        "name_fr": "Chaos Armour (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride"
+        "name_fr": "Chaos Armour (6+), Ordre Serré, Contre-charge, Ensorcelled Weapons, Première Charge, Obstiné, Rapide"
       },
       "notes": {
         "name_en": "0-1 unit of Chosen Chaos Knights",
@@ -2676,7 +2750,7 @@
           "name_en": "Hand weapons, Halberds",
           "name_de": "Hand weapons, Halberds",
           "name_es": "Hand weapons, Halberds",
-          "name_fr": "Hand weapons, Halberds",
+          "name_fr": "Armes de base, Hallebardes",
           "points": 0,
           "active": true
         }
@@ -2737,7 +2811,7 @@
         "name_en": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
         "name_de": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
-        "name_fr": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)"
+        "name_fr": "Ordre Serré, Ensorcelled Weapons, Première Charge, Touches d'Impact (D6+1)"
       }
     },
     {
@@ -2870,7 +2944,7 @@
         "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_fr": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Ogre Charge"
       }
     },
     {
@@ -2915,7 +2989,7 @@
           "name_en": "Calloused Hides (Light Armour)",
           "name_de": "Calloused Hides (Light Armour)",
           "name_es": "Calloused Hides (Light Armour)",
-          "name_fr": "Calloused Hides (Light Armour)",
+          "name_fr": "Peaux Calleuses (Light Armour)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2929,7 +3003,7 @@
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
       }
     },
     {
@@ -2947,7 +3021,7 @@
           "name_en": "Flailing Appendages (Hand weapons)",
           "name_de": "Flailing Appendages (Hand weapons)",
           "name_es": "Flailing Appendages (Hand weapons)",
-          "name_fr": "Flailing Appendages (Hand weapons)",
+          "name_fr": "Flailing Appendages (Armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2958,7 +3032,7 @@
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
           "name_es": "Scaly Skin (Heavy Armour)",
-          "name_fr": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Armure lourde)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3013,7 +3087,7 @@
         "name_en": "Armour Bane (2), Fear, Immune To Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
         "name_de": "Armour Bane (2), Fear, Immune To Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
         "name_es": "Armour Bane (2), Fear, Immune To Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable",
-        "name_fr": "Armour Bane (2), Fear, Immune To Psychology, Open Order, Random Attacks, Random Movement, Stomp Attacks (1), Unbreakable"
+        "name_fr": "Arme Perforante (2), Peur, Immunisé à la Psychologie, Ordre Dispersé, Attaques Aléatoires, Mouvement Aléatoire, Attaques de Piétinement (1), Indémoralisable"
       }
     },
     {
@@ -3034,7 +3108,12 @@
           "name_fr": "Shartak",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         }
@@ -3069,7 +3148,7 @@
           "name_en": "Halberds",
           "name_de": "Halberds",
           "name_es": "Halberds",
-          "name_fr": "Halberds",
+          "name_fr": "Hallebardes",
           "points": 3,
           "perModel": true
         }
@@ -3101,7 +3180,9 @@
           "name_de": "Shartak's Chaos Mutations",
           "name_es": "Shartak's Chaos Mutations",
           "name_fr": "Shartak's Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 25
         }
@@ -3111,7 +3192,7 @@
         "name_en": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune To Psychology, Stomp Attacks (2), The Quickening Storm",
         "name_de": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune To Psychology, Stomp Attacks (2), The Quickening Storm",
         "name_es": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune To Psychology, Stomp Attacks (2), The Quickening Storm",
-        "name_fr": "Armour Bane (1), Armoured Hide (2), Close Order, Fear, Ensorcelled Weapons, Immune To Psychology, Stomp Attacks (2), The Quickening Storm"
+        "name_fr": "Arme Perforante (1), Peau Blindée (2), Ordre Serré, Peur, Ensorcelled Weapons, Immunisé à la Psychologie, Attaques de Piétinement (2), The Quickening Storm"
       }
     },
     {
@@ -3127,7 +3208,7 @@
           "name_en": "Claws and Fangs (Hand weapon)",
           "name_de": "Claws and Fangs (Hand weapon)",
           "name_es": "Claws and Fangs (Hand weapon)",
-          "name_fr": "Claws and Fangs (Hand weapon)",
+          "name_fr": "Claws and Fangs (Arme de base)",
           "points": 0,
           "active": true
         }
@@ -3137,7 +3218,7 @@
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
           "name_es": "Scaly Skin (Heavy Armour)",
-          "name_fr": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Armure lourde)",
           "points": 0,
           "active": true
         }
@@ -3161,7 +3242,7 @@
           "name_en": "Regeneration (5+)",
           "name_de": "Regeneration (5+)",
           "name_es": "Regeneration (5+)",
-          "name_fr": "Regeneration (5+)",
+          "name_fr": "Régénération (5+)",
           "points": 15
         },
         {
@@ -3179,7 +3260,7 @@
         "name_en": "Armour Bane (2 - claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
         "name_de": "Armour Bane (2 - claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
         "name_es": "Armour Bane (2 - claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror",
-        "name_fr": "Armour Bane (2 - claws and fangs only), Close Order, Fly (10), Large Target, Stomp Attacks (1), Swiftstride, Terror"
+        "name_fr": "Arme Perforante (2 - claws and fangs only), Ordre Serré, Vol (10), Grande Cible, Attaques de Piétinement (1), Rapide, Terreur"
       }
     }
   ],
@@ -3197,7 +3278,7 @@
           "name_en": "Hand weapons, Halberds",
           "name_de": "Hand weapons, Halberds",
           "name_es": "Hand weapons, Halberds",
-          "name_fr": "Hand weapons, Halberds",
+          "name_fr": "Armes de base, Hallebardes",
           "points": 0,
           "active": true
         }
@@ -3258,7 +3339,7 @@
         "name_en": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)",
         "name_de": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)",
         "name_es": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)",
-        "name_fr": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)"
+        "name_fr": "Arme Perforante (1 - Gorebeast only), Ordre Serré, Ensorcelled Weapons, Première Charge, Touches d'Impact (D6+2), Coup Fatal (Gorebeast only)"
       }
     },
     {
@@ -3284,7 +3365,7 @@
           "name_en": "Light armour (Calloused hide)",
           "name_de": "Light armour (Calloused hide)",
           "name_es": "Light armour (Calloused hide)",
-          "name_fr": "Light armour (Calloused hide)",
+          "name_fr": "Armure légère (Peau calleuse)",
           "points": 0,
           "active": true
         },
@@ -3292,7 +3373,7 @@
           "name_en": "Scaly Skin (Heavy Armour)",
           "name_de": "Scaly Skin (Heavy Armour)",
           "name_es": "Scaly Skin (Heavy Armour)",
-          "name_fr": "Scaly Skin (Heavy Armour)",
+          "name_fr": "Scaly Skin (Armure lourde)",
           "points": 10
         }
       ],
@@ -3301,7 +3382,7 @@
           "name_en": "Regeneration (6+)",
           "name_de": "Regeneration (6+)",
           "name_es": "Regeneration (6+)",
-          "name_fr": "Regeneration (6+)",
+          "name_fr": "Régénération (6+)",
           "points": 20,
           "minimum": 0,
           "maximum": 0
@@ -3314,7 +3395,7 @@
         "name_en": "Close Order, Giant Attacks, Immune To Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_de": "Close Order, Giant Attacks, Immune To Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Close Order, Giant Attacks, Immune To Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Close Order, Giant Attacks, Immune To Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable"
+        "name_fr": "Ordre Serré, Giant Attacks, Immunisé à la Psychologie, Grande Cible, Pick Up And..., Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
       },
       "notes": {
         "name_en": "0-1 Chaos Giant per 1000 points",
@@ -3337,7 +3418,7 @@
           "name_en": "Hand weapon",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
-          "name_fr": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "active": true
         },
@@ -3381,7 +3462,12 @@
           "name_de": "Magische Gegenstände",
           "name_es": "Magic Items",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         },
@@ -3390,7 +3476,9 @@
           "name_de": "Chaos Mutations",
           "name_es": "Chaos Mutations",
           "name_fr": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "types": [
+            "chaos-mutation"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -3400,7 +3488,7 @@
         "name_en": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune To Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
         "name_de": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune To Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
         "name_es": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune To Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
-        "name_fr": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune To Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm"
+        "name_fr": "Arme Perforante (2), Peau Blindée (2), Ordre Serré, Ensorcelled Weapons, Immunisé à la Psychologie, Grande Cible, Attaques de Piétinement (D3+1), Storm Call, Terreur, The Quickening Storm"
       },
       "notes": {
         "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
@@ -3422,7 +3510,7 @@
           "name_en": "Doomfire, Hand weapons",
           "name_de": "Doomfire, Hand weapons",
           "name_es": "Doomfire, Hand weapons",
-          "name_fr": "Doomfire, Hand weapons",
+          "name_fr": "Doomfire, Armes de base",
           "points": 0,
           "active": true
         }
@@ -3447,7 +3535,7 @@
         "name_en": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune To Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune To Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune To Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
-        "name_fr": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune To Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned"
+        "name_fr": "Arme Perforante (1), Caged Fury, Ordre Serré, Ensorcelled Weapons, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Warp-spawned"
       },
       "notes": {
         "name_en": "0-1 Hellcannon per 1000 points",

@@ -64,7 +64,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (s'il est monté)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 2,
           "perModel": true
         }
@@ -74,7 +74,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -102,7 +102,7 @@
           "name_en": "On foot",
           "name_it": "A Piedi",
           "name_de": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -171,7 +171,12 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 100
         }
@@ -282,7 +287,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (s'il est monté)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 2,
           "perModel": true
         }
@@ -320,7 +325,7 @@
           "name_en": "On foot",
           "name_it": "A Piedi",
           "name_de": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -345,7 +350,12 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -423,11 +433,13 @@
           "name_en": "Battle Standard Bearer",
           "name_it": "Stendardo da Battaglia",
           "name_de": "Battle Standard Bearer",
-          "name_fr": "Embusqueurs",
+          "name_fr": "Porteur de la Grande Bannière",
           "name_es": "Battle Standard Bearer",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -473,7 +485,7 @@
           "name_en": "Cavalry spear (if appropriately mounted)",
           "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
           "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (s'il est monté)",
+          "name_fr": "Lance de Cavalerie (si monté)",
           "points": 2
         }
       ],
@@ -501,7 +513,7 @@
           "name_en": "On foot",
           "name_it": "A Piedi",
           "name_de": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -596,7 +608,7 @@
           "name_en": "Level 4 Wizard",
           "name_it": "Mago di 4° Livello",
           "name_de": "Level 4 Wizard",
-          "name_fr": "Peut devenir un Sorcier Niveau 4",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 30,
           "perModel": true,
           "minimum": 0,
@@ -608,7 +620,7 @@
           "name_en": "On foot",
           "name_it": "A Piedi",
           "name_de": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -644,7 +656,11 @@
           "maxPoints": 100
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"],
+      "lores": [
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
       "specialRules": {
         "name_en": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
         "name_de": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
@@ -710,7 +726,9 @@
           "name_fr": "Porteur de la Grande Bannière (Culte Mortuaire seulement)",
           "points": 25,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 0
           }
         }
@@ -731,7 +749,7 @@
           "name_en": "Level 2 Wizard",
           "name_it": "Mago di 2° Livello",
           "name_de": "Level 2 Wizard",
-          "name_fr": "Peut devenir un Sorcier Niveau 2",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30,
           "minimum": 0,
           "maximum": 0
@@ -742,7 +760,7 @@
           "name_en": "On foot",
           "name_it": "A Piedi",
           "name_de": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -771,7 +789,11 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["elementalism", "illusion", "necromancy"],
+      "lores": [
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
       "specialRules": {
         "name_en": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
         "name_de": "Arise!, Curse of the Necropolis, Indomitable (1), Khopesh, Lore of Nehekhara, Nehekharan Undead, Regeneration (5+), From Beneath the Sands",
@@ -855,8 +877,13 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 75
         }
@@ -874,7 +901,8 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Tomb Prince or Arch Necrotect per 1000 points",
-            "name_it": "0-1 Principe dei Sepolcri o Gran Necrotetto ogni 1.0000 punti"
+            "name_it": "0-1 Principe dei Sepolcri o Gran Necrotetto ogni 1.0000 punti",
+            "name_fr": "0-1 Tomb Prince or Arch Necrotect per 1000 points"
           }
         }
       }
@@ -936,7 +964,12 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
           "selected": [],
           "maxPoints": 50
         }
@@ -1026,13 +1059,15 @@
         }
       ],
       "items": [],
-      "lores": ["necromancy"],
+      "lores": [
+        "necromancy"
+      ],
       "specialRules": {
         "name_en": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
         "name_it": "Comandante delle Legioni, Maledizione della Necropoli, Arido come Polvere, Infiammabile, Colpi da impatto (2D3), Costrutto (3), Sapere di Nehekhara, Sia fatta la mia volontà, Non morto di Nehekharan, Rigenerazione (5+), Settra non si inginocchia!, Settra il Grande",
         "name_de": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
         "name_es": "Commander of Legions, Curse of the Necropolis, Dry as Dust, Flammable, Impact Hits (2D3), Indomitable (3), Lore of Nehekhara, My Will Be Done, Nehekharan Undead, Regeneration (5+), Settra Does Not Kneel!, Settra the Great",
-        "name_fr": "Commandant des Légions, Malédiction de la Nécropole, Désséché, Inflammable, Touches d'impact (2D3), Indomptable (3), Domaine de Nehekhara, Que Ma Volonté Soit Faite, Morts-vivants de Nehekhara, Régénération (5+), Settra Ne s'Agenoue Pas!, Settra le Grand"
+        "name_fr": "Commandant des Légions, Malédiction de la Nécropole, Désséché, Inflammable, Touches d'Impact (2D3), Indomptable (3), Domaine de Nehekhara, Que Ma Volonté Soit Faite, Morts-vivants de Nehekhara, Régénération (5+), Settra Ne s'Agenoue Pas!, Settra le Grand"
       }
     },
     {
@@ -1059,7 +1094,7 @@
           "name_it": "Arma Bianca, Sciame di Scarafaggi",
           "name_de": "Hand weapon, Swarming mass",
           "name_es": "Hand weapon, Swarming mass",
-          "name_fr": "Arme debase, Masse grouillante",
+          "name_fr": "Arme de base, Masse grouillante",
           "points": 0,
           "active": true
         }
@@ -1084,7 +1119,7 @@
         "name_it": "Agguato, Volo (9), Costrutto (2), Khopesh, Solitario,  Non Morto di Nehekharan, Rigenerazione (5+), Principe degli Scarabei, Mietitore di Usirian, Terrore",
         "name_de": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian's Reaper, Terror",
         "name_es": "Ambushers, Fly (9), Indomitable (2), Khopesh, Loner, Nehekharan Undead, Regeneration (5+), Scarab Prince, Usirian's Reaper, Terror",
-        "name_fr": "Embusqueur, Vol (9), Indomptable (2), Khopesh, Solitaire, Morts-vivants de Nehekhara, Régénération (5+), Prince Scarabée, Faucheur d'Usirian, Terreur"
+        "name_fr": "Embusqueurs, Vol (9), Indomptable (2), Khopesh, Solitaire, Morts-vivants de Nehekhara, Régénération (5+), Prince Scarabée, Faucheur d'Usirian, Terreur"
       }
     },
     {
@@ -1176,7 +1211,9 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1212,7 +1249,7 @@
           "name_en": "Light armour",
           "name_it": "Armatura Leggera",
           "name_de": "Light armour",
-          "name_fr": "Armures légères",
+          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true
         }
@@ -1246,7 +1283,7 @@
         "name_en": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_de": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_es": "Close Order, Horde, Nehekharan Undead, Regeneration (6+), Regimental Unit",
-        "name_fr": "Ordre Serré, Horde, Morts-vivants de Nehekhara, Régénération (6+), Unité régimentaire",
+        "name_fr": "Ordre Serré, Horde, Morts-vivants de Nehekhara, Régénération (6+), Unité Régimentaire",
         "name_it": "Formazione Serrata, Orda, Non morto di Nehekharan, Unità Madre, Rigenerazione (6+)"
       },
       "armyComposition": {
@@ -1402,7 +1439,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1449,7 +1488,7 @@
           "name_en": "Drilled (one per 1000pts)",
           "name_it": "Addestrato (una ogni 1000pti)",
           "name_de": "Drilled (one per 1000pts)",
-          "name_fr": "Avoir la règle Bien Entrainés (une unité par tranche de 1000pts)",
+          "name_fr": "Bien Entraînés (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -1473,7 +1512,7 @@
         "name_en": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_de": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_es": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
-        "name_fr": "Coup Fendoir, Ordre Serré, Indomptable (1),  Khopesh, Morts-vivants de Nehekhara, Régénération (6+), Unité régimentaire",
+        "name_fr": "Coup de Fendoir, Ordre Serré, Indomptable (1),  Khopesh, Morts-vivants de Nehekhara, Régénération (6+), Unité Régimentaire",
         "name_it": "Colpo di Grazia, Formazione Serrata, Costrutti (1), Khopesh, Non Morto di Nehekharan, Rigenerazione (6+), Unità Madre"
       },
       "armyComposition": {
@@ -1553,7 +1592,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1619,7 +1658,7 @@
           "name_en": "Hand weapons, Warbows",
           "name_it": "Arma Bianca, Archi da Guerra",
           "name_de": "Hand weapons, Warbows",
-          "name_fr": "Armes de base, Arcs de guerre",
+          "name_fr": "Armes de base, Arcs de Guerre",
           "points": 1,
           "perModel": true
         }
@@ -1650,7 +1689,7 @@
           "name_en": "Ambushers (Nehekharan Royal Host only - 0-1 per 1000 points)",
           "name_it": "Agguato (solo lista dello Schieramento Reale di Nehekharan, 0-1 per 1000 punti)",
           "name_de": "(Nehekharan Royal Host only - 0-1 per 1000 points) Ambushers",
-          "name_fr": "(Ost Royal de Nahekara seulement, 0-1 par tranche de 1000 points) Embusqueurs",
+          "name_fr": "Embusqueurs (Ost Royal de Nahekara seulement, 0-1 par tranche de 1000 points) Embusqueurs",
           "points": 0,
           "perModel": true,
           "minimum": 0,
@@ -1664,7 +1703,7 @@
         "name_en": "Arrows of Asaph, Chariot Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
         "name_de": "Arrows of Asaph, Chariot Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
         "name_es": "Arrows of Asaph, Chariot Runners, Nehekharan Undead, Regeneration (6+), Skirmishers, Vanguard",
-        "name_fr": "Flèches d'Asaph, Escorteurs de chars, Morts-vivants de Nehekhara, Régénération (6+), Tirailleurs, Avant-garde",
+        "name_fr": "Flèches d'Asaph, Escorteurs de Chars, Morts-vivants de Nehekhara, Régénération (6+), Tirailleurs, Avant-garde",
         "name_it": "Schermagliatori, Avanguardia, Freccie di Asaph, Non morto di Nehekharan, Rigenerazione (6+), Scorta dei Carri"
       },
       "notes": {
@@ -1721,7 +1760,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1738,7 +1779,7 @@
           "name_en": "Hand weapons, Cavalry spears, Warbows",
           "name_it": "Arma Bianca, Lance Leggere, Archi da Guerra",
           "name_de": "Hand weapons, Cavalry spears, Warbows",
-          "name_fr": "Armes de base, Lances de cavalerie, Arcs de guerre",
+          "name_fr": "Armes de base, Lances de Cavalerie, Arcs de Guerre",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1791,7 +1832,7 @@
           "name_en": "Hand weapons (Venemous Bites and Stings)",
           "name_it": "Morsi e Punture Velenose (conta come Armi Bianche)",
           "name_de": "Hand weapons (Venemous Bites and Stings)",
-          "name_fr": "Hand weapons (Venemous Bites and Stings)",
+          "name_fr": "Armes de base (Venemous Bites and Stings)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1871,7 +1912,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 25
           }
         },
@@ -1898,7 +1941,7 @@
           "name_en": "Cavalry spears",
           "name_it": "Lance Leggere",
           "name_de": "Cavalry spears",
-          "name_fr": "Lances de cavalerie",
+          "name_fr": "Lances de Cavalerie",
           "points": 1,
           "perModel": true
         }
@@ -1908,7 +1951,7 @@
           "name_en": "No armour, Shields",
           "name_it": "Senza Armatura, Scudi",
           "name_de": "No armour, Shields",
-          "name_fr": "No armour, Boucliers",
+          "name_fr": "Pas d'Armure, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2017,7 +2060,7 @@
           "name_en": "Chariot Runners",
           "name_it": "Scorta ai Carri",
           "name_de": "Chariot Runners",
-          "name_fr": "Avoir la règle spéciale Escorteurs de Chars",
+          "name_fr": "Escorteurs de Chars",
           "points": 1,
           "perModel": true
         },
@@ -2025,7 +2068,7 @@
           "name_en": "Chariot Runners (Nehekharan Royal Host only - 0-1 per 1000 points) ",
           "name_it": "Scorta ai Carri gratis (solo lista dello Schieramento Reale di Nehekharan - 0-1 per 1000 punti)",
           "name_de": "Chariot Runners (Nehekharan Royal Host only - 0-1 per 1000 points)",
-          "name_fr": "(Ost Royal de Nehekhara seulement - 0-1 par tranche de 1000 points) Avoir la règle spéciale Escorteurs de Chars",
+          "name_fr": "Escorteurs de Chars (Ost Royal de Nehekhara seulement - 0-1 par tranche de 1000 points) Avoir la règle spéciale Escorteurs de Chars",
           "points": 0,
           "perModel": true
         }
@@ -2076,7 +2119,12 @@
           "name_fr": "Maître d'armes (champion)",
           "points": 5,
           "magic": {
-            "types": ["weapon", "enchanted-item", "armor", "talisman"],
+            "types": [
+              "weapon",
+              "enchanted-item",
+              "armor",
+              "talisman"
+            ],
             "maxPoints": 30
           }
         },
@@ -2088,7 +2136,9 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2107,7 +2157,7 @@
           "name_it": "Armi Bianche(entrambi), Picche (Guerrieri), Archi da guerra (Arcieri)",
           "name_de": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
           "name_es": "Hand weapons (both), Thrusting spears (Warriors), Warbows (Archers)",
-          "name_fr": "Armes de base (les deux), Lances d'infanterie (Guerriers), Arcs de Guerre (Archers)",
+          "name_fr": "Armes de base (les deux), Lances d'Infanterie (Guerriers), Arcs de Guerre (Archers)",
           "points": 0,
           "active": true
         }
@@ -2165,7 +2215,7 @@
         "name_it": "Freccie di Asaph, Formazione Serrata, Orda, Rigenerazione (6+), Equipaggiamento Eterogeneo*, Non Morto di Nehekharan, Unità Madre, Disciplina Ferrea",
         "name_de": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline",
         "name_es": "Arrows of Asaph, Close Order, Horde, Motley Crew*, Nehekharan Undead, Regeneration (6+), Regimental Unit, Steadfast Discipline",
-        "name_fr": "Flèches d'Asaph, Ordre Serré, Horde, Bande Hétéroclite*, Morts-vivants de Nehekhara, Régénération (6+), Unité régimentaire, Steadfast Discipline"
+        "name_fr": "Flèches d'Asaph, Ordre Serré, Horde, Bande Hétéroclite*, Morts-vivants de Nehekhara, Régénération (6+), Unité Régimentaire, Steadfast Discipline"
       },
       "armyComposition": {
         "nehekharan-royal-hosts": {
@@ -2190,7 +2240,12 @@
           "name_fr": "Maître des Chevaux (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 30
           }
         },
@@ -2202,7 +2257,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 30
           }
         },
@@ -2221,7 +2278,7 @@
           "name_it": "Armi Bianche(entrambi), Lance Leggere (Cavalieri), Archi da guerra (Arcieri a Cavallo)",
           "name_de": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
           "name_es": "Hand weapons (both), Cavalry spears (Horsemen), Warbows (Horse Archers)",
-          "name_fr": "Armes de base (les deux), Lances de cavalerie (Cavaliers), Arcs de guerre (Archers montés)",
+          "name_fr": "Armes de base (les deux), Lances de Cavalerie (Cavaliers), Arcs de Guerre (Archers montés)",
           "points": 0,
           "active": true
         }
@@ -2232,7 +2289,7 @@
           "name_it": "Armature leggere (entrambi), Scudi (Cavalieri)",
           "name_de": "Light armour (both), Shields (Horsemen)",
           "name_es": "Light armour (both), Shields (Horsemen)",
-          "name_fr": "Armure Légère (les deux), Boucliers (Cavaliers)",
+          "name_fr": "Armure légère (les deux), Boucliers (Cavaliers)",
           "points": 0,
           "active": true
         }
@@ -2318,7 +2375,7 @@
         "name_it": "Agguato, Pelle a Scaglie (1), Colpi da Impatto (1), Indomito (1), Viaggiatore, Non Morto di Nehekharan, Formazione Aperta, Attacchi Venefici, Rigenerazione (6+), Passo Rapido",
         "name_de": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order, Poisoned Attacks, Regeneration (6+), Swiftstride",
         "name_es": "Ambushers, Armoured Hide (1), Impact Hits (1), Indomitable (1), Move Through Cover, Nehekharan Undead, Open Order, Poisoned Attacks, Regeneration (6+), Swiftstride",
-        "name_fr": "Embusqueurs, Peau Blindée (1), Touches d'Impact (1), Indomptable (1), Déplacement à couvert, Morts-vivants de Nehekhara, Ordre Dispersé, Attaques Empoisonnées, Régénération (6+), Rapide"
+        "name_fr": "Embusqueurs, Peau Blindée (1), Touches d'Impact (1), Indomptable (1), Mouvement à Couvert, Morts-vivants de Nehekhara, Ordre Dispersé, Attaques Empoisonnées, Régénération (6+), Rapide"
       },
       "armyComposition": {
         "mortuary-cults": {
@@ -2352,7 +2409,12 @@
           "name_fr": "Capitaine des Tombes (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 50
           }
         },
@@ -2364,7 +2426,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2383,7 +2447,7 @@
           "name_it": "Armi Bianche, Alabarde e Scudi",
           "name_de": "Hand weapons, Halberds, Shields",
           "name_es": "Hand weapons, Halberds, Shields",
-          "name_fr": "Armes de Base, Hallebardes, Boucliers",
+          "name_fr": "Armes de base, Hallebardes, Boucliers",
           "points": 0,
           "active": true
         }
@@ -2398,7 +2462,7 @@
         "name_it": "Colpo di Grazia (solo Eq. Guardie dei Sepolcri), Arido come Polvere, Colpi da Impatto (D3+1), Indomito (2), Khopesh, Rigenerazione (6+), Non Morto di Nehekharan, Formazione Aperta, Movimento Tattico, Passo Rapido",
         "name_de": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
         "name_es": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
-        "name_fr": "Coup Fendoir (Equipage Gardes des tombes seulement), Désséché, Touches d'Impact (D3+1), Indomptable (2), Khopesh, Morts-vivants de Nehekhara, Ordre Serré, Régénération (6+), Mouvement de Réserve, Rapide"
+        "name_fr": "Coup de Fendoir (Equipage Gardes des tombes seulement), Désséché, Touches d'Impact (D3+1), Indomptable (2), Khopesh, Morts-vivants de Nehekhara, Ordre Dispersé, Régénération (6+), Mouvement de Réserve, Rapide"
       },
       "armyComposition": {
         "nehekharan-royal-hosts": {
@@ -2531,7 +2595,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2594,7 +2658,7 @@
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
-          "name_fr": "Armure lourdes",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2633,7 +2697,7 @@
           "name_en": "Hand weapons (Venemous Bites and Stings)",
           "name_it": "Morsi e Punture Velenose (conta come Armi Bianche)",
           "name_de": "Hand weapons (Venemous Bites and Stings)",
-          "name_fr": "Morsures et dards venimeux (Compte comme des Armes de base)",
+          "name_fr": "Armes de base (Compte comme des Armes de base)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2691,7 +2755,7 @@
           "name_en": "Hand weapons (Beaks and Talons)",
           "name_it": "Becchi e Artigli (contano come armi bianche)",
           "name_de": "Hand weapons (Beaks and Talons)",
-          "name_fr": "Hand weapons (Beaks and Talons)",
+          "name_fr": "Armes de base (Beaks and Talons)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2760,7 +2824,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2786,7 +2852,7 @@
           "name_en": "Cavalry spears",
           "name_it": "Lance Leggere",
           "name_de": "Cavalry spears",
-          "name_fr": "Lances de cavalerie",
+          "name_fr": "Lances de Cavalerie",
           "points": 0,
           "perModel": true
         },
@@ -2794,7 +2860,7 @@
           "name_en": "Hand weapons (Lashing Tails)",
           "name_it": "Code sferzanti (conta come Arma Bianca)",
           "name_de": "Hand weapons (Lashing Tails)",
-          "name_fr": "Hand weapons (Lashing Tails)",
+          "name_fr": "Armes de base (Lashing Tails)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2835,7 +2901,7 @@
         "name_en": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
         "name_de": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
         "name_es": "Armoured Hide (1), Cleaving Blow, Close Order, Impact Hits (1), Indomitable (1), Khopesh, Nhekharan Undead, Poisoned Attacks, Regeneration (6+), Swiftstride",
-        "name_fr": "Peau Blindée (1), Coup Fendoir (cavalier seulement), Ordre Serré, Touches d'Impact (1), Indomptable (1), Khopesh, Morts-vivants de Nehekhara, Attaques Empoisonnées (Nécroserpent seulement), Régénération (6+), Rapide",
+        "name_fr": "Peau Blindée (1), Coup de Fendoir, Ordre Serré, Touches d'Impact (1), Indomptable (1), Khopesh, Morts-vivants de Nehekhara, Attaques Empoisonnées, Régénération (6+), Rapide",
         "name_it": "Pelle a Scaglie (1), Coplo di Grazia (solo cavalieri), Formazione Serrata, Colpi di Impatto (1), Costrutto (1), Khopesh, Rigenerazione (6+), Non morto di Nehekharan, Attacchi Venefici (Necroserpenti), Passo Rapido"
       },
       "notes": {
@@ -2889,7 +2955,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -2936,7 +3004,7 @@
           "name_en": "Drilled (one per 1000pts)",
           "name_it": "Addestrati (uno ogni 1.000pts)",
           "name_de": "Drilled (one per 1000pts)",
-          "name_fr": "Avoir la règle Spéciale Bien Entrainés (une unité par tranche de 1000pts)",
+          "name_fr": "Bien Entraînés (une unité par tranche de 1000pts)",
           "points": 1,
           "perModel": true,
           "minimum": 0,
@@ -2960,7 +3028,7 @@
         "name_en": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_de": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
         "name_es": "Cleaving Blow, Close Order, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (6+), Regimental Unit",
-        "name_fr": "Coup fendoir, Ordre Serré, Indomptable (1), Khopesh, Morts-vivants de Nehekhara, Régénération (6+), Unité régimentaire",
+        "name_fr": "Coup de Fendoir, Ordre Serré, Indomptable (1), Khopesh, Morts-vivants de Nehekhara, Régénération (6+), Unité Régimentaire",
         "name_it": "Colpo di Grazia, Formazione Serrata, Costrutti (1), Khopesh, Non Morto di Nehekharan, Rigenerazione (6+), Unità Madre"
       },
       "notes": {
@@ -3082,7 +3150,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3144,7 +3212,7 @@
           "name_en": "Heavy armour (Bone Carapace)",
           "name_it": "Carapace Ossea (conta come Armatura Pesante)",
           "name_de": "Heavy armour (Bone Carapace)",
-          "name_fr": "Heavy armour (Bone Carapace)",
+          "name_fr": "Armure lourde (Bone Carapace)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3155,7 +3223,7 @@
           "name_en": "Ambushers",
           "name_it": "Agguato",
           "name_de": "Ambushers",
-          "name_fr": "Embusqueur",
+          "name_fr": "Embusqueurs",
           "points": 5,
           "perModel": true
         },
@@ -3225,7 +3293,7 @@
           "name_en": "Wicked Claws (Warsphinx), Hand weapons (Tomb Guard Crew Only), Cavalry spears (Tomb Guard Crew Only), Shortbows (Tomb Guard Crew Only)",
           "name_it": "Artigli Malvagi (Sfinge da Guerra Khemriana), Armi Bianche (Guardia dei Sepolcri), Lance Leggere (Guardia dei Sepolcri) and Archi Corti (Guardia dei Sepolcri)",
           "name_de": "Wicked Claws (Warsphinx), Hand weapons (Tomb Guard Crew Only), Cavalry spears (Tomb Guard Crew Only), Shortbows (Tomb Guard Crew Only)",
-          "name_fr": "Griffes cruelles, Armes de base, Lances de cavalerie, Arcs courts",
+          "name_fr": "Wicked Claws (Warsphinx), Armes de base (Tomb Guard Crew Only), Lances de Cavalerie (Tomb Guard Crew Only), Arcs Courts (Tomb Guard Crew Only)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3268,7 +3336,7 @@
         "name_en": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
         "name_de": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
         "name_es": "Arrows of Asaph, Cleaving Blow (Tomb Guard Crew Only), Close Order, Howdah, Indomitable (2), Khopesh (Tomb Guard Crew Only), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Terror",
-        "name_fr": "Flèches d'Asaph, Coup Fendoir (équipage Gardes des Tombes uniquement), Ordre Serré, Howdah, Indomptable (2), Khopesh, Grande Cible, Morts-vivants de Nehekhara, Régénération (6+), Attaques de Piétinement (D3), Terreur",
+        "name_fr": "Flèches d'Asaph, Coup de Fendoir (équipage Gardes des Tombes uniquement), Ordre Serré, Howdah, Indomptable (2), Khopesh (Tomb Guard Crew Only), Grande Cible, Morts-vivants de Nehekhara, Régénération (6+), Attaques de Piétinement (D3), Terreur",
         "name_it": "Freccie di Asaph, Coplo di Grazia (solo Guardie dei Sepolcri), Palanchino, Costrutto (2), Bersaglio Grande, Rigenerazione (6+), Khopesh (solo Guardie dei Sepolcri), Non morto di Nehekharan, Calpestamento (D3), Terrore, Formazione Serrata"
       },
       "notes": {
@@ -3306,7 +3374,12 @@
           "name_fr": "Capitaine des Tombes (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
             "maxPoints": 50
           }
         },
@@ -3318,7 +3391,9 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -3352,7 +3427,7 @@
         "name_it": "Colpo di Grazia (solo Eq. Guardie dei Sepolcri), Arido come Polvere, Colpi da Impatto (D3+1), Indomito (2), Khopesh, Rigenerazione (6+), Non Morto di Nehekharan, Formazione Aperta, Movimento Tattico, Passo Rapido",
         "name_de": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
         "name_es": "Cleaving Blow (Tomb Guard Crew only), Dry as Dust, Impact Hits (D3+1), Indomitable (2), Khopesh, Nehekharan Undead, Open Order, Regeneration (6+), Reserve Move, Swiftstride",
-        "name_fr": "Coup Fendoir (Equipage Gardes des tombes seulement), Désséchés, Touches d'Impact (D3+1), Indomptable (2), Khopesh, Morts-vivants de Nehekhara, Ordre Serré, Régénération (6+), Mouvement de Réserve, Rapide"
+        "name_fr": "Coup de Fendoir (Equipage Gardes des tombes seulement), Désséchés, Touches d'Impact (D3+1), Indomptable (2), Khopesh, Morts-vivants de Nehekhara, Ordre Dispersé, Régénération (6+), Mouvement de Réserve, Rapide"
       },
       "armyComposition": {
         "nehekharan-royal-hosts": {
@@ -3506,7 +3581,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3692,7 +3767,7 @@
           "name_en": "Heavy armour",
           "name_it": "Armatura Pesante",
           "name_de": "Heavy armour",
-          "name_fr": "Armure Lourde",
+          "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
           "active": true
