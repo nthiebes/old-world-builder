@@ -265,7 +265,8 @@ export const GameView = () => {
                       </label>
                       <textarea
                         id="customNote"
-                        className="input game-view__custom-note-input"
+                        className="input textarea game-view__custom-note-input"
+                        rows="2"
                         value={unit.customNote || ""}
                         onChange={(event) =>
                           handleCustomNoteChange({

@@ -1430,7 +1430,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         </label>
         <textarea
           id="customNote"
-          className="input"
+          className="input textarea"
+          rows="2"
           value={unit.customNote || ""}
           onChange={handleCustomNoteChange}
           autoComplete="off"

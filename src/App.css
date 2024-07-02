@@ -258,9 +258,11 @@ hr {
   margin-bottom: 0;
 }
 
-textarea.input {
-  height: 6rem;
-  padding-bottom: 0;
+.textarea {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 48px;
 }
 
 .checkbox {
