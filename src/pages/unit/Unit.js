@@ -1428,8 +1428,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         <label htmlFor="customNote">
           <FormattedMessage id="unit.customNote" />
         </label>
-        <input
-          type="text"
+        <textarea
           id="customNote"
           className="input"
           value={unit.customNote || ""}
