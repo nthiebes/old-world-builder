@@ -566,48 +566,52 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.mercenaries && mercenariesData && list.armyComposition && list?.army !== "daemons-of-chaos" && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.mercenaries" />
-              </h2>
-              <p className="editor__points">
-                {mercenariesData.diff > 0 ? (
-                  <>
-                    <strong>{mercenariesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>
-                      {mercenariesData.points - mercenariesPoints}
-                    </strong>
-                    <FormattedMessage id="editor.availablePoints" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
+        {list.mercenaries &&
+          mercenariesData &&
+          list.armyComposition &&
+          list?.army !== "daemons-of-chaos" &&
+          list?.army !== "vampire-counts" && (
+            <section className="editor__section">
+              <header className="editor__header">
+                <h2>
+                  <FormattedMessage id="editor.mercenaries" />
+                </h2>
+                <p className="editor__points">
+                  {mercenariesData.diff > 0 ? (
+                    <>
+                      <strong>{mercenariesData.diff}</strong>
+                      <FormattedMessage id="editor.tooManyPoints" />
+                      <Icon symbol="error" color="red" />
+                    </>
+                  ) : (
+                    <>
+                      <strong>
+                        {mercenariesData.points - mercenariesPoints}
+                      </strong>
+                      <FormattedMessage id="editor.availablePoints" />
+                      <Icon symbol="check" />
+                    </>
+                  )}
+                </p>
+              </header>
 
-            <OrderableUnitList
-              units={list.mercenaries}
-              type="mercenaries"
-              listId={listId}
-            />
+              <OrderableUnitList
+                units={list.mercenaries}
+                type="mercenaries"
+                listId={listId}
+              />
 
-            <Button
-              type="primary"
-              centered
-              to={`/editor/${listId}/add/mercenaries`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button>
-          </section>
-        )}
+              <Button
+                type="primary"
+                centered
+                to={`/editor/${listId}/add/mercenaries`}
+                icon="add"
+                spaceTop
+              >
+                <FormattedMessage id="editor.add" />
+              </Button>
+            </section>
+          )}
       </MainComponent>
     </>
   );
