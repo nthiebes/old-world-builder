@@ -39,7 +39,7 @@
         {
           "name_de": "Lanze (sofern geeignet beritten)",
           "name_en": "Lance (if appropriately mounted)",
-          "name_fr": "Lance De Joute",
+          "name_fr": "Lance de Joute (si monté)",
           "points": 4
         }
       ],
@@ -64,7 +64,7 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -206,7 +206,7 @@
         {
           "name_de": "Lanze (sofern geeignet berittenen)",
           "name_en": "Lance (if appropriately mounted)",
-          "name_fr": "Lance De Joute",
+          "name_fr": "Lance de Joute (si monté)",
           "points": 4
         }
       ],
@@ -243,7 +243,7 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -302,7 +302,8 @@
         "name_en": "Blessings of the Lady, Rallying Cry, the Knight's Vow",
         "name_de": "Segen der Herrin, Sammelruf, Rittertugend",
         "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Voeu du Chevalier"
-      }
+      },
+      "name_fr": "Baron"
     },
     {
       "name_en": "Prophetess",
@@ -333,14 +334,14 @@
         {
           "name_en": "Level 4 Wizard",
           "name_de": "Zauberin Stufe 4",
-          "name_fr": "Sorcier Niveau 4",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 30
         }
       ],
       "mounts": [
         {
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -473,7 +474,7 @@
         {
           "name_de": "Lanze (sofern geeignet beritten)",
           "name_en": "Lance (if appropriately mounted)",
-          "name_fr": "Lance De Joute",
+          "name_fr": "Lance de Joute (si monté)",
           "points": 4
         }
       ],
@@ -510,7 +511,7 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -603,14 +604,14 @@
         {
           "name_en": "Level 2 Wizard",
           "name_de": "Zauberin Stufe 2",
-          "name_fr": "Sorcier Niveau 2",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30
         }
       ],
       "mounts": [
         {
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -690,7 +691,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "Zusätzliche Handwaffe",
-          "name_fr": "Arme de base Additionnelle",
+          "name_fr": "Arme de base additionnelle",
           "points": 2
         },
         {
@@ -720,7 +721,7 @@
       "mounts": [
         {
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true
@@ -744,7 +745,8 @@
       ],
       "specialRules": {
         "name_en": "Levies, Peasant's Duty, Peasantry, Warband",
-        "name_de": "Bauernvolk, Des Bauern Pflicht, Gesindel, Kriegerschar"
+        "name_de": "Bauernvolk, Des Bauern Pflicht, Gesindel, Kriegerschar",
+        "name_fr": "Conscrits, Peasant's Duty, Peasantry, Bande de Guerre"
       }
     },
     {
@@ -779,14 +781,14 @@
           "name_en": "Level 2 Wizard",
           "name_de": "Zauberer der Stufe 2",
           "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier Niveau 2",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30
         },
         {
           "name_en": "Level 3 Wizard",
           "name_de": "Zauberer der Stufe 3",
           "name_es": "Level 3 Wizard",
-          "name_fr": "Sorcier Niveau 3",
+          "name_fr": "Sorcier de Niveau 3",
           "points": 60
         }
       ],
@@ -794,7 +796,7 @@
         {
           "name_de": "Zu Fuß",
           "name_en": "On foot",
-          "name_fr": "À Pieds",
+          "name_fr": "À Pied",
           "points": 0,
           "active": true
         },
@@ -834,7 +836,7 @@
       "specialRules": {
         "name_en": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
         "name_de": "Magische Attacken, Magieresistenz (-1), Ungelernter Arkanist",
-        "name_fr": "Attaques Magiques, Résistance Magique (-1), Arcaniste Autodidacte"
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Arcaniste Autodidacte"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -855,7 +857,8 @@
           "name_en": "The Dolorous Blade",
           "name_de": "Die Klinge des Leids",
           "active": true,
-          "points": 0
+          "points": 0,
+          "name_fr": "The Dolorous Blade"
         }
       ],
       "armor": [
@@ -863,7 +866,8 @@
           "name_en": "Heavy armour, Shield, Barding",
           "name_de": "Schwere Rüstung, Schild, Rossharnisch",
           "active": true,
-          "points": 0
+          "points": 0,
+          "name_fr": "Armure lourde, Bouclier, Caparaçon"
         }
       ],
       "options": [],
@@ -873,7 +877,7 @@
       "specialRules": {
         "name_en": "Aura of the Fay, Blessed Knight, Ethereal, Guardian of the Sacred Sites, Immune To Psychology, Loner, Move Through Cover, Rallying Cry, Terror, Unbreakable, Unstable",
         "name_de": "Durch Deckung bewegen, Einzelgänger, Entsetzen, Gesegneter Ritter, Hüter der Heiligen Stätten, Immun gegen Psychologie, Instabil, Körperlos, Sammelruf, Unerschütterlich, Unsterblich",
-        "name_fr": "Aura Féérique, Chevalier Béni, Ethéré, Gardien des Sites Sacrés, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Cri de Ralliement, Terreur, Obstiné, Instable"
+        "name_fr": "Aura Féérique, Chevalier Béni, Ethéré, Gardien des Sites Sacrés, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Cri de Ralliement, Terreur, Indémoralisable, Instables"
       }
     },
     {
@@ -897,7 +901,8 @@
           "name_en": "Sorrow's End",
           "name_de": "Ende der Trauer (Axt)",
           "active": true,
-          "points": 0
+          "points": 0,
+          "name_fr": "Sorrow's End"
         }
       ],
       "armor": [
@@ -905,7 +910,8 @@
           "name_en": "Dragonhide Cloak, Heavy armour, Shield",
           "name_de": "Drachenhautmantel, Schwere Rüstung, Schild",
           "active": true,
-          "points": 0
+          "points": 0,
+          "name_fr": "Dragonhide Cloak, Armure lourde, Bouclier"
         }
       ],
       "options": [],
@@ -939,7 +945,8 @@
           "name_en": "Hand weapon, Chalice of Brionne, The Staff of the Elements",
           "name_de": "Handwaffe, Kelch von Brionne, Stab der Elemente",
           "active": true,
-          "points": 0
+          "points": 0,
+          "name_fr": "Arme de base, Chalice of Brionne, The Staff of the Elements"
         }
       ],
       "armor": [],
@@ -950,7 +957,7 @@
       "specialRules": {
         "name_en": "Arcane Backlash, Armour Bane (2 - Ariandir only), Armoured Hide (1), Aura of the Lady, Beguiling Aura, Blessings of the Lady, Counter Charge, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady, Stomp Attacks (1), Swiftstride",
         "name_de": "Arkane Rückkopplung, Aura der Herrin, Bezaubernde Aura, Gegenangriff, Lehre der Herrin, Magische Attacken, Magieresistenz (-2), Rüstungsfluch (2, nur Ariandir), Schild der Herrin, Schnelle Bewegung, Segen der Herrin, Stampfattacken (1), Zähe Haut (1)",
-        "name_fr": "Contrecoup Arcanique, Arme Perforante (2 - Ariandir Uniquement), Peau Blindée (1), Aura de la Dame, Aura Envoûtante, Bénédiction de la Dame, Contre Charge, Domaine de la Dame, Attaques Magiques, Résistance Magique (-2), Bouclier de la Dame, Attaques de Piétinement (1), Rapide"
+        "name_fr": "Contrecoup Arcanique, Arme Perforante (2 - Ariandir Uniquement), Peau Blindée (1), Aura de la Dame, Aura Envoûtante, Bénédiction de la Dame, Contre-charge, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame, Attaques de Piétinement (1), Rapide"
       },
       "armyComposition": {
         "kingdom-of-bretonnia": {
@@ -1000,7 +1007,8 @@
               "name_en": "Blessed Triptych",
               "name_de": "Heiliges Triptychon",
               "points": 25,
-              "exclusive": true
+              "exclusive": true,
+              "name_fr": "Blessed Triptych"
             }
           ]
         }
@@ -1030,7 +1038,7 @@
       "specialRules": {
         "name_en": "Close Order, Horde, Levies, Peasantry, Shieldwall, Warband",
         "name_de": "Bauernvolk, Geschlossene Ränge, Gesindel, Horde, Kriegerschar, Schildwall",
-        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Bouclier, Bande de Guerre"
+        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
       },
       "armyComposition": {
         "kingdom-of-bretonnia": {
@@ -1082,7 +1090,7 @@
         {
           "name_en": "Hand weapons, Longbows",
           "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
+          "name_fr": "Armes de base, Arcs Longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1253,7 +1261,7 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Furious Charge, the Knight's Vow",
         "name_de": "Segen der Herrin, Geschlossene Ränge, Rasender Angriff, Rittergelübde",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Charge Furieuse, le Voeu du Chevalier"
+        "name_fr": "Bénédiction de la Dame, Ordre Serré, Charge Dévastatrice, le Voeu du Chevalier"
       }
     },
     {
@@ -1319,7 +1327,7 @@
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_de": "Handwaffe, Lanzen, Schild",
-          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
+          "name_fr": "Armes de base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1340,7 +1348,7 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Knight's Vow",
         "name_de": "Segen der Herrin, Edle Schlachtrosse, Erster Angriff, Gegenangriff, Geschlossene Ränge, Lanzenformation, Rittergelübde, Schnelle Bewegung",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre Charge, Destriers SUpérieurs, Première Charge, Formation en Fer de Lance, le Voeu du Chevalier"
+        "name_fr": "Blessings of the Lady, Ordre Serré, Contre-charge, Finest Warhorses, Première Charge, Lance Formation, Rapide, the Knight's Vow"
       }
     },
     {
@@ -1408,7 +1416,7 @@
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_de": "Handwaffen, Lanzen, Schild",
-          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
+          "name_fr": "Armes de base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1429,7 +1437,7 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Impetuous, Lance Formation, Swiftstride, the Knight's Vow",
         "name_de": "Segen der Herrin, Edle Schlachtrosse, Erster Angriff, Geschlossene Ränge, Lanzenformation, Rittergelübde, Schnelle Bewegung, Ungestüm",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Voeu du Chevalier"
+        "name_fr": "Blessings of the Lady, Ordre Serré, Finest Warhorses, Première Charge, Impétueux, Lance Formation, Rapide, the Knight's Vow"
       }
     },
     {
@@ -1460,7 +1468,8 @@
               "name_en": "Blessed Triptych",
               "name_de": "Heiliges Triptychon",
               "points": 25,
-              "exclusive": true
+              "exclusive": true,
+              "name_fr": "Blessed Triptych"
             }
           ]
         },
@@ -1488,7 +1497,7 @@
           "name_en": "Hand weapons, Halberds",
           "name_de": "Handwaffen, Hellebarden",
           "name_es": "Hand weapons, Halberds",
-          "name_fr": "Arme de Base, Hallebarde",
+          "name_fr": "Armes de base, Hallebardes",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1497,7 +1506,7 @@
           "name_en": "Hand weapons, Polearms",
           "name_de": "Handwaffen, Stangenwaffen",
           "name_es": "Hand weapons, Polearms",
-          "name_fr": "Armes de Base, Armes d'Hast",
+          "name_fr": "Armes de base, Armes d'Hast",
           "points": 1,
           "perModel": true
         },
@@ -1505,7 +1514,7 @@
           "name_en": "Hand weapons, Thrusting spears",
           "name_de": "Handwaffen, Stoßspeere",
           "name_es": "Hand weapons, Thrusting spears",
-          "name_fr": "Armes de Base, Lances d'infanterie",
+          "name_fr": "Armes de base, Lances d'Infanterie",
           "points": 0,
           "perModel": true
         }
@@ -1515,7 +1524,7 @@
           "name_en": "Light armour, Shields",
           "name_de": "Leichte Rüstung, Schilde",
           "name_es": "Light armour, Shields",
-          "name_fr": "Armures légères, Boucliers",
+          "name_fr": "Armure légère, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1529,7 +1538,7 @@
         "name_en": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
         "name_de": "Bauernvolk, Geschlossene Ränge, Horde, Kriegerschar, Schildwall, Veteranen",
         "name_es": "Close Order, Horde, Peasantry, Shieldwall, Veteran, Warband",
-        "name_fr": "Ordre serré, Horde, Paysannerie, Mur de Boucliers, Veteran, Bande de Guerre"
+        "name_fr": "Ordre Serré, Horde, Paysannerie, Mur de Boucliers, Vétérans, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -1721,7 +1730,7 @@
         {
           "name_en": "Hand weapon, Lances, Shields",
           "name_de": "Handwaffen, Lanzen, Schilde",
-          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
+          "name_fr": "Arme de base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1742,7 +1751,7 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly(10), Furious Charge (Pegasus Knights & First Knight only), Lance Formation, Skirmishers, Swiftstride, the Knight's Vow",
         "name_de": "Segen der Herrin, Aufgefächerte Formation, Erster Angriff, Gegenangriff, Fliegen (10), Lanzenformation, Plänkler, Rasender Angriff (nur Pegasusritter und Erster Ritter), Rittergelübde, Schnelle Bewegung",
-        "name_fr": "Bénédiction de la Dame, Contre Charge, Formation Eparse, Première Charge, Vol(10), Charge Dévastatrice (Cavaliers uniquement), Formation en Fer de Lance, Tirailleurs, Rapide, le Voeu du Chevalier"
+        "name_fr": "Bénédiction de la Dame, Contre-charge, Formation Eparse, Première Charge, Vol(10), Charge Dévastatrice (Cavaliers uniquement), Formation en Fer de Lance, Tirailleurs, Rapide, le Voeu du Chevalier"
       }
     },
     {
@@ -1777,7 +1786,7 @@
         {
           "name_en": "Hand weapons, Cavalry spears, Shortbows",
           "name_de": "Handwaffen, Kavalleriespeere, Kurzbogen",
-          "name_fr": "Armes de Base, Lances de Cavalerie, Arcs courts",
+          "name_fr": "Armes de base, Lances de Cavalerie, Arcs Courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1820,7 +1829,7 @@
       "specialRules": {
         "name_en": "Fast Cavalry, Fire & Flee, Levies, Open Order, Peasantry, Reserve Move, Skirmishers, Swiftstride",
         "name_de": "Schnelle Kavallerie, Bauernvolk, Gesindel, Offene Ränge, Plänkler, Reservebewegung, Schießen und Verschwinden, Schnelle Bewegung",
-        "name_fr": "Cavalerie Rapide, Tir&Fuite, Conscrits, Ordre Dispersé, Paysannerie, Mouvement de Réserve, Tirailleurs, Rapide"
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Conscrits, Ordre Dispersé, Paysannerie, Mouvement de Réserve, Tirailleurs, Rapide"
       },
       "armyComposition": {
         "kingdom-of-bretonnia": {
@@ -1866,7 +1875,7 @@
         {
           "name_en": "Hand weapons, Longbows",
           "name_de": "Handwaffen, Langbogen",
-          "name_fr": "Armes de Base, Arcs longs",
+          "name_fr": "Armes de base, Arcs Longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1877,14 +1886,14 @@
         {
           "name_en": "Fire & Flee",
           "name_de": "Schießen und Verschwinden",
-          "name_fr": "Tir et Fuite",
+          "name_fr": "Tir & Fuite",
           "points": 1,
           "perModel": true
         },
         {
           "name_en": "Scouts",
           "name_de": "Kundschafter",
-          "name_fr": "Eclaireurs",
+          "name_fr": "Éclaireurs",
           "points": 1,
           "perModel": true
         }
@@ -2016,7 +2025,7 @@
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_de": "Handwaffen, Lanzen, Schilde",
-          "name_fr": "Armes de Base, Lances de Joute, Boucliers",
+          "name_fr": "Armes de base, Lances de Joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2047,7 +2056,7 @@
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Living Saints, Swiftstride, the Grail Vow",
         "name_de": "Segen der Herrin, Edle Schlachtrosse, Erster Angriff, Gegenangriff, Geschlossene Ränge, Gralsgelübde, Lanzenformation, Lebende Legenden, Schnelle Bewegung",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre Charge, Destrier Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, le Voeu du Graal"
+        "name_fr": "Blessings of the Lady, Ordre Serré, Contre-charge, Finest Warhorses, Première Charge, Lance Formation, Living Saints, Rapide, the Grail Vow"
       },
       "armyComposition": {
         "kingdom-of-bretonnia": {
@@ -2098,7 +2107,7 @@
         {
           "name_en": "Field Trebuchet, Hand weapons",
           "name_de": "Feldtrebuchet, Handwaffen",
-          "name_fr": "Trébuchet, Armes de Base",
+          "name_fr": "Trébuchet, Armes de base",
           "points": 0,
           "active": true
         }
@@ -2174,7 +2183,7 @@
         {
           "name_en": "Additional hand weapon",
           "name_de": "zusätzliche Handwaffe",
-          "name_fr": "Arme de base Additionnelle",
+          "name_fr": "Arme de base additionnelle",
           "name_es": "Additional hand weapon",
           "points": 2,
           "stackable": true
@@ -2237,7 +2246,7 @@
           "name_en": "Scouts (if Skirmishers)",
           "name_de": "Kundschafter (1 Einheit wenn Plänkler)",
           "name_es": "Scouts (if Skirmishers)",
-          "name_fr": "Eclaireurs (si Tirailleurs)",
+          "name_fr": "Éclaireurs (si Tirailleurs)",
           "points": 1,
           "perModel": true
         }
@@ -2249,7 +2258,7 @@
         "name_en": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
         "name_de": "Gesindel, Horde, Kriegerschar, Offene Ränge, Ungestüm, Zusammengewürfelter Haufen",
         "name_es": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
-        "name_fr": "Horde, Impétueux, Levées, Bande hétéroclite, Ordre Dispersé, Bande de Guerre"
+        "name_fr": "Horde, Impétueux, Conscrits, Bande Hétéroclite, Ordre Dispersé, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnian-exiles": {
@@ -2295,7 +2304,7 @@
         "name_en": "Levies, Skirmishers",
         "name_de": "Gesindel, Plänkler",
         "name_es": "Levies, Skirmishers",
-        "name_fr": "Levées, Tirailleurs"
+        "name_fr": "Conscrits, Tirailleurs"
       },
       "armyComposition": {
         "bretonnian-exiles": {
