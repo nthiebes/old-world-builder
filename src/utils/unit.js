@@ -1,6 +1,7 @@
 import { nameMap } from "../pages/magic";
 import { rulesMap, synonyms } from "../components/rules-index";
 import { normalizeRuleName } from "./string";
+import loresOfMagicWithSpells from "./lores-of-magic-with-spells.json";
 
 export const getAllOptions = (
   {
@@ -271,4 +272,153 @@ export const getUnitOptionNotes = ({ notes, key, className, language }) => {
       </p>
     )
   );
+};
+
+/**
+ * Returns true if a unit is equipped with given itemName (not case sensitive),
+ * false otherwise.
+ */
+export const unitHasItem = (unit, itemName) => {
+  if (unit.items) {
+    for (const itemCategory of unit.items) {
+      if (
+        itemCategory.selected.find(
+          ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase()
+        )
+      ) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+/**
+ * Returns the lores of magic and their spells the unit can use based on its
+ * special rules and its selected lore.
+ */
+export const getUnitLoresWithSpells = (unit) => {
+  const specialRuleLores = unit.specialRules.name_en
+    .split(", ")
+    .filter((rule) => /^Lore of/.test(rule))
+    .map((rule) => {
+      const loreId = rule.toLowerCase().replace(/ /g, "-");
+
+      // If the unit has the Lore of Chaos, only the spell matching its Mark
+      // of Chaos must be available
+      if (loreId === "lore-of-chaos") {
+        const markOfChaosOption = unit.options.find(
+          ({ active, name_en }) => active && /^Mark of/.test(name_en)
+        );
+        const markOfChaos = markOfChaosOption
+          ? markOfChaosOption.name_en.slice(8).toLowerCase().replace(/ /g, "-")
+          : "chaos-undivided";
+
+        // No spell for Mark of Khorne
+        if (markOfChaos === "khorne") {
+          return null;
+        }
+
+        const loreOfChaosSpell = Object.entries(
+          loresOfMagicWithSpells[loreId].spells
+        ).find(
+          ([spellId, spellData]) => spellData["mark-of-chaos"] === markOfChaos
+        );
+        return {
+          ...loresOfMagicWithSpells[loreId],
+          spells: {
+            [loreOfChaosSpell[0]]: loreOfChaosSpell[1],
+          },
+        };
+      }
+
+      return loresOfMagicWithSpells[loreId];
+    })
+    .filter((lore) => lore !== null);
+
+  const selectedLores =
+    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Lore Familiar")
+      ? [
+          loresOfMagicWithSpells["battle-magic"],
+          loresOfMagicWithSpells["daemonology"],
+          loresOfMagicWithSpells["dark-magic"],
+          loresOfMagicWithSpells["elementalism"],
+          loresOfMagicWithSpells["high-magic"],
+          loresOfMagicWithSpells["illusion"],
+          loresOfMagicWithSpells["necromancy"],
+          loresOfMagicWithSpells["waaagh-magic"],
+        ]
+      : unitHasItem(unit, "Loremaster")
+      ? [
+          loresOfMagicWithSpells["lore-of-saphery"],
+          loresOfMagicWithSpells["battle-magic"],
+          loresOfMagicWithSpells["elementalism"],
+          loresOfMagicWithSpells["high-magic"],
+          loresOfMagicWithSpells["illusion"],
+        ]
+      : unit.options.find(
+          ({ name_en, active }) =>
+            /^Arise!, Level 1 Wizard/.test(name_en) && active
+        )
+      ? [loresOfMagicWithSpells["necromancy"]]
+      : unit.lores?.length > 0
+      ? [loresOfMagicWithSpells[unit.activeLore ?? unit.lores[0]]]
+      : [];
+
+  return [...specialRuleLores, ...selectedLores];
+};
+
+/**
+ * Search for "Level x Wizard" in the unit options and deduct the unit level of
+ * wizardry.
+ */
+export const getUnitWizardryLevel = (unit) => {
+  if (unitHasItem(unit, "Loremaster")) {
+    return 1;
+  }
+
+  const levelOptions = unit.options.filter(({ name_en }) =>
+    /^(Arise!, )?Level [1234] Wizard/.test(name_en)
+  );
+
+  let wizardryLevel = 4;
+
+  for (let i = 0; i < levelOptions.length; i++) {
+    const levelOptionValue = Number(levelOptions[i].name_en.match(/[1234]/)[0]);
+
+    if (levelOptions[i].active) {
+      return unitHasItem(unit, "Master Of The Black Arts")
+        ? levelOptionValue + 1
+        : levelOptionValue;
+    }
+    if (levelOptionValue <= wizardryLevel) {
+      wizardryLevel = levelOptionValue - 1;
+    }
+  }
+
+  return wizardryLevel === 4 ? 0 : wizardryLevel;
+};
+
+/**
+ * Return the number of spells a unit can generate based on its level of
+ * wizardry, magic items and special rules.
+ */
+export const getUnitGeneratedSpellsCount = (unit) => {
+  let generatedSpellsCount = getUnitWizardryLevel(unit);
+
+  if (unitHasItem(unit, "Wizarding Hat")) {
+    generatedSpellsCount += 1;
+  }
+  if (unitHasItem(unit, "Spell Familiar*")) {
+    generatedSpellsCount += 1;
+  }
+  if (
+    unitHasItem(unit, "Twin Heads") ||
+    unitHasItem(unit, "Silvery Wand") ||
+    unitHasItem(unit, "Tome Of Furion")
+  ) {
+    generatedSpellsCount += 1;
+  }
+
+  return generatedSpellsCount;
 };

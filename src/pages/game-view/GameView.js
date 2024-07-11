@@ -14,7 +14,12 @@ import {
   RulesWithIcon,
   RuleWithIcon,
 } from "../../components/rules-index";
-import { getAllOptions } from "../../utils/unit";
+import { GeneratedSpells } from "../../components/generated-spells/GeneratedSpells";
+import {
+  getAllOptions,
+  getUnitGeneratedSpellsCount,
+  getUnitLoresWithSpells,
+} from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
@@ -39,6 +44,7 @@ export const GameView = () => {
   const [victoryPoints, setVictoryPoints] = useState({});
   const [showVictoryPoints, setShowVictoryPoints] = useState(true);
   const [showCustomNotes, setShowCustomNotes] = useState(true);
+  const [showGeneratedSpells, setShowGeneratedSpells] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -165,6 +171,16 @@ export const GameView = () => {
     },
     {
       name: intl.formatMessage({
+        id: "export.showGeneratedSpells",
+      }),
+      id: "generatedSpells",
+      checked: showGeneratedSpells,
+      callback: () => {
+        setShowGeneratedSpells(!showGeneratedSpells);
+      },
+    },
+    {
+      name: intl.formatMessage({
         id: "export.showVictoryPoints",
       }),
       id: "victory",
@@ -181,6 +197,7 @@ export const GameView = () => {
       <ul>
         {units.map((unit, index) => {
           const stats = getStats(unit);
+          const unitLoresWithSpells = getUnitLoresWithSpells(unit);
 
           return (
             <li key={index} className="list">
@@ -253,6 +270,13 @@ export const GameView = () => {
                         ]}
                       />
                     ))}
+                  {showGeneratedSpells && unitLoresWithSpells.length > 0 && (
+                    <GeneratedSpells
+                      loresWithSpells={unitLoresWithSpells}
+                      spellsCount={getUnitGeneratedSpellsCount(unit)}
+                      showPageNumbers={showPageNumbers}
+                    />
+                  )}
                   {showCustomNotes && (
                     <div>
                       <label
