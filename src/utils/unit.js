@@ -1,6 +1,7 @@
 import { nameMap } from "../pages/magic";
 import { rulesMap, synonyms } from "../components/rules-index";
 import { normalizeRuleName } from "./string";
+import loresOfMagicWithSpells from "./lores-of-magic-with-spells.json";
 
 export const getAllOptions = (
   {
@@ -261,4 +262,49 @@ export const getUnitName = ({ unit, language }) => {
     / *\{[^)]*\}/g,
     ""
   );
+};
+
+/**
+ * Returns the lores of magic and their spells the unit can use based on its
+ * special rules and its selected lore.
+ */
+export const getUnitLoresWithSpells = (unit) => {
+  const specialRuleLores = unit.specialRules.name_en
+    .split(", ")
+    .filter((rule) => /^Lore of/.test(rule))
+    .map((rule) => {
+      const loreId = rule.toLowerCase().replace(/ /g, "-");
+      return loresOfMagicWithSpells[loreId];
+    });
+
+  const selectedLores = unit.lores
+    ? [loresOfMagicWithSpells[unit.activeLore ?? unit.lores[0]]]
+    : [];
+
+  return [...specialRuleLores, ...selectedLores];
+};
+
+/**
+ * Search for "Level x Wizard" in the unit options and deduct the unit level of
+ * wizardry.
+ */
+export const getUnitWizardryLevel = (unit) => {
+  const levelOptions = unit.options.filter(({ name_en }) =>
+    /^Level [1234] Wizard/.test(name_en)
+  );
+
+  let wizardryLevel = 4;
+
+  for (let i = 0; i < levelOptions.length; i++) {
+    const levelOptionValue = Number(levelOptions[i].name_en.match(/[1234]/)[0]);
+
+    if (levelOptions[i].active) {
+      return levelOptionValue;
+    }
+    if (levelOptionValue <= wizardryLevel) {
+      wizardryLevel = levelOptionValue - 1;
+    }
+  }
+
+  return wizardryLevel === 4 ? 0 : wizardryLevel;
 };
