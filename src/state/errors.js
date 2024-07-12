@@ -10,6 +10,9 @@ export const errorSlice = createSlice({
     addError: (state, { payload }) => {
       return [...state, payload];
     },
+    removeError: (state, { id }) => {
+      return state.filter((error) => id !== error.id);
+    },
   },
 });
 
