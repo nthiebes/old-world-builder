@@ -88,7 +88,7 @@ export const NumberInput = ({
         />
       </div>
       {value < min && !noError && (
-        <ErrorMessage>
+        <ErrorMessage spaceAfter>
           <FormattedMessage
             id="misc.minError"
             values={{

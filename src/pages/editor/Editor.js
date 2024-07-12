@@ -12,12 +12,15 @@ import { OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
 import { ListItem } from "../../components/list/ListItem";
+import { ErrorMessage } from "../../components/error-message";
 import { getAllOptions, getUnitName } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
-import { deleteList, moveUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
+import { validateList } from "../../utils/validation";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
+import { deleteList, moveUnit } from "../../state/lists";
+import { setErrors } from "../../state/errors";
 
 import "./Editor.css";
 
@@ -26,10 +29,12 @@ export const Editor = ({ isMobile }) => {
   const { listId } = useParams();
   const intl = useIntl();
   const dispatch = useDispatch();
+  const { language } = useLanguage();
   const [redirect, setRedirect] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const location = useLocation();
-  // const errors = useSelector((state) => state.errors);
+  const errors = useSelector((state) => state.errors);
+  const army = useSelector((state) => state.army);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -59,8 +64,11 @@ export const Editor = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
+    if (list) {
+      army && dispatch(setErrors(validateList({ list, language, army })));
+      updateLocalList(list);
+    }
+  }, [list, dispatch, language, army]);
 
   if (redirect) {
     return <Redirect to="/" />;
@@ -284,14 +292,15 @@ export const Editor = ({ isMobile }) => {
             navigationIcon="more"
           />
         )}
-        {/* <section>
-          {errors.map((error) => (
-            <span>
-              <strong>{error}</strong>
-              <Icon symbol="error" color="red" />
-            </span>
-          ))}
-        </section> */}
+        <section>
+          {errors
+            .filter(({ section }) => section === "global")
+            .map(({ message }) => (
+              <ErrorMessage key={message} spaceAfter>
+                <FormattedMessage id={message} />
+              </ErrorMessage>
+            ))}
+        </section>
         {list.lords && (
           <section className="editor__section">
             <header className="editor__header">
@@ -403,6 +412,21 @@ export const Editor = ({ isMobile }) => {
               listId={listId}
             />
 
+            {errors
+              .filter(({ section }) => section === "characters")
+              .map(({ message, name, diff, min }) => (
+                <ErrorMessage key={message} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
+                      min,
+                    }}
+                  />
+                </ErrorMessage>
+              ))}
+
             <Button
               type="primary"
               centered
@@ -439,6 +463,21 @@ export const Editor = ({ isMobile }) => {
           </header>
 
           <OrderableUnitList units={list.core} type="core" listId={listId} />
+
+          {errors
+            .filter(({ section }) => section === "core")
+            .map(({ message, name, min, diff }) => (
+              <ErrorMessage key={message} spaceBefore>
+                <FormattedMessage
+                  id={message}
+                  values={{
+                    name,
+                    min,
+                    diff,
+                  }}
+                />
+              </ErrorMessage>
+            ))}
 
           <Button
             type="primary"

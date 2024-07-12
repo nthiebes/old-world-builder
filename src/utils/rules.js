@@ -1,4 +1,4 @@
-const rules = {
+export const rules = {
   "grand-army": {
     lords: { maxPercent: 25 },
     heroes: { maxPercent: 25 },
@@ -74,14 +74,6 @@ const rules = {
     mercenaries: { maxPercent: 20 },
     allies: {
       maxPercent: 25,
-      armies: [
-        "errantry-crusades",
-        "bretonnian-exiles",
-        "dwarfen-mountain-holds",
-        "empire-of-man",
-        "high-elf-realms",
-        "wood-elf-realms",
-      ],
     },
   },
   "errantry-crusades": {
@@ -149,9 +141,30 @@ const rules = {
   "orc-and-goblin-tribes": {
     characters: {
       maxPercent: 50,
+      units: [
+        {
+          ids: ["black-orc-warboss", "orc-warboss", "orc-weirdnob"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
     },
     core: {
       minPercent: 25,
+      units: [
+        {
+          ids: ["night-goblin-mob"],
+          min: 0,
+          max: 1,
+          requires: [
+            "night-goblin-warboss",
+            "night-goblin-bigboss",
+            "night-goblin-oddnob",
+            "night-goblin-oddgit",
+          ],
+        },
+      ],
     },
     special: {
       maxPercent: 50,
