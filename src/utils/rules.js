@@ -164,13 +164,68 @@ export const rules = {
             "night-goblin-oddgit",
           ],
         },
+        {
+          ids: ["night-goblin-squig-herd"],
+          min: 0,
+          max: 1,
+          requires: [
+            "night-goblin-warboss",
+            "night-goblin-bigboss",
+            "night-goblin-oddnob",
+            "night-goblin-oddgit",
+          ],
+        },
       ],
     },
     special: {
       maxPercent: 50,
+      units: [
+        {
+          ids: ["night-goblin-squig-hopper-mob"],
+          min: 0,
+          max: 1,
+          requires: [
+            "night-goblin-warboss",
+            "night-goblin-bigboss",
+            "night-goblin-oddnob",
+            "night-goblin-oddgit",
+          ],
+        },
+        {
+          ids: ["goblin-bolt-throwa"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
     },
     rare: {
       maxPercent: 25,
+      units: [
+        {
+          ids: ["mangler-squigs"],
+          min: 0,
+          max: 1,
+          requires: [
+            "night-goblin-warboss",
+            "night-goblin-bigboss",
+            "night-goblin-oddnob",
+            "night-goblin-oddgit",
+          ],
+        },
+        {
+          ids: ["goblin-rock-lobber"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["doom-diver-catapult"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },

@@ -1,19 +1,31 @@
 import { rules } from "./rules";
 import { uniq } from "./collection";
 
-export const validateList = ({ list, language, army }) => {
+export const validateList = ({ list, language, characters }) => {
   const errors = [];
   const generalsCount = list.characters.filter(
     (unit) =>
       unit.command &&
       unit.command.find((command) => command.active && command.id === 0)
   ).length;
-  const characterRulesUnits = rules[list.armyComposition]
+  const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
-  const coreRulesUnits = rules[list.armyComposition]
+  const coreUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].core.units
     : rules["grand-army"].core.units;
+  const specialUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].special.units
+    : rules["grand-army"].special.units;
+  const rareUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].rare.units
+    : rules["grand-army"].rare.units;
+  const alliesUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].allies.units
+    : rules["grand-army"].allies.units;
+  const mercenariesUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].mercenaries.units
+    : rules["grand-army"].mercenaries.units;
 
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = list[type].filter(
@@ -32,7 +44,7 @@ export const validateList = ({ list, language, army }) => {
       ruleUnit.requires &&
       uniq(
         ruleUnit.requires.map((id) => {
-          const unit = army.characters.find((unit) => unit.id === id);
+          const unit = characters.find((unit) => unit.id === id);
 
           return unit[`name_${language}`] || unit.name_en;
         })
@@ -93,13 +105,33 @@ export const validateList = ({ list, language, army }) => {
       section: "characters",
     });
 
-  characterRulesUnits.forEach((ruleUnit) => {
+  characterUnitsRules.forEach((ruleUnit) => {
     checkRules({ ruleUnit, type: "characters" });
   });
 
-  coreRulesUnits.forEach((ruleUnit) => {
+  coreUnitsRules.forEach((ruleUnit) => {
     checkRules({ ruleUnit, type: "core" });
   });
+
+  specialUnitsRules &&
+    specialUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "special" });
+    });
+
+  rareUnitsRules &&
+    rareUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "rare" });
+    });
+
+  alliesUnitsRules &&
+    alliesUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "allies" });
+    });
+
+  mercenariesUnitsRules &&
+    mercenariesUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "mercenaries" });
+    });
 
   return errors;
 };
