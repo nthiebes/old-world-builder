@@ -157,6 +157,7 @@ export const rules = {
           ids: ["night-goblin-mob"],
           min: 0,
           max: 1,
+          requiresType: "characters",
           requires: [
             "night-goblin-warboss",
             "night-goblin-bigboss",
@@ -168,6 +169,7 @@ export const rules = {
           ids: ["night-goblin-squig-herd"],
           min: 0,
           max: 1,
+          requiresType: "characters",
           requires: [
             "night-goblin-warboss",
             "night-goblin-bigboss",
@@ -180,6 +182,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
+          requiresType: "characters",
           requires: ["black-orc-warboss", "black-orc-bigboss"],
         },
       ],
@@ -191,6 +194,7 @@ export const rules = {
           ids: ["night-goblin-squig-hopper-mob"],
           min: 0,
           max: 1,
+          requiresType: "characters",
           requires: [
             "night-goblin-warboss",
             "night-goblin-bigboss",
@@ -213,6 +217,7 @@ export const rules = {
           ids: ["mangler-squigs"],
           min: 0,
           max: 1,
+          requiresType: "characters",
           requires: [
             "night-goblin-warboss",
             "night-goblin-bigboss",
@@ -262,6 +267,68 @@ export const rules = {
     mercenaries: {
       maxPercent: 25,
     },
+  },
+  "warriors-of-chaos": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chaos-lord", "daemon-prince"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["exalted-champion", "sorcerer-lord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chosen-chaos-warriors"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chosen-chaos-knights"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["hellcannon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-ogre-shaggoth"],
+          min: 0,
+          max: 1,
+          requiresType: "special",
+          requires: ["dragon-ogres"],
+        },
+        {
+          ids: ["chaos-giant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
   },
 };
 
