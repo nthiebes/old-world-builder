@@ -330,6 +330,70 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "beastmen-brayherds": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["beastlord", "great-bray-shaman", "doombull"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["gor-herds"],
+          min: 1,
+        },
+        {
+          ids: ["bestigor-herds"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["beastlord", "wargor"],
+        },
+        {
+          ids: ["minotaur-herd"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["doombull", "gorebull"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["jabberslythe", "cygor"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["great-bray-shaman", "bray-shaman"],
+        },
+        {
+          ids: ["ghorgon"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["doombull", "gorebull"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({

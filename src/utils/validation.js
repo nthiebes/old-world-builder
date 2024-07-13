@@ -33,7 +33,7 @@ export const validateList = ({ list, language, intl }) => {
     const unitsInList = list[type].filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
     );
-    const requiredCharactersInList =
+    const requiredUnitsInList =
       ruleUnit.requiresType &&
       list[ruleUnit.requiresType].filter(
         (unit) =>
@@ -44,6 +44,17 @@ export const validateList = ({ list, language, intl }) => {
     )
       .join(", ")
       .replace(/, ([^,]*)$/, " or $1");
+    const unitNames =
+      ruleUnit.min > 0 &&
+      uniq(
+        ruleUnit.ids.map((id) => {
+          const name = intl.formatMessage({ id });
+
+          return getUnitName({ unit: { name }, language });
+        })
+      )
+        .join(", ")
+        .replace(/, ([^,]*)$/, " or $1");
     const requiredNames =
       ruleUnit.requires &&
       uniq(
@@ -66,7 +77,7 @@ export const validateList = ({ list, language, intl }) => {
       errors.push({
         message: "misc.error.minUnits",
         section: type,
-        name: namesInList,
+        name: unitNames,
         min,
       });
     }
@@ -85,7 +96,7 @@ export const validateList = ({ list, language, intl }) => {
     }
 
     // Unit requires general
-    if (ruleUnit.requiresGeneral) {
+    if (ruleUnit.requiresGeneral && unitsInList.length > 0) {
       const matchingGeneral = generals.find((general) => {
         return ruleUnit.requires.includes(general.id.split(".")[0]);
       });
@@ -102,13 +113,13 @@ export const validateList = ({ list, language, intl }) => {
     if (
       !ruleUnit.requiresGeneral &&
       ruleUnit.requires &&
-      unitsInList.length > requiredCharactersInList.length
+      unitsInList.length > requiredUnitsInList.length
     ) {
       errors.push({
         message: "misc.error.requiresUnits",
         section: type,
         name: requiredNames,
-        diff: unitsInList.length - requiredCharactersInList.length,
+        diff: unitsInList.length - requiredUnitsInList.length,
       });
     }
   };
