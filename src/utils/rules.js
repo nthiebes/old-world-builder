@@ -454,6 +454,68 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "dwarfen-mountain-holds": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["king", "anvil-of-doom"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["rangers"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["long-beards"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["king"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["hammerers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["king", "thane"],
+        },
+        {
+          ids: ["bolt-thrower", "grudge-thrower", "cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      unit: [
+        {
+          ids: ["organ-gun", "flame-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
