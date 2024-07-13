@@ -7,9 +7,20 @@ export const validateList = ({ list, language, intl }) => {
   const generals = list.characters.filter(
     (unit) =>
       unit.command &&
-      unit.command.find((command) => command.active && command.id === 0)
+      unit.command.find(
+        (command) => command.active && command.name_en === "General"
+      )
+  );
+  const BSBs = list.characters.filter(
+    (unit) =>
+      unit.command &&
+      unit.command.find(
+        (command) =>
+          command.active && command.name_en === "Battle Standard Bearer"
+      )
   );
   const generalsCount = generals.length;
+  const BSBsCount = BSBs.length;
   const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
@@ -23,11 +34,11 @@ export const validateList = ({ list, language, intl }) => {
     ? rules[list.armyComposition].rare.units
     : rules["grand-army"].rare.units;
   const alliesUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].allies.units
-    : rules["grand-army"].allies.units;
+    ? rules[list.armyComposition]?.allies?.units
+    : rules["grand-army"]?.allies?.units;
   const mercenariesUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].mercenaries.units
-    : rules["grand-army"].mercenaries.units;
+    ? rules[list.armyComposition]?.mercenaries?.units
+    : rules["grand-army"]?.mercenaries?.units;
 
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = list[type].filter(
@@ -135,6 +146,13 @@ export const validateList = ({ list, language, intl }) => {
   generalsCount > 1 &&
     errors.push({
       message: "misc.error.multipleGenerals",
+      section: "characters",
+    });
+
+  // Multiple BSBs
+  BSBsCount > 1 &&
+    errors.push({
+      message: "misc.error.multipleBSBs",
       section: "characters",
     });
 

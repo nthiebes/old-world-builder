@@ -18,21 +18,15 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          id: "duke",
+          ids: ["duke"],
           min: 0,
           max: 1,
         },
         {
-          id: "baron",
+          ids: ["baron", "prophetess"],
           min: 0,
           max: 1,
-          perPoints: 1000,
-        },
-        {
-          id: "prophetees",
-          min: 0,
-          max: 1,
-          perPoints: 1000,
+          points: 1000,
         },
       ],
     },
@@ -47,16 +41,23 @@ export const rules = {
           ids: ["men-at-arms", "peasant-bowmen"],
           min: 1,
         },
+        {
+          ids: ["knights-errant"],
+          min: 0,
+          max: 1,
+          requiresType: "core",
+          requires: ["knights-of-the-realm", "mounted-knights-of-the-realm"],
+        },
       ],
     },
     special: {
       maxPercent: 50,
       units: [
         {
-          id: "battle-pilgrims",
+          ids: ["battle-pilgrims"],
           min: 0,
           max: 2,
-          perPoints: 1000,
+          points: 1000,
         },
       ],
     },
@@ -64,10 +65,10 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          id: "field-trebuchet",
+          ids: ["field-trebuchet"],
           min: 0,
           max: 1,
-          perPoints: 1000,
+          points: 1000,
         },
       ],
     },
@@ -103,13 +104,72 @@ export const rules = {
     },
   },
   "tomb-kings-of-khemri": {
-    characters: { maxPercent: 50 },
-    core: { minPercent: 25 },
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["tomb-king", "tomb-prince"],
+          min: 1,
+        },
+        {
+          ids: ["high-priest", "mortuary-priest"],
+          min: 1,
+        },
+        {
+          ids: ["tomb-king", "high-priest"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["skeleton-warriors", "skeleton-archers"],
+          min: 1,
+        },
+        {
+          ids: ["tomb-guard", "sepulchral-stalkers"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     special: {
       maxPercent: 50,
+      units: [
+        {
+          ids: ["tomb-scorpion"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["khemrian-warsphinx"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
     },
     rare: {
       maxPercent: 25,
+      units: [
+        {
+          ids: ["screaming-skull-catapult"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["casket-of-souls"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
     },
     mercenaries: {
       maxPercent: 20,
