@@ -1,13 +1,15 @@
 import { rules } from "./rules";
 import { uniq } from "./collection";
+import { getUnitName } from "./unit";
 
-export const validateList = ({ list, language, characters }) => {
+export const validateList = ({ list, language, intl }) => {
   const errors = [];
-  const generalsCount = list.characters.filter(
+  const generals = list.characters.filter(
     (unit) =>
       unit.command &&
       unit.command.find((command) => command.active && command.id === 0)
-  ).length;
+  );
+  const generalsCount = generals.length;
   const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
@@ -31,12 +33,14 @@ export const validateList = ({ list, language, characters }) => {
     const unitsInList = list[type].filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
     );
-    const requiredCharactersInList = list.characters.filter(
-      (core) =>
-        ruleUnit.requires && ruleUnit.requires.includes(core.id.split(".")[0])
-    );
+    const requiredCharactersInList =
+      ruleUnit.requiresType &&
+      list[ruleUnit.requiresType].filter(
+        (unit) =>
+          ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
+      );
     const namesInList = uniq(
-      unitsInList.map((unit) => unit[`name_${language}`] || unit.name_en)
+      unitsInList.map((unit) => getUnitName({ unit, language }))
     )
       .join(", ")
       .replace(/, ([^,]*)$/, " or $1");
@@ -44,21 +48,21 @@ export const validateList = ({ list, language, characters }) => {
       ruleUnit.requires &&
       uniq(
         ruleUnit.requires.map((id) => {
-          const unit = characters.find((unit) => unit.id === id);
+          const name = intl.formatMessage({ id });
 
-          return unit[`name_${language}`] || unit.name_en;
+          return getUnitName({ unit: { name }, language });
         })
       )
         .join(", ")
         .replace(/, ([^,]*)$/, " or $1");
     const points = ruleUnit.points;
-    const min = points ? ruleUnit.min : ruleUnit.min;
+    const min = ruleUnit.min;
     const max = points
       ? Math.floor(list.points / points) * ruleUnit.max
       : ruleUnit.max;
 
     // Not enough units
-    if (points && unitsInList.length < min) {
+    if (!ruleUnit.requires && unitsInList.length < min) {
       errors.push({
         message: "misc.error.minUnits",
         section: type,
@@ -68,7 +72,10 @@ export const validateList = ({ list, language, characters }) => {
     }
 
     // Too many units
-    if (points && unitsInList.length > max) {
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length > max
+    ) {
       errors.push({
         message: "misc.error.maxUnits",
         section: type,
@@ -77,35 +84,32 @@ export const validateList = ({ list, language, characters }) => {
       });
     }
 
-    // Requires general
-    if (ruleUnit.requiresGeneral && generalsCount === 0) {
-      errors.push({
-        message: "misc.error.requiresGeneral",
-        section: type,
-        name: requiredNames,
+    // Unit requires general
+    if (ruleUnit.requiresGeneral) {
+      const matchingGeneral = generals.find((general) => {
+        return ruleUnit.requires.includes(general.id.split(".")[0]);
       });
+
+      !matchingGeneral &&
+        errors.push({
+          message: "misc.error.requiresGeneral",
+          section: type,
+          name: requiredNames,
+        });
     }
 
     // Requires characters
     if (
+      !ruleUnit.requiresGeneral &&
       ruleUnit.requires &&
       unitsInList.length > requiredCharactersInList.length
     ) {
-      if (ruleUnit.requiresGeneral && unitsInList.length > max) {
-        errors.push({
-          message: "misc.error.maxUnits",
-          section: type,
-          name: namesInList,
-          diff: unitsInList.length - max,
-        });
-      } else {
-        errors.push({
-          message: "misc.error.requiresUnits",
-          section: type,
-          name: requiredNames && requiredNames,
-          diff: unitsInList.length - requiredCharactersInList.length,
-        });
-      }
+      errors.push({
+        message: "misc.error.requiresUnits",
+        section: type,
+        name: requiredNames,
+        diff: unitsInList.length - requiredCharactersInList.length,
+      });
     }
   };
 
@@ -123,13 +127,15 @@ export const validateList = ({ list, language, characters }) => {
       section: "characters",
     });
 
-  characterUnitsRules.forEach((ruleUnit) => {
-    checkRules({ ruleUnit, type: "characters" });
-  });
+  characterUnitsRules &&
+    characterUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "characters" });
+    });
 
-  coreUnitsRules.forEach((ruleUnit) => {
-    checkRules({ ruleUnit, type: "core" });
-  });
+  coreUnitsRules &&
+    coreUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "core" });
+    });
 
   specialUnitsRules &&
     specialUnitsRules.forEach((ruleUnit) => {

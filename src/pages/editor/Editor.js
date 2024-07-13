@@ -19,7 +19,6 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { validateList } from "../../utils/validation";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
-import { fetcher } from "../../utils/fetcher";
 import { deleteList, moveUnit } from "../../state/lists";
 import { setErrors } from "../../state/errors";
 
@@ -33,10 +32,8 @@ export const Editor = ({ isMobile }) => {
   const { language } = useLanguage();
   const [redirect, setRedirect] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [characters, setCharacters] = useState(null);
   const location = useLocation();
   const errors = useSelector((state) => state.errors);
-  const army = useSelector((state) => state.army);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -67,31 +64,19 @@ export const Editor = ({ isMobile }) => {
 
   useEffect(() => {
     if (list) {
-      if (army?.characters || characters) {
-        dispatch(
-          setErrors(
-            validateList({
-              list,
-              language,
-              characters: army?.characters || characters,
-            })
-          )
-        );
-      }
+      dispatch(
+        setErrors(
+          validateList({
+            list,
+            language,
+            intl,
+          })
+        )
+      );
+
       updateLocalList(list);
     }
-  }, [list, dispatch, language, characters, army]);
-
-  useEffect(() => {
-    if (list && !characters && !army?.characters) {
-      fetcher({
-        url: `games/${list.game}/${list.army}`,
-        onSuccess: (data) => {
-          setCharacters(data.characters);
-        },
-      });
-    }
-  }, [list, dispatch, characters, army]);
+  }, [list, dispatch, language, intl]);
 
   if (redirect) {
     return <Redirect to="/" />;
