@@ -77,17 +77,35 @@ export const validateList = ({ list, language, characters }) => {
       });
     }
 
+    // Requires general
+    if (ruleUnit.requiresGeneral && generalsCount === 0) {
+      errors.push({
+        message: "misc.error.requiresGeneral",
+        section: type,
+        name: requiredNames,
+      });
+    }
+
     // Requires characters
     if (
       ruleUnit.requires &&
       unitsInList.length > requiredCharactersInList.length
     ) {
-      errors.push({
-        message: "misc.error.requiresUnits",
-        section: type,
-        name: requiredNames && requiredNames,
-        diff: unitsInList.length - requiredCharactersInList.length,
-      });
+      if (ruleUnit.requiresGeneral && unitsInList.length > max) {
+        errors.push({
+          message: "misc.error.maxUnits",
+          section: type,
+          name: namesInList,
+          diff: unitsInList.length - max,
+        });
+      } else {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames && requiredNames,
+          diff: unitsInList.length - requiredCharactersInList.length,
+        });
+      }
     }
   };
 

@@ -175,6 +175,13 @@ export const rules = {
             "night-goblin-oddgit",
           ],
         },
+        {
+          ids: ["black-orc-mob"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["black-orc-warboss", "black-orc-bigboss"],
+        },
       ],
     },
     special: {
