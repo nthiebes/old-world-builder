@@ -504,11 +504,77 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
-      unit: [
+      units: [
         {
           ids: ["organ-gun", "flame-cannon"],
           min: 0,
           max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "empire-of-man": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["general-of-the-empire", "grand-master"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["lector-of-sigmar", "high-priest-of-ulric"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["veteran-state-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["inner-circle-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["great-cannon", "mortar"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["helblaster-volley-gun", "helstrom-rocket-battery"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["steam-tank"],
+          min: 0,
+          max: 1,
           points: 1000,
         },
       ],
