@@ -133,6 +133,30 @@ export const validateList = ({ list, language, intl }) => {
         diff: unitsInList.length - requiredUnitsInList.length,
       });
     }
+
+    // Requires magic item
+    if (ruleUnit.requiresMagicItem && unitsInList.length > 0) {
+      let hasMagicItem;
+
+      generals.forEach((unit) => {
+        unit.items.forEach((itemCategory) => {
+          if (
+            itemCategory.selected.find(
+              (item) => item.name === ruleUnit.requiresMagicItem
+            )
+          ) {
+            hasMagicItem = true;
+          }
+        });
+      });
+
+      !hasMagicItem &&
+        errors.push({
+          message: "misc.error.requiresMagicItem",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresMagicItem }),
+        });
+    }
   };
 
   // No general
