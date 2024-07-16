@@ -582,6 +582,71 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "wood-elf-realms": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["glade-lord", "spellweaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["treeman-ancient"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["glade-guard"],
+          min: 1,
+        },
+        {
+          ids: ["deepwood-scouts"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["treekin"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["waywatchers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["waystalker"],
+        },
+        {
+          ids: ["giant-eagle"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
