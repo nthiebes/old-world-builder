@@ -647,6 +647,87 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "high-elf-realms": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["prince", "archmage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-mage", "handmaiden-of-the-everqueen"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["sister-of-avelorn"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["handmaiden-of-the-everqueen"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dragon-princes"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["lion-chariots-of-chrace"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresHonour: "chracian-hunter",
+        },
+        {
+          ids: ["lothern-skycutter"],
+          min: 0,
+          max: 1,
+          requiresHonour: "sea-guard",
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["flamespyre-phoenix", "frostheart-phoenix-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["great-eagle"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["eagle-claw-bolt-thrower"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
