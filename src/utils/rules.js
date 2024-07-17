@@ -728,6 +728,88 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "chaos-dwarfs": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["sorcerer-prophet", "infernal-castellan"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["bull-centaur-taur'ruk"],
+          min: 0,
+          max: 1,
+          requiresType: "special",
+          requires: ["bull-centaur-renders"],
+        },
+        {
+          ids: ["black-orc-bigboss", "black-orc-warboss"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["infernal-guard"],
+          min: 1,
+        },
+        {
+          ids: ["black-orc-mob"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["iron-daemon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["deathshrieker-rocket-launcher", "magma-cannon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hobgoblin-bolt-thrower"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["hobgoblin-wolf-raiders"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["hobgoblin-khan"],
+        },
+        {
+          ids: ["dreadquake-mortar", "hellcannon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
