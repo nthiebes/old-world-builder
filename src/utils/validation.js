@@ -16,7 +16,7 @@ export const validateList = ({ list, language, intl }) => {
       unit.command &&
       unit.command.find(
         (command) =>
-          command.active && command.name_en === "Battle Standard Bearer"
+          command.active && command.name_en.includes("Battle Standard Bearer")
       )
   );
   const generalsCount = generals.length;
@@ -46,7 +46,10 @@ export const validateList = ({ list, language, intl }) => {
     );
     const requiredUnitsInList =
       ruleUnit.requiresType &&
-      list[ruleUnit.requiresType].filter(
+      (ruleUnit.requiresType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[ruleUnit.requiresType]
+      ).filter(
         (unit) =>
           ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
       );
@@ -120,7 +123,7 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
 
-    // Requires characters
+    // Requires other unit
     if (
       !ruleUnit.requiresGeneral &&
       ruleUnit.requires &&

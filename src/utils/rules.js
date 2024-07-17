@@ -242,7 +242,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["black-orc-warboss", "black-orc-bigboss"],
         },
       ],
@@ -414,7 +413,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["beastlord", "wargor"],
         },
         {
@@ -422,7 +420,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["doombull", "gorebull"],
         },
       ],
@@ -435,7 +432,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["great-bray-shaman", "bray-shaman"],
         },
         {
@@ -443,7 +439,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["doombull", "gorebull"],
         },
       ],
@@ -479,7 +474,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["king"],
         },
       ],
@@ -673,7 +667,6 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requiresType: "characters",
           requires: ["handmaiden-of-the-everqueen"],
         },
       ],
@@ -801,6 +794,150 @@ export const rules = {
         },
         {
           ids: ["dreadquake-mortar", "hellcannon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "daemons-of-chaos": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "bloodthirster",
+            "great-unclean-one",
+            "keeper-of-secrets",
+            "lord-of-change",
+          ],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["daemonic-herald-of-khorne"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "bloodletters-of-khorne",
+            "flesh-hounds-of-khorne",
+            "bloodcrushers-of-khorne",
+            "skull-cannon-of-khorne",
+          ],
+        },
+        {
+          ids: ["daemonic-herald-of-nurgle"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "plaguebearers-of-nurgle",
+            "nurglings",
+            "beasts-of-nurgle",
+            "plague-drones-of-nurgle",
+          ],
+        },
+        {
+          ids: ["daemonic-herald-of-slaanesh"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "daemonettes-of-slaanesh",
+            "seekers-of-slaanesh",
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+        },
+        {
+          ids: ["daemonic-herald-of-tzeentch"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "pink-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch",
+            "flamers-of-tzeentch",
+            "screamers-of-tzeentch",
+          ],
+        },
+        {
+          ids: ["daemon-prince"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne"],
+          requiresGeneral: true,
+          requires: ["bloodthirster"],
+        },
+        {
+          ids: ["plaguebearers-of-nurgle", "nurglings"],
+          requiresGeneral: true,
+          requires: ["great-unclean-one"],
+        },
+        {
+          ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh"],
+          requiresGeneral: true,
+          requires: ["keeper-of-secrets"],
+        },
+        {
+          ids: [
+            "pink-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch",
+          ],
+          requiresGeneral: true,
+          requires: ["lord-of-change"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["bloodcrushers-of-khorne"],
+          requiresGeneral: true,
+          requires: ["bloodthirster"],
+        },
+        {
+          ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
+          requiresGeneral: true,
+          requires: ["great-unclean-one"],
+        },
+        {
+          ids: [
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+          requiresGeneral: true,
+          requires: ["keeper-of-secrets"],
+        },
+        {
+          ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
+          requiresGeneral: true,
+          requires: ["lord-of-change"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["skull-cannon-of-khorne"],
           min: 0,
           max: 1,
           points: 1000,
