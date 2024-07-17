@@ -196,6 +196,8 @@ export const synonyms = {
   "scourgerunner chariots": "scourgerunner chariot",
   "bloodwrack shrines": "bloodwrack shrine",
   "bloodwrack medusas": "bloodwrack medusa",
+  "snotling pump wagons": "snotling pump wagon",
+  "goblin wolf chariots": "goblin wolf chariot",
 };
 
 export const rulesMap = {

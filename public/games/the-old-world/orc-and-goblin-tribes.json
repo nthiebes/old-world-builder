@@ -13,7 +13,7 @@
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
             "name_de": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
             "name_es": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_fr": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
         "nomadic-waaagh": {
@@ -22,7 +22,7 @@
             "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
-            "name_fr": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot"
+            "name_fr": "0-1 Chef de Guerre Orque Noir ou Grand Chef Orque Noir par Char à Sangliers Orque Noir"
           }
         }
       },
@@ -60,11 +60,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -113,33 +117,57 @@
             {
               "name_en": "Third Orc crew member",
               "name_de": "Third Orc crew member",
-              "points": 5,
-              "name_fr": "Third Orc crew member"
+              "name_fr": "Troisième Aurige Orque",
+              "points": 5
             },
             {
-              "name_en": "Frenzy (if 2 crew members)",
-              "name_de": "Frenzy (if 2 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 4,
-              "name_fr": "Frénésie (if 2 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 2 crew members",
+                  "name_fr": "Si 2 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Frenzy (if 3 crew members)",
-              "name_de": "Frenzy (if 3 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 6,
-              "name_fr": "Frénésie (if 3 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 3 crew members",
+                  "name_fr": "Si 3 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Warpaint (if frenzied)",
-              "name_de": "Warpaint (if frenzied)",
-              "name_fr": "Peintures de Guerre (si frénétique)",
-              "points": 10
+              "name_en": "Warpaint",
+              "name_de": "Warpaint",
+              "name_fr": "Peintures de Guerre",
+              "points": 10,
+              "notes": {
+                "name_en": "If frenzied",
+                "name_fr": "Si frénétique"
+              }
             }
           ]
         },
         {
           "name_en": "Black Orc Boar Chariot",
           "name_de": "Black Orc Boar Chariot",
-          "name_fr": "Black Orc Boar Chariot",
+          "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "armyComposition": ["nomadic-waaagh"],
           "options": [
@@ -188,10 +216,10 @@
         }
       ],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
+        "name_en": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       }
     },
     {
@@ -210,7 +238,7 @@
             "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
-            "name_fr": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot"
+            "name_fr": "0-1 Chef de Guerre Orque Noir ou Grand Chef Orque Noir par Char à Sangliers Orque Noir"
           }
         }
       },
@@ -259,11 +287,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -314,33 +346,57 @@
             {
               "name_en": "Third Orc crew member",
               "name_de": "Third Orc crew member",
-              "points": 5,
-              "name_fr": "Third Orc crew member"
+              "name_fr": "Troisième Aurige Orque",
+              "points": 5
             },
             {
-              "name_en": "Frenzy (if 2 crew members)",
-              "name_de": "Frenzy (if 2 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 4,
-              "name_fr": "Frénésie (if 2 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 2 crew members",
+                  "name_fr": "Si 2 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Frenzy (if 3 crew members)",
-              "name_de": "Frenzy (if 3 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 6,
-              "name_fr": "Frénésie (if 3 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 3 crew members",
+                  "name_fr": "Si 3 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Warpaint (if frenzied)",
-              "name_de": "Warpaint (if frenzied)",
-              "name_fr": "Peintures de Guerre (si frénétique)",
-              "points": 10
+              "name_en": "Warpaint",
+              "name_de": "Warpaint",
+              "name_fr": "Peintures de Guerre",
+              "points": 10,
+              "notes": {
+                "name_en": "If frenzied",
+                "name_fr": "Si frénétique"
+              }
             }
           ]
         },
         {
           "name_en": "Black Orc Boar Chariot",
           "name_de": "Black Orc Boar Chariot",
-          "name_fr": "Black Orc Boar Chariot",
+          "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "armyComposition": ["nomadic-waaagh"],
           "options": [
@@ -379,10 +435,10 @@
         }
       ],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
+        "name_en": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       }
     },
     {
@@ -396,27 +452,21 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
         "nomadic-waaagh": {
           "category": "characters",
           "notes": {
-            "name_en": "Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
         "troll-horde": {
           "category": "characters",
           "notes": {
-            "name_en": "Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         }
       },
@@ -478,11 +528,15 @@
           "perModel": true
         },
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (à la place de l'Armure légère)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -496,13 +550,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         }
       ],
       "mounts": [
@@ -532,26 +588,50 @@
             {
               "name_en": "Third Orc crew member",
               "name_de": "Third Orc crew member",
-              "points": 5,
-              "name_fr": "Third Orc crew member"
+              "name_fr": "Troisième Aurige Orque",
+              "points": 5
             },
             {
-              "name_en": "Frenzy (if 2 crew members)",
-              "name_de": "Frenzy (if 2 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 4,
-              "name_fr": "Frénésie (if 2 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 2 crew members",
+                  "name_fr": "Si 2 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Frenzy (if 3 crew members)",
-              "name_de": "Frenzy (if 3 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 6,
-              "name_fr": "Frénésie (if 3 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 3 crew members",
+                  "name_fr": "Si 3 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Warpaint (if frenzied)",
-              "name_de": "Warpaint (if frenzied)",
-              "name_fr": "Peintures de Guerre (si frénétique)",
-              "points": 10
+              "name_en": "Warpaint",
+              "name_de": "Warpaint",
+              "name_fr": "Peintures de Guerre",
+              "points": 10,
+              "notes": {
+                "name_en": "If frenzied",
+                "name_fr": "Si frénétique"
+              }
             }
           ]
         },
@@ -577,10 +657,10 @@
         }
       ],
       "specialRules": {
-        "name_en": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_de": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_es": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_fr": "Kikoup', Charge Dévastatrice*, Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
+        "name_en": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_de": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_es": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_fr": "Kikoup', Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
       }
     },
     {
@@ -658,11 +738,15 @@
           "perModel": true
         },
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (à la place de l'Armure légère)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -676,13 +760,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         }
       ],
       "mounts": [
@@ -712,26 +798,50 @@
             {
               "name_en": "Third Orc crew member",
               "name_de": "Third Orc crew member",
-              "points": 5,
-              "name_fr": "Third Orc crew member"
+              "name_fr": "Troisième Aurige Orque",
+              "points": 5
             },
             {
-              "name_en": "Frenzy (if 2 crew members)",
-              "name_de": "Frenzy (if 2 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 4,
-              "name_fr": "Frénésie (if 2 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 2 crew members",
+                  "name_fr": "Si 2 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Frenzy (if 3 crew members)",
-              "name_de": "Frenzy (if 3 crew members)",
+              "name_en": "Frenzy",
+              "name_de": "Frenzy",
+              "name_fr": "Frénésie",
               "points": 6,
-              "name_fr": "Frénésie (if 3 crew members)"
+              "notes": [
+                {
+                  "name_en": "If 3 crew members",
+                  "name_fr": "Si 3 auriges"
+                },
+                {
+                  "name_en": "0-1 per 1000 points",
+                  "name_fr": "0-1 par tranche de 1000 points"
+                }
+              ]
             },
             {
-              "name_en": "Warpaint (if frenzied)",
-              "name_de": "Warpaint (if frenzied)",
-              "name_fr": "Peintures de Guerre (si frénétique)",
-              "points": 10
+              "name_en": "Warpaint",
+              "name_de": "Warpaint",
+              "name_fr": "Peintures de Guerre",
+              "points": 10,
+              "notes": {
+                "name_en": "If frenzied",
+                "name_fr": "Si frénétique"
+              }
             }
           ]
         }
@@ -747,10 +857,10 @@
         }
       ],
       "specialRules": {
-        "name_en": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_de": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_es": "Choppas, Furious Charge*, Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
-        "name_fr": "Kikoup', Charge Dévastatrice*, Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
+        "name_en": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_de": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_es": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_fr": "Kikoup', Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
       }
     },
     {
@@ -764,27 +874,21 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
         "nomadic-waaagh": {
           "category": "characters",
           "notes": {
-            "name_en": "Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
         "troll-horde": {
           "category": "characters",
           "notes": {
-            "name_en": "Orc Warboss or Orc Weirdnob per 1000 points",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "Orc Warboss or Orc Weirdnob per 1000 points"
+            "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         }
       },
@@ -809,11 +913,15 @@
       ],
       "armor": [
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (à la place de l'Armure légère)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 0,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -827,13 +935,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         }
       ],
       "mounts": [
@@ -910,11 +1020,15 @@
       ],
       "armor": [
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (à la place de l'Armure légère)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 0,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -928,13 +1042,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         }
       ],
       "mounts": [
@@ -1014,11 +1130,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -1160,11 +1280,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -1335,19 +1459,19 @@
         {
           "name_en": "Arachnarok Spider",
           "name_de": "Arachnarok Spider",
+          "name_fr": "Arachnarok",
           "points": 310,
           "options": [
             {
               "name_en": "Spidersilk lobber",
-              "points": 35,
-              "name_fr": "Spidersilk lobber"
+              "name_fr": "Catatoile",
+              "points": 35
             }
           ],
           "specialRules": {
             "name_en": "Close Order, Howdah, Immune to Psychology, Large Target, Move through Cover, Poisoned Attacks, Stomp Attacks (D6), Stubborn, Swiftstride, Terror",
-            "name_fr": "Ordre Serré, Howdah, Immune to Psychology, Grande Cible, Move through Cover, Attaques Empoisonnées, Attaques de Piétinement (D6), Obstiné, Rapide, Terreur"
-          },
-          "name_fr": "Arachnarok Spider"
+            "name_fr": "Ordre Serré, Howdah, Immunisé à la Psychologie, Grande Cible, Mouvement à Couvert, Attaques Empoisonnées, Attaques de Piétinement (D6), Obstiné, Rapide, Terreur"
+          }
         }
       ],
       "items": [
@@ -1509,11 +1633,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -1628,11 +1756,15 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "If appropriately mounted",
+            "name_fr": "S'il est monté"
+          }
         }
       ],
       "armor": [
@@ -1852,7 +1984,7 @@
           "name_en": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "name_de": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "name_es": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
-          "name_fr": "Da Boss's Trophy Rack, Da Skull Smasha, Lance de cavalerie",
+          "name_fr": "Râtelier à Trophées du Chef, Frakass' Crânes, Lance de cavalerie",
           "name_it": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "name_pl": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "points": 0,
@@ -1877,7 +2009,7 @@
           "name_en": "Chompa",
           "name_de": "Chompa",
           "name_es": "Chompa",
-          "name_fr": "Chompa",
+          "name_fr": "Mâchoir'",
           "name_it": "Chompa",
           "name_pl": "Chompa",
           "points": 0,
@@ -1890,7 +2022,7 @@
         "name_en": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
         "name_de": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
         "name_es": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
-        "name_fr": "All Sneaky Like, Embusqueurs, Arme Perforante (1 - Chompa only), Peau Blindée (1), Escorteurs de Chars, Cavalerie Rapide, Peur des Elfes, Impétueux, 'It & Run, Cri de Ralliement, Rapide, Bande de Guerre",
+        "name_fr": "En Tapinois, Embusqueur, Arme Perforante (1 - Mâchoir' uniquement), Peau Blindée (1), Escorteurs de Chars, Cavalerie Rapide, Peur des Elfes, Impétueux, ’Arrcèlement, Cri de Ralliement, Rapide, Bande de Guerre",
         "name_it": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
         "name_pl": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband"
       }
@@ -1926,7 +2058,7 @@
           "name_en": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "name_de": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "name_es": "Bog-wood staff, Trollhide shawl, Lore Familiar",
-          "name_fr": "Bog-wood staff, Trollhide shawl, Lore Familiar",
+          "name_fr": "Bâton en Morta, Châle en Peau de Troll, Familier de Savoir",
           "name_it": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "name_pl": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "points": 0,
@@ -1954,7 +2086,7 @@
         "name_en": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_de": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_es": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
-        "name_fr": "Kikoup', Da Troll Calla, Ignore la Panique des Gobelins, Protect Da Boss, Syphoned Strength, Bande de Guerre",
+        "name_fr": "Kikoup', Eul' Maître des Trolls, Ignore la Panique des Gobelins, Protégez l'Chef, Drain de Force, Bande de Guerre",
         "name_it": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_pl": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband"
       }
@@ -1963,7 +2095,7 @@
       "name_en": "Troll Hag",
       "name_de": "Troll Hag",
       "name_es": "Troll Hag",
-      "name_fr": "Troll Hag",
+      "name_fr": "Mégère Trollesse",
       "name_it": "Troll Hag",
       "name_pl": "Troll Hag",
       "id": "troll-hag",
@@ -1982,11 +2114,7 @@
           "category": "rare",
           "notes": {
             "name_en": "Any army made using the Orc & Goblin Tribes Grand Army composition list that includes one or more Troll Mob may include 0-1 Troll Hag as a Rare choice.",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "Any army made using the Orc & Goblin Tribes Grand Army composition list that includes one or more Troll Mob may include 0-1 Troll Hag as a Rare choice.",
-            "name_it": "",
-            "name_pl": ""
+            "name_fr": "Toute armée utilisant la liste de composition de grande armée des Tribus d'Orques & Gobelins qui inclut au moins une Bande de Trolls peut inclure 0-1 Mégère Trollesse comme choix d'Unité Rare"
           }
         },
         "troll-horde": {
@@ -1998,7 +2126,7 @@
           "name_en": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "name_de": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "name_es": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
-          "name_fr": "Arme de base (Gnarled stump), Troll vomit, Swamp breath",
+          "name_fr": "Arme de base (Souche noueuse), Vomi de troll, Souffle marécageux",
           "name_it": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "name_pl": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "points": 0,
@@ -2007,14 +2135,14 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour (Scaly skin)",
-          "name_de": "Heavy armour (Scaly skin)",
-          "name_es": "Heavy armour (Scaly skin)",
-          "name_fr": "Armure lourde (Scaly skin)",
-          "name_it": "Heavy armour (Scaly skin)",
-          "name_pl": "Heavy armour (Scaly skin)",
+          "name_en": "Heavy armour",
+          "name_fr": "Armure lourde",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Scaly skin",
+            "name_fr": "Peau écailleuse"
+          }
         }
       ],
       "options": [
@@ -2056,7 +2184,7 @@
         "name_en": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_de": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Ordre Serré, Inflammable, Immune to Psychology, Indiscriminate Hunger, Grande Cible, Motherly Love, Régénération (5+), Slimy Shanks, Attaques de Piétinement (D6), Stupidité, Terreur, Timmm-berrr!, Indémoralisable",
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Faim Aveugle, Grande Cible, Amour Maternel, Régénération (5+), Jarrets Visqueux, Attaques de Piétinement (D6), Stupidité, Terreur, Timmm-berrr!, Indémoralisable",
         "name_it": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_pl": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable"
       }
@@ -2066,7 +2194,7 @@
     {
       "name_en": "Common Troll Mob",
       "name_de": "Common Troll Mob",
-      "name_fr": "Bandes de Trolls",
+      "name_fr": "Bande de Trolls",
       "id": "common-troll-mob",
       "points": 41,
       "minimum": 1,
@@ -2076,9 +2204,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken"
+            "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix de Base par Mégère Troll prise"
           }
         }
       },
@@ -2087,7 +2213,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -2110,10 +2236,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -2129,7 +2259,7 @@
     {
       "name_en": "River Troll Mob",
       "name_de": "River Troll Mob",
-      "name_fr": "Bandes de Trolls d'Eau",
+      "name_fr": "Bande de Trolls d'Eau",
       "id": "river-troll-mob",
       "points": 49,
       "minimum": 1,
@@ -2139,9 +2269,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken"
+            "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix de Base par Mégère Troll prise"
           }
         }
       },
@@ -2150,7 +2278,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -2173,10 +2301,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -2192,7 +2324,7 @@
     {
       "name_en": "Stone Troll Mob",
       "name_de": "Stone Troll Mob",
-      "name_fr": "Bandes de Trolls de Pierre",
+      "name_fr": "Bande de Trolls de Pierre",
       "id": "stone-troll-mob",
       "points": 45,
       "minimum": 1,
@@ -2202,9 +2334,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken"
+            "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix de Base par Mégère Troll prise"
           }
         }
       },
@@ -2213,7 +2343,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -2236,10 +2366,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -2255,7 +2389,7 @@
     {
       "name_en": "Orc Mob",
       "name_de": "Orc Mob",
-      "name_fr": "Bandes d'Orques",
+      "name_fr": "Bande d'Orques",
       "id": "orc-mob",
       "points": 5,
       "minimum": 5,
@@ -2267,6 +2401,11 @@
         "troll-horde": {
           "category": "core"
         }
+      },
+      "notes": {
+        "name_de": "0-1 Orc Mob per 1000 points may purchase a magic standard",
+        "name_en": "0-1 Orc Mob per 1000 points may purchase a magic standard",
+        "name_fr": "0-1 Bande d'Orques par tranche de 1000 points peut acheter une bannière magique"
       },
       "command": [
         {
@@ -2323,7 +2462,7 @@
         {
           "name_en": "Thrusting spears",
           "name_de": "Thrusting spears",
-          "name_fr": "Lances d'Infanterie",
+          "name_fr": "Lances d'infanterie",
           "points": 1,
           "perModel": true
         },
@@ -2345,39 +2484,45 @@
           "active": true
         },
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (à la place de l'Armure légère)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         },
         {
           "name_en": "Big Stabbas",
           "name_de": "Big Stabbas",
           "name_fr": "Grands Kitrou",
           "points": 5,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Shields",
-          "name_de": "Shields",
-          "name_fr": "Boucliers",
-          "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         },
         {
           "name_en": "Big 'Uns",
@@ -2385,8 +2530,10 @@
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
         },
         {
           "name_en": "Skirmishers",
@@ -2394,8 +2541,16 @@
           "name_fr": "Tirailleurs",
           "points": 0,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": [
+            {
+              "name_en": "Replace Close Order",
+              "name_fr": "Remplace Ordre Serré"
+            },
+            {
+              "name_en": "0-1 per army",
+              "name_fr": "0-1 par armée"
+            }
+          ]
         }
       ],
       "mounts": [],
@@ -2409,7 +2564,7 @@
     {
       "name_en": "Black Orc Mob",
       "name_de": "Black Orc Mob",
-      "name_fr": "Bandes d'Orques Noirs",
+      "name_fr": "Bande d'Orques Noirs",
       "id": "black-orc-mob",
       "points": 12,
       "minimum": 5,
@@ -2519,7 +2674,7 @@
         "name_en": "If your General is a Black Orc Boss, 0-1 Black Orc Mob may be taken as a Core choice",
         "name_de": "If your General is a Black Orc Boss, 0-1 Black Orc Mob may be taken as a Core choice",
         "name_es": "If your General is a Black Orc Boss, 0-1 Black Orc Mob may be taken as a Core choice",
-        "name_fr": "If your General is a Black Orc Boss, 0-1 Black Orc Mob may be taken as a Core choice"
+        "name_fr": "Si votre Général est un Chef Orque Noir, 0-1 Bande d'Orques Noirs peut être prise comme choix de base"
       },
       "specialRules": {
         "name_en": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
@@ -2531,7 +2686,7 @@
     {
       "name_en": "Goblin Mob",
       "name_de": "Goblin Mob",
-      "name_fr": "Bandes de Gobelins",
+      "name_fr": "Bande de Gobelins",
       "id": "goblin-mob",
       "points": 3,
       "minimum": 10,
@@ -2580,7 +2735,7 @@
         {
           "name_en": "Hand weapons, Thrusting spears, Shields",
           "name_de": "Hand weapons, Thrusting spears, Shields",
-          "name_fr": "Armes de base, Lances d'Infanterie, Boucliers",
+          "name_fr": "Armes de base, Lances d'infanterie, Boucliers",
           "points": 1,
           "perModel": true
         },
@@ -2612,21 +2767,27 @@
           "maximum": 3
         },
         {
-          "name_en": "Skirmishers (0-1 unit per 1000 points)",
-          "name_de": "Skirmishers (0-1 unit per 1000 points)",
-          "name_fr": "Tirailleurs (0-1 unité par tranche de 1000 points)",
+          "name_en": "Skirmishers",
+          "name_de": "Skirmishers",
+          "name_fr": "Tirailleurs",
           "points": 0,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": [
+            {
+              "name_en": "Replace Close Order",
+              "name_fr": "Remplace Ordre Serré"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
         }
       ],
       "mounts": [],
       "notes": {
         "name_en": "0-1 unit per 1000 points may purchase a magic standard",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": "0-1 unit per 1000 points may purchase a magic standard"
+        "name_fr": "0-1 Bande de Gobelins par tranche de 1000 points peut acheter une banière magique"
       },
       "specialRules": {
         "name_en": "Close Order, Fear of Elves, Horde, Impetuous, Warband",
@@ -2638,7 +2799,7 @@
     {
       "name_en": "Snotling Mob",
       "name_de": "Snotling Mob",
-      "name_fr": "Bandes de Snotlings",
+      "name_fr": "Bande de Snotlings",
       "id": "snotling-mob",
       "points": 35,
       "minimum": 2,
@@ -2672,7 +2833,7 @@
     {
       "name_en": "Night Goblin Mob",
       "name_de": "Night Goblin Mob",
-      "name_fr": "Bandes de Gobelins de la Nuit",
+      "name_fr": "Bande de Gobelins de la Nuit",
       "id": "night-goblin-mob",
       "points": 3,
       "minimum": 10,
@@ -2718,7 +2879,7 @@
         {
           "name_en": "Hand weapons, Thrusting spears, Shields",
           "name_de": "Hand weapons, Thrusting spears, Shields",
-          "name_fr": "Armes de base, Lances d'Infanterie, Boucliers",
+          "name_fr": "Armes de base, Lances d'infanterie, Boucliers",
           "points": 1,
           "perModel": true
         },
@@ -2743,19 +2904,23 @@
         {
           "name_en": "Fanatics",
           "name_de": "Fanatics",
-          "name_fr": "Fanatiques (0-3 par unité)",
+          "name_fr": "Fanatiques",
           "points": 25,
           "stackable": true,
           "minimum": 0,
-          "maximum": 3
+          "maximum": 3,
+          "notes": {
+            "name_en": "0-1 Fanatic per 10 Night Goblins",
+            "name_fr": "0-1 Fanatique par tranche de 10 Gobelins de la Nuit"
+          }
         }
       ],
       "mounts": [],
       "notes": {
-        "name_en": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken",
-        "name_de": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken",
-        "name_es": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken",
-        "name_fr": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken"
+        "name_en": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mobs per 1000 points may purchase a magic standard",
+        "name_de": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mobs per 1000 points may purchase a magic standard",
+        "name_es": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mobs per 1000 points may purchase a magic standard",
+        "name_fr": "0-1 Bande de Gobelins de la Nuit par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné, 0-1 Bande de Gobelins de la Nuit par tranche de 1000 points peut acheter une bannière magique"
       },
       "specialRules": {
         "name_en": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
@@ -2767,11 +2932,15 @@
     {
       "name_en": "Goblin Spider Rider Mob",
       "name_de": "Goblin Spider Rider Mob",
-      "name_fr": "Bandes de Gobelins sur Araignée",
+      "name_fr": "Bande de Gobelins sur Araignée",
       "id": "goblin-spider-rider-mob",
       "points": 12,
       "minimum": 5,
       "maximum": 0,
+      "notes": {
+        "name_en": "0-1 Goblin Spider Rider Mob per 1000 points may purchase a magic standard",
+        "name_fr": "0-1 Bande de Gobelins sur Araignée par tranche de 1000 points peut acheter une bannière magique"
+      },
       "armyComposition": {
         "orc-and-goblin-tribes": {
           "category": "core"
@@ -2849,11 +3018,15 @@
     {
       "name_en": "Goblin Wolf Rider Mob",
       "name_de": "Goblin Wolf Rider Mob",
-      "name_fr": "Bandes de Gobelins sur Loup",
+      "name_fr": "Bande de Gobelins sur Loup",
       "id": "goblin-wolf-rider-mob",
       "points": 10,
       "minimum": 5,
       "maximum": 0,
+      "notes": {
+        "name_en": "0-1 Goblin Wolf Rider Mob per 1000 points may purchase a magic standard",
+        "name_fr": "0-1 Bande de Gobelins sur Loups par tranche de 1000 points peut acheter une bannière magique"
+      },
       "command": [
         {
           "name_en": "Boss (champion)",
@@ -2913,45 +3086,54 @@
       ],
       "options": [
         {
-          "name_en": "Feigned Flight (0-1 unit per 1000 points may)",
-          "name_de": "Feigned Flight (0-1 unit per 1000 points may)",
-          "name_fr": "Fuite Feinte (0-1 par tranche de 1000 points)",
+          "name_en": "Feigned Flight",
+          "name_de": "Feigned Flight",
+          "name_fr": "Fuite Feinte",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Reserve Move (0-1 unit per 1000 points may)",
-          "name_de": "Reserve Move (0-1 unit per 1000 points may)",
-          "name_fr": "Mouvement de Réserve (0-1 par tranche de 1000 points)",
+          "name_en": "Reserve Move",
+          "name_fr": "Mouvement de Réserve",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
           "name_en": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "armyComposition": ["nomadic-waaagh"],
-          "name_fr": "Embusqueurs"
+          "armyComposition": ["nomadic-waaagh"]
         },
         {
-          "name_en": "Close Order, Horde (no Open Order and Skirmishers)",
+          "name_en": "Close Order, Horde",
+          "name_fr": "Ordre Serré, Horde",
           "points": 0,
           "armyComposition": ["nomadic-waaagh"],
-          "name_fr": "Ordre Serré, Horde (no Open Order and Skirmishers)"
+          "notes": {
+            "name_en": "Replace Open Order and Skirmishers",
+            "name_fr": "Remplace Ordre Dispersé et Tirailleurs"
+          }
         }
       ],
       "mounts": [],
       "specialRules": {
         "name_en": "Chariot Runners, Fast Cavalry, Fear of Elves, Fire & Flee, Impetuous, Open Order, Skirmishers, Swiftstride, Warband",
-        "name_de": "Chariot Runners, Fast Cavalry, Fear of Elves, Fire & Flee, Impetuous, Open Order, Skirmishers, Swiftstride, Warband",
-        "name_es": "Chariot Runners, Fast Cavalry, Fear of Elves, Fire & Flee, Impetuous, Open Order, Skirmishers, Swiftstride, Warband",
         "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Peur des Elfes, Tir & Fuite, Impétueux, Ordre Dispersé, Tirailleurs, Rapide, Bande de Guerre"
       }
     },
     {
       "name_en": "Orc Boar Boy Mob",
       "name_de": "Orc Boar Boy Mob",
-      "name_fr": "Bandes d'Orques sur Sangliers",
+      "name_fr": "Bande d'Orques sur Sangliers",
       "id": "orc-boar-boy-mob",
       "points": 15,
       "minimum": 4,
@@ -2960,10 +3142,8 @@
         "nomadic-waaagh": {
           "category": "core",
           "notes": {
-            "name_en": "If your General is an Orc Boss, 0-1 Boar Boy Mob may be taken as a Core choice",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "If your General is an Orc Boss, 0-1 Boar Boy Mob may be taken as a Core choice"
+            "name_en": "If your General is an Orc Boss, 0-1 Orc Boar Boy Mob may be taken as a Core choice. 0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_fr": "Si votre Général est un Chef Orque, 0-1 Bande d'Orques sur Sangliers peut être prise comme choix de Base. 0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique"
           }
         }
       },
@@ -3030,11 +3210,15 @@
           "perModel": true
         },
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (0-1 par tranche de 1000 points)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -3053,24 +3237,32 @@
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         },
         {
-          "name_en": "Vanguard (0-1 per 1000 points)",
+          "name_en": "Vanguard",
+          "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
-          "name_fr": "Avant-garde (0-1 par tranche de 1000 points)"
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -3078,13 +3270,13 @@
         "name_en": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_de": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_es": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
-        "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orc Boar Boys & Boss only), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
+        "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orques et Chef uniquement), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
       }
     },
     {
       "name_en": "Night Goblin Squig Herd",
       "name_de": "Night Goblin Squig Herd",
-      "name_fr": "Troupeaux de Squigs Gobelins de la Nuit",
+      "name_fr": "Troupeau de Squigs Gobelins de la Nuit",
       "id": "night-goblin-squig-herd",
       "points": 10,
       "minimum": 5,
@@ -3096,7 +3288,7 @@
             "name_en": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
             "name_de": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
             "name_es": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
-            "name_fr": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken"
+            "name_fr": "0-1 Troupeau de Squigs Gobelins de la Nuit par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
           }
         }
       },
@@ -3111,12 +3303,16 @@
           "points": 3,
           "stackable": true,
           "minimum": 1,
-          "maximum": 0
+          "maximum": 0,
+          "notes": {
+            "name_en": "At least 1 per 5 Squigs",
+            "name_fr": "Au moins 1 par tranche de 5 Squigs"
+          }
         },
         {
           "name_en": "Thrusting spears for Squig Herder",
           "name_de": "Thrusting spears for Squig Herder",
-          "name_fr": "Thrusting spears for Squig Herder",
+          "name_fr": "Lances d'infanterie pour Berger",
           "points": 1,
           "stackable": true,
           "minimum": 0,
@@ -3125,17 +3321,17 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew*, Open Order, Skirmishers, Squigs Go Wild, Warband",
-        "name_de": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew*, Open Order, Skirmishers, Squigs Go Wild, Warband",
-        "name_es": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew*, Open Order, Skirmishers, Squigs Go Wild, Warband",
-        "name_fr": "Haine (Nains), Immunisé à la Psychologie, Impétueux, Solitaire, Bande Hétéroclite*, Ordre Dispersé, Tirailleurs, Squigs Sauvages, Bande de Guerre"
+        "name_en": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
+        "name_de": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
+        "name_es": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
+        "name_fr": "Haine (Nains), Immunisé à la Psychologie, Impétueux, Solitaire, Bande Hétéroclite, Ordre Dispersé, Tirailleurs, Squigs Sauvages, Bande de Guerre"
       }
     },
     {
       "name_en": "Black Orc Boar Chariot",
       "name_de": "Black Orc Boar Chariot",
       "name_es": "Black Orc Boar Chariot",
-      "name_fr": "Black Orc Boar Chariot",
+      "name_fr": "Char à Sangliers Orque Noir",
       "name_it": "Black Orc Boar Chariot",
       "name_pl": "Black Orc Boar Chariot",
       "id": "black-orc-boar-chariot",
@@ -3145,11 +3341,7 @@
           "category": "core",
           "notes": {
             "name_en": "If your General is a Black Orc Boss, 0-1 Black Orc Boar Chariot may be taken as a Core choice",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "If your General is a Black Orc Boss, 0-1 Black Orc Boar Chariot may be taken as a Core choice",
-            "name_it": "",
-            "name_pl": ""
+            "name_fr": "Si votre Général est un Chef Orque Noir, 0-1 Char à Sangliers Orque Noir peut être pris comme choix de Base"
           }
         }
       },
@@ -3205,7 +3397,7 @@
         "name_en": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_de": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_es": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
-        "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Black Orc Crew only), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
+        "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Auriges Orques Noirs uniquement), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
         "name_it": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_pl": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge"
       }
@@ -3215,7 +3407,7 @@
     {
       "name_en": "Black Orc Mob",
       "name_de": "Black Orc Mob",
-      "name_fr": "Bandes d'Orques Noirs",
+      "name_fr": "Bande d'Orques Noirs",
       "id": "black-orc-mob",
       "points": 12,
       "minimum": 5,
@@ -3331,31 +3523,33 @@
     {
       "name_en": "Orc Boar Boy Mob",
       "name_de": "Orc Boar Boy Mob",
-      "name_fr": "Bandes d'Orques sur Sangliers",
+      "name_fr": "Bande d'Orques sur Sangliers",
       "id": "orc-boar-boy-mob",
       "points": 15,
       "minimum": 4,
       "maximum": 0,
       "armyComposition": {
         "orc-and-goblin-tribes": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_de": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_en": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique"
+          }
         },
         "troll-horde": {
           "category": "special",
           "notes": {
-            "name_en": "0-1 Orc Boar Boy Mobs per 1000 pointe",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "0-1 Orc Boar Boy Mobs per 1000 pointe"
+            "name_en": "0-1 Orc Boar Boy Mob per 1000 points. 0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points. 0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique"
           }
         },
         "nomadic-waaagh": {
           "category": "special",
           "notes": {
-            "name_en": "",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": ""
+            "name_de": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_en": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard",
+            "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique"
           }
         }
       },
@@ -3422,11 +3616,15 @@
           "perModel": true
         },
         {
-          "name_en": "Frenzy (no armour)",
-          "name_de": "Frenzy (no armour)",
-          "name_fr": "Frénésie (0-1 par tranche de 1000 points)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "options": [
@@ -3435,9 +3633,7 @@
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Big 'Uns",
@@ -3445,24 +3641,32 @@
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         },
         {
-          "name_en": "Vanguard (0-1 per 1000 points)",
+          "name_en": "Vanguard",
+          "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
-          "name_fr": "Avant-garde (0-1 par tranche de 1000 points)"
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -3470,13 +3674,13 @@
         "name_en": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_de": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_es": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
-        "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orc Boar Boys & Boss only), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
+        "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orques et Chef uniquement), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
       }
     },
     {
       "name_en": "Night Goblin Squig Hopper Mob",
       "name_de": "Night Goblin Squig Hopper Mob",
-      "name_fr": "Bandes de Gobelins de la Nuit sur Squigs",
+      "name_fr": "Bande de Gobelins de la Nuit sur Squigs",
       "id": "night-goblin-squig-hopper-mob",
       "points": 12,
       "minimum": 5,
@@ -3537,7 +3741,7 @@
         "name_en": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
         "name_de": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
         "name_es": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
-        "name_fr": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken"
+        "name_fr": "0-1 Bande de Gobelins de la Nuit sur Squigs par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
       },
       "specialRules": {
         "name_en": "Hatred (Dwarfs), Immune to Psychology, Impact Hits (1), Loner, Open Order, Random Movement, Skirmishers, Warband",
@@ -3549,26 +3753,18 @@
     {
       "name_en": "Orc Boar Chariot",
       "name_de": "Orc Boar Chariot",
-      "name_fr": "Chars à Sangliers Orques",
+      "name_fr": "Char à Sangliers Orque",
       "id": "orc-boar-chariots",
       "points": 90,
       "armyComposition": {
         "orc-and-goblin-tribes": {
-          "category": "special",
-          "notes": {
-            "name_en": "0-1 per 1000 points may have the Frenzy special rule",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "0-1 per 1000 points may have the Frenzy special rule"
-          }
+          "category": "special"
         },
         "troll-horde": {
           "category": "special",
           "notes": {
-            "name_en": "0-1 Orc Boar Chariots per 1000 points, 0-1 per 1000 points may have the Frenzy special rule",
-            "name_de": "",
-            "name_es": "",
-            "name_fr": "0-1 Orc Boar Chariots per 1000 points, 0-1 per 1000 points may have the Frenzy special rule"
+            "name_en": "0-1 Orc Boar Chariots per 1000 points",
+            "name_fr": "0-1 Char à Sangliers Orque par tranche de 1000 points"
           }
         },
         "nomadic-waaagh": {
@@ -3597,34 +3793,50 @@
         {
           "name_en": "Third Orc crew member",
           "name_de": "Third Orc crew member",
-          "points": 5,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "Third Orc crew member"
+          "name_fr": "Troisième Aurige Orque",
+          "points": 5
         },
         {
-          "name_en": "Frenzy (if 2 crew members)",
-          "name_de": "Frenzy (if 2 crew members)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 4,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "Frénésie (if 2 crew members)"
+          "notes": [
+            {
+              "name_en": "If 2 crew members",
+              "name_fr": "Si 2 auriges"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
         },
         {
-          "name_en": "Frenzy (if 3 crew members)",
-          "name_de": "Frenzy (if 3 crew members)",
+          "name_en": "Frenzy",
+          "name_de": "Frenzy",
+          "name_fr": "Frénésie",
           "points": 6,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "Frénésie (if 3 crew members)"
+          "notes": [
+            {
+              "name_en": "If 3 crew members",
+              "name_fr": "Si 3 auriges"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
         },
         {
-          "name_en": "Warpaint (if frenzied)",
-          "name_de": "Warpaint (if frenzied)",
-          "name_fr": "Peintures de Guerre (si frénétique)",
+          "name_en": "Warpaint",
+          "name_de": "Warpaint",
+          "name_fr": "Peintures de Guerre",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "If frenzied",
+            "name_fr": "Si frénétique"
+          }
         }
       ],
       "mounts": [],
@@ -3638,7 +3850,7 @@
     {
       "name_en": "Common Troll Mob",
       "name_de": "Common Troll Mob",
-      "name_fr": "Bandes de Trolls",
+      "name_fr": "Bande de Trolls",
       "id": "common-troll-mob",
       "points": 41,
       "minimum": 1,
@@ -3656,7 +3868,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -3679,10 +3891,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -3698,7 +3914,7 @@
     {
       "name_en": "River Troll Mob",
       "name_de": "River Troll Mob",
-      "name_fr": "Bandes de Trolls d'Eau",
+      "name_fr": "Bande de Trolls d'Eau",
       "id": "river-troll-mob",
       "points": 49,
       "minimum": 1,
@@ -3716,7 +3932,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -3739,10 +3955,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -3758,7 +3978,7 @@
     {
       "name_en": "Stone Troll Mob",
       "name_de": "Stone Troll Mob",
-      "name_fr": "Bandes de Trolls de Pierre",
+      "name_fr": "Bande de Trolls de Pierre",
       "id": "stone-troll-mob",
       "points": 45,
       "minimum": 1,
@@ -3776,7 +3996,7 @@
         {
           "name_en": "Hand weapons, Troll vomit",
           "name_de": "Hand weapons, Troll vomit",
-          "name_fr": "Armes de base, Troll vomit",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -3799,10 +4019,14 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
+          "name_en": "Light armour",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -3816,9 +4040,9 @@
       }
     },
     {
-      "name_en": "Goblin Wolf Chariot",
-      "name_de": "Goblin Wolf Chariot",
-      "name_fr": "Char à Loups Gobelin",
+      "name_en": "Goblin Wolf Chariots",
+      "name_de": "Goblin Wolf Chariots",
+      "name_fr": "Chars à Loups Gobelin",
       "id": "goblin-wolf-chariot",
       "points": 53,
       "minimum": 1,
@@ -3866,7 +4090,9 @@
           "name_fr": "Troisième Loup Géant",
           "points": 5,
           "perModel": true,
-          "stackable": true
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 5
         }
       ],
       "mounts": [],
@@ -3878,8 +4104,8 @@
       }
     },
     {
-      "name_en": "Snotling Pump Wagon",
-      "name_de": "Snotling Pump Wagon",
+      "name_en": "Snotling Pump Wagons",
+      "name_de": "Snotling Pump Wagons",
       "name_fr": "Chariots à Pompe Snotlings",
       "id": "snotling-pump-wagon",
       "points": 35,
@@ -3911,7 +4137,7 @@
         "name_en": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
         "name_de": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
         "name_es": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
-        "name_fr": "Arme Perforante (3 - Pump Wagon Impact Hits only), Immunisé à la Psychologie, Touches d'Impact (D3+1), Solitaire, Ordre Dispersé, Mouvement Aléatoire"
+        "name_fr": "Arme Perforante (3 - Touches d'Impact du Chariot à Pompe uniquement), Immunisé à la Psychologie, Touches d'Impact (D3+1), Solitaire, Ordre Dispersé, Mouvement Aléatoire"
       }
     },
     {
@@ -3941,7 +4167,7 @@
         "name_en": "0-2 Goblin Bolt Throwas per 1000 points",
         "name_de": "0-2 Goblin Bolt Throwas per 1000 points",
         "name_es": "0-2 Goblin Bolt Throwas per 1000 points",
-        "name_fr": "0-2 Goblin Bolt Throwas per 1000 points"
+        "name_fr": "0-2 Balistes Gobelines par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Fear of Elves, Skirmishers",
@@ -3976,22 +4202,26 @@
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Close Order, *Giant Attacks, Immune to Psychology, Large Target, *Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_de": "Close Order, *Giant Attacks, Immune to Psychology, Large Target, *Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_es": "Close Order, *Giant Attacks, Immune to Psychology, Large Target, *Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Ordre Serré, *Attaques de Géant, Immunisé à la Psychologie, Grande Cible, *Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_es": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
       }
     },
     {
       "name_en": "Doom Diver Catapult",
       "name_de": "Doom Diver Catapult",
-      "name_fr": "Catapultes à Plongeurs de la Mort",
+      "name_fr": "Catapulte à Plongeurs de la Mort",
       "id": "doom-diver-catapult",
       "points": 95,
       "armyComposition": {
@@ -4015,7 +4245,7 @@
         "name_en": "0-1 Doom Diver Catapult per 1000 points",
         "name_de": "0-1 Doom Diver Catapult per 1000 points",
         "name_es": "0-1 Doom Diver Catapult per 1000 points",
-        "name_fr": "0-1 Doom Diver Catapult per 1000 points"
+        "name_fr": "0-1 Catapulte à Plongeurs de la Mort par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Doom Diver, Fear of Elves, Skirmishers",
@@ -4051,7 +4281,7 @@
         "name_en": "0-1 Goblin Rock Lobber per 1000 points",
         "name_de": "0-1 Goblin Rock Lobber per 1000 points",
         "name_es": "0-1 Goblin Rock Lobber per 1000 points",
-        "name_fr": "0-1 Goblin Rock Lobber per 1000 points"
+        "name_fr": "0-1 Lance-Rocs Gobelins par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Fear of Elves, Skirmishers",
@@ -4076,7 +4306,7 @@
         {
           "name_en": "Hand weapon (poisonous fangs), Venom surge, Hand weapons, Cavalry spears, Shortbows",
           "name_de": "Hand weapon (poisonous fangs), Venom surge, Hand weapons, Cavalry spears, Shortbows",
-          "name_fr": "Arme de base (poisonous fangs), Venom surge, Armes de base, Lances de cavalerie, Arcs courts",
+          "name_fr": "Arme de base (crochets empoisonnés), Injection de venin, Armes de base, Lances de cavalerie, Arcs courts",
           "points": 0,
           "perModel": true,
           "active": true
@@ -4131,7 +4361,11 @@
           "name_fr": "Armure lourde",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Scaly skin",
+            "name_fr": "Peau écailleuse"
+          }
         }
       ],
       "options": [],
@@ -4140,7 +4374,7 @@
         "name_en": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
         "name_de": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
         "name_es": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
-        "name_fr": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken"
+        "name_fr": "0-1 Squig Broyeur par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
       },
       "specialRules": {
         "name_en": "Close Order, Hatred (Dwarfs), Immune to Psychology, Impact Hits (D6), Ker-splat, Large Target, Random Attacks, Random Movement, Spiked Ball & Chains, Stomp Attacks (D3), Timmm-berrr!",
@@ -4153,7 +4387,7 @@
       "name_en": "Black Orc Boar Chariot",
       "name_de": "Black Orc Boar Chariot",
       "name_es": "Black Orc Boar Chariot",
-      "name_fr": "Black Orc Boar Chariot",
+      "name_fr": "Char à Sangliers Orque Noir",
       "name_it": "Black Orc Boar Chariot",
       "name_pl": "Black Orc Boar Chariot",
       "id": "black-orc-boar-chariot",
@@ -4215,7 +4449,7 @@
         "name_en": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_de": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_es": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
-        "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Black Orc Crew only), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
+        "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Auriges Orques Noirs uniquement), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
         "name_it": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_pl": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge"
       }
@@ -4355,7 +4589,7 @@
       "name_en": "Bonegrinder Giant",
       "name_de": "Bonegrinder Giant",
       "name_es": "Bonegrinder Giant",
-      "name_fr": "Bonegrinder Giant",
+      "name_fr": "Géants Broyeurs d'Os",
       "name_it": "Bonegrinder Giant",
       "name_pl": "Bonegrinder Giant",
       "id": "bonegrinder-giant",
@@ -4367,7 +4601,7 @@
           "name_en": "Bonegrinders Giant's club",
           "name_de": "Bonegrinders Giant's club",
           "name_es": "Bonegrinders Giant's club",
-          "name_fr": "Bonegrinders Giant's club",
+          "name_fr": "Massue de Géant Broyeur d'Os",
           "name_it": "Bonegrinders Giant's club",
           "name_pl": "Bonegrinders Giant's club",
           "points": 0,
@@ -4376,14 +4610,18 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour (Calloused hide)",
-          "name_de": "Light armour (Calloused hide)",
-          "name_es": "Light armour (Calloused hide)",
-          "name_fr": "Armure légère (Peau calleuse)",
-          "name_it": "Light armour (Calloused hide)",
-          "name_pl": "Light armour (Calloused hide)",
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "name_it": "Light armour",
+          "name_pl": "Light armour",
           "points": 0,
-          "active": true
+          "active": true,
+          "notes": {
+            "name_en": "Calloused hide",
+            "name_fr": "Peau calleuse"
+          }
         }
       ],
       "options": [],
@@ -4394,7 +4632,7 @@
         "name_en": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
         "name_de": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Bonegrinder Giant Attacks, Ordre Serré, Immune to Psychology, Grande Cible, Mercenaires, Attaques de Piétinement (D6+1), Terreur, Timmm-berrr!, Indémoralisable",
+        "name_fr": "Attaques de Géant Broyeur d'Os, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Mercenaires, Attaques de Piétinement (D6+1), Terreur, Timmm-berrr!, Indémoralisable",
         "name_it": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
         "name_pl": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable"
       },
@@ -4402,7 +4640,7 @@
         "name_en": "0-1 Bonegrinder Giant",
         "name_de": "0-1 Bonegrinder Giant",
         "name_es": "0-1 Bonegrinder Giant",
-        "name_fr": "0-1 Bonegrinder Giant",
+        "name_fr": "0-1 Géant Broyeur d'Os",
         "name_it": "0-1 Bonegrinder Giant",
         "name_pl": "0-1 Bonegrinder Giant"
       }
