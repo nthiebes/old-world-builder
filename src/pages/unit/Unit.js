@@ -28,7 +28,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
 import { normalizeRuleName } from "../../utils/string";
-import { getUnitName } from "../../utils/unit";
+import { getUnitName, showUnitOptionNotes } from "../../utils/unit";
 
 import "./Unit.css";
 
@@ -777,26 +777,41 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.equipment" />
             </h2>
             {unit.equipment.map(
-              ({ points, perModel, id, active = false, ...equipment }) => (
-                <div className="radio" key={id}>
-                  <input
-                    type="radio"
-                    id={`equipment-${id}`}
-                    name="equipment"
-                    value={id}
-                    onChange={() => handleEquipmentChange(id)}
-                    checked={active}
-                    className="radio__input"
-                  />
-                  <label htmlFor={`equipment-${id}`} className="radio__label">
-                    <span className="unit__label-text">
-                      <RulesWithIcon textObject={equipment} />
-                    </span>
-                    <i className="checkbox__points">
-                      {getPointsText({ points, perModel })}
-                    </i>
-                  </label>
-                </div>
+              ({
+                points,
+                perModel,
+                id,
+                active = false,
+                notes,
+                ...equipment
+              }) => (
+                <Fragment key={id}>
+                  <div className="radio">
+                    <input
+                      type="radio"
+                      id={`equipment-${id}`}
+                      name="equipment"
+                      value={id}
+                      onChange={() => handleEquipmentChange(id)}
+                      checked={active}
+                      className="radio__input"
+                    />
+                    <label htmlFor={`equipment-${id}`} className="radio__label">
+                      <span className="unit__label-text">
+                        <RulesWithIcon textObject={equipment} />
+                      </span>
+                      <i className="checkbox__points">
+                        {getPointsText({ points, perModel })}
+                      </i>
+                    </label>
+                  </div>
+                  {showUnitOptionNotes(
+                    notes,
+                    `equipment-${id}-note`,
+                    "unit__option-note",
+                    language
+                  )}
+                </Fragment>
               )
             )}
           </>
@@ -813,33 +828,42 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 id,
                 activeDefault,
                 active = false,
+                notes,
                 ...equipment
               }) => {
                 const isRadio = unit.armor.length > 1 || activeDefault;
 
                 return (
-                  <div className={isRadio ? "radio" : "checkbox"} key={id}>
-                    <input
-                      type={isRadio ? "radio" : "checkbox"}
-                      id={`armor-${id}`}
-                      name="armor"
-                      value={id}
-                      onChange={() => handleArmorChange(id)}
-                      checked={active}
-                      className={isRadio ? "radio__input" : "checkbox__input"}
-                    />
-                    <label
-                      htmlFor={`armor-${id}`}
-                      className={isRadio ? "radio__label" : "checkbox__label"}
-                    >
-                      <span className="unit__label-text">
-                        <RulesWithIcon textObject={equipment} />
-                      </span>
-                      <i className="checkbox__points">
-                        {getPointsText({ points, perModel })}
-                      </i>
-                    </label>
-                  </div>
+                  <Fragment key={id}>
+                    <div className={isRadio ? "radio" : "checkbox"}>
+                      <input
+                        type={isRadio ? "radio" : "checkbox"}
+                        id={`armor-${id}`}
+                        name="armor"
+                        value={id}
+                        onChange={() => handleArmorChange(id)}
+                        checked={active}
+                        className={isRadio ? "radio__input" : "checkbox__input"}
+                      />
+                      <label
+                        htmlFor={`armor-${id}`}
+                        className={isRadio ? "radio__label" : "checkbox__label"}
+                      >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={equipment} />
+                        </span>
+                        <i className="checkbox__points">
+                          {getPointsText({ points, perModel })}
+                        </i>
+                      </label>
+                    </div>
+                    {showUnitOptionNotes(
+                      notes,
+                      `armor-${id}-note`,
+                      "unit__option-note",
+                      language
+                    )}
+                  </Fragment>
                 );
               }
             )}
@@ -861,6 +885,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   points,
                   perModel,
                   id,
+                  notes,
                   stackable,
                   maximum,
                   minimum = 0,
@@ -902,6 +927,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             </i>
                           </label>
                         </div>
+                        {showUnitOptionNotes(
+                          notes,
+                          `options-${id}-note`,
+                          "unit__option-note",
+                          language
+                        )}
                         {options?.length > 0 && active && (
                           <>
                             {options
@@ -988,6 +1019,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           })
                         }
                       />
+                      {showUnitOptionNotes(
+                        notes,
+                        `options-${id}-note`,
+                        "unit__option-note unit__option-note--stackable",
+                        language
+                      )}
                     </Fragment>
                   );
                 }
@@ -1230,85 +1267,99 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !armyComposition ||
                   armyComposition.includes(list.armyComposition)
               )
-              .map(({ points, id, active = false, options, ...mount }) => (
-                <Fragment key={id}>
-                  <div className="radio">
-                    <input
-                      type="radio"
-                      id={`mounts-${id}`}
-                      name="mounts"
-                      value={id}
-                      onChange={() => handleMountsChange(id)}
-                      checked={active}
-                      className="radio__input"
-                    />
-                    <label htmlFor={`mounts-${id}`} className="radio__label">
-                      <span className="unit__label-text">
-                        <RulesWithIcon textObject={mount} />
-                      </span>
-                      <i className="checkbox__points">
-                        {getPointsText({ points })}
-                      </i>
-                    </label>
-                  </div>
-                  {options?.length > 0 && active && (
-                    <>
-                      {options
-                        .filter(
-                          (option) =>
-                            !option.armyComposition ||
-                            option.armyComposition.includes(
-                              list.armyComposition
-                            )
-                        )
-                        .map((option, optionIndex) => {
-                          const exclusiveCheckedOption = options.find(
-                            (exclusiveOption) =>
-                              exclusiveOption.exclusive &&
-                              exclusiveOption.active
-                          );
+              .map(
+                ({ points, id, active = false, options, notes, ...mount }) => (
+                  <Fragment key={id}>
+                    <div className="radio">
+                      <input
+                        type="radio"
+                        id={`mounts-${id}`}
+                        name="mounts"
+                        value={id}
+                        onChange={() => handleMountsChange(id)}
+                        checked={active}
+                        className="radio__input"
+                      />
+                      <label htmlFor={`mounts-${id}`} className="radio__label">
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={mount} />
+                        </span>
+                        <i className="checkbox__points">
+                          {getPointsText({ points })}
+                        </i>
+                      </label>
+                    </div>
+                    {showUnitOptionNotes(
+                      notes,
+                      `mounts-${id}-note`,
+                      "unit__option-note",
+                      language
+                    )}
+                    {options?.length > 0 && active && (
+                      <>
+                        {options
+                          .filter(
+                            (option) =>
+                              !option.armyComposition ||
+                              option.armyComposition.includes(
+                                list.armyComposition
+                              )
+                          )
+                          .map((option, optionIndex) => {
+                            const exclusiveCheckedOption = options.find(
+                              (exclusiveOption) =>
+                                exclusiveOption.exclusive &&
+                                exclusiveOption.active
+                            );
 
-                          return (
-                            <Fragment key={option.name_en}>
-                              <div className="checkbox checkbox--conditional">
-                                <input
-                                  type="checkbox"
-                                  id={`mount-${id}-option-${optionIndex}`}
-                                  value={`${id}-${optionIndex}`}
-                                  onChange={() =>
-                                    handleMountsChange(id, optionIndex)
-                                  }
-                                  checked={Boolean(option.active)}
-                                  className="checkbox__input"
-                                  disabled={
-                                    (exclusiveCheckedOption &&
-                                      option.exclusive &&
-                                      !option.active) ||
-                                    detachmentActive
-                                  }
-                                />
-                                <label
-                                  htmlFor={`mount-${id}-option-${optionIndex}`}
-                                  className="checkbox__label"
-                                >
-                                  <span className="unit__label-text">
-                                    <RulesWithIcon textObject={option} />
-                                  </span>
-                                  <i className="checkbox__points">
-                                    {getPointsText({ points: option.points })}
-                                  </i>
-                                </label>
-                              </div>
-                              {optionIndex === options.length - 1 && (
-                                <hr className="unit__command-option-hr" />
-                              )}
-                            </Fragment>
-                          );
-                        })}
-                    </>
-                  )}
-                </Fragment>
-              ))}
+                            return (
+                              <Fragment key={option.name_en}>
+                                <div className="checkbox checkbox--conditional">
+                                  <input
+                                    type="checkbox"
+                                    id={`mount-${id}-option-${optionIndex}`}
+                                    value={`${id}-${optionIndex}`}
+                                    onChange={() =>
+                                      handleMountsChange(id, optionIndex)
+                                    }
+                                    checked={Boolean(option.active)}
+                                    className="checkbox__input"
+                                    disabled={
+                                      (exclusiveCheckedOption &&
+                                        option.exclusive &&
+                                        !option.active) ||
+                                      detachmentActive
+                                    }
+                                  />
+                                  <label
+                                    htmlFor={`mount-${id}-option-${optionIndex}`}
+                                    className="checkbox__label"
+                                  >
+                                    <span className="unit__label-text">
+                                      <RulesWithIcon textObject={option} />
+                                    </span>
+                                    <i className="checkbox__points">
+                                      {getPointsText({ points: option.points })}
+                                    </i>
+                                  </label>
+                                </div>
+                                {showUnitOptionNotes(
+                                  option.notes,
+                                  `mount-${id}-option-${optionIndex}`,
+                                  "unit__option-note unit__option-note--conditionnal",
+                                  language
+                                )}
+                                {optionIndex === options.length - 1 && (
+                                  <hr className="unit__command-option-hr" />
+                                )}
+                              </Fragment>
+                            );
+                          })}
+                      </>
+                    )}
+                  </Fragment>
+                )
+              )}
           </>
         )}
         {unit.lores && unit.lores.length ? (
