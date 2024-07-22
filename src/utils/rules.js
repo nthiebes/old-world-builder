@@ -510,6 +510,133 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "royal-clan": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["king", "thane"],
+          min: 1,
+        },
+        {
+          ids: ["anvil-of-doom", "runelord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["bolt-thrower", "grudge-thrower"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["doomseekers"],
+          min: 0,
+          max: 4,
+        },
+        {
+          ids: ["goblin-hewer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "expeditionary-forces": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["engineer", "engineer-sapper"],
+          min: 1,
+        },
+        {
+          ids: ["daemon-slayer", "dragon-slayer"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["rangers"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["scout-gyrocopters"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["bolt-thrower", "grudge-thrower", "cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["slayers"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["organ-gun", "flame-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["doomseekers"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["goblin-hewer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "empire-of-man": {
     characters: {
       maxPercent: 50,

@@ -160,6 +160,16 @@ export const nameMap = {
     name_en: "Dwarfen Mountain Holds",
     name_fr: "Forteresses Naines",
   },
+  "expeditionary-forces": {
+    name_de: "Expeditionary Forces",
+    name_en: "Expeditionary Forces",
+    name_fr: "Expeditionary Forces",
+  },
+  "royal-clan": {
+    name_de: "Royal Clan",
+    name_en: "Royal Clan",
+    name_fr: "Royal Clan",
+  },
   "empire-of-man": {
     name_de: "Empire of Man",
     name_en: "Empire of Man",
