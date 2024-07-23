@@ -43,7 +43,8 @@ export const NewList = ({ isMobile }) => {
     const newId = getRandomId();
     const newList = {
       "warhammer-fantasy": {
-        name: name || nameMap[army][language] || nameMap[army].name_en,
+        name:
+          name || nameMap[army][`name_${language}`] || nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -56,7 +57,12 @@ export const NewList = ({ isMobile }) => {
         id: newId,
       },
       "the-old-world": {
-        name: name || nameMap[army][language] || nameMap[army].name_en,
+        name:
+          name ||
+          nameMap[armyComposition]?.[`name_${language}`] ||
+          nameMap[armyComposition]?.name_en ||
+          nameMap[army][`name_${language}`] ||
+          nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
