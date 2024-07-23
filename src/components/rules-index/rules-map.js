@@ -192,6 +192,9 @@ export const synonyms = {
   fireglaives: "fireglaive",
   "warplock jezzails": "warplock jezzails",
   "warplock jezzails skaven": "warplock jezzail",
+  "scourgerunner chariots": "scourgerunner chariot",
+  "bloodwrack shrines": "bloodwrack shrine",
+  "bloodwrack medusas": "bloodwrack medusa",
 };
 
 export const rulesMap = {
