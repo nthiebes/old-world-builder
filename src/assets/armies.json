@@ -18,6 +18,10 @@
         "mercenaries": {
           "empire-of-man": [
             {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker, imperial-dwarf-mercenaries"]
+            },
+            {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
             }
@@ -65,12 +69,29 @@
         "name_es": "Dwarfen Mountain Holds",
         "name_fr": "Forteresses Naines",
         "items": ["dwarfen-mountain-holds"],
+        "armyComposition": ["royal-clan", "expeditionary-force"],
         "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
         "mercenaries": {
           "dwarfen-mountain-holds": [
             {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker, imperial-dwarf-mercenaries"]
+            },
+            {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "royal-clan": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker, imperial-dwarf-mercenaries, goblin-hewer"]
+            }
+          ],
+          "expeditionary-force": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker, imperial-dwarf-mercenaries, goblin-hewer"]
             }
           ]
         }
