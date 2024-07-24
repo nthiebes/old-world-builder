@@ -1225,6 +1225,75 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "ogre-kingdoms": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["tyrant", "slaughtermaster"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["ogre-bulls"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["maneaters"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["mournfang-cavalry"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["ironblaster", "gnoblar-scraplauncher"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["thundertusk-riders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["stonehorn-riders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["gorgers"],
+          min: 0,
+          max: 3,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
