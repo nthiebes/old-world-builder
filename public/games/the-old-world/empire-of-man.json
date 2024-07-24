@@ -2890,6 +2890,185 @@
       }
     }
   ],
-  "mercenaries": [],
+  "mercenaries": [
+    {
+      "name_en": "Doomseeker",
+      "id": "doomseeker",
+      "points": 50,
+      "command": [],
+      "notes": {
+        "name_en": "0-3 per army"
+      },
+      "equipment": [
+        {
+          "name_en": "Whirling blades of death (Hand weapon)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon Runes",
+          "name_it": "Armi Runiche",
+          "name_de": "Waffenrunen",
+          "name_fr": "Runes d'Arme",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Runic Tattoos (Max 3)",
+          "types": ["runic-tattoos"],
+          "selected": [],
+          "maxPoints": 0
+        }
+      ],
+      "specialRules": {
+        "name_en": "Deathblow, Doomseeker, First to the Fray, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Impact Hits (D3 + 1), Loner, Magic Resistance (-2), Random Attacks, Resolute, Unbreakable, Vanguard, Whirlwind of Death"
+      }
+    },
+    {
+      "name_en": "Imperial Dwarf Mercenaries",
+      "id": "imperial-dwarf-mercenaries",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 0,
+      "notes": {
+        "name_en": "0-1 per army"
+      },
+      "command": [
+        {
+          "name_en": "Veteran (champion)",
+          "name_it": "Veteranio (campione)",
+          "name_de": "Veteran (Champion)",
+          "name_fr": "Vétéran (champion)",
+          "points": 5,
+          "magic": {
+            "types": ["weapon-runes"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_it": "Armi Bianche",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante (TA+2)",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Great weapons",
+          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Shields",
+          "name_it": "Scudi (TA+1)",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Crossbows",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Handguns",
+          "points": 3,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled (0-1 unit per 1000 points)",
+          "name_it": "Addestrati (0-1 unit ogni 1000p.ti)",
+          "name_de": "Gut ausgebildet (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Bien Entraînés (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran (0-1 unit per 1000 points)",
+          "name_it": "Veterani (0-1 unit ogni 1000p.ti)",
+          "name_de": "Veteranen (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Vétérans (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_it": "Formazione Serrata, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, Muro di Scudi",
+        "name_de": "Geschlossene Ränge, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall",
+        "name_es": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_fr": "Ordre Serré, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers"
+      }
+    }
+  ],
   "allies": []
 }
