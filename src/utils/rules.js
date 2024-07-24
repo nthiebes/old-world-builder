@@ -1149,6 +1149,82 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  lizardmen: {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["slann-mage-priest"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["saurus-oldblood", "skink-priest"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["saurus-warrior"],
+          min: 1,
+        },
+        {
+          ids: ["temple-guard"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["terradon-riders"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["skink-chief", "skink-priest"],
+        },
+        {
+          ids: ["ripperdactyl-riders"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["skink-chief", "skink-priest"],
+        },
+        {
+          ids: ["bastiladon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["salamander-packs", "razordon-packs"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["stegadon", "troglodon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({
