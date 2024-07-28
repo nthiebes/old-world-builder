@@ -221,9 +221,7 @@ export const Add = ({ isMobile }) => {
               const mercenaryUnits = allUnits.filter((unit) =>
                 mercenary.units.includes(unit.id)
               );
-              allMercenaries = [...allMercenaries, ...mercenaryUnits].map(
-                (mercenaryUnit) => ({ ...mercenaryUnit, army: mercenary.army })
-              );
+              allMercenaries = [...allMercenaries, ...mercenaryUnits];
               setMercenariesLoaded(index + 1);
             },
           });
