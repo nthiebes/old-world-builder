@@ -760,7 +760,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["king", "anvil-of-doom"],
+          ids: ["king", "anvil-of-doom", "ungrim-ironfist"],
           min: 0,
           max: 1,
           points: 1000,
@@ -780,7 +780,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: ["king"],
+          requires: ["king", "ungrim-ironfist"],
         },
       ],
     },
@@ -792,7 +792,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["king", "thane"],
+          requires: ["king", "thane", "ungrim-ironfist", "thorgrim-ullekson"],
         },
         {
           ids: ["bolt-thrower", "grudge-thrower", "cannon"],
@@ -848,7 +848,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["king", "thane"],
+          ids: ["king", "thane", "ungrim-ironfist", "thorgrim-ullekson"],
           min: 1,
         },
         {
@@ -921,7 +921,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["engineer", "engineer-sapper"],
+          ids: ["engineer", "engineer-sapper", "burlok-damminson"],
           min: 1,
         },
         {
