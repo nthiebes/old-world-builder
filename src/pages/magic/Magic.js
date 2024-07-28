@@ -395,7 +395,12 @@ export const Magic = ({ isMobile }) => {
   const hasMagicItems = Boolean(unit?.items?.length);
 
   if (hasCommandMagicItems) {
-    maxMagicPoints = unit.command[command].magic.maxPoints;
+    maxMagicPoints =
+      (unit.command[command].magic.armyComposition &&
+        unit.command[command].magic.armyComposition[
+          list.armyComposition || list.army
+        ]?.maxPoints) ||
+      unit.command[command].magic.maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.command[command].magic.selected,
     });

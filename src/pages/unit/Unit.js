@@ -610,6 +610,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 const commandMagicPoints = getUnitMagicPoints({
                   selected: magic?.selected,
                 });
+                let commandMaxPoints = 0;
+
+                if (magic?.types && magic.types.length && active) {
+                  commandMaxPoints =
+                    (magic.armyComposition &&
+                      magic.armyComposition[list.armyComposition || list.army]
+                        ?.maxPoints) ||
+                    magic.maxPoints;
+                }
 
                 return (
                   <Fragment key={id}>
@@ -670,22 +679,20 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             <i className="checkbox__points">
                               <span
                                 className={classNames(
-                                  commandMagicPoints >
-                                    unit.command[index].magic.maxPoints &&
-                                    unit.command[index].magic.maxPoints > 0 &&
+                                  commandMagicPoints > commandMaxPoints &&
+                                    commandMaxPoints > 0 &&
                                     "editor__error"
                                 )}
                               >
                                 {commandMagicPoints}
                               </span>{" "}
-                              {unit.command[index].magic.maxPoints > 0 && (
-                                <>{` / ${unit.command[index].magic.maxPoints}`}</>
+                              {magic.maxPoints > 0 && (
+                                <>{` / ${commandMaxPoints}`}</>
                               )}{" "}
                               <FormattedMessage id="app.points" />
                             </i>
-                            {commandMagicPoints >
-                              unit.command[index].magic.maxPoints &&
-                              unit.command[index].magic.maxPoints > 0 && (
+                            {commandMagicPoints > commandMaxPoints &&
+                              commandMaxPoints > 0 && (
                                 <Icon
                                   symbol="error"
                                   color="red"
