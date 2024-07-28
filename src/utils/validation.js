@@ -81,13 +81,18 @@ export const validateList = ({ list, language, intl }) => {
         .join(", ")
         .replace(/, ([^,]*)$/, " or $1");
     const points = ruleUnit.points;
-    const min = ruleUnit.min;
+    const min = points
+      ? Math.floor(list.points / points) * ruleUnit.min
+      : ruleUnit.min;
     const max = points
       ? Math.floor(list.points / points) * ruleUnit.max
       : ruleUnit.max;
 
     // Not enough units
-    if (!ruleUnit.requires && unitsInList.length < min) {
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length < min
+    ) {
       errors.push({
         message: "misc.error.minUnits",
         section: type,
@@ -123,18 +128,84 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
 
+    // Unit should be mounted
+    if (ruleUnit.requiresMounted && unitsInList.length > 0) {
+      const charactersNotMounted = unitsInList.filter(
+        (character) =>
+          !Boolean(
+            character.mounts.find(
+              (mount) => mount.active && mount.name_en !== "On foot"
+            )
+          )
+      );
+      const requiredNames = charactersNotMounted
+        .map((unit) => getUnitName({ unit, language }))
+        .join(", ")
+        .replace(/, ([^,]*)$/, " and $1");
+
+      charactersNotMounted.length &&
+        errors.push({
+          message: "misc.error.requiresMounted",
+          section: type,
+          name: requiredNames,
+        });
+    }
+
     // Requires other unit
-    if (
-      !ruleUnit.requiresGeneral &&
-      ruleUnit.requires &&
-      unitsInList.length > requiredUnitsInList.length
-    ) {
-      errors.push({
-        message: "misc.error.requiresUnits",
-        section: type,
-        name: requiredNames,
-        diff: unitsInList.length - requiredUnitsInList.length,
-      });
+    if (!ruleUnit.requiresGeneral && ruleUnit.requires) {
+      if (!max && ruleUnit.perUnit && unitsInList.length < min) {
+        errors.push({
+          message: "misc.error.minUnits",
+          section: type,
+          name: unitNames,
+          min,
+        });
+      }
+
+      // Each other unit allows another unit
+      if (
+        max &&
+        ruleUnit.perUnit &&
+        unitsInList.length > requiredUnitsInList.length
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: unitsInList.length - requiredUnitsInList.length,
+        });
+        // Each other unit allows another unit with scaling max value
+      } else if (
+        !max &&
+        ruleUnit.perUnit &&
+        unitsInList.length > requiredUnitsInList.length + min
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: unitsInList.length - requiredUnitsInList.length - min,
+        });
+      } else if (
+        !ruleUnit.perUnit &&
+        !requiredUnitsInList.length &&
+        unitsInList.length > 0
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: 1,
+        });
+      }
+      if (!ruleUnit.perUnit && unitsInList.length > max) {
+        errors.push({
+          message: "misc.error.maxUnits",
+          section: type,
+          name: namesInList,
+          diff: unitsInList.length - max,
+        });
+      }
     }
 
     // Requires magic item
