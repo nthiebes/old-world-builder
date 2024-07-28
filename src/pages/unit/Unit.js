@@ -1368,6 +1368,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               const itemsPoints = getUnitMagicPoints({
                 selected: item.selected,
               });
+              const maxPoints =
+                (item.armyComposition &&
+                  item.armyComposition[list.armyComposition || list.army]
+                    ?.maxPoints) ||
+                item.maxPoints;
 
               return (
                 <ListItem
@@ -1383,17 +1388,17 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     <i className="checkbox__points">
                       <span
                         className={classNames(
-                          itemsPoints > item.maxPoints &&
-                            item.maxPoints > 0 &&
+                          itemsPoints > maxPoints &&
+                            maxPoints > 0 &&
                             "editor__error"
                         )}
                       >
                         {itemsPoints}
                       </span>
-                      {item.maxPoints > 0 && <>{` / ${item.maxPoints}`}</>}{" "}
+                      {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
                       <FormattedMessage id="app.points" />
                     </i>
-                    {itemsPoints > item.maxPoints && item.maxPoints > 0 && (
+                    {itemsPoints > maxPoints && maxPoints > 0 && (
                       <Icon
                         symbol="error"
                         color="red"

@@ -14,3 +14,12 @@ export const swap = (list, index1, index2) => {
 
   return result;
 };
+
+export const uniq = (array) => {
+  const seen = {};
+
+  return array.filter(function (item) {
+    // eslint-disable-next-line no-prototype-builtins
+    return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+  });
+};

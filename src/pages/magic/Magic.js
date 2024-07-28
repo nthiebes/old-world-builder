@@ -400,7 +400,11 @@ export const Magic = ({ isMobile }) => {
       selected: unit.command[command].magic.selected,
     });
   } else if (hasMagicItems) {
-    maxMagicPoints = unit.items[group].maxPoints;
+    maxMagicPoints =
+      (unit.items[group].armyComposition &&
+        unit.items[group].armyComposition[list.armyComposition || list.army]
+          ?.maxPoints) ||
+      unit.items[group].maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
