@@ -830,7 +830,7 @@ export const rules = {
       maxPercent: 20,
       units: [
         {
-          ids: ["doomseeker"],
+          ids: ["doomseeker-merc"],
           min: 0,
           max: 3,
         },
@@ -903,12 +903,12 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["doomseeker"],
+          ids: ["doomseeker-merc"],
           min: 0,
           max: 4,
         },
         {
-          ids: ["goblin-hewer"],
+          ids: ["goblin-hewer-merc"],
           min: 0,
           max: 1,
           points: 1000,
@@ -979,13 +979,13 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["doomseeker"],
+          ids: ["doomseeker-merc"],
           min: 0,
           max: 2,
           points: 1000,
         },
         {
-          ids: ["goblin-hewer"],
+          ids: ["goblin-hewer-merc"],
           min: 0,
           max: 1,
           points: 1000,
@@ -1060,7 +1060,7 @@ export const rules = {
       maxPercent: 20,
       units: [
         {
-          ids: ["doomseeker"],
+          ids: ["doomseeker-merc"],
           min: 0,
           max: 3,
         },
