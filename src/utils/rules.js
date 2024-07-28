@@ -811,9 +811,36 @@ export const rules = {
           max: 2,
           points: 1000,
         },
+        {
+          ids: ["dwarf-cart"],
+          min: 0,
+          max: 4,
+        },
+        {
+          ids: ["goblin-hewer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresType: "characters",
+          requires: ["daemon-slayer", "dragon-slayer"],
+        },
       ],
     },
-    mercenaries: { maxPercent: 20 },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["doomseeker"],
+          min: 0,
+          max: 3,
+        },
+        {
+          ids: ["imperial-dwarf-mercenaries"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     allies: { maxPercent: 25 },
   },
   "royal-clan": {
@@ -830,14 +857,37 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["daemon-slayer", "dragon-slayer"],
+          requiresGeneral: true,
+          requires: ["ungrim-ironfist"],
+        },
       ],
     },
     core: {
       minPercent: 25,
+      units: [
+        {
+          ids: ["slayers"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresGeneral: true,
+          requires: ["ungrim-ironfist"],
+        },
+      ],
     },
     special: {
       maxPercent: 50,
       units: [
+        {
+          ids: ["doomseeker"],
+          min: 0,
+          max: 4,
+          points: 1000,
+          requiresGeneral: true,
+          requires: ["ungrim-ironfist"],
+        },
         {
           ids: ["bolt-thrower", "grudge-thrower"],
           min: 0,
@@ -853,7 +903,7 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["doomseekers"],
+          ids: ["doomseeker"],
           min: 0,
           max: 4,
         },
@@ -866,7 +916,7 @@ export const rules = {
       ],
     },
   },
-  "expeditionary-forces": {
+  "expeditionary-force": {
     characters: {
       maxPercent: 50,
       units: [
@@ -929,7 +979,7 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["doomseekers"],
+          ids: ["doomseeker"],
           min: 0,
           max: 2,
           points: 1000,
@@ -1006,7 +1056,21 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxPercent: 20 },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["doomseeker"],
+          min: 0,
+          max: 3,
+        },
+        {
+          ids: ["imperial-dwarf-mercenaries"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     allies: { maxPercent: 25 },
   },
   "wood-elf-realms": {

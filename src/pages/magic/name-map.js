@@ -70,6 +70,11 @@ export const nameMap = {
     name_en: "Weapon Runes",
     name_fr: "Runes d'Arme",
   },
+  "ranged-weapon-runes": {
+    name_de: "Ranged Weapon Runes",
+    name_en: "Ranged Weapon Runes",
+    name_fr: "Ranged Weapon Runes",
+  },
   "armor-runes": {
     name_de: "Rüstungsrunen",
     name_en: "Armour Runes",
@@ -89,6 +94,11 @@ export const nameMap = {
     name_de: "Maschinenrunen",
     name_en: "Engineering Runes",
     name_fr: "Runes d'Ingénierie",
+  },
+  "runic-tattoos": {
+    name_de: "Runic Tattoos",
+    name_en: "Runic Tattoos",
+    name_fr: "Runic Tattoos",
   },
   triptych: {
     name_de: "Triptych",
@@ -160,10 +170,10 @@ export const nameMap = {
     name_en: "Dwarfen Mountain Holds",
     name_fr: "Forteresses Naines",
   },
-  "expeditionary-forces": {
-    name_de: "Expeditionary Forces",
-    name_en: "Expeditionary Forces",
-    name_fr: "Expeditionary Forces",
+  "expeditionary-force": {
+    name_de: "Expeditionary Force",
+    name_en: "Expeditionary Force",
+    name_fr: "Expeditionary Force",
   },
   "royal-clan": {
     name_de: "Royal Clan",

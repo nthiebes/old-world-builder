@@ -17,13 +17,6 @@
           "points": 0
         }
       ],
-      "notes": {
-        "name_en": "0-1 King, Anvil of Doom or Runelord per 1,000 points",
-        "name_it": "0-1 ogni 1000p.ti",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -36,21 +29,21 @@
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
         },
         {
           "name_en": "Crossbow",
-          "name_it": "Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+          "name_it": "Balestra",
           "name_de": "Armbrust",
           "name_fr": "Arbalète",
           "points": 6
         },
         {
           "name_en": "Handgun",
-          "name_it": "Archibugio G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Lento a Tirare]",
+          "name_it": "Archibugio",
           "name_de": "Muskete",
           "name_fr": "Arquebuse",
           "points": 6
@@ -59,7 +52,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -69,7 +62,7 @@
       "options": [
         {
           "name_en": "Pistol",
-          "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+          "name_it": "Pistola",
           "name_de": "Pistole",
           "name_fr": "Pistolet",
           "points": 5,
@@ -78,7 +71,7 @@
         },
         {
           "name_en": "Shield",
-          "name_it": "Scudo (TA+1)",
+          "name_it": "Scudo",
           "name_de": "Schild",
           "name_fr": "Bouclier",
           "points": 2,
@@ -116,7 +109,12 @@
           "name_it": "Rune",
           "name_de": "Runen",
           "name_fr": "Runes",
-          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "types": [
+            "weapon-runes",
+            "ranged-weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
           "selected": [],
           "maxPoints": 125
         }
@@ -127,12 +125,27 @@
         "name_de": "Erbfeindschaft, Zwergengefertigt, Gromrilrüstung, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Sammelruf, Resolut, Unnachgiebig",
         "name_es": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
         "name_fr": "Rancune Ancestrale, Facture Naine, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Cri de Ralliement, Résolu, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 King, Anvil of Doom or Runelord per 1000 points"
+          }
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ King or Thane"
+          }
+        }
       }
     },
     {
       "name_en": "Thane",
       "name_it": "Thane",
       "name_de": "Thain",
+      "name_fr": "Thane",
       "id": "thane",
       "points": 60,
       "command": [
@@ -168,21 +181,21 @@
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
         },
         {
           "name_en": "Crossbow",
-          "name_it": "Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+          "name_it": "Balestra",
           "name_de": "Armbrust",
           "name_fr": "Arbalète",
           "points": 6
         },
         {
           "name_en": "Handgun",
-          "name_it": "Archibugio G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Lento a Tirare]",
+          "name_it": "Archibugio",
           "name_de": "Muskete",
           "name_fr": "Arquebuse",
           "points": 6
@@ -191,7 +204,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -201,7 +214,7 @@
       "options": [
         {
           "name_en": "Pistol",
-          "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+          "name_it": "Pistola",
           "name_de": "Pistole",
           "name_fr": "Pistolet",
           "points": 5,
@@ -210,7 +223,7 @@
         },
         {
           "name_en": "Shield",
-          "name_it": "Scudo (TA+1)",
+          "name_it": "Scudo",
           "name_de": "Schild",
           "name_fr": "Bouclier",
           "points": 2,
@@ -236,7 +249,7 @@
         },
         {
           "name_en": "Shieldbearers",
-          "name_it": "Scudo (TA+1)bearers",
+          "name_it": "Scudobearers",
           "name_de": "Schildträger",
           "name_fr": "Porteurs de Bouclier",
           "points": 60
@@ -248,7 +261,12 @@
           "name_it": "Rune",
           "name_de": "Runen",
           "name_fr": "Runes",
-          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "types": [
+            "weapon-runes",
+            "ranged-weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
           "selected": [],
           "maxPoints": 75
         }
@@ -260,7 +278,20 @@
         "name_es": "Ancestral Grudge, Dwarf Crafted, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
         "name_fr": "Rancune Ancestrale, Facture Naine, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Cri de Ralliement, Résolu, Obstiné"
       },
-      "name_fr": "Thane"
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ King or Thane"
+          }
+        },
+        "expeditionary-force": {
+          "category": "characters"
+        }
+      }
     },
     {
       "name_en": "Anvil of Doom",
@@ -279,17 +310,10 @@
           "points": 0
         }
       ],
-      "notes": {
-        "name_en": "0-1 King, Anvil of Doom or Runelord per 1,000 points",
-        "name_it": "0-1 ogni 1000p.ti",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
-          "name_it": "Armi Bianche, Scudi (TA+1)",
+          "name_it": "Armi Bianche, Scudi",
           "name_de": "Handwaffen, Schilde",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -299,7 +323,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -325,6 +349,20 @@
         "name_de": "Schild der Ahnen, Gromrilrüstung, Gromrilwaffen, Hass (Orks & Goblins), Immun gegen Psychologie, Magieresistenz (-3), Resolut, Runenwissen, Plänkler, Die Runen schlagen, Unerschütterlich",
         "name_es": "Ancestral Shield, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-3), Resolute, Rune Lore, Skirmishers, Strike the Runes, Unbreakable",
         "name_fr": "Bouclier Ancestral, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Résistance à la Magie (-3), Résolu, Savoir Runique, Tirailleurs, Frapper les Runes, Indémoralisable"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 King, Anvil of Doom or Runelord per 1000 points"
+          }
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Anvil of Doom or Runelord per 1000 points"
+          }
+        }
       }
     },
     {
@@ -344,13 +382,6 @@
           "points": 0
         }
       ],
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_it": "0-1 ogni 1000p.ti",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -363,7 +394,7 @@
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
@@ -372,7 +403,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -380,7 +411,7 @@
         },
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 3
@@ -389,7 +420,7 @@
       "options": [
         {
           "name_en": "Shield",
-          "name_it": "Scudo (TA+1)",
+          "name_it": "Scudo",
           "name_de": "Schild",
           "name_fr": "Bouclier",
           "points": 2,
@@ -424,6 +455,20 @@
         "name_de": "Rüstungsfluch (1), Schmiedefeuer, Gromrilrüstung, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-2), Resolut, Runenwissen, Unnachgiebig",
         "name_es": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
         "name_fr": "Arme Perforante (1), Forgefeu, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-2), Résolu, Savoir Runique, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 King, Anvil of Doom, or Runelord per 1000 points"
+          }
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Anvil of Doom or Runelord per 1000 points"
+          }
+        }
       }
     },
     {
@@ -441,6 +486,14 @@
           "name_es": "General",
           "name_fr": "Général",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer (Royal Clan Only)",
+          "points": 25,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
@@ -455,7 +508,7 @@
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
@@ -464,7 +517,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -472,7 +525,7 @@
         },
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 3
@@ -481,7 +534,7 @@
       "options": [
         {
           "name_en": "Shield",
-          "name_it": "Scudo (TA+1)",
+          "name_it": "Scudo",
           "name_de": "Schild",
           "name_fr": "Bouclier",
           "points": 2,
@@ -538,14 +591,14 @@
         },
         {
           "name_en": "Additional hand weapon",
-          "name_it": "Arma Addizionale [Attacchi Aggiuntivi (+1), Richiede Due Mani]",
+          "name_it": "Arma Addizionale",
           "name_de": "Zusätzliche Handwaffe",
           "name_fr": "Arme de base additionnelle",
           "points": 3
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
@@ -572,6 +625,12 @@
           "types": ["talismanic-runes"],
           "selected": [],
           "maxPoints": 25
+        },
+        {
+          "name_en": "Runic Tattoos (Max 2)",
+          "types": ["runic-tattoos"],
+          "selected": [],
+          "maxPoints": 0
         }
       ],
       "specialRules": {
@@ -580,6 +639,23 @@
         "name_de": "Letzter Hieb, Gromrilwaffen, Hass (Orks & Goblins), Immun gegen Psychologie, Todesstoß, Einzelgänger, Magieresistenz (-2), Resolut, Dämonentöter, Unerschütterlich, Vorhut",
         "name_es": "Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Killing Blow, Loner, Magic Resistance (-2), Resolute, Slayer of Daemons, Unbreakable, Vanguard",
         "name_fr": "Ultime Attaque, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Coup Fatal, Solitaire, Résistance à la Magie (-2), Résolu, Tueur de Démons, Indémoralisable, Avant-garde"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "May only be taken as a character choice if general is Ungrim Ironfist"
+          }
+        },
+        "expeditionary-force": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Daemon Slayer or Dragon Slayer"
+          }
+        }
       }
     },
     {
@@ -602,14 +678,14 @@
         },
         {
           "name_en": "Additional hand weapon",
-          "name_it": "Arma Addizionale [Attacchi Aggiuntivi (+1), Richiede Due Mani]",
+          "name_it": "Arma Addizionale",
           "name_de": "Zusätzliche Handwaffe",
           "name_fr": "Arme de base additionnelle",
           "points": 3
         },
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4
@@ -627,6 +703,12 @@
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 75
+        },
+        {
+          "name_en": "Runic Tattoos (Max 1)",
+          "types": ["runic-tattoos"],
+          "selected": [],
+          "maxPoints": 0
         }
       ],
       "specialRules": {
@@ -635,6 +717,23 @@
         "name_de": "Letzter Hieb, Gromrilwaffen, Hass (Orks & Goblins), Immun gegen Psychologie, Todesstoß, Einzelgänger, Magieresistenz (-2), Resolut, Drachentöter, Unerschütterlich, Vorhut",
         "name_es": "Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Killing Blow, Loner, Magic Resistance (-2), Resolute, Slayer of Dragons, Unbreakable, Vanguard",
         "name_fr": "Ultime Attaque, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Coup Fatal, Solitaire, Résistance à la Magie (-2), Résolu, Tueur de Dragons, Indémoralisable, Avant-garde"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters",
+          "notes": {
+            "name_en": "May only be taken as a character choice if Ungrim Ironfist is chosen as the general"
+          }
+        },
+        "expeditionary-force": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Daemon Slayer or Dragon Slayer"
+          }
+        }
       }
     },
     {
@@ -644,6 +743,119 @@
       "name_fr": "Ingénieur",
       "id": "engineer",
       "points": 50,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generalee",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer (Expeditionary Force Only)",
+          "points": 25,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Pistol",
+          "name_it": "Pistola",
+          "name_de": "Pistole",
+          "name_fr": "Pistolet",
+          "points": 6
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_it": "Coppia di Pistole",
+          "name_de": "Pistolenpaar",
+          "name_fr": "Plusieurs pistolets",
+          "points": 10
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Great weapon",
+          "name_it": "Grande Arma",
+          "name_de": "Zweihandwaffe",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Handgun",
+          "name_it": "Archibugio",
+          "name_de": "Muskete",
+          "name_fr": "Arquebuse",
+          "points": 8,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Runes",
+          "name_it": "Rune",
+          "name_de": "Runen",
+          "name_fr": "Runes",
+          "types": [
+            "weapon-runes",
+            "ranged-weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "specialRules": {
+        "name_en": "Artillery Master, Dwarf Crafted, Entrenchment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, \"Stand Back Chief\", Stubborn",
+        "name_it": "Maestro Artigliere, Fattura Nanica, Trinceramento, Armatura di Gromril, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, \"Stia Indietro Capo!\", Determinato",
+        "name_de": "Geschützmeister, Zwergengefertigt, Befestigen, Gromrilrüstung, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, \"Bleibt in Deckung, Herr\", Unnachgiebig",
+        "name_es": "Artillery Master, Dwarf Crafted, Entrenchment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, \"Stand Back Chief\", Stubborn",
+        "name_fr": "Maître de l'Artillerie, Facture Naine, Retranchement, Armure en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, \"Restez en Retrait Chef\", Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "expeditionary-force": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Engineer or Engineer Sapper"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Engineer Sapper",
+      "id": "engineer-sapper",
+      "points": 70,
       "command": [
         {
           "name_en": "General",
@@ -666,14 +878,14 @@
         },
         {
           "name_en": "Pistol",
-          "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+          "name_it": "Pistola",
           "name_de": "Pistole",
           "name_fr": "Pistolet",
           "points": 6
         },
         {
           "name_en": "Brace of pistols",
-          "name_it": "Coppia di Pistole G12'' Fo4 PA-1 (in CaC +1A Richiede Due Mani) [Rottura dell'Armatura (1), Tiro Multiplo (2), Tiro Rapido]",
+          "name_it": "Coppia di Pistole",
           "name_de": "Pistolenpaar",
           "name_fr": "Plusieurs pistolets",
           "points": 10
@@ -682,7 +894,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -692,7 +904,7 @@
       "options": [
         {
           "name_en": "Great weapon",
-          "name_it": "Grande Arma +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grande Arma",
           "name_de": "Zweihandwaffe",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -701,7 +913,7 @@
         },
         {
           "name_en": "Handgun",
-          "name_it": "Archibugio G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Lento a Tirare]",
+          "name_it": "Archibugio",
           "name_de": "Muskete",
           "name_fr": "Arquebuse",
           "points": 8,
@@ -716,17 +928,153 @@
           "name_it": "Rune",
           "name_de": "Runen",
           "name_fr": "Runes",
-          "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
+          "types": [
+            "weapon-runes",
+            "ranged-weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
           "selected": [],
           "maxPoints": 50
         }
       ],
       "specialRules": {
-        "name_en": "Artillery Master, Dwarf Crafted, Entrenchment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, \"Stand Back Chief\", Stubborn",
-        "name_it": "Maestro Artigliere, Fattura Nanica, Trinceramento, Armatura di Gromril, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, \"Stia Indietro Capo!\", Determinato",
-        "name_de": "Geschützmeister, Zwergengefertigt, Befestigen, Gromrilrüstung, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, \"Bleibt in Deckung, Herr\", Unnachgiebig",
-        "name_es": "Artillery Master, Dwarf Crafted, Entrenchment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, \"Stand Back Chief\", Stubborn",
-        "name_fr": "Maître de l'Artillerie, Facture Naine, Retranchement, Armure en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, \"Restez en Retrait Chef\", Obstiné"
+        "name_en": "\"Dig In!\", Dwarf Crafted, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn"
+      },
+      "armyComposition": {
+        "expeditionary-force": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Engineer or Engineer Sapper"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Thorgrim Ullekson",
+      "id": "thorgrim-ullekson-kharl-of-the-dammaz-kron",
+      "named": true,
+      "points": 250,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Grudge-settler, The Grudgestone",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "The Armour of Skaldour, Shield",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Gromril Armour, Grudgelore, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn"
+      }
+    },
+    {
+      "name_en": "Ungrim Ironfist",
+      "id": "ungrim-ironfist",
+      "named": true,
+      "points": 315,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, The Axe of Dargo",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "The Slayer Crown, Light armour",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Deathblow, Gromril Armour, Hatred (Orcs & Goblins), Immune to Psychology, King of the Slayer Hold, Magic Resistance (-2), Rallying Cry, Resolute, Slayer, Unbreakable"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Burlok Damminson",
+      "id": "burlok-damminson",
+      "named": true,
+      "points": 85,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Furnace hammer, Rivet gun",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dwarf Crafted, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Prepared Positions, Range Finding Optics, Resolute, \"Stand Back Chief\", Stubborn"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "expeditionary-force": {
+          "category": "characters"
+        }
       }
     }
   ],
@@ -792,7 +1140,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -803,7 +1151,7 @@
       "options": [
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 1,
@@ -813,7 +1161,7 @@
         },
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -849,6 +1197,113 @@
         "name_de": "Geschlossene Ränge, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall",
         "name_es": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
         "name_fr": "Ordre Serré, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core"
+        },
+        "expeditionary-force": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Royal Clan Warriors",
+      "id": "royal-clan-warriors",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Royal Clan Veteran (Up to 25pts of each rune type)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon-runes", "talismanic-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 75
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_de": "Handwaffen,  Schild",
+          "name_fr": "Armes de base, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Gromril great axes",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled (0-1 unit per 1000 points)",
+          "name_it": "Addestrati (0-1 unit ogni 1000p.ti)",
+          "name_de": "Gut ausgebildet (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Bien Entraînés (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Stubborn (0-1 unit per 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran (0-1 unit per 1000 points)",
+          "name_it": "Veterani (0-1 unit ogni 1000p.ti)",
+          "name_de": "Veteranen (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Vétérans (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall"
+      },
+      "armyComposition": {
+        "royal-clan": {
+          "category": "core"
+        }
       }
     },
     {
@@ -860,13 +1315,6 @@
       "points": 12,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 if General is a King",
-        "name_it": "0-1 Se il Generalee è un Re",
-        "name_de": "0-1 wenn dein General ein König ist",
-        "name_es": "0-1 if General is a King",
-        "name_fr": "0-1 si votre Général est un Roi"
-      },
       "command": [
         {
           "name_en": "Elder (champion)",
@@ -911,7 +1359,7 @@
         },
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 1,
@@ -921,7 +1369,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -932,7 +1380,7 @@
       "options": [
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -958,6 +1406,17 @@
         "name_de": "Geschlossene Ränge, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall, Altehrwürdig, Veteranen",
         "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
         "name_fr": "Ordre Serré, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers, Vénérables, Vétérans"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 if general is a King"
+          }
+        },
+        "royal-clan": {
+          "category": "core"
+        }
       }
     },
     {
@@ -979,7 +1438,7 @@
           "options": [
             {
               "name_en": "Crossbow",
-              "name_it": "Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+              "name_it": "Balestra",
               "name_de": "Armbrust",
               "name_fr": "Arbalète",
               "points": 0,
@@ -988,7 +1447,7 @@
             },
             {
               "name_en": "Pistol",
-              "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+              "name_it": "Pistola",
               "name_de": "Pistole",
               "name_fr": "Pistolet",
               "points": 0,
@@ -996,7 +1455,7 @@
             },
             {
               "name_en": "Brace of pistols",
-              "name_it": "Coppia di Pistole G12'' Fo4 PA-1 (in CaC +1A Richiede Due Mani) [Rottura dell'Armatura (1), Tiro Multiplo (2), Tiro Rapido]",
+              "name_it": "Coppia di Pistole",
               "name_de": "Pistolenpaar",
               "name_fr": "Plusieurs pistolets",
               "points": 5,
@@ -1022,7 +1481,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Crossbows",
-          "name_it": "Armi Bianche, Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+          "name_it": "Armi Bianche, Balestra",
           "name_de": "Handwaffen, Armbrüste",
           "name_fr": "Armes de base, Arbalètes",
           "points": 0,
@@ -1033,7 +1492,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1044,7 +1503,7 @@
       "options": [
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -1054,7 +1513,7 @@
         },
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -1070,6 +1529,14 @@
         "name_de": "Geschlossene Ränge, Zwergengefertigt, Hass (Orks & Goblins), Magieresistenz (-1), Resolut",
         "name_es": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
         "name_fr": "Ordre Serré, Facture Naine, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core"
+        },
+        "royal-clan": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1091,7 +1558,7 @@
           "options": [
             {
               "name_en": "Handgun",
-              "name_it": "Archibugio G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Lento a Tirare]",
+              "name_it": "Archibugio",
               "name_de": "Muskete",
               "name_fr": "Arquebuse",
               "points": 0,
@@ -1100,7 +1567,7 @@
             },
             {
               "name_en": "Pistol",
-              "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+              "name_it": "Pistola",
               "name_de": "Pistole",
               "name_fr": "Pistolet",
               "points": 0,
@@ -1108,7 +1575,7 @@
             },
             {
               "name_en": "Brace of pistols",
-              "name_it": "Coppia di Pistole G12'' Fo4 PA-1 (in CaC +1A Richiede Due Mani) [Rottura dell'Armatura (1), Tiro Multiplo (2), Tiro Rapido]",
+              "name_it": "Coppia di Pistole",
               "name_de": "Pistolenpaar",
               "name_fr": "Plusieurs pistolets",
               "points": 5,
@@ -1134,7 +1601,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Handguns",
-          "name_it": "Armi Bianche, Archibugio G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Lento a Tirare]",
+          "name_it": "Armi Bianche, Archibugio",
           "name_de": "Handwaffen, Musketen",
           "name_fr": "Armes de base, Arquebuses",
           "points": 0,
@@ -1145,7 +1612,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1156,22 +1623,26 @@
       "options": [
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 2,
-          "minimum": 0,
-          "maximum": 0,
           "perModel": true
         },
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
-          "minimum": 0,
-          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
+          "name_it": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
+          "name_de": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
+          "name_fr": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
+          "points": 1,
           "perModel": true
         }
       ],
@@ -1182,6 +1653,14 @@
         "name_de": "Geschlossene Ränge, Zwergengefertigt, Hass (Orks & Goblins), Magieresistenz (-1), Resolut",
         "name_es": "Close Order, Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute",
         "name_fr": "Ordre Serré, Facture Naine, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core"
+        },
+        "expeditionary-force": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1193,13 +1672,6 @@
       "points": 11,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 unit of Rangers may be taken as a Core choice",
-        "name_it": "0-1 per Armata",
-        "name_de": "0-1 pro Armee",
-        "name_es": "0-1 per army",
-        "name_fr": "0-1 par armée"
-      },
       "command": [
         {
           "name_en": "Ol' Deadeye (champion)",
@@ -1210,7 +1682,7 @@
           "options": [
             {
               "name_en": "Crossbow",
-              "name_it": "Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+              "name_it": "Balestra",
               "name_de": "Armbrust",
               "name_fr": "Arbalète",
               "points": 0,
@@ -1219,7 +1691,7 @@
             },
             {
               "name_en": "Pistol",
-              "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+              "name_it": "Pistola",
               "name_de": "Pistole",
               "name_fr": "Pistolet",
               "points": 0,
@@ -1227,7 +1699,7 @@
             },
             {
               "name_en": "Brace of pistols",
-              "name_it": "Coppia di Pistole G12'' Fo4 PA-1 (in CaC +1A Richiede Due Mani) [Rottura dell'Armatura (1), Tiro Multiplo (2), Tiro Rapido]",
+              "name_it": "Coppia di Pistole",
               "name_de": "Pistolenpaar",
               "name_fr": "Plusieurs pistolets",
               "points": 5,
@@ -1257,7 +1729,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Crossbows",
-          "name_it": "Armi Bianche, Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+          "name_it": "Armi Bianche, Balestra",
           "name_de": "Handwaffen, Armbrüste",
           "name_fr": "Armes de base, Arbalètes",
           "points": 0,
@@ -1274,7 +1746,7 @@
         },
         {
           "name_en": "Hand weapons, Crossbows, Throwing axes",
-          "name_it": "Armi Bianche, Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare], Asce da Lancio G9'' Fo+1 [Tiro Rapido]",
+          "name_it": "Armi Bianche, Balestra, Asce da Lancio G9'' Fo+1 [Tiro Rapido]",
           "name_de": "Handwaffen, Armbrüste, Wurfäxte",
           "name_fr": "Armes de base, Arbalètes, Haches de lancer",
           "points": 1,
@@ -1284,7 +1756,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1295,7 +1767,7 @@
       "options": [
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -1305,7 +1777,7 @@
         },
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -1321,6 +1793,121 @@
         "name_de": "Zwergengefertigt, Hass (Orks & Goblins), Magieresistenz (-1), Durch Deckung bewegen, Offene Ränge, Resolut, Kundschafter, Plänkler",
         "name_es": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move Through Cover, Open Order, Resolute, Scouts, Skirmishers",
         "name_fr": "Facture Naine, Haine (Orques & Gobelins), Résistance à la Magie (-1), Mouvement à Couvert, Ordre Dispersé, Résolu, Éclaireurs, Tirailleurs"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Rangers may be taken as a Core choice"
+          }
+        },
+        "expeditionary-force": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 per 1000 points"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Scout Gyrocopters",
+      "id": "scout-gyrocopters",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Clatterguns",
+          "name_it": "Armi Bianche, Sferragliatrice G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Fattura Nanica, Tirare in Movimento, Tiro Multiplo (D6), Tiro Rapido]",
+          "name_de": "Handwaffen, Ratterkanone",
+          "name_fr": "Armes de base, Canon crépiteur",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Lightly armoured fuselage)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Extended Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard"
+      },
+      "armyComposition": {
+        "expeditionary-force": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 per 1000 points"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Dwarf Cart",
+      "id": "dwarf-cart",
+      "points": 65,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Bugman's Cart",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Impact Hits (D3), Magic Resistance (-1), Open Order, Resolute"
+      },
+      "armyComposition": {
+        "royal-clan": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Dwarf Cart",
+      "id": "dwarf-cart",
+      "points": 65,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Bugman's Cart",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Miner's Cart",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Impact Hits (D3), Magic Resistance (-1), Open Order, Resolute"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-4 per army"
+          }
+        },
+        "expeditionary-force": {
+          "category": "core"
+        }
       }
     }
   ],
@@ -1334,13 +1921,6 @@
       "points": 12,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 if General is a King",
-        "name_it": "0-1 Se il Generalee è un Re",
-        "name_de": "0-1 wenn dein General ein König ist",
-        "name_es": "0-1 if General is a King",
-        "name_fr": "0-1 si votre Général est un Roi"
-      },
       "command": [
         {
           "name_en": "Elder (champion)",
@@ -1385,7 +1965,7 @@
         },
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 1,
@@ -1395,7 +1975,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1406,12 +1986,10 @@
       "options": [
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
-          "minimum": 0,
-          "maximum": 0,
           "perModel": true
         },
         {
@@ -1420,8 +1998,6 @@
           "name_de": "Gut ausgebildet (0-1 Einheiten pro 1000 Punkte)",
           "name_fr": "Bien Entraînés (0-1 unité par tranche de 1000 points)",
           "points": 1,
-          "minimum": 0,
-          "maximum": 0,
           "perModel": true
         }
       ],
@@ -1432,6 +2008,11 @@
         "name_de": "Geschlossene Ränge, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall, Altehrwürdig, Veteranen",
         "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall, Venerable, Veteran",
         "name_fr": "Ordre Serré, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers, Vénérables, Vétérans"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1443,13 +2024,6 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 per King or Thane",
-        "name_it": "0-1 ogni Re o Thane",
-        "name_de": "0-1 pro König oder Thain",
-        "name_es": "0-1 per King or Thane",
-        "name_fr": "0-1 par Roi ou Thane"
-      },
       "command": [
         {
           "name_en": "Royal Champion (Up to 25pts of each rune type)",
@@ -1495,7 +2069,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1506,7 +2080,7 @@
       "options": [
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -1542,6 +2116,17 @@
         "name_de": "Geschlossene Ränge, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Königswache, Schildwall, Sture Verteidiger, Unnachgiebig",
         "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn",
         "name_fr": "Ordre Serré, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Garde Royale, Mur de Boucliers, Défenseurs Stoïques, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 per King or Thane"
+          }
+        },
+        "royal-clan": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1567,7 +2152,7 @@
           "options": [
             {
               "name_en": "Shield",
-              "name_it": "Scudo (TA+1)",
+              "name_it": "Scudo",
               "name_de": "Schild",
               "name_fr": "Bouclier",
               "points": 0,
@@ -1576,7 +2161,7 @@
             },
             {
               "name_en": "Brace of drakefire pistols",
-              "name_it": "Coppia di Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido] e Fuoco del Drago",
+              "name_it": "Coppia di Pistola e Fuoco del Drago",
               "name_de": "Drachenpistolenpaar",
               "name_fr": "Paire de pistolets drac de feu",
               "points": 10,
@@ -1621,7 +2206,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
-          "name_it": "Armi Bianche, Scudi (TA+1)",
+          "name_it": "Armi Bianche, Scudi",
           "name_de": "Handwaffen, Schilde",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -1632,7 +2217,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -1659,6 +2244,14 @@
         "name_de": "Geschlossene Ränge, Gromrilrüstung, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Hauptregiment, Resolut, Rettungsrunen, Schildwall, Unnachgiebig",
         "name_es": "Close Order, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Regimental Unit, Resolute, Runes of Protection, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Unité Régimentaire, Résolu, Runes de Protection, Mur de Boucliers, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special"
+        },
+        "royal-clan": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -1709,7 +2302,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Great weapons",
-          "name_it": "Armi Bianche, Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Armi Bianche, Grandi Armi",
           "name_de": "Handwaffen, Zweihandwaffen",
           "name_fr": "Armes de base, Armes lourdes",
           "points": 0,
@@ -1720,7 +2313,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -1774,6 +2367,14 @@
         "name_de": "0-1 Einheiten pro 1000 Punkte können Standartenrunen erwerben",
         "name_es": "0-1 unit per 1000 points can have Standard runes",
         "name_fr": "0-1 unité par tranche de 1000 points peut acheter des runes de Bannière"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special"
+        },
+        "expeditionary-force": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1840,7 +2441,7 @@
         },
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -1856,6 +2457,67 @@
         "name_de": "Letzter Hieb, \"Trau dich!\" (Riesenslayer), Hass (Orks & Goblins), Immun gegen Psychologie, Einzelgänger, Magieresistenz (-2), Zusammengewürfelter Haufen*, Offene Ränge, Resolut, Slayer, Unerschütterlich",
         "name_es": "Deathblow, \"Fight Me!\" (Giant Slayer), Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew*, Open Order, Resolute, Slayer, Unbreakable",
         "name_fr": "Ultime Attaque, \"Affronte-moi!\" (Tueur de Géant), Haine (Orques & Gobelins), Immunisé à la Psychologie, Solitaire, Résistance à la Magie (-2), Bande Hétéroclite*, Ordre Dispersé, Résolu, Tueur, Indémoralisable"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special"
+        },
+        "royal-clan": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 per 1000 points if general is Ungrim Ironfist"
+          }
+        },
+        "expeditionary-force": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 per army"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Doomseeker",
+      "id": "doomseeker",
+      "points": 50,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon (Whirling blades of death)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon Runes",
+          "name_it": "Armi Runiche",
+          "name_de": "Waffenrunen",
+          "name_fr": "Runes d'Arme",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Runic Tattoos (max 3)",
+          "types": ["runic-tattoos"],
+          "selected": [],
+          "maxPoints": 0
+        }
+      ],
+      "specialRules": {
+        "name_en": "Deathblow, Doomseeker, First to the Fray, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Impact Hits (D3 + 1), Loner, Magic Resistance (-2), Random Attacks, Resolute, Unbreakable, Vanguard, Whirlwind of Death"
+      },
+      "armyComposition": {
+        "royal-clan": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-4 per 1000 points if general is Ungrim Ironfist"
+          }
+        }
       }
     },
     {
@@ -1898,7 +2560,7 @@
       "armor": [
         {
           "name_en": "Full plate armour (armoured fuselage)",
-          "name_it": "Armatura Completa (TA+3) (Fusoliera Corazzata)",
+          "name_it": "Armatura Completa (Fusoliera Corazzata)",
           "name_de": "Plattenrüstung (Panzerrumpf)",
           "name_fr": "Armure de plate complète (fuselage blindé)",
           "points": 0,
@@ -1914,6 +2576,51 @@
         "name_de": "Bombenabwurf, Schießen und Verschwinden, Fliegen (9), Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
         "name_es": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
         "name_fr": "Largage en Piqué, Tir & Fuite, Vol (9), Touches d'Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special"
+        },
+        "expeditionary-force": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Scout Gyrocopters",
+      "id": "scout-gyrocopters",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Clatterguns",
+          "name_it": "Armi Bianche, Sferragliatrice G24'' Fo4 PA-1 [Rottura dell'Armatura (1), Fattura Nanica, Tirare in Movimento, Tiro Multiplo (D6), Tiro Rapido]",
+          "name_de": "Handwaffen, Ratterkanone",
+          "name_fr": "Armes de base, Canon crépiteur",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Lightly armoured fuselage)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Extended Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard"
+      },
+      "armyComposition": {
+        "expeditionary-force": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1924,13 +2631,6 @@
       "id": "bolt-thrower",
       "points": 55,
       "command": [],
-      "notes": {
-        "name_en": "0-3 warmachines per 1000 points",
-        "name_it": "0-3 Macchine da Guerra ogni 1000p.ti",
-        "name_de": "0-3 Kriegsmaschinen pro 1000 Punkte",
-        "name_es": "0-3 warmachines per 1000 points",
-        "name_fr": "0-3 machines de guerre par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Bolt thrower, Hand weapons",
@@ -1970,6 +2670,26 @@
         "name_de": "Hass (Orks & Goblins), Magieresistenz (-1), Plänkler, Unnachgiebig",
         "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
         "name_fr": "Haine (Orques & Gobelins), Résistance à la Magie (-1), Tirailleurs, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        },
+        "royal-clan": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower or Grudge Thrower per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        }
       }
     },
     {
@@ -1980,13 +2700,6 @@
       "id": "grudge-thrower",
       "points": 95,
       "command": [],
-      "notes": {
-        "name_en": "0-3 warmachines per 1000 points",
-        "name_it": "0-3 Macchine da Guerra ogni 1000p.ti",
-        "name_de": "0-3 Kriegsmaschinen pro 1000 Punkte",
-        "name_es": "0-3 warmachines per 1000 points",
-        "name_fr": "0-3 machines de guerre par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Stone thrower, Hand weapons",
@@ -2026,6 +2739,26 @@
         "name_de": "Hass (Orks & Goblins), Magieresistenz (-1), Plänkler, Unnachgiebig",
         "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
         "name_fr": "Haine (Orques & Gobelins), Résistance à la Magie (-1), Tirailleurs, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        },
+        "royal-clan": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower or Grudge Thrower per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        }
       }
     },
     {
@@ -2036,13 +2769,6 @@
       "id": "cannon",
       "points": 100,
       "command": [],
-      "notes": {
-        "name_en": "0-3 warmachines per 1000 points",
-        "name_it": "0-3 Macchine da Guerra ogni 1000p.ti",
-        "name_de": "0-3 Kriegsmaschinen pro 1000 Punkte",
-        "name_es": "0-3 warmachines per 1000 points",
-        "name_fr": "0-3 machines de guerre par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Cannon, Hand weapons",
@@ -2082,6 +2808,20 @@
         "name_de": "Hass (Orks & Goblins), Magieresistenz (-1), Plänkler, Unnachgiebig",
         "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
         "name_fr": "Haine (Orques & Gobelins), Résistance à la Magie (-1), Tirailleurs, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-3 Bolt Thrower, Grudge Thrower, or Cannon per 1000 points"
+          }
+        }
       }
     }
   ],
@@ -2095,13 +2835,6 @@
       "points": 11,
       "minimum": 5,
       "maximum": 0,
-      "notes": {
-        "name_en": "0-1 per army",
-        "name_it": "0-1 per Armata",
-        "name_de": "0-1 pro Armee",
-        "name_es": "0-1 per army",
-        "name_fr": "0-1 per army"
-      },
       "command": [
         {
           "name_en": "Ol' Deadeye (champion)",
@@ -2112,7 +2845,7 @@
           "options": [
             {
               "name_en": "Crossbow",
-              "name_it": "Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+              "name_it": "Balestra",
               "name_de": "Armbrust",
               "name_fr": "Arbalète",
               "points": 0,
@@ -2121,7 +2854,7 @@
             },
             {
               "name_en": "Pistol",
-              "name_it": "Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido]",
+              "name_it": "Pistola",
               "name_de": "Pistole",
               "name_fr": "Pistolet",
               "points": 0,
@@ -2129,7 +2862,7 @@
             },
             {
               "name_en": "Brace of pistols",
-              "name_it": "Coppia di Pistole G12'' Fo4 PA-1 (in CaC +1A Richiede Due Mani) [Rottura dell'Armatura (1), Tiro Multiplo (2), Tiro Rapido]",
+              "name_it": "Coppia di Pistole",
               "name_de": "Pistolenpaar",
               "name_fr": "Plusieurs pistolets",
               "points": 5,
@@ -2159,7 +2892,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Crossbows",
-          "name_it": "Armi Bianche, Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare]",
+          "name_it": "Armi Bianche, Balestra",
           "name_de": "Handwaffen, Armbrüste",
           "name_fr": "Armes de base, Arbalètes",
           "points": 0,
@@ -2176,7 +2909,7 @@
         },
         {
           "name_en": "Hand weapons, Crossbows, Throwing axes",
-          "name_it": "Armi Bianche, Balestra G30'' Fo4 [Rottura dell'Armatura (2), Lento a Tirare], Asce da Lancio G9'' Fo+1 [Tiro Rapido]",
+          "name_it": "Armi Bianche, Balestra, Asce da Lancio G9'' Fo+1 [Tiro Rapido]",
           "name_de": "Handwaffen, Armbrüste, Wurfäxte",
           "name_fr": "Armes de base, Arbalètes, Haches de lancer",
           "points": 1,
@@ -2186,7 +2919,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_it": "Armatura Pesante (TA+2)",
+          "name_it": "Armatura Pesante",
           "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -2197,7 +2930,7 @@
       "options": [
         {
           "name_en": "Great weapons",
-          "name_it": "Grandi Armi +2Fo PA-3 [Rottura dell'Armatura(1),Richiede Due Mani, Attacca per Ultimo]",
+          "name_it": "Grandi Armi",
           "name_de": "Zweihandwaffen",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -2207,7 +2940,7 @@
         },
         {
           "name_en": "Shields",
-          "name_it": "Scudi (TA+1)",
+          "name_it": "Scudi",
           "name_de": "Schilde",
           "name_fr": "Boucliers",
           "points": 1,
@@ -2223,6 +2956,14 @@
         "name_de": "Zwergengefertigt, Hass (Orks & Goblins), Magieresistenz (-1), Durch Deckung bewegen, Offene Ränge, Resolut, Kundschafter, Plänkler",
         "name_es": "Dwarf Crafted, Hatred (Orcs & Goblins), Magic Resistance (-1), Move Through Cover, Open Order, Resolute, Scouts, Skirmishers",
         "name_fr": "Facture Naine, Haine (Orques & Gobelins), Résistance à la Magie (-1), Mouvement à Couvert, Ordre Dispersé, Résolu, Éclaireurs, Tirailleurs"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare"
+        },
+        "royal-clan": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2254,7 +2995,7 @@
             },
             {
               "name_en": "Brace of drakefire pistols",
-              "name_it": "Coppia di Pistola G12'' Fo4 PA-1 [Rottura dell'Armatura (1), Tiro Rapido] e Fuoco del Drago",
+              "name_it": "Coppia di Pistola e Fuoco del Drago",
               "name_de": "Drachenfeuerpistolenpaar",
               "name_fr": "Paire de pistolet drac de feu",
               "points": 5,
@@ -2310,7 +3051,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
-          "name_it": "Armatura Completa (TA+3)",
+          "name_it": "Armatura Completa",
           "name_de": "Plattenrüstung",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -2351,6 +3092,14 @@
         "name_de": "0-1 Einheiten pro 1000 Punkte können Standartenrunen erwerben",
         "name_es": "0-1 unit per 1000 points can have Standard runes",
         "name_fr": "0-1 unité par tranche de 1000 points peut acheter des runes de Bannière"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare"
+        },
+        "royal-clan": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2388,7 +3137,7 @@
       "armor": [
         {
           "name_en": "Full plate armour (armoured fuselage)",
-          "name_it": "Armatura Completa (TA+3) (Fusoliera Corazzata)",
+          "name_it": "Armatura Completa (Fusoliera Corazzata)",
           "name_de": "Plattenrüstung (Panzerrumpf)",
           "name_fr": "Armure de plate complète (fuselage blindé)",
           "points": 0,
@@ -2403,6 +3152,14 @@
         "name_de": "Bombenangriff, Geschlossene Ränge, Fliegen (8), Aufpralltreffer (W3+1), Schnelle Bewegung",
         "name_es": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
         "name_fr": "Bombardement, Ordre Serré, Vol (8), Touches d'Impact (D3+1), Rapide"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare"
+        },
+        "expeditionary-force": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2413,13 +3170,6 @@
       "id": "organ-gun",
       "points": 120,
       "command": [],
-      "notes": {
-        "name_en": "0-2 warmachines per 1000 points",
-        "name_it": "0-2 Macchine da Guerra ogni 1000p.ti",
-        "name_de": "0-2 Kriegsmaschinen pro 1000 Punkte",
-        "name_es": "0-2 warmachines per 1000 points",
-        "name_fr": "0-2 machines de guerre par tranche de 1000 points"
-      },
       "equipment": [
         {
           "name_en": "Organ gun, Hand weapons",
@@ -2448,6 +3198,20 @@
         "name_de": "Hass (Orks & Goblins), Magieresistenz (-1), Plänkler, Unnachgiebig",
         "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
         "name_fr": "Haine (Orques & Gobelins), Résistance à la Magie (-1), Tirailleurs, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 Organ Guns or Flame Cannons per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 Organ Guns or Flame Cannons per 1000 points"
+          }
+        }
       }
     },
     {
@@ -2493,9 +3257,306 @@
         "name_de": "Hass (Orks & Goblins), Magieresistenz (-1), Plänkler, Unnachgiebig",
         "name_es": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
         "name_fr": "Haine (Orques & Gobelins), Résistance à la Magie (-1), Tirailleurs, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 Organ Guns or Flame Cannons per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 Organ Guns or Flame Cannons per 1000 points"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Goblin-Hewer",
+      "id": "goblin-hewer",
+      "points": 120,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Goblin-hewer, Hand weapons",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "items": [
+        {
+          "name_en": "Engineering Runes",
+          "name_it": "Engineering Rune",
+          "name_de": "Maschinenrunen",
+          "name_fr": "Runes d'Ingéniérie",
+          "types": ["engineering-runes"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-1), Skirmishers, Unbreakable"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 per 1000 points if army include 1+ Slayer of Legend"
+          }
+        }
       }
     }
   ],
-  "mercenaries": [],
+  "mercenaries": [
+    {
+      "name_en": "Doomseeker",
+      "id": "doomseeker",
+      "points": 50,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon (Whirling blades of death)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon Runes",
+          "name_it": "Armi Runiche",
+          "name_de": "Waffenrunen",
+          "name_fr": "Runes d'Arme",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Runic Tattoos (max 3)",
+          "types": ["runic-tattoos"],
+          "selected": [],
+          "maxPoints": 0
+        }
+      ],
+      "specialRules": {
+        "name_en": "Deathblow, Doomseeker, First to the Fray, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Impact Hits (D3 + 1), Loner, Magic Resistance (-2), Random Attacks, Resolute, Unbreakable, Vanguard, Whirlwind of Death"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "mercenaries",
+          "notes": {
+            "name_en": "0-3 per army"
+          }
+        },
+        "royal-clan": {
+          "category": "mercenaries",
+          "notes": {
+            "name_en": "0-4 per army"
+          }
+        },
+        "expeditionary-force": {
+          "category": "mercenaries",
+          "notes": {
+            "name_en": "0-2 per 1000 points"
+          }
+        }
+      }
+    },
+    {
+      "name_en": "Imperial Dwarf Mercenaries",
+      "id": "imperial-dwarf-mercenaries",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 0,
+      "notes": {
+        "name_en": "0-1 unit per 1000 points can have Standard runes",
+        "name_it": "0-1 unità ogni 1000 punti può avere rune di stendardo per 50 punti",
+        "name_de": "0-1 Einheiten pro 1000 Punkte können Standartenrunen erwerben",
+        "name_es": "0-1 unit per 1000 points can have Standard runes",
+        "name_fr": "0-1 unité par tranche de 1000 points peut acheter des runes de Bannière"
+      },
+      "command": [
+        {
+          "name_en": "Veteran (champion)",
+          "name_it": "Veteranio (campione)",
+          "name_de": "Veteran (Champion)",
+          "name_fr": "Vétéran (champion)",
+          "points": 5,
+          "magic": {
+            "types": ["weapon-runes"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_it": "Armi Bianche",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "defaultSelected": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_it": "Grandi Armi",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Crossbows",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Handguns",
+          "points": 3,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_it": "Scudi",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled (0-1 unit per 1000 points)",
+          "name_it": "Addestrati (0-1 unit ogni 1000p.ti)",
+          "name_de": "Gut ausgebildet (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Bien Entraînés (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran (0-1 unit per 1000 points)",
+          "name_it": "Veterani (0-1 unit ogni 1000p.ti)",
+          "name_de": "Veteranen (0-1 Einheiten pro 1000 Punkte)",
+          "name_fr": "Vétérans (0-1 unité par tranche de 1000 points)",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_it": "Formazione Serrata, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, Muro di Scudi",
+        "name_de": "Geschlossene Ränge, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall",
+        "name_es": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
+        "name_fr": "Ordre Serré, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers"
+      }
+    },
+    {
+      "name_en": "Goblin-Hewer",
+      "id": "goblin-hewer",
+      "points": 120,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Goblin-hewer, Hand weapons",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "items": [
+        {
+          "name_en": "Engineering Runes",
+          "name_it": "Engineering Rune",
+          "name_de": "Maschinenrunen",
+          "name_fr": "Runes d'Ingéniérie",
+          "types": ["engineering-runes"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Hatred (Orcs & Goblins), Immune to Psychology, Magic Resistance (-1), Skirmishers, Unbreakable"
+      },
+      "armyComposition": {
+        "royal-clan": {
+          "category": "mercenaries",
+          "notes": {
+            "name_en": "0-1 per 1000 points"
+          }
+        },
+        "expeditionary-force": {
+          "category": "mercenaries",
+          "notes": {
+            "name_en": "0-1 per 1000 points"
+          }
+        }
+      }
+    }
+  ],
   "allies": []
 }

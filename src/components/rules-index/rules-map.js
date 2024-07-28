@@ -187,6 +187,7 @@ export const synonyms = {
   ancient: "champions",
   "venerable ancient": "champions",
   "necropolis captain": "champions",
+  "royal clan veteran": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
