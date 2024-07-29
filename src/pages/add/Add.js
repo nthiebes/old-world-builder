@@ -62,6 +62,11 @@ const getArmyData = ({ data, armyComposition }) => {
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "special"
   );
+  const coreToRare = core.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
+  );
   const specialToRare = special.filter(
     (unit) =>
       unit?.armyComposition &&
@@ -86,7 +91,12 @@ const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "special") ||
       !unit.armyComposition
   );
-  const allRare = [...rare, ...specialToRare, ...charactersToRare].filter(
+  const allRare = [
+    ...rare,
+    ...specialToRare,
+    ...charactersToRare,
+    ...coreToRare,
+  ].filter(
     (unit) =>
       (unit?.armyComposition &&
         unit.armyComposition[armyComposition].category === "rare") ||
