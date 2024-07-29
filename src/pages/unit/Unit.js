@@ -610,6 +610,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 const commandMagicPoints = getUnitMagicPoints({
                   selected: magic?.selected,
                 });
+                let commandMaxPoints = 0;
+
+                if (magic?.types && magic.types.length && active) {
+                  commandMaxPoints =
+                    (magic.armyComposition &&
+                      magic.armyComposition[list.armyComposition || list.army]
+                        ?.maxPoints) ||
+                    magic.maxPoints;
+                }
 
                 return (
                   <Fragment key={id}>
@@ -670,22 +679,20 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             <i className="checkbox__points">
                               <span
                                 className={classNames(
-                                  commandMagicPoints >
-                                    unit.command[index].magic.maxPoints &&
-                                    unit.command[index].magic.maxPoints > 0 &&
+                                  commandMagicPoints > commandMaxPoints &&
+                                    commandMaxPoints > 0 &&
                                     "editor__error"
                                 )}
                               >
                                 {commandMagicPoints}
                               </span>{" "}
-                              {unit.command[index].magic.maxPoints > 0 && (
-                                <>{` / ${unit.command[index].magic.maxPoints}`}</>
+                              {magic.maxPoints > 0 && (
+                                <>{` / ${commandMaxPoints}`}</>
                               )}{" "}
                               <FormattedMessage id="app.points" />
                             </i>
-                            {commandMagicPoints >
-                              unit.command[index].magic.maxPoints &&
-                              unit.command[index].magic.maxPoints > 0 && (
+                            {commandMagicPoints > commandMaxPoints &&
+                              commandMaxPoints > 0 && (
                                 <Icon
                                   symbol="error"
                                   color="red"
@@ -1314,8 +1321,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 if (
                   lore === "troll-magic" &&
                   list.armyComposition !== "troll-horde" &&
+                  unit.items
+                    .find((items) => items.name_en === "Magic Items")
+                    ?.selected.find(
+                      (item) => item.name_en === "Da Hag's Brew"
+                    ) === undefined &&
                   index !== 0
                 ) {
+                  if (unit.activeLore === "troll-magic") {
+                    handleLoresChange(unit.lores[0]);
+                  }
                   return false;
                 }
                 return true;
@@ -1360,6 +1375,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               const itemsPoints = getUnitMagicPoints({
                 selected: item.selected,
               });
+              const maxPoints =
+                (item.armyComposition &&
+                  item.armyComposition[list.armyComposition || list.army]
+                    ?.maxPoints) ||
+                item.maxPoints;
 
               return (
                 <ListItem
@@ -1375,17 +1395,17 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     <i className="checkbox__points">
                       <span
                         className={classNames(
-                          itemsPoints > item.maxPoints &&
-                            item.maxPoints > 0 &&
+                          itemsPoints > maxPoints &&
+                            maxPoints > 0 &&
                             "editor__error"
                         )}
                       >
                         {itemsPoints}
                       </span>
-                      {item.maxPoints > 0 && <>{` / ${item.maxPoints}`}</>}{" "}
+                      {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
                       <FormattedMessage id="app.points" />
                     </i>
-                    {itemsPoints > item.maxPoints && item.maxPoints > 0 && (
+                    {itemsPoints > maxPoints && maxPoints > 0 && (
                       <Icon
                         symbol="error"
                         color="red"
@@ -1428,10 +1448,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         <label htmlFor="customNote">
           <FormattedMessage id="unit.customNote" />
         </label>
-        <input
-          type="text"
+        <textarea
           id="customNote"
-          className="input"
+          className="input textarea"
+          rows="2"
           value={unit.customNote || ""}
           onChange={handleCustomNoteChange}
           autoComplete="off"

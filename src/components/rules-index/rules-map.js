@@ -16,7 +16,6 @@ const additionalOWBRules = {
   spears: { url: "weapons-of-war/spears" },
   "morning stars": { url: "weapons-of-war/morning-star" },
   blowpipes: { url: "weapons-of-war/blowpipe" },
-  "warplock jezzails": { url: "weapons-of-war/warplock-jezzail" },
   handguns: { url: "weapons-of-war/handgun" },
   lances: { url: "weapons-of-war/lance" },
   shortbows: { url: "weapons-of-war/shortbow" },
@@ -188,8 +187,15 @@ export const synonyms = {
   ancient: "champions",
   "venerable ancient": "champions",
   "necropolis captain": "champions",
+  "royal clan veteran": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
+  fireglaives: "fireglaive",
+  "warplock jezzails": "warplock jezzails",
+  "warplock jezzails skaven": "warplock jezzail",
+  "scourgerunner chariots": "scourgerunner chariot",
+  "bloodwrack shrines": "bloodwrack shrine",
+  "bloodwrack medusas": "bloodwrack medusa",
 };
 
 export const rulesMap = {
