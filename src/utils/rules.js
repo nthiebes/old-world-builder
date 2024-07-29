@@ -1368,6 +1368,7 @@ export const rules = {
             "brimstone-horrors-of-tzeentch",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
+            "burning-chariot-of-tzeentch",
           ],
           perUnit: true,
         },
