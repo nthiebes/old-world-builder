@@ -23,7 +23,12 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["baron", "prophetess"],
+          ids: [
+            "baron",
+            "prophetess",
+            "sir-cecil-gastonne-the-wyrm-slayer",
+            "lady-élisse-duachaard",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -88,7 +93,12 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["baron", "prophetess"],
+          ids: [
+            "baron",
+            "prophetess",
+            "sir-cecil-gastonne-the-wyrm-slayer",
+            "lady-élisse-duachaard",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -136,7 +146,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["baron"],
+          ids: ["baron", "sir-cecil-gastonne-the-wyrm-slayer"],
           min: 0,
           max: 1,
           points: 1000,
@@ -204,7 +214,12 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tomb-king", "tomb-prince"],
+          ids: [
+            "tomb-king",
+            "tomb-prince",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+            "prince-apophas-the-cursed-scarab-lord",
+          ],
           min: 1,
         },
         {
@@ -212,7 +227,11 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["tomb-king", "high-priest"],
+          ids: [
+            "tomb-king",
+            "high-priest",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -279,10 +298,20 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tomb-king", "tomb-prince"],
+          ids: [
+            "tomb-king",
+            "tomb-prince",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+            "prince-apophas-the-cursed-scarab-lord",
+          ],
           min: 1,
           requiresGeneral: true,
-          requires: ["tomb-king", "tomb-prince"],
+          requires: [
+            "tomb-king",
+            "tomb-prince",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+            "prince-apophas-the-cursed-scarab-lord",
+          ],
         },
       ],
     },
@@ -338,7 +367,11 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["tomb-prince", "arch-necrotect"],
+          ids: [
+            "tomb-prince",
+            "arch-necrotect",
+            "prince-apophas-the-cursed-scarab-lord",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -403,7 +436,12 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["black-orc-warboss", "orc-warboss", "orc-weirdnob"],
+          ids: [
+            "black-orc-warboss",
+            "orc-warboss",
+            "orc-weirdnob",
+            "ogdruz-swampdigga",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -581,7 +619,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["orc-warboss", "orc-weirdnob"],
+          ids: ["orc-warboss", "orc-weirdnob", "ogdruz-swampdigga"],
           min: 0,
           max: 1,
           points: 1000,
