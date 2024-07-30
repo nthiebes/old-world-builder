@@ -1424,17 +1424,17 @@ export const rules = {
         {
           ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne"],
           requiresGeneral: true,
-          requires: ["bloodthirster"],
+          requires: ["bloodthirster", "daemonic-herald-of-khorne"],
         },
         {
           ids: ["plaguebearers-of-nurgle", "nurglings"],
           requiresGeneral: true,
-          requires: ["great-unclean-one"],
+          requires: ["great-unclean-one", "daemonic-herald-of-nurgle"],
         },
         {
           ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh"],
           requiresGeneral: true,
-          requires: ["keeper-of-secrets"],
+          requires: ["keeper-of-secrets", "daemonic-herald-of-slaanesh"],
         },
         {
           ids: [
@@ -1443,7 +1443,7 @@ export const rules = {
             "brimstone-horrors-of-tzeentch",
           ],
           requiresGeneral: true,
-          requires: ["lord-of-change"],
+          requires: ["lord-of-change", "daemonic-herald-of-tzeentch"],
         },
       ],
     },
@@ -1453,12 +1453,12 @@ export const rules = {
         {
           ids: ["bloodcrushers-of-khorne"],
           requiresGeneral: true,
-          requires: ["bloodthirster"],
+          requires: ["bloodthirster", "daemonic-herald-of-khorne"],
         },
         {
           ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
           requiresGeneral: true,
-          requires: ["great-unclean-one"],
+          requires: ["great-unclean-one", "daemonic-herald-of-nurgle"],
         },
         {
           ids: [
@@ -1467,12 +1467,12 @@ export const rules = {
             "seeker-chariot-of-slaanesh",
           ],
           requiresGeneral: true,
-          requires: ["keeper-of-secrets"],
+          requires: ["keeper-of-secrets", "daemonic-herald-of-slaanesh"],
         },
         {
           ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
           requiresGeneral: true,
-          requires: ["lord-of-change"],
+          requires: ["lord-of-change", "daemonic-herald-of-tzeentch"],
         },
       ],
     },

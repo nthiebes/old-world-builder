@@ -72,11 +72,13 @@ const getArmyData = ({ data, armyComposition }) => {
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "rare"
   );
-  const charactersToRare = characters.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
-  );
+  const charactersToRare = characters?.length
+    ? characters.filter(
+        (unit) =>
+          unit?.armyComposition &&
+          unit.armyComposition[armyComposition].category === "rare"
+      )
+    : [];
 
   // Remove units from old category
   const allCore = [...core, ...specialToCore, ...rareToCore].filter(
