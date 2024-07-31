@@ -805,12 +805,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       </i>
                     </label>
                   </div>
-                  {showUnitOptionNotes(
+                  {showUnitOptionNotes({
                     notes,
-                    `equipment-${id}-note`,
-                    "unit__option-note",
-                    language
-                  )}
+                    key: `equipment-${id}-note`,
+                    className: "unit__option-note",
+                    language,
+                  })}
                 </Fragment>
               )
             )}
@@ -857,12 +857,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         </i>
                       </label>
                     </div>
-                    {showUnitOptionNotes(
+                    {showUnitOptionNotes({
                       notes,
-                      `armor-${id}-note`,
-                      "unit__option-note",
-                      language
-                    )}
+                      key: `armor-${id}-note`,
+                      className: "unit__option-note",
+                      language,
+                    })}
                   </Fragment>
                 );
               }
@@ -927,12 +927,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             </i>
                           </label>
                         </div>
-                        {showUnitOptionNotes(
+                        {showUnitOptionNotes({
                           notes,
-                          `options-${id}-note`,
-                          "unit__option-note",
-                          language
-                        )}
+                          key: `options-${id}-note`,
+                          className: "unit__option-note",
+                          language,
+                        })}
                         {options?.length > 0 && active && (
                           <>
                             {options
@@ -1019,12 +1019,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           })
                         }
                       />
-                      {showUnitOptionNotes(
+                      {showUnitOptionNotes({
                         notes,
-                        `options-${id}-note`,
-                        "unit__option-note unit__option-note--stackable",
-                        language
-                      )}
+                        key: `options-${id}-note`,
+                        className:
+                          "unit__option-note unit__option-note--stackable",
+                        language,
+                      })}
                     </Fragment>
                   );
                 }
@@ -1289,12 +1290,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         </i>
                       </label>
                     </div>
-                    {showUnitOptionNotes(
+                    {showUnitOptionNotes({
                       notes,
-                      `mounts-${id}-note`,
-                      "unit__option-note",
-                      language
-                    )}
+                      key: `mounts-${id}-note`,
+                      className: "unit__option-note",
+                      language,
+                    })}
                     {options?.length > 0 && active && (
                       <>
                         {options
@@ -1343,12 +1344,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     </i>
                                   </label>
                                 </div>
-                                {showUnitOptionNotes(
-                                  option.notes,
-                                  `mount-${id}-option-${optionIndex}`,
-                                  "unit__option-note unit__option-note--conditionnal",
-                                  language
-                                )}
+                                {showUnitOptionNotes({
+                                  notes: option.notes,
+                                  key: `mount-${id}-option-${optionIndex}`,
+                                  className:
+                                    "unit__option-note unit__option-note--conditionnal",
+                                  language,
+                                })}
                                 {optionIndex === options.length - 1 && (
                                   <hr className="unit__command-option-hr" />
                                 )}
