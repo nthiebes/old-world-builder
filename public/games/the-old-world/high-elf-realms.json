@@ -540,17 +540,15 @@
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "name_es": "Objetos mágicos",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50,
-          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "armor",
             "talisman",
             "enchanted-item",
             "arcane-item"
-          ]
+          ],
+          "selected": [],
+          "maxPoints": 50
         },
         {
           "name_en": "Elven Honours",
@@ -1082,12 +1080,10 @@
         }
       ],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First",
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First",
         "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Attacca Per Primo",
         "name_es": "Flechas de Isha, Evasivo, Ignora cobertura, Inmune a la psicolgía, Armadura de Ithilmar, Armas de Ithilmar, Siempre ataca primero",
-        "name_fr": "Flèches d'Isha, Esquiveur, Ignore les Couverts, Immunisé à la Psychologie, Armure en Ithilmar, Armes en Ithilmar, Frappe En Premier",
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Strike First",
-        "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Attacca Per Primo"
+        "name_fr": "Flèches d'Isha, Esquiveur, Ignore les Couverts, Immunisé à la Psychologie, Armure en Ithilmar, Armes en Ithilmar, Frappe En Premier"
       }
     }
   ],
@@ -1234,26 +1230,13 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_it": "Armi Bianche",
-          "name_de": "Hand weapon",
-          "name_es": "Arma de mano",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Longbows",
-          "name_it": "Arco Lungos",
-          "name_de": "Longbow",
-          "name_es": "Arco largo",
-          "points": 0,
-          "active": true,
           "name_en": "Hand weapons, Longbows",
           "name_it": "Arco Lungos, Armi Bianche",
-          "name_fr": "Armes de base, Arcs Longs",
           "name_de": "Hand weapons, Longbows",
+          "name_es": "Arma de mano, Arco largo",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base, Arcs Longs"
         }
       ],
       "armor": [
@@ -1341,34 +1324,13 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_it": "Armi Bianche",
-          "name_de": "Hand weapons",
-          "name_es": "Armas de mano",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Thrusting spears",
-          "name_it": "Picche [Combattere su Ranghi Extra]",
-          "name_de": "Thrusting spears",
-          "name_es": "Lanzas largas",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Warbows",
-          "name_it": "Archi da Guerra G18” [Rafica di Fuoco]",
-          "name_de": "Warbows",
-          "name_es": "Arcos de guerra",
-          "points": 0,
-          "active": true,
           "name_en": "Hand weapons, Thrusting spears, Warbows",
           "name_it": "Armi Bianche, Picche, Archi da Guerra",
           "name_de": "Hand weapons, Thrusting spears, Warbows",
-          "name_fr": "Armes de base, Lances d'Infanterie, Arcs de Guerre",
+          "name_es": "Armas de mano, Lanzas largas, Arcos de guerra",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "Armes de base, Lances d'Infanterie, Arcs de Guerre"
         }
       ],
       "armor": [
@@ -1505,9 +1467,9 @@
           "name_fr": "Éclaireurs"
         },
         {
-          "name_en": "Skirmishes",
-          "name_it": "Skirmishes",
-          "name_de": "Skirmishes",
+          "name_en": "Skirmishers",
+          "name_it": "Skirmishers",
+          "name_de": "Skirmishers",
           "name_fr": "Tirailleurs",
           "name_es": "Escaramuzadores",
           "points": 1,
@@ -1682,7 +1644,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
         "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Formazione Aperta, Schermagliatori, Attacca Per Primo",
         "name_fr": "Flèches d'Isha, Esquiveur, Ignore les Couverts, Immunisé à la Psychologie, Armure en Ithilmar, Armes en Ithilmar, Ordre Dispersé, Tirailleurs, Frappe En Premier",
         "name_es": "Flechas de Isha, Evasivo, Ignora cobertura, Inmune a la psicolgía, Armadura de Ithilmar, Armas de Ithilmar, Orden abierto, Escaramuzadores, Siempre ataca primero"
@@ -1782,7 +1744,7 @@
         "name_es": "Orden cerrado, Contracarga, Armadura de dragón, Bien entrenados, Reflejos élficos, Primera carga, Ímpetu, Bardas de Ithilmar, Armas de Ithilmar, Hijos de Caledor, Veloces, Valor de las eras"
       },
       "notes": {
-        "name_es": "0-1 unidad de Príncipes dragón por cada 1000 puntos"
+        "name_es": "0-1 unidad de Príncipes dragón por cada 1000 puntos",
         "name_en": "0-1 unit of Dragon Princes of Caledor per 1000 points",
         "name_fr": "0-1 unité de Princes Dragons de Caledor par tranche de 1000 points"
       }
@@ -2191,7 +2153,7 @@
         "name_es": "Orden cerrado, Reflejos élficos, Miedo, Primera carga, Golpes de impacto (D6), Capa de león, Tozudo, Valor de las eras"
       },
       "notes": {
-        "name_es": "Si tu general tiene el honor élfico Cazador de Cracia, Se puede incluir 0-1 Carro de leones de Cracia como unidad especial por cada 1000 puntos"
+        "name_es": "Si tu general tiene el honor élfico Cazador de Cracia, Se puede incluir 0-1 Carro de leones de Cracia como unidad especial por cada 1000 puntos",
         "name_en": "If your General has the Chracian Hunter Elven Honour, 0-1 Lion Chariot of Chrace may be taken as a Special choice per 1000 points",
         "name_fr": "Si votre Général a l'Honneur Elfique Chasseur Chracien, 0-1 Char à Lions de Chrace peut être pris comme choix Spécial par tranche de 1000 points"
       }
@@ -2232,12 +2194,12 @@
       "specialRules": {
         "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages",
         "name_it": "Formazione Serrata, Paura, Volo (10), Riflessi Elfici (Sea Guard Crew only), Colpi da Impatto (D3+1), Passo Rapido, Valore delle Ere",
-        "name_fr": "Ordre Serré, Peur, Vol (10), Réflexes Elfiques (Équipage Garde Maritime uniquement), Touches d'Impact (D3+1), Rapide, Valeur des Âges"
+        "name_fr": "Ordre Serré, Peur, Vol (10), Réflexes Elfiques (Équipage Garde Maritime uniquement), Touches d'Impact (D3+1), Rapide, Valeur des Âges",
         "name_es": "Orden cerrado, Miedo, Volar (10), Reflejos élficos (solo la tripulación de Guardias del mar), Golpes de impacto (D3+1), Veloz, Valor de las eras"
       },
       "notes": {
         "name_en": "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice",
-        "name_fr": "Si votre Général a l'Honneur Elfique Garde Maritime, 0-1 Cotre Volant de Lothern peut être pris comme choix Spécial"
+        "name_fr": "Si votre Général a l'Honneur Elfique Garde Maritime, 0-1 Cotre Volant de Lothern peut être pris comme choix Spécial",
         "name_es": "Si tu general tiene el honor élfico Guardia del mar, puedes incluir 0-1 Escolta celeste de Lothern como unidad especial"
       }
     }
@@ -2311,7 +2273,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune To Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
+        "name_en": "Arrows of Isha, Evasive, Ignores Cover, Immune to Psychology, Ithilmar Armour, Ithilmar Weapons, Open Order, Skirmishers, Strike First",
         "name_it": "Freccie di Isha, Evasione, Ignores Cover, Immune alla Psicologia, Ithilmar Armour, Ithilmar Weapons, Formazione Aperta, Schermagliatori, Attacca Per Primo",
         "name_fr": "Flèches d'Isha, Esquiveur, Ignore les Couverts, Immunisé à la Psychologie, Armure en Ithilmar, Armes en Ithilmar, Ordre Dispersé, Tirailleurs, Frappe En Premier",
         "name_es": "Flechas de Isha, Evasivas Ignora cobertura, Inmune a la psicolgía, Armadura de Ithilmar, Armas de Ithilmar, Orden abierto, Escaramuzadoras, Siempre ataca primero"
@@ -2484,7 +2446,7 @@
       "specialRules": {
         "name_en": "Close Order, Fear, Fly (10), Elven Reflexes (Sea Guard Crew only), Impact Hits (D3+1), Swiftstride, Valour of Ages",
         "name_it": "Formazione Serrata, Paura, Volo (10), Riflessi Elfici (Sea Guard Crew only), Colpi da Impatto (D3+1), Passo Rapido, Valore delle Ere",
-        "name_fr": "Ordre Serré, Peur, Vol (10), Réflexes Elfiques (Équipage Garde Maritime uniquement), Touches d'Impact (D3+1), Rapide, Valeur des Âges"
+        "name_fr": "Ordre Serré, Peur, Vol (10), Réflexes Elfiques (Équipage Garde Maritime uniquement), Touches d'Impact (D3+1), Rapide, Valeur des Âges",
         "name_es": "Orden cerrado, Miedo, Volar (10), Reflejos élficos (solo la tripulación de Guardias del mar), Golpes de impacto (D3+1), Veloz, Valor de las eras"
       }
     }
