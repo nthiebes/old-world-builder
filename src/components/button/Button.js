@@ -90,7 +90,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.string,
   download: PropTypes.string,
-  value: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Button.defaultProps = {
