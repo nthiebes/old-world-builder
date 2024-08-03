@@ -551,7 +551,7 @@ export const rules = {
           ids: ["black-orc-warboss", "black-orc-bigboss"],
           min: 0,
           max: 1,
-          requiresType: "rare",
+          requiresType: "all",
           requires: ["black-orc-boar-chariot"],
           perUnit: true,
         },
