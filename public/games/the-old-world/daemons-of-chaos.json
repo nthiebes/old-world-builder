@@ -72,9 +72,9 @@
           "name_fr": "Démon de Khorne",
           "name_it": "Daemon of Khorne",
           "name_pl": "Daemon of Khorne",
+          "id": "daemon-of-khorne",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Nurgle",
@@ -83,9 +83,51 @@
           "name_fr": "Démon de Nurgle",
           "name_it": "Daemon of Nurgle",
           "name_pl": "Daemon of Nurgle",
+          "id": "daemon-of-nurgle",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Daemon of Slaanesh",
@@ -95,8 +137,50 @@
           "name_it": "Daemon of Slaanesh",
           "name_pl": "Daemon of Slaanesh",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "id": "daemon-of-slaanesh",
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Daemon of Tzeentch",
@@ -106,52 +190,50 @@
           "name_it": "Daemon of Tzeentch",
           "name_pl": "Daemon of Tzeentch",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 1 Wizard",
-          "name_de": "Level 1 Wizard",
-          "name_es": "Level 1 Wizard",
-          "name_fr": "Sorcier de Niveau 1",
-          "name_it": "Level 1 Wizard",
-          "name_pl": "Level 1 Wizard",
-          "points": 25,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "name_it": "Level 2 Wizard",
-          "name_pl": "Level 2 Wizard",
-          "points": 50,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_de": "Level 3 Wizard",
-          "name_es": "Level 3 Wizard",
-          "name_fr": "Sorcier de Niveau 3",
-          "name_it": "Level 3 Wizard",
-          "name_pl": "Level 3 Wizard",
-          "points": 75,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "name_es": "Level 4 Wizard",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_it": "Level 4 Wizard",
-          "name_pl": "Level 4 Wizard",
-          "points": 100,
-          "minimum": 0,
-          "maximum": 0
+          "id": "daemon-of-tzeentch",
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [],
@@ -174,7 +256,7 @@
           "maxPoints": 100
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": ["none", "battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
         "name_en": "Chaos Armour {daemons of chaos}, Daemonic, Infernal Favour (2), Lore of Daemons",
         "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",

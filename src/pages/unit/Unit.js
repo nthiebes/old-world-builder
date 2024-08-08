@@ -895,7 +895,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   options,
                   ...equipment
                 }) => {
-                  const exclusiveCheckedOption = unit.options.find(
+                  const exclusiveUnitCheckedOption = unit.options.find(
                     (exclusiveOption) =>
                       exclusiveOption.exclusive && exclusiveOption.active
                   );
@@ -912,7 +912,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             checked={active}
                             className="checkbox__input"
                             disabled={
-                              exclusiveCheckedOption && exclusive && !active
+                              exclusiveUnitCheckedOption && exclusive && !active
                             }
                           />
                           <label

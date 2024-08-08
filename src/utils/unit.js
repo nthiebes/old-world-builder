@@ -181,11 +181,11 @@ export const getAllOptions = (
         })
     : [];
   const lore = [];
-  if (activeLore) {
+  if (activeLore && nameMap[activeLore].name_en !== "None") {
     lore.push(
       nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
     );
-  } else if (lores?.length) {
+  } else if (lores?.length && nameMap[lores[0]].name_en !== "None") {
     lore.push(
       nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
     );

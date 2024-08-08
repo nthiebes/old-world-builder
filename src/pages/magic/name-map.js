@@ -225,6 +225,11 @@ export const nameMap = {
     name_en: "Elven Honour",
     name_fr: "Honneur Elfique",
   },
+  none: {
+    name_de: "Keine",
+    name_en: "None",
+    name_fr: "None",
+  },
   daemonology: {
     name_de: "Daemonology",
     name_en: "Daemonology",

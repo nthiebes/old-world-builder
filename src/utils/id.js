@@ -10,32 +10,32 @@ export const updateIds = (type = []) => {
       command: unit.command
         ? unit.command.map((commandData, index) => ({
             ...commandData,
-            id: index,
+            id: commandData.id || index,
           }))
         : null,
       equipment: unit.equipment
         ? unit.equipment.map((equipmentData, index) => ({
             ...equipmentData,
-            id: index,
+            id: equipmentData.id || index,
           }))
         : null,
       armor: unit.armor
         ? unit.armor.map((armorData, index) => ({
             ...armorData,
             activeDefault: armorData.active && unit.armor.length === 1,
-            id: index,
+            id: armorData.id || index,
           }))
         : null,
       mounts: unit.mounts
         ? unit.mounts.map((mountsData, index) => ({
             ...mountsData,
-            id: index,
+            id: mountsData.id || index,
           }))
         : null,
       options: unit.options
         ? unit.options.map((optionsData, index) => ({
             ...optionsData,
-            id: index,
+            id: optionsData.id || index,
           }))
         : null,
     };
