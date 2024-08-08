@@ -1721,6 +1721,7 @@ export const rules = {
             "vampire-thrall",
             "master-necromancer",
             "necromantic-acolyte",
+            "strigoi-ghoul-king",
           ],
           min: 1,
         },
