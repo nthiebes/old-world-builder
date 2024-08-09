@@ -28,7 +28,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
 import { normalizeRuleName } from "../../utils/string";
-import { getUnitName, showUnitOptionNotes } from "../../utils/unit";
+import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
 
 import "./Unit.css";
 
@@ -603,6 +603,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   magic,
                   options,
                   exclusive = true,
+                  notes,
                   ...command
                 },
                 index
@@ -657,6 +658,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         </i>
                       </label>
                     </div>
+                    {getUnitOptionNotes({
+                      notes: notes,
+                      key: `options-${index}-note`,
+                      className: "unit__option-note",
+                      language,
+                    })}
                     {magic?.types && magic.types.length && active ? (
                       <>
                         <hr className="unit__hr" />
@@ -805,7 +812,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       </i>
                     </label>
                   </div>
-                  {showUnitOptionNotes({
+                  {getUnitOptionNotes({
                     notes,
                     key: `equipment-${id}-note`,
                     className: "unit__option-note",
@@ -857,7 +864,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         </i>
                       </label>
                     </div>
-                    {showUnitOptionNotes({
+                    {getUnitOptionNotes({
                       notes,
                       key: `armor-${id}-note`,
                       className: "unit__option-note",
@@ -927,7 +934,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             </i>
                           </label>
                         </div>
-                        {showUnitOptionNotes({
+                        {getUnitOptionNotes({
                           notes,
                           key: `options-${id}-note`,
                           className: "unit__option-note",
@@ -1019,7 +1026,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           })
                         }
                       />
-                      {showUnitOptionNotes({
+                      {getUnitOptionNotes({
                         notes,
                         key: `options-${id}-note`,
                         className:
@@ -1290,7 +1297,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         </i>
                       </label>
                     </div>
-                    {showUnitOptionNotes({
+                    {getUnitOptionNotes({
                       notes,
                       key: `mounts-${id}-note`,
                       className: "unit__option-note",
@@ -1344,7 +1351,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     </i>
                                   </label>
                                 </div>
-                                {showUnitOptionNotes({
+                                {getUnitOptionNotes({
                                   notes: option.notes,
                                   key: `mount-${id}-option-${optionIndex}`,
                                   className:
@@ -1466,6 +1473,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       />
                     )}
                   </div>
+                  {getUnitOptionNotes({
+                    notes: item.notes,
+                    key: `options-${itemIndex}-note`,
+                    className: "unit__option-note unit__option-note--items",
+                    language,
+                  })}
                   {item.selected && (
                     <p>
                       {item.selected

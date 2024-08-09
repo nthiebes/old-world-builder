@@ -263,16 +263,11 @@ export const getUnitName = ({ unit, language }) => {
   );
 };
 
-export const showUnitOptionNotes = ({
-  notes,
-  keyPrefix,
-  className,
-  language,
-}) => {
+export const getUnitOptionNotes = ({ notes, key, className, language }) => {
   return (Array.isArray(notes) ? [...notes] : notes ? [notes] : []).map(
     (note, index) => (
-      <p className={className} key={`${keyPrefix}-${index}`}>
-        {note[`name_${language}`] || note["name_en"]}
+      <p className={className} key={`${key}-${index}`}>
+        {note[`name_${language}`] || note.name_en}
       </p>
     )
   );

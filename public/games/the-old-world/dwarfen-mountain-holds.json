@@ -515,13 +515,17 @@
           "points": 0
         },
         {
-          "name_en": "Battle Standard Bearer (Royal Clan only)",
+          "name_en": "Battle Standard Bearer",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "name_fr": "Porteur de la Grande Bannière (Clans Royaux uniquement)"
+          "name_fr": "Porteur de la Grande Bannière",
+          "notes": {
+            "name_en": "Royal Clan only",
+            "name_fr": "Clans Royaux uniquement"
+          }
         }
       ],
       "equipment": [
@@ -802,13 +806,17 @@
           "points": 0
         },
         {
-          "name_en": "Battle Standard Bearer (Expeditionary Force only)",
+          "name_en": "Battle Standard Bearer",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "name_fr": "Porteur de la Grande Bannière (Corps Expéditionnaires uniquement)"
+          "name_fr": "Porteur de la Grande Bannière",
+          "notes": {
+            "name_en": "Expeditionary Force only",
+            "name_fr": "Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "equipment": [
@@ -866,11 +874,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_it": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_de": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_fr": "Expeditionary Marksman (Expeditionary Force only)",
-          "points": 10
+          "name_en": "Expeditionary Marksman",
+          "name_it": "Expeditionary Marksman",
+          "name_de": "Expeditionary Marksman",
+          "name_fr": "Expeditionary Marksman",
+          "points": 10,
+          "notes": {
+            "name_en": "Expeditionary Force only",
+            "name_fr": "Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "mounts": [],
@@ -1710,12 +1722,16 @@
           "perModel": true
         },
         {
-          "name_en": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_it": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_de": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_fr": "Tireurs d'Élite Expéditionnaires (0-1 unité par tranche de 1000 points, Corps Expéditionnaires uniquement)",
+          "name_en": "Expeditionary Marksmen",
+          "name_it": "Expeditionary Marksmen",
+          "name_de": "Expeditionary Marksmen",
+          "name_fr": "Tireurs d'Élite Expéditionnaires",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit per 1000 points, Expeditionary Force only",
+            "name_fr": "0-1 unité par tranche de 1000 points, Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "mounts": [],

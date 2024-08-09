@@ -61,12 +61,18 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_it": "Lancia Leggera",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "solo a Cavallo, Carro o Cavalcature Mostruose",
+            "name_de": "sofern geeignet beritten",
+            "name_fr": "si monté"
+          }
         }
       ],
       "armor": [
@@ -90,11 +96,16 @@
           "perModel": true
         },
         {
-          "name_en": "Arise! (and Level 1 Wizard - Nehekharan Royal Host only)",
-          "name_it": "(solo lista dello Schieramento Reale di Nehekharan) La Lingua dei Scerdoti - Risorgi! Mago di 1° Livello",
-          "name_de": "(Nehekharan Royal Host only) Arise! and Level 1 Wizard",
-          "name_fr": "Levez-vous! (Ost Royal de Nehekhara seulement)",
-          "points": 35
+          "name_en": "Arise!, Level 1 Wizard",
+          "name_it": "Risorgi!, Mago di 1° Livello",
+          "name_de": "Arise!, Level 1 Wizard",
+          "name_fr": "Levez-vous!, Sorcier de Niveau 2",
+          "points": 35,
+          "notes": {
+            "name_en": "Nehekharan Royal Host only",
+            "name_fr": "Ost Royal de Nehekhara seulement",
+            "name_it": "solo lista dello Schieramento Reale di Nehekharan"
+          }
         }
       ],
       "mounts": [
@@ -279,12 +290,18 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
+          "name_en": "Cavalry spear",
+          "name_it": "Lancia Leggera",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "solo a Cavallo, Carro o Cavalcature Mostruose",
+            "name_de": "sofern geeignet beritten",
+            "name_fr": "si monté"
+          }
         }
       ],
       "armor": [
@@ -308,11 +325,16 @@
           "perModel": true
         },
         {
-          "name_en": "Arise! (and Level 1 Wizard - Nehekharan Royal Host only)",
-          "name_it": "(solo lista dello Schieramento Reale di Nehekharan) La Lingua dei Scerdoti - Risorgi! Mago di 1°",
-          "name_de": "(Nehekharan Royal Host only) Arise! and Level 1 Wizard",
-          "name_fr": "Levez-vous! (Ost Royal de Nehekhara seulement)",
-          "points": 35
+          "name_en": "Arise!, Level 1 Wizard",
+          "name_it": "Risorgi!, Mago di 1° Livello",
+          "name_de": "Arise!, Level 1 Wizard",
+          "name_fr": "Levez-vous!, Sorcier de Niveau 2",
+          "points": 35,
+          "notes": {
+            "name_en": "Nehekharan Royal Host only",
+            "name_fr": "Ost Royal de Nehekhara seulement",
+            "name_it": "solo lista dello Schieramento Reale di Nehekharan"
+          }
         }
       ],
       "mounts": [
@@ -470,11 +492,17 @@
           "points": 3
         },
         {
-          "name_en": "Cavalry spear (if appropriately mounted)",
-          "name_it": "Lancia Leggera (solo a Cavallo, Carro o Cavalcature Mostruose)",
-          "name_de": "Cavalry spear (if appropriately mounted)",
-          "name_fr": "Lance de cavalerie (si monté)",
-          "points": 2
+          "name_en": "Cavalry spear",
+          "name_it": "Lancia Leggera",
+          "name_de": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
+          "points": 2,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "solo a Cavallo, Carro o Cavalcature Mostruose",
+            "name_de": "sofern geeignet beritten",
+            "name_fr": "si monté"
+          }
         }
       ],
       "armor": [
@@ -704,14 +732,20 @@
           "points": 0
         },
         {
-          "name_en": "Battle Standard Bearer (Mortuary Cult Only)",
-          "name_it": "Stendardo da Battaglia (Solo nel CULTO MORTUARIO)",
-          "name_de": "Battle Standard Bearer (Mortuary Cult Only",
-          "name_fr": "Porteur de la Grande Bannière (Culte Mortuaire seulement)",
+          "name_en": "Battle Standard Bearer",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
             "types": ["banner"],
             "maxPoints": 0
+          },
+          "notes": {
+            "name_en": "Mortuary Cult only",
+            "name_it": "Solo Culto Mortuario",
+            "name_de": "Mortuary Cult only",
+            "name_fr": "Culte Mortuaire seulement"
           }
         }
       ],
@@ -1656,14 +1690,18 @@
           "maximum": 0
         },
         {
-          "name_en": "Ambushers (Nehekharan Royal Host only - 0-1 per 1000 points)",
-          "name_it": "Agguato (solo lista dello Schieramento Reale di Nehekharan, 0-1 per 1000 punti)",
-          "name_de": "(Nehekharan Royal Host only - 0-1 per 1000 points) Ambushers",
-          "name_fr": "Embusqueurs (Ost Royal de Nahekara seulement, 0-1 par tranche de 1000 points)",
+          "name_en": "Ambushers",
+          "name_it": "Agguato",
+          "name_de": "Ambushers",
+          "name_fr": "Embusqueurs",
           "points": 0,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Nehekharan Royal Host only - 0-1 per 1000 points",
+            "name_it": "solo lista dello Schieramento Reale di Nehekharan, 0-1 per 1000 punti",
+            "name_de": "Nehekharan Royal Host only - 0-1 per 1000 points",
+            "name_fr": "Ost Royal de Nahekara seulement, 0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -2311,12 +2349,18 @@
       "armor": [],
       "options": [
         {
-          "name_en": "(Mortuary Cult Only) The Terrors Below",
-          "name_it": "(Solo Culto Mortuario) Terrori Sottostanti",
-          "name_de": "(Mortuary Cult Only) The Terrors Below",
-          "name_fr": "(Culte Mortuaire seulement) Les Horreurs du dessous",
+          "name_en": "The Terrors Below",
+          "name_it": "Terrori Sottostanti",
+          "name_de": "The Terrors Below",
+          "name_fr": "Les Horreurs du dessous",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "Mortuary Cult only",
+            "name_it": "Solo Culto Mortuario",
+            "name_de": "Mortuary Cult only",
+            "name_fr": "Culte Mortuaire seulement"
+          }
         }
       ],
       "mounts": [],
@@ -3013,12 +3057,18 @@
       "armor": [],
       "options": [
         {
-          "name_en": "(Mortuary Cult Only) The Terrors Below",
-          "name_it": "(Solo Culto Mortuario) Terrori Sottostanti",
-          "name_de": "(Mortuary Cult Only) The Terrors Below",
-          "name_fr": "(Culte Mortuaire seulement), La terreur du Dessous",
+          "name_en": "The Terrors Below",
+          "name_it": "Terrori Sottostanti",
+          "name_de": "The Terrors Below",
+          "name_fr": "La terreur du Dessous",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "Mortuary Cult only",
+            "name_it": "Solo Culto Mortuario",
+            "name_de": "Mortuary Cult only",
+            "name_fr": "Culte Mortuaire seulement"
+          }
         }
       ],
       "mounts": [],
@@ -3169,12 +3219,18 @@
           "perModel": true
         },
         {
-          "name_en": "(Mortuary Cult Only) The Terrors Below",
-          "name_it": "(Solo Culto Mortuario) Terrori Sottostanti",
-          "name_de": "(Mortuary Cult Only) The Terrors Below",
-          "name_fr": "(Culte Mortuaire seulement) La Terreur du dessous",
+          "name_en": "The Terrors Below",
+          "name_it": "Terrori Sottostanti",
+          "name_de": "The Terrors Below",
+          "name_fr": "La Terreur du dessous",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "Mortuary Cult only",
+            "name_it": "Solo Culto Mortuario",
+            "name_de": "Mortuary Cult only",
+            "name_fr": "Culte Mortuaire seulement"
+          }
         }
       ],
       "mounts": [],
