@@ -3,77 +3,53 @@ import { updateIds } from "./id";
 export function getArmyData({ data, armyComposition }) {
   // Remove units that don't belong to the army composition
   const characters = data.characters.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
+    (unit) => !unit.armyComposition || unit.armyComposition[armyComposition]
   );
   const core = data.core.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
+    (unit) => !unit.armyComposition || unit.armyComposition[armyComposition]
   );
   const special = data.special.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
+    (unit) => !unit.armyComposition || unit.armyComposition[armyComposition]
   );
   const rare = data.rare.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
+    (unit) => !unit.armyComposition || unit.armyComposition[armyComposition]
   );
 
   // Get units moving category
   const specialToCore = special.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "core"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "core"
   );
   const rareToCore = rare.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "core"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "core"
   );
   const rareToSpecial = rare.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "special"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "special"
   );
   const coreToSpecial = core.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "special"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "special"
   );
   const coreToRare = core.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "rare"
   );
   const specialToRare = special.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
+    (unit) => unit?.armyComposition?.[armyComposition]?.category === "rare"
   );
   const charactersToRare = characters?.length
     ? characters.filter(
-        (unit) =>
-          unit?.armyComposition &&
-          unit.armyComposition[armyComposition].category === "rare"
+        (unit) => unit?.armyComposition?.[armyComposition]?.category === "rare"
       )
     : [];
 
   // Remove units from old category
   const allCore = [...core, ...specialToCore, ...rareToCore].filter(
     (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "core") ||
-      !unit.armyComposition
+      !unit.armyComposition ||
+      unit.armyComposition[armyComposition].category === "core"
   );
   const allSpecial = [...special, ...coreToSpecial, ...rareToSpecial].filter(
     (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "special") ||
-      !unit.armyComposition
+      !unit.armyComposition ||
+      unit.armyComposition[armyComposition].category === "special"
   );
   const allRare = [
     ...rare,
@@ -82,15 +58,13 @@ export function getArmyData({ data, armyComposition }) {
     ...coreToRare,
   ].filter(
     (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "rare") ||
-      !unit.armyComposition
+      !unit.armyComposition ||
+      unit.armyComposition[armyComposition].category === "rare"
   );
   const allCharacters = [...characters].filter(
     (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "characters") ||
-      !unit.armyComposition
+      !unit.armyComposition ||
+      unit.armyComposition[armyComposition].category === "characters"
   );
 
   return {
