@@ -515,13 +515,17 @@
           "points": 0
         },
         {
-          "name_en": "Battle Standard Bearer (Royal Clan only)",
+          "name_en": "Battle Standard Bearer",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "name_fr": "Porteur de la Grande Bannière (Clans Royaux uniquement)"
+          "name_fr": "Porteur de la Grande Bannière",
+          "notes": {
+            "name_en": "Royal Clan only",
+            "name_fr": "Clans Royaux uniquement"
+          }
         }
       ],
       "equipment": [
@@ -802,13 +806,17 @@
           "points": 0
         },
         {
-          "name_en": "Battle Standard Bearer (Expeditionary Force only)",
+          "name_en": "Battle Standard Bearer",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "name_fr": "Porteur de la Grande Bannière (Corps Expéditionnaires uniquement)"
+          "name_fr": "Porteur de la Grande Bannière",
+          "notes": {
+            "name_en": "Expeditionary Force only",
+            "name_fr": "Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "equipment": [
@@ -866,11 +874,15 @@
           "maximum": 0
         },
         {
-          "name_en": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_it": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_de": "Expeditionary Marksman (Expeditionary Force only)",
-          "name_fr": "Expeditionary Marksman (Expeditionary Force only)",
-          "points": 10
+          "name_en": "Expeditionary Marksman",
+          "name_it": "Expeditionary Marksman",
+          "name_de": "Expeditionary Marksman",
+          "name_fr": "Tireur d'Élite Expéditionnaire",
+          "points": 10,
+          "notes": {
+            "name_en": "Expeditionary Force only",
+            "name_fr": "Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "mounts": [],
@@ -1017,7 +1029,7 @@
       "name_fr": "Ingénieur Sapeur"
     },
     {
-      "name_en": "Thorgrim Ullekson",
+      "name_en": "Thorgrim Ulleksson",
       "id": "thorgrim-ullekson",
       "named": true,
       "points": 250,
@@ -1055,7 +1067,7 @@
         "name_en": "Gromril Armour, Grudgelore, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
         "name_fr": "Armure en Gromril, Science des Rancunes, Haine (Orques & Gobelins), Résistance à la Magie (-1), Cri de Ralliement, Résolu, Obstiné"
       },
-      "name_fr": "Thorgrim Ullekson"
+      "name_fr": "Thorgrim Ulleksson"
     },
     {
       "name_en": "Ungrim Ironfist",
@@ -1710,12 +1722,16 @@
           "perModel": true
         },
         {
-          "name_en": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_it": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_de": "Expeditionary Marksmen (0-1 unit per 1000 points, Expeditionary Force only)",
-          "name_fr": "Tireurs d'Élite Expéditionnaires (0-1 unité par tranche de 1000 points, Corps Expéditionnaires uniquement)",
+          "name_en": "Expeditionary Marksmen",
+          "name_it": "Expeditionary Marksmen",
+          "name_de": "Expeditionary Marksmen",
+          "name_fr": "Tireurs d'Élite Expéditionnaires",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit per 1000 points, Expeditionary Force only",
+            "name_fr": "0-1 unité par tranche de 1000 points, Corps Expéditionnaires uniquement"
+          }
         }
       ],
       "mounts": [],
@@ -3273,11 +3289,11 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
-        "name_it": "Corsa di Bombardamento, Formazione Serrata, Volo (8), Colpi da Impatto (D3+1), Passo Rapido",
-        "name_de": "Bombenangriff, Geschlossene Ränge, Fliegen (8), Aufpralltreffer (W3+1), Schnelle Bewegung",
-        "name_es": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride",
-        "name_fr": "Bombardement, Ordre Serré, Vol (8), Touches d'Impact (D3+1), Rapide"
+        "name_en": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride, Magic Resistance (-1), Hatred (Orcs & Goblins)",
+        "name_it": "Corsa di Bombardamento, Formazione Serrata, Volo (8), Colpi da Impatto (D3+1), Passo Rapido, Resistenza alla Magia (-1), Odio (Orchi & Goblin)",
+        "name_de": "Bombenangriff, Geschlossene Ränge, Fliegen (8), Aufpralltreffer (W3+1), Schnelle Bewegung, Magieresistenz (-1), Hass (Orks & Goblins)",
+        "name_es": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride, Magic Resistance (-1), Hatred (Orcs & Goblins)",
+        "name_fr": "Bombardement, Ordre Serré, Vol (8), Touches d'Impact (D3+1), Rapide, Résistance à la Magie (-1), Haine (Orques & Gobelins)"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -3710,6 +3726,106 @@
         }
       },
       "name_fr": "Faucheuse de Gobelins"
+    },
+    {
+      "name_en": "Prince Ulther's Dragon Company",
+      "name_de": "Prince Ulther's Dragon Company",
+      "name_es": "Prince Ulther's Dragon Company",
+      "name_fr": "Prince Ulther's Dragon Company",
+      "name_it": "Prince Ulther's Dragon Company",
+      "name_pl": "Prince Ulther's Dragon Company",
+      "id": "prince-ulther's-dragon-company",
+      "points": 14,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Prince Ulther",
+          "name_de": "Prince Ulther",
+          "name_es": "Prince Ulther",
+          "name_fr": "Prince Ulther",
+          "name_it": "Prince Ulther",
+          "name_pl": "Prince Ulther",
+          "points": 115,
+          "active": true
+        },
+        {
+          "name_en": "Borri Forkbeard (champion)",
+          "name_de": "Borri Forkbeard (champion)",
+          "name_es": "Borri Forkbeard (champion)",
+          "name_fr": "Borri Forkbeard (champion)",
+          "name_it": "Borri Forkbeard (champion)",
+          "name_pl": "Borri Forkbeard (champion)",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_de": "Standard Bearer",
+          "name_es": "Standard Bearer",
+          "name_fr": "Standard Bearer",
+          "name_it": "Standard Bearer",
+          "name_pl": "Standard Bearer",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musician",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "name_de": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "name_es": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "name_fr": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "name_it": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "name_pl": "Hand weapons, Brace of pistols, Dragonblade (Prince Ulther), Great weapon (Borri Forkbeard)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour, Shields",
+          "name_de": "Light armour, Shields",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Light armour, Shields",
+          "name_it": "Light armour, Shields",
+          "name_pl": "Light armour, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn",
+        "name_de": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn",
+        "name_es": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn",
+        "name_fr": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn",
+        "name_it": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn",
+        "name_pl": "Close Order, Drilled, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Stubborn"
+      },
+      "notes": {
+        "name_en": "Must Include Command and Prince Ulther",
+        "name_de": "Must Include Command and Prince Ulther",
+        "name_es": "Must Include Command and Prince Ulther",
+        "name_fr": "Must Include Command and Prince Ulther",
+        "name_it": "Must Include Command and Prince Ulther",
+        "name_pl": "Must Include Command and Prince Ulther"
+      }
     }
   ],
   "allies": []

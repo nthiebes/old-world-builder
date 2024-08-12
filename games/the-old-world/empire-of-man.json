@@ -47,11 +47,17 @@
           "perModel": true
         },
         {
-          "name_en": "Lance (if appropriately mounted)",
-          "name_de": "Lance (if appropriately mounted",
-          "name_fr": "Lance de joute (si monté)",
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "name_fr": "Lance de joute",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "if appropriately mounted",
+            "name_de": "if appropriately mounted",
+            "name_fr": "si monté"
+          }
         },
         {
           "name_en": "Handgun",
@@ -264,11 +270,17 @@
           "perModel": true
         },
         {
-          "name_en": "Lance (if appropriately mounted)",
-          "name_de": "Lance (if appropriately mounted)",
-          "name_fr": "Lance de joute (si monté)",
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "name_fr": "Lance de joute",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "if appropriately mounted",
+            "name_de": "if appropriately mounted",
+            "name_fr": "si monté"
+          }
         },
         {
           "name_en": "Handgun",
@@ -681,17 +693,11 @@
       ],
       "mounts": [
         {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "À Pied",
-          "points": 0,
-          "active": true
-        },
-        {
           "name_en": "Barded Warhorse",
           "name_de": "Barded Warhorse",
           "name_fr": "Destrier Caparaçonné",
-          "points": 16
+          "points": 16,
+          "active": true
         },
         {
           "name_en": "Pegasus",
@@ -817,17 +823,11 @@
       ],
       "mounts": [
         {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "À Pied",
-          "points": 0,
-          "active": true
-        },
-        {
           "name_en": "Barded Warhorse",
           "name_de": "Barded Warhorse",
           "name_fr": "Destrier Caparaçonné",
-          "points": 16
+          "points": 16,
+          "active": true
         },
         {
           "name_en": "Pegasus",
@@ -1620,7 +1620,7 @@
         {
           "name_en": "Thrusting spears",
           "name_de": "Thrusting spears",
-          "name_fr": "Lances d'Infanterie",
+          "name_fr": "Lances d'infanterie",
           "points": 1,
           "perModel": true
         }
@@ -1725,7 +1725,7 @@
         {
           "name_en": "Thrusting spears",
           "name_de": "Thrusting spears",
-          "name_fr": "Lances d'Infanterie",
+          "name_fr": "Lances d'infanterie",
           "points": 1,
           "perModel": true
         }
