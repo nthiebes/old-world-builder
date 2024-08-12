@@ -496,12 +496,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       callback: () => handleRemove(unit.id),
     },
   ];
+
   const notes =
-    unit.notes ||
-    (
-      unit.armyComposition &&
-      unit.armyComposition[list.armyComposition || list.army]
-    )?.notes;
+    unit?.armyComposition?.[list.armyComposition || list.army]?.notes ||
+    unit.notes;
 
   return (
     <>
