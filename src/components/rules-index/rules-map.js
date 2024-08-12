@@ -86,6 +86,7 @@ export const synonyms = {
   halberds: "halberd",
   polearms: "polearm",
   gyrocopters: "gyrocopter",
+  "scout gyrocopters": "scout gyrocopter",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   boss: "champions",
