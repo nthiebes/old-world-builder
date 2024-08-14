@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import { useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import classNames from "classnames";
 
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
@@ -11,11 +12,10 @@ import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../assets/armies.json";
 import { setLists } from "../../state/lists";
-import warhammerFantasy from "../../assets/warhammer-fantasy.png";
-import warhammerTheOldWorld from "../../assets/the-old-world.png";
+
+import { nameMap } from "../magic";
 
 import "./NewList.css";
-import { nameMap } from "../magic";
 
 export const NewList = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -137,7 +137,14 @@ export const NewList = ({ isMobile }) => {
         )}
         <form onSubmit={handleSubmit} className="new-list">
           {gameSystems.map(({ name, id }) => (
-            <div className="radio" key={id}>
+            <div
+              className={classNames(
+                "radio",
+                "new-list__radio",
+                id === "warhammer-fantasy" && "new-list__radio--last-item"
+              )}
+              key={id}
+            >
               <input
                 type="radio"
                 id={id}
@@ -152,14 +159,14 @@ export const NewList = ({ isMobile }) => {
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
                   <>
-                    <img height="20" src={warhammerFantasy} alt={name} />
+                    <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
                       <FormattedMessage id="new.8th" />
                     </p>
                   </>
                 )}
                 {id === "the-old-world" && (
-                  <img height="35" src={warhammerTheOldWorld} alt={name} />
+                  <span className="new-list__game-name">{name}</span>
                 )}
               </label>
             </div>

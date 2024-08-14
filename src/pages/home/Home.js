@@ -12,8 +12,6 @@ import { getAllPoints } from "../../utils/points";
 import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
-import warhammerFantasy from "../../assets/warhammer-fantasy.png";
-import warhammerTheOldWorld from "../../assets/the-old-world.png";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
 import dwarfs from "../../assets/army-icons/dwarfs.svg";
 import greenskins from "../../assets/army-icons/greenskins.svg";
@@ -133,20 +131,6 @@ export const Home = ({ isMobile }) => {
                   </p>
                 </span>
                 <div className="home__info">
-                  <img
-                    width="70"
-                    src={
-                      game === "warhammer-fantasy"
-                        ? warhammerFantasy
-                        : warhammerTheOldWorld
-                    }
-                    alt={
-                      game === "warhammer-fantasy"
-                        ? "Warhammer Fantasy"
-                        : "Warhammer: The Old World"
-                    }
-                    className="home__game"
-                  />
                   <img height="40" width="40" src={armyIconMap[army]} alt="" />
                 </div>
               </ListItem>
