@@ -1319,7 +1319,7 @@
       }
     },
     {
-      "name_de": "Königliche Clankrieger",
+      "name_de": "Königliche Klankrieger",
       "name_en": "Royal Clan Warriors",
       "name_fr": "Guerriers des Clans Royaux",
       "id": "royal-clan-warriors",
@@ -1328,13 +1328,18 @@
       "maximum": 0,
       "command": [
         {
-          "name_de": "Königlicher Clanveteran (Bis zu 25 Punkte von jedem Runentyp)",
-          "name_en": "Royal Clan Veteran (Up to 25 points of each rune type)",
-          "name_fr": "Vétéran des Clans Royaux (Jusqu'à 25 points de chaque type de rune)",
+          "name_de": "Königlicher Klanveteran",
+          "name_en": "Royal Clan Veteran",
+          "name_fr": "Vétéran des Clans Royaux",
           "points": 6,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
             "maxPoints": 50
+          },
+          "notes": {
+            "name_de": "Bis zu 25 Punkte von jedem Runentyp",
+            "name_en": "Up to 25 points of each rune type",
+            "name_fr": "Jusqu'à 25 points de chaque type de rune"
           }
         },
         {
