@@ -200,6 +200,7 @@ export const synonyms = {
   "bloodwrack medusas": "bloodwrack medusa",
   "snotling pump wagons": "snotling pump wagon",
   "goblin wolf chariots": "goblin wolf chariot",
+  "expeditionary marksman": "expeditionary marksmen",
 };
 
 export const rulesMap = {
