@@ -54,8 +54,8 @@ const additionalOWBRules = {
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
   "level 4 wizard": { url: "magic/levels-of-wizardry" },
-  "troll magic": {
-    url: "the-lores-of-magic/lore-of-troll-magic",
+  "storm call warriors": {
+    url: "special-rules/storm-call",
   },
 };
 
@@ -201,6 +201,7 @@ export const synonyms = {
   "snotling pump wagons": "snotling pump wagon",
   "goblin wolf chariots": "goblin wolf chariot",
   "expeditionary marksman": "expeditionary marksmen",
+  "troll magic": "lore of troll magic",
 };
 
 export const rulesMap = {

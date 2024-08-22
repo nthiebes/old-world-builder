@@ -1406,20 +1406,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">
                     {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
-                    {rulesMap[normalizeRuleName(nameMap[lore].name_en)] ? (
-                      <Button
-                        type="text"
-                        className="unit__rules"
-                        color="dark"
-                        label={intl.formatMessage({ id: "misc.showRules" })}
-                        icon="preview"
-                        onClick={() =>
-                          handleRulesClick({
-                            name: nameMap[lore].name_en,
-                          })
-                        }
-                      />
-                    ) : null}
+                    <RuleWithIcon
+                      name={nameMap[lore].name_en}
+                      isDark
+                      className="unit__rules"
+                    />
                   </label>
                 </div>
               ))}
