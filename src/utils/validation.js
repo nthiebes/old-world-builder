@@ -4,21 +4,26 @@ import { getUnitName } from "./unit";
 
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
-  const generals = list.characters.filter(
-    (unit) =>
-      unit.command &&
-      unit.command.find(
-        (command) => command.active && command.name_en === "General"
-      )
-  );
-  const BSBs = list.characters.filter(
-    (unit) =>
-      unit.command &&
-      unit.command.find(
-        (command) =>
-          command.active && command.name_en.includes("Battle Standard Bearer")
-      )
-  );
+  const generals = !list?.characters.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General"
+          )
+      );
+  const BSBs = !list.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.active &&
+              command.name_en.includes("Battle Standard Bearer")
+          )
+      );
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
   const characterUnitsRules = rules[list.armyComposition]

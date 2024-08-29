@@ -498,7 +498,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   ];
 
   const notes =
-    unit?.armyComposition?.[list.armyComposition || list.army]?.notes ||
+    unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
 
   return (
