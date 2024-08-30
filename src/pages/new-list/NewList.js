@@ -109,6 +109,11 @@ export const NewList = ({ isMobile }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createList();
+    window.umami.track("lists", {
+      name: army,
+      composition: armyComposition,
+      points,
+    });
   };
   const handleQuickActionClick = (event) => {
     event.preventDefault();
