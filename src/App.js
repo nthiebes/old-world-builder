@@ -36,8 +36,6 @@ export const App = () => {
     const localLists = localStorage.getItem("owb.lists");
 
     dispatch(setLists(JSON.parse(localLists)));
-
-    window.umami?.track();
   }, [dispatch]);
 
   useEffect(() => {
