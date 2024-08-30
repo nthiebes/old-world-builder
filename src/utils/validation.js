@@ -4,7 +4,7 @@ import { getUnitName } from "./unit";
 
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
-  const generals = !list?.characters.length
+  const generals = !list?.characters?.length
     ? []
     : list.characters.filter(
         (unit) =>
