@@ -1485,12 +1485,28 @@ export const rules = {
         {
           ids: ["bloodcrushers-of-khorne"],
           requiresGeneral: true,
-          requires: ["bloodthirster", "daemonic-herald-of-khorne"],
+          requires: [
+            "bloodthirster",
+            "daemonic-herald-of-khorne",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-khorne",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
           requiresGeneral: true,
-          requires: ["great-unclean-one", "daemonic-herald-of-nurgle"],
+          requires: [
+            "great-unclean-one",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: [
@@ -1499,12 +1515,28 @@ export const rules = {
             "seeker-chariot-of-slaanesh",
           ],
           requiresGeneral: true,
-          requires: ["keeper-of-secrets", "daemonic-herald-of-slaanesh"],
+          requires: [
+            "keeper-of-secrets",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slannesh",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
           requiresGeneral: true,
-          requires: ["lord-of-change", "daemonic-herald-of-tzeentch"],
+          requires: [
+            "lord-of-change",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
         },
       ],
     },
