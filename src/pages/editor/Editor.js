@@ -422,7 +422,7 @@ export const Editor = ({ isMobile }) => {
 
             {errors
               .filter(({ section }) => section === "characters")
-              .map(({ message, name, diff, min }, index) => (
+              .map(({ message, name, diff, min, option }, index) => (
                 <ErrorMessage key={message + index} spaceBefore>
                   <FormattedMessage
                     id={message}
@@ -430,6 +430,7 @@ export const Editor = ({ isMobile }) => {
                       name,
                       diff,
                       min,
+                      option,
                     }}
                   />
                 </ErrorMessage>
@@ -474,7 +475,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "core")
-            .map(({ message, name, min, diff }, index) => (
+            .map(({ message, name, min, diff, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -482,6 +483,7 @@ export const Editor = ({ isMobile }) => {
                     name,
                     min,
                     diff,
+                    option,
                   }}
                 />
               </ErrorMessage>
@@ -528,7 +530,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "special")
-            .map(({ message, name, diff, min }, index) => (
+            .map(({ message, name, diff, min, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -536,6 +538,7 @@ export const Editor = ({ isMobile }) => {
                     name,
                     diff,
                     min,
+                    option,
                   }}
                 />
               </ErrorMessage>
@@ -578,7 +581,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "rare")
-            .map(({ message, name, diff, min }, index) => (
+            .map(({ message, name, diff, min, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -586,6 +589,7 @@ export const Editor = ({ isMobile }) => {
                     name,
                     diff,
                     min,
+                    option,
                   }}
                 />
               </ErrorMessage>
@@ -633,7 +637,7 @@ export const Editor = ({ isMobile }) => {
 
             {errors
               .filter(({ section }) => section === "allies")
-              .map(({ message, name, diff, min }, index) => (
+              .map(({ message, name, diff, min, option }, index) => (
                 <ErrorMessage key={message + index} spaceBefore>
                   <FormattedMessage
                     id={message}
@@ -641,6 +645,7 @@ export const Editor = ({ isMobile }) => {
                       name,
                       diff,
                       min,
+                      option,
                     }}
                   />
                 </ErrorMessage>
@@ -695,7 +700,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                 .filter(({ section }) => section === "mercenaries")
-                .map(({ message, name, diff, min }, index) => (
+                .map(({ message, name, diff, min, option }, index) => (
                   <ErrorMessage key={message + index} spaceBefore>
                     <FormattedMessage
                       id={message}
@@ -703,6 +708,7 @@ export const Editor = ({ isMobile }) => {
                         name,
                         diff,
                         min,
+                        option,
                       }}
                     />
                   </ErrorMessage>

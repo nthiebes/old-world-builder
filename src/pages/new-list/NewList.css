@@ -2,6 +2,14 @@
   margin-top: 1rem;
 }
 
+.new-list__radio.radio {
+  margin-bottom: 0;
+}
+
+.new-list__radio--last-item.radio {
+  margin-bottom: 1rem;
+}
+
 .new-list__beta {
   /* color: var(--color-error); */
   /* font-weight: bold; */
@@ -20,4 +28,10 @@
 .new-list__quick-actions-label {
   display: block;
   margin-bottom: 5px;
+}
+
+.new-list__game-name {
+  font-family: "Gideon Roman", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
 }

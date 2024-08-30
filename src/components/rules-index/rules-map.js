@@ -54,8 +54,8 @@ const additionalOWBRules = {
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
   "level 4 wizard": { url: "magic/levels-of-wizardry" },
-  "troll magic": {
-    url: "the-lores-of-magic/lore-of-troll-magic",
+  "storm call warriors": {
+    url: "special-rules/storm-call",
   },
 };
 
@@ -86,6 +86,7 @@ export const synonyms = {
   halberds: "halberd",
   polearms: "polearm",
   gyrocopters: "gyrocopter",
+  "scout gyrocopters": "scout gyrocopter",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   boss: "champions",
@@ -188,6 +189,7 @@ export const synonyms = {
   "venerable ancient": "champions",
   "necropolis captain": "champions",
   "royal clan veteran": "champions",
+  "borri forkbeard": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -196,6 +198,10 @@ export const synonyms = {
   "scourgerunner chariots": "scourgerunner chariot",
   "bloodwrack shrines": "bloodwrack shrine",
   "bloodwrack medusas": "bloodwrack medusa",
+  "snotling pump wagons": "snotling pump wagon",
+  "goblin wolf chariots": "goblin wolf chariot",
+  "expeditionary marksman": "expeditionary marksmen",
+  "troll magic": "lore of troll magic",
 };
 
 export const rulesMap = {

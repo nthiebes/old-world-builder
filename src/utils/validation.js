@@ -4,21 +4,26 @@ import { getUnitName } from "./unit";
 
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
-  const generals = list.characters.filter(
-    (unit) =>
-      unit.command &&
-      unit.command.find(
-        (command) => command.active && command.name_en === "General"
-      )
-  );
-  const BSBs = list.characters.filter(
-    (unit) =>
-      unit.command &&
-      unit.command.find(
-        (command) =>
-          command.active && command.name_en.includes("Battle Standard Bearer")
-      )
-  );
+  const generals = !list?.characters.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General"
+          )
+      );
+  const BSBs = !list.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.active &&
+              command.name_en.includes("Battle Standard Bearer")
+          )
+      );
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
   const characterUnitsRules = rules[list.armyComposition]
@@ -126,6 +131,34 @@ export const validateList = ({ list, language, intl }) => {
           section: type,
           name: requiredNames,
         });
+
+      // Unit requires general with specific active option
+      if (ruleUnit.requiresOption) {
+        const generalWithOption = generals
+          .filter(
+            (general) =>
+              ruleUnit.requiresOption.unit === general.id.split(".")[0]
+          )
+          .find((general) =>
+            general.options.find(
+              (option) =>
+                option.id === ruleUnit.requiresOption.id && option.active
+            )
+          );
+
+        if (
+          !generalWithOption &&
+          matchingGeneral &&
+          matchingGeneral.id.split(".")[0] === ruleUnit.requiresOption.unit
+        ) {
+          errors.push({
+            message: "misc.error.requiresOption",
+            section: type,
+            name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
+            option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
+          });
+        }
+      }
     }
 
     // Unit should be mounted

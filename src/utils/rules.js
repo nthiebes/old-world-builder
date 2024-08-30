@@ -551,7 +551,7 @@ export const rules = {
           ids: ["black-orc-warboss", "black-orc-bigboss"],
           min: 0,
           max: 1,
-          requiresType: "rare",
+          requiresType: "all",
           requires: ["black-orc-boar-chariot"],
           perUnit: true,
         },
@@ -1424,17 +1424,41 @@ export const rules = {
         {
           ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne"],
           requiresGeneral: true,
-          requires: ["bloodthirster", "daemonic-herald-of-khorne"],
+          requires: [
+            "bloodthirster",
+            "daemonic-herald-of-khorne",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-khorne",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: ["plaguebearers-of-nurgle", "nurglings"],
           requiresGeneral: true,
-          requires: ["great-unclean-one", "daemonic-herald-of-nurgle"],
+          requires: [
+            "great-unclean-one",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh"],
           requiresGeneral: true,
-          requires: ["keeper-of-secrets", "daemonic-herald-of-slaanesh"],
+          requires: [
+            "keeper-of-secrets",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slaanesh",
+            unit: "daemon-prince",
+          },
         },
         {
           ids: [
@@ -1443,7 +1467,15 @@ export const rules = {
             "brimstone-horrors-of-tzeentch",
           ],
           requiresGeneral: true,
-          requires: ["lord-of-change", "daemonic-herald-of-tzeentch"],
+          requires: [
+            "lord-of-change",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
         },
       ],
     },
@@ -1721,6 +1753,7 @@ export const rules = {
             "vampire-thrall",
             "master-necromancer",
             "necromantic-acolyte",
+            "strigoi-ghoul-king",
           ],
           min: 1,
         },
