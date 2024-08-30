@@ -110,7 +110,7 @@ export const NewList = ({ isMobile }) => {
     event.preventDefault();
     createList();
     window.umami.track("lists", {
-      name: army,
+      army,
       composition: armyComposition,
       points,
     });
