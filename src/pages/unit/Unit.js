@@ -1426,7 +1426,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               });
               const maxPoints =
                 (item.armyComposition &&
-                  item.armyComposition[list.armyComposition || list.army]
+                  item.armyComposition[list?.armyComposition || list.army]
                     ?.maxPoints) ||
                 item.maxPoints;
 
