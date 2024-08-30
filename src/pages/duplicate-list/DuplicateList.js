@@ -53,7 +53,7 @@ export const DuplicateList = ({ isMobile }) => {
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
-    window.umami.track("lists", {
+    window.umami?.track("lists", {
       army: list.army,
       composition: list.armyComposition,
       points,

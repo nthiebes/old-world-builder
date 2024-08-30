@@ -37,7 +37,7 @@ export const App = () => {
 
     dispatch(setLists(JSON.parse(localLists)));
 
-    window.umami.track();
+    window.umami?.track();
   }, [dispatch]);
 
   useEffect(() => {
