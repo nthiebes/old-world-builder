@@ -3864,7 +3864,6 @@
           "name_it": "Wicket claws, Warpfire Blast",
           "name_pl": "Wicket claws, Warpfire Blast",
           "points": 0,
-          "perModel": true,
           "active": true
         }
       ],
@@ -3876,9 +3875,8 @@
           "name_fr": "Full plate armour (Draconic scales)",
           "name_it": "Full plate armour (Draconic scales)",
           "name_pl": "Full plate armour (Draconic scales)",
-          "points": 1,
-          "perModel": true,
-          "active": false
+          "points": 0,
+          "active": true
         }
       ],
       "options": [
@@ -3890,10 +3888,7 @@
           "name_it": "Level 1 Wizard",
           "name_pl": "Level 1 Wizard",
           "points": 30,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Level 2 Wizard",
@@ -3903,15 +3898,12 @@
           "name_it": "Level 2 Wizard",
           "name_pl": "Level 2 Wizard",
           "points": 60,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [],
       "items": [],
-      "lores": [],
+      "lores": ["none", "battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
         "name_en": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lord of Chaos, Magic Attacks, Magic resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura",
         "name_de": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lord of Chaos, Magic Attacks, Magic resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura",
