@@ -192,6 +192,7 @@ export const synonyms = {
   "borri forkbeard": "champions",
   headtaker: "champions",
   "skin wolf jarl": "champions",
+  "first sword": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",

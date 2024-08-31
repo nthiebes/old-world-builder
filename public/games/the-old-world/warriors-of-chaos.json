@@ -4039,8 +4039,8 @@
           "name_pl": "Standard bearer",
           "points": 6,
           "magic": {
-            "types": [],
-            "maxPoints": 0
+            "types": ["banner"],
+            "maxPoints": 50
           }
         },
         {
@@ -4058,6 +4058,15 @@
         }
       ],
       "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
         {
           "name_en": "Cavalry spears",
           "name_de": "Cavalry spears",
@@ -4107,6 +4116,28 @@
       ],
       "options": [
         {
+          "name_en": "Throwing axes",
+          "name_de": "Throwing axes",
+          "name_es": "Throwing axes",
+          "name_fr": "Throwing axes",
+          "name_it": "Throwing axes",
+          "name_pl": "Throwing axes",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Javelins",
+          "name_de": "Javelins",
+          "name_es": "Javelins",
+          "name_fr": "Javelins",
+          "name_it": "Javelins",
+          "name_pl": "Javelins",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
           "name_en": "Shields",
           "name_de": "Shields",
           "name_es": "Shields",
@@ -4120,17 +4151,75 @@
           "maximum": 0
         },
         {
-          "name_en": "Drilled (0-1 unit per 1000 points)",
-          "name_de": "Drilled (0-1 unit per 1000 points)",
-          "name_es": "Drilled (0-1 unit per 1000 points)",
-          "name_fr": "Drilled (0-1 unit per 1000 points)",
-          "name_it": "Drilled (0-1 unit per 1000 points)",
-          "name_pl": "Drilled (0-1 unit per 1000 points)",
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Drilled",
+          "name_it": "Drilled",
+          "name_pl": "Drilled",
           "points": 1,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 unit per 1000 points"
+          }
+        },
+        {
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
+          "points": 0,
+          "active": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [],
