@@ -1333,7 +1333,8 @@
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1368,7 +1369,13 @@
           "name_de": "Lance",
           "name_es": "Lance",
           "name_fr": "Lance de joute",
-          "points": 4
+          "points": 4,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_de": "if appropriately mounted",
+            "name_es": "if appropriately mounted",
+            "name_fr": "if appropriately mounted"
+          }
         }
       ],
       "armor": [
@@ -1392,50 +1399,74 @@
           "maximum": 0
         },
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Wolves of the Sea army only, infantry or cavalry only",
+            "name_de": "Wolves of the Sea army only, infantry or cavalry only",
+            "name_fr": "Wolves of the Sea army only, infantry or cavalry only"
+          }
         }
       ],
       "mounts": [
@@ -1599,7 +1630,26 @@
           "category": "characters"
         }
       },
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_es": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -1821,7 +1871,15 @@
           "category": "characters"
         }
       },
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon, Storm's Wrath",
@@ -1882,7 +1940,15 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_en": "Wicket Claws, Dark Fire of Chaos, Fumes of Contagion",
@@ -2294,7 +2360,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Great weapons",
@@ -2424,6 +2491,19 @@
             "name_de": "0-1 unit in your army",
             "name_fr": "0-1 unité de votre armée"
           }
+        },
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "Wolves of the Sea army only",
+            "name_de": "Wolves of the Sea army only",
+            "name_fr": "Wolves of the Sea army only"
+          }
         }
       ],
       "mounts": [],
@@ -2487,47 +2567,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons, Throwing axes",
-          "name_de": "Hand weapons, Throwing axes",
-          "name_es": "Hand weapons, Throwing axes",
-          "name_fr": "Armes de base, Haches de lancer",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapons, Javelins",
-          "name_de": "Hand weapons, Javelins",
-          "name_es": "Hand weapons, Javelins",
-          "name_fr": "Armes de base, Javelines",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapons, Throwing spears",
-          "name_de": "Hand weapons, Throwing spears",
-          "name_es": "Hand weapons, Throwing spears",
-          "name_fr": "Armes de base, Javelots",
-          "points": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapons, Throwing spears, Throwing axes",
-          "name_de": "Hand weapons, Throwing spears, Throwing axes",
-          "name_es": "Hand weapons, Throwing spears, Throwing axes",
-          "name_fr": "Armes de base, Javelots, Haches de lancer",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapons, Throwing spears, Javelins",
-          "name_de": "Hand weapons, Throwing spears, Javelins",
-          "name_es": "Hand weapons, Throwing spears, Javelins",
-          "name_fr": "Armes de base, Javelots, Javelines",
-          "points": 1,
-          "perModel": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Cavalry spears",
@@ -2538,19 +2579,11 @@
           "perModel": true
         },
         {
-          "name_en": "Cavalry spears, Throwing axes",
-          "name_de": "Cavalry spears, Throwing axes",
-          "name_es": "Cavalry spears, Throwing axes",
-          "name_fr": "Lances de cavalerie, Haches de lancer",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Cavalry spears, Javelins",
-          "name_de": "Cavalry spears, Javelins",
-          "name_es": "Cavalry spears, Javelins",
-          "name_fr": "Lances de cavalerie, Javelines",
-          "points": 1,
+          "name_en": "Throwing spears",
+          "name_de": "Throwing spears",
+          "name_es": "Throwing spears",
+          "name_fr": "Javelots",
+          "points": 0,
           "perModel": true
         },
         {
@@ -2559,22 +2592,6 @@
           "name_es": "Flails",
           "name_fr": "Fléaux",
           "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Flails, Throwing axes",
-          "name_de": "Flails, Throwing axes",
-          "name_es": "Flails, Throwing axes",
-          "name_fr": "Fléaux, Haches de lancer",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_en": "Flails, Javelins",
-          "name_de": "Flails, Javelins",
-          "name_es": "Flails, Javelins",
-          "name_fr": "Fléaux, Javelines",
-          "points": 2,
           "perModel": true
         }
       ],
@@ -2590,6 +2607,24 @@
         }
       ],
       "options": [
+        {
+          "name_en": "Javelins",
+          "name_de": "Javelins",
+          "name_es": "Javelins",
+          "name_fr": "Javelines",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Throwing axes",
+          "name_de": "Throwing axes",
+          "name_es": "Throwing axes",
+          "name_fr": "Haches de lancer",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
         {
           "name_en": "Shields",
           "name_de": "Shields",
@@ -2657,6 +2692,19 @@
               "exclusive": true
             }
           ]
+        },
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "Wolves of the Sea army only",
+            "name_de": "Wolves of the Sea army only",
+            "name_fr": "Wolves of the Sea army only"
+          }
         }
       ],
       "mounts": [],
