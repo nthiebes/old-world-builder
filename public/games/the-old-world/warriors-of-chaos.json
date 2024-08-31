@@ -3685,8 +3685,6 @@
       "name_pl": "Chosen Chaos Chariot",
       "id": "chosen-chaos-chariot",
       "points": 140,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -3797,10 +3795,6 @@
       "name_pl": "Gigantic Spawn of Chaos",
       "id": "gigantic-spawn-of-chaos",
       "points": 145,
-      "minimum": 1,
-      "maximum": 1,
-      "regimentalUnit": false,
-      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -3837,10 +3831,7 @@
           "name_it": "Gigantic Spawn of Khorne",
           "name_pl": "Gigantic Spawn of Khorne",
           "points": 20,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Gigantic Spawn of Nurgle",
@@ -3850,10 +3841,7 @@
           "name_it": "Gigantic Spawn of Nurgle",
           "name_pl": "Gigantic Spawn of Nurgle",
           "points": 25,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Gigantic Spawn of Slaanesh",
@@ -3863,10 +3851,7 @@
           "name_it": "Gigantic Spawn of Slaanesh",
           "name_pl": "Gigantic Spawn of Slaanesh",
           "points": 15,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Gigantic Spawn of Tzeentch",
@@ -3876,22 +3861,19 @@
           "name_it": "Gigantic Spawn of Tzeentch",
           "name_pl": "Gigantic Spawn of Tzeentch",
           "points": 10,
-          "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_de": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_es": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_it": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_pl": "Armour Bane (2), Close Order, First Charge, Immune to Psychologie, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable"
+        "name_en": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_es": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_fr": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_it": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_pl": "Armour Bane (2), Close Order, First Charge, Immune to Psychology, Large Target, Random Attacks, Random Movement, Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable"
       },
       "notes": {
         "name_en": "",
