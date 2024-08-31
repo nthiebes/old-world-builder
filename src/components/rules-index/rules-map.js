@@ -191,6 +191,7 @@ export const synonyms = {
   "royal clan veteran": "champions",
   "borri forkbeard": "champions",
   headtaker: "champions",
+  "skin wolf jarl": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
