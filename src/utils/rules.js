@@ -795,13 +795,21 @@ export const rules = {
           ids: ["chaos-lord", "daemon-prince"],
           min: 0,
           max: 1,
-          requiresMounted: true,
         },
         {
-          ids: ["exalted-champion", "sorcerer-lord", "frydaal-the-chainmaker"],
+          ids: ["exalted-champion", "sorcerer-lord"],
           min: 0,
           max: 1,
           points: 1000,
+        },
+        {
+          ids: [
+            "exalted-champion",
+            "sorcerer-lord",
+            "chaos-lord",
+            "exalted-sorcerer",
+            "aspiring-champion",
+          ],
           requiresMounted: true,
         },
       ],
@@ -814,7 +822,7 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["chaos-chariots"],
+          ids: ["chaos-chariot"],
           min: 0,
           max: 1,
         },
@@ -829,7 +837,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["chosen-chaos-chariots"],
+          ids: ["chosen-chaos-chariot"],
           min: 0,
           max: 1,
           points: 1000,
