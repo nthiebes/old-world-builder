@@ -680,7 +680,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["exalted-champion", "sorcerer-lord"],
+          ids: ["exalted-champion", "sorcerer-lord", "frydaal-the-chainmaker"],
           min: 0,
           max: 1,
           points: 1000,
@@ -743,7 +743,11 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["exalted-champion", "exalted-sorcerer"],
+          ids: [
+            "exalted-champion",
+            "exalted-sorcerer",
+            "frydaal-the-chainmaker",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -794,7 +798,7 @@ export const rules = {
           requiresMounted: true,
         },
         {
-          ids: ["exalted-champion", "sorcerer-lord"],
+          ids: ["exalted-champion", "sorcerer-lord", "frydaal-the-chainmaker"],
           min: 0,
           max: 1,
           points: 1000,
