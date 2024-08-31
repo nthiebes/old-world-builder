@@ -1488,6 +1488,17 @@
       "command": [],
       "equipment": [
         {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Hand weapon",
+          "name_it": "Hand weapon",
+          "name_pl": "Hand weapon",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
           "name_en": "Flail",
           "name_de": "Flail",
           "name_es": "Flail",
@@ -1495,8 +1506,7 @@
           "name_it": "Flail",
           "name_pl": "Flail",
           "points": 3,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Great weapon",
@@ -1506,8 +1516,7 @@
           "name_it": "Great weapon",
           "name_pl": "Great weapon",
           "points": 4,
-          "perModel": true,
-          "active": false
+          "perModel": true
         },
         {
           "name_en": "Cavalry spear",
@@ -1518,10 +1527,25 @@
           "name_pl": "Cavalry spear",
           "points": 4,
           "perModel": true,
-          "active": false
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "if appropriately mounted",
+            "name_de": "if appropriately mounted",
+            "name_fr": "si monté"
+          }
         }
       ],
       "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
         {
           "name_en": "Shield",
           "name_de": "Shield",
@@ -1530,11 +1554,8 @@
           "name_it": "Shield",
           "name_pl": "Shield",
           "points": 2,
-          "perModel": true,
-          "active": false
-        }
-      ],
-      "options": [
+          "perModel": true
+        },
         {
           "name_en": "Throwing axes",
           "name_de": "Throwing axes",
@@ -1544,9 +1565,7 @@
           "name_pl": "Throwing axes",
           "points": 2,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Javelins",
@@ -1557,12 +1576,75 @@
           "name_pl": "Javelins",
           "points": 2,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
+        },
+        {
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
+          "points": 0,
+          "active": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
         {
           "name_en": "Warhorse",
           "name_de": "Warhorse",
@@ -1570,8 +1652,7 @@
           "name_fr": "Warhorse",
           "name_it": "Warhorse",
           "name_pl": "Warhorse",
-          "points": 14,
-          "active": false
+          "points": 14
         }
       ],
       "items": [
@@ -1582,19 +1663,19 @@
           "name_fr": "Objets magiques",
           "name_it": "Oggetti magici",
           "name_pl": "Magiczne przedmioty",
-          "types": [],
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
         }
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": "",
-        "name_it": "",
-        "name_pl": ""
+        "name_en": "Ambushers, Chaos Armour {warriors of chaos} (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband",
+        "name_de": "Ambushers, Chaos Armour (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband",
+        "name_es": "Ambushers, Chaos Armour (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband",
+        "name_fr": "Ambushers, Chaos Armour (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband",
+        "name_it": "Ambushers, Chaos Armour (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband",
+        "name_pl": "Ambushers, Chaos Armour (6+), Gaze of the Gods, Mark of Chaos Undivided, Rallying Cry, Warband"
       },
       "notes": {
         "name_en": "",
@@ -1661,7 +1742,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
+        "name_en": "Ambushers, Chainmaker, Chaos Armour {warriors of chaos} (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
         "name_de": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
         "name_es": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
         "name_fr": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
@@ -1833,60 +1914,65 @@
           "name_es": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "minimum": 0,
-          "maximum": 0,
           "perModel": true
         },
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [],
@@ -1977,8 +2063,7 @@
           "name_fr": "Marque du Chaos Universel",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
+          "exclusive": true,
           "perModel": true
         },
         {
@@ -1987,8 +2072,7 @@
           "name_es": "Mark of Khorne",
           "name_fr": "Marque de Khorne",
           "points": 2,
-          "minimum": 0,
-          "maximum": 0,
+          "exclusive": true,
           "perModel": true
         },
         {
@@ -1997,8 +2081,7 @@
           "name_es": "Mark of Nurgle",
           "name_fr": "Marque de Nurgle",
           "points": 2,
-          "minimum": 0,
-          "maximum": 0,
+          "exclusive": true,
           "perModel": true
         },
         {
@@ -2007,8 +2090,7 @@
           "name_es": "Mark of Slaanesh",
           "name_fr": "Marque de Slaanesh",
           "points": 2,
-          "minimum": 0,
-          "maximum": 0,
+          "exclusive": true,
           "perModel": true
         },
         {
@@ -2017,8 +2099,7 @@
           "name_es": "Mark of Tzeentch",
           "name_fr": "Marque de Tzeentch",
           "points": 2,
-          "minimum": 0,
-          "maximum": 0,
+          "exclusive": true,
           "perModel": true
         }
       ],
@@ -2122,73 +2203,86 @@
           "perModel": true
         },
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 1,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 1,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 1,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 1,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Skirmishers (0-1 unit in your army)",
-          "name_de": "Skirmishers (0-1 unit in your army)",
-          "name_es": "Skirmishers (0-1 unit in your army)",
-          "name_fr": "Tirailleurs (0-1 unité de votre armée)",
+          "name_en": "Skirmishers",
+          "name_de": "Skirmishers",
+          "name_es": "Skirmishers",
+          "name_fr": "Tirailleurs",
           "points": 0,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 unit in your army",
+            "name_de": "0-1 unit in your army",
+            "name_fr": "0-1 unité de votre armée"
+          }
         },
         {
-          "name_en": "Open Order (0-1 unit in your army)",
-          "name_de": "Open Order (0-1 unit in your army)",
-          "name_es": "Open Order (0-1 unit in your army)",
-          "name_fr": "Ordre Dispersé (0-1 unité de votre armée)",
+          "name_en": "Open Order",
+          "name_de": "Open Order",
+          "name_es": "Open Order",
+          "name_fr": "Ordre Dispersé",
           "points": 0,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 unit in your army",
+            "name_de": "0-1 unit in your army",
+            "name_fr": "0-1 unité de votre armée"
+          }
         }
       ],
       "mounts": [],
@@ -2355,55 +2449,62 @@
           "perModel": true
         },
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [],
@@ -2812,55 +2913,62 @@
           "perModel": true
         },
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Drilled",
@@ -2969,55 +3077,62 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_de": "Mark of Chaos Undivided",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_de": "Mark of Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Mark of Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_de": "Mark of Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_de": "Mark of Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_de": "Mark of Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_de": "Mark of Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Drilled",

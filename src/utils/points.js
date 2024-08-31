@@ -24,7 +24,11 @@ export const getUnitPoints = (unit) => {
         unitPoints += option.points;
         option.options.forEach((subOption) => {
           if (subOption.active) {
-            unitPoints += subOption.points;
+            if (subOption.perModel) {
+              unitPoints += (unit.strength || 1) * subOption.points;
+            } else {
+              unitPoints += subOption.points;
+            }
           }
         });
       } else if (option.active) {
