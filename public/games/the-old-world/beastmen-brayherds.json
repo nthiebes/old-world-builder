@@ -1733,18 +1733,20 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Throwing axes (excludes javelins)",
-          "name_de": "Throwing axes (excludes javelins)",
+          "name_en": "Throwing axes",
+          "name_de": "Throwing axes",
+          "name_fr": "Haches de lancer",
           "points": 1,
           "perModel": true,
-          "name_fr": "Haches de lancer (à la place des javelines)"
+          "exclusive": true
         },
         {
-          "name_en": "Javelins (excludes throwing axes)",
-          "name_de": "Javelins (excludes throwing axes)",
+          "name_en": "Javelins",
+          "name_de": "Javelins",
+          "name_fr": "Javelines",
           "points": 1,
           "perModel": true,
-          "name_fr": "Javelines (à la place des haches de lancer)"
+          "exclusive": true
         },
         {
           "name_en": "Ambushers",
