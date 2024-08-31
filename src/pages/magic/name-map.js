@@ -305,6 +305,16 @@ export const nameMap = {
     name_en: "Troll Horde",
     name_fr: "Horde de Trolls",
   },
+  "wolves-of-the-sea": {
+    name_de: "Wolves of the Sea",
+    name_en: "Wolves of the Sea",
+    name_fr: "Wolves of the Sea",
+  },
+  "heralds-of-darkness": {
+    name_de: "Heralds of Darkness",
+    name_en: "Heralds of Darkness",
+    name_fr: "Heralds of Darkness",
+  },
   "chaos-dwarfs": {
     name_de: "Chaos Dwarfs",
     name_en: "Chaos Dwarfs",

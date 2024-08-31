@@ -680,7 +680,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["exalted-champion", "sorcerer-lord"],
+          ids: ["exalted-champion", "sorcerer-lord", "frydaal-the-chainmaker"],
           min: 0,
           max: 1,
           points: 1000,
@@ -732,6 +732,149 @@ export const rules = {
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
+  },
+  "wolves-of-the-sea": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chaos-lord", "daemon-prince", "sorcerer-lord"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: [
+            "exalted-champion",
+            "exalted-sorcerer",
+            "frydaal-the-chainmaker",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["gigantic-spawn-of-chaos"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-ogre-shaggoth"],
+          min: 0,
+          max: 1,
+          requiresType: "rare",
+          requires: ["dragon-ogres"],
+          perUnit: true,
+        },
+        {
+          ids: ["chaos-giant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 25 },
+  },
+  "heralds-of-darkness": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chaos-lord", "daemon-prince"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["exalted-champion", "sorcerer-lord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: [
+            "exalted-champion",
+            "sorcerer-lord",
+            "chaos-lord",
+            "exalted-sorcerer",
+            "aspiring-champion",
+          ],
+          requiresMounted: true,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["chaos-knights"],
+          min: 1,
+        },
+        {
+          ids: ["chaos-chariot"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chosen-chaos-knights"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chosen-chaos-chariot"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["dragon-ogre-shaggoth"],
+          min: 0,
+          max: 1,
+          requiresType: "special",
+          requires: ["dragon-ogres"],
+          perUnit: true,
+        },
+        {
+          ids: ["gigantic-spawn-of-chaos"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["chaos-giant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["warpfire-dragon"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 25 },
   },
   "beastmen-brayherds": {
     characters: {
