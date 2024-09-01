@@ -583,6 +583,22 @@
           ]
         },
         {
+          "name_en": "Manticore {warriors of chaos}",
+          "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
+          "points": 120,
+          "options": [
+            {
+              "name_en": "Venomous tail",
+              "name_de": "Venomous tail",
+              "name_es": "Venomous tail",
+              "name_fr": "Queue venimeuse",
+              "points": 15
+            }
+          ]
+        },
+        {
           "name_en": "Gorebeast Chariot",
           "name_de": "Gorebeast Chariot",
           "name_es": "Gorebeast Chariot",
@@ -632,18 +648,52 @@
           ]
         },
         {
-          "name_en": "Manticore {warriors of chaos}",
-          "name_de": "Manticore",
-          "name_es": "Manticore",
-          "name_fr": "Manticore",
-          "points": 120,
+          "name_en": "Chosen Chaos Chariot",
+          "name_de": "Chosen Chaos Chariot",
+          "name_es": "Chosen Chaos Chariot",
+          "name_fr": "Chosen Chaos Chariot",
+          "points": 140,
+          "armyComposition": ["heralds-of-darkness"],
           "options": [
             {
-              "name_en": "Venomous tail",
-              "name_de": "Venomous tail",
-              "name_es": "Venomous tail",
-              "name_fr": "Queue venimeuse",
-              "points": 15
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "exclusive": true
             }
           ]
         },
@@ -1226,6 +1276,56 @@
               "exclusive": true
             }
           ]
+        },
+        {
+          "name_en": "Chosen Chaos Chariot",
+          "name_de": "Chosen Chaos Chariot",
+          "name_es": "Chosen Chaos Chariot",
+          "name_fr": "Chosen Chaos Chariot",
+          "points": 140,
+          "armyComposition": ["heralds-of-darkness"],
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "items": [
@@ -1705,6 +1805,56 @@
           "name_es": "Gorebeast Chariot",
           "name_fr": "Char Éventreur",
           "points": 135,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_de": "Mark of Chaos Undivided",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_de": "Mark of Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_de": "Mark of Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_de": "Mark of Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_de": "Mark of Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Chosen Chaos Chariot",
+          "name_de": "Chosen Chaos Chariot",
+          "name_es": "Chosen Chaos Chariot",
+          "name_fr": "Chosen Chaos Chariot",
+          "points": 140,
+          "armyComposition": ["heralds-of-darkness"],
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
