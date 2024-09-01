@@ -728,6 +728,11 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["warpfire-dragon"],
+          min: 0,
+          max: 1,
+        },
       ],
     },
     mercenaries: { maxPercent: 20 },
@@ -811,6 +816,13 @@ export const rules = {
             "aspiring-champion",
           ],
           requiresMounted: true,
+        },
+        {
+          ids: ["daemon-prince"],
+          requiresOption: {
+            id: "fly",
+            unit: "daemon-prince",
+          },
         },
       ],
     },

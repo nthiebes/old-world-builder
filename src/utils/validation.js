@@ -184,6 +184,28 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
 
+    // Unit requires specific active option
+    if (ruleUnit.requiresOption) {
+      const charactersInList = unitsInList.filter(
+        (character) =>
+          ruleUnit.requiresOption.unit === character.id.split(".")[0]
+      );
+      const characterWithOption = charactersInList.find((character) =>
+        character.options.find(
+          (option) => option.id === ruleUnit.requiresOption.id && option.active
+        )
+      );
+
+      if (charactersInList.length && !characterWithOption) {
+        errors.push({
+          message: "misc.error.requiresOption",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
+          option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
+        });
+      }
+    }
+
     // Requires other unit
     if (!ruleUnit.requiresGeneral && ruleUnit.requires) {
       if (!max && ruleUnit.perUnit && unitsInList.length < min) {
