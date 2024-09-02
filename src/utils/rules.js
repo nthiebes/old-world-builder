@@ -733,6 +733,12 @@ export const rules = {
           min: 0,
           max: 1,
         },
+        {
+          ids: ["gigantic-spawn-of-chaos"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     mercenaries: { maxPercent: 20 },
@@ -944,6 +950,14 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
+      units: [
+        {
+          ids: ["gigantic-spawn-of-chaos"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
