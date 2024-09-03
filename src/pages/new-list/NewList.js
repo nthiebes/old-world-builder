@@ -12,9 +12,6 @@ import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../assets/armies.json";
 import { setLists } from "../../state/lists";
-import warhammerFantasySix from "../../assets/warhammer-fantasy-6.png";
-import warhammerFantasyEight from "../../assets/warhammer-fantasy-8.png";
-import warhammerTheOldWorld from "../../assets/the-old-world.png";
 
 import { nameMap } from "../magic";
 
@@ -182,7 +179,7 @@ export const NewList = ({ isMobile }) => {
                 )}
                 {id === "warhammer-fantasy-6" && (
                   <>
-                    <img height="20" src={warhammerFantasySix} alt={name} />
+                    <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
                       <FormattedMessage id="new.6th" />
                     </p>
