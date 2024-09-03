@@ -19,7 +19,8 @@
   color: var(--color-error);
 }
 
-.checkbox.export__visible-checkbox {
+.checkbox.export__visible-checkbox,
+.radio.export__visible-checkbox {
   margin-bottom: 0;
 }
 
@@ -27,6 +28,14 @@
   margin-bottom: 1rem;
 }
 
+.export__radio-description {
+  margin-left: 1rem;
+}
+
 .export__subtitle {
   margin-top: 2rem;
+}
+
+.export__sub-subtitle {
+  margin-top: 1rem;
 }

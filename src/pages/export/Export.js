@@ -10,7 +10,6 @@ import { Expandable } from "../../components/expandable";
 import { useLanguage } from "../../utils/useLanguage";
 
 import { getListAsText } from "./get-list-as-text";
-// import { getListAsMarkdown } from "./get-list-as-markdown";
 import "./Export.css";
 
 const getFile = ({ list, listText, asText }) => {
@@ -36,29 +35,29 @@ export const Export = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const { listId } = useParams();
+  const [hideItems, setHideItems] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
   const [shareError, setShareError] = useState(false);
   const [shareOwbError, setOwbShareError] = useState(false);
-  const [isShowList, setIsShowList] = useState(false);
   const [showStats, setShowStats] = useState(false);
-  const [isCompactList, setIsCompactList] = useState(false);
   const [showSpecialRules, setShowSpecialRules] = useState(false);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
-  const [isMarkdownList, setIsMarkdownList] = useState(false);
   const [showCustomNotes, setShowCustomNotes] = useState(false);
+  const [listType, setListType] = useState("regular");
+  const [listFormatting, setListFormatting] = useState("text");
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
   const listText = list
     ? getListAsText({
         list,
-        isShowList,
-        isCompactList,
+        isCompactList: listType === "compact",
+        isMarkdownList: listFormatting === "markdown",
+        isShowList: hideItems,
         showSpecialRules,
         showPageNumbers,
         showCustomNotes,
-        isMarkdownList,
         intl,
         language,
         showStats,
@@ -140,55 +139,81 @@ export const Export = ({ isMobile }) => {
           />
         )}
 
-        <h2 className="export__subtitle">
-          <FormattedMessage id="export.copyTitle" />
-        </h2>
-        <div className="checkbox export__visible-checkbox">
+        <h3 className="export__sub-subtitle">
+          <FormattedMessage id="export.listTypeTitle" />
+        </h3>
+        <div className="radio export__visible-checkbox">
           <input
-            type="checkbox"
+            type="radio"
+            id="regular"
+            onChange={() => setListType("regular")}
+            checked={listType === "regular"}
+            name="list"
+            value="regular"
+            className="radio__input"
+          />
+          <label htmlFor="regular" className="checkbox__label">
+            <FormattedMessage id="export.regularList" />
+          </label>
+        </div>
+        <div className="radio export__visible-checkbox">
+          <input
+            type="radio"
             id="compact"
-            onChange={() => setIsCompactList(!isCompactList)}
-            checked={isCompactList}
-            className="checkbox__input"
+            onChange={() => setListType("compact")}
+            checked={listType === "compact"}
+            name="list"
+            value="compact"
+            className="radio__input"
           />
           <label htmlFor="compact" className="checkbox__label">
             <FormattedMessage id="export.compactList" />
           </label>
         </div>
-        <p className="export__description">
+        <p className="export__radio-description">
           <i>
             <FormattedMessage id="export.compactListDescription" />
           </i>
         </p>
-        <div className="checkbox export__visible-checkbox">
+
+        <h3 className="export__sub-subtitle">
+          <FormattedMessage id="export.formattingTitle" />
+        </h3>
+        <div className="radio export__visible-checkbox">
           <input
-            type="checkbox"
-            id="show"
-            onChange={() => setIsShowList(!isShowList)}
-            checked={isShowList}
-            className="checkbox__input"
+            type="radio"
+            id="text"
+            onChange={() => setListFormatting("text")}
+            checked={listFormatting === "text"}
+            name="formatting"
+            value="text"
+            className="radio__input"
           />
-          <label htmlFor="show" className="checkbox__label">
-            <FormattedMessage id="export.visibleList" />
+          <label htmlFor="text" className="checkbox__label">
+            <FormattedMessage id="export.isTextList" />
           </label>
         </div>
-        <p className="export__description">
-          <i>
-            <FormattedMessage id="export.visibleListDescription" />
-          </i>
-        </p>
-        <div className="checkbox export__visible-checkbox">
+        <div className="radio export__visible-checkbox">
           <input
-            type="checkbox"
-            id="isMarkdownList"
-            onChange={() => setIsMarkdownList(!isMarkdownList)}
-            checked={isMarkdownList}
-            className="checkbox__input"
+            type="radio"
+            id="markdown"
+            onChange={() => setListFormatting("markdown")}
+            checked={listFormatting === "markdown"}
+            name="formatting"
+            value="markdown"
+            className="radio__input"
           />
-          <label htmlFor="isMarkdownList" className="checkbox__label">
+          <label htmlFor="markdown" className="checkbox__label">
             <FormattedMessage id="export.isMarkdownList" />
+            <b>
+              <i>New!</i>
+            </b>
           </label>
         </div>
+
+        <h3 className="export__sub-subtitle">
+          <FormattedMessage id="export.optionsTitle" />
+        </h3>
         <div className="checkbox export__visible-checkbox">
           <input
             type="checkbox"
@@ -237,6 +262,23 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.showCustomNotes" />
           </label>
         </div>
+        <div className="checkbox export__visible-checkbox">
+          <input
+            type="checkbox"
+            id="show"
+            onChange={() => setHideItems(!hideItems)}
+            checked={hideItems}
+            className="checkbox__input"
+          />
+          <label htmlFor="show" className="checkbox__label">
+            <FormattedMessage id="export.visibleList" />
+          </label>
+        </div>
+        <p className="export__radio-description">
+          <i>
+            <FormattedMessage id="export.visibleListDescription" />
+          </i>
+        </p>
         <p className="export__description"></p>
         <Expandable headline={<FormattedMessage id="export.preview" />}>
           <textarea className="export__text" value={listText} readOnly />
@@ -278,13 +320,13 @@ export const Export = ({ isMobile }) => {
           <FormattedMessage id="export.downloadAsText" />
         </Button>
 
+        <hr />
+
         <h2 className="export__subtitle">
           <FormattedMessage id="export.owbTitle" />
         </h2>
         <p>
-          <i>
-            <FormattedMessage id="export.dowloadInfo" />
-          </i>
+          <FormattedMessage id="export.dowloadInfo" />
         </p>
         <Button
           icon="download"

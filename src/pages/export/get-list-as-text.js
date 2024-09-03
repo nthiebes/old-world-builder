@@ -25,49 +25,52 @@ const getUnitsString = ({
       let optionsString = "";
 
       if (allOptions) {
-        if (isCompactList) {
+        if (isCompactList || isMarkdownList) {
           optionsString = `(${allOptions})\n`;
         } else {
           optionsString = `- ${allOptions.split(", ").join("\n- ")}\n`;
         }
       }
       if (showSpecialRules && unit.specialRules) {
-        optionsString += `${intl.formatMessage({
+        optionsString += `${isMarkdownList ? " - __" : ""}${intl.formatMessage({
           id: "unit.specialRules",
-        })}: ${(
+        })}:${isMarkdownList ? "__ *" : " "}${(
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
-        ).replace(/ *\{[^)]*\}/g, "")}\n`;
+        ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
       }
       if (showCustomNotes && unit.customNote) {
-        optionsString += `${intl.formatMessage({
+        optionsString += `${isMarkdownList ? " - __" : ""}${intl.formatMessage({
           id: "unit.customNote",
-        })} ${unit.customNote}\n`;
+        })}${isMarkdownList ? "__ *" : " "}${
+          isMarkdownList ? unit.customNote.replace(/\n/g, "") : unit.customNote
+        }${isMarkdownList ? "*" : ""}\n`;
       }
       if (showStats) {
         const stats = getStats(unit);
 
+        if (!isCompactList && !isMarkdownList) {
+          optionsString += "\n";
+        }
+
         if (stats?.length > 0) {
           stats.forEach((unitStats, index) => {
             // prettier-ignore
-            optionsString += `
-[${unitStats.Name.replace(/ /g, '\xa0')}]\xa0${intl.formatMessage({id: "unit.m"})}(${unitStats.M})\xa0${intl.formatMessage({id: "unit.ws"})}(${unitStats.WS})\xa0${intl.formatMessage({id: "unit.bs"})}(${unitStats.BS})\xa0${intl.formatMessage({id: "unit.s"})}(${unitStats.S})\xa0${intl.formatMessage({id: "unit.t"})}(${unitStats.T})\xa0${intl.formatMessage({id: "unit.w"})}(${unitStats.W})\xa0${intl.formatMessage({id: "unit.i"})}(${unitStats.I})\xa0${intl.formatMessage({id: "unit.a"})}(${unitStats.A})\xa0${intl.formatMessage({id: "unit.ld"})}(${unitStats.Ld})
+            optionsString += `${isMarkdownList ? " - " : ""}[${unitStats.Name.replace(/ /g, '\xa0')}]\xa0${intl.formatMessage({id: "unit.m"})}(${unitStats.M})\xa0${intl.formatMessage({id: "unit.ws"})}(${unitStats.WS})\xa0${intl.formatMessage({id: "unit.bs"})}(${unitStats.BS})\xa0${intl.formatMessage({id: "unit.s"})}(${unitStats.S})\xa0${intl.formatMessage({id: "unit.t"})}(${unitStats.T})\xa0${intl.formatMessage({id: "unit.w"})}(${unitStats.W})\xa0${intl.formatMessage({id: "unit.i"})}(${unitStats.I})\xa0${intl.formatMessage({id: "unit.a"})}(${unitStats.A})\xa0${intl.formatMessage({id: "unit.ld"})}(${unitStats.Ld})
 `;
           });
         } else {
           // prettier-ignore
-          optionsString += `
-${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ws"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.bs"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.s"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.t"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.w"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.i"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.a"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ld"})}(${'\xa0'})
+          optionsString += `${isMarkdownList ? " - " : ""}${intl.formatMessage({id: "unit.m"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ws"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.bs"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.s"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.t"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.w"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.i"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.a"})}(${'\xa0'})\xa0${intl.formatMessage({id: "unit.ld"})}(${'\xa0'})
 `;
         }
       }
 
       // prettier-ignore
-      return `${isMarkdownList ? '### ' : ''}${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
+      return `${isMarkdownList ? `- ` : ''}${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
 }${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${optionsString}
-`;
+${isMarkdownList && optionsString ? ' -# ' : ''}${optionsString}${isMarkdownList ? '' : '\n'}`;
     })
     .join("");
 };
@@ -120,7 +123,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   }
   // prettier-ignore
   if (!isCompactList && isMarkdownList) {
-    listString += `# ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
+    listString += `## ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
 ${game.name}, ${armyName}${armyCompositionString}
@@ -137,7 +140,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? '' : '\n';
+    listString += isCompactList || isMarkdownList ? '' : '\n';
     
     listString += `${getUnitsString({
       isCompactList,
@@ -161,7 +164,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? '' : '\n';
+    listString += isCompactList || isMarkdownList ? '' : '\n';
     
     listString += `${getUnitsString({
       isCompactList,
@@ -185,7 +188,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? '' : '\n';
+    listString += isCompactList || isMarkdownList ? '' : '\n';
     
     listString += `${getUnitsString({
       isCompactList,
@@ -209,7 +212,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? "" : "\n";
+    listString += isCompactList || isMarkdownList ? "" : "\n";
     
     listString += `${getUnitsString({
       isCompactList,
@@ -233,7 +236,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? "" : "\n";
+    listString += isCompactList || isMarkdownList ? "" : "\n";
     
     listString += `${getUnitsString({
       isCompactList,
@@ -257,7 +260,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? "" : "\n";
+    listString += isCompactList || isMarkdownList ? "" : "\n";
   
     listString += `${getUnitsString({
       isCompactList,
@@ -281,7 +284,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? "" : "\n";
+    listString += isCompactList || isMarkdownList ? "" : "\n";
   
     listString += `${getUnitsString({
       isCompactList,
@@ -305,7 +308,7 @@ ${game.name}, ${armyName}${armyCompositionString}
   id: "app.points",
 }) + ']'} ++
 `
-    listString += isCompactList ? "" : "\n";
+    listString += isCompactList || isMarkdownList ? "" : "\n";
 
     listString += `${getUnitsString({
       isCompactList,
@@ -320,15 +323,22 @@ ${game.name}, ${armyName}${armyCompositionString}
     })}`;
   }
 
-  listString += `---
+  if (isMarkdownList) {
+    listString += `
+*${intl.formatMessage({
+      id: "export.createdWith",
+    })} "Old World Builder"* - https://old-world-builder.com`;
+  } else {
+    listString += `---
 ${intl.formatMessage({
   id: "export.createdWith",
 })} "Old World Builder"
 
 [https://old-world-builder.com]`;
+  }
 
   if (isMarkdownList) {
-    listString = listString.replace(/ \+\+/g, "").replace(/\+\+/g, "##");
+    listString = listString.replace(/ \+\+/g, "").replace(/\+\+/g, "###");
   }
 
   return listString;
