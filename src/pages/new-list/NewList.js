@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import { useLocation, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import classNames from "classnames";
 
 import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
@@ -15,8 +16,9 @@ import warhammerFantasySix from "../../assets/warhammer-fantasy-6.png";
 import warhammerFantasyEight from "../../assets/warhammer-fantasy-8.png";
 import warhammerTheOldWorld from "../../assets/the-old-world.png";
 
-import "./NewList.css";
 import { nameMap } from "../magic";
+
+import "./NewList.css";
 
 export const NewList = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -44,7 +46,7 @@ export const NewList = ({ isMobile }) => {
     const newId = getRandomId();
     const newList = {
       "warhammer-fantasy-8": {
-        name: name || nameMap[army][language] || nameMap[army].name_en,
+        name: name || nameMap[army][`name_${language}`] || nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -57,7 +59,7 @@ export const NewList = ({ isMobile }) => {
         id: newId,
       },
       "warhammer-fantasy-6": {
-        name: name || nameMap[army][language] || nameMap[army].name_en,
+        name: name || nameMap[army][`name_${language}`] || nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -70,7 +72,12 @@ export const NewList = ({ isMobile }) => {
         id: newId,
       },
       "the-old-world": {
-        name: name || nameMap[army][language] || nameMap[army].name_en,
+        name:
+          name ||
+          nameMap[armyComposition]?.[`name_${language}`] ||
+          nameMap[armyComposition]?.name_en ||
+          nameMap[army][`name_${language}`] ||
+          nameMap[army].name_en,
         description: description,
         game: game,
         points: points,
@@ -145,7 +152,14 @@ export const NewList = ({ isMobile }) => {
         )}
         <form onSubmit={handleSubmit} className="new-list">
           {gameSystems.map(({ name, id }) => (
-            <div className="radio" key={id}>
+            <div
+              className={classNames(
+                "radio",
+                "new-list__radio",
+                id === "warhammer-fantasy" && "new-list__radio--last-item"
+              )}
+              key={id}
+            >
               <input
                 type="radio"
                 id={id}
@@ -160,7 +174,7 @@ export const NewList = ({ isMobile }) => {
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy-8" && (
                   <>
-                    <img height="20" src={warhammerFantasyEight} alt={name} />
+                    <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
                       <FormattedMessage id="new.8th" />
                     </p>
@@ -175,7 +189,7 @@ export const NewList = ({ isMobile }) => {
                   </>
                 )}
                 {id === "the-old-world" && (
-                  <img height="35" src={warhammerTheOldWorld} alt={name} />
+                  <span className="new-list__game-name">{name}</span>
                 )}
               </label>
             </div>

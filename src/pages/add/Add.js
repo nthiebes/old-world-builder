@@ -62,16 +62,23 @@ const getArmyData = ({ data, armyComposition }) => {
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "special"
   );
+  const coreToRare = core.filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "rare"
+  );
   const specialToRare = special.filter(
     (unit) =>
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "rare"
   );
-  const charactersToRare = characters.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
-  );
+  const charactersToRare = characters?.length
+    ? characters.filter(
+        (unit) =>
+          unit?.armyComposition &&
+          unit.armyComposition[armyComposition].category === "rare"
+      )
+    : [];
 
   // Remove units from old category
   const allCore = [...core, ...specialToCore, ...rareToCore].filter(
@@ -86,7 +93,12 @@ const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "special") ||
       !unit.armyComposition
   );
-  const allRare = [...rare, ...specialToRare, ...charactersToRare].filter(
+  const allRare = [
+    ...rare,
+    ...specialToRare,
+    ...charactersToRare,
+    ...coreToRare,
+  ].filter(
     (unit) =>
       (unit?.armyComposition &&
         unit.armyComposition[armyComposition].category === "rare") ||
@@ -221,9 +233,7 @@ export const Add = ({ isMobile }) => {
               const mercenaryUnits = allUnits.filter((unit) =>
                 mercenary.units.includes(unit.id)
               );
-              allMercenaries = [...allMercenaries, ...mercenaryUnits].map(
-                (mercenaryUnit) => ({ ...mercenaryUnit, army: mercenary.army })
-              );
+              allMercenaries = [...allMercenaries, ...mercenaryUnits];
               setMercenariesLoaded(index + 1);
             },
           });

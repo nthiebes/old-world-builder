@@ -70,6 +70,11 @@ export const nameMap = {
     name_en: "Weapon Runes",
     name_fr: "Runes d'Arme",
   },
+  "ranged-weapon-runes": {
+    name_de: "Ranged Weapon Runes",
+    name_en: "Ranged Weapon Runes",
+    name_fr: "Ranged Weapon Runes",
+  },
   "armor-runes": {
     name_de: "Rüstungsrunen",
     name_en: "Armour Runes",
@@ -89,6 +94,11 @@ export const nameMap = {
     name_de: "Maschinenrunen",
     name_en: "Engineering Runes",
     name_fr: "Runes d'Ingénierie",
+  },
+  "runic-tattoos": {
+    name_de: "Runic Tattoos",
+    name_en: "Runic Tattoos",
+    name_fr: "Runic Tattoos",
   },
   triptych: {
     name_de: "Triptych",
@@ -160,6 +170,16 @@ export const nameMap = {
     name_en: "Dwarfen Mountain Holds",
     name_fr: "Forteresses Naines",
   },
+  "expeditionary-force": {
+    name_de: "Expeditionary Force",
+    name_en: "Expeditionary Force",
+    name_fr: "Expeditionary Force",
+  },
+  "royal-clan": {
+    name_de: "Royal Clan",
+    name_en: "Royal Clan",
+    name_fr: "Royal Clan",
+  },
   "empire-of-man": {
     name_de: "Empire of Man",
     name_en: "Empire of Man",
@@ -204,6 +224,11 @@ export const nameMap = {
     name_de: "Elven Honour",
     name_en: "Elven Honour",
     name_fr: "Honneur Elfique",
+  },
+  none: {
+    name_de: "Keine",
+    name_en: "None",
+    name_fr: "None",
   },
   daemonology: {
     name_de: "Daemonology",
@@ -279,6 +304,16 @@ export const nameMap = {
     name_de: "Troll Horde",
     name_en: "Troll Horde",
     name_fr: "Horde de Trolls",
+  },
+  "wolves-of-the-sea": {
+    name_de: "Wolves of the Sea",
+    name_en: "Wolves of the Sea",
+    name_fr: "Wolves of the Sea",
+  },
+  "heralds-of-darkness": {
+    name_de: "Heralds of Darkness",
+    name_en: "Heralds of Darkness",
+    name_fr: "Heralds of Darkness",
   },
   "chaos-dwarfs": {
     name_de: "Chaos Dwarfs",

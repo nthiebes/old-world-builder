@@ -18,6 +18,14 @@
         "mercenaries": {
           "empire-of-man": [
             {
+              "army": "dwarfen-mountain-holds",
+              "units": [
+                "doomseeker-merc",
+                "imperial-dwarf-mercenaries",
+                "prince-ulther's-dragon-company"
+              ]
+            },
+            {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
             }
@@ -65,9 +73,48 @@
         "name_es": "Dwarfen Mountain Holds",
         "name_fr": "Forteresses Naines",
         "items": ["dwarfen-mountain-holds"],
+        "armyComposition": ["royal-clan", "expeditionary-force"],
         "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
         "mercenaries": {
           "dwarfen-mountain-holds": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": [
+                "imperial-dwarf-mercenaries",
+                "doomseeker-merc",
+                "prince-ulther's-dragon-company"
+              ]
+            },
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "royal-clan": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": [
+                "imperial-dwarf-mercenaries",
+                "doomseeker-merc",
+                "goblin-hewer-merc",
+                "prince-ulther's-dragon-company"
+              ]
+            },
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "expeditionary-force": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": [
+                "imperial-dwarf-mercenaries",
+                "doomseeker-merc",
+                "goblin-hewer-merc",
+                "prince-ulther's-dragon-company"
+              ]
+            },
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
@@ -87,6 +134,7 @@
           "gifts-of-chaos",
           "chaos-mutations"
         ],
+        "armyComposition": ["wolves-of-the-sea", "heralds-of-darkness"],
         "allies": [
           "orc-and-goblin-tribes",
           "beastmen-brayherds",
@@ -97,6 +145,18 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+            }
+          ],
+          "wolves-of-the-sea": [
+            {
+              "army": "beastmen-brayherds",
+              "units": ["gor-herds", "ungor-herd"]
+            }
+          ],
+          "heralds-of-darkness": [
+            {
+              "army": "beastmen-brayherds",
+              "units": ["centigore-chieftain", "centigor-herds"]
             }
           ]
         }
@@ -259,15 +319,7 @@
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": ["tomb-kings-of-khemri"],
-        "mercenaries": {
-          "vampire-counts": [
-            {
-              "army": "orc-and-goblin-tribes",
-              "units": ["badland-ogre-bulls"]
-            }
-          ]
-        }
+        "allies": ["tomb-kings-of-khemri"]
       },
       {
         "id": "daemons-of-chaos",
@@ -287,15 +339,7 @@
           "daemonic-icons-nurgle",
           "daemonic-icons-slaanesh",
           "daemonic-icons-tzeentch"
-        ],
-        "mercenaries": {
-          "daemons-of-chaos": [
-            {
-              "army": "orc-and-goblin-tribes",
-              "units": ["badland-ogre-bulls"]
-            }
-          ]
-        }
+        ]
       },
       {
         "id": "ogre-kingdoms",

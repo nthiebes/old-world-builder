@@ -181,11 +181,11 @@ export const getAllOptions = (
         })
     : [];
   const lore = [];
-  if (activeLore) {
+  if (activeLore && nameMap[activeLore].name_en !== "None") {
     lore.push(
       nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
     );
-  } else if (lores?.length) {
+  } else if (lores?.length && nameMap[lores[0]].name_en !== "None") {
     lore.push(
       nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
     );
@@ -260,5 +260,15 @@ export const getUnitName = ({ unit, language }) => {
   return (unit.name || unit[`name_${language}`] || unit.name_en).replace(
     / *\{[^)]*\}/g,
     ""
+  );
+};
+
+export const getUnitOptionNotes = ({ notes, key, className, language }) => {
+  return (Array.isArray(notes) ? [...notes] : notes ? [notes] : []).map(
+    (note, index) => (
+      <p className={className} key={`${key}-${index}`}>
+        {note[`name_${language}`] || note.name_en}
+      </p>
+    )
   );
 };
