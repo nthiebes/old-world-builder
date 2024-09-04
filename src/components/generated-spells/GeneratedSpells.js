@@ -3,50 +3,86 @@ import { FormattedMessage, useIntl } from "react-intl";
 import PropTypes from "prop-types";
 
 import { Button } from "../button";
-import { RulesLinksText } from "../rules-index";
-import { useLanguage } from "../../utils/useLanguage";
+import { LocalizedRuleLink } from "../rules-index";
 
 import "./GeneratedSpells.css";
 
+function spellIdToFormattedMessageId(spellId) {
+  const formattedSpellId = spellId
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/['’()!]/g, "")
+    .replace(/ /g, "-");
+
+  return `magic.spell.${formattedSpellId}`;
+}
+
 export const GeneratedSpells = ({
-  loresWithSpells,
-  spellsCount,
+  availableLoresWithSpells,
+  maxGeneratedSpellCount,
   showPageNumbers,
 }) => {
   const intl = useIntl();
-  const { language } = useLanguage();
-  const [generatedSpells, setGeneratedSpells] = useState([]);
+  const [generatedSpells, setGeneratedSpells] = useState(
+    Object.keys(availableLoresWithSpells).reduce(
+      (initialState, loreId) => ({ ...initialState, [loreId]: [] }),
+      {}
+    )
+  );
   const [showGenerationList, setShowGenerationList] = useState(false);
 
-  const handleSpellSelectionChange = (spell, selected) => {
+  const handleSpellSelectionChange = (loreId, spellId, selected) => {
     if (selected) {
       setGeneratedSpells((generatedSpells) => {
         // Insert the newly selected spell at the correct index (signature spell first)
-        if (spell.index === "signature") {
-          return [spell, ...generatedSpells];
+        if (availableLoresWithSpells[loreId][spellId].index === "signature") {
+          return {
+            ...generatedSpells,
+            [loreId]: [spellId, ...generatedSpells[loreId]],
+          };
         }
-        for (let i = 0; i <= generatedSpells.length; i++) {
+        for (let i = 0; i <= generatedSpells[loreId].length; i++) {
+          const generatedSpellIndex =
+            availableLoresWithSpells[loreId][generatedSpells[loreId][i]]?.index;
           if (
-            i === generatedSpells.length ||
-            (generatedSpells[i].index !== "signature" &&
-              generatedSpells[i].index > spell.index)
+            i === generatedSpells[loreId].length ||
+            (generatedSpellIndex !== "signature" &&
+              generatedSpellIndex >
+                availableLoresWithSpells[loreId][spellId].index)
           ) {
-            return generatedSpells.toSpliced(i, 0, spell);
+            return {
+              ...generatedSpells,
+              [loreId]: generatedSpells[loreId].toSpliced(i, 0, spellId),
+            };
           }
         }
       });
     } else {
-      setGeneratedSpells((generatedSpells) =>
-        generatedSpells.filter(({ name_en }) => name_en !== spell.name_en)
-      );
+      setGeneratedSpells((generatedSpells) => ({
+        ...generatedSpells,
+        [loreId]: generatedSpells[loreId].filter((id) => id !== spellId),
+      }));
     }
   };
+
+  let generatedSpellCount = 0;
+  let signatureSpellIsGenerated = false;
+
+  for (const loreId in generatedSpells) {
+    generatedSpellCount += generatedSpells[loreId].length;
+    if (
+      availableLoresWithSpells[loreId][generatedSpells[loreId][0]]?.index ===
+      "signature"
+    ) {
+      signatureSpellIsGenerated = true;
+    }
+  }
 
   return (
     <div className="generated-spells__wrapper">
       <span className="generated-spells__header">
         <FormattedMessage id="misc.generatedSpells" />
-        {` (${generatedSpells.length}/${spellsCount}) `}
+        {` (${generatedSpellCount}/${maxGeneratedSpellCount}) `}
         <Button
           type="text"
           color="dark"
@@ -60,75 +96,75 @@ export const GeneratedSpells = ({
       </span>
       {showGenerationList ? (
         <ul className="generated-spells__spells-selection-list">
-          {loresWithSpells.map((lore) => {
-            return (
-              <li key={lore.name_en}>
-                <ul>
-                  <div className="generated-spells__list-header">
-                    {lore[`name_${language}`]}
-                  </div>
-                  {Object.keys(lore.spells)
-                    .map((key) => lore.spells[key])
-                    .map((spell) => {
-                      return (
-                        <li key={spell.name_en}>
-                          <label className="generated-spells__spell-label">
-                            <input
-                              type="checkbox"
-                              checked={
-                                generatedSpells.find(
-                                  ({ name_en }) => name_en === spell.name_en
-                                ) !== undefined
-                              }
-                              disabled={
-                                (generatedSpells.length === spellsCount &&
-                                  generatedSpells.find(
-                                    ({ name_en }) => name_en === spell.name_en
-                                  ) === undefined) ||
-                                (spell.index === "signature" &&
-                                  generatedSpells[0]?.index === "signature" &&
-                                  generatedSpells[0].name_en !== spell.name_en)
-                              }
-                              onChange={(event) => {
-                                handleSpellSelectionChange(
-                                  spell,
-                                  event.target.checked
-                                );
-                              }}
-                            />
-                            <span className="generated-spells__spell-index">
-                              {spell.index === "signature"
-                                ? intl.formatMessage({
-                                    id: "misc.signatureAbbr",
-                                  })
-                                : spell.index}
-                            </span>
-                            {spell[`name_${language}`]}
-                          </label>
-                        </li>
-                      );
-                    })}
-                </ul>
-              </li>
-            );
-          })}
+          {Object.entries(availableLoresWithSpells).map(([loreId, spells]) => (
+            <li key={loreId}>
+              <ul>
+                <div className="generated-spells__list-header">
+                  <FormattedMessage id={`magic.lore.${loreId}`} />
+                </div>
+                {Object.entries(spells).map(([spellId, spell]) => {
+                  const spellIsGenerated =
+                    generatedSpells[loreId].find((id) => id === spellId) !==
+                    undefined;
+
+                  return (
+                    <li key={spellId}>
+                      <label className="generated-spells__spell-label">
+                        <input
+                          type="checkbox"
+                          checked={spellIsGenerated}
+                          disabled={
+                            (generatedSpellCount === maxGeneratedSpellCount &&
+                              !spellIsGenerated) ||
+                            (spell.index === "signature" &&
+                              signatureSpellIsGenerated &&
+                              !spellIsGenerated)
+                          }
+                          onChange={(event) => {
+                            handleSpellSelectionChange(
+                              loreId,
+                              spellId,
+                              event.target.checked
+                            );
+                          }}
+                        />
+                        <span className="generated-spells__spell-index">
+                          {spell.index === "signature"
+                            ? intl.formatMessage({
+                                id: "misc.signatureAbbr",
+                              })
+                            : spell.index}
+                        </span>
+                        <FormattedMessage
+                          id={spellIdToFormattedMessageId(spellId)}
+                        />
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            </li>
+          ))}
         </ul>
       ) : (
-        generatedSpells.map((spell) => (
-          <span className="generated-spells__spell-rule" key={spell.name_en}>
-            <RulesLinksText
-              textObject={spell}
-              showPageNumbers={showPageNumbers}
-            />
-          </span>
-        ))
+        Object.values(generatedSpells).map((spells) =>
+          spells.map((spellId) => (
+            <span className="generated-spells__spell-rule" key={spellId}>
+              <LocalizedRuleLink
+                ruleName={spellId}
+                formattedMessageId={spellIdToFormattedMessageId(spellId)}
+                showPageNumber={showPageNumbers}
+              />
+            </span>
+          ))
+        )
       )}
     </div>
   );
 };
 
 GeneratedSpells.propTypes = {
-  loresWithSpells: PropTypes.arrayOf(PropTypes.object),
-  spellsCount: PropTypes.number,
+  availableLoresWithSpells: PropTypes.objectOf(PropTypes.object).isRequired,
+  maxGeneratedSpellCount: PropTypes.number.isRequired,
   showPageNumbers: PropTypes.bool,
 };

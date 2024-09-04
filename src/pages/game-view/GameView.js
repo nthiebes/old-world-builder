@@ -17,7 +17,7 @@ import {
 import { GeneratedSpells } from "../../components/generated-spells/GeneratedSpells";
 import {
   getAllOptions,
-  getUnitGeneratedSpellsCount,
+  getUnitGeneratedSpellCount,
   getUnitLoresWithSpells,
 } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
@@ -197,7 +197,7 @@ export const GameView = () => {
       <ul>
         {units.map((unit, index) => {
           const stats = getStats(unit);
-          const unitLoresWithSpells = getUnitLoresWithSpells(unit);
+          const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
 
           return (
             <li key={index} className="list">
@@ -270,10 +270,10 @@ export const GameView = () => {
                         ]}
                       />
                     ))}
-                  {showGeneratedSpells && unitLoresWithSpells.length > 0 && (
+                  {showGeneratedSpells && unitGeneratedSpellCount > 0 && (
                     <GeneratedSpells
-                      loresWithSpells={unitLoresWithSpells}
-                      spellsCount={getUnitGeneratedSpellsCount(unit)}
+                      availableLoresWithSpells={getUnitLoresWithSpells(unit)}
+                      maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
                     />
                   )}
