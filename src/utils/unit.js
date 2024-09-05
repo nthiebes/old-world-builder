@@ -275,6 +275,64 @@ export const getUnitOptionNotes = ({ notes, key, className, language }) => {
 };
 
 /**
+ * Recursive lookup of a unit option satisfying the test function argument.
+ * By default, when onlyFollowActiveOptions is true, the function will only
+ * look deeper in sub options if the parent option is active.
+ * Return the first matching option or undefined.
+ */
+export const findOption = (
+  options,
+  testFunc,
+  onlyFollowActiveOptions = true
+) => {
+  if (Array.isArray(options)) {
+    for (const option of options) {
+      const foundOption = findOption(option, testFunc, onlyFollowActiveOptions);
+      if (foundOption) {
+        return foundOption;
+      }
+    }
+  } else if (testFunc(options)) {
+    return options;
+  } else if ((!onlyFollowActiveOptions || options.active) && options.options) {
+    return findOption(options.options, testFunc, onlyFollowActiveOptions);
+  }
+  return undefined;
+};
+
+/**
+ * Recursive lookup of all unit options satisfying the test function argument.
+ * By default, when onlyFollowActiveOptions is true, the function will only
+ * look deeper in sub options if the parent option is active.
+ * Return an array of options (empty if nothing found).
+ */
+export const findAllOptions = (
+  options,
+  testFunc,
+  onlyFollowActiveOptions = true
+) => {
+  const foundOptions = [];
+
+  if (Array.isArray(options)) {
+    for (const option of options) {
+      foundOptions.push(
+        ...findAllOptions(option, testFunc, onlyFollowActiveOptions)
+      );
+    }
+  } else {
+    if (testFunc(options)) {
+      foundOptions.push(options);
+    }
+    if ((!onlyFollowActiveOptions || options.active) && options.options) {
+      foundOptions.push(
+        ...findAllOptions(options.options, testFunc, onlyFollowActiveOptions)
+      );
+    }
+  }
+  return foundOptions;
+};
+
+/**
  * Returns true if a unit is equipped with given itemName (not case sensitive),
  * false otherwise.
  */
