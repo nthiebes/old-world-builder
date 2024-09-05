@@ -365,8 +365,13 @@ export const getUnitLoresWithSpells = (unit) => {
       // If the unit has the Lore of Chaos, only the spell matching its Mark
       // of Chaos must be available
       if (loreId === "lore-of-chaos") {
-        const markOfChaosOption = unit.options.find(
-          ({ active, name_en }) => active && /^Mark of/.test(name_en)
+        const markOfChaosOption = findOption(
+          unit.options,
+          ({ active, name_en }) =>
+            active &&
+            /^Mark of (Chaos Undivided|Nurgle|Khorne|Slaanesh|Tzeentch)/.test(
+              name_en
+            )
         );
         const markOfChaos = markOfChaosOption
           ? markOfChaosOption.name_en.slice(8).toLowerCase().replace(/ /g, "-")
@@ -416,9 +421,10 @@ export const getUnitLoresWithSpells = (unit) => {
           "high-magic": loresOfMagicWithSpells["high-magic"],
           illusion: loresOfMagicWithSpells["illusion"],
         }
-      : unit.options.find(
-          ({ name_en, active }) =>
-            /^Arise!, Level 1 Wizard/.test(name_en) && active
+      : findOption(
+          unit.options,
+          ({ active, name_en }) =>
+            active && /^Arise!, Level 1 Wizard/.test(name_en)
         )
       ? { necromancy: loresOfMagicWithSpells["necromancy"] }
       : unit.lores?.length > 0
@@ -440,7 +446,7 @@ export const getUnitWizardryLevel = (unit) => {
     return 1;
   }
 
-  const levelOptions = unit.options.filter(({ name_en }) =>
+  const levelOptions = findAllOptions(unit.options, ({ name_en }) =>
     /^(Arise!, )?Level [1234] Wizard/.test(name_en)
   );
 
