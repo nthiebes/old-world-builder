@@ -69,7 +69,7 @@ const getUnitsString = ({
       return `${isMarkdownList ? `- ` : ''}${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
 }${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints(unit) + ' ' + intl.formatMessage({
   id: "app.points",
-}) + ']'}
+}) + '] '}
 ${isMarkdownList && optionsString ? ' -# ' : ''}${optionsString}${isMarkdownList ? '' : '\n'}`;
     })
     .join("");
