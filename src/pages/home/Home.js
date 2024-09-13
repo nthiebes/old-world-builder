@@ -82,18 +82,6 @@ export const Home = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  function getLogo({ game }) {
-    let logo;
-    if (game === "warhammer-fantasy") {
-      logo = warhammerFantasyEight;
-    } else if (game === "warhammer-fantasy-6"){
-      logo = warhammerTheOldWorld;
-    } else {
-      logo = warhammerTheOldWorld;
-    }
-    return logo
-  }
-
   return (
     <>
       <Helmet>

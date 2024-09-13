@@ -123,6 +123,18 @@ const getArmyData = ({ data, armyComposition }) => {
   };
 };
 
+const getFantasyArmyData = ({ data }) => {
+  // Dropped logic around removing units outide an army
+  // composition as not yet supporting that for WHFB
+  return {
+    lords: updateIds(data.lords),
+    heroes: updateIds(data.heroes),
+    core: updateIds(data.core),
+    special: updateIds(data.special),
+    rare: updateIds(data.rare),
+  };
+};
+
 let allAllies = [];
 let allMercenaries = [];
 
@@ -181,63 +193,76 @@ export const Add = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (list && !army && type !== "allies") {
-      fetcher({
-        url: `games/${list.game}/${list.army}`,
-        onSuccess: (data) => {
-          const armyData = getArmyData({
-            data,
-            armyComposition: list.armyComposition || list.army,
-          });
-          dispatch(setArmy(armyData));
-        },
-      });
-    } else if (list && type === "allies" && allAllies.length === 0 && allies) {
-      setAlliesLoaded(false);
-      allies.forEach((ally, index) => {
+    // TOW
+    if (list && list.game == "the-old-world") {
+      if (!army && type !== "allies") {
         fetcher({
-          url: `games/${list.game}/${ally}`,
+          url: `games/${list.game}/${list.army}`,
           onSuccess: (data) => {
             const armyData = getArmyData({
               data,
-              armyComposition: ally,
+              armyComposition: list.armyComposition || list.army,
             });
-            allAllies = [...allAllies, { ...armyData, ally }];
-            setAlliesLoaded(index + 1);
+            dispatch(setArmy(armyData));
           },
         });
-      });
-    } else if (
-      list &&
-      type === "mercenaries" &&
-      allMercenaries.length === 0 &&
-      mercenaries
-    ) {
-      setMercenariesLoaded(false);
-      mercenaries[list.armyComposition] &&
-        mercenaries[list.armyComposition].forEach((mercenary, index) => {
+      } else if (type === "allies" && allAllies.length === 0 && allies) {
+        setAlliesLoaded(false);
+        allies.forEach((ally, index) => {
           fetcher({
-            url: `games/${list.game}/${mercenary.army}`,
+            url: `games/${list.game}/${ally}`,
             onSuccess: (data) => {
               const armyData = getArmyData({
                 data,
-                armyComposition: mercenary.army,
+                armyComposition: ally,
               });
-              const allUnits = [
-                ...armyData.characters,
-                ...armyData.core,
-                ...armyData.special,
-                ...armyData.rare,
-                ...armyData.mercenaries,
-              ];
-              const mercenaryUnits = allUnits.filter((unit) =>
-                mercenary.units.includes(unit.id)
-              );
-              allMercenaries = [...allMercenaries, ...mercenaryUnits];
-              setMercenariesLoaded(index + 1);
+              allAllies = [...allAllies, { ...armyData, ally }];
+              setAlliesLoaded(index + 1);
             },
           });
         });
+      } else if (
+        type === "mercenaries" &&
+        allMercenaries.length === 0 &&
+        mercenaries
+      ) {
+        setMercenariesLoaded(false);
+        mercenaries[list.armyComposition] &&
+          mercenaries[list.armyComposition].forEach((mercenary, index) => {
+            fetcher({
+              url: `games/${list.game}/${mercenary.army}`,
+              onSuccess: (data) => {
+                const armyData = getArmyData({
+                  data,
+                  armyComposition: mercenary.army,
+                });
+                const allUnits = [
+                  ...armyData.characters,
+                  ...armyData.core,
+                  ...armyData.special,
+                  ...armyData.rare,
+                  ...armyData.mercenaries,
+                ];
+                const mercenaryUnits = allUnits.filter((unit) =>
+                  mercenary.units.includes(unit.id)
+                );
+                allMercenaries = [...allMercenaries, ...mercenaryUnits];
+                setMercenariesLoaded(index + 1);
+              },
+            });
+          });
+      }
+    // WHFB
+    } else if (list) {
+      fetcher({
+        url: `games/${list.game}/${list.army}`,
+        onSuccess: (data) => {
+          //console.log(`--- onSuccess  WHFB - data: ${JSON.stringify(data)}`);
+          const armyData = getFantasyArmyData({data});
+          //console.log(`--- onSuccess  WHFB - armyData: ${JSON.stringify(armyData)}`);
+          dispatch(setArmy(armyData));
+        },
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list, army, allies, type]);

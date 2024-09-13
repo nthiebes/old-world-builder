@@ -101,6 +101,7 @@ export const Editor = ({ isMobile }) => {
   }
 
   const gameMode = list.game;
+  console.log(`--- gameMode ${gameMode}`)
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -361,7 +362,7 @@ export const Editor = ({ isMobile }) => {
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthLordData.maxSlots
+                        ? sixthLordData.maxSlots // TODO - Minus filled slots
                         : lordsData.points - lordsPoints
                     }</strong>
                     <FormattedMessage id={
@@ -418,7 +419,7 @@ export const Editor = ({ isMobile }) => {
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthHeroesData.maxSlots
+                        ? sixthHeroesData.maxSlots // TODO - Minus filled slots
                         : heroesData.points - heroesPoints
                     }</strong>
                     <FormattedMessage id={
@@ -523,7 +524,7 @@ export const Editor = ({ isMobile }) => {
                   <FormattedMessage id={
                     gameMode === "warhammer-fantasy-6"
                       ? "editor.tooFewSlots"
-                      : "editor.tooManyPoints"
+                      : "editor.missingPoints"
                   }/>
                   <Icon symbol="error" color="red" />
                 </>
@@ -591,7 +592,7 @@ export const Editor = ({ isMobile }) => {
                 <>
                   <strong>{
                     gameMode === "warhammer-fantasy-6"
-                      ? sixthSpecialData.maxSlots
+                      ? sixthSpecialData.maxSlots // TODO - Minus filled slots
                       : specialData.points - specialPoints
                   }</strong>
                   <FormattedMessage id={
@@ -662,7 +663,7 @@ export const Editor = ({ isMobile }) => {
                 <>
                   <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthRareData.maxSlots
+                        ? sixthRareData.maxSlots // TODO - Minus filled slots
                         : rareData.points - rarePoints
                   }</strong>
                   <FormattedMessage id={
