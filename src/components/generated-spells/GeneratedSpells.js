@@ -79,7 +79,7 @@ export const GeneratedSpells = ({
   }
 
   return (
-    <div className="generated-spells__wrapper">
+    <p className="generated-spells__wrapper">
       <span className="generated-spells__header">
         <FormattedMessage id="misc.generatedSpells" />
         {` (${generatedSpellCount}/${maxGeneratedSpellCount}) `}
@@ -91,7 +91,7 @@ export const GeneratedSpells = ({
           onClick={() =>
             setShowGenerationList((showGenerationList) => !showGenerationList)
           }
-          icon="edit"
+          icon={showGenerationList ? "edit-off" : "edit"}
         />
       </span>
       {showGenerationList ? (
@@ -159,7 +159,7 @@ export const GeneratedSpells = ({
           ))
         )
       )}
-    </div>
+    </p>
   );
 };
 

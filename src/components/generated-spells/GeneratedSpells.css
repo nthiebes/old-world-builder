@@ -26,10 +26,7 @@
 }
 
 .generated-spells__spells-selection-list {
-  margin: 0 0.25rem;
-  padding-left: 1rem;
-  border-left: 1px var(--color-list) solid;
-  border-bottom: 1px var(--color-list) solid;
+  padding-left: 5px;
 }
 
 .generated-spells__list-header {
@@ -42,8 +39,8 @@
 }
 
 .generated-spells__spell-label:has(input:disabled) {
-  opacity: 0.5;
-  cursor: auto;
+  opacity: 0.3;
+  cursor: default;
 }
 
 .generated-spells__spell-index {
