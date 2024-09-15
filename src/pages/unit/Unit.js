@@ -25,6 +25,7 @@ import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
+import { getArmyData } from "../../utils/army";
 import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
 
 import "./Unit.css";
@@ -430,16 +431,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
           dispatch(
-            setArmy({
-              lords: updateIds(data.lords),
-              heroes: updateIds(data.heroes),
-              characters: updateIds(data.characters),
-              core: updateIds(data.core),
-              special: updateIds(data.special),
-              rare: updateIds(data.rare),
-              mercenaries: updateIds(data.mercenaries),
-              allies: updateIds(data.allies),
-            })
+            setArmy(
+              getArmyData({
+                data,
+                armyComposition: list.armyComposition || list.army,
+              })
+            )
           );
         },
       });

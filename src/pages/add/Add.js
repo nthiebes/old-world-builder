@@ -12,116 +12,11 @@ import { setArmy } from "../../state/army";
 import { getUnitName } from "../../utils/unit";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateIds } from "../../utils/id";
+import { getArmyData } from "../../utils/army";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
 
 import "./Add.css";
-
-const getArmyData = ({ data, armyComposition }) => {
-  // Remove units that don't belong to the army composition
-  const characters = data.characters.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
-  );
-  const core = data.core.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
-  );
-  const special = data.special.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
-  );
-  const rare = data.rare.filter(
-    (unit) =>
-      (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
-      !unit.armyComposition
-  );
-
-  // Get units moving category
-  const specialToCore = special.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "core"
-  );
-  const rareToCore = rare.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "core"
-  );
-  const rareToSpecial = rare.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "special"
-  );
-  const coreToSpecial = core.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "special"
-  );
-  const coreToRare = core.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
-  );
-  const specialToRare = special.filter(
-    (unit) =>
-      unit?.armyComposition &&
-      unit.armyComposition[armyComposition].category === "rare"
-  );
-  const charactersToRare = characters?.length
-    ? characters.filter(
-        (unit) =>
-          unit?.armyComposition &&
-          unit.armyComposition[armyComposition].category === "rare"
-      )
-    : [];
-
-  // Remove units from old category
-  const allCore = [...core, ...specialToCore, ...rareToCore].filter(
-    (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "core") ||
-      !unit.armyComposition
-  );
-  const allSpecial = [...special, ...coreToSpecial, ...rareToSpecial].filter(
-    (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "special") ||
-      !unit.armyComposition
-  );
-  const allRare = [
-    ...rare,
-    ...specialToRare,
-    ...charactersToRare,
-    ...coreToRare,
-  ].filter(
-    (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "rare") ||
-      !unit.armyComposition
-  );
-  const allCharacters = [...characters].filter(
-    (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "characters") ||
-      !unit.armyComposition
-  );
-
-  return {
-    lords: updateIds(data.lords),
-    heroes: updateIds(data.heroes),
-    characters: updateIds(allCharacters),
-    core: updateIds(allCore),
-    special: updateIds(allSpecial),
-    rare: updateIds(allRare),
-    mercenaries: updateIds(data.mercenaries),
-    allies: updateIds(data.allies),
-  };
-};
 
 let allAllies = [];
 let allMercenaries = [];
@@ -185,11 +80,14 @@ export const Add = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
-          const armyData = getArmyData({
-            data,
-            armyComposition: list.armyComposition || list.army,
-          });
-          dispatch(setArmy(armyData));
+          dispatch(
+            setArmy(
+              getArmyData({
+                data,
+                armyComposition: list.armyComposition || list.army,
+              })
+            )
+          );
         },
       });
     } else if (list && type === "allies" && allAllies.length === 0 && allies) {
