@@ -15,7 +15,6 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import {
   RulesIndex,
-  rulesMap,
   RulesLinksText,
   RulesWithIcon,
   RuleWithIcon,
@@ -23,11 +22,9 @@ import {
 import { nameMap } from "../magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
-import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { updateIds, getRandomId } from "../../utils/id";
-import { normalizeRuleName } from "../../utils/string";
 import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
 
 import "./Unit.css";
@@ -61,9 +58,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     [...army.core, ...army.special, ...army.rare].filter(
       (coreUnit) => coreUnit.detachment
     );
-  const handleRulesClick = ({ name }) => {
-    dispatch(openRulesIndex({ activeRule: name }));
-  };
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);

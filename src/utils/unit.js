@@ -1,6 +1,7 @@
 import { nameMap } from "../pages/magic";
 import { rulesMap, synonyms } from "../components/rules-index";
 import { normalizeRuleName } from "./string";
+import loresOfMagicWithSpells from "../assets/lores-of-magic-with-spells.json";
 
 export const getAllOptions = (
   {
@@ -271,4 +272,222 @@ export const getUnitOptionNotes = ({ notes, key, className, language }) => {
       </p>
     )
   );
+};
+
+/**
+ * Recursive lookup of a unit option satisfying the test function argument.
+ * By default, when onlyFollowActiveOptions is true, the function will only
+ * look deeper in sub options if the parent option is active.
+ * Return the first matching option or undefined.
+ */
+export const findOption = (
+  options,
+  testFunc,
+  onlyFollowActiveOptions = true
+) => {
+  if (Array.isArray(options)) {
+    for (const option of options) {
+      const foundOption = findOption(option, testFunc, onlyFollowActiveOptions);
+      if (foundOption) {
+        return foundOption;
+      }
+    }
+  } else if (testFunc(options)) {
+    return options;
+  } else if ((!onlyFollowActiveOptions || options.active) && options.options) {
+    return findOption(options.options, testFunc, onlyFollowActiveOptions);
+  }
+  return undefined;
+};
+
+/**
+ * Recursive lookup of all unit options satisfying the test function argument.
+ * By default, when onlyFollowActiveOptions is true, the function will only
+ * look deeper in sub options if the parent option is active.
+ * Return an array of options (empty if nothing found).
+ */
+export const findAllOptions = (
+  options,
+  testFunc,
+  onlyFollowActiveOptions = true
+) => {
+  const foundOptions = [];
+
+  if (Array.isArray(options)) {
+    for (const option of options) {
+      foundOptions.push(
+        ...findAllOptions(option, testFunc, onlyFollowActiveOptions)
+      );
+    }
+  } else {
+    if (testFunc(options)) {
+      foundOptions.push(options);
+    }
+    if ((!onlyFollowActiveOptions || options.active) && options.options) {
+      foundOptions.push(
+        ...findAllOptions(options.options, testFunc, onlyFollowActiveOptions)
+      );
+    }
+  }
+  return foundOptions;
+};
+
+/**
+ * Returns true if a unit is equipped with given itemName (not case sensitive),
+ * false otherwise.
+ */
+export const unitHasItem = (unit, itemName) => {
+  if (unit.items) {
+    for (const itemCategory of unit.items) {
+      if (
+        itemCategory.selected.find(
+          ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase()
+        )
+      ) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+/**
+ * Returns the lores of magic and their spells the unit can use based on its
+ * special rules and its selected lore.
+ */
+export const getUnitLoresWithSpells = (unit) => {
+  const specialRuleLores = unit.specialRules.name_en
+    .split(", ")
+    .filter((rule) => /^Lore of/.test(rule))
+    .reduce((result, rule) => {
+      const loreId = rule.toLowerCase().replace(/ /g, "-");
+
+      // If the unit has the Lore of Chaos, only the spell matching its Mark
+      // of Chaos must be available
+      if (loreId === "lore-of-chaos") {
+        const markOfChaosOption = findOption(
+          unit.options,
+          ({ active, name_en }) =>
+            active &&
+            /^Mark of (Chaos Undivided|Nurgle|Khorne|Slaanesh|Tzeentch)/.test(
+              name_en
+            )
+        );
+        const markOfChaos = markOfChaosOption
+          ? markOfChaosOption.name_en.slice(8).toLowerCase().replace(/ /g, "-")
+          : "chaos-undivided";
+
+        // No spell if Mark of Khorne
+        if (markOfChaos === "khorne") {
+          return result;
+        }
+
+        const loreOfChaosSpell = Object.entries(
+          loresOfMagicWithSpells[loreId]
+        ).find(
+          ([spellId, spellData]) => spellData["mark-of-chaos"] === markOfChaos
+        );
+        return {
+          ...result,
+          [loreId]: {
+            [loreOfChaosSpell[0]]: loreOfChaosSpell[1],
+          },
+        };
+      }
+
+      return {
+        ...result,
+        [loreId]: loresOfMagicWithSpells[loreId],
+      };
+    }, {});
+
+  const selectedLores =
+    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Lore Familiar")
+      ? {
+          "battle-magic": loresOfMagicWithSpells["battle-magic"],
+          daemonology: loresOfMagicWithSpells["daemonology"],
+          "dark-magic": loresOfMagicWithSpells["dark-magic"],
+          elementalism: loresOfMagicWithSpells["elementalism"],
+          "high-magic": loresOfMagicWithSpells["high-magic"],
+          illusion: loresOfMagicWithSpells["illusion"],
+          necromancy: loresOfMagicWithSpells["necromancy"],
+          "waaagh-magic": loresOfMagicWithSpells["waaagh-magic"],
+        }
+      : unitHasItem(unit, "Loremaster")
+      ? {
+          "lore-of-saphery": loresOfMagicWithSpells["lore-of-saphery"],
+          "battle-magic": loresOfMagicWithSpells["battle-magic"],
+          elementalism: loresOfMagicWithSpells["elementalism"],
+          "high-magic": loresOfMagicWithSpells["high-magic"],
+          illusion: loresOfMagicWithSpells["illusion"],
+        }
+      : findOption(
+          unit.options,
+          ({ active, name_en }) =>
+            active && /^Arise!, Level 1 Wizard/.test(name_en)
+        )
+      ? { necromancy: loresOfMagicWithSpells["necromancy"] }
+      : unit.lores?.length > 0
+      ? {
+          [unit.activeLore ?? unit.lores[0]]:
+            loresOfMagicWithSpells[unit.activeLore ?? unit.lores[0]],
+        }
+      : {};
+
+  return { ...specialRuleLores, ...selectedLores };
+};
+
+/**
+ * Search for "Level x Wizard" in the unit options and deduct the unit level of
+ * wizardry.
+ */
+export const getUnitWizardryLevel = (unit) => {
+  if (unitHasItem(unit, "Loremaster")) {
+    return 1;
+  }
+
+  const levelOptions = findAllOptions(unit.options, ({ name_en }) =>
+    /^(Arise!, )?Level [1234] Wizard/.test(name_en)
+  );
+
+  let wizardryLevel = 4;
+
+  for (let i = 0; i < levelOptions.length; i++) {
+    const levelOptionValue = Number(levelOptions[i].name_en.match(/[1234]/)[0]);
+
+    if (levelOptions[i].active) {
+      return unitHasItem(unit, "Master Of The Black Arts")
+        ? levelOptionValue + 1
+        : levelOptionValue;
+    }
+    if (levelOptionValue <= wizardryLevel) {
+      wizardryLevel = levelOptionValue - 1;
+    }
+  }
+
+  return wizardryLevel === 4 ? 0 : wizardryLevel;
+};
+
+/**
+ * Return the number of spells a unit can generate based on its level of
+ * wizardry, magic items and special rules.
+ */
+export const getUnitGeneratedSpellCount = (unit) => {
+  let generatedSpellsCount = getUnitWizardryLevel(unit);
+
+  if (unitHasItem(unit, "Wizarding Hat")) {
+    generatedSpellsCount += 1;
+  }
+  if (unitHasItem(unit, "Spell Familiar*")) {
+    generatedSpellsCount += 1;
+  }
+  if (
+    unitHasItem(unit, "Twin Heads") ||
+    unitHasItem(unit, "Silvery Wand") ||
+    unitHasItem(unit, "Tome Of Furion")
+  ) {
+    generatedSpellsCount += 1;
+  }
+
+  return generatedSpellsCount;
 };

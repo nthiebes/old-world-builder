@@ -1,0 +1,58 @@
+.generated-spells__wrapper {
+  margin-top: 0.75rem;
+}
+
+.generated-spells__header {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.generated-spells__header::after {
+  content: ":";
+}
+
+.generated-spells__edit-button {
+  height: auto;
+  margin-left: 0.25rem;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.generated-spells__spell-rule:not(
+    .generated-spells__spell-rule:last-of-type
+  )::after {
+  content: ", ";
+}
+
+.generated-spells__spells-selection-list {
+  margin: 0 0.25rem;
+  padding-left: 1rem;
+  border-left: 1px var(--color-list) solid;
+  border-bottom: 1px var(--color-list) solid;
+}
+
+.generated-spells__list-header {
+  margin: 0.5rem 0 0.25rem;
+  font-weight: bold;
+}
+
+.generated-spells__spell-label {
+  font-weight: normal;
+}
+
+.generated-spells__spell-label:has(input:disabled) {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.generated-spells__spell-index {
+  display: inline-block;
+  width: 3ch;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+
+.generated-spells__spell-index::after {
+  content: ".";
+}
