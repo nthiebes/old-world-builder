@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl";
 import { Spinner } from "../../components/spinner";
 import { useLanguage } from "../../utils/useLanguage";
 import germany from "../../assets/germany.svg";
-import usa from "../../assets/usa.svg";
+import uk from "../../assets/uk.svg";
 import spain from "../../assets/spain.svg";
 import france from "../../assets/france.svg";
 import italy from "../../assets/italy.svg";
@@ -70,7 +70,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                   width="24"
                   height="19"
                   alt=""
-                  src={usa}
+                  src={uk}
                   className="footer__language-icon"
                 />
                 English
