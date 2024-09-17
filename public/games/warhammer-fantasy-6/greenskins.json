@@ -1,39 +1,18 @@
 {
   "lords": [
     {
-      "id": "gorbad",
-      "name_de": "Gorbad Eisenfaust",
-      "name_en": "Gorbad Ironclaw",
-      "points": 375,
-      "named": true
-    },
-    {
-      "id": "azhag",
-      "name_de": "Azhag der Vernichter",
-      "name_en": "Azhag the Slaughterer",
-      "points": 550,
-      "named": true
-    },
-    {
       "id": "grimgor",
       "name_de": "Grimgork Eisenpelz",
       "name_en": "Grimgor Ironhide",
-      "points": 355,
+      "points": 600,
       "named": true
     },
     {
       "id": "wurrzag",
-      "name_de": "Wurrzag, da Prophet des Gross'n Grün",
       "name_en": "Wurrzag, da Great Green Prophet",
-      "points": 350,
+      "points": 500,
       "named": true,
       "mounts": [
-        {
-          "name_de": "Zu Fuß",
-          "name_en": "On foot",
-          "active": true,
-          "points": 0
-        },
         {
           "name_de": "Wildschwein",
           "name_en": "War Boar",
@@ -42,24 +21,9 @@
       ]
     },
     {
-      "id": "grom",
-      "name_de": "Grom der Fettsack vom Nebelberg",
-      "name_en": "Grom the Paunch of Misty Mountain",
-      "points": 285,
-      "named": true
-    },
-    {
-      "id": "skarsnik",
-      "name_de": "Skarsnik, Waaaghboss der Acht Gipfel",
-      "name_en": "Skarsnik, Warlord of the Eight Peaks",
-      "points": 275,
-      "named": true
-    },
-    {
-      "id": "ork-whaaaghboss",
-      "name_de": "Ork-Waaaghboss",
+      "id": "orc-warboss",
       "name_en": "Orc Warboss",
-      "points": 115,
+      "points": 110,
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -88,6 +52,10 @@
           "name_de": "Schild",
           "name_en": "Shield",
           "points": 3
+        },
+        {
+          "name_en": "Light armour",
+          "points": 3
         }
       ],
       "mounts": [
@@ -105,17 +73,17 @@
         {
           "name_de": "Lindwurm",
           "name_en": "Wyvern",
-          "points": 160
+          "points": 230
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
           "name_en": "Orc Boar Chariot",
-          "points": 85
+          "points": 80
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
           "name_en": "Orc Boar Chariot, Extra Orc Crew model",
-          "points": 90
+          "points": 86
         }
       ],
       "magic": {
@@ -124,10 +92,10 @@
       }
     },
     {
-      "id": "savage-whaaaghboss",
+      "id": "savage-warboss",
       "name_de": "Wildork-Waaaghboss",
-      "name_en": "Savage Orc Wargboss",
-      "points": 150,
+      "name_en": "Savage Orc Warboss",
+      "points": 125,
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -156,6 +124,10 @@
           "name_de": "Schild",
           "name_en": "Shield",
           "points": 3
+        },
+        {
+          "name_en": "Warpaint",
+          "points": 12
         }
       ],
       "mounts": [
@@ -169,11 +141,6 @@
           "name_de": "Wildschwein",
           "name_en": "War Boar",
           "points": 24
-        },
-        {
-          "name_de": "Lindwurm",
-          "name_en": "Wyvern",
-          "points": 160
         }
       ],
       "magic": {
@@ -182,15 +149,23 @@
       }
     },
     {
-      "id": "blork-whaaaghboss",
+      "id": "blorc-warboss",
       "name_de": "Schwarzork-Waaaghboss",
       "name_en": "Black Orc Warboss",
-      "points": 160,
+      "points": 135,
       "options": [
         {
           "name_de": "Schild",
           "name_en": "Shield",
           "points": 3
+        },
+        {
+          "name_en": "Light armour",
+          "points": 3
+        },
+        {
+          "name_en": "Heavy armour",
+          "points": 6
         }
       ],
       "mounts": [
@@ -208,17 +183,17 @@
         {
           "name_de": "Lindwurm",
           "name_en": "Wyvern",
-          "points": 160
+          "points": 230
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
           "name_en": "Orc Boar Chariot",
-          "points": 85
+          "points": 80
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
           "name_en": "Orc Boar Chariot, Extra Orc Crew model",
-          "points": 90
+          "points": 86
         }
       ],
       "magic": {
@@ -227,7 +202,7 @@
       }
     },
     {
-      "id": "goblin-whaaaghboss",
+      "id": "goblin-warboss",
       "name_de": "Goblin-Waaaghboss",
       "name_en": "Goblin Warboss",
       "points": 65,
@@ -246,7 +221,7 @@
         {
           "name_de": "Zusätzliche Handwaffe (nur unberitten)",
           "name_en": "Additional hand weapon (unless mounted)",
-          "points": 3
+          "points": 6
         },
         {
           "name_de": "Speer (nur beritten)",
@@ -258,6 +233,10 @@
         {
           "name_de": "Schild",
           "name_en": "Shield",
+          "points": 3
+        },
+        {
+          "name_en": "Light armour",
           "points": 3
         }
       ],
@@ -274,34 +253,24 @@
           "points": 18
         },
         {
-          "name_de": "Riesenspinne",
-          "name_en": "Giant Spider",
-          "points": 22
-        },
-        {
-          "name_de": "Gigantula",
-          "name_en": "Gigantic Spider",
-          "points": 50
-        },
-        {
           "name_de": "Goblin-Wolfsstreitwagen",
           "name_en": "Wolf Chariot",
-          "points": 50
+          "points": 60
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
           "name_en": "Wolf Chariot, Extra Goblin Crew model",
-          "points": 55
+          "points": 63
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
           "name_en": "Wolf Chariot, Extra Giant Wolf",
-          "points": 55
+          "points": 67
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
           "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
-          "points": 60
+          "points": 70
         }
       ],
       "magic": {
@@ -310,7 +279,7 @@
       }
     },
     {
-      "id": "nightgobline-whaaaghboss",
+      "id": "nightgoblin-warboss",
       "name_de": "Nachtgoblin-Waaaghboss",
       "name_en": "Night Goblin Warboss",
       "points": 55,
@@ -325,16 +294,6 @@
           "name_de": "Zweihandwaffe",
           "name_en": "Great weapon",
           "points": 6
-        },
-        {
-          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
-          "name_en": "Additional hand weapon (unless mounted)",
-          "points": 3
-        },
-        {
-          "name_de": "Speer (nur beritten)",
-          "name_en": "Spear (mounted only)",
-          "points": 3
         }
       ],
       "options": [
@@ -355,11 +314,6 @@
           "name_en": "On foot",
           "active": true,
           "points": 0
-        },
-        {
-          "name_de": "Höhlensquig",
-          "name_en": "Great Cave Squig",
-          "points": 40
         }
       ],
       "magic": {
@@ -368,10 +322,10 @@
       }
     },
     {
-      "id": "ork-grossschamane",
+      "id": "ork-greatshaman",
       "name_de": "Ork-Grossschamane",
       "name_en": "Orc Great Shaman",
-      "points": 165,
+      "points": 180,
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -390,21 +344,16 @@
           "name_de": "Wildschwein",
           "name_en": "War Boar",
           "points": 24
-        },
-        {
-          "name_de": "Lindwurm",
-          "name_en": "Wyvern",
-          "points": 160
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen",
           "name_en": "Orc Boar Chariot",
-          "points": 85
+          "points": 80
         },
         {
           "name_de": "Ork-Wildschweinstreitwagen, Zusätzliches Ork-Besatzungsmitglied",
           "name_en": "Orc Boar Chariot, Extra Orc Crew model",
-          "points": 90
+          "points": 86
         }
       ],
       "magic": {
@@ -413,15 +362,19 @@
       }
     },
     {
-      "id": "savage-grossschamane",
+      "id": "savage-greatshaman",
       "name_de": "Wildork-Grossschamane",
       "name_en": "Savage Orc Great Shaman",
-      "points": 170,
+      "points": 190,
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
           "name_en": "Level 4 Wizard",
           "points": 35
+        },
+        {
+          "name_en": "Warpaint",
+          "points": 12
         }
       ],
       "mounts": [
@@ -435,11 +388,6 @@
           "name_de": "Wildschwein",
           "name_en": "War Boar",
           "points": 24
-        },
-        {
-          "name_de": "Lindwurm",
-          "name_en": "Wyvern",
-          "points": 160
         }
       ],
       "magic": {
@@ -448,10 +396,10 @@
       }
     },
     {
-      "id": "goblin-grossschamane",
+      "id": "goblin-greatshaman",
       "name_de": "Goblin-Grossschamane",
       "name_en": "Goblin Great Shaman",
-      "points": 145,
+      "points": 155,
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -474,37 +422,22 @@
         {
           "name_de": "Goblin-Wolfsstreitwagen",
           "name_en": "Wolf Chariot",
-          "points": 50
+          "points": 60
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied",
           "name_en": "Wolf Chariot, Extra Goblin Crew model",
-          "points": 55
+          "points": 63
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzlicher Riesenwolf",
           "name_en": "Wolf Chariot, Extra Giant Wolf",
-          "points": 55
+          "points": 67
         },
         {
           "name_de": "Goblin-Wolfsstreitwagen, Zusätzliches Goblin-Besatzungsmitglied, Zusätzlicher Riesenwolf",
           "name_en": "Wolf Chariot, Extra Goblin Crew model, Extra Giant Wolf",
-          "points": 60
-        },
-        {
-          "name_de": "Arachnarok-Spinne",
-          "name_en": "Arachnarok Spider",
-          "points": 290
-        },
-        {
-          "name_de": "Arachnarok-Spinne, Netzschleuda",
-          "name_en": "Arachnarok Spider, Flinger",
-          "points": 320
-        },
-        {
-          "name_de": "Arachnarok-Spinne, Spinn'netzschrein",
-          "name_en": "Arachnarok Spider, Catchweb Spidershrine",
-          "points": 330
+          "points": 70
         }
       ],
       "magic": {
@@ -513,7 +446,7 @@
       }
     },
     {
-      "id": "nightgoblin-grossschamane",
+      "id": "nightgoblin-greatshaman",
       "name_de": "Nachtgoblin-Grossschamane",
       "name_en": "Night Goblin Great Shaman",
       "points": 140,
@@ -531,20 +464,6 @@
     }
   ],
   "heroes": [
-    {
-      "id": "gitilla",
-      "name_de": "Gitilla da Jäga",
-      "name_en": "Gitilla da Hunter",
-      "points": 110,
-      "named": true
-    },
-    {
-      "id": "snagla",
-      "name_de": "Snagla Madenspucka",
-      "name_en": "Snagla Grobspit",
-      "points": 115,
-      "named": true
-    },
     {
       "id": "ork-gargboss",
       "name_de": "Ork-Gargboss",
