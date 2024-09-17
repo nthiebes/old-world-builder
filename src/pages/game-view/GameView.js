@@ -645,9 +645,7 @@ export const GameView = () => {
                     <p key={unitId}>
                       <b>
                         <i>
-                          {unit.name ||
-                            unit[`name_${language}`] ||
-                            unit.name_en}
+                          {getUnitName({ unit, language })}
                           {": "}
                         </i>
                       </b>

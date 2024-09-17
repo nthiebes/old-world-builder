@@ -11,9 +11,22 @@
         "name_fr": "Empire de l'Homme",
         "items": ["general", "empire-of-man"],
         "allies": [
-          "dwarfen-mountain-holds",
-          "kingdom-of-bretonnia",
-          "wood-elf-realms"
+          { "army": "dwarfen-mountain-holds" },
+          { "army": "dwarfen-mountain-holds", "armyComposition": "royal-clan" },
+          {
+            "army": "dwarfen-mountain-holds",
+            "armyComposition": "expeditionary-force"
+          },
+          { "army": "kingdom-of-bretonnia" },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "errantry-crusades"
+          },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "bretonnian-exiles"
+          },
+          { "army": "wood-elf-realms" }
         ],
         "mercenaries": {
           "empire-of-man": [
@@ -41,9 +54,33 @@
         "items": ["general", "orc-and-goblin-tribes"],
         "armyComposition": ["nomadic-waaagh", "troll-horde"],
         "allies": [
-          "warriors-of-chaos",
-          "beastmen-brayherds",
-          "tomb-kings-of-khemri"
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "nomadic-waaagh"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "troll-horde"
+          },
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          },
+          { "army": "beastmen-brayherds" },
+          { "army": "tomb-kings-of-khemri" },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "nehekharan-royal-hosts"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "mortuary-cults"
+          }
         ],
         "mercenaries": {
           "orc-and-goblin-tribes": [
@@ -74,7 +111,24 @@
         "name_fr": "Forteresses Naines",
         "items": ["dwarfen-mountain-holds"],
         "armyComposition": ["royal-clan", "expeditionary-force"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
+        "allies": [
+          { "army": "empire-of-man" },
+          { "army": "kingdom-of-bretonnia" },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "errantry-crusades"
+          },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "bretonnian-exiles"
+          },
+          { "army": "high-elf-realms" },
+          { "army": "dwarfen-mountain-holds", "armyComposition": "royal-clan" },
+          {
+            "army": "dwarfen-mountain-holds",
+            "armyComposition": "expeditionary-force"
+          }
+        ],
         "mercenaries": {
           "dwarfen-mountain-holds": [
             {
@@ -136,9 +190,39 @@
         ],
         "armyComposition": ["wolves-of-the-sea", "heralds-of-darkness"],
         "allies": [
-          "orc-and-goblin-tribes",
-          "beastmen-brayherds",
-          "tomb-kings-of-khemri"
+          {
+            "army": "orc-and-goblin-tribes"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "nomadic-waaagh"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "troll-horde"
+          },
+          {
+            "army": "beastmen-brayherds"
+          },
+          {
+            "army": "tomb-kings-of-khemri"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "nehekharan-royal-hosts"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "mortuary-cults"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          }
         ],
         "mercenaries": {
           "warriors-of-chaos": [
@@ -170,10 +254,23 @@
         "items": ["general", "kingdom-of-bretonnia", "knightly-virtues"],
         "armyComposition": ["errantry-crusades", "bretonnian-exiles"],
         "allies": [
-          "dwarfen-mountain-holds",
-          "empire-of-man",
-          "high-elf-realms",
-          "wood-elf-realms"
+          { "army": "dwarfen-mountain-holds" },
+          { "army": "dwarfen-mountain-holds", "armyComposition": "royal-clan" },
+          {
+            "army": "dwarfen-mountain-holds",
+            "armyComposition": "expeditionary-force"
+          },
+          { "army": "empire-of-man" },
+          { "army": "high-elf-realms" },
+          { "army": "wood-elf-realms" },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "errantry-crusades"
+          },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "bretonnian-exiles"
+          }
         ],
         "mercenaries": {
           "kingdom-of-bretonnia": [
@@ -204,9 +301,33 @@
         "name_fr": "Braillehardes Hommes-bêtes",
         "items": ["general", "beastmen-brayherds", "chaos-mutations"],
         "allies": [
-          "orc-and-goblin-tribes",
-          "warriors-of-chaos",
-          "tomb-kings-of-khemri"
+          { "army": "orc-and-goblin-tribes" },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "nomadic-waaagh"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "troll-horde"
+          },
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          },
+          { "army": "tomb-kings-of-khemri" },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "nehekharan-royal-hosts"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "mortuary-cults"
+          }
         ],
         "mercenaries": {
           "beastmen-brayherds": [
@@ -224,7 +345,19 @@
         "name_es": "Wood Elf Realms",
         "name_fr": "Royaumes Elfes Sylvains",
         "items": ["general", "wood-elf-realms", "forest-spites"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "high-elf-realms"],
+        "allies": [
+          { "army": "empire-of-man" },
+          { "army": "kingdom-of-bretonnia" },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "errantry-crusades"
+          },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "bretonnian-exiles"
+          },
+          { "army": "high-elf-realms" }
+        ],
         "mercenaries": {
           "wood-elf-realms": [
             {
@@ -243,9 +376,33 @@
         "items": ["general", "tomb-kings-of-khemri"],
         "armyComposition": ["nehekharan-royal-hosts", "mortuary-cults"],
         "allies": [
-          "orc-and-goblin-tribes",
-          "warriors-of-chaos",
-          "beastmen-brayherds"
+          { "army": "orc-and-goblin-tribes" },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "nomadic-waaagh"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "troll-horde"
+          },
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          },
+          { "army": "beastmen-brayherds" },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "nehekharan-royal-hosts"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "mortuary-cults"
+          }
         ],
         "mercenaries": {
           "tomb-kings-of-khemri": [
@@ -263,7 +420,19 @@
         "name_es": "High Elf Realms",
         "name_fr": "Royaumes Hauts Elfes",
         "items": ["general", "high-elf-realms", "elven-honours"],
-        "allies": ["empire-of-man", "kingdom-of-bretonnia", "wood-elf-realms"],
+        "allies": [
+          { "army": "empire-of-man" },
+          { "army": "kingdom-of-bretonnia" },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "errantry-crusades"
+          },
+          {
+            "army": "kingdom-of-bretonnia",
+            "armyComposition": "bretonnian-exiles"
+          },
+          { "army": "wood-elf-realms" }
+        ],
         "mercenaries": {
           "high-elf-realms": [
             {
@@ -285,7 +454,17 @@
           "gifts-of-khaine",
           "forbidden-poisons"
         ],
-        "allies": ["warriors-of-chaos"],
+        "allies": [
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          }
+        ],
         "mercenaries": {
           "dark-elves": [
             {
@@ -302,7 +481,17 @@
         "name_es": "Skaven",
         "name_fr": "Skaven",
         "items": ["general", "skaven"],
-        "allies": ["warriors-of-chaos"],
+        "allies": [
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          }
+        ],
         "mercenaries": {
           "skaven": [
             {
@@ -319,7 +508,17 @@
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": ["tomb-kings-of-khemri"]
+        "allies": [
+          { "army": "tomb-kings-of-khemri" },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "nehekharan-royal-hosts"
+          },
+          {
+            "army": "tomb-kings-of-khemri",
+            "armyComposition": "mortuary-cults"
+          }
+        ]
       },
       {
         "id": "daemons-of-chaos",
@@ -348,7 +547,17 @@
         "name_es": "Ogre Kingdoms",
         "name_fr": "Royaumes Ogres",
         "items": ["general", "ogre-kingdoms", "big-names"],
-        "allies": ["orc-and-goblin-tribes"],
+        "allies": [
+          { "army": "orc-and-goblin-tribes" },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "nomadic-waaagh"
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "armyComposition": "troll-horde"
+          }
+        ],
         "mercenaries": {
           "ogre-kingdoms": [
             {
@@ -365,7 +574,7 @@
         "name_es": "Lizardmen",
         "name_fr": "Hommes-Lézards",
         "items": ["general", "lizardmen", "disciplines-old-ones"],
-        "allies": ["high-elf-realms"],
+        "allies": [{ "army": "high-elf-realms" }],
         "mercenaries": {
           "lizardmen": [
             {
@@ -382,7 +591,17 @@
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
-        "allies": ["warriors-of-chaos"],
+        "allies": [
+          { "army": "warriors-of-chaos" },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "wolves-of-the-sea"
+          },
+          {
+            "army": "warriors-of-chaos",
+            "armyComposition": "heralds-of-darkness"
+          }
+        ],
         "mercenaries": {
           "chaos-dwarfs": [
             {

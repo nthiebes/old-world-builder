@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Icon } from "../../components/icon";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { Header, Main } from "../../components/page";
+import { Expandable } from "../../components/expandable";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { getUnitName } from "../../utils/unit";
@@ -15,6 +16,8 @@ import { useLanguage } from "../../utils/useLanguage";
 import { getArmyData } from "../../utils/army";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
+
+import { nameMap } from "../magic";
 
 import "./Add.css";
 
@@ -92,15 +95,22 @@ export const Add = ({ isMobile }) => {
       });
     } else if (list && type === "allies" && allAllies.length === 0 && allies) {
       setAlliesLoaded(false);
-      allies.forEach((ally, index) => {
+      allies.forEach(({ army, armyComposition }, index) => {
         fetcher({
-          url: `games/${list.game}/${ally}`,
+          url: `games/${list.game}/${army}`,
           onSuccess: (data) => {
             const armyData = getArmyData({
               data,
-              armyComposition: ally,
+              armyComposition: armyComposition || army,
             });
-            allAllies = [...allAllies, { ...armyData, ally }];
+            allAllies = [
+              ...allAllies,
+              {
+                ...armyData,
+                ally: army,
+                armyComposition: armyComposition || army,
+              },
+            ];
             setAlliesLoaded(index + 1);
           },
         });
@@ -207,21 +217,30 @@ export const Add = ({ isMobile }) => {
             </p>
             <ul>
               {allAllies.map(
-                ({ characters, core, special, rare, ally }, index) => (
-                  <Fragment key={index}>
-                    <header className="editor__header">
-                      <h2>
-                        {game?.armies.find((army) => army.id === ally)[
-                          `name_${language}`
-                        ] ||
-                          game?.armies.find((army) => army.id === ally).name_en}
-                      </h2>
-                    </header>
+                (
+                  { characters, core, special, rare, ally, armyComposition },
+                  index
+                ) => (
+                  <Expandable
+                    key={index}
+                    headline={`${
+                      game?.armies.find((army) => army.id === ally)[
+                        `name_${language}`
+                      ] || game?.armies.find((army) => army.id === ally).name_en
+                    } ${
+                      armyComposition !== ally
+                        ? ` (${
+                            nameMap[armyComposition][`name_${language}`] ||
+                            nameMap[armyComposition].name_en
+                          })`
+                        : ""
+                    }`}
+                  >
                     {characters.map((unit) => getUnit(unit, ally))}
                     {core.map((unit) => getUnit(unit, ally))}
                     {special.map((unit) => getUnit(unit, ally))}
                     {rare.map((unit) => getUnit(unit, ally))}
-                  </Fragment>
+                  </Expandable>
                 )
               )}
             </ul>
