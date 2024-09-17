@@ -340,6 +340,7 @@ export const unitHasItem = (unit, itemName) => {
   if (unit.items) {
     for (const itemCategory of unit.items) {
       if (
+        itemCategory.selected &&
         itemCategory.selected.find(
           ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase()
         )
