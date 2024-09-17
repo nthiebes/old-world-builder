@@ -79,8 +79,8 @@ export const GeneratedSpells = ({
   }
 
   return (
-    <p className="generated-spells__wrapper">
-      <span className="generated-spells__header">
+    <div className="generated-spells__wrapper">
+      <p className="generated-spells__header">
         <FormattedMessage id="misc.generatedSpells" />
         {` (${generatedSpellCount}/${maxGeneratedSpellCount}) `}
         <Button
@@ -93,7 +93,7 @@ export const GeneratedSpells = ({
           }
           icon={showGenerationList ? "edit-off" : "edit"}
         />
-      </span>
+      </p>
       {showGenerationList ? (
         <ul className="generated-spells__spells-selection-list">
           {Object.entries(availableLoresWithSpells).map(([loreId, spells]) => (
@@ -159,7 +159,7 @@ export const GeneratedSpells = ({
           ))
         )
       )}
-    </p>
+    </div>
   );
 };
 
