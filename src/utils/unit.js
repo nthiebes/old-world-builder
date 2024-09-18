@@ -357,7 +357,7 @@ export const unitHasItem = (unit, itemName) => {
  * special rules and its selected lore.
  */
 export const getUnitLoresWithSpells = (unit) => {
-  const specialRuleLores = unit.specialRules.name_en
+  const specialRuleLores = (unit?.specialRules?.name_en || "")
     .split(", ")
     .filter((rule) => /^Lore of/.test(rule))
     .reduce((result, rule) => {
