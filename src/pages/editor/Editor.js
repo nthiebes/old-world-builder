@@ -15,7 +15,7 @@ import { ListItem } from "../../components/list/ListItem";
 import { ErrorMessage } from "../../components/error-message";
 import { getAllOptions, getUnitName } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
-import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
+import { getUnitPoints, getPoints, getAllPoints, getOccupiedSlots } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { validateList } from "../../utils/validation";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
@@ -171,30 +171,45 @@ export const Editor = ({ isMobile }) => {
       points: alliesPoints,
       armyComposition: list.armyComposition,
     });
+
+  const sixthLordsSlots = getOccupiedSlots({ list, type: "lords" });
+  const sixthHeroesSlots = getOccupiedSlots({ list, type: "heroes" });
+  const sixthCoreSlots = getOccupiedSlots({ list, type: "core" });
+  const sixthSpecialSlots = getOccupiedSlots({ list, type: "special" });
+  const sixthRareSlots = getOccupiedSlots({ list, type: "rare" });
+  
   const sixthLordData =
     list.lords &&
     getSlots({
       type: "lords",
+      occupiedSlots: sixthLordsSlots,
       armyPoints: list.points
     });
   const sixthHeroesData =
     list.heroes &&
     getSlots({
       type: "heroes",
+      occupiedSlots: sixthHeroesSlots,
       armyPoints: list.points
     });
   const sixthCoreData = getSlots({
       type: "core",
+      occupiedSlots: sixthCoreSlots,
       armyPoints: list.points
     });
   const sixthSpecialData = getSlots({
       type: "special",
+      occupiedSlots: sixthSpecialSlots,
       armyPoints: list.points
     });
   const sixthRareData = getSlots({
       type: "rare",
+      occupiedSlots: sixthRareSlots,
       armyPoints: list.points
     });
+
+  console.log(`--- sixthLordData ${JSON.stringify(sixthLordData)}`)
+
   const moreButtons = [
     {
       name: intl.formatMessage({
@@ -344,11 +359,11 @@ export const Editor = ({ isMobile }) => {
                 <FormattedMessage id="editor.lords" />
               </h2>
               <p className="editor__points">
-                {lordsData.diff > 0 || sixthLordData.diff > 0 ? (
+                { (gameMode == "the-old-world" && lordsData.diff > 0) || (gameMode == "warhammer-fantasy-6" && sixthLordData.overLimit ) ? (
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthLordData.diff
+                        ? sixthLordData.diff - sixthLordData.maxSlots
                         : lordsData.diff
                     }</strong>
                     <FormattedMessage id={
@@ -362,7 +377,7 @@ export const Editor = ({ isMobile }) => {
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthLordData.maxSlots // TODO - Minus filled slots
+                        ? sixthLordData.maxSlots - sixthLordData.diff
                         : lordsData.points - lordsPoints
                     }</strong>
                     <FormattedMessage id={
@@ -401,11 +416,11 @@ export const Editor = ({ isMobile }) => {
                 <FormattedMessage id="editor.heroes" />
               </h2>
               <p className="editor__points">
-                {heroesData.diff > 0 || sixthHeroesData.diff > 0 ? (
+                {(gameMode == "the-old-world" && heroesData.diff > 0) || (gameMode == "warhammer-fantasy-6" && sixthHeroesData.overLimit ) ? (
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthHeroesData.diff
+                        ? sixthHeroesData.diff - sixthHeroesData.maxSlots
                         : lordsData.diff
                     }</strong>
                     <FormattedMessage id={
@@ -419,7 +434,7 @@ export const Editor = ({ isMobile }) => {
                   <>
                     <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthHeroesData.maxSlots // TODO - Minus filled slots
+                        ? sixthHeroesData.maxSlots - sixthHeroesData.diff
                         : heroesData.points - heroesPoints
                     }</strong>
                     <FormattedMessage id={
@@ -514,11 +529,11 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.core" />
             </h2>
             <p className="editor__points">
-              {coreData.diff > 0 || sixthCoreData.minSlots < sixthCoreData.diff ? (
+              {(gameMode == "the-old-world" && coreData.diff > 0) || (gameMode == "warhammer-fantasy-6" && sixthCoreData.diff < sixthCoreData.minSlots) ? (
                 <>
                   <strong>{
                     gameMode === "warhammer-fantasy-6"
-                      ? sixthCoreData.minSlots
+                      ? sixthCoreData.minSlots - sixthCoreData.occupiedSlots
                       : coreData.diff
                   }</strong>
                   <FormattedMessage id={
@@ -530,9 +545,16 @@ export const Editor = ({ isMobile }) => {
                 </>
               ) : (
                 <>
-                  <strong>{corePoints}</strong>
-                  {` / ${coreData.points} `}
-                  <FormattedMessage id="app.points" />
+                  <strong>{
+                    gameMode === "warhammer-fantasy-6"
+                      ? sixthCoreData.occupiedSlots
+                      : corePoints
+                  }</strong>
+                  <FormattedMessage id={
+                    gameMode === "warhammer-fantasy-6"
+                      ? "editor.satisfactorySlots"
+                      : "app.points"
+                  }/>
                   <Icon symbol="check" />
                 </>
               )}
@@ -574,11 +596,11 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.special" />
             </h2>
             <p className="editor__points">
-              {specialData.diff > 0 || sixthSpecialData.diff > 0 ? (
+              {(gameMode == "the-old-world" && specialData.diff > 0) || (gameMode == "warhammer-fantasy-6" && sixthSpecialData.overLimit ) ? (
                 <>
                   <strong>{
                     gameMode === "warhammer-fantasy-6"
-                      ? sixthSpecialData.diff
+                      ? sixthSpecialData.diff - sixthSpecialData.maxSlots
                       : specialData.diff
                   }</strong>
                   <FormattedMessage id={
@@ -592,7 +614,7 @@ export const Editor = ({ isMobile }) => {
                 <>
                   <strong>{
                     gameMode === "warhammer-fantasy-6"
-                      ? sixthSpecialData.maxSlots // TODO - Minus filled slots
+                      ? sixthSpecialData.maxSlots - sixthSpecialData.diff
                       : specialData.points - specialPoints
                   }</strong>
                   <FormattedMessage id={
@@ -645,11 +667,11 @@ export const Editor = ({ isMobile }) => {
               <FormattedMessage id="editor.rare" />
             </h2>
             <p className="editor__points">
-              {rareData.diff > 0 || sixthRareData.diff > 0 ? (
+              {(gameMode == "the-old-world" && rareData.diff > 0) || (gameMode == "warhammer-fantasy-6" && sixthRareData.overLimit ) ? (
                 <>
                   <strong>{
                     gameMode === "warhammer-fantasy-6"
-                      ? sixthRareData.diff
+                      ? sixthRareData.diff - sixthRareData.maxSlots
                       : rareData.diff
                   }</strong>
                   <FormattedMessage id={
@@ -663,7 +685,7 @@ export const Editor = ({ isMobile }) => {
                 <>
                   <strong>{
                       gameMode === "warhammer-fantasy-6"
-                        ? sixthRareData.maxSlots // TODO - Minus filled slots
+                        ? sixthRareData.maxSlots - sixthRareData.diff
                         : rareData.points - rarePoints
                   }</strong>
                   <FormattedMessage id={

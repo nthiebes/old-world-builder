@@ -2162,30 +2162,31 @@ export const rules = {
 
 const sixthComposition = {
   "underTwoThousand": {
-    lords: { max: 0 },
+    lords: { min: 0, max: 0 },
     heroes: { min: 1, max: 3 },
     characters: { max: 3 },
-    core: { min: 2 },
-    special: { max: 3 },
-    rare: { max: 1 }
+    core: { min: 2, max: 100 },
+    special: { min: 0, max: 3 },
+    rare: { min: 0, max: 1 }
   },
   "underThreeThousand": {
-    lords: { max: 1 },
-    heroes: { max: 4 },
+    lords: {min: 0, max: 1 },
+    heroes: {min: 1, max: 4 },
     characters: { max: 4 },
-    core: { min: 3 },
-    special: { max: 4 },
-    rare: { max: 2 }
+    core: { min: 3, max: 100  },
+    special: {min: 0, max: 4 },
+    rare: {min: 0, max: 2 }
   },
 };
 
 export const getSlots = ({
   type,
+  occupiedSlots,
   armyPoints
 }) => {
   let categoryData = {};
-  let maxSlots, slots = 0;
-  if (Number(armyPoints) <= 2000){
+  let maxSlots = 0;
+  if (Number(armyPoints) < 2000){
     categoryData = sixthComposition["underTwoThousand"]; 
   } else {
     categoryData = sixthComposition["underThreeThousand"]
@@ -2194,12 +2195,16 @@ export const getSlots = ({
     return null;
   }
   maxSlots = categoryData[type]["max"];
+  
   return {
     minSlots: categoryData[type]["min"],
     maxSlots: categoryData[type]["max"],
     //categorySlots: ,
-    overLimit: maxSlots > slots,
-    diff: slots > maxSlots,
+    overLimit: occupiedSlots > maxSlots,
+    //underMin: occupiedSlots < minSlots,
+    occupiedSlots: occupiedSlots,
+    diff: Math.abs(occupiedSlots, maxSlots),
+    //diff: maxSlots - occupiedSlots
   };
 };
 
