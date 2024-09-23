@@ -34,6 +34,7 @@ export const RulesIndex = () => {
               "rules-index__iframe",
               !isLoading && "rules-index__iframe--show"
             )}
+            // TODO - Switch version
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="Warhammer: The Old World Online Rules Index"
             height="500"

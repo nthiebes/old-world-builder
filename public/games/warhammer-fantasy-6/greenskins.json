@@ -576,7 +576,11 @@
         {
           "name_de": "Armeestandartenträger",
           "name_en": "Battle Standard Bearer",
-          "points": 25
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
         }
       ],
       "mounts": [
@@ -966,7 +970,7 @@
   ],
   "core": [
     {
-      "id": "orks",
+      "id": "orcs",
       "name_de": "Ork-Krieger",
       "name_en": "Orc Boyz",
       "points": 6,
@@ -975,41 +979,34 @@
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 15
+          "points": 13
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 5
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          }
+          "points": 10
         }
       ],
       "equipment": [
         {
-          "name_de": "Handwaffen",
-          "name_en": "Hand weapon",
+          "name_en": "Choppa & Light Armour",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_de": "Speere",
-          "name_en": "Spears",
-          "points": 1,
+          "name_en": "Spear & Light Armour",
+          "points": 2,
           "perModel": true
         },
         {
-          "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Additional hand weapons",
-          "points": 1,
+          "name_en": "Additional hand weapon & Light Armour",
+          "points": 2,
           "perModel": true
         }
       ],
@@ -1029,7 +1026,7 @@
       ]
     },
     {
-      "id": "ork-arrow",
+      "id": "orc-arrow",
       "name_de": "Ork-Bogenschützen",
       "name_en": "Orc Arrer Boyz",
       "points": 7,
@@ -1038,37 +1035,12 @@
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 10
+          "points": 13
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
-        },
-        {
-          "name_de": "Standartenträger",
-          "name_en": "Standard bearer",
-          "points": 10
-        }
-      ],
-      "equipment": []
-    },
-    {
-      "id": "savageorks",
-      "name_de": "Wildorks",
-      "name_en": "Savage Orcs",
-      "points": 8,
-      "minimum": 10,
-      "command": [
-        {
-          "name_de": "Boss",
-          "name_en": "Boss",
-          "points": 15
-        },
-        {
-          "name_de": "Musiker",
-          "name_en": "Musician",
-          "points": 10
+          "points": 5
         },
         {
           "name_de": "Standartenträger",
@@ -1078,28 +1050,66 @@
       ],
       "equipment": [
         {
-          "name_de": "Handwaffen",
-          "name_en": "Hand weapon",
+          "name_en": "Choppa & Bow",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Light Armour",
+          "points": 1,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "savageorcs",
+      "name_de": "Wildorks",
+      "name_en": "Savage Orcs",
+      "points": 6,
+      "minimum": 10,
+      "command": [
+        {
+          "name_de": "Boss",
+          "name_en": "Boss",
+          "points": 13
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 5
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 10
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Choppa",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere",
-          "name_en": "Spears",
+          "name_en": "Spear",
           "points": 1,
           "perModel": true
         },
         {
           "name_de": "Bögen",
           "name_en": "Bows",
-          "points": 1,
+          "points": 3,
           "perModel": true
         },
         {
           "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Additional hand weapons",
-          "points": 1,
+          "name_en": "Additional hand weapon",
+          "points": 2,
           "perModel": true
         }
       ],
@@ -1111,9 +1121,8 @@
           "perModel": true
         },
         {
-          "name_de": "Große Spießaz",
-          "name_en": "Big Stabbas",
-          "points": 20
+          "name_en": "Warpaint",
+          "points": 1
         },
         {
           "name_de": "Moschaz",
@@ -1127,59 +1136,49 @@
       "id": "goblins",
       "name_de": "Goblins",
       "name_en": "Goblins",
-      "points": 3,
+      "points": 2,
       "minimum": 20,
       "command": [
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 10
+          "points": 8
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 4
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10
+          "points": 8
         }
       ],
       "equipment": [
         {
-          "name_de": "Handwaffen",
-          "name_en": "Hand weapon",
+          "name_en": "Hand weapon & Shield",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_de": "Speere",
-          "name_en": "Spears",
-          "points": 0.5,
+          "name_en": "Spear & Shield",
+          "points": 1,
           "perModel": true
         },
         {
           "name_de": "Kurzbögen",
           "name_en": "Short bows",
-          "points": 0.5,
+          "points": 1,
           "perModel": true
         }
       ],
       "options": [
         {
-          "name_de": "Schilde",
-          "name_en": "Shields",
-          "points": 0.5,
+          "name_en": "Light Armour",
+          "points": 1,
           "perModel": true
-        },
-        {
-          "name_de": "Fiese Schlitzer",
-          "name_en": "Nasty Skulkers",
-          "points": 10,
-          "maximum": 3,
-          "stackable": true
         }
       ]
     },
@@ -1193,17 +1192,17 @@
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 10
+          "points": 12
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 6
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10
+          "points": 12
         }
       ],
       "equipment": [
@@ -1225,13 +1224,18 @@
         {
           "name_de": "Kurzbögen",
           "name_en": "Short bows",
-          "points": 1,
+          "points": 2,
           "perModel": true
         },
         {
           "name_de": "Schilde",
           "name_en": "Shields",
           "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Light Armour",
+          "points": 0,
           "perModel": true
         }
       ]
@@ -1240,43 +1244,42 @@
       "id": "nightgoblins",
       "name_de": "Nachtgoblins",
       "name_en": "Night Goblins",
-      "points": 3,
+      "points": 2,
       "minimum": 20,
       "command": [
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 10
+          "points": 8
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 4
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10
+          "points": 8
         }
       ],
       "equipment": [
         {
           "name_de": "Handwaffen, Schilde",
-          "name_en": "Hand weapons, Shields",
+          "name_en": "Hand weapons & Shields",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_de": "Speere, Schilde",
-          "name_en": "Spears, Shields",
-          "points": 0,
+          "name_en": "Spears & Shields",
+          "points": 1,
           "perModel": true
         },
         {
-          "name_de": "Handwaffen, Kurzbögen",
-          "name_en": "Hand weapons, Shields",
-          "points": 0,
+          "name_en": "Hand weapons & Short Bows",
+          "points": 1,
           "perModel": true
         }
       ],
@@ -1284,7 +1287,10 @@
         {
           "name_de": "Netzgitz",
           "name_en": "Netters",
-          "points": 45
+          "points": 2,
+          "perModel": true,
+          "maximum": 10,
+          "stackable": true
         },
         {
           "name_de": "Fanatics",
@@ -1296,50 +1302,17 @@
       ]
     },
     {
-      "id": "goblin-spiderriders",
-      "name_de": "Waldgoblin-Spinnenreiter",
-      "name_en": "Forest Goblin Spider Riders",
-      "points": 13,
-      "minimum": 5,
-      "command": [
-        {
-          "name_de": "Boss",
-          "name_en": "Boss",
-          "points": 10
-        },
-        {
-          "name_de": "Musiker",
-          "name_en": "Musician",
-          "points": 10
-        },
-        {
-          "name_de": "Standartenträger",
-          "name_en": "Standard bearer",
-          "points": 10
-        }
-      ],
-      "equipment": [
-        {
-          "name_de": "Speere, Schilde",
-          "name_en": "Spears, Shields",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_de": "Kurzbögen",
-          "name_en": "Short bows",
-          "points": 1,
-          "perModel": true
-        }
-      ]
+      "id": "snotlings",
+      "name_de": "Snotlinge",
+      "name_en": "Snotlings",
+      "points": 25,
+      "minimum": 2,
+      "maximum": 10
     }
   ],
   "special": [
     {
-      "id": "blackorks",
+      "id": "blackorcs",
       "name_de": "Schwarzorks",
       "name_en": "Black Orcs",
       "points": 12,
@@ -1353,16 +1326,34 @@
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 6
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10,
+          "points": 12,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
           }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Choppa & Heavy Armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great Weapon & Heavy Armour",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Choppa, Additional hand weapon & Heavy Armour",
+          "points": 2,
+          "perModel": true
         }
       ],
       "options": [
@@ -1375,83 +1366,26 @@
       ]
     },
     {
-      "id": "ork-boarboys",
+      "id": "orcboarboys",
       "name_de": "Ork-Wildschweinreiter",
       "name_en": "Orc Boar Boyz",
-      "points": 16,
-      "minimum": 5,
-      "command": [
-        {
-          "name_de": "Boss",
-          "name_en": "Boss",
-          "points": 15
-        },
-        {
-          "name_de": "Musiker",
-          "name_en": "Musician",
-          "points": 10
-        },
-        {
-          "name_de": "Standartenträger",
-          "name_en": "Standard bearer",
-          "points": 10,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_de": "Handwaffen",
-          "name_en": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_de": "Schilde",
-          "name_en": "Shields",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_de": "Speere",
-          "name_en": "Spears",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_de": "Moschaz",
-          "name_en": "Big 'Uns",
-          "points": 4,
-          "perModel": true
-        }
-      ]
-    },
-    {
-      "id": "savageork-boarboys",
-      "name_de": "Wildork-Wildschweinreiter",
-      "name_en": "Savage Orc Boar Boyz",
       "points": 18,
       "minimum": 5,
       "command": [
         {
           "name_de": "Boss",
           "name_en": "Boss",
-          "points": 15
+          "points": 17
         },
         {
           "name_de": "Musiker",
           "name_en": "Musician",
-          "points": 10
+          "points": 7
         },
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10,
+          "points": 14,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
@@ -1460,35 +1394,10 @@
       ],
       "equipment": [
         {
-          "name_de": "Handwaffen",
-          "name_en": "Hand weapon",
+          "name_en": "Hand weapon, Spear, Light Armour & Shield",
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_de": "Handwaffen, Schilde",
-          "name_en": "Hand weapons, Shields",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_de": "Zusätzliche Handwaffen",
-          "name_en": "Additional hand weapons",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_de": "Speere",
-          "name_en": "Spears",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_de": "Speere, Schilde",
-          "name_en": "Spears, Shields",
-          "points": 4,
-          "perModel": true
         }
       ],
       "options": [
@@ -1501,62 +1410,122 @@
       ]
     },
     {
-      "id": "ork-boarchariot",
-      "name_de": "Ork-Wildschweinstreitwagen",
-      "name_en": "Orc Boar Chariot",
-      "points": 85,
+      "id": "savageorcboarboys",
+      "name_de": "Wildork-Wildschweinreiter",
+      "name_en": "Savage Orc Boar Boyz",
+      "points": 17,
+      "minimum": 5,
+      "command": [
+        {
+          "name_de": "Boss",
+          "name_en": "Boss",
+          "points": 17
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "points": 7
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "points": 14,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon & Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [
         {
-          "name_de": "Zusätzliches Ork-Besatzungsmitglied",
-          "name_en": "Extra Orc Crew model",
-          "points": 5
+          "name_de": "Moschaz",
+          "name_en": "Big 'Uns",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Warpaint",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Spears",
+          "points": 1,
+          "perModel": true
         }
       ]
     },
     {
-      "id": "goblin-wolfchariot",
+      "id": "orcboarchariot",
+      "name_de": "Ork-Wildschweinstreitwagen",
+      "name_en": "Orc Boar Chariot",
+      "points": 80,
+      "options": [
+        {
+          "name_de": "Zusätzliches Ork-Besatzungsmitglied",
+          "name_en": "Extra Orc Crew model",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "id": "goblinwolfchariot",
       "name_de": "Goblin-Wolfsstreitwagen",
       "name_en": "Goblin Wolf Chariot",
-      "points": 50,
+      "points": 60,
       "minimum": 1,
-      "maximum": 3,
+      "maximum": 2,
       "options": [
         {
           "name_de": "Zusätzliches Goblin-Besatzungsmitglied",
           "name_en": "Extra Goblin Crew model",
-          "points": 5,
+          "points": 3,
           "perModel": true
         },
         {
           "name_de": "Zusätzlicher Riesenwolf",
           "name_en": "Extra Giant Wolf",
+          "points": 7,
+          "perModel": true
+        },
+        {
+          "name_en": "Spears (3 Goblin Crew)",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Spears (4 Goblin Crew)",
+          "points": 4,
+          "perModel": true
+        }
+      ]
+    },
+    {
+      "id": "goblinspearchucka",
+      "name_de": "Goblin-Speerschleuda",
+      "name_en": "Goblin Spear Chukka",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 2,
+      "options": [
+        {
+          "name_de": "Orktreiba",
+          "name_en": "Orc Bully",
           "points": 5,
           "perModel": true
         }
       ]
     },
     {
-      "id": "goblin-spearchucka",
-      "name_de": "Goblin-Speerschleuda",
-      "name_en": "Goblin Spear Chukka",
-      "points": 35,
-      "options": [
-        {
-          "name_de": "Orktreiba",
-          "name_en": "Orc Bully",
-          "points": 10
-        }
-      ]
-    },
-    {
-      "id": "nightgoblin-squighoppaz",
-      "name_de": "Nachtgoblin-Squighoppaz",
-      "name_en": "Night Goblin Squig Hoppers",
-      "points": 12,
-      "minimum": 5
-    },
-    {
-      "id": "nightgoblin-squigherd",
+      "id": "nightgoblinsquigherd",
       "name_de": "Nachtgoblin-Squigherde",
       "name_en": "Night Goblin Squig Herd",
       "points": 0,
@@ -1564,35 +1533,25 @@
         {
           "name_de": "Nachtgoblin-Squigtreiba",
           "name_en": "Night Goblin Herder",
-          "points": 3,
+          "points": 2,
           "minimum": 1,
           "stackable": true
         },
         {
           "name_de": "Höhlensquigs",
           "name_en": "Cave Squig",
-          "points": 8,
+          "points": 14,
           "minimum": 3,
+          "stackable": true
+        },
+        {
+          "name_en": "Cave Squig Hopper",
+          "points": 18,
+          "minimum": 1,
           "stackable": true
         }
       ]
     },
-    {
-      "id": "snotlings",
-      "name_de": "Snotlinge",
-      "name_en": "Snotlings",
-      "points": 30,
-      "minimum": 2
-    },
-    {
-      "id": "trolls",
-      "name_de": "Trolle",
-      "name_en": "Trolls",
-      "points": 35,
-      "minimum": 1
-    }
-  ],
-  "rare": [
     {
       "id": "goblin-stonethrower",
       "name_de": "Goblin-Steinschleuda",
@@ -1605,79 +1564,52 @@
           "points": 10
         }
       ]
+    }
+  ],
+  "rare": [
+    {
+      "id": "trolls",
+      "name_de": "Trolle",
+      "name_en": "Trolls",
+      "points": 50,
+      "minimum": 3,
+      "options": [
+        {
+          "name_en": "River Trolls",
+          "points": 10,
+          "perModel": true
+        },
+        {
+          "name_en": "Stone Trolls",
+          "points": 5,
+          "perModel": true
+        }
+      ]
     },
     {
       "id": "doomdiver",
       "name_de": "Kamikazekatapult",
       "name_en": "Doom Diver Catapult",
-      "points": 80
+      "points": 80,
+      "options": [
+        {
+          "name_de": "Orktreiba",
+          "name_en": "Orc Bully",
+          "points": 10
+        }
+      ]
     },
     {
       "id": "snotling-wagons",
       "name_de": "Snotling-Kurbelwagen",
       "name_en": "Snotling Pump Wagon",
-      "points": 45,
-      "options": [
-        {
-          "name_de": "Stachelwalze",
-          "name_en": "Spiky Roller",
-          "points": 15
-        },
-        {
-          "name_de": "Segel",
-          "name_en": "Out-rigga",
-          "points": 10
-        },
-        {
-          "name_de": "Flügel",
-          "name_en": "Flappas",
-          "points": 5
-        },
-        {
-          "name_de": "Dicke Bummpilze",
-          "name_en": "Giant Explodin' Spores",
-          "points": 15
-        }
-      ]
-    },
-    {
-      "id": "arachnarok",
-      "name_de": "Arachnarok-Spinne",
-      "name_en": "Arachnarok Spider",
-      "points": 290,
-      "options": [
-        {
-          "name_de": "Netzschleuda",
-          "name_en": "Flinger",
-          "points": 30
-        }
-      ]
-    },
-    {
-      "id": "manglersquigs",
-      "name_de": "Kettensquigs",
-      "name_en": "Mangler Squigs",
-      "points": 65
-    },
-    {
-      "id": "stonetrolls",
-      "name_de": "Steintrolle",
-      "name_en": "Stone Trolls",
-      "points": 45,
-      "minimum": 1
-    },
-    {
-      "id": "rivertrolls",
-      "name_de": "Flusstrolle",
-      "name_en": "River Trolls",
-      "points": 45,
-      "minimum": 1
+      "points": 40
     },
     {
       "id": "giant",
       "name_de": "Riese",
       "name_en": "Giant",
-      "points": 200
+      "points": 205
     }
   ]
 }
