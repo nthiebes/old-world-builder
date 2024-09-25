@@ -101,7 +101,6 @@ export const Editor = ({ isMobile }) => {
   }
 
   const gameMode = list.game;
-  console.log(`--- gameMode ${gameMode}`)
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -207,8 +206,6 @@ export const Editor = ({ isMobile }) => {
       occupiedSlots: sixthRareSlots,
       armyPoints: list.points
     });
-
-  console.log(`--- sixthLordData ${JSON.stringify(sixthLordData)}`)
 
   const moreButtons = [
     {
