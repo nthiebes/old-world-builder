@@ -9,13 +9,12 @@ import { Spinner } from "../../components/spinner";
 import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { rulesMap, synonyms, sixthrulesMap } from "./rules-map";
 import "./RulesIndex.css";
 
 export const RulesIndex = () => {
   const { listId } = useParams();
   const list = useSelector((state) => state.lists.find(({ id }) => listId === id));
-  console.log(`--- gameMode ${list.game}`)
   let gameMode = "tow"
   if ( list.game == "warhammer-fantasy-6" ) {
     gameMode = "6th"
@@ -26,17 +25,25 @@ export const RulesIndex = () => {
   const { open, activeRule } = useSelector((state) => state.rulesIndex);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
+
   const handleClose = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
+
   console.log(`--- activeRule = ${JSON.stringify(activeRule)}`);
   const normalizedName = normalizeRuleName(activeRule);
   console.log(`--- normalizedName = ${normalizedName}`);
   const synonym = synonyms[normalizedName];
-  const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
+  let ruleData = rulesMap[normalizedName] || rulesMap[synonym];
+  if ( gameMode == "6th" ) {
+    //console.log(`--- Using 6th`);
+    ruleData = sixthrulesMap[normalizedName] || rulesMap[synonym];
+  }
   console.log(`--- ruleData = ${JSON.stringify(ruleData)}`);
   const rulePath = ruleData?.url;
+  console.log(`--- rulePath = ${JSON.stringify(rulePath)}`);
+  
 
   return (
     <Dialog open={open} onClose={handleClose}>

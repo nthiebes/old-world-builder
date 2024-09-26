@@ -1,5 +1,5 @@
 import towRulesIndexExport from "./tow-rules-index-export.json";
-import sixthRulesIndexExport from "./6ed-rules-index-export.json";
+import sixthRulesIndexExport from "./6th-rules-index-export.json";
 
 const additionalOWBRules = {
   "throwing spears": { url: "weapons-of-war/throwing-spear" },
@@ -210,6 +210,9 @@ export const synonyms = {
 
 export const rulesMap = {
   ...towRulesIndexExport,
-  ...sixthRulesIndexExport,
   ...additionalOWBRules,
+};
+
+export const sixthrulesMap = {
+  ...sixthRulesIndexExport
 };
