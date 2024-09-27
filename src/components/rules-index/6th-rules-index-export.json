@@ -5926,51 +5926,9 @@
     "troopType": "HI",
     "page": "RH, p. 12"
   },
-  "black orc boar chariot": {
-    "url": "unit/black-orc-boar-chariot",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "-",
-        "S": "5",
-        "T": "5",
-        "W": "4",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Chariot"
-      },
-      {
-        "A": "1",
-        "I": "3",
-        "M": "-",
-        "S": "4",
-        "T": "4",
-        "W": "-",
-        "BS": "3",
-        "Ld": "8",
-        "WS": "4",
-        "Name": "Black Orc Crew (x2)"
-      },
-      {
-        "A": "1",
-        "I": "3",
-        "M": "7",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "3",
-        "Name": "War Boars (x2)"
-      }
-    ],
-    "troopType": "HCh",
-    "page": "AJ:O&GT, p. 41"
-  },
-  "black orc mob": {
-    "url": "unit/black-orc-mob",
+  "black orc regiment": {
+    "url": "unit/black-orc",
+    "maximum": 1,
     "stats": [
       {
         "A": "1",
@@ -7589,12 +7547,12 @@
     "troopType": "HCa",
     "page": "LM, p. 10"
   },
-  "common troll mob": {
-    "url": "unit/common-troll-mob",
+  "trolls": {
+    "url": "unit/troll",
     "stats": [
       {
         "A": "3",
-        "I": "2",
+        "I": "1",
         "M": "6",
         "S": "5",
         "T": "4",
@@ -8371,14 +8329,14 @@
     "page": "DoC, p. 19"
   },
   "doom diver catapult": {
-    "url": "unit/doom-diver-catapult",
+    "url": "unit/doom-diver-catapault",
     "stats": [
       {
         "A": "-",
         "I": "-",
         "M": "-",
         "S": "-",
-        "T": "5",
+        "T": "7",
         "W": "3",
         "BS": "-",
         "Ld": "-",
@@ -8387,7 +8345,7 @@
       },
       {
         "A": "3",
-        "I": "3",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "3",
@@ -8395,7 +8353,7 @@
         "BS": "3",
         "Ld": "4",
         "WS": "2",
-        "Name": "Goblin Crew"
+        "Name": "Goblin Crew (x3)"
       }
     ],
     "troopType": "WM",
@@ -9966,15 +9924,15 @@
     "troopType": "RI",
     "page": "RH, p. 15"
   },
-  "goblin bolt throwa": {
-    "url": "unit/goblin-bolt-throwa",
+  "goblin spear chukka": {
+    "url": "unit/spear-chukka",
     "stats": [
       {
         "A": "-",
         "I": "-",
         "M": "-",
         "S": "-",
-        "T": "5",
+        "T": "7",
         "W": "3",
         "BS": "-",
         "Ld": "-",
@@ -9983,15 +9941,15 @@
       },
       {
         "A": "3",
-        "I": "3",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "3",
         "W": "3",
         "BS": "3",
-        "Ld": "4",
+        "Ld": "6",
         "WS": "2",
-        "Name": "Goblin Crew"
+        "Name": "Goblin Crew x3"
       }
     ],
     "troopType": "WM",
@@ -10067,15 +10025,15 @@
     "page": "RH, p. 16"
   },
   "goblin rock lobber": {
-    "url": "unit/goblin-rock-lobber",
+    "url": "unit/rock-lobber",
     "stats": [
       {
         "A": "-",
         "I": "-",
         "M": "-",
         "S": "-",
-        "T": "6",
-        "W": "4",
+        "T": "7",
+        "W": "3",
         "BS": "-",
         "Ld": "-",
         "WS": "-",
@@ -10083,7 +10041,7 @@
       },
       {
         "A": "3",
-        "I": "3",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "3",
@@ -10091,7 +10049,7 @@
         "BS": "3",
         "Ld": "4",
         "WS": "2",
-        "Name": "Goblin Crew"
+        "Name": "Goblin Crew (x3)"
       }
     ],
     "troopType": "WM",
@@ -10176,7 +10134,7 @@
       },
       {
         "A": "1",
-        "I": "3",
+        "I": "2",
         "M": "-",
         "S": "3",
         "T": "-",
@@ -13088,7 +13046,7 @@
     "page": "RH, p. 18"
   },
   "night goblin squig herd": {
-    "url": "unit/night-goblin-squig-herd",
+    "url": "unit/night-goblin-squig-herder",
     "stats": [
       {
         "A": "1",
@@ -13098,14 +13056,14 @@
         "T": "3",
         "W": "1",
         "BS": "3",
-        "Ld": "6",
+        "Ld": "5",
         "WS": "2",
         "Name": "Squig Herder"
       },
       {
         "A": "2",
         "I": "4",
-        "M": "4",
+        "M": "2D6",
         "S": "5",
         "T": "3",
         "W": "1",
@@ -13337,24 +13295,12 @@
     "troopType": "RI",
     "page": "RH, p. 13"
   },
-  "orc boar boy mob": {
-    "url": "unit/orc-boar-boy-mob",
+  "orc boar boyz": {
+    "url": "unit/orc-boar-boy",
     "stats": [
       {
         "A": "1",
-        "I": "3",
-        "M": "-",
-        "S": "3",
-        "T": "4",
-        "W": "1",
-        "BS": "3",
-        "Ld": "6",
-        "WS": "3",
-        "Name": "Boar Boy"
-      },
-      {
-        "A": "2",
-        "I": "3",
+        "I": "2",
         "M": "-",
         "S": "3",
         "T": "4",
@@ -13362,6 +13308,61 @@
         "BS": "3",
         "Ld": "7",
         "WS": "3",
+        "Name": "Boar Boy"
+      },
+      {
+        "A": "2",
+        "I": "2",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Boss"
+      },
+      {
+        "A": "1",
+        "I": "3",
+        "M": "7",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "War Boar"
+      }
+    ],
+    "troopType": "HCa",
+    "page": "RH, p. 29"
+  },
+  "savage orc boar boyz": {
+    "url": "unit/savage-orc-boar-boy",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "-",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Boar Boy"
+      },
+      {
+        "A": "2",
+        "I": "2",
+        "M": "-",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "4",
         "Name": "Boss"
       },
       {
@@ -13397,7 +13398,7 @@
       },
       {
         "A": "1",
-        "I": "3",
+        "I": "2",
         "M": "-",
         "S": "3",
         "T": "-",
@@ -14643,8 +14644,8 @@
     "troopType": "MCa",
     "page": "LM, p. 11"
   },
-  "river troll mob": {
-    "url": "unit/river-troll-mob",
+  "river troll": {
+    "url": "unit/river-troll",
     "stats": [
       {
         "A": "3",
@@ -14652,7 +14653,7 @@
         "M": "6",
         "S": "5",
         "T": "4",
-        "W": "4",
+        "W": "3",
         "BS": "1",
         "Ld": "4",
         "WS": "3",
@@ -16406,8 +16407,8 @@
     "troopType": "Be",
     "page": "LM, p. 13"
   },
-  "stone troll mob": {
-    "url": "unit/stone-troll-mob",
+  "stone troll": {
+    "url": "unit/stone-troll",
     "stats": [
       {
         "A": "3",
@@ -16417,7 +16418,7 @@
         "T": "4",
         "W": "3",
         "BS": "1",
-        "Ld": "5",
+        "Ld": "4",
         "WS": "3",
         "Name": "Stone Troll"
       }
@@ -17222,25 +17223,6 @@
     ],
     "troopType": "MCr",
     "page": "LM, p. 15"
-  },
-  "troll hag": {
-    "url": "unit/troll-hag",
-    "stats": [
-      {
-        "A": "3",
-        "I": "2",
-        "M": "5",
-        "S": "6",
-        "T": "5",
-        "W": "6",
-        "BS": "2",
-        "Ld": "8",
-        "WS": "2",
-        "Name": "Troll Hag"
-      }
-    ],
-    "troopType": "Be",
-    "page": "AJ:O&GT, p. 38"
   },
   "tuskgor chariot": {
     "url": "unit/tuskgor-chariot",

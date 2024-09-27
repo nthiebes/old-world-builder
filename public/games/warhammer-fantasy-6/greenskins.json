@@ -1307,15 +1307,23 @@
       "name_en": "Snotlings",
       "points": 25,
       "minimum": 2,
-      "maximum": 10
+      "maximum": 10,
+      "equipment": [
+        {
+          "name_de": "Handwaffen",
+          "name_en": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ]
     }
   ],
   "special": [
     {
       "id": "blackorcs",
-      "name_de": "Schwarzorks",
-      "name_en": "Black Orcs",
-      "points": 12,
+      "name_en": "Black Orc Regiment",
+      "points": 10,
       "minimum": 10,
       "command": [
         {
@@ -1528,6 +1536,7 @@
       "id": "nightgoblinsquigherd",
       "name_de": "Nachtgoblin-Squigherde",
       "name_en": "Night Goblin Squig Herd",
+      "maximum": 1,
       "points": 0,
       "options": [
         {
