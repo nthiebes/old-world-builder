@@ -962,6 +962,14 @@
           "points": 35
         }
       ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "active": true,
+          "points": 0
+        }
+      ],
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
@@ -975,6 +983,7 @@
       "name_en": "Orc Boyz",
       "points": 6,
       "minimum": 10,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -989,7 +998,14 @@
         {
           "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50,
+            "notes": {
+              "name_en": "Must be upgraded to Big 'Uns"
+            }
+          }
         }
       ],
       "equipment": [
@@ -1021,7 +1037,11 @@
           "name_de": "Moschaz",
           "name_en": "Big 'Uns",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per army (At least as many 'normal' models of this type in other units)",
+            "name_fr": "0-1 par armée"
+          }
         }
       ]
     },
@@ -1031,6 +1051,7 @@
       "name_en": "Orc Arrer Boyz",
       "points": 7,
       "minimum": 10,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1070,6 +1091,7 @@
       "name_en": "Savage Orcs",
       "points": 6,
       "minimum": 10,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1128,7 +1150,11 @@
           "name_de": "Moschaz",
           "name_en": "Big 'Uns",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per army (At least as many 'normal' models of this type in other units)",
+            "name_fr": "0-1 par armée"
+          }
         }
       ]
     },
@@ -1138,6 +1164,7 @@
       "name_en": "Goblins",
       "points": 2,
       "minimum": 20,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1188,6 +1215,7 @@
       "name_en": "Goblin Wolf Riders",
       "points": 10,
       "minimum": 5,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1236,7 +1264,13 @@
         {
           "name_en": "Light Armour",
           "points": 0,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "No longer count as 'Fast Cavalry'",
+            "name_de": "",
+            "name_es": "",
+            "name_fr": ""
+          }
         }
       ]
     },
@@ -1246,6 +1280,7 @@
       "name_en": "Night Goblins",
       "points": 2,
       "minimum": 20,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1308,6 +1343,7 @@
       "points": 25,
       "minimum": 2,
       "maximum": 10,
+      "mounts": [],
       "equipment": [
         {
           "name_de": "Handwaffen",
@@ -1316,7 +1352,13 @@
           "perModel": true,
           "active": true
         }
-      ]
+      ],
+      "notes": {
+        "name_en": "0-1 Snotling Swarm per army",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "special": [
@@ -1325,6 +1367,7 @@
       "name_en": "Black Orc Regiment",
       "points": 10,
       "minimum": 10,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1371,7 +1414,13 @@
           "points": 1,
           "perModel": true
         }
-      ]
+      ],
+      "notes": {
+        "name_en": "0-1 Black Orc Regiment per army",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "id": "orcboarboys",
@@ -1379,6 +1428,7 @@
       "name_en": "Orc Boar Boyz",
       "points": 18,
       "minimum": 5,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1413,7 +1463,11 @@
           "name_de": "Moschaz",
           "name_en": "Big 'Uns",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per army (At least as many 'normal' models of this type in other units)",
+            "name_fr": "0-1 par armée"
+          }
         }
       ]
     },
@@ -1423,6 +1477,7 @@
       "name_en": "Savage Orc Boar Boyz",
       "points": 17,
       "minimum": 5,
+      "mounts": [],
       "command": [
         {
           "name_de": "Boss",
@@ -1457,7 +1512,11 @@
           "name_de": "Moschaz",
           "name_en": "Big 'Uns",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per army (At least as many 'normal' models of this type in other units)",
+            "name_fr": "0-1 par armée"
+          }
         },
         {
           "name_en": "Warpaint",
@@ -1476,6 +1535,7 @@
       "name_de": "Ork-Wildschweinstreitwagen",
       "name_en": "Orc Boar Chariot",
       "points": 80,
+      "mounts": [],
       "options": [
         {
           "name_de": "Zusätzliches Ork-Besatzungsmitglied",
@@ -1491,6 +1551,7 @@
       "points": 60,
       "minimum": 1,
       "maximum": 2,
+      "mounts": [],
       "options": [
         {
           "name_de": "Zusätzliches Goblin-Besatzungsmitglied",
@@ -1523,6 +1584,7 @@
       "points": 35,
       "minimum": 1,
       "maximum": 2,
+      "mounts": [],
       "options": [
         {
           "name_de": "Orktreiba",
@@ -1538,6 +1600,7 @@
       "name_en": "Night Goblin Squig Herd",
       "maximum": 1,
       "points": 0,
+      "mounts": [],
       "options": [
         {
           "name_de": "Nachtgoblin-Squigtreiba",
@@ -1559,13 +1622,20 @@
           "minimum": 1,
           "stackable": true
         }
-      ]
+      ],
+      "notes": {
+        "name_en": "0-1 Night Goblin Squig Herd per army",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     },
     {
       "id": "goblin-stonethrower",
       "name_de": "Goblin-Steinschleuda",
       "name_en": "Goblin Rock Lobber",
       "points": 85,
+      "mounts": [],
       "options": [
         {
           "name_de": "Orktreiba",
@@ -1582,6 +1652,7 @@
       "name_en": "Trolls",
       "points": 50,
       "minimum": 3,
+      "mounts": [],
       "options": [
         {
           "name_en": "River Trolls",
@@ -1600,6 +1671,7 @@
       "name_de": "Kamikazekatapult",
       "name_en": "Doom Diver Catapult",
       "points": 80,
+      "mounts": [],
       "options": [
         {
           "name_de": "Orktreiba",
@@ -1612,13 +1684,15 @@
       "id": "snotling-wagons",
       "name_de": "Snotling-Kurbelwagen",
       "name_en": "Snotling Pump Wagon",
-      "points": 40
+      "points": 40,
+      "mounts": []
     },
     {
       "id": "giant",
       "name_de": "Riese",
       "name_en": "Giant",
-      "points": 205
+      "points": 205,
+      "mounts": []
     }
   ]
 }
