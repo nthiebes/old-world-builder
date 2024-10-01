@@ -1,5 +1,7 @@
 import { nameMap } from "../pages/magic";
-import { rulesMap, synonyms } from "../components/rules-index";
+import { sixthrulesMap, rulesMap, synonyms } from "../components/rules-index";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { normalizeRuleName } from "./string";
 
 export const getAllOptions = (
@@ -234,13 +236,21 @@ export const getPage = (name) => {
 };
 
 export const getStats = (unit) => {
+  const { listId } = useParams();
+  const list = useSelector((state) => state.lists.find(({ id }) => listId === id));
   const normalizedName = normalizeRuleName(unit.name_en);
   const synonym = synonyms[normalizedName];
-  const stats = rulesMap[synonym || normalizedName]?.stats || [];
   const activeMount = unit.mounts.find((mount) => mount.active);
   const normalizedMountName = normalizeRuleName(activeMount?.name_en || "");
   const mountSynonym = synonyms[normalizedMountName];
-  const mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  let stats = rulesMap[synonym || normalizedName]?.stats || [];
+  let mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  if ( list.game == "warhammer-fantasy-6" ) {
+    stats = sixthrulesMap[synonym || normalizedName]?.stats || [];
+    mountStats = sixthrulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  } else if ( list.game == "warhammer-fantasy-8" ) {
+    // TBD
+  }
   const detachments = unit.detachments || [];
   const detachmentStats = [];
 

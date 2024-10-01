@@ -89,6 +89,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa"
       }
     },
     {
@@ -146,6 +149,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa, Frenzy, Warpaint"
       }
     },
     {
@@ -199,6 +205,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Ignore Greenskin Panic, Choppa, Quell Animosity"
       }
     },
     {
@@ -276,6 +285,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Fear Elves"
       }
     },
     {
@@ -319,6 +331,9 @@
       "magic": {
         "types": ["weapon", "armor", "talisman", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Fear Elves, Hate (Dwarfs)"
       }
     },
     {
@@ -359,6 +374,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa"
       }
     },
     {
@@ -393,6 +411,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa, Frenzy, Warpaint"
       }
     },
     {
@@ -443,6 +464,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Fear Elves"
       }
     },
     {
@@ -460,6 +484,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 100
+      },
+      "specialRules": {
+        "name_en": "Fear Elves, Hate (Dwarfs)"
       }
     }
   ],
@@ -537,6 +564,9 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa"
       }
     },
     {
@@ -606,6 +636,9 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa, Frenzy, Warpaint"
       }
     },
     {
@@ -658,6 +691,9 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Ignore Greenskin Panic, Choppa, Quell Animosity"
       }
     },
     {
@@ -763,6 +799,9 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Fear Elves"
       }
     },
     {
@@ -838,6 +877,9 @@
           "enchanted-item"
         ],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Fear Elves, Hate (Dwarfs)"
       }
     },
     {
@@ -898,6 +940,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa"
       }
     },
     {
@@ -948,6 +993,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Fear Elves"
       }
     },
     {
@@ -973,6 +1021,9 @@
       "magic": {
         "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
         "maxPoints": 50
+      },
+      "specialRules": {
+        "name_en": "Fear Elves, Hate (Dwarfs)"
       }
     }
   ],
@@ -1043,7 +1094,10 @@
             "name_fr": "0-1 par armée"
           }
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Big'Uns"
+      }
     },
     {
       "id": "orc-arrow",
@@ -1083,7 +1137,10 @@
           "points": 1,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Ignore Goblin Panic, Choppa"
+      }
     },
     {
       "id": "savageorcs",
@@ -1156,7 +1213,10 @@
             "name_fr": "0-1 par armée"
           }
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Frenzy, Warpaint, Big'Uns"
+      }
     },
     {
       "id": "goblins",
@@ -1207,7 +1267,10 @@
           "points": 1,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Fear Elves"
+      }
     },
     {
       "id": "goblin-wolves",
@@ -1272,7 +1335,10 @@
             "name_fr": ""
           }
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Fear Elves, Fast Cavalry"
+      }
     },
     {
       "id": "nightgoblins",
@@ -1334,7 +1400,10 @@
           "maximum": 3,
           "stackable": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Fear Elves, Hate (Dwarfs), Fanatics, Netters"
+      }
     },
     {
       "id": "snotlings",
@@ -1358,6 +1427,9 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "specialRules": {
+        "name_en": "Horde, Unbreakable, Nobody Cares"
       }
     }
   ],
@@ -1420,6 +1492,9 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "specialRules": {
+        "name_en": "Ignore Greenskin Panic, Choppa, Quell Animosity"
       }
     },
     {
@@ -1469,7 +1544,10 @@
             "name_fr": "0-1 par armée"
           }
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Ignore Goblin Panic, Thick Skinned, Tusker Charge, Big'Uns"
+      }
     },
     {
       "id": "savageorcboarboys",
@@ -1528,7 +1606,10 @@
           "points": 1,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Animosity, Ignore Goblin Panic, Frenzy, Warpaint, Thick Skinned, Tusker Charge, Big'Uns"
+      }
     },
     {
       "id": "orcboarchariot",
@@ -1542,7 +1623,10 @@
           "name_en": "Extra Orc Crew model",
           "points": 6
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Tusker Charge, Chariots"
+      }
     },
     {
       "id": "goblinwolfchariot",
@@ -1575,7 +1659,10 @@
           "points": 4,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Chariots"
+      }
     },
     {
       "id": "goblinspearchucka",
@@ -1592,7 +1679,10 @@
           "points": 5,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Spear Chukka"
+      }
     },
     {
       "id": "nightgoblinsquigherd",
@@ -1628,6 +1718,9 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "specialRules": {
+        "name_en": "Animosity, Fear Elves, Hate (Dwarfs), Squigs"
       }
     },
     {
@@ -1642,7 +1735,10 @@
           "name_en": "Orc Bully",
           "points": 10
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Rock Lobber"
+      }
     }
   ],
   "rare": [
@@ -1664,7 +1760,10 @@
           "points": 5,
           "perModel": true
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Fear, Stupidity, Troll Vomit, Regenerate, Trollish Types"
+      }
     },
     {
       "id": "doomdiver",
@@ -1678,21 +1777,30 @@
           "name_en": "Orc Bully",
           "points": 10
         }
-      ]
+      ],
+      "specialRules": {
+        "name_en": "Doom Diver Catapult"
+      }
     },
     {
       "id": "snotling-wagons",
       "name_de": "Snotling-Kurbelwagen",
       "name_en": "Snotling Pump Wagon",
       "points": 40,
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Snotling Pump Wagon, 2D6 Impact Hits, Unbreakable"
+      }
     },
     {
       "id": "giant",
       "name_de": "Riese",
       "name_en": "Giant",
       "points": 205,
-      "mounts": []
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Ignore Greenskin Panic, Large Target, Terror, Fall Over, Move, Special Attacks, Stubborn"
+      }
     }
   ]
 }

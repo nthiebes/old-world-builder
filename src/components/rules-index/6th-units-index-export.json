@@ -890,14 +890,14 @@
     "troopType": "HCa",
     "page": "VC, p. 14"
   },
-  "black orc bigboss": {
-    "url": "unit/black-orc-bigboss",
+  "black orc big boss": {
+    "url": "unit/black-orc-big-boss",
     "stats": [
       {
         "A": "3",
-        "I": "5",
+        "I": "3",
         "M": "4",
-        "S": "4",
+        "S": "5",
         "T": "5",
         "W": "2",
         "BS": "3",
@@ -4969,12 +4969,12 @@
     "troopType": "RI",
     "page": "RH, p. 23"
   },
-  "goblin oddgit": {
-    "url": "unit/goblin-oddgit",
+  "goblin shaman": {
+    "url": "unit/goblin-shaman",
     "stats": [
       {
         "A": "1",
-        "I": "3",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "3",
@@ -4982,26 +4982,26 @@
         "BS": "3",
         "Ld": "6",
         "WS": "3",
-        "Name": "Goblin Oddgit"
+        "Name": "Goblin Shaman"
       }
     ],
     "troopType": "RI",
     "page": "RH, p. 16"
   },
-  "goblin oddnob": {
-    "url": "unit/goblin-oddnob",
+  "goblin great shaman": {
+    "url": "unit/goblin-great-shaman",
     "stats": [
       {
         "A": "2",
-        "I": "4",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "4",
         "W": "3",
         "BS": "3",
         "Ld": "7",
-        "WS": "4",
-        "Name": "Goblin Oddnob"
+        "WS": "2",
+        "Name": "Goblin Great Shaman"
       }
     ],
     "troopType": "RI",
@@ -7940,8 +7940,8 @@
     "troopType": "RI",
     "page": "AJ:TKoK, p. 41"
   },
-  "night goblin bigboss": {
-    "url": "unit/night-goblin-bigboss",
+  "night goblin big boss": {
+    "url": "unit/night-goblin-big-boss",
     "stats": [
       {
         "A": "3",
@@ -7951,7 +7951,7 @@
         "T": "4",
         "W": "2",
         "BS": "3",
-        "Ld": "5",
+        "Ld": "6",
         "WS": "4",
         "Name": "Night Goblin Bigboss"
       }
@@ -7990,8 +7990,8 @@
     "troopType": "RI",
     "page": "RH, p. 25"
   },
-  "night goblin oddgit": {
-    "url": "unit/night-goblin-oddgit",
+  "night goblin shaman": {
+    "url": "unit/night-goblin-shaman",
     "stats": [
       {
         "A": "1",
@@ -8003,26 +8003,26 @@
         "BS": "3",
         "Ld": "5",
         "WS": "3",
-        "Name": "Night Goblin Oddgit"
+        "Name": "Night Goblin Shaman"
       }
     ],
     "troopType": "RI",
     "page": "RH, p. 18"
   },
-  "night goblin oddnob": {
-    "url": "unit/night-goblin-oddnob",
+  "night goblin great shaman": {
+    "url": "unit/night-goblin-great-shaman",
     "stats": [
       {
         "A": "2",
-        "I": "4",
+        "I": "3",
         "M": "4",
         "S": "3",
         "T": "4",
         "W": "3",
         "BS": "3",
         "Ld": "6",
-        "WS": "4",
-        "Name": "Night Goblin Oddnob"
+        "WS": "2",
+        "Name": "Night Goblin Great Shaman"
       }
     ],
     "troopType": "RI",
@@ -8259,18 +8259,37 @@
     "troopType": "MI",
     "page": "OK, p. 8"
   },
-  "orc bigboss": {
-    "url": "unit/orc-bigboss",
+  "orc big boss": {
+    "url": "unit/orc-big-boss",
     "stats": [
       {
         "A": "3",
-        "I": "4",
+        "I": "3",
         "M": "4",
         "S": "4",
         "T": "5",
         "W": "2",
         "BS": "2",
-        "Ld": "7",
+        "Ld": "8",
+        "WS": "5",
+        "Name": "Orc Bigboss"
+      }
+    ],
+    "troopType": "RI",
+    "page": "RH, p. 13"
+  },
+  "savage orc big boss": {
+    "url": "unit/savage-orc-big-boss",
+    "stats": [
+      {
+        "A": "3",
+        "I": "3",
+        "M": "4",
+        "S": "4",
+        "T": "5",
+        "W": "2",
+        "BS": "2",
+        "Ld": "8",
         "WS": "5",
         "Name": "Orc Bigboss"
       }
@@ -8524,13 +8543,13 @@
     "stats": [
       {
         "A": "4",
-        "I": "5",
+        "I": "4",
         "M": "4",
         "S": "5",
         "T": "5",
         "W": "3",
         "BS": "2",
-        "Ld": "8",
+        "Ld": "9",
         "WS": "6",
         "Name": "Orc Warboss"
       }
@@ -8538,39 +8557,96 @@
     "troopType": "RI",
     "page": "RH, p. 13"
   },
-  "orc weirdboy": {
-    "url": "unit/orc-weirdboy",
+  "savage orc warboss": {
+    "url": "unit/savage-orc-warboss",
+    "stats": [
+      {
+        "A": "4",
+        "I": "4",
+        "M": "4",
+        "S": "5",
+        "T": "5",
+        "W": "3",
+        "BS": "2",
+        "Ld": "9",
+        "WS": "6",
+        "Name": "Savage Orc Warboss"
+      }
+    ],
+    "troopType": "RI",
+    "page": "RH, p. 13"
+  },
+  "orc shaman": {
+    "url": "unit/orc-shaman",
     "stats": [
       {
         "A": "1",
-        "I": "3",
+        "I": "2",
         "M": "4",
         "S": "3",
         "T": "4",
         "W": "2",
-        "BS": "2",
+        "BS": "3",
         "Ld": "7",
         "WS": "3",
-        "Name": "Orc Weirdboy"
+        "Name": "Orc Shaman"
       }
     ],
     "troopType": "RI",
     "page": "RH, p. 14"
   },
-  "orc weirdnob": {
-    "url": "unit/orc-weirdnob",
+  "savage orc shaman": {
+    "url": "unit/savage-orc-shaman",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "4",
+        "S": "3",
+        "T": "4",
+        "W": "2",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Orc Shaman"
+      }
+    ],
+    "troopType": "RI",
+    "page": "RH, p. 14"
+  },
+  "orc great shaman": {
+    "url": "unit/orc-great-shaman",
     "stats": [
       {
         "A": "2",
-        "I": "4",
+        "I": "2",
         "M": "4",
         "S": "4",
-        "T": "5",
+        "T": "4",
         "W": "3",
-        "BS": "2",
+        "BS": "3",
         "Ld": "8",
         "WS": "4",
-        "Name": "Orc Weirdnob"
+        "Name": "Orc Great Shaman"
+      }
+    ],
+    "troopType": "RI",
+    "page": "RH, p. 14"
+  },
+  "savage orc great shaman": {
+    "url": "unit/savage-orc-great-shaman",
+    "stats": [
+      {
+        "A": "2",
+        "I": "2",
+        "M": "4",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "BS": "3",
+        "Ld": "8",
+        "WS": "4",
+        "Name": "Orc Great Shaman"
       }
     ],
     "troopType": "RI",
