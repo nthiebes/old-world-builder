@@ -1,13 +1,17 @@
 import { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
 import { normalizeRuleName } from "../../utils/string";
 import { useLanguage } from "../../utils/useLanguage";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { sixthrulesMap, rulesMap, synonyms } from "./rules-map";
 
 export const RulesLinksText = ({ textObject, showPageNumbers }) => {
+  const { listId } = useParams();
+  const list = useSelector((state) => state.lists.find(({ id }) => listId === id));
+  
   const dispatch = useDispatch();
   const { language } = useLanguage();
 
@@ -22,7 +26,12 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
   return ruleButtons.map((rule, index) => {
     const normalizedName = normalizeRuleName(textEn[index]);
     const synonym = synonyms[normalizedName];
-    const ruleData = rulesMap[synonym || normalizedName];
+    let ruleData = rulesMap[synonym || normalizedName];
+    if ( list.game == "warhammer-fantasy-6" ) {
+      ruleData = sixthrulesMap[normalizedName] || sixthrulesMap[synonym];
+    } else if ( list.game == "warhammer-fantasy-8" ) {
+      // TBD
+    }
 
     return (
       <Fragment key={rule}>

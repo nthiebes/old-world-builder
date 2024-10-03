@@ -29,10 +29,12 @@ export const RulesIndex = () => {
   const synonym = synonyms[normalizedName];
   let ruleData = rulesMap[normalizedName] || rulesMap[synonym];
   if ( list.game == "warhammer-fantasy-6" ) {
-    ruleData = sixthrulesMap[normalizedName] || rulesMap[synonym];
+    ruleData = sixthrulesMap[normalizedName] || sixthrulesMap[synonym];
   } else if ( list.game == "warhammer-fantasy-8" ) {
     // TBD
   }
+  console.log(`--- normalizedName = ${JSON.stringify(normalizedName)}`);
+  console.log(`--- synonym = ${JSON.stringify(synonym)}`);
   console.log(`--- ruleData = ${JSON.stringify(ruleData)}`);
   const rulePath = ruleData?.url;
   console.log(`--- rulePath = ${JSON.stringify(rulePath)}`);

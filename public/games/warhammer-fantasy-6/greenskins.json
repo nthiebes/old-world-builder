@@ -159,6 +159,29 @@
       "name_de": "Schwarzork-Waaaghboss",
       "name_en": "Black Orc Warboss",
       "points": 135,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
+          "points": 3
+        }
+      ],
       "options": [
         {
           "name_de": "Schild",
@@ -341,6 +364,14 @@
       "name_de": "Ork-Grossschamane",
       "name_en": "Orc Great Shaman",
       "points": 180,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -384,6 +415,14 @@
       "name_de": "Wildork-Grossschamane",
       "name_en": "Savage Orc Great Shaman",
       "points": 190,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -421,6 +460,14 @@
       "name_de": "Goblin-Grossschamane",
       "name_en": "Goblin Great Shaman",
       "points": 155,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -474,6 +521,14 @@
       "name_de": "Nachtgoblin-Grossschamane",
       "name_en": "Night Goblin Great Shaman",
       "points": 140,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 4",
@@ -642,10 +697,33 @@
       }
     },
     {
-      "id": "blork-gargboss",
+      "id": "blorc-gargboss",
       "name_de": "Schwarzork-Gargboss",
       "name_en": "Black Orc Big Boss",
       "points": 90,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_de": "Zweihandwaffe",
+          "name_en": "Great weapon",
+          "points": 6
+        },
+        {
+          "name_de": "Zusätzliche Handwaffe (nur unberitten)",
+          "name_en": "Additional hand weapon (unless mounted)",
+          "points": 3
+        },
+        {
+          "name_de": "Speer (nur beritten)",
+          "name_en": "Spear (mounted only)",
+          "points": 3
+        }
+      ],
       "options": [
         {
           "name_de": "Schild",
@@ -887,6 +965,14 @@
       "name_de": "Ork-Schamane",
       "name_en": "Orc Shaman",
       "points": 65,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
@@ -917,6 +1003,14 @@
       "name_de": "Wildork-Schamane",
       "name_en": "Savage Orc Shaman",
       "points": 70,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
@@ -950,6 +1044,14 @@
       "name_de": "Goblin-Schamane",
       "name_en": "Goblin Shaman",
       "points": 55,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
@@ -1003,6 +1105,14 @@
       "name_de": "Nachtgoblin-Schamane",
       "name_en": "Night Goblin Shaman",
       "points": 50,
+      "equipment": [
+        {
+          "name_de": "Handwaffe",
+          "name_en": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_de": "Zauberer der Stufe 2",
@@ -1096,7 +1206,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Big'Uns"
+        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Big 'Uns"
       }
     },
     {
@@ -1215,7 +1325,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Frenzy, Warpaint, Big'Uns"
+        "name_en": "Animosity, Ignore Goblin Panic, Choppa, Frenzy, Warpaint, Big 'Uns"
       }
     },
     {
@@ -1546,7 +1656,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Animosity, Ignore Goblin Panic, Thick Skinned, Tusker Charge, Big'Uns"
+        "name_en": "Animosity, Ignore Goblin Panic, Thick Skinned, Tusker Charge, Big 'Uns"
       }
     },
     {
@@ -1608,7 +1718,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Animosity, Ignore Goblin Panic, Frenzy, Warpaint, Thick Skinned, Tusker Charge, Big'Uns"
+        "name_en": "Animosity, Ignore Goblin Panic, Frenzy, Warpaint, Thick Skinned, Tusker Charge, Big 'Uns"
       }
     },
     {
@@ -1625,7 +1735,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Ignore Goblin Panic, Tusker Charge, Chariots"
+        "name_en": "Ignore Goblin Panic, Tusker Charge, 1D6 Impact Hits"
       }
     },
     {
@@ -1661,7 +1771,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Chariots"
+        "name_en": "Chariots, 1D6 Impact Hits"
       }
     },
     {
@@ -1799,7 +1909,7 @@
       "points": 205,
       "mounts": [],
       "specialRules": {
-        "name_en": "Ignore Greenskin Panic, Large Target, Terror, Fall Over, Move, Special Attacks, Stubborn"
+        "name_en": "Ignore Greenskin Panic, Large Target, Terror, Fall Over, Giant Special Attacks, Stubborn"
       }
     }
   ]
