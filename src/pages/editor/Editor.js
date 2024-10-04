@@ -207,6 +207,8 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points
     });
 
+  console.log(`sixthLordData: ${JSON.stringify(sixthLordData)} - ${list.points}`);
+
   const moreButtons = [
     {
       name: intl.formatMessage({
@@ -349,7 +351,8 @@ export const Editor = ({ isMobile }) => {
               </ErrorMessage>
             ))}
         </section>
-        {list.lords && (
+        {/* Disable Lords section for WHFB lists under 2,000 points */}
+        { (list.lords && list.points >= 2000 ) && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
