@@ -44,7 +44,7 @@ const getUnitsString = ({
         })} ${unit.customNote}\n`;
       }
       if (showStats) {
-        const stats = getStats(unit);
+        const stats = getStats(unit, list.game);
 
         if (stats?.length > 0) {
           stats.forEach((unitStats, index) => {

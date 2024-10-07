@@ -235,9 +235,7 @@ export const getPage = (name) => {
   return page.replace(/,/g, "");
 };
 
-export const getStats = (unit) => {
-  const { listId } = useParams();
-  const list = useSelector((state) => state.lists.find(({ id }) => listId === id));
+export const getStats = (unit, game) => {
   const normalizedName = normalizeRuleName(unit.name_en);
   const synonym = synonyms[normalizedName];
   const activeMount = unit.mounts.find((mount) => mount.active);
@@ -245,10 +243,10 @@ export const getStats = (unit) => {
   const mountSynonym = synonyms[normalizedMountName];
   let stats = rulesMap[synonym || normalizedName]?.stats || [];
   let mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
-  if ( list.game == "warhammer-fantasy-6" ) {
+  if ( game == "warhammer-fantasy-6" ) {
     stats = sixthrulesMap[synonym || normalizedName]?.stats || [];
     mountStats = sixthrulesMap[mountSynonym || normalizedMountName]?.stats || [];
-  } else if ( list.game == "warhammer-fantasy-8" ) {
+  } else if ( game == "warhammer-fantasy-8" ) {
     // TBD
   }
   const detachments = unit.detachments || [];

@@ -180,7 +180,7 @@ export const GameView = () => {
     return (
       <ul>
         {units.map((unit, index) => {
-          const stats = getStats(unit);
+          const stats = getStats(unit, list.game);
 
           return (
             <li key={index} className="list">
