@@ -203,10 +203,15 @@ export const getAllOptions = (
     ...allDetachments,
     ...lore,
   ];
+  
+  const { listId } = useParams();
+  const list = useSelector((state) =>
+    state.lists.find(({ id }) => listId === id)
+  );
 
   if (pageNumbers) {
     allOptionsArray = allOptionsArray.map((option) => {
-      const page = getPage(option);
+      const page = getPage(option, list.game);
 
       if (page) {
         return `${option} [${page}]`;
@@ -227,10 +232,15 @@ export const getAllOptions = (
   return null;
 };
 
-export const getPage = (name) => {
+export const getPage = (name, game) => {
   const normalizedName = normalizeRuleName(name);
   const synonym = synonyms[normalizedName];
-  const page = rulesMap[synonym || normalizedName]?.page || "";
+  let page = rulesMap[synonym || normalizedName]?.page || "";
+  if ( game == "warhammer-fantasy-6" ) {
+    page = sixthrulesMap[synonym || normalizedName]?.page || "";
+  } else if ( game == "warhammer-fantasy-8" ) {
+    // TBD
+  }
 
   return page.replace(/,/g, "");
 };
