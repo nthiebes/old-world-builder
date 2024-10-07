@@ -9,7 +9,7 @@ import { Spinner } from "../../components/spinner";
 import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms, sixthrulesMap } from "./rules-map";
+import { rulesMap, synonyms, sixthRulesMap } from "./rules-map";
 import "./RulesIndex.css";
 
 export const RulesIndex = () => {
@@ -29,7 +29,7 @@ export const RulesIndex = () => {
   const synonym = synonyms[normalizedName];
   let ruleData = rulesMap[normalizedName] || rulesMap[synonym];
   if ( list.game == "warhammer-fantasy-6" ) {
-    ruleData = sixthrulesMap[normalizedName] || sixthrulesMap[synonym];
+    ruleData = sixthRulesMap[normalizedName] || sixthRulesMap[synonym];
   } else if ( list.game == "warhammer-fantasy-8" ) {
     // TBD
   }

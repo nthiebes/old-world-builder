@@ -1,5 +1,5 @@
 import { nameMap } from "../pages/magic";
-import { sixthrulesMap, rulesMap, synonyms } from "../components/rules-index";
+import { sixthRulesMap, rulesMap, synonyms } from "../components/rules-index";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { normalizeRuleName } from "./string";
@@ -203,7 +203,7 @@ export const getAllOptions = (
     ...allDetachments,
     ...lore,
   ];
-  
+
   const { listId } = useParams();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -237,7 +237,7 @@ export const getPage = (name, game) => {
   const synonym = synonyms[normalizedName];
   let page = rulesMap[synonym || normalizedName]?.page || "";
   if ( game == "warhammer-fantasy-6" ) {
-    page = sixthrulesMap[synonym || normalizedName]?.page || "";
+    page = sixthRulesMap[synonym || normalizedName]?.page || "";
   } else if ( game == "warhammer-fantasy-8" ) {
     // TBD
   }
@@ -253,9 +253,11 @@ export const getStats = (unit, game) => {
   const mountSynonym = synonyms[normalizedMountName];
   let stats = rulesMap[synonym || normalizedName]?.stats || [];
   let mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  let detachStats = rulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
   if ( game == "warhammer-fantasy-6" ) {
-    stats = sixthrulesMap[synonym || normalizedName]?.stats || [];
-    mountStats = sixthrulesMap[mountSynonym || normalizedMountName]?.stats || [];
+    stats = sixthRulesMap[synonym || normalizedName]?.stats || [];
+    mountStats = sixthRulesMap[mountSynonym || normalizedMountName]?.stats || [];
+    detatchmentStats = sixthRulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
   } else if ( game == "warhammer-fantasy-8" ) {
     // TBD
   }
@@ -267,7 +269,7 @@ export const getStats = (unit, game) => {
     const detachmentSynonym = synonyms[normalizedDetachment];
 
     detachmentStats.push(
-      ...(rulesMap[detachmentSynonym || normalizedDetachment]?.stats || [])
+      ...(detachStats)
     );
   });
 

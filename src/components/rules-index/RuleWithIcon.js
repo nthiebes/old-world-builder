@@ -8,7 +8,7 @@ import { Button } from "../button";
 import { normalizeRuleName } from "../../utils/string";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, sixthrulesMap, synonyms } from "./rules-map";
+import { rulesMap, sixthRulesMap, synonyms } from "./rules-map";
 import "./RuleWithIcon.css";
 
 export const RuleWithIcon = ({ name, isDark, className }) => {
@@ -25,7 +25,7 @@ export const RuleWithIcon = ({ name, isDark, className }) => {
   
   let selectedRulesMap = rulesMap;
   if ( list.game == "warhammer-fantasy-6" ) {
-    selectedRulesMap = sixthrulesMap;
+    selectedRulesMap = sixthRulesMap;
   } else if ( list.game == "warhammer-fantasy-8" ) {
     // TBD
   }

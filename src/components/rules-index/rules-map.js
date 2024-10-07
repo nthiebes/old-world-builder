@@ -4,6 +4,7 @@ import sixthSpellsIndexExport from "./6th-spells-index-export.json";
 import sixthUnitsIndexExport from "./6th-units-index-export.json";
 import sixthWeaponsIndexExport from "./6th-weapons-index-export.json";
 import sixthWarmachinesIndexExport from "./6th-weapons-index-export.json";
+import sixthMagicIndexExport from "./6th-magicItems-index-export.json";
 
 const additionalOWBRules = {
   "throwing spears": { url: "weapons-of-war/throwing-spear" },
@@ -263,11 +264,12 @@ export const rulesMap = {
   ...additionalOWBRules,
 };
 
-export const sixthrulesMap = {
+export const sixthRulesMap = {
   ...sixthRulesIndexExport,
   ...sixthSpellsIndexExport,
   ...sixthWeaponsIndexExport,
   ...sixthWarmachinesIndexExport,
+  ...sixthMagicIndexExport,
   ...sixthUnitsIndexExport,
   ...additional6thRules
 };

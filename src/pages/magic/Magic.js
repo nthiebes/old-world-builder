@@ -10,7 +10,7 @@ import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { Button } from "../../components/button";
-import { RulesIndex, rulesMap } from "../../components/rules-index";
+import { RulesIndex, sixthRulesMap, rulesMap } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { openRulesIndex } from "../../state/rules-index";
@@ -297,6 +297,7 @@ export const Magic = ({ isMobile }) => {
   }
 
   const getCheckbox = ({
+    list,
     isChecked,
     selectedAmount,
     magicItem,
@@ -310,6 +311,15 @@ export const Magic = ({ isMobile }) => {
       ? // No maximum of this item if there is no point max.
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
+
+    let magicRules = rulesMap[normalizeRuleName(magicItem.name_en)];
+    if ( list.game == "warhammer-fantasy-6" ) {
+      magicRules = sixthRulesMap[normalizeRuleName(magicItem.name_en)];
+    } else if ( list.game == "warhammer-fantasy-8" ) {
+      // TBD
+    }
+    console.log(`normalizeRuleName: ${magicItem.name_en}`);
+    console.log(`magicRules: ${JSON.stringify(magicRules)}`);
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -350,7 +360,7 @@ export const Magic = ({ isMobile }) => {
                     id: "app.points",
                   })}`}
             </i>
-            {rulesMap[normalizeRuleName(magicItem.name_en)] ? (
+            {magicRules ? (
               <Button
                 type="text"
                 className="magic__rules"
@@ -552,6 +562,7 @@ export const Magic = ({ isMobile }) => {
                       </h3>
                     )}
                     {getCheckbox({
+                      list,
                       magicItem,
                       itemGroup,
                       selectedAmount,
@@ -562,6 +573,7 @@ export const Magic = ({ isMobile }) => {
                     {magicItem.conditional && isChecked
                       ? magicItem.conditional.map((conditionalItem) =>
                           getCheckbox({
+                            list,
                             magicItem: conditionalItem,
                             itemGroup,
                             selectedAmount,

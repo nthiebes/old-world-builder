@@ -207,8 +207,6 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points
     });
 
-  console.log(`sixthLordData: ${JSON.stringify(sixthLordData)} - ${list.points}`);
-
   const moreButtons = [
     {
       name: intl.formatMessage({

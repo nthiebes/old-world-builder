@@ -15,7 +15,6 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import {
   RulesIndex,
-  rulesMap,
   RulesLinksText,
   RulesWithIcon,
   RuleWithIcon,

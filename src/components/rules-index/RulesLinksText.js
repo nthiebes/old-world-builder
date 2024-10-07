@@ -6,7 +6,7 @@ import { normalizeRuleName } from "../../utils/string";
 import { useLanguage } from "../../utils/useLanguage";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { sixthrulesMap, rulesMap, synonyms } from "./rules-map";
+import { sixthRulesMap, rulesMap, synonyms } from "./rules-map";
 
 export const RulesLinksText = ({ textObject, showPageNumbers }) => {
   const { listId } = useParams();
@@ -28,7 +28,7 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
     const synonym = synonyms[normalizedName];
     let ruleData = rulesMap[synonym || normalizedName];
     if ( list.game == "warhammer-fantasy-6" ) {
-      ruleData = sixthrulesMap[normalizedName] || sixthrulesMap[synonym];
+      ruleData = sixthRulesMap[normalizedName] || sixthRulesMap[synonym];
     } else if ( list.game == "warhammer-fantasy-8" ) {
       // TBD
     }
