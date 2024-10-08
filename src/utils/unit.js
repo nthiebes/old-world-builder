@@ -204,14 +204,14 @@ export const getAllOptions = (
     ...lore,
   ];
 
-  const { listId } = useParams();
-  const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
-  );
+  // const { listId } = useParams();
+  // const list = useSelector((state) =>
+  //   state.lists.find(({ id }) => listId === id)
+  // );
 
   if (pageNumbers) {
     allOptionsArray = allOptionsArray.map((option) => {
-      const page = getPage(option, list.game);
+      const page = getPage(option);
 
       if (page) {
         return `${option} [${page}]`;
@@ -232,15 +232,15 @@ export const getAllOptions = (
   return null;
 };
 
-export const getPage = (name, game) => {
+export const getPage = (name) => {
   const normalizedName = normalizeRuleName(name);
   const synonym = synonyms[normalizedName];
   let page = rulesMap[synonym || normalizedName]?.page || "";
-  if ( game == "warhammer-fantasy-6" ) {
-    page = sixthRulesMap[synonym || normalizedName]?.page || "";
-  } else if ( game == "warhammer-fantasy-8" ) {
-    // TBD
-  }
+  // if ( game == "warhammer-fantasy-6" ) {
+  //   page = sixthRulesMap[synonym || normalizedName]?.page || "";
+  // } else if ( game == "warhammer-fantasy-8" ) {
+  //   // TBD
+  // }
 
   return page.replace(/,/g, "");
 };
@@ -253,11 +253,9 @@ export const getStats = (unit, game) => {
   const mountSynonym = synonyms[normalizedMountName];
   let stats = rulesMap[synonym || normalizedName]?.stats || [];
   let mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
-  let detachStats = rulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
   if ( game == "warhammer-fantasy-6" ) {
     stats = sixthRulesMap[synonym || normalizedName]?.stats || [];
     mountStats = sixthRulesMap[mountSynonym || normalizedMountName]?.stats || [];
-    detatchmentStats = sixthRulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
   } else if ( game == "warhammer-fantasy-8" ) {
     // TBD
   }
@@ -266,7 +264,13 @@ export const getStats = (unit, game) => {
 
   detachments.forEach((detachment) => {
     const normalizedDetachment = normalizeRuleName(detachment?.name_en || "");
-    const detachmentSynonym = synonyms[normalizedDetachment];
+    let detachmentSynonym = synonyms[normalizedDetachment];
+    let detachStats = rulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
+    if ( game == "warhammer-fantasy-6" ) {
+      detatchmentStats = sixthRulesMap[detachmentSynonym || normalizedDetachment]?.stats || []
+    } else if ( game == "warhammer-fantasy-8" ) {
+      // TBD
+    }
 
     detachmentStats.push(
       ...(detachStats)
