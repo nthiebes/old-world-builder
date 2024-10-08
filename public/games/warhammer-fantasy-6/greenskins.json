@@ -627,9 +627,7 @@
         "types": [
           "weapon",
           "armor",
-          "item",
           "talisman",
-          "banner",
           "enchanted-item"
         ],
         "maxPoints": 50
@@ -658,6 +656,25 @@
       "name_de": "Wildork-Gargboss",
       "name_en": "Savage Orc Big Boss",
       "points": 75,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -714,13 +731,26 @@
         "types": [
           "weapon",
           "armor",
-          "item",
           "talisman",
-          "banner",
           "enchanted-item"
         ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Ignore Goblin Panic, Choppa, Frenzy, Warpaint"
       }
@@ -730,6 +760,25 @@
       "name_de": "Schwarzork-Gargboss",
       "name_en": "Black Orc Big Boss",
       "points": 90,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -792,13 +841,26 @@
         "types": [
           "weapon",
           "armor",
-          "item",
           "talisman",
-          "banner",
           "enchanted-item"
         ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Ignore Greenskin Panic, Choppa, Quell Animosity"
       }
@@ -808,6 +870,25 @@
       "name_de": "Goblin-Gargboss",
       "name_en": "Goblin Big boss",
       "points": 35,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -900,13 +981,26 @@
         "types": [
           "weapon",
           "armor",
-          "item",
           "talisman",
-          "banner",
           "enchanted-item"
         ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Fear Elves"
       }
@@ -916,6 +1010,25 @@
       "name_de": "Nachtgoblin-Gargboss",
       "name_en": "Night Goblin Big Boss",
       "points": 30,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -978,13 +1091,26 @@
         "types": [
           "weapon",
           "armor",
-          "item",
           "talisman",
-          "banner",
           "enchanted-item"
         ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Fear Elves, Hate (Dwarfs)"
       }
@@ -994,6 +1120,15 @@
       "name_de": "Ork-Schamane",
       "name_en": "Orc Shaman",
       "points": 65,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -1023,8 +1158,31 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+        "types": [
+          "weapon",
+          "arcane-item",
+          "talisman",
+          "enchanted-item"
+        ],
         "maxPoints": 50
+      },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "arcane-item",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "specialRules": {
+        "name_en": "Ignore Goblin Panic, Choppa"
       }
     },
     {
@@ -1032,6 +1190,15 @@
       "name_de": "Wildork-Schamane",
       "name_en": "Savage Orc Shaman",
       "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -1061,9 +1228,29 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+        "types": [
+          "weapon",
+          "arcane-item",
+          "talisman",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "arcane-item",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Ignore Goblin Panic, Choppa"
       }
@@ -1073,6 +1260,15 @@
       "name_de": "Goblin-Schamane",
       "name_en": "Goblin Shaman",
       "points": 55,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -1122,9 +1318,29 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+        "types": [
+          "weapon",
+          "arcane-item",
+          "talisman",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "arcane-item",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Fear Elves"
       }
@@ -1134,6 +1350,15 @@
       "name_de": "Nachtgoblin-Schamane",
       "name_en": "Night Goblin Shaman",
       "points": 50,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
       "equipment": [
         {
           "name_de": "Handwaffe",
@@ -1158,9 +1383,29 @@
         }
       ],
       "magic": {
-        "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
+        "types": [
+          "weapon",
+          "arcane-item",
+          "talisman",
+          "enchanted-item"
+        ],
         "maxPoints": 50
       },
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "arcane-item",
+            "talisman",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
       "specialRules": {
         "name_en": "Fear Elves, Hate (Dwarfs)"
       }
