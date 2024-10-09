@@ -167,9 +167,9 @@ export const getPoints = ({ type, list }) => {
   return points;
 };
 
-// TODO - Handle Multiple slots taken up by units
 export const getUnitSlots = (unit) => {
-  return 1;
+  console.log(`getUnitSlots - ${JSON.stringify(unit)}`)
+  return unit.slots ? unit.slots  : 1;
 };
 
 export const getOccupiedSlots = ({ type, list }) => {
