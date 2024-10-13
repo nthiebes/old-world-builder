@@ -428,7 +428,7 @@ export const getUnitLoresWithSpells = (unit) => {
     }, {});
 
   const selectedLores =
-    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Lore Familiar")
+    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Arcane Familiar")
       ? {
           "battle-magic": loresOfMagicWithSpells["battle-magic"],
           daemonology: loresOfMagicWithSpells["daemonology"],
