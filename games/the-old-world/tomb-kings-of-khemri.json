@@ -1919,7 +1919,13 @@
           "points": 6,
           "magic": {
             "types": ["banner"],
-            "maxPoints": 25
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic banner",
+            "name_it": "0-1 unit per 1000 points may purchase a magic banner",
+            "name_de": "0-1 unit per 1000 points may purchase a magic banner",
+            "name_fr": "0-1 unit per 1000 points may purchase a magic banner"
           }
         },
         {
@@ -1971,12 +1977,18 @@
       ],
       "options": [
         {
-          "name_en": "Counter Charge (0-1 per 1000 points)",
-          "name_it": "Contro Carica (Una ogni 1.000pti)",
-          "name_de": "Counter Charge (0-1 per 1000 points)",
-          "name_fr": "Contre-charge (0-1 par tranche de 1000 points)",
+          "name_en": "Counter Charge",
+          "name_it": "Contro Carica",
+          "name_de": "Counter Charge",
+          "name_fr": "Contre-charge",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit per 1000 points",
+            "name_it": "Una ogni 1.000pti",
+            "name_de": "0-1 unit per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
