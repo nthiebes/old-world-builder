@@ -26,7 +26,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
-import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
+import { getUnitName, getUnitOptionNotes, unitHasItem } from "../../utils/unit";
 
 import "./Unit.css";
 
@@ -772,78 +772,33 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             <h2 className="unit__subline">
               <FormattedMessage id="unit.equipment" />
             </h2>
-            {unit.equipment.map(
-              ({
-                points,
-                perModel,
-                id,
-                active = false,
-                notes,
-                ...equipment
-              }) => (
-                <Fragment key={id}>
-                  <div className="radio">
-                    <input
-                      type="radio"
-                      id={`equipment-${id}`}
-                      name="equipment"
-                      value={id}
-                      onChange={() => handleEquipmentChange(id)}
-                      checked={active}
-                      className="radio__input"
-                    />
-                    <label htmlFor={`equipment-${id}`} className="radio__label">
-                      <span className="unit__label-text">
-                        <RulesWithIcon textObject={equipment} />
-                      </span>
-                      <i className="checkbox__points">
-                        {getPointsText({ points, perModel })}
-                      </i>
-                    </label>
-                  </div>
-                  {getUnitOptionNotes({
-                    notes,
-                    key: `equipment-${id}-note`,
-                    className: "unit__option-note",
-                    language,
-                  })}
-                </Fragment>
+            {unit.equipment
+              .filter(({ requiredMagicItem }) =>
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )
-            )}
-          </>
-        )}
-        {unit.armor && unit.armor.length > 0 && (
-          <>
-            <h2 className="unit__subline">
-              <FormattedMessage id="unit.armor" />
-            </h2>
-            {unit.armor.map(
-              ({
-                points,
-                perModel,
-                id,
-                activeDefault,
-                active = false,
-                notes,
-                ...equipment
-              }) => {
-                const isRadio = unit.armor.length > 1 || activeDefault;
-
-                return (
+              .map(
+                ({
+                  points,
+                  perModel,
+                  id,
+                  active = false,
+                  notes,
+                  ...equipment
+                }) => (
                   <Fragment key={id}>
-                    <div className={isRadio ? "radio" : "checkbox"}>
+                    <div className="radio">
                       <input
-                        type={isRadio ? "radio" : "checkbox"}
-                        id={`armor-${id}`}
-                        name="armor"
+                        type="radio"
+                        id={`equipment-${id}`}
+                        name="equipment"
                         value={id}
-                        onChange={() => handleArmorChange(id)}
+                        onChange={() => handleEquipmentChange(id)}
                         checked={active}
-                        className={isRadio ? "radio__input" : "checkbox__input"}
+                        className="radio__input"
                       />
                       <label
-                        htmlFor={`armor-${id}`}
-                        className={isRadio ? "radio__label" : "checkbox__label"}
+                        htmlFor={`equipment-${id}`}
+                        className="radio__label"
                       >
                         <span className="unit__label-text">
                           <RulesWithIcon textObject={equipment} />
@@ -855,14 +810,74 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     </div>
                     {getUnitOptionNotes({
                       notes,
-                      key: `armor-${id}-note`,
+                      key: `equipment-${id}-note`,
                       className: "unit__option-note",
                       language,
                     })}
                   </Fragment>
-                );
-              }
-            )}
+                )
+              )}
+          </>
+        )}
+        {unit.armor && unit.armor.length > 0 && (
+          <>
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.armor" />
+            </h2>
+            {unit.armor
+              .filter(({ requiredMagicItem }) =>
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+              )
+              .map(
+                ({
+                  points,
+                  perModel,
+                  id,
+                  activeDefault,
+                  active = false,
+                  notes,
+                  ...equipment
+                }) => {
+                  const isRadio = unit.armor.length > 1 || activeDefault;
+
+                  return (
+                    <Fragment key={id}>
+                      <div className={isRadio ? "radio" : "checkbox"}>
+                        <input
+                          type={isRadio ? "radio" : "checkbox"}
+                          id={`armor-${id}`}
+                          name="armor"
+                          value={id}
+                          onChange={() => handleArmorChange(id)}
+                          checked={active}
+                          className={
+                            isRadio ? "radio__input" : "checkbox__input"
+                          }
+                        />
+                        <label
+                          htmlFor={`armor-${id}`}
+                          className={
+                            isRadio ? "radio__label" : "checkbox__label"
+                          }
+                        >
+                          <span className="unit__label-text">
+                            <RulesWithIcon textObject={equipment} />
+                          </span>
+                          <i className="checkbox__points">
+                            {getPointsText({ points, perModel })}
+                          </i>
+                        </label>
+                      </div>
+                      {getUnitOptionNotes({
+                        notes,
+                        key: `armor-${id}-note`,
+                        className: "unit__option-note",
+                        language,
+                      })}
+                    </Fragment>
+                  );
+                }
+              )}
           </>
         )}
         {unit.options && unit.options.length > 0 && (
@@ -875,6 +890,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 (unitOption) =>
                   !unitOption.armyComposition ||
                   unitOption.armyComposition.includes(list.armyComposition)
+              )
+              .filter(({ requiredMagicItem }) =>
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )
               .map(
                 ({
