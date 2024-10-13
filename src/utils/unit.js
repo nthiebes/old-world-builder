@@ -67,19 +67,44 @@ export const getAllOptions = (
   }
   const allEquipment = equipment
     ? equipment
-        .filter(({ active, equippedDefault }) => active || equippedDefault)
+        .filter(
+          ({ active, equippedDefault, requiredMagicItem }) =>
+            (active && !requiredMagicItem) ||
+            (equippedDefault && !requiredMagicItem) ||
+            (active &&
+              requiredMagicItem &&
+              unitHasItem({ items }, requiredMagicItem))
+        )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
   const allArmor = armor
     ? armor
-        .filter(({ active }) => active)
+        .filter(
+          ({ active, requiredMagicItem }) =>
+            (active && !requiredMagicItem) ||
+            (active &&
+              requiredMagicItem &&
+              unitHasItem({ items }, requiredMagicItem))
+        )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
 
   if (options) {
     options.forEach(
-      ({ active, name_en, options: subOptions, stackableCount, ...entry }) => {
-        if (active) {
+      ({
+        active,
+        name_en,
+        options: subOptions,
+        stackableCount,
+        requiredMagicItem,
+        ...entry
+      }) => {
+        if (
+          (active && !requiredMagicItem) ||
+          (active &&
+            requiredMagicItem &&
+            unitHasItem({ items }, requiredMagicItem))
+        ) {
           let optionEntry = entry[`name_${language}`] || name_en;
           const selectedOptions = [];
 

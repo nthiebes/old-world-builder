@@ -967,7 +967,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["king", "anvil-of-doom", "ungrim-ironfist"],
+          ids: ["king", "anvil-of-doom", "runelord", "ungrim-ironfist"],
           min: 0,
           max: 1,
           points: 1000,
