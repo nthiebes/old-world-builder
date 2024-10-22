@@ -168,7 +168,6 @@ export const getPoints = ({ type, list }) => {
 };
 
 export const getUnitSlots = (unit) => {
-  console.log(`getUnitSlots - ${JSON.stringify(unit)}`)
   return unit.slots ? unit.slots  : 1;
 };
 

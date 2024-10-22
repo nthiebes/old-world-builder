@@ -17,7 +17,7 @@ import { getAllOptions, getUnitName } from "../../utils/unit";
 import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints, getOccupiedSlots } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
-import { validateList } from "../../utils/validation";
+import { validateList, validateWhfbList } from "../../utils/validation";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
 import { deleteList, moveUnit } from "../../state/lists";
 import { setErrors } from "../../state/errors";
@@ -62,21 +62,34 @@ export const Editor = ({ isMobile }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [location.pathname]);
 
-  useEffect(() => {
-    if (list) {
+  if ( list && list.game == "the-old-world" ) {
+    useEffect(() => {
+        dispatch(
+          setErrors(
+            validateList({
+              list,
+              language,
+              intl,
+            })
+          )
+        );
+        updateLocalList(list);
+    }, [list, dispatch, language, intl]);
+  } 
+  else {
+    useEffect(() => {
       dispatch(
         setErrors(
-          validateList({
+          validateWhfbList({
             list,
             language,
             intl,
           })
         )
       );
-
       updateLocalList(list);
-    }
   }, [list, dispatch, language, intl]);
+  }
 
   if (redirect) {
     return <Redirect to="/" />;
@@ -395,6 +408,23 @@ export const Editor = ({ isMobile }) => {
               listId={listId}
             />
 
+            {errors
+              .filter(({ section }) => section === "lords")
+              .map(({ message, name, diff, min, option }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
+                      min,
+                      option,
+                    }}
+                  />
+                </ErrorMessage>
+              ))
+            }
+
             <Button
               type="primary"
               centered
@@ -451,6 +481,23 @@ export const Editor = ({ isMobile }) => {
               type="heroes"
               listId={listId}
             />
+
+            {errors
+              .filter(({ section }) => section === "heroes")
+              .map(({ message, name, diff, min, option }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
+                      min,
+                      option,
+                    }}
+                  />
+                </ErrorMessage>
+              ))
+            }
 
             <Button
               type="primary"

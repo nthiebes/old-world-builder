@@ -257,9 +257,7 @@ export const Add = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/${list.army}`,
         onSuccess: (data) => {
-          //console.log(`--- onSuccess  WHFB - data: ${JSON.stringify(data)}`);
           const armyData = getFantasyArmyData({data});
-          //console.log(`--- onSuccess  WHFB - armyData: ${JSON.stringify(armyData)}`);
           dispatch(setArmy(armyData));
         },
       });
