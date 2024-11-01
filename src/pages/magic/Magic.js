@@ -540,7 +540,10 @@ export const Magic = ({ isMobile }) => {
                           !item.stackable &&
                           item.type === magicItem.type &&
                           !isRune) ||
-                        (isRune && runesAmountInCategory >= 3)
+                        (isRune && runesAmountInCategory >= 3) ||
+                        (isRune &&
+                          (magicItem.nonExclusive === false ||
+                            item.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
 
                 return (
