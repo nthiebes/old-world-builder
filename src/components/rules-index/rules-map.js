@@ -57,6 +57,9 @@ const additionalOWBRules = {
   "storm call warriors": {
     url: "special-rules/storm-call",
   },
+  "doomseeker dwarfs": {
+    url: "special-rules/doomseeker",
+  },
 };
 
 export const synonyms = {
@@ -64,6 +67,7 @@ export const synonyms = {
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
   "swords of hoeth": "sword of hoeth",
+  "gromril great axes": "gromril great axe",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
   shields: "shield",
