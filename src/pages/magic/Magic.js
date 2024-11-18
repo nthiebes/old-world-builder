@@ -522,16 +522,22 @@ export const Magic = ({ isMobile }) => {
                   ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                 );
                 let runesAmountInCategory = 0;
+                let masterRuneInCategory = false;
 
-                unitSelectedItems.forEach(({ type: itemType, amount }) => {
-                  if (itemType === magicItem.type) {
-                    runesAmountInCategory += amount ?? 1;
+                unitSelectedItems.forEach(
+                  ({ name_en, type: itemType, amount }) => {
+                    if (itemType === magicItem.type) {
+                      runesAmountInCategory += amount ?? 1;
+
+                      if (name_en.includes("Master")) {
+                        masterRuneInCategory = true;
+                      }
+                    }
                   }
-                });
+                );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
                 const isRune = Boolean(magicItem.type.includes("runes"));
-
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
                   : unitSelectedItems.some(
@@ -541,6 +547,9 @@ export const Magic = ({ isMobile }) => {
                           selectedItem.type === magicItem.type &&
                           !isRune) ||
                         (isRune && runesAmountInCategory >= 3) ||
+                        (isRune &&
+                          masterRuneInCategory &&
+                          magicItem.name_en.includes("Master")) ||
                         (isRune &&
                           magicItem.type === selectedItem.type &&
                           (magicItem.nonExclusive === false ||
