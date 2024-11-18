@@ -535,15 +535,16 @@ export const Magic = ({ isMobile }) => {
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
                   : unitSelectedItems.some(
-                      (item) =>
+                      (selectedItem) =>
                         (!magicItem.stackable &&
-                          !item.stackable &&
-                          item.type === magicItem.type &&
+                          !selectedItem.stackable &&
+                          selectedItem.type === magicItem.type &&
                           !isRune) ||
                         (isRune && runesAmountInCategory >= 3) ||
                         (isRune &&
+                          magicItem.type === selectedItem.type &&
                           (magicItem.nonExclusive === false ||
-                            item.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
+                            selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
 
                 return (
