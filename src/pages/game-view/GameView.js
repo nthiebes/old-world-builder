@@ -39,11 +39,12 @@ export const GameView = () => {
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
   const [BSBDead, setBSBDead] = useState(false);
+  const [detachmentsDead, setDetachmentsDead] = useState({});
   const [showStats, setShowStats] = useState(true);
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [victoryPoints, setVictoryPoints] = useState({});
   const [showVictoryPoints, setShowVictoryPoints] = useState(true);
-  const [showCustomNotes, setShowCustomNotes] = useState(true);
+  const [showCustomNotes, setShowCustomNotes] = useState(false);
   const [showGeneratedSpells, setShowGeneratedSpells] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -87,11 +88,22 @@ export const GameView = () => {
   const armyName = army[`name_${language}`] || army.name_en;
   const getUnitVictoryPoints = (unitId) => {
     let allPoints = 0;
+    let detachmentsSum = 0;
     const unitVictoryPoints = victoryPoints[unitId];
 
+    if (unitVictoryPoints && unitVictoryPoints["detachments"]) {
+      const detachments = Object.values(unitVictoryPoints["detachments"]);
+
+      if (detachments.length) {
+        for (let i = 0; i < detachments.length; i++) {
+          detachmentsSum += detachments[i];
+        }
+      }
+    }
     allPoints += unitVictoryPoints ? unitVictoryPoints["25"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["dead"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["fleeing"] : 0;
+    allPoints += detachmentsSum;
 
     return allPoints;
   };
@@ -306,7 +318,7 @@ export const GameView = () => {
                   )}
                   {showVictoryPoints && (
                     <div>
-                      {getVictoryButtons(unit)}
+                      {getVictoryButtons(unit, type)}
                       <p className="game-view__special-rules">
                         <b>
                           <i>
@@ -326,11 +338,12 @@ export const GameView = () => {
       </ul>
     );
   };
-  const updateVictoryPoints = ({ unit, value }) => {
+  const updateVictoryPoints = ({ unit, value, deadDetachments }) => {
     let unitPoints = victoryPoints[unit.id] || {
       dead: 0,
       fleeing: 0,
       25: 0,
+      detachments: {},
     };
     const isGeneral = Boolean(
       unit?.command?.length &&
@@ -350,7 +363,10 @@ export const GameView = () => {
     switch (value) {
       case "dead": {
         unitPoints = {
-          dead: unitPoints.dead ? 0 : getUnitPoints(unit),
+          ...unitPoints,
+          dead: unitPoints.dead
+            ? 0
+            : getUnitPoints(unit, { noDetachments: true }),
           fleeing: 0,
           25: 0,
         };
@@ -364,8 +380,11 @@ export const GameView = () => {
       }
       case "fleeing": {
         unitPoints = {
+          ...unitPoints,
           dead: 0,
-          fleeing: unitPoints.fleeing ? 0 : Math.round(getUnitPoints(unit) / 2),
+          fleeing: unitPoints.fleeing
+            ? 0
+            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 2),
           25: 0,
         };
         if (isGeneral) {
@@ -378,12 +397,30 @@ export const GameView = () => {
       }
       case "25": {
         unitPoints = {
+          ...unitPoints,
           dead: 0,
           fleeing: 0,
-          25: unitPoints["25"] ? 0 : Math.round(getUnitPoints(unit) / 4),
+          25: unitPoints["25"]
+            ? 0
+            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 4),
         };
-        setGeneralDead(false);
-        setBSBDead(false);
+        break;
+      }
+      case "detachment": {
+        unit.detachments.forEach((detachment) => {
+          unitPoints = {
+            ...unitPoints,
+            detachments: {
+              ...unitPoints.detachments,
+              [detachment.id]:
+                deadDetachments *
+                getUnitPoints({
+                  ...detachment,
+                  strength: 1,
+                }),
+            },
+          };
+        });
       }
     }
 
@@ -392,7 +429,8 @@ export const GameView = () => {
       [unit.id]: { ...unitPoints, isGeneral, isBSB },
     });
   };
-  const getVictoryButtons = (unit) => {
+
+  const getVictoryButtons = (unit, type) => {
     return (
       <>
         <Button
@@ -411,14 +449,45 @@ export const GameView = () => {
         >
           <FormattedMessage id="misc.fleeing" />
         </Button>
-        <Button
-          className="game-view__victory-button"
-          type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
-          spaceTop
-          onClick={() => updateVictoryPoints({ unit, value: "25" })}
-        >
-          {"<25%"}
-        </Button>
+        {type !== "characters" && (
+          <Button
+            className="game-view__victory-button"
+            type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
+            spaceTop
+            onClick={() => updateVictoryPoints({ unit, value: "25" })}
+          >
+            {"<25%"}
+          </Button>
+        )}
+        {unit.detachments &&
+          unit.detachments.length &&
+          unit.detachments.map((detachment) => (
+            <span key={detachment.id} className="game-view__detachment">
+              <label
+                htmlFor={detachment.id}
+                className="game-view__detachment-label"
+              >
+                <FormattedMessage id="misc.dead" /> {detachment.name_en}
+              </label>
+              <NumberInput
+                id={detachment.id}
+                min={0}
+                max={detachment.strength}
+                value={detachmentsDead[detachment.id] || 0}
+                onChange={(event) => {
+                  setDetachmentsDead({
+                    ...detachmentsDead,
+                    [detachment.id]: event.target.value,
+                  });
+                  updateVictoryPoints({
+                    unit,
+                    value: "detachment",
+                    deadDetachments: event.target.value,
+                  });
+                }}
+              />
+            </span>
+          ))}
       </>
     );
   };

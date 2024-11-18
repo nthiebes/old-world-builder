@@ -2843,6 +2843,8 @@
           "category": "core"
         }
       },
+      "regimentalUnit": true,
+      "maxDetachments": 1,
       "command": [
         {
           "name_en": "Boss (champion)",
@@ -2900,19 +2902,6 @@
           "points": 20,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Fanatics",
-          "name_de": "Fanatics",
-          "name_fr": "Fanatiques",
-          "points": 25,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 3,
-          "notes": {
-            "name_en": "0-1 Fanatic per 10 Night Goblins, to a maximum of 3",
-            "name_fr": "0-1 Fanatique par tranche de 10 Gobelins de la Nuit, jusqu'à un maximum de 3"
-          }
         }
       ],
       "mounts": [],
@@ -2927,6 +2916,43 @@
         "name_de": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
         "name_es": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
         "name_fr": "Ordre Serré, Peur des Elfes, Haine (Nains), Horde, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Fanatics",
+      "name_de": "Fanatics",
+      "name_es": "Fanatics",
+      "name_fr": "Fanatiques",
+      "id": "fanatics",
+      "points": 25,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 3,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Fanatic ball & chain",
+          "name_de": "Fanatic ball & chain",
+          "name_es": "Fanatic ball & chain",
+          "name_fr": "Fanatic ball & chain",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Immune to Psychology, Release the Fanatics!",
+        "name_de": "Immune to Psychology, Release the Fanatics!",
+        "name_es": "Immune to Psychology, Release the Fanatics!",
+        "name_fr": "Immune to Psychology, Release the Fanatics!"
+      },
+      "notes": {
+        "name_en": "0-1 Fanatic per 10 Night Goblins, to a maximum of 3",
+        "name_fr": "0-1 Fanatique par tranche de 10 Gobelins de la Nuit, jusqu'à un maximum de 3"
       }
     },
     {

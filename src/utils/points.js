@@ -1,4 +1,4 @@
-export const getUnitPoints = (unit) => {
+export const getUnitPoints = (unit, options) => {
   const detachmentActive =
     unit?.options?.length > 0 &&
     Boolean(
@@ -98,7 +98,7 @@ export const getUnitPoints = (unit) => {
       });
     });
   }
-  if (unit.detachments) {
+  if (unit.detachments && !options?.noDetachments) {
     unit.detachments.forEach(
       ({ strength, points, equipment, armor, options }) => {
         unitPoints += strength * points;

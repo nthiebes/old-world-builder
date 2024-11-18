@@ -1075,6 +1075,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       />
                     </div>
                   </div>
+                  {getUnitOptionNotes({
+                    notes: detachment.notes,
+                    key: `options-${id}-detachment`,
+                    className:
+                      "unit__option-note unit__option-note--detachment",
+                    language,
+                  })}
                   {unit.detachments &&
                     unit.detachments
                       .filter(
