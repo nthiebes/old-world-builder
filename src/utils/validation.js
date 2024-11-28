@@ -2,7 +2,7 @@ import { rules } from "./rules";
 import { uniq } from "./collection";
 import { getUnitName } from "./unit";
 
-export const validateList = ({ list, language, intl }) => {
+export const validateList = ({ list, language, intl, army}) => {
   const errors = [];
   const generals = !list?.characters?.length
     ? []
@@ -69,7 +69,7 @@ export const validateList = ({ list, language, intl }) => {
         ruleUnit.ids.map((id) => {
           const name = intl.formatMessage({ id });
 
-          return getUnitName({ unit: { name }, language });
+          return getUnitName({ unit: getUnitById(id, intl, army), language });
         })
       )
         .join(", ")
@@ -340,4 +340,19 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   return errors;
+};
+
+const getUnitById = (id, intl, army) => {
+  let foundUnit = null;
+
+  if(army) {
+    foundUnit = [army.characters, army.core, army.special, army.rare].flatMap(arr => arr).find(unit => unit.id === id);
+  }
+
+  if(foundUnit) {
+    return foundUnit;
+  } else {
+    const unitName = intl.formatMessage({ id });
+    return { name: unitName }
+  }
 };
