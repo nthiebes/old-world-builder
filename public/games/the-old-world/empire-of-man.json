@@ -2305,24 +2305,32 @@
       ],
       "options": [
         {
-          "name_en": "Drilled (0-1 unit per 1000 points)",
-          "name_de": "Drilled (0-1 unit per 1000 points)",
-          "name_fr": "Bien Entraînés (0-1 unité par tranche de 1000 points)",
-          "name_es": "Entrenado (0-1 unidades por cada 1.000 puntos)",
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
         },
         {
-          "name_en": "Stubborn (0-1 unit per 1000 points)",
-          "name_de": "Stubborn (0-1 unit per 1000 points)",
-          "name_fr": "Obstiné (0-1 unité par tranche de 1000 points)",
-          "name_es": "Tozudo (0-1 unidades por cada 1.000 puntos)",
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
         }
       ],
       "mounts": [],
@@ -2330,7 +2338,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Counter Charge, First Charge, Swiftstride",
-        "name_de": "",
+        "name_de": "Close Order, Counter Charge, First Charge, Swiftstride",
         "name_fr": "Ordre Serré, Contre-charge, Première Charge, Rapide",
         "name_es": "Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz"
       },
