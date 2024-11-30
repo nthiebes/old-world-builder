@@ -1058,6 +1058,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     <div className="list__inner unit__detachments-header">
                       <b className="unit__magic-headline">
                         {detachment[`name_${language}`] || name_en}
+                        <RuleWithIcon
+                          name={name_en}
+                          isDark
+                          className="unit__rules"
+                        />
                       </b>
                       <Button
                         onClick={() =>
@@ -1124,7 +1129,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               />
                               <span>
                                 <b>
-                                  {detachment[`name_${language}`] || name_en}
+                                  {detachment[`name_${language}`] || name_en}{" "}
                                 </b>
                                 <i>{getPointsText({ points })}</i>
                               </span>
