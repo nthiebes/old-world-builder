@@ -22,6 +22,7 @@ import { Changelog } from "./pages/changelog";
 import { Import } from "./pages/import";
 import { GameView } from "./pages/game-view";
 import { setLists } from "./state/lists";
+import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 
 import "./App.css";
@@ -34,8 +35,10 @@ export const App = () => {
 
   useEffect(() => {
     const localLists = localStorage.getItem("owb.lists");
+    const localSettings = localStorage.getItem("owb.settings");
 
     dispatch(setLists(JSON.parse(localLists)));
+    dispatch(setSettings(JSON.parse(localSettings)));
   }, [dispatch]);
 
   useEffect(() => {
