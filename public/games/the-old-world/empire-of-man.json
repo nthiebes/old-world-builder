@@ -732,12 +732,18 @@
       "points": 145,
       "armyComposition": {
         "empire-of-man": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 General of the Empire or Grand Master per 1000 points, 0-1 Grand Master or Chapter Master in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_de": "0-1 General of the Empire or Grand Master per 1000 points, 0-1 Grand Master or Chapter Master in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_fr": "0-1 Général de l'Empire ou Grand Maître par tranche de 1000 points, 0-1 Grand Master or Chapter Master in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_es": "0-1 General del Imperio o Gran Maestre por cada 1.000 puntos, 0-1 Grand Master or Chapter Master in your army may be upgraded to belong to your chosen Knightly Order"
+          }
         },
         "knightly-order-panther": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Grand Master",
+            "name_en": "0-1 Grand Master, Must belong to the Knights Panther",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -746,7 +752,7 @@
         "knightly-order-white-wolf": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Grand Master",
+            "name_en": "0-1 Grand Master, Must belong to the Knights Of The White Wolf",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -755,7 +761,7 @@
         "knightly-order-blazing-sun": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Grand Master",
+            "name_en": "0-1 Grand Master, Must belong to the Knights Of The Blazing Sun",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -764,7 +770,7 @@
         "knightly-order-morr": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Grand Master",
+            "name_en": "0-1 Grand Master, Must belong to the Knights Of Morr",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -773,7 +779,7 @@
         "knightly-order-fiery-heart": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Grand Master",
+            "name_en": "0-1 Grand Master, Must belong to the Knights Of The Fiery Heart",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -854,6 +860,56 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 10,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 10,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [
@@ -898,12 +954,6 @@
         "name_fr": "Contre-charge, Première Charge, Immunisé à la Psychologie, Maître des Batailles, Cri de Ralliement, Obstiné, Rapide, Vétérans",
         "name_es": "Contracarga, Primera Carga, Inmune a la Psicología, Maestro de Batalla, Grito de Guerra, Zancada Veloz, Veterano"
       },
-      "notes": {
-        "name_en": "0-1 General of the Empire or Grand Master per 1000 points",
-        "name_de": "",
-        "name_fr": "0-1 Général de l'Empire ou Grand Maître par tranche de 1000 points",
-        "name_es": "0-1 General del Imperio o Gran Maestre por cada 1.000 puntos"
-      },
       "magic": {
         "types": [
           "weapon",
@@ -924,12 +974,18 @@
       "points": 75,
       "armyComposition": {
         "empire-of-man": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master or Chapter Master in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         },
         "knightly-order-panther": {
           "category": "characters",
           "notes": {
-            "name_en": "1+ Chapter Master",
+            "name_en": "1+ Chapter Master, Must belong to the Knights Panther",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -938,7 +994,7 @@
         "knightly-order-white-wolf": {
           "category": "characters",
           "notes": {
-            "name_en": "1+ Chapter Master",
+            "name_en": "1+ Chapter Master, Must belong to the Knights Of The White Wolf",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -947,7 +1003,7 @@
         "knightly-order-blazing-sun": {
           "category": "characters",
           "notes": {
-            "name_en": "1+ Chapter Master",
+            "name_en": "1+ Chapter Master, Must belong to the Knights Of The Blazing Sun",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -956,7 +1012,7 @@
         "knightly-order-morr": {
           "category": "characters",
           "notes": {
-            "name_en": "1+ Chapter Master",
+            "name_en": "1+ Chapter Master, Must belong to the Knights Of Morr",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -965,7 +1021,7 @@
         "knightly-order-fiery-heart": {
           "category": "characters",
           "notes": {
-            "name_en": "1+ Chapter Master",
+            "name_en": "1+ Chapter Master, Must belong to the Knights Of The Fiery Heart",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -1054,9 +1110,57 @@
           "name_fr": "Bouclier",
           "name_es": "Escudo",
           "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 10,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 15,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [
@@ -1100,12 +1204,6 @@
         "name_de": "",
         "name_fr": "Contre-charge, Première Charge, Immunisé à la Psychologie, Maître des Batailles, Cri de Ralliement, Obstiné, Rapide, Vétérans",
         "name_es": "Contracarga, Primera Carga, Inmune a la Psicología, Maestro de Batalla, Grito de Guerra, Tozudo, Zancada Veloz, Veterano"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
       },
       "magic": {
         "types": [
@@ -2015,6 +2113,185 @@
         "name_fr": "",
         "name_es": ""
       }
+    },
+    {
+      "name_en": "Harbinger of Doom",
+      "name_de": "Harbinger of Doom",
+      "name_fr": "Harbinger of Doom",
+      "name_es": "Harbinger of Doom",
+      "id": "harbinger-of-doom",
+      "points": 65,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Flail",
+          "name_de": "Flail",
+          "name_es": "Flail",
+          "name_fr": "Fléau",
+          "points": 3
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Feel No Pain, Furious Charge, Immune to Psychology, Impetuous, Hatred (all enemies), Prayer of the Damned, Unbreakable, Zealot",
+        "name_de": "Feel No Pain, Furious Charge, Immune to Psychology, Impetuous, Hatred (all enemies), Prayer of the Damned, Unbreakable, Zealot",
+        "name_fr": "Feel No Pain, Furious Charge, Immune to Psychology, Impetuous, Hatred (all enemies), Prayer of the Damned, Unbreakable, Zealot",
+        "name_es": "Feel No Pain, Furious Charge, Immune to Psychology, Impetuous, Hatred (all enemies), Prayer of the Damned, Unbreakable, Zealot"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "General Hans von Löwenhacke",
+      "name_de": "General Hans von Löwenhacke",
+      "name_fr": "General Hans von Löwenhacke",
+      "name_es": "General Hans von Löwenhacke",
+      "id": "general-hans-von-lowenhacke",
+      "points": 190,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Judgement, Griffon Helm",
+          "name_de": "Hand weapon, Judgement, Griffon Helm",
+          "name_fr": "Arme de base, Judgement, Griffon Helm",
+          "name_es": "Arma de mano, Judgement, Griffon Helm",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Plate",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "\"Hold the Line!\", Mercenary Commander, Rallying Cry, Strategic Mastery, Stubborn",
+        "name_de": "\"Hold the Line!\", Mercenary Commander, Rallying Cry, Strategic Mastery, Stubborn",
+        "name_fr": "\"Hold the Line!\", Mercenary Commander, Rallying Cry, Strategic Mastery, Stubborn",
+        "name_es": "\"Hold the Line!\", Mercenary Commander, Rallying Cry, Strategic Mastery, Stubborn"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Harald Gemunsen",
+      "name_de": "Harald Gemunsen",
+      "name_fr": "Harald Gemunsen",
+      "name_es": "Harald Gemunsen",
+      "id": "harald-gemunsen",
+      "points": 185,
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Beast Reaver",
+          "name_de": "Hand weapon, Beast Reaver",
+          "name_fr": "Arme de base, Beast Reaver",
+          "name_es": "Arma de mano, Beast Reaver",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Plate, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran",
+        "name_de": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran",
+        "name_fr": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran",
+        "name_es": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
     }
   ],
   "core": [
@@ -2027,19 +2304,49 @@
       "points": 29,
       "armyComposition": {
         "knightly-order-panther": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "Must belong to the Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-white-wolf": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-blazing-sun": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-morr": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "Must belong to the Knights Of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-fiery-heart": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Fiery Heart",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         }
       },
       "minimum": 4,
@@ -2129,6 +2436,56 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [],
@@ -3096,7 +3453,13 @@
       "id": "empire-knights",
       "armyComposition": {
         "empire-of-man": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "city-state-of-nuln": {
           "category": "special"
@@ -3104,7 +3467,7 @@
         "knightly-order-panther": {
           "category": "core",
           "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Panther",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -3113,7 +3476,7 @@
         "knightly-order-white-wolf": {
           "category": "core",
           "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The White Wolf",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -3122,7 +3485,7 @@
         "knightly-order-blazing-sun": {
           "category": "core",
           "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The Blazing Sun",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -3131,7 +3494,7 @@
         "knightly-order-morr": {
           "category": "core",
           "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of Morr",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -3140,7 +3503,7 @@
         "knightly-order-fiery-heart": {
           "category": "core",
           "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The Fiery Heart",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -3247,6 +3610,56 @@
             "name_fr": "0-1 unité par tranche de 1000 points",
             "name_it": "0-1 unità ogni 1000p.ti"
           }
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [],
@@ -3383,22 +3796,58 @@
       "points": 29,
       "armyComposition": {
         "empire-of-man": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-panther": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-white-wolf": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-blazing-sun": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-morr": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-fiery-heart": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Fiery Heart",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         }
       },
       "minimum": 4,
@@ -3488,6 +3937,56 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [],
@@ -3615,6 +4114,104 @@
       },
       "notes": {
         "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Teutogen Guard",
+      "name_de": "Teutogen Guard",
+      "name_fr": "Teutogen Guard",
+      "name_es": "Teutogen Guard",
+      "id": "teutogen-guard",
+      "points": 13,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Teutogen Guard as a Special choice per Warrior Priest of Ulric it includes",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "special"
+        }
+      },
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "First Knight (champion)",
+          "name_de": "First Knight (champion)",
+          "name_fr": "First Knight (champion)",
+          "name_es": "First Knight (campeón)",
+          "points": 8
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Wolf hammers",
+          "name_de": "Hand weapons, Wolf hammers",
+          "name_fr": "Hand weapons, Wolf hammers",
+          "name_es": "Hand weapons, Wolf hammers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Guardians of the Temple",
+          "name_de": "Guardians of the Temple",
+          "name_fr": "Guardians of the Temple",
+          "name_es": "Guardians of the Temple",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blessings of Ulric, Close Order, Drilled, Guardians of the Temple, Stubborn, Veteran",
         "name_de": "",
         "name_fr": "",
         "name_es": ""
@@ -3867,22 +4464,58 @@
       "points": 58,
       "armyComposition": {
         "empire-of-man": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-panther": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-white-wolf": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-blazing-sun": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-morr": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         },
         "knightly-order-fiery-heart": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "Must belong to the Knights Of The Fiery Heart",
+            "name_de": "",
+            "name_fr": "",
+            "name_it": ""
+          }
         }
       },
       "minimum": 2,
@@ -3962,7 +4595,58 @@
           "perModel": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -3971,12 +4655,6 @@
         "name_de": "",
         "name_fr": "Ordre Serré, Contre-charge, Première Charge, Peur, Rapide",
         "name_es": "Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
       }
     },
     {

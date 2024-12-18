@@ -1244,6 +1244,13 @@ export const rules = {
           max: 3,
           points: 1000,
         },
+        {
+          ids: ["teutogen-guard"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["priest-of-ulric"],
+        },
       ],
     },
     rare: {
