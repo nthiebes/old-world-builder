@@ -7,6 +7,14 @@
       "name_es": "General del Imperio",
       "id": "general-of-the-empire",
       "points": 90,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -244,6 +252,14 @@
       "name_es": "Capitán del Imperio",
       "id": "captain-of-the-empire",
       "points": 45,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -471,7 +487,7 @@
         "empire-of-man": {
           "category": "characters"
         },
-        "knightly-order": {
+        "knightly-order-morr": {
           "category": "characters"
         }
       },
@@ -592,6 +608,26 @@
       "name_es": "Hechicero de Batalla",
       "id": "master-mage",
       "points": 60,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-2 Master Mages as Character choices per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -698,8 +734,50 @@
         "empire-of-man": {
           "category": "characters"
         },
-        "knightly-order": {
-          "category": "characters"
+        "knightly-order-panther": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Grand Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "command": [
@@ -848,8 +926,50 @@
         "empire-of-man": {
           "category": "characters"
         },
-        "knightly-order": {
-          "category": "characters"
+        "knightly-order-panther": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Chapter Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Chapter Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Chapter Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Chapter Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Chapter Master",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "command": [
@@ -859,6 +979,17 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
@@ -994,6 +1125,26 @@
       "name_es": "Cazador de brujas",
       "id": "witch-hunter",
       "points": 55,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        },
+        "knightly-order-panther": {
+          "category": "characters"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "characters"
+        },
+        "knightly-order-morr": {
+          "category": "characters"
+        },
+        "knightly-order-fiery-heart": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1050,8 +1201,7 @@
           "name_es": "Ballesta (No puede equiparse junto a arcabuz)",
           "points": 6,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Handgun (Don't take crossbow)",
@@ -1060,8 +1210,7 @@
           "name_es": "Arcabuz (No puede equiparse junto a ballesta)",
           "points": 6,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Pistol (Don't take brace of pistols)",
@@ -1070,8 +1219,7 @@
           "name_es": "Pistola (No puede equiparse junto a ristra de pistolas)",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Brace of pistols (Don't take pistol)",
@@ -1080,8 +1228,7 @@
           "name_es": "Ristra de pistolas (No puede equiparse junto a pistola)",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -1150,6 +1297,44 @@
       "name_es": "Archilector de Sigmar",
       "id": "lector-of-sigmar",
       "points": 110,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 General of the Empire or Lector of Sigmar per 1,000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-panther": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "notes": {
+        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
+        "name_de": "",
+        "name_fr": "0-1 Archidiacre de Sigmar ou Grand Prêtre d'Ulric par tranche de 1000 points, 0-1 Autel de Guerre de Sigmar (pris comme monture pour un Archidiacre de Sigmar)",
+        "name_es": "0-1 Archilector de Sigmar o Sumo Sacerdote de Ulric por cada 1.000 puntos, 0-1 Altar de Guerra de Sigmar (como montura de un Archilector de Sigmar)"
+      },
       "command": [
         {
           "name_en": "General",
@@ -1266,12 +1451,6 @@
         "name_de": "",
         "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Prières de Sigmar",
         "name_es": "Ataques Mágicos, Resistencia a la Magia (-1), Plegarias a Sigmar"
-      },
-      "notes": {
-        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
-        "name_de": "",
-        "name_fr": "0-1 Archidiacre de Sigmar ou Grand Prêtre d'Ulric par tranche de 1000 points, 0-1 Autel de Guerre de Sigmar (pris comme monture pour un Archidiacre de Sigmar)",
-        "name_es": "0-1 Archilector de Sigmar o Sumo Sacerdote de Ulric por cada 1.000 puntos, 0-1 Altar de Guerra de Sigmar (como montura de un Archilector de Sigmar)"
       }
     },
     {
@@ -1281,6 +1460,23 @@
       "name_es": "Sacerdote de Sigmar",
       "id": "priest-of-sigmar",
       "points": 60,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        },
+        "knightly-order-panther": {
+          "category": "characters"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "characters"
+        },
+        "knightly-order-fiery-heart": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1409,8 +1605,23 @@
         "empire-of-man": {
           "category": "characters"
         },
-        "knightly-order": {
-          "category": "characters"
+        "knightly-order-panther": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "command": [
@@ -1541,7 +1752,13 @@
         "empire-of-man": {
           "category": "characters"
         },
-        "knightly-order": {
+        "knightly-order-panther": {
+          "category": "characters"
+        },
+        "knightly-order-white-wolf": {
+          "category": "characters"
+        },
+        "knightly-order-blazing-sun": {
           "category": "characters"
         }
       },
@@ -1669,6 +1886,14 @@
       "name_es": "Ingeniero del Imperio",
       "id": "empire-engineer",
       "points": 45,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1794,6 +2019,135 @@
   ],
   "core": [
     {
+      "name_en": "Inner Circle Knights",
+      "name_de": "Inner Circle Knights",
+      "name_fr": "Chevaliers du Cercle Intérieur",
+      "name_es": "Caballeros del Círculo Interior",
+      "id": "inner-circle-knights-core",
+      "points": 29,
+      "armyComposition": {
+        "knightly-order-panther": {
+          "category": "core"
+        },
+        "knightly-order-white-wolf": {
+          "category": "core"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "core"
+        },
+        "knightly-order-morr": {
+          "category": "core"
+        },
+        "knightly-order-fiery-heart": {
+          "category": "core"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans",
+        "name_es": "Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
       "name_en": "State Troops",
       "name_de": "State Troops",
       "name_fr": "Troupes Régulières",
@@ -1804,8 +2158,50 @@
         "empire-of-man": {
           "category": "core"
         },
-        "knightly-order": {
-          "category": "core"
+        "knightly-order-panther": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "minimum": 10,
@@ -1915,10 +2311,14 @@
       "name_es": "Nuln Tropas Estatales",
       "id": "nuln-state-troops",
       "points": 5,
+      "armyComposition": {
+        "city-state-of-nuln": {
+          "category": "core"
+        }
+      },
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
-      "minDetachmentSize": 5,
       "minDetachments": 1,
       "maxDetachments": 2,
       "command": [
@@ -1988,7 +2388,7 @@
         "name_es": "Formación Cerrada, Unidad Regimental"
       },
       "notes": {
-        "name_en": "1+ regiment of Nuin State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or Swordsmen",
+        "name_en": "1+ regiment of Nuln State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or Swordsmen",
         "name_de": "",
         "name_fr": "",
         "name_es": ""
@@ -2012,7 +2412,7 @@
           "name_de": "Handwaffen, Schilde",
           "name_es": "Hand weapons, Boucliers",
           "name_fr": "Armes de base, Escudos",
-          "points": 0,
+          "points": 1,
           "perModel": true,
           "active": true
         }
@@ -2061,9 +2461,6 @@
       "id": "veteran-state-troops",
       "armyComposition": {
         "empire-of-man": {
-          "category": "core"
-        },
-        "knightly-order": {
           "category": "core"
         }
       },
@@ -2187,6 +2584,110 @@
       }
     },
     {
+      "name_en": "Nuln Veteran State Troops",
+      "name_de": "Nuln Veteran State Troops",
+      "name_fr": "Nuln Vétérans des Troupes Régulières",
+      "name_es": "Nuln Tropas Estatales Veteranas",
+      "id": "nuln-veteran-state-troops",
+      "armyComposition": {
+        "city-state-of-nuln": {
+          "category": "core"
+        }
+      },
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "minDetachments": 1,
+      "maxDetachments": 2,
+      "command": [
+        {
+          "name_en": "Veteran Sergeant (champion)",
+          "name_de": "Veteran Sergeant (champion)",
+          "name_fr": "Sergent Vétéran (champion)",
+          "name_es": "Sargento Veterano (campeón)",
+          "points": 5,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "name_fr": "Hallebardes",
+          "name_es": "Alabardas",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "name_es": "Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Regimental Unit, Veteran",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Unité Régimentaire, Vétérans",
+        "name_es": "Formación Cerrada, Unidad Regimental, Veterano"
+      },
+      "notes": {
+        "name_en": "1+ regiment of Nuln State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or Swordsmen",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
       "name_en": "State Missile Troops",
       "name_de": "State Missile Troops",
       "name_fr": "Troupes de Tir de l'Empire",
@@ -2197,8 +2698,50 @@
         "empire-of-man": {
           "category": "core"
         },
-        "knightly-order": {
-          "category": "core"
+        "knightly-order-panther": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire State Troops or State Missile Troops per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "minimum": 10,
@@ -2377,42 +2920,7 @@
           "name_de": "Sergeant (champion)",
           "name_fr": "Sergent (champion)",
           "name_es": "Sargento (campeón)",
-          "points": 0,
-          "options": [
-            {
-              "name_en": "Crossbow/Handgun",
-              "name_de": "Crossbow/Handgun",
-              "name_fr": "Arbalète/Arquebuse",
-              "name_es": "Ballesta/Arcabuz",
-              "points": 0,
-              "exclusive": true,
-              "active": true
-            },
-            {
-              "name_en": "Brace of pistols",
-              "name_de": "Brace of pistols",
-              "name_fr": "Plusieurs pistolets",
-              "name_es": "Ristra de pistolas",
-              "points": 5,
-              "exclusive": true
-            },
-            {
-              "name_en": "Hochland long rifle",
-              "name_de": "Hochland long rifle",
-              "name_fr": "Long fusil de Hochland",
-              "name_es": "Rifle largo de Hochland",
-              "points": 8,
-              "exclusive": true
-            },
-            {
-              "name_en": "Repeater handgun",
-              "name_de": "Repeater handgun",
-              "name_fr": "Arquebuse à répétition",
-              "name_es": "Mosquete de repetición",
-              "points": 5,
-              "exclusive": true
-            }
-          ]
+          "points": 0
         }
       ],
       "mounts": [],
@@ -2438,6 +2946,23 @@
       "name_es": "Milicia de Compañías Libres",
       "id": "free-company-militia",
       "points": 6,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "core"
+        },
+        "knightly-order-white-wolf": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Free Company Militia as a Core choice per 1,000",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "minimum": 10,
       "maximum": 0,
       "minDetachmentSize": 5,
@@ -2576,8 +3101,50 @@
         "city-state-of-nuln": {
           "category": "special"
         },
-        "knightly-order": {
-          "category": "core"
+        "knightly-order-panther": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Empire Knights per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "points": 21,
@@ -2705,6 +3272,14 @@
       "name_es": "Batidores",
       "id": "outriders-core",
       "points": 19,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "core"
+        }
+      },
       "minimum": 4,
       "maximum": 0,
       "command": [
@@ -2810,7 +3385,19 @@
         "empire-of-man": {
           "category": "special"
         },
-        "knightly-order": {
+        "knightly-order-panther": {
+          "category": "special"
+        },
+        "knightly-order-white-wolf": {
+          "category": "special"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special"
+        },
+        "knightly-order-morr": {
+          "category": "special"
+        },
+        "knightly-order-fiery-heart": {
           "category": "special"
         }
       },
@@ -2926,6 +3513,14 @@
       "name_es": "Grandes Espaderos del Imperio",
       "id": "empire-greatswords",
       "points": 11,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -3032,6 +3627,29 @@
       "name_es": "Herreruelos",
       "id": "pistoliers",
       "points": 16,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        },
+        "knightly-order-panther": {
+          "category": "rare"
+        },
+        "knightly-order-white-wolf": {
+          "category": "rare"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "rare"
+        },
+        "knightly-order-morr": {
+          "category": "rare"
+        },
+        "knightly-order-fiery-heart": {
+          "category": "rare"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -3140,6 +3758,14 @@
       "name_es": "Batidores",
       "id": "outriders",
       "points": 19,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        }
+      },
       "minimum": 4,
       "maximum": 0,
       "command": [
@@ -3243,7 +3869,19 @@
         "empire-of-man": {
           "category": "special"
         },
-        "knightly-order": {
+        "knightly-order-panther": {
+          "category": "special"
+        },
+        "knightly-order-white-wolf": {
+          "category": "special"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special"
+        },
+        "knightly-order-morr": {
+          "category": "special"
+        },
+        "knightly-order-fiery-heart": {
           "category": "special"
         }
       },
@@ -3348,6 +3986,23 @@
       "name_es": "Gran Cañón",
       "id": "great-cannon",
       "points": 125,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Great Cannon or Mortar as a Special choice per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3402,6 +4057,23 @@
       "name_es": "Mortero",
       "id": "mortar",
       "points": 95,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Great Cannon or Mortar as a Special choice per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3669,6 +4341,20 @@
       "name_es": "Tanque a Vapor",
       "id": "steam-tank",
       "points": 265,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3721,23 +4407,6 @@
         "name_de": "",
         "name_fr": "",
         "name_es": ""
-      },
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "rare"
-        },
-        "city-state-of-nuln": {
-          "category": "rare",
-          "notes": {
-            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order": {
-          "category": "rare"
-        }
       }
     },
     {
@@ -3751,7 +4420,7 @@
         "empire-of-man": {
           "category": "rare"
         },
-        "knightly-order": {
+        "knightly-order-fiery-heart": {
           "category": "rare"
         }
       },
@@ -3809,6 +4478,20 @@
       "name_es": "Cañón de Salvas Helblaster",
       "id": "helblaster-volley-gun",
       "points": 120,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -3839,23 +4522,6 @@
         "name_de": "",
         "name_fr": "0-1 machine de guerre choisie dans la liste suivante par tranche de 1000 points: Canon à Répétition Feu d'Enfer, Batterie Tonnerre de Feu",
         "name_es": "0-1 máquinas de guerra de la siguiente lista por cada 1.000 puntos: Cañón de Salvas Helblaster, Batería de Cohetes HelStorm"
-      },
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "rare"
-        },
-        "city-state-of-nuln": {
-          "category": "rare",
-          "notes": {
-            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order": {
-          "category": "rare"
-        }
       }
     },
     {
@@ -3865,6 +4531,20 @@
       "name_es": "Batería de Cohetes HelStorm",
       "id": "helstrom-rocket-battery",
       "points": 125,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -3895,23 +4575,6 @@
         "name_de": "",
         "name_fr": "0-1 machine de guerre choisie dans la liste suivante par tranche de 1000 points: Canon à Répétition Feu d'Enfer, Batterie Tonnerre de Feu",
         "name_es": "0-1 máquinas de guerra de la siguiente lista por cada 1.000 puntos: Cañón de Salvas Helblaster, Batería de Cohetes HelStorm"
-      },
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "rare"
-        },
-        "city-state-of-nuln": {
-          "category": "rare",
-          "notes": {
-            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order": {
-          "category": "rare"
-        }
       }
     }
   ],

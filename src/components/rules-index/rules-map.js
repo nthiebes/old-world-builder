@@ -132,6 +132,7 @@ export const synonyms = {
   alluress: "champions",
   "master moulder": "champions",
   sergeant: "champions",
+  "veteran sergeant": "champions",
   bloodreaper: "champions",
   nymph: "champions",
   guardian: "champions",

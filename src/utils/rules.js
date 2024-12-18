@@ -1359,6 +1359,298 @@ export const rules = {
       ],
     },
   },
+  "knightly-order-panther": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grand-master"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chapter-master"],
+          min: 1,
+        },
+        {
+          ids: ["lector-of-sigmar", "high-priest-of-ulric"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["inner-circle-knights-core"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["state-troops", "state-missile-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [],
+    },
+    mercenaries: {
+      units: [
+        {
+          ids: ["inner-circle-knights"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+  },
+  "knightly-order-white-wolf": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grand-master"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chapter-master"],
+          min: 1,
+        },
+        {
+          ids: ["lector-of-sigmar", "high-priest-of-ulric"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["inner-circle-knights-core"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 1,
+          points: 1000,
+        },
+        {
+          ids: ["free-company-militia"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["state-troops", "state-missile-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [],
+    },
+  },
+  "knightly-order-blazing-sun": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grand-master"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chapter-master"],
+          min: 1,
+        },
+        {
+          ids: ["master-mage"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["inner-circle-knights-core"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 1,
+          points: 1000,
+        },
+        {
+          ids: ["free-company-militia"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["state-troops", "state-missile-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["great-cannon", "mortar"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [],
+    },
+  },
+  "knightly-order-morr": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grand-master"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chapter-master"],
+          min: 1,
+        },
+        {
+          ids: ["lector-of-sigmar", "high-priest-of-ulric"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["inner-circle-knights-core"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["state-troops", "state-missile-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [],
+    },
+  },
+  "knightly-order-fiery-heart": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grand-master"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["chapter-master"],
+          min: 1,
+        },
+        {
+          ids: ["lector-of-sigmar", "high-priest-of-ulric"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["inner-circle-knights-core"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["empire-knights"],
+          min: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["state-troops", "state-missile-troops"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [],
+    },
+  },
   "wood-elf-realms": {
     characters: {
       maxPercent: 50,

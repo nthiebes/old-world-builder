@@ -505,9 +505,29 @@ export const nameMap = {
     name_en: "City-State of Nuln",
     name_fr: "City-State of Nuln",
   },
-  "knightly-order": {
-    name_de: "Knightly Order",
-    name_en: "Knightly Order",
-    name_fr: "Knightly Order",
+  "knightly-order-panther": {
+    name_de: "Knightly Order (Panther)",
+    name_en: "Knightly Order (Panther)",
+    name_fr: "Knightly Order (Panther)",
+  },
+  "knightly-order-white-wolf": {
+    name_de: "Knightly Order (White Wolf)",
+    name_en: "Knightly Order (White Wolf)",
+    name_fr: "Knightly Order (White Wolf)",
+  },
+  "knightly-order-blazing-sun": {
+    name_de: "Knightly Order (Blazing Sun)",
+    name_en: "Knightly Order (Blazing Sun)",
+    name_fr: "Knightly Order (Blazing Sun)",
+  },
+  "knightly-order-morr": {
+    name_de: "Knightly Order (Morr)",
+    name_en: "Knightly Order (Morr)",
+    name_fr: "Knightly Order (Morr)",
+  },
+  "knightly-order-fiery-heart": {
+    name_de: "Knightly Order (Fiery Heart)",
+    name_en: "Knightly Order (Fiery Heart)",
+    name_fr: "Knightly Order (Fiery Heart)",
   },
 };
