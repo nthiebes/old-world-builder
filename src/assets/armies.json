@@ -10,6 +10,7 @@
         "name_es": "Empire of Man",
         "name_fr": "Empire de l'Homme",
         "items": ["general", "empire-of-man"],
+        "armyComposition": ["city-state-of-nuln", "knightly-order"],
         "allies": [
           { "army": "dwarfen-mountain-holds" },
           { "army": "kingdom-of-bretonnia" },
@@ -28,6 +29,20 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
+            }
+          ],
+          "city-state-of-nuln": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker-merc", "imperial-dwarf-mercenaries"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
             }
           ]
         }
@@ -105,6 +120,10 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
             }
           ],
           "royal-clan": [

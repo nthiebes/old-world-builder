@@ -500,4 +500,14 @@ export const nameMap = {
     name_en: "Lizardmen",
     name_fr: "Hommes-Lézards",
   },
+  "city-state-of-nuln": {
+    name_de: "City-State of Nuln",
+    name_en: "City-State of Nuln",
+    name_fr: "City-State of Nuln",
+  },
+  "knightly-order": {
+    name_de: "Knightly Order",
+    name_en: "Knightly Order",
+    name_fr: "Knightly Order",
+  },
 };

@@ -1280,6 +1280,85 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
+  "city-state-of-nuln": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["general-of-the-empire", "lector-of-sigmar"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["war-altar-of-sigmar"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["nuln-state-troops", "nuln-veteran-state-troops"],
+          min: 1,
+        },
+        {
+          ids: ["outriders-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["great-cannon", "mortar"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: [
+            "helblaster-volley-gun",
+            "helstrom-rocket-battery",
+            "steam-tank",
+          ],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["steam-tank"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["doomseeker-merc"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["imperial-dwarf-mercenaries", "imperial-ogres"],
+        },
+      ],
+    },
+  },
   "wood-elf-realms": {
     characters: {
       maxPercent: 50,

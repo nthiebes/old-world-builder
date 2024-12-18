@@ -467,6 +467,14 @@
       "name_es": "Gran Hechicero",
       "id": "wizard-lord",
       "points": 130,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -686,6 +694,14 @@
       "name_es": "Gran Maestre",
       "id": "grand-master",
       "points": 145,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -828,6 +844,14 @@
       "name_es": "Maestre del Capítulo",
       "id": "chapter-master",
       "points": 75,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1381,6 +1405,14 @@
       "name_es": "Sumo Sacerdote de Ulric",
       "id": "high-priest-of-ulric",
       "points": 110,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1505,6 +1537,14 @@
       "name_es": "Sacerdote de Ulric",
       "id": "priest-of-ulric",
       "points": 60,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1636,6 +1676,20 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          },
+          "notes": {
+            "name_en": "City-State of Nuln only"
+          }
         }
       ],
       "equipment": [
@@ -1692,12 +1746,26 @@
           "name_de": "Pigeon bombs",
           "name_fr": "Pigeons grenadiers",
           "name_es": "Palomas bomba",
-          "points": 20,
-          "minimum": 0,
-          "maximum": 0
+          "points": 20
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "À Pied",
+          "name_es": "A pie",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "War Wagon",
+          "name_de": "War Wagon",
+          "name_fr": "War Wagon",
+          "name_es": "War Wagon",
+          "points": 140
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -1732,6 +1800,14 @@
       "name_es": "Tropas Estatales",
       "id": "state-troops",
       "points": 5,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "knightly-order": {
+          "category": "core"
+        }
+      },
       "minimum": 10,
       "maximum": 0,
       "minDetachmentSize": 5,
@@ -1833,11 +1909,164 @@
       }
     },
     {
+      "name_en": "Nuln State Troops",
+      "name_de": "Nuln State Troops",
+      "name_fr": "Nuln Troupes Régulières",
+      "name_es": "Nuln Tropas Estatales",
+      "id": "nuln-state-troops",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "minDetachmentSize": 5,
+      "minDetachments": 1,
+      "maxDetachments": 2,
+      "command": [
+        {
+          "name_en": "Sergeant (champion)",
+          "name_de": "Sergeant (champion)",
+          "name_fr": "Sergent (champion)",
+          "name_es": "Sargento (campeón)",
+          "points": 5
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 5
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "name_fr": "Hallebardes",
+          "name_es": "Alabardas",
+          "active": true,
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_de": "Shields",
+          "name_fr": "Boucliers",
+          "name_es": "Escudos",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Regimental Unit",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Unité Régimentaire",
+        "name_es": "Formación Cerrada, Unidad Regimental"
+      },
+      "notes": {
+        "name_en": "1+ regiment of Nuin State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or Swordsmen",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "State Troops",
+      "name_de": "State Troops",
+      "name_fr": "Troupes Régulières",
+      "name_es": "Tropas Estatales",
+      "id": "state-troops-detachment",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "detachment": true,
+      "minDetachmentSize": 5,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_de": "Handwaffen, Schilde",
+          "name_es": "Hand weapons, Boucliers",
+          "name_fr": "Armes de base, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Sergeant (champion)",
+          "name_de": "Sergeant (champion)",
+          "name_fr": "Sergent (champion)",
+          "name_es": "Sargento (campeón)",
+          "points": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Détachement",
+        "name_es": "Formación Cerrada, Destacamente"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
       "name_en": "Veteran State Troops",
       "name_de": "Veteran State Troops",
       "name_fr": "Vétérans des Troupes Régulières",
       "name_es": "Tropas Estatales Veteranas",
       "id": "veteran-state-troops",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "knightly-order": {
+          "category": "core"
+        }
+      },
       "points": 7,
       "minimum": 10,
       "maximum": 0,
@@ -1964,6 +2193,14 @@
       "name_es": "Tropas Estatales de Proyectiles",
       "id": "state-missile-troops",
       "points": 7,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "knightly-order": {
+          "category": "core"
+        }
+      },
       "minimum": 10,
       "maximum": 0,
       "minDetachmentSize": 5,
@@ -2085,6 +2322,107 @@
         "name_de": "",
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire",
         "name_es": "Formación Cerrada, Destacamente, Unidad Regimental"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "State Missile Troops",
+      "name_de": "State Missile Troops",
+      "name_fr": "Troupes de Tir de l'Empire",
+      "name_es": "Tropas Estatales de Proyectiles",
+      "id": "state-missile-troops-detachment",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "detachment": true,
+      "minDetachmentSize": 5,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Handguns",
+          "name_de": "Hand weapons, Handguns",
+          "name_fr": "Armes de base, Arquebuses",
+          "name_es": "Armas de mano, Arcabuces",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Sergeant (champion)",
+          "name_de": "Sergeant (champion)",
+          "name_fr": "Sergent (champion)",
+          "name_es": "Sargento (campeón)",
+          "points": 0,
+          "options": [
+            {
+              "name_en": "Crossbow/Handgun",
+              "name_de": "Crossbow/Handgun",
+              "name_fr": "Arbalète/Arquebuse",
+              "name_es": "Ballesta/Arcabuz",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "name_fr": "Plusieurs pistolets",
+              "name_es": "Ristra de pistolas",
+              "points": 5,
+              "exclusive": true
+            },
+            {
+              "name_en": "Hochland long rifle",
+              "name_de": "Hochland long rifle",
+              "name_fr": "Long fusil de Hochland",
+              "name_es": "Rifle largo de Hochland",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_de": "Repeater handgun",
+              "name_fr": "Arquebuse à répétition",
+              "name_es": "Mosquete de repetición",
+              "points": 5,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Détachement",
+        "name_es": "Formación Cerrada, Destacamente"
       },
       "notes": {
         "name_en": "",
@@ -2231,6 +2569,17 @@
       "name_fr": "Chevaliers de l'Empire",
       "name_es": "Caballeros del Imperio",
       "id": "empire-knights",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        },
+        "knightly-order": {
+          "category": "core"
+        }
+      },
       "points": 21,
       "minimum": 4,
       "maximum": 0,
@@ -2348,6 +2697,105 @@
         "name_fr": "",
         "name_es": ""
       }
+    },
+    {
+      "name_en": "Outriders",
+      "name_de": "Outriders",
+      "name_fr": "Escorteurs",
+      "name_es": "Batidores",
+      "id": "outriders-core",
+      "points": 19,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Sharpshooter (champion)",
+          "name_de": "Sharpshooter (champion)",
+          "name_fr": "Mitrailleur (champion)",
+          "name_es": "Tirador experto (campeón)",
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Repeater handgun",
+              "name_de": "Repeater handgun",
+              "name_fr": "Arquebuse à répétition",
+              "name_es": "Mosquete de repetición",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "name_fr": "Plusieurs pistolets",
+              "name_es": "Ristra de pistolas",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Grenade launching blunderbuss",
+              "name_de": "Grenade launching blunderbuss",
+              "name_fr": "Tromblon à grenades",
+              "name_es": "Trabuco lanzagranadas",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_de": "Repeater pistol",
+              "name_fr": "Pistolet à répétition",
+              "name_es": "Pistola de repetición",
+              "points": 0,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Pistols, Repeater handguns",
+          "name_de": "Hand weapons, Pistols, Repeater handguns",
+          "name_fr": "Armes de base, Pistolets, Arquebuses à répétition",
+          "name_es": "Armas de mano, Pistolas, Mosquetes de repeteción",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Vanguard",
+        "name_de": "",
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Ordre Dispersé, Tirailleurs, Rapide, Avant-garde",
+        "name_es": "Caballería Rápida, Disparar y Huir, Formación Abierta, Hostigadores, Zancada Veloz, Vanguardia"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Outriders per 1,000 points",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
     }
   ],
   "special": [
@@ -2358,6 +2806,14 @@
       "name_es": "Caballeros del Círculo Interior",
       "id": "inner-circle-knights",
       "points": 29,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order": {
+          "category": "special"
+        }
+      },
       "minimum": 4,
       "maximum": 0,
       "command": [
@@ -2658,9 +3114,7 @@
           "name_fr": "Avant-garde",
           "name_es": "Vanguardia",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -2785,6 +3239,14 @@
       "name_es": "Caballeros en Semigrifo",
       "id": "demigryph-knights",
       "points": 58,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order": {
+          "category": "special"
+        }
+      },
       "minimum": 2,
       "maximum": 12,
       "command": [
@@ -2903,10 +3365,20 @@
           "name_de": "Veteran",
           "name_fr": "Vétérans",
           "name_es": "Veterano",
-          "points": 10,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "points": 10
+        },
+        {
+          "name_en": "Veteran, Vanguard",
+          "name_de": "Veteran, Vorhut",
+          "name_fr": "Vétérans, Avant-garde",
+          "name_es": "Veterano, Vanguardia",
+          "points": 5,
+          "notes": {
+            "name_en": "0-1 war machine per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       ],
       "mounts": [],
@@ -2948,9 +3420,20 @@
           "name_fr": "Vétérans",
           "name_es": "Veterano",
           "points": 10,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
+        },
+        {
+          "name_en": "Veteran, Vanguard",
+          "name_de": "Veteran, Vorhut",
+          "name_fr": "Vétérans, Avant-garde",
+          "name_es": "Veterano, Vanguardia",
+          "points": 5,
+          "notes": {
+            "name_en": "0-1 war machine per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       ],
       "mounts": [],
@@ -2966,9 +3449,219 @@
         "name_fr": "0-3 machines de guerre choisies dans la liste suivante par tranche de 1000 points: Grand Canon, Mortier",
         "name_es": "0-3 máquinas de guerra de la siguiente lista por cada 1.000 puntos: Gran Cañón, Mortero"
       }
+    },
+    {
+      "name_en": "War Wagon",
+      "name_de": "War Wagon",
+      "name_fr": "War Wagon",
+      "name_es": "War Wagon",
+      "id": "war-wagon",
+      "points": 140,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "city-state-of-nuln": {
+          "category": "special"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Assorted weapons, Blunderbuss, Long rifle, Repeating rifle, Ball & chain, Hooked halberd, Man-catcher",
+          "name_de": "Hand weapons, Assorted weapons, Blunderbuss, Long rifle, Repeating rifle, Ball & chain, Hooked halberd, Man-catcher",
+          "name_fr": "Armes de base, Assorted weapons, Blunderbuss, Long rifle, Repeating rifle, Ball & chain, Hooked halberd, Man-catcher",
+          "name_es": "Armas de mano, Assorted weapons, Blunderbuss, Long rifle, Repeating rifle, Ball & chain, Hooked halberd, Man-catcher",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "3+",
+          "name_de": "3+",
+          "name_fr": "3+",
+          "name_es": "3+",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Crushing Weight, Impact Hits (D6+1 - War Wagon only), Large Target, Stable Firing Platform, Stomp Attacks (D3+1)",
+        "name_de": "Close Order, Crushing Weight, Impact Hits (D6+1 - War Wagon only), Large Target, Stable Firing Platform, Stomp Attacks (D3+1)",
+        "name_fr": "Close Order, Crushing Weight, Impact Hits (D6+1 - War Wagon only), Large Target, Stable Firing Platform, Stomp Attacks (D3+1)",
+        "name_es": "Close Order, Crushing Weight, Impact Hits (D6+1 - War Wagon only), Large Target, Stable Firing Platform, Stomp Attacks (D3+1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
     }
   ],
   "rare": [
+    {
+      "name_en": "Empire Road Wardens",
+      "name_de": "Empire Road Wardens",
+      "name_fr": "Empire Road Wardens",
+      "name_es": "Empire Road Wardens",
+      "id": "empire-road-wardens",
+      "points": 18,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "city-state-of-nuln": {
+          "category": "rare"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Captain (champion)",
+          "name_de": "Captain (champion)",
+          "name_fr": "Captain (champion)",
+          "name_es": "Captain (campeón)",
+          "points": 6,
+          "options": [
+            {
+              "name_en": "Crossbow",
+              "name_de": "Crossbow",
+              "name_fr": "Arbalète",
+              "name_es": "Ballesta",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_de": "Brace of pistols",
+              "name_fr": "Plusieurs pistolets",
+              "name_es": "Ristra de pistolas",
+              "points": 2,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_de": "Repeater pistol",
+              "name_fr": "Pistolet à répétition",
+              "name_es": "Pistola de repetición",
+              "points": 2,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Crossbows",
+          "name_de": "Hand weapons, Crossbows",
+          "name_fr": "Armes de base, Arbalètes",
+          "name_es": "Armas de mano, Ballestas",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Braces of pistols",
+          "name_de": "Hand weapons, Braces of pistols",
+          "name_fr": "Armes de base, Braces of pistols",
+          "name_es": "Armas de mano, Braces of pistols",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Feigned Flight",
+          "name_de": "Feigned Flight",
+          "name_fr": "Feigned Flight",
+          "name_es": "Feigned Flight",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Vanguard",
+          "name_de": "Vanguard",
+          "name_fr": "Vanguard",
+          "name_es": "Vanguard",
+          "points": 0,
+          "active": true,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_de": "Ambushers",
+          "name_fr": "Ambushers",
+          "name_es": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Scouts",
+          "name_de": "Scouts",
+          "name_fr": "Scouts",
+          "name_es": "Scouts",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride",
+        "name_de": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride",
+        "name_fr": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride",
+        "name_es": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
     {
       "name_en": "Steam Tank",
       "name_de": "Steam Tank",
@@ -3028,6 +3721,23 @@
         "name_de": "",
         "name_fr": "",
         "name_es": ""
+      },
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -3037,6 +3747,14 @@
       "name_es": "Flagelantes",
       "id": "flagellants",
       "points": 13,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "knightly-order": {
+          "category": "rare"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -3094,7 +3812,21 @@
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veteran, Vanguard",
+          "name_de": "Veteran, Vorhut",
+          "name_fr": "Vétérans, Avant-garde",
+          "name_es": "Veterano, Vanguardia",
+          "points": 10,
+          "notes": {
+            "name_en": "0-1 war machine per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      ],
       "mounts": [],
       "specialRules": {
         "name_en": "Skirmishers",
@@ -3107,6 +3839,23 @@
         "name_de": "",
         "name_fr": "0-1 machine de guerre choisie dans la liste suivante par tranche de 1000 points: Canon à Répétition Feu d'Enfer, Batterie Tonnerre de Feu",
         "name_es": "0-1 máquinas de guerra de la siguiente lista por cada 1.000 puntos: Cañón de Salvas Helblaster, Batería de Cohetes HelStorm"
+      },
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -3119,7 +3868,21 @@
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veteran, Vanguard",
+          "name_de": "Veteran, Vorhut",
+          "name_fr": "Vétérans, Avant-garde",
+          "name_es": "Veterano, Vanguardia",
+          "points": 10,
+          "notes": {
+            "name_en": "0-1 war machine per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      ],
       "mounts": [],
       "specialRules": {
         "name_en": "Skirmishers",
@@ -3132,9 +3895,122 @@
         "name_de": "",
         "name_fr": "0-1 machine de guerre choisie dans la liste suivante par tranche de 1000 points: Canon à Répétition Feu d'Enfer, Batterie Tonnerre de Feu",
         "name_es": "0-1 máquinas de guerra de la siguiente lista por cada 1.000 puntos: Cañón de Salvas Helblaster, Batería de Cohetes HelStorm"
+      },
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "rare"
+        },
+        "city-state-of-nuln": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-2 war machines chosen from the following list per 1,000 points: Helblaster Volley Gun, Helstorm Rocket Battery, 0-1 Empire Steam Tank per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order": {
+          "category": "rare"
+        }
       }
     }
   ],
-  "mercenaries": [],
+  "mercenaries": [
+    {
+      "name_en": "Imperial Ogres",
+      "name_de": "Imperial Ogres",
+      "name_fr": "Imperial Ogres",
+      "name_es": "Imperial Ogres",
+      "id": "imperial-ogres",
+
+      "points": 31,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Captain (champion)",
+          "name_de": "Captain (champion)",
+          "name_fr": "Captain (champion)",
+          "name_es": "Captain (campeón)",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_fr": "Armes de base",
+          "name_es": "Armas de mano",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "stackable": true
+        },
+        {
+          "name_en": "Morning Stars",
+          "name_de": "Morgensterne",
+          "name_fr": "Morning stars",
+          "points": 2,
+          "stackable": true
+        },
+        {
+          "name_de": "Light cannons",
+          "name_en": "Light cannons",
+          "name_fr": "Light cannons",
+          "points": 8,
+          "stackable": true
+        },
+        {
+          "name_de": "Ogre pistols",
+          "name_en": "Ogre pistols",
+          "name_fr": "Ogre pistols",
+          "points": 5,
+          "stackable": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
+        "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
+        "name_fr": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
+        "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Imperial Ogres may be taken as Mercenaries",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    }
+  ],
   "allies": []
 }
