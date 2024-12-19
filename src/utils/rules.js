@@ -1480,14 +1480,10 @@ export const rules = {
       units: [],
     },
     mercenaries: {
+      maxPercent: 25,
       units: [
         {
-          ids: ["inner-circle-knights-white-wolf"],
-          min: 0,
-          max: 1,
-        },
-        {
-          ids: ["empire-knights-white-wolf"],
+          ids: ["inner-circle-knights-white-wolf", "empire-knights-white-wolf"],
           min: 0,
           max: 1,
         },

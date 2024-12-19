@@ -6,8 +6,12 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { Icon } from "../../components/icon";
 import { updateList } from "../../state/lists";
 import { updateLocalList } from "../../utils/list";
+import { useLanguage } from "../../utils/useLanguage";
+
+import { nameMap } from "../magic";
 
 import "./EditList.css";
 
@@ -16,6 +20,7 @@ export const EditList = ({ isMobile }) => {
   const intl = useIntl();
   const MainComponent = isMobile ? Main : Fragment;
   const { listId } = useParams();
+  const { language } = useLanguage();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
@@ -93,6 +98,11 @@ export const EditList = ({ isMobile }) => {
             })}
           />
         )}
+        <p className="unit__notes">
+          <Icon symbol="error" className="unit__notes-icon" />
+          {nameMap[list.armyComposition]?.[`name_${language}`] ||
+            nameMap[list.armyComposition]?.name_en}
+        </p>
         <label htmlFor="name" className="edit__label">
           <FormattedMessage id="misc.name" />
         </label>
