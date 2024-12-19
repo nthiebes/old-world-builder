@@ -9,10 +9,22 @@
       "points": 90,
       "armyComposition": {
         "empire-of-man": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 General of the Empire or Grand Master per 1000 points",
+            "name_de": "",
+            "name_fr": "0-1 Général de l'Empire ou Grand Maître par tranche de 1000 points",
+            "name_es": "0-1 General del Imperio o Gran Maestre por cada 1.000 puntos"
+          }
         },
         "city-state-of-nuln": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 General of the Empire or Lector of Sigmar per 1,000 points",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
         }
       },
       "command": [
@@ -227,12 +239,6 @@
         "name_de": "",
         "name_es": "\"¡Aguantad la línea!\", Grito de Guerra",
         "name_fr": "\"Tenez la Ligne!\", Cri de Ralliement"
-      },
-      "notes": {
-        "name_en": "0-1 General of the Empire or Grand Master per 1000 points",
-        "name_de": "",
-        "name_fr": "0-1 Général de l'Empire ou Grand Maître par tranche de 1000 points",
-        "name_es": "0-1 General del Imperio o Gran Maestre por cada 1.000 puntos"
       },
       "magic": {
         "types": [
@@ -857,59 +863,112 @@
           "name_fr": "Bouclier",
           "name_es": "Escudo",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
+          "name_en": "Order of the Knights Panther",
+          "name_de": "Order of the Knights Panther",
+          "name_fr": "Order of the Knights Panther",
+          "name_es": "Order of the Knights Panther",
+          "points": 10,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-panther"
+        },
+        {
+          "name_en": "Order of the Knights Panther",
+          "name_de": "Order of the Knights Panther",
+          "name_fr": "Order of the Knights Panther",
+          "name_es": "Order of the Knights Panther",
           "points": 10,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
+          "name_en": "Order of the White Wolf",
+          "name_de": "Order of the White Wolf",
+          "name_fr": "Order of the White Wolf",
+          "name_es": "Order of the White Wolf",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-white-wolf"
+        },
+        {
+          "name_en": "Order of the White Wolf",
+          "name_de": "Order of the White Wolf",
+          "name_fr": "Order of the White Wolf",
+          "name_es": "Order of the White Wolf",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
+          "name_en": "Order of the Blazing Sun",
+          "name_de": "Order of the Blazing Sun",
+          "name_fr": "Order of the Blazing Sun",
+          "name_es": "Order of the Blazing Sun",
+          "points": 10,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-blazing-sun"
+        },
+        {
+          "name_en": "Order of the Blazing Sun",
+          "name_de": "Order of the Blazing Sun",
+          "name_fr": "Order of the Blazing Sun",
+          "name_es": "Order of the Blazing Sun",
           "points": 10,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
+          "name_en": "Order of the Knights of Morr",
+          "name_de": "Order of the Knights of Morr",
+          "name_fr": "Order of the Knights of Morr",
+          "name_es": "Order of the Knights of Morr",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-morr"
+        },
+        {
+          "name_en": "Order of the Knights of Morr",
+          "name_de": "Order of the Knights of Morr",
+          "name_fr": "Order of the Knights of Morr",
+          "name_es": "Order of the Knights of Morr",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
+          "name_en": "Order of the Fiery Heart",
+          "name_de": "Order of the Fiery Heart",
+          "name_fr": "Order of the Fiery Heart",
+          "name_es": "Order of the Fiery Heart",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-fiery-heart"
+        },
+        {
+          "name_en": "Order of the Fiery Heart",
+          "name_de": "Order of the Fiery Heart",
+          "name_fr": "Order of the Fiery Heart",
+          "name_es": "Order of the Fiery Heart",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         }
       ],
       "mounts": [
@@ -1113,54 +1172,109 @@
           "perModel": true
         },
         {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
+          "name_en": "Order of the Knights Panther",
+          "name_de": "Order of the Knights Panther",
+          "name_fr": "Order of the Knights Panther",
+          "name_es": "Order of the Knights Panther",
+          "points": 10,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-panther"
+        },
+        {
+          "name_en": "Order of the Knights Panther",
+          "name_de": "Order of the Knights Panther",
+          "name_fr": "Order of the Knights Panther",
+          "name_es": "Order of the Knights Panther",
           "points": 10,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
+          "name_en": "Order of the White Wolf",
+          "name_de": "Order of the White Wolf",
+          "name_fr": "Order of the White Wolf",
+          "name_es": "Order of the White Wolf",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-white-wolf"
+        },
+        {
+          "name_en": "Order of the White Wolf",
+          "name_de": "Order of the White Wolf",
+          "name_fr": "Order of the White Wolf",
+          "name_es": "Order of the White Wolf",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
+          "name_en": "Order of the Blazing Sun",
+          "name_de": "Order of the Blazing Sun",
+          "name_fr": "Order of the Blazing Sun",
+          "name_es": "Order of the Blazing Sun",
+          "points": 10,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-blazing-sun"
+        },
+        {
+          "name_en": "Order of the Blazing Sun",
+          "name_de": "Order of the Blazing Sun",
+          "name_fr": "Order of the Blazing Sun",
+          "name_es": "Order of the Blazing Sun",
           "points": 10,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
+          "name_en": "Order of the Knights of Morr",
+          "name_de": "Order of the Knights of Morr",
+          "name_fr": "Order of the Knights of Morr",
+          "name_es": "Order of the Knights of Morr",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-morr"
+        },
+        {
+          "name_en": "Order of the Knights of Morr",
+          "name_de": "Order of the Knights of Morr",
+          "name_fr": "Order of the Knights of Morr",
+          "name_es": "Order of the Knights of Morr",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         },
         {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
+          "name_en": "Order of the Fiery Heart",
+          "name_de": "Order of the Fiery Heart",
+          "name_fr": "Order of the Fiery Heart",
+          "name_es": "Order of the Fiery Heart",
+          "points": 15,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "knightly-order-fiery-heart"
+        },
+        {
+          "name_en": "Order of the Fiery Heart",
+          "name_de": "Order of the Fiery Heart",
+          "name_fr": "Order of the Fiery Heart",
+          "name_es": "Order of the Fiery Heart",
           "points": 15,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
+          "armyComposition": "empire-of-man"
         }
       ],
       "mounts": [
@@ -1249,7 +1363,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["empire-of-man", "city-state-of-nuln"]
         }
       ],
       "equipment": [
@@ -1402,7 +1517,7 @@
         "city-state-of-nuln": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 General of the Empire or Lector of Sigmar per 1,000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
+            "name_en": "0-1 General of the Empire or Lector of Sigmar per 1,000 points, 0-1 War Altar of Sigmar",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -1411,7 +1526,7 @@
         "knightly-order-panther": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points, 0-1 War Altar of Sigmar",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -1420,7 +1535,7 @@
         "knightly-order-fiery-heart": {
           "category": "characters",
           "notes": {
-            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points",
+            "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1,000 points, 0-1 War Altar of Sigmar",
             "name_de": "",
             "name_fr": "",
             "name_es": ""
@@ -1428,10 +1543,10 @@
         }
       },
       "notes": {
-        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1000 points, 0-1 War Altar of Sigmar (taken as a mount for a Lector of Sigmar)",
+        "name_en": "0-1 Lector of Sigmar or High Priest of Ulric per 1000 points, 0-1 War Altar of Sigmar",
         "name_de": "",
-        "name_fr": "0-1 Archidiacre de Sigmar ou Grand Prêtre d'Ulric par tranche de 1000 points, 0-1 Autel de Guerre de Sigmar (pris comme monture pour un Archidiacre de Sigmar)",
-        "name_es": "0-1 Archilector de Sigmar o Sumo Sacerdote de Ulric por cada 1.000 puntos, 0-1 Altar de Guerra de Sigmar (como montura de un Archilector de Sigmar)"
+        "name_fr": "0-1 Archidiacre de Sigmar ou Grand Prêtre d'Ulric par tranche de 1000 points, 0-1 Autel de Guerre de Sigmar",
+        "name_es": "0-1 Archilector de Sigmar o Sumo Sacerdote de Ulric por cada 1.000 puntos, 0-1 Altar de Guerra de Sigmar"
       },
       "command": [
         {
@@ -1439,7 +1554,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": "empire-of-man"
         }
       ],
       "equipment": [
@@ -1581,7 +1697,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["empire-of-man", "city-state-of-nuln"]
         }
       ],
       "equipment": [
@@ -1728,7 +1845,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["empire-of-man", "city-state-of-nuln"]
         }
       ],
       "equipment": [
@@ -1866,7 +1984,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["empire-of-man", "city-state-of-nuln"]
         }
       ],
       "equipment": [
@@ -2010,9 +2129,7 @@
             "types": ["banner"],
             "maxPoints": 0
           },
-          "notes": {
-            "name_en": "City-State of Nuln only"
-          }
+          "armyComposition": "city-state-of-nuln"
         }
       ],
       "equipment": [
@@ -2296,57 +2413,241 @@
   ],
   "core": [
     {
-      "name_en": "Inner Circle Knights",
-      "name_de": "Inner Circle Knights",
-      "name_fr": "Chevaliers du Cercle Intérieur",
-      "name_es": "Caballeros del Círculo Interior",
-      "id": "inner-circle-knights-core",
-      "points": 29,
+      "name_en": "Inner Circle Knights Panther",
+      "name_de": "Inner Circle Knights Panther",
+      "name_fr": "Chevaliers du Cercle Intérieur Panther",
+      "name_es": "Caballeros del Círculo Interior Panther",
+      "id": "inner-circle-knights-panther-core",
+      "points": 31,
       "armyComposition": {
         "knightly-order-panther": {
-          "category": "core",
-          "notes": {
-            "name_en": "Must belong to the Knights Panther",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
+          "category": "core"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
           }
         },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights Panther, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_de": "Order of the Knights Panther, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_fr": "Order of the Knights Panther, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_es": "Order of the Knights Panther, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the White Wolf",
+      "name_de": "Inner Circle Knights of the White Wolf",
+      "name_fr": "Chevaliers du Cercle Intérieur of the White Wolf",
+      "name_es": "Caballeros del Círculo Interior of the White Wolf",
+      "id": "inner-circle-knights-white-wolf-core",
+      "points": 32,
+      "armyComposition": {
         "knightly-order-white-wolf": {
-          "category": "core",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The White Wolf",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
+          "category": "core"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
           }
         },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers, Shields",
+          "name_de": "Hand weapons, Wolf hammers, Shields",
+          "name_fr": "Armes de base, Wolf hammers, Boucliers",
+          "name_es": "Armas de mano, Wolf hammers, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers",
+          "name_de": "Hand weapons, Wolf hammers",
+          "name_fr": "Armes de base, Wolf hammers",
+          "name_es": "Armas de mano, Wolf hammers",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the White Wolf, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Furious Charge",
+        "name_de": "Order of the White Wolf, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Furious Charge",
+        "name_fr": "Order of the White Wolf, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Furious Charge",
+        "name_es": "Order of the White Wolf, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Furious Charge"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the Blazing Sun",
+      "name_de": "Inner Circle Knights of the Blazing Sun",
+      "name_fr": "Chevaliers du Cercle Intérieur of the Blazing Sun",
+      "name_es": "Caballeros del Círculo Interior of the Blazing Sun",
+      "id": "inner-circle-knights-blazing-sun-core",
+      "points": 31,
+      "armyComposition": {
         "knightly-order-blazing-sun": {
-          "category": "core",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Blazing Sun",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-morr": {
-          "category": "core",
-          "notes": {
-            "name_en": "Must belong to the Knights Of Morr",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-fiery-heart": {
-          "category": "core",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Fiery Heart",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
+          "category": "core"
         }
       },
       "minimum": 4,
@@ -2436,66 +2737,250 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0
-        },
-        {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
-        },
-        {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
-        },
-        {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
-        },
-        {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
-        },
-        {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran",
+        "name_en": "Order of the Blazing Sun, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Evasive, Flaming attacks",
+        "name_de": "Order of the Blazing Sun, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Evasive, Flaming attacks",
+        "name_fr": "Order of the Blazing Sun, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Evasive, Flaming attacks",
+        "name_es": "Order of the Blazing Sun, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Evasive, Flaming attacks"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
         "name_de": "",
-        "name_fr": "Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans",
-        "name_es": "Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano"
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of Morr",
+      "name_de": "Inner Circle Knights of Morr",
+      "name_fr": "Chevaliers du Cercle Intérieur of Morr",
+      "name_es": "Caballeros del Círculo Interior of Morr",
+      "id": "inner-circle-knights-morr-core",
+      "points": 32,
+      "armyComposition": {
+        "knightly-order-morr": {
+          "category": "core"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
+        "name_de": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
+        "name_fr": "Order of the Knights of Morr, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (Undead models), Fear, Magical Attacks",
+        "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Undead models), Fear, Magical Attacks"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the Fiery Heart",
+      "name_de": "Inner Circle Knights of the Fiery Heart",
+      "name_fr": "Chevaliers du Cercle Intérieur of the Fiery Heart",
+      "name_es": "Caballeros del Círculo Interior of the Fiery Heart",
+      "id": "inner-circle-knights-fiery-heart-core",
+      "points": 32,
+      "armyComposition": {
+        "knightly-order-fiery-heart": {
+          "category": "core"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_de": "Order of the Fiery Heart, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_fr": "Order of the Fiery Heart, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (enemy Wizards Orcs & Goblins)"
       },
       "notes": {
         "name_en": "0-1 unit of Inner Circle Knights may be taken as a Core choice",
@@ -3446,239 +3931,6 @@
       }
     },
     {
-      "name_en": "Empire Knights",
-      "name_de": "Empire Knights",
-      "name_fr": "Chevaliers de l'Empire",
-      "name_es": "Caballeros del Imperio",
-      "id": "empire-knights",
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "core",
-          "notes": {
-            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "city-state-of-nuln": {
-          "category": "special"
-        },
-        "knightly-order-panther": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Panther",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order-white-wolf": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The White Wolf",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order-blazing-sun": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The Blazing Sun",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order-morr": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of Morr",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        },
-        "knightly-order-fiery-heart": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Empire Knights per 1,000 points, Must belong to the Knights Of The Fiery Heart",
-            "name_de": "",
-            "name_fr": "",
-            "name_es": ""
-          }
-        }
-      },
-      "points": 21,
-      "minimum": 4,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "Preceptor (champion)",
-          "name_de": "Preceptor (champion)",
-          "name_fr": "Précepteur (champion)",
-          "name_es": "Preceptor (campeón)",
-          "points": 6,
-          "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_es": "Portaestandarte",
-          "points": 6,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 25
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "name_fr": "Musicien",
-          "name_es": "Músico",
-          "points": 6
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons, Lances, Shields",
-          "name_de": "Hand weapons, Lances, Shields",
-          "name_fr": "Armes de base, Lances de joute, Boucliers",
-          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
-          "points": 1,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons, Great weapons, Shields",
-          "name_de": "Hand weapons, Great weapons, Shields",
-          "name_fr": "Armes de base, Armes lourdes, Boucliers",
-          "name_es": "Armas de mano, Armas a dos manos, Escudos",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapons, Great weapons",
-          "name_de": "Hand weapons, Great weapons",
-          "name_fr": "Armes de base, Armes lourdes",
-          "name_es": "Armas de mano, Armas a dos manos",
-          "points": 0,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Drilled",
-          "name_de": "Drilled",
-          "name_fr": "Bien Entraînés",
-          "name_es": "Entrenado",
-          "points": 1,
-          "perModel": true,
-          "notes": {
-            "name_de": "0-1 Einheit pro 1000 Punkte",
-            "name_en": "0-1 unit per 1000 points",
-            "name_fr": "0-1 unité par tranche de 1000 points",
-            "name_it": "0-1 unità ogni 1000p.ti"
-          }
-        },
-        {
-          "name_en": "Stubborn",
-          "name_de": "Stubborn",
-          "name_fr": "Obstiné",
-          "name_es": "Tozudo",
-          "points": 2,
-          "perModel": true,
-          "notes": {
-            "name_de": "0-1 Einheit pro 1000 Punkte",
-            "name_en": "0-1 unit per 1000 points",
-            "name_fr": "0-1 unité par tranche de 1000 points",
-            "name_it": "0-1 unità ogni 1000p.ti"
-          }
-        },
-        {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
-        },
-        {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
-        },
-        {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
-        },
-        {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
-        },
-        {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
-        }
-      ],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Counter Charge, First Charge, Swiftstride",
-        "name_de": "Close Order, Counter Charge, First Charge, Swiftstride",
-        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Rapide",
-        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
-      }
-    },
-    {
       "name_en": "Outriders",
       "name_de": "Outriders",
       "name_fr": "Escorteurs",
@@ -3784,90 +4036,34 @@
         "name_fr": "",
         "name_es": ""
       }
-    }
-  ],
-  "special": [
+    },
     {
-      "name_en": "Inner Circle Knights",
-      "name_de": "Inner Circle Knights",
-      "name_fr": "Chevaliers du Cercle Intérieur",
-      "name_es": "Caballeros del Círculo Interior",
-      "id": "inner-circle-knights",
-      "points": 29,
+      "name_en": "Empire Knights",
+      "name_de": "Empire Knights",
+      "name_fr": "Chevaliers de l'Empire",
+      "name_es": "Caballeros del Imperio",
+      "id": "empire-knights",
       "armyComposition": {
         "empire-of-man": {
-          "category": "special",
-          "notes": {
-            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
+          "category": "core"
         },
-        "knightly-order-panther": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Panther",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-white-wolf": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The White Wolf",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-blazing-sun": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Blazing Sun",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-morr": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of Morr",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-fiery-heart": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Fiery Heart",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
+        "city-state-of-nuln": {
+          "category": "special"
         }
       },
+      "points": 21,
       "minimum": 4,
       "maximum": 0,
       "command": [
         {
-          "name_en": "Inner Circle Preceptor (champion)",
-          "name_de": "Inner Circle Preceptor (champion)",
-          "name_fr": "Précepteur du Cercle Intérieur (champion)",
-          "name_es": "Preceptor del Círculo Interior (campeón)",
-          "points": 7,
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
           "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "arcane-item",
-              "enchanted-item"
-            ],
-            "maxPoints": 50
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
           }
         },
         {
@@ -3875,10 +4071,10 @@
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "name_es": "Portaestandarte",
-          "points": 7,
+          "points": 6,
           "magic": {
             "types": ["banner"],
-            "maxPoints": 50
+            "maxPoints": 25
           }
         },
         {
@@ -3886,7 +4082,7 @@
           "name_de": "Musician",
           "name_fr": "Musicien",
           "name_es": "Músico",
-          "points": 7
+          "points": 6
         }
       ],
       "equipment": [
@@ -3918,10 +4114,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3929,82 +4125,779 @@
       ],
       "options": [
         {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
           "name_en": "Stubborn",
           "name_de": "Stubborn",
           "name_fr": "Obstiné",
           "name_es": "Tozudo",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
-        },
-        {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
-        },
-        {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
-        },
-        {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
-        },
-        {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran",
-        "name_de": "",
-        "name_fr": "Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans",
-        "name_es": "Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano"
+        "name_en": "Close Order, Counter Charge, First Charge, Swiftstride",
+        "name_de": "Close Order, Counter Charge, First Charge, Swiftstride",
+        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Rapide",
+        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz"
       },
       "notes": {
-        "name_en": "0-1 unit of Inner Circle Knights per 1000 points",
+        "name_en": "",
         "name_de": "",
-        "name_fr": "0-1 unité de Chevaliers du Cercle Intérieur par tranche de 1000 points",
-        "name_es": "0-1 unidades de Caballeros del Círculo Interior por cada 1.000 puntos"
+        "name_fr": "",
+        "name_es": ""
       }
     },
+    {
+      "name_en": "Empire Knights Panther",
+      "name_de": "Empire Knights Panther",
+      "name_fr": "Chevaliers de l'Empire Panther",
+      "name_es": "Caballeros del Imperio Panther",
+      "id": "empire-knights-panther",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-panther": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "points": 23,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights Panther, Close Order, Counter Charge, First Charge, Swiftstride, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_de": "Order of the Knights Panther, Close Order, Counter Charge, First Charge, Swiftstride, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_fr": "Order of the Knights Panther, Ordre Serré, Contre-charge, Première Charge, Rapide, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_es": "Order of the Knights Panther, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Empire Knights of the White Wolf",
+      "name_de": "Empire Knights of the White Wolf",
+      "name_fr": "Chevaliers de l'Empire of the White Wolf",
+      "name_es": "Caballeros del Imperio of the White Wolf",
+      "id": "empire-knights-white-wolf",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of the White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of the White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "points": 24,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers, Shields",
+          "name_de": "Hand weapons, Wolf hammers, Shields",
+          "name_fr": "Armes de base, Wolf hammers, Boucliers",
+          "name_es": "Armas de mano, Wolf hammers, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers",
+          "name_de": "Hand weapons, Wolf hammers",
+          "name_fr": "Armes de base, Wolf hammers",
+          "name_es": "Armas de mano, Wolf hammers",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the White Wolf, Close Order, Counter Charge, First Charge, Swiftstride, Furious Charge",
+        "name_de": "Order of the White Wolf, Close Order, Counter Charge, First Charge, Swiftstride, Furious Charge",
+        "name_fr": "Order of the White Wolf, Ordre Serré, Contre-charge, Première Charge, Rapide, Furious Charge",
+        "name_es": "Order of the White Wolf, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Furious Charge"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Empire Knights of the Blazing Sun",
+      "name_de": "Empire Knights of the Blazing Sun",
+      "name_fr": "Chevaliers de l'Empire of the Blazing Sun",
+      "name_es": "Caballeros del Imperio of the Blazing Sun",
+      "id": "empire-knights-blazing-sun",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of the Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of the Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "points": 23,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Blazing Sun, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks",
+        "name_de": "Order of the Blazing Sun, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks",
+        "name_fr": "Order of the Blazing Sun, Ordre Serré, Contre-charge, Première Charge, Rapide, Evasive, Flaming attacks",
+        "name_es": "Order of the Blazing Sun, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Evasive, Flaming attacks"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Empire Knights of Morr",
+      "name_de": "Empire Knights of Morr",
+      "name_fr": "Chevaliers de l'Empire of Morr",
+      "name_es": "Caballeros del Imperio of Morr",
+      "id": "empire-knights-morr",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "points": 24,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks, Hatred (Undead models)",
+        "name_de": "Order of the Knights of Morr, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks, Hatred (Undead models)",
+        "name_fr": "Order of the Knights of Morr, Ordre Serré, Contre-charge, Première Charge, Rapide, Evasive, Flaming attacks, Hatred (Undead models)",
+        "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Evasive, Flaming attacks, Hatred (Undead models)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Empire Knights of the Fiery Heart",
+      "name_de": "Empire Knights of the Fiery Heart",
+      "name_fr": "Chevaliers de l'Empire of the Fiery Heart",
+      "name_es": "Caballeros del Imperio of the Fiery Heart",
+      "id": "empire-knights-fiery-heart",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of Fiery Heart",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "core"
+        },
+        "city-state-of-nuln": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Empire Knights of Fiery Heart",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        }
+      },
+      "points": 24,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Preceptor (champion)",
+          "name_de": "Preceptor (champion)",
+          "name_fr": "Précepteur (champion)",
+          "name_es": "Preceptor (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_de": "Order of the Fiery Heart, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming attacks, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_fr": "Order of the Fiery Heart, Ordre Serré, Contre-charge, Première Charge, Rapide, Evasive, Flaming attacks, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Evasive, Flaming attacks, Hatred (enemy Wizards Orcs & Goblins)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    }
+  ],
+  "special": [
     {
       "name_en": "Empire Greatswords",
       "name_de": "Empire Greatswords",
@@ -4456,208 +5349,6 @@
       }
     },
     {
-      "name_en": "Demigryph Knights",
-      "name_de": "Demigryph Knights",
-      "name_fr": "Chevaliers Demigriffons",
-      "name_es": "Caballeros en Semigrifo",
-      "id": "demigryph-knights",
-      "points": 58,
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "special",
-          "notes": {
-            "name_en": "0-1 unit of Empire Knights, Inner Circle Knights or Demigryph Knights in your army may be upgraded to belong to your chosen Knightly Order",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-panther": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Panther",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-white-wolf": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The White Wolf",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-blazing-sun": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Blazing Sun",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-morr": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of Morr",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        },
-        "knightly-order-fiery-heart": {
-          "category": "special",
-          "notes": {
-            "name_en": "Must belong to the Knights Of The Fiery Heart",
-            "name_de": "",
-            "name_fr": "",
-            "name_it": ""
-          }
-        }
-      },
-      "minimum": 2,
-      "maximum": 12,
-      "command": [
-        {
-          "name_en": "Demigryph Preceptor (champion)",
-          "name_de": "Demigryph Preceptor (champion)",
-          "name_fr": "Précepteur Demigriffon (champion)",
-          "name_es": "Preceptor en Semigrifos (campeón)",
-          "points": 7,
-          "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "arcane-item",
-              "enchanted-item"
-            ],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_es": "Portaestandarte",
-          "points": 7,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_de": "Musician",
-          "name_fr": "Musicien",
-          "name_es": "Músico",
-          "points": 7
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Lances, Shields",
-          "name_de": "Lances, Shields",
-          "name_fr": "Lances de joute, Boucliers",
-          "name_es": "Lanzas de caballería, Escudos",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Halberds, Shields",
-          "name_de": "Halberds, Shields",
-          "name_fr": "Hallebardes, Boucliers",
-          "name_es": "Alabardas, Escudos",
-          "points": 0,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
-          "points": 5,
-          "perModel": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Knights Panther",
-          "name_de": "Knights Panther",
-          "name_fr": "Knights Panther",
-          "name_es": "Knights Panther",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-panther", "empire-of-man"]
-        },
-        {
-          "name_en": "White Wolf",
-          "name_de": "White Wolf",
-          "name_fr": "White Wolf",
-          "name_es": "White Wolf",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
-        },
-        {
-          "name_en": "Blazing Sun",
-          "name_de": "Blazing Sun",
-          "name_fr": "Blazing Sun",
-          "name_es": "Blazing Sun",
-          "points": 2,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
-        },
-        {
-          "name_en": "Knights of Morr",
-          "name_de": "Knights of Morr",
-          "name_fr": "Knights of Morr",
-          "name_es": "Knights of Morr",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-morr", "empire-of-man"]
-        },
-        {
-          "name_en": "Fiery Heart",
-          "name_de": "Fiery Heart",
-          "name_fr": "Fiery Heart",
-          "name_es": "Fiery Heart",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true,
-          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
-        }
-      ],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Counter Charge, First Charge, Fear, Swiftstride",
-        "name_de": "",
-        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Peur, Rapide",
-        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz"
-      }
-    },
-    {
       "name_en": "Great Cannon {empire}",
       "name_de": "Great Cannon",
       "name_fr": "Grand Canon",
@@ -4858,6 +5549,1402 @@
         "name_de": "",
         "name_fr": "",
         "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights",
+      "name_de": "Inner Circle Knights",
+      "name_fr": "Chevaliers du Cercle Intérieur",
+      "name_es": "Caballeros del Círculo Interior",
+      "id": "inner-circle-knights",
+      "points": 29,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Knights Panther",
+          "name_de": "Knights Panther",
+          "name_fr": "Knights Panther",
+          "name_es": "Knights Panther",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-panther", "empire-of-man"]
+        },
+        {
+          "name_en": "White Wolf",
+          "name_de": "White Wolf",
+          "name_fr": "White Wolf",
+          "name_es": "White Wolf",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-white-wolf", "empire-of-man"]
+        },
+        {
+          "name_en": "Blazing Sun",
+          "name_de": "Blazing Sun",
+          "name_fr": "Blazing Sun",
+          "name_es": "Blazing Sun",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-blazing-sun", "empire-of-man"]
+        },
+        {
+          "name_en": "Knights of Morr",
+          "name_de": "Knights of Morr",
+          "name_fr": "Knights of Morr",
+          "name_es": "Knights of Morr",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-morr", "empire-of-man"]
+        },
+        {
+          "name_en": "Fiery Heart",
+          "name_de": "Fiery Heart",
+          "name_fr": "Fiery Heart",
+          "name_es": "Fiery Heart",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "armyComposition": ["knightly-order-fiery-heart", "empire-of-man"]
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans",
+        "name_es": "Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights per 1000 points",
+        "name_de": "",
+        "name_fr": "0-1 unité de Chevaliers du Cercle Intérieur par tranche de 1000 points",
+        "name_es": "0-1 unidades de Caballeros del Círculo Interior por cada 1.000 puntos"
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights Panther",
+      "name_de": "Inner Circle Knights Panther",
+      "name_fr": "Chevaliers du Cercle Intérieur Panther",
+      "name_es": "Caballeros del Círculo Interior Panther",
+      "id": "inner-circle-knights-panther",
+      "points": 31,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order-panther": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights Panther, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_de": "Order of the Knights Panther, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_fr": "Order of the Knights Panther, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)",
+        "name_es": "Order of the Knights Panther, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Magic Resistance (-1)"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights Panther",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the White Wolf",
+      "name_de": "Inner Circle Knights of the White Wolf",
+      "name_fr": "Chevaliers du Cercle Intérieur of the White Wolf",
+      "name_es": "Caballeros del Círculo Interior of the White Wolf",
+      "id": "inner-circle-knights-white-wolf",
+      "points": 32,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order-white-wolf": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers, Shields",
+          "name_de": "Hand weapons, Wolf hammers, Shields",
+          "name_fr": "Armes de base, Wolf hammers, Boucliers",
+          "name_es": "Armas de mano, Wolf hammers, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Wolf hammers",
+          "name_de": "Hand weapons, Wolf hammers",
+          "name_fr": "Armes de base, Wolf hammers",
+          "name_es": "Armas de mano, Wolf hammers",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the White Wolf, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Furious Charge",
+        "name_de": "Order of the White Wolf, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Furious Charge",
+        "name_fr": "Order of the White Wolf, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Furious Charge",
+        "name_es": "Order of the White Wolf, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Furious Charge"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights of the Wite Wolf",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the Blazing Sun",
+      "name_de": "Inner Circle Knights of the Blazing Sun",
+      "name_fr": "Chevaliers du Cercle Intérieur of the Blazing Sun",
+      "name_es": "Caballeros del Círculo Interior of the Blazing Sun",
+      "id": "inner-circle-knights-blazing-sun",
+      "points": 31,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Blazing Sun, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Evasive, Flaming attacks",
+        "name_de": "Order of the Blazing Sun, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Evasive, Flaming attacks",
+        "name_fr": "Order of the Blazing Sun, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Evasive, Flaming attacks",
+        "name_es": "Order of the Blazing Sun, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Evasive, Flaming attacks"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights of the Blazing Sun",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of Morr",
+      "name_de": "Inner Circle Knights of Morr",
+      "name_fr": "Chevaliers du Cercle Intérieur of Morr",
+      "name_es": "Caballeros del Círculo Interior of Morr",
+      "id": "inner-circle-knights-morr",
+      "points": 32,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order-morr": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
+        "name_de": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
+        "name_fr": "Order of the Knights of Morr, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (Undead models), Fear, Magical Attacks",
+        "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Undead models), Fear, Magical Attacks"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights of Morr",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Inner Circle Knights of the Fiery Heart",
+      "name_de": "Inner Circle Knights of the Fiery Heart",
+      "name_fr": "Chevaliers du Cercle Intérieur of the Fiery Heart",
+      "name_es": "Caballeros del Círculo Interior of the Fiery Heart",
+      "id": "inner-circle-knights-fiery-heart",
+      "points": 32,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        },
+        "knightly-order-fiery-heart": {
+          "category": "special"
+        }
+      },
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Inner Circle Preceptor (champion)",
+          "name_de": "Inner Circle Preceptor (champion)",
+          "name_fr": "Précepteur du Cercle Intérieur (champion)",
+          "name_es": "Preceptor del Círculo Interior (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "name_es": "Armas de mano, Lanzas de caballería, Escudos",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_de": "Hand weapons, Great weapons, Shields",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "name_es": "Armas de mano, Armas a dos manos, Escudos",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_de": "Stubborn",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_de": "Order of the Fiery Heart, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_fr": "Order of the Fiery Heart, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (enemy Wizards Orcs & Goblins)"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Inner Circle Knights of the Fiery Heart",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Demigryph Knights",
+      "name_de": "Demigryph Knights",
+      "name_fr": "Chevaliers Demigriffons",
+      "name_es": "Caballeros en Semigrifo",
+      "id": "demigryph-knights",
+      "points": 58,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute, Boucliers",
+          "name_es": "Lanzas de caballería, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes, Boucliers",
+          "name_es": "Alabardas, Escudos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, First Charge, Fear, Swiftstride",
+        "name_de": "",
+        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Peur, Rapide",
+        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz"
+      }
+    },
+    {
+      "name_en": "Demigryph Knights Panther",
+      "name_de": "Demigryph Knights Panther",
+      "name_fr": "Chevaliers Demigriffons Panther",
+      "name_es": "Caballeros en Semigrifo Panther",
+      "id": "demigryph-knights-panther",
+      "points": 60,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Demigryph Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-panther": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute, Boucliers",
+          "name_es": "Lanzas de caballería, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights Panther, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_de": "Order of the Knights Panther, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_fr": "Order of the Knights Panther, Ordre Serré, Contre-charge, Première Charge, Peur, Rapide, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)",
+        "name_es": "Order of the Knights Panther, Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models)"
+      }
+    },
+    {
+      "name_en": "Demigryph Knights of the White Wolf",
+      "name_de": "Demigryph Knights of the White Wolf",
+      "name_fr": "Chevaliers Demigriffons of the White Wolf",
+      "name_es": "Caballeros en Semigrifo of the White Wolf",
+      "id": "demigryph-knights-white-wolf",
+      "points": 61,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Demigryph Knights of the White Wolf",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-white-wolf": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Wolf hammers, Shields",
+          "name_de": "Wolf hammers, Shields",
+          "name_fr": "Wolf hammers, Boucliers",
+          "name_es": "Wolf hammers, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes, Boucliers",
+          "name_es": "Alabardas, Escudos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the White Wolf, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Furious Charge",
+        "name_de": "Order of the White Wolf, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Furious Charge",
+        "name_fr": "Order of the White Wolf, Ordre Serré, Contre-charge, Première Charge, Peur, Rapide, Furious Charge",
+        "name_es": "Order of the White Wolf, Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz, Furious Charge"
+      }
+    },
+    {
+      "name_en": "Demigryph Knights of the Blazing Sun",
+      "name_de": "Demigryph Knights of the Blazing Sun",
+      "name_fr": "Chevaliers Demigriffons of the Blazing Sun",
+      "name_es": "Caballeros en Semigrifo of the Blazing Sun",
+      "id": "demigryph-knights-blazing-sun",
+      "points": 60,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Demigryph Knights of the Blazing Sun",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-blazing-sun": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute, Boucliers",
+          "name_es": "Lanzas de caballería, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes, Boucliers",
+          "name_es": "Alabardas, Escudos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Blazing Sun, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Evasive, Flaming attacks",
+        "name_de": "Order of the Blazing Sun, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Evasive, Flaming attacks",
+        "name_fr": "Order of the Blazing Sun, Ordre Serré, Contre-charge, Première Charge, Peur, Rapide, Evasive, Flaming attacks",
+        "name_es": "Order of the Blazing Sun, Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz, Evasive, Flaming attacks"
+      }
+    },
+    {
+      "name_en": "Demigryph Knights of Morr",
+      "name_de": "Demigryph Knights of Morr",
+      "name_fr": "Chevaliers Demigriffons of Morr",
+      "name_es": "Caballeros en Semigrifo of Morr",
+      "id": "demigryph-knights-morr",
+      "points": 61,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Demigryph Knights of Morr",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-morr": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute, Boucliers",
+          "name_es": "Lanzas de caballería, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes, Boucliers",
+          "name_es": "Alabardas, Escudos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (Undead models)",
+        "name_de": "Order of the Knights of Morr, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (Undead models)",
+        "name_fr": "Order of the Knights of Morr, Ordre Serré, Contre-charge, Première Charge, Peur, Rapide, Hatred (Undead models)",
+        "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz, Hatred (Undead models)"
+      }
+    },
+    {
+      "name_en": "Demigryph Knights of the Fiery Heart",
+      "name_de": "Demigryph Knights of the Fiery Heart",
+      "name_fr": "Chevaliers Demigriffons of the Fiery Heart",
+      "name_es": "Caballeros en Semigrifo of the Fiery Heart",
+      "id": "demigryph-knights-fiery-heart",
+      "points": 61,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Demigryph Knights Panther",
+            "name_de": "",
+            "name_fr": "",
+            "name_es": ""
+          }
+        },
+        "knightly-order-fiery-heart": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 12,
+      "command": [
+        {
+          "name_en": "Demigryph Preceptor (champion)",
+          "name_de": "Demigryph Preceptor (champion)",
+          "name_fr": "Précepteur Demigriffon (champion)",
+          "name_es": "Preceptor en Semigrifos (campeón)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lances, Shields",
+          "name_de": "Lances, Shields",
+          "name_fr": "Lances de joute, Boucliers",
+          "name_es": "Lanzas de caballería, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Halberds, Shields",
+          "name_de": "Halberds, Shields",
+          "name_fr": "Hallebardes, Boucliers",
+          "name_es": "Alabardas, Escudos",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_de": "Order of the Fiery Heart, Close Order, Counter Charge, First Charge, Fear, Swiftstride, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_fr": "Order of the Fiery Heart, Ordre Serré, Contre-charge, Première Charge, Peur, Rapide, Hatred (enemy Wizards Orcs & Goblins)",
+        "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Primera Carga, Miedo, Zancada Veloz, Hatred (enemy Wizards Orcs & Goblins)"
       }
     }
   ],
