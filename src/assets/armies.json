@@ -10,10 +10,40 @@
         "name_es": "Empire of Man",
         "name_fr": "Empire de l'Homme",
         "items": ["general", "empire-of-man"],
+        "armyComposition": [
+          "city-state-of-nuln",
+          "knightly-order-panther",
+          "knightly-order-white-wolf",
+          "knightly-order-blazing-sun",
+          "knightly-order-morr",
+          "knightly-order-fiery-heart"
+        ],
         "allies": [
-          { "army": "dwarfen-mountain-holds" },
-          { "army": "kingdom-of-bretonnia" },
-          { "army": "wood-elf-realms" }
+          {
+            "army": "dwarfen-mountain-holds"
+          },
+          {
+            "army": "kingdom-of-bretonnia"
+          },
+          { "army": "wood-elf-realms" },
+          { "army": "empire-of-man", "armyComposition": "city-state-of-nuln" },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-panther"
+          },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-white-wolf"
+          },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-blazing-sun"
+          },
+          { "army": "empire-of-man", "armyComposition": "knightly-order-morr" },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-fiery-heart"
+          }
         ],
         "mercenaries": {
           "empire-of-man": [
@@ -28,6 +58,29 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
+            }
+          ],
+          "city-state-of-nuln": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": ["doomseeker-merc", "imperial-dwarf-mercenaries"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
+            }
+          ],
+          "knightly-order-panther": [
+            {
+              "army": "empire-of-man",
+              "units": [
+                "empire-knights-white-wolf",
+                "inner-circle-knights-white-wolf"
+              ]
             }
           ]
         }
@@ -105,6 +158,10 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
             }
           ],
           "royal-clan": [

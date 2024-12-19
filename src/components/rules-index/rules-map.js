@@ -132,6 +132,7 @@ export const synonyms = {
   alluress: "champions",
   "master moulder": "champions",
   sergeant: "champions",
+  "veteran sergeant": "champions",
   bloodreaper: "champions",
   nymph: "champions",
   guardian: "champions",
@@ -198,6 +199,7 @@ export const synonyms = {
   headtaker: "champions",
   "skin wolf jarl": "champions",
   "first sword": "champions",
+  captain: "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -209,6 +211,7 @@ export const synonyms = {
   "snotling pump wagons": "snotling pump wagon",
   "goblin wolf chariots": "goblin wolf chariot",
   "expeditionary marksman": "expeditionary marksmen",
+  "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
 };
 
