@@ -301,10 +301,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
-  const handleEquipmentChange = (id) => {
+  const handleEquipmentChange = ({ id, group }) => {
     const equipment = unit.equipment.map((item) => ({
       ...item,
-      active: item.id === id ? true : false,
+      active:
+        item.group === group
+          ? item.id === id
+            ? !item.active
+            : false
+          : item.active,
     }));
 
     dispatch(
@@ -796,22 +801,23 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   id,
                   active = false,
                   notes,
+                  group,
                   ...equipment
                 }) => (
                   <Fragment key={id}>
-                    <div className="radio">
+                    <div className={group ? "checkbox" : "radio"}>
                       <input
-                        type="radio"
+                        type={group ? "checkbox" : "radio"}
                         id={`equipment-${id}`}
                         name="equipment"
-                        value={id}
-                        onChange={() => handleEquipmentChange(id)}
+                        value={group || id}
+                        onChange={() => handleEquipmentChange({ id, group })}
                         checked={active}
-                        className="radio__input"
+                        className={group ? "checkbox__input" : "radio__input"}
                       />
                       <label
                         htmlFor={`equipment-${id}`}
-                        className="radio__label"
+                        className={group ? "checkbox__label" : "radio__label"}
                       >
                         <span className="unit__label-text">
                           <RulesWithIcon textObject={equipment} />
