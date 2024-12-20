@@ -1,3 +1,5 @@
+import { unitHasItem } from "./unit";
+
 export const getUnitPoints = (unit, options) => {
   const detachmentActive =
     unit?.options?.length > 0 &&
@@ -37,22 +39,34 @@ export const getUnitPoints = (unit, options) => {
     });
   }
   if (unit.equipment) {
-    unit.equipment.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
+    unit.equipment
+      .filter(
+        ({ active, requiredMagicItem }) =>
+          (active && !requiredMagicItem) ||
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+      )
+      .forEach((option) => {
+        if (option.active && option.perModel) {
+          unitPoints += (unit.strength || 1) * option.points;
+        } else if (option.active) {
+          unitPoints += option.points;
+        }
+      });
   }
   if (unit.armor) {
-    unit.armor.forEach((option) => {
-      if (option.active && option.perModel) {
-        unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active) {
-        unitPoints += option.points;
-      }
-    });
+    unit.armor
+      .filter(
+        ({ active, requiredMagicItem }) =>
+          (active && !requiredMagicItem) ||
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+      )
+      .forEach((option) => {
+        if (option.active && option.perModel) {
+          unitPoints += (unit.strength || 1) * option.points;
+        } else if (option.active) {
+          unitPoints += option.points;
+        }
+      });
   }
   if (unit.command && !detachmentActive) {
     unit.command.forEach((option) => {
@@ -76,18 +90,24 @@ export const getUnitPoints = (unit, options) => {
     });
   }
   if (unit.mounts) {
-    unit.mounts.forEach((option) => {
-      if (option.active) {
-        unitPoints += option.points;
-      }
-      if (option.active && option.options && option.options.length > 0) {
-        option.options.forEach((mountOption) => {
-          if (mountOption.active) {
-            unitPoints += mountOption.points;
-          }
-        });
-      }
-    });
+    unit.mounts
+      .filter(
+        ({ active, requiredMagicItem }) =>
+          (active && !requiredMagicItem) ||
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+      )
+      .forEach((option) => {
+        if (option.active) {
+          unitPoints += option.points;
+        }
+        if (option.active && option.options && option.options.length > 0) {
+          option.options.forEach((mountOption) => {
+            if (mountOption.active) {
+              unitPoints += mountOption.points;
+            }
+          });
+        }
+      });
   }
   if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {

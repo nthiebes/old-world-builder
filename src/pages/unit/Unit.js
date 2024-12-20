@@ -1333,6 +1333,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !armyComposition ||
                   armyComposition.includes(list.armyComposition)
               )
+              .filter(({ requiredMagicItem }) =>
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+              )
               .map(
                 ({ points, id, active = false, options, notes, ...mount }) => (
                   <Fragment key={id}>

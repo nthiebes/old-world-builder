@@ -131,26 +131,35 @@ export const getAllOptions = (
   }
 
   if (mounts) {
-    mounts.forEach(({ active, name_en, options, ...entry }) => {
-      if (active) {
-        let mountEntry = entry[`name_${language}`] || name_en;
-        const selectedOptions = [];
+    mounts
+      .filter(
+        ({ active, equippedDefault, requiredMagicItem }) =>
+          (active && !requiredMagicItem) ||
+          (equippedDefault && !requiredMagicItem) ||
+          (active &&
+            requiredMagicItem &&
+            unitHasItem({ items }, requiredMagicItem))
+      )
+      .forEach(({ active, name_en, options, ...entry }) => {
+        if (active) {
+          let mountEntry = entry[`name_${language}`] || name_en;
+          const selectedOptions = [];
 
-        if (options && options.length > 0) {
-          options.forEach((option) => {
-            if (option.active) {
-              selectedOptions.push(option.name_en);
-            }
-          });
+          if (options && options.length > 0) {
+            options.forEach((option) => {
+              if (option.active) {
+                selectedOptions.push(option.name_en);
+              }
+            });
+          }
+
+          if (selectedOptions.length) {
+            mountEntry += ` [${selectedOptions.join(" + ")}]`;
+          }
+
+          allMounts.push(mountEntry);
         }
-
-        if (selectedOptions.length) {
-          mountEntry += ` [${selectedOptions.join(" + ")}]`;
-        }
-
-        allMounts.push(mountEntry);
-      }
-    });
+      });
   }
 
   const allItems = [];
