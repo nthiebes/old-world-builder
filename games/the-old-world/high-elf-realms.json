@@ -27,7 +27,8 @@
           "points": 0,
           "perModel": true,
           "active": true,
-          "name_fr": "Arme de base"
+          "name_fr": "Arme de base",
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -224,9 +225,9 @@
           "name_it": "A Piedi",
           "name_de": "Zu Fuß",
           "name_es": "A pie",
+          "name_fr": "À Pied",
           "points": 0,
-          "active": true,
-          "name_fr": "À Pied"
+          "active": true
         },
         {
           "name_en": "Elven Steed",
@@ -245,6 +246,14 @@
           "points": 18
         },
         {
+          "name_en": "Great Eagle {mount}",
+          "name_it": "Grandi Aquile",
+          "name_de": "Riesenadler",
+          "name_fr": "Grand Aigle",
+          "name_es": "Gran águila",
+          "points": 60
+        },
+        {
           "name_en": "Tiranoc Chariot",
           "name_it": "Carro di Tiranoc",
           "name_de": "Tiranoc-Streitwagen",
@@ -253,18 +262,11 @@
           "points": 75
         },
         {
-          "name_en": "Lion Chariot of Chrace",
-          "name_it": "Carro dei Leoni di Chrace",
-          "name_de": "Löwenstreitwagen von Chrace",
-          "name_fr": "Char à Lions de Chrace",
-          "name_es": "Carro de leones de Cracia",
-          "points": 125
-        },
-        {
           "name_en": "Lothern Skycutter",
           "name_it": "Lothern Skycutter",
           "name_de": "Himmelssegler von Lothern",
           "name_es": "Escolta celeste",
+          "name_fr": "Cotre Volant de Lothern",
           "points": 90,
           "options": [
             {
@@ -276,15 +278,26 @@
               "points": 25
             }
           ],
-          "name_fr": "Cotre Volant de Lothern"
+          "requiredMagicItem": "Sea Guard",
+          "notes": {
+            "name_en": "Requires Sea Guard Elven Honour",
+            "name_de": "Requires Sea Guard Elven Honour",
+            "name_fr": "Requires Sea Guard Elven Honour"
+          }
         },
         {
-          "name_en": "Great Eagle {mount}",
-          "name_it": "Grandi Aquile",
-          "name_de": "Riesenadler",
-          "name_fr": "Grand Aigle",
-          "name_es": "Gran águila",
-          "points": 60
+          "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
+          "name_de": "Löwenstreitwagen von Chrace",
+          "name_fr": "Char à Lions de Chrace",
+          "name_es": "Carro de leones de Cracia",
+          "points": 125,
+          "requiredMagicItem": "Chracian Hunter",
+          "notes": {
+            "name_en": "Requires Chractian Hunter Elven Honour",
+            "name_de": "Requires Chractian Hunter Elven Honour",
+            "name_fr": "Requires Chractian Hunter Elven Honour"
+          }
         },
         {
           "name_en": "Griffon {high elves}",
@@ -300,15 +313,13 @@
           "name_de": "Flammensäulen-Phönix",
           "name_fr": "Phénix Spire-de-feu",
           "name_es": "Fénix pico llameante",
-          "points": 170
-        },
-        {
-          "name_en": "Frostheart Phoenix {mount}",
-          "name_it": "Fenice di Ghiaccio",
-          "name_de": "Frostherz-Phönix",
-          "name_fr": "Phénix Cœur-de-Givre",
-          "name_es": "Fénix corazón gélido",
-          "points": 205
+          "points": 170,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Sun Dragon",
@@ -316,7 +327,27 @@
           "name_de": "Sonnendrache",
           "name_fr": "Dragon Solaire",
           "name_es": "Dragón solar",
-          "points": 180
+          "points": 180,
+          "requiredMagicItem": "Blood of Caledor",
+          "notes": {
+            "name_en": "Requires Blood of Caledor Elven Honour",
+            "name_de": "Requires Blood of Caledor Elven Honour",
+            "name_fr": "Requires Blood of Caledor Elven Honour"
+          }
+        },
+        {
+          "name_en": "Frostheart Phoenix {mount}",
+          "name_it": "Fenice di Ghiaccio",
+          "name_de": "Frostherz-Phönix",
+          "name_fr": "Phénix Cœur-de-Givre",
+          "name_es": "Fénix corazón gélido",
+          "points": 205,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Moon Dragon",
@@ -407,10 +438,11 @@
           "name_it": "Arma Bianca",
           "name_de": "Handwaffe",
           "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true,
-          "name_fr": "Arme de base"
+          "equippedDefault": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -601,9 +633,9 @@
           "name_it": "A Piedi",
           "name_de": "Zu Fuß",
           "name_es": "A pie",
+          "name_fr": "À Pied",
           "points": 0,
-          "active": true,
-          "name_fr": "À Pied"
+          "active": true
         },
         {
           "name_en": "Elven Steed",
@@ -622,6 +654,14 @@
           "points": 18
         },
         {
+          "name_en": "Great Eagle {mount}",
+          "name_it": "Grandi Aquile",
+          "name_de": "Riesenadler",
+          "name_fr": "Grand Aigle",
+          "name_es": "Gran águila",
+          "points": 60
+        },
+        {
           "name_en": "Tiranoc Chariot",
           "name_it": "Carro di Tiranoc",
           "name_de": "Tiranoc-Streitwagen",
@@ -630,19 +670,11 @@
           "points": 75
         },
         {
-          "name_en": "Lion Chariot of Chrace",
-          "name_it": "Carro dei Leoni di Chrace",
-          "name_de": "Löwenstreitwagen von Chrace",
-          "name_fr": "Char à Lions de Chrace",
-          "name_es": "Carro de leones de Cracia",
-          "points": 125
-        },
-        {
           "name_en": "Lothern Skycutter",
           "name_it": "Lothern Skycutter",
           "name_de": "Himmelssegler von Lothern",
-          "name_fr": "Cotre Volant de Lothern",
           "name_es": "Escolta celeste",
+          "name_fr": "Cotre Volant de Lothern",
           "points": 90,
           "options": [
             {
@@ -653,15 +685,27 @@
               "name_es": "Lanzavirotes ojo de águila",
               "points": 25
             }
-          ]
+          ],
+          "requiredMagicItem": "Sea Guard",
+          "notes": {
+            "name_en": "Requires Sea Guard Elven Honour",
+            "name_de": "Requires Sea Guard Elven Honour",
+            "name_fr": "Requires Sea Guard Elven Honour"
+          }
         },
         {
-          "name_en": "Great Eagle {mount}",
-          "name_it": "Grandi Aquile",
-          "name_de": "Riesenadler",
-          "name_fr": "Grand Aigle",
-          "name_es": "Gran águila",
-          "points": 60
+          "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
+          "name_de": "Löwenstreitwagen von Chrace",
+          "name_fr": "Char à Lions de Chrace",
+          "name_es": "Carro de leones de Cracia",
+          "points": 125,
+          "requiredMagicItem": "Chracian Hunter",
+          "notes": {
+            "name_en": "Requires Chractian Hunter Elven Honour",
+            "name_de": "Requires Chractian Hunter Elven Honour",
+            "name_fr": "Requires Chractian Hunter Elven Honour"
+          }
         },
         {
           "name_en": "Griffon {high elves}",
@@ -677,15 +721,13 @@
           "name_de": "Flammensäulen-Phönix",
           "name_fr": "Phénix Spire-de-feu",
           "name_es": "Fénix pico llameante",
-          "points": 170
-        },
-        {
-          "name_en": "Frostheart Phoenix {mount}",
-          "name_it": "Fenice di Ghiaccio",
-          "name_de": "Frostherz-Phönix",
-          "name_fr": "Phénix Cœur-de-Givre",
-          "name_es": "Fénix corazón gélido",
-          "points": 205
+          "points": 170,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Sun Dragon",
@@ -693,7 +735,27 @@
           "name_de": "Sonnendrache",
           "name_fr": "Dragon Solaire",
           "name_es": "Dragón solar",
-          "points": 180
+          "points": 180,
+          "requiredMagicItem": "Blood of Caledor",
+          "notes": {
+            "name_en": "Requires Blood of Caledor Elven Honour",
+            "name_de": "Requires Blood of Caledor Elven Honour",
+            "name_fr": "Requires Blood of Caledor Elven Honour"
+          }
+        },
+        {
+          "name_en": "Frostheart Phoenix {mount}",
+          "name_it": "Fenice di Ghiaccio",
+          "name_de": "Frostherz-Phönix",
+          "name_fr": "Phénix Cœur-de-Givre",
+          "name_es": "Fénix corazón gélido",
+          "points": 205,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         }
       ],
       "items": [
@@ -859,9 +921,9 @@
           "name_it": "A Piedi",
           "name_de": "Zu Fuß",
           "name_es": "A pie",
+          "name_fr": "À Pied",
           "points": 0,
-          "active": true,
-          "name_fr": "À Pied"
+          "active": true
         },
         {
           "name_en": "Elven Steed",
@@ -880,18 +942,19 @@
           "points": 18
         },
         {
-          "name_en": "Lion Chariot of Chrace",
-          "name_it": "Carro dei Leoni di Chrace",
-          "name_de": "Löwenstreitwagen von Chrace",
-          "name_fr": "Char à Lions de Chrace",
-          "name_es": "Carro de leones de Cracia",
-          "points": 125
+          "name_en": "Great Eagle {mount}",
+          "name_it": "Grandi Aquile",
+          "name_de": "Riesenadler",
+          "name_fr": "Grand Aigle",
+          "name_es": "Gran águila",
+          "points": 60
         },
         {
           "name_en": "Lothern Skycutter",
           "name_it": "Lothern Skycutter",
           "name_de": "Himmelssegler von Lothern",
           "name_es": "Escolta celeste",
+          "name_fr": "Cotre Volant de Lothern",
           "points": 90,
           "options": [
             {
@@ -903,23 +966,26 @@
               "points": 25
             }
           ],
-          "name_fr": "Cotre Volant de Lothern"
+          "requiredMagicItem": "Sea Guard",
+          "notes": {
+            "name_en": "Requires Sea Guard Elven Honour",
+            "name_de": "Requires Sea Guard Elven Honour",
+            "name_fr": "Requires Sea Guard Elven Honour"
+          }
         },
         {
-          "name_en": "Great Eagle {mount}",
-          "name_it": "Grandi Aquile",
-          "name_de": "Riesenadler",
-          "name_fr": "Grand Aigle",
-          "name_es": "Gran águila",
-          "points": 60
-        },
-        {
-          "name_en": "Griffon {high elves}",
-          "name_it": "Grifone {high elves}",
-          "name_de": "Greif",
-          "name_fr": "Griffon",
-          "name_es": "Grifo",
-          "points": 130
+          "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
+          "name_de": "Löwenstreitwagen von Chrace",
+          "name_fr": "Char à Lions de Chrace",
+          "name_es": "Carro de leones de Cracia",
+          "points": 125,
+          "requiredMagicItem": "Chracian Hunter",
+          "notes": {
+            "name_en": "Requires Chractian Hunter Elven Honour",
+            "name_de": "Requires Chractian Hunter Elven Honour",
+            "name_fr": "Requires Chractian Hunter Elven Honour"
+          }
         },
         {
           "name_en": "Flamespyre Phoenix {mount}",
@@ -927,15 +993,13 @@
           "name_de": "Flammensäulen-Phönix",
           "name_fr": "Phénix Spire-de-feu",
           "name_es": "Fénix pico llameante",
-          "points": 170
-        },
-        {
-          "name_en": "Frostheart Phoenix {mount}",
-          "name_it": "Fenice di Ghiaccio",
-          "name_de": "Frostherz-Phönix",
-          "name_fr": "Phénix Cœur-de-Givre",
-          "name_es": "Fénix corazón gélido",
-          "points": 205
+          "points": 170,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Sun Dragon",
@@ -943,7 +1007,27 @@
           "name_de": "Sonnendrache",
           "name_fr": "Dragon Solaire",
           "name_es": "Dragón solar",
-          "points": 180
+          "points": 180,
+          "requiredMagicItem": "Blood of Caledor",
+          "notes": {
+            "name_en": "Requires Blood of Caledor Elven Honour",
+            "name_de": "Requires Blood of Caledor Elven Honour",
+            "name_fr": "Requires Blood of Caledor Elven Honour"
+          }
+        },
+        {
+          "name_en": "Frostheart Phoenix {mount}",
+          "name_it": "Fenice di Ghiaccio",
+          "name_de": "Frostherz-Phönix",
+          "name_fr": "Phénix Cœur-de-Givre",
+          "name_es": "Fénix corazón gélido",
+          "points": 205,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Moon Dragon",
@@ -1120,9 +1204,9 @@
           "name_it": "A Piedi",
           "name_de": "Zu Fuß",
           "name_es": "A pie",
+          "name_fr": "À Pied",
           "points": 0,
-          "active": true,
-          "name_fr": "À Pied"
+          "active": true
         },
         {
           "name_en": "Elven Steed",
@@ -1141,18 +1225,19 @@
           "points": 18
         },
         {
-          "name_en": "Lion Chariot of Chrace",
-          "name_it": "Carro dei Leoni di Chrace",
-          "name_de": "Löwenstreitwagen von Chrace",
-          "name_fr": "Char à Lions de Chrace",
-          "name_es": "Carro de leones de Cracia",
-          "points": 125
+          "name_en": "Great Eagle {mount}",
+          "name_it": "Grandi Aquile",
+          "name_de": "Riesenadler",
+          "name_fr": "Grand Aigle",
+          "name_es": "Gran águila",
+          "points": 60
         },
         {
           "name_en": "Lothern Skycutter",
           "name_it": "Lothern Skycutter",
           "name_de": "Himmelssegler von Lothern",
           "name_es": "Escolta celeste",
+          "name_fr": "Cotre Volant de Lothern",
           "points": 90,
           "options": [
             {
@@ -1164,23 +1249,26 @@
               "points": 25
             }
           ],
-          "name_fr": "Cotre Volant de Lothern"
+          "requiredMagicItem": "Sea Guard",
+          "notes": {
+            "name_en": "Requires Sea Guard Elven Honour",
+            "name_de": "Requires Sea Guard Elven Honour",
+            "name_fr": "Requires Sea Guard Elven Honour"
+          }
         },
         {
-          "name_en": "Great Eagle {mount}",
-          "name_it": "Grandi Aquile",
-          "name_de": "Riesenadler",
-          "name_fr": "Grand Aigle",
-          "name_es": "Gran águila",
-          "points": 60
-        },
-        {
-          "name_en": "Griffon {high elves}",
-          "name_it": "Grifone {high elves}",
-          "name_de": "Greif",
-          "name_fr": "Griffon",
-          "name_es": "Grifo",
-          "points": 130
+          "name_en": "Lion Chariot of Chrace",
+          "name_it": "Carro dei Leoni di Chrace",
+          "name_de": "Löwenstreitwagen von Chrace",
+          "name_fr": "Char à Lions de Chrace",
+          "name_es": "Carro de leones de Cracia",
+          "points": 125,
+          "requiredMagicItem": "Chracian Hunter",
+          "notes": {
+            "name_en": "Requires Chractian Hunter Elven Honour",
+            "name_de": "Requires Chractian Hunter Elven Honour",
+            "name_fr": "Requires Chractian Hunter Elven Honour"
+          }
         },
         {
           "name_en": "Flamespyre Phoenix {mount}",
@@ -1188,15 +1276,13 @@
           "name_de": "Flammensäulen-Phönix",
           "name_fr": "Phénix Spire-de-feu",
           "name_es": "Fénix pico llameante",
-          "points": 170
-        },
-        {
-          "name_en": "Frostheart Phoenix {mount}",
-          "name_it": "Fenice di Ghiaccio",
-          "name_de": "Frostherz-Phönix",
-          "name_fr": "Phénix Cœur-de-Givre",
-          "name_es": "Fénix corazón gélido",
-          "points": 205
+          "points": 170,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         },
         {
           "name_en": "Sun Dragon",
@@ -1204,7 +1290,27 @@
           "name_de": "Sonnendrache",
           "name_fr": "Dragon Solaire",
           "name_es": "Dragón solar",
-          "points": 180
+          "points": 180,
+          "requiredMagicItem": "Blood of Caledor",
+          "notes": {
+            "name_en": "Requires Blood of Caledor Elven Honour",
+            "name_de": "Requires Blood of Caledor Elven Honour",
+            "name_fr": "Requires Blood of Caledor Elven Honour"
+          }
+        },
+        {
+          "name_en": "Frostheart Phoenix {mount}",
+          "name_it": "Fenice di Ghiaccio",
+          "name_de": "Frostherz-Phönix",
+          "name_fr": "Phénix Cœur-de-Givre",
+          "name_es": "Fénix corazón gélido",
+          "points": 205,
+          "requiredMagicItem": "Anointed of Asuryan",
+          "notes": {
+            "name_en": "Requires Anointed of Asuryan Elven Honour",
+            "name_de": "Requires Anointed of Asuryan Elven Honour",
+            "name_fr": "Requires Anointed of Asuryan Elven Honour"
+          }
         }
       ],
       "items": [
