@@ -725,6 +725,16 @@ export const Editor = ({ isMobile }) => {
               </Button>
             </section>
           )}
+
+        <Button
+          type="secondary"
+          centered
+          to={`/game-view/${listId}`}
+          icon="shield"
+          spaceTop
+        >
+          <FormattedMessage id="misc.gameView" />
+        </Button>
       </MainComponent>
     </>
   );
