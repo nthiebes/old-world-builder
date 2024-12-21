@@ -185,7 +185,9 @@ export const getPoints = ({ type, list }) => {
 
   list[type] &&
     list[type].forEach((unit) => {
-      points += getUnitPoints(unit, { armyComposition: list.armyComposition });
+      points += getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
     });
 
   return points;

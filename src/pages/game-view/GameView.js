@@ -81,6 +81,7 @@ export const GameView = () => {
     );
   }
 
+  const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -279,7 +280,7 @@ export const GameView = () => {
                       <span className="game-view__points">
                         [
                         {getUnitPoints(unit, {
-                          armyComposition: list.armyComposition,
+                          armyComposition,
                         })}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
@@ -292,11 +293,11 @@ export const GameView = () => {
                       name_en: getAllOptions(unit, {
                         language: "en",
                         removeFactionName: false,
-                        armyComposition: list.armyComposition,
+                        armyComposition,
                       }),
                       [`name_${language}`]: getAllOptions(unit, {
                         removeFactionName: false,
-                        armyComposition: list.armyComposition,
+                        armyComposition,
                       }),
                     }}
                   />
@@ -421,7 +422,7 @@ export const GameView = () => {
             ? 0
             : getUnitPoints(unit, {
                 noDetachments: true,
-                armyComposition: list.armyComposition,
+                armyComposition,
               }),
           fleeing: 0,
           25: 0,
@@ -443,7 +444,7 @@ export const GameView = () => {
             : Math.round(
                 getUnitPoints(unit, {
                   noDetachments: true,
-                  armyComposition: list.armyComposition,
+                  armyComposition,
                 }) / 2
               ),
           25: 0,
@@ -466,7 +467,7 @@ export const GameView = () => {
             : Math.round(
                 getUnitPoints(unit, {
                   noDetachments: true,
-                  armyComposition: list.armyComposition,
+                  armyComposition,
                 }) / 4
               ),
         };
@@ -485,7 +486,7 @@ export const GameView = () => {
                     ...detachment,
                     strength: 1,
                   },
-                  { armyComposition: list.armyComposition }
+                  { armyComposition }
                 ),
             },
           };

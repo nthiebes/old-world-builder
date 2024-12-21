@@ -101,6 +101,7 @@ export const getListAsText = ({
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
+  const armyComposition = list.armyComposition || list.army;
   const armyCompositionName =
     list.army !== list.armyComposition && nameMap[list.armyComposition]
       ? nameMap[list.armyComposition][`name_${language}`] ||
@@ -154,7 +155,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isShowList,
       intl,
       language,showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -179,7 +180,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isShowList,
       intl,
       language,showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -204,7 +205,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       isShowList,
       intl,
       language,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -230,7 +231,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       intl,
       language,
       showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -256,7 +257,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       intl,
       language,
       showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -282,7 +283,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       intl,
       language,
       showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -308,7 +309,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       intl,
       language,
       showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 
@@ -334,7 +335,7 @@ ${game.name}, ${armyName}${armyCompositionString}
       intl,
       language,
       showStats,
-      armyComposition: list.armyComposition
+      armyComposition
     })}`;
   }
 

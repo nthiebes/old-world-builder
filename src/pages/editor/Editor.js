@@ -100,6 +100,7 @@ export const Editor = ({ isMobile }) => {
     }
   }
 
+  const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -115,7 +116,7 @@ export const Editor = ({ isMobile }) => {
       type: "lords",
       armyPoints: list.points,
       points: lordsPoints,
-      armyComposition: list.armyComposition,
+      armyComposition,
     });
   const heroesData =
     list.lords &&
@@ -123,7 +124,7 @@ export const Editor = ({ isMobile }) => {
       type: "heroes",
       armyPoints: list.points,
       points: heroesPoints,
-      armyComposition: list.armyComposition,
+      armyComposition,
     });
   const charactersData =
     list.characters &&
@@ -131,25 +132,25 @@ export const Editor = ({ isMobile }) => {
       type: "characters",
       armyPoints: list.points,
       points: charactersPoints,
-      armyComposition: list.armyComposition,
+      armyComposition,
     });
   const coreData = getMinPercentData({
     type: "core",
     armyPoints: list.points,
     points: corePoints,
-    armyComposition: list.armyComposition,
+    armyComposition,
   });
   const specialData = getMaxPercentData({
     type: "special",
     armyPoints: list.points,
     points: specialPoints,
-    armyComposition: list.armyComposition,
+    armyComposition,
   });
   const rareData = getMaxPercentData({
     type: "rare",
     armyPoints: list.points,
     points: rarePoints,
-    armyComposition: list.armyComposition,
+    armyComposition,
   });
   const mercenariesData =
     list.mercenaries &&
@@ -157,7 +158,7 @@ export const Editor = ({ isMobile }) => {
       type: "mercenaries",
       armyPoints: list.points,
       points: mercenariesPoints,
-      armyComposition: list.armyComposition,
+      armyComposition,
     });
   const alliesData =
     list.allies &&
@@ -165,7 +166,7 @@ export const Editor = ({ isMobile }) => {
       type: "allies",
       armyPoints: list.points,
       points: alliesPoints,
-      armyComposition: list.armyComposition,
+      armyComposition,
     });
   const moreButtons = [
     {
@@ -336,7 +337,7 @@ export const Editor = ({ isMobile }) => {
               units={list.lords}
               type="lords"
               listId={listId}
-              armyComposition={list.armyComposition}
+              armyComposition={armyComposition}
             />
 
             <Button
@@ -378,7 +379,7 @@ export const Editor = ({ isMobile }) => {
               units={list.heroes}
               type="heroes"
               listId={listId}
-              armyComposition={list.armyComposition}
+              armyComposition={armyComposition}
             />
 
             <Button
@@ -420,7 +421,7 @@ export const Editor = ({ isMobile }) => {
               units={list.characters}
               type="characters"
               listId={listId}
-              armyComposition={list.armyComposition}
+              armyComposition={armyComposition}
             />
 
             {errors
@@ -478,7 +479,7 @@ export const Editor = ({ isMobile }) => {
             units={list.core}
             type="core"
             listId={listId}
-            armyComposition={list.armyComposition}
+            armyComposition={armyComposition}
           />
 
           {errors
@@ -534,7 +535,7 @@ export const Editor = ({ isMobile }) => {
             units={list.special}
             type="special"
             listId={listId}
-            armyComposition={list.armyComposition}
+            armyComposition={armyComposition}
           />
 
           {errors
@@ -590,7 +591,7 @@ export const Editor = ({ isMobile }) => {
             units={list.rare}
             type="rare"
             listId={listId}
-            armyComposition={list.armyComposition}
+            armyComposition={armyComposition}
           />
 
           {errors
@@ -647,7 +648,7 @@ export const Editor = ({ isMobile }) => {
               units={list.allies}
               type="allies"
               listId={listId}
-              armyComposition={list.armyComposition}
+              armyComposition={armyComposition}
             />
 
             {errors
@@ -680,7 +681,7 @@ export const Editor = ({ isMobile }) => {
 
         {list.mercenaries &&
           mercenariesData &&
-          list.armyComposition &&
+          armyComposition &&
           list?.army !== "daemons-of-chaos" &&
           list?.army !== "vampire-counts" && (
             <section className="editor__section">
@@ -711,7 +712,7 @@ export const Editor = ({ isMobile }) => {
                 units={list.mercenaries}
                 type="mercenaries"
                 listId={listId}
-                armyComposition={list.armyComposition}
+                armyComposition={armyComposition}
               />
 
               {errors

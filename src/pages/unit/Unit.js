@@ -496,6 +496,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
+  const listArmyComposition = list?.armyComposition || list?.army;
 
   return (
     <>
@@ -515,7 +516,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             />
           }
           subheadline={`${getUnitPoints(unit, {
-            armycomposition: list.armyComposition,
+            armyComposition: listArmyComposition,
           })} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -540,7 +541,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               />
             }
             subheadline={`${getUnitPoints(unit, {
-              armyComposition: list.armyComposition,
+              armyComposition: listArmyComposition,
             })} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -595,7 +596,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitCommand) =>
                   !unitCommand.armyComposition ||
-                  unitCommand.armyComposition.includes(list.armyComposition)
+                  unitCommand.armyComposition.includes(listArmyComposition)
               )
               .map(
                 (
@@ -620,7 +621,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   if (magic?.types && magic.types.length && active) {
                     commandMaxPoints =
                       (magic.armyComposition &&
-                        magic.armyComposition[list.armyComposition || list.army]
+                        magic.armyComposition[listArmyComposition]
                           ?.maxPoints) ||
                       magic.maxPoints;
                   }
@@ -793,7 +794,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitEquipment) =>
                   !unitEquipment.armyComposition ||
-                  unitEquipment.armyComposition.includes(list.armyComposition)
+                  unitEquipment.armyComposition.includes(listArmyComposition)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
@@ -912,7 +913,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitOption) =>
                   !unitOption.armyComposition ||
-                  unitOption.armyComposition.includes(list.armyComposition)
+                  unitOption.armyComposition.includes(listArmyComposition)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
@@ -983,7 +984,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 (option) =>
                                   !option.armyComposition ||
                                   option.armyComposition.includes(
-                                    list.armyComposition
+                                    listArmyComposition
                                   )
                               )
                               .map((option, optionIndex) => {
@@ -1340,7 +1341,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 ({ armyComposition }) =>
                   !armyComposition ||
-                  armyComposition.includes(list.armyComposition)
+                  armyComposition.includes(listArmyComposition)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
@@ -1380,7 +1381,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             (option) =>
                               !option.armyComposition ||
                               option.armyComposition.includes(
-                                list.armyComposition
+                                listArmyComposition
                               )
                           )
                           .map((option, optionIndex) => {
@@ -1450,7 +1451,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter((lore, index) => {
                 if (
                   lore === "troll-magic" &&
-                  list.armyComposition !== "troll-horde" &&
+                  listArmyComposition !== "troll-horde" &&
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
@@ -1498,8 +1499,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               });
               const maxPoints =
                 (item.armyComposition &&
-                  item.armyComposition[list?.armyComposition || list.army]
-                    ?.maxPoints) ||
+                  item.armyComposition[listArmyComposition]?.maxPoints) ||
                 item.maxPoints;
 
               return (
