@@ -24,16 +24,7 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { editUnit } from "../../state/lists";
-import {
-  setShowSpecialRules,
-  setShowPoints,
-  setShowStats,
-  setShowPageNumbers,
-  setShowVictoryPoints,
-  setShowCustomNotes,
-  setShowGeneratedSpells,
-  updateSetting,
-} from "../../state/settings";
+import { updateSetting } from "../../state/settings";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -286,7 +277,10 @@ export const GameView = () => {
                     />
                     {showPoints && (
                       <span className="game-view__points">
-                        [{getUnitPoints(unit)}{" "}
+                        [
+                        {getUnitPoints(unit, {
+                          armyComposition: list.armyComposition,
+                        })}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
                     )}
@@ -298,9 +292,11 @@ export const GameView = () => {
                       name_en: getAllOptions(unit, {
                         language: "en",
                         removeFactionName: false,
+                        armyComposition: list.armyComposition,
                       }),
                       [`name_${language}`]: getAllOptions(unit, {
                         removeFactionName: false,
+                        armyComposition: list.armyComposition,
                       }),
                     }}
                   />
@@ -423,7 +419,10 @@ export const GameView = () => {
           ...unitPoints,
           dead: unitPoints.dead
             ? 0
-            : getUnitPoints(unit, { noDetachments: true }),
+            : getUnitPoints(unit, {
+                noDetachments: true,
+                armyComposition: list.armyComposition,
+              }),
           fleeing: 0,
           25: 0,
         };
@@ -441,7 +440,12 @@ export const GameView = () => {
           dead: 0,
           fleeing: unitPoints.fleeing
             ? 0
-            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 2),
+            : Math.round(
+                getUnitPoints(unit, {
+                  noDetachments: true,
+                  armyComposition: list.armyComposition,
+                }) / 2
+              ),
           25: 0,
         };
         if (isGeneral) {
@@ -459,7 +463,12 @@ export const GameView = () => {
           fleeing: 0,
           25: unitPoints["25"]
             ? 0
-            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 4),
+            : Math.round(
+                getUnitPoints(unit, {
+                  noDetachments: true,
+                  armyComposition: list.armyComposition,
+                }) / 4
+              ),
         };
         break;
       }
@@ -471,10 +480,13 @@ export const GameView = () => {
               ...unitPoints.detachments,
               [detachment.id]:
                 deadDetachments *
-                getUnitPoints({
-                  ...detachment,
-                  strength: 1,
-                }),
+                getUnitPoints(
+                  {
+                    ...detachment,
+                    strength: 1,
+                  },
+                  { armyComposition: list.armyComposition }
+                ),
             },
           };
         });

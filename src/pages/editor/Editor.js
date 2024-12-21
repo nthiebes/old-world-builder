@@ -336,6 +336,7 @@ export const Editor = ({ isMobile }) => {
               units={list.lords}
               type="lords"
               listId={listId}
+              armyComposition={list.armyComposition}
             />
 
             <Button
@@ -377,6 +378,7 @@ export const Editor = ({ isMobile }) => {
               units={list.heroes}
               type="heroes"
               listId={listId}
+              armyComposition={list.armyComposition}
             />
 
             <Button
@@ -418,6 +420,7 @@ export const Editor = ({ isMobile }) => {
               units={list.characters}
               type="characters"
               listId={listId}
+              armyComposition={list.armyComposition}
             />
 
             {errors
@@ -471,7 +474,12 @@ export const Editor = ({ isMobile }) => {
             </p>
           </header>
 
-          <OrderableUnitList units={list.core} type="core" listId={listId} />
+          <OrderableUnitList
+            units={list.core}
+            type="core"
+            listId={listId}
+            armyComposition={list.armyComposition}
+          />
 
           {errors
             .filter(({ section }) => section === "core")
@@ -526,6 +534,7 @@ export const Editor = ({ isMobile }) => {
             units={list.special}
             type="special"
             listId={listId}
+            armyComposition={list.armyComposition}
           />
 
           {errors
@@ -577,7 +586,12 @@ export const Editor = ({ isMobile }) => {
             </p>
           </header>
 
-          <OrderableUnitList units={list.rare} type="rare" listId={listId} />
+          <OrderableUnitList
+            units={list.rare}
+            type="rare"
+            listId={listId}
+            armyComposition={list.armyComposition}
+          />
 
           {errors
             .filter(({ section }) => section === "rare")
@@ -633,6 +647,7 @@ export const Editor = ({ isMobile }) => {
               units={list.allies}
               type="allies"
               listId={listId}
+              armyComposition={list.armyComposition}
             />
 
             {errors
@@ -696,6 +711,7 @@ export const Editor = ({ isMobile }) => {
                 units={list.mercenaries}
                 type="mercenaries"
                 listId={listId}
+                armyComposition={list.armyComposition}
               />
 
               {errors
@@ -746,7 +762,7 @@ export const Editor = ({ isMobile }) => {
  * @param {string} props.type
  * @param {string} props.listId
  */
-export const OrderableUnitList = ({ units, type, listId }) => {
+export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
   const dispatch = useDispatch();
   const location = useLocation();
   const intl = useIntl();
@@ -776,11 +792,13 @@ export const OrderableUnitList = ({ units, type, listId }) => {
                 <span>{`${unit.strength || unit.minimum}`}</span>
               ) : null}
               <b>{getUnitName({ unit, language })}</b>
-              <i>{`${getUnitPoints(unit)} ${intl.formatMessage({
+              <i>{`${getUnitPoints(unit, {
+                armyComposition,
+              })} ${intl.formatMessage({
                 id: "app.points",
               })}`}</i>
             </div>
-            <p>{getAllOptions(unit)}</p>
+            <p>{getAllOptions(unit, { armyComposition })}</p>
           </ListItem>
         ))}
     </OrderableList>

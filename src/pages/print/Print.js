@@ -139,13 +139,18 @@ export const Print = () => {
                 {getUnitName({ unit, language })}
                 {!isShowList && (
                   <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
+                    [
+                    {getUnitPoints(unit, {
+                      armyComposition: list.armyComposition,
+                    })}{" "}
+                    <FormattedMessage id="app.points" />]
                   </span>
                 )}
               </h3>
               {getAllOptions(unit, {
                 noMagic: isShowList,
                 pageNumbers: showPageNumbers,
+                armyComposition: list.armyComposition,
               })}
               {showSpecialRules && unit.specialRules ? (
                 <p className="print__special-rules">

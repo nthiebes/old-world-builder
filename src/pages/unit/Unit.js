@@ -514,7 +514,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               className="unit__header-rule-icon"
             />
           }
-          subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+          subheadline={`${getUnitPoints(unit, {
+            armycomposition: list.armyComposition,
+          })} ${intl.formatMessage({
             id: "app.points",
           })}`}
           navigationIcon="more"
@@ -537,7 +539,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 className="unit__header-rule-icon"
               />
             }
-            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+            subheadline={`${getUnitPoints(unit, {
+              armyComposition: list.armyComposition,
+            })} ${intl.formatMessage({
               id: "app.points",
             })}`}
             navigationIcon="more"
@@ -945,7 +949,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             onChange={() =>
                               !alwaysActive && handleOptionsChange(id)
                             }
-                            checked={active}
+                            checked={alwaysActive || active}
                             className="checkbox__input"
                             disabled={
                               (exclusiveUnitCheckedOption &&
@@ -997,7 +1001,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         id={`option-${id}-option-${optionIndex}`}
                                         value={`${id}-${optionIndex}`}
                                         onChange={() =>
-                                          !option.alwaysActive &&
                                           handleOptionsChange(id, optionIndex)
                                         }
                                         checked={Boolean(option.active)}

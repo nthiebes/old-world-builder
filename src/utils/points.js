@@ -1,6 +1,6 @@
 import { unitHasItem } from "./unit";
 
-export const getUnitPoints = (unit, options) => {
+export const getUnitPoints = (unit, settings) => {
   const detachmentActive =
     unit?.options?.length > 0 &&
     Boolean(
@@ -33,7 +33,11 @@ export const getUnitPoints = (unit, options) => {
             }
           }
         });
-      } else if (option.active) {
+      } else if (
+        option.active ||
+        (option.alwaysActive &&
+          option.armyComposition === settings.armyComposition)
+      ) {
         unitPoints += option.points;
       }
     });
@@ -118,7 +122,7 @@ export const getUnitPoints = (unit, options) => {
       });
     });
   }
-  if (unit.detachments && !options?.noDetachments) {
+  if (unit.detachments && !settings?.noDetachments) {
     unit.detachments.forEach(
       ({ strength, points, equipment, armor, options }) => {
         unitPoints += strength * points;
@@ -181,7 +185,7 @@ export const getPoints = ({ type, list }) => {
 
   list[type] &&
     list[type].forEach((unit) => {
-      points += getUnitPoints(unit);
+      points += getUnitPoints(unit, { armyComposition: list.armyComposition });
     });
 
   return points;

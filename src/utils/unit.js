@@ -20,6 +20,7 @@ export const getAllOptions = (
     noMagic,
     language: overrideLanguage,
     pageNumbers,
+    armyComposition,
   } = {}
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
@@ -93,6 +94,8 @@ export const getAllOptions = (
     options.forEach(
       ({
         active,
+        alwaysActive,
+        armyComposition: unitArmyComposition,
         name_en,
         options: subOptions,
         stackableCount,
@@ -100,6 +103,7 @@ export const getAllOptions = (
         ...entry
       }) => {
         if (
+          (alwaysActive && unitArmyComposition === armyComposition) ||
           (active && !requiredMagicItem) ||
           (active &&
             requiredMagicItem &&
