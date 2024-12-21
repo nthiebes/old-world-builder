@@ -872,7 +872,7 @@
           "name_es": "Order of the Knights Panther",
           "points": 10,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-panther"
         },
         {
@@ -892,7 +892,7 @@
           "name_es": "Order of the White Wolf",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-white-wolf"
         },
         {
@@ -912,7 +912,7 @@
           "name_es": "Order of the Blazing Sun",
           "points": 10,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-blazing-sun"
         },
         {
@@ -932,7 +932,7 @@
           "name_es": "Order of the Knights of Morr",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-morr"
         },
         {
@@ -952,7 +952,7 @@
           "name_es": "Order of the Fiery Heart",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-fiery-heart"
         },
         {
@@ -1173,7 +1173,7 @@
           "name_es": "Order of the Knights Panther",
           "points": 10,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-panther"
         },
         {
@@ -1193,7 +1193,7 @@
           "name_es": "Order of the White Wolf",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-white-wolf"
         },
         {
@@ -1213,7 +1213,7 @@
           "name_es": "Order of the Blazing Sun",
           "points": 10,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-blazing-sun"
         },
         {
@@ -1233,7 +1233,7 @@
           "name_es": "Order of the Knights of Morr",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-morr"
         },
         {
@@ -1253,7 +1253,7 @@
           "name_es": "Order of the Fiery Heart",
           "points": 15,
           "perModel": true,
-          "alwaysActive": false,
+          "alwaysActive": true,
           "armyComposition": "knightly-order-fiery-heart"
         },
         {
@@ -1364,9 +1364,9 @@
           "name_fr": "Arme de base",
           "name_es": "Arma de mano",
           "points": 0,
-          "perModel": true,
           "active": true,
-          "equippedDefault": true
+          "equippedDefault": true,
+          "group": "weapons1"
         },
         {
           "name_en": "Additional hand weapon",
@@ -1374,7 +1374,7 @@
           "name_fr": "Arme de base additionnelle",
           "name_es": "Arma de mano adicional",
           "points": 3,
-          "perModel": true
+          "group": "weapons1"
         },
         {
           "name_en": "Great weapon",
@@ -1382,7 +1382,39 @@
           "name_fr": "Arme lourde",
           "name_es": "Arma a dos manos",
           "points": 4,
-          "perModel": true
+          "group": "weapons1"
+        },
+        {
+          "name_en": "Crossbow",
+          "name_de": "Crossbow",
+          "name_fr": "Arbalète",
+          "name_es": "Ballesta",
+          "points": 6,
+          "group": "weapons2"
+        },
+        {
+          "name_en": "Handgun",
+          "name_de": "Handgun",
+          "name_fr": "Arquebuse",
+          "name_es": "Arcabuz",
+          "points": 6,
+          "group": "weapons2"
+        },
+        {
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "name_fr": "Pistolet",
+          "name_es": "Pistola",
+          "points": 5,
+          "group": "weapons3"
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_de": "Brace of pistols",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 10,
+          "group": "weapons3"
         }
       ],
       "armor": [
@@ -1398,39 +1430,36 @@
       ],
       "options": [
         {
-          "name_en": "Crossbow (Don't take handgun)",
-          "name_de": "Crossbow (Don't take handgun)",
-          "name_fr": "Arbalète (Ne peut pas prendre d'arquebuse)",
-          "name_es": "Ballesta (No puede equiparse junto a arcabuz)",
-          "points": 6,
-          "perModel": true,
+          "name_en": "The Witch",
+          "name_de": "The Witch",
+          "name_fr": "The Witch",
+          "name_es": "The Witch",
+          "points": 0,
+          "active": true,
           "exclusive": true
         },
         {
-          "name_en": "Handgun (Don't take crossbow)",
-          "name_de": "Handgun (Don't take crossbow)",
-          "name_fr": "Arquebuse (Ne peut pas prendre d'arbalète)",
-          "name_es": "Arcabuz (No puede equiparse junto a ballesta)",
-          "points": 6,
-          "perModel": true,
+          "name_en": "The Revenant",
+          "name_de": "The Revenant",
+          "name_fr": "The Revenant",
+          "name_es": "The Revenant",
+          "points": 0,
           "exclusive": true
         },
         {
-          "name_en": "Pistol (Don't take brace of pistols)",
-          "name_de": "Pistol (Don't take brace of pistols)",
-          "name_fr": "Pistolet (Ne peut pas prendre de paire de pistolets)",
-          "name_es": "Pistola (No puede equiparse junto a ristra de pistolas)",
-          "points": 5,
-          "perModel": true,
+          "name_en": "The Mutant",
+          "name_de": "The Mutant",
+          "name_fr": "The Mutant",
+          "name_es": "The Mutant",
+          "points": 0,
           "exclusive": true
         },
         {
-          "name_en": "Brace of pistols (Don't take pistol)",
-          "name_de": "Brace of pistols (Don't take pistol)",
-          "name_fr": "Plusieurs pistolets (Ne peut pas prendre de pistolet)",
-          "name_es": "Ristra de pistolas (No puede equiparse junto a pistola)",
-          "points": 10,
-          "perModel": true,
+          "name_en": "The Daemon",
+          "name_de": "The Daemon",
+          "name_fr": "The Daemon",
+          "name_es": "The Daemon",
+          "points": 0,
           "exclusive": true
         }
       ],
@@ -2494,10 +2523,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2619,10 +2648,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2736,10 +2765,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2853,10 +2882,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2970,10 +2999,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -4129,10 +4158,10 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5654,10 +5683,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5758,10 +5787,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5894,10 +5923,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -6014,10 +6043,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -6134,10 +6163,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -6254,10 +6283,10 @@
       ],
       "armor": [
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -6363,19 +6392,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -6464,19 +6493,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -6573,19 +6602,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -6682,19 +6711,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -6791,19 +6820,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -6900,19 +6929,19 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_de": "Heavy armour, Barding",
+          "name_fr": "Armure lourde, Barding",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
+          "name_en": "Full plate armour, Barding",
+          "name_de": "Full plate armour, Barding",
+          "name_fr": "Armure de plate complète, Barding",
+          "name_es": "Armadura completa, Barding",
           "points": 5,
           "perModel": true
         }
@@ -7021,7 +7050,7 @@
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "name_es": "Armadura pesada",
-          "points": 1,
+          "points": 0,
           "perModel": true,
           "active": true
         }
