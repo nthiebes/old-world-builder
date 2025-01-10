@@ -213,6 +213,22 @@ export const synonyms = {
   "expeditionary marksman": "expeditionary marksmen",
   "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
+  "nuln veteran state troops": "nuln state troops",
+  "empire knights panther": "empire knights",
+  "empire knights of the white wolf": "empire knights",
+  "empire knights of the fiery heart": "empire knights",
+  "empire knights of the blazing sun": "empire knights",
+  "empire knights of morr": "empire knights",
+  "inner circle knights panther": "inner circle knights",
+  "inner circle knights of the white wolf": "inner circle knights",
+  "inner circle knights of the fiery heart": "inner circle knights",
+  "inner circle knights of the blazing sun": "inner circle knights",
+  "inner circle knights of morr": "inner circle knights",
+  "demigryph knights panther": "demigryph knights",
+  "demigryph knights of the white wolf": "demigryph knights",
+  "demigryph knights of the fiery heart": "demigryph knights",
+  "demigryph knights of the blazing sun": "demigryph knights",
+  "demigryph knights of morr": "demigryph knights",
 };
 
 export const rulesMap = {
