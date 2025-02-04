@@ -26,6 +26,8 @@ export const Button = ({
   size,
   download,
   value,
+  showLabelRight,
+  showLabelLeft,
 }) => {
   const Component = to || href ? (to ? Link : "a") : "button";
   const buttonProps = {};
@@ -62,6 +64,7 @@ export const Button = ({
       value={value}
       {...buttonProps}
     >
+      {showLabelLeft && <span className="button__label--left">{label}</span>}
       {icon && (
         <Icon
           className={classNames(children && "button__icon")}
@@ -69,6 +72,7 @@ export const Button = ({
         />
       )}
       {children && children}
+      {showLabelRight && <span className="button__label--right">{label}</span>}
     </Component>
   );
 };

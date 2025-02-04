@@ -149,3 +149,22 @@
 .button--text.button--dark:active {
   color: var(--color-button);
 }
+
+.button__label--right {
+  width: 10rem;
+  margin-left: 0.5rem;
+  text-align: left;
+}
+
+.button__label--left {
+  width: 10rem;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+
+@media (max-width: 599px) {
+  .button__label--right,
+  .button__label--left {
+    display: none;
+  }
+}

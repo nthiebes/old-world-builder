@@ -134,6 +134,16 @@
 
 .header__empty-icon {
   width: 54px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .header__empty-icon {
+    width: calc(10.5rem + 54px);
+  }
+  .header__empty-icon--small {
+    width: 54px;
+  }
 }
 
 .header__checkbox {

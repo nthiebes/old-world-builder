@@ -53,7 +53,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "globals": {
+      "Dropbox": "writable"
+    }
   },
   "browserslist": {
     "production": [

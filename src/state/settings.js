@@ -11,9 +11,10 @@ export const settingsSlice = createSlice({
     showCustomNotes: false,
     showGeneratedSpells: true,
     showStats: true,
+    loggedIn: false,
   },
   reducers: {
-    setSettings: (state, { payload }) => {
+    setSettings: (_, { payload }) => {
       return payload || settingsSlice.initialState;
     },
     updateSetting: (state, { payload }) => ({

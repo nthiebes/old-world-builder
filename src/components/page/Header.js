@@ -6,6 +6,7 @@ import { useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
+import { useDropboxAuthentication } from "../../utils/useDropboxAuthentication";
 
 import "./Header.css";
 
@@ -26,6 +27,7 @@ export const Header = ({
   const intl = useIntl();
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
+  const { dpxAuthUrl, isLoggedIn, isLoginLoading } = useDropboxAuthentication();
   const Component = isSection ? "section" : "header";
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
@@ -61,6 +63,12 @@ export const Header = ({
     },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
+  const logout = () => {
+    localStorage.removeItem("owb.token");
+    window.location.reload();
+  };
+
+  // console.log("header");
 
   useEffect(() => {
     setShowMenu(false);
@@ -81,20 +89,45 @@ export const Header = ({
           }
           color={isSection ? "dark" : "light"}
           icon={isSection ? "close" : "back"}
+          showLabelRight={!isSection}
         />
       ) : (
         <>
-          {hasHomeButton && (
+          {hasHomeButton ? (
             <Button
               type="text"
               to="/"
               label={intl.formatMessage({ id: "misc.startpage" })}
               color="light"
               icon="home"
+              showLabelRight
             />
-          )}
-          {navigation && !hasHomeButton && (
-            <div className="header__empty-icon" />
+          ) : (
+            <>
+              {isLoggedIn ? (
+                <Button
+                  type="text"
+                  onClick={logout}
+                  label={intl.formatMessage({ id: "misc.dropboxLogout" })}
+                  color="light"
+                  icon="logout"
+                  showLabelRight
+                />
+              ) : (
+                <Button
+                  type="text"
+                  href={dpxAuthUrl}
+                  label={
+                    isLoginLoading
+                      ? ""
+                      : intl.formatMessage({ id: "misc.dropboxLogin" })
+                  }
+                  color="light"
+                  icon={isLoginLoading ? "spinner" : "dropbox"}
+                  showLabelRight
+                />
+              )}
+            </>
           )}
         </>
       )}
@@ -127,12 +160,26 @@ export const Header = ({
           type="text"
           className={classNames(showMenu && "header__more-button")}
           color={isSection ? "dark" : "light"}
-          label={intl.formatMessage({ id: "header.more" })}
+          label={
+            navigationIcon
+              ? intl.formatMessage({ id: "header.more" })
+              : intl.formatMessage({ id: "header.menu" })
+          }
           icon={navigationIcon ? navigationIcon : "menu"}
           onClick={handleMenuClick}
+          showLabelLeft={!isSection}
         />
       ) : (
-        <>{to && !filters && <div className="header__empty-icon" />}</>
+        <>
+          {to && !filters && (
+            <div
+              className={classNames(
+                "header__empty-icon",
+                isSection && "header__empty-icon--small"
+              )}
+            />
+          )}
+        </>
       )}
       {filters && (
         <Button
@@ -142,6 +189,7 @@ export const Header = ({
           label={intl.formatMessage({ id: "header.filter" })}
           icon="filter"
           onClick={handleMenuClick}
+          showLabelLeft
         />
       )}
       {showMenu && navigation && (
