@@ -2284,7 +2284,7 @@ export const rules = {
             "daemon-prince",
           ],
           requiresOption: {
-            id: "daemon-of-slannesh",
+            id: "daemon-of-slaanesh",
             unit: "daemon-prince",
           },
         },
