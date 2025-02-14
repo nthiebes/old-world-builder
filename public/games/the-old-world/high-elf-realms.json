@@ -8,6 +8,14 @@
       "name_es": "Príncipe",
       "id": "prince",
       "points": 130,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "the-chracian-warhost": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -828,6 +836,14 @@
       "name_es": "Archimago",
       "id": "archmage",
       "points": 155,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "the-chracian-warhost": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -848,19 +864,6 @@
           "perModel": true,
           "active": true,
           "name_fr": "Arme de base"
-        },
-        {
-          "name_en": "Sword of Hoeth",
-          "name_it": "Sword of Hoeth",
-          "name_de": "Schwert aus Hoeth",
-          "name_es": "Sword of Hoeth",
-          "name_fr": "Épée de Hoeth",
-          "points": 0,
-          "requiredMagicItem": "Loremaster",
-          "notes": {
-            "name_en": "Requires Loremaster Elven Honour",
-            "name_fr": "Nécessite l'Honneur Elfique Maître du Savoir"
-          }
         },
         {
           "name_en": "Sword of Hoeth",
@@ -1124,6 +1127,14 @@
       "name_es": "Mago",
       "id": "mage",
       "points": 80,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "sea-guard-garrison": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1144,19 +1155,6 @@
           "perModel": true,
           "active": true,
           "name_fr": "Arme de base"
-        },
-        {
-          "name_en": "Sword of Hoeth",
-          "name_it": "Sword of Hoeth",
-          "name_de": "Schwert aus Hoeth",
-          "name_es": "Sword of Hoeth",
-          "name_fr": "Épée de Hoeth",
-          "points": 0,
-          "requiredMagicItem": "Loremaster",
-          "notes": {
-            "name_en": "Requires Loremaster Elven Honour",
-            "name_fr": "Nécessite l'Honneur Elfique Maître du Savoir"
-          }
         },
         {
           "name_en": "Sword of Hoeth",
@@ -1404,6 +1402,14 @@
       "name_es": "Mago dragón",
       "id": "dragon-mage",
       "points": 275,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "sea-guard-garrison": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1495,6 +1501,11 @@
       "name_es": "Dama de la reina eterna",
       "id": "handmaiden-of-the-everqueen",
       "points": 65,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1569,6 +1580,501 @@
         "name_fr": "Flèches d'Isha, Esquiveur, Ignore les Couverts, Immunisé à la Psychologie, Armure en Ithilmar, Armes en Ithilmar, Frappe En Premier",
         "name_de": "Pfeile der Isha, Ausweichen, Deckung ignorieren, Immun gegen Psychologie, Ithilmar-Rüstung, Ithilmar-Waffen, Schlägt zuerst zu"
       }
+    },
+    {
+      "name_en": "Chracian Chieftain",
+      "name_it": "Chracian Chieftain",
+      "name_de": "Chracian Chieftain",
+      "name_fr": "Chracian Chieftain",
+      "name_es": "Chracian Chieftain",
+      "id": "chracian-chieftain",
+      "armyComposition": {
+        "the-chracian-warhost": {
+          "category": "characters"
+        }
+      },
+      "points": 105,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Armeestandartenträger",
+          "name_es": "Portaestandarte de batalla",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
+          "name_de": "Handwaffe",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_it": "Arma Addizionale",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle",
+          "points": 4
+        },
+        {
+          "name_en": "Chracian great blade",
+          "name_it": "Chracian great blade",
+          "name_de": "Chracian great blade",
+          "name_es": "Chracian great blade",
+          "name_fr": "Chracian great blade",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_it": "A Piedi",
+          "name_de": "Zu Fuß",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chieftain's Chariot",
+          "name_it": "Chieftain's Chariot",
+          "name_de": "Chieftain's Chariot",
+          "name_fr": "Chieftain's Chariot",
+          "name_es": "Chieftain's Chariot",
+          "points": 105
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "specialRules": {
+        "name_en": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_it": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_es": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_fr": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_de": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move through Cover*, Strike First*, Stubborn, Valour of Ages"
+      }
+    },
+    {
+      "name_en": "Sea Guard Garrison Commander",
+      "name_it": "Sea Guard Garrison Commander",
+      "name_de": "Sea Guard Garrison Commander",
+      "name_fr": "Sea Guard Garrison Commander",
+      "name_es": "Sea Guard Garrison Commander",
+      "id": "sea-guard-garrison.commander",
+      "points": 90,
+      "armyComposition": {
+        "sea-guard-garrison": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Armeestandartenträger",
+          "name_es": "Portaestandarte de batalla",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Warbow",
+          "name_it": "Arma Bianca, Arco da Guerra",
+          "name_de": "Handwaffe, Kriegsbogen",
+          "name_es": "Arma de mano, Arco de guerra",
+          "name_fr": "Arme de base, Arc de guerre",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Longbow",
+          "name_it": "Arma Bianca, Arco Lungo",
+          "name_de": "Handwaffe, Langbogen",
+          "name_es": "Arma de mano, Arco largo",
+          "name_fr": "Arme de base, Arc long",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_it": "Armatura Leggera",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_it": "Scudo",
+          "name_de": "Schild",
+          "name_es": "Escudo",
+          "name_fr": "Bouclier",
+          "points": 2
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_it": "A Piedi",
+          "name_de": "Zu Fuß",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Eagle {mount}",
+          "name_it": "Grandi Aquile",
+          "name_de": "Riesenadler",
+          "name_fr": "Grand Aigle",
+          "name_es": "Gran águila",
+          "points": 60
+        },
+        {
+          "name_en": "Lothern Skycutter",
+          "name_it": "Lothern Skycutter",
+          "name_de": "Himmelssegler von Lothern",
+          "name_es": "Escolta celeste",
+          "name_fr": "Cotre Volant de Lothern",
+          "points": 90,
+          "options": [
+            {
+              "name_en": "Eagle-Eye Bolt Thrower",
+              "name_it": "Eagle-Eye Balista",
+              "name_de": "Adlerauge-Speerschleuder",
+              "name_fr": "Baliste Œil-d'aigle",
+              "name_es": "Lanzavirotes ojo de águila",
+              "points": 25
+            }
+          ]
+        },
+        {
+          "name_en": "Griffon {high elves}",
+          "name_it": "Grifone",
+          "name_de": "Greif",
+          "name_fr": "Griffon",
+          "name_es": "Grifo",
+          "points": 130
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos mágicos",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "specialRules": {
+        "name_en": "Accomplished Archers, Ithilmar Weapons, Naval Discipline, Strike First*, Valour of Ages",
+        "name_it": "Accomplished Archers, Ithilmar Weapons, Naval Discipline, Strike First*, Valour of Ages",
+        "name_fr": "Accomplished Archers, Ithilmar Weapons, Naval Discipline, Strike First*, Valour of Ages",
+        "name_es": "Accomplished Archers, Ithilmar Weapons, Naval Discipline, Strike First*, Valour of Ages",
+        "name_de": "Accomplished Archers, Ithilmar Weapons, Naval Discipline, Strike First*, Valour of Ages"
+      }
+    },
+    {
+      "name_en": "Storm Weaver",
+      "name_it": "Storm Weaver",
+      "name_de": "Storm Weaver",
+      "name_fr": "Storm Weaver",
+      "name_es": "Storm Weaver",
+      "id": "storm-weaver",
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "the-chracian-warhost": {
+          "category": "characters"
+        }
+      },
+      "points": 85,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
+          "name_de": "Handwaffe",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_it": "A Piedi",
+          "name_de": "Zu Fuß",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Unicorn",
+          "name_it": "Unicorn",
+          "name_de": "Unicorn",
+          "name_fr": "Unicorn",
+          "name_es": "Unicorn",
+          "points": 35
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_it": "Oggetti Magici",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": ["dark-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Ithilmar Weapons, Lore of Saphery, Valour of Ages",
+        "name_it": "Riflessi Elfici, Ithilmar Weapons, Lore of Saphery, Valore delle Ere",
+        "name_fr": "Réflexes Elfiques, Armes en Ithilmar,Domaine de Saphery, Valeur des Âges",
+        "name_es": "Reflejos élficos, Armas de Ithilmar, Saber de Saphery, Valor de las eras",
+        "name_de": "Elfenreflexe, Ithilmar-Waffen, Lehre von Saphery, Mut der Zeitalter"
+      }
+    },
+    {
+      "name_en": "Korhil Lionmane",
+      "name_it": "Korhil Lionmane",
+      "name_de": "Korhil Lionmane",
+      "name_fr": "Korhil Lionmane",
+      "name_es": "Korhil Lionmane",
+      "id": "korhil-lionmane",
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "the-chracian-warhost": {
+          "category": "characters"
+        }
+      },
+      "points": 175,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_it": "Arma Bianca",
+          "name_de": "Handwaffe",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, The Pelt of Charandis",
+          "name_it": "Armatura Pesante, The Pelt of Charandis",
+          "name_de": "Schwere Rüstung, The Pelt of Charandis",
+          "name_es": "Armadura pesada, The Pelt of Charandis",
+          "name_fr": "Armure lourde, The Pelt of Charandis",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_it": "A Piedi",
+          "name_de": "Zu Fuß",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chieftain's Chariot",
+          "name_it": "Chieftain's Chariot",
+          "name_de": "Chieftain's Chariot",
+          "name_fr": "Chieftain's Chariot",
+          "name_es": "Chieftain's Chariot",
+          "points": 105
+        }
+      ],
+      "items": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move through Cover*, Stubborn, Valour of Ages",
+        "name_it": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move through Cover*, Stubborn, Valour of Ages",
+        "name_es": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move through Cover*, Stubborn, Valour of Ages",
+        "name_fr": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move through Cover*, Stubborn, Valour of Ages",
+        "name_de": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move through Cover*, Stubborn, Valour of Ages"
+      }
+    },
+    {
+      "name_en": "Ishaya Vess",
+      "name_it": "Ishaya Vess",
+      "name_de": "Ishaya Vess",
+      "name_fr": "Ishaya Vess",
+      "name_es": "Ishaya Vess",
+      "id": "ishaya-vess",
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "characters"
+        },
+        "sea-guard-garrison": {
+          "category": "characters"
+        }
+      },
+      "points": 170,
+      "command": [
+        {
+          "name_en": "General",
+          "name_it": "Generale",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Mathlann's Ire, Warbow",
+          "name_it": "Arma Bianca, Mathlann's Ire, Warbow",
+          "name_de": "Handwaffe, Mathlann's Ire, Warbow",
+          "name_es": "Arma de mano, Mathlann's Ire, Warbow",
+          "name_fr": "Arme de base, Mathlann's Ire, Warbow",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shield",
+          "name_it": "Armatura Pesante, Shield",
+          "name_de": "Schwere Rüstung, Shield",
+          "name_es": "Armadura pesada, Shield",
+          "name_fr": "Armure lourde, Shield",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Chieftain's Chariot",
+          "name_it": "Chieftain's Chariot",
+          "name_de": "Chieftain's Chariot",
+          "name_fr": "Chieftain's Chariot",
+          "name_es": "Chieftain's Chariot",
+          "points": 105
+        }
+      ],
+      "items": [],
+      "specialRules": {
+        "name_en": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages",
+        "name_it": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages",
+        "name_es": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages",
+        "name_fr": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages",
+        "name_de": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages"
+      }
     }
   ],
   "core": [
@@ -1580,6 +2086,14 @@
       "name_es": "Lanceros elfos",
       "id": "elven-spearmen",
       "points": 9,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        },
+        "the-chracian-warhost": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1680,6 +2194,14 @@
       "name_es": "Arqueros elfos",
       "id": "elven-archers",
       "points": 10,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        },
+        "the-chracian-warhost": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "minDetachmentSize": 5,
@@ -1765,11 +2287,19 @@
     },
     {
       "name_en": "Lothern Sea Guard",
-      "name_it": "Guardia del Mare di Lothern ",
+      "name_it": "Guardia del Mare di Lothern",
       "name_de": "Seegarde von Lothern",
       "name_fr": "Garde Maritime de Lothern",
       "name_es": "Guardia del mar de Lothern",
       "id": "lothern-sea-guard",
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        },
+        "sea-guard-garrison": {
+          "category": "core"
+        }
+      },
       "points": 11,
       "minimum": 5,
       "maximum": 0,
@@ -1866,6 +2396,14 @@
       "name_es": "Guardianes de Ellyrion",
       "id": "ellyrian-reavers",
       "points": 16,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        },
+        "sea-guard-garrison": {
+          "category": "rare"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1979,6 +2517,11 @@
       "name_es": "Yelmos plateados",
       "id": "silver-helms",
       "points": 23,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2065,6 +2608,11 @@
       "name_es": "Hermanas de Avelorn",
       "id": "sister-of-avelorn",
       "points": 15,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "notes": {
@@ -2138,6 +2686,329 @@
         "name_es": "Flechas de Isha, Evasivo, Ignora cobertura, Inmune a la psicolgía, Armadura de Ithilmar, Armas de Ithilmar, Orden abierto, Escaramuzadores, Siempre ataca primero",
         "name_de": "Pfeile der Isha, Ausweichen, Deckung ignorieren, Immun gegen Psychologie, Ithilmar-Rüstung, Ithilmar-Waffen, Offene Ränge, Plänkler, Schlägt zuerst zu"
       }
+    },
+    {
+      "name_en": "Chracian Woodsmen",
+      "name_it": "Chracian Woodsmen",
+      "name_de": "Chracian Woodsmen",
+      "name_fr": "Chracian Woodsmen",
+      "name_es": "Chracian Woodsmen",
+      "id": "chracian-woodsmen",
+      "points": 12,
+      "armyComposition": {
+        "the-chracian-warhost": {
+          "category": "core"
+        }
+      },
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Chracian Captain (champion)",
+          "name_it": "Chracian Captain (campione)",
+          "name_de": "Chracian Captain (Champion)",
+          "name_es": "Chracian Captain (Campeón)",
+          "name_fr": "Chracian Captain (champion)",
+          "points": 7
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 7
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Chracian great blades, Warbows",
+          "name_it": "Armi Bianche, Chracian great blades, Archi da Guerra",
+          "name_de": "Handwaffen, Chracian great blades, Kriegsbögen",
+          "name_es": "Armas de mano, Chracian great blades, Arcos de guerra",
+          "name_fr": "Armes de base, Chracian great blades, Arcs de guerre",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_it": "Armatura Leggera",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "perModel": true,
+          "points": 1
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Warbows",
+          "name_it": "Archi da Guerra",
+          "name_de": "Kriegsbögen",
+          "name_es": "Arcos de guerra",
+          "name_fr": "Arcs de guerre",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Scouts",
+          "name_it": "Esploratori",
+          "name_de": "Kundschafter",
+          "name_es": "Exploradores",
+          "name_fr": "Éclaireurs",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_it": "Agguatatori",
+          "name_de": "Überfall",
+          "name_es": "Emboscadores",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
+        "name_it": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
+        "name_fr": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
+        "name_es": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
+        "name_de": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard"
+      }
+    },
+    {
+      "name_en": "White Lions of Chrace",
+      "name_it": "Leoni Bianchi di Chrace",
+      "name_de": "Weiße Löwen von Chrace",
+      "name_fr": "Lions Blancs de Chrace",
+      "name_es": "Leones blancos de Cracia",
+      "id": "white-lions",
+      "points": 14,
+      "armyComposition": {
+        "the-chracian-warhost": {
+          "category": "core"
+        }
+      },
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Guardian",
+          "name_it": "Guardian",
+          "name_de": "Beschützer der Königs",
+          "name_es": "Guardián",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "name_fr": "Gardien"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Chracian great blades",
+          "name_it": "Chracian great blades",
+          "name_de": "Chraciaische Zweihandklingen",
+          "name_es": "Grandes hachas de Cracia",
+          "points": 0,
+          "active": true,
+          "name_fr": "Grandes lames de Chrace"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_es": "Cambiar \"Valor de las eras\" por \"Veteranos\"",
+          "name_en": "Replace the Valour of Ages special rule with Veteran",
+          "name_it": "Cambia \"Valour of Ages\" Con \"Veterani\"",
+          "name_de": "Ersetze die \"Mut der Zeitalter\" Sonderregel mit \"Veteranen\"",
+          "points": 1,
+          "perModel": true,
+          "name_fr": "Remplacer la règle spéciale Valeur des Âges par Vétérans"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Chracian Warriors, Elven Reflexes, King's Guard, Lion Cloak, Move Through Cover, Open Order, Stubborn, Valour of Ages",
+        "name_it": "Chracian Warriors, Riflessi Elfici, King's Guard, Lion Cloak, Viaggiatore, Formazione Aperta, Determinato, Valore delle Ere",
+        "name_fr": "Guerriers de Chrace, Réflexes Elfiques, Garde du Roi, Cape de Lion, Mouvement à Couvert, Ordre Dispersé, Obstiné, Valeur des Âges",
+        "name_es": "Guerreros de Cracia, Reflejos élficos, Guardia del rey, Capa de león, Mover a través de cobertura, Orden abierto, Tozudos, Valor de las eras",
+        "name_de": "Chracianische Krieger, Elfenreflexe, Wache des Königs, Löwenpelz, Durch Deckung bewegen, Offene Ränge, Unnachgiebig, Mut der Zeitalter"
+      }
+    },
+    {
+      "name_en": "Ship's Company",
+      "name_it": "Ship's Company",
+      "name_de": "Ship's Company",
+      "name_fr": "Ship's Company",
+      "name_es": "Ship's Company",
+      "id": "ships-company",
+      "armyComposition": {
+        "sea-guard-garrison": {
+          "category": "core"
+        }
+      },
+      "points": 9,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_it": "Campione",
+          "name_de": "Champion",
+          "name_es": "Campeón",
+          "name_fr": "Champion",
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Midshipman",
+              "name_it": "Midshipman",
+              "name_de": "Midshipman",
+              "name_es": "Midshipman",
+              "name_fr": "Midshipman",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Bosum",
+              "name_it": "Bosum",
+              "name_de": "Bosum",
+              "name_es": "Bosum",
+              "name_fr": "Bosum",
+              "points": 0,
+              "exclusive": true
+            }
+          ]
+        },
+
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 5
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Warbows",
+          "name_it": "Armi Bianche, Archi da Guerra",
+          "name_de": "Handwaffen, Kriegsbögen",
+          "name_es": "Armas de mano, Arcos de guerra",
+          "name_fr": "Armes de base, Arcs de guerre",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Thrusting spears, Shields",
+          "name_it": "Armi Bianche, Picche, Scudi",
+          "name_de": "Handwaffen, Stoßspeere, Schilde",
+          "name_es": "Armas de mano, Lanzas largas, Escudos",
+          "name_fr": "Armes de base, Lances d'infanterie, Boucliers",
+          "points": 0
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Light armour",
+          "name_it": "Armatura Leggera",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Replace Open Order with Skirmishers",
+          "name_it": "Replace Open Order with Skirmishers",
+          "name_de": "Replace Open Order with Skirmishers",
+          "name_es": "Replace Open Order with Skirmishers",
+          "name_fr": "Replace Open Order with Skirmishers",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Replace Valour of Ages with Veteran",
+          "name_it": "Replace Valour of Ages with Veteran",
+          "name_de": "Replace Valour of Ages with Veteran",
+          "name_es": "Replace Valour of Ages with Veteran",
+          "name_fr": "Replace Valour of Ages with Veteran",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Detachment, Elven Reflexes, Evasive, Fire & Flee, Open Order, Valour of Ages",
+        "name_it": "Detachment, Elven Reflexes, Evasive, Fire & Flee, Open Order, Valour of Ages",
+        "name_fr": "Detachment, Elven Reflexes, Evasive, Fire & Flee, Open Order, Valour of Ages",
+        "name_es": "Detachment, Elven Reflexes, Evasive, Fire & Flee, Open Order, Valour of Ages",
+        "name_de": "Detachment, Elven Reflexes, Evasive, Fire & Flee, Open Order, Valour of Ages"
+      }
     }
   ],
   "special": [
@@ -2149,6 +3020,11 @@
       "name_es": "Príncipes dragón",
       "id": "dragon-princes",
       "points": 37,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2230,6 +3106,11 @@
       "name_es": "Maestros de la espada de Hoeth",
       "id": "swordmasters",
       "points": 14,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2317,6 +3198,11 @@
       "name_es": "Guardia del fénix",
       "id": "phoenix-guard",
       "points": 16,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2404,6 +3290,14 @@
       "name_es": "Leones blancos de Cracia",
       "id": "white-lions",
       "points": 14,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        },
+        "the-chracian-warhost": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2491,6 +3385,17 @@
       "name_es": "Guerreros sombríos",
       "id": "shadow-warriors",
       "points": 14,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        },
+        "the-chracian-warhost": {
+          "category": "rare"
+        },
+        "sea-guard-garrison": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2575,6 +3480,11 @@
       "name_es": "Carros de Tiranoc",
       "id": "tiranoc-chariots",
       "points": 75,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        }
+      },
       "minimum": 1,
       "maximum": 4,
       "command": [],
@@ -2608,6 +3518,14 @@
       "name_es": "Carro de leones de Cracia",
       "id": "lion-chariot-of-chrace",
       "points": 125,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special"
+        },
+        "the-chracian-warhost": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2646,6 +3564,29 @@
       "name_es": "Escoltas celestes de Lothern",
       "id": "lothern-skycutters",
       "points": 90,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice",
+            "name_fr": "Si votre Général a l'Honneur Elfique Garde Maritime, 0-1 Cotre Volant de Lothern peut être pris comme choix Spécial",
+            "name_es": "Si tu general tiene el honor élfico Guardia del mar, puedes incluir 0-1 Escolta celeste de Lothern como unidad especial",
+            "name_de": "Wenn dein General die Elfenehrung Seegarde hat, kann 0-1 Himmelssegler von Lothern als Eliteauswahl gewählt werden"
+          }
+        },
+        "the-chracian-warhost": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice",
+            "name_fr": "Si votre Général a l'Honneur Elfique Garde Maritime, 0-1 Cotre Volant de Lothern peut être pris comme choix Spécial",
+            "name_es": "Si tu general tiene el honor élfico Guardia del mar, puedes incluir 0-1 Escolta celeste de Lothern como unidad especial",
+            "name_de": "Wenn dein General die Elfenehrung Seegarde hat, kann 0-1 Himmelssegler von Lothern als Eliteauswahl gewählt werden"
+          }
+        },
+        "sea-guard-garrison": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2677,13 +3618,45 @@
         "name_fr": "Ordre Serré, Peur, Vol (10), Réflexes Elfiques (Équipage Garde Maritime uniquement), Touches d'Impact (D3+1), Rapide, Valeur des Âges",
         "name_es": "Orden cerrado, Miedo, Volar (10), Reflejos élficos (solo la tripulación de Guardias del mar), Golpes de impacto (D3+1), Veloz, Valor de las eras",
         "name_de": "Geschlossene Ränge, Angst, Fliegen (10), Elfenreflexe (Nur Seegarde Besatzung), Aufpralltreffer (W3+1), Schnelle Bewegung, Mut der Zeitalter"
-      },
-      "notes": {
-        "name_en": "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice",
-        "name_fr": "Si votre Général a l'Honneur Elfique Garde Maritime, 0-1 Cotre Volant de Lothern peut être pris comme choix Spécial",
-        "name_es": "Si tu general tiene el honor élfico Guardia del mar, puedes incluir 0-1 Escolta celeste de Lothern como unidad especial",
-        "name_de": "Wenn dein General die Elfenehrung Seegarde hat, kann 0-1 Himmelssegler von Lothern als Eliteauswahl gewählt werden"
       }
+    },
+    {
+      "name_en": "War Lions",
+      "name_it": "War Lions",
+      "name_de": "War Lions",
+      "name_fr": "War Lions",
+      "name_es": "War Lions",
+      "id": "war-lions",
+      "points": 18,
+      "armyComposition": {
+        "the-chracian-warhost": {
+          "category": "special"
+        }
+      },
+      "minimum": 2,
+      "maximum": 6,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs)",
+          "name_de": "Hand weapons (Claws and fangs)",
+          "name_es": "Hand weapons (Claws and fangs)",
+          "name_fr": "Armes de base (Griffes et crocs)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_it": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_fr": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_es": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_de": "Cleaving Blow, Fear, Move through Cover, Open Order"
+      },
+      "notes": {}
     }
   ],
   "rare": [
@@ -2695,6 +3668,14 @@
       "name_es": "Hermanas de Avelorn",
       "id": "sister-of-avelorn",
       "points": 15,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        },
+        "the-chracian-warhost": {
+          "category": "rare"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2770,6 +3751,11 @@
       "name_es": "Carro de leones de Cracia",
       "id": "lion-chariot-of-chrace",
       "points": 125,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2802,6 +3788,14 @@
       "name_es": "Fénix pico llameante",
       "id": "flamespyre-phoenix",
       "points": 170,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        },
+        "sea-guard-garrison": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [
@@ -2833,6 +3827,14 @@
       "name_es": "Fénix corazón gélido",
       "id": "frostheart-phoenix-",
       "points": 205,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        },
+        "sea-guard-garrison": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [
@@ -2864,6 +3866,17 @@
       "name_es": "Gran águila",
       "id": "great-eagle",
       "points": 60,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        },
+        "the-chracian-warhost": {
+          "category": "rare"
+        },
+        "sea-guard-garrison": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -2885,6 +3898,17 @@
       "name_es": "Lanzavirotes garra de águila",
       "id": "eagle-claw-bolt-thrower",
       "points": 80,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        },
+        "the-chracian-warhost": {
+          "category": "rare"
+        },
+        "sea-guard-garrison": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -2906,6 +3930,11 @@
       "name_es": "Escolta celeste de Lothern",
       "id": "lothern-skycutters",
       "points": 90,
+      "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2938,6 +3967,133 @@
         "name_es": "Orden cerrado, Miedo, Volar (10), Reflejos élficos (solo la tripulación de Guardias del mar), Golpes de impacto (D3+1), Veloz, Valor de las eras",
         "name_de": "Geschlossene Ränge, Angst, Fliegen (10), Elfenreflexe (Nur Seegarde Besatzung), Aufpralltreffer (W3+1), Schnelle Bewegung, Mut der Zeitalter"
       }
+    },
+    {
+      "name_en": "Lion Guard",
+      "name_it": "Lion Guard",
+      "name_de": "Lion Guard",
+      "name_fr": "Lion Guard",
+      "name_es": "Lion Guard",
+      "id": "lion-guard",
+      "armyComposition": {
+        "the-chracian-warhost": {
+          "category": "rare"
+        }
+      },
+      "points": 18,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Lion Guard Captain (champion)",
+          "name_it": "Lion Guard Captain (champion)",
+          "name_de": "Lion Guard Captain (champion)",
+          "name_es": "Lion Guard Captain (champion)",
+          "name_fr": "Lion Guard Captain (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Chracian great blades",
+          "name_it": "Arma Bianca, Chracian great blades",
+          "name_de": "Handwaffen, Chraciaische Zweihandklingen",
+          "name_es": "Arma de mano, Grandes hachas de Cracia",
+          "name_fr": "Armes de base, Grandes lames de Chrace",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Champions of Chrace, Close Order, Elven Reflexes, Furious Charge, Lion Cloak, Stubborn, Veteran",
+        "name_it": "Champions of Chrace, Close Order, Elven Reflexes, Furious Charge, Lion Cloak, Stubborn, Veteran",
+        "name_fr": "Champions of Chrace, Close Order, Elven Reflexes, Furious Charge, Lion Cloak, Stubborn, Veteran",
+        "name_es": "Champions of Chrace, Close Order, Elven Reflexes, Furious Charge, Lion Cloak, Stubborn, Veteran",
+        "name_de": "Champions of Chrace, Close Order, Elven Reflexes, Furious Charge, Lion Cloak, Stubborn, Veteran"
+      }
+    },
+    {
+      "name_en": "Merwyrms",
+      "name_it": "Merwyrms",
+      "name_de": "Merwyrms",
+      "name_fr": "Merwyrms",
+      "name_es": "Merwyrms",
+      "id": "merwyrms",
+      "points": 225,
+      "armyComposition": {
+        "sea-guard-garrison": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lashing talons, Serpentine tail, Briny breath",
+          "name_de": "Lashing talons, Serpentine tail, Briny breath",
+          "name_es": "Lashing talons, Serpentine tail, Briny breath",
+          "name_fr": "Lashing talons, Serpentine tail, Briny breath",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Iridescent scales)",
+          "name_de": "Heavy armour (Iridescent scales)",
+          "name_es": "Heavy armour (Iridescent scales)",
+          "name_fr": "Heavy armour (Iridescent scales)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror, ",
+        "name_it": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_fr": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_es": "Cleaving Blow, Fear, Move through Cover, Open Order",
+        "name_de": "Cleaving Blow, Fear, Move through Cover, Open Order"
+      },
+      "notes": {}
     }
   ],
   "mercenaries": [],

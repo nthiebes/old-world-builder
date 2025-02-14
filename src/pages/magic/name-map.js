@@ -530,4 +530,14 @@ export const nameMap = {
     name_en: "Order of the Fiery Heart",
     name_fr: "Order of the Fiery Heart",
   },
+  "the-chracian-warhost": {
+    name_de: "The Chracian Warhost",
+    name_en: "The Chracian Warhost",
+    name_fr: "The Chracian Warhost",
+  },
+  "sea-guard-garrison": {
+    name_de: "Sea Guard Garrison",
+    name_en: "Sea Guard Garrison",
+    name_fr: "Sea Guard Garrison",
+  },
 };
