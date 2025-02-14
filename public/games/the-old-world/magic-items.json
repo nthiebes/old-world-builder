@@ -3388,7 +3388,8 @@
       "name_fr": "Maître du Savoir",
       "name_it": "Loremaster",
       "points": 35,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": "high-elf-realms"
     },
     {
       "name_de": "Schattenpirscher",
@@ -3396,7 +3397,12 @@
       "name_fr": "Rôdeur des Ombres",
       "name_it": "Shadow Stalker",
       "points": 20,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": [
+        "high-elf-realms",
+        "sea-guard-garrison",
+        "the-chracian-warhost"
+      ]
     },
     {
       "name_de": "Gesalbter Asuryan",
@@ -3404,7 +3410,8 @@
       "name_fr": "Élu d'Asuryan",
       "name_it": "Anointed of Asuryan",
       "points": 15,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": "high-elf-realms"
     },
     {
       "name_de": "Blut von Caledor",
@@ -3412,7 +3419,8 @@
       "name_fr": "Sang de Caledor",
       "name_it": "Blood of Caledor",
       "points": 15,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": "high-elf-realms"
     },
     {
       "name_de": "Chracianischer Jäger",
@@ -3421,7 +3429,8 @@
       "name_it": "Chracian Cacciatore",
       "points": 10,
       "type": "elven-honour",
-      "name": "chracian-hunter"
+      "name": "chracian-hunter",
+      "armyComposition": ["high-elf-realms", "the-chracian-warhost"]
     },
     {
       "name_de": "Wächter von Saphery",
@@ -3429,7 +3438,8 @@
       "name_fr": "Gardien de Saphery",
       "name_it": "Warden of Saphery",
       "points": 10,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": "high-elf-realms"
     },
     {
       "name_de": "Reinherzig",
@@ -3437,7 +3447,12 @@
       "name_fr": "Pur de Coeur",
       "name_it": "Pure of Cuore",
       "points": 0,
-      "type": "elven-honour"
+      "type": "elven-honour",
+      "armyComposition": [
+        "high-elf-realms",
+        "sea-guard-garrison",
+        "the-chracian-warhost"
+      ]
     },
     {
       "name_de": "Seegarde",
@@ -3446,7 +3461,8 @@
       "name_it": "Sea Guard",
       "points": 0,
       "type": "elven-honour",
-      "name": "sea-guard"
+      "name": "sea-guard",
+      "armyComposition": ["high-elf-realms", "sea-guard-garrison"]
     }
   ],
   "chaos-dwarfs": [

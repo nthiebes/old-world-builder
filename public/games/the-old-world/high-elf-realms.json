@@ -718,6 +718,19 @@
               "name_fr": "Baliste Œil-d'aigle",
               "name_es": "Lanzavirotes ojo de águila",
               "points": 25
+            },
+            {
+              "name_en": "Ambushers",
+              "name_it": "Ambushers",
+              "name_de": "Ambushers",
+              "name_fr": "Ambushers",
+              "name_es": "Ambushers",
+              "points": 10,
+              "perModel": true,
+              "armyComposition": "sea-guard-garrison",
+              "notes": {
+                "name_en": "0-1 unit per 1000 points"
+              }
             }
           ],
           "requiredMagicItem": "Sea Guard",
@@ -1297,6 +1310,19 @@
               "name_fr": "Baliste Œil-d'aigle",
               "name_es": "Lanzavirotes ojo de águila",
               "points": 25
+            },
+            {
+              "name_en": "Ambushers",
+              "name_it": "Ambushers",
+              "name_de": "Ambushers",
+              "name_fr": "Ambushers",
+              "name_es": "Ambushers",
+              "points": 10,
+              "perModel": true,
+              "armyComposition": "sea-guard-garrison",
+              "notes": {
+                "name_en": "0-1 unit per 1000 points"
+              }
             }
           ],
           "requiredMagicItem": "Sea Guard",
@@ -1812,6 +1838,19 @@
               "name_fr": "Baliste Œil-d'aigle",
               "name_es": "Lanzavirotes ojo de águila",
               "points": 25
+            },
+            {
+              "name_en": "Ambushers",
+              "name_it": "Ambushers",
+              "name_de": "Ambushers",
+              "name_fr": "Ambushers",
+              "name_es": "Ambushers",
+              "points": 10,
+              "perModel": true,
+              "armyComposition": "sea-guard-garrison",
+              "notes": {
+                "name_en": "0-1 unit per 1000 points"
+              }
             }
           ]
         },
@@ -2174,6 +2213,28 @@
           "points": 1,
           "perModel": true,
           "name_fr": "Vétérans"
+        },
+        {
+          "name_en": "Move through Cover",
+          "name_it": "Move through Cover",
+          "name_de": "Move through Cover",
+          "name_fr": "Move through Cover",
+          "name_es": "Move through Cover",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "the-chracian-warhost",
+          "notes": {
+            "name_en": "0-1 unit per 1000 points"
+          }
+        },
+        {
+          "name_en": "Lion Cloak",
+          "name_it": "Lion Cloak",
+          "name_de": "Lion Cloak",
+          "name_fr": "Lion Cloak",
+          "name_es": "Lion Cloak",
+          "points": 10,
+          "armyComposition": "the-chracian-warhost"
         }
       ],
       "mounts": [],
@@ -2274,6 +2335,28 @@
           "name_fr": "Détachement",
           "name_es": "Destacamento",
           "points": 0
+        },
+        {
+          "name_en": "Move through Cover",
+          "name_it": "Move through Cover",
+          "name_de": "Move through Cover",
+          "name_fr": "Move through Cover",
+          "name_es": "Move through Cover",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "the-chracian-warhost",
+          "notes": {
+            "name_en": "0-1 unit per 1000 points"
+          }
+        },
+        {
+          "name_en": "Lion Cloak",
+          "name_it": "Lion Cloak",
+          "name_de": "Lion Cloak",
+          "name_fr": "Lion Cloak",
+          "name_es": "Lion Cloak",
+          "points": 10,
+          "armyComposition": "the-chracian-warhost"
         }
       ],
       "mounts": [],
@@ -2343,9 +2426,9 @@
           "name_it": "Armi Bianche, Picche, Archi da Guerra",
           "name_de": "Handwaffen, Stoßspeere, Kriegsbögen",
           "name_es": "Armas de mano, Lanzas largas, Arcos de guerra",
+          "name_fr": "Armes de base, Lances d'infanterie, Arcs de guerre",
           "points": 0,
-          "active": true,
-          "name_fr": "Armes de base, Lances d'infanterie, Arcs de guerre"
+          "active": true
         }
       ],
       "armor": [
@@ -2354,9 +2437,9 @@
           "name_it": "Armatura Leggera",
           "name_de": "Leichte Rüstung",
           "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
           "points": 0,
-          "active": true,
-          "name_fr": "Armure légère"
+          "active": true
         }
       ],
       "options": [
@@ -2365,18 +2448,30 @@
           "name_it": "Scudi",
           "name_de": "Schilde",
           "name_es": "Escudos",
+          "name_fr": "Boucliers",
           "points": 1,
-          "perModel": true,
-          "name_fr": "Boucliers"
+          "perModel": true
         },
         {
           "name_en": "Veteran",
           "name_it": "Veterani",
           "name_de": "Veteranen",
           "name_es": "Veteranos",
+          "name_fr": "Vétérans",
           "points": 1,
-          "perModel": true,
-          "name_fr": "Vétérans"
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_it": "Drilled",
+          "name_de": "Drilled",
+          "name_fr": "Drilled",
+          "name_es": "Drilled",
+          "points": 0,
+          "armyComposition": "sea-guard-garrison",
+          "notes": {
+            "name_en": "0-1 unit per 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -2442,13 +2537,21 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Cavalry spears, Hand weapons (Hooves)",
-          "name_it": "Armi Bianche, Lancia Leggera, Armi Bianche (Hooves)",
-          "name_de": "Handwaffen, Kavalleriespeere, Handwaffen (Hufe)",
-          "name_es": "Armas de mano, Lanzas de caballería, Armas de mano (pezuñas)",
+          "name_en": "Hand weapons, Cavalry spears",
+          "name_it": "Armi Bianche, Lancia Leggera",
+          "name_de": "Handwaffen, Kavalleriespeere",
+          "name_es": "Armas de mano, Lanzas de caballería",
+          "name_fr": "Armes de base, Lances de cavalerie",
           "points": 0,
-          "active": true,
-          "name_fr": "Armes de base, Lances de cavalerie, Armes de base (Sabots)"
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Shortbows",
+          "name_it": "Armi Bianche, Archi Corti",
+          "name_de": "Handwaffen, Kurzbögen",
+          "name_es": "Armas de mano, Arcos cortos",
+          "name_fr": "Armes de base, Arcs courts",
+          "points": 1
         }
       ],
       "armor": [
@@ -2471,15 +2574,6 @@
           "points": 2,
           "perModel": true,
           "name_fr": "Arcs courts"
-        },
-        {
-          "name_en": "Replace Cavalry spears with Shortbows",
-          "name_it": "Cambia Lancia LeggeraCon Archi Corti",
-          "name_es": "Cambiar lanzas de caballería por arcos cortos",
-          "name_de": "Ersetze Kavalleriespeere mit Kurzbögen",
-          "points": 1,
-          "perModel": true,
-          "name_fr": "Remplacer les Lances de cavalerie par des Arcs courts"
         },
         {
           "name_en": "Scouts",
@@ -2870,13 +2964,13 @@
       ],
       "options": [
         {
-          "name_es": "Cambiar \"Valor de las eras\" por \"Veteranos\"",
-          "name_en": "Replace the Valour of Ages special rule with Veteran",
-          "name_it": "Cambia \"Valour of Ages\" Con \"Veterani\"",
-          "name_de": "Ersetze die \"Mut der Zeitalter\" Sonderregel mit \"Veteranen\"",
+          "name_en": "Veteran (Replaces Valour of Ages)",
+          "name_es": "Veteranos (Replaces Valour of Ages)",
+          "name_it": "Veterani (Replaces Valour of Ages)",
+          "name_de": "Veteranen (Replaces Valour of Ages)",
+          "name_fr": "Vétérans (Replaces Valour of Ages)",
           "points": 1,
-          "perModel": true,
-          "name_fr": "Remplacer la règle spéciale Valeur des Âges par Vétérans"
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -2983,20 +3077,20 @@
           "perModel": true
         },
         {
-          "name_en": "Replace Open Order with Skirmishers",
-          "name_it": "Replace Open Order with Skirmishers",
-          "name_de": "Replace Open Order with Skirmishers",
-          "name_es": "Replace Open Order with Skirmishers",
-          "name_fr": "Replace Open Order with Skirmishers",
+          "name_en": "Skirmishers (Replaces Open Order)",
+          "name_it": "Skirmishers (Replaces Open Order)",
+          "name_de": "Skirmishers (Replaces Open Order)",
+          "name_es": "Skirmishers (Replaces Open Order)",
+          "name_fr": "Skirmishers (Replaces Open Order)",
           "points": 0,
           "perModel": true
         },
         {
-          "name_en": "Replace Valour of Ages with Veteran",
-          "name_it": "Replace Valour of Ages with Veteran",
-          "name_de": "Replace Valour of Ages with Veteran",
-          "name_es": "Replace Valour of Ages with Veteran",
-          "name_fr": "Replace Valour of Ages with Veteran",
+          "name_en": "Ages with Veteran (Replaces Valour)",
+          "name_it": "Ages with Veteran (Replaces Valour)",
+          "name_de": "Ages with Veteran (Replaces Valour)",
+          "name_es": "Ages with Veteran (Replaces Valour)",
+          "name_fr": "Ages with Veteran (Replaces Valour)",
           "points": 1,
           "perModel": true
         }
@@ -3358,13 +3452,13 @@
       ],
       "options": [
         {
-          "name_es": "Cambiar \"Valor de las eras\" por \"Veteranos\"",
-          "name_en": "Replace the Valour of Ages special rule with Veteran",
-          "name_it": "Cambia \"Valour of Ages\" Con \"Veterani\"",
-          "name_de": "Ersetze die \"Mut der Zeitalter\" Sonderregel mit \"Veteranen\"",
+          "name_en": "Veteran (Replaces Valour of Ages)",
+          "name_es": "Veteranos (Replaces Valour of Ages)",
+          "name_it": "Veterani (Replaces Valour of Ages)",
+          "name_de": "Veteranen (Replaces Valour of Ages)",
+          "name_fr": "Vétérans (Replaces Valour of Ages)",
           "points": 1,
-          "perModel": true,
-          "name_fr": "Remplacer la règle spéciale Valeur des Âges par Vétérans"
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -3436,31 +3530,53 @@
       ],
       "options": [
         {
-          "name_en": "Ambushers (0-1 unit)",
-          "name_it": "Agguatatori (0-1 unit)",
-          "name_de": "Überfall (0-1 Einheit)",
-          "name_es": "Emboscadores (0-1 unidad)",
+          "name_en": "Ambushers",
+          "name_it": "Agguatatori",
+          "name_de": "Überfall",
+          "name_es": "Emboscadores",
+          "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "name_fr": "Embusqueurs (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit"
+          }
         },
         {
-          "name_en": "Chariot Runners (0-1 unit)",
-          "name_it": "Scorta dei Carri (0-1 unit)",
-          "name_de": "Streitwagengarde (0-1 Einheit)",
-          "name_es": "Corredores de carros (0-1 unidad)",
+          "name_en": "Chariot Runners",
+          "name_it": "Scorta dei Carri",
+          "name_de": "Streitwagengarde",
+          "name_es": "Corredores de carros",
+          "name_fr": "Escorteurs de Chars",
           "points": 1,
           "perModel": true,
-          "name_fr": "Escorteurs de Chars (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit"
+          }
         },
         {
-          "name_en": "Feigned Flight (0-1 unit)",
-          "name_it": "Feigned Flight (0-1 unit)",
+          "name_en": "Feigned Flight",
+          "name_it": "Feigned Flight",
           "name_de": "Vorgetäuschte Flucht",
-          "name_es": "Falsa retirada (0-1 uindad)",
+          "name_es": "Falsa retirada",
+          "name_fr": "Fuite Feinte",
           "points": 1,
           "perModel": true,
-          "name_fr": "Fuite Feinte (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit"
+          }
+        },
+        {
+          "name_en": "Ambushers",
+          "name_it": "Ambushers",
+          "name_de": "Ambushers",
+          "name_fr": "Ambushers",
+          "name_es": "Ambushers",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": "sea-guard-garrison",
+          "notes": {
+            "name_en": "0-1 unit"
+          }
         }
       ],
       "mounts": [],
@@ -3609,6 +3725,19 @@
           "points": 25,
           "perModel": true,
           "name_fr": "Baliste Œil-d'aigle"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_it": "Ambushers",
+          "name_de": "Ambushers",
+          "name_fr": "Ambushers",
+          "name_es": "Ambushers",
+          "points": 10,
+          "perModel": true,
+          "armyComposition": "sea-guard-garrison",
+          "notes": {
+            "name_en": "0-1 unit per 1000 points"
+          }
         }
       ],
       "mounts": [],
