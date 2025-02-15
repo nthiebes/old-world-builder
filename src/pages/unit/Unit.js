@@ -940,6 +940,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   );
 
                   if (!stackable) {
+                    const isDisabled =
+                      (exclusiveUnitCheckedOption && exclusive && !active) ||
+                      alwaysActive;
                     return (
                       <Fragment key={id}>
                         <div className="checkbox">
@@ -952,12 +955,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             }
                             checked={alwaysActive || active}
                             className="checkbox__input"
-                            disabled={
-                              (exclusiveUnitCheckedOption &&
-                                exclusive &&
-                                !active) ||
-                              alwaysActive
-                            }
+                            disabled={isDisabled}
                           />
                           <label
                             htmlFor={`options-${id}`}
@@ -976,6 +974,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           key: `options-${id}-note`,
                           className: "unit__option-note",
                           language,
+                          disabled: isDisabled,
                         })}
                         {options?.length > 0 && active && (
                           <>
@@ -1390,6 +1389,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 exclusiveOption.exclusive &&
                                 exclusiveOption.active
                             );
+                            const isDisabled =
+                              (exclusiveCheckedOption &&
+                                option.exclusive &&
+                                !option.active) ||
+                              detachmentActive;
 
                             return (
                               <Fragment key={option.name_en}>
@@ -1403,12 +1407,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     }
                                     checked={Boolean(option.active)}
                                     className="checkbox__input"
-                                    disabled={
-                                      (exclusiveCheckedOption &&
-                                        option.exclusive &&
-                                        !option.active) ||
-                                      detachmentActive
-                                    }
+                                    disabled={isDisabled}
                                   />
                                   <label
                                     htmlFor={`mount-${id}-option-${optionIndex}`}
@@ -1428,6 +1427,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   className:
                                     "unit__option-note unit__option-note--conditionnal",
                                   language,
+                                  disabled: isDisabled,
                                 })}
                                 {optionIndex === options.length - 1 && (
                                   <hr className="unit__command-option-hr" />

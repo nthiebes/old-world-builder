@@ -1930,7 +1930,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["shadow-warriors", "sisiters-of-avelorn"],
+          ids: ["shadow-warriors", "sister-of-avelorn"],
           min: 0,
           max: 1,
           points: 1000,

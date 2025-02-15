@@ -981,13 +981,24 @@
       ],
       "options": [
         {
+          "name_en": "Level 3 Wizard",
+          "name_it": "Mago di 3° Livello",
+          "name_de": "Stufe 3 Zauberer",
+          "name_es": "Mago de nivel 3",
+          "name_fr": "Sorcier de Niveau 3",
+          "points": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
           "name_en": "Level 4 Wizard",
           "name_it": "Mago di 4° Livello",
           "name_de": "Stufe 4 Zauberer",
           "name_es": "Mago de nivel 4",
+          "name_fr": "Sorcier de Niveau 4",
           "points": 30,
           "perModel": true,
-          "name_fr": "Sorcier de Niveau 4"
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -1275,13 +1286,24 @@
       ],
       "options": [
         {
+          "name_en": "Level 1 Wizard",
+          "name_it": "Mago di 1° Livello",
+          "name_de": "Stufe 1 Zauberer",
+          "name_es": "Mago de nivel 1",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
           "name_en": "Level 2 Wizard",
           "name_it": "Mago di 2° Livello",
           "name_de": "Stufe 2 Zauberer",
           "name_es": "Mago de nivel 2",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30,
           "perModel": true,
-          "name_fr": "Sorcier de Niveau 2"
+          "exclusive": true
         }
       ],
       "mounts": [
@@ -1498,13 +1520,23 @@
       ],
       "options": [
         {
+          "name_en": "Level 1 Wizard",
+          "name_it": "Mago di 1° Livello",
+          "name_de": "Stufe 1 Zauberer",
+          "name_es": "Mago de nivel 1",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
           "name_en": "Level 2 Wizard",
           "name_it": "Mago di 2° Livello",
           "name_de": "Stufe 2 Zauberer",
           "name_es": "Mago de nivel 2",
+          "name_fr": "Sorcier de Niveau 2",
           "points": 30,
-          "perModel": true,
-          "name_fr": "Sorcier de Niveau 2"
+          "perModel": true
         }
       ],
       "mounts": [
@@ -1826,6 +1858,14 @@
       ],
       "options": [
         {
+          "name_en": "Cavalry spear (if appropriately mounted)",
+          "name_it": "Lancia Leggera (if appropriately mounted)",
+          "name_de": "Kavalleriespeer (if appropriately mounted)",
+          "name_es": "Lanza de caballería (if appropriately mounted)",
+          "name_fr": "Lance de cavalerie (if appropriately mounted)",
+          "points": 2
+        },
+        {
           "name_en": "Shield",
           "name_it": "Scudo",
           "name_de": "Schild",
@@ -1927,13 +1967,19 @@
       "id": "storm-weaver",
       "armyComposition": {
         "high-elf-realms": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Storm Weaver per 1000 points"
+          }
         },
         "the-chracian-warhost": {
           "category": "characters",
           "notes": {
             "name_en": "0-1 Chracian Chieftain or Storm Weaver per 1000 points"
           }
+        },
+        "sea-guard-garrison": {
+          "category": "characters"
         }
       },
       "points": 85,
@@ -1959,7 +2005,36 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_it": "Mago di 1° Livello",
+          "name_de": "Stufe 1 Zauberer",
+          "name_es": "Mago de nivel 1",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_it": "Mago di 2° Livello",
+          "name_de": "Stufe 2 Zauberer",
+          "name_es": "Mago de nivel 2",
+          "name_fr": "Sorcier de Niveau 2",
+          "points": 30,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 3 Wizard",
+          "name_it": "Mago di 3° Livello",
+          "name_de": "Stufe 3 Zauberer",
+          "name_es": "Mago de nivel 3",
+          "name_fr": "Sorcier de Niveau 3",
+          "points": 60,
+          "exclusive": true
+        }
+      ],
       "mounts": [
         {
           "name_en": "On foot",
@@ -2028,11 +2103,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_it": "Arma Bianca",
-          "name_de": "Handwaffe",
-          "name_es": "Arma de mano",
-          "name_fr": "Arme de base",
+          "name_en": "Hand weapon, Chayal",
+          "name_it": "Arma Bianca, Chayal",
+          "name_de": "Handwaffe, Chayal",
+          "name_es": "Arma de mano, Chayal",
+          "name_fr": "Arme de base, Chayal",
           "points": 0,
           "active": true,
           "equippedDefault": true
@@ -2128,16 +2203,7 @@
         }
       ],
       "options": [],
-      "mounts": [
-        {
-          "name_en": "Chieftain's Chariot",
-          "name_it": "Chieftain's Chariot",
-          "name_de": "Chieftain's Chariot",
-          "name_fr": "Chieftain's Chariot",
-          "name_es": "Chieftain's Chariot",
-          "points": 105
-        }
-      ],
+      "mounts": [],
       "items": [],
       "specialRules": {
         "name_en": "Commanding Voice, Ithilmar Weapons, Naval Discipline, Rallying Cry, Strike First, Precision Strikes, Valour of Ages",
@@ -2786,22 +2852,36 @@
       ],
       "options": [
         {
-          "name_en": "Stubborn (0-1 unit)",
-          "name_it": "Determinato (0-1 unit)",
-          "name_de": "Unnachgiebig (0-1 Einheit)",
-          "name_es": "Tozudas (0-1 unidad)",
+          "name_en": "Stubborn",
+          "name_it": "Determinato",
+          "name_de": "Unnachgiebig",
+          "name_es": "Tozudas",
+          "name_fr": "Obstiné",
           "points": 1,
           "perModel": true,
-          "name_fr": "Obstiné (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         },
         {
-          "name_en": "Ambushers (0-1 unit)",
-          "name_it": "Agguatatori (0-1 unit)",
-          "name_de": "Überfall (0-1 Einheit)",
-          "name_es": "Emboscadoras (0-1 unidad)",
+          "name_en": "Ambushers",
+          "name_it": "Agguatatori",
+          "name_de": "Überfall",
+          "name_es": "Emboscadoras",
+          "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "name_fr": "Embusqueurs (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         }
       ],
       "mounts": [],
@@ -2856,11 +2936,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Chracian great blades, Warbows",
-          "name_it": "Armi Bianche, Chracian great blades, Archi da Guerra",
-          "name_de": "Handwaffen, Chracian great blades, Kriegsbögen",
-          "name_es": "Armas de mano, Chracian great blades, Arcos de guerra",
-          "name_fr": "Armes de base, Chracian great blades, Arcs de guerre",
+          "name_en": "Hand weapons, Chracian great blades",
+          "name_it": "Armi Bianche, Chracian great blades",
+          "name_de": "Handwaffen, Chracian great blades",
+          "name_es": "Armas de mano, Chracian great blades",
+          "name_fr": "Armes de base, Chracian great blades",
           "points": 0,
           "active": true
         }
@@ -2896,13 +2976,41 @@
           "perModel": true
         },
         {
+          "name_en": "Lion Cloak",
+          "name_it": "Lion Cloak",
+          "name_de": "Lion Cloak",
+          "name_es": "Lion Cloak",
+          "name_fr": "Lion Cloak",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Vanguard",
+          "name_it": "Vanguard",
+          "name_de": "Vanguard",
+          "name_es": "Vanguard",
+          "name_fr": "Vanguard",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "exclusive": true
+        },
+        {
           "name_en": "Scouts",
           "name_it": "Esploratori",
           "name_de": "Kundschafter",
           "name_es": "Exploradores",
           "name_fr": "Éclaireurs",
           "points": 0,
-          "perModel": true
+          "perModel": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         },
         {
           "name_en": "Ambushers",
@@ -2911,16 +3019,24 @@
           "name_es": "Emboscadores",
           "name_fr": "Embusqueurs",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         }
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
-        "name_it": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
-        "name_fr": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
-        "name_es": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard",
-        "name_de": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages, Vanguard"
+        "name_en": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages",
+        "name_it": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages",
+        "name_fr": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages",
+        "name_es": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages",
+        "name_de": "Elven Reflexes, Move through Cover, Skirmishers, Valour of Ages"
       }
     },
     {
@@ -3121,11 +3237,11 @@
           "perModel": true
         },
         {
-          "name_en": "Ages with Veteran (Replaces Valour)",
-          "name_it": "Ages with Veteran (Replaces Valour)",
-          "name_de": "Ages with Veteran (Replaces Valour)",
-          "name_es": "Ages with Veteran (Replaces Valour)",
-          "name_fr": "Ages with Veteran (Replaces Valour)",
+          "name_en": "Veteran (Replaces Valour of Ages)",
+          "name_it": "Veteran (Replaces Valour of Ages)",
+          "name_de": "Veteran (Replaces Valour of Ages)",
+          "name_es": "Veteran (Replaces Valour of Ages)",
+          "name_fr": "Veteran (Replaces Valour of Ages)",
           "points": 1,
           "perModel": true
         }
@@ -3677,7 +3793,13 @@
       "points": 125,
       "armyComposition": {
         "high-elf-realms": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_es": "Si tu general tiene el honor élfico Cazador de Cracia, Se puede incluir 0-1 Carro de leones de Cracia como unidad especial por cada 1000 puntos",
+            "name_en": "If your General has the Chracian Hunter Elven Honour, 0-1 Lion Chariot of Chrace may be taken as a Special choice per 1000 points",
+            "name_fr": "Si votre Général a l'Honneur Elfique Chasseur Chracien, 0-1 Char à Lions de Chrace peut être pris comme choix Spécial par tranche de 1000 points",
+            "name_de": "Wenn dein General die Elfenehrung Chracianischer Jäger hat, kann 0-1 Löwenstreitwagen von Chrace pro 1000 Punkte als Eliteauswahl gewählt werden"
+          }
         },
         "the-chracian-warhost": {
           "category": "special"
@@ -3705,12 +3827,6 @@
         "name_fr": "Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Touches d'Impact (D6), Cape de Lion, Obstiné, Valeur des Âges",
         "name_es": "Orden cerrado, Reflejos élficos, Miedo, Primera carga, Golpes de impacto (D6), Capa de león, Tozudo, Valor de las eras",
         "name_de": "Geschlossene Ränge, Elfenreflexe, Angst, Erster Angriff, Aufpralltreffer (W6), Löwenpelz, Unnachgiebig, Mut der Zeitalter"
-      },
-      "notes": {
-        "name_es": "Si tu general tiene el honor élfico Cazador de Cracia, Se puede incluir 0-1 Carro de leones de Cracia como unidad especial por cada 1000 puntos",
-        "name_en": "If your General has the Chracian Hunter Elven Honour, 0-1 Lion Chariot of Chrace may be taken as a Special choice per 1000 points",
-        "name_fr": "Si votre Général a l'Honneur Elfique Chasseur Chracien, 0-1 Char à Lions de Chrace peut être pris comme choix Spécial par tranche de 1000 points",
-        "name_de": "Wenn dein General die Elfenehrung Chracianischer Jäger hat, kann 0-1 Löwenstreitwagen von Chrace pro 1000 Punkte als Eliteauswahl gewählt werden"
       }
     },
     {
@@ -3823,11 +3939,11 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_it": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_fr": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_es": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_de": "Cleaving Blow, Fear, Move through Cover, Open Order"
+        "name_en": "Cleaving Blow, Fear, Move through Cover, Open Order, Swiftstride, Vanguard",
+        "name_it": "Cleaving Blow, Fear, Move through Cover, Open Order, Swiftstride, Vanguard",
+        "name_fr": "Cleaving Blow, Fear, Move through Cover, Open Order, Swiftstride, Vanguard",
+        "name_es": "Cleaving Blow, Fear, Move through Cover, Open Order, Swiftstride, Vanguard",
+        "name_de": "Cleaving Blow, Fear, Move through Cover, Open Order, Swiftstride, Vanguard"
       },
       "notes": {}
     }
@@ -3846,7 +3962,10 @@
           "category": "rare"
         },
         "the-chracian-warhost": {
-          "category": "rare"
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 unit of Shadow Warriors or Sisters of Avelorn per 1000 points"
+          }
         }
       },
       "minimum": 5,
@@ -3889,22 +4008,36 @@
       ],
       "options": [
         {
-          "name_en": "Stubborn (0-1 unit)",
-          "name_it": "Determinato (0-1 unit)",
-          "name_de": "Unnachgiebig (0-1 Einheit)",
-          "name_es": "Tozudas (0-1 unidad)",
+          "name_en": "Stubborn",
+          "name_it": "Determinato",
+          "name_de": "Unnachgiebig",
+          "name_es": "Tozudas",
+          "name_fr": "Obstiné",
           "points": 1,
           "perModel": true,
-          "name_fr": "Obstiné (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         },
         {
-          "name_en": "Ambushers (0-1 unit)",
-          "name_it": "Agguatatori (0-1 unit)",
-          "name_de": "Überfall (0-1 Einheit)",
-          "name_es": "Emboscadoras (0-1 unidad)",
+          "name_en": "Ambushers",
+          "name_it": "Agguatatori",
+          "name_de": "Überfall",
+          "name_es": "Emboscadoras",
+          "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "name_fr": "Embusqueurs (0-1 unité)"
+          "notes": {
+            "name_en": "0-1 unit",
+            "name_fr": "0-1 unité",
+            "name_es": "0-1 unidad",
+            "name_de": "0-1 Einheit",
+            "name_it": "0-1 unit"
+          }
         }
       ],
       "mounts": [],
@@ -4281,11 +4414,11 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror, ",
-        "name_it": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_fr": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_es": "Cleaving Blow, Fear, Move through Cover, Open Order",
-        "name_de": "Cleaving Blow, Fear, Move through Cover, Open Order"
+        "name_en": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_it": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_es": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_de": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror"
       },
       "notes": {}
     }
