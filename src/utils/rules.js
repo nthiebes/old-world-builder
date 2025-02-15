@@ -1907,13 +1907,6 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["lion-chariot-of-chrace"],
-          min: 0,
-          max: 1,
-          points: 1000,
-          requiresMagicItem: "chracian-hunter",
-        },
-        {
           ids: ["lothern-skycutters"],
           min: 0,
           max: 1,
@@ -1992,13 +1985,6 @@ export const rules = {
           min: 0,
           max: 3,
           points: 1000,
-        },
-        {
-          ids: ["lion-chariot-of-chrace"],
-          min: 0,
-          max: 1,
-          points: 1000,
-          requiresMagicItem: "chracian-hunter",
         },
         {
           ids: ["lothern-skycutters"],
