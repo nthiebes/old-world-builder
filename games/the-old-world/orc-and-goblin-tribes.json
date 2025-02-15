@@ -3162,6 +3162,16 @@
           "armyComposition": ["nomadic-waaagh"]
         },
         {
+          "name_en": "Ambushers",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": ["nomadic-waaagh"],
+          "notes": {
+            "name_en": "0-1 Goblin Wold Rider Mob if Kiknik is in the army"
+          }
+        },
+        {
           "name_en": "Close Order, Horde",
           "name_fr": "Ordre Serré, Horde",
           "points": 0,
@@ -4290,7 +4300,15 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Stone thrower, Hand weapons",
+          "name_de": "Steinschleuder, Handwaffen",
+          "name_fr": "Catapulte, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
