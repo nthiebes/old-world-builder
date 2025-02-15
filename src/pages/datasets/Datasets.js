@@ -9,6 +9,7 @@ import { Select } from "../../components/select";
 import { Expandable } from "../../components/expandable";
 import { Spinner } from "../../components/spinner";
 import { Dialog } from "../../components/dialog";
+import { ErrorMessage } from "../../components/error-message";
 import { fetcher } from "../../utils/fetcher";
 import gameSystems from "../../assets/armies.json";
 import { Unit } from "../unit";
@@ -139,6 +140,10 @@ export const Datasets = ({ isMobile }) => {
       <Main className="datasets">
         <div className="datasets__info">
           <h2 className="page-headline">Datasets Editor</h2>
+          <ErrorMessage spaceBefore spaceAfter>
+            Attention: The Datasets Editor has not been updated for some time
+            and no longer reflects the current format of the datasets.
+          </ErrorMessage>
           <p className="datasets__paragraph">
             Thank you for taking the time to improve the{" "}
             <i>Old World Builder</i>! You can expand existing army data, add
