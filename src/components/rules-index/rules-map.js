@@ -94,6 +94,8 @@ export const synonyms = {
   "scout gyrocopters": "scout gyrocopter",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
+  "lion guard captain": "champions",
+  "chracian captain": "champions",
   boss: "champions",
   marksman: "champions",
   preceptor: "champions",

@@ -218,7 +218,8 @@ hr {
 }
 
 .radio__input:disabled + .radio__label,
-.checkbox__input:disabled + .checkbox__label {
+.checkbox__input:disabled + .checkbox__label,
+.unit__option-note--disabled {
   opacity: 0.3;
   cursor: default;
 }

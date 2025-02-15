@@ -1798,6 +1798,12 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["storm-weaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     core: {
@@ -1861,6 +1867,158 @@ export const rules = {
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
+  },
+  "the-chracian-warhost": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["prince", "archmage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["chracian-chieftain", "storm-weaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["white-lions"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["war-lions"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["lion-chariot-of-chrace"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresMagicItem: "chracian-hunter",
+        },
+        {
+          ids: ["lothern-skycutters"],
+          min: 0,
+          max: 1,
+          requiresMagicItem: "sea-guard",
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["lion-guard"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["shadow-warriors", "sister-of-avelorn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["great-eagle"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["eagle-claw-bolt-thrower"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "sea-guard-garrison": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["prince", "archmage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-mage", "noble", "mage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["shadow-warriors"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["great-eagle"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["eagle-claw-bolt-thrower"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["lion-chariot-of-chrace"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresMagicItem: "chracian-hunter",
+        },
+        {
+          ids: ["lothern-skycutters"],
+          min: 0,
+          max: 1,
+          requiresMagicItem: "sea-guard",
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["flamespyre-phoenix", "frostheart-phoenix-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
   },
   "chaos-dwarfs": {
     characters: {
@@ -2126,7 +2284,7 @@ export const rules = {
             "daemon-prince",
           ],
           requiresOption: {
-            id: "daemon-of-slannesh",
+            id: "daemon-of-slaanesh",
             unit: "daemon-prince",
           },
         },

@@ -1,7 +1,9 @@
+import classNames from "classnames";
+
 import { nameMap } from "../pages/magic";
 import { rulesMap, synonyms } from "../components/rules-index";
-import { normalizeRuleName } from "./string";
 import loresOfMagicWithSpells from "../assets/lores-of-magic-with-spells.json";
+import { normalizeRuleName } from "./string";
 
 export const getAllOptions = (
   {
@@ -302,10 +304,22 @@ export const getUnitName = ({ unit, language }) => {
   );
 };
 
-export const getUnitOptionNotes = ({ notes, key, className, language }) => {
+export const getUnitOptionNotes = ({
+  notes,
+  key,
+  className,
+  language,
+  disabled,
+}) => {
   return (Array.isArray(notes) ? [...notes] : notes ? [notes] : []).map(
     (note, index) => (
-      <p className={className} key={`${key}-${index}`}>
+      <p
+        className={classNames(
+          className,
+          disabled && "unit__option-note--disabled"
+        )}
+        key={`${key}-${index}`}
+      >
         {note[`name_${language}`] || note.name_en}
       </p>
     )

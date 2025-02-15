@@ -371,13 +371,34 @@
         "name_es": "High Elf Realms",
         "name_fr": "Royaumes Hauts Elfes",
         "items": ["general", "high-elf-realms", "elven-honours"],
+        "armyComposition": ["the-chracian-warhost", "sea-guard-garrison"],
         "allies": [
           { "army": "empire-of-man" },
           { "army": "kingdom-of-bretonnia" },
-          { "army": "wood-elf-realms" }
+          { "army": "wood-elf-realms" },
+          {
+            "army": "high-elf-realms",
+            "armyComposition": "the-chracian-warhost"
+          },
+          {
+            "army": "high-elf-realms",
+            "armyComposition": "sea-guard-garrison"
+          }
         ],
         "mercenaries": {
           "high-elf-realms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "the-chracian-warhost": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "sea-guard-garrison": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
