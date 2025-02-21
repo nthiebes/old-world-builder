@@ -2,7 +2,7 @@
 
 The "Warhammer Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop games Warhammer Fantasy 6th Edition.
 
-You can visit the site here: [PENDING DEPLOY](https://cargad.com/)
+You can visit the site here: [PENDING DEPLOY](https://foo.com/)
 
 ## Contribution
 
