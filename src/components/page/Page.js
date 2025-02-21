@@ -79,48 +79,6 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <div className="radio">
               <input
                 type="radio"
-                id="deutsch"
-                name="languages"
-                value="de"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "de"}
-                className="radio__input"
-              />
-              <label htmlFor="deutsch" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={germany}
-                  className="footer__language-icon"
-                />
-                Deutsch
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="french"
-                name="languages"
-                value="fr"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "fr"}
-                className="radio__input"
-              />
-              <label htmlFor="french" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={france}
-                  className="footer__language-icon"
-                />
-                Français
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
                 id="spanish"
                 name="languages"
                 value="es"
@@ -137,48 +95,6 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                   className="footer__language-icon"
                 />
                 Español
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="italian"
-                name="languages"
-                value="it"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "it"}
-                className="radio__input"
-              />
-              <label htmlFor="italian" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={italy}
-                  className="footer__language-icon"
-                />
-                Italiano
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="polish"
-                name="languages"
-                value="pl"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "pl"}
-                className="radio__input"
-              />
-              <label htmlFor="polish" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={polen}
-                  className="footer__language-icon"
-                />
-                Polski
               </label>
             </div>
           </div>

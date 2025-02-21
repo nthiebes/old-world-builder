@@ -154,7 +154,7 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "warhammer-fantasy"}
+                disabled={id === "the-old-world"}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (
@@ -162,6 +162,22 @@ export const NewList = ({ isMobile }) => {
                     <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
                       <FormattedMessage id="new.8th" />
+                    </p>
+                  </>
+                )}
+                {id === "warhammer-fantasy-6th" && (
+                  <>
+                    <span className="new-list__game-name">{name}</span>
+                    <p className="new-list__beta">
+                      <FormattedMessage id="new.6th" />
+                    </p>
+                  </>
+                )}
+                {id === "warhammer-fantasy-mdn" && (
+                  <>
+                    <span className="new-list__game-name">{name}</span>
+                    <p className="new-list__beta">
+                      <FormattedMessage id="new.mdn" />
                     </p>
                   </>
                 )}

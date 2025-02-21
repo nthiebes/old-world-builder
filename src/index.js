@@ -11,11 +11,7 @@ import { App } from "./App";
 import store from "./store";
 
 import English from "./i18n/en.json";
-import German from "./i18n/de.json";
 import Spanish from "./i18n/es.json";
-import French from "./i18n/fr.json";
-import Italian from "./i18n/it.json";
-import Polish from "./i18n/pl.json";
 
 // Sentry error tracking
 if (process.env.NODE_ENV !== "development") {

@@ -16,10 +16,10 @@ export const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Old World Builder | 404</title>
+        <title>Warhammer Fantasy Builder | 404</title>
       </Helmet>
 
-      <Header headline="Old World Builder" />
+      <Header headline="Warhammer Fantasy Builder" />
 
       <Main compact>
         <Button to="/" icon="home" centered>
