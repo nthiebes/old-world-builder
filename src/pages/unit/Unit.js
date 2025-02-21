@@ -609,6 +609,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     options,
                     exclusive = true,
                     notes,
+                    alwaysActive,
                     ...command
                   },
                   index
@@ -638,11 +639,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           type="checkbox"
                           id={`command-${id}`}
                           value={id}
-                          onChange={() => handleCommandChange(id)}
+                          onChange={() =>
+                            !alwaysActive && handleCommandChange(id)
+                          }
                           checked={active}
                           className="checkbox__input"
                           disabled={
                             detachmentActive ||
+                            alwaysActive ||
                             (type === "characters" &&
                               exclusive &&
                               unit.command.find(
