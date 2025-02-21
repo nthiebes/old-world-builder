@@ -42,21 +42,22 @@ export const Add = ({ isMobile }) => {
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
   const mercenaries = armyData?.mercenaries;
-  const handleAdd = (unit, ally) => {
+  const handleAdd = (unit, ally, unitType) => {
     const newUnit = {
       ...unit,
       army: ally,
+      unitType,
       id: `${unit.id}.${getRandomId()}`,
     };
 
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = (unit, ally) => (
+  const getUnit = (unit, ally, unitType) => (
     <li key={unit.id} className="list">
       <button
         className="list__inner add__list-inner"
-        onClick={() => handleAdd(unit, ally)}
+        onClick={() => handleAdd(unit, ally, unitType)}
       >
         <span className="add__name">
           {unit.minimum ? `${unit.minimum} ` : null}
@@ -236,10 +237,12 @@ export const Add = ({ isMobile }) => {
                         : ""
                     }`}
                   >
-                    {characters.map((unit) => getUnit(unit, ally))}
-                    {core.map((unit) => getUnit(unit, ally))}
-                    {special.map((unit) => getUnit(unit, ally))}
-                    {rare.map((unit) => getUnit(unit, ally))}
+                    {characters.map((unit) =>
+                      getUnit(unit, ally, "characters")
+                    )}
+                    {core.map((unit) => getUnit(unit, ally, "core"))}
+                    {special.map((unit) => getUnit(unit, ally, "special"))}
+                    {rare.map((unit) => getUnit(unit, ally, "rare"))}
                   </Expandable>
                 )
               )}

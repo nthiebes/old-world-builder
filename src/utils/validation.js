@@ -24,8 +24,17 @@ export const validateList = ({ list, language, intl }) => {
               command.name_en.includes("Battle Standard Bearer")
           )
       );
+  const coreUnits = list?.core?.length || 0;
+  const specialUnits = list?.special?.length || 0;
+  const rareUnits = list?.rare?.length || 0;
+  const mercUnits = list?.mercenaries?.length || 0;
+  const allyUnits = !list?.allies?.length
+    ? 0
+    : list.allies.filter((unit) => unit.unitType !== "characters").length;
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
+  const nonCharactersCount =
+    coreUnits + specialUnits + rareUnits + mercUnits + allyUnits;
   const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
@@ -287,6 +296,13 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
   };
+
+  // Not enough non-character units
+  nonCharactersCount < 3 &&
+    errors.push({
+      message: "misc.error.notEnoughNonCharacters",
+      section: "global",
+    });
 
   // No general
   generalsCount === 0 &&
