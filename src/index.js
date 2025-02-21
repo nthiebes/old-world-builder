@@ -28,8 +28,8 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const metaDescription = {
-  de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
-  en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
+  de: "Armeebauer für Warhammer: The Warhammer Fantasy und Warhammer Fantasy.",
+  en: "Army builder for Warhammer: The Warhammer Fantasy and Warhammer Fantasy Battles.",
   fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World' et 'Warhammer Fantaisie'.",
   es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
   it: "Costruttore di eserciti per Warhammer: The Old World e Warhammer Fantasy Battles.",

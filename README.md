@@ -1,4 +1,4 @@
-# Old World Builder
+# Warhammer Builder
 
 The "Warhammer Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop games Warhammer Fantasy 6th Edition.
 
@@ -14,6 +14,12 @@ More details on the [datasets page - pending deploy](https://old-world-builder.c
 
 If you'd like to work on a feature let's have a chat first in one of the open issues (or create a new one).
 
+## Setup your local environment
+To develop and debug this code you'll need to install the following tools:
+* [Node](https://nodejs.org/en/download)
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+* Install the project dependencies `npm install`
+* Follow the instructions in [Create React App](create-react-app.md)
 
 ## Credits
 

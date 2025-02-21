@@ -18,21 +18,21 @@ export const Privacy = () => {
     <>
       <Helmet>
         <title>
-          {`Old World Builder | ${intl.formatMessage({
+          {`Warhammer Fantasy Builder | ${intl.formatMessage({
             id: "footer.privacy",
           })}`}
         </title>
         <link rel="canonical" href="https://old-world-builder.com/privacy" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
+      <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
 
       <Main compact>
         <h2 className="page-headline">
           <FormattedMessage id="footer.privacy" />
         </h2>
         <p>
-          The "Old World Builder" is built as an Open Source app. This SERVICE
+          The "Warhammer Fantasy Builder" is built as an Open Source app. This SERVICE
           is provided by at no cost and is intended for use as is.
         </p>
         <p>
