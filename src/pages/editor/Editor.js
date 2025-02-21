@@ -23,6 +23,9 @@ import { deleteList, moveUnit } from "../../state/lists";
 import { setErrors } from "../../state/errors";
 
 import "./Editor.css";
+import {fetcher} from "../../utils/fetcher";
+import {setArmy} from "../../state/army";
+import {getArmyData} from "../../utils/army";
 
 export const Editor = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -37,6 +40,7 @@ export const Editor = ({ isMobile }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
+  const army = useSelector((state) => state.army);
 
   const handleDeleteClick = (event) => {
     event.preventDefault();
@@ -64,19 +68,36 @@ export const Editor = ({ isMobile }) => {
 
   useEffect(() => {
     if (list) {
+      if(!army) {
+          fetcher({
+              url: `games/${list.game}/${list.army}`,
+              onSuccess: (data) => {
+                  dispatch(
+                      setArmy(
+                          getArmyData({
+                              data,
+                              armyComposition: list.armyComposition || list.army,
+                          })
+                      )
+                  );
+              },
+          });
+      }
+
       dispatch(
         setErrors(
           validateList({
             list,
             language,
             intl,
+            army
           })
         )
       );
 
       updateLocalList(list);
     }
-  }, [list, dispatch, language, intl]);
+  }, [list, army, dispatch, language, intl]);
 
   if (redirect) {
     return <Redirect to="/" />;
