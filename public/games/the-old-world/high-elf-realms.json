@@ -981,24 +981,12 @@
       ],
       "options": [
         {
-          "name_en": "Level 3 Wizard",
-          "name_it": "Mago di 3° Livello",
-          "name_de": "Stufe 3 Zauberer",
-          "name_es": "Mago de nivel 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
           "name_en": "Level 4 Wizard",
           "name_it": "Mago di 4° Livello",
           "name_de": "Stufe 4 Zauberer",
           "name_es": "Mago de nivel 4",
           "name_fr": "Sorcier de Niveau 4",
-          "points": 30,
-          "perModel": true,
-          "exclusive": true
+          "points": 30
         }
       ],
       "mounts": [
@@ -1286,24 +1274,12 @@
       ],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_it": "Mago di 1° Livello",
-          "name_de": "Stufe 1 Zauberer",
-          "name_es": "Mago de nivel 1",
-          "name_fr": "Sorcier de Niveau 1",
-          "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
           "name_en": "Level 2 Wizard",
           "name_it": "Mago di 2° Livello",
           "name_de": "Stufe 2 Zauberer",
           "name_es": "Mago de nivel 2",
           "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "perModel": true,
-          "exclusive": true
+          "points": 30
         }
       ],
       "mounts": [
@@ -2641,7 +2617,8 @@
           "name_es": "Armas de mano, Lanzas de caballería",
           "name_fr": "Armes de base, Lances de cavalerie",
           "points": 0,
-          "active": true
+          "active": true,
+          "perModel": true
         },
         {
           "name_en": "Hand weapons, Shortbows",
@@ -2649,7 +2626,8 @@
           "name_de": "Handwaffen, Kurzbögen",
           "name_es": "Armas de mano, Arcos cortos",
           "name_fr": "Armes de base, Arcs courts",
-          "points": 1
+          "points": 1,
+          "perModel": true
         }
       ],
       "armor": [
