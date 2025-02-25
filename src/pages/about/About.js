@@ -32,12 +32,12 @@ export const About = () => {
     <>
       <Helmet>
         <title>
-          {`Warhammer Fantasy Builder | ${intl.formatMessage({ id: "footer.about" })}`}
+          {`Old World Builder | ${intl.formatMessage({ id: "footer.about" })}`}
         </title>
         <link rel="canonical" href="https://old-world-builder.com/about" />
       </Helmet>
 
-      <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
+      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact>
         <h2 className="page-headline">
@@ -47,7 +47,7 @@ export const About = () => {
           <FormattedMessage
             id="about.text"
             values={{
-              owb: <i>Warhammer Fantasy Builder</i>,
+              owb: <i>Old World Builder</i>,
             }}
           />
         </p>
@@ -59,7 +59,7 @@ export const About = () => {
           <FormattedMessage
             id="about.text3"
             values={{
-              owb: <i>Warhammer Fantasy Builder</i>,
+              owb: <i>Old World Builder</i>,
               datasets: <Link to="/datasets">/datasets</Link>,
               discord: (
                 <a

@@ -343,12 +343,12 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `
 *${intl.formatMessage({
       id: "export.createdWith",
-    })} "Warhammer Fantasy Builder"* - https://old-world-builder.com`;
+    })} "Old World Builder"* - https://old-world-builder.com`;
   } else {
     listString += `---
 ${intl.formatMessage({
   id: "export.createdWith",
-})} "Warhammer Fantasy Builder"
+})} "Old World Builder"
 
 [https://old-world-builder.com]`;
   }

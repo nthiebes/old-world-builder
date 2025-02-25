@@ -501,7 +501,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   return (
     <>
       <Helmet>
-        <title>{`Warhammer Fantasy Builder | ${list?.name}`}</title>
+        <title>{`Old World Builder | ${list?.name}`}</title>
       </Helmet>
 
       {isMobile && (

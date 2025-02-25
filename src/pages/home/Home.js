@@ -86,13 +86,13 @@ export const Home = ({ isMobile }) => {
     <>
       <Helmet>
         <title>
-          Warhammer Fantasy Builder - Army builder for Warhammer: The Old World and
+          Old World Builder - Army builder for Warhammer: The Old World and
           Warhammer Fantasy Battles
         </title>
         <link rel="canonical" href="https://old-world-builder.com/" />
       </Helmet>
 
-      {isMobile && <Header headline="Warhammer Fantasy Builder" hasMainNavigation />}
+      {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
       <MainComponent>
         {!lists.length && (
           <>

@@ -420,7 +420,7 @@ export const Magic = ({ isMobile }) => {
   return (
     <>
       <Helmet>
-        <title>{`Warhammer Fantasy Builder | ${list?.name}`}</title>
+        <title>{`Old World Builder | ${list?.name}`}</title>
       </Helmet>
 
       {isMobile && (
