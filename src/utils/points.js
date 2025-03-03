@@ -8,6 +8,14 @@ export const getPointsPerModel = (unit) => {
     unit.options.forEach((option) => {
       if (option.active && option.perModel) {
         modelPoints += option.points;
+      } else if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((subOption) => {
+          if (subOption.active) {
+            if (subOption.perModel) {
+              modelPoints += subOption.points;
+            }
+          }
+        });
       }
     });
   }
