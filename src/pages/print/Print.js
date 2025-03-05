@@ -114,9 +114,9 @@ export const Print = () => {
   ];
   const handlePrintClick = () => {
     setIsPrinting(true);
-    document.title = `${list.name} - Old World Builder`;
+    document.title = `${list.name} - Warhammer Fantasy Builder`;
     window.onafterprint = () => {
-      document.title = "Old World Builder";
+      document.title = "Warhammer Fantasy Builder";
       setIsPrinting(false);
     };
     window.print();
@@ -372,7 +372,7 @@ export const Print = () => {
         <div className="print-footer">
           <p>
             <FormattedMessage id="export.createdWith" />{" "}
-            <b>"Old World Builder"</b>
+            <b>"Warhammer Fantasy Builder"</b>
           </p>
           <p>
             [

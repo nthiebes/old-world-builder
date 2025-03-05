@@ -128,14 +128,14 @@ export const Datasets = ({ isMobile }) => {
     <>
       <Helmet>
         <title>
-          {`Old World Builder | ${intl.formatMessage({
+          {`Warhamer Fantasy Builder | ${intl.formatMessage({
             id: "footer.datasets",
           })}`}
         </title>
         <link rel="canonical" href="https://old-world-builder.com/datasets" />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
+      <Header headline="Warhamer Fantasy Builder" hasMainNavigation hasHomeButton />
 
       <Main className="datasets">
         <div className="datasets__info">
@@ -146,13 +146,13 @@ export const Datasets = ({ isMobile }) => {
           </ErrorMessage>
           <p className="datasets__paragraph">
             Thank you for taking the time to improve the{" "}
-            <i>Old World Builder</i>! You can expand existing army data, add
+            <i>Warhammer Fantasy Builder</i>! You can expand existing army data, add
             missing translations or create a new army dataset.
           </p>
           <h3>What is a dataset?</h3>
           <p className="datasets__paragraph">
             A datasets contains the data of all units required to create an army
-            list in the <i>Old World Builder</i>. The datasets for each army are
+            list in the <i>Warhammer Fantasy Builder</i>. The datasets for each army are
             defined in a{" "}
             <a
               target="_blank"
