@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
-import { getUnitPoints, getUnitMagicPoints } from "../../utils/points";
+import { getPointsPerModel, getUnitPoints, getUnitMagicPoints } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -570,7 +570,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.minimum ? (
           <>
             <label htmlFor="strength" className="unit__strength">
-              <FormattedMessage id="unit.unitSize" />
+              <span><FormattedMessage id="unit.unitSize" /></span>
+              <i className="unit__strength-points">{getPointsText({ points: getPointsPerModel(unit), perModel: true }) }</i>
             </label>
             <NumberInput
               id="strength"

@@ -54,6 +54,15 @@
 
 .unit__strength {
   margin-top: 1rem;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit__strength-points {
+  font-style: italic;
+  font-weight: normal;
+  text-align: right;
 }
 
 .unit__link .list__inner label {
