@@ -1,6 +1,18 @@
+import { rulesMap, synonyms } from "../components/rules-index/rules-map";
 import { rules } from "./rules";
 import { uniq } from "./collection";
 import { getUnitName } from "./unit";
+import { normalizeRuleName } from "./string";
+
+const filterByTroopType = (unit) => {
+  const normalizedRuleName = normalizeRuleName(unit.name_en);
+  const synonym = synonyms[normalizedRuleName];
+  const ruleData = rulesMap[synonym || normalizedRuleName];
+
+  return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "Be"].includes(
+    ruleData?.troopType
+  );
+};
 
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
@@ -24,13 +36,24 @@ export const validateList = ({ list, language, intl }) => {
               command.name_en.includes("Battle Standard Bearer")
           )
       );
-  const coreUnits = list?.core?.length || 0;
-  const specialUnits = list?.special?.length || 0;
-  const rareUnits = list?.rare?.length || 0;
-  const mercUnits = list?.mercenaries?.length || 0;
-  const allyUnits = !list?.allies?.length
-    ? 0
-    : list.allies.filter((unit) => unit.unitType !== "characters").length;
+
+  let coreUnits = list?.core?.length
+    ? list.core.filter(filterByTroopType).length
+    : 0;
+  const specialUnits = list?.special?.length
+    ? list.special.filter(filterByTroopType).length
+    : 0;
+  const rareUnits = list?.rare?.length
+    ? list.rare.filter(filterByTroopType).length
+    : 0;
+  const mercUnits = list?.mercenaries?.length
+    ? list.mercenaries.filter(filterByTroopType).length
+    : 0;
+  const allyUnits = list?.allies?.length
+    ? list.allies
+        .filter((unit) => unit.unitType !== "characters")
+        .filter(filterByTroopType).length
+    : 0;
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
   const nonCharactersCount =
