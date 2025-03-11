@@ -3884,6 +3884,12 @@
       "id": "war-lions",
       "points": 18,
       "armyComposition": {
+        "high-elf-realms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Rare choice if you include one or more White Lions of Chrace unit"
+          }
+        },
         "the-chracian-warhost": {
           "category": "special",
           "notes": {
@@ -4355,12 +4361,14 @@
       "id": "merwyrms",
       "points": 225,
       "armyComposition": {
-        "sea-guard-garrison": {
-          "category": "rare"
-        },
         "high-elf-realms": {
           "category": "rare",
-          "notes": {}
+          "notes": {
+            "name_en": "0-1 Rare choice if you include one or more Lothern Sea Guard unit"
+          }
+        },
+        "sea-guard-garrison": {
+          "category": "rare"
         }
       },
       "command": [],
