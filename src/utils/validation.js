@@ -1,14 +1,9 @@
-import { rulesMap, synonyms } from "../components/rules-index/rules-map";
 import { rules } from "./rules";
 import { uniq } from "./collection";
-import { getUnitName } from "./unit";
-import { normalizeRuleName } from "./string";
+import { getUnitName, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
-  const normalizedRuleName = normalizeRuleName(unit.name_en);
-  const synonym = synonyms[normalizedRuleName];
-  const ruleData = rulesMap[synonym || normalizedRuleName];
-
+  const ruleData = getUnitRuleData(unit.name_en);
   return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "Be"].includes(
     ruleData?.troopType
   );
@@ -25,6 +20,37 @@ export const validateList = ({ list, language, intl }) => {
             (command) => command.active && command.name_en === "General"
           )
       );
+  // The general must be one of the characters with the highest leadership
+  let generalCandidates = [];
+  if (list?.characters?.length) {
+    let highestLeadership = 0;
+    list.characters.map((unit) => {
+      if (unit.command && 
+          unit.command.find(
+            (command) => command.name_en === "General"
+          )
+      ) {
+        const ruleData = getUnitRuleData(unit.name_en);
+        const leadership = ruleData?.stats?.length ?
+          ruleData.stats.reduce(
+            (previousValue, statLine) => 
+              (parseInt(statLine.Ld) || 0) > previousValue 
+                ? parseInt(statLine.Ld)
+                : previousValue,
+            0
+          )
+          : 0;
+        
+        if (leadership > highestLeadership) {
+          generalCandidates = [unit];
+          highestLeadership = leadership;
+        } else if (leadership === highestLeadership) {
+          generalCandidates.push(unit);
+        }
+      }  
+    });
+  };
+  
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
@@ -37,7 +63,7 @@ export const validateList = ({ list, language, intl }) => {
           )
       );
 
-  let coreUnits = list?.core?.length
+  const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
     : 0;
   const specialUnits = list?.special?.length
@@ -341,6 +367,17 @@ export const validateList = ({ list, language, intl }) => {
       section: "characters",
     });
 
+  // General doesn't have highest leadership in the army
+  generalsCount === 1 && !generalCandidates.find((unit) =>
+    unit.command &&
+    unit.command.find(
+      (command) => command.active && command.name_en === "General"
+    )) && 
+    errors.push({
+      message: "misc.error.generalLeadership",
+      section: "characters",
+    });
+  
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
