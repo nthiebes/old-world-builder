@@ -310,7 +310,6 @@ export const rules = {
             "tomb-king",
             "tomb-prince",
             "settra-the-imperishable-the-great-king-of-nehekhara",
-            "prince-apophas-the-cursed-scarab-lord",
           ],
         },
       ],
