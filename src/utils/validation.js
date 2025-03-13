@@ -28,6 +28,11 @@ export const validateList = ({ list, language, intl }) => {
       if (unit.command && 
           unit.command.find(
             (command) => command.name_en === "General"
+          ) && 
+          !unit.command.find(
+            (command) => 
+              command.name_en.includes("Battle Standard Bearer") &&
+              command.active
           )
       ) {
         const ruleData = getUnitRuleData(unit.name_en);
