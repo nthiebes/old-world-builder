@@ -11,6 +11,19 @@ export const getUnitRuleData = (unitName) => {
   return rulesMap[synonym || normalizedRuleName];
 }
 
+export const getUnitLeadership = (unitName) => {
+  const ruleData = getUnitRuleData(unitName);
+  return ruleData?.stats?.length ?
+    ruleData.stats.reduce(
+      (previousValue, statLine) => 
+        (parseInt(statLine.Ld) || 0) > previousValue 
+          ? parseInt(statLine.Ld)
+          : previousValue,
+      0
+    )
+    : 0;
+}
+
 export const getAllOptions = (
   {
     mounts,

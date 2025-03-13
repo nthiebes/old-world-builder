@@ -1,6 +1,6 @@
 import { rules } from "./rules";
 import { uniq } from "./collection";
-import { getUnitName, getUnitRuleData } from "./unit";
+import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
@@ -21,9 +21,8 @@ export const validateList = ({ list, language, intl }) => {
           )
       );
   // The general must be one of the characters with the highest leadership
-  let generalCandidates = [];
+  let highestLeadership = 0;
   if (list?.characters?.length) {
-    let highestLeadership = 0;
     list.characters.map((unit) => {
       if (unit.command && 
           unit.command.find(
@@ -35,22 +34,9 @@ export const validateList = ({ list, language, intl }) => {
               command.active
           )
       ) {
-        const ruleData = getUnitRuleData(unit.name_en);
-        const leadership = ruleData?.stats?.length ?
-          ruleData.stats.reduce(
-            (previousValue, statLine) => 
-              (parseInt(statLine.Ld) || 0) > previousValue 
-                ? parseInt(statLine.Ld)
-                : previousValue,
-            0
-          )
-          : 0;
-        
+        const leadership = getUnitLeadership(unit.name_en);
         if (leadership > highestLeadership) {
-          generalCandidates = [unit];
           highestLeadership = leadership;
-        } else if (leadership === highestLeadership) {
-          generalCandidates.push(unit);
         }
       }  
     });
@@ -373,11 +359,7 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // General doesn't have highest leadership in the army
-  generalsCount === 1 && !generalCandidates.find((unit) =>
-    unit.command &&
-    unit.command.find(
-      (command) => command.active && command.name_en === "General"
-    )) && 
+  generalsCount === 1 && getUnitLeadership(generals[0].name_en) < highestLeadership && 
     errors.push({
       message: "misc.error.generalLeadership",
       section: "characters",
