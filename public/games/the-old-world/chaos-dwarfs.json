@@ -591,6 +591,11 @@
       "name_fr": "Taur’ruk Centaure-Taureau",
       "id": "bull-centaur-taur'ruk",
       "points": 145,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1536,6 +1541,134 @@
         "name_es": "0-1",
         "name_fr": "0-1"
       }
+    },
+    {
+      "name_en": "Infernal Ironsworn",
+      "name_de": "Infernal Ironsworn",
+      "name_es": "Infernal Ironsworn",
+      "name_fr": "Jurefers Infernaux",
+      "id": "infernal-ironsworn",
+      "points": 19,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Overseer (champion)",
+          "name_de": "Overseer (champion)",
+          "name_es": "Overseer (champion)",
+          "name_fr": "Superviseur (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "talisman", "armor", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "options": [
+            {
+              "name_en": "Pistol",
+              "name_de": "Pistol",
+              "name_es": "Pistol",
+              "name_fr": "Pistolet",
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Naptha bombs",
+              "name_de": "Bombes au Naphta",
+              "points": 6,
+              "exclusive": true,
+              "name_fr": "Bombes au Naptha"
+            }
+          ]
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Hallebardes",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_de": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_es": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_fr": "Armure Sombréclat, Ordre Serré, Bien Entraînés, Armes Ensorcelées, Calme la Panique, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné, Vétérans"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
     }
   ],
   "special": [
@@ -2123,6 +2256,103 @@
   ],
   "rare": [
     {
+      "name_en": "Bull Centaur Taur'ruk",
+      "name_de": "Bull Centaur Taur'ruk",
+      "name_es": "Bull Centaur Taur'ruk",
+      "name_fr": "Taur’ruk Centaure-Taureau",
+      "id": "bull-centaur-taur'ruk",
+      "points": 145,
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Darkforged weapon",
+          "name_de": "Darkforged weapon",
+          "name_es": "Darkforged weapon",
+          "name_fr": "Arme de Sombreforge",
+          "points": 10,
+          "perModel": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 3,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Armoured Hide (1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_de": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_es": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Armure Sombréclat, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3+1), Solitaire, Ruée, Obstiné, Rapide"
+      },
+      "notes": {
+        "name_en": "0-1 per unit of Bull Centaur Renders",
+        "name_de": "0-1 per unit of Bull Centaur Renders",
+        "name_es": "0-1 per unit of Bull Centaur Renders",
+        "name_fr": "0-1 par unité de Hacheurs Centaures-Taureaux"
+      }
+    },
+    {
       "name_en": "Hobgoblin Wolf Riders",
       "name_de": "Hobgoblin Wolf Riders",
       "name_es": "Hobgoblin Wolf Riders",
@@ -2345,6 +2575,63 @@
         "name_de": "0-1 war machine chosen per 1000 points",
         "name_es": "0-1 war machine chosen per 1000 points",
         "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+      }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "name_de": "Chaos Giant",
+      "name_es": "Chaos Giant",
+      "name_fr": "Géant du Chaos",
+      "id": "chaos-giant",
+      "points": 200,
+      "command": [],
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Giant's club",
+          "name_de": "Giant's club",
+          "points": 0,
+          "active": true,
+          "name_fr": "Massue de Géant"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure légère (peau calleuse)"
+        },
+        {
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
+          "points": 10,
+          "name_fr": "Armure lourde (peau écailleuse)"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Regeneration (6+)",
+          "name_de": "Regeneration (6+)",
+          "points": 20,
+          "minimum": 0,
+          "maximum": 0,
+          "name_fr": "Régénération (6+)"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
       }
     }
   ],
