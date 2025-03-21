@@ -2132,10 +2132,10 @@ export const rules = {
           ids: ["infernal-ironsworn"],
           min: 0,
           max: 1,
-          requiresCommand: {
-            id: "general",
-            unit: "infernal-castellan",
-          },
+          requiresGeneral: true,
+          requires: [
+            "infernal-castellan",
+          ],
           perUnit: true,
         },
       ],
