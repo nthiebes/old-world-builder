@@ -439,35 +439,36 @@
         }
       ],
       "armor": [],
-      "options": [
-        {
-          "name_en": "Ambushers",
-          "name_fr": "Embusqueurs",
-          "points": 10,
-          "perModel": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Scouts",
-          "name_fr": "Éclaireurs",
-          "points": 5,
-          "perModel": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Vanguard",
-          "name_fr": "Avant-garde",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true
-        }
-      ],
+      "options": [],
       "mounts": [
         {
           "name_en": "On foot",
           "name_fr": "À Pied",
           "points": 0,
-          "active": true
+          "active": true,
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "name_fr": "Embusqueurs",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Scouts",
+              "name_fr": "Éclaireurs",
+              "points": 5,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Vanguard",
+              "name_fr": "Avant-garde",
+              "points": 3,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Stonehorn",
@@ -673,11 +674,11 @@
       }
     },
     {
-      "name_en": "Iron Guts",
-      "name_de": "Iron Guts",
-      "name_es": "Iron Guts",
+      "name_en": "Ironguts",
+      "name_de": "Ironguts",
+      "name_es": "Ironguts",
       "name_fr": "Ventres-durs",
-      "name_it": "Iron Guts",
+      "name_it": "Ironguts",
       "id": "ironguts",
       "points": 39,
       "minimum": 3,

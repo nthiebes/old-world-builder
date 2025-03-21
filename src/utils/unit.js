@@ -1,7 +1,9 @@
+import classNames from "classnames";
+
 import { nameMap } from "../pages/magic";
 import { rulesMap, synonyms } from "../components/rules-index";
-import { normalizeRuleName } from "./string";
 import loresOfMagicWithSpells from "../assets/lores-of-magic-with-spells.json";
+import { normalizeRuleName } from "./string";
 
 export const getAllOptions = (
   {
@@ -20,6 +22,7 @@ export const getAllOptions = (
     noMagic,
     language: overrideLanguage,
     pageNumbers,
+    armyComposition,
   } = {}
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
@@ -93,6 +96,8 @@ export const getAllOptions = (
     options.forEach(
       ({
         active,
+        alwaysActive,
+        armyComposition: unitArmyComposition,
         name_en,
         options: subOptions,
         stackableCount,
@@ -100,6 +105,7 @@ export const getAllOptions = (
         ...entry
       }) => {
         if (
+          (alwaysActive && unitArmyComposition === armyComposition) ||
           (active && !requiredMagicItem) ||
           (active &&
             requiredMagicItem &&
@@ -131,26 +137,35 @@ export const getAllOptions = (
   }
 
   if (mounts) {
-    mounts.forEach(({ active, name_en, options, ...entry }) => {
-      if (active) {
-        let mountEntry = entry[`name_${language}`] || name_en;
-        const selectedOptions = [];
+    mounts
+      .filter(
+        ({ active, equippedDefault, requiredMagicItem }) =>
+          (active && !requiredMagicItem) ||
+          (equippedDefault && !requiredMagicItem) ||
+          (active &&
+            requiredMagicItem &&
+            unitHasItem({ items }, requiredMagicItem))
+      )
+      .forEach(({ active, name_en, options, ...entry }) => {
+        if (active) {
+          let mountEntry = entry[`name_${language}`] || name_en;
+          const selectedOptions = [];
 
-        if (options && options.length > 0) {
-          options.forEach((option) => {
-            if (option.active) {
-              selectedOptions.push(option.name_en);
-            }
-          });
+          if (options && options.length > 0) {
+            options.forEach((option) => {
+              if (option.active) {
+                selectedOptions.push(option.name_en);
+              }
+            });
+          }
+
+          if (selectedOptions.length) {
+            mountEntry += ` [${selectedOptions.join(" + ")}]`;
+          }
+
+          allMounts.push(mountEntry);
         }
-
-        if (selectedOptions.length) {
-          mountEntry += ` [${selectedOptions.join(" + ")}]`;
-        }
-
-        allMounts.push(mountEntry);
-      }
-    });
+      });
   }
 
   const allItems = [];
@@ -289,10 +304,22 @@ export const getUnitName = ({ unit, language }) => {
   );
 };
 
-export const getUnitOptionNotes = ({ notes, key, className, language }) => {
+export const getUnitOptionNotes = ({
+  notes,
+  key,
+  className,
+  language,
+  disabled,
+}) => {
   return (Array.isArray(notes) ? [...notes] : notes ? [notes] : []).map(
     (note, index) => (
-      <p className={className} key={`${key}-${index}`}>
+      <p
+        className={classNames(
+          className,
+          disabled && "unit__option-note--disabled"
+        )}
+        key={`${key}-${index}`}
+      >
         {note[`name_${language}`] || note.name_en}
       </p>
     )

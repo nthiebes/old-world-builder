@@ -1463,6 +1463,11 @@
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
             "maxPoints": 50
+          },
+          "notes": {
+            "name_de": "Bis zu 25 Punkte von jedem Runentyp",
+            "name_en": "Up to 25 points of each rune type",
+            "name_fr": "Jusqu'à 25 points de chaque type de rune"
           }
         },
         {
@@ -2110,6 +2115,11 @@
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
             "maxPoints": 50
+          },
+          "notes": {
+            "name_de": "Bis zu 25 Punkte von jedem Runentyp",
+            "name_en": "Up to 25 points of each rune type",
+            "name_fr": "Jusqu'à 25 points de chaque type de rune"
           }
         },
         {
@@ -2224,6 +2234,11 @@
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
             "maxPoints": 50
+          },
+          "notes": {
+            "name_de": "Bis zu 25 Punkte von jedem Runentyp",
+            "name_en": "Up to 25 points of each rune type",
+            "name_fr": "Jusqu'à 25 points de chaque type de rune"
           }
         },
         {
@@ -3887,7 +3902,7 @@
       "name_it": "Prince Ulther's Dragon Company",
       "name_pl": "Prince Ulther's Dragon Company",
       "id": "prince-ulther's-dragon-company",
-      "points": 0,
+      "points": 115,
       "command": [
         {
           "name_en": "Prince Ulther",
@@ -3896,8 +3911,9 @@
           "name_fr": "Prince Ulther",
           "name_it": "Prince Ulther",
           "name_pl": "Prince Ulther",
-          "points": 115,
-          "active": true
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Borri Forkbeard (champion)",
@@ -3907,7 +3923,8 @@
           "name_it": "Borri Forkbeard (champion)",
           "name_pl": "Borri Forkbeard (champion)",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
@@ -3917,7 +3934,8 @@
           "name_it": "Standard bearer",
           "name_pl": "Standard bearer",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Musician",
@@ -3927,7 +3945,8 @@
           "name_it": "Musician",
           "name_pl": "Musician",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "equipment": [

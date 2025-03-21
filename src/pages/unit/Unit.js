@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
-import { getUnitPoints, getUnitMagicPoints } from "../../utils/points";
+import { getPointsPerModel, getUnitPoints, getUnitMagicPoints } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -301,10 +301,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
-  const handleEquipmentChange = (id) => {
+  const handleEquipmentChange = ({ id, group }) => {
     const equipment = unit.equipment.map((item) => ({
       ...item,
-      active: item.id === id ? true : false,
+      active:
+        item.group === group
+          ? item.id === id
+            ? !item.active
+            : false
+          : item.active,
     }));
 
     dispatch(
@@ -491,6 +496,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
+  const listArmyComposition = list?.armyComposition || list?.army;
 
   return (
     <>
@@ -509,7 +515,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               className="unit__header-rule-icon"
             />
           }
-          subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+          subheadline={`${getUnitPoints(unit, {
+            armyComposition: listArmyComposition,
+          })} ${intl.formatMessage({
             id: "app.points",
           })}`}
           navigationIcon="more"
@@ -532,7 +540,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 className="unit__header-rule-icon"
               />
             }
-            subheadline={`${getUnitPoints(unit)} ${intl.formatMessage({
+            subheadline={`${getUnitPoints(unit, {
+              armyComposition: listArmyComposition,
+            })} ${intl.formatMessage({
               id: "app.points",
             })}`}
             navigationIcon="more"
@@ -560,7 +570,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.minimum ? (
           <>
             <label htmlFor="strength" className="unit__strength">
-              <FormattedMessage id="unit.unitSize" />
+              <span><FormattedMessage id="unit.unitSize" /></span>
+              <i className="unit__strength-points">{getPointsText({ points: getPointsPerModel(unit), perModel: true }) }</i>
             </label>
             <NumberInput
               id="strength"
@@ -582,189 +593,201 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 <FormattedMessage id="unit.command" />
               </h2>
             )}
-            {unit.command.map(
-              (
-                {
-                  points,
-                  perModel,
-                  id,
-                  active = false,
-                  magic,
-                  options,
-                  exclusive = true,
-                  notes,
-                  ...command
-                },
-                index
-              ) => {
-                const commandMagicPoints = getUnitMagicPoints({
-                  selected: magic?.selected,
-                });
-                let commandMaxPoints = 0;
+            {unit.command
+              .filter(
+                (unitCommand) =>
+                  !unitCommand.armyComposition ||
+                  unitCommand.armyComposition.includes(listArmyComposition)
+              )
+              .map(
+                (
+                  {
+                    points,
+                    perModel,
+                    id,
+                    active = false,
+                    magic,
+                    options,
+                    exclusive = true,
+                    notes,
+                    alwaysActive,
+                    ...command
+                  },
+                  index
+                ) => {
+                  const commandMagicPoints = getUnitMagicPoints({
+                    selected: magic?.selected,
+                  });
+                  let commandMaxPoints = 0;
 
-                if (magic?.types && magic.types.length && active) {
-                  commandMaxPoints =
-                    (magic.armyComposition &&
-                      magic.armyComposition[list.armyComposition || list.army]
-                        ?.maxPoints) ||
-                    magic.maxPoints;
-                }
+                  if (magic?.types && magic.types.length && active) {
+                    commandMaxPoints =
+                      (magic.armyComposition &&
+                        magic.armyComposition[listArmyComposition]
+                          ?.maxPoints) ||
+                      magic.maxPoints;
+                  }
 
-                return (
-                  <Fragment key={id}>
-                    <div
-                      className={classNames(
-                        "checkbox",
-                        type === "characters" && "unit__bsb"
-                      )}
-                    >
-                      <input
-                        type="checkbox"
-                        id={`command-${id}`}
-                        value={id}
-                        onChange={() => handleCommandChange(id)}
-                        checked={active}
-                        className="checkbox__input"
-                        disabled={
-                          detachmentActive ||
-                          (type === "characters" &&
-                            exclusive &&
-                            unit.command.find(
-                              (commandUnit) =>
-                                commandUnit.active && commandUnit.id !== id
-                            ))
-                        }
-                      />
-                      <label
-                        htmlFor={`command-${id}`}
-                        className="checkbox__label"
+                  return (
+                    <Fragment key={id}>
+                      <div
+                        className={classNames(
+                          "checkbox",
+                          type === "characters" && "unit__bsb"
+                        )}
                       >
-                        <span className="unit__label-text">
-                          <RulesWithIcon textObject={command} />
-                        </span>
-                        <i className="checkbox__points">
-                          {getPointsText({ points })}
-                        </i>
-                      </label>
-                    </div>
-                    {getUnitOptionNotes({
-                      notes: notes,
-                      key: `options-${index}-note`,
-                      className: "unit__option-note",
-                      language,
-                    })}
-                    {magic?.types && magic.types.length && active ? (
-                      <>
-                        <hr className="unit__hr" />
-                        <ListItem
-                          to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                          className="editor__list unit__link unit__command-list"
-                          active={location.pathname.includes(`magic/${index}`)}
-                          disabled={detachmentActive}
+                        <input
+                          type="checkbox"
+                          id={`command-${id}`}
+                          value={id}
+                          onChange={() =>
+                            !alwaysActive && handleCommandChange(id)
+                          }
+                          checked={active}
+                          className="checkbox__input"
+                          disabled={
+                            detachmentActive ||
+                            alwaysActive ||
+                            (type === "characters" &&
+                              exclusive &&
+                              unit.command.find(
+                                (commandUnit) =>
+                                  commandUnit.active && commandUnit.id !== id
+                              ))
+                          }
+                        />
+                        <label
+                          htmlFor={`command-${id}`}
+                          className="checkbox__label"
                         >
-                          <div className="editor__list-inner">
-                            <b>
-                              {magic.types
-                                .map(
-                                  (itemType) =>
-                                    nameMap[itemType][`name_${language}`] ||
-                                    nameMap[itemType].name_en
-                                )
-                                .join(", ")}
-                            </b>
-                            <i className="checkbox__points">
-                              <span
-                                className={classNames(
-                                  commandMagicPoints > commandMaxPoints &&
-                                    commandMaxPoints > 0 &&
-                                    "editor__error"
+                          <span className="unit__label-text">
+                            <RulesWithIcon textObject={command} />
+                          </span>
+                          <i className="checkbox__points">
+                            {getPointsText({ points })}
+                          </i>
+                        </label>
+                      </div>
+                      {getUnitOptionNotes({
+                        notes: notes,
+                        key: `options-${index}-note`,
+                        className: "unit__option-note",
+                        language,
+                      })}
+                      {magic?.types && magic.types.length && active ? (
+                        <>
+                          <hr className="unit__hr" />
+                          <ListItem
+                            to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+                            className="editor__list unit__link unit__command-list"
+                            active={location.pathname.includes(
+                              `magic/${index}`
+                            )}
+                            disabled={detachmentActive}
+                          >
+                            <div className="editor__list-inner">
+                              <b>
+                                {magic.types
+                                  .map(
+                                    (itemType) =>
+                                      nameMap[itemType][`name_${language}`] ||
+                                      nameMap[itemType].name_en
+                                  )
+                                  .join(", ")}
+                              </b>
+                              <i className="checkbox__points">
+                                <span
+                                  className={classNames(
+                                    commandMagicPoints > commandMaxPoints &&
+                                      commandMaxPoints > 0 &&
+                                      "editor__error"
+                                  )}
+                                >
+                                  {commandMagicPoints}
+                                </span>{" "}
+                                {magic.maxPoints > 0 && (
+                                  <>{` / ${commandMaxPoints}`}</>
+                                )}{" "}
+                                <FormattedMessage id="app.points" />
+                              </i>
+                              {commandMagicPoints > commandMaxPoints &&
+                                commandMaxPoints > 0 && (
+                                  <Icon
+                                    symbol="error"
+                                    color="red"
+                                    className="unit__magic-icon"
+                                  />
                                 )}
-                              >
-                                {commandMagicPoints}
-                              </span>{" "}
-                              {magic.maxPoints > 0 && (
-                                <>{` / ${commandMaxPoints}`}</>
-                              )}{" "}
-                              <FormattedMessage id="app.points" />
-                            </i>
-                            {commandMagicPoints > commandMaxPoints &&
-                              commandMaxPoints > 0 && (
-                                <Icon
-                                  symbol="error"
-                                  color="red"
-                                  className="unit__magic-icon"
-                                />
-                              )}
-                          </div>
-                          {magic?.selected && (
-                            <p>
-                              {magic.selected
-                                .map((selectedItem) =>
-                                  selectedItem.amount > 1
-                                    ? `${selectedItem.amount}x ` +
-                                      (selectedItem[`name_${language}`] ||
-                                        selectedItem.name_en)
-                                    : selectedItem[`name_${language}`] ||
-                                      selectedItem.name_en
-                                )
-                                .join(", ")
-                                .replace(/\*/g, "")}
-                            </p>
-                          )}
-                        </ListItem>
-                      </>
-                    ) : null}
-                    {options?.length > 0 && active && (
-                      <Fragment>
-                        {options.map((option, optionIndex) => {
-                          const exclusiveCheckedOption = options.find(
-                            (exclusiveOption) =>
-                              exclusiveOption.exclusive &&
-                              exclusiveOption.active
-                          );
-
-                          return (
-                            <div
-                              className="checkbox checkbox--conditional"
-                              key={option.name_en}
-                            >
-                              <input
-                                type="checkbox"
-                                id={`command-${id}-option-${optionIndex}`}
-                                value={`${id}-${optionIndex}`}
-                                onChange={() =>
-                                  handleCommandChange(id, optionIndex)
-                                }
-                                checked={Boolean(option.active)}
-                                className="checkbox__input"
-                                disabled={
-                                  (exclusiveCheckedOption &&
-                                    option.exclusive &&
-                                    !option.active) ||
-                                  detachmentActive
-                                }
-                              />
-                              <label
-                                htmlFor={`command-${id}-option-${optionIndex}`}
-                                className="checkbox__label"
-                              >
-                                <span className="unit__label-text">
-                                  <RulesWithIcon textObject={option} />
-                                </span>
-                                <i className="checkbox__points">
-                                  {getPointsText({ points: option.points })}
-                                </i>
-                              </label>
                             </div>
-                          );
-                        })}
-                        <hr className="unit__command-option-hr" />
-                      </Fragment>
-                    )}
-                  </Fragment>
-                );
-              }
-            )}
+                            {magic?.selected && (
+                              <p>
+                                {magic.selected
+                                  .map((selectedItem) =>
+                                    selectedItem.amount > 1
+                                      ? `${selectedItem.amount}x ` +
+                                        (selectedItem[`name_${language}`] ||
+                                          selectedItem.name_en)
+                                      : selectedItem[`name_${language}`] ||
+                                        selectedItem.name_en
+                                  )
+                                  .join(", ")
+                                  .replace(/\*/g, "")}
+                              </p>
+                            )}
+                          </ListItem>
+                        </>
+                      ) : null}
+                      {options?.length > 0 && active && (
+                        <Fragment>
+                          {options.map((option, optionIndex) => {
+                            const exclusiveCheckedOption = options.find(
+                              (exclusiveOption) =>
+                                exclusiveOption.exclusive &&
+                                exclusiveOption.active
+                            );
+
+                            return (
+                              <div
+                                className="checkbox checkbox--conditional"
+                                key={option.name_en}
+                              >
+                                <input
+                                  type="checkbox"
+                                  id={`command-${id}-option-${optionIndex}`}
+                                  value={`${id}-${optionIndex}`}
+                                  onChange={() =>
+                                    handleCommandChange(id, optionIndex)
+                                  }
+                                  checked={Boolean(option.active)}
+                                  className="checkbox__input"
+                                  disabled={
+                                    (exclusiveCheckedOption &&
+                                      option.exclusive &&
+                                      !option.active) ||
+                                    detachmentActive
+                                  }
+                                />
+                                <label
+                                  htmlFor={`command-${id}-option-${optionIndex}`}
+                                  className="checkbox__label"
+                                >
+                                  <span className="unit__label-text">
+                                    <RulesWithIcon textObject={option} />
+                                  </span>
+                                  <i className="checkbox__points">
+                                    {getPointsText({ points: option.points })}
+                                  </i>
+                                </label>
+                              </div>
+                            );
+                          })}
+                          <hr className="unit__command-option-hr" />
+                        </Fragment>
+                      )}
+                    </Fragment>
+                  );
+                }
+              )}
           </>
         )}
         {unit.equipment && unit.equipment.length > 0 && (
@@ -773,6 +796,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.equipment" />
             </h2>
             {unit.equipment
+              .filter(
+                (unitEquipment) =>
+                  !unitEquipment.armyComposition ||
+                  unitEquipment.armyComposition.includes(listArmyComposition)
+              )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )
@@ -783,22 +811,23 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   id,
                   active = false,
                   notes,
+                  group,
                   ...equipment
                 }) => (
                   <Fragment key={id}>
-                    <div className="radio">
+                    <div className={group ? "checkbox" : "radio"}>
                       <input
-                        type="radio"
+                        type={group ? "checkbox" : "radio"}
                         id={`equipment-${id}`}
                         name="equipment"
-                        value={id}
-                        onChange={() => handleEquipmentChange(id)}
+                        value={group || id}
+                        onChange={() => handleEquipmentChange({ id, group })}
                         checked={active}
-                        className="radio__input"
+                        className={group ? "checkbox__input" : "radio__input"}
                       />
                       <label
                         htmlFor={`equipment-${id}`}
-                        className="radio__label"
+                        className={group ? "checkbox__label" : "radio__label"}
                       >
                         <span className="unit__label-text">
                           <RulesWithIcon textObject={equipment} />
@@ -889,7 +918,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitOption) =>
                   !unitOption.armyComposition ||
-                  unitOption.armyComposition.includes(list.armyComposition)
+                  unitOption.armyComposition.includes(listArmyComposition)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
@@ -907,6 +936,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   exclusive = false,
                   options,
+                  alwaysActive,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
@@ -915,6 +945,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   );
 
                   if (!stackable) {
+                    const isDisabled =
+                      (exclusiveUnitCheckedOption && exclusive && !active) ||
+                      alwaysActive;
                     return (
                       <Fragment key={id}>
                         <div className="checkbox">
@@ -922,12 +955,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             type="checkbox"
                             id={`options-${id}`}
                             value={id}
-                            onChange={() => handleOptionsChange(id)}
-                            checked={active}
-                            className="checkbox__input"
-                            disabled={
-                              exclusiveUnitCheckedOption && exclusive && !active
+                            onChange={() =>
+                              !alwaysActive && handleOptionsChange(id)
                             }
+                            checked={alwaysActive || active}
+                            className="checkbox__input"
+                            disabled={isDisabled}
                           />
                           <label
                             htmlFor={`options-${id}`}
@@ -946,6 +979,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           key: `options-${id}-note`,
                           className: "unit__option-note",
                           language,
+                          disabled: isDisabled,
                         })}
                         {options?.length > 0 && active && (
                           <>
@@ -954,7 +988,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 (option) =>
                                   !option.armyComposition ||
                                   option.armyComposition.includes(
-                                    list.armyComposition
+                                    listArmyComposition
                                   )
                               )
                               .map((option, optionIndex) => {
@@ -977,9 +1011,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         checked={Boolean(option.active)}
                                         className="checkbox__input"
                                         disabled={
-                                          exclusiveCheckedOption &&
-                                          option.exclusive &&
-                                          !option.active
+                                          (exclusiveCheckedOption &&
+                                            option.exclusive &&
+                                            !option.active) ||
+                                          option.alwaysActive
                                         }
                                       />
                                       <label
@@ -1058,6 +1093,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     <div className="list__inner unit__detachments-header">
                       <b className="unit__magic-headline">
                         {detachment[`name_${language}`] || name_en}
+                        <RuleWithIcon
+                          name={name_en}
+                          isDark
+                          className="unit__rules"
+                        />
                       </b>
                       <Button
                         onClick={() =>
@@ -1124,7 +1164,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               />
                               <span>
                                 <b>
-                                  {detachment[`name_${language}`] || name_en}
+                                  {detachment[`name_${language}`] || name_en}{" "}
                                 </b>
                                 <i>{getPointsText({ points })}</i>
                               </span>
@@ -1192,39 +1232,57 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     <h3 className="unit__subline">
                                       <FormattedMessage id="unit.armor" />
                                     </h3>
-                                    {detachmentArmor.map((armor) => (
-                                      <div className="radio" key={armor.id}>
-                                        <input
-                                          type="radio"
-                                          id={`armor-${id}-${armor.id}`}
-                                          name={`armor-${id}`}
-                                          value={armor.id}
-                                          onChange={() =>
-                                            handleDetachmentEquipmentChange({
-                                              detachmentId: id,
-                                              equipmentId: armor.id,
-                                              category: "armor",
-                                            })
-                                          }
-                                          checked={armor.active}
-                                          className="radio__input"
-                                        />
-                                        <label
-                                          htmlFor={`armor-${id}-${armor.id}`}
-                                          className="radio__label"
-                                        >
-                                          <span className="unit__label-text">
-                                            <RulesWithIcon textObject={armor} />
-                                          </span>
-                                          <i className="checkbox__points">
-                                            {getPointsText({
-                                              points: armor.points,
-                                              perModel: armor.perModel,
-                                            })}
-                                          </i>
-                                        </label>
-                                      </div>
-                                    ))}
+                                    {detachmentArmor.map((armor) => {
+                                      const isRadio =
+                                        armor.length > 1 || armor.activeDefault;
+
+                                      return (
+                                        <div className="radio" key={armor.id}>
+                                          <input
+                                            type={
+                                              isRadio ? "radio" : "checkbox"
+                                            }
+                                            id={`armor-${id}-${armor.id}`}
+                                            name={`armor-${id}`}
+                                            value={armor.id}
+                                            onChange={() =>
+                                              handleDetachmentEquipmentChange({
+                                                detachmentId: id,
+                                                equipmentId: armor.id,
+                                                category: "armor",
+                                                isCheckbox: !isRadio,
+                                              })
+                                            }
+                                            checked={armor.active}
+                                            className={
+                                              isRadio
+                                                ? "radio__input"
+                                                : "checkbox__input"
+                                            }
+                                          />
+                                          <label
+                                            htmlFor={`armor-${id}-${armor.id}`}
+                                            className={
+                                              isRadio
+                                                ? "radio__label"
+                                                : "checkbox__label"
+                                            }
+                                          >
+                                            <span className="unit__label-text">
+                                              <RulesWithIcon
+                                                textObject={armor}
+                                              />
+                                            </span>
+                                            <i className="checkbox__points">
+                                              {getPointsText({
+                                                points: armor.points,
+                                                perModel: armor.perModel,
+                                              })}
+                                            </i>
+                                          </label>
+                                        </div>
+                                      );
+                                    })}
                                   </>
                                 )}
                               {detachmentOptions &&
@@ -1287,7 +1345,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 ({ armyComposition }) =>
                   !armyComposition ||
-                  armyComposition.includes(list.armyComposition)
+                  armyComposition.includes(listArmyComposition)
+              )
+              .filter(({ requiredMagicItem }) =>
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )
               .map(
                 ({ points, id, active = false, options, notes, ...mount }) => (
@@ -1324,7 +1385,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             (option) =>
                               !option.armyComposition ||
                               option.armyComposition.includes(
-                                list.armyComposition
+                                listArmyComposition
                               )
                           )
                           .map((option, optionIndex) => {
@@ -1333,6 +1394,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 exclusiveOption.exclusive &&
                                 exclusiveOption.active
                             );
+                            const isDisabled =
+                              (exclusiveCheckedOption &&
+                                option.exclusive &&
+                                !option.active) ||
+                              detachmentActive;
 
                             return (
                               <Fragment key={option.name_en}>
@@ -1346,12 +1412,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     }
                                     checked={Boolean(option.active)}
                                     className="checkbox__input"
-                                    disabled={
-                                      (exclusiveCheckedOption &&
-                                        option.exclusive &&
-                                        !option.active) ||
-                                      detachmentActive
-                                    }
+                                    disabled={isDisabled}
                                   />
                                   <label
                                     htmlFor={`mount-${id}-option-${optionIndex}`}
@@ -1371,6 +1432,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   className:
                                     "unit__option-note unit__option-note--conditionnal",
                                   language,
+                                  disabled: isDisabled,
                                 })}
                                 {optionIndex === options.length - 1 && (
                                   <hr className="unit__command-option-hr" />
@@ -1394,7 +1456,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter((lore, index) => {
                 if (
                   lore === "troll-magic" &&
-                  list.armyComposition !== "troll-horde" &&
+                  listArmyComposition !== "troll-horde" &&
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
@@ -1442,8 +1504,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               });
               const maxPoints =
                 (item.armyComposition &&
-                  item.armyComposition[list?.armyComposition || list.army]
-                    ?.maxPoints) ||
+                  item.armyComposition[listArmyComposition]?.maxPoints) ||
                 item.maxPoints;
 
               return (

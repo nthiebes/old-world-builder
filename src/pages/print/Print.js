@@ -39,6 +39,7 @@ export const Print = () => {
     );
   }
 
+  const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -139,13 +140,18 @@ export const Print = () => {
                 {getUnitName({ unit, language })}
                 {!isShowList && (
                   <span className="print__points">
-                    [{getUnitPoints(unit)} <FormattedMessage id="app.points" />]
+                    [
+                    {getUnitPoints(unit, {
+                      armyComposition,
+                    })}{" "}
+                    <FormattedMessage id="app.points" />]
                   </span>
                 )}
               </h3>
               {getAllOptions(unit, {
                 noMagic: isShowList,
                 pageNumbers: showPageNumbers,
+                armyComposition,
               })}
               {showSpecialRules && unit.specialRules ? (
                 <p className="print__special-rules">

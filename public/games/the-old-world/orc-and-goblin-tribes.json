@@ -169,7 +169,6 @@
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
-          "armyComposition": ["nomadic-waaagh"],
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
@@ -398,7 +397,6 @@
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
-          "armyComposition": ["nomadic-waaagh"],
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
@@ -1208,6 +1206,12 @@
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
+            },
+            {
+              "name_en": "Standard bearer",
+              "name_de": "Standard bearer",
+              "name_fr": "Porte-étendard",
+              "points": 5
             }
           ]
         }
@@ -1358,6 +1362,12 @@
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
+            },
+            {
+              "name_en": "Standard bearer",
+              "name_de": "Standard bearer",
+              "name_fr": "Porte-étendard",
+              "points": 5
             }
           ]
         }
@@ -1452,6 +1462,12 @@
               "name_en": "Third Giant Wolf",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
+              "points": 5
+            },
+            {
+              "name_en": "Standard bearer",
+              "name_de": "Standard bearer",
+              "name_fr": "Porte-étendard",
               "points": 5
             }
           ]
@@ -1565,6 +1581,12 @@
               "name_en": "Third Giant Wolf",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
+              "points": 5
+            },
+            {
+              "name_en": "Standard bearer",
+              "name_de": "Standard bearer",
+              "name_fr": "Porte-étendard",
               "points": 5
             }
           ]
@@ -3140,6 +3162,16 @@
           "armyComposition": ["nomadic-waaagh"]
         },
         {
+          "name_en": "Ambushers",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": ["nomadic-waaagh"],
+          "notes": {
+            "name_en": "0-1 Goblin Wold Rider Mob if Kiknik is in the army"
+          }
+        },
+        {
           "name_en": "Close Order, Horde",
           "name_fr": "Ordre Serré, Horde",
           "points": 0,
@@ -4181,13 +4213,22 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Bolt thrower, Hand weapons",
+          "name_it": "Balista, Hand weapons",
+          "name_de": "Speerschleuder, Handwaffen",
+          "name_fr": "Baliste, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
-          "name_en": "Orc Bully",
-          "name_de": "Orc Bully",
-          "name_fr": "Brute Orque",
+          "name_en": "Orc Bully, Whip",
+          "name_de": "Orc Bully, Whip",
+          "name_fr": "Brute Orque, Whip",
           "points": 10
         }
       ],
@@ -4259,13 +4300,21 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Stone thrower, Hand weapons",
+          "name_de": "Steinschleuder, Handwaffen",
+          "name_fr": "Catapulte, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
-          "name_en": "Orc Bully",
-          "name_de": "Orc Bully",
-          "name_fr": "Brute Orque",
+          "name_en": "Orc Bully, Whip",
+          "name_de": "Orc Bully, Whip",
+          "name_fr": "Brute Orque, Whip",
           "points": 10
         }
       ],
@@ -4295,13 +4344,21 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Stone thrower, Hand weapons",
+          "name_de": "Steinschleuder, Handwaffen",
+          "name_fr": "Catapulte, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
-          "name_en": "Orc Bully",
-          "name_de": "Orc Bully",
-          "name_fr": "Brute Orque",
+          "name_en": "Orc Bully, Whip",
+          "name_de": "Orc Bully, Whip",
+          "name_fr": "Brute Orque, Whip",
           "points": 10
         }
       ],

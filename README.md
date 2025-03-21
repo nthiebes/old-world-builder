@@ -12,6 +12,8 @@ More details on the [datasets page](https://old-world-builder.com/datasets) or o
 
 [Datasets JSON documentation](https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md) (outdated)
 
+If you'd like to work on a feature let's have a chat first in one of the open issues (or create a new one).
+
 ## Feedback
 
 [Discord Server](https://discord.gg/87nUyjUxTU)

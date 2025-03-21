@@ -10,7 +10,10 @@ export const updateLocalList = (updatedList) => {
       }
     });
 
-  localLists && localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+  try {
+    localLists &&
+      localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+  } catch (error) {}
 };
 
 export const removeFromLocalList = (listId) => {

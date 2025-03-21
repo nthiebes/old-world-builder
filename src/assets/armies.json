@@ -10,10 +10,40 @@
         "name_es": "Empire of Man",
         "name_fr": "Empire de l'Homme",
         "items": ["general", "empire-of-man"],
+        "armyComposition": [
+          "city-state-of-nuln",
+          "knightly-order-panther",
+          "knightly-order-white-wolf",
+          "knightly-order-blazing-sun",
+          "knightly-order-morr",
+          "knightly-order-fiery-heart"
+        ],
         "allies": [
-          { "army": "dwarfen-mountain-holds" },
-          { "army": "kingdom-of-bretonnia" },
-          { "army": "wood-elf-realms" }
+          {
+            "army": "dwarfen-mountain-holds"
+          },
+          {
+            "army": "kingdom-of-bretonnia"
+          },
+          { "army": "wood-elf-realms" },
+          { "army": "empire-of-man", "armyComposition": "city-state-of-nuln" },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-panther"
+          },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-white-wolf"
+          },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-blazing-sun"
+          },
+          { "army": "empire-of-man", "armyComposition": "knightly-order-morr" },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-fiery-heart"
+          }
         ],
         "mercenaries": {
           "empire-of-man": [
@@ -28,6 +58,33 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
+            }
+          ],
+          "city-state-of-nuln": [
+            {
+              "army": "dwarfen-mountain-holds",
+              "units": [
+                "doomseeker-merc",
+                "imperial-dwarf-mercenaries",
+                "prince-ulther's-dragon-company"
+              ]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
+            }
+          ],
+          "knightly-order-panther": [
+            {
+              "army": "empire-of-man",
+              "units": [
+                "empire-knights-white-wolf",
+                "inner-circle-knights-white-wolf"
+              ]
             }
           ]
         }
@@ -105,6 +162,10 @@
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            },
+            {
+              "army": "empire-of-man",
+              "units": ["imperial-ogres"]
             }
           ],
           "royal-clan": [
@@ -314,13 +375,34 @@
         "name_es": "High Elf Realms",
         "name_fr": "Royaumes Hauts Elfes",
         "items": ["general", "high-elf-realms", "elven-honours"],
+        "armyComposition": ["the-chracian-warhost", "sea-guard-garrison"],
         "allies": [
           { "army": "empire-of-man" },
           { "army": "kingdom-of-bretonnia" },
-          { "army": "wood-elf-realms" }
+          { "army": "wood-elf-realms" },
+          {
+            "army": "high-elf-realms",
+            "armyComposition": "the-chracian-warhost"
+          },
+          {
+            "army": "high-elf-realms",
+            "armyComposition": "sea-guard-garrison"
+          }
         ],
         "mercenaries": {
           "high-elf-realms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "the-chracian-warhost": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "sea-guard-garrison": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]

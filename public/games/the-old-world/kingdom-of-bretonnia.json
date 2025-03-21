@@ -25,9 +25,9 @@
           "equippedDefault": true
         },
         {
+          "name_en": "Morning star",
           "name_de": "Morgenstern",
-          "name_en": "Morning Star",
-          "name_fr": "Morgenstern",
+          "name_fr": "Morning star",
           "points": 3
         },
         {
@@ -248,7 +248,22 @@
           "name_en": "The Grail Vow",
           "name_de": "Gralsgelübde",
           "name_fr": "Le Vœu du Graal",
-          "points": 20
+          "points": 20,
+          "armyComposition": ["kingdom-of-bretonnia", "errantry-crusades"]
+        },
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
         }
       ],
       "mounts": [
@@ -311,7 +326,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Rallying Cry, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Rallying Cry, The Knight's Vow",
         "name_de": "Segen der Herrin, Sammelruf, Rittertugend",
         "name_fr": "Bénédiction de la Dame, Cri de Ralliement, le Vœu du Chevalier"
       },
@@ -472,9 +487,9 @@
           "equippedDefault": true
         },
         {
+          "name_en": "Morning star",
           "name_de": "Morgenstern",
-          "name_en": "Morning Star",
-          "name_fr": "Morgenstern",
+          "name_fr": "Morning star",
           "points": 3
         },
         {
@@ -522,7 +537,22 @@
           "name_en": "The Grail Vow",
           "name_de": "Gralsgelübde",
           "name_fr": "Le Vœu du Graal",
-          "points": 20
+          "points": 20,
+          "armyComposition": ["kingdom-of-bretonnia", "errantry-crusades"]
+        },
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
         }
       ],
       "mounts": [
@@ -571,7 +601,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Rallying Cry, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Rallying Cry, The Knight's Vow",
         "name_de": "Segen der Herrin, Sammelruf, Rittergelübde",
         "name_fr": "Bénédiction de la Dame, Cri de Ralliement, le Vœu du Chevalier"
       }
@@ -938,7 +968,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blessings of the Lady, Rallying Cry, The Wyrm Slayer, The Exile's Vow",
-        "name_de": "Der Wyrmtöter, Das Exilantengelübde, Sammelruf, Segen der Herrin",
+        "name_de": "Segen der Herrin, Sammelruf, Der Wyrmtöter, Das Exilantengelübde",
         "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Sauroctone, Le Vœu de l'Exilé"
       }
     },
@@ -1274,10 +1304,25 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
+        }
+      ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Close Order, Furious Charge, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Close Order, Furious Charge, The Knight's Vow",
         "name_de": "Segen der Herrin, Geschlossene Ränge, Rasender Angriff, Rittergelübde",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Charge Dévastatrice, le Vœu du Chevalier"
       }
@@ -1361,10 +1406,25 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
+        }
+      ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
         "name_de": "Segen der Herrin, Edle Schlachtrosse, Erster Angriff, Gegenangriff, Geschlossene Ränge, Lanzenformation, Rittergelübde, Schnelle Bewegung",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Vœu du Chevalier"
       }
@@ -1450,10 +1510,25 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
+        }
+      ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Impetuous, Lance Formation, Swiftstride, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Impetuous, Lance Formation, Swiftstride, The Knight's Vow",
         "name_de": "Segen der Herrin, Edle Schlachtrosse, Erster Angriff, Geschlossene Ränge, Lanzenformation, Rittergelübde, Schnelle Bewegung, Ungestüm",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Impétueux, Formation en Fer de Lance, Rapide, le Vœu du Chevalier"
       }
@@ -1633,7 +1708,7 @@
       "name_fr": "Chevaliers de la Quête",
       "id": "questing-knights",
       "points": 26,
-      "minimum": 5,
+      "minimum": 3,
       "maximum": 0,
       "command": [
         {
@@ -1764,10 +1839,25 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "The Exile's Vow (replaces the Knight's Vow)",
+          "name_de": "Das Exilantengelübde",
+          "name_fr": "Le Vœu de l'Exilé",
+          "points": 0,
+          "armyComposition": ["bretonnian-exiles"]
+        },
+        {
+          "name_en": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_de": "The Crusader's Vow (replaces the Knight's Vow)",
+          "name_fr": "The Crusader's Vow (replaces the Knight's Vow)",
+          "points": 0,
+          "armyComposition": ["errantry-crusades"]
+        }
+      ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Lance Formation, Skirmishers, Swiftstride, the Knight's Vow",
+        "name_en": "Blessings of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Lance Formation, Skirmishers, Swiftstride, The Knight's Vow",
         "name_de": "Segen der Herrin, Aufgefächerte Formation, Erster Angriff, Gegenangriff, Fliegen (10), Lanzenformation, Plänkler, Rasender Angriff (nur Pegasusritter und Erster Ritter), Rittergelübde, Schnelle Bewegung",
         "name_fr": "Bénédiction de la Dame, Contre-charge, Formation Éparse, Première Charge, Vol (10), Charge Dévastatrice (Chevaliers Pégases & Champion Pégase uniquement), Formation en Fer de Lance, Tirailleurs, Rapide, le Vœu du Chevalier"
       }

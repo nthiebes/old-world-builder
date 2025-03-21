@@ -486,18 +486,58 @@ export const nameMap = {
     name_fr: "Grand Nom",
   },
   "disciplines-old-ones": {
-    name_de: "Disciplines Of The Old Ones",
-    name_en: "Disciplines Of The Old Ones",
+    name_de: "Disciplines of the Old Ones",
+    name_en: "Disciplines of the Old Ones",
     name_fr: "Disciplines des Anciens",
   },
   "discipline-old-ones": {
-    name_de: "Discipline Of The Old Ones",
-    name_en: "Discipline Of The Old Ones",
+    name_de: "Discipline of the Old Ones",
+    name_en: "Discipline of the Old Ones",
     name_fr: "Discipline des Anciens",
   },
   lizardmen: {
     name_de: "Lizardmen",
     name_en: "Lizardmen",
     name_fr: "Hommes-Lézards",
+  },
+  "city-state-of-nuln": {
+    name_de: "City-State of Nuln",
+    name_en: "City-State of Nuln",
+    name_fr: "City-State of Nuln",
+  },
+  "knightly-order-panther": {
+    name_de: "Order of the Knights Panther",
+    name_en: "Order of the Knights Panther",
+    name_fr: "Order of the Knights Panther",
+  },
+  "knightly-order-white-wolf": {
+    name_de: "Order of the White Wolf",
+    name_en: "Order of the White Wolf",
+    name_fr: "Order of the White Wolf",
+  },
+  "knightly-order-blazing-sun": {
+    name_de: "Order of the Blazing Sun",
+    name_en: "Order of the Blazing Sun",
+    name_fr: "Order of the Blazing Sun",
+  },
+  "knightly-order-morr": {
+    name_de: "Order of the Knights of Morr",
+    name_en: "Order of the Knights of Morr",
+    name_fr: "Order of the Knights of Morr",
+  },
+  "knightly-order-fiery-heart": {
+    name_de: "Order of the Fiery Heart",
+    name_en: "Order of the Fiery Heart",
+    name_fr: "Order of the Fiery Heart",
+  },
+  "the-chracian-warhost": {
+    name_de: "The Chracian Warhost",
+    name_en: "The Chracian Warhost",
+    name_fr: "The Chracian Warhost",
+  },
+  "sea-guard-garrison": {
+    name_de: "Sea Guard Garrison",
+    name_en: "Sea Guard Garrison",
+    name_fr: "Sea Guard Garrison",
   },
 };

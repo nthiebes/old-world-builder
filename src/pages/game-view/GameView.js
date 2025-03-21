@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -24,6 +24,7 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { editUnit } from "../../state/lists";
+import { updateSetting } from "../../state/settings";
 import gameSystems from "../../assets/armies.json";
 
 import "./GameView.css";
@@ -33,19 +34,22 @@ export const GameView = () => {
   const { language } = useLanguage();
   const intl = useIntl();
   const dispatch = useDispatch();
-  const [showPoints, setShowPoints] = useState(true);
-  const [showSpecialRules, setShowSpecialRules] = useState(true);
+  const settings = useSelector((state) => state.settings);
+  const {
+    showPoints,
+    showSpecialRules,
+    showStats,
+    showPageNumbers,
+    showVictoryPoints,
+    showCustomNotes,
+    showGeneratedSpells,
+  } = settings;
   const [banners, setBanners] = useState(0);
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
   const [BSBDead, setBSBDead] = useState(false);
   const [detachmentsDead, setDetachmentsDead] = useState({});
-  const [showStats, setShowStats] = useState(true);
-  const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [victoryPoints, setVictoryPoints] = useState({});
-  const [showVictoryPoints, setShowVictoryPoints] = useState(true);
-  const [showCustomNotes, setShowCustomNotes] = useState(false);
-  const [showGeneratedSpells, setShowGeneratedSpells] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -58,6 +62,9 @@ export const GameView = () => {
         customNote: value,
       })
     );
+  };
+  const updateLocalSettings = (newSettings) => {
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
 
   if (!list) {
@@ -74,6 +81,7 @@ export const GameView = () => {
     );
   }
 
+  const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -138,7 +146,13 @@ export const GameView = () => {
       id: "specialRules",
       checked: showSpecialRules,
       callback: () => {
-        setShowSpecialRules(!showSpecialRules);
+        updateLocalSettings({
+          ...settings,
+          showSpecialRules: !showSpecialRules,
+        });
+        dispatch(
+          updateSetting({ key: "showSpecialRules", value: !showSpecialRules })
+        );
       },
     },
     {
@@ -148,7 +162,11 @@ export const GameView = () => {
       id: "stats",
       checked: showStats,
       callback: () => {
-        setShowStats(!showStats);
+        updateLocalSettings({
+          ...settings,
+          showStats: !showStats,
+        });
+        dispatch(updateSetting({ key: "showStats", value: !showStats }));
       },
     },
     {
@@ -158,7 +176,11 @@ export const GameView = () => {
       id: "points",
       checked: showPoints,
       callback: () => {
-        setShowPoints(!showPoints);
+        updateLocalSettings({
+          ...settings,
+          showPoints: !showPoints,
+        });
+        dispatch(updateSetting({ key: "showPoints", value: !showPoints }));
       },
     },
     {
@@ -168,7 +190,13 @@ export const GameView = () => {
       id: "pages",
       checked: showPageNumbers,
       callback: () => {
-        setShowPageNumbers(!showPageNumbers);
+        updateLocalSettings({
+          ...settings,
+          showPageNumbers: !showPageNumbers,
+        });
+        dispatch(
+          updateSetting({ key: "showPageNumbers", value: !showPageNumbers })
+        );
       },
     },
     {
@@ -178,7 +206,13 @@ export const GameView = () => {
       id: "customNotes",
       checked: showCustomNotes,
       callback: () => {
-        setShowCustomNotes(!showCustomNotes);
+        updateLocalSettings({
+          ...settings,
+          showCustomNotes: !showCustomNotes,
+        });
+        dispatch(
+          updateSetting({ key: "showCustomNotes", value: !showCustomNotes })
+        );
       },
     },
     {
@@ -188,7 +222,16 @@ export const GameView = () => {
       id: "generatedSpells",
       checked: showGeneratedSpells,
       callback: () => {
-        setShowGeneratedSpells(!showGeneratedSpells);
+        updateLocalSettings({
+          ...settings,
+          showGeneratedSpells: !showGeneratedSpells,
+        });
+        dispatch(
+          updateSetting({
+            key: "showGeneratedSpells",
+            value: !showGeneratedSpells,
+          })
+        );
       },
     },
     {
@@ -198,7 +241,13 @@ export const GameView = () => {
       id: "victory",
       checked: showVictoryPoints,
       callback: () => {
-        setShowVictoryPoints(!showVictoryPoints);
+        updateLocalSettings({
+          ...settings,
+          showVictoryPoints: !showVictoryPoints,
+        });
+        dispatch(
+          updateSetting({ key: "showVictoryPoints", value: !showVictoryPoints })
+        );
       },
     },
   ];
@@ -229,7 +278,10 @@ export const GameView = () => {
                     />
                     {showPoints && (
                       <span className="game-view__points">
-                        [{getUnitPoints(unit)}{" "}
+                        [
+                        {getUnitPoints(unit, {
+                          armyComposition,
+                        })}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
                     )}
@@ -241,9 +293,11 @@ export const GameView = () => {
                       name_en: getAllOptions(unit, {
                         language: "en",
                         removeFactionName: false,
+                        armyComposition,
                       }),
                       [`name_${language}`]: getAllOptions(unit, {
                         removeFactionName: false,
+                        armyComposition,
                       }),
                     }}
                   />
@@ -366,7 +420,10 @@ export const GameView = () => {
           ...unitPoints,
           dead: unitPoints.dead
             ? 0
-            : getUnitPoints(unit, { noDetachments: true }),
+            : getUnitPoints(unit, {
+                noDetachments: true,
+                armyComposition,
+              }),
           fleeing: 0,
           25: 0,
         };
@@ -384,7 +441,12 @@ export const GameView = () => {
           dead: 0,
           fleeing: unitPoints.fleeing
             ? 0
-            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 2),
+            : Math.round(
+                getUnitPoints(unit, {
+                  noDetachments: true,
+                  armyComposition,
+                }) / 2
+              ),
           25: 0,
         };
         if (isGeneral) {
@@ -402,7 +464,12 @@ export const GameView = () => {
           fleeing: 0,
           25: unitPoints["25"]
             ? 0
-            : Math.round(getUnitPoints(unit, { noDetachments: true }) / 4),
+            : Math.round(
+                getUnitPoints(unit, {
+                  noDetachments: true,
+                  armyComposition,
+                }) / 4
+              ),
         };
         break;
       }
@@ -414,10 +481,13 @@ export const GameView = () => {
               ...unitPoints.detachments,
               [detachment.id]:
                 deadDetachments *
-                getUnitPoints({
-                  ...detachment,
-                  strength: 1,
-                }),
+                getUnitPoints(
+                  {
+                    ...detachment,
+                    strength: 1,
+                  },
+                  { armyComposition }
+                ),
             },
           };
         });
