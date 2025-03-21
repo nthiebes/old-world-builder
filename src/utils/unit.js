@@ -5,6 +5,25 @@ import { rulesMap, synonyms } from "../components/rules-index";
 import loresOfMagicWithSpells from "../assets/lores-of-magic-with-spells.json";
 import { normalizeRuleName } from "./string";
 
+export const getUnitRuleData = (unitName) => {
+  const normalizedRuleName = normalizeRuleName(unitName);
+  const synonym = synonyms[normalizedRuleName];
+  return rulesMap[synonym || normalizedRuleName];
+}
+
+export const getUnitLeadership = (unitName) => {
+  const ruleData = getUnitRuleData(unitName);
+  return ruleData?.stats?.length ?
+    ruleData.stats.reduce(
+      (previousValue, statLine) => 
+        (parseInt(statLine.Ld) || 0) > previousValue 
+          ? parseInt(statLine.Ld)
+          : previousValue,
+      0
+    )
+    : 0;
+}
+
 export const getAllOptions = (
   {
     mounts,
@@ -267,21 +286,15 @@ export const getAllOptions = (
 };
 
 export const getPage = (name) => {
-  const normalizedName = normalizeRuleName(name);
-  const synonym = synonyms[normalizedName];
-  const page = rulesMap[synonym || normalizedName]?.page || "";
+  const page = getUnitRuleData(name).page || "";
 
   return page.replace(/,/g, "");
 };
 
 export const getStats = (unit) => {
-  const normalizedName = normalizeRuleName(unit.name_en);
-  const synonym = synonyms[normalizedName];
-  const stats = rulesMap[synonym || normalizedName]?.stats || [];
+  const stats = getUnitRuleData(unit.name_en).stats || [];
   const activeMount = unit.mounts.find((mount) => mount.active);
-  const normalizedMountName = normalizeRuleName(activeMount?.name_en || "");
-  const mountSynonym = synonyms[normalizedMountName];
-  const mountStats = rulesMap[mountSynonym || normalizedMountName]?.stats || [];
+  const mountStats = getUnitRuleData(activeMount?.name_en || "")?.stats || [];
   const detachments = unit.detachments || [];
   const detachmentStats = [];
 
