@@ -320,6 +320,11 @@ export const nameMap = {
     name_en: "Chaos Dwarfs",
     name_fr: "Nains du Chaos",
   },
+  "chaos-dwarfs-renegades": {
+    name_de: "Chaos Dwarfs Renegades",
+    name_en: "Chaos Dwarfs Renegades",
+    name_fr: "Chaos Dwarfs Renegades",
+  },
   "vampire-counts": {
     name_de: "Vampire Counts",
     name_en: "Vampire Counts",

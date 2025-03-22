@@ -519,12 +519,19 @@
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
+        "armyComposition": ["chaos-dwarfs-renegades"],
         "allies": [{ "army": "warriors-of-chaos" }],
         "mercenaries": {
           "chaos-dwarfs": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "chaos-dwarfs-renegades": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls", "bonegrinder-giant"]
             }
           ]
         }
