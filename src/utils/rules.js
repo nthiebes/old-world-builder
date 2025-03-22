@@ -2103,6 +2103,100 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "chaos-dwarfs-renegades": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["sorcerer-prophet", "infernal-castellan"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["black-orc-bigboss", "black-orc-warboss"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["black-orc-mob"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["infernal-ironsworn"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["infernal-castellan"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["iron-daemon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["deathshrieker-rocket-launcher", "magma-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["hobgoblin-bolt-thrower"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["bull-centaur-taur'ruk"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["chaos-giant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hobgoblin-wolf-raiders"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["hobgoblin-khan"],
+          perUnit: true,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["bonegrinder-giant"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    allies: { maxPercent: 25 },
+  },
   "daemons-of-chaos": {
     characters: {
       maxPercent: 50,

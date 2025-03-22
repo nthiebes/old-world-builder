@@ -361,6 +361,14 @@
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 3,
+          "perModel": true
         }
       ],
       "options": [
@@ -415,7 +423,32 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["chaos-dwarfs-renegades"]
+        },
+        {
+          "name_en": "Bale Taurus",
+          "name_de": "Bale Taurus",
+          "name_es": "Bale Taurus",
+          "name_fr": "Sombre Taurus",
+          "points": 160,
+          "armyComposition": ["chaos-dwarfs-renegades"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -504,6 +537,14 @@
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Full plate armour",
+          "points": 3,
+          "perModel": true
         }
       ],
       "options": [
@@ -558,7 +599,24 @@
           "maximum": 0
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["chaos-dwarfs-renegades"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -668,6 +726,17 @@
         "name_de": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
         "name_es": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
         "name_fr": "Arme Perforante (1), Peau Blindée (1), Armure Sombréclat, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3+1), Solitaire, Ruée, Obstiné, Rapide"
+      },
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 per 1000 points"
+          }
+        }
       },
       "notes": {
         "name_en": "0-1 per unit of Bull Centaur Renders",
@@ -1655,6 +1724,17 @@
         "name_es": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
         "name_fr": "Armure Sombréclat, Ordre Serré, Bien Entraînés, Armes Ensorcelées, Calme la Panique, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné, Vétérans"
       },
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "core",
+          "notes": {
+            "name_en": "If no Black Orcs taken, and your General is an Infernal Castellan , 0-1 unit of Infernal Ironsworn may be taken as a Core choice",
+            "name_de": "If no Black Orcs taken, and your General is an Infernal Castellan , 0-1 unit of Infernal Ironsworn may be taken as a Core choice",
+            "name_es": "If no Black Orcs taken, and your General is an Infernal Castellan , 0-1 unit of Infernal Ironsworn may be taken as a Core choice",
+            "name_fr": "If no Black Orcs taken, and your General is an Infernal Castellan , 0-1 unit of Infernal Ironsworn may be taken as a Core choice"
+          }
+        }
+      },
       "notes": {
         "name_en": "",
         "name_de": "",
@@ -1800,7 +1880,12 @@
           "name_fr": "Ba'hal",
           "points": 6,
           "magic": {
-            "types": ["weapon", "talisman", "armor", "enchanted-item"],
+            "types": [
+              "weapon",
+              "talisman",
+              "armor",
+              "enchanted-item"
+            ],
             "maxPoints": 25
           }
         },
@@ -1811,7 +1896,9 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [
+              "banner"
+            ],
             "maxPoints": 50
           }
         },
@@ -1998,11 +2085,25 @@
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
-      "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 war machine chosen per 1000 points",
+            "name_de": "0-1 war machine chosen per 1000 points",
+            "name_es": "0-1 war machine chosen per 1000 points",
+            "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 war machine chosen per 1000 points",
+            "name_de": "0-2 war machine chosen per 1000 points",
+            "name_es": "0-2 war machine chosen per 1000 points",
+            "name_fr": "0-2 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        }
       }
     },
     {
@@ -2066,11 +2167,25 @@
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
-      "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 war machine chosen per 1000 points",
+            "name_de": "0-1 war machine chosen per 1000 points",
+            "name_es": "0-1 war machine chosen per 1000 points",
+            "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 war machine chosen per 1000 points",
+            "name_de": "0-2 war machine chosen per 1000 points",
+            "name_es": "0-2 war machine chosen per 1000 points",
+            "name_fr": "0-2 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        }
       }
     },
     {
@@ -2304,11 +2419,19 @@
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
-      "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 war machine chosen per 1000 points",
+            "name_de": "0-1 war machine chosen per 1000 points",
+            "name_es": "0-1 war machine chosen per 1000 points",
+            "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2340,11 +2463,82 @@
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
       },
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 war machine chosen per 1000 points",
+            "name_de": "0-1 war machine chosen per 1000 points",
+            "name_es": "0-1 war machine chosen per 1000 points",
+            "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "name_de": "Chaos Giant",
+      "name_es": "Chaos Giant",
+      "name_fr": "Géant du Chaos",
+      "id": "chaos-giant",
+      "points": 200,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Giant's club",
+          "name_de": "Giant's club",
+          "points": 0,
+          "active": true,
+          "name_fr": "Massue de Géant"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (calloused hide)",
+          "name_de": "Light armour (calloused hide)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure légère (peau calleuse)"
+        },
+        {
+          "name_en": "Heavy armour (scaly skin)",
+          "name_de": "Heavy armour (scaly skin)",
+          "points": 10,
+          "name_fr": "Armure lourde (peau écailleuse)"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Regeneration (6+)",
+          "name_de": "Regeneration (6+)",
+          "points": 20,
+          "minimum": 0,
+          "maximum": 0,
+          "name_fr": "Régénération (6+)"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
+      },
       "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+        "name_en": "0-1 Chaos Giant per 1000 points",
+        "name_de": "0-1 Chaos Giant per 1000 points",
+        "name_es": "0-1 Chaos Giant per 1000 points",
+        "name_fr": "0-1 Géant du Chaos par tranche de 1000 points"
+      },
+      "armyComposition": {
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
       }
     }
   ],
