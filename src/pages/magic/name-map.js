@@ -330,6 +330,11 @@ export const nameMap = {
     name_en: "Vampire Counts",
     name_fr: "Comtes Vampires",
   },
+  "vampire-counts-renegades": {
+    name_de: "Vampire Counts Renegades",
+    name_en: "Vampire Counts Renegades",
+    name_fr: "Comtes Vampires Renegades",
+  },
   "vampiric-powers": {
     name_de: "Vampiric Powers",
     name_en: "Vampiric Powers",
@@ -344,6 +349,11 @@ export const nameMap = {
     name_de: "Dark Elves",
     name_en: "Dark Elves",
     name_fr: "Elfes Noirs",
+  },
+  "dark-elves-renegades": {
+    name_de: "Dark Elves Renegades",
+    name_en: "Dark Elves Renegades",
+    name_fr: "Elfes Noirs Renegades",
   },
   "skaven": {
     name_de: "Skaven",
