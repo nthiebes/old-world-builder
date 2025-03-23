@@ -430,7 +430,8 @@
               "units": ["badland-ogre-bulls"]
             }
           ]
-        }
+        },
+        "armyComposition": ["dark-elves-renegades"]
       },
       {
         "id": "skaven",
@@ -463,7 +464,8 @@
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": [{ "army": "tomb-kings-of-khemri" }]
+        "allies": [{ "army": "tomb-kings-of-khemri" }],
+        "armyComposition": ["vampire-counts-renegades"]
       },
       {
         "id": "daemons-of-chaos",
@@ -545,7 +547,15 @@
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
-        "allies": [{ "army": "warriors-of-chaos" }],
+        "allies": [
+          {
+            "army": "warriors-of-chaos"
+          },
+          {
+            "army": "daemons-of-chaos",
+            "armyComposition": "chaos-dwarfs-renegades"
+          }
+        ],
         "armyComposition": ["chaos-dwarfs-renegades"],
         "mercenaries": {
           "chaos-dwarfs": [
