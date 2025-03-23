@@ -576,6 +576,18 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+",
+            "name_fr": "1+"
+          }
+        },
+        "ogre-kingdoms-renegades": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Crusher (champion)",
@@ -587,15 +599,25 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer"
+          "options": [
+            {
+              "name_en": "Look-out Gnoblar",
+              "name_de": "Look-out Gnoblar",
+              "name_es": "Look-out Gnoblar",
+              "name_fr": "Gnoblar Longue-vue",
+              "name_it": "Look-out Gnoblar",
+              "points": 5
+            }
+          ]
         },
         {
           "name_en": "Bellower (musician)",
@@ -648,16 +670,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Look-out Gnoblar (Standard bearer)",
-          "name_de": "Look-out Gnoblar (Standard bearer)",
-          "name_es": "Look-out Gnoblar (Standard bearer)",
-          "name_fr": "Gnoblar Longue-vue (Porte-étendard)",
-          "name_it": "Look-out Gnoblar (Standard bearer)",
-          "points": 5
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -667,10 +680,6 @@
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre",
         "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
-      },
-      "notes": {
-        "name_en": "1+",
-        "name_fr": "1+"
       }
     },
     {
@@ -1685,7 +1694,7 @@
       "detachment": false,
       "armyComposition": {
         "ogre-kingdoms": {
-          "category": "special",
+          "category": "rare",
           "notes": {
             "name_en": "0-3 Gorgers",
             "name_de": "0-3 Gorgers",
@@ -1696,7 +1705,7 @@
           }
         },
         "ogre-kingdoms-renegades": {
-          "category": "special"
+          "category": "rare"
         }
       },
       "command": [],

@@ -787,12 +787,16 @@
           "name_en": "Shieldwall",
           "name_de": "Shieldwall",
           "name_es": "Shieldwall",
+          "name_it": "Shieldwall",
           "name_fr": "Mur de Boucliers",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_it": "Shieldwall"
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_de": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_es": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_fr": "0-1 unité par tranche de 1000 points peut avoir la règle spéciale Mur de Boucliers"
+          }
         }
       ],
       "mounts": [],
@@ -803,12 +807,90 @@
         "name_de": "",
         "name_es": "",
         "name_fr": "Ordre Serré, Sang Froid, Lames Obsidienne"
+      }
+    },
+    {
+      "name_en": "Temple Guard",
+      "name_de": "Temple Guard",
+      "name_es": "Temple Guard",
+      "name_fr": "Gardien du Temple",
+      "id": "temple-guard",
+      "points": 16,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "lizardmen-renegades": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Revered Guardian (champion)",
+          "name_de": "Revered Guardian (champion)",
+          "name_es": "Revered Guardian (champion)",
+          "name_fr": "Gardien Révéré (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberds, Shields",
+          "name_de": "Hand weapons, Halberds, Shields",
+          "name_es": "Hand weapons, Halberds, Shields",
+          "name_fr": "Armes de base, Hallebardes, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Peau écailleuse)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_fr": "Ordre Serré, Sang Froid, Gardiens, Lames Obsidienne, Mur de Boucliers, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_de": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_es": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_fr": "0-1 unité par tranche de 1000 points peut avoir la règle spéciale Mur de Boucliers"
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       }
     },
     {
@@ -961,8 +1043,7 @@
           "name_es": "Scouts",
           "name_fr": "Éclaireurs",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Vanguard",
@@ -970,8 +1051,7 @@
           "name_es": "Vanguard",
           "name_fr": "Avant-garde",
           "points": 5,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [],

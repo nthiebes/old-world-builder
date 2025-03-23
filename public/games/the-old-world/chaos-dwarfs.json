@@ -152,10 +152,10 @@
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 or Infernal Castellan per 1000 points",
-        "name_de": "0-1 or Infernal Castellan per 1000 points",
-        "name_es": "0-1 or Infernal Castellan per 1000 points",
-        "name_fr": "0-1 ou Châtelain Infernal par tranche de 1000 points"
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_fr": "0-1 Sorcerer-Prophet ou Châtelain Infernal par tranche de 1000 points"
       }
     },
     {
@@ -365,44 +365,48 @@
       ],
       "options": [
         {
-          "name_en": "Pistol (not Naptha bombs)",
-          "name_de": "Pistol (not Naptha bombs)",
-          "name_es": "Pistol (not Naptha bombs)",
-          "name_fr": "Pistolet (sans Bombes au Naptha)",
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "name_es": "Pistol",
+          "name_fr": "Pistolet",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Naptha bombs"
+          }
         },
         {
-          "name_en": "Naptha bombs (not Pistol)",
-          "name_de": "Naptha bombs (not Pistol)",
-          "name_es": "Naptha bombs (not Pistol)",
-          "name_fr": "Bombes au Naptha (sans Pistolet)",
+          "name_en": "Naptha bombs",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Bombes au Naptha",
           "points": 7,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Pistol"
+          }
         },
         {
-          "name_en": "Fireglaive (not Hailshot blunderbuss)",
-          "name_de": "Fireglaive (not Hailshot blunderbuss)",
-          "name_es": "Fireglaive (not Hailshot blunderbuss)",
-          "name_fr": "Glaive Ardent (sans Tromblon Grêle-de-Tir)",
+          "name_en": "Fireglaive",
+          "name_de": "Fireglaive",
+          "name_es": "Fireglaive",
+          "name_fr": "Glaive Ardent",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Hailshot blunderbuss"
+          }
         },
         {
-          "name_en": "Hailshot blunderbuss (not Fireglaive)",
-          "name_de": "Hailshot blunderbuss (not Fireglaive)",
-          "name_es": "Hailshot blunderbuss (not Fireglaive)",
-          "name_fr": "Tromblon Grêle-de-Tir (sans Glaive Ardent)",
+          "name_en": "Hailshot blunderbuss",
+          "name_de": "Hailshot blunderbuss",
+          "name_es": "Hailshot blunderbuss",
+          "name_fr": "Tromblon Grêle-de-Tir",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Fireglaive"
+          }
         },
         {
           "name_en": "Shield",
@@ -410,9 +414,7 @@
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -435,10 +437,10 @@
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Cri de Ralliement, Résolu, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_de": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_es": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_fr": "0-1 ou Sorcier-Prophète par tranche de 1000 points"
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_fr": "0-1 Infernal Castellan ou Sorcier-Prophète par tranche de 1000 points"
       }
     },
     {
@@ -761,10 +763,10 @@
           "perModel": true
         },
         {
-          "name_en": "Shortbow (instead Throwing weapons)",
-          "name_de": "Shortbow (instead Throwing weapons)",
-          "name_es": "Shortbow (instead Throwing weapons)",
-          "name_fr": "Arc court (à la place des Armes de lancer)",
+          "name_en": "Shortbow (replaces throwing weapons)",
+          "name_de": "Shortbow (replaces throwing weapons)",
+          "name_es": "Shortbow (replaces throwing weapons)",
+          "name_fr": "Arc court (replaces throwing weapons)",
           "points": 2,
           "perModel": true
         }
@@ -990,10 +992,10 @@
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
-        "name_en": "0-1 or Black Orc Bigboss",
-        "name_de": "0-1 or Black Orc Bigboss",
-        "name_es": "0-1 or Black Orc Bigboss",
-        "name_fr": "0-1 ou Grand Chef Orque Noir"
+        "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_fr": "0-1 Black Orc Warboss ou Grand Chef Orque Noir"
       }
     },
     {
@@ -1168,10 +1170,10 @@
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
-        "name_en": "0-1 or Black Orc Warboss",
-        "name_de": "0-1 or Black Orc Warboss",
-        "name_es": "0-1 or Black Orc Warboss",
-        "name_fr": "0-1 ou Chef de Guerre Orque Noir"
+        "name_en": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_de": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_es": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_fr": "0-1 Black Orc Bigboss ou Chef de Guerre Orque Noir"
       }
     }
   ],
@@ -1186,6 +1188,20 @@
       "minimum": 10,
       "maximum": 0,
       "minDetachmentSize": 5,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+",
+            "name_de": "1+",
+            "name_es": "1+",
+            "name_fr": "1+"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Deathmask (champion)",
@@ -1288,29 +1304,35 @@
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
-          "name_en": "Drilled (0-1 per 1000 points)",
-          "name_de": "Drilled (0-1 per 1000 points)",
-          "name_es": "Drilled (0-1 per 1000 points)",
-          "name_fr": "Bien Entraînés (0-1 par tranche de 1000 points)",
+          "name_en": "Drilled",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Blackshard Armour (0-1 per 1000 points)",
-          "name_de": "Blackshard Armour (0-1 per 1000 points)",
-          "name_es": "Blackshard Armour (0-1 per 1000 points)",
-          "name_fr": "Armure Sombréclat (0-1 par tranche de 1000 points)",
+          "name_en": "Blackshard Armour",
+          "name_de": "Blackshard Armour",
+          "name_es": "Blackshard Armour",
+          "name_fr": "Armure Sombréclat",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
           "name_en": "Detachment",
@@ -1328,12 +1350,6 @@
         "name_de": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
         "name_es": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné"
-      },
-      "notes": {
-        "name_en": "1+",
-        "name_de": "1+",
-        "name_es": "1+",
-        "name_fr": "1+"
       }
     },
     {
@@ -1539,10 +1555,10 @@
         "name_fr": "Kikoup', Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l'Impétuosité"
       },
       "notes": {
-        "name_en": "0-1",
-        "name_de": "0-1",
-        "name_es": "0-1",
-        "name_fr": "0-1"
+        "name_en": "0-1 Black Orc Mob",
+        "name_de": "0-1 Black Orc Mob",
+        "name_es": "0-1 Black Orc Mob",
+        "name_fr": "0-1 Black Orc Mob"
       }
     },
     {
@@ -1550,7 +1566,7 @@
       "name_de": "Infernal Ironsworn",
       "name_es": "Infernal Ironsworn",
       "name_fr": "Jurefers Infernaux",
-      "id": "infernal-ironsworn",
+      "id": "infernal-ironsworn-core",
       "points": 19,
       "minimum": 10,
       "maximum": 0,
