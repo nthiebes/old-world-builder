@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { Header, Main } from "../../components/page";
+import { Icon } from "../../components/icon";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../assets/armies.json";
@@ -206,6 +207,13 @@ export const NewList = ({ isMobile }) => {
                 selected={army}
                 spaceBottom
               />
+              {armyComposition.includes("renegade") && (
+                <p className="unit__notes new-list__notes">
+                  <Icon symbol="error" className="unit__notes-icon" />
+                  Note: The integration of Renegade lists into OWB is not yet
+                  final. Feel free to report bugs on our Discord.
+                </p>
+              )}
             </>
           ) : null}
           <label htmlFor="points">
