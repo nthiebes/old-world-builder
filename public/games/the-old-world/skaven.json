@@ -577,6 +577,26 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "armyComposition": {
+        "skaven": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 per 1000 points"
+          }
+        },
+        "skaven-renegades": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 if army includes a Skaven Warlord",
+            "name_de": "0-1 if army includes a Skaven Warlord",
+            "name_es": "0-1 if army includes a Skaven Warlord",
+            "name_fr": "0-1 if army includes a Skaven Warlord"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Fangleader (champion)",
@@ -659,10 +679,10 @@
         "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre"
       },
       "notes": {
-        "name_en": "0-1 if army includes a Skaven Warlord",
-        "name_de": "0-1 if army includes a Skaven Warlord",
-        "name_es": "0-1 if army includes a Skaven Warlord",
-        "name_fr": "0-1 if army includes a Skaven Warlord"
+        "name_en": "0-1 per 1000 points",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 per 1000 points"
       }
     },
     {
@@ -1225,12 +1245,6 @@
         "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre"
-      },
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
       }
     },
     {
