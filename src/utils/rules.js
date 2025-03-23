@@ -2129,13 +2129,11 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["infernal-ironsworn"],
+          ids: ["infernal-ironsworn-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: [
-            "infernal-castellan",
-          ],
+          requires: ["infernal-castellan"],
           perUnit: true,
         },
       ],
@@ -2201,8 +2199,8 @@ export const rules = {
           id: ["bonegrinder-giant"],
           min: 0,
           max: 1,
-        }
-      ]
+        },
+      ],
     },
     allies: { maxPercent: 25 },
   },
@@ -2422,6 +2420,17 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
+          ids: [
+            "bloodthirster",
+            "great-unclean-one",
+            "keeper-of-secrets",
+            "lord-of-change",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
           ids: ["bloodthirster"],
           min: 0,
           max: 1,
@@ -2433,7 +2442,6 @@ export const rules = {
             "skull-cannon-of-khorne",
           ],
           perUnit: true,
-          points: 1000,
         },
         {
           ids: ["great-unclean-one"],
@@ -2447,7 +2455,6 @@ export const rules = {
             "plague-drones-of-nurgle",
           ],
           perUnit: true,
-          points: 1000,
         },
         {
           ids: ["keeper-of-secrets"],
@@ -2462,7 +2469,6 @@ export const rules = {
             "seeker-chariot-of-slaanesh",
           ],
           perUnit: true,
-          points: 1000,
         },
         {
           ids: ["lord-of-change"],
@@ -2478,7 +2484,6 @@ export const rules = {
             "burning-chariot-of-tzeentch",
           ],
           perUnit: true,
-          points: 1000,
         },
         {
           ids: ["daemonic-herald-of-khorne"],
@@ -2586,10 +2591,7 @@ export const rules = {
           },
         },
         {
-          ids: [
-            "blue-horrors-of-tzeentch",
-            "brimstone-horrors-of-tzeentch",
-          ],
+          ids: ["blue-horrors-of-tzeentch", "brimstone-horrors-of-tzeentch"],
           requiresGeneral: true,
           requires: [
             "lord-of-change",
@@ -2604,7 +2606,7 @@ export const rules = {
       ],
     },
     special: {
-      maxPercent: 50
+      maxPercent: 50,
     },
     rare: {
       maxPercent: 25,
@@ -2694,7 +2696,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "lizardmen": {
+  lizardmen: {
     characters: {
       maxPercent: 50,
       units: [
@@ -2781,13 +2783,13 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1500,
-          requiresIfGeneral: [ "temple-guard" ],
+          requiresIfGeneral: ["temple-guard"],
         },
         {
           ids: ["saurus-oldblood"],
           min: 0,
           max: 1,
-          points: 1000
+          points: 1000,
         },
       ],
     },
@@ -2799,9 +2801,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: [
-            "slann-mage-priest",
-          ],
+          requires: ["slann-mage-priest"],
         },
       ],
     },
@@ -3056,7 +3056,7 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
-  "skaven": {
+  skaven: {
     characters: {
       maxPercent: 50,
       units: [
@@ -3163,9 +3163,6 @@ export const rules = {
           ids: ["skaven-warlord"],
           min: 0,
           max: 1,
-          requiresType: "all",
-          requires: ["stormvermin"],
-          perUnit: true,
           points: 1000,
         },
         {
@@ -3177,7 +3174,7 @@ export const rules = {
         {
           ids: ["plague-priest"],
           requiresType: "all",
-          requires: ["plague-monks"],
+          requires: ["plague-monks", "plague-monks-core"],
           perUnit: true,
         },
       ],
@@ -3190,15 +3187,19 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["skaven-warlord"]
+          requires: ["skaven-warlord"],
         },
         {
-          ids: ["plague-monks"],
+          ids: ["plague-monks-core"],
           min: 0,
           max: 1,
           requiresType: "characters",
           requires: ["plague-priest"],
-          perUnit: true,
+        },
+        {
+          ids: ["plague-monks-core", "stormvermin"],
+          min: 0,
+          max: 1,
         },
       ],
     },
