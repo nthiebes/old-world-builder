@@ -1360,54 +1360,6 @@
         "name_es": "0-2 Bastiladons per 1000 points",
         "name_fr": "0-2 Bastiladons par tranche de 1000 points"
       }
-    },
-    {
-      "name_en": "Stegadon",
-      "name_de": "Stegadon",
-      "name_es": "Stegadon",
-      "name_fr": "Stégadon",
-      "id": "stegadon",
-      "points": 215,
-      "armyComposition": {
-        "lizardmen-renegades": {
-          "category": "special"
-        }
-      },
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_de": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_es": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_fr": "Armes de base, Javelines, Grandes cornes, Arc géant",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_de": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_es": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_fr": "Armes de base, Javelines, Grandes cornes, Sarbacanes géantes",
-          "points": 0
-        }
-      ],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
-      },
-      "notes": {
-        "name_en": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_de": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_es": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points"
-      }
     }
   ],
   "rare": [
@@ -1539,6 +1491,9 @@
       "armyComposition": {
         "lizardmen": {
           "category": "rare"
+        },
+        "lizardmen-renegades": {
+          "category": "special"
         }
       },
       "command": [],
