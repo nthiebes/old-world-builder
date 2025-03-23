@@ -669,6 +669,14 @@
         },
         "skaven-renegades": {
           "category": "core",
+          "specialRules": {
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regiment",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment"
+          },
           "notes": {
             "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
             "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
@@ -759,12 +767,6 @@
         "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
         "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre"
-      },
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_de": "0-1 per 1000 points",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 per 1000 points"
       }
     },
     {
@@ -791,7 +793,16 @@
           }
         },
         "skaven-renegades": {
-          "category": "core"
+          "category": "core",
+          "maximum": "",
+          "specialRules": {
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Regiment",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Regiment",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Regiment",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Regiment",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Regiment",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Regiment"
+          }
         }
       },
       "command": [
@@ -885,6 +896,22 @@
       "detachment": true,
       "minDetachmentSize": 1,
       "maxDetachmentSize": 1,
+      "armyComposition": {
+        "skaven": {
+          "category": "core"
+        },
+        "skaven-renegades": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Loner, Open Order, Scurry Away, Detachment",
+            "name_de": "Loner, Open Order, Scurry Away, Detachment",
+            "name_es": "Loner, Open Order, Scurry Away, Detachment",
+            "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Detachment",
+            "name_it": "Loner, Open Order, Scurry Away, Detachment",
+            "name_pl": "Loner, Open Order, Scurry Away, Detachment"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1262,7 +1289,15 @@
       "maxDetachments": 1,
       "armyComposition": {
         "skaven-renegades": {
-          "category": "special"
+          "category": "special",
+          "specialRules": {
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regiment",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment"
+          }
         }
       },
       "command": [
@@ -1763,6 +1798,19 @@
       "name_fr": "Abomination de Malefosse",
       "id": "hell-pit-abomination",
       "points": 210,
+      "armyComposition": {
+        "skaven-renegades": {
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
+            "name_de": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
+            "name_es": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
+            "name_fr": "Attaques Abominables, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Résistance à la Magie (-1), Attaques Aléatoires, Mouvement Aléatoire, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Timmm-berrr!, Trop Horrible pour Mourir, Indémoralisable, Impact Hits (D3+1)",
+            "name_it": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
+            "name_pl": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
