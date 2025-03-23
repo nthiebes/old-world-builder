@@ -2762,7 +2762,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["stegadon", "troglodon"],
+          ids: ["ancient-stegadon", "stegadon", "troglodon"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3160,7 +3160,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["skaven-warlord", "grey-seer"],
+          ids: ["skaven-warlord"],
           min: 0,
           max: 1,
           requiresType: "all",
