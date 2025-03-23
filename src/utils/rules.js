@@ -2762,7 +2762,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["stegadon", "troglodon"],
+          ids: ["ancient-stegadon", "stegadon", "troglodon"],
           min: 0,
           max: 1,
           points: 1000,
