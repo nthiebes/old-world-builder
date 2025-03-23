@@ -1556,7 +1556,13 @@
       "maximum": 0,
       "armyComposition": {
         "chaos-dwarfs-renegades": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_de": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_es": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_fr": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan"
+          }
         }
       },
       "command": [
@@ -2080,6 +2086,26 @@
       "name_fr": "Lance-Fusées Hurlemort",
       "id": "deathshrieker-rocket-launcher",
       "points": 120,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2148,6 +2174,26 @@
       "name_fr": "Canon à Magma",
       "id": "magma-cannon",
       "points": 125,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2441,10 +2487,10 @@
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
       "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+        "name_en": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
       }
     },
     {
@@ -2454,6 +2500,20 @@
       "name_fr": "Canon Apocalypse",
       "id": "hellcannon",
       "points": 215,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
+          }
+        },
+        "chaos-dwarfs-renegades": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2475,12 +2535,6 @@
         "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
-      },
-      "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
       }
     },
     {
