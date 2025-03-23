@@ -320,10 +320,20 @@ export const nameMap = {
     name_en: "Chaos Dwarfs",
     name_fr: "Nains du Chaos",
   },
+  "chaos-dwarfs-renegades": {
+    name_de: "Chaos Dwarfs Renegades",
+    name_en: "Chaos Dwarfs Renegades",
+    name_fr: "Nains du Chaos Renegades",
+  },
   "vampire-counts": {
     name_de: "Vampire Counts",
     name_en: "Vampire Counts",
     name_fr: "Comtes Vampires",
+  },
+  "vampire-counts-renegades": {
+    name_de: "Vampire Counts Renegades",
+    name_en: "Vampire Counts Renegades",
+    name_fr: "Comtes Vampires Renegades",
   },
   "vampiric-powers": {
     name_de: "Vampiric Powers",
@@ -340,15 +350,30 @@ export const nameMap = {
     name_en: "Dark Elves",
     name_fr: "Elfes Noirs",
   },
-  skaven: {
+  "dark-elves-renegades": {
+    name_de: "Dark Elves Renegades",
+    name_en: "Dark Elves Renegades",
+    name_fr: "Elfes Noirs Renegades",
+  },
+  "skaven": {
     name_de: "Skaven",
     name_en: "Skaven",
     name_fr: "Skaven",
+  },
+  "skaven-renegades": {
+    name_de: "Skaven Renegades",
+    name_en: "Skaven Renegades",
+    name_fr: "Skaven Renegades",
   },
   "daemons-of-chaos": {
     name_de: "Daemons of Chaos",
     name_en: "Daemons of Chaos",
     name_fr: "Démons du Chaos",
+  },
+  "daemons-of-chaos-renegades": {
+    name_de: "Daemons of Chaos Renegades",
+    name_en: "Daemons of Chaos Renegades",
+    name_fr: "Démons du Chaos Renegades",
   },
   "daemonic-gifts-common": {
     name_de: "Chaotic Gifts",
@@ -475,6 +500,11 @@ export const nameMap = {
     name_en: "Ogre Kingdoms",
     name_fr: "Royaumes Ogres",
   },
+  "ogre-kingdoms-renegades": {
+    name_de: "Ogre Kingdoms Renegades",
+    name_en: "Ogre Kingdoms Renegades",
+    name_fr: "Royaumes Ogres Renegades",
+  },
   "big-names": {
     name_de: "Big Names",
     name_en: "Big Names",
@@ -495,10 +525,15 @@ export const nameMap = {
     name_en: "Discipline of the Old Ones",
     name_fr: "Discipline des Anciens",
   },
-  lizardmen: {
+  "lizardmen": {
     name_de: "Lizardmen",
     name_en: "Lizardmen",
     name_fr: "Hommes-Lézards",
+  },
+  "lizardmen-renegades": {
+    name_de: "Lizardmen Renegades",
+    name_en: "Lizardmen Renegades",
+    name_fr: "Hommes-Lézards Renegades",
   },
   "city-state-of-nuln": {
     name_de: "City-State of Nuln",
