@@ -2152,7 +2152,7 @@ export const rules = {
         {
           ids: ["deathshrieker-rocket-launcher", "magma-cannon"],
           min: 0,
-          max: 1,
+          max: 2,
           points: 1000,
         },
         {
