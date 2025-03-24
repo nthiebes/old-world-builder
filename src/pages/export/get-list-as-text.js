@@ -48,7 +48,7 @@ const getUnitsString = ({
         }${isMarkdownList ? "*" : ""}\n`;
       }
       if (showStats) {
-        const stats = getStats(unit);
+        const stats = getStats(unit, armyComposition);
 
         if (!isCompactList && !isMarkdownList) {
           optionsString += "\n";

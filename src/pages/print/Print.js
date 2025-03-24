@@ -127,7 +127,7 @@ export const Print = () => {
     return (
       <ul>
         {units.map((unit) => {
-          const stats = getStats(unit);
+          const stats = getStats(unit, armyComposition);
 
           return (
             <li key={unit.id}>
