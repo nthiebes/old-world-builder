@@ -429,9 +429,15 @@
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
             }
+          ],
+          "de-renegades": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
           ]
         },
-        "armyComposition": ["dark-elves-renegades"]
+        "armyComposition": ["de-renegades"]
       },
       {
         "id": "skaven",
@@ -465,7 +471,7 @@
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
         "allies": [{ "army": "tomb-kings-of-khemri" }],
-        "armyComposition": ["vampire-counts-renegades"]
+        "armyComposition": ["vc-renegades"]
       },
       {
         "id": "daemons-of-chaos",
@@ -496,7 +502,7 @@
         "name_fr": "Royaumes Ogres",
         "items": ["general", "ogre-kingdoms", "big-names"],
         "allies": [{ "army": "orc-and-goblin-tribes" }],
-        "armyComposition": ["ogre-kingdoms-renegades"],
+        "armyComposition": ["ok-renegades"],
         "mercenaries": {
           "ogre-kingdoms": [
             {
@@ -504,7 +510,7 @@
               "units": ["badland-ogre-bulls"]
             }
           ],
-          "ogre-kingdoms-renegades": [
+          "ok-renegades": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["bonegrinder-giant"]
