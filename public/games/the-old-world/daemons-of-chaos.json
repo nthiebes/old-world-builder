@@ -2656,7 +2656,15 @@
           }
         },
         "doc-renegade": {
-          "category": "special"
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (D3+1), Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide, Armour Piercing (1 - Impact Hits Only)",
+            "name_it": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)"
+          }
         }
       },
       "command": [],
@@ -4007,6 +4015,22 @@
       "name_pl": "Hellflayer of Slaanesh",
       "id": "hellflayer-of-slaanesh",
       "points": 145,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        },
+        "doc-renegade": {
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Ordre Serré, Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (2D6+1), Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide, Armour Piercing (1 - Impact Hits Only)",
+            "name_it": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -4481,7 +4505,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne {renegade}, Hellblades",
           "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "name_fr": "Roues d'airain, Arme de base (faux), Canon de Khorne, Lames Infernales",
