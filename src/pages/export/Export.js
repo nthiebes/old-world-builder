@@ -61,7 +61,7 @@ export const Export = ({ isMobile }) => {
         intl,
         language,
         showStats: showStats,
-        isSimpleList: listType === "simple"
+        isSimpleList: listType === "simple",
       })
     : "";
   const copyText = () => {
@@ -173,6 +173,11 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.compactList" />
           </label>
         </div>
+        <p className="export__radio-description">
+          <i>
+            <FormattedMessage id="export.compactListDescription" />
+          </i>
+        </p>
         <div className="radio export__visible-checkbox">
           <input
             type="radio"
@@ -186,13 +191,13 @@ export const Export = ({ isMobile }) => {
           <label htmlFor="simple" className="checkbox__label">
             <FormattedMessage id="export.minimalistList" />
             <b>
-              <i> New!</i>
+              <i>New!</i>
             </b>
           </label>
         </div>
         <p className="export__radio-description">
           <i>
-            <FormattedMessage id="export.compactListDescription" />
+            <FormattedMessage id="export.minimalistDescription" />
           </i>
         </p>
 

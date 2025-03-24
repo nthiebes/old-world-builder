@@ -286,7 +286,7 @@ export const getAllOptions = (
 };
 
 export const getPage = (name) => {
-  const page = getUnitRuleData(name).page || "";
+  const page = getUnitRuleData(name)?.page || "";
 
   return page.replace(/,/g, "");
 };
