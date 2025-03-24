@@ -430,14 +430,14 @@
               "units": ["badland-ogre-bulls"]
             }
           ],
-          "de-renegades": [
+          "de-renegade": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
             }
           ]
         },
-        "armyComposition": ["de-renegades"]
+        "armyComposition": ["de-renegade"]
       },
       {
         "id": "skaven",
@@ -447,7 +447,7 @@
         "name_fr": "Skaven",
         "items": ["general", "skaven"],
         "allies": [{ "army": "warriors-of-chaos" }],
-        "armyComposition": ["skaven-renegades"],
+        "armyComposition": ["sk-renegade"],
         "mercenaries": {
           "skaven": [
             {
@@ -455,7 +455,7 @@
               "units": ["badland-ogre-bulls"]
             }
           ],
-          "skaven-renegades": [
+          "sk-renegade": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
@@ -471,7 +471,7 @@
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
         "allies": [{ "army": "tomb-kings-of-khemri" }],
-        "armyComposition": ["vc-renegades"]
+        "armyComposition": ["vc-renegade"]
       },
       {
         "id": "daemons-of-chaos",

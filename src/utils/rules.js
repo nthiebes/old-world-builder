@@ -2696,7 +2696,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "de-renegades": {
+  "de-renegade": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3132,7 +3132,7 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
-  "vc-renegades": {
+  "vc-renegade": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3346,7 +3346,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "skaven-renegades": {
+  "sk-renegade": {
     characters: {
       maxPercent: 50,
       units: [

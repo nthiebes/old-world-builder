@@ -19,7 +19,7 @@
             "name_pl": "Skaven Warlord or Grey Seer per 1,000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "characters",
           "notes": {
             "name_en": "0-1 Skaven Warlord per 1000 points",
@@ -249,7 +249,7 @@
             "name_pl": "Skaven Warlord or Grey Seer per 1,000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "characters",
           "notes": {
             "name_en": "0-1 Grey Seer per 1000 points",
@@ -302,7 +302,7 @@
           "active": true
         },
         {
-          "name_en": "Screaming Bell",
+          "name_en": "Screaming Bell {renegade}",
           "name_de": "Höllenglocke",
           "name_es": "Screaming Bell",
           "name_fr": "Cloche Hurlante",
@@ -365,7 +365,7 @@
             "name_pl": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "characters"
         }
       },
@@ -479,7 +479,7 @@
             "name_pl": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "characters"
         }
       },
@@ -541,7 +541,7 @@
             "name_pl": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "characters"
         }
       },
@@ -609,7 +609,7 @@
           "active": true
         },
         {
-          "name_en": "Plague Furnace",
+          "name_en": "Plague Furnace {renegade}",
           "name_de": "Seuchenmenetekel",
           "name_es": "Plague Furnace",
           "name_fr": "Creuset de la Peste",
@@ -667,15 +667,15 @@
             "name_pl": "0-1 per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regiment",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment"
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regimental Unit",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
           },
           "notes": {
             "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
@@ -792,15 +792,15 @@
             "name_pl": "1+ per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Regiment",
-            "name_de": "Close Order, Horde, Scurry Away, Warband, Regiment",
-            "name_es": "Close Order, Horde, Scurry Away, Warband, Regiment",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Regiment",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Regiment",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Regiment"
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Regimental Unit",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Regimental Unit"
           }
         }
       },
@@ -893,7 +893,7 @@
         "skaven": {
           "category": "core"
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "core",
           "specialRules": {
             "name_en": "Loner, Open Order, Scurry Away, Detachment",
@@ -969,12 +969,6 @@
         "name_de": "Loner, Open Order, Scurry Away",
         "name_es": "Loner, Open Order, Scurry Away",
         "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
       }
     },
     {
@@ -1193,7 +1187,7 @@
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "core",
           "notes": {
             "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
@@ -1281,15 +1275,15 @@
       "regimentalUnit": true,
       "maxDetachments": 1,
       "armyComposition": {
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regiment",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regiment"
+            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regimental Unit",
+            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
           }
         }
       },
@@ -1484,7 +1478,7 @@
             "name_pl": "0-2 units of Rat Ogres per 1000 points"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "special"
         }
       },
@@ -1582,7 +1576,7 @@
             "name_pl": "0-1 unit of Plague Monks per Clan Pestilens Plague Priest taken"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "special"
         }
       },
@@ -1669,7 +1663,7 @@
             "name_pl": "0-1 unit of Warplock Jezzails per Clan Skryre Warlock Engineer taken"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "special",
           "notes": {
             "name_en": "If your army includes a Clan Skryre Warlock Engineer",
@@ -1736,7 +1730,7 @@
             "name_pl": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken"
           }
         },
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "special",
           "notes": {
             "name_en": "If your army includes a Clan Skryre Warlock Engineer",
@@ -1785,14 +1779,14 @@
   ],
   "rare": [
     {
-      "name_en": "Hell Pit Abomination",
+      "name_en": "Hell Pit Abomination {renegade}",
       "name_de": "Höllengrubenbrut",
       "name_es": "Hell Pit Abomination",
       "name_fr": "Abomination de Malefosse",
       "id": "hell-pit-abomination",
       "points": 210,
       "armyComposition": {
-        "skaven-renegades": {
+        "sk-renegade": {
           "category": "rare",
           "specialRules": {
             "name_en": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
@@ -1883,7 +1877,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Warp Lightning Cannon, Hand weapons",
+          "name_en": "Warp Lightning Cannon {renegade}, Hand weapons",
           "name_de": "Warpblitzkanone, Handwaffen",
           "name_es": "Warp Lightning Cannon, Hand weapons",
           "name_fr": "Canon à Malefoudre, Armes de base",
