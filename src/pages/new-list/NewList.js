@@ -207,13 +207,6 @@ export const NewList = ({ isMobile }) => {
                 selected={army}
                 spaceBottom
               />
-              {armyComposition.includes("renegade") && (
-                <p className="unit__notes new-list__notes">
-                  <Icon symbol="error" className="unit__notes-icon" />
-                  Note: The integration of Renegade lists into OWB is not yet
-                  final. Feel free to report bugs on our Discord.
-                </p>
-              )}
             </>
           ) : null}
           <label htmlFor="points">
