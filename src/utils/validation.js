@@ -1,14 +1,9 @@
-import { rulesMap, synonyms } from "../components/rules-index/rules-map";
 import { rules } from "./rules";
 import { uniq } from "./collection";
-import { getUnitName } from "./unit";
-import { normalizeRuleName } from "./string";
+import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
-  const normalizedRuleName = normalizeRuleName(unit.name_en);
-  const synonym = synonyms[normalizedRuleName];
-  const ruleData = rulesMap[synonym || normalizedRuleName];
-
+  const ruleData = getUnitRuleData(unit.name_en);
   return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "Be"].includes(
     ruleData?.troopType
   );
@@ -25,6 +20,28 @@ export const validateList = ({ list, language, intl }) => {
             (command) => command.active && command.name_en === "General"
           )
       );
+  // The general must be one of the characters with the highest leadership
+  let highestLeadership = 0;
+  if (list?.characters?.length) {
+    list.characters.map((unit) => {
+      if (unit.command && 
+          unit.command.find(
+            (command) => command.name_en === "General"
+          ) && 
+          !unit.command.find(
+            (command) => 
+              command.name_en.includes("Battle Standard Bearer") &&
+              command.active
+          )
+      ) {
+        const leadership = getUnitLeadership(unit.name_en);
+        if (leadership > highestLeadership) {
+          highestLeadership = leadership;
+        }
+      }  
+    });
+  };
+  
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
@@ -37,7 +54,7 @@ export const validateList = ({ list, language, intl }) => {
           )
       );
 
-  let coreUnits = list?.core?.length
+  const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
     : 0;
   const specialUnits = list?.special?.length
@@ -380,6 +397,13 @@ export const validateList = ({ list, language, intl }) => {
       section: "characters",
     });
 
+  // General doesn't have highest leadership in the army
+  generalsCount === 1 && getUnitLeadership(generals[0].name_en) < highestLeadership && 
+    errors.push({
+      message: "misc.error.generalLeadership",
+      section: "characters",
+    });
+  
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
