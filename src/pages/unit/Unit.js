@@ -868,6 +868,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.armor" />
             </h2>
             {unit.armor
+              .filter(
+                (unitArmor) =>
+                  !unitArmor.armyComposition ||
+                  unitArmor.armyComposition.includes(listArmyComposition)
+              )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )

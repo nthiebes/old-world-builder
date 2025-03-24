@@ -2103,7 +2103,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "chaos-dwarfs-renegades": {
+  "cd-renegade": {
     characters: {
       maxPercent: 50,
       units: [

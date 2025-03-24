@@ -359,8 +359,17 @@
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 0,
-          "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_it": "Full plate armour",
+          "name_pl": "Full plate armour",
+          "points": 3,
+          "armyComposition": "cd-renegade"
         }
       ],
       "options": [
@@ -417,7 +426,24 @@
           "perModel": true
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["cd-renegade"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -504,50 +530,63 @@
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 0,
-          "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_it": "Full plate armour",
+          "name_pl": "Full plate armour",
+          "points": 3,
+          "armyComposition": "cd-renegade"
         }
       ],
       "options": [
         {
-          "name_en": "Pistol (not Naptha bombs)",
-          "name_de": "Pistol (not Naptha bombs)",
-          "name_es": "Pistol (not Naptha bombs)",
-          "name_fr": "Pistolet (sans Bombes au Naptha)",
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "name_es": "Pistol",
+          "name_fr": "Pistolet",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Naptha bombs"
+          }
         },
         {
-          "name_en": "Naptha bombs (not Pistol)",
-          "name_de": "Naptha bombs (not Pistol)",
-          "name_es": "Naptha bombs (not Pistol)",
-          "name_fr": "Bombes au Naptha (sans Pistolet)",
+          "name_en": "Naptha bombs",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Bombes au Naptha",
           "points": 7,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Pistol"
+          }
         },
         {
-          "name_en": "Fireglaive (not Hailshot blunderbuss)",
-          "name_de": "Fireglaive (not Hailshot blunderbuss)",
-          "name_es": "Fireglaive (not Hailshot blunderbuss)",
-          "name_fr": "Glaive Ardent (sans Tromblon Grêle-de-Tir)",
+          "name_en": "Fireglaive",
+          "name_de": "Fireglaive",
+          "name_es": "Fireglaive",
+          "name_fr": "Glaive Ardent",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Hailshot blunderbuss"
+          }
         },
         {
-          "name_en": "Hailshot blunderbuss (not Fireglaive)",
-          "name_de": "Hailshot blunderbuss (not Fireglaive)",
-          "name_es": "Hailshot blunderbuss (not Fireglaive)",
-          "name_fr": "Tromblon Grêle-de-Tir (sans Glaive Ardent)",
+          "name_en": "Hailshot blunderbuss",
+          "name_de": "Hailshot blunderbuss",
+          "name_es": "Hailshot blunderbuss",
+          "name_fr": "Tromblon Grêle-de-Tir",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Fireglaive"
+          }
         },
         {
           "name_en": "Shield",
@@ -555,12 +594,35 @@
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["cd-renegade"]
+        },
+        {
+          "name_en": "Bale Taurus",
+          "name_de": "Bale Taurus",
+          "name_es": "Bale Taurus",
+          "name_fr": "Sombre Taurus",
+          "points": 160,
+          "armyComposition": ["cd-renegade"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -597,7 +659,7 @@
         "chaos-dwarfs": {
           "category": "characters"
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "rare"
         }
       },
@@ -1198,7 +1260,7 @@
             "name_fr": "1+"
           }
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "core"
         }
       },
@@ -1571,7 +1633,7 @@
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "core",
           "notes": {
             "name_en": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
@@ -1884,7 +1946,7 @@
       }
     },
     {
-      "name_en": "K'daai Fireborn",
+      "name_en": "K'daai Fireborn {renegade}",
       "name_de": "K'daai Fireborn",
       "name_es": "K'daai Fireborn",
       "name_fr": "K'daai Rejetons de Feu",
@@ -1896,7 +1958,7 @@
         "chaos-dwarfs": {
           "category": "special"
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "special",
           "specialRules": {
             "name_en": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire {renegade}",
@@ -2126,7 +2188,7 @@
             "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
           }
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "special",
           "notes": {
             "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
@@ -2214,7 +2276,7 @@
             "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
           }
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "special",
           "notes": {
             "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
@@ -2540,7 +2602,7 @@
             "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
           }
         },
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "rare"
         }
       },
@@ -2576,7 +2638,7 @@
       "points": 200,
       "command": [],
       "armyComposition": {
-        "chaos-dwarfs-renegades": {
+        "cd-renegade": {
           "category": "rare"
         }
       },
