@@ -320,10 +320,20 @@ export const nameMap = {
     name_en: "Chaos Dwarfs",
     name_fr: "Nains du Chaos",
   },
+  "cd-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
+  },
   "vampire-counts": {
     name_de: "Vampire Counts",
     name_en: "Vampire Counts",
     name_fr: "Comtes Vampires",
+  },
+  "vc-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
   },
   "vampiric-powers": {
     name_de: "Vampiric Powers",
@@ -340,15 +350,30 @@ export const nameMap = {
     name_en: "Dark Elves",
     name_fr: "Elfes Noirs",
   },
+  "de-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
+  },
   skaven: {
     name_de: "Skaven",
     name_en: "Skaven",
     name_fr: "Skaven",
   },
+  "sk-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
+  },
   "daemons-of-chaos": {
     name_de: "Daemons of Chaos",
     name_en: "Daemons of Chaos",
     name_fr: "Démons du Chaos",
+  },
+  "doc-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
   },
   "daemonic-gifts-common": {
     name_de: "Chaotic Gifts",
@@ -475,6 +500,11 @@ export const nameMap = {
     name_en: "Ogre Kingdoms",
     name_fr: "Royaumes Ogres",
   },
+  "ok-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
+  },
   "big-names": {
     name_de: "Big Names",
     name_en: "Big Names",
@@ -499,6 +529,11 @@ export const nameMap = {
     name_de: "Lizardmen",
     name_en: "Lizardmen",
     name_fr: "Hommes-Lézards",
+  },
+  "lm-renegade": {
+    name_de: "Renegade",
+    name_en: "Renegade",
+    name_fr: "Renegade",
   },
   "city-state-of-nuln": {
     name_de: "City-State of Nuln",

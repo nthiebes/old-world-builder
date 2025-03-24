@@ -210,6 +210,23 @@ export const validateList = ({ list, language, intl }) => {
       }
     }
 
+    // General requires unit (especially for the renegade rules)
+    if(ruleUnit.requiresIfGeneral && generals.length > 0) {
+      const requiredUnitsByGeneralInList =
+        [...list.characters, ...list.core, ...list.special, ...list.rare].filter(
+          (unit) =>
+            ruleUnit.requiresIfGeneral && ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
+        );
+      if (requiredUnitsByGeneralInList.length == 0) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: ruleUnit.requiresIfGeneral,
+          diff: 1,
+        });
+      }
+    }
+
     // Unit should be mounted
     if (ruleUnit.requiresMounted && unitsInList.length > 0) {
       const charactersNotMounted = unitsInList.filter(
@@ -251,6 +268,28 @@ export const validateList = ({ list, language, intl }) => {
           section: type,
           name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
           option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
+        });
+      }
+    }
+
+    // Unit requires specific active command
+    if (ruleUnit.requiresCommand) {
+      const charactersInList = unitsInList.filter(
+        (character) =>
+          ruleUnit.requiresCommand.unit === character.id.split(".")[0]
+      );
+      const characterWithCommand = charactersInList.find((character) =>
+        character.commands.find(
+          (command) => command.id === ruleUnit.requiresCommand.id && command.active
+        )
+      );
+
+      if (charactersInList.length && !characterWithCommand) {
+        errors.push({
+          message: "misc.error.requiresCommand",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresCommand.unit }),
+          command: intl.formatMessage({ id: ruleUnit.requiresCommand.id }),
         });
       }
     }

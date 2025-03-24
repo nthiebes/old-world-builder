@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { Header, Main } from "../../components/page";
+import { Icon } from "../../components/icon";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
 import gameSystems from "../../assets/armies.json";

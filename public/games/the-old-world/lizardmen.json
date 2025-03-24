@@ -1,12 +1,34 @@
 {
   "characters": [
     {
-      "name_en": "Slann Mage-Priest",
+      "name_en": "Slann Mage-Priest {renegade}",
       "name_de": "Slann Mage-Priest",
       "name_es": "Slann Mage-Priest",
       "name_fr": "Prêtre-mage Slann",
       "id": "slann-mage-priest",
       "points": 285,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "characters"
+        },
+        "lm-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Arcane Shield, Cold Blooded {renegade}, Fly (8), Lore of Lustria, Wisdom of the Old Ones {renegade}, Palanquin {renegade}",
+            "name_de": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
+            "name_es": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
+            "name_fr": "Bouclier Arcanique, Sang Froid, Vol (8), Domaine de Lustrie, Wisdom of the Old Ones, Palanquin"
+          },
+          "notes": {
+            "name_en": "0-1 Slann Mage-Priest per 1500 Points",
+            "name_de": "0-1 Slann Mage-Priest per 1500 Points",
+            "name_es": "0-1 Slann Mage-Priest per 1500 Points",
+            "name_fr": "0-1 Prêtre-mage Slann par tranche de 1500 points",
+            "name_it": "0-1 Slann Mage-Priest per 1500 Points",
+            "name_pl": "0-1 Slann Mage-Priest per 1500 Points"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -76,16 +98,10 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
+        "name_en": "Arcane Shield, Cold Blooded {renegade}, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_de": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_es": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_fr": "Bouclier Arcanique, Sang Froid, Ordre Serré, Vol (8), Grande Cible, Domaine de Lustrie"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
       }
     },
     {
@@ -95,6 +111,30 @@
       "name_fr": "Sang Ancien Saurus",
       "id": "saurus-oldblood",
       "points": 140,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_de": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_es": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_fr": "0-1 Sang Ancien Saurus ou Prêtre Skink par tranche de 1000 points",
+            "name_it": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_pl": "0-1 Saurus Oldblood or Skink Chief per 1000 Points"
+          }
+        },
+        "lm-renegade": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Saurus Oldblood per 1000 Points",
+            "name_de": "0-1 Saurus Oldblood per 1000 Points",
+            "name_es": "0-1 Saurus Oldblood per 1000 Points",
+            "name_fr": "0-1 Sang Ancien Saurus par tranche de 1000 points",
+            "name_it": "0-1 Saurus Oldblood per 1000 Points",
+            "name_pl": "0-1 Saurus Oldblood per 1000 Points"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -212,16 +252,10 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
+        "name_en": "Cold Blooded {renegade}, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_fr": "Sang Froid, Charge Dévastatrice*, Lames Obsidienne, Cri de Ralliement"
-      },
-      "notes": {
-        "name_en": "*Note that this special rule does not apply to this model's mount (should it have one)",
-        "name_de": "*Note that this special rule does not apply to this model's mount (should it have one)",
-        "name_es": "*Note that this special rule does not apply to this model's mount (should it have one)",
-        "name_fr": "*Notez que cette règle spéciale ne s'applique pas à la monture de cette figurine (si elle en a une)"
       }
     },
     {
@@ -358,7 +392,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
+        "name_en": "Cold Blooded {renegade}, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_fr": "Sang Froid, Charge Dévastatrice*, Lames Obsidienne, Cri de Ralliement"
@@ -377,6 +411,22 @@
       "name_fr": "Prêtre Skink",
       "id": "skink-priest",
       "points": 60,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_de": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_es": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_fr": "0-1 Sang Ancien Saurus ou Prêtre Skink par tranche de 1000 points",
+            "name_it": "0-1 Saurus Oldblood or Skink Chief per 1000 Points",
+            "name_pl": "0-1 Saurus Oldblood or Skink Chief per 1000 Points"
+          }
+        },
+        "lm-renegade": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -477,7 +527,7 @@
       ],
       "lores": ["elementalism", "battle-magic", "illusion"],
       "specialRules": {
-        "name_en": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
+        "name_en": "Arcane Vassal, Aquatic**, Cold Blooded {renegade}, Lore of Lustria",
         "name_de": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
         "name_es": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
         "name_fr": "Vassal Magique, Aquatique**, Sang Froid, Domaine de Lustrie"
@@ -645,7 +695,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic**, Cold Blooded, Poisoned Attacks",
+        "name_en": "Aquatic**, Cold Blooded {renegade}, Poisoned Attacks",
         "name_de": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_es": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_fr": "Aquatique**, Sang Froid, Attaques Empoisonnées"
@@ -737,32 +787,30 @@
           "name_en": "Shieldwall",
           "name_de": "Shieldwall",
           "name_es": "Shieldwall",
+          "name_it": "Shieldwall",
           "name_fr": "Mur de Boucliers",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_it": "Shieldwall"
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_de": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_es": "0-1 unit per 1000 points may have the Shieldwall special rule",
+            "name_fr": "0-1 unité par tranche de 1000 points peut avoir la règle spéciale Mur de Boucliers"
+          }
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Obsidian Blades",
+        "name_en": "Close Order, Cold Blooded {renegade}, Obsidian Blades",
         "name_de": "",
         "name_es": "",
         "name_fr": "Ordre Serré, Sang Froid, Lames Obsidienne"
-      },
-      "notes": {
-        "name_en": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_de": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_es": "0-1 unit per 1000 points may have the Shieldwall special rule",
-        "name_fr": "0-1 unité par tranche de 1000 points peut avoir la règle spéciale Mur de Boucliers"
       }
     },
     {
-      "name_en": "Temple Guard",
+      "name_en": "Temple Guard {renegade}",
       "name_de": "Temple Guard",
       "name_es": "Temple Guard",
       "name_fr": "Gardien du Temple",
@@ -770,6 +818,11 @@
       "points": 16,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "lm-renegade": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Revered Guardian (champion)",
@@ -828,7 +881,102 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_en": "Close Order, Cold Blooded {renegade}, Guardians {renegade}, Obsidian Blades, Shieldwall, Stubborn",
+        "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_fr": "Ordre Serré, Sang Froid, Gardiens, Lames Obsidienne, Mur de Boucliers, Obstiné"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Temple Guard {renegade}",
+      "name_de": "Temple Guard",
+      "name_es": "Temple Guard",
+      "name_fr": "Gardien du Temple",
+      "id": "temple-guard",
+      "points": 16,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "core"
+        },
+        "lm-renegade": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
+            "name_de": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
+            "name_es": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
+            "name_fr": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
+            "name_it": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
+            "name_pl": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Revered Guardian (champion)",
+          "name_de": "Revered Guardian (champion)",
+          "name_es": "Revered Guardian (champion)",
+          "name_fr": "Gardien Révéré (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberds, Shields",
+          "name_de": "Hand weapons, Halberds, Shields",
+          "name_es": "Hand weapons, Halberds, Shields",
+          "name_fr": "Armes de base, Hallebardes, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Armure lourde (Peau écailleuse)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Cold Blooded {renegade}, Guardians {renegade}, Obsidian Blades, Shieldwall, Stubborn",
         "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Sang Froid, Gardiens, Lames Obsidienne, Mur de Boucliers, Obstiné"
@@ -895,8 +1043,7 @@
           "name_es": "Scouts",
           "name_fr": "Éclaireurs",
           "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         },
         {
           "name_en": "Vanguard",
@@ -904,15 +1051,14 @@
           "name_es": "Vanguard",
           "name_fr": "Avant-garde",
           "points": 5,
-          "minimum": 0,
-          "maximum": 0
+          "exclusive": true
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
+        "name_en": "Cold Blooded {renegade}, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_de": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_es": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_fr": "Sang Froid, Mouvement à Couvert, Attaques Empoisonnées (Javelines uniquement), Tirailleurs"
@@ -950,7 +1096,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
+        "name_en": "Cold Blooded {renegade}, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_de": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_es": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_fr": "Sang Froid, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Attaques Empoisonnées, Tirailleurs, Indémoralisable, Avant-garde"
@@ -1009,7 +1155,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
+        "name_en": "Cold Blooded {renegade}, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_de": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_es": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_fr": "Sang Froid, Esquiveur, Mouvement à Couvert, Éclaireurs, Tirailleurs"
@@ -1066,7 +1212,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
+        "name_en": "Aquatic, Close Order, Cold Blooded {renegade}, Fear, Skirmish Screen",
         "name_de": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_es": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_fr": "Aquatique, Ordre Serré, Sang Froid, Peur, Écran de Tirailleurs"
@@ -1087,6 +1233,22 @@
       "points": 32,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Terradon Riders per Skink Hero taken",
+            "name_de": "0-1 unit of Terradon Riders per Skink Hero taken",
+            "name_es": "0-1 unit of Terradon Riders per Skink Hero taken",
+            "name_fr": "0-1 unité de Monteurs de Téradon par Héros Skink pris",
+            "name_it": "0-1 unit of Terradon Riders per Skink Hero taken",
+            "name_pl": "0-1 unit of Terradon Riders per Skink Hero taken"
+          }
+        },
+        "lm-renegade": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Sky Leader (champion)",
@@ -1131,16 +1293,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
+        "name_en": "Armoured Hide (1), Cold Blooded {renegade}, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_de": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_es": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_fr": "Peau Blindée (1), Sang Froid, Rochers, Peur, Vol (10), Attaques Empoisonnées (Javelines uniquement), Tirailleurs, Rapide"
-      },
-      "notes": {
-        "name_en": "0-1 unit of Terradon Riders per Skink Hero taken",
-        "name_de": "0-1 unit of Terradon Riders per Skink Hero taken",
-        "name_es": "0-1 unit of Terradon Riders per Skink Hero taken",
-        "name_fr": "0-1 unité de Monteurs de Téradon par Héros Skink pris"
       }
     },
     {
@@ -1152,6 +1308,22 @@
       "points": 40,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
+            "name_de": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
+            "name_es": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
+            "name_fr": "0-1 unité de Monteurs d'Entérodactyle par Héros Skink pris",
+            "name_it": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
+            "name_pl": "0-1 unit of Ripperdactyl Riders per Skink Hero taken"
+          }
+        },
+        "lm-renegade": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Ripperdactyl Champion",
@@ -1188,16 +1360,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
+        "name_en": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded {renegade}, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_de": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_es": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_fr": "Peau Blindée (1), Coup de Fendoir (Entérodactyle uniquement), Sang Froid, Peur, Vol (9), Charge Dévastatrice (Entérodactyle uniquement), Impétueux, Tirailleurs, Rapide, Crapauds"
-      },
-      "notes": {
-        "name_en": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
-        "name_de": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
-        "name_es": "0-1 unit of Ripperdactyl Riders per Skink Hero taken",
-        "name_fr": "0-1 unité de Monteurs d'Entérodactyle par Héros Skink pris"
       }
     },
     {
@@ -1298,7 +1464,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
+        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded {renegade}, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_es": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Sang Froid, Peur, Lames Obsidienne, Stupidité, Rapide"
@@ -1317,6 +1483,22 @@
       "name_fr": "Bastiladon",
       "id": "bastiladon",
       "points": 160,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Bastiladons per 1000 points",
+            "name_de": "0-2 Bastiladons per 1000 points",
+            "name_es": "0-2 Bastiladons per 1000 points",
+            "name_fr": "0-2 Bastiladons par tranche de 1000 points",
+            "name_it": "0-2 Bastiladons per 1000 points",
+            "name_pl": "0-2 Bastiladons per 1000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1349,16 +1531,63 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
+        "name_en": "Close Order, Cold Blooded {renegade}, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_fr": "Ordre Serré, Sang Froid, Immunisé à la Psychologie, Touches d'Impact (D3), Défense Impénétrable, Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+1), Obstiné, Terreur"
+      }
+    },
+    {
+      "name_en": "Stegadon",
+      "name_de": "Stegadon",
+      "name_es": "Stegadon",
+      "name_fr": "Stégadon",
+      "id": "stegadon",
+      "points": 215,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_de": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_es": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points",
+            "name_it": "0-1 Stegadon or Troglodon per 1,000 points",
+            "name_pl": "0-1 Stegadon or Troglodon per 1,000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "special"
+        }
       },
-      "notes": {
-        "name_en": "0-2 Bastiladons per 1000 points",
-        "name_de": "0-2 Bastiladons per 1000 points",
-        "name_es": "0-2 Bastiladons per 1000 points",
-        "name_fr": "0-2 Bastiladons par tranche de 1000 points"
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Javelins, Great horns, Giant bow",
+          "name_de": "Hand weapons, Javelins, Great horns, Giant bow",
+          "name_es": "Hand weapons, Javelins, Great horns, Giant bow",
+          "name_fr": "Armes de base, Javelines, Grandes cornes, Arc géant",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Javelins, Great horns, Giant blowpipes",
+          "name_de": "Hand weapons, Javelins, Great horns, Giant blowpipes",
+          "name_es": "Hand weapons, Javelins, Great horns, Giant blowpipes",
+          "name_fr": "Armes de base, Javelines, Grandes cornes, Sarbacanes géantes",
+          "points": 0
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Cold Blooded {renegade}, Howdah {renegade}, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
       }
     }
   ],
@@ -1372,6 +1601,22 @@
       "points": 75,
       "minimum": 1,
       "maximum": 0,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_de": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_es": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_fr": "0-1 Meute de Salamandre ou Meute de Razordon par tranche de 1000 points",
+            "name_it": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_pl": "0-1 Salamander Pack or Razordon Pack per 1000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1381,7 +1626,18 @@
           "name_fr": "Griffes mortelles, Souffle ardent",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "lizardmen"
+        },
+        {
+          "name_en": "Wicked claws, Fiery breath {renegade}",
+          "name_de": "Wicked claws, Fiery breath",
+          "name_es": "Wicked claws, Fiery breath",
+          "name_fr": "Griffes mortelles, Souffle ardent",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "lm-renegade"
         }
       ],
       "armor": [
@@ -1410,16 +1666,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
+        "name_en": "Aquatic, Beast Handlers, Cold Blooded {renegade}, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_fr": "Aquatique, Maître des Bêtes, Sang Froid, Peur, Tirailleurs"
-      },
-      "notes": {
-        "name_en": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Salamander Pack must contain at least three Skink Handlers for every one Salamander.",
-        "name_de": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Salamander Pack must contain at least three Skink Handlers for every one Salamander.",
-        "name_es": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Salamander Pack must contain at least three Skink Handlers for every one Salamander.",
-        "name_fr": "0-1 Meute de Salamandre ou Meute de Razordon par tranche de 1000 points, *Quand vous rédigez votre liste de mobilisation, une Meute de Salamandre doit contenir au moins trois Coureurs Skinks pour chaque Salamandre"
       }
     },
     {
@@ -1431,6 +1681,22 @@
       "points": 60,
       "minimum": 1,
       "maximum": 0,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_de": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_es": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_fr": "0-1 Meute de Salamandre ou Meute de Razordon par tranche de 1000 points",
+            "name_it": "0-1 Salamander Pack or Razordon Pack per 1000 points",
+            "name_pl": "0-1 Salamander Pack or Razordon Pack per 1000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1469,59 +1735,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
+        "name_en": "Aquatic, Beast Handlers, Cold Blooded {renegade}, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_fr": "Aquatique, Maître des Bêtes, Sang Froid, Peur, Tirailleurs"
-      },
-      "notes": {
-        "name_en": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Razordon Pack must contain at least three Skink Handlers for every one Razordon.",
-        "name_de": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Razordon Pack must contain at least three Skink Handlers for every one Razordon.",
-        "name_es": "0-1 Salamander Pack or Razordon Pack per 1000 points, *When writing your muster list, a Razordon Pack must contain at least three Skink Handlers for every one Razordon.",
-        "name_fr": "0-1 Meute de Salamandre ou Meute de Razordon par tranche de 1000 points, *Quand vous rédigez votre liste de mobilisation, une Meute de Razordon doit contenir au moins trois Coureurs Skinks pour chaque Razordon"
-      }
-    },
-    {
-      "name_en": "Stegadon",
-      "name_de": "Stegadon",
-      "name_es": "Stegadon",
-      "name_fr": "Stégadon",
-      "id": "stegadon",
-      "points": 215,
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_de": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_es": "Hand weapons, Javelins, Great horns, Giant bow",
-          "name_fr": "Armes de base, Javelines, Grandes cornes, Arc géant",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_de": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_es": "Hand weapons, Javelins, Great horns, Giant blowpipes",
-          "name_fr": "Armes de base, Javelines, Grandes cornes, Sarbacanes géantes",
-          "points": 0
-        }
-      ],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
-        "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
-      },
-      "notes": {
-        "name_en": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_de": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_es": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points"
       }
     },
     {
@@ -1530,6 +1747,22 @@
       "name_es": "Troglodon",
       "name_fr": "Troglodon",
       "id": "troglodon",
+      "armyComposition": {
+        "lizardmen": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_de": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_es": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points",
+            "name_it": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_pl": "0-1 Stegadon or Troglodon per 1000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "rare"
+        }
+      },
       "points": 200,
       "command": [
         {
@@ -1566,16 +1799,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
+        "name_en": "Arcane Vassal, Aquatic, Close Order, Cold Blooded {renegade}, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_de": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_es": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_fr": "Vassal Magique, Aquatique, Ordre Serré, Sang Froid, Immunisé à la Psychologie, Grande Cible, Domaine de Lustrie, Rugissement Primal, Attaques de Piétinement (2), Obstiné, Terreur"
-      },
-      "notes": {
-        "name_en": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_de": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_es": "0-1 Stegadon or Troglodon per 1000 points",
-        "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points"
       }
     },
     {
@@ -1585,6 +1812,22 @@
       "name_fr": "Stégadon Ancestral",
       "id": "ancient-stegadon",
       "points": 230,
+      "armyComposition": {
+        "lizardmen": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_de": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_es": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points",
+            "name_it": "0-1 Stegadon or Troglodon per 1000 points",
+            "name_pl": "0-1 Stegadon or Troglodon per 1000 points"
+          }
+        },
+        "lm-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1616,16 +1859,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_en": "Close Order, Cold Blooded {renegade}, Howdah {renegade}, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
-      },
-      "notes": {
-        "name_en": "0-1 Stegadon or Troglodon per 1000 points, gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
-        "name_de": "0-1 Stegadon or Troglodon per 1000 points, gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
-        "name_es": "0-1 Stegadon or Troglodon per 1000 points, gains Burning Alignment special rule when choosing Engine of the Gods weapon option",
-        "name_fr": "0-1 Stégadon ou Troglodon par tranche de 1000 points, gagne la règle spéciale Alignement Ardent si l'option d'arme Machine des Dieux est choisie"
       }
     }
   ],

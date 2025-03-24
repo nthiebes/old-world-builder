@@ -60,6 +60,9 @@ const additionalOWBRules = {
   "doomseeker dwarfs": {
     url: "special-rules/doomseeker",
   },
+  "armour piercing": {
+    url: "the-shooting-phase/armour-piercing",
+  },
 };
 
 export const synonyms = {
@@ -85,6 +88,7 @@ export const synonyms = {
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
+  "leadbelcher guns renegade": "leadbelcher gun renegade",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",

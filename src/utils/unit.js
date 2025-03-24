@@ -291,8 +291,11 @@ export const getPage = (name) => {
   return page.replace(/,/g, "");
 };
 
-export const getStats = (unit) => {
-  const stats = getUnitRuleData(unit.name_en).stats || [];
+export const getStats = (unit, armyComposition) => {
+  const name = unit.name_en.includes("renegade") && armyComposition?.includes("renegade")
+  ? unit.name_en
+  : unit.name_en.replace(" {renegade}", "");
+  const stats = getUnitRuleData(name).stats || [];
   const activeMount = unit.mounts.find((mount) => mount.active);
   const mountStats = getUnitRuleData(activeMount?.name_en || "")?.stats || [];
   const detachments = unit.detachments || [];

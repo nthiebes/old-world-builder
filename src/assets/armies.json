@@ -429,8 +429,15 @@
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
             }
+          ],
+          "de-renegade": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
           ]
-        }
+        },
+        "armyComposition": ["de-renegade"]
       },
       {
         "id": "skaven",
@@ -440,8 +447,15 @@
         "name_fr": "Skaven",
         "items": ["general", "skaven"],
         "allies": [{ "army": "warriors-of-chaos" }],
+        "armyComposition": ["sk-renegade"],
         "mercenaries": {
           "skaven": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "sk-renegade": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
@@ -456,7 +470,8 @@
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": [{ "army": "tomb-kings-of-khemri" }]
+        "allies": [{ "army": "tomb-kings-of-khemri" }],
+        "armyComposition": ["vc-renegade"]
       },
       {
         "id": "daemons-of-chaos",
@@ -464,6 +479,7 @@
         "name_en": "Daemons of Chaos",
         "name_es": "Daemons of Chaos",
         "name_fr": "Démons du Chaos",
+        "armyComposition": ["doc-renegade"],
         "items": [
           "general",
           "daemonic-gifts-common",
@@ -486,8 +502,19 @@
         "name_fr": "Royaumes Ogres",
         "items": ["general", "ogre-kingdoms", "big-names"],
         "allies": [{ "army": "orc-and-goblin-tribes" }],
+        "armyComposition": ["ok-renegade"],
         "mercenaries": {
           "ogre-kingdoms": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "ok-renegade": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["bonegrinder-giant"]
+            },
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
@@ -503,8 +530,15 @@
         "name_fr": "Hommes-Lézards",
         "items": ["general", "lizardmen", "disciplines-old-ones"],
         "allies": [{ "army": "high-elf-realms" }],
+        "armyComposition": ["lm-renegade"],
         "mercenaries": {
           "lizardmen": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "lm-renegade": [
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]
@@ -519,9 +553,28 @@
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
-        "allies": [{ "army": "warriors-of-chaos" }],
+        "allies": [
+          {
+            "army": "warriors-of-chaos"
+          },
+          {
+            "army": "daemons-of-chaos",
+            "armyComposition": "cd-renegade"
+          }
+        ],
+        "armyComposition": ["cd-renegade"],
         "mercenaries": {
           "chaos-dwarfs": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["badland-ogre-bulls"]
+            }
+          ],
+          "cd-renegade": [
+            {
+              "army": "orc-and-goblin-tribes",
+              "units": ["bonegrinder-giant"]
+            },
             {
               "army": "orc-and-goblin-tribes",
               "units": ["badland-ogre-bulls"]

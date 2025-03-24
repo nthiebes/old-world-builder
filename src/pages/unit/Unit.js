@@ -7,7 +7,11 @@ import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
 import { fetcher } from "../../utils/fetcher";
-import { getPointsPerModel, getUnitPoints, getUnitMagicPoints } from "../../utils/points";
+import {
+  getPointsPerModel,
+  getUnitPoints,
+  getUnitMagicPoints,
+} from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
@@ -496,6 +500,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
+  const specialRules =
+    unit?.armyComposition?.[list?.armyComposition || list?.army]
+      ?.specialRules || unit.specialRules;
   const listArmyComposition = list?.armyComposition || list?.army;
 
   return (
@@ -570,8 +577,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.minimum ? (
           <>
             <label htmlFor="strength" className="unit__strength">
-              <span><FormattedMessage id="unit.unitSize" /></span>
-              <i className="unit__strength-points">{getPointsText({ points: getPointsPerModel(unit), perModel: true }) }</i>
+              <span>
+                <FormattedMessage id="unit.unitSize" />
+              </span>
+              <i className="unit__strength-points">
+                {getPointsText({
+                  points: getPointsPerModel(unit),
+                  perModel: true,
+                })}
+              </i>
             </label>
             <NumberInput
               id="strength"
@@ -854,6 +868,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.armor" />
             </h2>
             {unit.armor
+              .filter(
+                (unitArmor) =>
+                  !unitArmor.armyComposition ||
+                  unitArmor.armyComposition.includes(listArmyComposition)
+              )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
               )
@@ -1565,13 +1584,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             })
           : null}
 
-        {unit.specialRules && unit.specialRules.name_en ? (
+        {specialRules && specialRules.name_en ? (
           <>
             <h2 className="unit__subline unit__subline--space-before">
               <FormattedMessage id="unit.specialRules" />
             </h2>
             <p>
-              <RulesLinksText textObject={unit.specialRules} />
+              <RulesLinksText textObject={specialRules} />
             </p>
           </>
         ) : null}

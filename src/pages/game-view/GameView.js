@@ -257,7 +257,7 @@ export const GameView = () => {
     return (
       <ul>
         {units.map((unit, index) => {
-          const stats = getStats(unit);
+          const stats = getStats(unit, armyComposition);
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
 
           return (
