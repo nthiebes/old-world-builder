@@ -1,7 +1,7 @@
 {
   "characters": [
     {
-      "name_en": "Slann Mage-Priest",
+      "name_en": "Slann Mage-Priest {renegade}",
       "name_de": "Slann Mage-Priest",
       "name_es": "Slann Mage-Priest",
       "name_fr": "Prêtre-mage Slann",
@@ -11,10 +11,10 @@
         "lizardmen": {
           "category": "characters"
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "characters",
           "specialRules": {
-            "name_en": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
+            "name_en": "Arcane Shield, Cold Blooded {renegade}, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_de": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_es": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_fr": "Bouclier Arcanique, Sang Froid, Vol (8), Domaine de Lustrie, Wisdom of the Old Ones, Palanquin"
@@ -98,7 +98,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
+        "name_en": "Arcane Shield, Cold Blooded {renegade}, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_de": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_es": "Arcane Shield, Cold Blooded, Close Order, Fly (8), Large Target, Lore of Lustria",
         "name_fr": "Bouclier Arcanique, Sang Froid, Ordre Serré, Vol (8), Grande Cible, Domaine de Lustrie"
@@ -123,7 +123,7 @@
             "name_pl": "0-1 Saurus Oldblood or Skink Chief per 1000 Points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "characters",
           "notes": {
             "name_en": "0-1 Saurus Oldblood per 1000 Points",
@@ -252,7 +252,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
+        "name_en": "Cold Blooded {renegade}, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_fr": "Sang Froid, Charge Dévastatrice*, Lames Obsidienne, Cri de Ralliement"
@@ -392,7 +392,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
+        "name_en": "Cold Blooded {renegade}, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_de": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_es": "Cold Blooded, Furious Charge*, Obsidian Blades, Rallying Cry",
         "name_fr": "Sang Froid, Charge Dévastatrice*, Lames Obsidienne, Cri de Ralliement"
@@ -423,7 +423,7 @@
             "name_pl": "0-1 Saurus Oldblood or Skink Chief per 1000 Points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "characters"
         }
       },
@@ -527,7 +527,7 @@
       ],
       "lores": ["elementalism", "battle-magic", "illusion"],
       "specialRules": {
-        "name_en": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
+        "name_en": "Arcane Vassal, Aquatic**, Cold Blooded {renegade}, Lore of Lustria",
         "name_de": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
         "name_es": "Arcane Vassal, Aquatic**, Cold Blooded, Lore of Lustria",
         "name_fr": "Vassal Magique, Aquatique**, Sang Froid, Domaine de Lustrie"
@@ -695,7 +695,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic**, Cold Blooded, Poisoned Attacks",
+        "name_en": "Aquatic**, Cold Blooded {renegade}, Poisoned Attacks",
         "name_de": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_es": "Aquatic**, Cold Blooded, Poisoned Attacks",
         "name_fr": "Aquatique**, Sang Froid, Attaques Empoisonnées"
@@ -803,14 +803,14 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Obsidian Blades",
+        "name_en": "Close Order, Cold Blooded {renegade}, Obsidian Blades",
         "name_de": "",
         "name_es": "",
         "name_fr": "Ordre Serré, Sang Froid, Lames Obsidienne"
       }
     },
     {
-      "name_en": "Temple Guard",
+      "name_en": "Temple Guard {renegade}",
       "name_de": "Temple Guard",
       "name_es": "Temple Guard",
       "name_fr": "Gardien du Temple",
@@ -819,7 +819,7 @@
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "special"
         }
       },
@@ -881,7 +881,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_en": "Close Order, Cold Blooded {renegade}, Guardians {renegade}, Obsidian Blades, Shieldwall, Stubborn",
         "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Sang Froid, Gardiens, Lames Obsidienne, Mur de Boucliers, Obstiné"
@@ -894,7 +894,7 @@
       }
     },
     {
-      "name_en": "Temple Guard",
+      "name_en": "Temple Guard {renegade}",
       "name_de": "Temple Guard",
       "name_es": "Temple Guard",
       "name_fr": "Gardien du Temple",
@@ -906,7 +906,7 @@
         "lizardmen": {
           "category": "core"
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "core",
           "notes": {
             "name_en": "0-1 unit of Temple Guard (if your General is a Slann Mage-Priest)",
@@ -976,7 +976,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
+        "name_en": "Close Order, Cold Blooded {renegade}, Guardians {renegade}, Obsidian Blades, Shieldwall, Stubborn",
         "name_de": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_es": "Close Order, Cold Blooded, Guardians, Obsidian Blades, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Sang Froid, Gardiens, Lames Obsidienne, Mur de Boucliers, Obstiné"
@@ -1058,7 +1058,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
+        "name_en": "Cold Blooded {renegade}, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_de": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_es": "Cold Blooded, Move Through Cover, Poisoned Attacks (Javelins only), Skirmishers",
         "name_fr": "Sang Froid, Mouvement à Couvert, Attaques Empoisonnées (Javelines uniquement), Tirailleurs"
@@ -1096,7 +1096,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
+        "name_en": "Cold Blooded {renegade}, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_de": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_es": "Cold Blooded, Immune to Psychology, Loner, Move Through Cover, Poisoned Attacks, Skirmishers, Unbreakable, Vanguard",
         "name_fr": "Sang Froid, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Attaques Empoisonnées, Tirailleurs, Indémoralisable, Avant-garde"
@@ -1155,7 +1155,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
+        "name_en": "Cold Blooded {renegade}, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_de": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_es": "Cold Blooded, Evasive, Move Through Cover, Scouts, Skirmishers",
         "name_fr": "Sang Froid, Esquiveur, Mouvement à Couvert, Éclaireurs, Tirailleurs"
@@ -1212,7 +1212,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
+        "name_en": "Aquatic, Close Order, Cold Blooded {renegade}, Fear, Skirmish Screen",
         "name_de": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_es": "Aquatic, Close Order, Cold Blooded, Fear, Skirmish Screen",
         "name_fr": "Aquatique, Ordre Serré, Sang Froid, Peur, Écran de Tirailleurs"
@@ -1245,7 +1245,7 @@
             "name_pl": "0-1 unit of Terradon Riders per Skink Hero taken"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "special"
         }
       },
@@ -1293,7 +1293,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
+        "name_en": "Armoured Hide (1), Cold Blooded {renegade}, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_de": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_es": "Armoured Hide (1), Cold Blooded, Drop Rocks, Fear, Fly (10), Poisoned Attacks (Javelins only), Skirmishers, Swiftstride",
         "name_fr": "Peau Blindée (1), Sang Froid, Rochers, Peur, Vol (10), Attaques Empoisonnées (Javelines uniquement), Tirailleurs, Rapide"
@@ -1320,7 +1320,7 @@
             "name_pl": "0-1 unit of Ripperdactyl Riders per Skink Hero taken"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "special"
         }
       },
@@ -1360,7 +1360,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
+        "name_en": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded {renegade}, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_de": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_es": "Armoured Hide (1), Cleaving Blow (Ripperdactyl only), Cold Blooded, Fear, Fly (9), Furious Charge (Ripperdactyl only), Impetuous, Skirmishers, Swiftstride, Toad Rage",
         "name_fr": "Peau Blindée (1), Coup de Fendoir (Entérodactyle uniquement), Sang Froid, Peur, Vol (9), Charge Dévastatrice (Entérodactyle uniquement), Impétueux, Tirailleurs, Rapide, Crapauds"
@@ -1464,7 +1464,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
+        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded {renegade}, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_es": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Cold Blooded, Fear, Obsidian Blades, Stupidity, Swiftstride",
         "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Sang Froid, Peur, Lames Obsidienne, Stupidité, Rapide"
@@ -1495,7 +1495,7 @@
             "name_pl": "0-2 Bastiladons per 1000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "special"
         }
       },
@@ -1531,7 +1531,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
+        "name_en": "Close Order, Cold Blooded {renegade}, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Immune to Psychology, Impact Hits (D3), Impervious Defence, Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+1), Stubborn, Terror",
         "name_fr": "Ordre Serré, Sang Froid, Immunisé à la Psychologie, Touches d'Impact (D3), Défense Impénétrable, Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+1), Obstiné, Terreur"
@@ -1556,7 +1556,7 @@
             "name_pl": "0-1 Stegadon or Troglodon per 1,000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "special"
         }
       },
@@ -1584,7 +1584,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_en": "Close Order, Cold Blooded {renegade}, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
@@ -1613,7 +1613,7 @@
             "name_pl": "0-1 Salamander Pack or Razordon Pack per 1000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "rare"
         }
       },
@@ -1655,7 +1655,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
+        "name_en": "Aquatic, Beast Handlers, Cold Blooded {renegade}, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_fr": "Aquatique, Maître des Bêtes, Sang Froid, Peur, Tirailleurs"
@@ -1682,7 +1682,7 @@
             "name_pl": "0-1 Salamander Pack or Razordon Pack per 1000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "rare"
         }
       },
@@ -1724,7 +1724,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
+        "name_en": "Aquatic, Beast Handlers, Cold Blooded {renegade}, Fear, Skirmishers",
         "name_de": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_es": "Aquatic, Beast Handlers, Cold Blooded, Fear, Skirmishers",
         "name_fr": "Aquatique, Maître des Bêtes, Sang Froid, Peur, Tirailleurs"
@@ -1748,7 +1748,7 @@
             "name_pl": "0-1 Stegadon or Troglodon per 1000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "rare"
         }
       },
@@ -1788,7 +1788,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
+        "name_en": "Arcane Vassal, Aquatic, Close Order, Cold Blooded {renegade}, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_de": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_es": "Arcane Vassal, Aquatic, Close Order, Cold Blooded, Immune to Psychology, Large Target, Lore of Lustria, Primeval Roar, Stomp Attacks (2), Stubborn, Terror",
         "name_fr": "Vassal Magique, Aquatique, Ordre Serré, Sang Froid, Immunisé à la Psychologie, Grande Cible, Domaine de Lustrie, Rugissement Primal, Attaques de Piétinement (2), Obstiné, Terreur"
@@ -1813,7 +1813,7 @@
             "name_pl": "0-1 Stegadon or Troglodon per 1000 points"
           }
         },
-        "lizardmen-renegades": {
+        "lm-renegade": {
           "category": "rare"
         }
       },
@@ -1848,7 +1848,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
+        "name_en": "Close Order, Cold Blooded {renegade}, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_de": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_es": "Close Order, Cold Blooded, Howdah, Immune to Psychology, Impact Hits (D3+1), Large Target, Poisoned Attacks (Javelins only), Stomp Attacks (D3+2), Stubborn, Terror",
         "name_fr": "Ordre Serré, Sang Froid, Howdah, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Empoisonnées (Javelines uniquement), Attaques de Piétinement (D3+2), Obstiné, Terreur"
