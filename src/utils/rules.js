@@ -3132,6 +3132,121 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
+  "vc-renegades": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "vampire-count",
+            "vampire-thrall",
+            "master-necromancer",
+            "necromantic-acolyte",
+            "strigoi-ghoul-king",
+          ],
+          min: 1,
+        },
+        {
+          ids: ["vampire-count", "master-necromancer", "strigoi-ghoul-king"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["wight-king", "tomb-banshee"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["grave-guard", "black-knights"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["wight-king", "wight-lord"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grave-guard", "black-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["crypt-horrors", "fell-bats"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["corpse-cart"],
+          min: 0,
+          max: 3,
+        },
+        {
+          ids: ["spirit-hosts"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["cairn-wraith", "tomb-banshee"],
+          perUnit: true,
+        },
+        {
+          ids: ["vargheists", "terrorgheist"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["strigoi-ghoul-king"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["vargheists"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["black-coach"],
+          min: 0,
+          max: 2,
+        },
+        {
+          ids: ["terrorgheist", "varghulf"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["blood-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hexwraiths"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["cairn-wraith", "tomb-banshee"],
+          perUnit: true,
+        },
+      ],
+    },
+    allies: { maxPercent: 25 },
+  },
   skaven: {
     characters: {
       maxPercent: 50,
