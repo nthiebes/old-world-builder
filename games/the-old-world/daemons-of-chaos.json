@@ -9,6 +9,22 @@
       "name_pl": "Daemon Prince",
       "id": "daemon-prince",
       "points": 210,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "characters"
+        },
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons, Regeneration (5+)",
+            "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+)",
+            "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+)",
+            "name_fr": "Armure du Chaos, Démoniaque, Faveur Infernale (2), Domaine des Démons, Régénération (5+)",
+            "name_it": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+)",
+            "name_pl": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+)"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -310,7 +326,7 @@
       ],
       "lores": ["none", "battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
-        "name_en": "Chaos Armour {daemons of chaos}, Daemonic, Infernal Favour (2), Lore of Daemons",
+        "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons",
         "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",
         "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons",
         "name_fr": "Armure du Chaos, Démoniaque, Faveur Infernale (2), Domaine des Démons",
@@ -335,6 +351,38 @@
       "name_pl": "Bloodthirster",
       "id": "bloodthirster",
       "points": 355,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
+          }
+        },
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror, Close Order",
+            "name_de": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror, Close Order",
+            "name_es": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror, Close Order",
+            "name_fr": "Démoniaque, Charge Démoniaque, Démon de Khorne, Vol (10), Charge Dévastatrice, Touches d'Impact (D3), Impétueux, Faveur Infernale (2), Grande Cible, Résistance à la Magie (-2), Terreur, Close Order",
+            "name_it": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror, Close Order",
+            "name_pl": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror, Close Order"
+          },
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -432,14 +480,6 @@
         "name_fr": "Démoniaque, Charge Démoniaque, Démon de Khorne, Vol (10), Charge Dévastatrice, Touches d'Impact (D3), Impétueux, Faveur Infernale (2), Grande Cible, Résistance à la Magie (-2), Terreur",
         "name_it": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
         "name_pl": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror"
-      },
-      "notes": {
-        "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
-        "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
       }
     },
     {
@@ -570,6 +610,38 @@
       "name_pl": "Great Unclean One",
       "id": "great-unclean-one",
       "points": 330,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
+          }
+        },
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror, Close Order",
+            "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror, Close Order",
+            "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror, Close Order",
+            "name_fr": "Démoniaque, Démon de Nurgle, Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques Empoisonnées, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Close Order",
+            "name_it": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror, Close Order",
+            "name_pl": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror, Close Order"
+          },
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -691,14 +763,6 @@
         "name_fr": "Démoniaque, Démon de Nurgle, Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques Empoisonnées, Régénération (5+), Attaques de Piétinement (D3+1), Terreur",
         "name_it": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror",
         "name_pl": "Daemonic, Daemon of Nurgle, Infernal Favour (2), Large Target, Lore of Daemons, Poisoned Attacks, Regeneration (5+), Stomp Attacks (D3+1), Terror"
-      },
-      "notes": {
-        "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
-        "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
       }
     },
     {
@@ -858,7 +922,7 @@
           "active": true
         },
         {
-          "name_en": "Palanquin of Nurgle",
+          "name_en": "Palanquin of Nurgle {renegade}",
           "name_de": "Palanquin of Nurgle",
           "name_es": "Palanquin of Nurgle",
           "name_fr": "Palanquin de Nurgle",
@@ -906,6 +970,38 @@
       "name_pl": "Keeper of Secrets",
       "id": "keeper-of-secrets",
       "points": 330,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
+          }
+        },
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques de Piétinement (D3), Rapide, Terreur, Close Order",
+            "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order"
+          },
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -991,14 +1087,6 @@
         "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques de Piétinement (D3), Rapide, Terreur",
         "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
         "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror"
-      },
-      "notes": {
-        "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
-        "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
       }
     },
     {
@@ -1212,6 +1300,38 @@
       "name_pl": "Lord of Change",
       "id": "lord-of-change",
       "points": 310,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
+          }
+        },
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_de": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_es": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_fr": "Démoniaque, Démon de Tzeentch, Attaques Enflammées, Vol (9), Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques de Piétinement (D3), Rapide, Terreur, Close Order",
+            "name_it": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order",
+            "name_pl": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror, Close Order"
+          },
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same demonic alignment"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1303,14 +1423,6 @@
         "name_fr": "Démoniaque, Démon de Tzeentch, Attaques Enflammées, Vol (9), Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques de Piétinement (D3), Rapide, Terreur",
         "name_it": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
         "name_pl": "Daemonic, Daemon of Tzeentch, Flaming Attacks, Fly (9), Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror"
-      },
-      "notes": {
-        "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch)",
-        "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
-        "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
       }
     },
     {
@@ -1512,6 +1624,22 @@
       "points": 11,
       "minimum": 6,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "If your General is a Daemon of Slaanesh",
+            "name_de": "If your General is a Daemon of Slaanesh",
+            "name_es": "If your General is a Daemon of Slaanesh",
+            "name_fr": "Si votre Général est un Démon de Slaanesh",
+            "name_it": "If your General is a Daemon of Slaanesh",
+            "name_pl": "If your General is a Daemon of Slaanesh"
+          }
+        },
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Alluress (champion)",
@@ -1563,20 +1691,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Slaanesh",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Slaanesh",
         "name_it": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_pl": "Close Order, Daemonic, Daemons of Slaanesh"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Slaanesh",
-        "name_de": "If your General is a Daemon of Slaanesh",
-        "name_es": "If your General is a Daemon of Slaanesh",
-        "name_fr": "Si votre Général est un Démon de Slaanesh",
-        "name_it": "If your General is a Daemon of Slaanesh",
-        "name_pl": "If your General is a Daemon of Slaanesh"
       }
     },
     {
@@ -1642,7 +1762,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Cavalerie Rapide, Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Tirailleurs, Rapide",
@@ -1669,6 +1789,22 @@
       "points": 13,
       "minimum": 7,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "If your General is a Daemon of Nurgle",
+            "name_de": "If your General is a Daemon of Nurgle",
+            "name_es": "If your General is a Daemon of Nurgle",
+            "name_fr": "Si votre Général est un Démon de Nurgle",
+            "name_it": "If your General is a Daemon of Nurgle",
+            "name_pl": "If your General is a Daemon of Nurgle"
+          }
+        },
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Plagueridden (champion)",
@@ -1721,20 +1857,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_de": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_es": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Nurgle, Attaques Empoisonnées, Régénération (6+)",
         "name_it": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_pl": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Nurgle",
-        "name_de": "If your General is a Daemon of Nurgle",
-        "name_es": "If your General is a Daemon of Nurgle",
-        "name_fr": "Si votre Général est un Démon de Nurgle",
-        "name_it": "If your General is a Daemon of Nurgle",
-        "name_pl": "If your General is a Daemon of Nurgle"
       }
     },
     {
@@ -1748,6 +1876,22 @@
       "points": 45,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core"
+        },
+        "doc-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_fr": "Démoniaque, Démons de Nurgle, Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (6+), Tirailleurs, Éclaireurs",
+            "name_it": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_pl": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts"
+          }
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -1783,6 +1927,22 @@
       "points": 14,
       "minimum": 8,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "If your General is a Daemon of Khorne",
+            "name_de": "If your General is a Daemon of Khorne",
+            "name_es": "If your General is a Daemon of Khorne",
+            "name_fr": "Si votre Général est un Démon de Khorne",
+            "name_it": "If your General is a Daemon of Khorne",
+            "name_pl": "If your General is a Daemon of Khorne"
+          }
+        },
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Bloodreaper (champion)",
@@ -1845,20 +2005,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-1)",
         "name_it": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_pl": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Khorne",
-        "name_de": "If your General is a Daemon of Khorne",
-        "name_es": "If your General is a Daemon of Khorne",
-        "name_fr": "Si votre Général est un Démon de Khorne",
-        "name_it": "If your General is a Daemon of Khorne",
-        "name_pl": "If your General is a Daemon of Khorne"
       }
     },
     {
@@ -1872,6 +2024,22 @@
       "points": 32,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core"
+        },
+        "doc-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_fr": "Arme Perforante (1), Ordre Serré, Contre-charge, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-2), Rapide",
+            "name_it": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_pl": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1928,7 +2096,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_fr": "Arme Perforante (1), Ordre Serré, Contre-charge, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-2)",
@@ -1955,6 +2123,22 @@
       "points": 12,
       "minimum": 9,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "If your General is a Daemon of Tzeentch",
+            "name_de": "If your General is a Daemon of Tzeentch",
+            "name_es": "If your General is a Daemon of Tzeentch",
+            "name_fr": "Si votre Général est un Démon de Tzeentch",
+            "name_it": "If your General is a Daemon of Tzeentch",
+            "name_pl": "If your General is a Daemon of Tzeentch"
+          }
+        },
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Iridescent Horror (champion)",
@@ -2007,20 +2191,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Tzeentch, Scintillating Sorcery",
         "name_de": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_es": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Tzeentch, Sorcellerie Scintillante",
         "name_it": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_pl": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Tzeentch",
-        "name_de": "If your General is a Daemon of Tzeentch",
-        "name_es": "If your General is a Daemon of Tzeentch",
-        "name_fr": "Si votre Général est un Démon de Tzeentch",
-        "name_it": "If your General is a Daemon of Tzeentch",
-        "name_pl": "If your General is a Daemon of Tzeentch"
       }
     },
     {
@@ -2034,6 +2210,22 @@
       "points": 9,
       "minimum": 9,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core"
+        },
+        "doc-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
+            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Ectoplasmic Horror (champion)",
@@ -2235,6 +2427,11 @@
       "points": 11,
       "minimum": 6,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Alluress (champion)",
@@ -2286,7 +2483,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Slaanesh",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Slaanesh",
@@ -2365,7 +2562,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Cavalerie Rapide, Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Tirailleurs, Rapide",
@@ -2392,6 +2589,22 @@
       "points": 66,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2411,20 +2624,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Slaanesh, Musc Soporifique, Rapide",
         "name_it": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_pl": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
       }
     },
     {
@@ -2438,6 +2643,30 @@
       "points": 100,
       "minimum": 1,
       "maximum": 3,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (D3+1), Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide, Armour Piercing (1 - Impact Hits Only)",
+            "name_it": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2469,20 +2698,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (D3+1), Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide",
         "name_it": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
       }
     },
     {
@@ -2495,6 +2716,19 @@
       "id": "hellflayer-of-slaanesh",
       "points": 145,
       "command": [],
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
+          }
+        }
+      },
       "equipment": [
         {
           "name_en": "Piercing claws, Hand weapons (Claws and fangs)",
@@ -2513,20 +2747,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Ordre Serré, Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (2D6+1), Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide",
         "name_it": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Slaanesh, les Bêtes, les Chars Écorcheurs et les Chars Traqueurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Slaanesh, Fiends, Hellflayers and Seeker Chariots may be taken as Special choices"
       }
     },
     {
@@ -2540,6 +2766,11 @@
       "points": 13,
       "minimum": 7,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Plagueridden (champion)",
@@ -2592,7 +2823,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_de": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_es": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Nurgle, Attaques Empoisonnées, Régénération (6+)",
@@ -2619,6 +2850,22 @@
       "points": 45,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        },
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_fr": "Démoniaque, Démons de Nurgle, Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (6+), Tirailleurs, Éclaireurs",
+            "name_it": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_pl": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts"
+          }
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -2654,6 +2901,22 @@
       "points": 62,
       "minimum": 2,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Nurgle, les Bêtes de Nurgle et les Drones de la Peste peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2673,20 +2936,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_en": "Attention Seeker, Close Order, Daemonic {renegade}, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_fr": "En Quête d'Attention, Ordre Serré, Démoniaque, Démons de Nurgle, Impétueux, Faveur Infernale (1), Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (5+), Trainée de bave",
         "name_it": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_pl": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Nurgle, les Bêtes de Nurgle et les Drones de la Peste peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices"
       }
     },
     {
@@ -2700,6 +2955,11 @@
       "points": 63,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Plagueridden (champion)",
@@ -2776,7 +3036,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
@@ -2803,6 +3063,11 @@
       "points": 14,
       "minimum": 8,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Bloodreaper (champion)",
@@ -2865,7 +3130,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-1)",
@@ -2892,6 +3157,22 @@
       "points": 32,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        },
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_fr": "Arme Perforante (1), Ordre Serré, Contre-charge, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-2), Rapide",
+            "name_it": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_pl": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2948,7 +3229,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_fr": "Arme Perforante (1), Ordre Serré, Contre-charge, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-2)",
@@ -2975,6 +3256,22 @@
       "points": 65,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Khorne, les Équarrisseurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Bloodreaper (champion)",
@@ -3037,20 +3334,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_fr": "Peau Blindée (1), Ordre Serré, Démoniaque, Démon de Khorne, Touches d'Impact (2), Impétueux, Résistance à la Magie (-1), Rapide, Première Charge",
         "name_it": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_pl": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Khorne, les Équarrisseurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices"
       }
     },
     {
@@ -3064,6 +3353,11 @@
       "points": 12,
       "minimum": 9,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Iridescent Horror (champion)",
@@ -3116,7 +3410,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Tzeentch, Scintillating Sorcery",
         "name_de": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_es": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Tzeentch, Sorcellerie Scintillante",
@@ -3143,6 +3437,22 @@
       "points": 9,
       "minimum": 9,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        },
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
+            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Ectoplasmic Horror (champion)",
@@ -3246,6 +3556,22 @@
       "points": 44,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Tzeentch, les Incendiaires et les Hurleurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3272,14 +3598,6 @@
         "name_fr": "Démoniaque, Démons de Tzeentch, Vol (9), Solitaire, Tirailleurs, Attaque au Passage",
         "name_it": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
         "name_pl": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Tzeentch, les Incendiaires et les Hurleurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices"
       }
     },
     {
@@ -3293,6 +3611,22 @@
       "points": 40,
       "minimum": 3,
       "maximum": 6,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special",
+          "notes": {
+            "name_en": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_de": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Tzeentch, les Incendiaires et les Hurleurs peuvent être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices"
+          }
+        },
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Pyroclaster (champion)",
@@ -3369,14 +3703,6 @@
         "name_fr": "Démoniaque, Démons de Tzeentch, Attaques Enflammées, Faveur Infernale (1 - Incendiaire Exalté uniquement), Domaine des Démons (Incendiaire Exalté uniquement), Mouvement à Couvert, Tirailleurs",
         "name_it": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers",
         "name_pl": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons (Exalted Flamer only), Move Through Cover, Skirmishers"
-      },
-      "notes": {
-        "name_en": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_de": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_es": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_fr": "Si votre Général est un Démon de Tzeentch, les Incendiaires et les Hurleurs peuvent être pris comme choix Spécial",
-        "name_it": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
-        "name_pl": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices"
       }
     }
   ],
@@ -3392,6 +3718,11 @@
       "points": 65,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Bloodreaper (champion)",
@@ -3454,7 +3785,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_fr": "Peau Blindée (1), Ordre Serré, Démoniaque, Démon de Khorne, Touches d'Impact (2), Impétueux, Résistance à la Magie (-1), Rapide, Première Charge",
@@ -3481,6 +3812,11 @@
       "points": 62,
       "minimum": 2,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3500,7 +3836,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_en": "Attention Seeker, Close Order, Daemonic {renegade}, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_fr": "En Quête d'Attention, Ordre Serré, Démoniaque, Démons de Nurgle, Impétueux, Faveur Infernale (1), Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (5+), Trainée de bave",
@@ -3603,7 +3939,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
         "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
@@ -3630,6 +3966,11 @@
       "points": 66,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3649,7 +3990,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_fr": "Ordre Serré, Démoniaque, Démons de Slaanesh, Musc Soporifique, Rapide",
@@ -3674,6 +4015,22 @@
       "name_pl": "Hellflayer of Slaanesh",
       "id": "hellflayer-of-slaanesh",
       "points": 145,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        },
+        "doc-renegade": {
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Ordre Serré, Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (2D6+1), Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide, Armour Piercing (1 - Impact Hits Only)",
+            "name_it": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)",
+            "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits Only)"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3693,7 +4050,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Ordre Serré, Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (2D6+1), Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide",
@@ -3720,6 +4077,11 @@
       "points": 100,
       "minimum": 1,
       "maximum": 3,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3751,7 +4113,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d'Impact (D3+1), Ordre Dispersé, Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide",
@@ -3778,6 +4140,11 @@
       "points": 40,
       "minimum": 3,
       "maximum": 6,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Pyroclaster (champion)",
@@ -3875,6 +4242,11 @@
       "points": 44,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3987,7 +4359,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_de": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_es": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_fr": "Ordre Serré, Démoniaque, Démon de Tzeentch, Vol (9), Touches d'Impact (D6+1), Domaine des Démons, Attaque au Passage (Hurleurs uniquement)",
@@ -4105,7 +4477,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
+        "name_en": "Close Order, Daemonic {renegade}, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
         "name_de": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
         "name_es": "Close Order, Daemonic, Furious Charge, Large Target, Reserve Move, Stomp Attacks (D6+1), Terror",
         "name_fr": "Ordre Serré, Démoniaque, Charge Dévastatrice, Grande Cible, Mouvement de Réserve, Attaques de Piétinement (D6+1), Terreur",
@@ -4133,7 +4505,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne {renegade}, Hellblades",
           "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "name_fr": "Roues d'airain, Arme de base (faux), Canon de Khorne, Lames Infernales",
@@ -4160,7 +4532,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_en": "Brazen Wheels, Close Order, Daemonic {renegade}, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
         "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
         "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
         "name_fr": "Roues d'airain, Ordre Serré, Démoniaque, Démon de Khorne, Première Charge, Touches d'Impact (D3+1), Impétueux, Attaques de Piétinement (D3)",

@@ -500,7 +500,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack",
+        "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack {renegade}",
         "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute"
       },
       "notes": {
@@ -576,6 +576,18 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+",
+            "name_fr": "1+"
+          }
+        },
+        "ok-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Crusher (champion)",
@@ -587,15 +599,25 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
           "points": 6,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer"
+          "options": [
+            {
+              "name_en": "Look-out Gnoblar",
+              "name_de": "Look-out Gnoblar",
+              "name_es": "Look-out Gnoblar",
+              "name_fr": "Gnoblar Longue-vue",
+              "name_it": "Look-out Gnoblar",
+              "points": 5
+            }
+          ]
         },
         {
           "name_en": "Bellower (musician)",
@@ -648,16 +670,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Look-out Gnoblar (Standard bearer)",
-          "name_de": "Look-out Gnoblar (Standard bearer)",
-          "name_es": "Look-out Gnoblar (Standard bearer)",
-          "name_fr": "Gnoblar Longue-vue (Porte-étendard)",
-          "name_it": "Look-out Gnoblar (Standard bearer)",
-          "points": 5
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -667,10 +680,6 @@
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre",
         "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
-      },
-      "notes": {
-        "name_en": "1+",
-        "name_fr": "1+"
       }
     },
     {
@@ -1006,7 +1015,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Leadbelcher guns",
+          "name_en": "Hand weapons, Leadbelcher guns {renegade}",
           "name_de": "Hand weapons, Leadbelcher guns",
           "name_es": "Hand weapons, Leadbelcher guns",
           "name_fr": "Armes de base, Crache-plomb",
@@ -1188,8 +1197,12 @@
         "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points, 0-1 unit per 1000 points may purchase a magic standard worth up to 50 points, Any unit may have 0-2 of the following special rules: Immune to Psychology, Poisoned Attacks, Stubborn, Vanguard",
-        "name_fr": "0-1 par tranche de 1000 points, 0-1 unité par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points, Toute unité peut avoir 0-2 des règles spéciales suivantes: Immunisé à la Psychologie, Attaques Empoisonnées, Obstiné, Avant-garde"
+        "name_en": "0-1 unit of Maneaters per 1,000 points",
+        "name_de": "0-1 unit of Maneaters per 1,000 points",
+        "name_es": "0-1 unit of Maneaters per 1,000 points",
+        "name_fr": "0-1 unit of Maneaters per 1,000 points",
+        "name_it": "0-1 unit of Maneaters per 1,000 points",
+        "name_pl": "0-1 unit of Maneaters per 1,000 points"
       }
     },
     {
@@ -1310,8 +1323,12 @@
         "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_en": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_de": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_es": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_fr": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_it": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_pl": "0-1 unit of Mournfang Cavalry per 1,000 points"
       }
     },
     {
@@ -1397,10 +1414,34 @@
       "points": 185,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_de": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_es": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points",
+            "name_it": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_pl": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points"
+          }
+        },
+        "ok-renegade": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Ironblaster per 1000 points",
+            "name_de": "0-1 Ironblaster per 1000 points",
+            "name_es": "0-1 Ironblaster per 1000 points",
+            "name_fr": "0-1 Ironblaster per 1000 points",
+            "name_it": "0-1 Ironblaster per 1000 points",
+            "name_pl": "0-1 Ironblaster per 1000 points"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
-          "name_en": "Cannon of the Sky-titans, Hand weapons",
+          "name_en": "Cannon of the Sky-titans {renegade}, Hand weapons",
           "name_de": "Cannon of the Sky-titans",
           "name_es": "Cannon of the Sky-titans",
           "name_fr": "Canon des Titans Célestes, Armes de base",
@@ -1421,10 +1462,6 @@
         "name_es": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
         "name_fr": "Arme Perforante (2 - Rhinox uniquement), Ordre Serré, Peur, Première Charge, Touches d'Impact (D6+1), Grande Cible",
         "name_it": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target"
-      },
-      "notes": {
-        "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
-        "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points"
       }
     },
     {
@@ -1437,6 +1474,22 @@
       "points": 140,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_de": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_es": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points",
+            "name_it": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_pl": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points"
+          }
+        },
+        "ok-renegade": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1461,10 +1514,6 @@
         "name_es": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
         "name_fr": "Arme Perforante (2 - Rhinox uniquement), Ordre Serré, Peur, Première Charge, Touches d'Impact (D6+1), Grande Cible",
         "name_it": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target"
-      },
-      "notes": {
-        "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
-        "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points"
       }
     }
   ],
@@ -1643,6 +1692,22 @@
       "points": 90,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-3 Gorgers",
+            "name_de": "0-3 Gorgers",
+            "name_es": "0-3 Gorgers",
+            "name_fr": "0-3 Cannibales",
+            "name_it": "0-3 Gorgers",
+            "name_pl": "0-3 Gorgers"
+          }
+        },
+        "ok-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1697,10 +1762,6 @@
         "name_es": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
         "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
         "name_it": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
-      },
-      "notes": {
-        "name_en": "0-3",
-        "name_fr": "0-3"
       }
     }
   ],
