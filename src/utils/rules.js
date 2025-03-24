@@ -2858,8 +2858,7 @@ export const rules = {
           ids: ["slann-mage-priest"],
           min: 0,
           max: 1,
-          points: 1500,
-          requiresIfGeneral: ["temple-guard"],
+          points: 1500
         },
         {
           ids: ["saurus-oldblood"],
