@@ -330,7 +330,7 @@ export const nameMap = {
     name_en: "Vampire Counts",
     name_fr: "Comtes Vampires",
   },
-  "vampire-counts-renegades": {
+  "vc-renegades": {
     name_de: "Renegade",
     name_en: "Renegade",
     name_fr: "Renegade",
