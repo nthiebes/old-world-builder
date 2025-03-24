@@ -2850,7 +2850,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "lizardmen-renegades": {
+  "lm-renegade": {
     characters: {
       maxPercent: 50,
       units: [

@@ -530,7 +530,7 @@ export const nameMap = {
     name_en: "Lizardmen",
     name_fr: "Hommes-Lézards",
   },
-  "lizardmen-renegades": {
+  "lm-renegade": {
     name_de: "Renegade",
     name_en: "Renegade",
     name_fr: "Renegade",

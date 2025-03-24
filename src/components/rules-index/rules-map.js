@@ -60,6 +60,9 @@ const additionalOWBRules = {
   "doomseeker dwarfs": {
     url: "special-rules/doomseeker",
   },
+  "armour piercing": {
+    url: "the-shooting-phase/armour-piercing",
+  },
 };
 
 export const synonyms = {
