@@ -350,7 +350,7 @@ export const nameMap = {
     name_en: "Dark Elves",
     name_fr: "Elfes Noirs",
   },
-  "dark-elves-renegades": {
+  "de-renegades": {
     name_de: "Renegade",
     name_en: "Renegade",
     name_fr: "Renegade",

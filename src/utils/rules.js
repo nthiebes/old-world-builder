@@ -2696,6 +2696,82 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "de-renegades": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dark-elf-dreadlord", "supreme-sorceress"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["witch-elves"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["death-hag"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["black-guard-of-naggarond"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["dark-elf-dreadlord", "dark-elf-master"],
+          perUnit: true,
+        },
+        {
+          ids: ["cold-one-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["scourgerunner-chariots", "cold-one-chariots"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["war-hydra", "kharybdiss"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["high-beastmaster"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["doomfire-warlocks"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["reaper-bolt-throwers"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
   lizardmen: {
     characters: {
       maxPercent: 50,
