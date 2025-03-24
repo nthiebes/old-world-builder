@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 
@@ -14,12 +15,20 @@ import "./RulesIndex.css";
 export const RulesIndex = () => {
   const { open, activeRule } = useSelector((state) => state.rulesIndex);
   const [isLoading, setIsLoading] = useState(true);
+  const { listId } = useParams();
+  const list = useSelector((state) =>
+    state.lists.find(({ id }) => listId === id)
+  );
+  const listArmyComposition = list?.armyComposition || list?.army;
   const dispatch = useDispatch();
   const handleClose = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-  const normalizedName = normalizeRuleName(activeRule);
+  const normalizedName =
+    activeRule.includes("renegade") && listArmyComposition?.includes("renegade")
+      ? normalizeRuleName(activeRule)
+      : normalizeRuleName(activeRule.replace(" {renegade}", ""));
   const synonym = synonyms[normalizedName];
   const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
   const rulePath = ruleData?.url;

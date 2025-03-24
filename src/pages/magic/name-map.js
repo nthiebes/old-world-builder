@@ -370,7 +370,7 @@ export const nameMap = {
     name_en: "Daemons of Chaos",
     name_fr: "Démons du Chaos",
   },
-  "daemons-of-chaos-renegades": {
+  "doc-renegade": {
     name_de: "Renegade",
     name_en: "Renegade",
     name_fr: "Renegade",

@@ -2415,7 +2415,7 @@ export const rules = {
       ],
     },
   },
-  "daemons-of-chaos-renegades": {
+  "doc-renegade": {
     characters: {
       maxPercent: 50,
       units: [
