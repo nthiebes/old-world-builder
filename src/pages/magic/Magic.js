@@ -339,7 +339,10 @@ export const Magic = ({ isMobile }) => {
             className="checkbox__label"
           >
             <span className="magic__label-text">
-              {magicItem[`name_${language}`] || magicItem.name_en}
+              {(magicItem[`name_${language}`] || magicItem.name_en).replace(
+                / *\{[^)]*\}/g,
+                ""
+              )}
             </span>
             <i className="checkbox__points">
               {magicItem.points === 0

@@ -274,8 +274,11 @@ export const getPage = (name) => {
   return page.replace(/,/g, "");
 };
 
-export const getStats = (unit) => {
-  const normalizedName = normalizeRuleName(unit.name_en);
+export const getStats = (unit, armyComposition) => {
+  const normalizedName =
+    unit.name_en.includes("renegade") && armyComposition?.includes("renegade")
+      ? normalizeRuleName(unit.name_en)
+      : normalizeRuleName(unit.name_en.replace(" {renegade}", ""));
   const synonym = synonyms[normalizedName];
   const stats = rulesMap[synonym || normalizedName]?.stats || [];
   const activeMount = unit.mounts.find((mount) => mount.active);
