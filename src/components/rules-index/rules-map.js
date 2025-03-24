@@ -88,6 +88,7 @@ export const synonyms = {
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
+  "leadbelcher guns renegade": "leadbelcher gun renegade",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",

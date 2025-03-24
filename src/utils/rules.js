@@ -2959,7 +2959,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "ogre-kingdoms-renegades": {
+  "ok-renegade": {
     characters: {
       maxPercent: 50,
       units: [

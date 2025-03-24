@@ -14,7 +14,7 @@
         "lm-renegade": {
           "category": "characters",
           "specialRules": {
-            "name_en": "Arcane Shield, Cold Blooded {renegade}, Fly (8), Lore of Lustria, Wisdom of the Old Ones {renegade}, Palanquin {renegade}",
+            "name_en": "Arcane Shield, Cold Blooded {renegade}, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_de": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_es": "Arcane Shield, Cold Blooded, Fly (8), Lore of Lustria, Wisdom of the Old Ones, Palanquin",
             "name_fr": "Bouclier Arcanique, Sang Froid, Vol (8), Domaine de Lustrie, Wisdom of the Old Ones, Palanquin"
@@ -1626,7 +1626,18 @@
           "name_fr": "Griffes mortelles, Souffle ardent",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "lizardmen"
+        },
+        {
+          "name_en": "Wicked claws, Fiery breath {renegade}",
+          "name_de": "Wicked claws, Fiery breath",
+          "name_es": "Wicked claws, Fiery breath",
+          "name_fr": "Griffes mortelles, Souffle ardent",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "lm-renegade"
         }
       ],
       "armor": [

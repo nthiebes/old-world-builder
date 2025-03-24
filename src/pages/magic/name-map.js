@@ -500,7 +500,7 @@ export const nameMap = {
     name_en: "Ogre Kingdoms",
     name_fr: "Royaumes Ogres",
   },
-  "ogre-kingdoms-renegades": {
+  "ok-renegade": {
     name_de: "Renegade",
     name_en: "Renegade",
     name_fr: "Renegade",
