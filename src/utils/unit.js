@@ -9,20 +9,20 @@ export const getUnitRuleData = (unitName) => {
   const normalizedRuleName = normalizeRuleName(unitName);
   const synonym = synonyms[normalizedRuleName];
   return rulesMap[synonym || normalizedRuleName];
-}
+};
 
 export const getUnitLeadership = (unitName) => {
   const ruleData = getUnitRuleData(unitName);
-  return ruleData?.stats?.length ?
-    ruleData.stats.reduce(
-      (previousValue, statLine) => 
-        (parseInt(statLine.Ld) || 0) > previousValue 
-          ? parseInt(statLine.Ld)
-          : previousValue,
-      0
-    )
+  return ruleData?.stats?.length
+    ? ruleData.stats.reduce(
+        (previousValue, statLine) =>
+          (parseInt(statLine.Ld) || 0) > previousValue
+            ? parseInt(statLine.Ld)
+            : previousValue,
+        0
+      )
     : 0;
-}
+};
 
 export const getAllOptions = (
   {
@@ -292,10 +292,12 @@ export const getPage = (name) => {
 };
 
 export const getStats = (unit, armyComposition) => {
-  const name = unit.name_en.includes("renegade") && armyComposition?.includes("renegade")
-  ? unit.name_en
-  : unit.name_en.replace(" {renegade}", "");
-  const stats = getUnitRuleData(name).stats || [];
+  const normalizedName =
+    unit.name_en.includes("renegade") && armyComposition?.includes("renegade")
+      ? normalizeRuleName(unit.name_en)
+      : normalizeRuleName(unit.name_en.replace(" {renegade}", ""));
+  const synonym = synonyms[normalizedName];
+  const stats = rulesMap[synonym || normalizedName]?.stats || [];
   const activeMount = unit.mounts.find((mount) => mount.active);
   const mountStats = getUnitRuleData(activeMount?.name_en || "")?.stats || [];
   const detachments = unit.detachments || [];
