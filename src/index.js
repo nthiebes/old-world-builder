@@ -16,6 +16,7 @@ import Spanish from "./i18n/es.json";
 import French from "./i18n/fr.json";
 import Italian from "./i18n/it.json";
 import Polish from "./i18n/pl.json";
+import Chinese from "./i18n/cn.json";
 
 // Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -46,7 +47,7 @@ try {
 } catch {}
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr", "es", "it", "pl"];
+const supportedLanguages = ["en", "de", "fr", "es", "it", "pl", "cn"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -72,6 +73,8 @@ if (language === "de") {
   messages = Italian;
 } else if (language === "pl") {
   messages = Polish;
+} else if (language === "cn") {
+  messages = Chinese;
 } else {
   messages = English;
 }
