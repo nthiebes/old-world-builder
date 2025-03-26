@@ -445,6 +445,14 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["black-orc-warboss", "black-orc-bigboss"],
+          requires: ["black-orc-mob"],
+          requiresType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
       ],
     },
     core: {
@@ -483,6 +491,15 @@ export const rules = {
           requiresGeneral: true,
           requires: ["black-orc-warboss", "black-orc-bigboss"],
         },
+        {
+          ids: ["black-orc-mob"],
+          requires: ["black-orc-warboss", "black-orc-bigboss"],
+          requiresType: "characters",
+          requiredByType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
       ],
     },
     special: {
@@ -506,6 +523,15 @@ export const rules = {
           min: 0,
           max: 2,
           points: 1000,
+        },
+        {
+          ids: ["black-orc-mob"],
+          requires: ["black-orc-warboss", "black-orc-bigboss"],
+          requiresType: "characters",
+          requiredByType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
         },
       ],
     },
@@ -2858,7 +2884,7 @@ export const rules = {
           ids: ["slann-mage-priest"],
           min: 0,
           max: 1,
-          points: 1500
+          points: 1500,
         },
         {
           ids: ["saurus-oldblood"],

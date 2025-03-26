@@ -101,7 +101,9 @@ export const EditList = ({ isMobile }) => {
         <p className="unit__notes">
           <Icon symbol="error" className="unit__notes-icon" />
           {nameMap[list.armyComposition]?.[`name_${language}`] ||
-            nameMap[list.armyComposition]?.name_en}
+            nameMap[list.armyComposition]?.name_en ||
+            nameMap[list.army]?.[`name_${language}`] ||
+            nameMap[list.army]?.name_en}
         </p>
         <label htmlFor="name" className="edit__label">
           <FormattedMessage id="misc.name" />

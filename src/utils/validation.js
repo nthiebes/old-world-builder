@@ -24,24 +24,22 @@ export const validateList = ({ list, language, intl }) => {
   let highestLeadership = 0;
   if (list?.characters?.length) {
     list.characters.map((unit) => {
-      if (unit.command && 
-          unit.command.find(
-            (command) => command.name_en === "General"
-          ) && 
-          !unit.command.find(
-            (command) => 
-              command.name_en.includes("Battle Standard Bearer") &&
-              command.active
-          )
+      if (
+        unit.command &&
+        unit.command.find((command) => command.name_en === "General") &&
+        !unit.command.find(
+          (command) =>
+            command.name_en.includes("Battle Standard Bearer") && command.active
+        )
       ) {
         const leadership = getUnitLeadership(unit.name_en);
         if (leadership > highestLeadership) {
           highestLeadership = leadership;
         }
-      }  
+      }
     });
-  };
-  
+  }
+
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
@@ -95,7 +93,11 @@ export const validateList = ({ list, language, intl }) => {
     : rules["grand-army"]?.mercenaries?.units;
 
   const checkRules = ({ ruleUnit, type }) => {
-    const unitsInList = list[type].filter(
+    const unitsInList = (
+      ruleUnit?.requiredByType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[type]
+    ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
     );
     const requiredUnitsInList =
@@ -211,12 +213,17 @@ export const validateList = ({ list, language, intl }) => {
     }
 
     // General requires unit (especially for the renegade rules)
-    if(ruleUnit.requiresIfGeneral && generals.length > 0) {
-      const requiredUnitsByGeneralInList =
-        [...list.characters, ...list.core, ...list.special, ...list.rare].filter(
-          (unit) =>
-            ruleUnit.requiresIfGeneral && ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
-        );
+    if (ruleUnit.requiresIfGeneral && generals.length > 0) {
+      const requiredUnitsByGeneralInList = [
+        ...list.characters,
+        ...list.core,
+        ...list.special,
+        ...list.rare,
+      ].filter(
+        (unit) =>
+          ruleUnit.requiresIfGeneral &&
+          ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
+      );
       if (requiredUnitsByGeneralInList.length == 0) {
         errors.push({
           message: "misc.error.requiresUnits",
@@ -280,7 +287,8 @@ export const validateList = ({ list, language, intl }) => {
       );
       const characterWithCommand = charactersInList.find((character) =>
         character.commands.find(
-          (command) => command.id === ruleUnit.requiresCommand.id && command.active
+          (command) =>
+            command.id === ruleUnit.requiresCommand.id && command.active
         )
       );
 
@@ -398,12 +406,13 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // General doesn't have highest leadership in the army
-  generalsCount === 1 && getUnitLeadership(generals[0].name_en) < highestLeadership && 
+  generalsCount === 1 &&
+    getUnitLeadership(generals[0].name_en) < highestLeadership &&
     errors.push({
       message: "misc.error.generalLeadership",
       section: "characters",
     });
-  
+
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
