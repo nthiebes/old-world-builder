@@ -567,17 +567,15 @@
         {
           "name_en": "Battle Standard Bearer",
           "name_cn": "战旗手",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "name_fr": "Porteur de la Grande Bannière",
-          "notes": {
-            "name_en": "Royal Clan only",
-            "name_cn": "仅限皇室",
-            "name_fr": "Clans Royaux uniquement"
-          }
+          "armyComposition": "royal-clan"
         }
       ],
       "equipment": [
@@ -895,21 +893,17 @@
           "points": 0
         },
         {
-          "name_de": "Armeestandartenträger",
           "name_en": "Battle Standard Bearer",
           "name_cn": "战旗手",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Armeestandartenträger",
           "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 0
           },
-          "notes": {
-            "name_de": "Nur Expeditionsstreitmacht",
-            "name_en": "Expeditionary Force only",
-            "name_cn": "只有远征军可用",
-            "name_fr": "Corps Expéditionnaires uniquement"
-          }
+          "armyComposition": "expeditionary-force"
         }
       ],
       "equipment": [
@@ -975,12 +969,7 @@
           "name_de": "Expeditionsschützen",
           "name_fr": "Tireur d'Élite Expéditionnaire",
           "points": 10,
-          "notes": {
-            "name_de": "Nur Expeditionsstreitmacht",
-            "name_en": "Expeditionary Force only",
-            "name_cn": "只有远征军可用",
-            "name_fr": "Corps Expéditionnaires uniquement"
-          }
+          "armyComposition": "expeditionary-force"
         }
       ],
       "mounts": [],
@@ -1983,11 +1972,12 @@
           "name_fr": "Tireurs d'Élite Expéditionnaires",
           "points": 1,
           "perModel": true,
+          "armyComposition": "expeditionary-force",
           "notes": {
             "name_de": "0-1 Einheit Musketenschützen pro 1.000 Punkte, nur Expeditionsstreitmacht",
             "name_en": "0-1 unit per 1000 points, Expeditionary Force only",
-            "name_cn": "每1000分0-1单位, 只有远征军可用",
-            "name_fr": "0-1 unité par tranche de 1000 points, Corps Expéditionnaires uniquement"
+            "name_cn": "每1000分0-1单位",
+            "name_fr": "0-1 unité par tranche de 1000 points"
           }
         }
       ],
