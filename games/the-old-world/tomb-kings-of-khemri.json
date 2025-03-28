@@ -101,11 +101,7 @@
           "name_de": "Erhebt euch!, Level 1 Zauberer",
           "name_fr": "Levez-vous!, Sorcier de Niveau 1",
           "points": 35,
-          "notes": {
-            "name_en": "Nehekharan Royal Host only",
-            "name_fr": "Ost Royal de Nehekhara uniquement",
-            "name_it": "solo lista dello Schieramento Reale di Nehekharan"
-          }
+          "armyComposition": "nehekharan-royal-hosts"
         }
       ],
       "mounts": [
@@ -330,11 +326,7 @@
           "name_de": "Erhebt euch!, Level 1 Zauberer",
           "name_fr": "Levez-vous!, Sorcier de Niveau 1",
           "points": 35,
-          "notes": {
-            "name_en": "Nehekharan Royal Host only",
-            "name_fr": "Ost Royal de Nehekhara uniquement",
-            "name_it": "solo lista dello Schieramento Reale di Nehekharan"
-          }
+          "armyComposition": "nehekharan-royal-hosts"
         }
       ],
       "mounts": [
@@ -1688,11 +1680,12 @@
           "name_fr": "Embusqueurs",
           "points": 0,
           "perModel": true,
+          "armyComposition": "nehekharan-royal-hosts",
           "notes": {
-            "name_en": "Nehekharan Royal Host only - 0-1 per 1000 points",
-            "name_it": "solo lista dello Schieramento Reale di Nehekharan, 0-1 per 1000 punti",
-            "name_de": "Nur Königliches Heer - 0-1 pro 1000 Punkte",
-            "name_fr": "Ost Royal de Nehekhara uniquement - 0-1 par tranche de 1000 points"
+            "name_en": "0-1 per 1000 points",
+            "name_it": "0-1 per 1000 punti",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_fr": "0-1 par tranche de 1000 points"
           }
         }
       ],
@@ -2073,12 +2066,19 @@
           "perModel": true
         },
         {
-          "name_en": "Chariot Runners (Nehekharan Royal Host only - 0-1 per 1000 points)",
-          "name_it": "Scorta ai Carri gratis (solo lista dello Schieramento Reale di Nehekharan - 0-1 per 1000 punti)",
-          "name_de": "Streitwagengarde (Nur Königlichen Heere von Nehekhara- 0-1 pro 1000 Punkte)",
-          "name_fr": "Escorteurs de Chars (Ost Royal de Nehekhara uniquement - 0-1 par tranche de 1000 points)",
+          "name_en": "Chariot Runners",
+          "name_it": "Scorta ai Carri",
+          "name_de": "Streitwagengarde",
+          "name_fr": "Escorteurs de Chars",
+          "armyComposition": "nehekharan-royal-hosts",
           "points": 0,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_it": "0-1 per 1000 punti",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -2372,12 +2372,7 @@
           "name_fr": "Les Horreurs d'En dessous",
           "points": 2,
           "perModel": true,
-          "notes": {
-            "name_en": "Mortuary Cult only",
-            "name_it": "Solo Culto Mortuario",
-            "name_de": "Nur Totenkult",
-            "name_fr": "Culte Mortuaire uniquement"
-          }
+          "armyComposition": "mortuary-cults"
         }
       ],
       "mounts": [],
@@ -3080,12 +3075,7 @@
           "name_fr": "Les Horreurs d'En dessous",
           "points": 2,
           "perModel": true,
-          "notes": {
-            "name_en": "Mortuary Cult only",
-            "name_it": "Solo Culto Mortuario",
-            "name_de": "Nur Todeskult",
-            "name_fr": "Culte Mortuaire uniquement"
-          }
+          "armyComposition": "mortuary-cults"
         }
       ],
       "mounts": [],
@@ -3242,12 +3232,7 @@
           "name_fr": "Les Horreurs d'En dessous",
           "points": 2,
           "perModel": true,
-          "notes": {
-            "name_en": "Mortuary Cult only",
-            "name_it": "Solo Culto Mortuario",
-            "name_de": "Nur Todeskult",
-            "name_fr": "Culte Mortuaire uniquement"
-          }
+          "armyComposition": "mortuary-cults"
         }
       ],
       "mounts": [],
