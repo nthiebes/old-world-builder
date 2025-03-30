@@ -4,7 +4,7 @@ import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
-  return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "Be"].includes(
+  return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "MCr", "Be"].includes(
     ruleData?.troopType
   );
 };
