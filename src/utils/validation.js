@@ -1,5 +1,6 @@
 import { rules } from "./rules";
 import { uniq } from "./collection";
+import { equalsOrIncludes } from "./string";
 import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
@@ -26,7 +27,11 @@ export const validateList = ({ list, language, intl }) => {
     list.characters.map((unit) => {
       if (
         unit.command &&
-        unit.command.find((command) => command.name_en === "General") &&
+        unit.command.find(
+          (command) => 
+            command.name_en === "General" &&
+            (!command.armyComposition || equalsOrIncludes(command.armyComposition, list.armyComposition))
+        ) &&
         !unit.command.find(
           (command) =>
             command.name_en.includes("Battle Standard Bearer") && command.active
