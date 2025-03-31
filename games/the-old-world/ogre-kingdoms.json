@@ -2,9 +2,17 @@
   "characters": [
     {
       "name_en": "Tyrant",
+      "name_de": "Tyrann",
+      "name_es": "Tyrant",
       "name_fr": "Tyran",
+      "name_it": "Tyrant",
+      "name_pl": "Tyrant",
       "id": "tyrant",
       "points": 185,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "General",
@@ -20,25 +28,41 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_it": "Hand weapon",
+          "name_pl": "Hand weapon"
         },
         {
           "name_en": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_it": "Additional hand weapon",
+          "name_pl": "Additional hand weapon"
         },
         {
           "name_en": "Ironfist",
           "name_fr": "Poing d'Acier",
           "points": 6,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Eisenfaust",
+          "name_es": "Ironfist",
+          "name_it": "Ironfist",
+          "name_pl": "Ironfist"
         },
         {
           "name_en": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 5,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_it": "Great weapon",
+          "name_pl": "Great weapon"
         }
       ],
       "armor": [
@@ -47,13 +71,21 @@
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_it": "Light armour",
+          "name_pl": "Light armour"
         },
         {
           "name_en": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_it": "Heavy armour",
+          "name_pl": "Heavy armour"
         }
       ],
       "options": [
@@ -61,13 +93,21 @@
           "name_en": "Ogre pistol",
           "name_fr": "Pistolet Ogre",
           "points": 6,
-          "exclusive": true
+          "exclusive": true,
+          "name_de": "Ogerpistole",
+          "name_es": "Ogre pistol",
+          "name_it": "Ogre pistol",
+          "name_pl": "Ogre pistol"
         },
         {
           "name_en": "Brace of Ogre pistols",
           "name_fr": "Paire de pistolets Ogres",
           "points": 12,
-          "exclusive": true
+          "exclusive": true,
+          "name_de": "Ogerpistolenpaar",
+          "name_es": "Brace of Ogre pistols",
+          "name_it": "Brace of Ogre pistols",
+          "name_pl": "Brace of Ogre pistols"
         }
       ],
       "mounts": [
@@ -75,17 +115,29 @@
           "name_en": "On foot",
           "name_fr": "À Pied",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_it": "On foot",
+          "name_pl": "On foot"
         },
         {
           "name_en": "Stonehorn",
           "name_fr": "Mastauroc",
-          "points": 195
+          "points": 195,
+          "name_de": "Steinyak",
+          "name_es": "Stonehorn",
+          "name_it": "Stonehorn",
+          "name_pl": "Stonehorn"
         },
         {
           "name_en": "Thundertusk",
           "name_fr": "Mégastodonte",
-          "points": 165
+          "points": 165,
+          "name_de": "Donnerhorn",
+          "name_es": "Thundertusk",
+          "name_it": "Thundertusk",
+          "name_pl": "Thundertusk"
         }
       ],
       "items": [
@@ -94,32 +146,55 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_it": "Magic Items",
+          "name_pl": "Magic Items"
         },
         {
           "name_en": "Big Name",
-          "name_de": "Big Name",
+          "name_de": "Großer Name",
           "name_fr": "Grand Nom",
           "types": ["big-name"],
           "selected": [],
-          "maxPoints": 0
+          "maxPoints": 0,
+          "name_es": "Big Name",
+          "name_it": "Big Name",
+          "name_pl": "Big Name"
         }
       ],
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
-        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d'Impact (2), Charge Ogre"
+        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d'Impact (2), Charge Ogre",
+        "name_de": "Angst, Aufpralltreffer (2), Ogerangriff, Rüstungsfluch (1), Walze",
+        "name_es": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+        "name_it": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+        "name_pl": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_de": "0-1 pro 1.000 Punkte",
+        "name_es": "0-1 per 1000 points",
+        "name_it": "0-1 per 1000 points",
+        "name_pl": "0-1 per 1000 points"
       }
     },
     {
       "name_en": "Bruiser",
+      "name_de": "Brecher",
+      "name_es": "Bruiser",
       "name_fr": "Cogneur",
+      "name_it": "Bruiser",
+      "name_pl": "Bruiser",
       "id": "bruiser",
       "points": 110,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "General",
@@ -130,7 +205,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
+          "name_de": "Armeestandartenräger",
           "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
@@ -145,25 +220,41 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_it": "Hand weapon",
+          "name_pl": "Hand weapon"
         },
         {
           "name_en": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_it": "Additional hand weapon",
+          "name_pl": "Additional hand weapon"
         },
         {
           "name_en": "Ironfist",
           "name_fr": "Poing d'Acier",
           "points": 6,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Eisenfaust",
+          "name_es": "Ironfist",
+          "name_it": "Ironfist",
+          "name_pl": "Ironfist"
         },
         {
           "name_en": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 5,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_it": "Great weapon",
+          "name_pl": "Great weapon"
         }
       ],
       "armor": [
@@ -172,13 +263,21 @@
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_it": "Light armour",
+          "name_pl": "Light armour"
         },
         {
           "name_en": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_it": "Heavy armour",
+          "name_pl": "Heavy armour"
         }
       ],
       "options": [
@@ -186,13 +285,21 @@
           "name_en": "Ogre pistol",
           "name_fr": "Pistolet Ogre",
           "points": 6,
-          "exclusive": true
+          "exclusive": true,
+          "name_de": "Ogerpistole",
+          "name_es": "Ogre pistol",
+          "name_it": "Ogre pistol",
+          "name_pl": "Ogre pistol"
         },
         {
           "name_en": "Brace of Ogre pistols",
           "name_fr": "Paire de pistolets Ogres",
           "points": 12,
-          "exclusive": true
+          "exclusive": true,
+          "name_de": "Ogerpistolenpaar",
+          "name_es": "Brace of Ogre pistols",
+          "name_it": "Brace of Ogre pistols",
+          "name_pl": "Brace of Ogre pistols"
         }
       ],
       "mounts": [
@@ -200,17 +307,29 @@
           "name_en": "On foot",
           "name_fr": "À Pied",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_it": "On foot",
+          "name_pl": "On foot"
         },
         {
           "name_en": "Stonehorn",
           "name_fr": "Mastauroc",
-          "points": 195
+          "points": 195,
+          "name_de": "Steinyak",
+          "name_es": "Stonehorn",
+          "name_it": "Stonehorn",
+          "name_pl": "Stonehorn"
         },
         {
           "name_en": "Thundertusk",
           "name_fr": "Mégastodonte",
-          "points": 165
+          "points": 165,
+          "name_de": "Donnerhorn",
+          "name_es": "Thundertusk",
+          "name_it": "Thundertusk",
+          "name_pl": "Thundertusk"
         }
       ],
       "items": [
@@ -219,21 +338,32 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_es": "Magic Items",
+          "name_it": "Magic Items",
+          "name_pl": "Magic Items",
+          "name_de": "Magische Gegenstände"
         },
         {
           "name_en": "Big Name",
-          "name_de": "Big Name",
+          "name_de": "Großer Name",
           "name_fr": "Grand Nom",
           "types": ["big-name"],
           "selected": [],
-          "maxPoints": 0
+          "maxPoints": 0,
+          "name_es": "Big Name",
+          "name_it": "Big Name",
+          "name_pl": "Big Name"
         }
       ],
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
-        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d'Impact (2), Charge Ogre"
+        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d'Impact (2), Charge Ogre",
+        "name_de": "Angst, Aufpralltreffer (2), Ogerangriff, Rüstungsfluch (1), Walze",
+        "name_es": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+        "name_it": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+        "name_pl": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge"
       },
       "notes": {
         "name_en": "",
@@ -242,9 +372,17 @@
     },
     {
       "name_en": "Slaughtermaster",
+      "name_de": "Fleischermeister",
+      "name_es": "Slaughtermaster",
       "name_fr": "Désosseur",
+      "name_it": "Slaughtermaster",
+      "name_pl": "Slaughtermaster",
       "id": "slaughtermaster",
       "points": 230,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "General",
@@ -260,13 +398,15 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffe"
         },
         {
           "name_en": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe"
         }
       ],
       "armor": [],
@@ -277,7 +417,8 @@
           "points": 30,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_de": "Fleischerkessel"
         },
         {
           "name_en": "Level 4 Wizard",
@@ -285,7 +426,8 @@
           "points": 35,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_de": "Stufe 4 Zauberer"
         }
       ],
       "mounts": [],
@@ -301,11 +443,12 @@
             "arcane-item"
           ],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "name_de": "Magische Gegenstände"
         },
         {
           "name_en": "Big Name",
-          "name_de": "Big Name",
+          "name_de": "Großer Name",
           "name_fr": "Grand Nom",
           "types": ["big-name"],
           "selected": [],
@@ -315,18 +458,28 @@
       "lores": ["battle-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge",
-        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre"
+        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre",
+        "name_de": "Angst, Aufpralltreffer (2), Lehre des Großen Schlundes, Ogerangriff, Rüstungsfluch (1)"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_de": "0-1 pro 1.000 Punkte"
       }
     },
     {
       "name_en": "Butcher",
+      "name_de": "Fleischer",
+      "name_es": "Butcher",
       "name_fr": "Boucher",
+      "name_it": "Butcher",
+      "name_pl": "Butcher",
       "id": "butcher",
       "points": 105,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "General",
@@ -342,13 +495,15 @@
           "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffe"
         },
         {
           "name_en": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe"
         }
       ],
       "armor": [],
@@ -359,7 +514,8 @@
           "points": 30,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_de": "Fleischerkessel"
         },
         {
           "name_en": "Level 2 Wizard",
@@ -367,7 +523,8 @@
           "points": 35,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "name_de": "Stufe 2 Zauberer"
         }
       ],
       "mounts": [],
@@ -383,11 +540,12 @@
             "arcane-item"
           ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_de": "Magische Gegenstände"
         },
         {
           "name_en": "Big Name",
-          "name_de": "Big Name",
+          "name_de": "Großer Name",
           "name_fr": "Grand Nom",
           "types": ["big-name"],
           "selected": [],
@@ -397,7 +555,8 @@
       "lores": ["battle-magic", "elementalism", "illusion"],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw, Ogre Charge",
-        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre"
+        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (2), Domaine de La Gueule, Charge Ogre",
+        "name_de": "Angst, Aufpralltreffer (2), Lehre des Großen Schlundes, Ogerangriff, Rüstungsfluch (1)"
       },
       "notes": {
         "name_en": "",
@@ -406,9 +565,17 @@
     },
     {
       "name_en": "Hunter",
+      "name_de": "Jäger",
+      "name_es": "Hunter",
       "name_fr": "Chasseur",
+      "name_it": "Hunter",
+      "name_pl": "Hunter",
       "id": "hunter",
       "points": 115,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [],
       "equipment": [
         {
@@ -417,25 +584,29 @@
           "points": 0,
           "perModel": true,
           "active": true,
-          "equippedDefault": true
+          "equippedDefault": true,
+          "name_de": "Handwaffe"
         },
         {
           "name_en": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe"
         },
         {
           "name_en": "Harpoon launcher",
           "name_fr": "Lance-harpon",
           "points": 10,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Harpunenschleuder"
         },
         {
           "name_en": "Additional hand weapon, Harpoon launcher",
           "name_fr": "Arme de base additionnelle, Lance-harpon",
           "points": 14,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zusätzliche Handwaffe, Harpunenschleuder"
         }
       ],
       "armor": [],
@@ -450,6 +621,7 @@
             {
               "name_en": "Ambushers",
               "name_fr": "Embusqueurs",
+              "name_de": "Hinterhalt",
               "points": 10,
               "perModel": true,
               "exclusive": true
@@ -457,6 +629,7 @@
             {
               "name_en": "Scouts",
               "name_fr": "Éclaireurs",
+              "name_de": "Kundschafter",
               "points": 5,
               "perModel": true,
               "exclusive": true
@@ -464,21 +637,25 @@
             {
               "name_en": "Vanguard",
               "name_fr": "Avant-garde",
+              "name_de": "Vorhut",
               "points": 3,
               "perModel": true,
               "exclusive": true
             }
-          ]
+          ],
+          "name_de": "Zu Fuß"
         },
         {
           "name_en": "Stonehorn",
           "name_fr": "Mastauroc",
-          "points": 195
+          "points": 195,
+          "name_de": "Steinyak"
         },
         {
           "name_en": "Thundertusk",
           "name_fr": "Mégastodonte",
-          "points": 165
+          "points": 165,
+          "name_de": "Donnerhorn"
         }
       ],
       "items": [
@@ -487,11 +664,12 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_de": "Magische Gegenstände"
         },
         {
           "name_en": "Big Name",
-          "name_de": "Big Name",
+          "name_de": "Großer Name",
           "name_fr": "Grand Nom",
           "types": ["big-name"],
           "selected": [],
@@ -501,18 +679,28 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack {renegade}",
-        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute"
+        "name_fr": "Arme Perforante (1), Peur, Touches d'Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute",
+        "name_de": "Angst, Aufpralltreffer (1), Durch Deckung bewegen, Einzelgänger, Ogerangriff, Rüstungsfluch (1), Teil des Rudels"
       },
       "notes": {
         "name_en": "",
-        "name_fr": ""
+        "name_fr": "",
+        "name_de": "0-1 pro 1.000 Punkte"
       }
     },
     {
       "name_en": "Firebelly",
+      "name_de": "Feuerbauch",
+      "name_es": "Firebelly",
       "name_fr": "Ventre-feu",
+      "name_it": "Firebelly",
+      "name_pl": "Firebelly",
       "id": "firebelly",
       "points": 110,
+      "minimum": 0,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
       "command": [
         {
           "name_en": "General",
@@ -528,7 +716,11 @@
           "name_fr": "Arme de base, Souffle enflammé",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffe, Flammender Atem",
+          "name_es": "",
+          "name_it": "",
+          "name_pl": ""
         }
       ],
       "armor": [],
@@ -537,13 +729,15 @@
           "name_en": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 6,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Zweihandwaffe"
         },
         {
           "name_en": "Level 2 Wizard",
           "name_fr": "Sorcier de Niveau 2",
           "points": 35,
-          "perModel": true
+          "perModel": true,
+          "name_de": "Stufe 2 Zauberer"
         }
       ],
       "mounts": [],
@@ -553,45 +747,47 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "name_de": "Magische Gegenstände"
         }
       ],
       "lores": ["battle-magic", "elementalism"],
       "specialRules": {
         "name_en": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge",
-        "name_fr": "Arme Perforante (1), Bénédictions du Dieu Volcan, Peur, Attaques Enflammées, Touches d'Impact (1), Charge Ogre"
+        "name_fr": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge",
+        "name_de": "Angst, Aufpralltreffer (2), Flammenattacken, Ogerangriff, Rüstungsfluch (1), Segen des Vulkangottes",
+        "name_es": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge",
+        "name_it": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge",
+        "name_pl": "Armour Bane (1), Blessings of the Volcano God, Fear, Flaming Attacks, Impact Hits (1), Ogre Charge"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
       }
     }
   ],
   "core": [
     {
       "name_en": "Ogre Bulls",
-      "name_de": "Ogre Bulls",
+      "name_de": "Ogerbullen",
       "name_es": "Ogre Bulls",
       "name_fr": "Buffles Ogres",
       "name_it": "Ogre Bulls",
+      "name_pl": "Ogre Bulls",
       "id": "ogre-bulls",
       "points": 31,
       "minimum": 3,
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
-      "armyComposition": {
-        "ogre-kingdoms": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+",
-            "name_fr": "1+"
-          }
-        },
-        "ok-renegade": {
-          "category": "core"
-        }
-      },
       "command": [
         {
           "name_en": "Crusher (champion)",
-          "name_de": "Crusher (champion)",
+          "name_de": "Quetscher (Champion)",
           "name_es": "Crusher (champion)",
           "name_fr": "Broyeur (champion)",
           "name_it": "Crusher (champion)",
@@ -599,7 +795,7 @@
         },
         {
           "name_en": "Standard bearer",
-          "name_de": "Standard bearer",
+          "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
           "name_it": "Standard bearer",
@@ -611,7 +807,7 @@
           "options": [
             {
               "name_en": "Look-out Gnoblar",
-              "name_de": "Look-out Gnoblar",
+              "name_de": "Spähgnoblar (Standartenträger)",
               "name_es": "Look-out Gnoblar",
               "name_fr": "Gnoblar Longue-vue",
               "name_it": "Look-out Gnoblar",
@@ -621,7 +817,7 @@
         },
         {
           "name_en": "Bellower (musician)",
-          "name_de": "Bellower (musician)",
+          "name_de": "Brüller (Musiker)",
           "name_es": "Bellower (musician)",
           "name_fr": "Beugleur (musicien)",
           "name_it": "Bellower (musician)",
@@ -631,7 +827,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
+          "name_de": "Handwaffen",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
           "name_it": "Hand weapon",
@@ -641,7 +837,7 @@
         },
         {
           "name_en": "Additional hand weapons",
-          "name_de": "Additional hand weapons",
+          "name_de": "Zusätzliche Handwaffen",
           "name_es": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "name_it": "Additional hand weapons",
@@ -650,7 +846,7 @@
         },
         {
           "name_en": "Ironfists",
-          "name_de": "Ironfists",
+          "name_de": "Eisenfäuste",
           "name_es": "Ironfists",
           "name_fr": "Poings d'Acier",
           "name_it": "Ironfists",
@@ -661,7 +857,7 @@
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
           "name_it": "Light armour",
@@ -676,15 +872,36 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff, Rüstungsfluch (1)",
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre",
-        "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
+        "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_pl": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+",
+            "name_fr": "1+"
+          }
+        },
+        "ok-renegade": {
+          "category": "core"
+        }
       }
     },
     {
       "name_en": "Ironguts",
-      "name_de": "Ironguts",
+      "name_de": "Eisenwänste",
       "name_es": "Ironguts",
       "name_fr": "Ventres-durs",
       "name_it": "Ironguts",
@@ -702,7 +919,7 @@
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           },
-          "name_de": "Gutlord",
+          "name_de": "Staalwanst (Champion)",
           "name_es": "Gutlord",
           "name_fr": "Ventre de fer",
           "name_it": "Gutlord"
@@ -714,14 +931,14 @@
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standard bearer",
+          "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
           "name_it": "Standard bearer"
         },
         {
           "name_en": "Bellower (musician)",
-          "name_de": "Bellower (musician)",
+          "name_de": "Brüller (Musiker)",
           "name_es": "Bellower (musician)",
           "name_fr": "Beugleur (musicien)",
           "name_it": "Bellower (musician)",
@@ -731,7 +948,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Great weapons",
-          "name_de": "Hand weapons, Great weapons",
+          "name_de": "Handwaffen, Zweihandwaffen",
           "name_es": "Hand weapons, Great weapons",
           "name_fr": "Armes de base, Armes lourdes",
           "name_it": "Hand weapons, Great weapons",
@@ -743,7 +960,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
+          "name_de": "Schwere Rüstung",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "name_it": "Heavy armour",
@@ -755,7 +972,7 @@
       "options": [
         {
           "name_en": "Look-out Gnoblar (Standard bearer)",
-          "name_de": "Look-out Gnoblar (Standard bearer)",
+          "name_de": "Spähgnoblar (Standartenträger)",
           "name_es": "Look-out Gnoblar (Standard bearer)",
           "name_fr": "Gnoblar Longue-vue (Porte-étendard)",
           "name_it": "Look-out Gnoblar (Standard bearer)",
@@ -763,7 +980,7 @@
         },
         {
           "name_en": "Veteran",
-          "name_de": "Veteran",
+          "name_de": "Veteranen",
           "name_es": "Veteran",
           "name_fr": "Vétérans",
           "name_it": "Veteran",
@@ -787,7 +1004,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_de": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff",
         "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre",
         "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
@@ -802,7 +1019,7 @@
     },
     {
       "name_en": "Gnoblar Fighters",
-      "name_de": "Gnoblar Fighters",
+      "name_de": "Gnoblarkrieger",
       "name_es": "Gnoblar Fighters",
       "name_fr": "Guerriers Gnoblars",
       "name_it": "Gnoblar Fighters",
@@ -815,7 +1032,7 @@
       "command": [
         {
           "name_en": "Groinbiter",
-          "name_de": "Groinbiter",
+          "name_de": "Wadenbeißer (Champion)",
           "name_es": "Groinbiter",
           "name_fr": "Mord-nez",
           "name_it": "Groinbiter",
@@ -825,7 +1042,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Throwing weapons (Sharp stuff)",
-          "name_de": "Hand weapons, Throwing weapons (Sharp stuff)",
+          "name_de": "Handwaffen, Wurfwaffen (Spitzes Zeug)",
           "name_es": "Hand weapons, Throwing weapons (Sharp stuff)",
           "name_fr": "Armes de base, Armes de lancer (Trucs pointus)",
           "name_it": "Hand weapons, Throwing weapons (Sharp stuff)",
@@ -841,7 +1058,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Horde, Largely Insignificant",
-        "name_de": "Close Order, Horde, Largely Insignificant",
+        "name_de": "Geschlossene Ränge, Horde, Völlig Unbedeutend",
         "name_es": "Close Order, Horde, Largely Insignificant",
         "name_fr": "Ordre Serré, Horde, Complètement Insignifiant",
         "name_it": "Close Order, Horde, Largely Insignificant"
@@ -856,7 +1073,7 @@
     },
     {
       "name_en": "Gnoblar Trappers",
-      "name_de": "Gnoblar Trappers",
+      "name_de": "Gnoblar-Fallensteller",
       "name_es": "Gnoblar Trappers",
       "name_fr": "Trappeurs Gnoblars",
       "name_it": "Gnoblar Trappers",
@@ -869,7 +1086,7 @@
       "command": [
         {
           "name_en": "Snarefinger",
-          "name_de": "Snarefinger",
+          "name_de": "Lederstrumpf (Champion)",
           "name_es": "Snarefinger",
           "name_fr": "Braconnier",
           "name_it": "Snarefinger",
@@ -879,7 +1096,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Throwing weapons (Sharp stuff)",
-          "name_de": "Hand weapons, Throwing weapons (Sharp stuff)",
+          "name_de": "Handwaffen, Wurfwaffen (Spitzes Zeug)",
           "name_es": "Hand weapons, Throwing weapons (Sharp stuff)",
           "name_fr": "Armes de base, Armes de lancer (Trucs pointus)",
           "name_it": "Hand weapons, Throwing weapons (Sharp stuff)",
@@ -895,7 +1112,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
-        "name_de": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
+        "name_de": "Durch Deckung bewegen, Fallen & Schlingen, Kundschafter, Plänkler, Völlig Unbedeutend",
         "name_es": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
         "name_fr": "Complètement Insignifiant, Mouvement à Couvert, Éclaireurs, Tirailleurs, Pièges & Collets",
         "name_it": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares"
@@ -910,7 +1127,7 @@
     },
     {
       "name_en": "Sabretusk Pack",
-      "name_de": "Sabretusk Pack",
+      "name_de": "Säbelzahnrudel",
       "name_es": "Sabretusk Pack",
       "name_fr": "Meutes de Crocs de Sabre",
       "name_it": "Sabretusk Pack",
@@ -924,7 +1141,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons (Claws and fangs)",
-          "name_de": "Hand weapons (Claws and fangs)",
+          "name_de": "Handwaffen (Klauen und Zähne)",
           "name_es": "Hand weapons (Claws and fangs)",
           "name_fr": "Armes de base (Griffes et crocs)",
           "name_it": "Hand weapons (Claws and fangs)",
@@ -937,7 +1154,7 @@
       "options": [
         {
           "name_en": "Ambushers",
-          "name_de": "Ambushers",
+          "name_de": "Hinterhalt",
           "name_es": "Ambushers",
           "name_fr": "Embusqueurs",
           "name_it": "Ambushers",
@@ -946,7 +1163,7 @@
         },
         {
           "name_en": "Scouts",
-          "name_de": "Scouts",
+          "name_de": "Kundschafter",
           "name_es": "Scouts",
           "name_fr": "Éclaireurs",
           "name_it": "Scouts",
@@ -955,7 +1172,7 @@
         },
         {
           "name_en": "Vanguard",
-          "name_de": "Vanguard",
+          "name_de": "Vorhut",
           "name_es": "Vanguard",
           "name_fr": "Avant-garde",
           "name_it": "Vanguard",
@@ -968,7 +1185,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Fear, Impetuous, Loner, Move Through Cover, Open Order, Skirmishers, Swiftstride",
-        "name_de": "Armour Bane (1), Fear, Impetuous, Loner, Move Through Cover, Open Order, Skirmishers, Swiftstride",
+        "name_de": "Angst, Durch Deckung bewegen, Einzelgänger, Offene Ränge, Plänkler, Rüstungsfluch (1), Schnelle Bewegung, Ungestüm",
         "name_es": "Armour Bane (1), Fear, Impetuous, Loner, Move Through Cover, Open Order, Skirmishers, Swiftstride",
         "name_fr": "Arme Perforante (1), Peur, Impétueux, Solitaire, Mouvement à Couvert, Ordre Dispersé, Tirailleurs, Rapide",
         "name_it": "Armour Bane (1), Fear, Impetuous, Loner, Move Through Cover, Open Order, Skirmishers, Swiftstride"
@@ -985,7 +1202,7 @@
   "special": [
     {
       "name_en": "Leadbelchers",
-      "name_de": "Leadbelchers",
+      "name_de": "Bleispucker",
       "name_es": "Leadbelchers",
       "name_fr": "Crache-plomb",
       "name_it": "Leadbelchers",
@@ -998,7 +1215,7 @@
       "command": [
         {
           "name_en": "Thunderfist",
-          "name_de": "Thunderfist",
+          "name_de": "Donnerfaust (Champion)",
           "name_es": "Thunderfist",
           "name_fr": "Crache-tonnerre",
           "name_it": "Thunderfist",
@@ -1006,7 +1223,7 @@
         },
         {
           "name_en": "Bellower (musician)",
-          "name_de": "Bellower (musician)",
+          "name_de": "Brüller (Musiker)",
           "name_es": "Bellower (musician)",
           "name_fr": "Beugleur (musicien)",
           "name_it": "Bellower (musician)",
@@ -1016,7 +1233,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Leadbelcher guns {renegade}",
-          "name_de": "Hand weapons, Leadbelcher guns",
+          "name_de": "Handwaffen, Donnerrohr",
           "name_es": "Hand weapons, Leadbelcher guns",
           "name_fr": "Armes de base, Crache-plomb",
           "name_it": "Hand weapons, Leadbelcher guns",
@@ -1028,7 +1245,7 @@
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
           "name_it": "Light armour",
@@ -1040,7 +1257,7 @@
       "options": [
         {
           "name_en": "Veteran",
-          "name_de": "Veteran",
+          "name_de": "Veteranen",
           "name_es": "Veteran",
           "name_fr": "Vétérans",
           "name_it": "Veteran",
@@ -1053,7 +1270,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_de": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff",
         "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre",
         "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
@@ -1068,7 +1285,7 @@
     },
     {
       "name_en": "Maneaters",
-      "name_de": "Maneaters",
+      "name_de": "Vielfraße",
       "name_es": "Maneaters",
       "name_fr": "Mangeurs d'Hommes",
       "name_it": "Maneaters",
@@ -1081,6 +1298,7 @@
       "command": [
         {
           "name_en": "Maneater Captain (champion)",
+          "name_de": "Vielfraß-Hauptmann (Champion)",
           "name_fr": "Capitaine Mangeur d'Hommes (champion)",
           "points": 7,
           "magic": {
@@ -1090,6 +1308,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_de": "Standartenträger",
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
@@ -1099,6 +1318,7 @@
           "options": [
             {
               "name_en": "Look-out Gnoblar",
+              "name_de": "Spähgnoblar (Standartenträger)",
               "name_fr": "Gnoblar Longue-vue",
               "points": 5
             }
@@ -1106,6 +1326,7 @@
         },
         {
           "name_en": "Bellower (musician)",
+          "name_de": "Brüller (Musiker)",
           "name_fr": "Beugleur (musicien)",
           "points": 7
         }
@@ -1113,6 +1334,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_de": "Handwaffen",
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
@@ -1122,6 +1344,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
@@ -1131,56 +1354,66 @@
       "options": [
         {
           "name_en": "Immune to Psychology",
+          "name_de": "Immung gegen Psychologie",
           "name_fr": "Immunisé à la Psychologie",
           "points": 0
         },
         {
           "name_en": "Poisoned Attacks",
+          "name_de": "Giftattacken",
           "name_fr": "Attaques Empoisonnées",
           "points": 0
         },
         {
           "name_en": "Stubborn",
+          "name_de": "Unnachgiebig",
           "name_fr": "Obstiné",
           "points": 0
         },
         {
           "name_en": "Vanguard",
+          "name_de": "Vorhut",
           "name_fr": "Avant-garde",
           "points": 0
         },
         {
           "name_en": "Additional hand weapons",
+          "name_de": "Zusätzliche Handwaffen",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
           "stackable": true
         },
         {
           "name_en": "Ironfists",
+          "name_de": "Eisenfäuste",
           "name_fr": "Poings d'Acier",
           "points": 4,
           "stackable": true
         },
         {
           "name_en": "Great weapons",
+          "name_de": "Zweihänder",
           "name_fr": "Armes lourdes",
           "points": 4,
           "stackable": true
         },
         {
           "name_en": "Ogre pistols",
+          "name_de": "Ogerpistolen",
           "name_fr": "Pistolets Ogres",
           "points": 6,
           "stackable": true
         },
         {
           "name_en": "Brace of Ogre pistols",
+          "name_de": "Ogerpistolenpaar",
           "name_fr": "Paire de pistolets Ogres",
           "points": 12,
           "stackable": true
         },
         {
           "name_en": "Heavy armour",
+          "name_de": "Schwere Rüstung",
           "name_fr": "Armure lourde",
           "points": 3,
           "stackable": true
@@ -1191,14 +1424,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
-        "name_de": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
+        "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff, Zusammengewürfelter Haufen",
         "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
         "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Bande Hétéroclite, Charge Ogre",
         "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
       },
       "notes": {
         "name_en": "0-1 unit of Maneaters per 1,000 points",
-        "name_de": "0-1 unit of Maneaters per 1,000 points",
+        "name_de": "0-1 Einheit Vielfraße pro 1.000 Punkte",
         "name_es": "0-1 unit of Maneaters per 1,000 points",
         "name_fr": "0-1 unit of Maneaters per 1,000 points",
         "name_it": "0-1 unit of Maneaters per 1,000 points",
@@ -1207,10 +1440,11 @@
     },
     {
       "name_en": "Mournfang Cavalry",
-      "name_de": "Mournfang Cavalry",
+      "name_de": "Trauerfangkavallerie",
       "name_es": "Mournfang Cavalry",
       "name_fr": "Cavalerie Férox",
       "name_it": "Mournfang Cavalry",
+      "name_pl": "Mournfang Cavalry",
       "id": "mournfang-cavalry",
       "points": 64,
       "minimum": 2,
@@ -1225,10 +1459,11 @@
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           },
-          "name_de": "Crusher (champion)",
+          "name_de": "Quetscher (Champion)",
           "name_es": "Crusher (champion)",
           "name_fr": "Broyeur (champion)",
-          "name_it": "Crusher (champion)"
+          "name_it": "Crusher (champion)",
+          "name_pl": "Crusher (champion)"
         },
         {
           "name_en": "Standard bearer",
@@ -1237,14 +1472,14 @@
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standard bearer",
+          "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
           "name_it": "Standard bearer"
         },
         {
           "name_en": "Bellower (musician)",
-          "name_de": "Bellower (musician)",
+          "name_de": "Brüller (Musiker)",
           "name_es": "Bellower (musician)",
           "name_fr": "Beugleur (musicien)",
           "name_it": "Bellower (musician)",
@@ -1254,58 +1489,63 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
+          "name_de": "Handwaffen",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
           "name_it": "Hand weapon",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_pl": "Hand weapon"
         },
         {
           "name_en": "Ironfist",
-          "name_de": "Ironfist",
+          "name_de": "Eisenfäuste",
           "name_es": "Ironfist",
           "name_fr": "Poing d'Acier",
           "name_it": "Ironfist",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_pl": "Ironfist"
         },
         {
           "name_en": "Great weapon",
-          "name_de": "Great weapon",
+          "name_de": "Zweihandwaffen",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
           "name_it": "Great weapon",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "name_pl": "Great weapon"
         }
       ],
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Light armour",
+          "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
           "name_it": "Light armour",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "name_pl": "Light armour"
         },
         {
           "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
+          "name_de": "Schwere Rüstung",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "name_it": "Heavy armour",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "name_pl": "Heavy armouHeavy armourr"
         }
       ],
       "options": [
         {
           "name_en": "Brace of Ogre pistols (Crusher)",
-          "name_de": "Brace of Ogre pistols (Crusher)",
+          "name_de": "Ogerpistolenpaar (Quetscher)",
           "name_es": "Brace of Ogre pistols (Crusher)",
           "name_fr": "Paire de pistolets Ogres (Broyeur)",
           "name_it": "Brace of Ogre pistols (Crusher)",
@@ -1317,14 +1557,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
-        "name_de": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
+        "name_de": "Angst, Aufpralltreffer (W3), Geschlossene Ordnung, Schnelle Bewegung, Trauerfangangriff, Zähe Haut (1)",
         "name_es": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
         "name_fr": "Peau Blindée (1), Ordre Serré, Peur, Touches d'Impact (D3), Charge Férox, Rapide",
         "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride"
       },
       "notes": {
         "name_en": "0-1 unit of Mournfang Cavalry per 1,000 points",
-        "name_de": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_de": "0-1 Einheit Trauerfangkavallerie pro 1.000 Punkte",
         "name_es": "0-1 unit of Mournfang Cavalry per 1,000 points",
         "name_fr": "0-1 unit of Mournfang Cavalry per 1,000 points",
         "name_it": "0-1 unit of Mournfang Cavalry per 1,000 points",
@@ -1333,7 +1573,7 @@
     },
     {
       "name_en": "Yhetees",
-      "name_de": "Yhetees",
+      "name_de": "Yhetis",
       "name_es": "Yhetees",
       "name_fr": "Yétis",
       "name_it": "Yhetees",
@@ -1346,7 +1586,7 @@
       "command": [
         {
           "name_en": "Greyback",
-          "name_de": "Greyback",
+          "name_de": "Silberrücken",
           "name_es": "Greyback",
           "name_fr": "Dos-gris",
           "name_it": "Greyback",
@@ -1356,7 +1596,7 @@
       "equipment": [
         {
           "name_en": "Grimfrost weapons",
-          "name_de": "Grimfrost weapons",
+          "name_de": "Eiswaffen",
           "name_es": "Grimfrost weapons",
           "name_fr": "Arme de Sinistregivre",
           "name_it": "Grimfrost weapons",
@@ -1369,7 +1609,7 @@
       "options": [
         {
           "name_en": "Scouts",
-          "name_de": "Scouts",
+          "name_de": "Kundschafter",
           "name_es": "Scouts",
           "name_fr": "Éclaireurs",
           "name_it": "Scouts",
@@ -1378,7 +1618,7 @@
         },
         {
           "name_en": "Vanguard",
-          "name_de": "Vanguard",
+          "name_de": "Vorhut",
           "name_es": "Vanguard",
           "name_fr": "Avant-garde",
           "name_it": "Vanguard",
@@ -1391,7 +1631,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride",
-        "name_de": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride",
+        "name_de": "Angst, Brennbar, Durch Deckung bewegen, Einzelgänger, Lämende Kälte, Offene Ränge, Schnelle Bewegung, Zähe Haut (1)",
         "name_es": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride",
         "name_fr": "Peau Blindée (1), Peur, Inflammable, Solitaire, Mouvement à Couvert, Frisson Paralysant, Ordre Dispersé, Rapide",
         "name_it": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride"
@@ -1406,7 +1646,7 @@
     },
     {
       "name_en": "Ironblaster",
-      "name_de": "Ironblaster",
+      "name_de": "Eisenspucker",
       "name_es": "Ironblaster",
       "name_fr": "Boute-fer",
       "name_it": "Ironblaster",
@@ -1419,7 +1659,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
-            "name_de": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_de": "0-1 Eisenspucker oder Gnoblar-Schrottschleuder pro 1.000 Punkte",
             "name_es": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
             "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points",
             "name_it": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
@@ -1430,7 +1670,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 Ironblaster per 1000 points",
-            "name_de": "0-1 Ironblaster per 1000 points",
+            "name_de": "0-1 Eisenspucker pro 1000 Punkte",
             "name_es": "0-1 Ironblaster per 1000 points",
             "name_fr": "0-1 Ironblaster per 1000 points",
             "name_it": "0-1 Ironblaster per 1000 points",
@@ -1442,7 +1682,7 @@
       "equipment": [
         {
           "name_en": "Cannon of the Sky-titans {renegade}, Hand weapons",
-          "name_de": "Cannon of the Sky-titans",
+          "name_de": "Kanone der Himmelstitanen, Handwaffen",
           "name_es": "Cannon of the Sky-titans",
           "name_fr": "Canon des Titans Célestes, Armes de base",
           "name_it": "Cannon of the Sky-titans",
@@ -1458,7 +1698,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
-        "name_de": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
+        "name_de": "Angst, Aufpralltreffer (W6+1), Erster Angriff, Geschlossene Ränge, Großes Ziel, Rüstungsfluch (2 - nur Rhinox)",
         "name_es": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
         "name_fr": "Arme Perforante (2 - Rhinox uniquement), Ordre Serré, Peur, Première Charge, Touches d'Impact (D6+1), Grande Cible",
         "name_it": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target"
@@ -1466,7 +1706,7 @@
     },
     {
       "name_en": "Gnoblar Scraplauncher",
-      "name_de": "Gnoblar Scraplauncher",
+      "name_de": "Gnoblar-Schrottschleuder",
       "name_es": "Gnoblar Scraplauncher",
       "name_fr": "Lance-ferraille Gnoblar",
       "name_it": "Gnoblar Scraplauncher",
@@ -1479,7 +1719,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
-            "name_de": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
+            "name_de": "0-1 Eisenspucker oder Gnoblar-Schrottschleuder pro 1.000 Punkte",
             "name_es": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
             "name_fr": "0-1 Boute-fer ou Lance-ferraille Gnoblar par tranche de 1000 points",
             "name_it": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
@@ -1494,7 +1734,7 @@
       "equipment": [
         {
           "name_en": "Scraplauncher catapult, Hand weapons",
-          "name_de": "Scraplauncher catapult, Hand weapons",
+          "name_de": "Schrottschleuderkatapult, Handwaffen",
           "name_es": "Scraplauncher catapult, Hand weapons",
           "name_fr": "Catapulte Lance-ferraille, Armes de base",
           "name_it": "Scraplauncher catapult, Hand weapons",
@@ -1510,7 +1750,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
-        "name_de": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
+        "name_de": "Angst, Aufpralltreffer (W6+1), Erster Angriff, Geschlossene Ränge, Großes Ziel, Rüsungsfluch (2 - nur Rhinox)",
         "name_es": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target",
         "name_fr": "Arme Perforante (2 - Rhinox uniquement), Ordre Serré, Peur, Première Charge, Touches d'Impact (D6+1), Grande Cible",
         "name_it": "Armour Bane (2 - Rhinox only), Close Order, Fear, First Charge, Impact Hits (D6+1), Large Target"
@@ -1520,12 +1760,15 @@
   "rare": [
     {
       "name_en": "Stonehorn Riders",
-      "name_de": "Stonehorn Riders",
+      "name_de": "Steinyakreiter",
       "name_es": "Stonehorn Riders",
       "name_fr": "Chevaucheurs de Mastauroc",
       "name_it": "Stonehorn Riders",
+      "name_pl": "Stonehorn Riders",
       "id": "stonehorn-riders",
       "points": 245,
+      "minimum": 0,
+      "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
       "command": [],
@@ -1535,20 +1778,28 @@
           "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Lance-harpon (Servant Ogre), Croque-monsieur (Chevaucheur Ogre)",
           "points": 0,
           "perModel": false,
-          "active": true
+          "active": true,
+          "name_de": "Handwaffen, Harpunenschleuder (Oger-Besatzung), Ketten-Fangeisen (Ogerreiter), Steinerne Hörner (Steinyak)",
+          "name_es": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_it": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_pl": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)"
         },
         {
           "name_en": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
           "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Lance-harpon (Servant Ogre), Vautour de sang (Chevaucheur Ogre)",
           "points": 5,
-          "perModel": false
+          "perModel": false,
+          "name_de": "Blutgeier (Ogerreiter), Handwaffen, Harpunenschleuder (Oger-Besatzung), Steinerne Hörner (Steinyak)",
+          "name_es": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
+          "name_it": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
+          "name_pl": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)"
         }
       ],
       "armor": [],
       "options": [
         {
           "name_en": "Harpoon launcher (Ogre Beast Rider)",
-          "name_de": "Harpoon launcher (Ogre Beast Rider)",
+          "name_de": "Harpunenschleuder (Ogerreiter)",
           "name_es": "Harpoon launcher (Ogre Beast Rider)",
           "name_fr": "Lance-harpon (Chevaucheur Ogre)",
           "name_it": "Harpoon launcher (Ogre Beast Rider)",
@@ -1564,22 +1815,24 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge",
-        "name_de": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge",
+        "name_de": "Aufpralltreffer (W6+1), Entsetzen, Erster Angriff, Donnender Angriff, Geschlossene Ränge, Großes Ziel, Rüstungsfluch (2 - nur Steinyak), Sänfte, Schnelle Bewegung, Steinernes Skelett",
         "name_es": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge",
         "name_fr": "Arme Perforante (2 - Mastauroc uniquement), Ordre Serré, Première Charge, Howdah, Touches d'Impact (D6+1), Grande Cible, Squelette de Pierre, Rapide, Terreur, Charge Tonnerre",
         "name_it": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_de": "0-1 pro 1.000 Punkte"
       }
     },
     {
       "name_en": "Thundertusk Riders",
-      "name_de": "Thundertusk Riders",
+      "name_de": "Donnerhornreiter",
       "name_es": "Thundertusk Riders",
       "name_fr": "Chevaucheurs de Mégastodonte",
       "name_it": "Thundertusk Riders",
+      "name_pl": "Thundertusk Riders",
       "id": "thundertusk-riders",
       "points": 215,
       "minimum": 0,
@@ -1592,20 +1845,25 @@
           "name_en": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
           "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Souffle glacial (Mégastodonte), Lance-harpon (Servant Ogre), Croque-monsieur (Chevaucheur Ogre)",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_de": "Eisiger Atem (Donnerhorn), Gewaltige Hauer, Handwaffen, Harpunenschleuder (Oger-Besatzung), Ketten-Fangeisen (Ogerreiter)",
+          "name_es": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_it": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_pl": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)"
         },
         {
           "name_en": "Hand weapon, Great tusks (Thundertusk), Chill breath (Thundertusk), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
           "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Souffle glacial (Mégastodonte), Lance-harpon (Servant Ogre), Vautour de sang (Chevaucheur Ogre)",
           "points": 5,
-          "perModel": false
+          "perModel": false,
+          "name_de": "Eisiger Atem (Donnerhorn), Gewaltige Hauer, Handwaffen, Harpunenschleuder (Oger-Besatzung), Blutgeier (Ogerreiter)"
         }
       ],
       "armor": [],
       "options": [
         {
           "name_en": "Harpoon launcher (Ogre Beast Rider)",
-          "name_de": "Harpoon launcher (Ogre Beast Rider)",
+          "name_de": "Harpunenschleuder (Ogerreiter)",
           "name_es": "Harpoon launcher (Ogre Beast Rider)",
           "name_fr": "Lance-harpon (Chevaucheur Ogre)",
           "name_it": "Harpoon launcher (Ogre Beast Rider)",
@@ -1618,19 +1876,21 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror",
-        "name_de": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror",
+        "name_de": "Aufpralltreffer (W3), Entsetzen, Erster Angriff, Geschlossene Ränge, Großes Ziel, Lähmende Kälte, Sänfte, Schnelle Bewegung, Stampfattacken (3)",
         "name_es": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror",
         "name_fr": "Ordre Serré, Première Charge, Howdah, Touches d'Impact (D3), Grande Cible, Frisson Paralysant, Attaques de Piétinement (3), Rapide, Terreur",
-        "name_it": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror"
+        "name_it": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror",
+        "name_pl": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_de": "0-1 pro 1.000 Punkte"
       }
     },
     {
       "name_en": "Giant",
-      "name_de": "Giant",
+      "name_de": "Riese",
       "name_es": "Giant",
       "name_fr": "Géants",
       "name_it": "Giant",
@@ -1642,7 +1902,7 @@
       "equipment": [
         {
           "name_en": "Giant's club",
-          "name_de": "Giant's club",
+          "name_de": "Riesenkeule",
           "name_es": "Giant's club",
           "name_fr": "Massue de Géant",
           "name_it": "Giant's club",
@@ -1654,7 +1914,7 @@
       "armor": [
         {
           "name_en": "Light armour (Calloused hide)",
-          "name_de": "Light armour (Calloused hide)",
+          "name_de": "Leichte Rüstung (Schwielige Haut)",
           "name_es": "Light armour (Calloused hide)",
           "name_fr": "Armure légère (Peau calleuse)",
           "name_it": "Light armour (Calloused hide)",
@@ -1669,7 +1929,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
-        "name_de": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Baum fällt!, Entsetzen, Geschlossene Ränge, Grabschen und..., Großes Ziel, Immun gegen Psychologie, Riesenattacken, Stampfattacken (W6), Unerschütterlich",
         "name_es": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable",
         "name_it": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable"
@@ -1684,7 +1944,7 @@
     },
     {
       "name_en": "Gorger",
-      "name_de": "Gorger",
+      "name_de": "Verschlinger",
       "name_es": "Gorger",
       "name_fr": "Cannibales",
       "name_it": "Gorger",
@@ -1697,7 +1957,7 @@
           "category": "rare",
           "notes": {
             "name_en": "0-3 Gorgers",
-            "name_de": "0-3 Gorgers",
+            "name_de": "0-3 Verschlinger",
             "name_es": "0-3 Gorgers",
             "name_fr": "0-3 Cannibales",
             "name_it": "0-3 Gorgers",
@@ -1712,7 +1972,7 @@
       "equipment": [
         {
           "name_en": "Wicked claws, Distensible jaw",
-          "name_de": "Wicked claws, Distensible jaw",
+          "name_de": "Scheußliche Krallen, Gewaltiges Maul",
           "name_es": "Wicked claws, Distensible jaw",
           "name_fr": "Griffes mortelles, Mâchoire extensible",
           "name_it": "Wicked claws, Distensible jaw",
@@ -1724,7 +1984,7 @@
       "armor": [
         {
           "name_en": "Light armour (Calloused hide)",
-          "name_de": "Light armour (Calloused hide)",
+          "name_de": "Leichte Rüstung (Schwielige Haut)",
           "name_es": "Light armour (Calloused hide)",
           "name_fr": "Armure légère (Peau calleuse)",
           "name_it": "Light armour (Calloused hide)",
@@ -1736,7 +1996,7 @@
       "options": [
         {
           "name_en": "Scouts",
-          "name_de": "Scouts",
+          "name_de": "Kundschafter",
           "name_es": "Scouts",
           "name_fr": "Éclaireurs",
           "name_it": "Scouts",
@@ -1745,7 +2005,7 @@
         },
         {
           "name_en": "Vanguard",
-          "name_de": "Vanguard",
+          "name_de": "Vorhut",
           "name_es": "Vanguard",
           "name_fr": "Avant-garde",
           "name_it": "Vanguard",
@@ -1758,7 +2018,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
-        "name_de": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
+        "name_de": "Angst, Ausgehungert, Geschlossene Ränge, Hinterhalt, Raserei, Regeneration (6+), Schnelle Bewegung, Unerschütterlich",
         "name_es": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
         "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
         "name_it": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
