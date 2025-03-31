@@ -594,7 +594,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   ? unit.minDetachmentSize
                   : unit.minimum
               }
-              max={unit.maximum}
+              max={
+                unit.armyComposition &&
+                typeof unit.armyComposition[listArmyComposition]?.maximum ===
+                  "number"
+                  ? unit.armyComposition[listArmyComposition].maximum
+                  : unit.maximum
+              }
               value={unit.strength}
               onChange={handleStrengthChange}
             />
