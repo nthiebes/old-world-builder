@@ -3424,8 +3424,6 @@ export const rules = {
       units: [
         {
           ids: ["warplock-jezzails"],
-          min: 0,
-          max: 1,
           requiresType: "characters",
           requires: ["warlock-engineer"],
         },
