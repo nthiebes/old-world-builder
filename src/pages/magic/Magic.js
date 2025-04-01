@@ -16,7 +16,7 @@ import { editUnit } from "../../state/lists";
 import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { normalizeRuleName } from "../../utils/string";
+import { normalizeRuleName, equalsOrIncludes } from "../../utils/string";
 import gameSystems from "../../assets/armies.json";
 import {
   isMultipleAllowedItem,
@@ -493,13 +493,7 @@ export const Magic = ({ isMobile }) => {
           ).filter(
             (item) =>
               (!maxMagicPoints || item.points <= maxMagicPoints) &&
-              (item?.armyComposition === list?.armyComposition ||
-                !item.armyComposition ||
-                (item?.armyComposition &&
-                  item.armyComposition.length > 0 &&
-                  item.armyComposition.includes(
-                    list?.armyComposition || list?.army
-                  )))
+              (!item.armyComposition || equalsOrIncludes(item.armyComposition, list?.armyComposition))
           );
 
           if (itemGroupItems.length > 0) {
