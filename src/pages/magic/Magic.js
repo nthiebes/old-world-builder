@@ -493,7 +493,10 @@ export const Magic = ({ isMobile }) => {
           ).filter(
             (item) =>
               (!maxMagicPoints || item.points <= maxMagicPoints) &&
-              (!item.armyComposition || equalsOrIncludes(item.armyComposition, list?.armyComposition))
+              (
+                !item.armyComposition || 
+                equalsOrIncludes(item.armyComposition, list?.armyComposition || list?.army)
+              )
           );
 
           if (itemGroupItems.length > 0) {
