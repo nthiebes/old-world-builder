@@ -2,6 +2,7 @@
   "characters": [
     {
       "name_en": "Black Orc Warboss",
+      "name_cn": "黑兽人老大",
       "name_de": "Black Orc Warboss",
       "name_fr": "Chef de Guerre Orque Noir",
       "id": "black-orc-warboss",
@@ -11,6 +12,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "0-1黑兽人老大, 每1000分兽人战将或兽人疯老大",
             "name_de": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
             "name_es": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
             "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
@@ -20,6 +22,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
+            "name_cn": "0-1Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_fr": "0-1 Chef de Guerre Orque Noir ou Grand Chef Orque Noir par Char à Sangliers Orque Noir"
@@ -29,6 +32,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -38,6 +42,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -47,6 +52,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -54,6 +60,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -61,12 +68,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -74,6 +83,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -84,6 +94,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -93,6 +104,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -100,65 +112,77 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "name_fr": "Troisième Aurige Orque",
               "points": 5
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 4,
               "notes": [
                 {
                   "name_en": "If 2 crew members",
+                  "name_cn": "If 2 crew members",
                   "name_fr": "Si 2 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 6,
               "notes": [
                 {
                   "name_en": "If 3 crew members",
+                  "name_cn": "If 3 crew members",
                   "name_fr": "Si 3 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Warpaint",
+              "name_cn": "战漆",
               "name_de": "Warpaint",
               "name_fr": "Peintures de Guerre",
               "points": 10,
               "notes": {
                 "name_en": "If frenzied",
+                "name_cn": "若具有狂暴",
                 "name_fr": "Si frénétique"
               }
             }
@@ -166,12 +190,14 @@
         },
         {
           "name_en": "Black Orc Boar Chariot",
+          "name_cn": "黑兽人野猪战车",
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
+              "name_cn": "单手武器, 额外单手武器",
               "name_de": "Hand weapon, Additional hand weapon",
               "points": 2,
               "exclusive": true,
@@ -180,6 +206,7 @@
             },
             {
               "name_en": "Hand weapon, Great weapon",
+              "name_cn": "单手武器, 重型武器",
               "name_de": "Hand weapon, Great weapon",
               "points": 4,
               "exclusive": true,
@@ -187,6 +214,7 @@
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "points": 10,
               "name_fr": "Porte-étendard"
@@ -195,11 +223,13 @@
         },
         {
           "name_en": "Wyvern",
+          "name_cn": "双足飞龙",
           "name_de": "Wyvern",
           "name_fr": "Vouivre",
           "points": 130,
           "specialRules": {
             "name_en": "Close Order, Fly (9), Large Target, Stomp Attacks (D3), Swiftstride, Terror",
+            "name_cn": "紧密阵型, 飞行(9), 大型目标, 践踏攻击(D3), 快速行进, 惊骇",
             "name_fr": "Ordre Serré, Vol (9), Grande Cible, Attaques de Piétinement (D3), Rapide, Terreur"
           }
         }
@@ -207,6 +237,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -216,6 +247,7 @@
       ],
       "specialRules": {
         "name_en": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_cn": "大砍刀, 大只佬, 狂怒冲锋(doesn't apply to a mount), 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
         "name_de": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_es": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
@@ -223,6 +255,7 @@
     },
     {
       "name_en": "Black Orc Bigboss",
+      "name_cn": "黑兽人勇士",
       "name_de": "Black Orc Bigboss",
       "name_fr": "Grand Chef Orque Noir",
       "id": "black-orc-bigboss",
@@ -235,6 +268,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
+            "name_cn": "0-1Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot",
             "name_fr": "0-1 Chef de Guerre Orque Noir ou Grand Chef Orque Noir par Char à Sangliers Orque Noir"
@@ -244,6 +278,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -251,6 +286,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
           "name_fr": "Porteur de la Grande Bannière",
           "name_es": "Battle Standard Bearer",
@@ -264,6 +300,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -273,6 +310,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -280,6 +318,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -287,12 +326,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -300,6 +341,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -310,6 +352,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -321,6 +364,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -328,65 +372,77 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "name_fr": "Troisième Aurige Orque",
               "points": 5
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 4,
               "notes": [
                 {
                   "name_en": "If 2 crew members",
+                  "name_cn": "If 2 crew members",
                   "name_fr": "Si 2 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 6,
               "notes": [
                 {
                   "name_en": "If 3 crew members",
+                  "name_cn": "If 3 crew members",
                   "name_fr": "Si 3 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Warpaint",
+              "name_cn": "战漆",
               "name_de": "Warpaint",
               "name_fr": "Peintures de Guerre",
               "points": 10,
               "notes": {
                 "name_en": "If frenzied",
+                "name_cn": "若具有狂暴",
                 "name_fr": "Si frénétique"
               }
             }
@@ -394,12 +450,14 @@
         },
         {
           "name_en": "Black Orc Boar Chariot",
+          "name_cn": "黑兽人野猪战车",
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
+              "name_cn": "单手武器, 额外单手武器",
               "name_de": "Hand weapon, Additional hand weapon",
               "points": 2,
               "exclusive": true,
@@ -408,6 +466,7 @@
             },
             {
               "name_en": "Hand weapon, Great weapon",
+              "name_cn": "单手武器, 重型武器",
               "name_de": "Hand weapon, Great weapon",
               "points": 4,
               "exclusive": true,
@@ -415,6 +474,7 @@
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "points": 10,
               "name_fr": "Porte-étendard"
@@ -425,6 +485,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -434,6 +495,7 @@
       ],
       "specialRules": {
         "name_en": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_cn": "大砍刀, 大只佬, 狂怒冲锋(doesn't apply to a mount), 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
         "name_de": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_es": "Choppas, Da Boyz, Furious Charge (doesn't apply to a mount), Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
@@ -441,6 +503,7 @@
     },
     {
       "name_en": "Orc Warboss",
+      "name_cn": "兽人战将",
       "name_de": "Orc Warboss",
       "name_fr": "Chef de Guerre Orque",
       "id": "orc-warboss",
@@ -450,6 +513,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "0-1黑兽人老大, 每1000分兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
@@ -457,6 +521,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "每1000分0-1兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
@@ -464,6 +529,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "每1000分0-1兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         }
@@ -471,6 +537,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -480,6 +547,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -489,6 +557,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -496,6 +565,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -503,6 +573,7 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
@@ -512,6 +583,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -520,6 +592,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 3,
@@ -527,12 +600,14 @@
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 3,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -540,6 +615,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -549,12 +625,14 @@
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         }
@@ -562,6 +640,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -569,65 +648,77 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "name_fr": "Troisième Aurige Orque",
               "points": 5
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 4,
               "notes": [
                 {
                   "name_en": "If 2 crew members",
+                  "name_cn": "If 2 crew members",
                   "name_fr": "Si 2 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 6,
               "notes": [
                 {
                   "name_en": "If 3 crew members",
+                  "name_cn": "If 3 crew members",
                   "name_fr": "Si 3 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Warpaint",
+              "name_cn": "战漆",
               "name_de": "Warpaint",
               "name_fr": "Peintures de Guerre",
               "points": 10,
               "notes": {
                 "name_en": "If frenzied",
+                "name_cn": "若具有狂暴",
                 "name_fr": "Si frénétique"
               }
             }
@@ -635,11 +726,13 @@
         },
         {
           "name_en": "Wyvern",
+          "name_cn": "双足飞龙",
           "name_de": "Wyvern",
           "name_fr": "Vouivre",
           "points": 130,
           "specialRules": {
             "name_en": "Close Order, Fly (9), Large Target, Stomp Attacks (D3), Swiftstride, Terror",
+            "name_cn": "紧密阵型, 飞行(9), 大型目标, 践踏攻击(D3), 快速行进, 惊骇",
             "name_fr": "Ordre Serré, Vol (9), Grande Cible, Attaques de Piétinement (D3), Rapide, Terreur"
           }
         }
@@ -647,6 +740,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -656,6 +750,7 @@
       ],
       "specialRules": {
         "name_en": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_cn": "大砍刀, 狂怒冲锋(doesn't apply to a mount), 无视地精恐慌, 鲁莽, 集结战吼, Waaagh!, 战帮",
         "name_de": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
         "name_es": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
         "name_fr": "Kikoup', Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
@@ -663,6 +758,7 @@
     },
     {
       "name_en": "Orc Bigboss",
+      "name_cn": "兽人勇士",
       "name_de": "Orc Bigboss",
       "name_fr": "Grand Chef Orque",
       "id": "orc-bigboss",
@@ -670,6 +766,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -677,6 +774,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
           "name_fr": "Porteur de la Grande Bannière",
           "name_es": "Battle Standard Bearer",
@@ -690,6 +788,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -699,6 +798,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -706,6 +806,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -713,6 +814,7 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
@@ -722,6 +824,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -730,6 +833,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 3,
@@ -737,12 +841,14 @@
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 3,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -750,6 +856,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -759,12 +866,14 @@
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         }
@@ -772,6 +881,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -779,65 +889,77 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "name_fr": "Troisième Aurige Orque",
               "points": 5
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 4,
               "notes": [
                 {
                   "name_en": "If 2 crew members",
+                  "name_cn": "If 2 crew members",
                   "name_fr": "Si 2 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Frenzy",
+              "name_cn": "狂暴",
               "name_de": "Frenzy",
               "name_fr": "Frénésie",
               "points": 6,
               "notes": [
                 {
                   "name_en": "If 3 crew members",
+                  "name_cn": "If 3 crew members",
                   "name_fr": "Si 3 auriges"
                 },
                 {
                   "name_en": "0-1 per 1000 points",
+                  "name_cn": "0-1 per 1000 points",
                   "name_fr": "0-1 par tranche de 1000 points"
                 }
               ]
             },
             {
               "name_en": "Warpaint",
+              "name_cn": "战漆",
               "name_de": "Warpaint",
               "name_fr": "Peintures de Guerre",
               "points": 10,
               "notes": {
                 "name_en": "If frenzied",
+                "name_cn": "若具有狂暴",
                 "name_fr": "Si frénétique"
               }
             }
@@ -847,6 +969,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -856,6 +979,7 @@
       ],
       "specialRules": {
         "name_en": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
+        "name_cn": "大砍刀, 狂怒冲锋(doesn't apply to a mount), 无视地精恐慌, 鲁莽, 集结战吼, Waaagh!, 战帮",
         "name_de": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
         "name_es": "Choppas, Furious Charge (doesn't apply to a mount), Ignore Goblin Panic, Impetuous, Rallying Cry, Waaagh!, Warband",
         "name_fr": "Kikoup', Charge Dévastatrice (ne s'applique pas à la monture), Ignore la Panique des Gobelins, Impétueux, Cri de Ralliement, Waaagh!, Bande de Guerre"
@@ -863,6 +987,7 @@
     },
     {
       "name_en": "Orc Weirdnob",
+      "name_cn": "兽人疯老大",
       "name_de": "Orc Weirdnob",
       "name_fr": "Bizarnob Orque",
       "id": "orc-weirdnob",
@@ -872,6 +997,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "0-1黑兽人老大, 每1000分兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque Noir, Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
@@ -879,6 +1005,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "每1000分0-1兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         },
@@ -886,6 +1013,7 @@
           "category": "characters",
           "notes": {
             "name_en": "0-1 Orc Warboss or Orc Weirdnob per 1000 points",
+            "name_cn": "每1000分0-1兽人战将或兽人疯老大",
             "name_fr": "0-1 Chef de Guerre Orque ou Bizarnob Orque par tranche de 1000 points"
           }
         }
@@ -893,6 +1021,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -902,6 +1031,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -912,12 +1042,14 @@
       "armor": [
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 0,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -925,6 +1057,7 @@
       "options": [
         {
           "name_en": "Level 4 Wizard",
+          "name_cn": "4级法师",
           "name_de": "Level 4 Wizard",
           "name_fr": "Sorcier de Niveau 4",
           "points": 30,
@@ -934,12 +1067,14 @@
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         }
@@ -947,6 +1082,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -954,21 +1090,25 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         },
         {
           "name_en": "Wyvern",
+          "name_cn": "双足飞龙",
           "name_de": "Wyvern",
           "name_fr": "Vouivre",
           "points": 130,
           "specialRules": {
             "name_en": "Close Order, Fly (9), Large Target, Stomp Attacks (D3), Swiftstride, Terror",
+            "name_cn": "紧密阵型, 飞行(9), 大型目标, 践踏攻击(D3), 快速行进, 惊骇",
             "name_fr": "Ordre Serré, Vol (9), Grande Cible, Attaques de Piétinement (D3), Rapide, Terreur"
           }
         }
@@ -976,6 +1116,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -986,6 +1127,7 @@
       "lores": ["battle-magic", "elementalism", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
+        "name_cn": "大砍刀, 无视地精恐慌, 搞哥法系, 帮派大哥, 战帮",
         "name_de": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
         "name_es": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
         "name_fr": "Kikoup', Ignore la Panique des Gobelins, Domaine de Gork, La Loi du Nombre, Bande de Guerre"
@@ -993,6 +1135,7 @@
     },
     {
       "name_en": "Orc Weirdboy",
+      "name_cn": "兽人疯小子",
       "name_de": "Orc Weirdboy",
       "name_fr": "Bizarboy Orque",
       "id": "orc-weirdboy",
@@ -1000,6 +1143,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1009,6 +1153,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1019,12 +1164,14 @@
       "armor": [
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 0,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -1032,6 +1179,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
           "name_de": "Level 2 Wizard",
           "name_fr": "Sorcier de Niveau 2",
           "points": 30,
@@ -1041,12 +1189,14 @@
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 5,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         }
@@ -1054,6 +1204,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1061,11 +1212,13 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_fr": "Sanglier",
           "points": 16,
           "specialRules": {
             "name_en": "Armoured Hide (1), Counter Charge, Swiftstride, Tusker Charge",
+            "name_cn": "坚硬皮肤(1), 反制冲锋, 快速行进, 獠牙冲锋",
             "name_fr": "Peau Blindée (1), Contre-charge, Rapide, Charge de Sanglier"
           }
         }
@@ -1073,6 +1226,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -1083,6 +1237,7 @@
       "lores": ["battle-magic", "elementalism", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
+        "name_cn": "大砍刀, 无视地精恐慌, 搞哥法系, 帮派大哥, 战帮",
         "name_de": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
         "name_es": "Choppas, Ignore Goblin Panic, Lore of Gork, Mob Rule, Warband",
         "name_fr": "Kikoup', Ignore la Panique des Gobelins, Domaine de Gork, La Loi du Nombre, Bande de Guerre"
@@ -1090,6 +1245,7 @@
     },
     {
       "name_en": "Goblin Warboss",
+      "name_cn": "地精战将",
       "name_de": "Goblin Warboss",
       "name_fr": "Chef de Guerre Gobelin",
       "id": "goblin-warboss",
@@ -1097,6 +1253,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1106,6 +1263,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1115,6 +1273,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -1122,6 +1281,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -1129,12 +1289,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -1142,6 +1304,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 3,
@@ -1151,6 +1314,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -1162,6 +1326,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1169,12 +1334,14 @@
         },
         {
           "name_en": "Giant Wolf",
+          "name_cn": "巨狼",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
           "points": 10,
           "options": [
             {
               "name_en": "Ambushers",
+              "name_cn": "伏击",
               "points": 10,
               "armyComposition": ["nomadic-waaagh"],
               "name_fr": "Embusqueurs"
@@ -1182,33 +1349,39 @@
           ],
           "specialRules": {
             "name_en": "Chariot Runners, Fast Cavalry, Fire & Flee, Swiftstride",
+            "name_cn": "战车骑伴, 快速骑兵, 游击, 快速行进",
             "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Tir & Fuite, Rapide"
           }
         },
         {
           "name_en": "Gigantic Spider",
+          "name_cn": "巨型蜘蛛",
           "name_de": "Gigantic Spider",
           "name_fr": "Araignée Géante",
           "points": 35,
           "specialRules": {
             "name_en": "Armoured Hide (1), Fast Cavalry, Poisoned Attacks, Swiftstride",
+            "name_cn": "坚硬皮肤(1), 快速骑兵, 淬毒攻击, 快速行进",
             "name_fr": "Peau Blindée (1), Cavalerie Rapide, Attaques Empoisonnées, Rapide"
           }
         },
         {
           "name_en": "Wolf Chariot",
+          "name_cn": "野狼战车",
           "name_de": "Wolf Chariot",
           "name_fr": "Char à Loups",
           "points": 53,
           "options": [
             {
               "name_en": "Third Giant Wolf",
+              "name_cn": "第三只巨狼",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "name_fr": "Porte-étendard",
               "points": 5
@@ -1219,6 +1392,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1228,6 +1402,7 @@
       ],
       "specialRules": {
         "name_en": "Fear of Elves, Impetuous, Rallying Cry, Warband",
+        "name_cn": "惧怕精灵, 鲁莽, 集结战吼, 战帮",
         "name_de": "Fear of Elves, Impetuous, Rallying Cry, Warband",
         "name_es": "Fear of Elves, Impetuous, Rallying Cry, Warband",
         "name_fr": "Peur des Elfes, Impétueux, Cri de Ralliement, Bande de Guerre"
@@ -1235,6 +1410,7 @@
     },
     {
       "name_en": "Goblin Bigboss",
+      "name_cn": "地精勇士",
       "name_de": "Goblin Bigboss",
       "name_fr": "Grand Chef Gobelin",
       "id": "goblin-bigboss",
@@ -1242,6 +1418,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1249,6 +1426,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
           "name_fr": "Porteur de la Grande Bannière",
           "name_es": "Battle Standard Bearer",
@@ -1262,6 +1440,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1271,6 +1450,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -1278,6 +1458,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -1285,12 +1466,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -1298,6 +1481,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 3,
@@ -1307,6 +1491,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -1318,6 +1503,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1325,12 +1511,14 @@
         },
         {
           "name_en": "Giant Wolf",
+          "name_cn": "巨狼",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
           "points": 10,
           "options": [
             {
               "name_en": "Ambushers",
+              "name_cn": "伏击",
               "points": 10,
               "armyComposition": ["nomadic-waaagh"],
               "name_fr": "Embusqueurs"
@@ -1338,33 +1526,39 @@
           ],
           "specialRules": {
             "name_en": "Chariot Runners, Fast Cavalry, Fire & Flee, Swiftstride",
+            "name_cn": "战车骑伴, 快速骑兵, 游击, 快速行进",
             "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Tir & Fuite, Rapide"
           }
         },
         {
           "name_en": "Gigantic Spider",
+          "name_cn": "巨型蜘蛛",
           "name_de": "Gigantic Spider",
           "name_fr": "Araignée Géante",
           "points": 35,
           "specialRules": {
             "name_en": "Armoured Hide (1), Fast Cavalry, Poisoned Attacks, Swiftstride",
+            "name_cn": "坚硬皮肤(1), 快速骑兵, 淬毒攻击, 快速行进",
             "name_fr": "Peau Blindée (1), Cavalerie Rapide, Attaques Empoisonnées, Rapide"
           }
         },
         {
           "name_en": "Wolf Chariot",
+          "name_cn": "野狼战车",
           "name_de": "Wolf Chariot",
           "name_fr": "Char à Loups",
           "points": 53,
           "options": [
             {
               "name_en": "Third Giant Wolf",
+              "name_cn": "第三只巨狼",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "name_fr": "Porte-étendard",
               "points": 5
@@ -1375,6 +1569,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1384,6 +1579,7 @@
       ],
       "specialRules": {
         "name_en": "Fear of Elves, Impetuous, Rallying Cry, Warband",
+        "name_cn": "惧怕精灵, 鲁莽, 集结战吼, 战帮",
         "name_de": "Fear of Elves, Impetuous, Rallying Cry, Warband",
         "name_es": "Fear of Elves, Impetuous, Rallying Cry, Warband",
         "name_fr": "Peur des Elfes, Impétueux, Cri de Ralliement, Bande de Guerre"
@@ -1391,6 +1587,7 @@
     },
     {
       "name_en": "Goblin Oddnob",
+      "name_cn": "地精怪老大",
       "name_de": "Goblin Oddnob",
       "name_fr": "Zarbnob Gobelin",
       "id": "goblin-oddnod",
@@ -1398,6 +1595,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1407,6 +1605,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1418,6 +1617,7 @@
       "options": [
         {
           "name_en": "Level 4 Wizard",
+          "name_cn": "4级法师",
           "name_de": "Level 4 Wizard",
           "name_fr": "Sorcier de Niveau 4",
           "points": 30,
@@ -1429,6 +1629,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1436,12 +1637,14 @@
         },
         {
           "name_en": "Giant Wolf",
+          "name_cn": "巨狼",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
           "points": 10,
           "options": [
             {
               "name_en": "Ambushers",
+              "name_cn": "伏击",
               "points": 10,
               "armyComposition": ["nomadic-waaagh"],
               "name_fr": "Embusqueurs"
@@ -1449,23 +1652,27 @@
           ],
           "specialRules": {
             "name_en": "Chariot Runners, Fast Cavalry, Fire & Flee, Swiftstride",
+            "name_cn": "战车骑伴, 快速骑兵, 游击, 快速行进",
             "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Tir & Fuite, Rapide"
           }
         },
         {
           "name_en": "Wolf Chariot",
+          "name_cn": "野狼战车",
           "name_de": "Wolf Chariot",
           "name_fr": "Char à Loups",
           "points": 53,
           "options": [
             {
               "name_en": "Third Giant Wolf",
+              "name_cn": "第三只巨狼",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "name_fr": "Porte-étendard",
               "points": 5
@@ -1474,18 +1681,21 @@
         },
         {
           "name_en": "Arachnarok Spider",
+          "name_cn": "阿拉克纳瑞巨蛛",
           "name_de": "Arachnarok Spider",
           "name_fr": "Arachnarok",
           "points": 310,
           "options": [
             {
               "name_en": "Spidersilk lobber",
+              "name_cn": "蛛丝投掷器",
               "name_fr": "Catatoile",
               "points": 35
             }
           ],
           "specialRules": {
             "name_en": "Close Order, Howdah, Immune to Psychology, Large Target, Move Through Cover, Poisoned Attacks, Stomp Attacks (D6), Stubborn, Swiftstride, Terror",
+            "name_cn": "紧密阵型, 驼轿, 心理免疫, 大型目标, 穿行掩体, 淬毒攻击, 践踏攻击(D6), 坚毅, 快速行进, 惊骇",
             "name_fr": "Ordre Serré, Howdah, Immunisé à la Psychologie, Grande Cible, Mouvement à Couvert, Attaques Empoisonnées, Attaques de Piétinement (D6), Obstiné, Rapide, Terreur"
           }
         }
@@ -1493,6 +1703,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -1503,6 +1714,7 @@
       "lores": ["elementalism", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Fear of Elves, Lore of Mork, Warband",
+        "name_cn": "惧怕精灵, 毛哥法系, 战帮",
         "name_de": "Fear of Elves, Lore of Mork, Warband",
         "name_es": "Fear of Elves, Lore of Mork, Warband",
         "name_fr": "Peur des Elfes, Domaine de Mork, Bande de Guerre"
@@ -1510,6 +1722,7 @@
     },
     {
       "name_en": "Goblin Oddgit",
+      "name_cn": "地精怪家伙",
       "name_de": "Goblin Oddgit",
       "name_fr": "Zarbzig Gobelin",
       "id": "goblin-oddgit",
@@ -1517,6 +1730,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1526,6 +1740,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1537,6 +1752,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
           "name_de": "Level 2 Wizard",
           "name_fr": "Sorcier de Niveau 2",
           "points": 30,
@@ -1548,6 +1764,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1555,12 +1772,14 @@
         },
         {
           "name_en": "Giant Wolf",
+          "name_cn": "巨狼",
           "name_de": "Giant Wolf",
           "name_fr": "Loup Géant",
           "points": 10,
           "options": [
             {
               "name_en": "Ambushers",
+              "name_cn": "伏击",
               "points": 10,
               "armyComposition": ["nomadic-waaagh"],
               "name_fr": "Embusqueurs"
@@ -1568,23 +1787,27 @@
           ],
           "specialRules": {
             "name_en": "Chariot Runners, Fast Cavalry, Fire & Flee, Swiftstride",
+            "name_cn": "战车骑伴, 快速骑兵, 游击, 快速行进",
             "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Tir & Fuite, Rapide"
           }
         },
         {
           "name_en": "Wolf Chariot",
+          "name_cn": "野狼战车",
           "name_de": "Wolf Chariot",
           "name_fr": "Char à Loups",
           "points": 53,
           "options": [
             {
               "name_en": "Third Giant Wolf",
+              "name_cn": "第三只巨狼",
               "name_de": "Third Giant Wolf",
               "name_fr": "Troisième Loup Géant",
               "points": 5
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "name_fr": "Porte-étendard",
               "points": 5
@@ -1595,6 +1818,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -1605,6 +1829,7 @@
       "lores": ["elementalism", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Fear of Elves, Lore of Mork, Warband",
+        "name_cn": "惧怕精灵, 毛哥法系, 战帮",
         "name_de": "Fear of Elves, Lore of Mork, Warband",
         "name_es": "Fear of Elves, Lore of Mork, Warband",
         "name_fr": "Peur des Elfes, Domaine de Mork, Bande de Guerre"
@@ -1612,6 +1837,7 @@
     },
     {
       "name_en": "Night Goblin Warboss",
+      "name_cn": "夜地精战将",
       "name_de": "Night Goblin Warboss",
       "name_fr": "Chef de Guerre Gobelin de la Nuit",
       "id": "night-goblin-warboss",
@@ -1624,6 +1850,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1633,6 +1860,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1642,6 +1870,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -1649,6 +1878,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -1656,12 +1886,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -1669,6 +1901,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 3,
@@ -1678,6 +1911,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -1689,6 +1923,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1696,11 +1931,13 @@
         },
         {
           "name_en": "Giant Cave Squig",
+          "name_cn": "巨型洞穴跳跳",
           "name_de": "Giant Cave Squig",
           "name_fr": "Squig des Cavernes Géant",
           "points": 25,
           "specialRules": {
             "name_en": "Armoured Hide (1), Hatred (Dwarfs), Impact Hits (D3), Loner, Random Movement",
+            "name_cn": "坚硬皮肤(1), 仇恨(矮人), 撞击(D3), 独行, 随机移动",
             "name_fr": "Peau Blindée (1), Haine (Nains), Touches d'Impact (D3), Solitaire, Mouvement Aléatoire"
           }
         }
@@ -1708,6 +1945,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1717,6 +1955,7 @@
       ],
       "specialRules": {
         "name_en": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
+        "name_cn": "惧怕精灵, 仇恨(矮人), 集结战吼, 战帮",
         "name_de": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
         "name_es": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
         "name_fr": "Peur des Elfes, Haine (Nains), Cri de Ralliement, Bande de Guerre"
@@ -1724,6 +1963,7 @@
     },
     {
       "name_en": "Night Goblin Bigboss",
+      "name_cn": "夜地精勇士",
       "name_de": "Night Goblin Bigboss",
       "name_fr": "Grand Chef Gobelin de la Nuit",
       "id": "night-goblin-bigboss",
@@ -1736,6 +1976,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1743,6 +1984,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
           "name_fr": "Porteur de la Grande Bannière",
           "name_es": "Battle Standard Bearer",
@@ -1756,6 +1998,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1765,6 +2008,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 3,
@@ -1772,6 +2016,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 4,
@@ -1779,12 +2024,14 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "If appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_fr": "S'il est monté"
           }
         }
@@ -1792,6 +2039,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 3,
@@ -1801,6 +2049,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
@@ -1812,6 +2061,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1819,11 +2069,13 @@
         },
         {
           "name_en": "Giant Cave Squig",
+          "name_cn": "巨型洞穴跳跳",
           "name_de": "Giant Cave Squig",
           "name_fr": "Squig des Cavernes Géant",
           "points": 25,
           "specialRules": {
             "name_en": "Armoured Hide (1), Hatred (Dwarfs), Impact Hits (D3), Loner, Random Movement",
+            "name_cn": "坚硬皮肤(1), 仇恨(矮人), 撞击(D3), 独行, 随机移动",
             "name_fr": "Peau Blindée (1), Haine (Nains), Touches d'Impact (D3), Solitaire, Mouvement Aléatoire"
           }
         }
@@ -1831,6 +2083,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
@@ -1840,6 +2093,7 @@
       ],
       "specialRules": {
         "name_en": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
+        "name_cn": "惧怕精灵, 仇恨(矮人), 集结战吼, 战帮",
         "name_de": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
         "name_es": "Fear of Elves, Hatred (Dwarfs), Rallying Cry, Warband",
         "name_fr": "Peur des Elfes, Haine (Nains), Cri de Ralliement, Bande de Guerre"
@@ -1847,6 +2101,7 @@
     },
     {
       "name_en": "Night Goblin Oddnob",
+      "name_cn": "夜地精萨满",
       "name_de": "Night Goblin Oddnob",
       "name_fr": "Zarbnob Gobelin de la Nuit",
       "id": "night-goblin-oddnob",
@@ -1859,6 +2114,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1868,6 +2124,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1879,6 +2136,7 @@
       "options": [
         {
           "name_en": "Level 4 Wizard",
+          "name_cn": "4级法师",
           "name_de": "Level 4 Wizard",
           "name_fr": "Sorcier de Niveau 4",
           "points": 30,
@@ -1890,6 +2148,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1899,6 +2158,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -1909,6 +2169,7 @@
       "lores": ["illusion", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
+        "name_cn": "惧怕精灵, 仇恨(矮人), 毛哥法系, 战帮",
         "name_de": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
         "name_es": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
         "name_fr": "Peur des Elfes, Haine (Nains), Domaine de Mork, Bande de Guerre"
@@ -1916,6 +2177,7 @@
     },
     {
       "name_en": "Night Goblin Oddgit",
+      "name_cn": "夜地精怪家伙",
       "name_de": "Night Goblin Oddgit",
       "name_fr": "Zarbzig Gobelin de la Nuit",
       "id": "night-goblin-oddgit",
@@ -1928,6 +2190,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -1937,6 +2200,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_fr": "Arme de base",
           "points": 0,
@@ -1948,6 +2212,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
           "name_de": "Level 2 Wizard",
           "name_fr": "Sorcier de Niveau 2",
           "points": 30,
@@ -1959,6 +2224,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_fr": "À Pied",
           "points": 0,
@@ -1968,6 +2234,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "arcane-item", "enchanted-item"],
@@ -1978,6 +2245,7 @@
       "lores": ["illusion", "waaagh-magic", "troll-magic"],
       "specialRules": {
         "name_en": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
+        "name_cn": "惧怕精灵, 仇恨(矮人), 毛哥法系, 战帮",
         "name_de": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
         "name_es": "Fear of Elves, Hatred (Dwarfs), Lore of Mork, Warband",
         "name_fr": "Peur des Elfes, Haine (Nains), Domaine de Mork, Bande de Guerre"
@@ -1985,6 +2253,7 @@
     },
     {
       "name_en": "Kiknik Toofsnatcha",
+      "name_cn": "基克尼克·窃牙",
       "name_de": "Kiknik Toofsnatcha",
       "name_es": "Kiknik Toofsnatcha",
       "name_fr": "Kiknik Toofsnatcha",
@@ -1995,6 +2264,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -2004,6 +2274,7 @@
       "equipment": [
         {
           "name_en": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
+          "name_cn": "老大的战利品架, 碎头者, 骑兵长矛",
           "name_de": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "name_es": "Da Boss's Trophy Rack, Da Skull Smasha, Cavalry spear",
           "name_fr": "Râtelier à Trophées du Chef, Frakass' Crânes, Lance de cavalerie",
@@ -2016,6 +2287,7 @@
       "armor": [
         {
           "name_en": "Shield, Light armour",
+          "name_cn": "盾牌, 轻甲",
           "name_de": "Shield, Light armour",
           "name_es": "Shield, Light armour",
           "name_fr": "Bouclier, Armure légère",
@@ -2029,6 +2301,7 @@
       "mounts": [
         {
           "name_en": "Chompa",
+          "name_cn": "尖牙利爪",
           "name_de": "Chompa",
           "name_es": "Chompa",
           "name_fr": "Mâchoir'",
@@ -2042,6 +2315,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
+        "name_cn": "阴险狡诈, 伏击, 碎甲攻击(1 - Chompa only), 坚硬皮肤(1), 战车骑伴, 快速骑兵, 惧怕精灵, 鲁莽, 打了就跑, 集结战吼, 快速行进, 战帮",
         "name_de": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
         "name_es": "All Sneaky Like, Ambushers, Armour Bane (1 - Chompa only), Armoured Hide (1), Chariot Runners, Fast Cavalry, Fear of Elves, Impetuous, 'It & Run, Rallying Cry, Swiftstride, Warband",
         "name_fr": "En Tapinois, Embusqueurs, Arme Perforante (1 - Mâchoir' uniquement), Peau Blindée (1), Escorteurs de Chars, Cavalerie Rapide, Peur des Elfes, Impétueux, ’Arrcèlement, Cri de Ralliement, Rapide, Bande de Guerre",
@@ -2051,6 +2325,7 @@
     },
     {
       "name_en": "Ogdruz Swampdigga",
+      "name_cn": "欧德鲁兹·掘沼者",
       "name_de": "Ogdruz Swampdigga",
       "name_es": "Ogdruz Swampdigga",
       "name_fr": "Ogdruz Swampdigga",
@@ -2069,6 +2344,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -2078,6 +2354,7 @@
       "equipment": [
         {
           "name_en": "Bog-wood staff, Trollhide shawl, Lore Familiar",
+          "name_cn": "沼木法杖, 巨魔皮披肩, 法系仆从",
           "name_de": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "name_es": "Bog-wood staff, Trollhide shawl, Lore Familiar",
           "name_fr": "Bâton en Morta, Châle en Peau de Troll, Familier de Savoir",
@@ -2091,6 +2368,7 @@
       "options": [
         {
           "name_en": "Level 3 Wizard",
+          "name_cn": "3级法师",
           "name_de": "Level 3 Wizard",
           "name_es": "Level 3 Wizard",
           "name_fr": "Sorcier de Niveau 3",
@@ -2106,6 +2384,7 @@
       "lores": ["troll-magic", "elementalism"],
       "specialRules": {
         "name_en": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
+        "name_cn": "大砍刀, 召唤巨魔, 无视地精恐慌, 保护老大, 力量虹吸, 战帮",
         "name_de": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_es": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_fr": "Kikoup', Eul' Maître des Trolls, Ignore la Panique des Gobelins, Protégez l'Chef, Drain de Force, Bande de Guerre",
@@ -2115,6 +2394,7 @@
     },
     {
       "name_en": "Troll Hag",
+      "name_cn": "巨魔巫婆",
       "name_de": "Troll Hag",
       "name_es": "Troll Hag",
       "name_fr": "Mégère Trollesse",
@@ -2125,6 +2405,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
@@ -2136,6 +2417,7 @@
           "category": "rare",
           "notes": {
             "name_en": "Any army made using the Orc & Goblin Tribes Grand Army composition list that includes one or more Troll Mobs may include 0-1 Troll Hag as a Rare choice.",
+            "name_cn": "Any army made using the Orc & Goblin Tribes Grand Army composition list that includes one或more Troll Mobs may include 0-1 Troll Hag as a Rare choice.",
             "name_fr": "Toute armée utilisant la liste de composition de grande armée des Tribus d'Orques & Gobelins qui inclut au moins une Bande de Trolls peut inclure 0-1 Mégère Trollesse comme choix d'Unité Rare"
           }
         },
@@ -2146,6 +2428,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
+          "name_cn": "单手武器(Gnarled stump), 巨魔呕吐, 沼泽吐息",
           "name_de": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "name_es": "Hand weapon (Gnarled stump), Troll vomit, Swamp breath",
           "name_fr": "Arme de base (Souche noueuse), Vomi de troll, Souffle marécageux",
@@ -2158,11 +2441,13 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_fr": "Armure lourde",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Scaly skin",
+            "name_cn": "鳞皮",
             "name_fr": "Peau écailleuse"
           }
         }
@@ -2170,6 +2455,7 @@
       "options": [
         {
           "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
           "name_de": "Level 2 Wizard",
           "name_es": "Level 2 Wizard",
           "name_fr": "Sorcier de Niveau 2",
@@ -2185,6 +2471,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -2204,6 +2491,7 @@
       "lores": ["troll-magic", "battle-magic"],
       "specialRules": {
         "name_en": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
+        "name_cn": "紧密阵型, 易燃, 心理免疫, 饥不择食, 大型目标, 母爱, 重生(5+), 黏滑小腿, 践踏攻击(D6), 愚笨, 惊骇, 倒啦！, 永不战败",
         "name_de": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Faim Aveugle, Grande Cible, Amour Maternel, Régénération (5+), Jarrets Visqueux, Attaques de Piétinement (D6), Stupidité, Terreur, Timmm-berrr!, Indémoralisable",
@@ -2215,6 +2503,7 @@
   "core": [
     {
       "name_en": "Common Troll Mob",
+      "name_cn": "普通巨魔战帮",
       "name_de": "Common Troll Mob",
       "name_fr": "Bande de Trolls",
       "id": "common-troll-mob",
@@ -2226,6 +2515,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
+            "name_cn": "每1000分1 Troll Mob, 0-1additional Troll Mob may be taken as a Core choice per Troll Hag taken",
             "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix d'Unité de Base par Mégère Trollesse prise"
           }
         }
@@ -2234,6 +2524,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -2243,6 +2534,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -2250,6 +2542,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -2259,11 +2552,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -2273,6 +2568,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
@@ -2280,6 +2576,7 @@
     },
     {
       "name_en": "River Troll Mob",
+      "name_cn": "河流巨魔战帮",
       "name_de": "River Troll Mob",
       "name_fr": "Bande de Trolls d'Eau",
       "id": "river-troll-mob",
@@ -2291,6 +2588,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
+            "name_cn": "每1000分1 Troll Mob, 0-1additional Troll Mob may be taken as a Core choice per Troll Hag taken",
             "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix d'Unité de Base par Mégère Trollesse prise"
           }
         }
@@ -2299,6 +2597,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -2308,6 +2607,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -2315,6 +2615,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -2324,11 +2625,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -2338,6 +2641,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
@@ -2345,6 +2649,7 @@
     },
     {
       "name_en": "Stone Troll Mob",
+      "name_cn": "石巨魔战帮",
       "name_de": "Stone Troll Mob",
       "name_fr": "Bande de Trolls de Pierre",
       "id": "stone-troll-mob",
@@ -2356,6 +2661,7 @@
           "category": "core",
           "notes": {
             "name_en": "1 Troll Mob per 1000 points, 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken",
+            "name_cn": "每1000分1 Troll Mob, 0-1additional Troll Mob may be taken as a Core choice per Troll Hag taken",
             "name_fr": "1 Bande de Trolls par tranche de 1000 points, 0-1 Bande de Trolls additionnelle peut être prise comme choix d'Unité de Base par Mégère Trollesse prise"
           }
         }
@@ -2364,6 +2670,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -2373,6 +2680,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -2380,6 +2688,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -2389,11 +2698,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -2403,6 +2714,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité"
@@ -2410,6 +2722,7 @@
     },
     {
       "name_en": "Orc Mob",
+      "name_cn": "兽人战帮",
       "name_de": "Orc Mob",
       "name_fr": "Bande d'Orques",
       "id": "orc-mob",
@@ -2427,11 +2740,13 @@
       "notes": {
         "name_de": "0-1 Orc Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_en": "0-1 Orc Mob per 1000 points may purchase a magic standard worth up to 50 points",
+        "name_cn": "0-1Orc Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_fr": "0-1 Bande d'Orques par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
       },
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 7,
@@ -2442,6 +2757,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
@@ -2452,6 +2768,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 5
@@ -2460,6 +2777,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -2469,6 +2787,7 @@
         },
         {
           "name_en": "Warbows",
+          "name_cn": "战弓",
           "name_de": "Warbows",
           "name_fr": "Arcs de guerre",
           "points": 0,
@@ -2476,6 +2795,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 1,
@@ -2483,6 +2803,7 @@
         },
         {
           "name_en": "Thrusting spears",
+          "name_cn": "刺矛",
           "name_de": "Thrusting spears",
           "name_fr": "Lances d'infanterie",
           "points": 1,
@@ -2490,6 +2811,7 @@
         },
         {
           "name_en": "Throwing spears",
+          "name_cn": "投矛",
           "name_de": "Throwing spears",
           "name_fr": "Javelots",
           "points": 1,
@@ -2499,6 +2821,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -2507,12 +2830,14 @@
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -2520,6 +2845,7 @@
       "options": [
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
@@ -2527,38 +2853,45 @@
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         },
         {
           "name_en": "Big Stabbas",
+          "name_cn": "大戳戳",
           "name_de": "Big Stabbas",
           "name_fr": "Grands Kitrou",
           "points": 5,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         },
         {
           "name_en": "Big 'Uns",
+          "name_cn": "大只佬",
           "name_de": "Big 'Uns",
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per army",
+            "name_cn": "0-1per army",
             "name_fr": "0-1 par armée"
           }
         },
         {
           "name_en": "Skirmishers",
+          "name_cn": "散兵",
           "name_de": "Skirmishers",
           "name_fr": "Tirailleurs",
           "points": 0,
@@ -2566,10 +2899,12 @@
           "notes": [
             {
               "name_en": "Replace Close Order",
+              "name_cn": "Replace Close Order",
               "name_fr": "Remplace Ordre Serré"
             },
             {
               "name_en": "0-1 per army",
+              "name_cn": "0-1 per army",
               "name_fr": "0-1 par armée"
             }
           ]
@@ -2578,6 +2913,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, Ignore Goblin Panic, Impetuous, Warband",
+        "name_cn": "大砍刀, 紧密阵型, 无视地精恐慌, 鲁莽, 战帮",
         "name_de": "Choppas, Close Order, Ignore Goblin Panic, Impetuous, Warband",
         "name_es": "Choppas, Close Order, Ignore Goblin Panic, Impetuous, Warband",
         "name_fr": "Kikoup', Ordre Serré, Ignore la Panique des Gobelins, Impétueux, Bande de Guerre"
@@ -2585,6 +2921,7 @@
     },
     {
       "name_en": "Black Orc Mob",
+      "name_cn": "黑兽人战帮",
       "name_de": "Black Orc Mob",
       "name_fr": "Bande d'Orques Noirs",
       "id": "black-orc-mob",
@@ -2599,6 +2936,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 6,
@@ -2609,6 +2947,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 6,
@@ -2619,6 +2958,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 6
@@ -2627,6 +2967,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -2637,6 +2978,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -2647,6 +2989,7 @@
       "options": [
         {
           "name_en": "Stubborn",
+          "name_cn": "坚毅",
           "name_de": "Stubborn",
           "name_fr": "Obstiné",
           "points": 1,
@@ -2656,6 +2999,7 @@
         },
         {
           "name_en": "Veteran",
+          "name_cn": "老兵",
           "name_de": "Veteran",
           "name_fr": "Vétérans",
           "points": 1,
@@ -2665,6 +3009,7 @@
         },
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
@@ -2674,6 +3019,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -2683,6 +3029,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 1,
@@ -2694,12 +3041,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Black Orc Mob may be taken as a Core choice if your General is a Black Orc Boss",
+        "name_cn": "0-1Black Orc Mob may be taken as a Core choice if your General is a Black Orc Boss",
         "name_de": "0-1 Black Orc Mob may be taken as a Core choice if your General is a Black Orc Boss",
         "name_es": "0-1 Black Orc Mob may be taken as a Core choice if your General is a Black Orc Boss",
         "name_fr": "0-1 Bande d'Orques Noirs peut être prise comme Unité de Base si votre Général est un Chef Orque Noir"
       },
       "specialRules": {
         "name_en": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
+        "name_cn": "大砍刀, 紧密阵型, 大只佬, 狂怒冲锋, 无视恐慌, 散兵游勇, 抑制鲁莽",
         "name_de": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_es": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_fr": "Kikoup', Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l'Impétuosité"
@@ -2707,6 +3056,7 @@
     },
     {
       "name_en": "Goblin Mob",
+      "name_cn": "地精战帮",
       "name_de": "Goblin Mob",
       "name_fr": "Bande de Gobelins",
       "id": "goblin-mob",
@@ -2724,12 +3074,14 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 7
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
@@ -2740,6 +3092,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 5
@@ -2748,6 +3101,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
           "name_de": "Hand weapons, Shields",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -2756,6 +3110,7 @@
         },
         {
           "name_en": "Hand weapons, Thrusting spears, Shields",
+          "name_cn": "单手武器, 刺矛, 盾牌",
           "name_de": "Hand weapons, Thrusting spears, Shields",
           "name_fr": "Armes de base, Lances d'infanterie, Boucliers",
           "points": 1,
@@ -2763,6 +3118,7 @@
         },
         {
           "name_en": "Hand weapons, Shortbows",
+          "name_cn": "单手武器, 短弓",
           "name_de": "Hand weapons, Shortbows",
           "name_fr": "Armes de base, Arcs courts",
           "points": 1,
@@ -2772,6 +3128,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 1,
@@ -2781,6 +3138,7 @@
       "options": [
         {
           "name_en": "Nasty Skulkers",
+          "name_cn": "卑鄙潜伏者",
           "name_de": "Nasty Skulkers",
           "name_fr": "Zigouillards",
           "points": 10,
@@ -2790,6 +3148,7 @@
         },
         {
           "name_en": "Skirmishers",
+          "name_cn": "散兵",
           "name_de": "Skirmishers",
           "name_fr": "Tirailleurs",
           "points": 0,
@@ -2797,10 +3156,12 @@
           "notes": [
             {
               "name_en": "Replace Close Order",
+              "name_cn": "Replace Close Order",
               "name_fr": "Remplace Ordre Serré"
             },
             {
               "name_en": "0-1 per 1000 points",
+              "name_cn": "0-1 per 1000 points",
               "name_fr": "0-1 par tranche de 1000 points"
             }
           ]
@@ -2809,10 +3170,12 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 unit per 1000 points may purchase a magic standard worth up to 50 points",
+        "name_cn": "0-1unit per 1000 points may purchase a magic standard worth up to 50 points",
         "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
       },
       "specialRules": {
         "name_en": "Close Order, Fear of Elves, Horde, Impetuous, Warband",
+        "name_cn": "紧密阵型, 惧怕精灵, 部群, 鲁莽, 战帮",
         "name_de": "Close Order, Fear of Elves, Horde, Impetuous, Warband",
         "name_es": "Close Order, Fear of Elves, Horde, Impetuous, Warband",
         "name_fr": "Ordre Serré, Peur des Elfes, Horde, Impétueux, Bande de Guerre"
@@ -2820,6 +3183,7 @@
     },
     {
       "name_en": "Snotling Mob",
+      "name_cn": "鼻涕精",
       "name_de": "Snotling Mob",
       "name_fr": "Bande de Snotlings",
       "id": "snotling-mob",
@@ -2835,6 +3199,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Throwing weapons",
+          "name_cn": "单手武器, 投掷武器",
           "name_de": "Hand weapons, Throwing weapons",
           "name_fr": "Armes de base, Armes de lancer",
           "points": 0,
@@ -2847,6 +3212,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Immune to Psychology, Impetuous, Loner, Open Order, Skirmishers, Unbreakable, Vanguard",
+        "name_cn": "心理免疫, 鲁莽, 独行, 开放阵型, 散兵, 永不战败, 先锋",
         "name_de": "Immune to Psychology, Impetuous, Loner, Open Order, Skirmishers, Unbreakable, Vanguard",
         "name_es": "Immune to Psychology, Impetuous, Loner, Open Order, Skirmishers, Unbreakable, Vanguard",
         "name_fr": "Immunisé à la Psychologie, Impétueux, Solitaire, Ordre Dispersé, Tirailleurs, Indémoralisable, Avant-garde"
@@ -2854,6 +3220,7 @@
     },
     {
       "name_en": "Night Goblin Mob",
+      "name_cn": "夜地精战帮",
       "name_de": "Night Goblin Mob",
       "name_fr": "Bande de Gobelins de la Nuit",
       "id": "night-goblin-mob",
@@ -2870,12 +3237,14 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 7
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
@@ -2886,6 +3255,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 5
@@ -2894,6 +3264,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
           "name_de": "Hand weapons, Shields",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -2902,6 +3273,7 @@
         },
         {
           "name_en": "Hand weapons, Thrusting spears, Shields",
+          "name_cn": "单手武器, 刺矛, 盾牌",
           "name_de": "Hand weapons, Thrusting spears, Shields",
           "name_fr": "Armes de base, Lances d'infanterie, Boucliers",
           "points": 1,
@@ -2909,6 +3281,7 @@
         },
         {
           "name_en": "Hand weapons, Shortbows",
+          "name_cn": "单手武器, 短弓",
           "name_de": "Hand weapons, Shortbows",
           "name_fr": "Armes de base, Arcs courts",
           "points": 1,
@@ -2919,6 +3292,7 @@
       "options": [
         {
           "name_en": "Netters",
+          "name_cn": "网手",
           "name_de": "Netters",
           "name_fr": "Rétiaires",
           "points": 20,
@@ -2929,12 +3303,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Night Goblin Mob per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mob per 1000 points may purchase a magic standard worth up to 50 points",
+        "name_cn": "0-1Night Goblin Mob per Night Goblin Chief or Night Goblin Shaman taken, 0-1Night Goblin Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_de": "0-1 Night Goblin Mob per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_es": "0-1 Night Goblin Mob per Night Goblin Chief or Night Goblin Shaman taken, 0-1 Night Goblin Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_fr": "0-1 Bande de Gobelins de la Nuit par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné, 0-1 Bande de Gobelins de la Nuit par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
       },
       "specialRules": {
         "name_en": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
+        "name_cn": "紧密阵型, 惧怕精灵, 仇恨(矮人), 部群, 战帮",
         "name_de": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
         "name_es": "Close Order, Fear of Elves, Hatred (Dwarfs), Horde, Warband",
         "name_fr": "Ordre Serré, Peur des Elfes, Haine (Nains), Horde, Bande de Guerre"
@@ -2942,6 +3318,7 @@
     },
     {
       "name_en": "Fanatics",
+      "name_cn": "夜地精狂热者",
       "name_de": "Fanatics",
       "name_es": "Fanatics",
       "name_fr": "Fanatiques",
@@ -2954,6 +3331,7 @@
       "equipment": [
         {
           "name_en": "Fanatic ball & chain",
+          "name_cn": "狂热者链球",
           "name_de": "Fanatic ball & chain",
           "name_es": "Fanatic ball & chain",
           "name_fr": "Fanatic ball & chain",
@@ -2968,17 +3346,20 @@
       "lores": [],
       "specialRules": {
         "name_en": "Immune to Psychology, Release the Fanatics!",
+        "name_cn": "心理免疫, 放出狂热者!",
         "name_de": "Immune to Psychology, Release the Fanatics!",
         "name_es": "Immune to Psychology, Release the Fanatics!",
         "name_fr": "Immune to Psychology, Release the Fanatics!"
       },
       "notes": {
         "name_en": "0-1 Fanatic per 10 Night Goblins, to a maximum of 3",
+        "name_cn": "0-1Fanatic per 10 Night Goblins, 最多3个",
         "name_fr": "0-1 Fanatique par tranche de 10 Gobelins de la Nuit, jusqu'à un maximum de 3"
       }
     },
     {
       "name_en": "Goblin Spider Rider Mob",
+      "name_cn": "地精蜘蛛骑兵战帮",
       "name_de": "Goblin Spider Rider Mob",
       "name_fr": "Bande de Gobelins sur Araignées",
       "id": "goblin-spider-rider-mob",
@@ -2987,6 +3368,7 @@
       "maximum": 0,
       "notes": {
         "name_en": "0-1 Goblin Spider Rider Mob per 1000 points may purchase a magic standard worth up to 50 points",
+        "name_cn": "0-1Goblin Spider Rider Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_fr": "0-1 Bande de Gobelins sur Araignées par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
       },
       "armyComposition": {
@@ -3000,12 +3382,14 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 7
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
@@ -3016,6 +3400,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 5
@@ -3024,6 +3409,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
           "name_de": "Hand weapons, Shields",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -3035,6 +3421,7 @@
       "options": [
         {
           "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 1,
@@ -3042,6 +3429,7 @@
         },
         {
           "name_en": "Shortbows",
+          "name_cn": "短弓",
           "name_de": "Shortbows",
           "name_fr": "Arcs courts",
           "points": 1,
@@ -3049,6 +3437,7 @@
         },
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 1,
@@ -3058,6 +3447,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Fast Cavalry, Fear of Elves, Impetuous, Move Through Cover, Open Order, Poisoned Attacks, Swiftstride, Warband",
+        "name_cn": "快速骑兵, 惧怕精灵, 鲁莽, 穿行掩体, 开放阵型, 淬毒攻击, 快速行进, 战帮",
         "name_de": "Fast Cavalry, Fear of Elves, Impetuous, Move Through Cover, Open Order, Poisoned Attacks, Swiftstride, Warband",
         "name_es": "Fast Cavalry, Fear of Elves, Impetuous, Move Through Cover, Open Order, Poisoned Attacks, Swiftstride, Warband",
         "name_fr": "Cavalerie Rapide, Peur des Elfes, Impétueux, Mouvement à Couvert, Ordre Dispersé, Attaques Empoisonnées, Rapide, Bande de Guerre"
@@ -3065,6 +3455,7 @@
     },
     {
       "name_en": "Goblin Wolf Rider Mob",
+      "name_cn": "地精狼骑兵战帮",
       "name_de": "Goblin Wolf Rider Mob",
       "name_fr": "Bande de Gobelins sur Loups",
       "id": "goblin-wolf-rider-mob",
@@ -3073,17 +3464,20 @@
       "maximum": 0,
       "notes": {
         "name_en": "0-1 Goblin Wolf Rider Mob per 1000 points may purchase a magic standard worth up to 50 points",
+        "name_cn": "0-1Goblin Wolf Rider Mob per 1000 points may purchase a magic standard worth up to 50 points",
         "name_fr": "0-1 Bande de Gobelins sur Loups par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
       },
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 7
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
@@ -3094,6 +3488,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 5
@@ -3102,6 +3497,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
           "name_de": "Hand weapons, Shields",
           "name_fr": "Armes de base, Boucliers",
           "points": 0,
@@ -3110,6 +3506,7 @@
         },
         {
           "name_en": "Hand weapons, Shields, Cavalry spears",
+          "name_cn": "单手武器, 盾牌, 骑兵长矛",
           "name_de": "Hand weapons, Shields, Cavalry spears",
           "name_fr": "Armes de base, Boucliers, Lances de cavalerie",
           "points": 0,
@@ -3117,6 +3514,7 @@
         },
         {
           "name_en": "Hand weapons, Shortbows",
+          "name_cn": "单手武器, 短弓",
           "name_de": "Hand weapons, Shortbows",
           "name_fr": "Armes de base, Arcs courts",
           "points": 0,
@@ -3126,6 +3524,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 1,
@@ -3135,27 +3534,32 @@
       "options": [
         {
           "name_en": "Feigned Flight",
+          "name_cn": "诱敌诈退",
           "name_de": "Feigned Flight",
           "name_fr": "Fuite Feinte",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         },
         {
           "name_en": "Reserve Move",
+          "name_cn": "预备移动",
           "name_fr": "Mouvement de Réserve",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         },
         {
           "name_en": "Ambushers",
+          "name_cn": "伏击",
           "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
@@ -3163,21 +3567,25 @@
         },
         {
           "name_en": "Ambushers",
+          "name_cn": "伏击",
           "name_fr": "Embusqueurs",
           "points": 0,
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
           "notes": {
-            "name_en": "0-1 Goblin Wold Rider Mob if Kiknik is in the army"
+            "name_en": "0-1 Goblin Wold Rider Mob if Kiknik is in the army",
+            "name_cn": "0-1Goblin Wold Rider Mob if Kiknik is in the army"
           }
         },
         {
           "name_en": "Close Order, Horde",
+          "name_cn": "紧密阵型, 部群",
           "name_fr": "Ordre Serré, Horde",
           "points": 0,
           "armyComposition": ["nomadic-waaagh"],
           "notes": {
             "name_en": "Replace Open Order and Skirmishers",
+            "name_cn": "替换 开放阵型 和 散兵",
             "name_fr": "Remplace Ordre Dispersé et Tirailleurs"
           }
         }
@@ -3185,11 +3593,13 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Chariot Runners, Fast Cavalry, Fear of Elves, Fire & Flee, Impetuous, Open Order, Skirmishers, Swiftstride, Warband",
+        "name_cn": "战车骑伴, 快速骑兵, 惧怕精灵, 游击, 鲁莽, 开放阵型, 散兵, 快速行进, 战帮",
         "name_fr": "Escorteurs de Chars, Cavalerie Rapide, Peur des Elfes, Tir & Fuite, Impétueux, Ordre Dispersé, Tirailleurs, Rapide, Bande de Guerre"
       }
     },
     {
       "name_en": "Orc Boar Boy Mob",
+      "name_cn": "兽人战猪小子战帮",
       "name_de": "Orc Boar Boy Mob",
       "name_fr": "Bande d'Orques sur Sangliers",
       "id": "orc-boar-boy-mob",
@@ -3201,6 +3611,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 Orc Boar Boy Mob may be taken as a Core choice if your General is an Orc Boss , 0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
+            "name_cn": "0-1Orc Boar Boy Mob may be taken as a Core choice if your General is an Orc Boss, 0-1Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_fr": "0-1 Bande d'Orques sur Sangliers peut être prise comme Unité de Base si votre Général est un Chef Orque , 0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
           }
         }
@@ -3208,6 +3619,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 8,
@@ -3218,6 +3630,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 6,
@@ -3228,6 +3641,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 6
@@ -3236,6 +3650,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -3245,6 +3660,7 @@
         },
         {
           "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 1,
@@ -3254,6 +3670,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -3262,6 +3679,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 1,
@@ -3269,12 +3687,14 @@
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -3282,6 +3702,7 @@
       "options": [
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
@@ -3291,34 +3712,40 @@
         },
         {
           "name_en": "Big 'Uns",
+          "name_cn": "大只佬",
           "name_de": "Big 'Uns",
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per army",
+            "name_cn": "0-1per army",
             "name_fr": "0-1 par armée"
           }
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         },
         {
           "name_en": "Vanguard",
+          "name_cn": "先锋",
           "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -3326,6 +3753,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
+        "name_cn": "坚硬皮肤(1), 大砍刀, 紧密阵型, 反制冲锋, 狂怒冲锋(Orc Boar Boys & Boss only), 无视地精恐慌, 鲁莽, 快速行进, 獠牙冲锋, 战帮",
         "name_de": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_es": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orques sur Sangliers & Chef uniquement), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
@@ -3333,6 +3761,7 @@
     },
     {
       "name_en": "Night Goblin Squig Herd",
+      "name_cn": "夜地精跳跳牧群",
       "name_de": "Night Goblin Squig Herd",
       "name_fr": "Troupeau de Squigs Gobelins de la Nuit",
       "id": "night-goblin-squig-herd",
@@ -3344,6 +3773,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
+            "name_cn": "0-1Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
             "name_de": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
             "name_es": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
             "name_fr": "0-1 Troupeau de Squigs Gobelins de la Nuit par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
@@ -3356,6 +3786,7 @@
       "options": [
         {
           "name_en": "Squig Herder",
+          "name_cn": "跳跳牧人",
           "name_de": "Squig Herder",
           "name_fr": "Berger Gobelin de la Nuit",
           "points": 3,
@@ -3364,11 +3795,13 @@
           "maximum": 0,
           "notes": {
             "name_en": "At least 1 per 5 Squigs",
+            "name_cn": "每五个洞穴跳跳至少有一个",
             "name_fr": "Au moins 1 par tranche de 5 Squigs"
           }
         },
         {
           "name_en": "Thrusting spears for Squig Herder",
+          "name_cn": "单位中的任意跳跳牧人可装备投矛",
           "name_de": "Thrusting spears for Squig Herder",
           "name_fr": "Lances d'infanterie pour Berger Gobelin de la Nuit",
           "points": 1,
@@ -3380,6 +3813,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
+        "name_cn": "仇恨(矮人), 心理免疫, 鲁莽, 独行, 散兵游勇, 开放阵型, 散兵, 跳跳发狂, 战帮",
         "name_de": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
         "name_es": "Hatred (Dwarfs), Immune to Psychology, Impetuous, Loner, Motley Crew, Open Order, Skirmishers, Squigs Go Wild, Warband",
         "name_fr": "Haine (Nains), Immunisé à la Psychologie, Impétueux, Solitaire, Bande Hétéroclite, Ordre Dispersé, Tirailleurs, Squigs Sauvages, Bande de Guerre"
@@ -3387,6 +3821,7 @@
     },
     {
       "name_en": "Black Orc Boar Chariot",
+      "name_cn": "黑兽人野猪战车",
       "name_de": "Black Orc Boar Chariot",
       "name_es": "Black Orc Boar Chariot",
       "name_fr": "Char à Sangliers Orque Noir",
@@ -3399,6 +3834,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 Black Orc Boar Chariot may be taken as a Core choice if your General is a Black Orc Boss",
+            "name_cn": "0-1Black Orc Boar Chariot may be taken as a Core choice if your General is a Black Orc Boss",
             "name_fr": "0-1 Char à Sangliers Orque Noir peut être pris comme Unité de Base si votre Général est un Chef Orque Noir"
           }
         }
@@ -3406,6 +3842,7 @@
       "command": [
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -3421,6 +3858,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon, Additional hand weapon",
+          "name_cn": "单手武器, 额外单手武器",
           "name_de": "Hand weapon, Additional hand weapon",
           "name_es": "Hand weapon, Additional hand weapon",
           "name_fr": "Arme de base, Arme de base additionnelle",
@@ -3431,6 +3869,7 @@
         },
         {
           "name_en": "Hand weapon, Great weapon",
+          "name_cn": "单手武器, 重型武器",
           "name_de": "Hand weapon, Great weapon",
           "name_es": "Hand weapon, Great weapon",
           "name_fr": "Arme de base, Arme lourde",
@@ -3443,6 +3882,7 @@
       "armor": [
         {
           "name_en": "3+",
+          "name_cn": "3+",
           "points": 0,
           "active": true,
           "name_fr": "3+"
@@ -3454,6 +3894,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
+        "name_cn": "大砍刀, 紧密阵型, 先行冲锋, 狂怒冲锋(Black Orc Crew only), 无视恐慌, 撞击(D6+1), 獠牙冲锋",
         "name_de": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_es": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Auriges Orques Noirs uniquement), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
@@ -3465,6 +3906,7 @@
   "special": [
     {
       "name_en": "Black Orc Mob",
+      "name_cn": "黑兽人战帮",
       "name_de": "Black Orc Mob",
       "name_fr": "Bande d'Orques Noirs",
       "id": "black-orc-mob",
@@ -3479,6 +3921,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 6,
@@ -3489,6 +3932,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 6,
@@ -3499,6 +3943,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 6
@@ -3507,6 +3952,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -3517,6 +3963,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_fr": "Armure de plate complète",
           "points": 0,
@@ -3527,6 +3974,7 @@
       "options": [
         {
           "name_en": "Stubborn",
+          "name_cn": "坚毅",
           "name_de": "Stubborn",
           "name_fr": "Obstiné",
           "points": 1,
@@ -3536,6 +3984,7 @@
         },
         {
           "name_en": "Veteran",
+          "name_cn": "老兵",
           "name_de": "Veteran",
           "name_fr": "Vétérans",
           "points": 1,
@@ -3545,6 +3994,7 @@
         },
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
@@ -3554,6 +4004,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 2,
@@ -3563,6 +4014,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 1,
@@ -3574,6 +4026,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
+        "name_cn": "大砍刀, 紧密阵型, 大只佬, 狂怒冲锋, 无视恐慌, 散兵游勇, 抑制鲁莽",
         "name_de": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_es": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_fr": "Kikoup', Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l'Impétuosité"
@@ -3581,6 +4034,7 @@
     },
     {
       "name_en": "Orc Boar Boy Mob",
+      "name_cn": "兽人战猪小子战帮",
       "name_de": "Orc Boar Boy Mob",
       "name_fr": "Bande d'Orques sur Sangliers",
       "id": "orc-boar-boy-mob",
@@ -3593,6 +4047,7 @@
           "notes": {
             "name_de": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_en": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
+            "name_cn": "0-1Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
           }
         },
@@ -3600,6 +4055,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 Orc Boar Boy Mob per 1000 points, 0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
+            "name_cn": "每1000分0-1兽人战猪小子战帮, 0-1Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points, 0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
           }
         },
@@ -3608,6 +4064,7 @@
           "notes": {
             "name_de": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_en": "0-1 Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
+            "name_cn": "0-1Orc Boar Boy Mob per 1000 points may purchase a magic standard worth up to 50 points",
             "name_fr": "0-1 Bande d'Orques sur Sangliers par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
           }
         }
@@ -3615,6 +4072,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 8,
@@ -3625,6 +4083,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 6,
@@ -3635,6 +4094,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_fr": "Musicien",
           "points": 6
@@ -3643,6 +4103,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -3652,6 +4113,7 @@
         },
         {
           "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 1,
@@ -3661,6 +4123,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -3669,6 +4132,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 1,
@@ -3676,12 +4140,14 @@
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -3689,6 +4155,7 @@
       "options": [
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
@@ -3696,34 +4163,40 @@
         },
         {
           "name_en": "Big 'Uns",
+          "name_cn": "大只佬",
           "name_de": "Big 'Uns",
           "name_fr": "Kostos",
           "points": 2,
           "perModel": true,
           "notes": {
             "name_en": "0-1 per army",
+            "name_cn": "0-1per army",
             "name_fr": "0-1 par armée"
           }
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 1,
           "perModel": true,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         },
         {
           "name_en": "Vanguard",
+          "name_cn": "先锋",
           "name_fr": "Avant-garde",
           "points": 1,
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
           "notes": {
             "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_fr": "0-1 par tranche de 1000 points"
           }
         }
@@ -3731,6 +4204,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
+        "name_cn": "坚硬皮肤(1), 大砍刀, 紧密阵型, 反制冲锋, 狂怒冲锋(Orc Boar Boys & Boss only), 无视地精恐慌, 鲁莽, 快速行进, 獠牙冲锋, 战帮",
         "name_de": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_es": "Armoured Hide (1), Choppas, Close Order, Counter Charge, Furious Charge (Orc Boar Boys & Boss only), Ignore Goblin Panic, Impetuous, Swiftstride, Tusker Charge, Warband",
         "name_fr": "Peau Blindée (1), Kikoup', Ordre Serré, Contre-charge, Charge Dévastatrice (Orques sur Sangliers & Chef uniquement), Ignore la Panique des Gobelins, Impétueux, Rapide, Charge de Sanglier, Bande de Guerre"
@@ -3738,6 +4212,7 @@
     },
     {
       "name_en": "Night Goblin Squig Hopper Mob",
+      "name_cn": "夜地精跳跳骑兵战帮",
       "name_de": "Night Goblin Squig Hopper Mob",
       "name_fr": "Bande de Gobelins de la Nuit sur Squigs",
       "id": "night-goblin-squig-hopper-mob",
@@ -3752,6 +4227,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_fr": "Chef (champion)",
           "points": 6,
@@ -3770,6 +4246,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
@@ -3779,6 +4256,7 @@
         },
         {
           "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
           "points": 1,
@@ -3789,6 +4267,7 @@
       "options": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 1,
@@ -3798,12 +4277,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
+        "name_cn": "0-1Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
         "name_de": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
         "name_es": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
         "name_fr": "0-1 Bande de Gobelins de la Nuit sur Squigs par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
       },
       "specialRules": {
         "name_en": "Hatred (Dwarfs), Immune to Psychology, Impact Hits (1), Loner, Open Order, Random Movement, Skirmishers, Warband",
+        "name_cn": "仇恨(矮人), 心理免疫, 撞击(1), 独行, 开放阵型, 随机移动, 散兵, 战帮",
         "name_de": "Hatred (Dwarfs), Immune to Psychology, Impact Hits (1), Loner, Open Order, Random Movement, Skirmishers, Warband",
         "name_es": "Hatred (Dwarfs), Immune to Psychology, Impact Hits (1), Loner, Open Order, Random Movement, Skirmishers, Warband",
         "name_fr": "Haine (Nains), Immunisé à la Psychologie, Touches d'Impact (1), Solitaire, Ordre Dispersé, Mouvement Aléatoire, Tirailleurs, Bande de Guerre"
@@ -3811,6 +4292,7 @@
     },
     {
       "name_en": "Orc Boar Chariot",
+      "name_cn": "兽人野猪战车",
       "name_de": "Orc Boar Chariot",
       "name_fr": "Char à Sangliers Orque",
       "id": "orc-boar-chariots",
@@ -3823,6 +4305,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 Orc Boar Chariot per 1000 points",
+            "name_cn": "每1000分0-1兽人野猪战车",
             "name_fr": "0-1 Char à Sangliers Orque par tranche de 1000 points"
           }
         },
@@ -3834,6 +4317,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Cavalry spears",
+          "name_cn": "单手武器, 骑兵长矛",
           "name_de": "Hand weapons, Cavalry spears",
           "name_fr": "Armes de base, Lances de cavalerie",
           "points": 0,
@@ -3844,6 +4328,7 @@
       "armor": [
         {
           "name_en": "4+",
+          "name_cn": "4+",
           "points": 0,
           "active": true,
           "name_fr": "4+"
@@ -3852,49 +4337,58 @@
       "options": [
         {
           "name_en": "Third Orc crew member",
+          "name_cn": "第三个兽人乘员",
           "name_de": "Third Orc crew member",
           "name_fr": "Troisième Aurige Orque",
           "points": 5
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 4,
           "notes": [
             {
               "name_en": "If 2 crew members",
+              "name_cn": "If 2 crew members",
               "name_fr": "Si 2 auriges"
             },
             {
               "name_en": "0-1 per 1000 points",
+              "name_cn": "0-1 per 1000 points",
               "name_fr": "0-1 par tranche de 1000 points"
             }
           ]
         },
         {
           "name_en": "Frenzy",
+          "name_cn": "狂暴",
           "name_de": "Frenzy",
           "name_fr": "Frénésie",
           "points": 6,
           "notes": [
             {
               "name_en": "If 3 crew members",
+              "name_cn": "If 3 crew members",
               "name_fr": "Si 3 auriges"
             },
             {
               "name_en": "0-1 per 1000 points",
+              "name_cn": "0-1 per 1000 points",
               "name_fr": "0-1 par tranche de 1000 points"
             }
           ]
         },
         {
           "name_en": "Warpaint",
+          "name_cn": "战漆",
           "name_de": "Warpaint",
           "name_fr": "Peintures de Guerre",
           "points": 10,
           "notes": {
             "name_en": "If frenzied",
+            "name_cn": "若具有狂暴",
             "name_fr": "Si frénétique"
           }
         }
@@ -3902,6 +4396,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, First Charge, Ignore Goblin Panic, Impact Hits (D6+1), Impetuous, Tusker Charge, Warband",
+        "name_cn": "大砍刀, 紧密阵型, 先行冲锋, 无视地精恐慌, 撞击(D6+1), 鲁莽, 獠牙冲锋, 战帮",
         "name_de": "Choppas, Close Order, First Charge, Ignore Goblin Panic, Impact Hits (D6+1), Impetuous, Tusker Charge, Warband",
         "name_es": "Choppas, Close Order, First Charge, Ignore Goblin Panic, Impact Hits (D6+1), Impetuous, Tusker Charge, Warband",
         "name_fr": "Kikoup', Ordre Serré, Première Charge, Ignore la Panique des Gobelins, Touches d'Impact (D6+1), Impétueux, Charge de Sanglier, Bande de Guerre"
@@ -3909,6 +4404,7 @@
     },
     {
       "name_en": "Common Troll Mob",
+      "name_cn": "普通巨魔战帮",
       "name_de": "Common Troll Mob",
       "name_fr": "Bande de Trolls",
       "id": "common-troll-mob",
@@ -3927,6 +4423,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -3936,6 +4433,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -3943,6 +4441,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -3952,11 +4451,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -3966,6 +4467,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
@@ -3973,6 +4475,7 @@
     },
     {
       "name_en": "River Troll Mob",
+      "name_cn": "河流巨魔战帮",
       "name_de": "River Troll Mob",
       "name_fr": "Bande de Trolls d'Eau",
       "id": "river-troll-mob",
@@ -3991,6 +4494,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -4000,6 +4504,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -4007,6 +4512,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -4016,11 +4522,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -4030,6 +4538,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
@@ -4037,6 +4546,7 @@
     },
     {
       "name_en": "Stone Troll Mob",
+      "name_cn": "石巨魔战帮",
       "name_de": "Stone Troll Mob",
       "name_fr": "Bande de Trolls de Pierre",
       "id": "stone-troll-mob",
@@ -4055,6 +4565,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
           "name_de": "Hand weapons, Troll vomit",
           "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
@@ -4064,6 +4575,7 @@
         },
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
           "points": 3,
@@ -4071,6 +4583,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
@@ -4080,11 +4593,13 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_fr": "Armure légère",
           "points": 0,
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -4094,6 +4609,7 @@
       "items": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
+        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨",
         "name_de": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
         "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
         "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité"
@@ -4101,6 +4617,7 @@
     },
     {
       "name_en": "Goblin Wolf Chariots",
+      "name_cn": "地精狼战车",
       "name_de": "Goblin Wolf Chariots",
       "name_fr": "Chars à Loups Gobelins",
       "id": "goblin-wolf-chariot",
@@ -4121,6 +4638,7 @@
       "command": [
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5
@@ -4129,6 +4647,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Cavalry spears, Shortbows",
+          "name_cn": "单手武器, 骑兵长矛, 短弓",
           "name_de": "Hand weapons, Cavalry spears, Shortbows",
           "name_fr": "Armes de base, Lances de cavalerie, Arcs courts",
           "points": 0,
@@ -4139,6 +4658,7 @@
       "armor": [
         {
           "name_en": "5+",
+          "name_cn": "5+",
           "points": 0,
           "active": true,
           "name_fr": "5+"
@@ -4147,6 +4667,7 @@
       "options": [
         {
           "name_en": "Third Giant Wolf",
+          "name_cn": "第三只巨狼",
           "name_de": "Third Giant Wolf",
           "name_fr": "Troisième Loup Géant",
           "points": 5,
@@ -4159,6 +4680,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Fear of Elves, Impact Hits (D3+1), Impetuous, Open Order, Swiftstride, Warband",
+        "name_cn": "惧怕精灵, 撞击(D3+1), 鲁莽, 开放阵型, 快速行进, 战帮",
         "name_de": "Fear of Elves, Impact Hits (D3+1), Impetuous, Open Order, Swiftstride, Warband",
         "name_es": "Fear of Elves, Impact Hits (D3+1), Impetuous, Open Order, Swiftstride, Warband",
         "name_fr": "Peur des Elfes, Touches d'Impact (D3+1), Impétueux, Ordre Dispersé, Rapide, Bande de Guerre"
@@ -4166,6 +4688,7 @@
     },
     {
       "name_en": "Snotling Pump Wagons",
+      "name_cn": "鼻涕精泵车",
       "name_de": "Snotling Pump Wagons",
       "name_fr": "Chariots à Pompe Snotlings",
       "id": "snotling-pump-wagon",
@@ -4184,6 +4707,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Throwing weapons",
+          "name_cn": "单手武器, 投掷武器",
           "name_de": "Hand weapons, Throwing weapons",
           "name_fr": "Armes de base, Armes de lancer",
           "points": 0,
@@ -4196,6 +4720,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
+        "name_cn": "碎甲攻击(3 - Pump Wagon Impact Hits only), 心理免疫, 撞击(D3+1), 独行, 开放阵型, 随机移动",
         "name_de": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
         "name_es": "Armour Bane (3 - Pump Wagon Impact Hits only), Immune to Psychology, Impact Hits (D3+1), Loner, Open Order, Random Movement",
         "name_fr": "Arme Perforante (3 - Touches d'Impact du Chariot à Pompe uniquement), Immunisé à la Psychologie, Touches d'Impact (D3+1), Solitaire, Ordre Dispersé, Mouvement Aléatoire"
@@ -4203,6 +4728,7 @@
     },
     {
       "name_en": "Goblin Bolt Throwa",
+      "name_cn": "地精弩炮",
       "name_de": "Goblin Bolt Throwa",
       "name_fr": "Baliste Gobeline",
       "id": "goblin-bolt-throwa",
@@ -4216,6 +4742,7 @@
       "equipment": [
         {
           "name_en": "Bolt thrower, Hand weapons",
+          "name_cn": "弩炮, 单手武器",
           "name_it": "Balista, Hand weapons",
           "name_de": "Speerschleuder, Handwaffen",
           "name_fr": "Baliste, Armes de base",
@@ -4227,6 +4754,7 @@
       "options": [
         {
           "name_en": "Orc Bully, Whip",
+          "name_cn": "兽人监工, 长鞭",
           "name_de": "Orc Bully, Whip",
           "name_fr": "Brute Orque, Whip",
           "points": 10
@@ -4235,12 +4763,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-2 Goblin Bolt Throwas per 1000 points",
+        "name_cn": "每1000分0-2Goblin Bolt Throwas",
         "name_de": "0-2 Goblin Bolt Throwas per 1000 points",
         "name_es": "0-2 Goblin Bolt Throwas per 1000 points",
         "name_fr": "0-2 Balistes Gobelines par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Fear of Elves, Skirmishers",
+        "name_cn": "惧怕精灵, 散兵",
         "name_de": "Fear of Elves, Skirmishers",
         "name_es": "Fear of Elves, Skirmishers",
         "name_fr": "Peur des Elfes, Tirailleurs"
@@ -4250,6 +4780,7 @@
   "rare": [
     {
       "name_en": "Giant",
+      "name_cn": "巨人",
       "name_de": "Giant",
       "name_fr": "Géant",
       "id": "giant",
@@ -4258,6 +4789,7 @@
       "equipment": [
         {
           "name_en": "Giant's club",
+          "name_cn": "巨人大棒",
           "name_de": "Giant's club",
           "name_fr": "Massue de Géant",
           "points": 0,
@@ -4268,6 +4800,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_fr": "Armure légère",
           "points": 0,
@@ -4275,6 +4808,7 @@
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -4283,6 +4817,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_cn": "紧密阵型, 巨人攻击, 心理免疫, 大型目标, 打包, 践踏攻击(D6), 惊骇, 倒啦！, 永不战败",
         "name_de": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
         "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
@@ -4290,6 +4825,7 @@
     },
     {
       "name_en": "Doom Diver Catapult",
+      "name_cn": "死亡俯冲弹射器",
       "name_de": "Doom Diver Catapult",
       "name_fr": "Catapulte à Plongeurs de la Mort",
       "id": "doom-diver-catapult",
@@ -4303,6 +4839,7 @@
       "equipment": [
         {
           "name_en": "Stone thrower, Hand weapons",
+          "name_cn": "投石器, 单手武器",
           "name_de": "Steinschleuder, Handwaffen",
           "name_fr": "Catapulte, Armes de base",
           "points": 0,
@@ -4313,6 +4850,7 @@
       "options": [
         {
           "name_en": "Orc Bully, Whip",
+          "name_cn": "兽人监工, 长鞭",
           "name_de": "Orc Bully, Whip",
           "name_fr": "Brute Orque, Whip",
           "points": 10
@@ -4321,12 +4859,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Doom Diver Catapult per 1000 points",
+        "name_cn": "每1000分0-1死亡俯冲弹射器",
         "name_de": "0-1 Doom Diver Catapult per 1000 points",
         "name_es": "0-1 Doom Diver Catapult per 1000 points",
         "name_fr": "0-1 Catapulte à Plongeurs de la Mort par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Doom Diver, Fear of Elves, Skirmishers",
+        "name_cn": "死亡俯冲, 惧怕精灵, 散兵",
         "name_de": "Doom Diver, Fear of Elves, Skirmishers",
         "name_es": "Doom Diver, Fear of Elves, Skirmishers",
         "name_fr": "Plongeur de la Mort, Peur des Elfes, Tirailleurs"
@@ -4334,6 +4874,7 @@
     },
     {
       "name_en": "Goblin Rock Lobber",
+      "name_cn": "地精抛石机",
       "name_de": "Goblin Rock Lobber",
       "name_fr": "Lance-rocs Gobelin",
       "id": "goblin-rock-lobber",
@@ -4347,6 +4888,7 @@
       "equipment": [
         {
           "name_en": "Stone thrower, Hand weapons",
+          "name_cn": "投石器, 单手武器",
           "name_de": "Steinschleuder, Handwaffen",
           "name_fr": "Catapulte, Armes de base",
           "points": 0,
@@ -4357,6 +4899,7 @@
       "options": [
         {
           "name_en": "Orc Bully, Whip",
+          "name_cn": "兽人监工, 长鞭",
           "name_de": "Orc Bully, Whip",
           "name_fr": "Brute Orque, Whip",
           "points": 10
@@ -4365,12 +4908,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Goblin Rock Lobber per 1000 points",
+        "name_cn": "每1000分0-1地精抛石机",
         "name_de": "0-1 Goblin Rock Lobber per 1000 points",
         "name_es": "0-1 Goblin Rock Lobber per 1000 points",
         "name_fr": "0-1 Lance-rocs Gobelin par tranche de 1000 points"
       },
       "specialRules": {
         "name_en": "Fear of Elves, Skirmishers",
+        "name_cn": "惧怕精灵, 散兵",
         "name_de": "Fear of Elves, Skirmishers",
         "name_es": "Fear of Elves, Skirmishers",
         "name_fr": "Peur des Elfes, Tirailleurs"
@@ -4378,6 +4923,7 @@
     },
     {
       "name_en": "Arachnarok Spider",
+      "name_cn": "阿拉克纳瑞巨蛛",
       "name_de": "Arachnarok Spider",
       "name_fr": "Arachnarok",
       "id": "arachnarok-spider",
@@ -4391,6 +4937,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon (poisonous fangs), Venom surge, Hand weapons, Cavalry spears, Shortbows",
+          "name_cn": "单手武器(poisonous fangs), 毒液喷涌, 单手武器, 骑兵长矛, 短弓",
           "name_de": "Hand weapon (poisonous fangs), Venom surge, Hand weapons, Cavalry spears, Shortbows",
           "name_fr": "Arme de base (crochets empoisonnés), Injection de venin, Armes de base, Lances de cavalerie, Arcs courts",
           "points": 0,
@@ -4402,6 +4949,7 @@
       "options": [
         {
           "name_en": "Spidersilk lobber",
+          "name_cn": "蛛丝投掷器",
           "name_de": "Spidersilk lobber",
           "name_fr": "Catatoile",
           "points": 35,
@@ -4413,6 +4961,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Close Order, Howdah, Immune to Psychology, Large Target, Move Through Cover, Poisoned Attacks, Stomp Attacks (D6), Stubborn, Swiftstride, Terror",
+        "name_cn": "紧密阵型, 驼轿, 心理免疫, 大型目标, 穿行掩体, 淬毒攻击, 践踏攻击(D6), 坚毅, 快速行进, 惊骇",
         "name_de": "Close Order, Howdah, Immune to Psychology, Large Target, Move Through Cover, Poisoned Attacks, Stomp Attacks (D6), Stubborn, Swiftstride, Terror",
         "name_es": "Close Order, Howdah, Immune to Psychology, Large Target, Move Through Cover, Poisoned Attacks, Stomp Attacks (D6), Stubborn, Swiftstride, Terror",
         "name_fr": "Ordre Serré, Howdah, Immunisé à la Psychologie, Grande Cible, Mouvement à Couvert, Attaques Empoisonnées, Attaques de Piétinement (D6), Obstiné, Rapide, Terreur"
@@ -4420,6 +4969,7 @@
     },
     {
       "name_en": "Mangler Squigs",
+      "name_cn": "跳跳压路机",
       "name_de": "Mangler Squigs",
       "name_fr": "Squigs Broyeurs",
       "id": "mangler-squigs",
@@ -4433,6 +4983,7 @@
       "equipment": [
         {
           "name_en": "Colossal fang-filled gob",
+          "name_cn": "血盆大口",
           "name_de": "Colossal fang-filled gob",
           "name_fr": "Colossale gueule garnie de crocs",
           "points": 0,
@@ -4443,6 +4994,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 0,
@@ -4450,6 +5002,7 @@
           "active": true,
           "notes": {
             "name_en": "Scaly skin",
+            "name_cn": "鳞皮",
             "name_fr": "Peau écailleuse"
           }
         }
@@ -4458,12 +5011,14 @@
       "mounts": [],
       "notes": {
         "name_en": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
+        "name_cn": "0-1Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
         "name_de": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
         "name_es": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
         "name_fr": "0-1 Squig Broyeur par Chef Gobelin de la Nuit ou Chamane Gobelin de la Nuit sélectionné"
       },
       "specialRules": {
         "name_en": "Close Order, Hatred (Dwarfs), Immune to Psychology, Impact Hits (D6), Ker-splat, Large Target, Random Attacks, Random Movement, Spiked Ball & Chains, Stomp Attacks (D3), Timmm-berrr!",
+        "name_cn": "紧密阵型, 仇恨(矮人), 心理免疫, 撞击(D6), 咻——啪, 大型目标, 随机攻击, 随机移动, 尖刺链球, 践踏攻击(D3), 倒啦！",
         "name_de": "Close Order, Hatred (Dwarfs), Immune to Psychology, Impact Hits (D6), Ker-splat, Large Target, Random Attacks, Random Movement, Spiked Ball & Chains, Stomp Attacks (D3), Timmm-berrr!",
         "name_es": "Close Order, Hatred (Dwarfs), Immune to Psychology, Impact Hits (D6), Ker-splat, Large Target, Random Attacks, Random Movement, Spiked Ball & Chains, Stomp Attacks (D3), Timmm-berrr!",
         "name_fr": "Ordre Serré, Haine (Nains), Immunisé à la Psychologie, Touches d'Impact (D6), Sproutch, Grande Cible, Attaques Aléatoires, Mouvement Aléatoire, Chaînes & Boulets, Attaques de Piétinement (D3), Timmm-berrr!"
@@ -4471,6 +5026,7 @@
     },
     {
       "name_en": "Black Orc Boar Chariot",
+      "name_cn": "黑兽人野猪战车",
       "name_de": "Black Orc Boar Chariot",
       "name_es": "Black Orc Boar Chariot",
       "name_fr": "Char à Sangliers Orque Noir",
@@ -4486,6 +5042,7 @@
       "command": [
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -4501,6 +5058,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon, Additional hand weapon",
+          "name_cn": "单手武器, 额外单手武器",
           "name_de": "Hand weapon, Additional hand weapon",
           "name_es": "Hand weapon, Additional hand weapon",
           "name_fr": "Arme de base, Arme de base additionnelle",
@@ -4511,6 +5069,7 @@
         },
         {
           "name_en": "Hand weapon, Great weapon",
+          "name_cn": "单手武器, 重型武器",
           "name_de": "Hand weapon, Great weapon",
           "name_es": "Hand weapon, Great weapon",
           "name_fr": "Arme de base, Arme lourde",
@@ -4523,6 +5082,7 @@
       "armor": [
         {
           "name_en": "3+",
+          "name_cn": "3+",
           "points": 0,
           "active": true,
           "name_fr": "3+"
@@ -4534,6 +5094,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
+        "name_cn": "大砍刀, 紧密阵型, 先行冲锋, 狂怒冲锋(Black Orc Crew only), 无视恐慌, 撞击(D6+1), 獠牙冲锋",
         "name_de": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_es": "Choppas, Close Order, First Charge, Furious Charge (Black Orc Crew only), Ignore Panic, Impact Hits (D6+1), Tusker Charge",
         "name_fr": "Kikoup', Ordre Serré, Première Charge, Charge Dévastatrice (Auriges Orques Noirs uniquement), Ignore la Panique, Touches d'Impact (D6+1), Charge de Sanglier",
@@ -4545,6 +5106,7 @@
   "mercenaries": [
     {
       "name_en": "Badlands Ogre Bulls",
+      "name_cn": "恶地食人魔蛮牛战士",
       "name_de": "Badlands Ogre Bulls",
       "name_es": "Badlands Ogre Bulls",
       "name_fr": "Buffles Ogres des Terres Arides",
@@ -4558,6 +5120,7 @@
       "command": [
         {
           "name_en": "Crusher (champion)",
+          "name_cn": "碾压者(冠军)",
           "name_de": "Crusher (champion)",
           "name_es": "Crusher (champion)",
           "name_fr": "Broyeur (champion)",
@@ -4567,6 +5130,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -4580,6 +5144,7 @@
         },
         {
           "name_en": "Bellower (musician)",
+          "name_cn": "大嗓门(乐手)",
           "name_de": "Bellower (musician)",
           "name_es": "Bellower (musician)",
           "name_fr": "Beugleur (musicien)",
@@ -4591,6 +5156,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
@@ -4604,6 +5170,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -4615,6 +5182,7 @@
         },
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -4628,6 +5196,7 @@
       "options": [
         {
           "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapons",
           "name_es": "Additional hand weapons",
           "name_fr": "Armes de base additionnelles",
@@ -4639,6 +5208,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_es": "Great weapons",
           "name_fr": "Armes lourdes",
@@ -4650,6 +5220,7 @@
         },
         {
           "name_en": "Ironfists",
+          "name_cn": "铁拳套",
           "name_de": "Ironfists",
           "name_es": "Ironfists",
           "name_fr": "Poings d'Acier",
@@ -4665,6 +5236,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 佣兵, 散兵游勇, 食人魔冲锋",
         "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mercenaries, Motley Crew, Ogre Charge",
         "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Mercenaires, Bande Hétéroclite, Charge Ogre",
@@ -4674,6 +5246,7 @@
     },
     {
       "name_en": "Bonegrinder Giant",
+      "name_cn": "碾骨者巨人",
       "name_de": "Bonegrinder Giant",
       "name_es": "Bonegrinder Giant",
       "name_fr": "Géant Broyeur d'Os",
@@ -4686,6 +5259,7 @@
       "equipment": [
         {
           "name_en": "Bonegrinders Giant's club",
+          "name_cn": "碾骨者巨人大棒",
           "name_de": "Bonegrinders Giant's club",
           "name_es": "Bonegrinders Giant's club",
           "name_fr": "Massue de Géant Broyeur d'Os",
@@ -4698,6 +5272,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -4707,6 +5282,7 @@
           "active": true,
           "notes": {
             "name_en": "Calloused hide",
+            "name_cn": "坚硬皮肤",
             "name_fr": "Peau calleuse"
           }
         }
@@ -4717,6 +5293,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_cn": "碾骨者巨人攻击, 紧密阵型, 心理免疫, 大型目标, 佣兵, 践踏攻击(D6+1), 惊骇, 倒啦！, 永不战败",
         "name_de": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
         "name_es": "Bonegrinder Giant Attacks, Close Order, Immune to Psychology, Large Target, Mercenaries, Stomp Attacks (D6+1), Terror, Timmm-berrr!, Unbreakable",
         "name_fr": "Attaques de Géant Broyeur d'Os, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Mercenaires, Attaques de Piétinement (D6+1), Terreur, Timmm-berrr!, Indémoralisable",
@@ -4725,6 +5302,7 @@
       },
       "notes": {
         "name_en": "0-1 Bonegrinder Giant",
+        "name_cn": "0-1碾骨者巨人",
         "name_de": "0-1 Bonegrinder Giant",
         "name_es": "0-1 Bonegrinder Giant",
         "name_fr": "0-1 Géant Broyeur d'Os",
