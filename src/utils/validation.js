@@ -5,9 +5,18 @@ import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
-  return ["MCa", "LCa", "HCa", "MI", "RI", "HI", "HCh", "LCh", "MCr", "Be"].includes(
-    ruleData?.troopType
-  );
+  return [
+    "MCa",
+    "LCa",
+    "HCa",
+    "MI",
+    "RI",
+    "HI",
+    "HCh",
+    "LCh",
+    "MCr",
+    "Be",
+  ].includes(ruleData?.troopType);
 };
 
 export const validateList = ({ list, language, intl }) => {
@@ -24,13 +33,14 @@ export const validateList = ({ list, language, intl }) => {
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
   if (list?.characters?.length) {
-    list.characters.map((unit) => {
+    list.characters.forEach((unit) => {
       if (
         unit.command &&
         unit.command.find(
-          (command) => 
+          (command) =>
             command.name_en === "General" &&
-            (!command.armyComposition || equalsOrIncludes(command.armyComposition, list.armyComposition))
+            (!command.armyComposition ||
+              equalsOrIncludes(command.armyComposition, list.armyComposition))
         ) &&
         !unit.command.find(
           (command) =>
