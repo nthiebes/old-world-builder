@@ -1064,51 +1064,13 @@
       "name_pl": "Blade of Silvered Steel",
       "points": 30,
       "type": "weapon",
-      "armyComposition": "knightly-order-panther"
-    },
-    {
-      "name_de": "Blade of Silvered Steel",
-      "name_en": "Blade of Silvered Steel",
-      "name_cn": "镀银钢剑",
-      "name_fr": "Lame d'Acier Argenté",
-      "name_it": "Blade of Silvered Steel",
-      "name_pl": "Blade of Silvered Steel",
-      "points": 30,
-      "type": "weapon",
-      "armyComposition": "knightly-order-morr"
-    },
-    {
-      "name_de": "Blade of Silvered Steel",
-      "name_en": "Blade of Silvered Steel",
-      "name_cn": "镀银钢剑",
-      "name_fr": "Lame d'Acier Argenté",
-      "name_it": "Blade of Silvered Steel",
-      "name_pl": "Blade of Silvered Steel",
-      "points": 30,
-      "type": "weapon",
-      "armyComposition": "knightly-order-blazing-sun"
-    },
-    {
-      "name_de": "Blade of Silvered Steel",
-      "name_en": "Blade of Silvered Steel",
-      "name_cn": "镀银钢剑",
-      "name_fr": "Lame d'Acier Argenté",
-      "name_it": "Blade of Silvered Steel",
-      "name_pl": "Blade of Silvered Steel",
-      "points": 30,
-      "type": "weapon",
-      "armyComposition": "knightly-order-fiery-heart"
-    },
-    {
-      "name_de": "Blade of Silvered Steel",
-      "name_en": "Blade of Silvered Steel",
-      "name_cn": "镀银钢剑",
-      "name_fr": "Lame d'Acier Argenté",
-      "name_it": "Blade of Silvered Steel",
-      "name_pl": "Blade of Silvered Steel",
-      "points": 30,
-      "type": "weapon",
-      "armyComposition": "knightly-order-white-wolf"
+      "armyComposition": [
+        "knightly-order-panther",
+        "knightly-order-morr",
+        "knightly-order-blazing-sun",
+        "knightly-order-fiery-heart",
+        "knightly-order-white-wolf"
+      ]
     },
     {
       "name_de": "Dragon Bow",
@@ -1150,51 +1112,13 @@
       "name_pl": "Shield of the Gorgon",
       "points": 40,
       "type": "armor",
-      "armyComposition": "knightly-order-panther"
-    },
-    {
-      "name_de": "Shield of the Gorgon",
-      "name_en": "Shield of the Gorgon",
-      "name_cn": "戈尔贡之盾",
-      "name_fr": "Bouclier de la Gorgone",
-      "name_it": "Shield of the Gorgon",
-      "name_pl": "Shield of the Gorgon",
-      "points": 40,
-      "type": "armor",
-      "armyComposition": "knightly-order-morr"
-    },
-    {
-      "name_de": "Shield of the Gorgon",
-      "name_en": "Shield of the Gorgon",
-      "name_cn": "戈尔贡之盾",
-      "name_fr": "Bouclier de la Gorgone",
-      "name_it": "Shield of the Gorgon",
-      "name_pl": "Shield of the Gorgon",
-      "points": 40,
-      "type": "armor",
-      "armyComposition": "knightly-order-blazing-sun"
-    },
-    {
-      "name_de": "Shield of the Gorgon",
-      "name_en": "Shield of the Gorgon",
-      "name_cn": "戈尔贡之盾",
-      "name_fr": "Bouclier de la Gorgone",
-      "name_it": "Shield of the Gorgon",
-      "name_pl": "Shield of the Gorgon",
-      "points": 40,
-      "type": "armor",
-      "armyComposition": "knightly-order-fiery-heart"
-    },
-    {
-      "name_de": "Shield of the Gorgon",
-      "name_en": "Shield of the Gorgon",
-      "name_cn": "戈尔贡之盾",
-      "name_fr": "Bouclier de la Gorgone",
-      "name_it": "Shield of the Gorgon",
-      "name_pl": "Shield of the Gorgon",
-      "points": 40,
-      "type": "armor",
-      "armyComposition": "knightly-order-white-wolf"
+      "armyComposition": [
+        "knightly-order-panther",
+        "knightly-order-morr",
+        "knightly-order-blazing-sun",
+        "knightly-order-fiery-heart",
+        "knightly-order-white-wolf"
+      ]
     },
     {
       "name_de": "Armour of Tarnus",
@@ -3995,7 +3919,10 @@
       "points": 10,
       "type": "elven-honour",
       "name": "chracian-hunter",
-      "armyComposition": ["high-elf-realms", "the-chracian-warhost"]
+      "armyComposition": [
+        "high-elf-realms",
+        "the-chracian-warhost"
+      ]
     },
     {
       "name_de": "Wächter von Saphery",
@@ -4030,7 +3957,10 @@
       "points": 0,
       "type": "elven-honour",
       "name": "sea-guard",
-      "armyComposition": ["high-elf-realms", "sea-guard-garrison"]
+      "armyComposition": [
+        "high-elf-realms",
+        "sea-guard-garrison"
+      ]
     }
   ],
   "chaos-dwarfs": [
