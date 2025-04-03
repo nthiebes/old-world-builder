@@ -63,6 +63,9 @@ const additionalOWBRules = {
   "armour piercing": {
     url: "the-shooting-phase/armour-piercing",
   },
+  "nuln state troops empire": {
+    url: "special-rules/nuln-state-troops",
+  },
 };
 
 export const synonyms = {
