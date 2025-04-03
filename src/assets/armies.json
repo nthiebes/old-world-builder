@@ -7,6 +7,7 @@
         "id": "empire-of-man",
         "name_de": "Empire of Man",
         "name_en": "Empire of Man",
+        "name_cn": "人类帝国",
         "name_es": "Empire of Man",
         "name_fr": "Empire de l'Homme",
         "items": ["general", "empire-of-man"],
@@ -25,8 +26,13 @@
           {
             "army": "kingdom-of-bretonnia"
           },
-          { "army": "wood-elf-realms" },
-          { "army": "empire-of-man", "armyComposition": "city-state-of-nuln" },
+          {
+            "army": "wood-elf-realms"
+          },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "city-state-of-nuln"
+          },
           {
             "army": "empire-of-man",
             "armyComposition": "knightly-order-panther"
@@ -39,7 +45,10 @@
             "army": "empire-of-man",
             "armyComposition": "knightly-order-blazing-sun"
           },
-          { "army": "empire-of-man", "armyComposition": "knightly-order-morr" },
+          {
+            "army": "empire-of-man",
+            "armyComposition": "knightly-order-morr"
+          },
           {
             "army": "empire-of-man",
             "armyComposition": "knightly-order-fiery-heart"
@@ -93,6 +102,7 @@
         "id": "orc-and-goblin-tribes",
         "name_de": "Orc & Goblin Tribes",
         "name_en": "Orc & Goblin Tribes",
+        "name_cn": "兽人&地精部落",
         "name_es": "Orc & Goblin Tribes",
         "name_fr": "Tribus des Orques & Gobelins",
         "items": ["general", "orc-and-goblin-tribes"],
@@ -106,9 +116,15 @@
             "army": "orc-and-goblin-tribes",
             "armyComposition": "troll-horde"
           },
-          { "army": "warriors-of-chaos" },
-          { "army": "beastmen-brayherds" },
-          { "army": "tomb-kings-of-khemri" }
+          {
+            "army": "warriors-of-chaos"
+          },
+          {
+            "army": "beastmen-brayherds"
+          },
+          {
+            "army": "tomb-kings-of-khemri"
+          }
         ],
         "mercenaries": {
           "orc-and-goblin-tribes": [
@@ -135,15 +151,25 @@
         "id": "dwarfen-mountain-holds",
         "name_de": "Dwarfen Mountain Holds",
         "name_en": "Dwarfen Mountain Holds",
+        "name_cn": "矮人群山王国",
         "name_es": "Dwarfen Mountain Holds",
         "name_fr": "Forteresses Naines",
         "items": ["dwarfen-mountain-holds"],
         "armyComposition": ["royal-clan", "expeditionary-force"],
         "allies": [
-          { "army": "empire-of-man" },
-          { "army": "kingdom-of-bretonnia" },
-          { "army": "high-elf-realms" },
-          { "army": "dwarfen-mountain-holds", "armyComposition": "royal-clan" },
+          {
+            "army": "empire-of-man"
+          },
+          {
+            "army": "kingdom-of-bretonnia"
+          },
+          {
+            "army": "high-elf-realms"
+          },
+          {
+            "army": "dwarfen-mountain-holds",
+            "armyComposition": "royal-clan"
+          },
           {
             "army": "dwarfen-mountain-holds",
             "armyComposition": "expeditionary-force"
@@ -204,6 +230,7 @@
         "id": "warriors-of-chaos",
         "name_de": "Warriors of Chaos",
         "name_en": "Warriors of Chaos",
+        "name_cn": "混沌勇士",
         "name_es": "Warriors of Chaos",
         "name_fr": "Guerriers du Chaos",
         "items": [
@@ -257,15 +284,24 @@
         "id": "kingdom-of-bretonnia",
         "name_de": "Kingdom of Bretonnia",
         "name_en": "Kingdom of Bretonnia",
+        "name_cn": "巴托尼亚王国",
         "name_es": "Kingdom of Bretonnia",
         "name_fr": "Royaume de Bretonnie",
         "items": ["general", "kingdom-of-bretonnia", "knightly-virtues"],
         "armyComposition": ["errantry-crusades", "bretonnian-exiles"],
         "allies": [
-          { "army": "dwarfen-mountain-holds" },
-          { "army": "empire-of-man" },
-          { "army": "high-elf-realms" },
-          { "army": "wood-elf-realms" },
+          {
+            "army": "dwarfen-mountain-holds"
+          },
+          {
+            "army": "empire-of-man"
+          },
+          {
+            "army": "high-elf-realms"
+          },
+          {
+            "army": "wood-elf-realms"
+          },
           {
             "army": "kingdom-of-bretonnia",
             "armyComposition": "errantry-crusades"
@@ -300,13 +336,20 @@
         "id": "beastmen-brayherds",
         "name_de": "Beastmen Brayherds",
         "name_en": "Beastmen Brayherds",
+        "name_cn": "野兽人嘶叫兽群",
         "name_es": "Beastmen Brayherds",
         "name_fr": "Braillehardes Hommes-bêtes",
         "items": ["general", "beastmen-brayherds", "chaos-mutations"],
         "allies": [
-          { "army": "orc-and-goblin-tribes" },
-          { "army": "warriors-of-chaos" },
-          { "army": "tomb-kings-of-khemri" }
+          {
+            "army": "orc-and-goblin-tribes"
+          },
+          {
+            "army": "warriors-of-chaos"
+          },
+          {
+            "army": "tomb-kings-of-khemri"
+          }
         ],
         "mercenaries": {
           "beastmen-brayherds": [
@@ -321,13 +364,20 @@
         "id": "wood-elf-realms",
         "name_de": "Wood Elf Realms",
         "name_en": "Wood Elf Realms",
+        "name_cn": "木精灵王国",
         "name_es": "Wood Elf Realms",
         "name_fr": "Royaumes Elfes Sylvains",
         "items": ["general", "wood-elf-realms", "forest-spites"],
         "allies": [
-          { "army": "empire-of-man" },
-          { "army": "kingdom-of-bretonnia" },
-          { "army": "high-elf-realms" }
+          {
+            "army": "empire-of-man"
+          },
+          {
+            "army": "kingdom-of-bretonnia"
+          },
+          {
+            "army": "high-elf-realms"
+          }
         ],
         "mercenaries": {
           "wood-elf-realms": [
@@ -342,14 +392,21 @@
         "id": "tomb-kings-of-khemri",
         "name_de": "Tomb Kings of Khemri",
         "name_en": "Tomb Kings of Khemri",
+        "name_cn": "喀穆里古墓王",
         "name_es": "Tomb Kings of Khemri",
         "name_fr": "Rois des Tombes de Khemri",
         "items": ["general", "tomb-kings-of-khemri"],
         "armyComposition": ["nehekharan-royal-hosts", "mortuary-cults"],
         "allies": [
-          { "army": "orc-and-goblin-tribes" },
-          { "army": "warriors-of-chaos" },
-          { "army": "beastmen-brayherds" },
+          {
+            "army": "orc-and-goblin-tribes"
+          },
+          {
+            "army": "warriors-of-chaos"
+          },
+          {
+            "army": "beastmen-brayherds"
+          },
           {
             "army": "tomb-kings-of-khemri",
             "armyComposition": "nehekharan-royal-hosts"
@@ -372,14 +429,21 @@
         "id": "high-elf-realms",
         "name_de": "High Elf Realms",
         "name_en": "High Elf Realms",
+        "name_cn": "高等精灵王国",
         "name_es": "High Elf Realms",
         "name_fr": "Royaumes Hauts Elfes",
         "items": ["general", "high-elf-realms", "elven-honours"],
         "armyComposition": ["the-chracian-warhost", "sea-guard-garrison"],
         "allies": [
-          { "army": "empire-of-man" },
-          { "army": "kingdom-of-bretonnia" },
-          { "army": "wood-elf-realms" },
+          {
+            "army": "empire-of-man"
+          },
+          {
+            "army": "kingdom-of-bretonnia"
+          },
+          {
+            "army": "wood-elf-realms"
+          },
           {
             "army": "high-elf-realms",
             "armyComposition": "the-chracian-warhost"
@@ -414,6 +478,7 @@
         "id": "dark-elves",
         "name_de": "Dark Elves",
         "name_en": "Dark Elves",
+        "name_cn": "黑暗精灵",
         "name_es": "Dark Elves",
         "name_fr": "Elfes Noirs",
         "items": [
@@ -422,7 +487,11 @@
           "gifts-of-khaine",
           "forbidden-poisons"
         ],
-        "allies": [{ "army": "warriors-of-chaos" }],
+        "allies": [
+          {
+            "army": "warriors-of-chaos"
+          }
+        ],
         "mercenaries": {
           "dark-elves": [
             {
@@ -443,10 +512,15 @@
         "id": "skaven",
         "name_de": "Skaven",
         "name_en": "Skaven",
+        "name_cn": "斯卡文",
         "name_es": "Skaven",
         "name_fr": "Skaven",
         "items": ["general", "skaven"],
-        "allies": [{ "army": "warriors-of-chaos" }],
+        "allies": [
+          {
+            "army": "warriors-of-chaos"
+          }
+        ],
         "armyComposition": ["sk-renegade"],
         "mercenaries": {
           "skaven": [
@@ -467,16 +541,22 @@
         "id": "vampire-counts",
         "name_de": "Vampire Counts",
         "name_en": "Vampire Counts",
+        "name_cn": "吸血鬼公爵",
         "name_es": "Vampire Counts",
         "name_fr": "Comtes Vampires",
         "items": ["general", "vampire-counts", "vampiric-powers"],
-        "allies": [{ "army": "tomb-kings-of-khemri" }],
+        "allies": [
+          {
+            "army": "tomb-kings-of-khemri"
+          }
+        ],
         "armyComposition": ["vc-renegade"]
       },
       {
         "id": "daemons-of-chaos",
         "name_de": "Daemons of Chaos",
         "name_en": "Daemons of Chaos",
+        "name_cn": "混沌恶魔",
         "name_es": "Daemons of Chaos",
         "name_fr": "Démons du Chaos",
         "armyComposition": ["doc-renegade"],
@@ -498,10 +578,15 @@
         "id": "ogre-kingdoms",
         "name_de": "Ogre Kingdoms",
         "name_en": "Ogre Kingdoms",
+        "name_cn": "食人魔王国",
         "name_es": "Ogre Kingdoms",
         "name_fr": "Royaumes Ogres",
         "items": ["general", "ogre-kingdoms", "big-names"],
-        "allies": [{ "army": "orc-and-goblin-tribes" }],
+        "allies": [
+          {
+            "army": "orc-and-goblin-tribes"
+          }
+        ],
         "armyComposition": ["ok-renegade"],
         "mercenaries": {
           "ogre-kingdoms": [
@@ -526,10 +611,15 @@
         "id": "lizardmen",
         "name_de": "Lizardmen",
         "name_en": "Lizardmen",
+        "name_cn": "蜥蜴人",
         "name_es": "Lizardmen",
         "name_fr": "Hommes-Lézards",
         "items": ["general", "lizardmen", "disciplines-old-ones"],
-        "allies": [{ "army": "high-elf-realms" }],
+        "allies": [
+          {
+            "army": "high-elf-realms"
+          }
+        ],
         "armyComposition": ["lm-renegade"],
         "mercenaries": {
           "lizardmen": [
@@ -550,6 +640,7 @@
         "id": "chaos-dwarfs",
         "name_de": "Chaos Dwarfs",
         "name_en": "Chaos Dwarfs",
+        "name_cn": "混沌矮人",
         "name_es": "Chaos Dwarfs",
         "name_fr": "Nains du Chaos",
         "items": ["general", "chaos-dwarfs"],
@@ -592,6 +683,7 @@
         "id": "greenskins",
         "name_de": "Orks & Goblins",
         "name_en": "Orcs & Goblins",
+        "name_cn": "兽人 & 地精",
         "name_es": "Orcs & Goblins",
         "name_fr": "Orques & Gobelins",
         "items": ["greenskins", "general"]
@@ -600,6 +692,7 @@
         "id": "dwarfs",
         "name_de": "Zwerge",
         "name_en": "Dwarfs",
+        "name_cn": "矮人",
         "name_es": "Dwarfs",
         "name_fr": "Nains",
         "items": ["heirlooms", "dwarfs"]
@@ -608,6 +701,7 @@
         "id": "the-empire",
         "name_de": "Das Imperium",
         "name_en": "The Empire",
+        "name_cn": "帝国",
         "name_es": "The Empire",
         "name_fr": "L'Empire",
         "items": ["the-empire", "general"]
