@@ -90,7 +90,7 @@ export const Magic = ({ isMobile }) => {
           ];
         } else {
           magicItems = [
-            ...(unit.command[command].magic.selected || []),
+            ...(commandOptions[command].magic.selected || []),
             {
               ...magicItem,
               id: event.target.value,
@@ -117,7 +117,7 @@ export const Magic = ({ isMobile }) => {
       }
     } else {
       if (isCommand) {
-        magicItems = unit.command[command].magic.selected.filter(
+        magicItems = commandOptions[command].magic.selected.filter(
           ({ id }) => id !== event.target.value
         );
       } else {
@@ -128,7 +128,7 @@ export const Magic = ({ isMobile }) => {
     }
 
     if (isCommand) {
-      const newCommand = unit.command.map((entry, entryIndex) =>
+      const newCommand = commandOptions.map((entry, entryIndex) =>
         entryIndex === Number(command)
           ? {
               ...entry,
@@ -172,7 +172,7 @@ export const Magic = ({ isMobile }) => {
     let magicItems;
 
     if (isCommand) {
-      magicItems = (unit.command[command].magic.selected || []).map((item) =>
+      magicItems = (commandOptions[command].magic.selected || []).map((item) =>
         item.id === parentId
           ? {
               ...item,
@@ -192,7 +192,7 @@ export const Magic = ({ isMobile }) => {
     }
 
     if (isCommand) {
-      const newCommand = unit.command.map((entry, entryIndex) =>
+      const newCommand = commandOptions.map((entry, entryIndex) =>
         entryIndex === Number(command)
           ? {
               ...entry,
@@ -304,7 +304,9 @@ export const Magic = ({ isMobile }) => {
     isConditional,
     isTypeLimitReached,
   }) => {
-    const isCommand = Boolean(unit?.command[command]?.magic?.types.length);
+    const isCommand = Boolean(
+      unit && commandOptions[command]?.magic?.types.length
+    );
 
     const max = !maxMagicPoints
       ? // No maximum of this item if there is no point max.
@@ -390,22 +392,29 @@ export const Magic = ({ isMobile }) => {
   };
 
   let unitMagicPoints = 0;
+  const commandOptions = unit?.command.filter(
+    (commandOption) =>
+      !commandOption.armyComposition ||
+      commandOption.armyComposition.includes(
+        list?.armyComposition || list?.army
+      )
+  );
   const hasCommandMagicItems = Boolean(
-    unit?.command &&
-      unit.command[command] &&
-      unit.command[command]?.magic?.types.length
+    commandOptions &&
+      commandOptions[command] &&
+      commandOptions[command]?.magic?.types.length
   );
   const hasMagicItems = Boolean(unit?.items?.length);
 
   if (hasCommandMagicItems) {
     maxMagicPoints =
-      (unit.command[command].magic.armyComposition &&
-        unit.command[command].magic.armyComposition[
+      (commandOptions[command].magic.armyComposition &&
+        commandOptions[command].magic.armyComposition[
           list.armyComposition || list.army
         ]?.maxPoints) ||
-      unit.command[command].magic.maxPoints;
+      commandOptions[command].magic.maxPoints;
     unitMagicPoints = getUnitMagicPoints({
-      selected: unit.command[command].magic.selected,
+      selected: commandOptions[command].magic.selected,
     });
   } else if (hasMagicItems) {
     maxMagicPoints =
@@ -480,7 +489,7 @@ export const Magic = ({ isMobile }) => {
           const commandMagicItems = itemGroup.items.filter(
             (item) =>
               hasCommandMagicItems &&
-              unit.command[command].magic.types.includes(item.type)
+              commandOptions[command].magic.types.includes(item.type)
           );
           const magicItems = itemGroup.items.filter(
             (item) =>
@@ -493,10 +502,11 @@ export const Magic = ({ isMobile }) => {
           ).filter(
             (item) =>
               (!maxMagicPoints || item.points <= maxMagicPoints) &&
-              (
-                !item.armyComposition || 
-                equalsOrIncludes(item.armyComposition, list?.armyComposition || list?.army)
-              )
+              (!item.armyComposition ||
+                equalsOrIncludes(
+                  item.armyComposition,
+                  list?.armyComposition || list?.army
+                ))
           );
 
           if (itemGroupItems.length > 0) {
@@ -505,7 +515,7 @@ export const Magic = ({ isMobile }) => {
           }
 
           const unitSelectedItems = hasCommandMagicItems
-            ? unit.command[command].magic.selected ?? []
+            ? commandOptions[command].magic.selected ?? []
             : unit.items[group].selected ?? [];
 
           return (
