@@ -31,6 +31,7 @@ import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
 import { getUnitName, getUnitOptionNotes, unitHasItem } from "../../utils/unit";
+import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
 import "./Unit.css";
 
@@ -47,6 +48,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
+  const gameSystems = getGameSystems();
+  const game = gameSystems.find((game) => game.id === list?.game);
   const units = list ? list[type] : null;
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
@@ -434,22 +437,37 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   }, [list]);
 
   useEffect(() => {
-    list &&
-      !army &&
-      fetcher({
-        url: `games/${list.game}/${list.army}`,
-        onSuccess: (data) => {
-          dispatch(
-            setArmy(
-              getArmyData({
-                data,
-                armyComposition: list.armyComposition || list.army,
-              })
-            )
-          );
-        },
-      });
-  }, [list, army, dispatch]);
+    if (list && !army) {
+      const isCustom = game.id !== "the-old-world";
+
+      if (isCustom) {
+        const data = getCustomDatasetData(list.army);
+
+        dispatch(
+          setArmy(
+            getArmyData({
+              data,
+              armyComposition: list.armyComposition,
+            })
+          )
+        );
+      } else {
+        fetcher({
+          url: `games/${list.game}/${list.army}`,
+          onSuccess: (data) => {
+            dispatch(
+              setArmy(
+                getArmyData({
+                  data,
+                  armyComposition: list.armyComposition || list.army,
+                })
+              )
+            );
+          },
+        });
+      }
+    }
+  }, [list, army, dispatch, game]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;

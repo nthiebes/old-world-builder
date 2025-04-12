@@ -19,18 +19,6 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
 }
 ```
 
-### Warhammer Fantasy
-
-```javascript
-{
-  "lords": [],
-  "heroes": [],
-  "core": [],
-  "special": [],
-  "rare": []
-}
-```
-
 ## All unit options
 
 ```javascript

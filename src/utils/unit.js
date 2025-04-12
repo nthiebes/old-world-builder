@@ -13,7 +13,12 @@ export const getUnitRuleData = (unitName) => {
 
 export const getUnitLeadership = (unitName) => {
   const ruleData = getUnitRuleData(unitName);
-  return ruleData?.stats?.length
+
+  if (!ruleData) {
+    return false;
+  }
+
+  return ruleData.stats?.length
     ? ruleData.stats.reduce(
         (previousValue, statLine) =>
           (parseInt(statLine.Ld) || 0) > previousValue

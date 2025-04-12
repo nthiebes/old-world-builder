@@ -47,9 +47,9 @@ export const Header = ({
     },
     {
       name: intl.formatMessage({
-        id: "footer.datasets",
+        id: "footer.custom-datasets",
       }),
-      to: "/datasets",
+      to: "/custom-datasets",
       icon: "datasets",
     },
     {

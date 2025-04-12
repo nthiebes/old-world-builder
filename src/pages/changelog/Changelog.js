@@ -897,7 +897,7 @@ export const Changelog = () => {
               values={{
                 datasets: (
                   <Link to="/datasets">
-                    <FormattedMessage id="footer.datasets" />
+                    <FormattedMessage id="footer.datasets-editor" />
                   </Link>
                 ),
               }}

@@ -48,7 +48,8 @@ export const validateList = ({ list, language, intl }) => {
         )
       ) {
         const leadership = getUnitLeadership(unit.name_en);
-        if (leadership > highestLeadership) {
+
+        if (leadership && leadership > highestLeadership) {
           highestLeadership = leadership;
         }
       }
@@ -421,8 +422,12 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // General doesn't have highest leadership in the army
+  const unitLeadership =
+    generalsCount === 1 && getUnitLeadership(generals[0].name_en);
+
   generalsCount === 1 &&
-    getUnitLeadership(generals[0].name_en) < highestLeadership &&
+    unitLeadership &&
+    unitLeadership < highestLeadership &&
     errors.push({
       message: "misc.error.generalLeadership",
       section: "characters",

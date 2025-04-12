@@ -1,6 +1,6 @@
 # Old World Builder
 
-The "Old World Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop games Warhammer Fantasy and Warhammer: The Old World.
+The "Old World Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop game Warhammer: The Old World.
 
 You can visit the site here: [old-world-builder.com](https://old-world-builder.com/)
 
