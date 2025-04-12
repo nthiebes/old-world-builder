@@ -560,7 +560,8 @@ export const getUnitGeneratedSpellCount = (unit) => {
   if (
     unitHasItem(unit, "Twin Heads") ||
     unitHasItem(unit, "Silvery Wand") ||
-    unitHasItem(unit, "Tome Of Furion")
+    unitHasItem(unit, "Tome Of Furion") ||
+    unitHasItem(unit, "Tome Of Midnight")
   ) {
     generatedSpellsCount += 1;
   }
