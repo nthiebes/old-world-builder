@@ -25,7 +25,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { editUnit } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 
 import "./GameView.css";
 
@@ -91,6 +91,7 @@ export const GameView = () => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+  const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
@@ -582,56 +583,20 @@ export const GameView = () => {
       />
 
       <Main className="game-view">
-        {list.game === "the-old-world" ? (
-          list.characters.length > 0 && (
-            <section className="game-view__section">
-              <header className="editor__header">
-                <h2>
-                  <FormattedMessage id="editor.characters" />{" "}
-                  {showPoints && (
-                    <span className="game-view__points">
-                      [{charactersPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-              </header>
-              {getSection({ type: "characters" })}
-            </section>
-          )
-        ) : (
-          <>
-            {list.lords.length > 0 && (
-              <section className="game-view__section">
-                <header className="editor__header">
-                  <h2>
-                    <FormattedMessage id="editor.lords" />{" "}
-                    {showPoints && (
-                      <span className="game-view__points">
-                        [{lordsPoints} <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h2>
-                </header>
-                {getSection({ type: "lords" })}
-              </section>
-            )}
-
-            {list.heroes.length > 0 && (
-              <section className="game-view__section">
-                <header className="editor__header">
-                  <h2>
-                    <FormattedMessage id="editor.heroes" />{" "}
-                    {showPoints && (
-                      <span className="game-view__points">
-                        [{heroesPoints} <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h2>
-                </header>
-                {getSection({ type: "heroes" })}
-              </section>
-            )}
-          </>
+        {list.characters.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.characters" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{charactersPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "characters" })}
+          </section>
         )}
 
         {list.core.length > 0 && (
@@ -682,41 +647,36 @@ export const GameView = () => {
           </section>
         )}
 
-        {list.game === "the-old-world" && (
-          <>
-            {list.allies.length > 0 && (
-              <section className="game-view__section">
-                <header className="editor__header">
-                  <h2>
-                    <FormattedMessage id="editor.allies" />{" "}
-                    {showPoints && (
-                      <span className="game-view__points">
-                        [{alliesPoints} <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h2>
-                </header>
-                {getSection({ type: "allies" })}
-              </section>
-            )}
+        {list.allies.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.allies" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{alliesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "allies" })}
+          </section>
+        )}
 
-            {list.mercenaries.length > 0 && (
-              <section className="game-view__section">
-                <header className="editor__header">
-                  <h2>
-                    <FormattedMessage id="editor.mercenaries" />{" "}
-                    {showPoints && (
-                      <span className="game-view__points">
-                        [{mercenariesPoints}{" "}
-                        <FormattedMessage id="app.points" />]
-                      </span>
-                    )}
-                  </h2>
-                </header>
-                {getSection({ type: "mercenaries" })}
-              </section>
-            )}
-          </>
+        {list.mercenaries.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.mercenaries" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "mercenaries" })}
+          </section>
         )}
 
         {showVictoryPoints && (

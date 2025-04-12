@@ -40,6 +40,37 @@ export const Changelog = () => {
           <time>
             <i>
               <FormattedDate
+                value={new Date("2025-04-12 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change58"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+                datasets: (
+                  <Link to="/custom-datasets">
+                    <FormattedMessage id="footer.custom-datasets" />
+                  </Link>
+                ),
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.13</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
                 value={new Date("2025-03-25 11:11:11")}
                 month="long"
                 day="2-digit"
@@ -897,7 +928,7 @@ export const Changelog = () => {
               values={{
                 datasets: (
                   <Link to="/datasets">
-                    <FormattedMessage id="footer.datasets" />
+                    <FormattedMessage id="footer.datasets-editor" />
                   </Link>
                 ),
               }}

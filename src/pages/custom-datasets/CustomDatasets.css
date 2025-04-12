@@ -1,0 +1,39 @@
+.custom .list__inner {
+  cursor: default;
+}
+
+.custom .list__inner::before {
+  display: none;
+}
+
+.custom .list__inner .button {
+  padding: 0;
+  height: 22px;
+  margin-left: 0.5rem;
+}
+
+.custom .dataset__unit-header .button {
+  position: absolute;
+  right: 1rem;
+}
+
+.column.custom__column {
+  width: calc(100% + 2rem);
+  padding-bottom: 0;
+  margin: 0 -1rem;
+}
+
+.custom__army {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom__army:not(:last-child) {
+  border-bottom: 2px solid var(--color-list);
+  padding-bottom: 1rem;
+}
+
+.custom__link {
+  margin-left: 5px;
+}

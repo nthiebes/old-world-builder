@@ -1,76 +1,99 @@
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { getStats, getUnitName } from "../../utils/unit";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 import { nameMap } from "../magic";
 
 // Helper function to filter options for simple list format
 const getFilteredOptions = (unit, intl, params) => {
   const allOptionsString = getAllOptions(unit, params);
-  
+
   if (!allOptionsString) return "";
-  
+
   // Items to exclude
   let itemsToExclude = ["Hand weapon", "Hand weapons"];
-  
+
   if (unit.equipment) {
     if (unit.equipment.length === 1 && unit.equipment[0].active) {
-      itemsToExclude = [...itemsToExclude, ...unit.equipment[0].name_en.split(", ")];
+      itemsToExclude = [
+        ...itemsToExclude,
+        ...unit.equipment[0].name_en.split(", "),
+      ];
     } else {
-      const activeEquipment = unit.equipment.find(eq => eq.active);
+      const activeEquipment = unit.equipment.find((eq) => eq.active);
       if (activeEquipment && activeEquipment.points === 0) {
-        itemsToExclude = [...itemsToExclude, ...activeEquipment.name_en.split(", ")];
+        itemsToExclude = [
+          ...itemsToExclude,
+          ...activeEquipment.name_en.split(", "),
+        ];
       }
     }
   }
-  
+
   if (unit.armor) {
     if (unit.armor.length === 1 && unit.armor[0].active) {
-      itemsToExclude = [...itemsToExclude, ...unit.armor[0].name_en.split(", ")];
+      itemsToExclude = [
+        ...itemsToExclude,
+        ...unit.armor[0].name_en.split(", "),
+      ];
     } else {
-      const activeArmor = unit.armor.find(ar => ar.active);
+      const activeArmor = unit.armor.find((ar) => ar.active);
       if (activeArmor && activeArmor.points === 0) {
-        itemsToExclude = [...itemsToExclude, ...activeArmor.name_en.split(", ")];
+        itemsToExclude = [
+          ...itemsToExclude,
+          ...activeArmor.name_en.split(", "),
+        ];
       }
     }
   }
-  
+
   if (unit.mounts) {
     if (unit.mounts.length === 1 && unit.mounts[0].active) {
-      itemsToExclude = [...itemsToExclude, ...unit.mounts[0].name_en.split(", ")];
+      itemsToExclude = [
+        ...itemsToExclude,
+        ...unit.mounts[0].name_en.split(", "),
+      ];
     } else {
-      const activeMount = unit.mounts.find(m => m.active);
+      const activeMount = unit.mounts.find((m) => m.active);
       if (activeMount && activeMount.points === 0) {
-        itemsToExclude = [...itemsToExclude, ...activeMount.name_en.split(", ")];
+        itemsToExclude = [
+          ...itemsToExclude,
+          ...activeMount.name_en.split(", "),
+        ];
       }
     }
   }
-  
+
   // Split into array of individual options
   const optionsArray = allOptionsString.split(", ");
-  
+
   let hasFullCommand = false;
-  
+
   // If there are 3 or more command options and all are active, replace with "Full Command"
-  if (unit.command && unit.command.length >= 3 && 
-      unit.command.every(cmd => cmd.active)) {
+  if (
+    unit.command &&
+    unit.command.length >= 3 &&
+    unit.command.every((cmd) => cmd.active)
+  ) {
     hasFullCommand = true;
-    
-    unit.command.forEach(cmd => {
+
+    unit.command.forEach((cmd) => {
       itemsToExclude.push(cmd.name_en);
     });
   }
-  
-  const filteredOptions = optionsArray.filter(option => {
+
+  const filteredOptions = optionsArray.filter((option) => {
     return !itemsToExclude.includes(option);
   });
-  
+
   if (hasFullCommand) {
-    filteredOptions.push(intl.formatMessage({
-      id: "unit.fullCommand",
-    }));
+    filteredOptions.push(
+      intl.formatMessage({
+        id: "unit.fullCommand",
+      })
+    );
   }
-  
+
   return filteredOptions.join(", ");
 };
 
@@ -93,25 +116,31 @@ const getUnitsString = ({
       .map((unit) => {
         const unitPoints = getUnitPoints(unit, { armyComposition });
         const unitName = getUnitName({ unit, language });
-        
-        const filteredOptions = getFilteredOptions(unit, intl,{
+
+        const filteredOptions = getFilteredOptions(unit, intl, {
           noMagic: isShowList,
           pageNumbers: false,
           armyComposition,
         });
-        
+
         // Format: "name, important options - points"
-        let unitString = `${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""}${unitName}${filteredOptions ? `, ${filteredOptions}` : ""}${isShowList ? '' : ` - ${unitPoints}`}`;
-        
+        let unitString = `${
+          unit.strength || unit.minimum
+            ? `${unit.strength || unit.minimum} `
+            : ""
+        }${unitName}${filteredOptions ? `, ${filteredOptions}` : ""}${
+          isShowList ? "" : ` - ${unitPoints}`
+        }`;
+
         // Clean up any double commas that might have been created
         unitString = unitString.replace(", ,", ",");
         unitString = unitString.replace(/,\s*$/, "");
-        
+
         return unitString;
       })
       .join("\n");
   }
-  
+
   return units
     .map((unit) => {
       const allOptions = getAllOptions(unit, {
@@ -194,6 +223,7 @@ export const getListAsText = ({
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+  const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
@@ -209,9 +239,13 @@ export const getListAsText = ({
   let listString = "";
 
   if (isSimpleList) {
-    listString += `${list.name}${isShowList ? '' : ` [${allPoints} ${intl.formatMessage({id: "app.points"})}]`}\n`;
+    listString += `${list.name}${
+      isShowList
+        ? ""
+        : ` [${allPoints} ${intl.formatMessage({ id: "app.points" })}]`
+    }\n`;
     listString += `${game.name}, ${armyName}${armyCompositionString}\n\n`;
-    
+
     const allUnits = [
       ...(list.characters || []),
       ...(list.lords || []),
@@ -220,9 +254,9 @@ export const getListAsText = ({
       ...(list.special || []),
       ...(list.rare || []),
       ...(list.mercenaries || []),
-      ...(list.allies || [])
+      ...(list.allies || []),
     ];
-    
+
     listString += getUnitsString({
       units: allUnits,
       isShowList,
@@ -235,13 +269,13 @@ export const getListAsText = ({
       language,
       showStats: false,
       armyComposition,
-      isSimpleList: true
+      isSimpleList: true,
     });
-    
+
     listString += `\n\n---\n${intl.formatMessage({
       id: "export.createdWith",
     })} "Old World Builder"\n\n[https://old-world-builder.com]`;
-    
+
     return listString;
   }
 

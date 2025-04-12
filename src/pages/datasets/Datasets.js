@@ -11,7 +11,7 @@ import { Spinner } from "../../components/spinner";
 import { Dialog } from "../../components/dialog";
 import { ErrorMessage } from "../../components/error-message";
 import { fetcher } from "../../utils/fetcher";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 import { Unit } from "../unit";
 
 import { Entity } from "./Entity";
@@ -26,6 +26,7 @@ export const Datasets = ({ isMobile }) => {
   const [copyError, setCopyError] = useState(false);
   const [army, setArmy] = useState("empire-of-man");
   const game = "the-old-world";
+  const gameSystems = getGameSystems();
   const localDataset = localStorage.getItem("owb.dataset");
   const [dataset, setDataset] = useState({
     characters: [],
@@ -129,7 +130,7 @@ export const Datasets = ({ isMobile }) => {
       <Helmet>
         <title>
           {`Old World Builder | ${intl.formatMessage({
-            id: "footer.datasets",
+            id: "footer.datasets-editor",
           })}`}
         </title>
         <link rel="canonical" href="https://old-world-builder.com/datasets" />

@@ -12,6 +12,7 @@ import { getAllPoints } from "../../utils/points";
 import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
+import owb from "../../assets/army-icons/owb.svg";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
 import dwarfs from "../../assets/army-icons/dwarfs.svg";
 import greenskins from "../../assets/army-icons/greenskins.svg";
@@ -86,8 +87,7 @@ export const Home = ({ isMobile }) => {
     <>
       <Helmet>
         <title>
-          Old World Builder - Army builder for Warhammer: The Old World and
-          Warhammer Fantasy Battles
+          Old World Builder - Army builder for Warhammer: The Old World
         </title>
         <link rel="canonical" href="https://old-world-builder.com/" />
       </Helmet>
@@ -97,7 +97,7 @@ export const Home = ({ isMobile }) => {
         {!lists.length && (
           <>
             <img
-              src={theEmpire}
+              src={owb}
               alt=""
               width="100"
               height="100"
@@ -131,7 +131,12 @@ export const Home = ({ isMobile }) => {
                   </p>
                 </span>
                 <div className="home__info">
-                  <img height="40" width="40" src={armyIconMap[army]} alt="" />
+                  <img
+                    height="40"
+                    width="40"
+                    src={armyIconMap[army] || owb}
+                    alt=""
+                  />
                 </div>
               </ListItem>
             )

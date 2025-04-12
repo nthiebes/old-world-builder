@@ -5,13 +5,12 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
 import { Button } from "../../components/button";
-import { getRandomId } from "../../utils/id";
-import { useLanguage } from "../../utils/useLanguage";
 import { Header, Main } from "../../components/page";
-import { Icon } from "../../components/icon";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
+import { getRandomId } from "../../utils/id";
+import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 
 import { nameMap } from "../magic";
@@ -24,6 +23,7 @@ export const NewList = ({ isMobile }) => {
   const dispatch = useDispatch();
   const intl = useIntl();
   const { language } = useLanguage();
+  const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState("the-old-world");
   const [army, setArmy] = useState(
@@ -43,42 +43,27 @@ export const NewList = ({ isMobile }) => {
   const createList = () => {
     const newId = getRandomId();
     const newList = {
-      "warhammer-fantasy": {
-        name:
-          name || nameMap[army][`name_${language}`] || nameMap[army].name_en,
-        description: description,
-        game: game,
-        points: points,
-        army: army,
-        lords: [],
-        heroes: [],
-        core: [],
-        special: [],
-        rare: [],
-        id: newId,
-      },
-      "the-old-world": {
-        name:
-          name ||
-          nameMap[armyComposition]?.[`name_${language}`] ||
-          nameMap[armyComposition]?.name_en ||
-          nameMap[army][`name_${language}`] ||
-          nameMap[army].name_en,
-        description: description,
-        game: game,
-        points: points,
-        army: army,
-        characters: [],
-        core: [],
-        special: [],
-        rare: [],
-        mercenaries: [],
-        allies: [],
-        id: newId,
-        armyComposition,
-      },
+      name:
+        name ||
+        nameMap[armyComposition]?.[`name_${language}`] ||
+        nameMap[armyComposition]?.name_en ||
+        (nameMap[army] && nameMap[army][`name_${language}`]) ||
+        nameMap[army]?.name_en ||
+        army,
+      description: description,
+      game: game,
+      points: points,
+      army: army,
+      characters: [],
+      core: [],
+      special: [],
+      rare: [],
+      mercenaries: [],
+      allies: [],
+      id: newId,
+      armyComposition,
     };
-    const newLists = [...lists, newList[game]];
+    const newLists = [...lists, newList];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
@@ -93,7 +78,9 @@ export const NewList = ({ isMobile }) => {
   };
   const handleArmyChange = (value) => {
     setArmy(value);
-    setArmyComposition(value);
+    setArmyComposition(
+      armies.find(({ id }) => value === id).armyComposition[0]
+    );
   };
   const handleArcaneJournalChange = (value) => {
     setArmyComposition(value);
@@ -137,12 +124,12 @@ export const NewList = ({ isMobile }) => {
           />
         )}
         <form onSubmit={handleSubmit} className="new-list">
-          {gameSystems.map(({ name, id }) => (
+          {gameSystems.map(({ name, id }, index) => (
             <div
               className={classNames(
                 "radio",
                 "new-list__radio",
-                id === "warhammer-fantasy" && "new-list__radio--last-item"
+                index === gameSystems.length - 1 && "new-list__radio--last-item"
               )}
               key={id}
             >
@@ -155,20 +142,9 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "warhammer-fantasy"}
               />
               <label htmlFor={id} className="radio__label">
-                {id === "warhammer-fantasy" && (
-                  <>
-                    <span className="new-list__game-name">{name}</span>
-                    <p className="new-list__beta">
-                      <FormattedMessage id="new.8th" />
-                    </p>
-                  </>
-                )}
-                {id === "the-old-world" && (
-                  <span className="new-list__game-name">{name}</span>
-                )}
+                <span className="new-list__game-name">{name}</span>
               </label>
             </div>
           ))}
@@ -191,16 +167,12 @@ export const NewList = ({ isMobile }) => {
               <Select
                 id="arcane-journal"
                 options={[
-                  {
-                    id: army,
-                    name_en: intl.formatMessage({ id: "new.grandArmy" }),
-                  },
                   ...journalArmies.map((journalArmy) => ({
                     id: journalArmy,
-                    name_en: nameMap[journalArmy].name_en,
-                    name_de: nameMap[journalArmy].name_de,
-                    name_es: nameMap[journalArmy].name_es,
-                    name_fr: nameMap[journalArmy].name_fr,
+                    name_en:
+                      journalArmy === army
+                        ? intl.formatMessage({ id: "new.grandArmy" })
+                        : nameMap[journalArmy].name_en,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}

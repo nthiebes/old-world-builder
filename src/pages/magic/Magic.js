@@ -17,7 +17,7 @@ import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { normalizeRuleName, equalsOrIncludes } from "../../utils/string";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
   maxAllowedOfItem,
@@ -65,6 +65,7 @@ export const Magic = ({ isMobile }) => {
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
   const armyId = unit?.army || list?.army;
+  const gameSystems = getGameSystems();
   const army =
     list &&
     gameSystems
@@ -253,7 +254,7 @@ export const Magic = ({ isMobile }) => {
       unit &&
       !items &&
       fetcher({
-        url: `games/${list.game}/magic-items`,
+        url: "games/the-old-world/magic-items",
         onSuccess: (data) => {
           let itemCategories = army.items;
 

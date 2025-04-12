@@ -11,7 +11,7 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { nameMap } from "../magic";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 
 import "./Print.css";
 
@@ -49,6 +49,7 @@ export const Print = () => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+  const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
@@ -250,50 +251,18 @@ export const Print = () => {
           {armyCompositionName ? `, ${armyCompositionName}` : ""}
         </p>
 
-        {list.game === "the-old-world" ? (
-          list.characters.length > 0 && (
-            <section>
-              <h2>
-                <FormattedMessage id="editor.characters" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{charactersPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              {getSection({ type: "characters" })}
-            </section>
-          )
-        ) : (
-          <>
-            {list.lords.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.lords" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{lordsPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "lords" })}
-              </section>
-            )}
-
-            {list.heroes.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.heroes" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{heroesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "heroes" })}
-              </section>
-            )}
-          </>
+        {list.characters.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.characters" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{charactersPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "characters" })}
+          </section>
         )}
 
         {list.core.length > 0 && (
@@ -338,37 +307,34 @@ export const Print = () => {
           </section>
         )}
 
-        {list.game === "the-old-world" && (
-          <>
-            {list.allies.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.allies" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{alliesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "allies" })}
-              </section>
-            )}
-
-            {list.mercenaries.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.mercenaries" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "mercenaries" })}
-              </section>
-            )}
-          </>
+        {list.allies.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.allies" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{alliesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "allies" })}
+          </section>
         )}
+
+        {list.mercenaries.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.mercenaries" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "mercenaries" })}
+          </section>
+        )}
+
         <div className="print-footer">
           <p>
             <FormattedMessage id="export.createdWith" />{" "}

@@ -24,12 +24,12 @@ export const validateList = ({ list, language, intl }) => {
   const generals = !list?.characters?.length
     ? []
     : list.characters.filter(
-      (unit) =>
-        unit.command &&
-        unit.command.find(
-          (command) => command.active && command.name_en === "General"
-        )
-    );
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General"
+          )
+      );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
   if (list?.characters?.length) {
@@ -48,11 +48,13 @@ export const validateList = ({ list, language, intl }) => {
         )
       ) {
         const unitName =
-          unit.name_en.includes("renegade") && list.armyComposition?.includes("renegade")
+          unit.name_en.includes("renegade") &&
+          list.armyComposition?.includes("renegade")
             ? unit.name_en
             : unit.name_en.replace(" {renegade}", "");
         const leadership = getUnitLeadership(unitName);
-        if (leadership > highestLeadership) {
+
+        if (leadership && leadership > highestLeadership) {
           highestLeadership = leadership;
         }
       }
@@ -62,14 +64,14 @@ export const validateList = ({ list, language, intl }) => {
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
-      (unit) =>
-        unit.command &&
-        unit.command.find(
-          (command) =>
-            command.active &&
-            command.name_en.includes("Battle Standard Bearer")
-        )
-    );
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.active &&
+              command.name_en.includes("Battle Standard Bearer")
+          )
+      );
 
   const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
@@ -425,8 +427,12 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // General doesn't have highest leadership in the army
+  const unitLeadership =
+    generalsCount === 1 && getUnitLeadership(generals[0].name_en);
+
   generalsCount === 1 &&
-    getUnitLeadership(generals[0].name_en) < highestLeadership &&
+    unitLeadership &&
+    unitLeadership < highestLeadership &&
     errors.push({
       message: "misc.error.generalLeadership",
       section: "characters",
