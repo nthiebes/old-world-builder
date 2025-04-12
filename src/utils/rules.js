@@ -563,6 +563,13 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["troll-hag"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: ["common-troll-mob", "river-troll-mob", "stone-troll-mob"],
+        },
       ],
     },
     mercenaries: { maxPercent: 20 },

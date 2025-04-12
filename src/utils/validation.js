@@ -47,7 +47,12 @@ export const validateList = ({ list, language, intl }) => {
             command.name_en.includes("Battle Standard Bearer") && command.active
         )
       ) {
-        const leadership = getUnitLeadership(unit.name_en);
+        const unitName =
+          unit.name_en.includes("renegade") &&
+          list.armyComposition?.includes("renegade")
+            ? unit.name_en
+            : unit.name_en.replace(" {renegade}", "");
+        const leadership = getUnitLeadership(unitName);
 
         if (leadership && leadership > highestLeadership) {
           highestLeadership = leadership;
