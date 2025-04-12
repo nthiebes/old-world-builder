@@ -153,6 +153,12 @@ export const CustomDatasets = () => {
         <p>Manage and add custom game systems and datasets.</p>
         <p className="unit__notes">
           <Icon symbol="error" className="unit__notes-icon" />
+          Custom game systems also utilize ToW's list validation and magic
+          items. Game systems that are not derived from ToW and have different
+          rules are currently not supported (e.g., Warhammer 40k).
+        </p>
+        <p className="unit__notes">
+          <Icon symbol="error" className="unit__notes-icon" />
           <span>
             Each new army in a custom game system needs a dataset with the same
             file name as the army ID.
@@ -229,18 +235,16 @@ export const CustomDatasets = () => {
 
         <section>
           <h2>Add a custom game system</h2>
-          <p className="unit__notes">
-            <span>
-              Template file:
-              <a
-                className="custom__link"
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/nthiebes/old-world-builder/blob/main/src/assets/the-old-world.json"
-              >
-                the-old-world.json
-              </a>
-            </span>
+          <p>
+            Template file:
+            <a
+              className="custom__link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/nthiebes/old-world-builder/blob/main/src/assets/the-old-world.json"
+            >
+              the-old-world.json
+            </a>
           </p>
           <form onSubmit={handleGameSubmit}>
             <label htmlFor="system-file">Select a .json file:</label>
@@ -310,6 +314,15 @@ export const CustomDatasets = () => {
 
         <section>
           <h2>Add a custom dataset</h2>
+          <p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md"
+            >
+              Datasets documentation
+            </a>
+          </p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="dataset-file">Select a .json file:</label>
             <input
