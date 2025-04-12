@@ -72,6 +72,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "name_pl": String,
       "name_cn": String,
       "points": Number,
+      "alwaysActive": Boolean, // Always selected and cannot be deselected, optional
       "magic": {
         "types": [String], // Limit the available magic items (see "magic-items.json" types)
         "maxPoints": Number, // Maximum points for magic items
@@ -149,6 +150,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "points": Number,
       "perModel": Boolean, // Optional
       "active": Boolean, // Optional
+      "alwaysActive": Boolean, // Always selected and cannot be deselected, optional
       "stackable": Boolean, // Allows multiple selections of this option
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
