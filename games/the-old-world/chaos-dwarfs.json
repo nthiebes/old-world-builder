@@ -2298,7 +2298,8 @@
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Great weapons",
@@ -2307,6 +2308,15 @@
           "name_es": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 3,
           "perModel": true
         }
       ],
@@ -2322,19 +2332,7 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_cn": "盾牌",
-          "name_de": "Shield",
-          "name_es": "Shield",
-          "name_fr": "Bouclier",
-          "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
