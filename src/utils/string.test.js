@@ -23,19 +23,19 @@ describe("normalizeRuleName", () => {
 });
 
 describe("equalsOrIncludes", () => {
-    test("Returns true if object and target are equal", () => {
-      expect(equalsOrIncludes("tomb-kings", "tomb-kings")).toBe(true);
-    });
-
-    test("Returns false if object is string and target is just a subset of that string", () => {
-      expect(equalsOrIncludes("tomb-kings", "kings")).toBe(false);
-    });
-
-    test("Returns true if object is array and target included in it", () => {
-      expect(equalsOrIncludes(["tomb-kings", "mortuary-cults"], "mortuary-cults")).toBe(true);
-    });
-    
-    test("Returns false if object is array and target isn't in it", () => {
-        expect(equalsOrIncludes(["tomb-kings", "mortuary-cults"], "kings")).toBe(false);
-      });
+  test("Returns true if object and target are equal", () => {
+    expect(equalsOrIncludes("tomb-kings", "tomb-kings")).toBe(true);
   });
+
+  test("Returns false if object is string and target is just a subset of that string", () => {
+    expect(equalsOrIncludes("tomb-kings", "kings")).toBe(false);
+  });
+
+  test("Returns true if object is array and target included in it", () => {
+    expect(equalsOrIncludes(["tomb-kings", "mortuary-cults"], "mortuary-cults")).toBe(true);
+  });
+
+  test("Returns false if object is array and target isn't in it", () => {
+    expect(equalsOrIncludes(["tomb-kings", "mortuary-cults"], "kings")).toBe(false);
+  });
+});
