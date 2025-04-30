@@ -1032,6 +1032,7 @@ export const rules = {
           max: 1,
           requiresType: "characters",
           requires: ["king", "thane", "ungrim-ironfist", "thorgrim-ullekson"],
+          perUnit: true,
         },
         {
           ids: ["bolt-thrower", "grudge-thrower", "cannon"],
