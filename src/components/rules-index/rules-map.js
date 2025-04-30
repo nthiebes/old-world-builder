@@ -76,6 +76,7 @@ export const synonyms = {
   "gromril great axes": "gromril great axe",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
+  "wolf hammers": "wolf hammer",
   shields: "shield",
   bellower: "bellowers & musicians",
   "revered guardian": "battle standard bearer",
