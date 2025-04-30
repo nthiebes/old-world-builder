@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import PropTypes from "prop-types";
 
 import { Button } from "../button";
-import { LocalizedRuleLink } from "../rules-index";
+import { LocalizedRuleLink, RuleWithIcon } from "../rules-index";
 
 import "./GeneratedSpells.css";
 
@@ -128,16 +128,23 @@ export const GeneratedSpells = ({
                             );
                           }}
                         />
-                        <span className="generated-spells__spell-index">
-                          {spell.index === "signature"
-                            ? intl.formatMessage({
-                                id: "misc.signatureAbbr",
-                              })
-                            : spell.index}
+                        <span className="generated-spells__rules-wrapper">
+                          <span className="generated-spells__spell-index">
+                            {spell.index === "signature"
+                              ? intl.formatMessage({
+                                  id: "misc.signatureAbbr",
+                                })
+                              : spell.index}
+                          </span>
+                          <FormattedMessage
+                            id={spellIdToFormattedMessageId(spellId)}
+                          />
+                          <RuleWithIcon
+                            name={spellId}
+                            isDark
+                            className="generated-spells__rule-icon"
+                          />
                         </span>
-                        <FormattedMessage
-                          id={spellIdToFormattedMessageId(spellId)}
-                        />
                       </label>
                     </li>
                   );
