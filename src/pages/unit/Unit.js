@@ -1334,41 +1334,59 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     <h3 className="unit__subline">
                                       <FormattedMessage id="unit.options" />
                                     </h3>
-                                    {detachmentOptions.map((option) => (
-                                      <div className="checkbox" key={option.id}>
-                                        <input
-                                          type="checkbox"
-                                          id={`options-${id}-${option.id}`}
-                                          value={option.id}
-                                          onChange={() =>
-                                            handleDetachmentEquipmentChange({
-                                              detachmentId: id,
-                                              equipmentId: option.id,
-                                              category: "options",
-                                              isCheckbox: true,
-                                            })
-                                          }
-                                          checked={option.active || false}
-                                          className="checkbox__input"
-                                        />
-                                        <label
-                                          htmlFor={`options-${id}-${option.id}`}
-                                          className="checkbox__label"
+                                    {detachmentOptions.map((option) => {
+                                      const exclusiveCheckedOption =
+                                        detachmentOptions.find(
+                                          (exclusiveOption) =>
+                                            exclusiveOption.exclusive &&
+                                            exclusiveOption.active
+                                        );
+
+                                      return (
+                                        <div
+                                          className="checkbox"
+                                          key={option.id}
                                         >
-                                          <span className="unit__label-text">
-                                            <RulesWithIcon
-                                              textObject={option}
-                                            />
-                                          </span>
-                                          <i className="checkbox__points">
-                                            {getPointsText({
-                                              points: option.points,
-                                              perModel: option.perModel,
-                                            })}
-                                          </i>
-                                        </label>
-                                      </div>
-                                    ))}
+                                          <input
+                                            type="checkbox"
+                                            id={`options-${id}-${option.id}`}
+                                            value={option.id}
+                                            onChange={() =>
+                                              handleDetachmentEquipmentChange({
+                                                detachmentId: id,
+                                                equipmentId: option.id,
+                                                category: "options",
+                                                isCheckbox: true,
+                                              })
+                                            }
+                                            checked={option.active || false}
+                                            className="checkbox__input"
+                                            disabled={
+                                              (exclusiveCheckedOption &&
+                                                option.exclusive &&
+                                                !option.active) ||
+                                              option.alwaysActive
+                                            }
+                                          />
+                                          <label
+                                            htmlFor={`options-${id}-${option.id}`}
+                                            className="checkbox__label"
+                                          >
+                                            <span className="unit__label-text">
+                                              <RulesWithIcon
+                                                textObject={option}
+                                              />
+                                            </span>
+                                            <i className="checkbox__points">
+                                              {getPointsText({
+                                                points: option.points,
+                                                perModel: option.perModel,
+                                              })}
+                                            </i>
+                                          </label>
+                                        </div>
+                                      );
+                                    })}
                                   </>
                                 )}
                             </div>

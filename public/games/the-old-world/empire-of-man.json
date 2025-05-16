@@ -2521,6 +2521,7 @@
       "name_es": "Harbinger of Doom",
       "id": "harbinger-of-doom",
       "points": 65,
+      "armyComposition": "empire-of-man",
       "command": [
         {
           "name_en": "General",
@@ -3623,9 +3624,7 @@
           "name_fr": "Boucliers",
           "name_es": "Escudos",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -4221,12 +4220,50 @@
           "perModel": true
         },
         {
-          "name_en": "Sergeant (champion)",
+          "name_en": "Sergeant (champion), Crossbow",
           "name_cn": "军士(冠军)",
           "name_de": "Feldwaibel (Champion)",
           "name_fr": "Sergent (champion)",
           "name_es": "Sargento (campeón)",
-          "points": 0
+          "points": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Sergeant (champion), Handgun",
+          "name_cn": "十字弩/火枪",
+          "name_de": "Armbrust/Muskete",
+          "name_fr": "Arbalète/Arquebuse",
+          "name_es": "Ballesta/Arcabuz",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Sergeant (champion), Brace of pistols",
+          "name_cn": "成对手枪",
+          "name_de": "Pistolenpaar",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Sergeant (champion), Hochland long rifle",
+          "name_cn": "霍克领长铳",
+          "name_de": "Hochland Langbüchse",
+          "name_fr": "Long fusil de Hochland",
+          "name_es": "Rifle largo de Hochland",
+          "points": 8,
+          "exclusive": true
+        },
+        {
+          "name_en": "Sergeant (champion), Repeater handgun",
+          "name_cn": "连发枪",
+          "name_de": "Repetier-Armbrust",
+          "name_fr": "Arquebuse à répétition",
+          "name_es": "Mosquete de repetición",
+          "points": 5,
+          "exclusive": true
         }
       ],
       "mounts": [],
