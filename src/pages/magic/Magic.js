@@ -9,14 +9,12 @@ import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
-import { Button } from "../../components/button";
-import { RulesIndex, rulesMap } from "../../components/rules-index";
+import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
-import { openRulesIndex } from "../../state/rules-index";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { normalizeRuleName, equalsOrIncludes } from "../../utils/string";
+import { equalsOrIncludes } from "../../utils/string";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
@@ -73,9 +71,6 @@ export const Magic = ({ isMobile }) => {
       .armies.find(({ id }) => armyId === id);
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
-  const handleRulesClick = ({ name }) => {
-    dispatch(openRulesIndex({ activeRule: name }));
-  };
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
     const inputType = event.target.type;
@@ -356,20 +351,11 @@ export const Magic = ({ isMobile }) => {
                     id: "app.points",
                   })}`}
             </i>
-            {rulesMap[normalizeRuleName(magicItem.name_en)] ? (
-              <Button
-                type="text"
-                className="magic__rules"
-                color="dark"
-                label={intl.formatMessage({ id: "misc.showRules" })}
-                icon="preview"
-                onClick={() =>
-                  handleRulesClick({
-                    name: magicItem.name_en,
-                  })
-                }
-              />
-            ) : null}
+            <RuleWithIcon
+              name={magicItem.name_en}
+              isDark
+              className="magic__rules"
+            />
           </label>
         </div>
 

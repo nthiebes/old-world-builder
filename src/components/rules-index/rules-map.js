@@ -239,6 +239,9 @@ export const synonyms = {
   "demigryph knights of the fiery heart": "demigryph knights",
   "demigryph knights of the blazing sun": "demigryph knights",
   "demigryph knights of morr": "demigryph knights",
+  "ogre pistols": "ogre pistol",
+  "light cannons": "light cannon",
+  "bigger choppier axe": "bigger, choppier axe",
 };
 
 export const rulesMap = {
