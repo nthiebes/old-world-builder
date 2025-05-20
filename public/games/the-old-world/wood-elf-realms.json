@@ -1,6 +1,274 @@
 {
   "characters": [
-    {
+{
+      "name_en": "Araloth, Lord of Talsyn",
+      "name_cn": "Araloth, Lord of Talsyn",
+      "name_de": "Araloth, Lord of Talsyn",
+      "name_fr": "Araloth, Lord of Talsyn",
+      "name_pl": "Araloth, Lord of Talsyn",
+      "id": "Araloth, Lord of Talsyn",
+      "points": 170,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Spear of Talsyn",
+          "name_cn": "Spear of Talsyn",
+          "name_de": "Spear of Talsyn",
+          "name_fr": "Spear of Talsyn",
+          "name_pl": "Spear of Talsyn",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        }
+
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Heavy armour",
+          "name_pl": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+         {
+          "name_en": "Shield",
+          "name_cn": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Shield",
+          "name_pl": "Shield",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+     
+      ],
+      
+      },
+      "specialRules": {
+        "name_en": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_cn": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_de": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_es": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_fr": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_pl": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn"
+      }
+    }, 
+ 
+{
+      "name_en": "Wardens Of Talsyn",
+      "name_cn": "Wardens Of Talsyn",
+      "name_de": "Wardens Of Talsyn",
+      "name_fr": "Wardens Of Talsyn",
+      "name_pl": "Wardens Of Talsyn",
+      "id": "Wardens Of Talsyn",
+      "points": 125,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon & Asrai spear",
+          "name_cn": "Hand weapon & Asrai spear",
+          "name_de": "Hand weapon & Asrai spear",
+          "name_fr": "Hand weapon & Asrai spear",
+          "name_pl": "Hand weapon & Asrai spear",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+	{
+          "name_en": "Additional hand weapon",
+          "name_cn": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Additional hand weapon",
+          "name_pl": "Additional hand weapon",
+          "points": 3,
+          "perModel": true,
+        },
+	{
+          "name_en": "Great weapon",
+          "name_cn": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Great weapon",
+          "name_pl": "Great weapon",
+          "points": 4,
+          "perModel": true,
+        }
+
+      ],
+      "armor": [
+        {
+          "name_en": "light armour",
+          "name_cn": "light armour",
+          "name_de": "light armour",
+          "name_fr": "light armour",
+          "name_pl": "light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_cn": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Shield",
+          "name_pl": "Shield",
+          "points": 2,
+          "perModel": true,
+        }
+	],
+       "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+
+      ],
+      "magic": {
+        "types": ["weapon", "armor", "talisman", "enchanted-item"],
+        "maxPoints": 75
+      }
+      "specialRules": {
+        "name_en": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn",
+        "name_cn": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn",
+        "name_de": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn",
+        "name_es": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn",
+        "name_fr": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn",
+        "name_pl": "Close Order Courage Beyond Compare Drilled Elven Reflexes Immune to Psychology Move Through Cover Parry Strike First Stubborn"
+      }
+    }, 
+
+{
+      "name_en": "Orion the King in the Woods",
+      "name_cn": "Orion the King in the Woods",
+      "name_de": "Orion the King in the Woods",
+      "name_fr": "Orion the King in the Woods",
+      "name_pl": "Orion the King in the Woods",
+      "id": "Orion the King in the Woods",
+      "points": 455,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Cloak of Isha",
+          "name_cn": "Cloak of Isha",
+          "name_de": "Cloak of Isha",
+          "name_fr": "Cloak of Isha",
+          "name_pl": "Cloak of Isha",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+{
+          "name_en": "Hawks Talon",
+          "name_cn": "Hawks Talon",
+          "name_de": "Hawks Talon",
+          "name_fr": "Hawks Talon",
+          "name_pl": "Hawks Talon",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+{
+          "name_en": "Horn of the Wild Hunt",
+          "name_cn": "Horn of the Wild Hunt",
+          "name_de": "Horn of the Wild Hunt",
+          "name_fr": "Horn of the Wild Hunt",
+          "name_pl": "Horn of the Wild Hunt",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+{
+          "name_en": "Spear of Kurnous",
+          "name_cn": "Spear of Kurnous",
+          "name_de": "Spear of Kurnous",
+          "name_fr": "Spear of Kurnous",
+          "name_pl": "Spear of Kurnous",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        }
+
+      ],
+       "Hound of Orion": [
+        {
+          "name_en": "Claws and fangs count as a hand weapon",
+          "name_cn": "Claws and fangs count as a hand weapon",
+          "name_de": "Claws and fangs count as a hand weapon",
+          "name_fr": "Claws and fangs count as a hand weapon",
+          "name_pl": "Claws and fangs count as a hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+     
+      ],
+      
+      },
+      "specialRules": {
+        "name_en": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable",
+        "name_cn": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable",
+        "name_de": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable",
+        "name_es": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable",
+        "name_fr": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable",
+        "name_pl": "Orion: Fear Frenzy Immune to Psychology Move through Cover Open Order Stomp Attacks D3+2 Strikes First Terror Unbreakable"
+      };
+{
+        "name_en": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable",
+        "name_cn": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable",
+        "name_de": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable",
+        "name_es": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable",
+        "name_fr": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable",
+        "name_pl": "Hound of Orion: Fear Frenzy Immune to Psychology Magical Attacks Move through Cover Open Order Spectral Hounds Unbreakable"
+      }
+
+    }, 
+ 
+
+ {
       "name_en": "Glade Lord",
       "name_cn": "林地领主",
       "name_de": "Lichtungsfürst",
@@ -207,6 +475,16 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Kindreds",
+          "name_cn": "Kindreds",
+          "name_de": "NKindreds",
+          "name_fr": "Kindreds",
+          "name_pl": "Kindreds",
+          "types": ["Kindreds"],
+          "selected": [],
+          "maxPoints": 25
         }
       ],
       "magic": {
@@ -428,6 +706,16 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Kindreds",
+          "name_cn": "Kindreds",
+          "name_de": "NKindreds",
+          "name_fr": "Kindreds",
+          "name_pl": "Kindreds",
+          "types": ["Kindreds"],
+          "selected": [],
+          "maxPoints": 25
         }
       ],
       "specialRules": {
@@ -554,6 +842,16 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Kindreds",
+          "name_cn": "Kindreds",
+          "name_de": "NKindreds",
+          "name_fr": "Kindreds",
+          "name_pl": "Kindreds",
+          "types": ["Kindreds"],
+          "selected": [],
+          "maxPoints": 25
         }
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
@@ -691,6 +989,16 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Kindreds",
+          "name_cn": "Kindreds",
+          "name_de": "NKindreds",
+          "name_fr": "Kindreds",
+          "name_pl": "Kindreds",
+          "types": ["Kindreds"],
+          "selected": [],
+          "maxPoints": 25
         }
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
