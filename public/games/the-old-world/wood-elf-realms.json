@@ -134,6 +134,15 @@
           "name_pl": "Długi łuk Asrai",
           "points": 0,
           "perModel": true
+        },
+        {
+          "name_en": "Talismanic Tattoos",
+          "name_cn": "Talismanic Tattoos",
+          "name_de": "Talismanic Tattoos",
+          "name_fr": "Talismanic Tattoos",
+          "name_pl": "Talismanic Tattoos",
+          "points": 10,
+          "armyComposition": "orions-wild-hunt"
         }
       ],
       "mounts": [
@@ -242,6 +251,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "name_cn": "战旗手",
           "name_de": "Armeestandartenträger",
           "name_pl": "Chorąży",
@@ -249,11 +259,20 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 0
-          },
-          "name_fr": "Porteur de la Grande Bannière"
+          }
         }
       ],
       "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
         {
           "name_en": "Additional hand weapon",
           "name_cn": "额外单手武器",
@@ -277,15 +296,6 @@
           "name_fr": "Lance de cavalerie",
           "name_pl": "Lanca",
           "points": 2
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_cn": "单手武器",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0,
-          "active": true
         }
       ],
       "armor": [
@@ -349,20 +359,21 @@
           "points": 3
         },
         {
-          "name_en": "Hand weapon",
-          "name_cn": "单手武器",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0
-        },
-        {
           "name_en": "Asrai Longbow",
           "name_cn": "阿斯莱长弓",
           "name_de": "Asrai-Langbogen",
           "name_fr": "Arc long Asrai",
           "name_pl": "Długi łuk Asrai",
           "points": 0
+        },
+        {
+          "name_en": "Talismanic Tattoos",
+          "name_cn": "Talismanic Tattoos",
+          "name_de": "Talismanic Tattoos",
+          "name_fr": "Talismanic Tattoos",
+          "name_pl": "Talismanic Tattoos",
+          "points": 10,
+          "armyComposition": "orions-wild-hunt"
         }
       ],
       "mounts": [
@@ -447,6 +458,21 @@
       "name_pl": "Tkacz Uroków",
       "id": "spellweaver",
       "points": 155,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "elementalism",
+            "high-magic",
+            "illusion",
+            "lore-of-the-wilds"
+          ]
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -584,6 +610,24 @@
       "name_pl": "Pieśniarz Zaklęć",
       "id": "spellsinger",
       "points": 80,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "elementalism",
+            "high-magic",
+            "illusion",
+            "lore-of-the-wilds"
+          ]
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -974,6 +1018,15 @@
           "name_pl": "Czarodziej poziomu 4",
           "points": 60,
           "perModel": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 10,
+          "armyComposition": "host-of-talsyn"
         }
       ],
       "mounts": [],
@@ -1496,7 +1549,18 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "host-of-talsyn"
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
@@ -1664,6 +1728,22 @@
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_fr": "0-1 unité par tranche de 1000 points",
             "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Furious Charge, Impetous",
+          "name_cn": "Furious Charge, Impetous",
+          "name_de": "Furious Charge, Impetous",
+          "name_fr": "Furious Charge, Impetous",
+          "name_pl": "Furious Charge, Impetous",
+          "points": 10,
+          "armyComposition": "orions-wild-hunt",
+          "notes": {
+            "name_en": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_cn": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_de": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_fr": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_it": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points"
           }
         }
       ],
@@ -2213,6 +2293,22 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "Furious Charge, Impetous",
+          "name_cn": "Furious Charge, Impetous",
+          "name_de": "Furious Charge, Impetous",
+          "name_fr": "Furious Charge, Impetous",
+          "name_pl": "Furious Charge, Impetous",
+          "points": 10,
+          "armyComposition": "orions-wild-hunt",
+          "notes": {
+            "name_en": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_cn": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_de": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_fr": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points",
+            "name_it": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -2274,7 +2370,18 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "host-of-talsyn"
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
@@ -2443,7 +2550,17 @@
       "command": [],
       "equipment": [],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 10,
+          "armyComposition": "host-of-talsyn"
+        }
+      ],
       "mounts": [],
       "items": [
         {

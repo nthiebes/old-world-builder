@@ -518,6 +518,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
+  const lores =
+    unit?.armyComposition?.[list?.armyComposition || list?.army]?.lores ||
+    unit.lores;
   const specialRules =
     unit?.armyComposition?.[list?.armyComposition || list?.army]
       ?.specialRules || unit.specialRules;
@@ -1508,12 +1511,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {unit.lores && unit.lores.length ? (
+        {lores && lores.length ? (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.lore" />
             </h2>
-            {unit.lores
+            {lores
               .filter((lore, index) => {
                 if (
                   lore === "troll-magic" &&
@@ -1526,7 +1529,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   index !== 0
                 ) {
                   if (unit.activeLore === "troll-magic") {
-                    handleLoresChange(unit.lores[0]);
+                    handleLoresChange(lores[0]);
                   }
                   return false;
                 }
@@ -1540,7 +1543,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     name="lores"
                     value={lore}
                     onChange={() => handleLoresChange(lore)}
-                    checked={(unit.activeLore || unit.lores[0]) === lore}
+                    checked={(unit.activeLore || lores[0]) === lore}
                     className="radio__input"
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">

@@ -690,4 +690,22 @@ export const nameMap = {
     name_cn: "海卫戍军",
     name_fr: "Sea Guard Garrison",
   },
+  "orions-wild-hunt": {
+    name_de: "Orion's Wild Hunt",
+    name_en: "Orion's Wild Hunt",
+    name_cn: "Orion's Wild Hunt",
+    name_fr: "Orion's Wild Hunt",
+  },
+  "host-of-talsyn": {
+    name_de: "Host of Talsyn",
+    name_en: "Host of Talsyn",
+    name_cn: "Host of Talsyn",
+    name_fr: "Host of Talsyn",
+  },
+  "lore-of-the-wilds": {
+    name_de: "Lore of the Wilds",
+    name_en: "Lore of the Wilds",
+    name_cn: "Lore of the Wilds",
+    name_fr: "Lore of the Wilds",
+  },
 };
