@@ -126,9 +126,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       strength: detachment.minDetachmentSize || 5,
       minDetachmentSize: detachment.minDetachmentSize || 5,
       maxDetachmentSize: detachment.maxDetachmentSize,
+      scaleWithUnit: detachment.scaleWithUnit,
       equipment: detachment.equipment,
       armor: detachment.armor,
       options: detachment.options,
+      specialRules: detachment.specialRules,
     });
 
     dispatch(
@@ -514,7 +516,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       callback: () => handleRemove(unit.id),
     },
   ];
-
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
@@ -1182,9 +1183,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           points,
                           minDetachmentSize,
                           maxDetachmentSize,
+                          scaleWithUnit,
                           equipment: detachmentEquipment,
                           armor: detachmentArmor,
                           options: detachmentOptions,
+                          specialRules: detachmentSpecialRules,
                           ...detachment
                         }) => (
                           <div
@@ -1195,9 +1198,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               <NumberInput
                                 noError
                                 id={`strength-${id}`}
-                                min={minDetachmentSize || 5}
+                                min={
+                                  (scaleWithUnit
+                                    ? minDetachmentSize * unit.strength
+                                    : minDetachmentSize) || 5
+                                }
                                 max={
-                                  maxDetachmentSize ||
+                                  (scaleWithUnit
+                                    ? maxDetachmentSize * unit.strength
+                                    : maxDetachmentSize) ||
                                   Math.floor(unit.strength / 2)
                                 }
                                 value={strength}
@@ -1392,6 +1401,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     })}
                                   </>
                                 )}
+                              {detachmentSpecialRules?.name_en && (
+                                <>
+                                  <h3>
+                                    <FormattedMessage id="unit.specialRules" />
+                                  </h3>
+                                  <p className="unit__subline--space-after">
+                                    <RulesLinksText
+                                      textObject={detachmentSpecialRules}
+                                    />
+                                  </p>
+                                </>
+                              )}
                             </div>
                           </div>
                         )

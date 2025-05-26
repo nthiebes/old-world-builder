@@ -227,10 +227,6 @@
           "selected": []
         }
       ],
-      "magic": {
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "maxPoints": 150
-      },
       "specialRules": {
         "name_en": "The Arrow of Kurnous, Evasive, Fire & Flee, Ignores Cover, Move Through Cover, Rallying Cry, Strike First",
         "name_cn": "库诺斯之箭, 闪避, 游击, 无视掩体, 穿行掩体, 集结战吼, 先攻",
@@ -860,6 +856,14 @@
       "name_pl": "Czatownik",
       "id": "waystalker",
       "points": 85,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1003,6 +1007,14 @@
       "name_pl": "Starożytny Drzewiec",
       "id": "treeman-ancient",
       "points": 265,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1076,6 +1088,14 @@
       "name_pl": "Upiór Konaru",
       "id": "branchwraith",
       "points": 80,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1190,18 +1210,172 @@
           "name_fr": "Cloak of Isha, Hawks Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
           "name_pl": "Cloak of Isha, Hawks Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
           "points": 0,
-          "active": true,
-          "equippedDefault": true
+          "active": true
         }
       ],
       "options": [],
       "specialRules": {
-        "name_en": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_cn": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_de": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_es": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_fr": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_pl": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strikes First (Orion), Terror, Spectral Hounds (Hound), Unbreakable"
+        "name_en": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_cn": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_de": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_es": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_fr": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_pl": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable"
+      }
+    },
+    {
+      "name_en": "Araloth",
+      "name_cn": "Araloth",
+      "name_de": "Araloth",
+      "name_fr": "Araloth",
+      "name_pl": "Araloth",
+      "id": "araloth",
+      "points": 170,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Spear of Talsyn",
+          "name_cn": "Spear of Talsyn",
+          "name_de": "Spear of Talsyn",
+          "name_fr": "Spear of Talsyn",
+          "name_pl": "Spear of Talsyn",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shield",
+          "name_cn": "Heavy armour, Shield",
+          "name_de": "Heavy armour, Shield",
+          "name_fr": "Heavy armour, Shield",
+          "name_pl": "Heavy armour, Shield",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_cn": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_de": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_es": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_fr": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn",
+        "name_pl": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn"
+      }
+    },
+    {
+      "name_en": "Warden Of Talsyn",
+      "name_cn": "Warden Of Talsyn",
+      "name_de": "Warden Of Talsyn",
+      "name_fr": "Warden Of Talsyn",
+      "name_pl": "Warden Of Talsyn",
+      "id": "warden-of-talsyn",
+      "points": 125,
+      "armyComposition": {
+        "host-of-talsyn": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_pl": "Chorąży",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Asrai spear",
+          "name_cn": "Hand weapon, Asrai spear",
+          "name_de": "Hand weapon, Asrai spear",
+          "name_fr": "Hand weapon, Asrai spear",
+          "name_pl": "Hand weapon, Asrai spear",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Additional hand weapon",
+          "name_cn": "Hand weapon, Additional hand weapon",
+          "name_de": "Hand weapon, Additional hand weapon",
+          "name_fr": "Hand weapon, Additional hand weapon",
+          "name_pl": "Hand weapon, Additional hand weapon",
+          "points": 3
+        },
+        {
+          "name_en": "Hand weapon, Great weapon",
+          "name_cn": "Hand weapon, Great weapon",
+          "name_de": "Hand weapon, Great weapon",
+          "name_fr": "Hand weapon, Great weapon",
+          "name_pl": "Hand weapon, Great weapon",
+          "points": 4
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Light armour",
+          "name_pl": "Light armour",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Shield",
+          "name_pl": "Shield",
+          "points": 2
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_pl": "Magiczne przedmioty",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "specialRules": {
+        "name_en": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn",
+        "name_cn": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn",
+        "name_de": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn",
+        "name_es": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn",
+        "name_fr": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn",
+        "name_pl": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn"
       }
     }
   ],
@@ -1216,6 +1390,14 @@
       "points": 11,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "core"
+        },
+        "host-of-talsyn": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1345,10 +1527,18 @@
       "name_de": "Waldelfenkundschafter",
       "name_fr": "Éclaireurs du Grand-bois",
       "name_pl": "Zwiadowcy z Głębokiego Lasu",
-      "id": "deepwood-scouts",
+      "id": "deepwood-scouts-core",
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "core"
+        },
+        "host-of-talsyn": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1460,6 +1650,14 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "core"
+        },
+        "host-of-talsyn": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Eternal Warden (champion)",
@@ -1568,6 +1766,14 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "core"
+        },
+        "host-of-talsyn": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Nymph",
@@ -1639,6 +1845,14 @@
       "points": 18,
       "minimum": 5,
       "maximum": 96,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "core"
+        },
+        "orions-wild-hunt": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Glade Knight",
@@ -1814,6 +2028,108 @@
         "name_fr": "Réflexes Elfiques, Cavalerie Rapide, Tir & Fuite, Ordre Dispersé, Tirailleurs, Rapide",
         "name_pl": "Elfickie Refleksy, Szybka Kawaleria, Strzał i Ucieczka, Luźny Szyk, Harcownicy, Szybki Krok"
       }
+    },
+    {
+      "name_en": "Wild Riders",
+      "name_cn": "狂野骑手",
+      "name_de": "Wilde Jagd",
+      "name_fr": "Cavaliers Sauvages",
+      "name_pl": "Dzicy Jeźdzcy",
+      "id": "wild-riders-core",
+      "points": 27,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "orions-wild-hunt": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Wild Hunter",
+          "name_cn": "狂野猎手",
+          "name_de": "Herr der Jagd",
+          "name_fr": "Chasseur Sauvage",
+          "name_pl": "Dziki Łowca",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_pl": "Muzyk",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Hunting spear",
+          "name_cn": "单手武器, 猎矛",
+          "name_de": "Handwaffe, Jagdspeer",
+          "name_fr": "Arme de base, Lance de chasse",
+          "name_pl": "Broń ręczna, Włócznia myśliwska",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "name_pl": "Tarcze",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Counter Charge, Elven Reflexes, Fast Cavalry, Fear, Frenzy, Furious Charge (Wild Riders & Wild Hunter only), Move Through Cover, Open Order, Swiftstride, Talismanic Tattoos",
+        "name_cn": "反制冲锋, 精灵反应, 快速骑兵, 恐惧, 狂暴, 狂怒冲锋(Wild Riders & Wild Hunter only), 穿行掩体, 开放阵型, 快速行进, 护身纹身",
+        "name_de": "Gegenangriff, Elfenreflexe, Wendige Kavallerie, Angst, Raserei, Rasender Angriff (nur Wilde Jäger und Herr der Jagd), Durch Deckung bewegen, Offene Ränge, Schnelle Bewegung, Schützende Tätowierungen",
+        "name_es": "",
+        "name_fr": "Contre-charge, Réflexes Elfiques, Cavalerie Rapide, Peur, Frénésie, Charge Dévastatrice (Cavaliers Sauvages & Chasseur Sauvage uniquement), Mouvement à Couvert, Ordre Dispersé, Rapide, Tatouages Talismaniques",
+        "name_pl": "Przeciwnatarcie, Elfickie Refleksy, Szybka Kawaleria, Strach, Szał, Wściekła Szarża (tylko Dzicy Jeźdzcy i Dziki Łowca), Przechodzenie przez Zasłony, Luźny Szyk, Szybki Krok, Talizmanowe Tatuaże"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Wild Riders per 1000 points",
+        "name_cn": "0-1 unit of Wild Riders per 1000 points",
+        "name_de": "0-1 unit of Wild Riders per 1000 points",
+        "name_fr": "0-1 unit of Wild Riders per 1000 points",
+        "name_it": "0-1 unit of Wild Riders per 1000 points"
+      }
     }
   ],
   "special": [
@@ -1827,6 +2143,17 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "orions-wild-hunt": {
+          "category": "rare"
+        },
+        "host-of-talsyn": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Lord's Bowmen",
@@ -1942,6 +2269,17 @@
       "points": 14,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "orions-wild-hunt": {
+          "category": "rare"
+        },
+        "host-of-talsyn": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Wildwood Warden",
@@ -2031,6 +2369,17 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "orions-wild-hunt": {
+          "category": "special"
+        },
+        "host-of-talsyn": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Bladesinger",
@@ -2188,6 +2537,14 @@
       "points": 27,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "orions-wild-hunt": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Wild Hunter",
@@ -2278,6 +2635,14 @@
       "points": 44,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "orions-wild-hunt": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Wind Rider",
@@ -2389,6 +2754,14 @@
       "points": 51,
       "minimum": 2,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "special"
+        },
+        "host-of-talsyn": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Elder",
@@ -2449,6 +2822,101 @@
         "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (1), Obstiné, Esprit des Forêts, Abattage",
         "name_pl": "Przebicie Zbroi (2), Zwarty Szyk, Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (1), Upartość, Duch Drzew, Drzewne Uderzenie"
       }
+    },
+    {
+      "name_en": "Guardians of Talsyn",
+      "name_cn": "Guardians of Talsyn",
+      "name_de": "Guardians of Talsyn",
+      "name_fr": "Guardians of Talsyn",
+      "name_pl": "Guardians of Talsyn",
+      "id": "guardians-of-talsyn",
+      "points": 18,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "host-of-talsyn": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Watchmaster (Champion)",
+          "name_cn": "Watchmaster (冠军)",
+          "name_de": "Watchmaster (Champion)",
+          "name_fr": "Watchmaster (Champion)",
+          "name_pl": "Watchmaster (Champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_pl": "Sztandarowy",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_pl": "Muzyk",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Asrai Spears",
+          "name_cn": "单手武器, 阿斯莱长矛",
+          "name_de": "Handwaffe, Asrai-Speere",
+          "name_fr": "Arme de base, Lances Asrai",
+          "name_pl": "Broń Ręczna, Włócznia Asrai",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_pl": "Lekka zbroja",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "name_pl": "Tarcze",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Close Order, Drilled, Elven Reflexes, Martial Prowess, Move Through Cover, Parry, Stubborn, Veteran",
+        "name_cn": "紧密阵型, 受训, 精灵反应, 精湛武艺, 穿行掩体, Parry, 坚毅, 老兵",
+        "name_de": "Geschlossene Ränge, Gut ausgebildet, Elfenreflexe, Kriegerisches Können, Durch Deckung bewegen, Parry, Unnachgiebig, Veteranen",
+        "name_es": "Close Order, Drilled, Elven Reflexes, Martial Prowess, Move Through Cover, Parry, Stubborn; Veteran",
+        "name_fr": "Ordre Serré, Bien Entraînés, Réflexes Elfiques, Prouesses Martiales, Mouvement à Couvert, Parry, Obstiné, Vétérans",
+        "name_pl": "Zwarty Szyk, Wymusztrowani, Elfickie Refleksy, Bojowe Męstwo, Przechodzenie przez Zasłony, Parry, Upartość, Weterani"
+      }
     }
   ],
   "rare": [
@@ -2462,6 +2930,14 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "rare"
+        },
+        "orions-wild-hunt": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Sentinel",
@@ -2604,6 +3080,14 @@
       "name_pl": "Drzewiec",
       "id": "treeman",
       "points": 215,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "rare"
+        },
+        "host-of-talsyn": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [],
       "armor": [],
@@ -2638,6 +3122,203 @@
         "name_es": "",
         "name_fr": "Arme Perforante (1), Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage",
         "name_pl": "Przebicie Zbroi (1), Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr! Duch Drzew, Drzewne Uderzenie"
+      }
+    },
+    {
+      "name_en": "Wood Elf Beast Pack",
+      "name_cn": "Wood Elf Beast Pack",
+      "name_de": "Wood Elf Beast Pack",
+      "name_fr": "Wood Elf Beast Pack",
+      "name_pl": "Wood Elf Beast Pack",
+      "id": "wood-elf-beast-pack",
+      "armyComposition": {
+        "orions-wild-hunt": {
+          "category": "special"
+        },
+        "wood-elf-realms": {
+          "category": "rare"
+        }
+      },
+      "regimentalUnit": true,
+      "maxDetachments": 1,
+      "points": 11,
+      "minimum": 1,
+      "maximum": 0,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers",
+        "name_cn": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers",
+        "name_de": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers",
+        "name_es": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers",
+        "name_fr": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers",
+        "name_pl": "Elven Reflexes, Motley Crew, Move Through Cover, Run with the Pack, Skirmishers"
+      },
+      "notes": {
+        "name_en": "Note that each Beast Keeper within a Beast Pack must take the same. In other words, a Beast Pack can only contain Deepwood Hounds, Forest Cats, Sylvan Boars or Bears of Loren, not a mixture of different beasts."
+      }
+    },
+    {
+      "name_en": "Deepwood Hounds",
+      "name_cn": "Deepwood Hounds",
+      "name_de": "Deepwood Hounds",
+      "name_es": "Deepwood Hounds",
+      "name_fr": "Deepwood Hounds",
+      "id": "deepwood-hounds",
+      "points": 8,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 3,
+      "scaleWithUnit": true,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_cn": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_de": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_es": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_fr": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Motley Crew, Run with the Pack, Skirmishers, Warband",
+        "name_cn": "Motley Crew, Run with the Pack, Skirmishers, Warband",
+        "name_de": "Motley Crew, Run with the Pack, Skirmishers, Warband",
+        "name_es": "Motley Crew, Run with the Pack, Skirmishers, Warband",
+        "name_fr": "Motley Crew, Run with the Pack, Skirmishers, Warband"
+      },
+      "notes": {
+        "name_en": "1-3 Deepwood Hounds per Beast Keeper"
+      }
+    },
+    {
+      "name_en": "Forest Cat",
+      "name_cn": "Forest Cat",
+      "name_de": "Forest Cat",
+      "name_es": "Forest Cat",
+      "name_fr": "Forest Cat",
+      "id": "forest-cat",
+      "points": 6,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 3,
+      "scaleWithUnit": true,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_cn": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_de": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_es": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_fr": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers",
+        "name_cn": "Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers",
+        "name_de": "Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers",
+        "name_es": "Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers",
+        "name_fr": "Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers"
+      },
+      "notes": {
+        "name_en": "1-3 Forest Cats per Beast Keeper"
+      }
+    },
+    {
+      "name_en": "Sylvan Boar",
+      "name_cn": "Sylvan Boar",
+      "name_de": "Sylvan Boar",
+      "name_es": "Sylvan Boar",
+      "name_fr": "Sylvan Boar",
+      "id": "sylvan-boar",
+      "points": 11,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 3,
+      "scaleWithUnit": true,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_cn": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_de": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_es": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_fr": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers",
+        "name_cn": "Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers",
+        "name_de": "Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers",
+        "name_es": "Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers",
+        "name_fr": "Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers"
+      },
+      "notes": {
+        "name_en": "1-3 Sylvan Boar per Beast Keeper"
+      }
+    },
+    {
+      "name_en": "Bear of Loren",
+      "name_cn": "Bear of Loren",
+      "name_de": "Bear of Loren",
+      "name_es": "Bear of Loren",
+      "name_fr": "Bear of Loren",
+      "id": "bear-of-loren",
+      "points": 20,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 1,
+      "scaleWithUnit": true,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_cn": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_de": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_es": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "name_fr": "Hand weapons (Claws, fangs, tusks, teeth)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers",
+        "name_cn": "Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers",
+        "name_de": "Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers",
+        "name_es": "Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers",
+        "name_fr": "Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers"
+      },
+      "notes": {
+        "name_en": "1 Bear of Loren per Beast Keeper"
       }
     }
   ],

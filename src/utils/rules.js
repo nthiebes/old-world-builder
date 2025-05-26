@@ -1837,7 +1837,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["wild-riders"],
+          ids: ["wild-riders-core"],
           min: 0,
           max: 1,
           points: 1000,
@@ -1920,7 +1920,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["deepwood-scouts"],
+          ids: ["deepwood-scouts-core"],
           min: 0,
           max: 1,
         },

@@ -194,6 +194,7 @@ export const synonyms = {
   deathmask: "champions",
   "plague deacon": "champions",
   fangleader: "champions",
+  watchmaster: "champions",
   clawleader: "champions",
   "master of arms": "champions",
   "master of arrows": "champions",
