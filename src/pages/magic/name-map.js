@@ -708,4 +708,16 @@ export const nameMap = {
     name_cn: "Lore of the Wilds",
     name_fr: "Lore of the Wilds",
   },
+  kindreds: {
+    name_de: "Alter/Noble Kindreds",
+    name_en: "Alter/Noble Kindreds",
+    name_cn: "Alter/Noble Kindreds",
+    name_fr: "Alter/Noble Kindreds",
+  },
+  kindred: {
+    name_de: "Kindred",
+    name_en: "Kindred",
+    name_cn: "Kindred",
+    name_fr: "Kindred",
+  },
 };
