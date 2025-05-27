@@ -164,6 +164,20 @@ const getUnitsString = ({
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
         ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
       }
+      if (showSpecialRules && unit.detachments) {
+        unit.detachments.forEach((detachment) => {
+          optionsString += `${
+            isMarkdownList ? " - __" : ""
+          }${intl.formatMessage({
+            id: "unit.specialRules",
+          })} (${detachment[`name_${language}`] || detachment.name_en}):${
+            isMarkdownList ? "__ *" : " "
+          }${(
+            detachment.specialRules[`name_${language}`] ||
+            detachment.specialRules.name_en
+          ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
+        });
+      }
       if (showCustomNotes && unit.customNote) {
         optionsString += `${isMarkdownList ? " - __" : ""}${intl.formatMessage({
           id: "unit.customNote",

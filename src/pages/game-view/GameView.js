@@ -301,17 +301,36 @@ export const GameView = () => {
                     }}
                   />
                   {showSpecialRules && unit.specialRules ? (
-                    <p className="game-view__special-rules">
-                      <b>
-                        <i>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </i>
-                      </b>{" "}
-                      <RulesLinksText
-                        textObject={unit.specialRules}
-                        showPageNumbers={showPageNumbers}
-                      />
-                    </p>
+                    <>
+                      <p className="game-view__special-rules">
+                        <b>
+                          <i>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </i>
+                        </b>{" "}
+                        <RulesLinksText
+                          textObject={unit.specialRules}
+                          showPageNumbers={showPageNumbers}
+                        />
+                      </p>
+                      {unit.detachments &&
+                        unit.detachments.map((detachment) => (
+                          <p className="game-view__special-rules">
+                            <b>
+                              <i>
+                                <FormattedMessage id="unit.specialRules" /> (
+                                {detachment[`name_${language}`] ||
+                                  detachment.name_en}
+                                ):
+                              </i>
+                            </b>{" "}
+                            <RulesLinksText
+                              textObject={detachment.specialRules}
+                              showPageNumbers={showPageNumbers}
+                            />
+                          </p>
+                        ))}
+                    </>
                   ) : null}
                   {showStats &&
                     (stats?.length > 0 ? (

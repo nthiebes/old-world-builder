@@ -41,8 +41,6 @@ export const Print = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -155,17 +153,36 @@ export const Print = () => {
                 armyComposition,
               })}
               {showSpecialRules && unit.specialRules ? (
-                <p className="print__special-rules">
-                  <i>
-                    <b>
-                      <FormattedMessage id="unit.specialRules" />:
-                    </b>{" "}
-                    {(
-                      unit.specialRules[`name_${language}`] ||
-                      unit.specialRules.name_en
-                    ).replace(/ *\{[^)]*\}/g, "")}
-                  </i>
-                </p>
+                <>
+                  <p className="print__special-rules">
+                    <i>
+                      <b>
+                        <FormattedMessage id="unit.specialRules" />:
+                      </b>{" "}
+                      {(
+                        unit.specialRules[`name_${language}`] ||
+                        unit.specialRules.name_en
+                      ).replace(/ *\{[^)]*\}/g, "")}
+                    </i>
+                  </p>
+                  {unit.detachments &&
+                    unit.detachments.map((detachment) => (
+                      <p className="game-view__special-rules">
+                        <b>
+                          <i>
+                            <FormattedMessage id="unit.specialRules" /> (
+                            {detachment[`name_${language}`] ||
+                              detachment.name_en}
+                            ):
+                          </i>
+                        </b>{" "}
+                        {(
+                          detachment.specialRules[`name_${language}`] ||
+                          detachment.specialRules.name_en
+                        ).replace(/ *\{[^)]*\}/g, "")}
+                      </p>
+                    ))}
+                </>
               ) : null}
               {showStats &&
                 (stats?.length > 0 ? (
