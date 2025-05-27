@@ -83,8 +83,6 @@ export const GameView = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
