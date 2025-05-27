@@ -11,7 +11,7 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
   const dispatch = useDispatch();
   const { language } = useLanguage();
 
-  if (!textObject.name_en) {
+  if (!textObject?.name_en) {
     return [];
   }
 

@@ -166,22 +166,32 @@ export const Print = () => {
                     </i>
                   </p>
                   {unit.detachments &&
-                    unit.detachments.map((detachment) => (
-                      <p className="game-view__special-rules">
-                        <b>
-                          <i>
-                            <FormattedMessage id="unit.specialRules" /> (
-                            {detachment[`name_${language}`] ||
-                              detachment.name_en}
-                            ):
-                          </i>
-                        </b>{" "}
-                        {(
-                          detachment.specialRules[`name_${language}`] ||
-                          detachment.specialRules.name_en
-                        ).replace(/ *\{[^)]*\}/g, "")}
-                      </p>
-                    ))}
+                    unit.detachments.map((detachment) => {
+                      const specialRulesDetachment =
+                        detachment.armyComposition?.[
+                          list?.armyComposition || list?.army
+                        ]?.specialRules || detachment.specialRules;
+
+                      return (
+                        <p
+                          className="game-view__special-rules"
+                          key={detachment.id}
+                        >
+                          <b>
+                            <i>
+                              <FormattedMessage id="unit.specialRules" /> (
+                              {detachment[`name_${language}`] ||
+                                detachment.name_en}
+                              ):
+                            </i>
+                          </b>{" "}
+                          {(
+                            specialRulesDetachment[`name_${language}`] ||
+                            specialRulesDetachment.name_en
+                          ).replace(/ *\{[^)]*\}/g, "")}
+                        </p>
+                      );
+                    })}
                 </>
               ) : null}
               {showStats &&

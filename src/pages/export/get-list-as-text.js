@@ -166,6 +166,10 @@ const getUnitsString = ({
       }
       if (showSpecialRules && unit.detachments) {
         unit.detachments.forEach((detachment) => {
+          const specialRulesDetachment =
+            detachment.armyComposition?.[armyComposition]?.specialRules ||
+            detachment.specialRules;
+
           optionsString += `${
             isMarkdownList ? " - __" : ""
           }${intl.formatMessage({
@@ -173,8 +177,8 @@ const getUnitsString = ({
           })} (${detachment[`name_${language}`] || detachment.name_en}):${
             isMarkdownList ? "__ *" : " "
           }${(
-            detachment.specialRules[`name_${language}`] ||
-            detachment.specialRules.name_en
+            specialRulesDetachment[`name_${language}`] ||
+            specialRulesDetachment.name_en
           ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
         });
       }
