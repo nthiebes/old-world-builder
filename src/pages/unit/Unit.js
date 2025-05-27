@@ -1554,6 +1554,21 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   }
                   return false;
                 }
+                if (
+                  lore === "lore-of-the-wilds" &&
+                  listArmyComposition !== "host-of-talsyn" &&
+                  unit.items
+                    .find((items) => items.name_en === "Magic Items")
+                    ?.selected.find(
+                      (item) => item.name_en === "Heartwood Pendant*"
+                    ) === undefined &&
+                  index !== 0
+                ) {
+                  if (unit.activeLore === "lore-of-the-wilds") {
+                    handleLoresChange(lores[0]);
+                  }
+                  return false;
+                }
                 return true;
               })
               .map((lore) => (
