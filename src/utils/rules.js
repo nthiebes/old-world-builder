@@ -1815,6 +1815,140 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "orions-wild-hunt": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["glade-lord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shadowdancer", "spellsinger", "waystalker"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["wild-riders-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["sisters-of-the-thorn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["waywatchers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["waystalker"],
+          perUnit: true,
+        },
+        {
+          ids: ["giant-eagle"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "host-of-talsyn": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["glade-lord", "spellweaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["treeman-ancient"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["warden-of-talsyn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shadowdancer"],
+          min: 0,
+          max: 1,
+          requiresType: "rare",
+          requires: ["wardancers"],
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["eternal-guard"],
+          min: 1,
+        },
+        {
+          ids: ["glade-guard"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["deepwood-scouts-core"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["treekin"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["giant-eagle"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "high-elf-realms": {
     characters: {
       maxPercent: 50,

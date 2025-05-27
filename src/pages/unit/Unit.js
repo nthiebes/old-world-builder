@@ -126,9 +126,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       strength: detachment.minDetachmentSize || 5,
       minDetachmentSize: detachment.minDetachmentSize || 5,
       maxDetachmentSize: detachment.maxDetachmentSize,
+      scaleWithUnit: detachment.scaleWithUnit,
       equipment: detachment.equipment,
       armor: detachment.armor,
       options: detachment.options,
+      specialRules: detachment.specialRules,
     });
 
     dispatch(
@@ -514,10 +516,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       callback: () => handleRemove(unit.id),
     },
   ];
-
   const notes =
     unit?.armyComposition?.[list?.armyComposition || list?.army]?.notes ||
     unit.notes;
+  const lores =
+    unit?.armyComposition?.[list?.armyComposition || list?.army]?.lores ||
+    unit.lores;
   const specialRules =
     unit?.armyComposition?.[list?.armyComposition || list?.army]
       ?.specialRules || unit.specialRules;
@@ -1179,9 +1183,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           points,
                           minDetachmentSize,
                           maxDetachmentSize,
+                          scaleWithUnit,
                           equipment: detachmentEquipment,
                           armor: detachmentArmor,
                           options: detachmentOptions,
+                          specialRules: detachmentSpecialRules,
                           ...detachment
                         }) => (
                           <div
@@ -1192,9 +1198,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               <NumberInput
                                 noError
                                 id={`strength-${id}`}
-                                min={minDetachmentSize || 5}
+                                min={
+                                  (scaleWithUnit
+                                    ? minDetachmentSize * unit.strength
+                                    : minDetachmentSize) || 5
+                                }
                                 max={
-                                  maxDetachmentSize ||
+                                  (scaleWithUnit
+                                    ? maxDetachmentSize * unit.strength
+                                    : maxDetachmentSize) ||
                                   Math.floor(unit.strength / 2)
                                 }
                                 value={strength}
@@ -1389,6 +1401,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     })}
                                   </>
                                 )}
+                              {detachmentSpecialRules?.name_en && (
+                                <>
+                                  <h3>
+                                    <FormattedMessage id="unit.specialRules" />
+                                  </h3>
+                                  <p className="unit__subline--space-after">
+                                    <RulesLinksText
+                                      textObject={detachmentSpecialRules}
+                                    />
+                                  </p>
+                                </>
+                              )}
                             </div>
                           </div>
                         )
@@ -1508,12 +1532,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {unit.lores && unit.lores.length ? (
+        {lores && lores.length ? (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.lore" />
             </h2>
-            {unit.lores
+            {lores
               .filter((lore, index) => {
                 if (
                   lore === "troll-magic" &&
@@ -1526,7 +1550,22 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   index !== 0
                 ) {
                   if (unit.activeLore === "troll-magic") {
-                    handleLoresChange(unit.lores[0]);
+                    handleLoresChange(lores[0]);
+                  }
+                  return false;
+                }
+                if (
+                  lore === "lore-of-the-wilds" &&
+                  listArmyComposition !== "host-of-talsyn" &&
+                  unit.items
+                    .find((items) => items.name_en === "Magic Items")
+                    ?.selected.find(
+                      (item) => item.name_en === "Heartwood Pendant*"
+                    ) === undefined &&
+                  index !== 0
+                ) {
+                  if (unit.activeLore === "lore-of-the-wilds") {
+                    handleLoresChange(lores[0]);
                   }
                   return false;
                 }
@@ -1540,7 +1579,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     name="lores"
                     value={lore}
                     onChange={() => handleLoresChange(lore)}
-                    checked={(unit.activeLore || unit.lores[0]) === lore}
+                    checked={(unit.activeLore || lores[0]) === lore}
                     className="radio__input"
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">

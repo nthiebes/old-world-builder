@@ -384,8 +384,12 @@
       "name_cn": "木精灵王国",
       "name_es": "Wood Elf Realms",
       "name_fr": "Royaumes Elfes Sylvains",
-      "items": ["general", "wood-elf-realms", "forest-spites"],
-      "armyComposition": ["wood-elf-realms"],
+      "items": ["general", "wood-elf-realms", "forest-spites", "kindreds"],
+      "armyComposition": [
+        "wood-elf-realms",
+        "orions-wild-hunt",
+        "host-of-talsyn"
+      ],
       "allies": [
         {
           "army": "empire-of-man"
@@ -395,6 +399,14 @@
         },
         {
           "army": "high-elf-realms"
+        },
+        {
+          "army": "wood-elf-realms",
+          "armyComposition": "orions-wild-hunt"
+        },
+        {
+          "army": "wood-elf-realms",
+          "armyComposition": "host-of-talsyn"
         }
       ],
       "mercenaries": {

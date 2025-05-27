@@ -83,8 +83,6 @@ export const GameView = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -303,17 +301,36 @@ export const GameView = () => {
                     }}
                   />
                   {showSpecialRules && unit.specialRules ? (
-                    <p className="game-view__special-rules">
-                      <b>
-                        <i>
-                          <FormattedMessage id="unit.specialRules" />:
-                        </i>
-                      </b>{" "}
-                      <RulesLinksText
-                        textObject={unit.specialRules}
-                        showPageNumbers={showPageNumbers}
-                      />
-                    </p>
+                    <>
+                      <p className="game-view__special-rules">
+                        <b>
+                          <i>
+                            <FormattedMessage id="unit.specialRules" />:
+                          </i>
+                        </b>{" "}
+                        <RulesLinksText
+                          textObject={unit.specialRules}
+                          showPageNumbers={showPageNumbers}
+                        />
+                      </p>
+                      {unit.detachments &&
+                        unit.detachments.map((detachment) => (
+                          <p className="game-view__special-rules">
+                            <b>
+                              <i>
+                                <FormattedMessage id="unit.specialRules" /> (
+                                {detachment[`name_${language}`] ||
+                                  detachment.name_en}
+                                ):
+                              </i>
+                            </b>{" "}
+                            <RulesLinksText
+                              textObject={detachment.specialRules}
+                              showPageNumbers={showPageNumbers}
+                            />
+                          </p>
+                        ))}
+                    </>
                   ) : null}
                   {showStats &&
                     (stats?.length > 0 ? (
