@@ -303,7 +303,9 @@ export const getStats = (unit, armyComposition) => {
       : normalizeRuleName(unit.name_en.replace(" {renegade}", ""));
   const synonym = synonyms[normalizedName];
   const stats = rulesMap[synonym || normalizedName]?.stats || [];
-  const activeMount = unit.mounts.find((mount) => mount.active);
+  const activeMount = unit.mounts
+    ? unit.mounts.find((mount) => mount.active)
+    : null;
   const mountStats = getUnitRuleData(activeMount?.name_en || "")?.stats || [];
   const detachments = unit.detachments || [];
   const detachmentStats = [];
