@@ -170,16 +170,18 @@ const getUnitsString = ({
             detachment.armyComposition?.[armyComposition]?.specialRules ||
             detachment.specialRules;
 
-          optionsString += `${
-            isMarkdownList ? " - __" : ""
-          }${intl.formatMessage({
-            id: "unit.specialRules",
-          })} (${detachment[`name_${language}`] || detachment.name_en}):${
-            isMarkdownList ? "__ *" : " "
-          }${(
-            specialRulesDetachment[`name_${language}`] ||
-            specialRulesDetachment.name_en
-          ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
+          if (specialRulesDetachment) {
+            optionsString += `${
+              isMarkdownList ? " - __" : ""
+            }${intl.formatMessage({
+              id: "unit.specialRules",
+            })} (${detachment[`name_${language}`] || detachment.name_en}):${
+              isMarkdownList ? "__ *" : " "
+            }${(
+              specialRulesDetachment[`name_${language}`] ||
+              specialRulesDetachment.name_en
+            ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
+          }
         });
       }
       if (showCustomNotes && unit.customNote) {

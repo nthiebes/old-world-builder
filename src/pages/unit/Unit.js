@@ -1197,6 +1197,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               list?.armyComposition || list?.army
                             ]?.specialRules || detachmentSpecialRules;
 
+                          if (!specialRulesDetachment) {
+                            return null;
+                          }
+
                           return (
                             <div
                               className="list unit__detachments-wrapper"

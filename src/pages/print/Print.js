@@ -172,6 +172,10 @@ export const Print = () => {
                           list?.armyComposition || list?.army
                         ]?.specialRules || detachment.specialRules;
 
+                      if (!specialRulesDetachment) {
+                        return null;
+                      }
+
                       return (
                         <p
                           className="game-view__special-rules"
