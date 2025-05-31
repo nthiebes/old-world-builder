@@ -1639,6 +1639,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
               if (
                 item.armyComposition &&
+                typeof item.armyComposition === "string" &&
                 !item.armyComposition.includes(listArmyComposition)
               ) {
                 return null;
