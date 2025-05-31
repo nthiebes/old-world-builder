@@ -978,6 +978,17 @@ export const rules = {
           requiresGeneral: true,
           requires: ["doombull", "gorebull"],
         },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["preyton"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     rare: {
@@ -990,6 +1001,127 @@ export const rules = {
           points: 1000,
         },
       ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "minotaur-blood-herd": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["doombull"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["bray-shaman"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["minotaur-herd"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dragon-ogres"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["dragon-ogre-shaggoth"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "wild-herd": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["beastlord", "great-bray-shaman"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["primal-warherd"],
+          min: 1,
+        },
+        {
+          ids: ["centigor-herds"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["centigore-chieftain"],
+        },
+        {
+          ids: ["tuskgor-chariots-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dragon-ogres"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["cockatrice", "preyton"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [],
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },

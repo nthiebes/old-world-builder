@@ -1619,71 +1619,78 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           <hr className="unit__hr unit__hr--space-top" />
         ) : null}
         {unit.items && unit.items.length
-          ? unit.items.map((item, itemIndex) => {
-              const itemsPoints = getUnitMagicPoints({
-                selected: item.selected,
-              });
-              const maxPoints =
-                (item.armyComposition &&
-                  item.armyComposition[listArmyComposition]?.maxPoints) ||
-                item.maxPoints;
+          ? unit.items
+              .filter((item) => {
+                return (
+                  !item.armyComposition ||
+                  item.armyComposition.includes(listArmyComposition)
+                );
+              })
+              .map((item, itemIndex) => {
+                const itemsPoints = getUnitMagicPoints({
+                  selected: item.selected,
+                });
+                const maxPoints =
+                  (item.armyComposition &&
+                    item.armyComposition[listArmyComposition]?.maxPoints) ||
+                  item.maxPoints;
 
-              return (
-                <ListItem
-                  to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
-                  className="editor__list unit__link"
-                  active={location.pathname.includes(`items/${itemIndex}`)}
-                  key={itemIndex}
-                >
-                  <div className="editor__list-inner">
-                    <b className="unit__magic-headline">
-                      {item[`name_${language}`] || item.name_en}
-                    </b>
-                    <i className="checkbox__points">
-                      <span
-                        className={classNames(
-                          itemsPoints > maxPoints &&
-                            maxPoints > 0 &&
-                            "editor__error"
-                        )}
-                      >
-                        {itemsPoints}
-                      </span>
-                      {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
-                      <FormattedMessage id="app.points" />
-                    </i>
-                    {itemsPoints > maxPoints && maxPoints > 0 && (
-                      <Icon
-                        symbol="error"
-                        color="red"
-                        className="unit__magic-icon"
-                      />
+                return (
+                  <ListItem
+                    to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
+                    className="editor__list unit__link"
+                    active={location.pathname.includes(`items/${itemIndex}`)}
+                    key={itemIndex}
+                  >
+                    <div className="editor__list-inner">
+                      <b className="unit__magic-headline">
+                        {item[`name_${language}`] || item.name_en}
+                      </b>
+                      <i className="checkbox__points">
+                        <span
+                          className={classNames(
+                            itemsPoints > maxPoints &&
+                              maxPoints > 0 &&
+                              "editor__error"
+                          )}
+                        >
+                          {itemsPoints}
+                        </span>
+                        {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
+                        <FormattedMessage id="app.points" />
+                      </i>
+                      {itemsPoints > maxPoints && maxPoints > 0 && (
+                        <Icon
+                          symbol="error"
+                          color="red"
+                          className="unit__magic-icon"
+                        />
+                      )}
+                    </div>
+                    {getUnitOptionNotes({
+                      notes: item.notes,
+                      key: `options-${itemIndex}-note`,
+                      className: "unit__option-note unit__option-note--items",
+                      language,
+                    })}
+                    {item.selected && (
+                      <p>
+                        {item.selected
+                          .map((selectedItem) =>
+                            selectedItem.amount > 1
+                              ? `${selectedItem.amount}x ` +
+                                (selectedItem[`name_${language}`] ||
+                                  selectedItem.name_en)
+                              : selectedItem[`name_${language}`] ||
+                                selectedItem.name_en
+                          )
+                          .join(", ")
+                          .replace(/\*/g, "")}
+                      </p>
                     )}
-                  </div>
-                  {getUnitOptionNotes({
-                    notes: item.notes,
-                    key: `options-${itemIndex}-note`,
-                    className: "unit__option-note unit__option-note--items",
-                    language,
-                  })}
-                  {item.selected && (
-                    <p>
-                      {item.selected
-                        .map((selectedItem) =>
-                          selectedItem.amount > 1
-                            ? `${selectedItem.amount}x ` +
-                              (selectedItem[`name_${language}`] ||
-                                selectedItem.name_en)
-                            : selectedItem[`name_${language}`] ||
-                              selectedItem.name_en
-                        )
-                        .join(", ")
-                        .replace(/\*/g, "")}
-                    </p>
-                  )}
-                </ListItem>
-              );
-            })
+                  </ListItem>
+                );
+              })
           : null}
 
         {specialRules && specialRules.name_en ? (

@@ -126,21 +126,45 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 100,
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets Magiques"
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 125,
+          "armyComposition": "wild-herd"
         },
         {
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
           "name_es": "Mutaciones del caos",
-          "name_fr": "Mutations du Chaos"
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         }
       ],
       "lores": [],
@@ -178,12 +202,12 @@
           "name_en": "Battle Standard Bearer",
           "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
           "points": 25,
           "magic": {
             "types": ["banner"],
             "maxPoints": 0
-          },
-          "name_fr": "Porteur de la Grande Bannière"
+          }
         }
       ],
       "equipment": [
@@ -294,21 +318,45 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets Magiques"
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         },
         {
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
           "name_es": "Mutaciones del caos",
-          "name_fr": "Mutations du Chaos"
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         }
       ],
       "lores": [],
@@ -328,6 +376,15 @@
       "name_fr": "Grand Braillechamane",
       "id": "great-bray-shaman",
       "points": 150,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "wild-herd": {
+          "category": "characters",
+          "lores": ["daemonology", "dark-magic", "elementalism", "primal-magic"]
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -404,27 +461,57 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
           "types": [
             "enchanted-item",
             "talisman",
-            "armor",
+            "armor-mages",
             "weapon",
             "arcane-item"
           ],
           "selected": [],
           "maxPoints": 100,
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets Magiques"
+          "name_fr": "Objets Magiques",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor-mages",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 125,
+          "armyComposition": "wild-herd"
         },
         {
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
           "name_es": "Mutaciones del caos",
-          "name_fr": "Mutations du Chaos"
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         }
       ],
       "lores": ["daemonology", "dark-magic", "elementalism"],
@@ -449,6 +536,18 @@
       "name_fr": "Braillechamane",
       "id": "bray-shaman",
       "points": 65,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "minotaur-blood-herd": {
+          "category": "characters"
+        },
+        "wild-herd": {
+          "category": "characters",
+          "lores": ["daemonology", "dark-magic", "elementalism", "primal-magic"]
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -525,27 +624,57 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
           "types": [
             "enchanted-item",
             "talisman",
-            "armor",
+            "armor-mages",
             "weapon",
             "arcane-item"
           ],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "name_fr": "Objets Magiques"
+          "name_fr": "Objets Magiques",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor-mages",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         },
         {
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
           "name_es": "Mutaciones del caos",
-          "name_fr": "Mutations du Chaos"
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         }
       ],
       "lores": ["daemonology", "dark-magic", "elementalism"],
@@ -565,6 +694,21 @@
       "name_fr": "Doombull",
       "id": "doombull",
       "points": 210,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "minotaur-blood-herd": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_cn": "碎甲攻击(1), 嗜血, 血怒, 牛角, 恐惧, 裂敌者, 诸神凝视, 撞击(1), 混沌无分之印, 原始狂怒, 杀戮召唤, 战帮, Impetuous",
+            "name_de": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_es": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_fr": "Arme Perforante (1), Soif de Sang, Rage Sanguinaire, Taurogors, Peur, Déchiqueteur, Regard des Dieux, Touches d'Impact (1), Marque du Chaos Universel, Fureur Primale, Appel du Massacreur, Bande de Guerre, Impetuous"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -646,13 +790,13 @@
           "name_fr": "Objets Magiques"
         },
         {
-          "name_en": "Chaos Mutations",
-          "name_cn": "混沌变异",
-          "name_de": "Chaos Mutations",
-          "types": ["chaos-mutation"],
+          "name_en": "Chaos Mutations / Gifts of Chaos",
+          "name_cn": "混沌变异 / 混沌赠礼",
+          "name_de": "Chaos Mutations / Gifts of Chaos",
+          "name_fr": "Mutations du Chaos / Dons du Chaos",
+          "types": ["chaos-mutation", "gift-of-chaos"],
           "selected": [],
-          "maxPoints": 50,
-          "name_fr": "Mutations du Chaos"
+          "maxPoints": 50
         }
       ],
       "lores": [],
@@ -677,6 +821,21 @@
       "name_fr": "Gorebull",
       "id": "gorebull",
       "points": 130,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "minotaur-blood-herd": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_cn": "碎甲攻击(1), 嗜血, 血怒, 牛角, 恐惧, 裂敌者, 诸神凝视, 撞击(1), 混沌无分之印, 原始狂怒, 杀戮召唤, 战帮, Impetuous",
+            "name_de": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_es": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
+            "name_fr": "Arme Perforante (1), Soif de Sang, Rage Sanguinaire, Taurogors, Peur, Déchiqueteur, Regard des Dieux, Touches d'Impact (1), Marque du Chaos Universel, Fureur Primale, Appel du Massacreur, Bande de Guerre, Impetuous"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -685,6 +844,18 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "armyComposition": "minotaur-blood-herd",
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
         }
       ],
       "equipment": [
@@ -765,6 +936,17 @@
           "selected": [],
           "maxPoints": 50,
           "name_fr": "Mutations du Chaos"
+        },
+        {
+          "name_en": "Gifts of Chaos",
+          "name_cn": "混沌赠礼",
+          "name_de": "Gifts of Chaos",
+          "name_es": "Gifts of Chaos",
+          "name_fr": "Dons du Chaos",
+          "types": ["gift-of-chaos"],
+          "armyComposition": "minotaur-blood-herd",
+          "selected": [],
+          "maxPoints": 50
         }
       ],
       "lores": [],
@@ -877,19 +1059,41 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 50,
-          "name_fr": "Objets Magiques"
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         },
         {
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "name_fr": "Mutations du Chaos"
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 75,
+          "armyComposition": "wild-herd"
         }
       ],
       "lores": [],
@@ -899,6 +1103,88 @@
         "name_de": "",
         "name_es": "",
         "name_fr": "Ivres, Cavalerie Rapide, Regard des Dieux, Marque du Chaos Universel, Mouvement à Couvert, Fureur Primale, Attaques de Piétinement (1), Rapide, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Kralmaw",
+      "name_cn": "Kralmaw",
+      "name_de": "Kralmaw",
+      "name_es": "Kralmaw",
+      "name_fr": "Kralmaw",
+      "id": "kralmaw",
+      "points": 245,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Grisly Totem",
+          "name_cn": "单手武器, Grisly Totem",
+          "name_de": "Hand weapon, Grisly Totem",
+          "name_fr": "Arme de base, Grisly Totem",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": ["dark-magic", "primal-magic"],
+      "specialRules": {
+        "name_en": "Braystaff, Future Sight, Gaze of the Gods, Leering Spirit, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "Braystaff, Future Sight, Gaze of the Gods, Leering Spirit, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_de": "Braystaff, Future Sight, Gaze of the Gods, Leering Spirit, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_es": "Braystaff, Future Sight, Gaze of the Gods, Leering Spirit, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_fr": "Braystaff, Future Sight, Gaze of the Gods, Leering Spirit, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband"
+      }
+    },
+    {
+      "name_en": "Ghorros",
+      "name_cn": "Ghorros",
+      "name_de": "Ghorros",
+      "name_es": "Ghorros",
+      "name_fr": "Ghorros",
+      "id": "ghorros",
+      "points": 155,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Manshmasher, Skull of the Unicorn Lord",
+          "name_cn": "单手武器, Manshmasher, Skull of the Unicorn Lord",
+          "name_de": "Hand weapon, Manshmasher, Skull of the Unicorn Lord",
+          "name_fr": "Arme de base, Manshmasher, Skull of the Unicorn Lord",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband",
+        "name_cn": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband",
+        "name_de": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband",
+        "name_es": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband",
+        "name_fr": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband"
       }
     }
   ],
@@ -1031,6 +1317,21 @@
       "points": 7,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "core"
+        },
+        "minotaur-blood-herd": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Impetuous",
+            "name_cn": "野蛮冲锋, 血怒, 部群, 混沌无分之印, 穿行掩体, 开放阵型, 原始狂怒, 散兵, 战帮, Impetuous",
+            "name_de": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Impetuous",
+            "name_es": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Impetuous",
+            "name_fr": "Charge Bestiale, Rage Sanguinaire, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Bande de Guerre, Impetuous"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "True-horn",
@@ -1111,12 +1412,23 @@
           "name_en": "Ambushers",
           "name_cn": "伏击",
           "name_de": "Ambushers",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true,
           "name_es": "Emboscada",
-          "name_fr": "Embusqueurs"
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": "wild-herd",
+          "notes": {
+            "name_en": "0-1 Gor Herd, Ungor Herd or Centigor Herd per 1.000 points with a Unit Strength of 10 or less"
+          }
         }
       ],
       "mounts": [],
@@ -1222,6 +1534,19 @@
           "perModel": true,
           "name_es": "Emboscada",
           "name_fr": "Embusqueurs"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": "wild-herd",
+          "notes": {
+            "name_en": "0-1 Gor Herd, Ungor Herd or Centigor Herd per 1.000 points with a Unit Strength of 10 or less"
+          }
         }
       ],
       "mounts": [],
@@ -1404,6 +1729,21 @@
       "points": 47,
       "minimum": 2,
       "maximum": 0,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "core"
+        },
+        "minotaur-blood-herd": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_cn": "嗜血, 血怒, 牛角, 紧密阵型, 恐惧, 裂敌者, 撞击(1), 混沌无分之印, 散兵游勇, 原始狂怒, 战帮, Impetuous",
+            "name_de": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_es": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_fr": "Soif de Sang, Rage Sanguinaire, Taurogors, Ordre Serré, Peur, Déchiqueteur, Touches d'Impact (1), Marque du Chaos Universel, Bande Hétéroclite, Fureur Primale, Bande de Guerre, Impetuous"
+          }
+        }
+      },
       "notes": {
         "name_en": "0-1 if General is Doombull or Gorebull",
         "name_cn": "0-1if General is Doombull或利角公牛",
@@ -1623,6 +1963,16 @@
           "maximum": 0,
           "perModel": true,
           "name_fr": "Vétérans"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "wild-herd"
         }
       ],
       "mounts": [],
@@ -1681,6 +2031,21 @@
       "points": 47,
       "minimum": 2,
       "maximum": 0,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "minotaur-blood-herd": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_cn": "嗜血, 血怒, 牛角, 紧密阵型, 恐惧, 裂敌者, 撞击(1), 混沌无分之印, 散兵游勇, 原始狂怒, 战帮, Impetuous",
+            "name_de": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_es": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband, Impetuous",
+            "name_fr": "Soif de Sang, Rage Sanguinaire, Taurogors, Ordre Serré, Peur, Déchiqueteur, Touches d'Impact (1), Marque du Chaos Universel, Bande Hétéroclite, Fureur Primale, Bande de Guerre, Impetuous"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Bloodkine",
@@ -1960,6 +2325,19 @@
           "points": 1,
           "perModel": true,
           "name_fr": "Embusqueurs"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": "wild-herd",
+          "notes": {
+            "name_en": "0-1 Gor Herd, Ungor Herd or Centigor Herd per 1.000 points with a Unit Strength of 10 or less"
+          }
         }
       ],
       "mounts": [],
@@ -2389,6 +2767,90 @@
         "name_de": "",
         "name_es": "",
         "name_fr": "Soif de Sang, Ordre Serré, Frénésie, Grande Cible, Fureur Primale, Régénération (6+), Attaques de Piétinement (D3), Obstiné, Avaler Tout Rond, Terreur, Timmm-berrr!"
+      }
+    },
+    {
+      "name_en": "Herdstone",
+      "name_cn": "Herdstone",
+      "name_de": "Herdstone",
+      "name_es": "Herdstone",
+      "name_fr": "Herdstone",
+      "id": "herdstone",
+      "points": 100,
+      "notes": {
+        "name_en": "0-1 per army",
+        "name_cn": "0-1 per army",
+        "name_de": "0-1 per army",
+        "name_es": "0-1 per army",
+        "name_fr": "0-1 per army"
+      },
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "A Tingle in the Air, Bestial Fury, Dark Sorcery, Fearsome Edifice",
+        "name_cn": "A Tingle in the Air, Bestial Fury, Dark Sorcery, Fearsome Edifice",
+        "name_de": "A Tingle in the Air, Bestial Fury, Dark Sorcery, Fearsome Edifice",
+        "name_es": "A Tingle in the Air, Bestial Fury, Dark Sorcery, Fearsome Edifice",
+        "name_fr": "A Tingle in the Air, Bestial Fury, Dark Sorcery, Fearsome Edifice"
+      }
+    },
+    {
+      "name_en": "Preyton",
+      "name_cn": "Preyton",
+      "name_de": "Preyton",
+      "name_es": "Preyton",
+      "name_fr": "Preyton",
+      "id": "preyton",
+      "points": 160,
+      "command": [],
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs), Twisted antlers",
+          "name_cn": "单手武器(Claws and fangs), Twisted antlers",
+          "name_de": "Hand weapons (Claws and fangs), Twisted antlers",
+          "name_fr": "Armes de base (Claws and fangs), Twisted antlers",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 10
+        },
+        {
+          "name_en": "Frenzy",
+          "name_cn": "Frenzy",
+          "name_de": "Frenzy",
+          "name_es": "Frenzy",
+          "name_fr": "Frenzy",
+          "points": 5
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror",
+        "name_cn": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror",
+        "name_de": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror",
+        "name_es": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror",
+        "name_fr": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror"
       }
     }
   ],
