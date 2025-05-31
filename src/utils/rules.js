@@ -1061,8 +1061,6 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxPercent: 20 },
-    allies: { maxPercent: 25 },
   },
   "wild-herd": {
     characters: {
@@ -1084,11 +1082,12 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["centigor-herds"],
+          ids: ["centigor-herd-core"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresType: "characters",
           requires: ["centigore-chieftain"],
+          perUnit: true,
         },
         {
           ids: ["tuskgor-chariots-"],
@@ -1123,8 +1122,6 @@ export const rules = {
       maxPercent: 33,
       units: [],
     },
-    mercenaries: { maxPercent: 20 },
-    allies: { maxPercent: 25 },
   },
   "dwarfen-mountain-holds": {
     characters: {

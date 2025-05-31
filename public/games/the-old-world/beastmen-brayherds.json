@@ -13,7 +13,10 @@
           "category": "characters"
         },
         "wild-herd": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Beastlord or Great Bray-Shaman per 1000 points"
+          }
         }
       },
       "command": [
@@ -204,7 +207,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
         },
         {
           "name_en": "Battle Standard Bearer",
@@ -390,7 +394,15 @@
         },
         "wild-herd": {
           "category": "characters",
-          "lores": ["daemonology", "dark-magic", "elementalism", "primal-magic"]
+          "lores": [
+            "daemonology",
+            "dark-magic",
+            "elementalism",
+            "primal-magic"
+          ],
+          "notes": {
+            "name_en": "0-1 Beastlord or Great Bray-Shaman per 1000 points"
+          }
         }
       },
       "command": [
@@ -566,7 +578,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
         }
       ],
       "equipment": [
@@ -722,7 +735,8 @@
             "name_en": "0-1 Doombull per 1000 points",
             "name_cn": "0-1 Doombull per 1000 points",
             "name_fr": "0-1 Doombull per 1000 points"
-          }
+          },
+          "lores": ["battle-magic", "dark-magic"]
         }
       },
       "command": [
@@ -788,10 +802,26 @@
           "name_en": "Shield",
           "name_cn": "盾牌",
           "name_de": "Shield",
-          "points": 5,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "Bouclier"
+          "name_fr": "Bouclier",
+          "points": 5
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Hechicero nivel 1",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 35,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Hechicero nivel 2",
+          "name_fr": "Sorcier de Niveau 2",
+          "points": 65,
+          "exclusive": true
         }
       ],
       "mounts": [],
@@ -927,10 +957,26 @@
           "name_en": "Shield",
           "name_cn": "盾牌",
           "name_de": "Shield",
-          "points": 5,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "Bouclier"
+          "name_fr": "Bouclier",
+          "points": 5
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Hechicero nivel 1",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 35,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Hechicero nivel 2",
+          "name_fr": "Sorcier de Niveau 2",
+          "points": 65,
+          "exclusive": true
         }
       ],
       "mounts": [],
@@ -989,7 +1035,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
         }
       ],
       "equipment": [
@@ -1129,6 +1176,14 @@
       "name_fr": "Kralmaw",
       "id": "kralmaw",
       "points": 245,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "wild-herd": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1136,7 +1191,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
         }
       ],
       "equipment": [
@@ -1177,7 +1233,8 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
         }
       ],
       "equipment": [
@@ -1418,6 +1475,9 @@
         "name_de": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
         "name_es": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
         "name_fr": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband"
+      },
+      "notes": {
+        "name_en": "1+ Primal Warherd"
       }
     },
     {
@@ -2042,7 +2102,10 @@
       "maximum": 0,
       "armyComposition": {
         "wild-herd": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 Centigor Herd may be taken as Core choice oer Centigor Chieftain"
+          }
         }
       },
       "command": [
@@ -2177,34 +2240,21 @@
           "category": "core"
         },
         "wild-herd": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 Tuskgor Chariot per 1,000 points"
+          }
         }
       },
       "command": [],
       "equipment": [
         {
-          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
-          "name_cn": "大角兽乘员x 1 -单手武器、重型武器, 重型武器",
-          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "name_en": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_cn": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_de": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_fr": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
           "points": 0,
-          "active": true,
-          "name_fr": "Aurige Bestigor x 1 - Armes de base, Armes lourdes"
-        },
-        {
-          "name_en": "Gor Crew x 1 - Hand weapon and cavalry spear",
-          "name_cn": "角兽乘员x 1 -单手武器、骑兵长矛",
-          "name_de": "Gor Crew x 1 - Hand weapon and cavalry spear",
-          "points": 0,
-          "active": true,
-          "name_fr": "Aurige Gor x 1 - Arme de base et lance de cavalerie"
-        },
-        {
-          "name_en": "Tuskgor x 2 - Hand weapon (tusks)",
-          "name_cn": "獠牙兽x 2 - 单手武器(獠牙)",
-          "name_de": "Tuskgor x 2 - Hand weapon (tusks)",
-          "points": 0,
-          "active": true,
-          "name_fr": "Sanglebouc x 2 - Arme de base (défenses)"
+          "active": true
         }
       ],
       "armor": [],
@@ -2684,7 +2734,10 @@
           "category": "special"
         },
         "wild-herd": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Cockatrice or Preyton per 1,000 points"
+          }
         }
       },
       "command": [],
@@ -2889,7 +2942,10 @@
           }
         },
         "wild-herd": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Dragon Ogres"
+          }
         }
       },
       "command": [
@@ -3000,30 +3056,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
-          "name_cn": "大角兽乘员x 1 -单手武器、重型武器, 重型武器",
-          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "name_en": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_cn": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_de": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_fr": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
           "points": 0,
-          "active": true,
-          "name_fr": "Aurige Bestigor x 1 - Armes de base, Armes lourdes"
-        },
-        {
-          "name_en": "Gor Crew x 1 - Hand weapons, Cavalry spear",
-          "name_cn": "角兽乘员x 1 - 单手武器, 骑兵长矛",
-          "name_de": "Gor Crew x 1 - Hand weapons, Cavalry spear",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "name_fr": "Aurige Gor x 1 - Armes de base, Lance de cavalerie"
-        },
-        {
-          "name_en": "Razorgor x 1 - Hand weapon (tusks)",
-          "name_cn": "剃刀兽x 1 - 单手武器(獠牙)",
-          "name_de": "Razorgor x 1 - Hand weapon (tusks)",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "name_fr": "Razorgor x 1 - Arme de base (défenses)"
+          "active": true
         }
       ],
       "armor": [],
@@ -3170,11 +3208,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Mark of Chaos Undivided, Ogre Charge",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 混沌无分之印, 食人魔冲锋",
+        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Marque du Chaos Universel, Charge Ogre"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre"
       }
     },
     {
@@ -3392,10 +3430,16 @@
       "command": [],
       "armyComposition": {
         "beastmen-brayherds": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Preyton per 1,000 points"
+          }
         },
         "wild-herd": {
-          "category": "special"
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Cockatrice or Preyton per 1,000 points"
+          }
         }
       },
       "equipment": [
@@ -3539,28 +3583,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
-          "name_cn": "大角兽乘员x 1 -单手武器、重型武器, 重型武器",
-          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "name_en": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_cn": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_de": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
+          "name_fr": "Hand weapons, Great weapons (Bestigor Crew), Cavalry spears (Gor Crew)",
           "points": 0,
-          "active": true,
-          "name_fr": "Aurige Bestigor x 1 - Armes de base, Armes lourdes"
-        },
-        {
-          "name_en": "Gor Crew x 1 - Hand weapon and cavalry spear",
-          "name_cn": "角兽乘员x 1 -单手武器、骑兵长矛",
-          "name_de": "Gor Crew x 1 - Hand weapon and cavalry spear",
-          "points": 0,
-          "active": true,
-          "name_fr": "Aurige Gor x 1 - Arme de base et lance de cavalerie"
-        },
-        {
-          "name_en": "Tuskgor x 2 - Hand weapon (tusks)",
-          "name_cn": "獠牙兽x 2 - 单手武器(獠牙)",
-          "name_de": "Tuskgor x 2 - Hand weapon (tusks)",
-          "points": 0,
-          "active": true,
-          "name_fr": "Sanglebouc x 2 - Arme de base (défenses)"
+          "active": true
         }
       ],
       "armor": [],
@@ -3692,13 +3720,13 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws and slythey tongue",
-          "name_cn": "邪恶利爪和疯语长舌 ",
-          "name_de": "Wicked claws and slythey tongue",
+          "name_en": "Wicked claws, Slythey tongue",
+          "name_cn": "Wicked claws, Slythey tongue",
+          "name_de": "Wicked claws, Sythey tongue",
+          "name_es": "Wicked claws, slythey tongue",
+          "name_fr": "Griffes cruelles, langue protractile",
           "points": 0,
-          "active": true,
-          "name_es": "Wicked claws and slythey tongue",
-          "name_fr": "Griffes cruelles et langue protractile"
+          "active": true
         }
       ],
       "armor": [
@@ -3993,44 +4021,36 @@
       ],
       "options": [
         {
-          "name_en": "*Spawn of Khorne (only select one)",
-          "name_cn": "*恐虐混沌卵(仅限1)",
-          "name_de": "*Spawn of Khorne (only select one)",
+          "name_en": "Spawn of Khorne",
+          "name_cn": "恐虐混沌卵",
+          "name_de": "Spawn of Khorne",
+          "name_fr": "Rejeton de Khorne",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Rejeton de Khorne (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Spawn of Nurgle (only select one)",
-          "name_cn": "*纳垢混沌卵(仅限1)",
-          "name_de": "*Spawn of Nurgle (only select one)",
+          "name_en": "Spawn of Nurgle",
+          "name_cn": "纳垢混沌卵",
+          "name_de": "Spawn of Nurgle",
+          "name_fr": "Rejeton de Nurgle",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Rejeton de Nurgle (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Spawn of Slaanesh (only select one)",
-          "name_cn": "*色孽混沌卵(仅限1)",
-          "name_de": "*Spawn of Slaanesh (only select one)",
+          "name_en": "Spawn of Slaanesh",
+          "name_cn": "色孽混沌卵",
+          "name_de": "Spawn of Slaanesh",
+          "name_fr": "Rejeton de Slaanesh",
           "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Rejeton de Slaanesh (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Spawn of Tzeentch (only select one)",
-          "name_cn": "*奸奇混沌卵(仅限1)",
-          "name_de": "*Spawn of Tzeentch (only select one)",
+          "name_en": "Spawn of Tzeentch",
+          "name_cn": "奸奇混沌卵",
+          "name_de": "Spawn of Tzeentch",
+          "name_fr": "Rejeton de Tzeentch",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Rejeton de Tzeentch (sélectionnez-en un seul)"
+          "exclusive": true
         }
       ],
       "mounts": [],

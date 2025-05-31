@@ -2521,7 +2521,11 @@
       "name_es": "Harbinger of Doom",
       "id": "harbinger-of-doom",
       "points": 65,
-      "armyComposition": "empire-of-man",
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
