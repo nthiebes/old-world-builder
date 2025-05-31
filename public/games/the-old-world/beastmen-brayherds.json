@@ -1190,6 +1190,261 @@
   ],
   "core": [
     {
+      "name_en": "Primal Warherd",
+      "name_cn": "Primal Warherd",
+      "name_de": "Primal Warherd",
+      "name_es": "Primal Warherd",
+      "name_fr": "Primal Warherd",
+      "id": "primal-warherd",
+      "points": 0,
+      "regimentalUnit": true,
+      "minDetachments": 2,
+      "maxDetachments": 2,
+      "armyComposition": {
+        "wild-herd": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Foe-render (champion)",
+          "name_cn": "Foe-render (champion)",
+          "name_de": "Foe-render (champion)",
+          "name_es": "Foe-render (champion)",
+          "name_fr": "Foe-render (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "options": [
+            {
+              "name_en": "Great weapon",
+              "name_cn": "重型武器",
+              "name_de": "Great weapon",
+              "name_fr": "Arme lourde",
+              "points": 0
+            }
+          ]
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapons",
+          "points": 0,
+          "perModel": true,
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Armes de base additionnelles"
+        },
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Shields",
+          "points": 0,
+          "perModel": true,
+          "name_es": "Escudos",
+          "name_fr": "Boucliers"
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "detachments": [
+        {
+          "id": "gors.gxjrykvifu",
+          "name_de": "Gors",
+          "name_en": "Gors",
+          "points": 7,
+          "strength": 10,
+          "minDetachmentSize": 10,
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "name_cn": "单手武器",
+              "name_de": "Hand weapons",
+              "name_es": "Escudos",
+              "name_fr": "Armes de base",
+              "points": 0,
+              "active": true,
+              "id": 0
+            },
+            {
+              "name_en": "Hand weapons, Shields",
+              "name_cn": "单手武器, 盾牌",
+              "name_de": "Hand weapons, Shields",
+              "name_es": "Escudos, Escudos",
+              "name_fr": "Armes de base, Boucliers",
+              "points": 0,
+              "id": 1,
+              "active": false
+            },
+            {
+              "name_en": "Additional hand weapons",
+              "name_cn": "额外单手武器",
+              "name_de": "Additional hand weapons",
+              "name_es": "Arma de mano adicional",
+              "name_fr": "Armes de base additionnelles",
+              "points": 0,
+              "id": 2,
+              "active": false
+            }
+          ],
+          "armor": [],
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_de": "Ambushers",
+              "name_es": "Emboscada",
+              "name_fr": "Embusqueurs",
+              "points": 1,
+              "perModel": true,
+              "notes": {
+                "name_en": "If selected, it must also be selected for Ungors"
+              }
+            }
+          ],
+          "specialRules": {}
+        },
+        {
+          "id": "ungors.xtxqwnwp",
+          "name_de": "Ungors",
+          "name_en": "Ungors",
+          "points": 6,
+          "strength": 10,
+          "minDetachmentSize": 10,
+          "equipment": [
+            {
+              "name_en": "Hand weapons, Shields",
+              "name_cn": "单手武器, 盾牌",
+              "name_de": "Hand weapons, Shields",
+              "name_es": "Hand weapons, Shields",
+              "name_fr": "Armes de base, Boucliers",
+              "active": true,
+              "points": 0,
+              "id": 0
+            },
+            {
+              "name_en": "Thrusting spears, Shields",
+              "name_cn": "刺矛, 盾牌",
+              "name_de": "Thrusting spears, Shields",
+              "name_es": "Thrusting spears, Shields",
+              "name_fr": "Lances d'infanterie, Boucliers",
+              "points": 0,
+              "id": 1
+            },
+            {
+              "name_en": "Throwing spears, Shields",
+              "name_cn": "投矛, 盾牌",
+              "name_de": "Throwing spears, Shields",
+              "name_es": "Throwing spears, Shields",
+              "name_fr": "Javelots, Boucliers",
+              "points": 0,
+              "id": 2
+            }
+          ],
+          "armor": [],
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_de": "Ambushers",
+              "name_es": "Emboscada",
+              "name_fr": "Embusqueurs",
+              "points": 1,
+              "perModel": true,
+              "notes": {
+                "name_en": "If selected, it must also be selected for Gors"
+              }
+            }
+          ],
+          "specialRules": {}
+        }
+      ],
+      "specialRules": {
+        "name_en": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
+        "name_cn": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
+        "name_de": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
+        "name_es": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband",
+        "name_fr": "Bestial Charge (Gors only), Blood Rage, Close Order, Horde, Impetuous, Mark of Chaos Undivided, Mixed Unit, Motley Crew, Move through Cover, Primal Fury, Warband"
+      }
+    },
+    {
+      "name_en": "Gors",
+      "name_cn": "Gors",
+      "name_de": "Gors",
+      "name_es": "Gors",
+      "name_fr": "Gors",
+      "id": "gors",
+      "points": 6,
+      "detachment": true,
+      "minDetachmentSize": 10,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "notes": {},
+      "specialRules": {}
+    },
+    {
+      "name_en": "Ungors",
+      "name_cn": "Ungors",
+      "name_de": "Ungors",
+      "name_es": "Ungors",
+      "name_fr": "Ungors",
+      "id": "ungors",
+      "points": 6,
+      "detachment": true,
+      "minDetachmentSize": 10,
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "notes": {},
+      "specialRules": {}
+    },
+    {
       "name_en": "Bestigor Herd",
       "name_cn": "大角兽群",
       "name_de": "Bestigor Herd",
@@ -1384,7 +1639,7 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true,
-          "name_es": "Escudos",
+          "name_es": "Hand weapons",
           "name_fr": "Armes de base"
         },
         {
