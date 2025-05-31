@@ -355,8 +355,17 @@
       "name_cn": "野兽人嘶叫兽群",
       "name_es": "Beastmen Brayherds",
       "name_fr": "Braillehardes Hommes-bêtes",
-      "items": ["general", "beastmen-brayherds", "chaos-mutations"],
-      "armyComposition": ["beastmen-brayherds"],
+      "items": [
+        "general",
+        "beastmen-brayherds",
+        "chaos-mutations",
+        "gifts-of-chaos"
+      ],
+      "armyComposition": [
+        "beastmen-brayherds",
+        "minotaur-blood-herd",
+        "wild-herd"
+      ],
       "allies": [
         {
           "army": "orc-and-goblin-tribes"
@@ -366,6 +375,14 @@
         },
         {
           "army": "tomb-kings-of-khemri"
+        },
+        {
+          "army": "beastmen-brayherds",
+          "armyComposition": "minotaur-blood-herd"
+        },
+        {
+          "army": "beastmen-brayherds",
+          "armyComposition": "wild-herd"
         }
       ],
       "mercenaries": {

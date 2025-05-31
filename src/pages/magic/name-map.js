@@ -720,4 +720,22 @@ export const nameMap = {
     name_cn: "Kindred",
     name_fr: "Kindred",
   },
+  "minotaur-blood-herd": {
+    name_de: "Minotaur Blood Herd",
+    name_en: "Minotaur Blood Herd",
+    name_cn: "Minotaur Blood Herd",
+    name_fr: "Minotaur Blood Herd",
+  },
+  "wild-herd": {
+    name_de: "Wild Herd",
+    name_en: "Wild Herd",
+    name_cn: "Wild Herd",
+    name_fr: "Wild Herd",
+  },
+  "primal-magic": {
+    name_de: "Primal Magic",
+    name_en: "Primal Magic",
+    name_cn: "Primal Magic",
+    name_fr: "Primal Magic",
+  },
 };
