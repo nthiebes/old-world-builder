@@ -196,6 +196,7 @@ export const synonyms = {
   fangleader: "champions",
   watchmaster: "champions",
   "foe-render": "champions",
+  "splice-horn": "champions",
   clawleader: "champions",
   "master of arms": "champions",
   "master of arrows": "champions",

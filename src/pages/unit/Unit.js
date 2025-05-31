@@ -578,6 +578,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             navigationIcon="more"
           />
         )}
+        {notes && notes.name_en ? (
+          <p className="unit__notes">
+            <Icon symbol="error" className="unit__notes-icon" />
+            {notes[`name_${language}`] || notes.name_en}
+          </p>
+        ) : null}
         {!unit.minimum &&
           (!unit.lores || (unit.lores && !unit.lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
@@ -591,12 +597,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.noOptions" />
             </i>
           )}
-        {notes && notes.name_en ? (
-          <p className="unit__notes">
-            <Icon symbol="error" className="unit__notes-icon" />
-            {notes[`name_${language}`] || notes.name_en}
-          </p>
-        ) : null}
         {unit.minimum ? (
           <>
             <label htmlFor="strength" className="unit__strength">

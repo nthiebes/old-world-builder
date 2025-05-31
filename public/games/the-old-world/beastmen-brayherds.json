@@ -8,6 +8,14 @@
       "name_fr": "Seigneur des Bêtes",
       "id": "beastlord",
       "points": 115,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "characters"
+        },
+        "wild-herd": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -541,7 +549,10 @@
           "category": "characters"
         },
         "minotaur-blood-herd": {
-          "category": "characters"
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Bray-Shaman per 1000 points"
+          }
         },
         "wild-herd": {
           "category": "characters",
@@ -706,6 +717,11 @@
             "name_de": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
             "name_es": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
             "name_fr": "Arme Perforante (1), Soif de Sang, Rage Sanguinaire, Taurogors, Peur, Déchiqueteur, Regard des Dieux, Touches d'Impact (1), Marque du Chaos Universel, Fureur Primale, Appel du Massacreur, Bande de Guerre, Impetuous"
+          },
+          "notes": {
+            "name_en": "0-1 Doombull per 1000 points",
+            "name_cn": "0-1 Doombull per 1000 points",
+            "name_fr": "0-1 Doombull per 1000 points"
           }
         }
       },
@@ -1454,6 +1470,11 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "core"
+        }
+      },
       "notes": {
         "name_en": "0-1 if General is Beastlord or Wargor",
         "name_cn": "0-1if General is Beastlord或战角兽",
@@ -1574,7 +1595,12 @@
       "maximum": 0,
       "armyComposition": {
         "beastmen-brayherds": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "1+ Gor Herd",
+            "name_cn": "1+角兽群",
+            "name_fr": "1+ Harde de Gor"
+          }
         },
         "minotaur-blood-herd": {
           "category": "core",
@@ -1585,6 +1611,9 @@
             "name_es": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Impetuous",
             "name_fr": "Charge Bestiale, Rage Sanguinaire, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Bande de Guerre, Impetuous"
           }
+        },
+        "wild-herd": {
+          "category": "core"
         }
       },
       "command": [
@@ -1695,11 +1724,6 @@
         "name_de": "",
         "name_es": "",
         "name_fr": "Charge Bestiale, Rage Sanguinaire, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Bande de Guerre"
-      },
-      "notes": {
-        "name_en": "1+ Gor Herd",
-        "name_cn": "1+角兽群",
-        "name_fr": "1+ Harde de Gor"
       }
     },
     {
@@ -1882,6 +1906,75 @@
       }
     },
     {
+      "name_en": "Primal Warhounds",
+      "name_cn": "Primal Warhounds",
+      "name_de": "Primal Warhounds",
+      "name_es": "Primal Warhounds",
+      "name_fr": "Primal Warhounds",
+      "id": "primal-warhounds",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [],
+      "armyComposition": {
+        "wild-herd": {
+          "category": "core"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs)",
+          "name_cn": "单手武器(尖牙利爪)",
+          "name_de": "Hand weapons (Claws and fangs)",
+          "name_es": "Hand weapons (Claws and fangs)",
+          "name_fr": "Armes de base (Griffes et crocs)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Armoured Hide (1)",
+          "name_cn": "坚硬皮肤(1)",
+          "name_de": "Armoured Hide (1)",
+          "name_fr": "Peau Blindée (1)",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "name_cn": "淬毒攻击",
+          "name_de": "Poisoned Attacks",
+          "name_fr": "Attaques Empoisonnées",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Ungor Ravagers",
+          "name_cn": "Ungor Ravagers",
+          "name_de": "Ungor Ravagers",
+          "name_fr": "Ungor Ravagers",
+          "points": 7,
+          "stackable": true,
+          "notes": {
+            "name_en": "May include one Ungor Ravager for every three Primal Warhounds"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horder, Motley Crew, Move Through Cover, Swiftstride, Warband",
+        "name_cn": "Close Order, Horder, Motley Crew, Move Through Cover, Swiftstride, Warband",
+        "name_de": "Close Order, Horder, Motley Crew, Move Through Cover, Swiftstride, Warband",
+        "name_es": "Close Order, Horder, Motley Crew, Move Through Cover, Swiftstride, Warband",
+        "name_fr": "Close Order, Horder, Motley Crew, Move Through Cover, Swiftstride, Warband"
+      }
+    },
+    {
       "name_en": "Razorgor Herd",
       "name_cn": "剃刀兽群",
       "name_de": "Razorgor Herd",
@@ -1892,6 +1985,17 @@
       "minimum": 1,
       "maximum": 0,
       "command": [],
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "core"
+        },
+        "minotaur-blood-herd": {
+          "category": "special"
+        },
+        "wild-herd": {
+          "category": "core"
+        }
+      },
       "equipment": [
         {
           "name_en": "Hand weapons (tusks)",
@@ -1927,6 +2031,140 @@
       }
     },
     {
+      "name_en": "Centigor Herd",
+      "name_cn": "人马兽群",
+      "name_de": "Centigor Herd",
+      "name_es": "Centigor Herd",
+      "name_fr": "Harde de Centigor",
+      "id": "centigor-herd-core",
+      "points": 19,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "wild-herd": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Gorehoof",
+          "name_cn": "血蹄",
+          "name_de": "Gorehoof",
+          "points": 8,
+          "magic": {
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
+          },
+          "name_fr": "Éventreur"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "points": 6,
+          "name_fr": "Musicien"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
+          "name_de": "Hand weapons, Shields",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Armes de base, Boucliers"
+        },
+        {
+          "name_en": "Hand weapons, Cavalry spears, Shields",
+          "name_cn": "单手武器, 骑兵长矛, 盾牌",
+          "name_de": "Hand weapons, Cavalry spears, Shields",
+          "points": 1,
+          "perModel": true,
+          "name_fr": "Armes de base, Lances de cavalerie, Boucliers"
+        },
+        {
+          "name_en": "Hand weapons, Throwing spears, Shields",
+          "name_cn": "单手武器, 投矛, 盾牌",
+          "name_de": "Hand weapons, Throwing spears, Shields",
+          "points": 1,
+          "perModel": true,
+          "name_fr": "Armes de base, Javelots, Boucliers"
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Hand weapons, Great weapons",
+          "points": 1,
+          "perModel": true,
+          "name_fr": "Armes de base, Armes lourdes"
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Throwing axes",
+          "name_cn": "飞斧",
+          "name_de": "Throwing axes",
+          "name_fr": "Haches de lancer",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Javelins",
+          "name_cn": "标枪",
+          "name_de": "Javelins",
+          "name_fr": "Javelines",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "name_fr": "Embusqueurs"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 0,
+          "perModel": true,
+          "armyComposition": "wild-herd",
+          "notes": {
+            "name_en": "0-1 Gor Herd, Ungor Herd or Centigor Herd per 1.000 points with a Unit Strength of 10 or less"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Drunken, Fast Cavalry, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Stomp Attacks (1), Swiftstride, Warband",
+        "name_cn": "醉酒, 快速骑兵, 部群, 混沌无分之印, 穿行掩体, 开放阵型, 原始狂怒, 散兵, 践踏攻击(1), 快速行进, 战帮",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ivres, Cavalerie Rapide, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Attaques de Piétinement (1), Rapide, Bande de Guerre"
+      }
+    },
+    {
       "name_en": "Tuskgor Chariot",
       "name_cn": "獠牙兽战车",
       "name_de": "Tuskgor Chariot",
@@ -1934,6 +2172,14 @@
       "name_fr": "Char à Sangleboucs",
       "id": "tuskgor-chariots-",
       "points": 85,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "core"
+        },
+        "wild-herd": {
+          "category": "core"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1986,7 +2232,14 @@
       "maximum": 0,
       "armyComposition": {
         "beastmen-brayherds": {
-          "category": "core"
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 if General is Doombull or Gorebull",
+            "name_cn": "0-1if General is Doombull或利角公牛",
+            "name_de": "0-1 if General is Doombull or Gorebull",
+            "name_es": "0-1 if General is Doombull or Gorebull",
+            "name_fr": "0-1 si votre général est un Doombull ou un Gorebull"
+          }
         },
         "minotaur-blood-herd": {
           "category": "core",
@@ -1999,24 +2252,17 @@
           }
         }
       },
-      "notes": {
-        "name_en": "0-1 if General is Doombull or Gorebull",
-        "name_cn": "0-1if General is Doombull或利角公牛",
-        "name_de": "0-1 if General is Doombull or Gorebull",
-        "name_es": "0-1 if General is Doombull or Gorebull",
-        "name_fr": "0-1 si votre général est un Doombull ou un Gorebull"
-      },
       "command": [
         {
-          "name_en": "Bloodkine",
-          "name_cn": "血牛",
-          "name_de": "Bloodkine",
+          "name_en": "Bloodkine (champion)",
+          "name_cn": "血牛 (champion)",
+          "name_de": "Bloodkine (champion)",
+          "name_fr": "Sangor (champion)",
           "points": 6,
           "magic": {
             "types": ["enchanted-item", "talisman", "armor", "weapon"],
             "maxPoints": 25
-          },
-          "name_fr": "Sangor"
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -2134,6 +2380,14 @@
       "points": 13,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "wild-herd": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Gouge-horn",
@@ -2425,6 +2679,14 @@
       "name_fr": "Cockatrice",
       "id": "cockatrice",
       "points": 170,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "wild-herd": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2616,6 +2878,20 @@
       "points": 56,
       "minimum": 1,
       "maximum": 9,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "minotaur-blood-herd": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Dragon Ogres per 1,000 points"
+          }
+        },
+        "wild-herd": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Shartak",
@@ -2713,6 +2989,14 @@
       "name_fr": "Char à Razorgors",
       "id": "razergor-chariot",
       "points": 120,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "wild-herd": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2765,6 +3049,14 @@
       "points": 33,
       "minimum": 3,
       "maximum": 15,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "minotaur-blood-herd": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Champion",
@@ -2828,44 +3120,50 @@
       ],
       "options": [
         {
-          "name_en": "*Replace Undivided with Khorne (only select one)",
-          "name_cn": "*混沌无分之印替换为恐虐之印(仅限1)",
-          "name_de": "*Replace Undivided with Khorne (only select one)",
-          "points": 3,
+          "name_en": "Mark of Chaos Undivided",
+          "name_cn": "Mark of Chaos Undivided",
+          "name_de": "Mark of Chaos Undivided",
+          "name_fr": "Mark of Chaos Undivided",
+          "points": 0,
+          "active": true,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Remplacer Universel par Khorne (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Replace Undivided with Nurgle (only select one)",
-          "name_cn": "*混沌无分之印替换为纳垢之印(仅限1)",
-          "name_de": "*Replace Undivided with Nurgle (only select one)",
+          "name_en": "Mark of Khorne",
+          "name_cn": "Mark of Khorne",
+          "name_de": "Mark of Khorne",
+          "name_fr": "Mark of Khorne",
           "points": 3,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Remplacer Universel par Nurgle (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Replace Undivided with Slaanesh (only select one)",
-          "name_cn": "*混沌无分之印替换为色孽之印(仅限1)",
-          "name_de": "*Replace Undivided with Slaanesh (only select one)",
+          "name_en": "Mark of Nurgle",
+          "name_cn": "Mark of Nurgle",
+          "name_de": "Mark of Nurgle",
+          "name_fr": "Mark of Nurgle",
           "points": 3,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Remplacer Universel par Slaanesh (sélectionnez-en un seul)"
+          "exclusive": true
         },
         {
-          "name_en": "*Replace Undivided with Tzeentch (only select one)",
-          "name_cn": "*混沌无分之印替换为奸奇之印(仅限1)",
-          "name_de": "*Replace Undivided with Tzeentch (only select one)",
+          "name_en": "Mark of Slaanesh",
+          "name_cn": "Mark of Slaanesh",
+          "name_de": "Mark of Slaanesh",
+          "name_fr": "Mark of Slaanesh",
           "points": 3,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "name_fr": "*Remplacer Universel par Tzeentch (sélectionnez-en un seul)"
+          "exclusive": true
+        },
+        {
+          "name_en": "Mark of Tzeentch",
+          "name_cn": "Mark of Tzeentch",
+          "name_de": "Mark of Tzeentch",
+          "name_fr": "Mark of Tzeentch",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true
         }
       ],
       "mounts": [],
@@ -2887,6 +3185,11 @@
       "name_fr": "Jabberslythe",
       "id": "jabberslythe",
       "points": 195,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        }
+      },
       "command": [],
       "notes": {
         "name_en": "0-1 if General is Great Bray-Shaman or Bray-Shaman",
@@ -2934,7 +3237,12 @@
       "name_de": "Cygor",
       "name_es": "Cygor",
       "name_fr": "Cygor",
-      "id": "cygor",
+      "id": "cygor-special",
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        }
+      },
       "points": 215,
       "command": [],
       "notes": {
@@ -2984,12 +3292,20 @@
       "name_fr": "Ghorgon",
       "id": "ghorgon",
       "points": 245,
-      "notes": {
-        "name_en": "0-1 if General is Doombull or Gorebull",
-        "name_cn": "0-1if General is Doombull或利角公牛",
-        "name_de": "0-1 if General is Doombull or Gorebull",
-        "name_es": "0-1 if General is Doombull or Gorebull",
-        "name_fr": "0-1 si votre général est un Doombull ou un Gorebull"
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 if General is Doombull or Gorebull",
+            "name_cn": "0-1if General is Doombull或利角公牛",
+            "name_de": "0-1 if General is Doombull or Gorebull",
+            "name_es": "0-1 if General is Doombull or Gorebull",
+            "name_fr": "0-1 si votre général est un Doombull ou un Gorebull"
+          }
+        },
+        "minotaur-blood-herd": {
+          "category": "special"
+        }
       },
       "command": [],
       "equipment": [
@@ -3032,6 +3348,17 @@
       "name_fr": "Herdstone",
       "id": "herdstone",
       "points": 100,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "special"
+        },
+        "minotaur-blood-herd": {
+          "category": "core"
+        },
+        "wild-herd": {
+          "category": "special"
+        }
+      },
       "notes": {
         "name_en": "0-1 per army",
         "name_cn": "0-1 per army",
@@ -3065,6 +3392,9 @@
       "command": [],
       "armyComposition": {
         "beastmen-brayherds": {
+          "category": "special"
+        },
+        "wild-herd": {
           "category": "special"
         }
       },
@@ -3107,6 +3437,144 @@
         "name_es": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror",
         "name_fr": "Close Order, Crown of Antlers, Endless Malice, Fly (10), Impact Hits (D3), Large Target, Terror"
       }
+    },
+    {
+      "name_en": "Warped Gors",
+      "name_cn": "Warped Gors",
+      "name_de": "Warped Gors",
+      "name_es": "Warped Gors",
+      "name_fr": "Warped Gors",
+      "id": "warped-gors",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "wild-herd": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Splice-horn (champion)",
+          "name_cn": "Splice-horn (champion)",
+          "name_de": "Splice-horn (champion)",
+          "name_es": "Splice-horn (champion)",
+          "name_fr": "Splice-horn (champion)",
+          "points": 8
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 6
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
+          "name_de": "Hand weapons, Shields",
+          "name_es": "Hand weapons, Escudos",
+          "name_fr": "Armes de base, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapons",
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Armes de base additionnelles",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Blessing of Chaos, Blood Rage, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Random Attacks, Stubborn, Warband",
+        "name_cn": "Armoured Hide (1), Blessing of Chaos, Blood Rage, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Random Attacks, Stubborn, Warband",
+        "name_de": "Armoured Hide (1), Blessing of Chaos, Blood Rage, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Random Attacks, Stubborn, Warband",
+        "name_es": "Armoured Hide (1), Blessing of Chaos, Blood Rage, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Random Attacks, Stubborn, Warband",
+        "name_fr": "Armoured Hide (1), Blessing of Chaos, Blood Rage, Mark of Chaos Undivided, Move through Cover, Open Order, Primal Fury, Random Attacks, Stubborn, Warband"
+      }
+    },
+    {
+      "name_en": "Tuskgor Chariot",
+      "name_cn": "獠牙兽战车",
+      "name_de": "Tuskgor Chariot",
+      "name_es": "Tuskgor Chariot",
+      "name_fr": "Char à Sangleboucs",
+      "id": "tuskgor-chariots-special",
+      "points": 85,
+      "armyComposition": {
+        "wild-herd": {
+          "category": "special"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "name_cn": "大角兽乘员x 1 -单手武器、重型武器, 重型武器",
+          "name_de": "Bestigor Crew x 1 - Hand weapons, Great weapons",
+          "points": 0,
+          "active": true,
+          "name_fr": "Aurige Bestigor x 1 - Armes de base, Armes lourdes"
+        },
+        {
+          "name_en": "Gor Crew x 1 - Hand weapon and cavalry spear",
+          "name_cn": "角兽乘员x 1 -单手武器、骑兵长矛",
+          "name_de": "Gor Crew x 1 - Hand weapon and cavalry spear",
+          "points": 0,
+          "active": true,
+          "name_fr": "Aurige Gor x 1 - Arme de base et lance de cavalerie"
+        },
+        {
+          "name_en": "Tuskgor x 2 - Hand weapon (tusks)",
+          "name_cn": "獠牙兽x 2 - 单手武器(獠牙)",
+          "name_de": "Tuskgor x 2 - Hand weapon (tusks)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Sanglebouc x 2 - Arme de base (défenses)"
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Impact Hits (D6+1), Mark of Chaos Undivided, Primal Fury, Razor Tusks, Warband",
+        "name_cn": "紧密阵型, 先行冲锋, 撞击(D6+1), 混沌无分之印, 原始狂怒, 剃刀獠牙, 战帮",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Première Charge, Touches d'Impact (D6+1), Marque du Chaos Universel, Fureur Primale, Défenses Acérées, Bande de Guerre"
+      }
     }
   ],
   "rare": [
@@ -3118,6 +3586,20 @@
       "name_fr": "Shaggoth Dragon Ogre",
       "id": "dragon-ogre-shaggoth-",
       "points": 225,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        },
+        "minotaur-blood-herd": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dragon Ogre Shaggoth per 1,000 points"
+          }
+        },
+        "wild-herd": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3199,6 +3681,14 @@
       "name_fr": "Jabberslythe",
       "id": "jabberslythe",
       "points": 195,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        },
+        "wild-herd": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3241,6 +3731,14 @@
       "name_fr": "Cygor",
       "id": "cygor",
       "points": 215,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        },
+        "wild-herd": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3340,6 +3838,11 @@
       "name_fr": "Ghorgon",
       "id": "ghorgon",
       "points": 245,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3383,6 +3886,14 @@
       "points": 41,
       "minimum": 1,
       "maximum": 9,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        },
+        "minotaur-blood-herd": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3446,6 +3957,14 @@
       "points": 50,
       "minimum": 1,
       "maximum": 4,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        },
+        "wild-herd": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3535,6 +4054,11 @@
       "name_pl": "Gigantic Spawn of Chaos",
       "id": "gigantic-spawn-of-chaos",
       "points": 145,
+      "armyComposition": {
+        "beastmen-brayherds": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {

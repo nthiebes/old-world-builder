@@ -1054,7 +1054,7 @@ export const rules = {
       maxPercent: 33,
       units: [
         {
-          ids: ["dragon-ogre-shaggoth"],
+          ids: ["dragon-ogre-shaggoth-"],
           min: 0,
           max: 1,
           points: 1000,
