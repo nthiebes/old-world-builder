@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
-import { ErrorMessage } from "../../components/error-message";
 import { Expandable } from "../../components/expandable";
 import theOldWorld from "../../assets/the-old-world.json";
 

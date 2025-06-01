@@ -812,7 +812,11 @@
           "name_es": "Hechicero nivel 1",
           "name_fr": "Sorcier de Niveau 1",
           "points": 35,
-          "exclusive": true
+          "exclusive": true,
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "If selected, he must also be the general"
+          }
         },
         {
           "name_en": "Level 2 Wizard",
@@ -821,7 +825,11 @@
           "name_es": "Hechicero nivel 2",
           "name_fr": "Sorcier de Niveau 2",
           "points": 65,
-          "exclusive": true
+          "exclusive": true,
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "If selected, he must also be the general"
+          }
         }
       ],
       "mounts": [],
@@ -830,10 +838,20 @@
           "name_en": "Magic Items",
           "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
-          "maxPoints": 100,
-          "name_fr": "Objets Magiques"
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaos Mutations",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50,
+          "armyComposition": "beastmen-brayherds"
         },
         {
           "name_en": "Chaos Mutations / Gifts of Chaos",
@@ -841,6 +859,7 @@
           "name_de": "Chaos Mutations / Gifts of Chaos",
           "name_fr": "Mutations du Chaos / Dons du Chaos",
           "types": ["chaos-mutation", "gift-of-chaos"],
+          "armyComposition": "minotaur-blood-herd",
           "selected": [],
           "maxPoints": 50
         }
@@ -967,7 +986,11 @@
           "name_es": "Hechicero nivel 1",
           "name_fr": "Sorcier de Niveau 1",
           "points": 35,
-          "exclusive": true
+          "exclusive": true,
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "If selected, he must also be the general"
+          }
         },
         {
           "name_en": "Level 2 Wizard",
@@ -976,7 +999,11 @@
           "name_es": "Hechicero nivel 2",
           "name_fr": "Sorcier de Niveau 2",
           "points": 65,
-          "exclusive": true
+          "exclusive": true,
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "If selected, he must also be the general"
+          }
         }
       ],
       "mounts": [],
@@ -994,21 +1021,21 @@
           "name_en": "Chaos Mutations",
           "name_cn": "混沌变异",
           "name_de": "Chaos Mutations",
+          "name_fr": "Mutations du Chaos",
           "types": ["chaos-mutation"],
           "selected": [],
           "maxPoints": 50,
-          "name_fr": "Mutations du Chaos"
+          "armyComposition": "beastmen-brayherds"
         },
         {
-          "name_en": "Gifts of Chaos",
-          "name_cn": "混沌赠礼",
-          "name_de": "Gifts of Chaos",
-          "name_es": "Gifts of Chaos",
-          "name_fr": "Dons du Chaos",
-          "types": ["gift-of-chaos"],
-          "armyComposition": "minotaur-blood-herd",
+          "name_en": "Chaos Mutations / Gifts of Chaos",
+          "name_cn": "混沌变异 / 混沌赠礼",
+          "name_de": "Chaos Mutations / Gifts of Chaos",
+          "name_fr": "Mutations du Chaos / Dons du Chaos",
+          "types": ["chaos-mutation", "gift-of-chaos"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "armyComposition": "minotaur-blood-herd"
         }
       ],
       "lores": [],

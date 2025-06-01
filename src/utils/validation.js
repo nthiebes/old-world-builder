@@ -245,7 +245,7 @@ export const validateList = ({ list, language, intl }) => {
           ruleUnit.requiresIfGeneral &&
           ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
       );
-      if (requiredUnitsByGeneralInList.length == 0) {
+      if (requiredUnitsByGeneralInList.length === 0) {
         errors.push({
           message: "misc.error.requiresUnits",
           section: type,
