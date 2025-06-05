@@ -34,7 +34,7 @@ export const getPointsPerModel = (unit) => {
     });
   }
   return modelPoints;
-}
+};
 
 export const getUnitPoints = (unit, settings) => {
   const detachmentActive =
@@ -165,22 +165,28 @@ export const getUnitPoints = (unit, settings) => {
 
         if (equipment && equipment.length) {
           equipment.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (armor && armor.length) {
           armor.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (options && options.length) {
           options.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
