@@ -245,6 +245,8 @@ export const synonyms = {
   "ogre pistols": "ogre pistol",
   "light cannons": "light cannon",
   "bigger choppier axe": "bigger, choppier axe",
+  orion: "orion, the king in the woods",
+  araloth: "araloth, lord of talsyn",
 };
 
 export const rulesMap = {

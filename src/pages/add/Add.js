@@ -297,11 +297,13 @@ export const Add = ({ isMobile }) => {
                     }`}
                   >
                     {characters.map((unit) =>
-                      getUnit(unit, ally, "characters")
+                      getUnit(unit, armyComposition, "characters")
                     )}
-                    {core.map((unit) => getUnit(unit, ally, "core"))}
-                    {special.map((unit) => getUnit(unit, ally, "special"))}
-                    {rare.map((unit) => getUnit(unit, ally, "rare"))}
+                    {core.map((unit) => getUnit(unit, armyComposition, "core"))}
+                    {special.map((unit) =>
+                      getUnit(unit, armyComposition, "special")
+                    )}
+                    {rare.map((unit) => getUnit(unit, armyComposition, "rare"))}
                   </Expandable>
                 )
               )}
