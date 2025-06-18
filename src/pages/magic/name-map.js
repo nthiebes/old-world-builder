@@ -738,4 +738,10 @@ export const nameMap = {
     name_cn: "Primal Magic",
     name_fr: "Primal Magic",
   },
+  "grand-cathay": {
+    name_de: "Grand Cathay",
+    name_en: "Grand Cathay",
+    name_cn: "Grand Cathay",
+    name_fr: "Grand Cathay",
+  },
 };
