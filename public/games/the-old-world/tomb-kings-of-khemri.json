@@ -203,7 +203,28 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "armyComposition": "tomb-kings-of-khemri"
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_it": "Oggetti Magici",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "armyComposition": "nehekharan-royal-hosts",
+          "notes": {
+            "name_en": "Arcane items are only available if the Tomb King is a wizard"
+          }
         }
       ],
       "lores": [],
@@ -404,7 +425,28 @@
           "name_fr": "Objets Magiques",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults"]
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_it": "Oggetti Magici",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "armyComposition": "nehekharan-royal-hosts",
+          "notes": {
+            "name_en": "Arcane items are only available if the Tomb Prince is a wizard"
+          }
         }
       ],
       "lores": [],
