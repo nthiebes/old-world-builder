@@ -440,8 +440,7 @@ export const getUnitLoresWithSpells = (unit) => {
     .reduce((result, rule) => {
       const loreId = rule.toLowerCase().replace(/ /g, "-");
 
-      // If the unit has the Lore of Chaos, only the spell matching its Mark
-      // of Chaos must be available
+      // If the unit has the Lore of Chaos, only the spell matching its Mark of Chaos must be available
       if (loreId === "lore-of-chaos") {
         const markOfChaosOption = findOption(
           unit.options,
@@ -478,6 +477,22 @@ export const getUnitLoresWithSpells = (unit) => {
         [loreId]: loresOfMagicWithSpells[loreId],
       };
     }, {});
+
+  if (unit.id.includes("miao-ying")) {
+    specialRuleLores["miao-ying"] = loresOfMagicWithSpells["miao-ying"];
+  }
+
+  // Lores added via unit option
+  let optionsLore = findOption(
+    unit.options,
+    ({ active, name_en }) => active && /Lore of Yang|Lore of Yin/.test(name_en)
+  );
+
+  if (optionsLore) {
+    const loreId = optionsLore.name_en.toLowerCase().replace(/ /g, "-");
+
+    specialRuleLores[loreId] = loresOfMagicWithSpells[loreId];
+  }
 
   const selectedLores =
     unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Arcane Familiar")

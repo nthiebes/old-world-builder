@@ -373,6 +373,7 @@ export const GameView = () => {
                       availableLoresWithSpells={getUnitLoresWithSpells(unit)}
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
+                      maxSignatureSpells={unit.maxSignatureSpells}
                     />
                   )}
                   {showCustomNotes && (

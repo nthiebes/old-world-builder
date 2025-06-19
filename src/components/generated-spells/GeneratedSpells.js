@@ -21,6 +21,7 @@ export const GeneratedSpells = ({
   availableLoresWithSpells,
   maxGeneratedSpellCount,
   showPageNumbers,
+  maxSignatureSpells = 1,
 }) => {
   const intl = useIntl();
   const [generatedSpells, setGeneratedSpells] = useState(
@@ -66,15 +67,17 @@ export const GeneratedSpells = ({
   };
 
   let generatedSpellCount = 0;
-  let signatureSpellIsGenerated = false;
+  let signatureSpellsGenerated = 0;
 
   for (const loreId in generatedSpells) {
     generatedSpellCount += generatedSpells[loreId].length;
-    if (
-      availableLoresWithSpells[loreId][generatedSpells[loreId][0]]?.index ===
-      "signature"
-    ) {
-      signatureSpellIsGenerated = true;
+
+    for (let j = 0; j < generatedSpells[loreId].length; j++) {
+      const spellId = generatedSpells[loreId][j];
+
+      if (availableLoresWithSpells[loreId][spellId]?.index === "signature") {
+        signatureSpellsGenerated++;
+      }
     }
   }
 
@@ -117,7 +120,7 @@ export const GeneratedSpells = ({
                             (generatedSpellCount === maxGeneratedSpellCount &&
                               !spellIsGenerated) ||
                             (spell.index === "signature" &&
-                              signatureSpellIsGenerated &&
+                              signatureSpellsGenerated >= maxSignatureSpells &&
                               !spellIsGenerated)
                           }
                           onChange={(event) => {

@@ -3737,7 +3737,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["cathayan-dragon"],
+          ids: ["miao-ying"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3754,7 +3754,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["jade-lancers"],
+          ids: ["jade-lancers-core"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3765,13 +3765,13 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["fire-rain-rocket-batteries", "cathayan-grand-cannon"],
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
           min: 0,
           max: 3,
           points: 1000,
         },
         {
-          ids: ["cathayan-sentinel"],
+          ids: ["cathayan-sentinel-special"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -3779,7 +3779,7 @@ export const rules = {
           requires: ["shugengan-lord", "shugengan"],
         },
         {
-          ids: ["sky-lantern"],
+          ids: ["sky-lantern-special"],
           min: 0,
           max: 1,
           requiresGeneral: true,

@@ -8,6 +8,7 @@
       "name_es": "Miao Ying",
       "id": "miao-ying",
       "points": 485,
+      "maxSignatureSpells": 2,
       "command": [
         {
           "name_en": "General",
@@ -15,7 +16,9 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "equipment": [
@@ -57,18 +60,11 @@
       "items": [],
       "lores": ["battle-magic", "elementalism", "high-magic"],
       "specialRules": {
-        "name_en": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
-        "name_cn": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
-        "name_de": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
-        "name_fr": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
-        "name_es": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)"
-      },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
+        "name_en": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Lore of Yang, Lore of Yin, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
+        "name_cn": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Lore of Yang, Lore of Yin, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
+        "name_de": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Lore of Yang, Lore of Yin, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
+        "name_fr": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Lore of Yang, Lore of Yin, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)",
+        "name_es": "Celestial Forged Armour (5+), Disdain of the Dragons, Hatred (Warriors of Chaos & Daemonic models), Magic Resistance (-1), Mastery of the Storm Winds, Lore of Yang, Lore of Yin, Mastery of the Elemental Winds, Stubborn, Supreme Matriarch of Nan-Gau, Transformation of the Dragon, Will of the Dragons, Wrath of the Storm, Rallying Cry (Human Form), Fly (9 - Dragon Form), Large Target (Dragon Form), Stomp Attacks (D6 - Dragon Form), Swiftstride (Dragon Form), Terror (Dragon Form)"
       }
     },
     {
@@ -191,7 +187,11 @@
           "name_fr": "Lore of Yang",
           "name_es": "Lore of Yang",
           "points": 0,
-          "exclusive": true
+          "active": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "Must choose Lore of Yang or Lore of Yin"
+          }
         },
         {
           "name_en": "Lore of Yin",
@@ -366,7 +366,11 @@
           "name_fr": "Lore of Yang",
           "name_es": "Lore of Yang",
           "points": 0,
-          "exclusive": true
+          "active": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "Must choose Lore of Yang or Lore of Yin"
+          }
         },
         {
           "name_en": "Lore of Yin",
@@ -1059,6 +1063,29 @@
             "name_fr": "0-1 unité par tranche de 1000 points",
             "name_it": "0-1 unità ogni 1000p.ti"
           }
+        },
+        {
+          "name_en": "Celestial Dragon Guard",
+          "name_cn": "Celestial Dragon Guard",
+          "name_de": "Celestial Dragon Guard",
+          "name_fr": "Celestial Dragon Guard",
+          "name_es": "Celestial Dragon Guard",
+          "points": 1,
+          "perModel": true,
+          "specialRules": {
+            "name_en": "Celestial Armour (6+)",
+            "name_cn": "Celestial Armour (6+)",
+            "name_de": "Celestial Armour (6+)",
+            "name_fr": "Celestial Armour (6+)",
+            "name_es": "Celestial Armour (6+)"
+          },
+          "notes": {
+            "name_en": "0-1 unit if Miao Ying is the army's General",
+            "name_de": "0-1 unit if Miao Ying is the army's General",
+            "name_cn": "0-1 unit if Miao Ying is the army's General",
+            "name_fr": "0-1 unit if Miao Ying is the army's General",
+            "name_it": "0-1 unit if Miao Ying is the army's General"
+          }
         }
       ],
       "mounts": [],
@@ -1072,6 +1099,167 @@
         "name_es": "Close Order, Defensive Stance, Detachment, Regimental Unit, Will of the Dragons"
       }
     },
+    {
+      "name_en": "Jade Lancers",
+      "name_cn": "Jade Lancers",
+      "name_de": "Jade Lancers",
+      "name_fr": "Jade Lancers",
+      "name_es": "Jade Lancers",
+      "id": "jade-lancers-core",
+      "points": 20,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Jade Lancer Officer (champion)",
+          "name_cn": "Jade Lancer Officer (冠军)",
+          "name_de": "Jade Lancer Officer (Champion)",
+          "name_fr": "Jade Lancer Officer (champion)",
+          "name_es": "Jade Lancer Officer (campeón)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Cathayan lances, Shields",
+          "name_cn": "单手武器, Cathayan lances, 盾牌",
+          "name_de": "Handwaffen, Cathayan lances, Schilde",
+          "name_fr": "Armes de base, Cathayan lances, Boucliers",
+          "name_es": "Armas de mano, Cathayan lances, Escudos",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_cn": "每1000分0-1 单位",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_de": "Gut ausgebildet",
+          "name_fr": "Bien Entraînés",
+          "name_es": "Entrenado",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_cn": "每1000分0-1 单位",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Stubborn",
+          "name_cn": "坚毅",
+          "name_de": "Unnachgiebig",
+          "name_fr": "Obstiné",
+          "name_es": "Tozudo",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_en": "0-1 unit per 1000 points",
+            "name_cn": "每1000分0-1 单位",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
+        },
+        {
+          "name_en": "Celestial Dragon Guard",
+          "name_cn": "Celestial Dragon Guard",
+          "name_de": "Celestial Dragon Guard",
+          "name_fr": "Celestial Dragon Guard",
+          "name_es": "Celestial Dragon Guard",
+          "points": 1,
+          "perModel": true,
+          "specialRules": {
+            "name_en": "Celestial Armour (6+)",
+            "name_cn": "Celestial Armour (6+)",
+            "name_de": "Celestial Armour (6+)",
+            "name_fr": "Celestial Armour (6+)",
+            "name_es": "Celestial Armour (6+)"
+          },
+          "notes": {
+            "name_en": "0-1 unit if Miao Ying is the army's General",
+            "name_de": "0-1 unit if Miao Ying is the army's General",
+            "name_cn": "0-1 unit if Miao Ying is the army's General",
+            "name_fr": "0-1 unit if Miao Ying is the army's General",
+            "name_it": "0-1 unit if Miao Ying is the army's General"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cathayan Cataphracts, Close Order, Counter Charge, Horde, Swiftstride, Will of the Dragons",
+        "name_cn": "Cathayan Cataphracts, 紧密阵型, 反制冲锋, Horde, 快速行进, Will of the Dragons",
+        "name_de": "Cathayan Cataphracts, Geschlossene Ränge, Gegenangriff, Horde, Schnelle Bewegung, Will of the Dragons",
+        "name_fr": "Cathayan Cataphracts, Ordre Serré, Contre-charge, Horde, Rapide, Will of the Dragons",
+        "name_es": "Cathayan Cataphracts, Formación Cerrada, Contracarga, Horde, Zancada Veloz, Will of the Dragons"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Jade Lances per 1000 points may be taken as a Core choice",
+        "name_cn": "0-1个单位的Free Company Militia per 1000 points may be taken as a Core choice",
+        "name_de": "0-1 Einheit Freischärler pro 1.000 Punkte können als Kernauswahl gewählt werden",
+        "name_fr": "0-1 unité de Milice des Franches Compagnies par tranche de 1000 points peut être prise comme choix d'Unité de Base",
+        "name_es": "0-1 unit of Jade Lances per 1000 points may be taken as a Core choice"
+      }
+    }
+  ],
+  "special": [
     {
       "name_en": "Jade Lancers",
       "name_cn": "Jade Lancers",
@@ -1188,6 +1376,29 @@
             "name_fr": "0-1 unité par tranche de 1000 points",
             "name_it": "0-1 unità ogni 1000p.ti"
           }
+        },
+        {
+          "name_en": "Celestial Dragon Guard",
+          "name_cn": "Celestial Dragon Guard",
+          "name_de": "Celestial Dragon Guard",
+          "name_fr": "Celestial Dragon Guard",
+          "name_es": "Celestial Dragon Guard",
+          "points": 1,
+          "perModel": true,
+          "specialRules": {
+            "name_en": "Celestial Armour (6+)",
+            "name_cn": "Celestial Armour (6+)",
+            "name_de": "Celestial Armour (6+)",
+            "name_fr": "Celestial Armour (6+)",
+            "name_es": "Celestial Armour (6+)"
+          },
+          "notes": {
+            "name_en": "0-1 unit if Miao Ying is the army's General",
+            "name_de": "0-1 unit if Miao Ying is the army's General",
+            "name_cn": "0-1 unit if Miao Ying is the army's General",
+            "name_fr": "0-1 unit if Miao Ying is the army's General",
+            "name_it": "0-1 unit if Miao Ying is the army's General"
+          }
         }
       ],
       "mounts": [],
@@ -1207,16 +1418,14 @@
         "name_fr": "",
         "name_es": ""
       }
-    }
-  ],
-  "special": [
+    },
     {
       "name_en": "Cathayan Grand Cannon",
       "name_cn": "Cathayan Grand Cannon",
       "name_de": "Cathayan Grand Cannon",
       "name_fr": "Cathayan Grand Cannon",
       "name_es": "Cathayan Grand Cannon",
-      "id": "cathayan-great-cannon",
+      "id": "cathayan-grand-cannon",
       "points": 130,
       "command": [],
       "equipment": [
@@ -1345,6 +1554,182 @@
       }
     },
     {
+      "name_en": "Cathayan Sentinel",
+      "name_cn": "Cathayan Sentinel",
+      "name_de": "Cathayan Sentinel",
+      "name_fr": "Cathayan Sentinel",
+      "name_es": "Cathayan Sentinel",
+      "id": "cathayan-sentinel-special",
+      "points": 230,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great blade",
+          "name_cn": "单手武器, Great blade",
+          "name_de": "Handwaffen, Great blade",
+          "name_fr": "Armes de base, Great blade",
+          "name_es": "Armas de mano, Great blade",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Terracotta armour)",
+          "name_cn": "重甲 (Terracotta armour)",
+          "name_de": "Schwere Rüstung (Terracotta armour)",
+          "name_fr": "Armure lourde (Terracotta armour)",
+          "name_es": "Armadura pesada (Terracotta armour)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Terracotta Sentinel",
+          "name_cn": "Terracotta Sentinel",
+          "name_de": "Terracotta Sentinel",
+          "name_fr": "Terracotta Sentinel",
+          "name_es": "Terracotta Sentinel",
+          "points": 0,
+          "exclusive": true,
+          "active": true,
+          "specialRules": {
+            "name_en": "Regeneration (6+)"
+          }
+        },
+        {
+          "name_en": "Jade Sentinel",
+          "name_cn": "Jade Sentinel",
+          "name_de": "Jade Sentinel",
+          "name_fr": "Jade Sentinel",
+          "name_es": "Jade Sentinel",
+          "points": 20,
+          "exclusive": true
+        },
+        {
+          "name_en": "Obsidian Sentinel",
+          "name_cn": "Obsidian Sentinel",
+          "name_de": "Obsidian Sentinel",
+          "name_fr": "Obsidian Sentinel",
+          "name_es": "Obsidian Sentinel",
+          "points": 25,
+          "exclusive": true,
+          "specialRules": {
+            "name_en": "Magic Resistance (-2)"
+          }
+        },
+        {
+          "name_en": "Granite Sentinel",
+          "name_cn": "Granite Sentinel",
+          "name_de": "Granite Sentinel",
+          "name_fr": "Granite Sentinel",
+          "name_es": "Granite Sentinel",
+          "points": 35,
+          "exclusive": true
+        },
+        {
+          "name_en": "Warpstone Sentinel",
+          "name_cn": "Warpstone Sentinel",
+          "name_de": "Warpstone Sentinel",
+          "name_fr": "Warpstone Sentinel",
+          "name_es": "Warpstone Sentinel",
+          "points": 40,
+          "exclusive": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Immune to Psychology, Implacable, Large Target, Stomp Attacks (D3+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_cn": "Close Order, Immune to Psychology, Implacable, Large Target, Stomp Attacks (D3+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_de": "Close Order, Immune to Psychology, Implacable, Large Target, Stomp Attacks (D3+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_fr": "Close Order, Immune to Psychology, Implacable, Large Target, Stomp Attacks (D3+1), Terror, Timmm-berrr!, Unbreakable",
+        "name_es": "Close Order, Immune to Psychology, Implacable, Large Target, Stomp Attacks (D3+1), Terror, Timmm-berrr!, Unbreakable"
+      },
+      "notes": {
+        "name_en": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
+        "name_cn": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
+        "name_de": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
+        "name_fr": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
+        "name_es": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan"
+      }
+    },
+    {
+      "name_en": "Sky Lantern",
+      "name_cn": "Sky Lantern",
+      "name_de": "Sky Lantern",
+      "name_fr": "Sky Lantern",
+      "name_es": "Sky Lantern",
+      "id": "sky-lantern-special",
+      "points": 135,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Sky Lantern Crane Guns",
+          "name_cn": "Sky Lantern Crane Guns",
+          "name_de": "Sky Lantern Crane Guns",
+          "name_fr": "Sky Lantern Crane Guns",
+          "name_es": "Sky Lantern Crane Guns",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Iron hail guns, Gunpowder bombs",
+          "name_cn": "Iron hail guns, Gunpowder bombs",
+          "name_de": "Iron hail guns, Gunpowder bombs",
+          "name_fr": "Iron hail guns, Gunpowder bombs",
+          "name_es": "Iron hail guns, Gunpowder bombs",
+          "points": 0
+        },
+        {
+          "name_en": "Iron hail guns, Dragon fire bombs",
+          "name_cn": "Iron hail guns, Dragon fire bombs",
+          "name_de": "Iron hail guns, Dragon fire bombs",
+          "name_fr": "Iron hail guns, Dragon fire bombs",
+          "name_es": "Iron hail guns, Dragon fire bombs",
+          "points": 20
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_fr": "4+",
+          "name_es": "4+",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Sky Lantern bombs",
+          "name_cn": "Sky Lantern bombs",
+          "name_de": "Sky Lantern bombs",
+          "name_fr": "Sky Lantern bombs",
+          "name_es": "Sky Lantern bombs",
+          "points": 15
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable",
+        "name_cn": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable",
+        "name_de": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable",
+        "name_fr": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable",
+        "name_es": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable"
+      },
+      "notes": {
+        "name_en": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
+        "name_cn": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
+        "name_de": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
+        "name_fr": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
+        "name_es": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist"
+      }
+    }
+  ],
+  "rare": [
+    {
       "name_en": "Sky Lantern",
       "name_cn": "Sky Lantern",
       "name_de": "Sky Lantern",
@@ -1409,9 +1794,7 @@
         "name_fr": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable",
         "name_es": "Close Order, Disengage, Eye of the Dragon, Feigned Flight, Fire & Flee, Fly (8), Heavenly Beacon, Impact Hits (D3+1 - Sky Lantern only), Large Target, Reserve Move, Scouts, Unbreakable"
       }
-    }
-  ],
-  "rare": [
+    },
     {
       "name_en": "Cathayan Sentinel",
       "name_cn": "Cathayan Sentinel",
