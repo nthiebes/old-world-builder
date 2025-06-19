@@ -104,6 +104,8 @@ export const synonyms = {
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
   "chracian captain": "champions",
+  "jade officer": "champions",
+  "jade lancer officer": "champions",
   boss: "champions",
   marksman: "champions",
   preceptor: "champions",
