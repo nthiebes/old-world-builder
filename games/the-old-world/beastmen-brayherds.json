@@ -846,7 +846,27 @@
           "name_fr": "Objets Magiques",
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "Arcane items are only available if the Doombull is a Level 1 or 2 Wizard"
+          }
         },
         {
           "name_en": "Chaos Mutations",
@@ -1022,7 +1042,27 @@
           "types": ["enchanted-item", "talisman", "armor", "weapon"],
           "selected": [],
           "maxPoints": 50,
-          "name_fr": "Objets Magiques"
+          "name_fr": "Objets Magiques",
+          "armyComposition": "beastmen-brayherds"
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "name_fr": "Objets Magiques",
+          "armyComposition": "minotaur-blood-herd",
+          "notes": {
+            "name_en": "Arcane items are only available if the Gorebull is a Level 1 or 2 Wizard"
+          }
         },
         {
           "name_en": "Chaos Mutations",
