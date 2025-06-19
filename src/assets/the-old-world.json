@@ -737,7 +737,21 @@
       "name_fr": "Grand Cathay",
       "items": ["general", "grand-cathay"],
       "armyComposition": ["grand-cathay"],
-      "allies": [],
+      "allies": [
+        { "army": "dwarfen-mountain-holds" },
+        {
+          "army": "empire-of-man"
+        },
+        {
+          "army": "kingdom-of-bretonnia"
+        },
+        {
+          "army": "wood-elf-realms"
+        },
+        {
+          "army": "high-elf-realms"
+        }
+      ],
       "mercenaries": {}
     }
   ]

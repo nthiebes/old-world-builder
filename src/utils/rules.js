@@ -3732,6 +3732,70 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "grand-cathay": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["cathayan-dragon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shugengan-lord", "lord-magistrate"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["jade-lancers"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["fire-rain-rocket-batteries", "cathayan-grand-cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["cathayan-sentinel"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["shugengan-lord", "shugengan"],
+        },
+        {
+          ids: ["sky-lantern"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["lord-magistrate", "strategist"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 20,
+    },
+    allies: { maxPercent: 25 },
+  },
 };
 
 export const getMaxPercentData = ({

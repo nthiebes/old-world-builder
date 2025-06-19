@@ -744,4 +744,16 @@ export const nameMap = {
     name_cn: "Grand Cathay",
     name_fr: "Grand Cathay",
   },
+  "lore-of-yang": {
+    name_de: "Lore of Yang",
+    name_en: "Lore of Yang",
+    name_cn: "Lore of Yang",
+    name_fr: "Lore of Yang",
+  },
+  "lore-of-yin": {
+    name_de: "Lore of Yin",
+    name_en: "Lore of Yin",
+    name_cn: "Lore of Yin",
+    name_fr: "Lore of Yin",
+  },
 };
