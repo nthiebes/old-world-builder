@@ -38,6 +38,8 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
   "points": Number, // Points for each model
   "minimum": Number, // Minimum number of models of the unit
   "maximum": Number, // Maximum number of models of the unit
+  "magicItemsArmy": String, // Category the unit can take magic items from, optional
+  "maxSignatureSpells": Number, // Number of maximum signature spells
   "army": String, // Only in mercanaries category, army ID, optional
   "armyComposition": { // Army composition specific options, optional
     [army composition ID]: { // Example: "troll-horde"
