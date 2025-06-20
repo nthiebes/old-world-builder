@@ -501,7 +501,7 @@ export const nameMap = {
   "daemonic-gifts-nurgle": {
     name_de: "Gifts Of Nurgle",
     name_en: "Gifts Of Nurgle",
-    name_cn: "Gifts Of Nurgle",
+    name_cn: "纳垢赠礼",
     name_fr: "Dons de Nurgle",
   },
   "daemonic-gift-nurgle": {
@@ -741,19 +741,19 @@ export const nameMap = {
   "grand-cathay": {
     name_de: "Grand Cathay",
     name_en: "Grand Cathay",
-    name_cn: "Grand Cathay",
+    name_cn: "震旦天朝",
     name_fr: "Grand Cathay",
   },
   "lore-of-yang": {
     name_de: "Lore of Yang",
     name_en: "Lore of Yang",
-    name_cn: "Lore of Yang",
+    name_cn: "阳系法术",
     name_fr: "Lore of Yang",
   },
   "lore-of-yin": {
     name_de: "Lore of Yin",
     name_en: "Lore of Yin",
-    name_cn: "Lore of Yin",
+    name_cn: "阴系法术",
     name_fr: "Lore of Yin",
   },
 };
