@@ -733,10 +733,10 @@ export const nameMap = {
     name_fr: "Wild Herd",
   },
   "primal-magic": {
-    name_de: "Primal Magic",
-    name_en: "Primal Magic",
-    name_cn: "Primal Magic",
-    name_fr: "Primal Magic",
+    name_de: "Lore of Primal Magic",
+    name_en: "Lore of Primal Magic",
+    name_cn: "Lore of Primal Magic",
+    name_fr: "Lore of Primal Magic",
   },
   "grand-cathay": {
     name_de: "Grand Cathay",
