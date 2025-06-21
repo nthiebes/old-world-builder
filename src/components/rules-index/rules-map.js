@@ -253,7 +253,6 @@ export const synonyms = {
   kralmaw: "kralmaw, the prophet of ruin",
   ghorros: "ghorros warhoof",
   "primal magic": "lore of primal magic",
-  herdstone: "herdstones",
   "a tingle in the air": "herdstones",
   "dark sorcery": "herdstones",
   "fearsome edifice": "herdstones",
