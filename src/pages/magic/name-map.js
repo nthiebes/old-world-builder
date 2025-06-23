@@ -693,31 +693,31 @@ export const nameMap = {
   "orions-wild-hunt": {
     name_de: "Orion's Wild Hunt",
     name_en: "Orion's Wild Hunt",
-    name_cn: "Orion's Wild Hunt",
+    name_cn: "奥莱恩的狂猎",
     name_fr: "Orion's Wild Hunt",
   },
   "host-of-talsyn": {
     name_de: "Host of Talsyn",
     name_en: "Host of Talsyn",
-    name_cn: "Host of Talsyn",
+    name_cn: "塔塞恩大军",
     name_fr: "Host of Talsyn",
   },
   "lore-of-the-wilds": {
     name_de: "Lore of the Wilds",
     name_en: "Lore of the Wilds",
-    name_cn: "Lore of the Wilds",
+    name_cn: "荒野法系",
     name_fr: "Lore of the Wilds",
   },
   kindreds: {
     name_de: "Alter/Noble Kindreds",
     name_en: "Alter/Noble Kindreds",
-    name_cn: "Alter/Noble Kindreds",
+    name_cn: "易形/贵族亲族",
     name_fr: "Alter/Noble Kindreds",
   },
   kindred: {
     name_de: "Kindred",
     name_en: "Kindred",
-    name_cn: "Kindred",
+    name_cn: "亲族",
     name_fr: "Kindred",
   },
   "minotaur-blood-herd": {
