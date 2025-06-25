@@ -501,7 +501,7 @@ export const GameView = () => {
                 getUnitPoints(unit, {
                   noDetachments: true,
                   armyComposition,
-                }) / 4
+                }) / 2
               ),
         };
         break;
@@ -552,16 +552,14 @@ export const GameView = () => {
         >
           <FormattedMessage id="misc.fleeing" />
         </Button>
-        {type !== "characters" && (
-          <Button
-            className="game-view__victory-button"
-            type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
-            spaceTop
-            onClick={() => updateVictoryPoints({ unit, value: "25" })}
-          >
-            {"<25%"}
-          </Button>
-        )}
+        <Button
+          className="game-view__victory-button"
+          type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
+          spaceTop
+          onClick={() => updateVictoryPoints({ unit, value: "25" })}
+        >
+          {"<25%"}
+        </Button>
         {unit.detachments &&
           unit.detachments.length &&
           unit.detachments.map((detachment) => (
