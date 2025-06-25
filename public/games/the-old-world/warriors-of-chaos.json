@@ -1365,6 +1365,24 @@
           ]
         },
         {
+          "name_en": "Manticore {warriors of chaos}",
+          "name_cn": "蝎尾狮 {warriors of chaos}",
+          "name_de": "Manticore",
+          "name_es": "Manticore",
+          "name_fr": "Manticore",
+          "points": 120,
+          "options": [
+            {
+              "name_en": "Venomous tail",
+              "name_cn": "毒液尾刺",
+              "name_de": "Venomous tail",
+              "name_es": "Venomous tail",
+              "name_fr": "Queue venimeuse",
+              "points": 15
+            }
+          ]
+        },
+        {
           "name_en": "Gorebeast Chariot",
           "name_cn": "戈尔兽战车",
           "name_de": "Gorebeast Chariot",
@@ -1474,6 +1492,14 @@
               "exclusive": true
             }
           ]
+        },
+        {
+          "name_en": "Chaos Dragon",
+          "name_cn": "混沌龙",
+          "name_de": "Chaos Dragon",
+          "name_es": "Chaos Dragon",
+          "name_fr": "Dragon du Chaos",
+          "points": 285
         }
       ],
       "items": [
@@ -2903,11 +2929,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
-        "name_cn": "紧密阵型, 附魔武器, 先行冲锋, 快速行进",
-        "name_de": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
-        "name_es": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride",
-        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Rapide"
+        "name_en": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
+        "name_cn": "紧密阵型, 附魔武器, 先行冲锋, 快速行进, Counter Charge",
+        "name_de": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
+        "name_es": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
+        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Rapide, Counter Charge"
       }
     },
     {
@@ -4635,24 +4661,6 @@
           "points": 0,
           "perModel": true,
           "active": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Additional hand weapons",
-          "name_es": "Additional hand weapons",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Great weapons",
-          "name_es": "Great weapons",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -4667,16 +4675,37 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapons",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
-        "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -4790,7 +4819,7 @@
       "name_fr": "Dragons Ogres",
       "id": "dragon-ogres",
       "magicItemsArmy": "beastmen-brayherds",
-      "points": 56,
+      "points": 59,
       "minimum": 1,
       "maximum": 9,
       "armyComposition": {

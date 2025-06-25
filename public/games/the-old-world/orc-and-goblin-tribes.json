@@ -201,6 +201,7 @@
           "name_de": "Schwarzork-Wildschweinstreitwagen",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
+          "armyComposition": "nomadic-waaagh",
           "options": [
             {
               "name_en": "Hand weapons, Additional hand weapons",
@@ -2597,22 +2598,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -2630,15 +2615,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -2672,22 +2676,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -2706,15 +2694,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -2748,22 +2755,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -2782,15 +2773,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -4533,22 +4543,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -4567,15 +4561,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -4606,22 +4619,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -4639,15 +4636,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
@@ -4678,22 +4694,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffen",
-          "name_fr": "Armes de base additionnelles",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "points": 4,
-          "perModel": true
         }
       ],
       "armor": [
@@ -4712,15 +4712,34 @@
           }
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨",
-        "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit",
-        "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity",
-        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité"
+        "name_en": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨, Motley Crew",
+        "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit, Motley Crew",
+        "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {

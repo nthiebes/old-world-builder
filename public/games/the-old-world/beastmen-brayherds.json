@@ -3017,7 +3017,7 @@
       "name_es": "Dragon Ogres",
       "name_fr": "Dragons Ogres",
       "id": "dragon-ogres",
-      "points": 56,
+      "points": 59,
       "minimum": 1,
       "maximum": 9,
       "armyComposition": {
@@ -4026,22 +4026,6 @@
           "perModel": true,
           "active": true,
           "name_fr": "Armes de base"
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Additional hand weapons",
-          "points": 3,
-          "perModel": true,
-          "name_fr": "Armes de base additionnelles"
-        },
-        {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Great weapons",
-          "points": 4,
-          "perModel": true,
-          "name_fr": "Armes lourdes"
         }
       ],
       "armor": [
@@ -4055,16 +4039,35 @@
           "name_fr": "Armure légère (peau calleuse)"
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapons",
+          "name_fr": "Armes de base additionnelles",
+          "points": 3,
+          "perModel": true,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Great weapons",
+          "name_fr": "Armes lourdes",
+          "points": 4,
+          "perModel": true,
+          "stackable": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨",
+        "name_en": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
+        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "",
         "name_es": "",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
       }
     },
     {
