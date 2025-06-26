@@ -104,6 +104,8 @@ export const EditList = ({ isMobile }) => {
             nameMap[list.armyComposition]?.name_en ||
             nameMap[list.army]?.[`name_${language}`] ||
             nameMap[list.army]?.name_en}
+          ,{" "}
+          <FormattedMessage id={`misc.${list.compositionRule || "open-war"}`} />
         </p>
         <label htmlFor="name" className="edit__label">
           <FormattedMessage id="misc.name" />

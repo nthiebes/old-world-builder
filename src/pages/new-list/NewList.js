@@ -29,6 +29,7 @@ export const NewList = ({ isMobile }) => {
   const [army, setArmy] = useState(
     gameSystems.find(({ id }) => id === game).armies[0].id
   );
+  const [compositionRule, setCompositionRule] = useState("open-war");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
@@ -36,6 +37,20 @@ export const NewList = ({ isMobile }) => {
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
+  const compositionRules = [
+    {
+      id: "open-war",
+      name_en: intl.formatMessage({ id: "misc.open-war" }),
+    },
+    {
+      id: "grand-melee",
+      name_en: intl.formatMessage({ id: "misc.grand-melee" }),
+    },
+    {
+      id: "combined-arms",
+      name_en: intl.formatMessage({ id: "misc.combined-arms" }),
+    },
+  ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
   const quickActions = lists.length
     ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
@@ -62,6 +77,7 @@ export const NewList = ({ isMobile }) => {
       allies: [],
       id: newId,
       armyComposition,
+      compositionRule,
     };
     const newLists = [...lists, newList];
 
@@ -75,15 +91,20 @@ export const NewList = ({ isMobile }) => {
     setArmy(
       gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id
     );
+    setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
     setArmy(value);
     setArmyComposition(
       armies.find(({ id }) => value === id).armyComposition[0]
     );
+    setCompositionRule("open-war");
   };
   const handleArcaneJournalChange = (value) => {
     setArmyComposition(value);
+  };
+  const handleCompositionRuleChange = (value) => {
+    setCompositionRule(value);
   };
   const handlePointsChange = (event) => {
     setPoints(event.target.value);
@@ -181,6 +202,16 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
+          <label htmlFor="composition-rule">
+            <FormattedMessage id="new.armyCompositionRule" />
+          </label>
+          <Select
+            id="composition-rule"
+            options={compositionRules}
+            onChange={handleCompositionRuleChange}
+            selected={compositionRule}
+            spaceBottom
+          />
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>

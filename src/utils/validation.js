@@ -1,7 +1,13 @@
 import { rules } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
-import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
+import { getUnitPoints } from "./points";
+import {
+  getUnitName,
+  getUnitLeadership,
+  getUnitRuleData,
+  findOption,
+} from "./unit";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
@@ -444,6 +450,76 @@ export const validateList = ({ list, language, intl }) => {
       message: "misc.error.multipleBSBs",
       section: "characters",
     });
+
+  // Grand Melee
+  if (list.compositionRule === "grand-melee") {
+    const checkFor25Percent = (unit, type) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+
+      if (unitPoints > list.points / 4) {
+        errors.push({
+          message: "misc.error.grandMelee25",
+          section: type,
+        });
+      }
+    };
+    const level3Allowed = Math.floor(list.points / 1000);
+    const level4Allowed = Math.floor(list.points / 2000);
+    let level3Wizards = 0;
+    let level4Wizards = 0;
+
+    list.characters.forEach((unit) => {
+      checkFor25Percent(unit, "characters");
+      if (
+        findOption(
+          unit.options,
+          ({ name_en, active }) =>
+            active && name_en.toLowerCase().includes("level 4 wizard")
+        )
+      ) {
+        level4Wizards++;
+      }
+      if (
+        findOption(
+          unit.options,
+          ({ name_en, active }) =>
+            active && name_en.toLowerCase().includes("level 3 wizard")
+        )
+      ) {
+        level3Wizards++;
+      }
+
+      if (level4Wizards > level4Allowed) {
+        errors.push({
+          message: "misc.error.grandMeleeLevel4",
+          section: "characters",
+        });
+      }
+      if (level3Wizards > level3Allowed) {
+        errors.push({
+          message: "misc.error.grandMeleeLevel3",
+          section: "characters",
+        });
+      }
+    });
+    list.core.forEach((unit) => {
+      checkFor25Percent(unit, "core");
+    });
+    list.special.forEach((unit) => {
+      checkFor25Percent(unit, "special");
+    });
+    list.rare.forEach((unit) => {
+      checkFor25Percent(unit, "rare");
+    });
+    list.mercenaries.forEach((unit) => {
+      checkFor25Percent(unit, "mercenaries");
+    });
+    list.allies.forEach((unit) => {
+      checkFor25Percent(unit, "allies");
+    });
+  }
 
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
