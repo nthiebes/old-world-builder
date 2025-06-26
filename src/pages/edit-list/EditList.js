@@ -74,7 +74,6 @@ export const EditList = ({ isMobile }) => {
     );
   };
 
-  console.log(list);
   useEffect(() => {
     list && updateLocalList(list);
   }, [list]);
