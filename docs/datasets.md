@@ -35,6 +35,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
   "name_it": String, // Italian name
   "name_pl": String, // Polish name
   "name_cn": String, // Chinese name
+  "named": Boolean, // Used for composition rules validation
   "points": Number, // Points for each model
   "minimum": Number, // Minimum number of models of the unit
   "maximum": Number, // Maximum number of models of the unit

@@ -280,6 +280,8 @@ export const Print = () => {
         <p className="print__subheader">
           {game.name}, {armyName}
           {armyCompositionName ? `, ${armyCompositionName}` : ""}
+          ,{" "}
+          <FormattedMessage id={`misc.${list.compositionRule || "open-war"}`} />
         </p>
 
         {list.characters.length > 0 && (

@@ -256,6 +256,9 @@ export const getListAsText = ({
   const armyCompositionString = armyCompositionName
     ? `, ${armyCompositionName}`
     : "";
+  const compositionRuleString = intl.formatMessage({
+    id: `misc.${list.compositionRule || "open-war"}`,
+  });
   let listString = "";
 
   if (isSimpleList) {
@@ -264,7 +267,7 @@ export const getListAsText = ({
         ? ""
         : ` [${allPoints} ${intl.formatMessage({ id: "app.points" })}]`
     }\n`;
-    listString += `${game.name}, ${armyName}${armyCompositionString}\n\n`;
+    listString += `${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}\n\n`;
 
     const allUnits = [
       ...(list.characters || []),
@@ -306,7 +309,7 @@ export const getListAsText = ({
 ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}${armyCompositionString}
+${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
 ===
 
 `;
@@ -316,7 +319,7 @@ ${game.name}, ${armyName}${armyCompositionString}
     listString += `## ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}${armyCompositionString}
+${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
 
 `;
   }
