@@ -157,6 +157,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
       "armyComposition": [army composition IDs], // Optional
+      "requiredMagicItem": String, // Name of a required magic item
       "notes": { // Optional
         "name_en": String,
         "name_de": String,
