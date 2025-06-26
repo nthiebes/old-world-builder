@@ -1268,10 +1268,19 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
-          "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
           "selected": [],
           "maxPoints": 100,
-          "name_fr": "Objets Magiques"
+          "notes": {
+            "name_en": "Magic armour requires Blood of Caledor Elven Honour"
+          }
         },
         {
           "name_en": "Elven Honours",
@@ -1279,10 +1288,10 @@
           "name_it": "Onoroficenze Elfiche",
           "name_de": "Elfenehrungen",
           "name_es": "Honores élficos",
+          "name_fr": "Honneurs Elfiques",
           "types": ["elven-honour"],
           "selected": [],
-          "maxPoints": 0,
-          "name_fr": "Honneurs Elfiques"
+          "maxPoints": 0
         }
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
@@ -1597,10 +1606,13 @@
           "name_it": "Oggetti Magici",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
           "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
           "selected": [],
           "maxPoints": 50,
-          "name_fr": "Objets Magiques"
+          "notes": {
+            "name_en": "Magic armour requires Blood of Caledor Elven Honour"
+          }
         },
         {
           "name_en": "Elven Honours",
@@ -1608,10 +1620,10 @@
           "name_it": "Onoroficenze Elfiche",
           "name_de": "Elfenehrungen",
           "name_es": "Honores élficos",
+          "name_fr": "Honneurs Elfiques",
           "types": ["elven-honour"],
           "selected": [],
-          "maxPoints": 0,
-          "name_fr": "Honneurs Elfiques"
+          "maxPoints": 0
         }
       ],
       "lores": ["battle-magic", "elementalism", "high-magic", "illusion"],
