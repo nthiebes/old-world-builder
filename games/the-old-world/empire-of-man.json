@@ -578,15 +578,35 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_de": "Stufe 4 Zauberer",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_es": "Hechicero de Nivel 4",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -2603,6 +2623,7 @@
       "name_es": "General Hans von Löwenhacke",
       "id": "general-hans-von-lowenhacke",
       "points": 190,
+      "named": true,
       "armyComposition": {
         "empire-of-man": {
           "category": "characters"
@@ -2672,6 +2693,7 @@
       "name_es": "Harald Gemunsen",
       "id": "harald-gemunsen",
       "points": 185,
+      "named": true,
       "armyComposition": {
         "empire-of-man": {
           "category": "characters"
@@ -3237,7 +3259,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
-        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(Undead models), 恐惧, 魔法攻击",
+        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(亡灵模型), 恐惧, 魔法攻击",
         "name_de": "Orden der Ritter des Morr, Geschlossene Ränge, Gegenangriff, Gut ausgebildet, Erster Angriff, Innerer Zirkel, Schnelle Bewegung, Veteranen, Hass (Untote), Angst, Magische Attacken",
         "name_fr": "Ordre des Chevaliers de Morr, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Haine (figurines Mortes-vivantes)), Peur, Attaques Magiques",
         "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Undead models), Fear, Magical Attacks"
@@ -3365,7 +3387,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (enemy Wizards + Orcs & Goblins)",
-        "name_cn": "燃烧之心骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(enemy Wizards + Orcs & Goblins)",
+        "name_cn": "燃烧之心骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(敌方法师 + 兽人 & 地精)",
         "name_de": "Orden der Flammenden Herzens, Geschlossene Ränge, Gegenangriff, Gut ausgebildet, Erster Angriff, Innerer Zirkel, Schnelle Bewegung, Veteranen, Hass (feindliche Zauberer und Orks & Goblins)",
         "name_fr": "Ordre du Cœur Ardent, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Haine (Sorciers ennemis, Orques & Gobelins)",
         "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (enemy Wizards + Orcs & Goblins)"
@@ -3539,7 +3561,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Detachment, Regimental Unit, Horde",
-        "name_cn": "紧密阵型, 分遣队, 主团单位, Horde",
+        "name_cn": "紧密阵型, 分遣队, 主团单位, 部群",
         "name_de": "Geschlossene Ränge, Abteilung, Hauptregiment, Horde",
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Horde",
         "name_es": "Formación Cerrada, Destacamente, Unidad Regimental, Horde"
@@ -3636,14 +3658,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Regimental Unit, Nuln State Troops {empire}, Horde",
-        "name_cn": "紧密阵型, 主团单位, Nuln State Troops, Horde",
+        "name_cn": "紧密阵型, 主团单位, 努恩省兵, 部群",
         "name_de": "Geschlossene Ränge, Hauptregiment, Nulner Staatstruppen, Horde",
         "name_fr": "Ordre Serré, Unité Régimentaire, Nuln State Troops, Horde",
         "name_es": "Formación Cerrada, Unidad Regimental, Nuln State Troops, Horde"
       },
       "notes": {
         "name_en": "1+ regiment of Nuln State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or State Troops",
-        "name_cn": "1+ regiment of Nuln State Troops或努恩资深省兵, 由 1 个省兵主团单位和 1-2\n个远程省兵所伴同",
+        "name_cn": "1+只努恩省兵或努恩资深省兵, 由1个省兵主团单位和 1-2\n个远程省兵所伴同",
         "name_de": "1+ Regiment Nulner Staatstruppen oder Nulner Staatstruppen-Veteranen, 1-2 Abteilungen von Staatstruppen-Schützen und/oder Staatstruppen",
         "name_fr": "1+ régiment de Troupes Régulières de Nuln ou Vétérans des Troupes Régulières de Nuln, 1-2 détachements de Troupes de Tir de l'Empire et/ou Troupes Régulières",
         "name_es": ""
@@ -3701,7 +3723,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Detachment, Horde",
-        "name_cn": "紧密阵型, 分遣队, Horde",
+        "name_cn": "紧密阵型, 分遣队, 部群",
         "name_de": "Geschlossene Ränge, Abteilung, Horde",
         "name_fr": "Ordre Serré, Détachement, Horde",
         "name_es": "Formación Cerrada, Destacamente, Horde"
@@ -3844,7 +3866,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Detachment, Regimental Unit, Veteran, Horde",
-        "name_cn": "紧密阵型, 分遣队, 主团单位, 老兵, Horde",
+        "name_cn": "紧密阵型, 分遣队, 主团单位, 老兵, 部群",
         "name_de": "Geschlossene Ränge, Abteilung, Hauptregiment, Veteranen, Horde",
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Vétérans, Horde",
         "name_es": "Formación Cerrada, Destacamento, Unidad Regimental, Veterano, Horde"
@@ -3958,14 +3980,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Regimental Unit, Veteran, Nuln State Troops {empire}, Horde",
-        "name_cn": "紧密阵型, 主团单位, 老兵, Nuln State Troops, Horde",
+        "name_cn": "紧密阵型, 主团单位, 老兵, 努恩省兵, 部群",
         "name_de": "Geschlossene Ränge, Hauptregiment, Veteranen, Nulner Staatstruppen, Horde",
         "name_fr": "Ordre Serré, Unité Régimentaire, Vétérans, Nuln State Troops, Horde",
         "name_es": "Formación Cerrada, Unidad Regimental, Veterano, Nuln State Troops, Horde"
       },
       "notes": {
         "name_en": "1+ regiment of Nuln State Troops or Nuln Veteran State Troops, 1-2 detachments of State Missile Troops and/or State Troops",
-        "name_cn": "1+ regiment of Nuln State Troops或努恩资深省兵, 由 1 个省兵主团单位和 1-2\n个远程省兵所伴同",
+        "name_cn": "1+只努恩省兵或努恩资深省兵, 由1个省兵主团单位和 1-2\n个远程省兵所伴同",
         "name_de": "1+ Regiment Nulner Staatstruppen oder Nulner Staatstruppen-Veteranen, 1-2 Abteilungen von Staatstruppen-Schützen und/oder Staatstruppen",
         "name_fr": "1+ régiment de Troupes Régulières de Nuln ou Vétérans des Troupes Régulières de Nuln, 1-2 détachements de Troupes de Tir de l'Empire et/ou Troupes Régulières",
         "name_es": ""
@@ -4706,7 +4728,7 @@
     },
     {
       "name_en": "Empire Knights Panther",
-      "name_cn": "猎豹骑士团帝国骑士",
+      "name_cn": "猎豹帝国骑士",
       "name_de": "Pantherritter",
       "name_fr": "Chevaliers Panthères",
       "name_es": "Caballeros del Imperio Panther",
@@ -4716,7 +4738,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 unit of Empire Knights Panther",
-            "name_cn": "0-1个单位的猎豹骑士团帝国骑士",
+            "name_cn": "0-1个单位的猎豹帝国骑士",
             "name_de": "0-1 Einheit Pantherritter",
             "name_fr": "0-1 unité de Chevaliers Panthères",
             "name_es": ""
@@ -4729,7 +4751,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 unit of Empire Knights Panther",
-            "name_cn": "0-1个单位的猎豹骑士团帝国骑士",
+            "name_cn": "0-1个单位的猎豹帝国骑士",
             "name_de": "0-1 Einheit Pantherritter",
             "name_fr": "0-1 unité de Chevaliers Panthères",
             "name_es": ""
@@ -4851,7 +4873,7 @@
     },
     {
       "name_en": "Empire Knights of the White Wolf",
-      "name_cn": "白狼骑士团帝国骑士",
+      "name_cn": "白狼帝国骑士",
       "name_de": "Ritter des Weißen Wolfs",
       "name_fr": "Chevaliers du Loup Blanc",
       "name_es": "Caballeros del Imperio of the White Wolf",
@@ -4861,7 +4883,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 unit of Empire Knights of the White Wolf",
-            "name_cn": "0-1个单位的白狼骑士团帝国骑士",
+            "name_cn": "0-1个单位的白狼帝国骑士",
             "name_de": "0-1 Einheit Ritter des Weißen Wolfs",
             "name_fr": "0-1 unité de Chevaliers du Loup Blanc",
             "name_es": ""
@@ -4883,7 +4905,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 unit of Empire Knights of the White Wolf",
-            "name_cn": "0-1个单位的白狼骑士团帝国骑士",
+            "name_cn": "0-1个单位的白狼帝国骑士",
             "name_de": "0-1 Einheit Ritter des Weißen Wolfs",
             "name_fr": "0-1 unité de Chevaliers du Loup Blanc",
             "name_es": ""
@@ -5032,7 +5054,7 @@
     },
     {
       "name_en": "Empire Knights of the Blazing Sun",
-      "name_cn": "焰阳骑士团帝国骑士",
+      "name_cn": "焰阳帝国骑士",
       "name_de": "Ritter des Sonnenordens",
       "name_fr": "Chevaliers du Soleil",
       "name_es": "Caballeros del Imperio of the Blazing Sun",
@@ -5042,7 +5064,7 @@
           "category": "core",
           "notes": {
             "name_en": "0-1 unit of Empire Knights of the Blazing Sun",
-            "name_cn": "0-1个单位的焰阳骑士团帝国骑士",
+            "name_cn": "0-1个单位的焰阳帝国骑士",
             "name_de": "0-1 Einheit itter des Sonnenordens",
             "name_fr": "0-1 unité de Chevaliers du Soleil",
             "name_es": ""
@@ -5055,7 +5077,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 unit of Empire Knights of the Blazing Sun",
-            "name_cn": "0-1个单位的焰阳骑士团帝国骑士",
+            "name_cn": "0-1个单位的焰阳帝国骑士",
             "name_de": "0-1 Einheit Ritter des Sonnenordens",
             "name_fr": "0-1 unité de Chevaliers du Soleil",
             "name_es": ""
@@ -5343,7 +5365,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, First Charge, Swiftstride, Hatred (Undead models)",
-        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 先行冲锋, 快速行进, 仇恨(Undead models)",
+        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 先行冲锋, 快速行进, 仇恨(亡灵模型)",
         "name_de": "Orden der Ritter des Morr, Geschlossene Ränge, Gegenangriff, Erster Angriff, Schnelle Bewegung, Hass (Untote)",
         "name_fr": "Ordre des Chevaliers de Morr, Ordre Serré, Contre-charge, Première Charge, Rapide, Haine (figurines Mortes-vivantes))",
         "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Hatred (Undead models)"
@@ -5358,7 +5380,7 @@
     },
     {
       "name_en": "Empire Knights of the Fiery Heart",
-      "name_cn": "燃烧之心骑士团帝国骑士",
+      "name_cn": "燃烧之心帝国骑士",
       "name_de": "Ritter des Flammenden Herzens",
       "name_fr": "Chevaliers du Cœur Ardent",
       "name_es": "Caballeros del Imperio of the Fiery Heart",
@@ -5506,7 +5528,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Order of the Fiery Heart, Close Order, Counter Charge, First Charge, Swiftstride, Evasive, Flaming Attacks, Hatred (enemy Wizards + Orcs & Goblins)",
-        "name_cn": "燃烧之心骑士团, 紧密阵型, 反制冲锋, 先行冲锋, 快速行进, 闪避, 火焰攻击, 仇恨(enemy Wizards + Orcs & Goblins)",
+        "name_cn": "燃烧之心骑士团, 紧密阵型, 反制冲锋, 先行冲锋, 快速行进, 闪避, 火焰攻击, 仇恨(敌方法师 + 兽人 & 地精)",
         "name_de": "Orden der Flammenden Herzens, Geschlossene Ränge, Gegenangriff, Erster Angriff, Schnelle Bewegung, Ausweichen, Flammenattacken, Hass (feindliche Zauberer und Orks & Goblins)",
         "name_fr": "Ordre du Cœur Ardent, Ordre Serré, Contre-charge, Première Charge, Rapide, Esquiveur, Attaques Enflammées, Haine (Sorciers ennemis, Orques & Gobelins)",
         "name_es": "Order of the Fiery Heart, Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Evasive, Flaming Attacks, Hatred (enemy Wizards + Orcs & Goblins)"
@@ -6154,7 +6176,7 @@
           "armyComposition": "city-state-of-nuln",
           "notes": {
             "name_en": "0-1 war machine per 1000 points",
-            "name_cn": "每1000分0-1 war machine",
+            "name_cn": "每1000分0-1战争机器",
             "name_de": "0-1 Kriegsmaschine pro 1.000 Punkte",
             "name_fr": "0-1 machine de guerre par tranche de 1000 points",
             "name_es": ""
@@ -6882,7 +6904,7 @@
       "lores": [],
       "specialRules": {
         "name_en": "Order of the Knights of Morr, Close Order, Counter Charge, Drilled, First Charge, Inner Circle, Swiftstride, Veteran, Hatred (Undead models), Fear, Magical Attacks",
-        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(Undead models), 恐惧, 魔法攻击",
+        "name_cn": "莫尔骑士团, 紧密阵型, 反制冲锋, 受训, 先行冲锋, 内环, 快速行进, 老兵, 仇恨(亡灵模型), 恐惧, 魔法攻击",
         "name_de": "Orden der Ritter des Morr, Geschlossene Ränge, Gegenangriff, Gut ausgebildet, Erster Angriff, Innerer Zirkel, Schnelle Bewegung, Veteranen, Hass (Untote), Angst, Magische Attacken",
         "name_fr": "Ordre des Chevaliers de Morr, Ordre Serré, Contre-charge, Bien Entraînés, Première Charge, Cercle Intérieur, Rapide, Vétérans, Haine (figurines Mortes-vivantes)), Peur, Attaques Magiques",
         "name_es": "Order of the Knights of Morr, Formación Cerrada, Contracarga, Entrenado, Primera Carga, Círculo Interior, Zancada Veloz, Veterano, Hatred (Undead models), Fear, Magical Attacks"

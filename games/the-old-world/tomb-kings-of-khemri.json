@@ -725,15 +725,35 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_it": "Mago di 4° Livello",
-          "name_de": "Stufe 4 Zauberer",
-          "name_fr": "Sorcier de Niveau 4",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1135,6 +1155,7 @@
       "name_fr": "Settra l'Impérissable",
       "id": "settra-the-imperishable-the-great-king-of-nehekhara",
       "points": 445,
+      "named": true,
       "armyComposition": {
         "tomb-kings-of-khemri": {
           "category": "characters"
@@ -1211,6 +1232,7 @@
       "name_fr": "Prince Apophas",
       "id": "prince-apophas-the-cursed-scarab-lord",
       "points": 130,
+      "named": true,
       "command": [],
       "equipment": [
         {
@@ -1258,6 +1280,7 @@
       "name_fr": "Nekaph",
       "id": "nekaph-emissary-of-settra",
       "points": 120,
+      "named": true,
       "armyComposition": {
         "tomb-kings-of-khemri": {
           "category": "characters"
