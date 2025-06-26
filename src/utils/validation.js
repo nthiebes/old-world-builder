@@ -47,10 +47,6 @@ export const validateList = ({ list, language, intl }) => {
             command.name_en === "General" &&
             (!command.armyComposition ||
               equalsOrIncludes(command.armyComposition, list.armyComposition))
-        ) &&
-        !unit.command.find(
-          (command) =>
-            command.name_en.includes("Battle Standard Bearer") && command.active
         )
       ) {
         const unitName =
