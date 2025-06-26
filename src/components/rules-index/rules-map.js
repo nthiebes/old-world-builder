@@ -50,7 +50,7 @@ const additionalOWBRules = {
   champions: { url: "command-groups/champions" },
   musician: { url: "command-groups/musicians" },
   "standard bearer": { url: "command-groups/standard-bearers" },
-  wizard: { url: "magic/levels-of-wizardry" },
+  wizard: { url: "magic/wizards" },
   "level 1 wizard": { url: "magic/levels-of-wizardry" },
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },

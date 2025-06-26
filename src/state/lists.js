@@ -11,8 +11,8 @@ export const listsSlice = createSlice({
       return payload || [];
     },
     updateList: (state, { payload }) => {
-      const { listId, name, points, description } = payload;
-      const newValues = { name, points, description };
+      const { listId, name, points, description, compositionRule } = payload;
+      const newValues = { name, points, description, compositionRule };
 
       Object.keys(newValues).forEach((key) =>
         newValues[key] === undefined ? delete newValues[key] : {}

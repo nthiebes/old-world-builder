@@ -525,13 +525,35 @@
           "perModel": true
         },
         {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_de": "Zauberer der Stufe 4",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_pl": "Czarodziej poziomu 4",
-          "points": 30,
-          "perModel": true
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1201,6 +1223,7 @@
       "name_pl": "Orion",
       "id": "orion",
       "points": 455,
+      "named": true,
       "command": [
         {
           "name_en": "General",
@@ -1241,6 +1264,7 @@
       "name_pl": "Araloth",
       "id": "araloth",
       "points": 170,
+      "named": true,
       "command": [
         {
           "name_en": "General",

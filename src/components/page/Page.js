@@ -45,7 +45,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
-            <Link to="/datasets">
+            <Link to="/custom-datasets">
               <FormattedMessage id="footer.custom-datasets" />
             </Link>
             <Link to="/datasets">
