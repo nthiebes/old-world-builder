@@ -216,9 +216,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
-  const handleOptionsChange = (id, optionIndex) => {
+  const handleOptionsChange = (id, optionIndex, isRadio) => {
     let newOptions;
 
+    // Option with sub-options
     if (optionIndex !== undefined) {
       newOptions = unit.options.map((parentOption) => {
         if (parentOption.id === id) {
@@ -227,6 +228,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               return {
                 ...option,
                 active: option.active ? false : true,
+              };
+            } else if (isRadio) {
+              return {
+                ...option,
+                active: false,
               };
             }
 
@@ -240,6 +246,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         }
         return parentOption;
       });
+
+      // Top level
     } else {
       newOptions = unit.options.map((option) => {
         if (option.id === id) {
@@ -1051,21 +1059,34 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     exclusiveOption.exclusive &&
                                     exclusiveOption.active
                                 );
+                                const allOptionsExclusive = options.every(
+                                  (opt) => opt.exclusive
+                                );
 
                                 return (
                                   <Fragment key={option.name_en}>
                                     <div className="checkbox checkbox--conditional">
                                       <input
-                                        type="checkbox"
+                                        type={
+                                          allOptionsExclusive
+                                            ? "radio"
+                                            : "checkbox"
+                                        }
                                         id={`option-${id}-option-${optionIndex}`}
                                         value={`${id}-${optionIndex}`}
+                                        name={`option-${id}`}
                                         onChange={() =>
-                                          handleOptionsChange(id, optionIndex)
+                                          handleOptionsChange(
+                                            id,
+                                            optionIndex,
+                                            allOptionsExclusive
+                                          )
                                         }
                                         checked={Boolean(option.active)}
                                         className="checkbox__input"
                                         disabled={
                                           (exclusiveCheckedOption &&
+                                            !allOptionsExclusive &&
                                             option.exclusive &&
                                             !option.active) ||
                                           option.alwaysActive

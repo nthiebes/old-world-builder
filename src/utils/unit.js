@@ -249,7 +249,6 @@ export const getAllOptions = (
     : [];
   const lore = [];
   if (isWizard({ options })) {
-    console.log(activeLore);
     if (activeLore && nameMap[activeLore].name_en !== "None") {
       lore.push(
         nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
