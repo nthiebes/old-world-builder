@@ -532,49 +532,157 @@ export const validateList = ({ list, language, intl }) => {
     const specialMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
     const rareAndMercMax =
       Math.max(Math.floor((list.points - 2000) / 1000), 0) + 2;
+    const restrictedUnits = [];
 
-    if (
-      list.characters &&
-      list.characters.filter(({ named }) => !named).length > charactersMax
-    ) {
-      errors.push({
-        message: "misc.error.combinedArmsCharacters",
-        section: "characters",
-        max: charactersMax,
-      });
-    }
-    if (list.core && list.core.length > coreMax) {
-      errors.push({
-        message: "misc.error.combinedArmsCore",
-        section: "core",
-        max: coreMax,
-      });
-    }
-    if (list.special && list.special.length > specialMax) {
-      errors.push({
-        message: "misc.error.combinedArmsSpecial",
-        section: "special",
-        max: specialMax,
-      });
-    }
-    if (
-      ((list.rare && list.rare.length) || 0) +
-        ((list.mercenaries && list.mercenaries.length) || 0) >
-      rareAndMercMax
-    ) {
-      rareUnits &&
-        errors.push({
-          message: "misc.error.combinedArmsRareAndMercenaries",
+    // Characters
+    list.characters.forEach((unit) => {
+      const characterRestricted = Boolean(
+        characterUnitsRules &&
+          characterUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const characterCount = list.characters.filter(
+        (character) => character.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !characterRestricted &&
+        !unit.named &&
+        characterCount > charactersMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "characters",
+          diff: characterCount - charactersMax,
+        });
+      }
+    });
+
+    // Core
+    list.core.forEach((unit) => {
+      const coreRestricted = Boolean(
+        coreUnitsRules &&
+          coreUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const coreCount = list.core.filter(
+        (core) => core.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !coreRestricted &&
+        coreCount > coreMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "core",
+          diff: coreCount - coreMax,
+        });
+      }
+    });
+
+    // Special
+    list.special.forEach((unit) => {
+      const specialRestricted = Boolean(
+        specialUnitsRules &&
+          specialUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const specialCount = list.special.filter(
+        (special) => special.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !specialRestricted &&
+        specialCount > specialMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "special",
+          diff: specialCount - specialMax,
+        });
+      }
+    });
+
+    // Rare
+    list.rare.forEach((unit) => {
+      const rareRestricted = Boolean(
+        rareUnitsRules &&
+          rareUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const rareCount = list.rare.filter(
+        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !rareRestricted &&
+        rareCount > rareAndMercMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
           section: "rare",
-          max: rareAndMercMax,
+          diff: rareCount - rareAndMercMax,
         });
-      mercUnits &&
-        errors.push({
-          message: "misc.error.combinedArmsRareAndMercenaries",
+      }
+    });
+
+    // Mercenaries
+    list.mercenaries.forEach((unit) => {
+      const mercRestricted = Boolean(
+        mercenariesUnitsRules &&
+          mercenariesUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const mercCount = list.mercenaries.filter(
+        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !mercRestricted &&
+        mercCount > rareAndMercMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
           section: "mercenaries",
-          max: rareAndMercMax,
+          diff: mercCount - rareAndMercMax,
         });
-    }
+      }
+    });
+
+    restrictedUnits.forEach((restrictedUnit) => {
+      errors.push({
+        message: "misc.error.maxUnits",
+        section: restrictedUnit.section,
+        diff: restrictedUnit.diff,
+        name: restrictedUnit.name,
+      });
+    });
   }
 
   characterUnitsRules &&
