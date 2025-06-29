@@ -39,7 +39,8 @@ export const getAllOptions = (
     items,
     detachments,
     activeLore,
-    lores,
+    lores: unitLores,
+    armyComposition: unitArmyComposition,
   },
   {
     removeFactionName = true,
@@ -55,6 +56,7 @@ export const getAllOptions = (
     Boolean(
       options.find((option) => option.name_en === "Detachment" && option.active)
     );
+  const lores = unitArmyComposition?.[armyComposition]?.lores || unitLores;
   const allCommand = [];
   const allMounts = [];
   const allOptions = [];
@@ -246,14 +248,17 @@ export const getAllOptions = (
         })
     : [];
   const lore = [];
-  if (activeLore && nameMap[activeLore].name_en !== "None") {
-    lore.push(
-      nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
-    );
-  } else if (lores?.length && nameMap[lores[0]].name_en !== "None") {
-    lore.push(
-      nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
-    );
+  if (isWizard({ options })) {
+    console.log(activeLore);
+    if (activeLore && nameMap[activeLore].name_en !== "None") {
+      lore.push(
+        nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
+      );
+    } else if (lores?.length && nameMap[lores[0]].name_en !== "None") {
+      lore.push(
+        nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
+      );
+    }
   }
 
   let allOptionsArray = [
@@ -427,6 +432,16 @@ export const unitHasItem = (unit, itemName) => {
     }
   }
   return false;
+};
+
+export const isWizard = (unit) => {
+  return Boolean(
+    findOption(
+      unit.options,
+      ({ name_en, active }) =>
+        active && name_en.toLowerCase().includes("wizard")
+    )
+  );
 };
 
 /**

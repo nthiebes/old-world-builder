@@ -30,7 +30,12 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
-import { getUnitName, getUnitOptionNotes, unitHasItem } from "../../utils/unit";
+import {
+  getUnitName,
+  getUnitOptionNotes,
+  unitHasItem,
+  isWizard,
+} from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
 import "./Unit.css";
@@ -586,7 +591,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           </p>
         ) : null}
         {!unit.minimum &&
-          (!unit.lores || (unit.lores && !unit.lores.length)) &&
+          (!lores || (lores && !lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
           (!unit.equipment || (unit.equipment && !unit.equipment.length)) &&
           (!unit.armor || (unit.armor && !unit.armor.length)) &&
@@ -1563,7 +1568,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {lores && lores.length ? (
+        {isWizard(unit) && lores && lores.length ? (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.lore" />
