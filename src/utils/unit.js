@@ -433,7 +433,11 @@ export const unitHasItem = (unit, itemName) => {
   return false;
 };
 
-export const isWizard = (unit) => {
+export const isWizard = (unitToCheck) => {
+  const unit = {
+    ...unitToCheck,
+    options: unitToCheck.options || [],
+  };
   return Boolean(
     findOption(
       unit.options,
