@@ -630,14 +630,35 @@
           "name_fr": "Embusqueurs"
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "points": 30,
-          "minimum": 0,
-          "maximum": 0,
-          "name_es": "Hechicero nivel 2",
-          "name_fr": "Sorcier de Niveau 2"
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -944,7 +965,8 @@
             "name_de": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
             "name_es": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband, Impetuous",
             "name_fr": "Arme Perforante (1), Soif de Sang, Rage Sanguinaire, Taurogors, Peur, Déchiqueteur, Regard des Dieux, Touches d'Impact (1), Marque du Chaos Universel, Fureur Primale, Appel du Massacreur, Bande de Guerre, Impétueux"
-          }
+          },
+          "lores": ["battle-magic", "dark-magic"]
         }
       },
       "command": [

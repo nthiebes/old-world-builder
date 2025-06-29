@@ -1466,13 +1466,35 @@
       ],
       "options": [
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1719,25 +1741,35 @@
       ],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_it": "Mago di 1° Livello",
-          "name_de": "Stufe 1 Zauberer",
-          "name_es": "Mago de nivel 1",
-          "name_fr": "Sorcier de Niveau 1",
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
           "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "perModel": true
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -2258,35 +2290,45 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_it": "Mago di 1° Livello",
-          "name_de": "Stufe 1 Zauberer",
-          "name_es": "Mago de nivel 1",
-          "name_fr": "Sorcier de Niveau 1",
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
           "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "exclusive": true
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_it": "Mago di 3° Livello",
-          "name_de": "Stufe 3 Zauberer",
-          "name_es": "Mago de nivel 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "points": 60,
-          "exclusive": true
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_it": "Mago di 3° Livello",
+              "name_de": "Stufe 3 Zauberer",
+              "name_es": "Mago de nivel 3",
+              "name_fr": "Sorcier de Niveau 3",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
