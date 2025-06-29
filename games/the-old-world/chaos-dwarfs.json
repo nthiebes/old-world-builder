@@ -271,15 +271,35 @@
           "maximum": 0
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1191,10 +1211,10 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_en": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
@@ -1391,10 +1411,10 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_en": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {

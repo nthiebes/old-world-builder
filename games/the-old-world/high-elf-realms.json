@@ -1466,13 +1466,35 @@
       ],
       "options": [
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1719,25 +1741,35 @@
       ],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_it": "Mago di 1° Livello",
-          "name_de": "Stufe 1 Zauberer",
-          "name_es": "Mago de nivel 1",
-          "name_fr": "Sorcier de Niveau 1",
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
           "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "perModel": true
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1999,12 +2031,12 @@
         }
       ],
       "specialRules": {
-        "name_en": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_en": "Furious Charge, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
         "name_cn": "狂怒冲锋*, 伊瑟拉玛武器, 白狮斗篷, 穿行掩体*, 先攻*, 坚毅, 岁月的荣耀",
-        "name_it": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
-        "name_es": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_it": "Furious Charge, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
+        "name_es": "Furious Charge, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages",
         "name_fr": "Charge Dévastatrice*, Armes en Ithilmar, Cape de Lion, Mouvement à Couvert*, Frappe En Premier*, Obstiné, Valeur des Âges",
-        "name_de": "Furious Charge*, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages"
+        "name_de": "Furious Charge, Ithilmar Weapons, Lion Cloak, Move Through Cover*, Strike First*, Stubborn, Valour of Ages"
       }
     },
     {
@@ -2258,35 +2290,45 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_it": "Mago di 1° Livello",
-          "name_de": "Stufe 1 Zauberer",
-          "name_es": "Mago de nivel 1",
-          "name_fr": "Sorcier de Niveau 1",
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
           "points": 0,
-          "exclusive": true,
-          "active": true
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_it": "Mago di 2° Livello",
-          "name_de": "Stufe 2 Zauberer",
-          "name_es": "Mago de nivel 2",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "exclusive": true
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_it": "Mago di 3° Livello",
-          "name_de": "Stufe 3 Zauberer",
-          "name_es": "Mago de nivel 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "points": 60,
-          "exclusive": true
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_it": "Mago di 3° Livello",
+              "name_de": "Stufe 3 Zauberer",
+              "name_es": "Mago de nivel 3",
+              "name_fr": "Sorcier de Niveau 3",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -2411,12 +2453,12 @@
       ],
       "items": [],
       "specialRules": {
-        "name_en": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
+        "name_en": "Elven Reflexes, Furious Charge, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
         "name_cn": "精灵反应, 狂怒冲锋*, 强韧体质, 穿行掩体*, 坚毅, 岁月的荣耀",
-        "name_it": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
-        "name_es": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
+        "name_it": "Elven Reflexes, Furious Charge, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
+        "name_es": "Elven Reflexes, Furious Charge, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages",
         "name_fr": "Réflexes Elfiques, Charge Dévastatrice*, Puissante Constitution, Mouvement à Couvert*, Obstiné, Valeur des Âges",
-        "name_de": "Elven Reflexes, Furious Charge*, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages"
+        "name_de": "Elven Reflexes, Furious Charge, Mighty Constitution, Move Through Cover*, Stubborn, Valour of Ages"
       }
     },
     {

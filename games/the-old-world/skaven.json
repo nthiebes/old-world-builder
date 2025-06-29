@@ -1139,11 +1139,11 @@
       "maximum": 30,
       "command": [
         {
-          "name_en": "Master Moulder (Upgrade for one Packmaster)",
-          "name_cn": "莫德尔训鼠大师(将一个鼠群饲主升级为)",
-          "name_de": "Meisterzüchter (Aufwertung für einen Meutenbändiger)",
-          "name_es": "Master Moulder (Upgrade for one Packmaster)",
-          "name_fr": "Maître corrupteur (Amélioration pour un Chef de meute)",
+          "name_en": "Master Moulder (champion)",
+          "name_cn": "莫德尔训鼠大师 (champion)",
+          "name_de": "Meisterzüchter (champion)",
+          "name_es": "Master Moulder (champion)",
+          "name_fr": "Maître corrupteur (champion)",
           "points": 7,
           "magic": {
             "types": [
@@ -1154,6 +1154,13 @@
               "enchanted-item"
             ],
             "maxPoints": 25
+          },
+          "notes": {
+            "name_en": "Upgrade for one Packmaster",
+            "name_cn": "将一个鼠群饲主升级为",
+            "name_de": "Aufwertung für einen Meutenbändiger",
+            "name_es": "Upgrade for one Packmaster",
+            "name_fr": "Amélioration pour un Chef de meute"
           }
         }
       ],
@@ -1172,28 +1179,38 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Packmaster (Whip - 1 per 3 Giant Rats)",
-          "name_cn": "鼠群饲主(长鞭 - 每包括3个巨鼠，就可以加入1个)",
-          "name_de": "Meutenbändiger (Peitsche, 1 pro 3 Riesenratten)",
-          "name_es": "Packmaster (Whip, one per 3 Giant Rats)",
-          "name_fr": "Chef de meute (Fouet, 1 tous les 3 Rats Géants)",
+          "name_en": "Packmaster, Whip",
+          "name_cn": "鼠群饲主, 长鞭",
+          "name_de": "Meutenbändiger, Peitsche",
+          "name_es": "Packmaster, Whip",
+          "name_fr": "Chef de meute, Fouet",
           "points": 5,
           "perModel": true,
           "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Max 1 per 3 Giant Rats",
+            "name_cn": "Max 每包括3个巨鼠，就可以加入1个",
+            "name_de": "Max 1 pro 3 Riesenratten",
+            "name_es": "Max 1 per 3 Giant Rats",
+            "name_fr": "Max 1 tous les 3 Rats Géants"
+          }
         },
         {
-          "name_en": "Packmaster (Things-catcher - 1 per 3 Giant Rats)",
-          "name_cn": "鼠群饲主(捕人器 - 每包括3个巨鼠，就可以加入1个)",
-          "name_de": "Meutenbändiger (Ding-Fänger, 1 per 3 Giant Rats)",
-          "name_es": "Packmaster (Things-catcher, 1 per 3 Giant Rats)",
-          "name_fr": "Chef de meute (Attrape-choses, 1 tous les 3 Rats Géants)",
+          "name_en": "Packmaster, Things-catcher",
+          "name_cn": "鼠群饲主, 捕人器",
+          "name_de": "Meutenbändiger, Ding-Fänger",
+          "name_es": "Packmaster, Things-catcher",
+          "name_fr": "Chef de meute, Attrape-choses",
           "points": 10,
           "perModel": true,
           "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Max 1 per 3 Giant Rats",
+            "name_cn": "Max 每包括3个巨鼠，就可以加入1个",
+            "name_de": "Max 1 pro 3 Riesenratten",
+            "name_es": "Max 1 per 3 Giant Rats",
+            "name_fr": "Max 1 tous les 3 Rats Géants"
+          }
         }
       ],
       "mounts": [],
@@ -1646,11 +1663,11 @@
       },
       "command": [
         {
-          "name_en": "Master Moulder (Upgrade for one Packmaster)",
-          "name_cn": "莫德尔训鼠大师(将一个鼠群饲主升级为)",
-          "name_de": "Meisterzüchter (Aufwertung für einen Meutenbändiger)",
-          "name_es": "Master Moulder (Upgrade for one Packmaster)",
-          "name_fr": "Maître corrupteur (Amélioration pour un Chef de meute)",
+          "name_en": "Master Moulder (champion)",
+          "name_cn": "莫德尔训鼠大师 (champion)",
+          "name_de": "Meisterzüchter (champion)",
+          "name_es": "Master Moulder (champion)",
+          "name_fr": "Maître corrupteur (champion)",
           "points": 7,
           "magic": {
             "types": [
@@ -1661,6 +1678,13 @@
               "enchanted-item"
             ],
             "maxPoints": 25
+          },
+          "notes": {
+            "name_en": "Upgrade for one Packmaster",
+            "name_cn": "将一个鼠群饲主升级为",
+            "name_de": "Aufwertung für einen Meutenbändiger",
+            "name_es": "Upgrade for one Packmaster",
+            "name_fr": "Amélioration pour un Chef de meute"
           }
         }
       ],
@@ -1690,26 +1714,38 @@
       ],
       "options": [
         {
-          "name_en": "Packmaster (Whip - 1 per 2 Rat Ogres)",
-          "name_cn": "鼠群饲主(长鞭 - 每包括2个鼠巨魔，就可以加入1个)",
-          "name_de": "Meutenbändiger (Peitsche, 1 pro 2 Rattenoger)",
-          "name_es": "Packmaster (Whip, 1 per 2 Rat Ogres)",
-          "name_fr": "Chef de meute (Fouet, 1 tous les 2 Rat-ogres)",
+          "name_en": "Packmaster, Whip",
+          "name_cn": "鼠群饲主, 长鞭",
+          "name_de": "Meutenbändiger, Peitsche",
+          "name_es": "Packmaster, Whip",
+          "name_fr": "Chef de meute, Fouet",
           "points": 5,
+          "perModel": true,
           "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Max 1 per 3 Giant Rats",
+            "name_cn": "Max 每包括3个巨鼠，就可以加入1个",
+            "name_de": "Max 1 pro 3 Riesenratten",
+            "name_es": "Max 1 per 3 Giant Rats",
+            "name_fr": "Max 1 tous les 3 Rats Géants"
+          }
         },
         {
-          "name_en": "Packmaster (Things-catcher - 1 per 2 Rat Ogres)",
-          "name_cn": "鼠群饲主(捕人器 - 每包括2个鼠巨魔，就可以加入1个)",
-          "name_de": "Meutenbändiger (Ding-Fänger, 1 pro 2 Rattenoger)",
-          "name_es": "Packmaster (Things-catcher, 1 per 2 Rat Ogres)",
-          "name_fr": "Chef de meute (Attrape-choses, 1 tous les 2 Rat-ogres)",
+          "name_en": "Packmaster, Things-catcher",
+          "name_cn": "鼠群饲主, 捕人器",
+          "name_de": "Meutenbändiger, Ding-Fänger",
+          "name_es": "Packmaster, Things-catcher",
+          "name_fr": "Chef de meute, Attrape-choses",
           "points": 10,
+          "perModel": true,
           "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "Max 1 per 3 Giant Rats",
+            "name_cn": "Max 每包括3个巨鼠，就可以加入1个",
+            "name_de": "Max 1 pro 3 Riesenratten",
+            "name_es": "Max 1 per 3 Giant Rats",
+            "name_fr": "Max 1 tous les 3 Rats Géants"
+          }
         }
       ],
       "mounts": [],
