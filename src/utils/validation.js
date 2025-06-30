@@ -471,6 +471,7 @@ export const validateList = ({ list, language, intl }) => {
         checkFor25Percent(unit, "characters");
 
         if (
+          unit.options &&
           findOption(
             unit.options,
             ({ name_en, active }) =>
@@ -480,6 +481,7 @@ export const validateList = ({ list, language, intl }) => {
           level4Wizards++;
         }
         if (
+          unit.options &&
           findOption(
             unit.options,
             ({ name_en, active }) =>

@@ -533,7 +533,7 @@ export const getUnitLoresWithSpells = (unit) => {
           illusion: loresOfMagicWithSpells["illusion"],
         }
       : findOption(
-          unit.options,
+          unit.options || [],
           ({ active, name_en }) =>
             active && /^Arise!, Level 1 Wizard/.test(name_en)
         )
