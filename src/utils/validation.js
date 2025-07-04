@@ -448,7 +448,7 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // Grand Melee
-  if (list.compositionRule === "grand-melee") {
+  if (list.compositionRule.includes("grand-melee")) {
     const checkFor25Percent = (unit, type) => {
       const unitPoints = getUnitPoints(unit, {
         armyComposition: list.armyComposition || list.army,
@@ -527,7 +527,7 @@ export const validateList = ({ list, language, intl }) => {
   }
 
   // Combined Arms
-  if (list.compositionRule === "combined-arms") {
+  if (list.compositionRule.includes("combined-arms")) {
     const charactersMax =
       Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
     const coreMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 4;

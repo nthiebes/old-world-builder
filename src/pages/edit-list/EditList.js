@@ -36,6 +36,10 @@ export const EditList = ({ isMobile }) => {
       id: "combined-arms",
       name_en: intl.formatMessage({ id: "misc.combined-arms" }),
     },
+    {
+      id: "grand-melee-combined-arms",
+      name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
+    },
   ];
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
