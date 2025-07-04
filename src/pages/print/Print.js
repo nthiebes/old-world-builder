@@ -256,6 +256,7 @@ export const Print = () => {
           spaceBottom
           size="large"
           disabled={isPrinting}
+          className="print__button"
         >
           {isPrinting ? (
             <FormattedMessage id="print.printing" />
@@ -279,8 +280,7 @@ export const Print = () => {
         </h1>
         <p className="print__subheader">
           {game.name}, {armyName}
-          {armyCompositionName ? `, ${armyCompositionName}` : ""}
-          ,{" "}
+          {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
           <FormattedMessage id={`misc.${list.compositionRule || "open-war"}`} />
         </p>
 

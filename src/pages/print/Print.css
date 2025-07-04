@@ -45,7 +45,7 @@
 
 .print li {
   margin-bottom: 1rem;
-  break-inside: avoid
+  break-inside: avoid;
 }
 
 .print__points {
@@ -83,4 +83,9 @@
 
 .print__custom-note {
   margin-top: 5px;
+}
+
+.print__button {
+  margin-left: 0;
+  transform: none;
 }
