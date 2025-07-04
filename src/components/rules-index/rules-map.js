@@ -257,6 +257,9 @@ export const synonyms = {
   "dark sorcery": "herdstones",
   "fearsome edifice": "herdstones",
   "bestial fury beastmen": "herdstones",
+  "cathayan lances": "cathayan lance",
+  "sky lantern crane guns": "sky lantern crane gun",
+  "iron hail guns": "iron hail gun",
 };
 
 export const rulesMap = {
