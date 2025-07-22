@@ -215,10 +215,17 @@ export const getAllOptions = (
 
           if (equipment && equipment.length) {
             equipment.forEach((option) => {
-              (option.active || option.equippedDefault) &&
+              if (option.stackable && option.stackableCount > 0) {
                 equipmentSelection.push(
-                  `${option[`name_${language}`]}` || option.name_en
+                  `${option.stackableCount}x ${option[`name_${language}`]}` ||
+                    option.name_en
                 );
+              } else {
+                (option.active || option.equippedDefault) &&
+                  equipmentSelection.push(
+                    `${option[`name_${language}`]}` || option.name_en
+                  );
+              }
             });
           }
           if (armor && armor.length) {

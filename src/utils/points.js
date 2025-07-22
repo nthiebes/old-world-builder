@@ -165,7 +165,10 @@ export const getUnitPoints = (unit, settings) => {
 
         if (equipment && equipment.length) {
           equipment.forEach((option) => {
-            if (option.active && option.perModel) {
+            if (option.stackable) {
+              unitPoints +=
+                (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
               unitPoints += strength * option.points;
             } else if (option.active && !option.perModel) {
               unitPoints += option.points;

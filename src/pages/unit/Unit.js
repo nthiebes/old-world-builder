@@ -216,6 +216,39 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       })
     );
   };
+  const handleStackableDetachmentChange = ({
+    detachmentId,
+    equipmentId,
+    category,
+    stackableCount,
+  }) => {
+    const unitDetachments = [...unit.detachments].map((detachment) => {
+      if (detachment.id === detachmentId) {
+        const equipment = detachment[category].map((item) => {
+          if (item.id === equipmentId) {
+            return {
+              ...item,
+              stackableCount,
+            };
+          }
+          return item;
+        });
+
+        return { ...detachment, [category]: equipment };
+      }
+
+      return detachment;
+    });
+
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        detachments: unitDetachments,
+      })
+    );
+  };
   const handleOptionsChange = (id, optionIndex, isRadio) => {
     let newOptions;
 
@@ -1287,44 +1320,109 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                       <h3 className="unit__subline">
                                         <FormattedMessage id="unit.equipment" />
                                       </h3>
-                                      {detachmentEquipment.map((equipment) => (
-                                        <div
-                                          className="radio"
-                                          key={equipment.id}
-                                        >
-                                          <input
-                                            type="radio"
-                                            id={`equipment-${id}-${equipment.id}`}
-                                            name={`equipment-${id}`}
-                                            value={equipment.id}
-                                            onChange={() =>
-                                              handleDetachmentEquipmentChange({
-                                                detachmentId: id,
-                                                equipmentId: equipment.id,
-                                                category: "equipment",
-                                              })
-                                            }
-                                            checked={equipment.active || false}
-                                            className="radio__input"
-                                          />
-                                          <label
-                                            htmlFor={`equipment-${id}-${equipment.id}`}
-                                            className="radio__label"
-                                          >
-                                            <span className="unit__label-text">
-                                              <RulesWithIcon
-                                                textObject={equipment}
+                                      {detachmentEquipment.map((equipment) => {
+                                        const stackableCount =
+                                          equipment.stackableCount ||
+                                          equipment.minimum ||
+                                          0;
+                                        let combinedStackableCount = 0;
+
+                                        detachmentEquipment.forEach((item) => {
+                                          if (item.exclusive) {
+                                            combinedStackableCount +=
+                                              item.stackableCount || 0;
+                                          }
+                                        });
+
+                                        const maxEquipmentCount =
+                                          (equipment.maximum || strength) -
+                                          combinedStackableCount +
+                                          stackableCount;
+
+                                        if (equipment.stackable) {
+                                          return (
+                                            <Fragment key={equipment.id}>
+                                              <label
+                                                htmlFor={`equipment-${id}-${equipment.id}`}
+                                                className="radio__label"
+                                              >
+                                                <span className="unit__label-text">
+                                                  <RulesWithIcon
+                                                    textObject={equipment}
+                                                  />
+                                                </span>
+                                                <i className="checkbox__points">
+                                                  {getPointsText({
+                                                    points: equipment.points,
+                                                    perModel:
+                                                      equipment.perModel,
+                                                  })}
+                                                </i>
+                                              </label>
+                                              <NumberInput
+                                                id={`equipment-${id}-${equipment.id}`}
+                                                min={equipment.minimum}
+                                                max={maxEquipmentCount}
+                                                value={stackableCount}
+                                                onChange={(event) =>
+                                                  handleStackableDetachmentChange(
+                                                    {
+                                                      detachmentId: id,
+                                                      equipmentId: equipment.id,
+                                                      category: "equipment",
+                                                      stackableCount:
+                                                        event.target.value,
+                                                    }
+                                                  )
+                                                }
                                               />
-                                            </span>
-                                            <i className="checkbox__points">
-                                              {getPointsText({
-                                                points: equipment.points,
-                                                perModel: equipment.perModel,
-                                              })}
-                                            </i>
-                                          </label>
-                                        </div>
-                                      ))}
+                                            </Fragment>
+                                          );
+                                        }
+
+                                        return (
+                                          <div
+                                            className="radio"
+                                            key={equipment.id}
+                                          >
+                                            <input
+                                              type="radio"
+                                              id={`equipment-${id}-${equipment.id}`}
+                                              name={`equipment-${id}`}
+                                              value={equipment.id}
+                                              onChange={() =>
+                                                handleDetachmentEquipmentChange(
+                                                  {
+                                                    detachmentId: id,
+                                                    equipmentId: equipment.id,
+                                                    category: "equipment",
+                                                  }
+                                                )
+                                              }
+                                              checked={
+                                                equipment.active || false
+                                              }
+                                              className="radio__input"
+                                            />
+                                            <label
+                                              htmlFor={`equipment-${id}-${equipment.id}`}
+                                              className="radio__label"
+                                            >
+                                              <span className="unit__label-text">
+                                                <RulesWithIcon
+                                                  textObject={equipment}
+                                                />
+                                              </span>
+                                              <i className="checkbox__points">
+                                                {getPointsText({
+                                                  points: equipment.points,
+                                                  perModel: equipment.perModel,
+                                                })}
+                                              </i>
+                                            </label>
+                                          </div>
+                                        );
+                                      })}
                                     </>
                                   )}
                                 {detachmentArmor &&
