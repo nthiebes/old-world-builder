@@ -120,7 +120,7 @@ export const App = () => {
                   <Route path="/editor/:listId/edit">{<EditList />}</Route>
                   <Route path="/editor/:listId/export">{<Export />}</Route>
                   <Route path="/editor/:listId/duplicate">
-                    {<DuplicateList />}
+                    <DuplicateList />
                   </Route>
                   <Route path="/editor/:listId/add/:type">{<Add />}</Route>
                   <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>
@@ -129,13 +129,13 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/editor/:listId/:type/:unitId/magic/:command">
-                    {<Magic />}
+                    <Magic />
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/rename">
-                    {<Rename />}
+                    <Rename />
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/items/:group">
-                    {<Magic />}
+                    <Magic />
                   </Route>
                 </Switch>
               </section>

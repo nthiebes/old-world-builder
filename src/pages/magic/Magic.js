@@ -68,7 +68,7 @@ export const Magic = ({ isMobile }) => {
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => armyId === id);
+      .armies.find(({ id }) => armyId === id || list?.army === id);
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
@@ -492,7 +492,7 @@ export const Magic = ({ isMobile }) => {
               (!item.armyComposition ||
                 equalsOrIncludes(
                   item.armyComposition,
-                  list?.armyComposition || list?.army
+                  unit.army || list?.armyComposition || list?.army
                 ))
           );
 
