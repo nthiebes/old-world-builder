@@ -4829,11 +4829,11 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5010,11 +5010,11 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5173,11 +5173,11 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5336,11 +5336,11 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5499,11 +5499,11 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
           "active": true
@@ -5623,11 +5623,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Great weapons",
-          "name_cn": "重型武器",
-          "name_de": "Zweihandwaffen",
-          "name_fr": "Armes lourdes",
-          "name_es": "Armas a dos manos",
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Handwaffen, Zweihandwaffen",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
           "points": 0,
           "perModel": true,
           "active": true
@@ -8113,7 +8113,17 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Helblaster Volley Gun, Hand weapons",
+          "name_cn": "地狱喷射连环炮, 单手武器",
+          "name_de": "Höllenfeuer-Salvenkanone, Handwaffen",
+          "name_fr": "Canon à Répétition Feu d'Enfer, Armes de base",
+          "name_es": "Cañón de Salvas Helblaster, Armas de mano",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [
         {
@@ -8173,7 +8183,15 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [{
+          "name_en": "Helstorm Rocket Battery, Hand weapons",
+          "name_cn": "地狱风暴火箭炮, 单手武器",
+          "name_de": "Höllensturm-Raketenlafette, Handwaffen",
+          "name_fr": "Batterie Tonnerre de Feu, Armes de base",
+          "name_es": "Batería de Cohetes HelStorm, Armas de mano",
+          "points": 0,
+          "active": true
+        }],
       "armor": [],
       "options": [
         {
