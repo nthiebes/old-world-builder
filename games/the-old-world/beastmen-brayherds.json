@@ -1441,37 +1441,7 @@
           "points": 5
         }
       ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons",
-          "name_cn": "单手武器",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Armes de base",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Additional hand weapons",
-          "points": 0,
-          "perModel": true,
-          "name_es": "Arma de mano adicional",
-          "name_fr": "Armes de base additionnelles"
-        },
-        {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_de": "Shields",
-          "points": 0,
-          "perModel": true,
-          "name_es": "Escudos",
-          "name_fr": "Boucliers"
-        }
-      ],
+      "equipment": [],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -1487,16 +1457,6 @@
           "minDetachmentSize": 10,
           "equipment": [
             {
-              "name_en": "Hand weapons",
-              "name_cn": "单手武器",
-              "name_de": "Hand weapons",
-              "name_es": "Escudos",
-              "name_fr": "Armes de base",
-              "points": 0,
-              "active": true,
-              "id": 0
-            },
-            {
               "name_en": "Hand weapons, Shields",
               "name_cn": "单手武器, 盾牌",
               "name_de": "Hand weapons, Shields",
@@ -1504,7 +1464,11 @@
               "name_fr": "Armes de base, Boucliers",
               "points": 0,
               "id": 1,
-              "active": false
+              "stackable": true,
+              "stackableCount": 10,
+              "exclusive": true,
+              "minimum": 0,
+              "maximum": 0
             },
             {
               "name_en": "Additional hand weapons",
@@ -1514,7 +1478,10 @@
               "name_fr": "Armes de base additionnelles",
               "points": 0,
               "id": 2,
-              "active": false
+              "stackable": true,
+              "exclusive": true,
+              "minimum": 0,
+              "maximum": 0
             }
           ],
           "armor": [],
@@ -1527,6 +1494,7 @@
               "name_fr": "Embusqueurs",
               "points": 1,
               "perModel": true,
+              "id": 0,
               "notes": {
                 "name_en": "If selected, it must also be selected for Ungors",
                 "name_fr": "Si sélectionné, doit être sélectionné également pour les Ungors"
@@ -1545,23 +1513,18 @@
           "minDetachmentSize": 10,
           "equipment": [
             {
-              "name_en": "Hand weapons, Shields",
-              "name_cn": "单手武器, 盾牌",
-              "name_de": "Hand weapons, Shields",
-              "name_es": "Hand weapons, Shields",
-              "name_fr": "Armes de base, Boucliers",
-              "active": true,
-              "points": 0,
-              "id": 0
-            },
-            {
               "name_en": "Thrusting spears, Shields",
               "name_cn": "刺矛, 盾牌",
               "name_de": "Thrusting spears, Shields",
               "name_es": "Thrusting spears, Shields",
               "name_fr": "Lances d'infanterie, Boucliers",
               "points": 0,
-              "id": 1
+              "id": 1,
+              "stackable": true,
+              "stackableCount": 10,
+              "exclusive": true,
+              "minimum": 0,
+              "maximum": 0
             },
             {
               "name_en": "Throwing spears, Shields",
@@ -1570,7 +1533,11 @@
               "name_es": "Throwing spears, Shields",
               "name_fr": "Javelots, Boucliers",
               "points": 0,
-              "id": 2
+              "id": 2,
+              "stackable": true,
+              "exclusive": true,
+              "minimum": 0,
+              "maximum": 0
             }
           ],
           "armor": [],
@@ -1583,6 +1550,7 @@
               "name_fr": "Embusqueurs",
               "points": 1,
               "perModel": true,
+              "id": 0,
               "notes": {
                 "name_en": "If selected, it must also be selected for Gors",
                 "name_fr": "Si sélectionné, doit être sélectionné également pour les Gors"
