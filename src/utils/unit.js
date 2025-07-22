@@ -519,8 +519,10 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
     specialRuleLores[loreId] = loresOfMagicWithSpells[loreId];
   }
 
-  const unitLores = unit?.armyComposition[armyComposition]?.lores
-    ? unit.armyComposition[armyComposition].lores
+  const unitLores = unit.armyComposition
+    ? unit.armyComposition[armyComposition]?.lores
+      ? unit.armyComposition[armyComposition].lores
+      : unit.lores || []
     : unit.lores || [];
 
   const selectedLores =
