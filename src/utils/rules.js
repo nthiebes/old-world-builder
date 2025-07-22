@@ -3695,8 +3695,6 @@ export const rules = {
         },
         {
           ids: ["poisoned-wind-globadiers"],
-          min: 0,
-          max: 1,
           requiresType: "characters",
           requires: ["warlock-engineer"],
         },
