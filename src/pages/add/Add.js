@@ -299,11 +299,15 @@ export const Add = ({ isMobile }) => {
                     {characters.map((unit) =>
                       getUnit(unit, armyComposition, "characters")
                     )}
-                    {core.map((unit) => getUnit(unit, armyComposition, "core"))}
-                    {special.map((unit) =>
-                      getUnit(unit, armyComposition, "special")
-                    )}
-                    {rare.map((unit) => getUnit(unit, armyComposition, "rare"))}
+                    {core
+                      .filter((unit) => !unit.detachment)
+                      .map((unit) => getUnit(unit, armyComposition, "core"))}
+                    {special
+                      .filter((unit) => !unit.detachment)
+                      .map((unit) => getUnit(unit, armyComposition, "special"))}
+                    {rare
+                      .filter((unit) => !unit.detachment)
+                      .map((unit) => getUnit(unit, armyComposition, "rare"))}
                   </Expandable>
                 )
               )}
