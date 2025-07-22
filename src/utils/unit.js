@@ -451,7 +451,7 @@ export const isWizard = (unitToCheck) => {
  * Returns the lores of magic and their spells the unit can use based on its
  * special rules and its selected lore.
  */
-export const getUnitLoresWithSpells = (unit) => {
+export const getUnitLoresWithSpells = (unit, armyComposition) => {
   const specialRuleLores = (unit?.specialRules?.name_en || "")
     .split(", ")
     .filter((rule) => /^Lore of/.test(rule))
@@ -512,6 +512,10 @@ export const getUnitLoresWithSpells = (unit) => {
     specialRuleLores[loreId] = loresOfMagicWithSpells[loreId];
   }
 
+  const unitLores = unit?.armyComposition[armyComposition]?.lores
+    ? unit.armyComposition[armyComposition].lores
+    : unit.lores || [];
+
   const selectedLores =
     unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Arcane Familiar")
       ? {
@@ -538,10 +542,10 @@ export const getUnitLoresWithSpells = (unit) => {
             active && /^Arise!, Level 1 Wizard/.test(name_en)
         )
       ? { necromancy: loresOfMagicWithSpells["necromancy"] }
-      : unit.lores?.length > 0
+      : unitLores.length > 0
       ? {
-          [unit.activeLore ?? unit.lores[0]]:
-            loresOfMagicWithSpells[unit.activeLore ?? unit.lores[0]],
+          [unit.activeLore ?? unitLores[0]]:
+            loresOfMagicWithSpells[unit.activeLore ?? unitLores[0]],
         }
       : {};
 
