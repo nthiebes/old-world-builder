@@ -64,11 +64,21 @@ export const Magic = ({ isMobile }) => {
   const unit = units && units.find(({ id }) => id === unitId);
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
-  const army =
+  let army =
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => armyId === id || list?.army === id);
+      .armies.find(({ id }) => armyId === id);
+
+  // Use list army for arcane journals
+  if (!army) {
+    army =
+      list &&
+      gameSystems
+        .find(({ id }) => id === list.game)
+        .armies.find(({ id }) => list.army === id);
+  }
+
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
@@ -383,7 +393,7 @@ export const Magic = ({ isMobile }) => {
     (commandOption) =>
       !commandOption.armyComposition ||
       commandOption.armyComposition.includes(
-        list?.armyComposition || list?.army
+        unit.army || list?.armyComposition || list?.army
       )
   );
   const hasCommandMagicItems = Boolean(
