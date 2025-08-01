@@ -1,6 +1,7 @@
 import {
   isMultipleAllowedItem,
   maxAllowedOfItem,
+  itemsUsedElsewhere,
 } from "./magic-item-limitations";
 import magicItems from "../../public/games/the-old-world/magic-items.json";
 
@@ -67,3 +68,87 @@ describe("maxAllowedOfItem", () => {
     expect(maxAllowedOfItem(item, selectedAmount, unitPointsRemaining)).toBe(3);
   });
 });
+
+const princeID = "prince.rbexhgs";
+// List with a Prince and a Mage with no overlapping items
+const itemsElswhereList = {
+  "name": "High Elf Realms",
+  "game": "the-old-world",
+  "army": "high-elf-realms",
+  "characters": [
+    {
+      "name_en": "Prince",
+      "id": princeID,
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "selected": [
+            {
+              "name_en": "Berserker Blade",
+              "type": "weapon",
+              "id": "general-8"
+            },
+            {
+              "name_en": "Dragon Helm",
+              "type": "armor",
+              "id": "high-elf-realms-11"
+            }
+          ],
+        }
+      ],
+    },{
+      "name_en": "Mage",
+      "id": "mage.qhhrfk",
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "selected": [],
+        }
+      ]
+    }
+  ],
+  "core": [],
+  "special": [],
+  "rare": [],
+  "mercenaries": [],
+  "allies": [],
+  "armyComposition": "high-elf-realms",
+}
+
+describe("itemsUsedElsewhere", () => {
+  test("Warns if an item is used by more than one hero", () => {
+    const items = [
+      magicItems.general.find(
+        (item) => item.name_en === "Berserker Blade"
+      )
+    ];
+    
+    // Deep copy of list
+    // structuredClone would do this cleaner, but it doesn't seem supported
+    // by whatever version of node is running here.
+    const list = JSON.parse(JSON.stringify(itemsElswhereList));
+
+    //Add a Noble with an item shared with the Prince
+    list.characters.push(
+      {
+        "name_en": "Noble",
+        "id": "noble.xglrvqwbe",
+        "items": [
+          {
+            "name_en": "Magic Items",
+            "selected": [
+              {
+                "name_en": "Berserker Blade",
+                "type": "weapon",
+                "id": "general-8"
+              }
+            ],
+          }
+        ],
+      }
+    );
+    expect(itemsUsedElsewhere(items, list, princeID)).toHaveLength(1);
+  });
+});
+
+

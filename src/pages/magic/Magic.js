@@ -9,6 +9,7 @@ import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { ErrorMessage } from "../../components/error-message";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
@@ -18,6 +19,7 @@ import { equalsOrIncludes } from "../../utils/string";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
+  itemsUsedElsewhere,
   maxAllowedOfItem,
 } from "../../utils/magic-item-limitations";
 
@@ -254,6 +256,16 @@ export const Magic = ({ isMobile }) => {
   }, [list]);
 
   useEffect(() => {
+    if (unit && list && unitId) {
+      if (command) {
+        itemsUsedElsewhere(unit?.command[command]?.magic?.selected || [], list, unitId)
+      } else {
+        itemsUsedElsewhere(unit?.items[group || 0]?.selected || [], list, unitId)
+      }
+    }
+  }, [unit, list, unitId])
+
+  useEffect(() => {
     army &&
       list &&
       unit &&
@@ -309,6 +321,7 @@ export const Magic = ({ isMobile }) => {
     itemGroup,
     isConditional,
     isTypeLimitReached,
+    showError,
   }) => {
     const isCommand = Boolean(
       unit && commandOptions[command]?.magic?.types.length
@@ -368,6 +381,11 @@ export const Magic = ({ isMobile }) => {
             />
           </label>
         </div>
+        {showError &&
+          <ErrorMessage key={'asdf'} spaceAfter spaceBefore={isMobile}>
+            <FormattedMessage id={"This item is in use by another unit"} />
+          </ErrorMessage>
+        }
 
         {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
           <NumberInput
@@ -582,6 +600,7 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
+                      isChecked
                     })}
 
                     {magicItem.conditional && isChecked
