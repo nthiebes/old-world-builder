@@ -259,11 +259,11 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     if (unit && list && unitId) {
+      let items = (unit?.items && unit.items[group || 0]?.selected) || [];
       if (command) {
-        setUsedElsewhere(itemsUsedElsewhere(unit?.command[command]?.magic?.selected || [], list, unitId));
-      } else {
-        setUsedElsewhere(itemsUsedElsewhere(unit?.items[group || 0]?.selected || [], list, unitId));
+        items = items.concat(unit?.command[command]?.magic?.selected || []);
       }
+      setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
     }
   }, [unit, list, unitId])
 
@@ -389,7 +389,7 @@ export const Magic = ({ isMobile }) => {
           </label>
         </div>
         {usedElsewhereErrors && usedElsewhereErrors.length > 0 &&
-          <ErrorMessage key={'asdf'} spaceAfter spaceBefore={isMobile}>
+          <ErrorMessage key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`} spaceAfter spaceBefore={isMobile}>
             <FormattedMessage 
               id="misc.error.itemUsedElsewhereBy"
               values={{

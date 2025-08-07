@@ -53,7 +53,7 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
   let errors = [];
   for (let i in items) {
     let item = items[i];
-    if (item.stackable !== true) {
+    if (item.onePerArmy === true) {
       for (let j in combinedUnits) {
         let unit = combinedUnits[j];
         if (unit.id !== excludeId) {

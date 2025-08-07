@@ -29,7 +29,7 @@ export const equalsOrIncludes = (strOrArray, x) => (
  * 
  * @param {string[]} words Array of strings to join
  * @param {string} conjunction Conjunction word joining the last two words. Defaults to 'and'
- * @returns {string} Joined string with commas and 'and'
+ * @returns {string} Joined string with commas and conjunction
  */
 export const humanReadableList = (words, conjunction) => {
   conjunction = conjunction || 'and';

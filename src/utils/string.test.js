@@ -41,31 +41,31 @@ describe("equalsOrIncludes", () => {
 });
 
 describe('humanReadableList', () => {
-    test('returns empty string for empty array', () => {
+    test('Returns empty string for empty array', () => {
         expect(humanReadableList([])).toBe('');
     });
 
-    test('returns single word for one-element array', () => {
+    test('Returns single word for one-element array', () => {
         expect(humanReadableList(['Dan'])).toBe('Dan');
     });
 
-    test('joins two words with "and"', () => {
+    test('Joins two words with "and"', () => {
         expect(humanReadableList(['Dan', 'David'])).toBe('Dan and David');
     });
 
-    test('joins three words with commas and "and"', () => {
+    test('Joins three words with commas and "and"', () => {
         expect(humanReadableList(['Dan', 'David', 'Joe'])).toBe('Dan, David and Joe');
     });
 
-    test('joins more than three words correctly', () => {
+    test('Joins more than three words correctly', () => {
         expect(humanReadableList(['Dan', 'David', 'Joe', 'Amy'])).toBe('Dan, David, Joe and Amy');
     });
 
-    test('can use other conjunctions', () => {
+    test('Can use other conjunctions', () => {
         expect(humanReadableList(['Dan', 'David', 'Joe', 'Amy'], 'or')).toBe('Dan, David, Joe or Amy');
     });
 
-    test('handles null or undefined input', () => {
+    test('Handles null or undefined input', () => {
         expect(humanReadableList(null)).toBe('');
         expect(humanReadableList(undefined)).toBe('');
     });
