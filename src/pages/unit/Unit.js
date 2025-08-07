@@ -1764,11 +1764,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
               if (
                 item.armyComposition && (
-                  typeof item.armyComposition === "string" &&
-                  !item.armyComposition.includes(unitArmyComposition)
-                ) || (
-                  item.armyComposition.length > 0 &&
-                  item.armyComposition.indexOf(unitArmyComposition) < 0
+                  (
+                    typeof item.armyComposition === "string" &&
+                    !item.armyComposition.includes(unitArmyComposition)
+                  ) || (
+                    item.armyComposition.length > 0 &&
+                    item.armyComposition.indexOf(unitArmyComposition) < 0
+                  )
                 )
               ) {
                 return null;
