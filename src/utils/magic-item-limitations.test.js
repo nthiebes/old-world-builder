@@ -125,7 +125,7 @@ describe("itemsUsedElsewhere", () => {
     
     // Deep copy of list
     // structuredClone would do this cleaner, but it doesn't seem supported
-    // by whatever version of node is running here.
+    // by whatever version of node is running tests here.
     const list = JSON.parse(JSON.stringify(itemsElswhereList));
 
     //Add a Noble with an item shared with the Prince

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -15,7 +15,7 @@ import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { equalsOrIncludes } from "../../utils/string";
+import { equalsOrIncludes, humanReadableList } from "../../utils/string";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
@@ -71,6 +71,8 @@ export const Magic = ({ isMobile }) => {
     gameSystems
       .find(({ id }) => id === list.game)
       .armies.find(({ id }) => armyId === id);
+
+  const [usedElsewhere, setUsedElsewhere] = useState([]);
 
   // Use list army for arcane journals
   if (!army) {
@@ -258,9 +260,9 @@ export const Magic = ({ isMobile }) => {
   useEffect(() => {
     if (unit && list && unitId) {
       if (command) {
-        itemsUsedElsewhere(unit?.command[command]?.magic?.selected || [], list, unitId)
+        setUsedElsewhere(itemsUsedElsewhere(unit?.command[command]?.magic?.selected || [], list, unitId));
       } else {
-        itemsUsedElsewhere(unit?.items[group || 0]?.selected || [], list, unitId)
+        setUsedElsewhere(itemsUsedElsewhere(unit?.items[group || 0]?.selected || [], list, unitId));
       }
     }
   }, [unit, list, unitId])
@@ -321,7 +323,7 @@ export const Magic = ({ isMobile }) => {
     itemGroup,
     isConditional,
     isTypeLimitReached,
-    showError,
+    usedElsewhereErrors,
   }) => {
     const isCommand = Boolean(
       unit && commandOptions[command]?.magic?.types.length
@@ -331,6 +333,11 @@ export const Magic = ({ isMobile }) => {
       ? // No maximum of this item if there is no point max.
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
+
+    const usedElsewhereBy = humanReadableList(
+      usedElsewhereErrors?.map((error) => error.unit[`name_${language}`] || error.unit.name_en),
+      intl.formatMessage({id: "misc.and" })
+    );
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -381,9 +388,14 @@ export const Magic = ({ isMobile }) => {
             />
           </label>
         </div>
-        {showError &&
+        {usedElsewhereErrors && usedElsewhereErrors.length > 0 &&
           <ErrorMessage key={'asdf'} spaceAfter spaceBefore={isMobile}>
-            <FormattedMessage id={"This item is in use by another unit"} />
+            <FormattedMessage 
+              id="misc.error.itemUsedElsewhereBy"
+              values={{
+                usedby: usedElsewhereBy,
+              }}
+            />
           </ErrorMessage>
         }
 
@@ -585,6 +597,8 @@ export const Magic = ({ isMobile }) => {
                           (magicItem.nonExclusive === false ||
                             selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
+                
+                const usedElsewhereErrors = usedElsewhere.filter((e) => e.itemName == magicItem.name_en);
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
@@ -600,7 +614,8 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
-                      isChecked
+                      isChecked,
+                      usedElsewhereErrors
                     })}
 
                     {magicItem.conditional && isChecked
@@ -612,6 +627,7 @@ export const Magic = ({ isMobile }) => {
                             isChecked,
                             isConditional: true,
                             isTypeLimitReached,
+                            usedElsewhereErrors,
                           })
                         )
                       : null}

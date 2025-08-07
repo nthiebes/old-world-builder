@@ -40,7 +40,8 @@ export const maxAllowedOfItem = (
 };
 
 /**
- * Checks if non-extremely common items are used elsewhere in a list
+ * Checks if items are used elsewhere in an army list, unless an item is extremely common or
+ * otherwise can be used by multiple units.
  * 
  * @param {object[]} items Array of magic items to be looked for in the list
  * @param {object} list The army list to be checked
@@ -67,7 +68,7 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
             if (allItems[targetItem].name_en === item.name_en) {
               errors.push(
                 {
-                  itemID: item.name_en,
+                  itemName: item.name_en,
                   unit: unit,
                 }
               );
@@ -77,5 +78,5 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
       }
     }
   }
-  return errors
+  return errors;
 }

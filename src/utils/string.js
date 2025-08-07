@@ -22,3 +22,21 @@ export const equalsOrIncludes = (strOrArray, x) => (
   x === strOrArray ||
   (Array.isArray(strOrArray) && strOrArray.includes(x))
 );
+
+/**
+ * Turns an array of strings into a single string joined with commas and 'and'. Does not use the Oxford comma.
+ * For example given ['a', 'b', 'c'] it returns "a, b and c".
+ * 
+ * @param {string[]} words Array of strings to join
+ * @param {string} conjunction Conjunction word joining the last two words. Defaults to 'and'
+ * @returns {string} Joined string with commas and 'and'
+ */
+export const humanReadableList = (words, conjunction) => {
+  conjunction = conjunction || 'and';
+  if (!words || words.length === 0)
+    return '';
+  if (words.length < 2)
+    return words.join(` ${conjunction} `);
+  const allButLast = words.slice(0, -1).join(', ');
+  return `${allButLast} ${conjunction} ${words[words.length - 1]}`;
+}

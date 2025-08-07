@@ -1,4 +1,4 @@
-import { normalizeRuleName, equalsOrIncludes } from "./string";
+import { normalizeRuleName, equalsOrIncludes, humanReadableList } from "./string";
 
 describe("normalizeRuleName", () => {
   test("Lower cases rules names", () => {
@@ -38,4 +38,35 @@ describe("equalsOrIncludes", () => {
   test("Returns false if object is array and target isn't in it", () => {
     expect(equalsOrIncludes(["tomb-kings", "mortuary-cults"], "kings")).toBe(false);
   });
+});
+
+describe('humanReadableList', () => {
+    test('returns empty string for empty array', () => {
+        expect(humanReadableList([])).toBe('');
+    });
+
+    test('returns single word for one-element array', () => {
+        expect(humanReadableList(['Dan'])).toBe('Dan');
+    });
+
+    test('joins two words with "and"', () => {
+        expect(humanReadableList(['Dan', 'David'])).toBe('Dan and David');
+    });
+
+    test('joins three words with commas and "and"', () => {
+        expect(humanReadableList(['Dan', 'David', 'Joe'])).toBe('Dan, David and Joe');
+    });
+
+    test('joins more than three words correctly', () => {
+        expect(humanReadableList(['Dan', 'David', 'Joe', 'Amy'])).toBe('Dan, David, Joe and Amy');
+    });
+
+    test('can use other conjunctions', () => {
+        expect(humanReadableList(['Dan', 'David', 'Joe', 'Amy'], 'or')).toBe('Dan, David, Joe or Amy');
+    });
+
+    test('handles null or undefined input', () => {
+        expect(humanReadableList(null)).toBe('');
+        expect(humanReadableList(undefined)).toBe('');
+    });
 });
