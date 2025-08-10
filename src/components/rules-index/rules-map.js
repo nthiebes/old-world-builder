@@ -67,6 +67,12 @@ const additionalOWBRules = {
   "nuln state troops empire": {
     url: "special-rules/nuln-state-troops",
   },
+  "crown of horns beastmen": {
+    url: "magic-item/crown-of-horns-beastmen",
+  },
+  "crown of horns cathay": {
+    url: "weapons-of-war/crown-of-horns-grand-cathay",
+  },
 };
 
 export const synonyms = {
