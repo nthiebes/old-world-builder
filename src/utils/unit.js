@@ -407,7 +407,7 @@ export const findAllOptions = (
         ...findAllOptions(option, testFunc, onlyFollowActiveOptions)
       );
     }
-  } else {
+  } else if (options) {
     if (testFunc(options)) {
       foundOptions.push(options);
     }
@@ -570,8 +570,8 @@ export const getUnitWizardryLevel = (unit) => {
     return 1;
   }
 
-  const levelOptions = findAllOptions(unit.options, ({ name_en }) =>
-    /^(Arise!, )?Level [1234] Wizard/.test(name_en)
+  const levelOptions = findAllOptions(unit?.options, (option) =>
+    /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en)
   );
 
   let wizardryLevel = 4;
