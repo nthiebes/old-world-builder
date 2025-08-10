@@ -49,7 +49,7 @@ export const maxAllowedOfItem = (
  * @returns {object[]} List of error messages for items that have failed validation
  */
 export const itemsUsedElsewhere = (items, list, excludeId) => {
-  let combinedUnits = [].concat(list.characters, list.core, list.special, list.rare, list.mercenaries);
+  let combinedUnits = [].concat(list.characters, list.core, list.special, list.rare, list.mercenaries, list.allies);
   let errors = [];
   for (let i in items) {
     let item = items[i];
