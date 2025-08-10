@@ -1655,14 +1655,35 @@
           "maximum": 0
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -2593,18 +2614,29 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_cn": "4级法师",
+          "name_de": "Zauberer der Stufe 4",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": ["dark-magic"],
       "specialRules": {
-        "name_en": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_cn": "4级法师, 坚硬皮肤(1), 变化吐息, 紧密阵型, 飞行(10), 大型目标, 奸奇之印, 重生(5+), 迦尔洛希之魂, 践踏攻击(D6), 快速行进, 惊骇, 双头龙",
-        "name_de": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_es": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_fr": "Sorcier de Niveau 4, Peau Blindée (1), Souffle du Changement, Ordre Serré, Vol (10), Grande Cible, Marque de Tzeentch, Régénération (5+), Esprit de Galrauch, Attaques de Piétinement (D6), Rapide, Terreur, Dragon Bicéphale",
-        "name_it": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_pl": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon"
+        "name_en": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_cn": "坚硬皮肤(1), 变化吐息, 紧密阵型, 飞行(10), 大型目标, 奸奇之印, 重生(5+), 迦尔洛希之魂, 践踏攻击(D6), 快速行进, 惊骇, 双头龙",
+        "name_de": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_es": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_fr": "Peau Blindée (1), Souffle du Changement, Ordre Serré, Vol (10), Grande Cible, Marque de Tzeentch, Régénération (5+), Esprit de Galrauch, Attaques de Piétinement (D6), Rapide, Terreur, Dragon Bicéphale",
+        "name_it": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_pl": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon"
       },
       "notes": {
         "name_en": "",
