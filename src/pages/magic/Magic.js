@@ -334,15 +334,13 @@ export const Magic = ({ isMobile }) => {
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
 
-    const usedElsewhereBy = <span>
-      {usedElsewhereErrors?.map(
-        (error, index) => 
-          <>
-            <Link to={error.url}>{error.unit[`name_${language}`] || error.unit.name_en}</Link>
-            {index !== usedElsewhereErrors.length - 1 ? ', ' : ''}
-          </>
-      )}
-    </span>;
+    const usedElsewhereBy = usedElsewhereErrors?.map(
+      (error, index) => 
+        <Fragment key={`${error.unit.id}-error-link`}>
+          <Link to={error.url}>{error.unit[`name_${language}`] || error.unit.name_en}</Link>
+          {index !== usedElsewhereErrors.length - 1 ? ', ' : ''}
+        </Fragment>
+    );
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>

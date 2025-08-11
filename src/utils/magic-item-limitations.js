@@ -49,13 +49,13 @@ export const maxAllowedOfItem = (
  * @returns {object[]} List of error messages for items that have failed validation
  */
 export const itemsUsedElsewhere = (items, list, excludeId) => {
-  let unit_categories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
+  const unitCategories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
   let errors = [];
   for (let i in items) {
     let item = items[i];
     if (item.onePerArmy === true) {
-      for (let category_index in unit_categories) {
-        let category = unit_categories[category_index];
+      for (let categoryIndex in unitCategories) {
+        let category = unitCategories[categoryIndex];
         for (let j in list[category]) {
           let unit = list[category][j];
           if (unit.id !== excludeId) {
