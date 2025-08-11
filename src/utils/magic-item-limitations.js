@@ -51,7 +51,6 @@ export const maxAllowedOfItem = (
 export const itemsUsedElsewhere = (items, list, excludeId) => {
   let unit_categories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
   let errors = [];
-  console.log(list);
   for (let i in items) {
     let item = items[i];
     if (item.onePerArmy === true) {
@@ -74,15 +73,17 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
               }
             }
             for (let commandGroup in unit.command) {
-              for (let targetItem in unit.command[commandGroup].magic?.selected) {
-                if (unit.command[commandGroup].magic.selected[targetItem].name_en === item.name_en) {
-                  errors.push(
-                    {
-                      itemName: item.name_en,
-                      unit: unit,
-                      url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
-                    }
-                  );
+              if (unit.command[commandGroup].active) {
+                for (let targetItem in unit.command[commandGroup].magic?.selected) {
+                  if (unit.command[commandGroup].magic.selected[targetItem].name_en === item.name_en) {
+                    errors.push(
+                      {
+                        itemName: item.name_en,
+                        unit: unit,
+                        url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
+                      }
+                    );
+                  }
                 }
               }
             }
