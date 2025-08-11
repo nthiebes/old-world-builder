@@ -9,7 +9,7 @@
  * @param {number} [magicItem.maximum]
  * @returns {boolean}
  */
-export const isMultipleAllowedItem = ({ type, stackable, maximum }) =>
+export const isMultipleAllowedItem = ({ stackable, maximum }) =>
   Boolean(stackable || maximum);
 
 /**
@@ -49,29 +49,42 @@ export const maxAllowedOfItem = (
  * @returns {object[]} List of error messages for items that have failed validation
  */
 export const itemsUsedElsewhere = (items, list, excludeId) => {
-  let combinedUnits = [].concat(list.characters, list.core, list.special, list.rare, list.mercenaries, list.allies);
+  let unit_categories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
   let errors = [];
+  console.log(list);
   for (let i in items) {
     let item = items[i];
     if (item.onePerArmy === true) {
-      for (let j in combinedUnits) {
-        let unit = combinedUnits[j];
-        if (unit.id !== excludeId) {
-          let allItems = [];
-          if (unit.items?.length > 0) {
-            allItems = allItems.concat(unit.items.map((group) => group.selected || []).flat());
-          }
-          if (unit.command?.length > 0) {
-            allItems = allItems.concat(unit.command.map((command) => command.magic?.selected || []).flat());
-          }
-          for (let targetItem in allItems) {
-            if (allItems[targetItem].name_en === item.name_en) {
-              errors.push(
-                {
-                  itemName: item.name_en,
-                  unit: unit,
+      for (let category_index in unit_categories) {
+        let category = unit_categories[category_index];
+        for (let j in list[category]) {
+          let unit = list[category][j];
+          if (unit.id !== excludeId) {
+            for (let itemGroup in unit.items) {
+              for (let targetItem in unit.items[itemGroup].selected) {
+                if (unit.items[itemGroup].selected[targetItem].name_en === item.name_en) {
+                  errors.push(
+                    {
+                      itemName: item.name_en,
+                      unit: unit,
+                      url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
+                    }
+                  );
                 }
-              );
+              }
+            }
+            for (let commandGroup in unit.command) {
+              for (let targetItem in unit.command[commandGroup].magic?.selected) {
+                if (unit.command[commandGroup].magic.selected[targetItem].name_en === item.name_en) {
+                  errors.push(
+                    {
+                      itemName: item.name_en,
+                      unit: unit,
+                      url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
+                    }
+                  );
+                }
+              }
             }
           }
         }

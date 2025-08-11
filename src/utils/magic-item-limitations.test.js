@@ -145,6 +145,7 @@ describe("itemsUsedElsewhere", () => {
     list.characters.push(
       {
         "name_en": "Noble",
+        "id": "noble.xglrvqwbe",
         "items": [
           {
             "name_en": "Magic Items",
@@ -179,6 +180,7 @@ describe("itemsUsedElsewhere", () => {
     list.core.push(
       {
         "name_en": "Silver Helms",
+        "id": "silver-helms.qjbtqm",
         "command": [
           {
             "name_en": "High Helm (champion)",
@@ -206,6 +208,7 @@ describe("itemsUsedElsewhere", () => {
     list.characters.push(
       {
         "name_en": "Noble",
+        "id": "noble.xglrvqwbe",
         "items": [
           {
             "name_en": "Elven Honours",

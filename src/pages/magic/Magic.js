@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
@@ -15,7 +15,7 @@ import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { equalsOrIncludes, humanReadableList } from "../../utils/string";
+import { equalsOrIncludes } from "../../utils/string";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
@@ -334,10 +334,15 @@ export const Magic = ({ isMobile }) => {
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
 
-    const usedElsewhereBy = humanReadableList(
-      usedElsewhereErrors?.map((error) => error.unit[`name_${language}`] || error.unit.name_en),
-      intl.formatMessage({id: "misc.and" })
-    );
+    const usedElsewhereBy = <span>
+      {usedElsewhereErrors?.map(
+        (error, index) => 
+          <>
+            <Link to={error.url}>{error.unit[`name_${language}`] || error.unit.name_en}</Link>
+            {index !== usedElsewhereErrors.length - 1 ? ', ' : ''}
+          </>
+      )}
+    </span>;
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -390,12 +395,14 @@ export const Magic = ({ isMobile }) => {
         </div>
         {usedElsewhereErrors && usedElsewhereErrors.length > 0 &&
           <ErrorMessage key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`} spaceAfter spaceBefore={isMobile}>
-            <FormattedMessage 
-              id="misc.error.itemUsedElsewhereBy"
-              values={{
-                usedby: usedElsewhereBy,
-              }}
-            />
+            <span>
+              <FormattedMessage 
+                id="misc.error.itemUsedElsewhereBy"
+                values={{
+                  usedby: usedElsewhereBy,
+                }}
+              />
+            </span>
           </ErrorMessage>
         }
 
@@ -614,7 +621,6 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
-                      isChecked,
                       usedElsewhereErrors
                     })}
 
