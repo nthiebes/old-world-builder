@@ -35,7 +35,9 @@ export const NewList = ({ isMobile }) => {
   const [points, setPoints] = useState(2000);
   const [armyComposition, setArmyComposition] = useState("empire-of-man");
   const [redirect, setRedirect] = useState(null);
-  const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
+  const armies = gameSystems
+    .filter(({ id }) => id === game)[0]
+    .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
   const compositionRules = [
     {
