@@ -73,6 +73,9 @@ const additionalOWBRules = {
   "crown of horns cathay": {
     url: "weapons-of-war/crown-of-horns-grand-cathay",
   },
+  "engine of the gods renegade": {
+    url: "special-rules/engine-of-the-gods-renegade",
+  },
 };
 
 export const synonyms = {
