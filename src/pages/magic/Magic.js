@@ -1,5 +1,5 @@
-import { Fragment, useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { Fragment, useEffect, useState } from "react";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
@@ -9,6 +9,7 @@ import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { ErrorMessage } from "../../components/error-message";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
@@ -18,6 +19,7 @@ import { equalsOrIncludes } from "../../utils/string";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
+  itemsUsedElsewhere,
   maxAllowedOfItem,
 } from "../../utils/magic-item-limitations";
 
@@ -69,6 +71,8 @@ export const Magic = ({ isMobile }) => {
     gameSystems
       .find(({ id }) => id === list.game)
       .armies.find(({ id }) => armyId === id);
+
+  const [usedElsewhere, setUsedElsewhere] = useState([]);
 
   // Use list army for arcane journals
   if (!army) {
@@ -254,6 +258,16 @@ export const Magic = ({ isMobile }) => {
   }, [list]);
 
   useEffect(() => {
+    if (unit && list && unitId) {
+      let items = (unit?.items && unit.items[group || 0]?.selected) || [];
+      if (command) {
+        items = items.concat(unit?.command[command]?.magic?.selected || []);
+      }
+      setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
+    }
+  }, [unit, list, unitId])
+
+  useEffect(() => {
     army &&
       list &&
       unit &&
@@ -309,6 +323,7 @@ export const Magic = ({ isMobile }) => {
     itemGroup,
     isConditional,
     isTypeLimitReached,
+    usedElsewhereErrors,
   }) => {
     const isCommand = Boolean(
       unit && commandOptions[command]?.magic?.types.length
@@ -318,6 +333,14 @@ export const Magic = ({ isMobile }) => {
       ? // No maximum of this item if there is no point max.
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
+
+    const usedElsewhereBy = usedElsewhereErrors?.map(
+      (error, index) => 
+        <Fragment key={`${error.unit.id}-error-link`}>
+          <Link to={error.url}>{error.unit[`name_${language}`] || error.unit.name_en}</Link>
+          {index !== usedElsewhereErrors.length - 1 ? ', ' : ''}
+        </Fragment>
+    );
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -368,6 +391,18 @@ export const Magic = ({ isMobile }) => {
             />
           </label>
         </div>
+        {usedElsewhereErrors && usedElsewhereErrors.length > 0 &&
+          <ErrorMessage key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`} spaceAfter spaceBefore={isMobile}>
+            <span>
+              <FormattedMessage 
+                id="misc.error.itemUsedElsewhereBy"
+                values={{
+                  usedby: usedElsewhereBy,
+                }}
+              />
+            </span>
+          </ErrorMessage>
+        }
 
         {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
           <NumberInput
@@ -567,6 +602,8 @@ export const Magic = ({ isMobile }) => {
                           (magicItem.nonExclusive === false ||
                             selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
+                
+                const usedElsewhereErrors = usedElsewhere.filter((e) => e.itemName == magicItem.name_en);
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
@@ -582,6 +619,7 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
+                      usedElsewhereErrors
                     })}
 
                     {magicItem.conditional && isChecked
@@ -593,6 +631,7 @@ export const Magic = ({ isMobile }) => {
                             isChecked,
                             isConditional: true,
                             isTypeLimitReached,
+                            usedElsewhereErrors,
                           })
                         )
                       : null}
