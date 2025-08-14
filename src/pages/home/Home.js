@@ -6,6 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 
 import { Button } from "../../components/button";
+import { Icon } from "../../components/icon";
 import { ListItem, OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { getAllPoints } from "../../utils/points";
@@ -36,7 +37,9 @@ import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import mwgForge from "../../assets/mwg-forge.gif";
 import { swap } from "../../utils/collection";
 import { useLanguage } from "../../utils/useLanguage";
-import { setLists } from "../../state/lists";
+import { setLists, toggleFolder } from "../../state/lists";
+import { getRandomId } from "../../utils/id";
+import { updateListsFolder, updateLocalList } from "../../utils/list";
 
 import "./Home.css";
 
@@ -76,10 +79,15 @@ export const Home = ({ isMobile }) => {
     dispatch(setItems(null));
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
-    const newLists = swap(lists, sourceIndex, destinationIndex);
+    const newLists = updateListsFolder(
+      swap(lists, sourceIndex, destinationIndex)
+    );
+
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
-    return dispatch(setLists(newLists));
+    dispatch(setLists(newLists));
   };
+  const folders = lists.filter((list) => list.type === "folder");
+  const listsWithoutFolders = lists.filter((list) => list.type !== "folder");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -96,7 +104,31 @@ export const Home = ({ isMobile }) => {
 
       {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
       <MainComponent>
-        {!lists.length && (
+        {listsWithoutFolders.length > 0 && (
+          <section>
+            <Button
+              type="text"
+              label={intl.formatMessage({ id: "home.newFolder" })}
+              color="dark"
+              icon="new-folder"
+              onClick={() => {
+                const newLists = [
+                  {
+                    id: `folder-${getRandomId()}`,
+                    name: "New folder",
+                    type: "folder",
+                    open: true,
+                  },
+                  ...lists,
+                ];
+                localStorage.setItem("owb.lists", JSON.stringify(newLists));
+                dispatch(setLists(newLists));
+              }}
+            />
+          </section>
+        )}
+
+        {listsWithoutFolders.length === 0 && (
           <>
             <img
               src={owb}
@@ -112,36 +144,83 @@ export const Home = ({ isMobile }) => {
         )}
         <OrderableList id="armies" onMoved={handleListMoved}>
           {lists.map(
-            ({ id, name, description, points, game, army, ...list }, index) => (
-              <ListItem
-                key={index}
-                to={`/editor/${id}`}
-                active={location.pathname.includes(id)}
-                onClick={resetState}
-              >
-                <span className="home__list-item">
-                  <h2 className="home__headline">{name}</h2>
-                  {description && (
-                    <p className="home__description">{description}</p>
-                  )}
-                  <p className="home__points">
-                    {getAllPoints({
-                      ...list,
-                      points,
-                    })}{" "}
-                    / {points} <FormattedMessage id="app.points" />
-                  </p>
-                </span>
-                <div className="home__info">
-                  <img
-                    height="40"
-                    width="40"
-                    src={armyIconMap[army] || owb}
-                    alt=""
-                  />
-                </div>
-              </ListItem>
-            )
+            (
+              {
+                id,
+                name,
+                description,
+                points,
+                game,
+                army,
+                type,
+                folder,
+                open,
+                ...list
+              },
+              index
+            ) =>
+              type === "folder" ? (
+                <ListItem key={index} to="#" className="home__folder">
+                  <span className="home__list-item">
+                    <h2 className="home__headline">
+                      <Icon className="" symbol="folder" />
+                      <span className="home__folder-name">{name}</span>
+                      <Button
+                        type="text"
+                        label={
+                          open
+                            ? intl.formatMessage({ id: "misc.collapseFolder" })
+                            : intl.formatMessage({ id: "misc.expandFolder" })
+                        }
+                        color="dark"
+                        icon={open ? "collapse" : "expand"}
+                        onClick={() => {
+                          updateLocalList({
+                            id,
+                            name,
+                            type,
+                            open: !open,
+                          });
+                          dispatch(toggleFolder({ folderId: id }));
+                        }}
+                      />
+                    </h2>
+                  </span>
+                </ListItem>
+              ) : (
+                <ListItem
+                  key={index}
+                  to={`/editor/${id}`}
+                  active={location.pathname.includes(id)}
+                  onClick={resetState}
+                  hide={
+                    folders.find((folderData) => folderData.id === folder)
+                      ?.open === false
+                  }
+                >
+                  <span className="home__list-item">
+                    <h2 className="home__headline">{name}</h2>
+                    {description && (
+                      <p className="home__description">{description}</p>
+                    )}
+                    <p className="home__points">
+                      {getAllPoints({
+                        ...list,
+                        points,
+                      })}{" "}
+                      / {points} <FormattedMessage id="app.points" />
+                    </p>
+                  </span>
+                  <div className="home__info">
+                    <img
+                      height="40"
+                      width="40"
+                      src={armyIconMap[army] || owb}
+                      alt=""
+                    />
+                  </div>
+                </ListItem>
+              )
           )}
         </OrderableList>
         <Button
