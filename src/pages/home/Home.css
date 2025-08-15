@@ -74,6 +74,12 @@
   );
 }
 
+.home__folder .list__inner::before {
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .home__folder--active {
   z-index: 2;
 }
@@ -99,4 +105,12 @@
 
 .home__folder-icon {
   margin-right: 0.5rem;
+}
+
+.home__header {
+  margin-bottom: 0;
+}
+
+.home__divider {
+  margin: 0;
 }

@@ -70,7 +70,7 @@ const armyIconMap = {
 
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
-  const lists = useSelector((state) => state.lists);
+  const lists = updateListsFolder(useSelector((state) => state.lists));
   const location = useLocation();
   const { language } = useLanguage();
   const { timezone } = useTimezone();
@@ -109,7 +109,10 @@ export const Home = ({ isMobile }) => {
         id: "misc.delete",
       }),
       icon: "delete",
-      callback: () => setDialogOpen("delete"),
+      callback: ({ name }) => {
+        setFolderName(name);
+        setDialogOpen("delete");
+      },
     },
   ];
   const handleCancelClick = (event) => {
@@ -177,7 +180,7 @@ export const Home = ({ isMobile }) => {
           <FormattedMessage
             id="editor.confirmDelete"
             values={{
-              list: <b>{"list.name"}</b>,
+              list: <b>{folderName}</b>,
             }}
           />
         </p>
@@ -276,18 +279,35 @@ export const Home = ({ isMobile }) => {
       {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
       <MainComponent>
         {listsWithoutFolders.length > 0 && (
-          <section>
+          <section className="column-header home__header">
             <Button
               type="text"
               label={intl.formatMessage({ id: "home.newFolder" })}
               color="dark"
               icon="new-folder"
               onClick={() => {
+                setFolderName("");
                 setDialogOpen("new");
               }}
-            />
+            >
+              <FormattedMessage id="home.newFolder" />
+            </Button>
+            <Button
+              type="text"
+              label={intl.formatMessage({ id: "misc.sort" })}
+              color="dark"
+              icon="sort"
+              onClick={() => {
+                setFolderName("");
+                setDialogOpen("new");
+              }}
+            >
+              <FormattedMessage id="misc.sort" />
+            </Button>
           </section>
         )}
+
+        <hr className="home__divider" />
 
         {listsWithoutFolders.length === 0 && (
           <>
