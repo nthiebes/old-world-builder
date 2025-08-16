@@ -41,6 +41,7 @@ import { swap } from "../../utils/collection";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList, updateListsFolder } from "../../utils/list";
 import { setLists, toggleFolder, updateList } from "../../state/lists";
+import { updateSetting } from "../../state/settings";
 import { getRandomId } from "../../utils/id";
 
 import "./Home.css";
@@ -70,7 +71,78 @@ const armyIconMap = {
 
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
-  const lists = updateListsFolder(useSelector((state) => state.lists));
+  const settings = useSelector((state) => state.settings);
+  let lists = updateListsFolder(useSelector((state) => state.lists));
+
+  // Sort lists based on the current sorting setting
+  switch (settings.listSorting) {
+    case "nameAsc":
+      lists = [...lists].sort((a, b) => {
+        if (
+          !a.folder &&
+          !b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return a.name.localeCompare(b.name);
+        }
+
+        if (
+          a.folder &&
+          a.folder === b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return a.name.localeCompare(b.name);
+        }
+      });
+      break;
+    case "nameDesc":
+      lists = [...lists].sort((a, b) => {
+        if (
+          !a.folder &&
+          !b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return b.name.localeCompare(a.name);
+        }
+
+        if (
+          a.folder &&
+          a.folder === b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return b.name.localeCompare(a.name);
+        }
+      });
+      break;
+    case "faction":
+      lists = [...lists].sort((a, b) => {
+        if (
+          !a.folder &&
+          !b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return a.army.localeCompare(b.army);
+        }
+
+        if (
+          a.folder &&
+          a.folder === b.folder &&
+          a.type !== "folder" &&
+          b.type !== "folder"
+        ) {
+          return a.army.localeCompare(b.army);
+        }
+      });
+      break;
+    default:
+      break;
+  }
+
   const location = useLocation();
   const { language } = useLanguage();
   const { timezone } = useTimezone();
@@ -79,11 +151,15 @@ export const Home = ({ isMobile }) => {
   const [listsInFolder, setListsInFolder] = useState([]);
   const [dialogOpen, setDialogOpen] = useState(null);
   const [activeMenu, setActiveMenu] = useState(false);
+  const [sortMenuOpen, setSortMenuOpen] = useState(false);
   const [folderName, setFolderName] = useState("");
   const [activeDeleteOption, setActiveDeleteOption] = useState("delete");
   const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
+  };
+  const updateLocalSettings = (newSettings) => {
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
     const draggedItem = lists.find((list, index) => index === sourceIndex);
@@ -140,7 +216,7 @@ export const Home = ({ isMobile }) => {
   };
   const folders = lists.filter((list) => list.type === "folder");
   const listsWithoutFolders = lists.filter((list) => list.type !== "folder");
-  const moreButtons = [
+  const moreButtonsFolder = [
     {
       name: intl.formatMessage({
         id: "misc.rename",
@@ -160,6 +236,64 @@ export const Home = ({ isMobile }) => {
         setFolderName(name);
         setActiveDeleteOption("delete");
         setDialogOpen("delete");
+      },
+    },
+  ];
+  const moreButtonsSort = [
+    {
+      name: intl.formatMessage({
+        id: "misc.manual",
+      }),
+      type: "manual",
+      callback: () => {
+        setSortMenuOpen(false);
+        updateLocalSettings({
+          ...settings,
+          listSorting: "manual",
+        });
+        dispatch(updateSetting({ key: "listSorting", value: "manual" }));
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.faction",
+      }),
+      type: "faction",
+      callback: () => {
+        setSortMenuOpen(false);
+        updateLocalSettings({
+          ...settings,
+          listSorting: "faction",
+        });
+        dispatch(updateSetting({ key: "listSorting", value: "faction" }));
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.nameAsc",
+      }),
+      type: "nameAsc",
+      callback: () => {
+        setSortMenuOpen(false);
+        updateLocalSettings({
+          ...settings,
+          listSorting: "nameAsc",
+        });
+        dispatch(updateSetting({ key: "listSorting", value: "nameAsc" }));
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.nameDesc",
+      }),
+      type: "nameDesc",
+      callback: () => {
+        setSortMenuOpen(false);
+        updateLocalSettings({
+          ...settings,
+          listSorting: "nameDesc",
+        });
+        dispatch(updateSetting({ key: "listSorting", value: "nameDesc" }));
       },
     },
   ];
@@ -254,9 +388,9 @@ export const Home = ({ isMobile }) => {
         >
           <p className="home__delete-text">
             <FormattedMessage
-              id="editor.confirmDelete"
+              id="home.confirmDelete"
               values={{
-                list: <b>{folderName}</b>,
+                folder: <b>{folderName}</b>,
               }}
             />
           </p>
@@ -403,14 +537,33 @@ export const Home = ({ isMobile }) => {
               type="text"
               label={intl.formatMessage({ id: "misc.sort" })}
               color="dark"
-              icon="sort"
               onClick={() => {
-                setFolderName("");
-                setDialogOpen("new");
+                setSortMenuOpen(!sortMenuOpen);
               }}
+              className={classNames(sortMenuOpen && "header__more-button")}
             >
-              <FormattedMessage id="misc.sort" />
+              <FormattedMessage
+                id={`misc.${settings.listSorting || "manual"}`}
+              />
+              <Icon symbol="sort" className="home__sort-icon" />
             </Button>
+            {sortMenuOpen && (
+              <ul className="header__more">
+                {moreButtonsSort.map(
+                  ({ callback, name, type, to: moreButtonTo }) => (
+                    <li key={name}>
+                      <Button
+                        type="text"
+                        onClick={() => callback({ type })}
+                        to={moreButtonTo}
+                      >
+                        {name}
+                      </Button>
+                    </li>
+                  )
+                )}
+              </ul>
+            )}
           </section>
         )}
 
@@ -501,7 +654,7 @@ export const Home = ({ isMobile }) => {
                   </span>
                   {activeMenu === id && (
                     <ul className="header__more folder__more">
-                      {moreButtons.map(
+                      {moreButtonsFolder.map(
                         ({
                           callback,
                           name: buttonName,
