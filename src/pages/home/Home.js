@@ -199,11 +199,11 @@ export const Home = ({ isMobile }) => {
           (list) => list.folder === draggedItem.id
         );
 
-        listsInFolder.forEach((list, index) => {
+        listsInFolder.forEach((_, index) => {
           newLists = swap(
             newLists,
-            sourceIndex + index + (destinationIndex < sourceIndex ? 1 : 0),
-            destinationIndex + index + (destinationIndex < sourceIndex ? 1 : 0)
+            sourceIndex + (destinationIndex < sourceIndex ? 1 + index : 0),
+            destinationIndex + (destinationIndex < sourceIndex ? 1 + index : 0)
           );
         });
         newLists = updateListsFolder(newLists);
@@ -351,6 +351,7 @@ export const Home = ({ isMobile }) => {
     dispatch(setLists(newLists));
     setFolderName("");
     setDialogOpen(null);
+    window.scrollTo(0, 0);
   };
   const handleDragStart = (start) => {
     const draggedItem = lists.find(
