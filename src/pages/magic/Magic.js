@@ -16,6 +16,7 @@ import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { equalsOrIncludes } from "../../utils/string";
+import { getUnitName } from "../../utils/unit";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
@@ -341,7 +342,7 @@ export const Magic = ({ isMobile }) => {
     const usedElsewhereBy = usedElsewhereErrors?.map((error, index) => (
       <Fragment key={`${error.unit.id}-error-link`}>
         <Link to={error.url}>
-          {error.unit[`name_${language}`] || error.unit.name_en}
+          {getUnitName({ unit: error.unit, language })}
         </Link>
         {index !== usedElsewhereErrors.length - 1 ? ", " : ""}
       </Fragment>
