@@ -95,6 +95,8 @@ export const Home = ({ isMobile }) => {
         ) {
           return a.name.localeCompare(b.name);
         }
+
+        return 0;
       });
       break;
     case "nameDesc":
@@ -116,6 +118,8 @@ export const Home = ({ isMobile }) => {
         ) {
           return b.name.localeCompare(a.name);
         }
+
+        return 0;
       });
       break;
     case "faction":
@@ -137,6 +141,8 @@ export const Home = ({ isMobile }) => {
         ) {
           return a.army.localeCompare(b.army);
         }
+
+        return 0;
       });
       break;
     default:
