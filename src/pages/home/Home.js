@@ -200,7 +200,7 @@ export const Home = ({ isMobile }) => {
     const newLists = updateListsFolder([
       {
         id: `folder-${getRandomId()}`,
-        name: folderName || "New folder",
+        name: folderName || intl.formatMessage({ id: "home.newFolder" }),
         type: "folder",
         open: true,
       },
@@ -246,136 +246,141 @@ export const Home = ({ isMobile }) => {
         open={dialogOpen === "delete"}
         onClose={() => setDialogOpen(null)}
       >
-        <p className="home__delete-text">
-          <FormattedMessage
-            id="editor.confirmDelete"
-            values={{
-              list: <b>{folderName}</b>,
-            }}
-          />
-        </p>
-        <div className="radio">
-          <input
-            type="radio"
-            id="delete-lists"
-            name="lists"
-            value="delete"
-            onChange={() => handleDeleteOptionChange("delete")}
-            checked={activeDeleteOption === "delete"}
-            className="radio__input"
-          />
-          <label htmlFor="delete-lists" className="radio__label">
-            <span className="unit__label-text">
-              <FormattedMessage id="home.deleteLists" />
-            </span>
-          </label>
-        </div>
-        <div className="radio">
-          <input
-            type="radio"
-            id="keep-lists"
-            name="lists"
-            value="keep"
-            onChange={() => handleDeleteOptionChange("keep")}
-            checked={activeDeleteOption === "keep"}
-            className="radio__input"
-          />
-          <label htmlFor="keep-lists" className="radio__label">
-            <span className="unit__label-text">
-              <FormattedMessage id="home.keepLists" />
-            </span>
-          </label>
-        </div>
-        <div className="editor__delete-dialog">
-          <Button
-            type="text"
-            onClick={handleCancelClick}
-            icon="close"
-            spaceTop
-            color="dark"
-          >
-            <FormattedMessage id="misc.cancel" />
-          </Button>
-          <Button
-            type="primary"
-            submitButton
-            onClick={handleDeleteConfirm}
-            icon="delete"
-            spaceTop
-          >
-            <FormattedMessage id="misc.delete" />
-          </Button>
-        </div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleDeleteConfirm();
+          }}
+        >
+          <p className="home__delete-text">
+            <FormattedMessage
+              id="editor.confirmDelete"
+              values={{
+                list: <b>{folderName}</b>,
+              }}
+            />
+          </p>
+          <div className="radio">
+            <input
+              type="radio"
+              id="delete-lists"
+              name="lists"
+              value="delete"
+              onChange={() => handleDeleteOptionChange("delete")}
+              checked={activeDeleteOption === "delete"}
+              className="radio__input"
+            />
+            <label htmlFor="delete-lists" className="radio__label">
+              <span className="unit__label-text">
+                <FormattedMessage id="home.deleteLists" />
+              </span>
+            </label>
+          </div>
+          <div className="radio">
+            <input
+              type="radio"
+              id="keep-lists"
+              name="lists"
+              value="keep"
+              onChange={() => handleDeleteOptionChange("keep")}
+              checked={activeDeleteOption === "keep"}
+              className="radio__input"
+            />
+            <label htmlFor="keep-lists" className="radio__label">
+              <span className="unit__label-text">
+                <FormattedMessage id="home.keepLists" />
+              </span>
+            </label>
+          </div>
+          <div className="editor__delete-dialog">
+            <Button
+              type="text"
+              onClick={handleCancelClick}
+              icon="close"
+              spaceTop
+              color="dark"
+            >
+              <FormattedMessage id="misc.cancel" />
+            </Button>
+            <Button type="primary" submitButton icon="delete" spaceTop>
+              <FormattedMessage id="misc.delete" />
+            </Button>
+          </div>
+        </form>
       </Dialog>
 
       <Dialog open={dialogOpen === "edit"} onClose={() => setDialogOpen(null)}>
-        <label htmlFor="folderName">
-          <FormattedMessage id="misc.folderName" />
-        </label>
-        <input
-          type="text"
-          id="folderName"
-          className="input"
-          value={folderName}
-          onChange={(e) => setFolderName(e.target.value)}
-          autoComplete="off"
-          maxLength="100"
-        />
-        <div className="editor__delete-dialog">
-          <Button
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleEditConfirm();
+          }}
+        >
+          <label htmlFor="folderName">
+            <FormattedMessage id="misc.folderName" />
+          </label>
+          <input
             type="text"
-            onClick={handleCancelClick}
-            icon="close"
-            spaceTop
-            color="dark"
-          >
-            <FormattedMessage id="misc.cancel" />
-          </Button>
-          <Button
-            type="primary"
-            submitButton
-            onClick={handleEditConfirm}
-            icon="check"
-            spaceTop
-          >
-            <FormattedMessage id="misc.confirm" />
-          </Button>
-        </div>
+            id="folderName"
+            className="input"
+            value={folderName}
+            onChange={(e) => setFolderName(e.target.value)}
+            autoComplete="off"
+            maxLength="100"
+            required
+          />
+          <div className="editor__delete-dialog">
+            <Button
+              type="text"
+              onClick={handleCancelClick}
+              icon="close"
+              spaceTop
+              color="dark"
+            >
+              <FormattedMessage id="misc.cancel" />
+            </Button>
+            <Button type="primary" submitButton icon="check" spaceTop>
+              <FormattedMessage id="misc.confirm" />
+            </Button>
+          </div>
+        </form>
       </Dialog>
 
       <Dialog open={dialogOpen === "new"} onClose={() => setDialogOpen(null)}>
-        <label htmlFor="newFolderName">
-          <FormattedMessage id="misc.folderName" />
-        </label>
-        <input
-          type="text"
-          id="newFolderName"
-          className="input"
-          value={folderName}
-          onChange={(e) => setFolderName(e.target.value)}
-          autoComplete="off"
-          maxLength="100"
-        />
-        <div className="editor__delete-dialog">
-          <Button
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleNewConfirm();
+          }}
+        >
+          <label htmlFor="newFolderName">
+            <FormattedMessage id="misc.folderName" />
+          </label>
+          <input
             type="text"
-            onClick={handleCancelClick}
-            icon="close"
-            spaceTop
-            color="dark"
-          >
-            <FormattedMessage id="misc.cancel" />
-          </Button>
-          <Button
-            type="primary"
-            submitButton
-            onClick={handleNewConfirm}
-            icon="check"
-            spaceTop
-          >
-            <FormattedMessage id="misc.confirm" />
-          </Button>
-        </div>
+            id="newFolderName"
+            className="input"
+            value={folderName}
+            onChange={(e) => setFolderName(e.target.value)}
+            autoComplete="off"
+            maxLength="100"
+            required
+          />
+          <div className="editor__delete-dialog">
+            <Button
+              type="text"
+              onClick={handleCancelClick}
+              icon="close"
+              spaceTop
+              color="dark"
+            >
+              <FormattedMessage id="misc.cancel" />
+            </Button>
+            <Button type="primary" submitButton icon="check" spaceTop>
+              <FormattedMessage id="misc.confirm" />
+            </Button>
+          </div>
+        </form>
       </Dialog>
 
       {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
