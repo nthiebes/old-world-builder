@@ -266,6 +266,7 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [unit, list, unitId]);
 
   useEffect(() => {
@@ -612,7 +613,7 @@ export const Magic = ({ isMobile }) => {
                     );
 
                 const usedElsewhereErrors = usedElsewhere.filter(
-                  (e) => e.itemName == magicItem.name_en
+                  (e) => e.itemName === magicItem.name_en
                 );
 
                 return (
