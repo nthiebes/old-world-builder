@@ -2518,6 +2518,7 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne",
             "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
           ],
@@ -2531,6 +2532,7 @@ export const rules = {
           requires: [
             "plaguebearers-of-nurgle",
             "nurglings",
+            "nurglings-core",
             "beasts-of-nurgle",
             "plague-drones-of-nurgle",
           ],
@@ -2544,6 +2546,7 @@ export const rules = {
           requires: [
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
             "fiends-of-slaanesh",
             "hellflayer-of-slaanesh",
             "seeker-chariot-of-slaanesh",
@@ -2558,6 +2561,8 @@ export const rules = {
           requires: [
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
@@ -2577,7 +2582,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne"],
+          ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne-core"],
           requiresGeneral: true,
           requires: [
             "bloodthirster",
@@ -2590,7 +2595,7 @@ export const rules = {
           },
         },
         {
-          ids: ["plaguebearers-of-nurgle", "nurglings"],
+          ids: ["plaguebearers-of-nurgle", "nurglings-core"],
           requiresGeneral: true,
           requires: [
             "great-unclean-one",
@@ -2603,7 +2608,7 @@ export const rules = {
           },
         },
         {
-          ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh"],
+          ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh-core"],
           requiresGeneral: true,
           requires: [
             "keeper-of-secrets",
@@ -2617,8 +2622,8 @@ export const rules = {
         },
         {
           ids: [
-            "pink-horrors-of-tzeentch",
-            "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
           ],
           requiresGeneral: true,
@@ -2730,6 +2735,7 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne",
             "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
           ],
@@ -2743,6 +2749,7 @@ export const rules = {
           requires: [
             "plaguebearers-of-nurgle",
             "nurglings",
+            "nurglings-core",
             "beasts-of-nurgle",
             "plague-drones-of-nurgle",
           ],
@@ -2756,6 +2763,7 @@ export const rules = {
           requires: [
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
             "fiends-of-slaanesh",
             "hellflayer-of-slaanesh",
             "seeker-chariot-of-slaanesh",
@@ -2770,6 +2778,8 @@ export const rules = {
           requires: [
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
@@ -2844,7 +2854,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["flesh-hounds-of-khorne"],
+          ids: ["flesh-hounds-of-khorne-core"],
           requiresGeneral: true,
           requires: [
             "bloodthirster",
@@ -2857,7 +2867,7 @@ export const rules = {
           },
         },
         {
-          ids: ["nurglings"],
+          ids: ["nurglings-core"],
           requiresGeneral: true,
           requires: [
             "great-unclean-one",
@@ -2870,7 +2880,7 @@ export const rules = {
           },
         },
         {
-          ids: ["seekers-of-slaanesh"],
+          ids: ["seekers-of-slaanesh-core"],
           requiresGeneral: true,
           requires: [
             "keeper-of-secrets",
@@ -2883,7 +2893,10 @@ export const rules = {
           },
         },
         {
-          ids: ["blue-horrors-of-tzeentch", "brimstone-horrors-of-tzeentch"],
+          ids: [
+            "blue-horrors-of-tzeentch-core",
+            "brimstone-horrors-of-tzeentch-core",
+          ],
           requiresGeneral: true,
           requires: [
             "lord-of-change",

@@ -71,7 +71,6 @@ export const Magic = ({ isMobile }) => {
     gameSystems
       .find(({ id }) => id === list.game)
       .armies.find(({ id }) => armyId === id);
-
   const [usedElsewhere, setUsedElsewhere] = useState([]);
 
   // Use list army for arcane journals
@@ -80,7 +79,9 @@ export const Magic = ({ isMobile }) => {
       list &&
       gameSystems
         .find(({ id }) => id === list.game)
-        .armies.find(({ id }) => list.army === id);
+        .armies.find(
+          ({ id }) => unit.magicItemsArmy === id || list.army === id
+        );
   }
 
   const items = useSelector((state) => state.items);
@@ -265,7 +266,7 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
     }
-  }, [unit, list, unitId])
+  }, [unit, list, unitId]);
 
   useEffect(() => {
     army &&
@@ -281,7 +282,9 @@ export const Magic = ({ isMobile }) => {
             itemCategories = itemCategories.filter(
               (itemCategory) => itemCategory !== army.id
             );
-            itemCategories.push(unit.magicItemsArmy);
+            if (data[unit.magicItemsArmy]) {
+              itemCategories.push(unit.magicItemsArmy);
+            }
           }
 
           const allItems = itemCategories.map((itemCategory) => {
@@ -334,13 +337,14 @@ export const Magic = ({ isMobile }) => {
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
 
-    const usedElsewhereBy = usedElsewhereErrors?.map(
-      (error, index) => 
-        <Fragment key={`${error.unit.id}-error-link`}>
-          <Link to={error.url}>{error.unit[`name_${language}`] || error.unit.name_en}</Link>
-          {index !== usedElsewhereErrors.length - 1 ? ', ' : ''}
-        </Fragment>
-    );
+    const usedElsewhereBy = usedElsewhereErrors?.map((error, index) => (
+      <Fragment key={`${error.unit.id}-error-link`}>
+        <Link to={error.url}>
+          {error.unit[`name_${language}`] || error.unit.name_en}
+        </Link>
+        {index !== usedElsewhereErrors.length - 1 ? ", " : ""}
+      </Fragment>
+    ));
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -391,10 +395,14 @@ export const Magic = ({ isMobile }) => {
             />
           </label>
         </div>
-        {usedElsewhereErrors && usedElsewhereErrors.length > 0 &&
-          <ErrorMessage key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`} spaceAfter spaceBefore={isMobile}>
+        {usedElsewhereErrors && usedElsewhereErrors.length > 0 && (
+          <ErrorMessage
+            key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`}
+            spaceAfter
+            spaceBefore={isMobile}
+          >
             <span>
-              <FormattedMessage 
+              <FormattedMessage
                 id="misc.error.itemUsedElsewhereBy"
                 values={{
                   usedby: usedElsewhereBy,
@@ -402,7 +410,7 @@ export const Magic = ({ isMobile }) => {
               />
             </span>
           </ErrorMessage>
-        }
+        )}
 
         {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
           <NumberInput
@@ -602,8 +610,10 @@ export const Magic = ({ isMobile }) => {
                           (magicItem.nonExclusive === false ||
                             selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
-                
-                const usedElsewhereErrors = usedElsewhere.filter((e) => e.itemName == magicItem.name_en);
+
+                const usedElsewhereErrors = usedElsewhere.filter(
+                  (e) => e.itemName == magicItem.name_en
+                );
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
@@ -619,7 +629,7 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
-                      usedElsewhereErrors
+                      usedElsewhereErrors,
                     })}
 
                     {magicItem.conditional && isChecked

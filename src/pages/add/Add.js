@@ -43,22 +43,23 @@ export const Add = ({ isMobile }) => {
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
   const mercenaries = armyData?.mercenaries;
-  const handleAdd = (unit, ally, unitType) => {
+  const handleAdd = (unit, ally, unitType, magicItemsArmy) => {
     const newUnit = {
       ...unit,
       army: ally,
       unitType,
       id: `${unit.id}.${getRandomId()}`,
+      magicItemsArmy: unit.magicItemsArmy || magicItemsArmy,
     };
 
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = (unit, ally, unitType) => (
+  const getUnit = (unit, ally, unitType, magicItemsArmy) => (
     <li key={unit.id} className="list">
       <button
         className="list__inner add__list-inner"
-        onClick={() => handleAdd(unit, ally, unitType)}
+        onClick={() => handleAdd(unit, ally, unitType, magicItemsArmy)}
       >
         <span className="add__name">
           {unit.minimum ? `${unit.minimum} ` : null}
@@ -112,7 +113,7 @@ export const Add = ({ isMobile }) => {
       }
     } else if (list && type === "allies" && allAllies.length === 0 && allies) {
       setAlliesLoaded(false);
-      allies.forEach(({ army, armyComposition }, index) => {
+      allies.forEach(({ army, armyComposition, magicItemsArmy }, index) => {
         const isCustom = game.id !== "the-old-world";
         const customData = isCustom && getCustomDatasetData(army);
 
@@ -139,12 +140,14 @@ export const Add = ({ isMobile }) => {
                 data,
                 armyComposition: armyComposition || army,
               });
+
               allAllies = [
                 ...allAllies,
                 {
                   ...armyData,
                   ally: army,
                   armyComposition: armyComposition || army,
+                  magicItemsArmy: magicItemsArmy,
                 },
               ];
               setAlliesLoaded(index + 1);
@@ -278,7 +281,15 @@ export const Add = ({ isMobile }) => {
             <ul>
               {allAllies.map(
                 (
-                  { characters, core, special, rare, ally, armyComposition },
+                  {
+                    characters,
+                    core,
+                    special,
+                    rare,
+                    ally,
+                    armyComposition,
+                    magicItemsArmy,
+                  },
                   index
                 ) => (
                   <Expandable
@@ -297,17 +308,33 @@ export const Add = ({ isMobile }) => {
                     }`}
                   >
                     {characters.map((unit) =>
-                      getUnit(unit, armyComposition, "characters")
+                      getUnit(
+                        unit,
+                        armyComposition,
+                        "characters",
+                        magicItemsArmy
+                      )
                     )}
                     {core
                       .filter((unit) => !unit.detachment)
-                      .map((unit) => getUnit(unit, armyComposition, "core"))}
+                      .map((unit) =>
+                        getUnit(unit, armyComposition, "core", magicItemsArmy)
+                      )}
                     {special
                       .filter((unit) => !unit.detachment)
-                      .map((unit) => getUnit(unit, armyComposition, "special"))}
+                      .map((unit) =>
+                        getUnit(
+                          unit,
+                          armyComposition,
+                          "special",
+                          magicItemsArmy
+                        )
+                      )}
                     {rare
                       .filter((unit) => !unit.detachment)
-                      .map((unit) => getUnit(unit, armyComposition, "rare"))}
+                      .map((unit) =>
+                        getUnit(unit, armyComposition, "rare", magicItemsArmy)
+                      )}
                   </Expandable>
                 )
               )}
