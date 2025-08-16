@@ -291,52 +291,94 @@ export const Add = ({ isMobile }) => {
                     magicItemsArmy,
                   },
                   index
-                ) => (
-                  <Expandable
-                    key={index}
-                    headline={`${
-                      game?.armies.find((army) => army.id === ally)[
-                        `name_${language}`
-                      ] || game?.armies.find((army) => army.id === ally).name_en
-                    } ${
-                      armyComposition !== ally
-                        ? ` (${
-                            nameMap[armyComposition][`name_${language}`] ||
-                            nameMap[armyComposition].name_en
-                          })`
-                        : ""
-                    }`}
-                  >
-                    {characters.map((unit) =>
-                      getUnit(
-                        unit,
-                        armyComposition,
-                        "characters",
-                        magicItemsArmy
-                      )
-                    )}
-                    {core
-                      .filter((unit) => !unit.detachment)
-                      .map((unit) =>
-                        getUnit(unit, armyComposition, "core", magicItemsArmy)
-                      )}
-                    {special
-                      .filter((unit) => !unit.detachment)
-                      .map((unit) =>
+                ) => {
+                  // Remove duplicate units
+                  const uniqueUnits = [];
+                  const tempCharacters = characters.filter((unit) => {
+                    if (
+                      !uniqueUnits.some((name_en) => name_en === unit.name_en)
+                    ) {
+                      uniqueUnits.push(unit.name_en);
+                      return true;
+                    }
+                    return false;
+                  });
+                  const tempCore = core.filter((unit) => {
+                    if (
+                      !uniqueUnits.some((name_en) => name_en === unit.name_en)
+                    ) {
+                      uniqueUnits.push(unit.name_en);
+                      return true;
+                    }
+                    return false;
+                  });
+                  const tempSpecial = special.filter((unit) => {
+                    if (
+                      !uniqueUnits.some((name_en) => name_en === unit.name_en)
+                    ) {
+                      uniqueUnits.push(unit.name_en);
+                      return true;
+                    }
+                    return false;
+                  });
+                  const tempRare = rare.filter((unit) => {
+                    if (
+                      !uniqueUnits.some((name_en) => name_en === unit.name_en)
+                    ) {
+                      uniqueUnits.push(unit.name_en);
+                      return true;
+                    }
+                    return false;
+                  });
+
+                  return (
+                    <Expandable
+                      key={index}
+                      headline={`${
+                        game?.armies.find((army) => army.id === ally)[
+                          `name_${language}`
+                        ] ||
+                        game?.armies.find((army) => army.id === ally).name_en
+                      } ${
+                        armyComposition !== ally
+                          ? ` (${
+                              nameMap[armyComposition][`name_${language}`] ||
+                              nameMap[armyComposition].name_en
+                            })`
+                          : ""
+                      }`}
+                    >
+                      {tempCharacters.map((unit) =>
                         getUnit(
                           unit,
                           armyComposition,
-                          "special",
+                          "characters",
                           magicItemsArmy
                         )
                       )}
-                    {rare
-                      .filter((unit) => !unit.detachment)
-                      .map((unit) =>
-                        getUnit(unit, armyComposition, "rare", magicItemsArmy)
-                      )}
-                  </Expandable>
-                )
+                      {tempCore
+                        .filter((unit) => !unit.detachment)
+                        .map((unit) =>
+                          getUnit(unit, armyComposition, "core", magicItemsArmy)
+                        )}
+                      {tempSpecial
+                        .filter((unit) => !unit.detachment)
+                        .map((unit) =>
+                          getUnit(
+                            unit,
+                            armyComposition,
+                            "special",
+                            magicItemsArmy
+                          )
+                        )}
+                      {tempRare
+                        .filter((unit) => !unit.detachment)
+                        .map((unit) =>
+                          getUnit(unit, armyComposition, "rare", magicItemsArmy)
+                        )}
+                    </Expandable>
+                  );
+                }
               )}
             </ul>
           </>
