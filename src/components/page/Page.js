@@ -45,14 +45,14 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
+            <Link to="/changelog">
+              <FormattedMessage id="footer.changelog" />
+            </Link>
             <Link to="/custom-datasets">
               <FormattedMessage id="footer.custom-datasets" />
             </Link>
             <Link to="/datasets">
               <FormattedMessage id="footer.datasets-editor" />
-            </Link>
-            <Link to="/changelog">
-              <FormattedMessage id="footer.changelog" />
             </Link>
             <Link to="/privacy">
               <FormattedMessage id="footer.privacy" />

@@ -21,7 +21,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
  * @param {React.ReactElement[]} props.children
  * @param {string} props.id
  */
-export const OrderableList = ({ id, children, onMoved }) => {
+export const OrderableList = ({ id, children, onMoved, onDragStart }) => {
   const handleDragEnd = (result) => {
     if (!result.destination) {
       return;
@@ -33,40 +33,42 @@ export const OrderableList = ({ id, children, onMoved }) => {
   };
 
   return (
-    <DragDropContext onDragEnd={handleDragEnd}>
+    <DragDropContext onDragEnd={handleDragEnd} onBeforeDragStart={onDragStart}>
       <Droppable droppableId={`droppable-${id}`}>
         {(provided, _snapshot) => (
           <ol {...provided.droppableProps} ref={provided.innerRef}>
             {/* We clone the children and add the drag handlers props */}
-            {React.Children.map(children, (child, index) =>
-              React.isValidElement(child) ? (
-                <Draggable
-                  key={child.key}
-                  draggableId={child.key}
-                  index={index}
-                >
-                  {(provided, snapshot) => {
-                    // Block horizontal movement
-                    const style = provided.draggableProps.style;
-                    if (style.transform) {
-                      style.transform = style.transform.replace(/\d+/, "0");
-                    }
+            {React.Children.map(children, (child, index) => {
+              if (React.isValidElement(child)) {
+                return (
+                  <Draggable
+                    key={child.key}
+                    draggableId={child.key}
+                    index={index}
+                  >
+                    {(provided, snapshot) => {
+                      // Block horizontal movement
+                      const style = provided.draggableProps.style;
+                      if (style.transform) {
+                        style.transform = style.transform.replace(/\d+/, "0");
+                      }
 
-                    return React.cloneElement(child, {
-                      // Add a dragging attribute for styling
-                      ...(snapshot.isDragging && !snapshot.isDropAnimating
-                        ? { dragging: "" }
-                        : {}),
-                      ref: provided.innerRef,
-                      ...provided.draggableProps,
-                      ...provided.dragHandleProps,
-                    });
-                  }}
-                </Draggable>
-              ) : (
-                child
-              )
-            )}
+                      return React.cloneElement(child, {
+                        // Add a dragging attribute for styling
+                        ...(snapshot.isDragging && !snapshot.isDropAnimating
+                          ? { dragging: "" }
+                          : {}),
+                        ref: provided.innerRef,
+                        ...provided.draggableProps,
+                        ...provided.dragHandleProps,
+                      });
+                    }}
+                  </Draggable>
+                );
+              } else {
+                return child;
+              }
+            })}
             {provided.placeholder}
           </ol>
         )}

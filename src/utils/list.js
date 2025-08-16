@@ -22,3 +22,32 @@ export const removeFromLocalList = (listId) => {
 
   localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
 };
+
+export const updateListsFolder = (lists) => {
+  const folderIndexes = {};
+  let latestFolderIndex = null;
+
+  lists.forEach((folder, index) => {
+    if (folder.type === "folder") {
+      folderIndexes[index] = folder.id;
+    }
+  });
+
+  const newLists = lists.map((list, index) => {
+    if (folderIndexes[index]) {
+      latestFolderIndex = index;
+    }
+
+    if (list.type === "folder") {
+      return list;
+    }
+
+    return {
+      ...list,
+      folder:
+        latestFolderIndex !== null ? folderIndexes[latestFolderIndex] : null,
+    };
+  });
+
+  return newLists;
+};

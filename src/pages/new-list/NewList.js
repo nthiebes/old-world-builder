@@ -83,7 +83,7 @@ export const NewList = ({ isMobile }) => {
       armyComposition,
       compositionRule,
     };
-    const newLists = [...lists, newList];
+    const newLists = [newList, ...lists];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
