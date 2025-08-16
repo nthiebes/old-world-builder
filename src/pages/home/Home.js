@@ -76,20 +76,67 @@ export const Home = ({ isMobile }) => {
   const { timezone } = useTimezone();
   const dispatch = useDispatch();
   const intl = useIntl();
+  const [listsInFolder, setListsInFolder] = useState([]);
   const [dialogOpen, setDialogOpen] = useState(null);
   const [activeMenu, setActiveMenu] = useState(false);
   const [folderName, setFolderName] = useState("");
+  const [activeDeleteOption, setActiveDeleteOption] = useState("delete");
   const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
-    const newLists = updateListsFolder(
-      swap(lists, sourceIndex, destinationIndex)
-    );
+    const draggedItem = lists.find((list, index) => index === sourceIndex);
+    const difference = sourceIndex - destinationIndex;
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
-    dispatch(setLists(newLists));
+    setListsInFolder([]);
+
+    if (difference === 0) {
+      return;
+    }
+
+    if (draggedItem.type === "folder") {
+      const listBeforeDestination = lists.find(
+        (_, index) => index === destinationIndex - 1
+      );
+      const listAtDestination = lists.find(
+        (_, index) => index === destinationIndex
+      );
+      const listAfterDestination = lists.find(
+        (_, index) => index === destinationIndex + 1
+      );
+
+      if (
+        !listBeforeDestination ||
+        !listAfterDestination ||
+        (difference > 0 && listAtDestination.type === "folder") || // Moving up
+        (difference < 0 && listAfterDestination.type === "folder") // Moving down
+      ) {
+        let newLists = swap(lists, sourceIndex, destinationIndex);
+        const listsInFolder = lists.filter(
+          (list) => list.folder === draggedItem.id
+        );
+
+        listsInFolder.forEach((list, index) => {
+          newLists = swap(
+            newLists,
+            sourceIndex + index + (destinationIndex < sourceIndex ? 1 : 0),
+            destinationIndex + index + (destinationIndex < sourceIndex ? 1 : 0)
+          );
+        });
+        newLists = updateListsFolder(newLists);
+
+        localStorage.setItem("owb.lists", JSON.stringify(newLists));
+        dispatch(setLists(newLists));
+      }
+    } else {
+      let newLists = updateListsFolder(
+        swap(lists, sourceIndex, destinationIndex)
+      );
+
+      localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      dispatch(setLists(newLists));
+    }
   };
   const folders = lists.filter((list) => list.type === "folder");
   const listsWithoutFolders = lists.filter((list) => list.type !== "folder");
@@ -111,6 +158,7 @@ export const Home = ({ isMobile }) => {
       icon: "delete",
       callback: ({ name }) => {
         setFolderName(name);
+        setActiveDeleteOption("delete");
         setDialogOpen("delete");
       },
     },
@@ -122,9 +170,15 @@ export const Home = ({ isMobile }) => {
     setFolderName("");
   };
   const handleDeleteConfirm = () => {
-    const newLists = updateListsFolder(
-      lists.filter((list) => list.id !== activeMenu)
-    );
+    let newLists = lists.filter((list) => list.id !== activeMenu);
+
+    if (activeDeleteOption === "delete") {
+      newLists = newLists.filter(
+        (list) => list.folder !== activeMenu || !list.folder
+      );
+    }
+
+    newLists = updateListsFolder(newLists);
 
     setDialogOpen(null);
     setActiveMenu(null);
@@ -158,6 +212,22 @@ export const Home = ({ isMobile }) => {
     setFolderName("");
     setDialogOpen(null);
   };
+  const handleDragStart = (start) => {
+    const draggedItem = lists.find(
+      (list) =>
+        list.id === start.draggableId || list.folder === start.draggableId
+    );
+    const listsInFolder = lists
+      .map((list, index) => ({ folder: list.folder, index: index }))
+      .filter((list) => list.folder);
+
+    if (draggedItem.type === "folder") {
+      setListsInFolder(listsInFolder);
+    }
+  };
+  const handleDeleteOptionChange = (option) => {
+    setActiveDeleteOption(option);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -176,7 +246,7 @@ export const Home = ({ isMobile }) => {
         open={dialogOpen === "delete"}
         onClose={() => setDialogOpen(null)}
       >
-        <p>
+        <p className="home__delete-text">
           <FormattedMessage
             id="editor.confirmDelete"
             values={{
@@ -184,6 +254,38 @@ export const Home = ({ isMobile }) => {
             }}
           />
         </p>
+        <div className="radio">
+          <input
+            type="radio"
+            id="delete-lists"
+            name="lists"
+            value="delete"
+            onChange={() => handleDeleteOptionChange("delete")}
+            checked={activeDeleteOption === "delete"}
+            className="radio__input"
+          />
+          <label htmlFor="delete-lists" className="radio__label">
+            <span className="unit__label-text">
+              <FormattedMessage id="home.deleteLists" />
+            </span>
+          </label>
+        </div>
+        <div className="radio">
+          <input
+            type="radio"
+            id="keep-lists"
+            name="lists"
+            value="keep"
+            onChange={() => handleDeleteOptionChange("keep")}
+            checked={activeDeleteOption === "keep"}
+            className="radio__input"
+          />
+          <label htmlFor="keep-lists" className="radio__label">
+            <span className="unit__label-text">
+              <FormattedMessage id="home.keepLists" />
+            </span>
+          </label>
+        </div>
         <div className="editor__delete-dialog">
           <Button
             type="text"
@@ -323,26 +425,27 @@ export const Home = ({ isMobile }) => {
             </i>
           </>
         )}
-        <OrderableList id="armies" onMoved={handleListMoved}>
+        <OrderableList
+          id="armies"
+          onMoved={handleListMoved}
+          onDragStart={handleDragStart}
+        >
           {lists.map(
-            (
-              {
-                id,
-                name,
-                description,
-                points,
-                game,
-                army,
-                type,
-                folder,
-                open,
-                ...list
-              },
-              index
-            ) =>
+            ({
+              id,
+              name,
+              description,
+              points,
+              game,
+              army,
+              type,
+              folder,
+              open,
+              ...list
+            }) =>
               type === "folder" ? (
                 <ListItem
-                  key={index}
+                  key={id}
                   to="#"
                   className={classNames(
                     "home__folder",
@@ -417,7 +520,7 @@ export const Home = ({ isMobile }) => {
                 </ListItem>
               ) : (
                 <ListItem
-                  key={index}
+                  key={id}
                   to={`/editor/${id}`}
                   active={location.pathname.includes(id)}
                   onClick={resetState}
@@ -425,6 +528,9 @@ export const Home = ({ isMobile }) => {
                     folders.find((folderData) => folderData.id === folder)
                       ?.open === false
                   }
+                  className={classNames(
+                    listsInFolder.length > 0 && "home__list--dragging"
+                  )}
                 >
                   {folder ? (
                     <Icon symbol="folder" className="home__folder-icon" />

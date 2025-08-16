@@ -114,3 +114,12 @@
 .home__divider {
   margin: 0;
 }
+
+.home__list--dragging {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.home__delete-text {
+  margin-bottom: 1rem;
+}
