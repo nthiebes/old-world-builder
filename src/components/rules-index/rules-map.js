@@ -50,6 +50,7 @@ const additionalOWBRules = {
   champions: { url: "command-groups/champions" },
   musician: { url: "command-groups/musicians" },
   "standard bearer": { url: "command-groups/standard-bearers" },
+  wizard: { url: "magic/wizards" },
   "level 1 wizard": { url: "magic/levels-of-wizardry" },
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
@@ -59,6 +60,21 @@ const additionalOWBRules = {
   },
   "doomseeker dwarfs": {
     url: "special-rules/doomseeker",
+  },
+  "armour piercing": {
+    url: "the-shooting-phase/armour-piercing",
+  },
+  "nuln state troops empire": {
+    url: "special-rules/nuln-state-troops",
+  },
+  "crown of horns beastmen": {
+    url: "magic-item/crown-of-horns-beastmen",
+  },
+  "crown of horns cathay": {
+    url: "weapons-of-war/crown-of-horns-grand-cathay",
+  },
+  "engine of the gods renegade": {
+    url: "special-rules/engine-of-the-gods-renegade",
   },
 };
 
@@ -70,6 +86,7 @@ export const synonyms = {
   "gromril great axes": "gromril great axe",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
+  "wolf hammers": "wolf hammer",
   shields: "shield",
   bellower: "bellowers & musicians",
   "revered guardian": "battle standard bearer",
@@ -85,6 +102,7 @@ export const synonyms = {
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
+  "leadbelcher guns renegade": "leadbelcher gun renegade",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",
@@ -94,6 +112,10 @@ export const synonyms = {
   "scout gyrocopters": "scout gyrocopter",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
+  "lion guard captain": "champions",
+  "chracian captain": "champions",
+  "jade officer": "champions",
+  "jade lancer officer": "champions",
   boss: "champions",
   marksman: "champions",
   preceptor: "champions",
@@ -184,6 +206,9 @@ export const synonyms = {
   deathmask: "champions",
   "plague deacon": "champions",
   fangleader: "champions",
+  watchmaster: "champions",
+  "foe-render": "champions",
+  "splice-horn": "champions",
   clawleader: "champions",
   "master of arms": "champions",
   "master of arrows": "champions",
@@ -229,6 +254,21 @@ export const synonyms = {
   "demigryph knights of the fiery heart": "demigryph knights",
   "demigryph knights of the blazing sun": "demigryph knights",
   "demigryph knights of morr": "demigryph knights",
+  "ogre pistols": "ogre pistol",
+  "light cannons": "light cannon",
+  "bigger choppier axe": "bigger, choppier axe",
+  orion: "orion, the king in the woods",
+  araloth: "araloth, lord of talsyn",
+  kralmaw: "kralmaw, the prophet of ruin",
+  ghorros: "ghorros warhoof",
+  "primal magic": "lore of primal magic",
+  "a tingle in the air": "herdstones",
+  "dark sorcery": "herdstones",
+  "fearsome edifice": "herdstones",
+  "bestial fury beastmen": "herdstones",
+  "cathayan lances": "cathayan lance",
+  "sky lantern crane guns": "sky lantern crane gun",
+  "iron hail guns": "iron hail gun",
 };
 
 export const rulesMap = {

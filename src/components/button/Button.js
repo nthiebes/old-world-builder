@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-import { Icon } from "..//icon";
+import { Icon } from "../icon";
 
 import "./Button.css";
 

@@ -310,7 +310,6 @@ export const rules = {
             "tomb-king",
             "tomb-prince",
             "settra-the-imperishable-the-great-king-of-nehekhara",
-            "prince-apophas-the-cursed-scarab-lord",
           ],
         },
       ],
@@ -446,6 +445,14 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["black-orc-warboss", "black-orc-bigboss"],
+          requires: ["black-orc-mob"],
+          requiresType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
       ],
     },
     core: {
@@ -484,6 +491,15 @@ export const rules = {
           requiresGeneral: true,
           requires: ["black-orc-warboss", "black-orc-bigboss"],
         },
+        {
+          ids: ["black-orc-mob"],
+          requires: ["black-orc-warboss", "black-orc-bigboss"],
+          requiresType: "characters",
+          requiredByType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
       ],
     },
     special: {
@@ -507,6 +523,15 @@ export const rules = {
           min: 0,
           max: 2,
           points: 1000,
+        },
+        {
+          ids: ["black-orc-mob"],
+          requires: ["black-orc-warboss", "black-orc-bigboss"],
+          requiresType: "characters",
+          requiredByType: "all",
+          perUnit: true,
+          min: 0,
+          max: 1,
         },
       ],
     },
@@ -537,6 +562,13 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
+        },
+        {
+          ids: ["troll-hag"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: ["common-troll-mob", "river-troll-mob", "stone-troll-mob"],
         },
       ],
     },
@@ -946,6 +978,17 @@ export const rules = {
           requiresGeneral: true,
           requires: ["doombull", "gorebull"],
         },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["preyton"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     rare: {
@@ -961,6 +1004,124 @@ export const rules = {
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
+  },
+  "minotaur-blood-herd": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["doombull"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["bray-shaman"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["minotaur-herd"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dragon-ogres"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["dragon-ogre-shaggoth-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "wild-herd": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["beastlord", "great-bray-shaman"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["primal-warherd"],
+          min: 1,
+        },
+        {
+          ids: ["centigor-herd-core"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["centigore-chieftain"],
+          perUnit: true,
+        },
+        {
+          ids: ["tuskgor-chariots-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dragon-ogres"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["cockatrice", "preyton"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["herdstone"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [],
+    },
   },
   "dwarfen-mountain-holds": {
     characters: {
@@ -1000,6 +1161,7 @@ export const rules = {
           max: 1,
           requiresType: "characters",
           requires: ["king", "thane", "ungrim-ironfist", "thorgrim-ullekson"],
+          perUnit: true,
         },
         {
           ids: ["bolt-thrower", "grudge-thrower", "cannon"],
@@ -1782,6 +1944,140 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "orions-wild-hunt": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["glade-lord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shadowdancer", "spellsinger", "waystalker"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["wild-riders-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["sisters-of-the-thorn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["waywatchers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["waystalker"],
+          perUnit: true,
+        },
+        {
+          ids: ["giant-eagle"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "host-of-talsyn": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["glade-lord", "spellweaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["treeman-ancient"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["warden-of-talsyn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shadowdancer"],
+          min: 0,
+          max: 1,
+          requiresType: "rare",
+          requires: ["wardancers"],
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["eternal-guard"],
+          min: 1,
+        },
+        {
+          ids: ["glade-guard"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["deepwood-scouts-core"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["treekin"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["giant-eagle"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "high-elf-realms": {
     characters: {
       maxPercent: 50,
@@ -1794,6 +2090,12 @@ export const rules = {
         },
         {
           ids: ["dragon-mage", "handmaiden-of-the-everqueen"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["storm-weaver"],
           min: 0,
           max: 1,
           points: 1000,
@@ -1857,10 +2159,157 @@ export const rules = {
           max: 2,
           points: 1000,
         },
+        {
+          ids: ["war-lions"],
+          min: 0,
+          max: 1,
+          requiresType: "special",
+          requires: ["white-lions"],
+        },
+        {
+          ids: ["merwyrms"],
+          min: 0,
+          max: 1,
+          requiresType: "core",
+          requires: ["lothern-sea-guard"],
+        },
       ],
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
+  },
+  "the-chracian-warhost": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["prince", "archmage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["chracian-chieftain", "storm-weaver"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["white-lions"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["war-lions"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["lothern-skycutters"],
+          min: 0,
+          max: 1,
+          requiresMagicItem: "sea-guard",
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["lion-guard"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["shadow-warriors", "sister-of-avelorn"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["great-eagle"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["eagle-claw-bolt-thrower"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "sea-guard-garrison": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["prince", "archmage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-mage", "noble", "mage"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["shadow-warriors"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["great-eagle"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["eagle-claw-bolt-thrower"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["flamespyre-phoenix", "frostheart-phoenix-"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
   },
   "chaos-dwarfs": {
     characters: {
@@ -1946,6 +2395,107 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "cd-renegade": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["sorcerer-prophet", "infernal-castellan"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["black-orc-bigboss", "black-orc-warboss"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["black-orc-mob"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["infernal-ironsworn-core"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["infernal-castellan"],
+          perUnit: true,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["iron-daemon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["deathshrieker-rocket-launcher", "magma-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["hobgoblin-bolt-thrower"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["hobgoblin-wolf-raiders"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["hobgoblin-khan"],
+          perUnit: true,
+        },
+        {
+          ids: ["bull-centaur-taur'ruk"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dreadquake-mortar", "hellcannon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["chaos-giant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          id: ["bonegrinder-giant"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    allies: { maxPercent: 25 },
+  },
   "daemons-of-chaos": {
     characters: {
       maxPercent: 50,
@@ -1959,6 +2509,283 @@ export const rules = {
           ],
           min: 0,
           max: 1,
+        },
+        {
+          ids: ["daemonic-herald-of-khorne"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "bloodletters-of-khorne",
+            "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
+            "bloodcrushers-of-khorne",
+            "skull-cannon-of-khorne",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["daemonic-herald-of-nurgle"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "plaguebearers-of-nurgle",
+            "nurglings",
+            "nurglings-core",
+            "beasts-of-nurgle",
+            "plague-drones-of-nurgle",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["daemonic-herald-of-slaanesh"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "daemonettes-of-slaanesh",
+            "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["daemonic-herald-of-tzeentch"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "pink-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
+            "brimstone-horrors-of-tzeentch",
+            "flamers-of-tzeentch",
+            "screamers-of-tzeentch",
+            "burning-chariot-of-tzeentch",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["daemon-prince"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne-core"],
+          requiresGeneral: true,
+          requires: [
+            "bloodthirster",
+            "daemonic-herald-of-khorne",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-khorne",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["plaguebearers-of-nurgle", "nurglings-core"],
+          requiresGeneral: true,
+          requires: [
+            "great-unclean-one",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh-core"],
+          requiresGeneral: true,
+          requires: [
+            "keeper-of-secrets",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slaanesh",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: [
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
+            "brimstone-horrors-of-tzeentch",
+          ],
+          requiresGeneral: true,
+          requires: [
+            "lord-of-change",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["bloodcrushers-of-khorne"],
+          requiresGeneral: true,
+          requires: [
+            "bloodthirster",
+            "daemonic-herald-of-khorne",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-khorne",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
+          requiresGeneral: true,
+          requires: [
+            "great-unclean-one",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: [
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+          requiresGeneral: true,
+          requires: [
+            "keeper-of-secrets",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slaanesh",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
+          requiresGeneral: true,
+          requires: [
+            "lord-of-change",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["skull-cannon-of-khorne"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "doc-renegade": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "bloodthirster",
+            "great-unclean-one",
+            "keeper-of-secrets",
+            "lord-of-change",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["bloodthirster"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "bloodletters-of-khorne",
+            "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
+            "bloodcrushers-of-khorne",
+            "skull-cannon-of-khorne",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["great-unclean-one"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "plaguebearers-of-nurgle",
+            "nurglings",
+            "nurglings-core",
+            "beasts-of-nurgle",
+            "plague-drones-of-nurgle",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["keeper-of-secrets"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "daemonettes-of-slaanesh",
+            "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+          perUnit: true,
+        },
+        {
+          ids: ["lord-of-change"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: [
+            "pink-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
+            "brimstone-horrors-of-tzeentch",
+            "flamers-of-tzeentch",
+            "screamers-of-tzeentch",
+            "burning-chariot-of-tzeentch",
+          ],
+          perUnit: true,
         },
         {
           ids: ["daemonic-herald-of-khorne"],
@@ -2027,7 +2854,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["bloodletters-of-khorne", "flesh-hounds-of-khorne"],
+          ids: ["flesh-hounds-of-khorne-core"],
           requiresGeneral: true,
           requires: [
             "bloodthirster",
@@ -2040,7 +2867,7 @@ export const rules = {
           },
         },
         {
-          ids: ["plaguebearers-of-nurgle", "nurglings"],
+          ids: ["nurglings-core"],
           requiresGeneral: true,
           requires: [
             "great-unclean-one",
@@ -2053,7 +2880,7 @@ export const rules = {
           },
         },
         {
-          ids: ["daemonettes-of-slaanesh", "seekers-of-slaanesh"],
+          ids: ["seekers-of-slaanesh-core"],
           requiresGeneral: true,
           requires: [
             "keeper-of-secrets",
@@ -2067,9 +2894,8 @@ export const rules = {
         },
         {
           ids: [
-            "pink-horrors-of-tzeentch",
-            "blue-horrors-of-tzeentch",
-            "brimstone-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch-core",
+            "brimstone-horrors-of-tzeentch-core",
           ],
           requiresGeneral: true,
           requires: [
@@ -2086,64 +2912,6 @@ export const rules = {
     },
     special: {
       maxPercent: 50,
-      units: [
-        {
-          ids: ["bloodcrushers-of-khorne"],
-          requiresGeneral: true,
-          requires: [
-            "bloodthirster",
-            "daemonic-herald-of-khorne",
-            "daemon-prince",
-          ],
-          requiresOption: {
-            id: "daemon-of-khorne",
-            unit: "daemon-prince",
-          },
-        },
-        {
-          ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
-          requiresGeneral: true,
-          requires: [
-            "great-unclean-one",
-            "daemonic-herald-of-nurgle",
-            "daemon-prince",
-          ],
-          requiresOption: {
-            id: "daemon-of-nurgle",
-            unit: "daemon-prince",
-          },
-        },
-        {
-          ids: [
-            "fiends-of-slaanesh",
-            "hellflayer-of-slaanesh",
-            "seeker-chariot-of-slaanesh",
-          ],
-          requiresGeneral: true,
-          requires: [
-            "keeper-of-secrets",
-            "daemonic-herald-of-slaanesh",
-            "daemon-prince",
-          ],
-          requiresOption: {
-            id: "daemon-of-slannesh",
-            unit: "daemon-prince",
-          },
-        },
-        {
-          ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
-          requiresGeneral: true,
-          requires: [
-            "lord-of-change",
-            "daemonic-herald-of-tzeentch",
-            "daemon-prince",
-          ],
-          requiresOption: {
-            id: "daemon-of-tzeentch",
-            unit: "daemon-prince",
-          },
-        },
-      ],
     },
     rare: {
       maxPercent: 25,
@@ -2158,6 +2926,82 @@ export const rules = {
     },
   },
   "dark-elves": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["dark-elf-dreadlord", "supreme-sorceress"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["witch-elves"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["death-hag"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["black-guard-of-naggarond"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["dark-elf-dreadlord", "dark-elf-master"],
+          perUnit: true,
+        },
+        {
+          ids: ["cold-one-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["scourgerunner-chariots", "cold-one-chariots"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["war-hydra", "kharybdiss"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["high-beastmaster"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["doomfire-warlocks"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["reaper-bolt-throwers"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "de-renegade": {
     characters: {
       maxPercent: 50,
       units: [
@@ -2301,12 +3145,51 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["stegadon", "troglodon"],
+          ids: ["ancient-stegadon", "stegadon", "troglodon"],
           min: 0,
           max: 1,
           points: 1000,
         },
       ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "lm-renegade": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["slann-mage-priest"],
+          min: 0,
+          max: 1,
+          points: 1500,
+        },
+        {
+          ids: ["saurus-oldblood"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["temple-guard"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["slann-mage-priest"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+    },
+    rare: {
+      maxPercent: 25,
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
@@ -2380,7 +3263,180 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
+  "ok-renegade": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["tyrant", "slaughtermaster"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["maneaters"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["mournfang-cavalry"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["ironblaster"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["thundertusk-riders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["stonehorn-riders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
   "vampire-counts": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "vampire-count",
+            "vampire-thrall",
+            "master-necromancer",
+            "necromantic-acolyte",
+            "strigoi-ghoul-king",
+          ],
+          min: 1,
+        },
+        {
+          ids: ["vampire-count", "master-necromancer", "strigoi-ghoul-king"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["wight-king", "tomb-banshee"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["grave-guard", "black-knights"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["wight-king", "wight-lord"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["grave-guard", "black-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["crypt-horrors", "fell-bats"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["corpse-cart"],
+          min: 0,
+          max: 3,
+        },
+        {
+          ids: ["spirit-hosts"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["cairn-wraith", "tomb-banshee"],
+          perUnit: true,
+        },
+        {
+          ids: ["vargheists", "terrorgheist"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["strigoi-ghoul-king"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["vargheists"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["black-coach"],
+          min: 0,
+          max: 2,
+        },
+        {
+          ids: ["terrorgheist", "varghulf"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["blood-knights"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hexwraiths"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["cairn-wraith", "tomb-banshee"],
+          perUnit: true,
+        },
+      ],
+    },
+    allies: { maxPercent: 25 },
+  },
+  "vc-renegade": {
     characters: {
       maxPercent: 50,
       units: [
@@ -2592,6 +3648,163 @@ export const rules = {
       ],
     },
     mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "sk-renegade": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["skaven-warlord"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["grey-seer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["plague-priest"],
+          requiresType: "all",
+          requires: ["plague-monks", "plague-monks-core"],
+          perUnit: true,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["stormvermin"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["skaven-warlord"],
+        },
+        {
+          ids: ["plague-monks-core"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["plague-priest"],
+        },
+        {
+          ids: ["plague-monks-core", "stormvermin"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["warplock-jezzails"],
+          requiresType: "characters",
+          requires: ["warlock-engineer"],
+        },
+        {
+          ids: ["poisoned-wind-globadiers"],
+          requiresType: "characters",
+          requires: ["warlock-engineer"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["hell-pit-abomination"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["doomwheel", "warp-lightning-cannon"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["warlock-engineer"],
+          points: 1000,
+        },
+        {
+          ids: ["plagueclaw-catapult", "plague-censer-bearers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["plague-priest"],
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: { maxPercent: 20 },
+    allies: { maxPercent: 25 },
+  },
+  "grand-cathay": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["miao-ying"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["shugengan-lord", "lord-magistrate"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["jade-lancers-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["cathayan-sentinel-special"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["shugengan-lord", "shugengan"],
+        },
+        {
+          ids: ["sky-lantern-special"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["lord-magistrate", "strategist"],
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 20,
+    },
     allies: { maxPercent: 25 },
   },
 };

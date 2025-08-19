@@ -11,8 +11,9 @@ export const listsSlice = createSlice({
       return payload || [];
     },
     updateList: (state, { payload }) => {
-      const { listId, name, points, description } = payload;
-      const newValues = { name, points, description };
+      const { listId, name, points, description, compositionRule, folder } =
+        payload;
+      const newValues = { name, points, description, compositionRule, folder };
 
       Object.keys(newValues).forEach((key) =>
         newValues[key] === undefined ? delete newValues[key] : {}
@@ -174,6 +175,20 @@ export const listsSlice = createSlice({
         return list;
       });
     },
+    toggleFolder: (state, { payload }) => {
+      const { folderId } = payload;
+
+      return state.map((list) => {
+        if (list.id === folderId) {
+          return {
+            ...list,
+            open: !list.open,
+          };
+        }
+
+        return list;
+      });
+    },
   },
 });
 
@@ -187,6 +202,7 @@ export const {
   updateList,
   deleteList,
   duplicateList,
+  toggleFolder,
 } = listsSlice.actions;
 
 export default listsSlice.reducer;

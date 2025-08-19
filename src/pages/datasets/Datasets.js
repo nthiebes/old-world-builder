@@ -9,8 +9,9 @@ import { Select } from "../../components/select";
 import { Expandable } from "../../components/expandable";
 import { Spinner } from "../../components/spinner";
 import { Dialog } from "../../components/dialog";
+import { ErrorMessage } from "../../components/error-message";
 import { fetcher } from "../../utils/fetcher";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 import { Unit } from "../unit";
 
 import { Entity } from "./Entity";
@@ -25,6 +26,7 @@ export const Datasets = ({ isMobile }) => {
   const [copyError, setCopyError] = useState(false);
   const [army, setArmy] = useState("empire-of-man");
   const game = "the-old-world";
+  const gameSystems = getGameSystems();
   const localDataset = localStorage.getItem("owb.dataset");
   const [dataset, setDataset] = useState({
     characters: [],
@@ -128,7 +130,7 @@ export const Datasets = ({ isMobile }) => {
       <Helmet>
         <title>
           {`Old World Builder | ${intl.formatMessage({
-            id: "footer.datasets",
+            id: "footer.datasets-editor",
           })}`}
         </title>
         <link rel="canonical" href="https://old-world-builder.com/datasets" />
@@ -139,6 +141,10 @@ export const Datasets = ({ isMobile }) => {
       <Main className="datasets">
         <div className="datasets__info">
           <h2 className="page-headline">Datasets Editor</h2>
+          <ErrorMessage spaceBefore spaceAfter>
+            Attention: The Datasets Editor has not been updated for some time
+            and no longer reflects the current format of the datasets.
+          </ErrorMessage>
           <p className="datasets__paragraph">
             Thank you for taking the time to improve the{" "}
             <i>Old World Builder</i>! You can expand existing army data, add

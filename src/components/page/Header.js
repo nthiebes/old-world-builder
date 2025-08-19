@@ -49,17 +49,17 @@ export const Header = ({
     },
     {
       name: intl.formatMessage({
-        id: "footer.datasets",
-      }),
-      to: "/datasets",
-      icon: "datasets",
-    },
-    {
-      name: intl.formatMessage({
         id: "footer.changelog",
       }),
       to: "/changelog",
       icon: "news",
+    },
+    {
+      name: intl.formatMessage({
+        id: "footer.custom-datasets",
+      }),
+      to: "/custom-datasets",
+      icon: "datasets",
     },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;

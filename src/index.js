@@ -16,6 +16,7 @@ import Spanish from "./i18n/es.json";
 import French from "./i18n/fr.json";
 import Italian from "./i18n/it.json";
 import Polish from "./i18n/pl.json";
+import Chinese from "./i18n/cn.json";
 
 // Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -28,12 +29,13 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const metaDescription = {
-  de: "Armeebauer für Warhammer: The Old World und Warhammer Fantasy.",
-  en: "Army builder for Warhammer: The Old World and Warhammer Fantasy Battles.",
-  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World' et 'Warhammer Fantaisie'.",
-  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World y Warhammer Fantasy.",
-  it: "Costruttore di eserciti per Warhammer: The Old World e Warhammer Fantasy Battles.",
-  pl: "Konstruktor armii dla Warhammer: The Old World i Warhammer Fantasy Battles.",
+  de: "Armeebauer für Warhammer: The Old World.",
+  en: "Army builder for Warhammer: The Old World.",
+  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World'.",
+  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World.",
+  it: "Costruttore di eserciti per Warhammer: The Old World.",
+  pl: "Konstruktor armii dla Warhammer: The Old World.",
+  cn: "《战锤：旧世界》的军队建造者。",
 };
 
 try {
@@ -46,7 +48,7 @@ try {
 } catch {}
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr", "es", "it", "pl"];
+const supportedLanguages = ["en", "de", "fr", "es", "it", "pl", "cn"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -72,6 +74,8 @@ if (language === "de") {
   messages = Italian;
 } else if (language === "pl") {
   messages = Polish;
+} else if (language === "cn") {
+  messages = Chinese;
 } else {
   messages = English;
 }

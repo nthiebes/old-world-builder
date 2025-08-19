@@ -35,6 +35,297 @@ export const Changelog = () => {
 
         <hr />
 
+        <h3>v1.21</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-08-16 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change64"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.20</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-08-12 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change63"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.19</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-06-26 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change62"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.18</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-06-19 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change61"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.17</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-05-31 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change60"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.16</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-05-26 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change59"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.15</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-04-12 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change58"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+                datasets: (
+                  <Link to="/custom-datasets">
+                    <FormattedMessage id="footer.custom-datasets" />
+                  </Link>
+                ),
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.14</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-03-25 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change57"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.13</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-03-24 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change56"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.12</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-03-24 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change55"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.11</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2025-02-15 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change54"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
         <h3>v1.10</h3>
         <p>
           <time>
@@ -793,7 +1084,7 @@ export const Changelog = () => {
               values={{
                 datasets: (
                   <Link to="/datasets">
-                    <FormattedMessage id="footer.datasets" />
+                    <FormattedMessage id="footer.datasets-editor" />
                   </Link>
                 ),
               }}

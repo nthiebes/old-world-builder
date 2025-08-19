@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import PropTypes from "prop-types";
 
 import { Button } from "../button";
-import { LocalizedRuleLink } from "../rules-index";
+import { LocalizedRuleLink, RuleWithIcon } from "../rules-index";
 
 import "./GeneratedSpells.css";
 
@@ -21,6 +21,7 @@ export const GeneratedSpells = ({
   availableLoresWithSpells,
   maxGeneratedSpellCount,
   showPageNumbers,
+  maxSignatureSpells = 1,
 }) => {
   const intl = useIntl();
   const [generatedSpells, setGeneratedSpells] = useState(
@@ -66,15 +67,17 @@ export const GeneratedSpells = ({
   };
 
   let generatedSpellCount = 0;
-  let signatureSpellIsGenerated = false;
+  let signatureSpellsGenerated = 0;
 
   for (const loreId in generatedSpells) {
     generatedSpellCount += generatedSpells[loreId].length;
-    if (
-      availableLoresWithSpells[loreId][generatedSpells[loreId][0]]?.index ===
-      "signature"
-    ) {
-      signatureSpellIsGenerated = true;
+
+    for (let j = 0; j < generatedSpells[loreId].length; j++) {
+      const spellId = generatedSpells[loreId][j];
+
+      if (availableLoresWithSpells[loreId][spellId]?.index === "signature") {
+        signatureSpellsGenerated++;
+      }
     }
   }
 
@@ -117,7 +120,7 @@ export const GeneratedSpells = ({
                             (generatedSpellCount === maxGeneratedSpellCount &&
                               !spellIsGenerated) ||
                             (spell.index === "signature" &&
-                              signatureSpellIsGenerated &&
+                              signatureSpellsGenerated >= maxSignatureSpells &&
                               !spellIsGenerated)
                           }
                           onChange={(event) => {
@@ -128,16 +131,23 @@ export const GeneratedSpells = ({
                             );
                           }}
                         />
-                        <span className="generated-spells__spell-index">
-                          {spell.index === "signature"
-                            ? intl.formatMessage({
-                                id: "misc.signatureAbbr",
-                              })
-                            : spell.index}
+                        <span className="generated-spells__rules-wrapper">
+                          <span className="generated-spells__spell-index">
+                            {spell.index === "signature"
+                              ? intl.formatMessage({
+                                  id: "misc.signatureAbbr",
+                                })
+                              : spell.index}
+                          </span>
+                          <FormattedMessage
+                            id={spellIdToFormattedMessageId(spellId)}
+                          />
+                          <RuleWithIcon
+                            name={spellId}
+                            isDark
+                            className="generated-spells__rule-icon"
+                          />
                         </span>
-                        <FormattedMessage
-                          id={spellIdToFormattedMessageId(spellId)}
-                        />
                       </label>
                     </li>
                   );

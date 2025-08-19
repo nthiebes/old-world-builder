@@ -1,5 +1,41 @@
 import { unitHasItem } from "./unit";
 
+// returns the points cost for adding a single model in a unit, given the
+// selected options and equipment
+export const getPointsPerModel = (unit) => {
+  let modelPoints = unit.points;
+  if (unit.options) {
+    unit.options.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      } else if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((subOption) => {
+          if (subOption.active) {
+            if (subOption.perModel) {
+              modelPoints += subOption.points;
+            }
+          }
+        });
+      }
+    });
+  }
+  if (unit.equipment) {
+    unit.equipment.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+  if (unit.armor) {
+    unit.armor.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+  return modelPoints;
+};
+
 export const getUnitPoints = (unit, settings) => {
   const detachmentActive =
     unit?.options?.length > 0 &&
@@ -129,22 +165,31 @@ export const getUnitPoints = (unit, settings) => {
 
         if (equipment && equipment.length) {
           equipment.forEach((option) => {
-            if (option.active) {
+            if (option.stackable) {
+              unitPoints +=
+                (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (armor && armor.length) {
           armor.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (options && options.length) {
           options.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }

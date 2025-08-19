@@ -75,7 +75,7 @@ export const NumberInput = ({
           type="secondary"
           icon="up"
           label={intl.formatMessage({ id: "misc.increase" })}
-          disabled={value >= max && max !== 0}
+          disabled={(value >= max && max !== 0) || (max === 0 && min === 0)}
           className="number-input__button number-input__button--up"
         />
         <Button
@@ -83,7 +83,7 @@ export const NumberInput = ({
           type="secondary"
           icon="down"
           label={intl.formatMessage({ id: "misc.decrease" })}
-          disabled={value <= min}
+          disabled={value <= min || (max === 0 && min === 0)}
           className="number-input__button number-input__button--down"
         />
       </div>

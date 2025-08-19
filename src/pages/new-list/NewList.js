@@ -5,12 +5,12 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 
 import { Button } from "../../components/button";
-import { getRandomId } from "../../utils/id";
-import { useLanguage } from "../../utils/useLanguage";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select";
 import { NumberInput } from "../../components/number-input";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
+import { getRandomId } from "../../utils/id";
+import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 
 import { nameMap } from "../magic";
@@ -23,18 +23,38 @@ export const NewList = ({ isMobile }) => {
   const dispatch = useDispatch();
   const intl = useIntl();
   const { language } = useLanguage();
+  const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState("the-old-world");
-  const [army, setArmy] = useState(
-    gameSystems.find(({ id }) => id === game).armies[0].id
-  );
+  const [army, setArmy] = useState("empire-of-man");
+  const [compositionRule, setCompositionRule] = useState("open-war");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
   const [armyComposition, setArmyComposition] = useState("empire-of-man");
   const [redirect, setRedirect] = useState(null);
-  const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
+  const armies = gameSystems
+    .filter(({ id }) => id === game)[0]
+    .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
+  const compositionRules = [
+    {
+      id: "open-war",
+      name_en: intl.formatMessage({ id: "misc.open-war" }),
+    },
+    {
+      id: "grand-melee",
+      name_en: intl.formatMessage({ id: "misc.grand-melee" }),
+    },
+    {
+      id: "combined-arms",
+      name_en: intl.formatMessage({ id: "misc.combined-arms" }),
+    },
+    {
+      id: "grand-melee-combined-arms",
+      name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
+    },
+  ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
   const quickActions = lists.length
     ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
@@ -42,42 +62,28 @@ export const NewList = ({ isMobile }) => {
   const createList = () => {
     const newId = getRandomId();
     const newList = {
-      "warhammer-fantasy": {
-        name:
-          name || nameMap[army][`name_${language}`] || nameMap[army].name_en,
-        description: description,
-        game: game,
-        points: points,
-        army: army,
-        lords: [],
-        heroes: [],
-        core: [],
-        special: [],
-        rare: [],
-        id: newId,
-      },
-      "the-old-world": {
-        name:
-          name ||
-          nameMap[armyComposition]?.[`name_${language}`] ||
-          nameMap[armyComposition]?.name_en ||
-          nameMap[army][`name_${language}`] ||
-          nameMap[army].name_en,
-        description: description,
-        game: game,
-        points: points,
-        army: army,
-        characters: [],
-        core: [],
-        special: [],
-        rare: [],
-        mercenaries: [],
-        allies: [],
-        id: newId,
-        armyComposition,
-      },
+      name:
+        name ||
+        nameMap[armyComposition]?.[`name_${language}`] ||
+        nameMap[armyComposition]?.name_en ||
+        (nameMap[army] && nameMap[army][`name_${language}`]) ||
+        nameMap[army]?.name_en ||
+        army,
+      description: description,
+      game: game,
+      points: points,
+      army: army,
+      characters: [],
+      core: [],
+      special: [],
+      rare: [],
+      mercenaries: [],
+      allies: [],
+      id: newId,
+      armyComposition,
+      compositionRule,
     };
-    const newLists = [...lists, newList[game]];
+    const newLists = [newList, ...lists];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
@@ -89,13 +95,20 @@ export const NewList = ({ isMobile }) => {
     setArmy(
       gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id
     );
+    setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
     setArmy(value);
-    setArmyComposition(value);
+    setArmyComposition(
+      armies.find(({ id }) => value === id).armyComposition[0]
+    );
+    setCompositionRule("open-war");
   };
   const handleArcaneJournalChange = (value) => {
     setArmyComposition(value);
+  };
+  const handleCompositionRuleChange = (value) => {
+    setCompositionRule(value);
   };
   const handlePointsChange = (event) => {
     setPoints(event.target.value);
@@ -136,12 +149,12 @@ export const NewList = ({ isMobile }) => {
           />
         )}
         <form onSubmit={handleSubmit} className="new-list">
-          {gameSystems.map(({ name, id }) => (
+          {gameSystems.map(({ name, id }, index) => (
             <div
               className={classNames(
                 "radio",
                 "new-list__radio",
-                id === "warhammer-fantasy" && "new-list__radio--last-item"
+                index === gameSystems.length - 1 && "new-list__radio--last-item"
               )}
               key={id}
             >
@@ -154,20 +167,9 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "warhammer-fantasy"}
               />
               <label htmlFor={id} className="radio__label">
-                {id === "warhammer-fantasy" && (
-                  <>
-                    <span className="new-list__game-name">{name}</span>
-                    <p className="new-list__beta">
-                      <FormattedMessage id="new.8th" />
-                    </p>
-                  </>
-                )}
-                {id === "the-old-world" && (
-                  <span className="new-list__game-name">{name}</span>
-                )}
+                <span className="new-list__game-name">{name}</span>
               </label>
             </div>
           ))}
@@ -190,16 +192,12 @@ export const NewList = ({ isMobile }) => {
               <Select
                 id="arcane-journal"
                 options={[
-                  {
-                    id: army,
-                    name_en: intl.formatMessage({ id: "new.grandArmy" }),
-                  },
                   ...journalArmies.map((journalArmy) => ({
                     id: journalArmy,
-                    name_en: nameMap[journalArmy].name_en,
-                    name_de: nameMap[journalArmy].name_de,
-                    name_es: nameMap[journalArmy].name_es,
-                    name_fr: nameMap[journalArmy].name_fr,
+                    name_en:
+                      journalArmy === army
+                        ? intl.formatMessage({ id: "new.grandArmy" })
+                        : nameMap[journalArmy].name_en,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
@@ -208,6 +206,16 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
+          <label htmlFor="composition-rule">
+            <FormattedMessage id="new.armyCompositionRule" />
+          </label>
+          <Select
+            id="composition-rule"
+            options={compositionRules}
+            onChange={handleCompositionRuleChange}
+            selected={compositionRule}
+            spaceBottom
+          />
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>

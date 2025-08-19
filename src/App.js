@@ -21,6 +21,7 @@ import { Privacy } from "./pages/privacy";
 import { Changelog } from "./pages/changelog";
 import { Import } from "./pages/import";
 import { GameView } from "./pages/game-view";
+import { CustomDatasets } from "./pages/custom-datasets";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
@@ -80,6 +81,7 @@ export const App = () => {
           <Route path="/new">{<NewList isMobile />}</Route>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
@@ -94,6 +96,7 @@ export const App = () => {
         <Switch>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
@@ -117,7 +120,7 @@ export const App = () => {
                   <Route path="/editor/:listId/edit">{<EditList />}</Route>
                   <Route path="/editor/:listId/export">{<Export />}</Route>
                   <Route path="/editor/:listId/duplicate">
-                    {<DuplicateList />}
+                    <DuplicateList />
                   </Route>
                   <Route path="/editor/:listId/add/:type">{<Add />}</Route>
                   <Route path="/editor/:listId/:type/:unitId">{<Unit />}</Route>
@@ -126,13 +129,13 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/editor/:listId/:type/:unitId/magic/:command">
-                    {<Magic />}
+                    <Magic />
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/rename">
-                    {<Rename />}
+                    <Rename />
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/items/:group">
-                    {<Magic />}
+                    <Magic />
                   </Route>
                 </Switch>
               </section>

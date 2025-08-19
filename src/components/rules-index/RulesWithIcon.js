@@ -46,7 +46,10 @@ export const RulesWithIcon = ({ textObject }) => {
           </span>
         ) : (
           <>
-            {rule}
+            {rule
+              .replace(/\[/g, "")
+              .replace(/\]/g, "")
+              .replace(/ *\{[^)]*\}/g, "")}
             {index !== ruleButtons.length - 1 && ", "}
           </>
         )}

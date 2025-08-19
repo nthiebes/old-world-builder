@@ -13,6 +13,10 @@
   margin-top: 0.5rem;
 }
 
+.unit__subline--space-after {
+  margin-bottom: 0.5rem;
+}
+
 .unit__points {
   font-size: 1rem;
   font-weight: 400;
@@ -54,6 +58,15 @@
 
 .unit__strength {
   margin-top: 1rem;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit__strength-points {
+  font-style: italic;
+  font-weight: normal;
+  text-align: right;
 }
 
 .unit__link .list__inner label {
@@ -232,6 +245,7 @@
 .unit__option-note--items {
   margin-left: 0;
   margin-bottom: 0.5rem;
+  font-size: 0.9rem !important;
 }
 
 .unit__option-note--detachment {

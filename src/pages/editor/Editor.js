@@ -305,7 +305,7 @@ export const Editor = ({ isMobile }) => {
           {errors
             .filter(({ section }) => section === "global")
             .map(({ message }) => (
-              <ErrorMessage key={message} spaceAfter>
+              <ErrorMessage key={message} spaceAfter spaceBefore={isMobile}>
                 <FormattedMessage id={message} />
               </ErrorMessage>
             ))}
@@ -426,7 +426,7 @@ export const Editor = ({ isMobile }) => {
 
             {errors
               .filter(({ section }) => section === "characters")
-              .map(({ message, name, diff, min, option }, index) => (
+              .map(({ message, name, diff, min, max, option }, index) => (
                 <ErrorMessage key={message + index} spaceBefore>
                   <FormattedMessage
                     id={message}
@@ -434,6 +434,7 @@ export const Editor = ({ isMobile }) => {
                       name,
                       diff,
                       min,
+                      max,
                       option,
                     }}
                   />
@@ -484,13 +485,14 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "core")
-            .map(({ message, name, min, diff, option }, index) => (
+            .map(({ message, name, min, max, diff, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
                   values={{
                     name,
                     min,
+                    max,
                     diff,
                     option,
                   }}
@@ -540,7 +542,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "special")
-            .map(({ message, name, diff, min, option }, index) => (
+            .map(({ message, name, diff, min, max, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -548,6 +550,7 @@ export const Editor = ({ isMobile }) => {
                     name,
                     diff,
                     min,
+                    max,
                     option,
                   }}
                 />
@@ -596,7 +599,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "rare")
-            .map(({ message, name, diff, min, option }, index) => (
+            .map(({ message, name, diff, min, max, option }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -604,6 +607,7 @@ export const Editor = ({ isMobile }) => {
                     name,
                     diff,
                     min,
+                    max,
                     option,
                   }}
                 />
@@ -620,64 +624,6 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="editor.add" />
           </Button>
         </section>
-
-        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.allies" />
-              </h2>
-              <p className="editor__points">
-                {alliesData.diff > 0 ? (
-                  <>
-                    <strong>{alliesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>{alliesData.points - alliesPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
-
-            <OrderableUnitList
-              units={list.allies}
-              type="allies"
-              listId={listId}
-              armyComposition={armyComposition}
-            />
-
-            {errors
-              .filter(({ section }) => section === "allies")
-              .map(({ message, name, diff, min, option }, index) => (
-                <ErrorMessage key={message + index} spaceBefore>
-                  <FormattedMessage
-                    id={message}
-                    values={{
-                      name,
-                      diff,
-                      min,
-                      option,
-                    }}
-                  />
-                </ErrorMessage>
-              ))}
-
-            <Button
-              type="primary"
-              centered
-              to={`/editor/${listId}/add/allies`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button>
-          </section>
-        )}
 
         {list.mercenaries &&
           mercenariesData &&
@@ -717,7 +663,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                 .filter(({ section }) => section === "mercenaries")
-                .map(({ message, name, diff, min, option }, index) => (
+                .map(({ message, name, diff, min, max, option }, index) => (
                   <ErrorMessage key={message + index} spaceBefore>
                     <FormattedMessage
                       id={message}
@@ -725,6 +671,7 @@ export const Editor = ({ isMobile }) => {
                         name,
                         diff,
                         min,
+                        max,
                         option,
                       }}
                     />
@@ -742,6 +689,65 @@ export const Editor = ({ isMobile }) => {
               </Button>
             </section>
           )}
+
+        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.allies" />
+              </h2>
+              <p className="editor__points">
+                {alliesData.diff > 0 ? (
+                  <>
+                    <strong>{alliesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{alliesData.points - alliesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
+
+            <OrderableUnitList
+              units={list.allies}
+              type="allies"
+              listId={listId}
+              armyComposition={armyComposition}
+            />
+
+            {errors
+              .filter(({ section }) => section === "allies")
+              .map(({ message, name, diff, min, max, option }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
+                      min,
+                      max,
+                      option,
+                    }}
+                  />
+                </ErrorMessage>
+              ))}
+
+            <Button
+              type="primary"
+              centered
+              to={`/editor/${listId}/add/allies`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
 
         <Button
           type="secondary"

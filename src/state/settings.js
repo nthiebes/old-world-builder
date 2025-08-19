@@ -12,6 +12,7 @@ export const settingsSlice = createSlice({
     showGeneratedSpells: true,
     showStats: true,
     loggedIn: false,
+    listSorting: "manual",
   },
   reducers: {
     setSettings: (_, { payload }) => {

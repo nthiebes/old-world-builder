@@ -11,7 +11,7 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { nameMap } from "../magic";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 
 import "./Print.css";
 
@@ -41,14 +41,13 @@ export const Print = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const lordsPoints = getPoints({ list, type: "lords" });
-  const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+  const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list.game);
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
@@ -127,7 +126,7 @@ export const Print = () => {
     return (
       <ul>
         {units.map((unit) => {
-          const stats = getStats(unit);
+          const stats = getStats(unit, armyComposition);
 
           return (
             <li key={unit.id}>
@@ -154,17 +153,50 @@ export const Print = () => {
                 armyComposition,
               })}
               {showSpecialRules && unit.specialRules ? (
-                <p className="print__special-rules">
-                  <i>
-                    <b>
-                      <FormattedMessage id="unit.specialRules" />:
-                    </b>{" "}
-                    {(
-                      unit.specialRules[`name_${language}`] ||
-                      unit.specialRules.name_en
-                    ).replace(/ *\{[^)]*\}/g, "")}
-                  </i>
-                </p>
+                <>
+                  <p className="print__special-rules">
+                    <i>
+                      <b>
+                        <FormattedMessage id="unit.specialRules" />:
+                      </b>{" "}
+                      {(
+                        unit.specialRules[`name_${language}`] ||
+                        unit.specialRules.name_en
+                      ).replace(/ *\{[^)]*\}/g, "")}
+                    </i>
+                  </p>
+                  {unit.detachments &&
+                    unit.detachments.map((detachment) => {
+                      const specialRulesDetachment =
+                        detachment.armyComposition?.[
+                          list?.armyComposition || list?.army
+                        ]?.specialRules || detachment.specialRules;
+
+                      if (!specialRulesDetachment) {
+                        return null;
+                      }
+
+                      return (
+                        <p
+                          className="game-view__special-rules"
+                          key={detachment.id}
+                        >
+                          <b>
+                            <i>
+                              <FormattedMessage id="unit.specialRules" /> (
+                              {detachment[`name_${language}`] ||
+                                detachment.name_en}
+                              ):
+                            </i>
+                          </b>{" "}
+                          {(
+                            specialRulesDetachment[`name_${language}`] ||
+                            specialRulesDetachment.name_en
+                          ).replace(/ *\{[^)]*\}/g, "")}
+                        </p>
+                      );
+                    })}
+                </>
               ) : null}
               {showStats &&
                 (stats?.length > 0 ? (
@@ -224,6 +256,7 @@ export const Print = () => {
           spaceBottom
           size="large"
           disabled={isPrinting}
+          className="print__button"
         >
           {isPrinting ? (
             <FormattedMessage id="print.printing" />
@@ -247,53 +280,22 @@ export const Print = () => {
         </h1>
         <p className="print__subheader">
           {game.name}, {armyName}
-          {armyCompositionName ? `, ${armyCompositionName}` : ""}
+          {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
+          <FormattedMessage id={`misc.${list.compositionRule || "open-war"}`} />
         </p>
 
-        {list.game === "the-old-world" ? (
-          list.characters.length > 0 && (
-            <section>
-              <h2>
-                <FormattedMessage id="editor.characters" />{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{charactersPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-              {getSection({ type: "characters" })}
-            </section>
-          )
-        ) : (
-          <>
-            {list.lords.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.lords" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{lordsPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "lords" })}
-              </section>
-            )}
-
-            {list.heroes.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.heroes" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{heroesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "heroes" })}
-              </section>
-            )}
-          </>
+        {list.characters.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.characters" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{charactersPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "characters" })}
+          </section>
         )}
 
         {list.core.length > 0 && (
@@ -338,37 +340,34 @@ export const Print = () => {
           </section>
         )}
 
-        {list.game === "the-old-world" && (
-          <>
-            {list.allies.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.allies" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{alliesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "allies" })}
-              </section>
-            )}
-
-            {list.mercenaries.length > 0 && (
-              <section>
-                <h2>
-                  <FormattedMessage id="editor.mercenaries" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
-                {getSection({ type: "mercenaries" })}
-              </section>
-            )}
-          </>
+        {list.allies.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.allies" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{alliesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "allies" })}
+          </section>
         )}
+
+        {list.mercenaries.length > 0 && (
+          <section>
+            <h2>
+              <FormattedMessage id="editor.mercenaries" />{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h2>
+            {getSection({ type: "mercenaries" })}
+          </section>
+        )}
+
         <div className="print-footer">
           <p>
             <FormattedMessage id="export.createdWith" />{" "}

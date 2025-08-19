@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { Select } from "../../components/select";
 import { Icon } from "../../components/icon";
 import { updateList } from "../../state/lists";
 import { updateLocalList } from "../../utils/list";
@@ -22,6 +23,24 @@ export const EditList = ({ isMobile }) => {
   const { listId } = useParams();
   const { language } = useLanguage();
   const dispatch = useDispatch();
+  const compositionRules = [
+    {
+      id: "open-war",
+      name_en: intl.formatMessage({ id: "misc.open-war" }),
+    },
+    {
+      id: "grand-melee",
+      name_en: intl.formatMessage({ id: "misc.grand-melee" }),
+    },
+    {
+      id: "combined-arms",
+      name_en: intl.formatMessage({ id: "misc.combined-arms" }),
+    },
+    {
+      id: "grand-melee-combined-arms",
+      name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
+    },
+  ];
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -47,6 +66,14 @@ export const EditList = ({ isMobile }) => {
       updateList({
         listId,
         description: event.target.value,
+      })
+    );
+  };
+  const handleCompositionRuleChange = (value) => {
+    dispatch(
+      updateList({
+        listId,
+        compositionRule: value,
       })
     );
   };
@@ -101,7 +128,9 @@ export const EditList = ({ isMobile }) => {
         <p className="unit__notes">
           <Icon symbol="error" className="unit__notes-icon" />
           {nameMap[list.armyComposition]?.[`name_${language}`] ||
-            nameMap[list.armyComposition]?.name_en}
+            nameMap[list.armyComposition]?.name_en ||
+            nameMap[list.army]?.[`name_${language}`] ||
+            nameMap[list.army]?.name_en}
         </p>
         <label htmlFor="name" className="edit__label">
           <FormattedMessage id="misc.name" />
@@ -138,6 +167,16 @@ export const EditList = ({ isMobile }) => {
           onChange={handlePointsChange}
           required
           interval={50}
+        />
+        <label htmlFor="composition-rule">
+          <FormattedMessage id="new.armyCompositionRule" />
+        </label>
+        <Select
+          id="composition-rule"
+          options={compositionRules}
+          onChange={handleCompositionRuleChange}
+          selected={list.compositionRule || "open-war"}
+          spaceBottom
         />
       </MainComponent>
     </>

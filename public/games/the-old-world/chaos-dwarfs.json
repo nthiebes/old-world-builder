@@ -2,6 +2,7 @@
   "characters": [
     {
       "name_en": "Sorcerer-Prophet",
+      "name_cn": "术士先知",
       "name_de": "Sorcerer-Prophet",
       "name_es": "Sorcerer-Prophet",
       "name_fr": "Sorcier-Prophète",
@@ -10,6 +11,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -19,6 +21,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -28,6 +31,7 @@
         },
         {
           "name_en": "Darkforged weapon",
+          "name_cn": "邪铸武器",
           "name_de": "Darkforged weapon",
           "name_es": "Darkforged weapon",
           "name_fr": "Arme de Sombreforge",
@@ -38,6 +42,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -49,6 +54,7 @@
       "options": [
         {
           "name_en": "Naptha bombs",
+          "name_cn": "火油炸弹",
           "name_de": "Naptha bombs",
           "name_es": "Naptha bombs",
           "name_fr": "Bombes au Naptha",
@@ -59,29 +65,50 @@
         },
         {
           "name_en": "Blood of Hashut",
+          "name_cn": "哈苏特之血",
           "name_de": "Blood of Hashut",
           "name_es": "Blood of Hashut",
           "name_fr": "Sang d’Hashut",
           "points": 20,
           "perModel": true,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "name_es": "Level 4 Wizard",
-          "name_fr": "Sorcier de Niveau 4",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "À Pied",
@@ -90,6 +117,7 @@
         },
         {
           "name_en": "Bale Taurus",
+          "name_cn": "烈焰魔牛",
           "name_de": "Bale Taurus",
           "name_es": "Bale Taurus",
           "name_fr": "Sombre Taurus",
@@ -97,6 +125,7 @@
         },
         {
           "name_en": "Great Taurus",
+          "name_cn": "巨型魔牛",
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
@@ -104,6 +133,7 @@
         },
         {
           "name_en": "Lammasu",
+          "name_cn": "拉玛苏",
           "name_de": "Lammasu",
           "name_es": "Lammasu",
           "name_fr": "Lammasu",
@@ -111,6 +141,7 @@
           "options": [
             {
               "name_en": "Mace tail",
+              "name_cn": "锤击尾部",
               "name_de": "Mace tail",
               "name_es": "Mace tail",
               "name_fr": "Masse Caudale",
@@ -118,6 +149,7 @@
             },
             {
               "name_en": "Sorcerous Exhalation",
+              "name_cn": "魔法吐息",
               "name_de": "Sorcerous Exhalation",
               "name_es": "Sorcerous Exhalation",
               "name_fr": "Exhalaison Occulte",
@@ -129,6 +161,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -147,19 +180,22 @@
       "lores": ["daemonology", "dark-magic", "elementalism"],
       "specialRules": {
         "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+        "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
         "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
         "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 or Infernal Castellan per 1000 points",
-        "name_de": "0-1 or Infernal Castellan per 1000 points",
-        "name_es": "0-1 or Infernal Castellan per 1000 points",
-        "name_fr": "0-1 ou Châtelain Infernal par tranche de 1000 points"
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_cn": "0-1术士先知或地狱卫堡主每1, 000分",
+        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_fr": "0-1 Sorcerer-Prophet ou Châtelain Infernal par tranche de 1000 points"
       }
     },
     {
       "name_en": "Daemonsmith Sorcerer",
+      "name_cn": "恶魔铁匠",
       "name_de": "Daemonsmith Sorcerer",
       "name_es": "Daemonsmith Sorcerer",
       "name_fr": "Forgeron-Démoniste",
@@ -168,6 +204,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -177,6 +214,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -186,6 +224,7 @@
         },
         {
           "name_en": "Darkforged weapon",
+          "name_cn": "邪铸武器",
           "name_de": "Darkforged weapon",
           "name_es": "Darkforged weapon",
           "name_fr": "Arme de Sombreforge",
@@ -196,6 +235,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -207,6 +247,7 @@
       "options": [
         {
           "name_en": "Naptha bombs",
+          "name_cn": "火油炸弹",
           "name_de": "Naptha bombs",
           "name_es": "Naptha bombs",
           "name_fr": "Bombes au Naptha",
@@ -217,29 +258,50 @@
         },
         {
           "name_en": "Blood of Hashut",
+          "name_cn": "哈苏特之血",
           "name_de": "Blood of Hashut",
           "name_es": "Blood of Hashut",
           "name_fr": "Sang d’Hashut",
           "points": 20,
           "perModel": true,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "À Pied",
@@ -248,6 +310,7 @@
         },
         {
           "name_en": "Great Taurus",
+          "name_cn": "巨型魔牛",
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
@@ -255,6 +318,7 @@
         },
         {
           "name_en": "Lammasu",
+          "name_cn": "拉玛苏",
           "name_de": "Lammasu",
           "name_es": "Lammasu",
           "name_fr": "Lammasu",
@@ -262,6 +326,7 @@
           "options": [
             {
               "name_en": "Mace tail",
+              "name_cn": "锤击尾部",
               "name_de": "Mace tail",
               "name_es": "Mace tail",
               "name_fr": "Masse Caudale",
@@ -269,6 +334,7 @@
             },
             {
               "name_en": "Sorcerous Exhalation",
+              "name_cn": "魔法吐息",
               "name_de": "Sorcerous Exhalation",
               "name_es": "Sorcerous Exhalation",
               "name_fr": "Exhalaison Occulte",
@@ -280,6 +346,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -298,12 +365,14 @@
       "lores": ["daemonology", "dark-magic", "elementalism"],
       "specialRules": {
         "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+        "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
         "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
         "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -311,6 +380,7 @@
     },
     {
       "name_en": "Infernal Castellan",
+      "name_cn": "地狱卫堡主",
       "name_de": "Infernal Castellan",
       "name_es": "Infernal Castellan",
       "name_fr": "Châtelain Infernal",
@@ -319,6 +389,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -328,6 +399,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -337,6 +409,7 @@
         },
         {
           "name_en": "Darkforged weapon",
+          "name_cn": "邪铸武器",
           "name_de": "Darkforged weapon",
           "name_es": "Darkforged weapon",
           "name_fr": "Arme de Sombreforge",
@@ -345,6 +418,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -355,70 +429,121 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 0,
-          "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_it": "Full plate armour",
+          "name_pl": "Full plate armour",
+          "points": 3,
+          "armyComposition": "cd-renegade"
         }
       ],
       "options": [
         {
-          "name_en": "Pistol (not Naptha bombs)",
-          "name_de": "Pistol (not Naptha bombs)",
-          "name_es": "Pistol (not Naptha bombs)",
-          "name_fr": "Pistolet (sans Bombes au Naptha)",
+          "name_en": "Pistol",
+          "name_cn": "手枪",
+          "name_de": "Pistol",
+          "name_es": "Pistol",
+          "name_fr": "Pistolet",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Naptha bombs",
+            "name_cn": "若不使用火油炸弹"
+          }
         },
         {
-          "name_en": "Naptha bombs (not Pistol)",
-          "name_de": "Naptha bombs (not Pistol)",
-          "name_es": "Naptha bombs (not Pistol)",
-          "name_fr": "Bombes au Naptha (sans Pistolet)",
+          "name_en": "Naptha bombs",
+          "name_cn": "火油炸弹",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Bombes au Naptha",
           "points": 7,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Pistol",
+            "name_cn": "若不使用手枪"
+          }
         },
         {
-          "name_en": "Fireglaive (not Hailshot blunderbuss)",
-          "name_de": "Fireglaive (not Hailshot blunderbuss)",
-          "name_es": "Fireglaive (not Hailshot blunderbuss)",
-          "name_fr": "Glaive Ardent (sans Tromblon Grêle-de-Tir)",
+          "name_en": "Fireglaive",
+          "name_cn": "阔刃火枪",
+          "name_de": "Fireglaive",
+          "name_es": "Fireglaive",
+          "name_fr": "Glaive Ardent",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Hailshot blunderbuss",
+            "name_cn": "若不使用霰弹短枪"
+          }
         },
         {
-          "name_en": "Hailshot blunderbuss (not Fireglaive)",
-          "name_de": "Hailshot blunderbuss (not Fireglaive)",
-          "name_es": "Hailshot blunderbuss (not Fireglaive)",
-          "name_fr": "Tromblon Grêle-de-Tir (sans Glaive Ardent)",
+          "name_en": "Hailshot blunderbuss",
+          "name_cn": "霰弹短枪",
+          "name_de": "Hailshot blunderbuss",
+          "name_es": "Hailshot blunderbuss",
+          "name_fr": "Tromblon Grêle-de-Tir",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Fireglaive",
+            "name_cn": "若不使用阔刃火枪"
+          }
         },
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["cd-renegade"]
+        },
+        {
+          "name_en": "Bale Taurus",
+          "name_cn": "烈焰魔牛",
+          "name_de": "Bale Taurus",
+          "name_es": "Bale Taurus",
+          "name_fr": "Sombre Taurus",
+          "points": 160,
+          "armyComposition": ["cd-renegade"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -430,19 +555,22 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_cn": "黑铁鳞甲, 附魔武器, 集结战吼, 坚决, 坚毅",
         "name_de": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
         "name_es": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Cri de Ralliement, Résolu, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_de": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_es": "0-1 or Sorcerer-Prophet per 1000 points",
-        "name_fr": "0-1 ou Sorcier-Prophète par tranche de 1000 points"
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_cn": "0-1术士先知或地狱卫堡主每1, 000分",
+        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_fr": "0-1 Infernal Castellan ou Sorcier-Prophète par tranche de 1000 points"
       }
     },
     {
       "name_en": "Infernal Seneschal",
+      "name_cn": "地狱卫总管",
       "name_de": "Infernal Seneschal",
       "name_es": "Infernal Seneschal",
       "name_fr": "Sénéchal Infernal",
@@ -451,6 +579,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -458,6 +587,7 @@
         },
         {
           "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
           "name_de": "Battle Standard Bearer",
           "name_es": "Battle Standard Bearer",
           "name_fr": "Porteur de la Grande Bannière",
@@ -471,6 +601,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -480,6 +611,7 @@
         },
         {
           "name_en": "Darkforged weapon",
+          "name_cn": "邪铸武器",
           "name_de": "Darkforged weapon",
           "name_es": "Darkforged weapon",
           "name_fr": "Arme de Sombreforge",
@@ -488,6 +620,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -498,70 +631,112 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
           "points": 0,
-          "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_it": "Full plate armour",
+          "name_pl": "Full plate armour",
+          "points": 3,
+          "armyComposition": "cd-renegade"
         }
       ],
       "options": [
         {
-          "name_en": "Pistol (not Naptha bombs)",
-          "name_de": "Pistol (not Naptha bombs)",
-          "name_es": "Pistol (not Naptha bombs)",
-          "name_fr": "Pistolet (sans Bombes au Naptha)",
+          "name_en": "Pistol",
+          "name_cn": "手枪",
+          "name_de": "Pistol",
+          "name_es": "Pistol",
+          "name_fr": "Pistolet",
           "points": 5,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Naptha bombs",
+            "name_cn": "若不使用火油炸弹"
+          }
         },
         {
-          "name_en": "Naptha bombs (not Pistol)",
-          "name_de": "Naptha bombs (not Pistol)",
-          "name_es": "Naptha bombs (not Pistol)",
-          "name_fr": "Bombes au Naptha (sans Pistolet)",
+          "name_en": "Naptha bombs",
+          "name_cn": "火油炸弹",
+          "name_de": "Naptha bombs",
+          "name_es": "Naptha bombs",
+          "name_fr": "Bombes au Naptha",
           "points": 7,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Pistol",
+            "name_cn": "若不使用手枪"
+          }
         },
         {
-          "name_en": "Fireglaive (not Hailshot blunderbuss)",
-          "name_de": "Fireglaive (not Hailshot blunderbuss)",
-          "name_es": "Fireglaive (not Hailshot blunderbuss)",
-          "name_fr": "Glaive Ardent (sans Tromblon Grêle-de-Tir)",
+          "name_en": "Fireglaive",
+          "name_cn": "阔刃火枪",
+          "name_de": "Fireglaive",
+          "name_es": "Fireglaive",
+          "name_fr": "Glaive Ardent",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Hailshot blunderbuss",
+            "name_cn": "若不使用霰弹短枪"
+          }
         },
         {
-          "name_en": "Hailshot blunderbuss (not Fireglaive)",
-          "name_de": "Hailshot blunderbuss (not Fireglaive)",
-          "name_es": "Hailshot blunderbuss (not Fireglaive)",
-          "name_fr": "Tromblon Grêle-de-Tir (sans Glaive Ardent)",
+          "name_en": "Hailshot blunderbuss",
+          "name_cn": "霰弹短枪",
+          "name_de": "Hailshot blunderbuss",
+          "name_es": "Hailshot blunderbuss",
+          "name_fr": "Tromblon Grêle-de-Tir",
           "points": 10,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "if not using Fireglaive",
+            "name_cn": "若不使用阔刃火枪"
+          }
         },
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         }
       ],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Great Taurus",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": ["cd-renegade"]
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -573,12 +748,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
+        "name_cn": "黑铁鳞甲, 附魔武器, 集结战吼, 坚决, 坚毅",
         "name_de": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
         "name_es": "Blackshard Armour, Ensorcelled Weapons, Rallying Cry, Resolute, Stubborn",
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Cri de Ralliement, Résolu, Obstiné"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -586,15 +763,32 @@
     },
     {
       "name_en": "Bull Centaur Taur'ruk",
+      "name_cn": "半人牛领军者",
       "name_de": "Bull Centaur Taur'ruk",
       "name_es": "Bull Centaur Taur'ruk",
       "name_fr": "Taur’ruk Centaure-Taureau",
       "id": "bull-centaur-taur'ruk",
       "points": 145,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 per unit of Bull Centaur Renders",
+            "name_cn": "0-1每队半人牛撕裂者",
+            "name_de": "0-1 per unit of Bull Centaur Renders",
+            "name_es": "0-1 per unit of Bull Centaur Renders",
+            "name_fr": "0-1 par unité de Hacheurs Centaures-Taureaux"
+          }
+        },
+        "cd-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -604,6 +798,7 @@
         },
         {
           "name_en": "Darkforged weapon",
+          "name_cn": "邪铸武器",
           "name_de": "Darkforged weapon",
           "name_es": "Darkforged weapon",
           "name_fr": "Arme de Sombreforge",
@@ -612,6 +807,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
@@ -620,6 +816,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -630,6 +827,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -641,6 +839,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
@@ -654,6 +853,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -665,19 +865,15 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Armoured Hide (1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3+1), Loner, Stampede, Stubborn, Swiftstride",
+        "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 黑铁鳞甲, 附魔武器, 恐惧, 先行冲锋, 撞击(D3+1), 独行, 奔涌狂潮, 坚毅, 快速行进",
         "name_de": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
         "name_es": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
         "name_fr": "Arme Perforante (1), Peau Blindée (1), Armure Sombréclat, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3+1), Solitaire, Ruée, Obstiné, Rapide"
-      },
-      "notes": {
-        "name_en": "0-1 per unit of Bull Centaur Renders",
-        "name_de": "0-1 per unit of Bull Centaur Renders",
-        "name_es": "0-1 per unit of Bull Centaur Renders",
-        "name_fr": "0-1 par unité de Hacheurs Centaures-Taureaux"
       }
     },
     {
       "name_en": "Hobgoblin Khan",
+      "name_cn": "大地精可汗",
       "name_de": "Hobgoblin Khan",
       "name_es": "Hobgoblin Khan",
       "name_fr": "Khan Hobgobelin",
@@ -686,6 +882,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -695,6 +892,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon, Throwing weapons",
+          "name_cn": "单手武器, 投掷武器",
           "name_de": "Hand weapon, Throwing weapons",
           "name_es": "Hand weapon, Throwing weapons",
           "name_fr": "Arme de base, Armes de lancer",
@@ -705,6 +903,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
@@ -713,6 +912,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -721,6 +921,7 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_es": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
@@ -728,6 +929,7 @@
           "perModel": true,
           "notes": {
             "name_en": "if appropriately mounted",
+            "name_cn": "若处于骑乘状态",
             "name_it": "if appropriately mounted",
             "name_de": "if appropriately mounted",
             "name_fr": "si monté"
@@ -738,6 +940,7 @@
       "options": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -746,6 +949,7 @@
         },
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
@@ -753,10 +957,11 @@
           "perModel": true
         },
         {
-          "name_en": "Shortbow (instead Throwing weapons)",
-          "name_de": "Shortbow (instead Throwing weapons)",
-          "name_es": "Shortbow (instead Throwing weapons)",
-          "name_fr": "Arc court (à la place des Armes de lancer)",
+          "name_en": "Shortbow (replaces throwing weapons)",
+          "name_cn": "短弓(replaces throwing weapons)",
+          "name_de": "Shortbow (replaces throwing weapons)",
+          "name_es": "Shortbow (replaces throwing weapons)",
+          "name_fr": "Arc court (replaces throwing weapons)",
           "points": 2,
           "perModel": true
         }
@@ -764,6 +969,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "À Pied",
@@ -772,6 +978,7 @@
         },
         {
           "name_en": "Giant Wolf",
+          "name_cn": "巨狼",
           "name_de": "Giant Wolf",
           "name_es": "Giant Wolf",
           "name_fr": "Loup Géant",
@@ -781,6 +988,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -792,12 +1000,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Backstab, Evasive, Levies, Warband",
+        "name_cn": "背刺, 闪避, 炮灰, 战帮",
         "name_de": "Backstab, Evasive, Levies, Warband",
         "name_es": "Backstab, Evasive, Levies, Warband",
         "name_fr": "Coup en Traître, Esquiveur, Conscrits, Bande de Guerre"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -805,6 +1015,7 @@
     },
     {
       "name_en": "Black Orc Warboss",
+      "name_cn": "黑兽人老大",
       "name_de": "Black Orc Warboss",
       "name_es": "Black Orc Warboss",
       "name_fr": "Chef de Guerre Orque Noir",
@@ -814,6 +1025,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -823,6 +1035,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -832,6 +1045,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
@@ -840,6 +1054,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -848,6 +1063,7 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_es": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
@@ -858,6 +1074,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
           "name_fr": "Armure de plate complète",
@@ -869,6 +1086,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
@@ -881,6 +1099,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "À Pied",
@@ -889,6 +1108,7 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_es": "War Boar",
           "name_fr": "Sanglier",
@@ -896,30 +1116,35 @@
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "points": 5,
               "name_fr": "Troisième Aurige Orque"
             },
             {
               "name_en": "Frenzy (if 2 crew members)",
+              "name_cn": "狂暴(if 2 crew members)",
               "name_de": "Frenzy (if 2 crew members)",
               "points": 4,
               "name_fr": "Frénésie (si 2 membres d'équipage)"
             },
             {
               "name_en": "Frenzy (if 3 crew members)",
+              "name_cn": "狂暴(if 3 crew members)",
               "name_de": "Frenzy (if 3 crew members)",
               "points": 6,
               "name_fr": "Frénésie (si 3 membres d'équipage)"
             },
             {
               "name_en": "Warpaint (if frenzied)",
+              "name_cn": "战漆(若具有狂暴)",
               "name_de": "Warpaint (if frenzied)",
               "name_fr": "Peintures de Guerre (si frénétique)",
               "points": 10
@@ -928,12 +1153,14 @@
         },
         {
           "name_en": "Black Orc Boar Chariot",
+          "name_cn": "黑兽人野猪战车",
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
+              "name_cn": "单手武器, 额外单手武器",
               "name_de": "Hand weapon, Additional hand weapon",
               "points": 2,
               "exclusive": true,
@@ -942,6 +1169,7 @@
             },
             {
               "name_en": "Hand weapon, Great weapon",
+              "name_cn": "单手武器, 重型武器",
               "name_de": "Hand weapon, Great weapon",
               "points": 4,
               "exclusive": true,
@@ -949,6 +1177,7 @@
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "points": 10,
               "name_fr": "Porte-étendard"
@@ -957,6 +1186,7 @@
         },
         {
           "name_en": "Wyvern",
+          "name_cn": "双足飞龙",
           "name_de": "Wyvern",
           "name_es": "Wyvern",
           "name_fr": "Vouivre",
@@ -966,6 +1196,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -976,20 +1207,23 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_en": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
-        "name_en": "0-1 or Black Orc Bigboss",
-        "name_de": "0-1 or Black Orc Bigboss",
-        "name_es": "0-1 or Black Orc Bigboss",
-        "name_fr": "0-1 ou Grand Chef Orque Noir"
+        "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_cn": "0-1 Black Orc Warboss或黑兽人勇士",
+        "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss",
+        "name_fr": "0-1 Black Orc Warboss ou Grand Chef Orque Noir"
       }
     },
     {
       "name_en": "Black Orc Bigboss",
+      "name_cn": "黑兽人勇士",
       "name_de": "Black Orc Bigboss",
       "name_es": "Black Orc Bigboss",
       "name_fr": "Grand Chef Orque Noir",
@@ -999,6 +1233,7 @@
       "command": [
         {
           "name_en": "General",
+          "name_cn": "主将",
           "name_de": "General",
           "name_es": "General",
           "name_fr": "Général",
@@ -1008,6 +1243,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -1017,6 +1253,7 @@
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
@@ -1025,6 +1262,7 @@
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
@@ -1033,6 +1271,7 @@
         },
         {
           "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spear",
           "name_es": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
@@ -1043,6 +1282,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
           "name_fr": "Armure de plate complète",
@@ -1054,6 +1294,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
@@ -1066,6 +1307,7 @@
       "mounts": [
         {
           "name_en": "On foot",
+          "name_cn": "步行",
           "name_de": "On foot",
           "name_es": "On foot",
           "name_fr": "À Pied",
@@ -1074,6 +1316,7 @@
         },
         {
           "name_en": "War Boar",
+          "name_cn": "战猪",
           "name_de": "War Boar",
           "name_es": "War Boar",
           "name_fr": "Sanglier",
@@ -1081,30 +1324,35 @@
         },
         {
           "name_en": "Boar Chariot",
+          "name_cn": "野猪战车",
           "name_de": "Boar Chariot",
           "name_fr": "Char à Sangliers",
           "points": 90,
           "options": [
             {
               "name_en": "Third Orc crew member",
+              "name_cn": "第三个兽人乘员",
               "name_de": "Third Orc crew member",
               "points": 5,
               "name_fr": "Troisième Aurige Orque"
             },
             {
               "name_en": "Frenzy (if 2 crew members)",
+              "name_cn": "狂暴(if 2 crew members)",
               "name_de": "Frenzy (if 2 crew members)",
               "points": 4,
               "name_fr": "Frénésie (si 2 membres d'équipage)"
             },
             {
               "name_en": "Frenzy (if 3 crew members)",
+              "name_cn": "狂暴(if 3 crew members)",
               "name_de": "Frenzy (if 3 crew members)",
               "points": 6,
               "name_fr": "Frénésie (si 3 membres d'équipage)"
             },
             {
               "name_en": "Warpaint (if frenzied)",
+              "name_cn": "战漆(若具有狂暴)",
               "name_de": "Warpaint (if frenzied)",
               "name_fr": "Peintures de Guerre (si frénétique)",
               "points": 10
@@ -1113,12 +1361,14 @@
         },
         {
           "name_en": "Black Orc Boar Chariot",
+          "name_cn": "黑兽人野猪战车",
           "name_de": "Black Orc Boar Chariot",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
+              "name_cn": "单手武器, 额外单手武器",
               "name_de": "Hand weapon, Additional hand weapon",
               "points": 2,
               "exclusive": true,
@@ -1127,6 +1377,7 @@
             },
             {
               "name_en": "Hand weapon, Great weapon",
+              "name_cn": "单手武器, 重型武器",
               "name_de": "Hand weapon, Great weapon",
               "points": 4,
               "exclusive": true,
@@ -1134,6 +1385,7 @@
             },
             {
               "name_en": "Standard bearer",
+              "name_cn": "旗手",
               "name_de": "Standard bearer",
               "points": 10,
               "name_fr": "Porte-étendard"
@@ -1144,6 +1396,7 @@
       "items": [
         {
           "name_en": "Magic Items",
+          "name_cn": "魔法物品",
           "name_de": "Magische Gegenstände",
           "name_es": "Objetos mágicos",
           "name_fr": "Objets Magiques",
@@ -1154,22 +1407,25 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_de": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_es": "Choppas, Da Boyz, Furious Charge*, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_en": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
+        "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
+        "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
-        "name_en": "0-1 or Black Orc Warboss",
-        "name_de": "0-1 or Black Orc Warboss",
-        "name_es": "0-1 or Black Orc Warboss",
-        "name_fr": "0-1 ou Chef de Guerre Orque Noir"
+        "name_en": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_cn": "0-1 Black Orc Bigboss或黑兽人老大",
+        "name_de": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_es": "0-1 Black Orc Bigboss or Black Orc Warboss",
+        "name_fr": "0-1 Black Orc Bigboss ou Chef de Guerre Orque Noir"
       }
     }
   ],
   "core": [
     {
       "name_en": "Infernal Guard",
+      "name_cn": "地狱卫队",
       "name_de": "Infernal Guard",
       "name_es": "Infernal Guard",
       "name_fr": "Garde Infernale",
@@ -1178,9 +1434,25 @@
       "minimum": 10,
       "maximum": 0,
       "minDetachmentSize": 5,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+",
+            "name_cn": "1+",
+            "name_de": "1+",
+            "name_es": "1+",
+            "name_fr": "1+"
+          }
+        },
+        "cd-renegade": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Deathmask (champion)",
+          "name_cn": "死亡面具(冠军)",
           "name_de": "Deathmask (champion)",
           "name_es": "Deathmask (champion)",
           "name_fr": "Masque de Mort (champion)",
@@ -1192,6 +1464,7 @@
           "options": [
             {
               "name_en": "Pistol",
+              "name_cn": "手枪",
               "name_de": "Pistol",
               "name_es": "Pistol",
               "name_fr": "Pistolet",
@@ -1200,6 +1473,7 @@
             },
             {
               "name_en": "Naptha bombs",
+              "name_cn": "火油炸弹",
               "name_de": "Naptha bombs",
               "name_es": "Naptha bombs",
               "name_fr": "Bombes au Naptha",
@@ -1210,6 +1484,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -1221,6 +1496,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1230,6 +1506,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
@@ -1239,6 +1516,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_es": "Great weapons",
           "name_fr": "Armes lourdes",
@@ -1247,6 +1525,7 @@
         },
         {
           "name_en": "Fireglaives",
+          "name_cn": "阔刃火枪",
           "name_de": "Fireglaives",
           "name_es": "Fireglaives",
           "name_fr": "Glaive Ardents",
@@ -1255,6 +1534,7 @@
         },
         {
           "name_en": "Hailshot blunderbuss",
+          "name_cn": "霰弹短枪",
           "name_de": "Hailshot blunderbuss",
           "name_es": "Hailshot blunderbuss",
           "name_fr": "Tromblon Grêle-de-Tir",
@@ -1265,6 +1545,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -1276,36 +1557,48 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
-          "name_en": "Drilled (0-1 per 1000 points)",
-          "name_de": "Drilled (0-1 per 1000 points)",
-          "name_es": "Drilled (0-1 per 1000 points)",
-          "name_fr": "Bien Entraînés (0-1 par tranche de 1000 points)",
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_de": "Drilled",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Blackshard Armour (0-1 per 1000 points)",
-          "name_de": "Blackshard Armour (0-1 per 1000 points)",
-          "name_es": "Blackshard Armour (0-1 per 1000 points)",
-          "name_fr": "Armure Sombréclat (0-1 par tranche de 1000 points)",
+          "name_en": "Blackshard Armour",
+          "name_cn": "黑铁鳞甲",
+          "name_de": "Blackshard Armour",
+          "name_es": "Blackshard Armour",
+          "name_fr": "Armure Sombréclat",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 per 1000 points",
+            "name_es": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
           "name_en": "Detachment",
+          "name_cn": "分遣队",
           "name_de": "Detachment",
           "name_es": "Detachment",
           "name_fr": "Détachement",
@@ -1317,19 +1610,15 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
+        "name_cn": "紧密阵型, 分遣队, 主团单位, 坚决, 盾墙, 坚毅",
         "name_de": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
         "name_es": "Close Order, Detachment, Regimental Unit, Resolute, Shieldwall, Stubborn",
         "name_fr": "Ordre Serré, Détachement, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné"
-      },
-      "notes": {
-        "name_en": "1+",
-        "name_de": "1+",
-        "name_es": "1+",
-        "name_fr": "1+"
       }
     },
     {
       "name_en": "Hobgoblin Cutthroats",
+      "name_cn": "大地精割喉者",
       "name_de": "Hobgoblin Cutthroats",
       "name_es": "Hobgoblin Cutthroats",
       "name_fr": "Coupe-jarrets Hobgobelins",
@@ -1340,6 +1629,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_es": "Boss (champion)",
           "name_fr": "Chef (champion)",
@@ -1347,6 +1637,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -1354,6 +1645,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1363,6 +1655,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
           "name_de": "Hand weapons, Shields",
           "name_es": "Hand weapons, Shields",
           "name_fr": "Armes de base, Boucliers",
@@ -1372,6 +1665,7 @@
         },
         {
           "name_en": "Hand weapons, Shortbows",
+          "name_cn": "单手武器, 短弓",
           "name_de": "Hand weapons, Shortbows",
           "name_es": "Hand weapons, Shortbows",
           "name_fr": "Armes de base, Arcs courts",
@@ -1382,6 +1676,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -1395,12 +1690,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Backstab, Close Order, Horde, Levies, Warband",
+        "name_cn": "背刺, 紧密阵型, 部群, 炮灰, 战帮",
         "name_de": "Backstab, Close Order, Horde, Levies, Warband",
         "name_es": "Backstab, Close Order, Horde, Levies, Warband",
         "name_fr": "Coup en Traître, Ordre Serré, Horde, Conscrits, Bande de Guerre"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1408,6 +1705,7 @@
     },
     {
       "name_en": "Black Orc Mob",
+      "name_cn": "黑兽人战帮",
       "name_de": "Black Orc Mob",
       "name_es": "Black Orc Mob",
       "name_fr": "Bande d'Orques Noirs",
@@ -1419,6 +1717,7 @@
       "command": [
         {
           "name_en": "Boss",
+          "name_cn": "老大",
           "name_de": "Boss",
           "name_es": "Boss",
           "name_fr": "Chef",
@@ -1430,6 +1729,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -1441,6 +1741,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1450,6 +1751,7 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
+          "name_cn": "单手武器",
           "name_de": "Hand weapon",
           "name_es": "Hand weapon",
           "name_fr": "Arme de base",
@@ -1461,6 +1763,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
           "name_fr": "Armure de plate complète",
@@ -1472,6 +1775,7 @@
       "options": [
         {
           "name_en": "Stubborn",
+          "name_cn": "坚毅",
           "name_de": "Stubborn",
           "name_es": "Stubborn",
           "name_fr": "Obstiné",
@@ -1482,6 +1786,7 @@
         },
         {
           "name_en": "Veteran",
+          "name_cn": "老兵",
           "name_de": "Veteran",
           "name_es": "Veteran",
           "name_fr": "Vétérans",
@@ -1492,33 +1797,30 @@
         },
         {
           "name_en": "Shields",
+          "name_cn": "盾牌",
           "name_de": "Shields",
           "name_es": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Great weapon",
+          "name_cn": "重型武器",
           "name_de": "Great weapon",
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 2,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
           "name_de": "Additional hand weapon",
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 1,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         }
       ],
       "mounts": [],
@@ -1526,31 +1828,45 @@
       "lores": [],
       "specialRules": {
         "name_en": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
+        "name_cn": "大砍刀, 紧密阵型, 大只佬, 狂怒冲锋, 无视恐慌, 散兵游勇, 抑制鲁莽",
         "name_de": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_es": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_fr": "Kikoup', Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l'Impétuosité"
       },
       "notes": {
-        "name_en": "0-1",
-        "name_de": "0-1",
-        "name_es": "0-1",
-        "name_fr": "0-1"
+        "name_en": "0-1 Black Orc Mob",
+        "name_cn": "0-1 黑兽人战帮",
+        "name_de": "0-1 Black Orc Mob",
+        "name_es": "0-1 Black Orc Mob",
+        "name_fr": "0-1 Black Orc Mob"
       }
-    }
-  ],
-  "special": [
+    },
     {
       "name_en": "Infernal Ironsworn",
+      "name_cn": "地狱卫铁誓军",
       "name_de": "Infernal Ironsworn",
       "name_es": "Infernal Ironsworn",
       "name_fr": "Jurefers Infernaux",
-      "id": "infernal-ironsworn",
+      "id": "infernal-ironsworn-core",
       "points": 19,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "cd-renegade": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_cn": "0-1 若没有选择任何黑兽人, 且你的主将为地狱卫堡主",
+            "name_de": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_es": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
+            "name_fr": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Overseer (champion)",
+          "name_cn": "督查者(冠军)",
           "name_de": "Overseer (champion)",
           "name_es": "Overseer (champion)",
           "name_fr": "Superviseur (champion)",
@@ -1562,6 +1878,7 @@
           "options": [
             {
               "name_en": "Pistol",
+              "name_cn": "手枪",
               "name_de": "Pistol",
               "name_es": "Pistol",
               "name_fr": "Pistolet",
@@ -1570,6 +1887,7 @@
             },
             {
               "name_en": "Naptha bombs",
+              "name_cn": "火油炸弹",
               "name_de": "Bombes au Naphta",
               "points": 6,
               "exclusive": true,
@@ -1579,6 +1897,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -1590,6 +1909,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1599,6 +1919,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
@@ -1608,6 +1929,7 @@
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_es": "Great weapons",
           "name_fr": "Armes lourdes",
@@ -1616,6 +1938,7 @@
         },
         {
           "name_en": "Halberds",
+          "name_cn": "长戟",
           "name_de": "Halberds",
           "name_es": "Halberds",
           "name_fr": "Hallebardes",
@@ -1626,6 +1949,7 @@
       "armor": [
         {
           "name_en": "Full plate armour",
+          "name_cn": "全身甲",
           "name_de": "Full plate armour",
           "name_es": "Full plate armour",
           "name_fr": "Armure de plate complète",
@@ -1637,6 +1961,7 @@
       "options": [
         {
           "name_en": "Shield",
+          "name_cn": "盾牌",
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
@@ -1651,12 +1976,152 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_cn": "黑铁鳞甲, 紧密阵型, 受训, 附魔武器, 镇压恐慌, 主团单位, 坚决, 盾墙, 坚毅, 老兵",
         "name_de": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
         "name_es": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
         "name_fr": "Armure Sombréclat, Ordre Serré, Bien Entraînés, Armes Ensorcelées, Calme la Panique, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné, Vétérans"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Infernal Ironsworn",
+      "name_cn": "地狱卫铁誓军",
+      "name_de": "Infernal Ironsworn",
+      "name_es": "Infernal Ironsworn",
+      "name_fr": "Jurefers Infernaux",
+      "id": "infernal-ironsworn",
+      "points": 19,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Overseer (champion)",
+          "name_cn": "督查者(冠军)",
+          "name_de": "Overseer (champion)",
+          "name_es": "Overseer (champion)",
+          "name_fr": "Superviseur (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "talisman", "armor", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "options": [
+            {
+              "name_en": "Pistol",
+              "name_cn": "手枪",
+              "name_de": "Pistol",
+              "name_es": "Pistol",
+              "name_fr": "Pistolet",
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Naptha bombs",
+              "name_cn": "火油炸弹",
+              "name_de": "Bombes au Naphta",
+              "points": 6,
+              "exclusive": true,
+              "name_fr": "Bombes au Naptha"
+            }
+          ]
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 100
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_de": "Great weapons",
+          "name_es": "Great weapons",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_cn": "长戟",
+          "name_de": "Halberds",
+          "name_es": "Halberds",
+          "name_fr": "Hallebardes",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_cn": "黑铁鳞甲, 紧密阵型, 受训, 附魔武器, 镇压恐慌, 主团单位, 坚决, 盾墙, 坚毅, 老兵",
+        "name_de": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_es": "Blackshard Armour, Close Order, Drilled, Ensorcelled Weapons, Quell Panic, Regimental Unit, Resolute, Shieldwall, Stubborn, Veteran",
+        "name_fr": "Armure Sombréclat, Ordre Serré, Bien Entraînés, Armes Ensorcelées, Calme la Panique, Unité Régimentaire, Résolu, Mur de Boucliers, Obstiné, Vétérans"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1664,6 +2129,7 @@
     },
     {
       "name_en": "Sneaky Gits",
+      "name_cn": "卑鄙潜伏者",
       "name_de": "Sneaky Gits",
       "name_es": "Sneaky Gits",
       "name_fr": "Assassins Hobgobelins",
@@ -1674,6 +2140,7 @@
       "command": [
         {
           "name_en": "Murder Boss (champion)",
+          "name_cn": "谋杀者老大(冠军)",
           "name_de": "Murder Boss (champion)",
           "name_es": "Murder Boss (champion)",
           "name_fr": "Chef Meurtrier (champion)",
@@ -1681,6 +2148,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1690,6 +2158,7 @@
       "equipment": [
         {
           "name_en": "Two hand weapons, Throwing weapons",
+          "name_cn": "两把单手武器, 投掷武器",
           "name_de": "Two hand weapons, Throwing weapons",
           "name_es": "Two hand weapons, Throwing weapons",
           "name_fr": "Deux armes de base, Armes de lancer",
@@ -1701,6 +2170,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -1714,19 +2184,22 @@
       "lores": [],
       "specialRules": {
         "name_en": "Ambushers, Backstab, Evasive, Levies, Move Through Cover, Skirmishers",
+        "name_cn": "伏击, 背刺, 闪避, 炮灰, 穿行掩体, 散兵",
         "name_de": "Ambushers, Backstab, Evasive, Levies, Move Through Cover, Skirmishers",
         "name_es": "Ambushers, Backstab, Evasive, Levies, Move Through Cover, Skirmishers",
         "name_fr": "Embusqueurs, Coup en Traître, Esquiveur, Conscrits, Mouvement à Couvert, Tirailleurs"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
       }
     },
     {
-      "name_en": "K'daai Fireborn",
+      "name_en": "K'daai Fireborn {renegade}",
+      "name_cn": "卡德艾焰魔 {renegade}",
       "name_de": "K'daai Fireborn",
       "name_es": "K'daai Fireborn",
       "name_fr": "K'daai Rejetons de Feu",
@@ -1734,9 +2207,25 @@
       "points": 41,
       "minimum": 3,
       "maximum": 0,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special"
+        },
+        "cd-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire {renegade}",
+            "name_cn": "炽焰之躯, 紧密阵型, 附魔武器, 恐惧, 火焰攻击, 心理免疫, 重生(5+), 永不战败, 不稳定, 次元产物, 生于烈火 {renegade}",
+            "name_de": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire",
+            "name_es": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire",
+            "name_fr": "Corps Embrasé, Ordre Serré, Armes Ensorcelées, Peur, Attaques Enflammées, Immunisé à la Psychologie, Régénération (5+), Indémoralisable, Instables, Engeance du Warp, Born of Fire"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Manburner (champion)",
+          "name_cn": "永燃者(冠军)",
           "name_de": "Manburner (champion)",
           "name_es": "Manburner (champion)",
           "name_fr": "Brûleur d’Hommes (champion)",
@@ -1757,6 +2246,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
@@ -1772,12 +2262,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
+        "name_cn": "炽焰之躯, 紧密阵型, 附魔武器, 恐惧, 火焰攻击, 心理免疫, 重生(5+), 永不战败, 不稳定, 次元产物",
         "name_de": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
         "name_es": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
         "name_fr": "Corps Embrasé, Ordre Serré, Armes Ensorcelées, Peur, Attaques Enflammées, Immunisé à la Psychologie, Régénération (5+), Indémoralisable, Instables, Engeance du Warp"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1785,6 +2277,7 @@
     },
     {
       "name_en": "Bull Centaur Renders",
+      "name_cn": "半人牛撕裂者",
       "name_de": "Bull Centaur Renders",
       "name_es": "Bull Centaur Renders",
       "name_fr": "Hacheurs Centaures-Taureaux",
@@ -1795,6 +2288,7 @@
       "command": [
         {
           "name_en": "Ba'hal",
+          "name_cn": "半人牛头目",
           "name_de": "Ba'hal",
           "name_es": "Ba'hal",
           "name_fr": "Ba'hal",
@@ -1806,6 +2300,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -1817,6 +2312,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -1826,25 +2322,38 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "equippedDefault": true
         },
         {
           "name_en": "Great weapons",
+          "name_cn": "重型武器",
           "name_de": "Great weapons",
           "name_es": "Great weapons",
           "name_fr": "Armes lourdes",
           "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 3,
           "perModel": true
         }
       ],
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -1853,29 +2362,20 @@
           "active": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_es": "Shield",
-          "name_fr": "Bouclier",
-          "points": 3,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
+        "name_cn": "坚硬皮肤(1), 黑铁鳞甲, 紧密阵型, 附魔武器, 恐惧, 先行冲锋, 撞击(D3), 独行, 奔涌狂潮, 坚毅, 快速行进",
         "name_de": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
         "name_es": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
         "name_fr": "Peau Blindée (1), Armure Sombréclat, Ordre Serré, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3), Solitaire, Ruée, Obstiné, Rapide"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -1883,6 +2383,7 @@
     },
     {
       "name_en": "Iron Daemon",
+      "name_cn": "钢铁恶魔",
       "name_de": "Iron Daemon",
       "name_es": "Iron Daemon",
       "name_fr": "Démon d’Acier",
@@ -1892,6 +2393,7 @@
       "equipment": [
         {
           "name_en": "Steam Cannonade, Hand weapons",
+          "name_cn": "蒸汽动力速射炮, 单手武器",
           "name_de": "Steam Cannonade, Hand weapons",
           "name_es": "Steam Cannonade, Hand weapons",
           "name_fr": "Canonnade à Vapeur, Armes de base",
@@ -1901,6 +2403,7 @@
         },
         {
           "name_en": "Skullcracker, Hand weapons",
+          "name_cn": "熔渣粉碎机, 单手武器",
           "name_de": "Skullcracker, Hand weapons",
           "name_es": "Skullcracker, Hand weapons",
           "name_fr": "Briseur de Crânes, Armes de base",
@@ -1912,6 +2415,7 @@
       "options": [
         {
           "name_en": "Hellbound",
+          "name_cn": "地狱束缚",
           "name_de": "Hellbound",
           "name_es": "Hellbound",
           "name_fr": "Possédé",
@@ -1926,12 +2430,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Target, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
+        "name_cn": "拖运车厢, 紧密阵型, 恐惧, 碾碎车轮, 心理免疫, 撞击(D6+1), 大型目标, 缓慢毁灭, 践踏攻击(D3+1), 永不战败",
         "name_de": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Target, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
         "name_es": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Target, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
         "name_fr": "Train d’Artillerie, Ordre Serré, Peur, Roues de Broyage, Immunisé à la Psychologie, Touches d'Impact (D6+1), Grande Cible, Destruction Inexorable, Attaques de Piétinement (D3+1), Indémoralisable"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分0-1",
         "name_de": "0-1 per 1000 points",
         "name_es": "0-1 per 1000 points",
         "name_fr": "0-1 par tranche de 1000 points"
@@ -1939,15 +2445,39 @@
     },
     {
       "name_en": "Deathshrieker Rocket Launcher",
+      "name_cn": "死亡尖啸火箭车",
       "name_de": "Deathshrieker Rocket Launcher",
       "name_es": "Deathshrieker Rocket Launcher",
       "name_fr": "Lance-Fusées Hurlemort",
       "id": "deathshrieker-rocket-launcher",
       "points": 120,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_cn": "每1000分0-1 Deathshrieker Rocket Launcher或Magma Cannon chosen",
+            "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        },
+        "cd-renegade": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_cn": "每1000分0-2 Deathshrieker Rocket Launcher或Magma Cannon chosen",
+            "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
           "name_en": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
+          "name_cn": "爆破火箭, 地狱烈焰弹, 单手武器",
           "name_de": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
           "name_es": "Demolition Rockets, Infernal Incendiaries, Hand weapons",
           "name_fr": "Fusées de Démolition, Fusées Incendiaires Infernales, Armes de base",
@@ -1959,6 +2489,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -1970,6 +2501,7 @@
       "options": [
         {
           "name_en": "Hellbound",
+          "name_cn": "地狱束缚",
           "name_de": "Hellbound",
           "name_es": "Hellbound",
           "name_fr": "Possédé",
@@ -1980,6 +2512,7 @@
         },
         {
           "name_en": "Steam Carriage",
+          "name_cn": "蒸汽车厢",
           "name_de": "Steam Carriage",
           "name_es": "Steam Carriage",
           "name_fr": "Attelage à Vapeur",
@@ -1994,12 +2527,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Skirmishers",
+        "name_cn": "黑铁鳞甲, 散兵",
         "name_de": "Blackshard Armour, Skirmishers",
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
       "notes": {
         "name_en": "0-1 war machine chosen per 1000 points",
+        "name_cn": "每1000分0-1 war machine chosen",
         "name_de": "0-1 war machine chosen per 1000 points",
         "name_es": "0-1 war machine chosen per 1000 points",
         "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
@@ -2007,15 +2542,39 @@
     },
     {
       "name_en": "Magma Cannon",
+      "name_cn": "熔岩炮",
       "name_de": "Magma Cannon",
       "name_es": "Magma Cannon",
       "name_fr": "Canon à Magma",
       "id": "magma-cannon",
       "points": 125,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_cn": "每1000分0-1 Deathshrieker Rocket Launcher或Magma Cannon chosen",
+            "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        },
+        "cd-renegade": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_cn": "每1000分0-2 Deathshrieker Rocket Launcher或Magma Cannon chosen",
+            "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
           "name_en": "Fire thrower, Hand weapons",
+          "name_cn": "火焰喷射器, 单手武器",
           "name_de": "Fire thrower, Hand weapons",
           "name_es": "Fire thrower, Hand weapons",
           "name_fr": "Lance-flamme, Armes de base",
@@ -2027,6 +2586,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -2038,6 +2598,7 @@
       "options": [
         {
           "name_en": "Hellbound",
+          "name_cn": "地狱束缚",
           "name_de": "Hellbound",
           "name_es": "Hellbound",
           "name_fr": "Possédé",
@@ -2048,6 +2609,7 @@
         },
         {
           "name_en": "Steam Carriage",
+          "name_cn": "蒸汽车厢",
           "name_de": "Steam Carriage",
           "name_es": "Steam Carriage",
           "name_fr": "Attelage à Vapeur",
@@ -2062,12 +2624,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Skirmishers",
+        "name_cn": "黑铁鳞甲, 散兵",
         "name_de": "Blackshard Armour, Skirmishers",
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
       "notes": {
         "name_en": "0-1 war machine chosen per 1000 points",
+        "name_cn": "每1000分0-1 war machine chosen",
         "name_de": "0-1 war machine chosen per 1000 points",
         "name_es": "0-1 war machine chosen per 1000 points",
         "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
@@ -2075,6 +2639,7 @@
     },
     {
       "name_en": "Hobgoblin Bolt Thrower",
+      "name_cn": "大地精弩炮",
       "name_de": "Hobgoblin Bolt Thrower",
       "name_es": "Hobgoblin Bolt Thrower",
       "name_fr": "Baliste Hobgobeline",
@@ -2084,6 +2649,7 @@
       "equipment": [
         {
           "name_en": "Bolt thrower, Hand weapons",
+          "name_cn": "弩炮, 单手武器",
           "name_de": "Bolt thrower, Hand weapons",
           "name_es": "Bolt thrower, Hand weapons",
           "name_fr": "Baliste, Armes de base",
@@ -2095,6 +2661,7 @@
       "armor": [
         {
           "name_en": "Light armour",
+          "name_cn": "轻甲",
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
@@ -2109,12 +2676,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Levies, Skirmishers",
+        "name_cn": "炮灰, 散兵",
         "name_de": "Levies, Skirmishers",
         "name_es": "Levies, Skirmishers",
         "name_fr": "Conscrits, Tirailleurs"
       },
       "notes": {
         "name_en": "0-2 per 1000 points",
+        "name_cn": "每1000分0-2",
         "name_de": "0-2 per 1000 points",
         "name_es": "0-2 per 1000 points",
         "name_fr": "0-2 par tranche de 1000 points"
@@ -2124,6 +2693,7 @@
   "rare": [
     {
       "name_en": "Hobgoblin Wolf Riders",
+      "name_cn": "大地精狼骑劫掠者",
       "name_de": "Hobgoblin Wolf Riders",
       "name_es": "Hobgoblin Wolf Riders",
       "name_fr": "Chevaucheurs de Loups Hobgobelins",
@@ -2134,6 +2704,7 @@
       "command": [
         {
           "name_en": "Boss (champion)",
+          "name_cn": "老大(冠军)",
           "name_de": "Boss (champion)",
           "name_es": "Boss (champion)",
           "name_fr": "Chef (champion)",
@@ -2141,6 +2712,7 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_cn": "旗手",
           "name_de": "Standard bearer",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
@@ -2148,6 +2720,7 @@
         },
         {
           "name_en": "Musician",
+          "name_cn": "乐手",
           "name_de": "Musician",
           "name_es": "Musician",
           "name_fr": "Musicien",
@@ -2157,6 +2730,7 @@
       "equipment": [
         {
           "name_en": "Hand weapons",
+          "name_cn": "单手武器",
           "name_de": "Hand weapons",
           "name_es": "Hand weapons",
           "name_fr": "Armes de base",
@@ -2167,6 +2741,7 @@
         },
         {
           "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
           "name_de": "Cavalry spears",
           "name_es": "Cavalry spears",
           "name_fr": "Lances de cavalerie",
@@ -2177,6 +2752,7 @@
       "armor": [
         {
           "name_en": "Light armour, Shields",
+          "name_cn": "轻甲, 盾牌",
           "name_de": "Light armour, Shields",
           "name_es": "Light armour, Shields",
           "name_fr": "Armure légère, Boucliers",
@@ -2188,6 +2764,7 @@
       "options": [
         {
           "name_en": "Shortbow",
+          "name_cn": "短弓",
           "name_de": "Shortbow",
           "name_es": "Shortbow",
           "name_fr": "Arc court",
@@ -2198,6 +2775,7 @@
         },
         {
           "name_en": "Feigned Flight (0-1 per 1000 points)",
+          "name_cn": "诱敌诈退(每1000分0-1)",
           "name_de": "Feigned Flight (0-1 per 1000 points)",
           "name_es": "Feigned Flight (0-1 per 1000 points)",
           "name_fr": "Fuite Feinte (0-1 par tranche de 1000 points)",
@@ -2208,6 +2786,7 @@
         },
         {
           "name_en": "Reserve Move (0-1 per 1000 points)",
+          "name_cn": "预备移动(每1000分0-1)",
           "name_de": "Reserve Move (0-1 per 1000 points)",
           "name_es": "Reserve Move (0-1 per 1000 points)",
           "name_fr": "Mouvement de Réserve (0-1 par tranche de 1000 points)",
@@ -2222,12 +2801,14 @@
       "lores": [],
       "specialRules": {
         "name_en": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
+        "name_cn": "背刺, 闪避, 快速骑兵, 游击, 炮灰, 开放阵型, 散兵, 快速行进",
         "name_de": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
         "name_es": "Backstab, Evasive, Fast Cavalry, Fire & Flee, Levies, Open Order, Skirmishers, Swiftstride",
         "name_fr": "Coup en Traître, Esquiveur, Cavalerie Rapide, Tir & Fuite, Conscrits, Ordre Dispersé, Tirailleurs, Rapide"
       },
       "notes": {
         "name_en": "",
+        "name_cn": "",
         "name_de": "",
         "name_es": "",
         "name_fr": ""
@@ -2235,6 +2816,7 @@
     },
     {
       "name_en": "Dreadquake Mortar",
+      "name_cn": "恐震臼炮",
       "name_de": "Dreadquake Mortar",
       "name_es": "Dreadquake Mortar",
       "name_fr": "Mortier Trembleffroi",
@@ -2244,6 +2826,7 @@
       "equipment": [
         {
           "name_en": "Dreadquake Mortar, Hand weapons",
+          "name_cn": "恐震臼炮, 单手武器",
           "name_de": "Dreadquake Mortar, Hand weapons",
           "name_es": "Dreadquake Mortar, Hand weapons",
           "name_fr": "Mortier Trembleffroi, Armes de base",
@@ -2255,6 +2838,7 @@
       "armor": [
         {
           "name_en": "Heavy armour",
+          "name_cn": "重甲",
           "name_de": "Heavy armour",
           "name_es": "Heavy armour",
           "name_fr": "Armure lourde",
@@ -2266,6 +2850,7 @@
       "options": [
         {
           "name_en": "Ogre Loader",
+          "name_cn": "食人魔装填手",
           "name_de": "Ogre Loader",
           "name_es": "Ogre Loader",
           "name_fr": "Pourvoyeur Ogre",
@@ -2276,6 +2861,7 @@
         },
         {
           "name_en": "Hellbound",
+          "name_cn": "地狱束缚",
           "name_de": "Hellbound",
           "name_es": "Hellbound",
           "name_fr": "Possédé",
@@ -2286,6 +2872,7 @@
         },
         {
           "name_en": "Steam Carriage",
+          "name_cn": "蒸汽车厢",
           "name_de": "Steam Carriage",
           "name_es": "Steam Carriage",
           "name_fr": "Attelage à Vapeur",
@@ -2300,28 +2887,47 @@
       "lores": [],
       "specialRules": {
         "name_en": "Blackshard Armour, Skirmishers",
+        "name_cn": "黑铁鳞甲, 散兵",
         "name_de": "Blackshard Armour, Skirmishers",
         "name_es": "Blackshard Armour, Skirmishers",
         "name_fr": "Armure Sombréclat, Tirailleurs"
       },
       "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+        "name_en": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_cn": "每1000分选取0-1恐震臼炮或地狱炮",
+        "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+        "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
       }
     },
     {
       "name_en": "Hellcannon",
+      "name_cn": "地狱炮",
       "name_de": "Hellcannon",
       "name_es": "Hellcannon",
       "name_fr": "Canon Apocalypse",
       "id": "hellcannon",
       "points": 215,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_cn": "每1000分选取0-1恐震臼炮或地狱炮",
+            "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
+            "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
+          }
+        },
+        "cd-renegade": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
           "name_en": "Doomfire, Hand weapons",
+          "name_cn": "地狱火, 单手武器",
           "name_de": "Doomfire, Hand weapons",
           "name_es": "Doomfire, Hand weapons",
           "name_fr": "Feu Infernal, Armes de base",
@@ -2336,15 +2942,73 @@
       "lores": [],
       "specialRules": {
         "name_en": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
+        "name_cn": "碎甲攻击(1), 束缚之怒, 紧密阵型, 附魔武器, 心理免疫, 撞击(D6), 大型目标, 怪兽驭手, 重生(6+), 惊骇, 永不战败, 次元产物",
         "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
+      }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "name_cn": "混沌巨人",
+      "name_de": "Chaos Giant",
+      "name_es": "Chaos Giant",
+      "name_fr": "Géant du Chaos",
+      "id": "chaos-giant",
+      "points": 200,
+      "command": [],
+      "armyComposition": {
+        "cd-renegade": {
+          "category": "rare"
+        }
       },
-      "notes": {
-        "name_en": "0-1 war machine chosen per 1000 points",
-        "name_de": "0-1 war machine chosen per 1000 points",
-        "name_es": "0-1 war machine chosen per 1000 points",
-        "name_fr": "0-1 machine de guerre sélectionnée par tranche de 1000 points"
+      "equipment": [
+        {
+          "name_en": "Giant's club",
+          "name_cn": "巨人大棒",
+          "name_de": "Giant's club",
+          "points": 0,
+          "active": true,
+          "name_fr": "Massue de Géant"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (calloused hide)",
+          "name_cn": "轻甲(坚硬皮肤)",
+          "name_de": "Light armour (calloused hide)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure légère (peau calleuse)"
+        },
+        {
+          "name_en": "Heavy armour (scaly skin)",
+          "name_cn": "重甲(鳞皮)",
+          "name_de": "Heavy armour (scaly skin)",
+          "points": 10,
+          "name_fr": "Armure lourde (peau écailleuse)"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Regeneration (6+)",
+          "name_cn": "重生(6+)",
+          "name_de": "Regeneration (6+)",
+          "points": 20,
+          "minimum": 0,
+          "maximum": 0,
+          "name_fr": "Régénération (6+)"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Giant Attacks, Immune to Psychology, Large Target, Pick Up And..., Stomp Attacks (D6), Terror, Timmm-berrr!, Unbreakable",
+        "name_cn": "紧密阵型, 巨人攻击, 心理免疫, 大型目标, 打包, 践踏攻击(D6), 惊骇, 倒啦！, 永不战败",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Attaques de Géant, Immunisé à la Psychologie, Grande Cible, Ramassage, Attaques de Piétinement (D6), Terreur, Timmm-berrr!, Indémoralisable"
       }
     }
   ],

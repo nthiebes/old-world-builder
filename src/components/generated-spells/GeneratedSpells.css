@@ -37,6 +37,7 @@
 
 .generated-spells__spell-label {
   font-weight: normal;
+  display: flex;
 }
 
 .generated-spells__spell-label:has(input:disabled) {
@@ -53,4 +54,13 @@
 
 .generated-spells__spell-index::after {
   content: ".";
+}
+
+.generated-spells__rules-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.generated-spells__rule-icon {
+  margin-left: 0.5rem;
 }
