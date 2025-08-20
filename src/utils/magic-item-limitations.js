@@ -94,3 +94,80 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
   }
   return errors;
 }
+
+/**
+ * Checks if an item's rune loadout is shared by other units. Corresponds to the Rule of Pride, FoF pg 32.
+ * We treat an item's rune loadout as synonymous with an item category, like Weapon, Armour, etc.
+ * 
+ * @param {object[]} runes Array of runes to be looked for in the list
+ * @param {object} list The army list to be checked
+ * @param {string} excludeId The id of the character/unit with the runes, which will be skipped by the check
+ * @returns {object[]} List of error messages for rune categories that have failed validation
+ */
+export const runeLoadoutElsewhere = (runes, list, excludeId) => {
+  const unitCategories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
+  let errors = [];
+  let groupedByType = {};
+  for (let i in runes) {
+    let rune = runes[i];
+    if (groupedByType[rune.type] === undefined) {
+      groupedByType[rune.type] = [rune];
+    } else {
+      groupedByType[rune.type].push(rune);
+    }
+  }
+  for (let runeType in groupedByType) {
+    let itemRunes = groupedByType[runeType];
+    for (let categoryIndex in unitCategories) {
+      let category = unitCategories[categoryIndex];
+      for (let i in list[category]) {
+        let unit = list[category][i];
+        if (unit.id !== excludeId) {
+          for (let itemGroup in unit.items) {
+            // get all items that match the current item's runeType
+            let targetItemRunes = [];
+            for (let targetItem in unit.items[itemGroup].selected) {
+              if (unit.items[itemGroup].selected[targetItem].type === runeType) {
+                targetItemRunes.push(unit.items[itemGroup].selected[targetItem]);
+              }
+            }
+            if (targetItemRunes.length === itemRunes.length) {
+              if (itemRunes.every(
+                rune => targetItemRunes.some((targetRune) => rune.name_en === targetRune.name_en))
+              ) {
+                errors.push({
+                  runeType: runeType,
+                  unit: unit,
+                  url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
+                });
+              }
+            }
+          }
+          for (let commandGroup in unit.command) {
+            if (unit.command[commandGroup].active) {
+              let targetItemRunes = [];
+              for (let targetItem in unit.command[commandGroup].magic?.selected) {
+                if (unit.command[commandGroup].magic.selected[targetItem].type === runeType) {
+                  targetItemRunes.push(unit.command[commandGroup].magic.selected[targetItem]);
+                }
+              }
+              if (itemRunes.length === targetItemRunes.length) {
+                if (itemRunes.every(
+                  rune => targetItemRunes.some((targetRune) => rune.name_en === targetRune.name_en))
+                ) {
+                  errors.push({
+                    runeType: runeType,
+                    unit: unit,
+                    url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
+                  });
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  console.log(errors);
+  return errors;
+}

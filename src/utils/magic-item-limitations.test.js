@@ -2,6 +2,7 @@ import {
   isMultipleAllowedItem,
   maxAllowedOfItem,
   itemsUsedElsewhere,
+  runeLoadoutElsewhere
 } from "./magic-item-limitations";
 import magicItems from "../../public/games/the-old-world/magic-items.json";
 
@@ -222,6 +223,174 @@ describe("itemsUsedElsewhere", () => {
       }
     );
     let elsewhereErrors = itemsUsedElsewhere(items, list, princeID);
+    expect(elsewhereErrors).toHaveLength(0);
+  });
+});
+
+const kingId = "king.grdbtm";
+const runesElsewhereList = {
+  "name": "Dwarfen Mountain Holds",
+  "game": "the-old-world",
+  "army": "dwarfen-mountain-holds",
+  "characters": [
+    {
+      "name_en": "King",
+      "id": kingId,
+      "items": [
+        {
+          "name_en": "Runes",
+          "types": [
+            "weapon-runes",
+            "ranged-weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
+          "selected": [
+            magicItems["dwarfen-mountain-holds"].find(
+              (item) => item.name_en === "Rune of Striking*"
+            ),
+            magicItems["dwarfen-mountain-holds"].find(
+              (item) => item.name_en === "Rune of Cleaving*"
+            )
+          ]
+        }
+      ]
+    },
+    {
+      "name_en": "Runesmith",
+      "id": "runesmith.tmsvbwmcec",
+      "items": [
+        {
+          "name_en": "Runes",
+          "types": [
+            "weapon-runes",
+            "armor-runes",
+            "talismanic-runes"
+          ],
+          "selected": [
+            magicItems["dwarfen-mountain-holds"].find(
+              (item) => item.name_en === "Rune of Speed*"
+            )
+          ],
+          "maxPoints": 75,
+          "armyComposition": {
+            "royal-clan": {
+              "maxPoints": 100
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "core": [],
+  "special": [],
+  "rare": [],
+  "mercenaries": [],
+  "allies": [],
+  "id": "lcqmhc",
+  "armyComposition": "dwarfen-mountain-holds"
+};
+
+describe("runeLoadoutElsewhere", () => {
+  test("No errors if no rune loadouts are shared", () => {
+    const items = runesElsewhereList.characters[0].items[0].selected; // Runes of Striking and Cleaving
+    // Deep copy of list. structuredClone() would do this cleaner, but it 
+    // doesn't seem supported by whatever version of node is running tests here.
+    const list = JSON.parse(JSON.stringify(runesElsewhereList));
+    expect(runeLoadoutElsewhere(items, list, kingId)).toHaveLength(0);
+  });
+  
+  test("Warns if a rune loadout is used by more than one hero", () => {
+    const items = runesElsewhereList.characters[0].items[0].selected; // Runes of Striking and Cleaving
+    const list = JSON.parse(JSON.stringify(runesElsewhereList));
+
+    //Add a Thane with Rune of Striking, which is shared with the King, but not a fully shared loadout
+    list.characters.push(
+      {
+        "name_en": "Thane",
+        "id": "thane.gwrngoed",
+        "items": [
+          {
+            "name_en": "Magic Items",
+            "selected": [
+              magicItems["dwarfen-mountain-holds"].find(
+                (item) => item.name_en === "Rune of Striking*"
+              )
+            ]
+          }
+        ]
+      }
+    );
+    
+    let elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    expect(elsewhereErrors).toHaveLength(0);
+
+    //Add a Rune of Cleaving to the Thane, completing a shared loudout with the King
+    list.characters[2].items[0].selected.push(
+      magicItems["dwarfen-mountain-holds"].find(
+        (item) => item.name_en === "Rune of Cleaving*"
+      )
+    );
+    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    expect(elsewhereErrors).toHaveLength(1);
+    
+    //Add a Rune of Speed to the Thane, making the loadout different again
+    list.characters[2].items[0].selected.push(
+      magicItems["dwarfen-mountain-holds"].find(
+        (item) => item.name_en === "Rune of Speed*"
+      )
+    );
+    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    expect(elsewhereErrors).toHaveLength(0);
+  });
+
+  test("Warns if a rune loadout is shared by a unit command model", () => {
+    const items = runesElsewhereList.characters[0].items[0].selected; // Runes of Striking and Cleaving
+    const list = JSON.parse(JSON.stringify(runesElsewhereList));
+
+    //Add Dwarf Warriors champion with Rune of Striking, which is shared with the King, but not a fully shared loadout
+    list.core.push(
+      {
+        "name_en": "Dwarf Warriors",
+        "id": "dwarf-warriors.yfnqemhtz",
+        "command": [
+          {
+            "name_en": "Veteran (champion)",
+            "magic": {
+              "types": [
+                "weapon-runes"
+              ],
+              "selected": [
+                magicItems["dwarfen-mountain-holds"].find(
+                  (item) => item.name_en === "Rune of Striking*"
+                )
+              ]
+            },
+            "id": 0,
+            "active": true
+          }
+        ]
+      }
+    );
+    let elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    expect(elsewhereErrors).toHaveLength(0);
+
+    //Add a Rune of Cleaving to the champion, completing a shared loudout with the King
+    list.core[0].command[0].magic.selected.push(
+      magicItems["dwarfen-mountain-holds"].find(
+        (item) => item.name_en === "Rune of Cleaving*"
+      )
+    );
+    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    expect(elsewhereErrors).toHaveLength(1);
+    
+    //Add a Rune of Speed to the champion, making the loadout different again
+    list.core[0].command[0].magic.selected.push(
+      magicItems["dwarfen-mountain-holds"].find(
+        (item) => item.name_en === "Rune of Speed*"
+      )
+    );
+    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
   });
 });
