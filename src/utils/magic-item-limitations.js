@@ -168,6 +168,5 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
       }
     }
   }
-  console.log(errors);
   return errors;
 }
