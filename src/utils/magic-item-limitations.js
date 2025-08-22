@@ -133,8 +133,10 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
             }
             if (targetItemRunes.length === itemRunes.length) {
               if (itemRunes.every(
-                rune => targetItemRunes.some((targetRune) => rune.name_en === targetRune.name_en))
-              ) {
+                rune => targetItemRunes.some(
+                  (targetRune) => rune.name_en === targetRune.name_en && (rune.amount || 1) == (targetRune.amount || 1)
+                )
+              )) {
                 errors.push({
                   runeType: runeType,
                   unit: unit,
@@ -153,8 +155,10 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
               }
               if (itemRunes.length === targetItemRunes.length) {
                 if (itemRunes.every(
-                  rune => targetItemRunes.some((targetRune) => rune.name_en === targetRune.name_en))
-                ) {
+                  rune => targetItemRunes.some(
+                    (targetRune) => rune.name_en === targetRune.name_en && (rune.amount || 1) == (targetRune.amount || 1)
+                  )
+                )) {
                   errors.push({
                     runeType: runeType,
                     unit: unit,
