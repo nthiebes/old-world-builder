@@ -268,15 +268,17 @@ export const Magic = ({ isMobile }) => {
         items = items.concat(unit?.command[command]?.magic?.selected || []);
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
+
+      const typeIsRunic = (type) => type.indexOf("runes") >= 0 || type === "runic-tattoos";
       const isRune = 
-        (unit?.items && unit.items[group || 0]?.types?.some((type) => type.indexOf("runes") >= 0)) ||
-        (command && unit?.command[command]?.magic?.types?.some((type) => type.indexOf("runes") >= 0));
+        (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
+        (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
       if (isRune) {
         setRunesUsedElsewhere(runeLoadoutElsewhere(items, list, unitId));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [unit, list, unitId]);
+  }, [unit, list, unitId, command]);
 
   useEffect(() => {
     army &&

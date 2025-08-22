@@ -110,11 +110,8 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
   let groupedByType = {};
   for (let i in runes) {
     let rune = runes[i];
-    if (groupedByType[rune.type] === undefined) {
-      groupedByType[rune.type] = [rune];
-    } else {
-      groupedByType[rune.type].push(rune);
-    }
+    groupedByType[rune.type] = groupedByType[rune.type] || [];
+    groupedByType[rune.type].push(rune);
   }
   for (let runeType in groupedByType) {
     let itemRunes = groupedByType[runeType];
@@ -123,48 +120,47 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
       for (let i in list[category]) {
         let unit = list[category][i];
         if (unit.id !== excludeId) {
+          let collectedItemRunes = [];
+
           for (let itemGroup in unit.items) {
             // get all items that match the current item's runeType
-            let targetItemRunes = [];
-            for (let targetItem in unit.items[itemGroup].selected) {
-              if (unit.items[itemGroup].selected[targetItem].type === runeType) {
-                targetItemRunes.push(unit.items[itemGroup].selected[targetItem]);
+            let targetItemRunes = unit.items[itemGroup].selected.filter(
+              (targetItem) => targetItem.type === runeType
+            );
+            if (targetItemRunes.length > 0) {
+              collectedItemRunes.push({
+                itemRunes: targetItemRunes,
+                url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
+              });
+            }
+          }
+          for (let commandGroup in unit.command) {
+            if (unit.command[commandGroup].active && unit.command[commandGroup].magic?.selected) {
+              let targetItemRunes = unit.command[commandGroup].magic?.selected.filter(
+                (targetItem) => targetItem.type === runeType
+              );
+              if (targetItemRunes.length > 0) {
+                collectedItemRunes.push({
+                  itemRunes: targetItemRunes,
+                  url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
+                });
               }
             }
-            if (targetItemRunes.length === itemRunes.length) {
+          }
+
+          for (let j in collectedItemRunes) {
+            let targetItemRunesObj = collectedItemRunes[j];
+            if (targetItemRunesObj.itemRunes.length === itemRunes.length) {
               if (itemRunes.every(
-                rune => targetItemRunes.some(
+                rune => targetItemRunesObj.itemRunes.some(
                   (targetRune) => rune.name_en === targetRune.name_en && (rune.amount || 1) == (targetRune.amount || 1)
                 )
               )) {
                 errors.push({
                   runeType: runeType,
                   unit: unit,
-                  url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
+                  url: targetItemRunesObj.url
                 });
-              }
-            }
-          }
-          for (let commandGroup in unit.command) {
-            if (unit.command[commandGroup].active) {
-              let targetItemRunes = [];
-              for (let targetItem in unit.command[commandGroup].magic?.selected) {
-                if (unit.command[commandGroup].magic.selected[targetItem].type === runeType) {
-                  targetItemRunes.push(unit.command[commandGroup].magic.selected[targetItem]);
-                }
-              }
-              if (itemRunes.length === targetItemRunes.length) {
-                if (itemRunes.every(
-                  rune => targetItemRunes.some(
-                    (targetRune) => rune.name_en === targetRune.name_en && (rune.amount || 1) == (targetRune.amount || 1)
-                  )
-                )) {
-                  errors.push({
-                    runeType: runeType,
-                    unit: unit,
-                    url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
-                  });
-                }
               }
             }
           }
