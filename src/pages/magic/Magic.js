@@ -22,6 +22,7 @@ import {
   isMultipleAllowedItem,
   itemsUsedElsewhere,
   maxAllowedOfItem,
+  runeLoadoutElsewhere
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -73,6 +74,7 @@ export const Magic = ({ isMobile }) => {
       .find(({ id }) => id === list.game)
       .armies.find(({ id }) => armyId === id);
   const [usedElsewhere, setUsedElsewhere] = useState([]);
+  const [runesUsedElsewhere, setRunesUsedElsewhere] = useState([]);
 
   // Use list army for arcane journals
   if (!army) {
@@ -266,9 +268,17 @@ export const Magic = ({ isMobile }) => {
         items = items.concat(unit?.command[command]?.magic?.selected || []);
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
+
+      const typeIsRunic = (type) => type.indexOf("runes") >= 0 || type === "runic-tattoos";
+      const isRune = 
+        (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
+        (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
+      if (isRune) {
+        setRunesUsedElsewhere(runeLoadoutElsewhere(items, list, unitId));
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [unit, list, unitId]);
+  }, [unit, list, unitId, command]);
 
   useEffect(() => {
     army &&
@@ -616,14 +626,41 @@ export const Magic = ({ isMobile }) => {
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en
                 );
+                const runesElsewhereErrors = isFirstItemType && runesUsedElsewhere.filter(
+                  (e) => e.runeType === magicItem.type
+                );
+                const runesUsedBy = runesElsewhereErrors?.length > 0 && runesElsewhereErrors.map((error, index) => (
+                  <Fragment key={`${error.unit.id}-rune-error-link`}>
+                    <Link to={error.url}>
+                      {getUnitName({ unit: error.unit, language })}
+                    </Link>
+                    {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
+                  </Fragment>
+                ));
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
                     {isFirstItemType && (
-                      <h3 className="magic__type">
-                        {nameMap[magicItem.type][`name_${language}`] ||
-                          nameMap[magicItem.type].name_en}
-                      </h3>
+                      <>
+                        <h3 className="magic__type">
+                          {nameMap[magicItem.type][`name_${language}`] ||
+                            nameMap[magicItem.type].name_en}
+                        </h3>
+                        {runesUsedBy && (
+                          <ErrorMessage
+                            key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`}
+                          >
+                            <span>
+                              <FormattedMessage
+                                id="misc.error.runesUsedElsewhereBy"
+                                values={{
+                                  usedby: runesUsedBy,
+                                }}
+                              />
+                            </span>
+                          </ErrorMessage>
+                        )}
+                      </>
                     )}
                     {getCheckbox({
                       magicItem,
