@@ -76,6 +76,12 @@ const additionalOWBRules = {
   "engine of the gods renegade": {
     url: "special-rules/engine-of-the-gods-renegade",
   },
+  "crown of antlers beastmen": {
+    url: "special-rules/crown-of-antlers",
+  },
+  "crown of antlers wood-elf-realms": {
+    url: "magic-item/crown-of-antlers",
+  },
 };
 
 export const synonyms = {
