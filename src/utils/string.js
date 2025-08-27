@@ -22,3 +22,17 @@ export const equalsOrIncludes = (strOrArray, x) => (
   x === strOrArray ||
   (Array.isArray(strOrArray) && strOrArray.includes(x))
 );
+
+/**
+ * Picks out the various localized names of a unit or item object
+ * and puts them in a nice object for easy attribute spreading
+ */
+export const namesForSpread = (obj) => ({
+  name_en: obj.name_en,
+  name_de: obj.name_de,
+  name_fr: obj.name_fr,
+  name_cn: obj.name_cn,
+  name_es: obj.name_es,
+  name_it: obj.name_it,
+  name_pl: obj.name_pl,
+});
