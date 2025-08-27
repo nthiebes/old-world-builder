@@ -22,7 +22,7 @@ import {
   isMultipleAllowedItem,
   itemsUsedElsewhere,
   maxAllowedOfItem,
-  runeLoadoutElsewhere
+  runeLoadoutElsewhere,
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -269,8 +269,9 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
-      const typeIsRunic = (type) => type.indexOf("runes") >= 0 || type === "runic-tattoos";
-      const isRune = 
+      const typeIsRunic = (type) =>
+        type.indexOf("runes") >= 0 || type === "runic-tattoos";
+      const isRune =
         (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
         (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
       if (isRune) {
@@ -626,17 +627,21 @@ export const Magic = ({ isMobile }) => {
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en
                 );
-                const runesElsewhereErrors = isFirstItemType && runesUsedElsewhere.filter(
-                  (e) => e.runeType === magicItem.type
-                );
-                const runesUsedBy = runesElsewhereErrors?.length > 0 && runesElsewhereErrors.map((error, index) => (
-                  <Fragment key={`${error.unit.id}-rune-error-link`}>
-                    <Link to={error.url}>
-                      {getUnitName({ unit: error.unit, language })}
-                    </Link>
-                    {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
-                  </Fragment>
-                ));
+                const runesElsewhereErrors =
+                  isFirstItemType &&
+                  runesUsedElsewhere.filter(
+                    (e) => e.runeType === magicItem.type
+                  );
+                const runesUsedBy =
+                  runesElsewhereErrors?.length > 0 &&
+                  runesElsewhereErrors.map((error, index) => (
+                    <Fragment key={`${error.unit.id}-rune-error-link`}>
+                      <Link to={error.url}>
+                        {getUnitName({ unit: error.unit, language })}
+                      </Link>
+                      {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>

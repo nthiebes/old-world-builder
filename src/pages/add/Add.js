@@ -179,9 +179,9 @@ export const Add = ({ isMobile }) => {
               ...armyData.rare,
               ...armyData.mercenaries,
             ];
-            const mercenaryUnits = allUnits.filter((unit) =>
-              mercenary.units.includes(unit.id)
-            );
+            const mercenaryUnits = allUnits
+              .filter((unit) => mercenary.units.includes(unit.id))
+              .map((unit) => ({ ...unit, army: mercenary.army }));
             allMercenaries = [...allMercenaries, ...mercenaryUnits];
             setMercenariesLoaded(index + 1);
           } else {
@@ -199,9 +199,9 @@ export const Add = ({ isMobile }) => {
                   ...armyData.rare,
                   ...armyData.mercenaries,
                 ];
-                const mercenaryUnits = allUnits.filter((unit) =>
-                  mercenary.units.includes(unit.id)
-                );
+                const mercenaryUnits = allUnits
+                  .filter((unit) => mercenary.units.includes(unit.id))
+                  .map((unit) => ({ ...unit, army: mercenary.army }));
                 allMercenaries = [...allMercenaries, ...mercenaryUnits];
                 setMercenariesLoaded(index + 1);
               },
