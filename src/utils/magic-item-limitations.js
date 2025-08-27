@@ -178,7 +178,7 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
                   targetItemRunesObj.itemRunes.some(
                     (targetRune) =>
                       rune.name_en === targetRune.name_en &&
-                      (rune.amount || 1) == (targetRune.amount || 1)
+                      (rune.amount || 1) === (targetRune.amount || 1)
                   )
                 )
               ) {
