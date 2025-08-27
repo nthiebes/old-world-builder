@@ -2795,6 +2795,7 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne",
             "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
           ],
@@ -2808,6 +2809,7 @@ export const rules = {
           requires: [
             "plaguebearers-of-nurgle",
             "nurglings",
+            "nurglings-core",
             "beasts-of-nurgle",
             "plague-drones-of-nurgle",
           ],
@@ -2821,6 +2823,7 @@ export const rules = {
           requires: [
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
             "fiends-of-slaanesh",
             "hellflayer-of-slaanesh",
             "seeker-chariot-of-slaanesh",
@@ -2835,6 +2838,8 @@ export const rules = {
           requires: [
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
