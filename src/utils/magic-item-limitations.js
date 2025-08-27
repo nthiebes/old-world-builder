@@ -42,14 +42,21 @@ export const maxAllowedOfItem = (
 /**
  * Checks if items are used elsewhere in an army list, unless an item is extremely common or
  * otherwise can be used by multiple units.
- * 
+ *
  * @param {object[]} items Array of magic items to be looked for in the list
  * @param {object} list The army list to be checked
  * @param {string} excludeId The id of the character/unit with the items, which will be skipped by the check
  * @returns {object[]} List of error messages for items that have failed validation
  */
 export const itemsUsedElsewhere = (items, list, excludeId) => {
-  const unitCategories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
+  const unitCategories = [
+    "characters",
+    "core",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ];
   let errors = [];
   for (let i in items) {
     let item = items[i];
@@ -61,28 +68,31 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
           if (unit.id !== excludeId) {
             for (let itemGroup in unit.items) {
               for (let targetItem in unit.items[itemGroup].selected) {
-                if (unit.items[itemGroup].selected[targetItem].name_en === item.name_en) {
-                  errors.push(
-                    {
-                      itemName: item.name_en,
-                      unit: unit,
-                      url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
-                    }
-                  );
+                if (
+                  unit.items[itemGroup].selected[targetItem].name_en ===
+                  item.name_en
+                ) {
+                  errors.push({
+                    itemName: item.name_en,
+                    unit: unit,
+                    url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`,
+                  });
                 }
               }
             }
             for (let commandGroup in unit.command) {
               if (unit.command[commandGroup].active) {
-                for (let targetItem in unit.command[commandGroup].magic?.selected) {
-                  if (unit.command[commandGroup].magic.selected[targetItem].name_en === item.name_en) {
-                    errors.push(
-                      {
-                        itemName: item.name_en,
-                        unit: unit,
-                        url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
-                      }
-                    );
+                for (let targetItem in unit.command[commandGroup].magic
+                  ?.selected) {
+                  if (
+                    unit.command[commandGroup].magic.selected[targetItem]
+                      .name_en === item.name_en
+                  ) {
+                    errors.push({
+                      itemName: item.name_en,
+                      unit: unit,
+                      url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`,
+                    });
                   }
                 }
               }
@@ -93,19 +103,26 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
     }
   }
   return errors;
-}
+};
 
 /**
  * Checks if an item's rune loadout is shared by other units. Corresponds to the Rule of Pride, FoF pg 32.
  * We treat an item's rune loadout as synonymous with an item category, like Weapon, Armour, etc.
- * 
+ *
  * @param {object[]} runes Array of runes to be looked for in the list
  * @param {object} list The army list to be checked
  * @param {string} excludeId The id of the character/unit with the runes, which will be skipped by the check
  * @returns {object[]} List of error messages for rune categories that have failed validation
  */
 export const runeLoadoutElsewhere = (runes, list, excludeId) => {
-  const unitCategories = ['characters', 'core', 'special', 'rare', 'mercenaries', 'allies'];
+  const unitCategories = [
+    "characters",
+    "core",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ];
   let errors = [];
   let groupedByType = {};
   for (let i in runes) {
@@ -130,19 +147,24 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
             if (targetItemRunes.length > 0) {
               collectedItemRunes.push({
                 itemRunes: targetItemRunes,
-                url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`
+                url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`,
               });
             }
           }
           for (let commandGroup in unit.command) {
-            if (unit.command[commandGroup].active && unit.command[commandGroup].magic?.selected) {
-              let targetItemRunes = unit.command[commandGroup].magic?.selected.filter(
+            if (
+              unit.command[commandGroup].active &&
+              unit.command[commandGroup].magic?.selected
+            ) {
+              let targetItemRunes = unit.command[
+                commandGroup
+              ].magic?.selected.filter(
                 (targetItem) => targetItem.type === runeType
               );
               if (targetItemRunes.length > 0) {
                 collectedItemRunes.push({
                   itemRunes: targetItemRunes,
-                  url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`
+                  url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`,
                 });
               }
             }
@@ -151,15 +173,19 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
           for (let j in collectedItemRunes) {
             let targetItemRunesObj = collectedItemRunes[j];
             if (targetItemRunesObj.itemRunes.length === itemRunes.length) {
-              if (itemRunes.every(
-                rune => targetItemRunesObj.itemRunes.some(
-                  (targetRune) => rune.name_en === targetRune.name_en && (rune.amount || 1) == (targetRune.amount || 1)
+              if (
+                itemRunes.every((rune) =>
+                  targetItemRunesObj.itemRunes.some(
+                    (targetRune) =>
+                      rune.name_en === targetRune.name_en &&
+                      (rune.amount || 1) == (targetRune.amount || 1)
+                  )
                 )
-              )) {
+              ) {
                 errors.push({
                   runeType: runeType,
                   unit: unit,
-                  url: targetItemRunesObj.url
+                  url: targetItemRunesObj.url,
                 });
               }
             }
@@ -169,4 +195,4 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
     }
   }
   return errors;
-}
+};

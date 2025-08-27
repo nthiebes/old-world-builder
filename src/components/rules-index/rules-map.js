@@ -79,6 +79,7 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
