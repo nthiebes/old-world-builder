@@ -30,6 +30,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
+import { namesForSpread } from "../../utils/string";
 import {
   getUnitName,
   getUnitOptionNotes,
@@ -125,8 +126,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
     unitDetachments.push({
       id: `${id}.${getRandomId()}`,
-      name_de: detachment.name_de,
-      name_en: detachment.name_en,
+      ...namesForSpread(detachment),
       points: detachment.points,
       strength: detachment.minDetachmentSize || 5,
       minDetachmentSize: detachment.minDetachmentSize || 5,
