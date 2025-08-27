@@ -1729,12 +1729,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .map((lore) => (
                 <div className="radio" key={lore}>
                   <input
-                    type="radio"
+                    type={unit.arcaneFamiliar ? "checkbox" : "radio"}
+                    disabled={unit.arcaneFamiliar}
                     id={`lore-${lore}`}
                     name="lores"
                     value={lore}
                     onChange={() => handleLoresChange(lore)}
-                    checked={(unit.activeLore || lores[0]) === lore}
+                    checked={
+                      (unit.activeLore || lores[0]) === lore ||
+                      unit.arcaneFamiliar
+                    }
                     className="radio__input"
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">
@@ -1763,15 +1767,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 item.maxPoints;
 
               if (
-                item.armyComposition && (
-                  (
-                    typeof item.armyComposition === "string" &&
-                    !item.armyComposition.includes(unitArmyComposition)
-                  ) || (
-                    item.armyComposition.length > 0 &&
-                    item.armyComposition.indexOf(unitArmyComposition) < 0
-                  )
-                )
+                item.armyComposition &&
+                ((typeof item.armyComposition === "string" &&
+                  !item.armyComposition.includes(unitArmyComposition)) ||
+                  (item.armyComposition.length > 0 &&
+                    item.armyComposition.indexOf(unitArmyComposition) < 0))
               ) {
                 return null;
               }

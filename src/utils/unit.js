@@ -558,6 +558,12 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
         }
       : {};
 
+  if (unit.arcaneFamiliar) {
+    unitLores.forEach((lore) => {
+      selectedLores[lore] = loresOfMagicWithSpells[lore];
+    });
+  }
+
   return { ...specialRuleLores, ...selectedLores };
 };
 
