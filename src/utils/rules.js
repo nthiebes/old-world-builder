@@ -3812,6 +3812,69 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
+  "jade-fleet": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["miao-ying"],
+        },
+        {
+          ids: ["shugengan-lord", "lord-magistrate"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["jade-lancers-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: [
+            "captain-of-the-empire",
+            "master-mage",
+            "priest-of-sigmar",
+            "priest-of-ulric",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["pistoliers", "outriders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
 };
 
 export const getMaxPercentData = ({

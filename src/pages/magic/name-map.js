@@ -756,4 +756,10 @@ export const nameMap = {
     name_cn: "阴系法术",
     name_fr: "Lore of Yin",
   },
+  "jade-fleet": {
+    name_de: "Jade Fleet",
+    name_en: "Jade Fleet",
+    name_cn: "Jade Fleet",
+    name_fr: "Jade Fleet",
+  },
 };

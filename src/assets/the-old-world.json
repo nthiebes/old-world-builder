@@ -746,8 +746,12 @@
       "name_es": "Grand Cathay",
       "name_fr": "Grand Cathay",
       "items": ["general", "grand-cathay"],
-      "armyComposition": ["grand-cathay"],
+      "armyComposition": ["grand-cathay", "jade-fleet"],
       "allies": [
+        {
+          "army": "grand-cathay",
+          "armyComposition": "jade-fleet"
+        },
         { "army": "dwarfen-mountain-holds" },
         {
           "army": "empire-of-man"
@@ -767,6 +771,23 @@
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls"]
+          }
+        ],
+        "jade-fleet": [
+          {
+            "army": "empire-of-man",
+            "units": [
+              "captain-of-the-empire",
+              "master-mage",
+              "priest-of-sigmar",
+              "priest-of-ulric",
+              "state-troops",
+              "state-missile-troops",
+              "free-company-militia",
+              "empire-archers",
+              "pistoliers",
+              "outriders"
+            ]
           }
         ]
       }
