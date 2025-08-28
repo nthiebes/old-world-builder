@@ -192,6 +192,7 @@
           "exclusive": true,
           "notes": {
             "name_en": "Must choose Lore of Yang or Lore of Yin",
+            "name_cn": "必须选择阳系或者阴系法术",
             "name_fr": "Doit choisir le Domaine du Yang ou le Domaine du Yin"
           }
         },
@@ -370,6 +371,7 @@
           "exclusive": true,
           "notes": {
             "name_en": "Must choose Lore of Yang or Lore of Yin",
+            "name_cn": "必须选择阳系或者阴系法术",
             "name_fr": "Doit choisir le Domaine du Yang ou le Domaine du Yin"
           }
         },
@@ -413,6 +415,7 @@
           "maxPoints": 50,
           "notes": {
             "name_en": "Cannot take shields",
+            "name_cn": "不能购买盾牌",
             "name_fr": "Ne peut prendre de boucliers"
           }
         }
@@ -421,9 +424,9 @@
       "specialRules": {
         "name_en": "Armoured Hide (2), Celestial Forged Armour (5+), Counter Charge, Fear, Fly (9), Impact Hits (D3+1), Mastery of the Elemental Winds, Swiftstride, Will of the Dragons, Crown of horns {cathay}",
         "name_cn": "坚硬皮肤(2), 天工铸甲(5+), 反制冲锋, 恐惧, 飞行(9), 撞击(D3+1), 精气之风精通, 快速行进, 巨龙意志, 角冠",
-        "name_de": "Armoured Hide (2), Celestial Forged Armour (5+), Counter Charge, Fear, Fly (9), Impact Hits (D3+1), Mastery of the Elemental Winds, Swiftstride, Will of the Dragons, Crown of horns {cathay}",
+        "name_de": "Armoured Hide (2), Celestial Forged Armour (5+), Counter Charge, Fear, Fly (9), Impact Hits (D3+1), Mastery of the Elemental Winds, Swiftstride, Will of the Dragons, Crown of horns",
         "name_fr": "Peau Blindée (2), Armure Céleste (5+), Contre-charge, Peur, Vol (9), Touches d'Impact (D3+1), Maîtrise des Vents Élémentaires, Rapide, Volonté des Dragons, Couronne de Cornes",
-        "name_es": "Armoured Hide (2), Celestial Forged Armour (5+), Counter Charge, Fear, Fly (9), Impact Hits (D3+1), Mastery of the Elemental Winds, Swiftstride, Will of the Dragons, Crown of horns {cathay}"
+        "name_es": "Armoured Hide (2), Celestial Forged Armour (5+), Counter Charge, Fear, Fly (9), Impact Hits (D3+1), Mastery of the Elemental Winds, Swiftstride, Will of the Dragons, Crown of horns"
       },
       "notes": {
         "name_en": "",
@@ -998,7 +1001,7 @@
           "notes": {
             "name_de": "0-1 Einheit pro 1.000 Punkte können eine Magische Standarte im Wert von bis zu 50 Punkten erwerben",
             "name_en": "0-1 unit per 1000 points may purchase a magic standard worth up to 50 points",
-            "name_cn": "0-1unit per 1000 points may purchase a magic standard worth up to 50 points",
+            "name_cn": "每1000分0-1单位可购买不超过50分的魔法战旗",
             "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique pour une valeur maximale de 50 points"
           }
         },
@@ -1095,7 +1098,7 @@
           "notes": {
             "name_en": "0-1 unit if Miao Ying is the army's General",
             "name_de": "0-1 unit if Miao Ying is the army's General",
-            "name_cn": "0-1unit if Miao Ying is the army's General",
+            "name_cn": "如果妙影为主将，0-1单位",
             "name_fr": "0-1 unité si Miao Ying est la Générale de l'armée",
             "name_it": "0-1 unit if Miao Ying is the army's General"
           }
@@ -1247,7 +1250,7 @@
           "notes": {
             "name_en": "0-1 unit if Miao Ying is the army's General",
             "name_de": "0-1 unit if Miao Ying is the army's General",
-            "name_cn": "0-1unit if Miao Ying is the army's General",
+            "name_cn": "如果妙影为主将，0-1单位",
             "name_fr": "0-1 unité si Miao Ying est la Générale de l'armée",
             "name_it": "0-1 unit if Miao Ying is the army's General"
           }
@@ -1408,7 +1411,7 @@
           "notes": {
             "name_en": "0-1 unit if Miao Ying is the army's General",
             "name_de": "0-1 unit if Miao Ying is the army's General",
-            "name_cn": "0-1unit if Miao Ying is the army's General",
+            "name_cn": "如果妙影为主将，0-1单位",
             "name_fr": "0-1 unité si Miao Ying est la Générale de l'armée",
             "name_it": "0-1 unit if Miao Ying is the army's General"
           }
@@ -1614,7 +1617,8 @@
           "active": true,
           "specialRules": {
             "name_en": "Regeneration (6+)",
-            "name_fr": "Régénération (6+)"
+            "name_fr": "Régénération (6+)",
+            "name_cn": "重生(6+)"
           }
         },
         {
@@ -1636,7 +1640,8 @@
           "exclusive": true,
           "specialRules": {
             "name_en": "Magic Resistance (-2)",
-            "name_fr": "Résistance à la Magie (-2)"
+            "name_fr": "Résistance à la Magie (-2)",
+            "name_cn": "魔法抗性(-2)"
           }
         },
         {
@@ -1668,7 +1673,7 @@
       },
       "notes": {
         "name_en": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
-        "name_cn": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
+        "name_cn": "若主将为修验卿领主或修颜卿，则0-1单位的震旦禁卫可作为特殊选择",
         "name_de": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan",
         "name_fr": "0-1 Sentinelle Cathayenne peut être pris comme choix Spécial par tranche de 1000 points si votre Général est un Seigneur Shugengan ou un Shugengan",
         "name_es": "0-1 Cathayan Sentinel may be taken as a Special choice per 1000 points if your General is a Shugengan Lord or Shugengan"
@@ -1746,7 +1751,7 @@
       },
       "notes": {
         "name_en": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
-        "name_cn": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
+        "name_cn": "若主将为经略使或参谋，则0-1单位的天灯可作为特殊选择",
         "name_de": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist",
         "name_fr": "0-1 Lanterne Céleste peut être pris comme choix Spécial par tranche de 1000 points si votre Général est un Seigneur Magistrat ou un Stratège",
         "name_es": "0-1 Sky Lantern may be taken as a Special choice per 1000 points if your General is a Lord Magistrate or Strategist"
@@ -1820,7 +1825,7 @@
           "armyComposition": "jade-fleet",
           "notes": {
             "name_en": "0-1 per 1000 points",
-            "name_cn": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
             "name_de": "0-1 per 1000 points",
             "name_fr": "0-1 per 1000 points",
             "name_es": "0-1 per 1000 points"
@@ -1859,7 +1864,7 @@
       "armor": [
         {
           "name_en": "Heavy armour (Terracotta armour)",
-          "name_cn": "重甲(Terracotta armour)",
+          "name_cn": "重甲(陶俑护甲)",
           "name_de": "Schwere Rüstung (Terracotta armour)",
           "name_fr": "Armure lourde (Armure de terre cuite)",
           "name_es": "Armadura pesada (Terracotta armour)",
@@ -1901,7 +1906,8 @@
           "exclusive": true,
           "specialRules": {
             "name_en": "Magic Resistance (-2)",
-            "name_fr": "Résistance à la Magie (-2)"
+            "name_fr": "Résistance à la Magie (-2)",
+            "name_cn": "魔法抗性(-2)"
           }
         },
         {
