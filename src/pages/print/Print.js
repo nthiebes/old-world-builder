@@ -162,7 +162,7 @@ export const Print = () => {
                       {(
                         unit.specialRules[`name_${language}`] ||
                         unit.specialRules.name_en
-                      ).replace(/ *\{[^)]*\}/g, "")}
+                      )?.replace(/ *\{[^)]*\}/g, "")}
                     </i>
                   </p>
                   {unit.detachments &&
@@ -192,7 +192,7 @@ export const Print = () => {
                           {(
                             specialRulesDetachment[`name_${language}`] ||
                             specialRulesDetachment.name_en
-                          ).replace(/ *\{[^)]*\}/g, "")}
+                          )?.replace(/ *\{[^)]*\}/g, "")}
                         </p>
                       );
                     })}
