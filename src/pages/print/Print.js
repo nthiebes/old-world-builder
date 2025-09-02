@@ -172,7 +172,7 @@ export const Print = () => {
                           list?.armyComposition || list?.army
                         ]?.specialRules || detachment.specialRules;
 
-                      if (!specialRulesDetachment) {
+                      if (!specialRulesDetachment?.name_en) {
                         return null;
                       }
 
@@ -192,7 +192,7 @@ export const Print = () => {
                           {(
                             specialRulesDetachment[`name_${language}`] ||
                             specialRulesDetachment.name_en
-                          )?.replace(/ *\{[^)]*\}/g, "")}
+                          ).replace(/ *\{[^)]*\}/g, "")}
                         </p>
                       );
                     })}

@@ -170,7 +170,7 @@ const getUnitsString = ({
             detachment.armyComposition?.[armyComposition]?.specialRules ||
             detachment.specialRules;
 
-          if (specialRulesDetachment) {
+          if (specialRulesDetachment?.name_en) {
             optionsString += `${
               isMarkdownList ? " - __" : ""
             }${intl.formatMessage({
