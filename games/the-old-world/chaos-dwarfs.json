@@ -8,6 +8,21 @@
       "name_fr": "Sorcier-Prophète",
       "id": "sorcerer-prophet",
       "points": 195,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters"
+        },
+        "cd-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut {renegade}, Resolute, Sorcerer's Curse, Stubborn",
+            "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
+            "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -129,7 +144,17 @@
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
-          "points": 120
+          "points": 120,
+          "armyComposition": "chaos-dwarfs"
+        },
+        {
+          "name_en": "Great Taurus {renegade}",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": "cd-renegade"
         },
         {
           "name_en": "Lammasu",
@@ -201,6 +226,21 @@
       "name_fr": "Forgeron-Démoniste",
       "id": "daemonsmith-sorcerer",
       "points": 85,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters"
+        },
+        "cd-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut {renegade}, Resolute, Sorcerer's Curse, Stubborn",
+            "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
+            "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -314,7 +354,17 @@
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
-          "points": 120
+          "points": 120,
+          "armyComposition": "chaos-dwarfs"
+        },
+        {
+          "name_en": "Great Taurus {renegade}",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": "cd-renegade"
         },
         {
           "name_en": "Lammasu",
@@ -522,7 +572,7 @@
           "active": true
         },
         {
-          "name_en": "Great Taurus",
+          "name_en": "Great Taurus {renegade}",
           "name_cn": "巨型魔牛",
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
