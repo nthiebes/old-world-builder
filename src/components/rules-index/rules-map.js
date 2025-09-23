@@ -85,6 +85,10 @@ const additionalOWBRules = {
 };
 
 export const synonyms = {
+  "the witch": "suffer not...",
+  "the revenant": "suffer not...",
+  "the mutant": "suffer not...",
+  "the daemon": "suffer not...",
   "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
