@@ -1367,6 +1367,86 @@ export const rules = {
       ],
     },
   },
+  "slayer-host": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["ungrim-ironfist"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["daemon-slayer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-slayer"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 20,
+      units: [],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["brotherhood-of-grimnir"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["doomseekers"],
+          min: 0,
+          max: 4,
+          requiresType: "characters",
+          requires: ["daemon-slayer", "dragon-slayer"],
+          perUnit: true,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["goblin-hewer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dwarf-cart"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hammerers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["ungrim-ironfist"],
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["rangers"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+  },
   "empire-of-man": {
     characters: {
       maxPercent: 50,

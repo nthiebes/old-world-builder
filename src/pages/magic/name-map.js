@@ -768,4 +768,10 @@ export const nameMap = {
     name_cn: "Renegade Crowns",
     name_fr: "Renegade Crowns",
   },
+  "slayer-host": {
+    name_de: "Slayer Host",
+    name_en: "Slayer Host",
+    name_cn: "Slayer Host",
+    name_fr: "Slayer Host",
+  },
 };

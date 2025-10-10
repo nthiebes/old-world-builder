@@ -195,7 +195,8 @@
       "armyComposition": [
         "dwarfen-mountain-holds",
         "royal-clan",
-        "expeditionary-force"
+        "expeditionary-force",
+        "slayer-host"
       ],
       "allies": [
         {
@@ -217,6 +218,10 @@
         {
           "army": "dwarfen-mountain-holds",
           "armyComposition": "expeditionary-force"
+        },
+        {
+          "army": "dwarfen-mountain-holds",
+          "armyComposition": "slayer-host"
         }
       ],
       "mercenaries": {
@@ -266,6 +271,12 @@
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls"]
+          }
+        ],
+        "slayer-host": [
+          {
+            "army": "dwarfen-mountain-holds",
+            "units": ["rangers"]
           }
         ]
       }

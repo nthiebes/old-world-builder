@@ -122,7 +122,9 @@ export const getUnitPoints = (unit, settings) => {
       }
       if (option.active && option.options && option.options.length > 0) {
         option.options.forEach((commandOption) => {
-          if (commandOption.active) {
+          if (commandOption.active && commandOption.perModel) {
+            unitPoints += (unit.strength || 1) * commandOption.points;
+          } else if (commandOption.active) {
             unitPoints += commandOption.points;
           }
         });
