@@ -762,4 +762,10 @@ export const nameMap = {
     name_cn: "Jade Fleet",
     name_fr: "Jade Fleet",
   },
+  "renegade-crowns": {
+    name_de: "Renegade Crowns",
+    name_en: "Renegade Crowns",
+    name_cn: "Renegade Crowns",
+    name_fr: "Renegade Crowns",
+  },
 };

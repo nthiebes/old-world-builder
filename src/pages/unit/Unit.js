@@ -742,7 +742,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               exclusive &&
                               unit.command.find(
                                 (commandUnit) =>
-                                  commandUnit.active && commandUnit.id !== id
+                                  commandUnit.active &&
+                                  commandUnit.id !== id &&
+                                  commandUnit.exclusive !== false
                               ))
                           }
                         />
@@ -837,38 +839,44 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             );
 
                             return (
-                              <div
-                                className="checkbox checkbox--conditional"
-                                key={option.name_en}
-                              >
-                                <input
-                                  type="checkbox"
-                                  id={`command-${id}-option-${optionIndex}`}
-                                  value={`${id}-${optionIndex}`}
-                                  onChange={() =>
-                                    handleCommandChange(id, optionIndex)
-                                  }
-                                  checked={Boolean(option.active)}
-                                  className="checkbox__input"
-                                  disabled={
-                                    (exclusiveCheckedOption &&
-                                      option.exclusive &&
-                                      !option.active) ||
-                                    detachmentActive
-                                  }
-                                />
-                                <label
-                                  htmlFor={`command-${id}-option-${optionIndex}`}
-                                  className="checkbox__label"
-                                >
-                                  <span className="unit__label-text">
-                                    <RulesWithIcon textObject={option} />
-                                  </span>
-                                  <i className="checkbox__points">
-                                    {getPointsText({ points: option.points })}
-                                  </i>
-                                </label>
-                              </div>
+                              <Fragment key={option.name_en}>
+                                <div className="checkbox checkbox--conditional">
+                                  <input
+                                    type="checkbox"
+                                    id={`command-${id}-option-${optionIndex}`}
+                                    value={`${id}-${optionIndex}`}
+                                    onChange={() =>
+                                      handleCommandChange(id, optionIndex)
+                                    }
+                                    checked={Boolean(option.active)}
+                                    className="checkbox__input"
+                                    disabled={
+                                      (exclusiveCheckedOption &&
+                                        option.exclusive &&
+                                        !option.active) ||
+                                      detachmentActive ||
+                                      option.alwaysActive
+                                    }
+                                  />
+                                  <label
+                                    htmlFor={`command-${id}-option-${optionIndex}`}
+                                    className="checkbox__label"
+                                  >
+                                    <span className="unit__label-text">
+                                      <RulesWithIcon textObject={option} />
+                                    </span>
+                                    <i className="checkbox__points">
+                                      {getPointsText({ points: option.points })}
+                                    </i>
+                                  </label>
+                                </div>
+                                {getUnitOptionNotes({
+                                  notes: option.notes,
+                                  key: `options-${index}-${optionIndex}-note`,
+                                  className: "unit__option-note",
+                                  language,
+                                })}
+                              </Fragment>
                             );
                           })}
                           <hr className="unit__command-option-hr" />
@@ -1031,6 +1039,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   exclusive = false,
                   options,
+                  useCheckboxes,
                   alwaysActive,
                   ...equipment
                 }) => {
@@ -1092,10 +1101,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     exclusiveOption.exclusive &&
                                     exclusiveOption.active
                                 );
-                                const allOptionsExclusive = options.every(
-                                  (opt) => opt.exclusive
-                                );
-
+                                const allOptionsExclusive = useCheckboxes
+                                  ? false
+                                  : options.every((opt) => opt.exclusive);
                                 return (
                                   <Fragment key={option.name_en}>
                                     <div className="checkbox checkbox--conditional">
@@ -1139,6 +1147,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         </i>
                                       </label>
                                     </div>
+                                    {getUnitOptionNotes({
+                                      notes: option.notes,
+                                      key: `options-${id}-${optionIndex}-note`,
+                                      className: "unit__option-note",
+                                      language,
+                                      disabled: option.disabled,
+                                    })}
                                     {optionIndex === options.length - 1 && (
                                       <hr className="unit__command-option-hr" />
                                     )}

@@ -3,6 +3,36 @@
   "name": "Warhammer: The Old World",
   "armies": [
     {
+      "id": "renegade-crowns",
+      "name_de": "Renegade Crowns",
+      "name_en": "Renegade Crowns",
+      "name_cn": "Renegade Crowns",
+      "name_es": "Renegade Crowns",
+      "name_fr": "Renegade Crowns",
+      "items": ["general"],
+      "armyComposition": ["renegade-crowns"],
+      "mercenaries": {
+        "renegade-crowns": [
+          {
+            "army": "dwarfen-mountain-holds",
+            "units": [
+              "doomseeker-merc",
+              "imperial-dwarf-mercenaries",
+              "prince-ulther's-dragon-company"
+            ]
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+          },
+          {
+            "army": "empire-of-man",
+            "units": ["imperial-ogres"]
+          }
+        ]
+      }
+    },
+    {
       "id": "empire-of-man",
       "name_de": "Empire of Man",
       "name_en": "Empire of Man",

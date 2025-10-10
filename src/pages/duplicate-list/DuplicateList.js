@@ -39,7 +39,6 @@ export const DuplicateList = ({ isMobile }) => {
   const handleSubmit = (event) => {
     const newId = getRandomId();
     const newLists = [
-      ...lists,
       {
         ...list,
         name,
@@ -47,6 +46,7 @@ export const DuplicateList = ({ isMobile }) => {
         description,
         id: newId,
       },
+      ...lists,
     ];
 
     event.preventDefault();

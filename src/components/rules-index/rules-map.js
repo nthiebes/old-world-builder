@@ -82,6 +82,7 @@ const additionalOWBRules = {
   "crown of antlers wood-elf-realms": {
     url: "magic-item/crown-of-antlers",
   },
+  "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
 };
 
 export const synonyms = {
@@ -236,6 +237,9 @@ export const synonyms = {
   "skin wolf jarl": "champions",
   "first sword": "champions",
   captain: "champions",
+  officer: "champions",
+  "veteran officer": "champions",
+  commander: "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",

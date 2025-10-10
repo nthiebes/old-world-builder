@@ -3875,6 +3875,68 @@ export const rules = {
       ],
     },
   },
+  "renegade-crowns": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["renegade-prince"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["veteran-sellswords"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["border-princes-mortar"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["border-princes-organ-gun", "border-princes-mortar"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["steam-tank"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["war-wagon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 33,
+      units: [],
+    },
+  },
 };
 
 export const getMaxPercentData = ({

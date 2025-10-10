@@ -72,9 +72,25 @@ export const Magic = ({ isMobile }) => {
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => armyId === id);
+      .armies.find(
+        ({ id }) =>
+          (unit && unit.items && unit.items[group]?.magicItemsArmy === id) ||
+          (command !== undefined &&
+            unit &&
+            unit.command &&
+            unit.command[command]?.magic?.magicItemsArmy === id)
+      );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [runesUsedElsewhere, setRunesUsedElsewhere] = useState([]);
+
+  // Fallback to list army if no specific army for items is set
+  if (!army) {
+    army =
+      list &&
+      gameSystems
+        .find(({ id }) => id === list.game)
+        .armies.find(({ id }) => armyId === id);
+  }
 
   // Use list army for arcane journals
   if (!army) {
