@@ -1,0 +1,2386 @@
+{
+  "characters": [
+    {
+      "name_en": "Renegade Prince",
+      "name_cn": "Renegade Prince",
+      "name_de": "Renegade Prince",
+      "name_fr": "Renegade Prince",
+      "name_es": "Renegade Prince",
+      "id": "renegade-prince",
+      "points": 75,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0,
+          "exclusive": false
+        },
+        {
+          "name_en": "The Might Of Miragliano",
+          "name_cn": "The Might Of Miragliano",
+          "name_de": "The Might Of Miragliano",
+          "name_fr": "The Might Of Miragliano",
+          "name_es": "The Might Of Miragliano",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Stubborn, Tilean Stoicism",
+              "name_cn": "Stubborn, Tilean Stoicism",
+              "name_de": "Stubborn, Tilean Stoicism",
+              "name_fr": "Stubborn, Tilean Stoicism",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Renegade Knight",
+          "name_cn": "The Renegade Knight",
+          "name_de": "The Renegade Knight",
+          "name_fr": "The Renegade Knight",
+          "name_es": "The Renegade Knight",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Noble Disdain, Veteran",
+              "name_cn": "Noble Disdain, Veteran",
+              "name_de": "Noble Disdain, Veteran",
+              "name_fr": "Noble Disdain, Veteran",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Noble Outlaw",
+          "name_cn": "The Noble Outlaw",
+          "name_de": "The Noble Outlaw",
+          "name_fr": "The Noble Outlaw",
+          "name_es": "The Noble Outlaw",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "\"Hold the Line!\"",
+              "name_cn": "\"Hold the Line!\"",
+              "name_de": "\"Hold the Line!\"",
+              "name_fr": "\"Hold the Line!\"",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Handgun",
+              "name_cn": "火枪",
+              "name_de": "Muskete",
+              "name_fr": "Arquebuse",
+              "name_es": "Arcabuz",
+              "points": 6,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_cn": "连发枪",
+              "name_de": "Bündelmuskete",
+              "name_fr": "Arquebuse à répétition",
+              "name_es": "Mosquete de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_cn": "连发手枪",
+              "name_de": "Bündelpistole",
+              "name_fr": "Pistolet à répétition",
+              "name_es": "Pistola de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Shortbow",
+              "name_cn": "短弓",
+              "name_de": "Shortbow",
+              "name_es": "Shortbow",
+              "name_fr": "Arc court",
+              "points": 2,
+              "exclusive": true
+            },
+            {
+              "name_en": "Longbow",
+              "name_cn": "长弓",
+              "name_de": "Langbogen",
+              "name_fr": "Arc long",
+              "name_es": "Arco largo",
+              "points": 4,
+              "exclusive": true
+            },
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_de": "Überfall",
+              "name_es": "Ambushers",
+              "name_fr": "Embusqueurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            },
+            {
+              "name_en": "Scouts",
+              "name_cn": "侦察",
+              "name_de": "Kundschafter",
+              "name_es": "Scouts",
+              "name_fr": "Éclaireurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            }
+          ]
+        },
+        {
+          "name_en": "The Wandering Diestro",
+          "name_cn": "The Wandering Diestro",
+          "name_de": "The Wandering Diestro",
+          "name_fr": "The Wandering Diestro",
+          "name_es": "The Wandering Diestro",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Feint & Dodge",
+              "name_cn": "Feint & Dodge",
+              "name_de": "Feint & Dodge",
+              "name_fr": "Feint & Dodge",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "name_cn": "额外单手武器",
+              "name_de": "Additional hand weapon",
+              "name_fr": "Arme de base additionnelle",
+              "points": 3
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_fr": "Arme lourde",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Hellebarde",
+          "name_fr": "Hallebarde",
+          "name_es": "Alabarda",
+          "points": 3
+        },
+        {
+          "name_en": "Lance",
+          "name_cn": "长枪",
+          "name_de": "Lanze",
+          "name_fr": "Lance de joute",
+          "name_es": "Lanza de caballería",
+          "points": 4,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_cn": "若处于骑乘状态",
+            "name_it": "if appropriately mounted",
+            "name_de": "wenn beritten",
+            "name_fr": "si monté",
+            "name_es": "si está montado"
+          }
+        },
+        {
+          "name_en": "Morning star",
+          "name_cn": "晨星锤",
+          "name_de": "Morgenstern",
+          "name_fr": "Morning star",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 3
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_fr": "Bouclier",
+          "name_es": "Escudo",
+          "points": 2
+        },
+        {
+          "name_en": "Warbow",
+          "name_cn": "战弓",
+          "name_it": "Arco da Guerra",
+          "name_de": "Kriegsbogen",
+          "name_es": "Arco de guerra",
+          "name_fr": "Arc de guerre",
+          "points": 3,
+          "exclusive": true
+        },
+        {
+          "name_en": "Crossbow",
+          "name_cn": "十字弩",
+          "name_de": "Armbrust",
+          "name_fr": "Arbalète",
+          "name_es": "Ballesta",
+          "points": 4,
+          "exclusive": true
+        },
+        {
+          "name_en": "Pistol",
+          "name_cn": "手枪",
+          "name_de": "Pistole",
+          "name_fr": "Pistolet",
+          "name_es": "Pistola",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_cn": "成对手枪",
+          "name_de": "Pistolenpaar",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_fr": "À Pied",
+          "name_es": "A pie",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorse",
+          "name_cn": "披甲战马",
+          "name_de": "Schlachtross mit Rossharnisch",
+          "name_fr": "Destrier Caparaçonné",
+          "name_es": "Caballo de guerra con barda",
+          "points": 16
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "notes": {
+            "name_en": "Ignore with Renegade Knight or Noble Outlaw Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "magicItemsArmy": "kingdom-of-bretonnia",
+          "notes": {
+            "name_en": "Only with the Renegade Knight Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100,
+          "magicItemsArmy": "empire-of-man",
+          "notes": {
+            "name_en": "Only with the Noble Outlaw Infamous Origin"
+          }
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Rallying Cry, Veteran, Warband",
+        "name_cn": "集结战吼, 老兵, 战帮",
+        "name_de": "Sammelruf, Veteranen, Kriegerschar",
+        "name_fr": "Cri de Ralliement, Vétérans, Bande de Guerre",
+        "name_es": "Grito de Guerra, Veteran, Warband"
+      },
+      "notes": {
+        "name_en": "0-1 Renegade Prince per 1,000 points",
+        "name_cn": "0-1 Renegade Prince per 1,000 points",
+        "name_de": "0-1 Renegade Prince per 1,000 points",
+        "name_fr": "0-1 Renegade Prince per 1,000 points",
+        "name_es": "0-1 Renegade Prince per 1,000 points"
+      }
+    },
+    {
+      "name_en": "Renegade Captain",
+      "name_cn": "Renegade Captain",
+      "name_de": "Renegade Captain",
+      "name_fr": "Renegade Captain",
+      "name_es": "Renegade Captain",
+      "id": "renegade-captain",
+      "points": 35,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Excludes Battle Standard Bearer"
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Ignore with Renegade Knight or Noble Outlaw Infamous Origin"
+          },
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Only with the Renegade Knight Infamous Origin"
+          },
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0,
+            "magicItemsArmy": "kingdom-of-bretonnia"
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Only with the Noble Outlaw Infamous Origin"
+          },
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0,
+            "magicItemsArmy": "empire-of-man"
+          }
+        },
+        {
+          "name_en": "The Might Of Miragliano",
+          "name_cn": "The Might Of Miragliano",
+          "name_de": "The Might Of Miragliano",
+          "name_fr": "The Might Of Miragliano",
+          "name_es": "The Might Of Miragliano",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Stubborn, Tilean Stoicism",
+              "name_cn": "Stubborn, Tilean Stoicism",
+              "name_de": "Stubborn, Tilean Stoicism",
+              "name_fr": "Stubborn, Tilean Stoicism",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Renegade Knight",
+          "name_cn": "The Renegade Knight",
+          "name_de": "The Renegade Knight",
+          "name_fr": "The Renegade Knight",
+          "name_es": "The Renegade Knight",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Noble Disdain, Veteran",
+              "name_cn": "Noble Disdain, Veteran",
+              "name_de": "Noble Disdain, Veteran",
+              "name_fr": "Noble Disdain, Veteran",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Noble Outlaw",
+          "name_cn": "The Noble Outlaw",
+          "name_de": "The Noble Outlaw",
+          "name_fr": "The Noble Outlaw",
+          "name_es": "The Noble Outlaw",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "\"Hold the Line!\"",
+              "name_cn": "\"Hold the Line!\"",
+              "name_de": "\"Hold the Line!\"",
+              "name_fr": "\"Hold the Line!\"",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Handgun",
+              "name_cn": "火枪",
+              "name_de": "Muskete",
+              "name_fr": "Arquebuse",
+              "name_es": "Arcabuz",
+              "points": 6,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_cn": "连发枪",
+              "name_de": "Bündelmuskete",
+              "name_fr": "Arquebuse à répétition",
+              "name_es": "Mosquete de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_cn": "连发手枪",
+              "name_de": "Bündelpistole",
+              "name_fr": "Pistolet à répétition",
+              "name_es": "Pistola de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Shortbow",
+              "name_cn": "短弓",
+              "name_de": "Shortbow",
+              "name_es": "Shortbow",
+              "name_fr": "Arc court",
+              "points": 2,
+              "exclusive": true
+            },
+            {
+              "name_en": "Longbow",
+              "name_cn": "长弓",
+              "name_de": "Langbogen",
+              "name_fr": "Arc long",
+              "name_es": "Arco largo",
+              "points": 4,
+              "exclusive": true
+            },
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_de": "Überfall",
+              "name_es": "Ambushers",
+              "name_fr": "Embusqueurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            },
+            {
+              "name_en": "Scouts",
+              "name_cn": "侦察",
+              "name_de": "Kundschafter",
+              "name_es": "Scouts",
+              "name_fr": "Éclaireurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            }
+          ]
+        },
+        {
+          "name_en": "The Wandering Diestro",
+          "name_cn": "The Wandering Diestro",
+          "name_de": "The Wandering Diestro",
+          "name_fr": "The Wandering Diestro",
+          "name_es": "The Wandering Diestro",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Feint & Dodge",
+              "name_cn": "Feint & Dodge",
+              "name_de": "Feint & Dodge",
+              "name_fr": "Feint & Dodge",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "name_cn": "额外单手武器",
+              "name_de": "Additional hand weapon",
+              "name_fr": "Arme de base additionnelle",
+              "points": 3
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_fr": "Arme lourde",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Hellebarde",
+          "name_fr": "Hallebarde",
+          "name_es": "Alabarda",
+          "points": 3
+        },
+        {
+          "name_en": "Lance",
+          "name_cn": "长枪",
+          "name_de": "Lanze",
+          "name_fr": "Lance de joute",
+          "name_es": "Lanza de caballería",
+          "points": 4,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_cn": "若处于骑乘状态",
+            "name_it": "if appropriately mounted",
+            "name_de": "wenn beritten",
+            "name_fr": "si monté",
+            "name_es": "si está montado"
+          }
+        },
+        {
+          "name_en": "Morning star",
+          "name_cn": "晨星锤",
+          "name_de": "Morgenstern",
+          "name_fr": "Morning star",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 3
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_fr": "Bouclier",
+          "name_es": "Escudo",
+          "points": 2
+        },
+        {
+          "name_en": "Warbow",
+          "name_cn": "战弓",
+          "name_it": "Arco da Guerra",
+          "name_de": "Kriegsbogen",
+          "name_es": "Arco de guerra",
+          "name_fr": "Arc de guerre",
+          "points": 3,
+          "exclusive": true
+        },
+        {
+          "name_en": "Crossbow",
+          "name_cn": "十字弩",
+          "name_de": "Armbrust",
+          "name_fr": "Arbalète",
+          "name_es": "Ballesta",
+          "points": 4,
+          "exclusive": true
+        },
+        {
+          "name_en": "Pistol",
+          "name_cn": "手枪",
+          "name_de": "Pistole",
+          "name_fr": "Pistolet",
+          "name_es": "Pistola",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_cn": "成对手枪",
+          "name_de": "Pistolenpaar",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_fr": "À Pied",
+          "name_es": "A pie",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorse",
+          "name_cn": "披甲战马",
+          "name_de": "Schlachtross mit Rossharnisch",
+          "name_fr": "Destrier Caparaçonné",
+          "name_es": "Caballo de guerra con barda",
+          "points": 16
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "Ignore with Renegade Knight or Noble Outlaw Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "magicItemsArmy": "kingdom-of-bretonnia",
+          "notes": {
+            "name_en": "Only with the Renegade Knight Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50,
+          "magicItemsArmy": "empire-of-man",
+          "notes": {
+            "name_en": "Only with the Noble Outlaw Infamous Origin"
+          }
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Rallying Cry, Veteran, Warband",
+        "name_cn": "集结战吼, 老兵, 战帮",
+        "name_de": "Sammelruf, Veteranen, Kriegerschar",
+        "name_fr": "Cri de Ralliement, Vétérans, Bande de Guerre",
+        "name_es": "Grito de Guerra, Veteran, Warband"
+      }
+    },
+    {
+      "name_en": "Outcast Wizard",
+      "name_cn": "流亡法师",
+      "name_de": "Ausgestoßene Zauberer",
+      "name_es": "Outcast Wizard",
+      "name_fr": "Mage Proscrit",
+      "id": "outcast-wizard",
+      "points": 45,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0,
+          "exclusive": false
+        },
+        {
+          "name_en": "The Might Of Miragliano",
+          "name_cn": "The Might Of Miragliano",
+          "name_de": "The Might Of Miragliano",
+          "name_fr": "The Might Of Miragliano",
+          "name_es": "The Might Of Miragliano",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Stubborn, Tilean Stoicism",
+              "name_cn": "Stubborn, Tilean Stoicism",
+              "name_de": "Stubborn, Tilean Stoicism",
+              "name_fr": "Stubborn, Tilean Stoicism",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Renegade Knight",
+          "name_cn": "The Renegade Knight",
+          "name_de": "The Renegade Knight",
+          "name_fr": "The Renegade Knight",
+          "name_es": "The Renegade Knight",
+          "points": 25,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Noble Disdain, Veteran",
+              "name_cn": "Noble Disdain, Veteran",
+              "name_de": "Noble Disdain, Veteran",
+              "name_fr": "Noble Disdain, Veteran",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        },
+        {
+          "name_en": "The Noble Outlaw",
+          "name_cn": "The Noble Outlaw",
+          "name_de": "The Noble Outlaw",
+          "name_fr": "The Noble Outlaw",
+          "name_es": "The Noble Outlaw",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "\"Hold the Line!\"",
+              "name_cn": "\"Hold the Line!\"",
+              "name_de": "\"Hold the Line!\"",
+              "name_fr": "\"Hold the Line!\"",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Handgun",
+              "name_cn": "火枪",
+              "name_de": "Muskete",
+              "name_fr": "Arquebuse",
+              "name_es": "Arcabuz",
+              "points": 6,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater handgun",
+              "name_cn": "连发枪",
+              "name_de": "Bündelmuskete",
+              "name_fr": "Arquebuse à répétition",
+              "name_es": "Mosquete de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Repeater pistol",
+              "name_cn": "连发手枪",
+              "name_de": "Bündelpistole",
+              "name_fr": "Pistolet à répétition",
+              "name_es": "Pistola de repetición",
+              "points": 8,
+              "exclusive": true
+            },
+            {
+              "name_en": "Shortbow",
+              "name_cn": "短弓",
+              "name_de": "Shortbow",
+              "name_es": "Shortbow",
+              "name_fr": "Arc court",
+              "points": 2,
+              "exclusive": true
+            },
+            {
+              "name_en": "Longbow",
+              "name_cn": "长弓",
+              "name_de": "Langbogen",
+              "name_fr": "Arc long",
+              "name_es": "Arco largo",
+              "points": 4,
+              "exclusive": true
+            },
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_de": "Überfall",
+              "name_es": "Ambushers",
+              "name_fr": "Embusqueurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            },
+            {
+              "name_en": "Scouts",
+              "name_cn": "侦察",
+              "name_de": "Kundschafter",
+              "name_es": "Scouts",
+              "name_fr": "Éclaireurs",
+              "points": 10,
+              "notes": {
+                "name_en": "Ambushers OR Scouts",
+                "name_cn": "Ambushers OR Scouts",
+                "name_de": "Ambushers OR Scouts",
+                "name_fr": "Ambushers OR Scouts",
+                "name_es": "Ambushers OR Scouts"
+              }
+            }
+          ]
+        },
+        {
+          "name_en": "The Wandering Diestro",
+          "name_cn": "The Wandering Diestro",
+          "name_de": "The Wandering Diestro",
+          "name_fr": "The Wandering Diestro",
+          "name_es": "The Wandering Diestro",
+          "points": 20,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Feint & Dodge",
+              "name_cn": "Feint & Dodge",
+              "name_de": "Feint & Dodge",
+              "name_fr": "Feint & Dodge",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "name_cn": "额外单手武器",
+              "name_de": "Additional hand weapon",
+              "name_fr": "Arme de base additionnelle",
+              "points": 3
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_fr": "Arme de base",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Zauberer der Stufe 3",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Warhorse {bretonnia}",
+          "name_cn": "战马 {bretonnia}",
+          "name_de": "Schlachtross",
+          "name_fr": "Destrier",
+          "name_es": "Warhorse",
+          "points": 12
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos mágicos",
+          "types": [
+            "weapon",
+            "talisman",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 75,
+          "notes": {
+            "name_en": "Ignore with Renegade Knight or Noble Outlaw Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": [
+            "weapon",
+            "talisman",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 75,
+          "magicItemsArmy": "kingdom-of-bretonnia",
+          "notes": {
+            "name_en": "Only with the Renegade Knight Infamous Origin"
+          }
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": [
+            "weapon",
+            "talisman",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 75,
+          "magicItemsArmy": "empire-of-man",
+          "notes": {
+            "name_en": "Only with the Noble Outlaw Infamous Origin"
+          }
+        }
+      ],
+      "lores": [
+        "battle-magic",
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1), Untutored Arcanist",
+        "name_cn": "魔法攻击, 魔法抗性(-1), 野蛮奥术",
+        "name_de": "Magische Attacken, Magieresistenz (-1), Ungelernter Arkanist",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1), Arcaniste Autodidacte"
+      }
+    }
+  ],
+  "core": [
+    {
+      "name_de": "Sellsword Infantry",
+      "name_en": "Sellsword Infantry",
+      "name_cn": "Sellsword Infantry",
+      "name_fr": "Sellsword Infantry",
+      "id": "sellsword-infantry",
+      "points": 4,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Officer (champion)",
+          "name_cn": "Officer (冠军)",
+          "name_it": "Officer (campione)",
+          "name_de": "Officer (Champion)",
+          "name_fr": "Officer (champion)",
+          "points": 7
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 5
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_it": "Armi Bianche",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "defaultSelected": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_de": "Stoßspeere",
+          "name_cn": "刺矛",
+          "name_fr": "Lances d'infanterie",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_cn": "长戟",
+          "name_de": "Hellebarden",
+          "name_fr": "Hallebardes",
+          "name_es": "Alabardas",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_it": "Grandi Armi",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Crossbows",
+          "name_de": "Armbrüste",
+          "name_cn": "十字弩",
+          "name_fr": "Arbalètes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Handguns",
+          "name_de": "Musketen",
+          "name_cn": "火枪",
+          "name_fr": "Arquebuses",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_de": "Leichte Rüstung",
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_it": "Scudi",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Heavy Infantry, Phalanx",
+          "name_cn": "Heavy Infantry, Phalanx",
+          "name_it": "Heavy Infantry, Phalanx",
+          "name_de": "Heavy Infantry, Phalanx",
+          "name_fr": "Heavy Infantry, Phalanx",
+          "points": 10,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Might of Miragliano Infamous Origin"
+          }
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Horde, Regimental Unit, Warband",
+        "name_cn": "Close Order, Detachment, Horde, Regimental Unit, Warband",
+        "name_it": "Close Order, Detachment, Horde, Regimental Unit, Warband",
+        "name_de": "Close Order, Detachment, Horde, Regimental Unit, Warband",
+        "name_es": "Close Order, Detachment, Horde, Regimental Unit, Warband",
+        "name_fr": "Close Order, Detachment, Horde, Regimental Unit, Warband"
+      }
+    },
+    {
+      "name_de": "Veteran Sellswords",
+      "name_en": "Veteran Sellswords",
+      "name_cn": "Veteran Sellswords",
+      "name_fr": "Veteran Sellswords",
+      "id": "veteran-sellswords",
+      "points": 5,
+      "minimum": 5,
+      "maximum": 0,
+      "notes": {
+        "name_en": "0-1 unit of Veteran Sellswords per 1,000",
+        "name_cn": "0-1 unit of Veteran Sellswords per 1,000",
+        "name_it": "0-1 unit of Veteran Sellswords per 1,000",
+        "name_de": "0-1 unit of Veteran Sellswords per 1,000",
+        "name_fr": "0-1 unit of Veteran Sellswords per 1,000"
+      },
+      "command": [
+        {
+          "name_en": "Veteran Officer (champion)",
+          "name_cn": "Veteran Officer (冠军)",
+          "name_it": "Veteran Officer (campione)",
+          "name_de": "Veteran Officer (Champion)",
+          "name_fr": "Veteran Officer (champion)",
+          "points": 7,
+          "magic": {
+            "types": [
+              "arcane-item",
+              "enchanted-item",
+              "talisman",
+              "weapon",
+              "armor"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_it": "Armi Bianche",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "defaultSelected": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_de": "Stoßspeere",
+          "name_cn": "刺矛",
+          "name_fr": "Lances d'infanterie",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberds",
+          "name_cn": "长戟",
+          "name_de": "Hellebarden",
+          "name_fr": "Hallebardes",
+          "name_es": "Alabardas",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_it": "Grandi Armi",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Crossbows",
+          "name_de": "Armbrüste",
+          "name_cn": "十字弩",
+          "name_fr": "Arbalètes",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Handguns",
+          "name_de": "Musketen",
+          "name_cn": "火枪",
+          "name_fr": "Arquebuses",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_de": "Leichte Rüstung",
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_it": "Scudi",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_it": "Addestrati",
+          "name_de": "Gut ausgebildet",
+          "name_fr": "Bien Entraînés",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Heavy Infantry, Phalanx",
+          "name_cn": "Heavy Infantry, Phalanx",
+          "name_it": "Heavy Infantry, Phalanx",
+          "name_de": "Heavy Infantry, Phalanx",
+          "name_fr": "Heavy Infantry, Phalanx",
+          "points": 10,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Might of Miragliano Infamous Origin"
+          }
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran",
+        "name_cn": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran",
+        "name_it": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran",
+        "name_de": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran",
+        "name_es": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran",
+        "name_fr": "Close Order, Detachment, Horde, Regimental Unit, Warband, Veteran"
+      }
+    },
+    {
+      "name_en": "Freeblade Knights",
+      "name_cn": "Freeblade Knights",
+      "name_de": "Freeblade Knights",
+      "name_fr": "Freeblade Knights",
+      "name_es": "Freeblade Knights",
+      "id": "freeblade-knights",
+      "points": 18,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Commander (champion)",
+          "name_cn": "Commander (冠军)",
+          "name_de": "Commander (Champion)",
+          "name_fr": "Commander (champion)",
+          "name_es": "Commander (campeón)",
+          "points": 6
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances",
+          "name_cn": "单手武器, 长枪",
+          "name_de": "Handwaffen, Lanzen",
+          "name_fr": "Armes de base, Lances de joute",
+          "name_es": "Armas de mano, Lanzas de caballería",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Handwaffen, Zweihandwaffen",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Warhorses",
+          "name_cn": "Warhorses",
+          "name_de": "Warhorses",
+          "name_fr": "Warhorses",
+          "name_es": "Warhorses",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorses",
+          "name_cn": "Barded Warhorses",
+          "name_de": "Barded Warhorses",
+          "name_fr": "Barded Warhorses",
+          "name_es": "Barded Warhorses",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_it": "Scudi",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance Formation, Noble Disdain",
+          "name_cn": "Lance Formation, Noble Disdain",
+          "name_it": "Lance Formation, Noble Disdain",
+          "name_de": "Lance Formation, Noble Disdain",
+          "name_fr": "Lance Formation, Noble Disdain",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Outcast Knights Infamous Origin"
+          }
+        }
+      ],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, First Charge, Swiftstride",
+        "name_cn": "紧密阵型, 反制冲锋, 先行冲锋, 快速行进",
+        "name_de": "Geschlossene Ränge, Gegenangriff, Erster Angriff, Schnelle Bewegung",
+        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Rapide",
+        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz"
+      }
+    },
+    {
+      "name_en": "Hireling Outriders",
+      "name_cn": "Hireling Outriders",
+      "name_de": "Hireling Outriders",
+      "name_fr": "Hireling Outriders",
+      "name_es": "Hireling Outriders",
+      "id": "hireling-outriders",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Captain",
+          "name_cn": "Captain",
+          "name_de": "Captain",
+          "name_fr": "Captain",
+          "name_es": "Captain",
+          "points": 6
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "name_es": "Armas de mano",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
+          "name_de": "Kavalleriespeer",
+          "name_es": "Lanza de caballería",
+          "name_fr": "Lance de cavalerie",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Shortbows",
+          "name_cn": "短弓",
+          "name_de": "Shortbows",
+          "name_es": "Cambiar escudos por arcos cortos",
+          "name_fr": "Arcs courts",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Pistols",
+          "name_cn": "手枪",
+          "name_de": "Pistole",
+          "name_es": "Pistols",
+          "name_fr": "Pistolets",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_cn": "成对手枪",
+          "name_de": "Pistolenpaar",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 6,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "keine Rüstung",
+          "name_fr": "Pas d'armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_de": "Leichte Rüstung",
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_fr": "Armure légère",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_it": "Armatura Pesante",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Feigned Flight",
+          "name_cn": "诱敌诈退",
+          "name_de": "Vorgetäuschte Flucht",
+          "name_fr": "Fuite Feinte",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Reserve Move",
+          "name_cn": "预备移动",
+          "name_de": "Reservebewegung",
+          "name_fr": "Mouvement de Réserve",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 per 1.000 Punkte",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Vanguard",
+          "name_cn": "先锋",
+          "name_de": "Vanguard",
+          "name_es": "Vanguard",
+          "name_fr": "Avant-garde",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 per 1.000 Punkte",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Ambushers",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Noble Outlaw Infamous Origin"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride",
+        "name_cn": "快速骑兵, 游击, 开放阵型, 散兵, 快速行进",
+        "name_de": "Wendige Kavallerie, Schießen und Verschwinden, Offene Ränge, Plänkler, Schnelle Bewegung",
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Ordre Dispersé, Tirailleurs, Rapide",
+        "name_es": "Caballería Rápida, Disparar y Huir, Formación Abierta, Hostigadores, Zancada Veloz"
+      }
+    },
+    {
+      "name_en": "Free Company Militia",
+      "name_cn": "自由联队民兵",
+      "name_de": "Freischärler",
+      "name_fr": "Milice des Franches Compagnies",
+      "name_es": "Milicia de Compañías Libres",
+      "id": "free-company-militia",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "minDetachmentSize": 5,
+      "command": [
+        {
+          "name_en": "Militia leader (champion)",
+          "name_cn": "民兵领袖(冠军)",
+          "name_de": "Feldwaibel der Miliz (Champion)",
+          "name_fr": "Chef de Milice (champion)",
+          "name_es": "Lider de la Milicia (campeón)",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Additional hand weapons, Throwing weapons (mixed weapons)",
+          "name_cn": "额外单手武器, 投掷武器（混合武器）",
+          "name_de": "Zusätzliche Handwaffen, Wurfwaffen (gemischte Waffen)",
+          "name_fr": "Armes de base additionnelles, Armes de lancer (armes mixtes)",
+          "name_es": "Armas de mano adicionales, Armas arrojadizas (armas variadas)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Detachment",
+          "name_cn": "分遣队",
+          "name_de": "Abteilung",
+          "name_fr": "Détachement",
+          "name_es": "Destacamento",
+          "points": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Detachment, Horde, Impetuous, Levies, Open Order, Warband",
+        "name_cn": "分遣队, 部群, 鲁莽, 炮灰, 开放阵型, 战帮",
+        "name_de": "Abteilung, Horde, Ungestüm, Gesindel, Offene Ränge, Kriegerschar",
+        "name_fr": "Détachement, Horde, Impétueux, Conscrits, Ordre Dispersé, Bande de Guerre",
+        "name_es": "Destacamento, Horda, Impetuoso, Levas, Formación Abierta, Partida de Guerra"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    },
+    {
+      "name_en": "Empire Archers",
+      "name_cn": "帝国弓箭手",
+      "name_de": "Imperiale Bogenschützen",
+      "name_fr": "Archers de l'Empire",
+      "name_es": "Arqueros del Imperio",
+      "id": "empire-archers",
+      "points": 7,
+      "minimum": 5,
+      "maximum": 0,
+      "minDetachmentSize": 5,
+      "command": [
+        {
+          "name_en": "Marksman (champion)",
+          "name_cn": "神射手(冠军)",
+          "name_de": "Meisterschütze (Champion)",
+          "name_fr": "Tireur d'Élite (champion)",
+          "name_es": "Tirador (campeón)",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Warbows",
+          "name_cn": "单手武器, 战弓",
+          "name_de": "Handwaffen, Kriegsbögen",
+          "name_fr": "Armes de base, Arcs de guerre",
+          "name_es": "Armas de mano, Arcos de guerra",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Fire & Flee",
+          "name_cn": "游击",
+          "name_de": "Schießen und verschwinden",
+          "name_fr": "Tir & Fuite",
+          "name_es": "Disparar y huir",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_fr": "Éclaireurs",
+          "name_es": "Exploradores",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Detachment",
+          "name_cn": "分遣队",
+          "name_de": "Abteilung",
+          "name_fr": "Détachement",
+          "name_es": "Destacamento",
+          "points": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Detachment, Move Through Cover, Open Order, Skirmishers, Vanguard",
+        "name_cn": "分遣队, 穿行掩体, 开放阵型, 散兵, 先锋",
+        "name_de": "Abteilung, Durch Deckung bewegen, Offene Ränge, Plänkler, Vorhut",
+        "name_fr": "Détachement, Mouvement à Couvert, Ordre Dispersé, Tirailleurs, Avant-garde",
+        "name_es": "Destacamento, Mover a Través de Cobertura, Formación Abierta, Hostigadores, Vanguardia"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Veteran Freeblades",
+      "name_cn": "Veteran Freeblades",
+      "name_de": "Veteran Freeblades",
+      "name_fr": "Veteran Freeblades",
+      "name_es": "Veteran Freeblades",
+      "id": "veteran-freeblades",
+      "points": 22,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Veteran Commander (champion)",
+          "name_cn": "Veteran Commander (冠军)",
+          "name_de": "Veteran Commander (Champion)",
+          "name_fr": "Veteran Commander (champion)",
+          "name_es": "Veteran Commander (campeón)",
+          "points": 6
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances",
+          "name_cn": "单手武器, 长枪",
+          "name_de": "Handwaffen, Lanzen",
+          "name_fr": "Armes de base, Lances de joute",
+          "name_es": "Armas de mano, Lanzas de caballería",
+          "points": 1,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Handwaffen, Zweihandwaffen",
+          "name_fr": "Armes de base, Armes lourdes",
+          "name_es": "Armas de mano, Armas a dos manos",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Warhorses",
+          "name_cn": "Warhorses",
+          "name_de": "Warhorses",
+          "name_fr": "Warhorses",
+          "name_es": "Warhorses",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorses",
+          "name_cn": "Barded Warhorses",
+          "name_de": "Barded Warhorses",
+          "name_fr": "Barded Warhorses",
+          "name_es": "Barded Warhorses",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_it": "Scudi",
+          "name_de": "Schilde",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance Formation, Noble Disdain",
+          "name_cn": "Lance Formation, Noble Disdain",
+          "name_it": "Lance Formation, Noble Disdain",
+          "name_de": "Lance Formation, Noble Disdain",
+          "name_fr": "Lance Formation, Noble Disdain",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Outcast Knights Infamous Origin"
+          }
+        }
+      ],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, First Charge, Swiftstride, Veteran",
+        "name_cn": "紧密阵型, 反制冲锋, 先行冲锋, 快速行进, Veteran",
+        "name_de": "Geschlossene Ränge, Gegenangriff, Erster Angriff, Schnelle Bewegung, Veteran",
+        "name_fr": "Ordre Serré, Contre-charge, Première Charge, Rapide, Veteran",
+        "name_es": "Formación Cerrada, Contracarga, Primera Carga, Zancada Veloz, Veteran"
+      }
+    },
+    {
+      "name_en": "Border Princes Mortar",
+      "name_cn": "Border Princes Mortar",
+      "name_it": "Border Princes Mortar",
+      "name_de": "Border Princes Mortar",
+      "name_fr": "Border Princes Mortar",
+      "id": "border-princes-mortar",
+      "points": 90,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Mortar, Hand weapons",
+          "name_cn": "臼炮, 单手武器",
+          "name_de": "Mörser, Handwaffen",
+          "name_fr": "Mortier, Armes de base",
+          "name_es": "Mortero, Armas de mano",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Levies, Skirmishers",
+        "name_cn": "Levies, 散兵",
+        "name_it": "Levies, Schermagliatori",
+        "name_de": "Levies, Plänkler",
+        "name_es": "Levies, Skirmishers",
+        "name_fr": "Levies, Tirailleurs"
+      },
+      "notes": {
+        "name_en": "0-2 Border Princes Mortars per 1,000 points"
+      }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Border Princes Brigands",
+      "name_cn": "边境亲王领盗贼",
+      "name_de": "Briganten der Grenzgrafschaften",
+      "name_es": "Border Princes Brigands",
+      "name_fr": "Brigands des Principautés Frontalières",
+      "id": "border-princes-brigands",
+      "points": 4,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Desperado (champion)",
+          "name_cn": "匪首(冠军)",
+          "name_de": "Rädelsführer",
+          "name_es": "Desperado (champion)",
+          "name_fr": "Desperado (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "points": 5
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_es": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "zusätzliche Handwaffe",
+          "name_fr": "Arme de base additionnelle",
+          "name_es": "Additional hand weapon",
+          "points": 2,
+          "stackable": true
+        },
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_fr": "Boucliers",
+          "name_es": "Shields",
+          "points": 1,
+          "stackable": true
+        },
+        {
+          "name_en": "Pistols",
+          "name_cn": "手枪",
+          "name_de": "Pistole",
+          "name_es": "Pistols",
+          "name_fr": "Pistolets",
+          "points": 2,
+          "stackable": true
+        },
+        {
+          "name_en": "Blunderbusses",
+          "name_cn": "喇叭枪",
+          "name_de": "Donnerbüchse",
+          "name_es": "Blunderbusses",
+          "name_fr": "Tromblons",
+          "points": 4,
+          "stackable": true
+        },
+        {
+          "name_en": "Crossbows",
+          "name_cn": "十字弩",
+          "name_de": "Armbrust",
+          "name_es": "Crossbows",
+          "name_fr": "Arbalètes",
+          "points": 3,
+          "stackable": true
+        },
+        {
+          "name_en": "Formation",
+          "name_cn": "Formation",
+          "name_de": "Formation",
+          "name_fr": "Formation",
+          "name_es": "Formation",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "notes": {
+            "name_en": "0-1 Close Order and 0-1 Skirmishers per 1000 points"
+          },
+          "options": [
+            {
+              "name_en": "Open Order",
+              "name_cn": "开放阵型",
+              "name_it": "Formazione Aperta",
+              "name_de": "Offene Ränge",
+              "name_fr": "Ordre Dispersé",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Close Order",
+              "name_cn": "Close Order",
+              "name_it": "Close Order",
+              "name_de": "Close Order",
+              "name_fr": "Close Order",
+              "points": 0,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Skirmishers",
+              "name_cn": "散兵",
+              "name_de": "Plänkler",
+              "name_fr": "Tirailleurs",
+              "points": 0,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_es": "Ambushers",
+          "name_fr": "Embusqueurs",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_en": "If Skirmishers",
+            "name_cn": "如果散兵",
+            "name_de": "Wenn Plänkler",
+            "name_fr": "Si Tirailleurs",
+            "name_es": "If Skirmishers"
+          }
+        },
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_es": "Scouts",
+          "name_fr": "Éclaireurs",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "If Skirmishers",
+            "name_cn": "如果散兵",
+            "name_de": "Wenn Plänkler",
+            "name_fr": "Si Tirailleurs",
+            "name_es": "If Skirmishers"
+          }
+        },
+        {
+          "name_en": "+1 to Weapon Skill",
+          "name_cn": "+1 to Weapon Skill",
+          "name_de": "+1 to Weapon Skill",
+          "name_fr": "+1 to Weapon Skill",
+          "name_es": "+1 to Weapon Skill",
+          "points": 2,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Wandering Duelists Infamous Origin"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_cn": "部群, 鲁莽, 炮灰, 散兵游勇, 开放阵型, 战帮",
+        "name_de": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_es": "Horde, Impetuous, Levies, Motley Crew, Open Order, Warband",
+        "name_fr": "Horde, Impétueux, Conscrits, Bande Hétéroclite, Ordre Dispersé, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Border Princes Organ Gun",
+      "name_cn": "Border Princes Organ Gun",
+      "name_it": "Border Princes Organ Gun",
+      "name_de": "Border Princes Organ Gun",
+      "name_fr": "Border Princes Organ Gun",
+      "id": "border-princes-organ-gun",
+      "points": 125,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Organ gun, Hand weapons",
+          "name_cn": "风琴炮, 单手武器",
+          "name_it": "Organ gun, Hand weapons",
+          "name_de": "Orgelkanone, Handwaffen",
+          "name_fr": "Canon-orgue, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Levies, Skirmishers",
+        "name_cn": "Levies, 散兵",
+        "name_it": "Levies, Schermagliatori",
+        "name_de": "Levies, Plänkler",
+        "name_es": "Levies, Skirmishers",
+        "name_fr": "Levies, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Border Princes Bombard",
+      "name_cn": "边境亲王领射石炮",
+      "name_de": "Bombarde der Grenzgrafschaften",
+      "name_es": "Border Princes Bombard",
+      "name_fr": "Bombarde des Principautés Frontalières",
+      "id": "border-princes-bombard",
+      "points": 100,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Bombard, Hand weapons",
+          "name_cn": "Bombard, 单手武器",
+          "name_de": "Bombard, Handwaffen",
+          "name_es": "Bombard, Hand weapons",
+          "name_fr": "Bombard, Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "name_es": "Light armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Levies, Skirmishers",
+        "name_cn": "炮灰, 散兵",
+        "name_de": "Gesindel, Plänkler",
+        "name_es": "Levies, Skirmishers",
+        "name_fr": "Conscrits, Tirailleurs"
+      }
+    }
+  ],
+  "mercenaries": []
+}
