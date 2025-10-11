@@ -2568,7 +2568,7 @@ export const rules = {
       maxPercent: 20,
       units: [
         {
-          id: ["bonegrinder-giant"],
+          ids: ["bonegrinder-giant"],
           min: 0,
           max: 1,
         },
