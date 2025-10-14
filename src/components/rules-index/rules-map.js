@@ -83,6 +83,12 @@ const additionalOWBRules = {
     url: "magic-item/crown-of-antlers",
   },
   "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
+  "helblaster volley gun weapon": {
+    url: "weapons-of-war/helblaster-volley-gun",
+  },
+  "helstorm rocket battery weapon": {
+    url: "weapons-of-war/helstorm-rocket-battery",
+  },
 };
 
 export const synonyms = {
