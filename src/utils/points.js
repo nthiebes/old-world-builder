@@ -139,12 +139,16 @@ export const getUnitPoints = (unit, settings) => {
           (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
       )
       .forEach((option) => {
-        if (option.active) {
+        if (option.active && option.perModel) {
+          unitPoints += (unit.strength || 1) * option.points;
+        } else if (option.active) {
           unitPoints += option.points;
         }
         if (option.active && option.options && option.options.length > 0) {
           option.options.forEach((mountOption) => {
-            if (mountOption.active) {
+            if (mountOption.active && mountOption.perModel) {
+              unitPoints += (unit.strength || 1) * mountOption.points;
+            } else if (mountOption.active) {
               unitPoints += mountOption.points;
             }
           });
