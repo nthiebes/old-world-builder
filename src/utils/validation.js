@@ -340,13 +340,13 @@ export const validateList = ({ list, language, intl }) => {
       if (
         max &&
         ruleUnit.perUnit &&
-        unitsInList.length > requiredUnitsInList.length
+        unitsInList.length > requiredUnitsInList.length * max
       ) {
         errors.push({
           message: "misc.error.requiresUnits",
           section: type,
           name: requiredNames,
-          diff: unitsInList.length - requiredUnitsInList.length,
+          diff: unitsInList.length - requiredUnitsInList.length * max,
         });
         // Each other unit allows another unit with scaling max value
       } else if (
