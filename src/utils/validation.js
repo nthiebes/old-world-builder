@@ -8,6 +8,7 @@ import {
   getUnitRuleData,
   findOption,
 } from "./unit";
+import { joinWithAnd, joinWithOr } from "./string";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
@@ -132,33 +133,27 @@ export const validateList = ({ list, language, intl }) => {
         (unit) =>
           ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
       );
-    const namesInList = uniq(
+    const namesInList = joinWithOr(uniq(
       unitsInList.map((unit) => getUnitName({ unit, language }))
-    )
-      .join(", ")
-      .replace(/, ([^,]*)$/, " or $1");
+    ));
     const unitNames =
       ruleUnit.min > 0 &&
-      uniq(
+      joinWithOr(uniq(
         ruleUnit.ids.map((id) => {
           const name = intl.formatMessage({ id });
 
           return getUnitName({ unit: { name }, language });
         })
-      )
-        .join(", ")
-        .replace(/, ([^,]*)$/, " or $1");
+      ));
     const requiredNames =
       ruleUnit.requires &&
-      uniq(
+      joinWithOr(uniq(
         ruleUnit.requires.map((id) => {
           const name = intl.formatMessage({ id });
 
           return getUnitName({ unit: { name }, language });
         })
-      )
-        .join(", ")
-        .replace(/, ([^,]*)$/, " or $1");
+      ));
     const points = ruleUnit.points;
     const min = points
       ? Math.floor(list.points / points) * ruleUnit.min
@@ -267,10 +262,8 @@ export const validateList = ({ list, language, intl }) => {
             )
           )
       );
-      const requiredNames = charactersNotMounted
-        .map((unit) => getUnitName({ unit, language }))
-        .join(", ")
-        .replace(/, ([^,]*)$/, " and $1");
+      const requiredNames = joinWithAnd(charactersNotMounted
+        .map((unit) => getUnitName({ unit, language })));
 
       charactersNotMounted.length &&
         errors.push({
