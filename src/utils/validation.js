@@ -116,6 +116,287 @@ export const validateList = ({ list, language, intl }) => {
     ? rules[list.armyComposition]?.mercenaries?.units
     : rules["grand-army"]?.mercenaries?.units;
 
+
+  // Not enough non-character units
+  nonCharactersCount < 3 &&
+    errors.push({
+      message: "misc.error.notEnoughNonCharacters",
+      section: "global",
+    });
+
+  // No general
+  generalsCount === 0 &&
+    errors.push({
+      message: "misc.error.noGeneral",
+      section: "characters",
+    });
+
+  // Multiple generals
+  generalsCount > 1 &&
+    errors.push({
+      message: "misc.error.multipleGenerals",
+      section: "characters",
+    });
+
+  // General doesn't have highest leadership in the army
+  const unitLeadership =
+    generalsCount === 1 && getUnitLeadership(generals[0].name_en);
+
+  generalsCount === 1 &&
+    unitLeadership &&
+    unitLeadership < highestLeadership &&
+    errors.push({
+      message: "misc.error.generalLeadership",
+      section: "characters",
+    });
+
+  // Multiple BSBs
+  BSBsCount > 1 &&
+    errors.push({
+      message: "misc.error.multipleBSBs",
+      section: "characters",
+    });
+
+  // Grand Melee
+  if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
+    const checkFor25Percent = (unit, type) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+
+      if (unitPoints > list.points / 4) {
+        errors.push({
+          message: "misc.error.grandMelee25",
+          section: type,
+        });
+      }
+    };
+    const level3Max = Math.floor(list.points / 1000);
+    const level4Max = Math.floor(list.points / 2000);
+    let level3Wizards = 0;
+    let level4Wizards = 0;
+
+    list?.characters &&
+      list.characters.forEach((unit) => {
+        checkFor25Percent(unit, "characters");
+
+        if (
+          unit.options &&
+          findOption(
+            unit.options,
+            ({ name_en, active }) =>
+              active && name_en.toLowerCase().includes("level 4 wizard")
+          )
+        ) {
+          level4Wizards++;
+        }
+        if (
+          unit.options &&
+          findOption(
+            unit.options,
+            ({ name_en, active }) =>
+              active && name_en.toLowerCase().includes("level 3 wizard")
+          )
+        ) {
+          level3Wizards++;
+        }
+
+        if (level4Wizards > level4Max) {
+          errors.push({
+            message: "misc.error.grandMeleeLevel4",
+            section: "characters",
+          });
+        }
+        if (level3Wizards > level3Max) {
+          errors.push({
+            message: "misc.error.grandMeleeLevel3",
+            section: "characters",
+          });
+        }
+      });
+    list?.core &&
+      list.core.forEach((unit) => {
+        checkFor25Percent(unit, "core");
+      });
+    list?.special &&
+      list.special.forEach((unit) => {
+        checkFor25Percent(unit, "special");
+      });
+    list?.rare &&
+      list.rare.forEach((unit) => {
+        checkFor25Percent(unit, "rare");
+      });
+    list?.mercenaries &&
+      list.mercenaries.forEach((unit) => {
+        checkFor25Percent(unit, "mercenaries");
+      });
+    list?.allies &&
+      list.allies.forEach((unit) => {
+        checkFor25Percent(unit, "allies");
+      });
+  }
+
+  // Combined Arms
+  if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
+    const charactersMax =
+      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
+    const coreMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 4;
+    const specialMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
+    const rareAndMercMax =
+      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 2;
+    const restrictedUnits = [];
+
+    // Characters
+    list.characters.forEach((unit) => {
+      const characterRestricted = Boolean(
+        characterUnitsRules &&
+          characterUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const characterCount = list.characters.filter(
+        (character) => character.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !characterRestricted &&
+        !unit.named &&
+        characterCount > charactersMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "characters",
+          diff: characterCount - charactersMax,
+        });
+      }
+    });
+
+    // Core
+    list.core.forEach((unit) => {
+      const coreRestricted = Boolean(
+        coreUnitsRules &&
+          coreUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const coreCount = list.core.filter(
+        (core) => core.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !coreRestricted &&
+        coreCount > coreMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "core",
+          diff: coreCount - coreMax,
+        });
+      }
+    });
+
+    // Special
+    list.special.forEach((unit) => {
+      const specialRestricted = Boolean(
+        specialUnitsRules &&
+          specialUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const specialCount = list.special.filter(
+        (special) => special.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !specialRestricted &&
+        specialCount > specialMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "special",
+          diff: specialCount - specialMax,
+        });
+      }
+    });
+
+    // Rare
+    list.rare.forEach((unit) => {
+      const rareRestricted = Boolean(
+        rareUnitsRules &&
+          rareUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const rareCount = list.rare.filter(
+        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !rareRestricted &&
+        rareCount > rareAndMercMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "rare",
+          diff: rareCount - rareAndMercMax,
+        });
+      }
+    });
+
+    // Mercenaries
+    list.mercenaries.forEach((unit) => {
+      const mercRestricted = Boolean(
+        mercenariesUnitsRules &&
+          mercenariesUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
+      );
+      const mercCount = list.mercenaries.filter(
+        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
+      ).length;
+
+      if (
+        !mercRestricted &&
+        mercCount > rareAndMercMax &&
+        !restrictedUnits.find(
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+        )
+      ) {
+        restrictedUnits.push({
+          id: unit.id.split(".")[0],
+          name: getUnitName({ unit, language }),
+          section: "mercenaries",
+          diff: mercCount - rareAndMercMax,
+        });
+      }
+    });
+
+    restrictedUnits.forEach((restrictedUnit) => {
+      errors.push({
+        message: "misc.error.maxUnits",
+        section: restrictedUnit.section,
+        diff: restrictedUnit.diff,
+        name: restrictedUnit.name,
+      });
+    });
+  }
+
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
@@ -399,287 +680,6 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
   };
-
-  // Not enough non-character units
-  nonCharactersCount < 3 &&
-    errors.push({
-      message: "misc.error.notEnoughNonCharacters",
-      section: "global",
-    });
-
-  // No general
-  generalsCount === 0 &&
-    errors.push({
-      message: "misc.error.noGeneral",
-      section: "characters",
-    });
-
-  // Multiple generals
-  generalsCount > 1 &&
-    errors.push({
-      message: "misc.error.multipleGenerals",
-      section: "characters",
-    });
-
-  // General doesn't have highest leadership in the army
-  const unitLeadership =
-    generalsCount === 1 && getUnitLeadership(generals[0].name_en);
-
-  generalsCount === 1 &&
-    unitLeadership &&
-    unitLeadership < highestLeadership &&
-    errors.push({
-      message: "misc.error.generalLeadership",
-      section: "characters",
-    });
-
-  // Multiple BSBs
-  BSBsCount > 1 &&
-    errors.push({
-      message: "misc.error.multipleBSBs",
-      section: "characters",
-    });
-
-  // Grand Melee
-  if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
-    const checkFor25Percent = (unit, type) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
-
-      if (unitPoints > list.points / 4) {
-        errors.push({
-          message: "misc.error.grandMelee25",
-          section: type,
-        });
-      }
-    };
-    const level3Max = Math.floor(list.points / 1000);
-    const level4Max = Math.floor(list.points / 2000);
-    let level3Wizards = 0;
-    let level4Wizards = 0;
-
-    list?.characters &&
-      list.characters.forEach((unit) => {
-        checkFor25Percent(unit, "characters");
-
-        if (
-          unit.options &&
-          findOption(
-            unit.options,
-            ({ name_en, active }) =>
-              active && name_en.toLowerCase().includes("level 4 wizard")
-          )
-        ) {
-          level4Wizards++;
-        }
-        if (
-          unit.options &&
-          findOption(
-            unit.options,
-            ({ name_en, active }) =>
-              active && name_en.toLowerCase().includes("level 3 wizard")
-          )
-        ) {
-          level3Wizards++;
-        }
-
-        if (level4Wizards > level4Max) {
-          errors.push({
-            message: "misc.error.grandMeleeLevel4",
-            section: "characters",
-          });
-        }
-        if (level3Wizards > level3Max) {
-          errors.push({
-            message: "misc.error.grandMeleeLevel3",
-            section: "characters",
-          });
-        }
-      });
-    list?.core &&
-      list.core.forEach((unit) => {
-        checkFor25Percent(unit, "core");
-      });
-    list?.special &&
-      list.special.forEach((unit) => {
-        checkFor25Percent(unit, "special");
-      });
-    list?.rare &&
-      list.rare.forEach((unit) => {
-        checkFor25Percent(unit, "rare");
-      });
-    list?.mercenaries &&
-      list.mercenaries.forEach((unit) => {
-        checkFor25Percent(unit, "mercenaries");
-      });
-    list?.allies &&
-      list.allies.forEach((unit) => {
-        checkFor25Percent(unit, "allies");
-      });
-  }
-
-  // Combined Arms
-  if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
-    const charactersMax =
-      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
-    const coreMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 4;
-    const specialMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
-    const rareAndMercMax =
-      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 2;
-    const restrictedUnits = [];
-
-    // Characters
-    list.characters.forEach((unit) => {
-      const characterRestricted = Boolean(
-        characterUnitsRules &&
-          characterUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
-      );
-      const characterCount = list.characters.filter(
-        (character) => character.id.split(".")[0] === unit.id.split(".")[0]
-      ).length;
-
-      if (
-        !characterRestricted &&
-        !unit.named &&
-        characterCount > charactersMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "characters",
-          diff: characterCount - charactersMax,
-        });
-      }
-    });
-
-    // Core
-    list.core.forEach((unit) => {
-      const coreRestricted = Boolean(
-        coreUnitsRules &&
-          coreUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
-      );
-      const coreCount = list.core.filter(
-        (core) => core.id.split(".")[0] === unit.id.split(".")[0]
-      ).length;
-
-      if (
-        !coreRestricted &&
-        coreCount > coreMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "core",
-          diff: coreCount - coreMax,
-        });
-      }
-    });
-
-    // Special
-    list.special.forEach((unit) => {
-      const specialRestricted = Boolean(
-        specialUnitsRules &&
-          specialUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
-      );
-      const specialCount = list.special.filter(
-        (special) => special.id.split(".")[0] === unit.id.split(".")[0]
-      ).length;
-
-      if (
-        !specialRestricted &&
-        specialCount > specialMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "special",
-          diff: specialCount - specialMax,
-        });
-      }
-    });
-
-    // Rare
-    list.rare.forEach((unit) => {
-      const rareRestricted = Boolean(
-        rareUnitsRules &&
-          rareUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
-      );
-      const rareCount = list.rare.filter(
-        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
-      ).length;
-
-      if (
-        !rareRestricted &&
-        rareCount > rareAndMercMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "rare",
-          diff: rareCount - rareAndMercMax,
-        });
-      }
-    });
-
-    // Mercenaries
-    list.mercenaries.forEach((unit) => {
-      const mercRestricted = Boolean(
-        mercenariesUnitsRules &&
-          mercenariesUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
-      );
-      const mercCount = list.mercenaries.filter(
-        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
-      ).length;
-
-      if (
-        !mercRestricted &&
-        mercCount > rareAndMercMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "mercenaries",
-          diff: mercCount - rareAndMercMax,
-        });
-      }
-    });
-
-    restrictedUnits.forEach((restrictedUnit) => {
-      errors.push({
-        message: "misc.error.maxUnits",
-        section: restrictedUnit.section,
-        diff: restrictedUnit.diff,
-        name: restrictedUnit.name,
-      });
-    });
-  }
-
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
       checkRules({ ruleUnit, type: "characters" });
