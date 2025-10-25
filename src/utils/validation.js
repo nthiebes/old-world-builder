@@ -475,6 +475,8 @@ export const validateList = ({ list, language, intl }) => {
 
   }
 
+  // Checking which units have a 0-X per Y points rule.  Used in Battle March.
+  let used0XUnits = [];
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
@@ -545,6 +547,13 @@ export const validateList = ({ list, language, intl }) => {
         name: namesInList,
         diff: unitsInList.length - max,
       });
+    }
+    // Marking used 0-X units for Battle March rule
+    if (ruleUnit.max > 0 && unitsInList.length > 0) {
+      used0XUnits = [
+        ...used0XUnits,
+        ...unitsInList.map((unit) => unit.id.split(".")[0]),
+      ];
     }
 
     // Unit requires general
@@ -790,5 +799,15 @@ export const validateList = ({ list, language, intl }) => {
       checkRules({ ruleUnit, type: "mercenaries" });
     });
 
+  // 0-X units check for Battle March
+  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
+    // TODO: Format the error with the names of the units
+    if (used0XUnits.length > 2) {
+      errors.push({
+        message: "misc.error.battleMarchMultiple0XUnits",
+        section: "global",
+      });
+    }
+  }
   return errors;
 };
