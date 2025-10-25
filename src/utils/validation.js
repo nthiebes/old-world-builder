@@ -31,12 +31,12 @@ export const validateList = ({ list, language, intl }) => {
   const generals = !list?.characters?.length
     ? []
     : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) => command.active && command.name_en === "General"
-          )
-      );
+      (unit) =>
+        unit.command &&
+        unit.command.find(
+          (command) => command.active && command.name_en === "General"
+        )
+    );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
   if (list?.characters?.length) {
@@ -52,7 +52,7 @@ export const validateList = ({ list, language, intl }) => {
       ) {
         const unitName =
           unit.name_en.includes("renegade") &&
-          list.armyComposition?.includes("renegade")
+            list.armyComposition?.includes("renegade")
             ? unit.name_en
             : unit.name_en.replace(" {renegade}", "");
         const leadership = getUnitLeadership(unitName);
@@ -67,14 +67,14 @@ export const validateList = ({ list, language, intl }) => {
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) =>
-              command.active &&
-              command.name_en.includes("Battle Standard Bearer")
-          )
-      );
+      (unit) =>
+        unit.command &&
+        unit.command.find(
+          (command) =>
+            command.active &&
+            command.name_en.includes("Battle Standard Bearer")
+        )
+    );
 
   const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
@@ -90,8 +90,8 @@ export const validateList = ({ list, language, intl }) => {
     : 0;
   const allyUnits = list?.allies?.length
     ? list.allies
-        .filter((unit) => unit.unitType !== "characters")
-        .filter(filterByTroopType).length
+      .filter((unit) => unit.unitType !== "characters")
+      .filter(filterByTroopType).length
     : 0;
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
