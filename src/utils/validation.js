@@ -116,13 +116,22 @@ export const validateList = ({ list, language, intl }) => {
     ? rules[list.armyComposition]?.mercenaries?.units
     : rules["grand-army"]?.mercenaries?.units;
 
-
   // Not enough non-character units
-  nonCharactersCount < 3 &&
-    errors.push({
-      message: "misc.error.notEnoughNonCharacters",
-      section: "global",
-    });
+  if (!list.compositionRule || !list.compositionRule.includes("battle-march")) {
+    if (nonCharactersCount < 3) {
+      errors.push({
+        message: "misc.error.notEnoughNonCharacters",
+        section: "global",
+      });
+    }
+  } else {
+    if (nonCharactersCount < 2) {
+      errors.push({
+        message: "misc.error.notEnoughNonCharactersBattleMarch",
+        section: "global",
+      });
+    }
+  }
 
   // No general
   generalsCount === 0 &&
@@ -250,9 +259,9 @@ export const validateList = ({ list, language, intl }) => {
     list.characters.forEach((unit) => {
       const characterRestricted = Boolean(
         characterUnitsRules &&
-          characterUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+        characterUnitsRules.find((ruleUnit) =>
+          ruleUnit.ids.includes(unit.id.split(".")[0])
+        )?.max
       );
       const characterCount = list.characters.filter(
         (character) => character.id.split(".")[0] === unit.id.split(".")[0]
@@ -279,9 +288,9 @@ export const validateList = ({ list, language, intl }) => {
     list.core.forEach((unit) => {
       const coreRestricted = Boolean(
         coreUnitsRules &&
-          coreUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+        coreUnitsRules.find((ruleUnit) =>
+          ruleUnit.ids.includes(unit.id.split(".")[0])
+        )?.max
       );
       const coreCount = list.core.filter(
         (core) => core.id.split(".")[0] === unit.id.split(".")[0]
@@ -307,9 +316,9 @@ export const validateList = ({ list, language, intl }) => {
     list.special.forEach((unit) => {
       const specialRestricted = Boolean(
         specialUnitsRules &&
-          specialUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+        specialUnitsRules.find((ruleUnit) =>
+          ruleUnit.ids.includes(unit.id.split(".")[0])
+        )?.max
       );
       const specialCount = list.special.filter(
         (special) => special.id.split(".")[0] === unit.id.split(".")[0]
@@ -335,9 +344,9 @@ export const validateList = ({ list, language, intl }) => {
     list.rare.forEach((unit) => {
       const rareRestricted = Boolean(
         rareUnitsRules &&
-          rareUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+        rareUnitsRules.find((ruleUnit) =>
+          ruleUnit.ids.includes(unit.id.split(".")[0])
+        )?.max
       );
       const rareCount = list.rare.filter(
         (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
@@ -363,9 +372,9 @@ export const validateList = ({ list, language, intl }) => {
     list.mercenaries.forEach((unit) => {
       const mercRestricted = Boolean(
         mercenariesUnitsRules &&
-          mercenariesUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+        mercenariesUnitsRules.find((ruleUnit) =>
+          ruleUnit.ids.includes(unit.id.split(".")[0])
+        )?.max
       );
       const mercCount = list.mercenaries.filter(
         (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
@@ -395,6 +404,54 @@ export const validateList = ({ list, language, intl }) => {
         name: restrictedUnit.name,
       });
     });
+  }
+
+  // Battle March
+  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
+    // Neither player can spend more than 25% of their total points on a single character.
+    list?.characters &&
+      list.characters.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+        });
+        if (unitPoints > list.points / 4) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerCharacter",
+            section: "characters",
+          });
+        }
+      });
+
+    // Neither player can spend more than 35% of their total points on a single core unit.
+    list?.core && list.core.forEach((unit) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+      if (unitPoints  > list.points * 0.35) {
+        errors.push({
+          message: "misc.error.battleMarch35PercentPerCore",
+          section: "core",
+        });
+      }
+    });
+    // Neither player can spend more than 30% of their total points on a single special unit.
+    list.special && list.special.forEach((unit) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+      if (unitPoints > list.points * 0.3) {
+        errors.push({
+          message: "misc.error.battleMarch30PercentPerSpecial",
+          section: "special",
+        });
+      }
+    });
+    // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
+    // But this is already covered, as the sum of all rare units should be less than 25%, and same for mercenaries.
+    // No check required here.
+
+    // TODO: Only a single 0-X unit or option is allowed across the entire army.
+
   }
 
   const checkRules = ({ ruleUnit, type }) => {
@@ -680,6 +737,8 @@ export const validateList = ({ list, language, intl }) => {
         });
     }
   };
+
+
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
       checkRules({ ruleUnit, type: "characters" });
