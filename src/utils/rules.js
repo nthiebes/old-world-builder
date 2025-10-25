@@ -13,13 +13,6 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "battle-march": {
-    characters: { maxPercent: 50 },
-    core: { minPercent: 25 },
-    special: { maxPercent: 50 },
-    rare: { maxPercent: 25 },
-    mercenaries: { maxPercent: 25 },
-  },
   "kingdom-of-bretonnia": {
     characters: {
       maxPercent: 50,

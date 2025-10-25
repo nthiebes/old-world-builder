@@ -447,8 +447,29 @@ export const validateList = ({ list, language, intl }) => {
       }
     });
     // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
-    // But this is already covered, as the sum of all rare units should be less than 25%, and same for mercenaries.
-    // No check required here.
+    list.rare && list.rare.forEach((unit) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+      if (unitPoints > list.points * 0.25) {
+        errors.push({
+          message: "misc.error.battleMarch25PercentPerRare",
+          section: "rare",
+        });
+      }
+    });
+    list.mercenaries && list.mercenaries.forEach((unit) => {
+      const unitPoints = getUnitPoints(unit, {
+        armyComposition: list.armyComposition || list.army,
+      });
+      if (unitPoints > list.points * 0.25) {
+        errors.push({
+          message: "misc.error.battleMarch25PercentPerMercenary",
+          section: "mercenaries",
+        });
+      }
+    });
+
 
     // TODO: Only a single 0-X unit or option is allowed across the entire army.
 
