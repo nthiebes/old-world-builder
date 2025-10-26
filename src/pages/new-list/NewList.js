@@ -54,6 +54,10 @@ export const NewList = ({ isMobile }) => {
       id: "grand-melee-combined-arms",
       name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
     },
+    {
+      id: "battle-march",
+      name_en: intl.formatMessage({ id: "misc.battle-march" }),
+    },
   ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
   const quickActions = lists.length

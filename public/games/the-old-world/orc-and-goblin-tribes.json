@@ -210,7 +210,7 @@
               "points": 2,
               "exclusive": true,
               "active": true,
-              "name_fr": "Arme de base, Arme de base additionnelle"
+              "name_fr": "Armes de base, Armes de base additionnelles"
             },
             {
               "name_en": "Hand weapons, Great weapons",
@@ -218,7 +218,7 @@
               "name_de": "Handwaffen, Zweihandwaffen",
               "points": 4,
               "exclusive": true,
-              "name_fr": "Arme de base, Arme lourde"
+              "name_fr": "Armes de base, Armes lourdes"
             },
             {
               "name_en": "Standard bearer",
@@ -470,6 +470,7 @@
           "name_de": "Schwarzork-Wildschweinstreitwagen",
           "name_fr": "Char à Sangliers Orque Noir",
           "points": 130,
+          "armyComposition": "nomadic-waaagh",
           "options": [
             {
               "name_en": "Hand weapon, Additional hand weapon",
@@ -486,7 +487,7 @@
               "name_de": "Handwaffen, Zweihandwaffen",
               "points": 4,
               "exclusive": true,
-              "name_fr": "Arme de base, Arme lourde"
+              "name_fr": "Armes de base, Armes lourdes"
             },
             {
               "name_en": "Standard bearer",
@@ -1795,7 +1796,8 @@
               "name_fr": "Porte-étendard",
               "points": 5
             }
-          ]
+          ],
+          "name_fr": "Char à Loups"
         },
         {
           "name_en": "Arachnarok Spider",
@@ -2573,6 +2575,7 @@
       "mounts": [],
       "items": [],
       "lores": ["troll-magic", "elementalism"],
+      "arcaneFamiliar": true,
       "specialRules": {
         "name_en": "Choppas, Da Troll Calla, Ignore Goblin Panic, Protect Da Boss, Syphoned Strength, Warband",
         "name_cn": "大砍刀, 召唤巨魔, 无视地精恐慌, 保护老大, 力量虹吸, 战帮",
@@ -2706,7 +2709,7 @@
         "name_cn": "紧密阵型, 易燃, 心理免疫, 饥不择食, 大型目标, 母爱, 重生(5+), 黏滑小腿, 践踏攻击(D6), 愚笨, 惊骇, 倒啦！, 永不战败",
         "name_de": "Geschlossene Ränge, Brennbar, Immun gegen Psychologie, Ungezügelter Hunger, Großes Ziel, Mütterliche Liebe, Regeneration (5+), Schleimige Schenkel, Stampfattacken (W6), Blödheit, Entsetzen, Baum fällt!, Unerschütterlich",
         "name_es": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
-        "name_fr": "Ordre Serré, Inflammable, Immunisé Rà la Psychologie, Faim Aveugle, Grande Cible, Amour Maternel, Régénération (5+), Jarrets Visqueux, Attaques de Piétinement (D6), Stupidité, Terreur, Timmm-berrr!, Indémoralisable",
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Faim Aveugle, Grande Cible, Amour Maternel, Régénération (5+), Jarrets Visqueux, Attaques de Piétinement (D6), Stupidité, Terreur, Timmm-berrr!, Indémoralisable",
         "name_it": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable",
         "name_pl": "Close Order, Flammable, Immune to Psychology, Indiscriminate Hunger, Large Target, Motherly Love, Regeneration (5+), Slimy Shanks, Stomp Attacks (D6), Stupidity, Terror, Timmm-berrr!, Unbreakable"
       }
@@ -2788,7 +2791,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -2867,7 +2870,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -2946,7 +2949,7 @@
         "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -3561,7 +3564,7 @@
           "name_cn": "狂热者链球",
           "name_de": "Fanatic-Kugelkette",
           "name_es": "Fanatic ball & chain",
-          "name_fr": "Fanatic ball & chain",
+          "name_fr": "Chaînes & Boulets de Fanatique",
           "points": 0,
           "active": true
         }
@@ -3576,7 +3579,7 @@
         "name_cn": "心理免疫, 放出狂热者!",
         "name_de": "Immun gegen Psychologie, Fanatics loslassen!",
         "name_es": "Immune to Psychology, Release the Fanatics!",
-        "name_fr": "Immune to Psychology, Release the Fanatics!"
+        "name_fr": "Immunisé à la Psychologie, Lâchez les Fanatiques!"
       },
       "notes": {
         "name_en": "0-1 Fanatic per 10 Night Goblins, to a maximum of 3",
@@ -3807,9 +3810,10 @@
           "perModel": true,
           "armyComposition": ["nomadic-waaagh"],
           "notes": {
-            "name_en": "0-1 Goblin Wold Rider Mob if Kiknik is in the army",
-            "name_cn": "0-1Goblin Wold Rider Mob if Kiknik is in the army",
-            "name_de": "0-1 Goblin Wolfsreiter-Mob, wenn Kiknik Teil der Armee ist"
+            "name_en": "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
+            "name_cn": "0-1Goblin Wolf Rider Mob if Kiknik is in the army",
+            "name_de": "0-1 Goblin Wolfsreiter-Mob, wenn Kiknik Teil der Armee ist",
+            "name_fr": "0-1 Bande de Gobelins sur Loups si Kiknik est dans l'armée"
           }
         },
         {
@@ -4718,7 +4722,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -4793,7 +4797,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Geschlossen Ränge, Angst, Brennbar, Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -4869,7 +4873,7 @@
         "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 紧密阵型, 恐惧, 易燃, 魔法抗性(-1), 重生(5+), 愚笨, Motley Crew",
         "name_de": "Rüstungsfluch (1), Zähe Haut (1), Geschlossen Ränge, Angst, Brennbar, Magieresistenz (-1), Regeneration (5+), Blödheit, Motley Crew",
         "name_es": "Armour Bane (1), Armoured Hide (1), Close Order, Fear, Flammable, Magic Resistance (-1), Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Ordre Serré, Peur, Inflammable, Résistance à la Magie (-1), Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -5012,7 +5016,7 @@
           "name_en": "Orc Bully, Whip",
           "name_cn": "兽人监工, 长鞭",
           "name_de": "Orktreiba, Peitsche",
-          "name_fr": "Brute Orque, Whip",
+          "name_fr": "Brute Orque, Fouet",
           "points": 10
         }
       ],
@@ -5109,7 +5113,7 @@
           "name_en": "Orc Bully, Whip",
           "name_cn": "兽人监工, 长鞭",
           "name_de": "Orktreiba, Peitsche",
-          "name_fr": "Brute Orque, Whip",
+          "name_fr": "Brute Orque, Fouet",
           "points": 10
         }
       ],
@@ -5158,7 +5162,7 @@
           "name_en": "Orc Bully, Whip",
           "name_cn": "兽人监工, 长鞭",
           "name_de": "Orktreiba, Peitsche",
-          "name_fr": "Brute Orque, Whip",
+          "name_fr": "Brute Orque, Fouet",
           "points": 10
         }
       ],

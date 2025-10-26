@@ -33,6 +33,7 @@ import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
 import cathay from "../../assets/army-icons/cathay.svg";
+import renegade from "../../assets/army-icons/renegade.svg";
 import forg3dBanner from "../../assets/forg3d.jpg";
 import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
 import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
@@ -67,6 +68,7 @@ const armyIconMap = {
   lizardmen: lizardmen,
   "chaos-dwarfs": chaosDwarfs,
   "grand-cathay": cathay,
+  "renegade-crowns": renegade,
 };
 
 export const Home = ({ isMobile }) => {

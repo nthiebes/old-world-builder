@@ -76,9 +76,27 @@ const additionalOWBRules = {
   "engine of the gods renegade": {
     url: "special-rules/engine-of-the-gods-renegade",
   },
+  "crown of antlers beastmen": {
+    url: "special-rules/crown-of-antlers",
+  },
+  "crown of antlers wood-elf-realms": {
+    url: "magic-item/crown-of-antlers",
+  },
+  "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
+  "helblaster volley gun weapon": {
+    url: "weapons-of-war/helblaster-volley-gun",
+  },
+  "helstorm rocket battery weapon": {
+    url: "weapons-of-war/helstorm-rocket-battery",
+  },
 };
 
 export const synonyms = {
+  "the witch": "suffer not...",
+  "the revenant": "suffer not...",
+  "the mutant": "suffer not...",
+  "the daemon": "suffer not...",
+  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
@@ -225,6 +243,10 @@ export const synonyms = {
   "skin wolf jarl": "champions",
   "first sword": "champions",
   captain: "champions",
+  officer: "champions",
+  "veteran officer": "champions",
+  commander: "champions",
+  "shrine keeper": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",

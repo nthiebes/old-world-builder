@@ -41,7 +41,17 @@
           "name_fr": "Poing d'Acier",
           "name_de": "Eisenfaust",
           "points": 6,
-          "perModel": true
+          "perModel": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Ironfist {renegade}",
+          "name_cn": "铁拳套",
+          "name_fr": "Poing d'Acier",
+          "name_de": "Eisenfaust",
+          "points": 6,
+          "perModel": true,
+          "armyComposition": "ok-renegade"
         },
         {
           "name_en": "Great weapon",
@@ -141,7 +151,7 @@
         "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff"
       },
       "notes": {
-        "name_en": "0-1 per 1,000 points",
+        "name_en": "0-1 per 1000 points",
         "name_cn": "每1000分0-1",
         "name_fr": "0-1 par tranche de 1000 points",
         "name_de": "0-1 pro 1.000 Punkte"
@@ -199,7 +209,17 @@
           "name_fr": "Poing d'Acier",
           "name_de": "Eisenfaust",
           "points": 6,
-          "perModel": true
+          "perModel": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Ironfist {renegade}",
+          "name_cn": "铁拳套",
+          "name_fr": "Poing d'Acier",
+          "name_de": "Eisenfaust",
+          "points": 6,
+          "perModel": true,
+          "armyComposition": "ok-renegade"
         },
         {
           "name_en": "Great weapon",
@@ -413,7 +433,7 @@
         "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (2), Lehre des Großen Schlundes, Ogerangriff"
       },
       "notes": {
-        "name_en": "0-1 per 1,000 points",
+        "name_en": "0-1 per 1000 points",
         "name_cn": "每1000分0-1",
         "name_fr": "0-1 par tranche de 1000 points",
         "name_de": "0-1 pro 1.000 Punkte"
@@ -778,7 +798,15 @@
           }
         },
         "ok-renegade": {
-          "category": "core"
+          "category": "core",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
+            "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
+            "name_de": "Rüstungsfluch (1), Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff, Monstrous Ranks",
+            "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
+            "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre, Rangs Monstrueux",
+            "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+          }
         }
       },
       "command": [
@@ -855,7 +883,19 @@
           "name_fr": "Poings d'Acier",
           "name_it": "Ironfists",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Ironfists {renegade}",
+          "name_cn": "铁拳套",
+          "name_de": "Eisenfäuste",
+          "name_es": "Ironfists",
+          "name_fr": "Poings d'Acier",
+          "name_it": "Ironfists",
+          "points": 4,
+          "perModel": true,
+          "armyComposition": "ok-renegade"
         }
       ],
       "armor": [
@@ -897,6 +937,22 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "core"
+        },
+        "ok-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
+            "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff, Monstrous Ranks",
+            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
+            "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre, Rangs Monstrueux",
+            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Gutlord (champion)",
@@ -1226,6 +1282,22 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special"
+        },
+        "ok-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
+            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff, Monstrous Ranks",
+            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
+            "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre, Rangs Monstrueux",
+            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Thunderfist (champion)",
@@ -1317,6 +1389,22 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special"
+        },
+        "ok-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks {renegade}",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 散兵游勇, 食人魔冲锋, Monstrous Ranks",
+            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Zusammengewürfelter Haufen, Ogerangriff, Monstrous Ranks",
+            "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks",
+            "name_fr": "Ordre Serré, Peur, Touches d'Impact (1), Bande Hétéroclite, Charge Ogre, Rangs Monstrueux",
+            "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Maneater Captain (champion)",
@@ -1422,7 +1510,17 @@
           "name_fr": "Poings d'Acier",
           "name_de": "Eisenfäuste",
           "points": 4,
-          "stackable": true
+          "stackable": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Ironfists {renegade}",
+          "name_cn": "铁拳套",
+          "name_fr": "Poings d'Acier",
+          "name_de": "Eisenfäuste",
+          "points": 4,
+          "stackable": true,
+          "armyComposition": "ok-renegade"
         },
         {
           "name_en": "Great weapons",
@@ -1469,13 +1567,13 @@
         "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
       },
       "notes": {
-        "name_en": "0-1 unit of Maneaters per 1,000 points",
+        "name_en": "0-1 unit of Maneaters per 1000 points",
         "name_cn": "0-1个单位的Maneaters per 1, 000分",
         "name_de": "0-1 Einheit Vielfraße pro 1.000 Punkte",
-        "name_es": "0-1 unit of Maneaters per 1,000 points",
-        "name_fr": "0-1 unit of Maneaters per 1,000 points",
-        "name_it": "0-1 unit of Maneaters per 1,000 points",
-        "name_pl": "0-1 unit of Maneaters per 1,000 points"
+        "name_es": "0-1 unit of Maneaters per 1000 points",
+        "name_fr": "0-1 unité de Mangeurs d'Hommes par tranche de 1000 points",
+        "name_it": "0-1 unit of Maneaters per 1000 points",
+        "name_pl": "0-1 unit of Maneaters per 1000 points"
       }
     },
     {
@@ -1548,7 +1646,19 @@
           "name_fr": "Poing d'Acier",
           "name_it": "Ironfist",
           "points": 4,
-          "perModel": true
+          "perModel": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Ironfist {renegade}",
+          "name_cn": "铁拳套",
+          "name_de": "Eisenfäuste",
+          "name_es": "Ironfist",
+          "name_fr": "Poing d'Acier",
+          "name_it": "Ironfist",
+          "points": 4,
+          "perModel": true,
+          "armyComposition": "ok-renegade"
         },
         {
           "name_en": "Great weapon",
@@ -1607,13 +1717,13 @@
         "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride"
       },
       "notes": {
-        "name_en": "0-1 unit of Mournfang Cavalry per 1,000 points",
+        "name_en": "0-1 unit of Mournfang Cavalry per 1000 points",
         "name_cn": "0-1个单位的Mournfang Cavalry per 1, 000分",
         "name_de": "0-1 Einheit Trauerfangkavallerie pro 1.000 Punkte",
-        "name_es": "0-1 unit of Mournfang Cavalry per 1,000 points",
-        "name_fr": "0-1 unit of Mournfang Cavalry per 1,000 points",
-        "name_it": "0-1 unit of Mournfang Cavalry per 1,000 points",
-        "name_pl": "0-1 unit of Mournfang Cavalry per 1,000 points"
+        "name_es": "0-1 unit of Mournfang Cavalry per 1000 points",
+        "name_fr": "0-1 unité de Cavalerie Férox par tranche de 1000 points",
+        "name_it": "0-1 unit of Mournfang Cavalry per 1000 points",
+        "name_pl": "0-1 unit of Mournfang Cavalry per 1000 points"
       }
     },
     {
@@ -1711,7 +1821,7 @@
         "ogre-kingdoms": {
           "category": "special",
           "notes": {
-            "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1,000 points",
+            "name_en": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
             "name_cn": "每1000分0-1 Ironblaster或孬不拉废铁投射器",
             "name_de": "0-1 Eisenspeier oder Gnoblar-Schrottschleuder pro 1.000 Punkte",
             "name_es": "0-1 Ironblaster or Gnoblar Scraplauncher per 1000 points",
@@ -1723,11 +1833,11 @@
         "ok-renegade": {
           "category": "special",
           "notes": {
-            "name_en": "0-1 Ironblaster per 1,000 points",
+            "name_en": "0-1 Ironblaster per 1000 points",
             "name_cn": "每1000分0-1 Ironblaster",
             "name_de": "0-1 Eisenspeier pro 1.000 Punkte",
             "name_es": "0-1 Ironblaster per 1000 points",
-            "name_fr": "0-1 Ironblaster per 1000 points",
+            "name_fr": "0-1 Boute-fer par tranche de 1000 points",
             "name_it": "0-1 Ironblaster per 1000 points",
             "name_pl": "0-1 Ironblaster per 1000 points"
           }
@@ -1874,9 +1984,9 @@
         "name_it": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge"
       },
       "notes": {
-        "name_en": "0-1 Stonehorn Riders per 1,000 points",
+        "name_en": "0-1 Stonehorn Riders per 1000 points",
         "name_cn": "每1000分0-1",
-        "name_fr": "0-1 par tranche de 1000 points",
+        "name_fr": "0-1 Chevaucheurs de Mastauroc par tranche de 1000 points",
         "name_de": "0-1 Steinyakreiter pro 1.000 Punkte"
       }
     },
@@ -1937,9 +2047,9 @@
         "name_it": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror"
       },
       "notes": {
-        "name_en": "0-1 Thundertusk Riders per 1,000 points",
+        "name_en": "0-1 Thundertusk Riders per 1000 points",
         "name_cn": "每1000分0-1",
-        "name_fr": "0-1 par tranche de 1000 points",
+        "name_fr": "0-1 Chevaucheurs de Mégastodonte par tranche de 1000 points",
         "name_de": "0-1 Donnerhornreiter pro 1.000 Punkte"
       }
     },
@@ -2007,7 +2117,7 @@
       "name_cn": "贪吃魔",
       "name_de": "Verschlinger",
       "name_es": "Gorger",
-      "name_fr": "Cannibales",
+      "name_fr": "Cannibale",
       "name_it": "Gorger",
       "id": "gorgers",
       "points": 90,
@@ -2087,7 +2197,7 @@
         "name_cn": "伏击, 紧密阵型, 恐惧, 狂暴, 贪婪饥渴, 重生(6+), 快速行进, 永不战败",
         "name_de": "Überfall, Geschlossene Ränge, Angst, Raserei, Ausgehungert, Regeneration (6+), Schnelle Bewegung, Unerschütterlich",
         "name_es": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
-        "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim vDévorante, Régénération (6+), Rapide, Indémoralisable",
+        "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
         "name_it": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
       }
     }

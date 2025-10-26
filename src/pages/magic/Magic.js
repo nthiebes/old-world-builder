@@ -22,7 +22,7 @@ import {
   isMultipleAllowedItem,
   itemsUsedElsewhere,
   maxAllowedOfItem,
-  runeLoadoutElsewhere
+  runeLoadoutElsewhere,
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -72,9 +72,25 @@ export const Magic = ({ isMobile }) => {
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => armyId === id);
+      .armies.find(
+        ({ id }) =>
+          (unit && unit.items && unit.items[group]?.magicItemsArmy === id) ||
+          (command !== undefined &&
+            unit &&
+            unit.command &&
+            unit.command[command]?.magic?.magicItemsArmy === id)
+      );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [runesUsedElsewhere, setRunesUsedElsewhere] = useState([]);
+
+  // Fallback to list army if no specific army for items is set
+  if (!army) {
+    army =
+      list &&
+      gameSystems
+        .find(({ id }) => id === list.game)
+        .armies.find(({ id }) => armyId === id);
+  }
 
   // Use list army for arcane journals
   if (!army) {
@@ -269,8 +285,9 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
-      const typeIsRunic = (type) => type.indexOf("runes") >= 0 || type === "runic-tattoos";
-      const isRune = 
+      const typeIsRunic = (type) =>
+        type.indexOf("runes") >= 0 || type === "runic-tattoos";
+      const isRune =
         (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
         (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
       if (isRune) {
@@ -625,17 +642,21 @@ export const Magic = ({ isMobile }) => {
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en
                 );
-                const runesElsewhereErrors = isFirstItemType && runesUsedElsewhere.filter(
-                  (e) => e.runeType === magicItem.type
-                );
-                const runesUsedBy = runesElsewhereErrors?.length > 0 && runesElsewhereErrors.map((error, index) => (
-                  <Fragment key={`${error.unit.id}-rune-error-link`}>
-                    <Link to={error.url}>
-                      {getUnitName({ unit: error.unit, language })}
-                    </Link>
-                    {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
-                  </Fragment>
-                ));
+                const runesElsewhereErrors =
+                  isFirstItemType &&
+                  runesUsedElsewhere.filter(
+                    (e) => e.runeType === magicItem.type
+                  );
+                const runesUsedBy =
+                  runesElsewhereErrors?.length > 0 &&
+                  runesElsewhereErrors.map((error, index) => (
+                    <Fragment key={`${error.unit.id}-rune-error-link`}>
+                      <Link to={error.url}>
+                        {getUnitName({ unit: error.unit, language })}
+                      </Link>
+                      {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
 
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>

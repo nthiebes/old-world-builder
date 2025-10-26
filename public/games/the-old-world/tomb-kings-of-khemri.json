@@ -223,7 +223,8 @@
           "maxPoints": 100,
           "armyComposition": "nehekharan-royal-hosts",
           "notes": {
-            "name_en": "Arcane items are only available if the Tomb King is a wizard"
+            "name_en": "Arcane items are only available if the Tomb King is a wizard",
+            "name_fr": "Les objets cabalistiques ne sont disponibles que si le Roi des Tombes est un sorcier."
           }
         }
       ],
@@ -445,7 +446,8 @@
           "maxPoints": 50,
           "armyComposition": "nehekharan-royal-hosts",
           "notes": {
-            "name_en": "Arcane items are only available if the Tomb Prince is a wizard"
+            "name_en": "Arcane items are only available if the Tomb Prince is a wizard",
+            "name_fr": "Les objets cabalistiques ne sont disponibles que si le Prince des Tombes est un sorcier."
           }
         }
       ],
@@ -1220,7 +1222,18 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
+          "name_es": "Hechicero de Nivel 1",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
       "mounts": [
         {
           "name_en": "The Chariot of the Gods",
@@ -2621,7 +2634,8 @@
           "minimum": 0,
           "notes": {
             "name_en": "Set this to the total amount of Horses in the unit",
-            "name_cn": "将此设置为单位中马的总数"
+            "name_cn": "将此设置为单位中马的总数",
+            "name_fr": "Indiquez ici le total de Chevaux dans l'unité"
           }
         }
       ],
