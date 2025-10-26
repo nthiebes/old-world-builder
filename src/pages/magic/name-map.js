@@ -774,4 +774,10 @@ export const nameMap = {
     name_cn: "屠夫军团",
     name_fr: "Slayer Host",
   },
+  "battle-march": {
+    name_de: "Battle March",
+    name_en: "Battle March",
+    name_cn: "Battle March",
+    name_fr: "Battle March",
+  },
 };

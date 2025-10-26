@@ -31,12 +31,12 @@ export const validateList = ({ list, language, intl }) => {
   const generals = !list?.characters?.length
     ? []
     : list.characters.filter(
-      (unit) =>
-        unit.command &&
-        unit.command.find(
-          (command) => command.active && command.name_en === "General"
-        )
-    );
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General"
+          )
+      );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
   if (list?.characters?.length) {
@@ -52,7 +52,7 @@ export const validateList = ({ list, language, intl }) => {
       ) {
         const unitName =
           unit.name_en.includes("renegade") &&
-            list.armyComposition?.includes("renegade")
+          list.armyComposition?.includes("renegade")
             ? unit.name_en
             : unit.name_en.replace(" {renegade}", "");
         const leadership = getUnitLeadership(unitName);
@@ -67,14 +67,14 @@ export const validateList = ({ list, language, intl }) => {
   const BSBs = !list.characters?.length
     ? []
     : list.characters.filter(
-      (unit) =>
-        unit.command &&
-        unit.command.find(
-          (command) =>
-            command.active &&
-            command.name_en.includes("Battle Standard Bearer")
-        )
-    );
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.active &&
+              command.name_en.includes("Battle Standard Bearer")
+          )
+      );
 
   const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
@@ -90,8 +90,8 @@ export const validateList = ({ list, language, intl }) => {
     : 0;
   const allyUnits = list?.allies?.length
     ? list.allies
-      .filter((unit) => unit.unitType !== "characters")
-      .filter(filterByTroopType).length
+        .filter((unit) => unit.unitType !== "characters")
+        .filter(filterByTroopType).length
     : 0;
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
@@ -259,9 +259,9 @@ export const validateList = ({ list, language, intl }) => {
     list.characters.forEach((unit) => {
       const characterRestricted = Boolean(
         characterUnitsRules &&
-        characterUnitsRules.find((ruleUnit) =>
-          ruleUnit.ids.includes(unit.id.split(".")[0])
-        )?.max
+          characterUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
       );
       const characterCount = list.characters.filter(
         (character) => character.id.split(".")[0] === unit.id.split(".")[0]
@@ -288,9 +288,9 @@ export const validateList = ({ list, language, intl }) => {
     list.core.forEach((unit) => {
       const coreRestricted = Boolean(
         coreUnitsRules &&
-        coreUnitsRules.find((ruleUnit) =>
-          ruleUnit.ids.includes(unit.id.split(".")[0])
-        )?.max
+          coreUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
       );
       const coreCount = list.core.filter(
         (core) => core.id.split(".")[0] === unit.id.split(".")[0]
@@ -316,9 +316,9 @@ export const validateList = ({ list, language, intl }) => {
     list.special.forEach((unit) => {
       const specialRestricted = Boolean(
         specialUnitsRules &&
-        specialUnitsRules.find((ruleUnit) =>
-          ruleUnit.ids.includes(unit.id.split(".")[0])
-        )?.max
+          specialUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
       );
       const specialCount = list.special.filter(
         (special) => special.id.split(".")[0] === unit.id.split(".")[0]
@@ -344,9 +344,9 @@ export const validateList = ({ list, language, intl }) => {
     list.rare.forEach((unit) => {
       const rareRestricted = Boolean(
         rareUnitsRules &&
-        rareUnitsRules.find((ruleUnit) =>
-          ruleUnit.ids.includes(unit.id.split(".")[0])
-        )?.max
+          rareUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
       );
       const rareCount = list.rare.filter(
         (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
@@ -372,9 +372,9 @@ export const validateList = ({ list, language, intl }) => {
     list.mercenaries.forEach((unit) => {
       const mercRestricted = Boolean(
         mercenariesUnitsRules &&
-        mercenariesUnitsRules.find((ruleUnit) =>
-          ruleUnit.ids.includes(unit.id.split(".")[0])
-        )?.max
+          mercenariesUnitsRules.find((ruleUnit) =>
+            ruleUnit.ids.includes(unit.id.split(".")[0])
+          )?.max
       );
       const mercCount = list.mercenaries.filter(
         (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
@@ -423,60 +423,60 @@ export const validateList = ({ list, language, intl }) => {
       });
 
     // Neither player can spend more than 35% of their total points on a single core unit.
-    list?.core && list.core.forEach((unit) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
-      if (unitPoints  > list.points * 0.35) {
-        errors.push({
-          message: "misc.error.battleMarch35PercentPerCore",
-          section: "core",
+    list?.core &&
+      list.core.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
         });
-      }
-    });
+        if (unitPoints > list.points * 0.35) {
+          errors.push({
+            message: "misc.error.battleMarch35PercentPerCore",
+            section: "core",
+          });
+        }
+      });
     // Neither player can spend more than 30% of their total points on a single special unit.
-    list.special && list.special.forEach((unit) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
-      if (unitPoints > list.points * 0.3) {
-        errors.push({
-          message: "misc.error.battleMarch30PercentPerSpecial",
-          section: "special",
+    list.special &&
+      list.special.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
         });
-      }
-    });
+        if (unitPoints > list.points * 0.3) {
+          errors.push({
+            message: "misc.error.battleMarch30PercentPerSpecial",
+            section: "special",
+          });
+        }
+      });
     // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
-    list.rare && list.rare.forEach((unit) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
-      if (unitPoints > list.points * 0.25) {
-        errors.push({
-          message: "misc.error.battleMarch25PercentPerRare",
-          section: "rare",
+    list.rare &&
+      list.rare.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
         });
-      }
-    });
-    list.mercenaries && list.mercenaries.forEach((unit) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
+        if (unitPoints > list.points * 0.25) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerRare",
+            section: "rare",
+          });
+        }
       });
-      if (unitPoints > list.points * 0.25) {
-        errors.push({
-          message: "misc.error.battleMarch25PercentPerMercenary",
-          section: "mercenaries",
+    list.mercenaries &&
+      list.mercenaries.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
         });
-      }
-    });
-
-
-    // TODO: Only a single 0-X unit or option is allowed across the entire army.
-
+        if (unitPoints > list.points * 0.25) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerMercenary",
+            section: "mercenaries",
+          });
+        }
+      });
   }
 
-  // Checking which units have a 0-X per Y points rule.  Used in Battle March.
   let used0XUnits = [];
+
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
@@ -494,27 +494,31 @@ export const validateList = ({ list, language, intl }) => {
         (unit) =>
           ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
       );
-    const namesInList = joinWithOr(uniq(
-      unitsInList.map((unit) => getUnitName({ unit, language }))
-    ));
+    const namesInList = joinWithOr(
+      uniq(unitsInList.map((unit) => getUnitName({ unit, language })))
+    );
     const unitNames =
       ruleUnit.min > 0 &&
-      joinWithOr(uniq(
-        ruleUnit.ids.map((id) => {
-          const name = intl.formatMessage({ id });
+      joinWithOr(
+        uniq(
+          ruleUnit.ids.map((id) => {
+            const name = intl.formatMessage({ id });
 
-          return getUnitName({ unit: { name }, language });
-        })
-      ));
+            return getUnitName({ unit: { name }, language });
+          })
+        )
+      );
     const requiredNames =
       ruleUnit.requires &&
-      joinWithOr(uniq(
-        ruleUnit.requires.map((id) => {
-          const name = intl.formatMessage({ id });
+      joinWithOr(
+        uniq(
+          ruleUnit.requires.map((id) => {
+            const name = intl.formatMessage({ id });
 
-          return getUnitName({ unit: { name }, language });
-        })
-      ));
+            return getUnitName({ unit: { name }, language });
+          })
+        )
+      );
     const points = ruleUnit.points;
     const min = points
       ? Math.floor(list.points / points) * ruleUnit.min
@@ -539,7 +543,10 @@ export const validateList = ({ list, language, intl }) => {
     // Too many units
     if (
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
-      unitsInList.length > max
+      unitsInList.length > max &&
+      ((list.compositionRule && // Exception for Battle March 0-X units
+        !list.compositionRule.includes("battle-march")) ||
+        !list.compositionRule)
     ) {
       errors.push({
         message: "misc.error.maxUnits",
@@ -548,12 +555,19 @@ export const validateList = ({ list, language, intl }) => {
         diff: unitsInList.length - max,
       });
     }
-    // Marking used 0-X units for Battle March rule
-    if (ruleUnit.max > 0 && unitsInList.length > 0) {
-      used0XUnits = [
-        ...used0XUnits,
-        ...unitsInList.map((unit) => unit.id.split(".")[0]),
-      ];
+
+    // 0-X units check for Battle March
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length > max &&
+      list.compositionRule &&
+      list.compositionRule.includes("battle-march") &&
+      used0XUnits.length > 1
+    ) {
+      errors.push({
+        message: "misc.error.battleMarchMultiple0XUnits",
+        section: type,
+      });
     }
 
     // Unit requires general
@@ -630,8 +644,9 @@ export const validateList = ({ list, language, intl }) => {
             )
           )
       );
-      const requiredNames = joinWithAnd(charactersNotMounted
-        .map((unit) => getUnitName({ unit, language })));
+      const requiredNames = joinWithAnd(
+        charactersNotMounted.map((unit) => getUnitName({ unit, language }))
+      );
 
       charactersNotMounted.length &&
         errors.push({
@@ -768,6 +783,57 @@ export const validateList = ({ list, language, intl }) => {
     }
   };
 
+  // Marking used 0-X per 1000 pts units for Battle March
+  const checkFor0XRules = ({ ruleUnit, type }) => {
+    const unitsInList = (
+      ruleUnit?.requiredByType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[type]
+    ).filter(
+      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
+    );
+
+    if (
+      ruleUnit.max > 0 &&
+      ruleUnit.points === 1000 &&
+      unitsInList.length > 0
+    ) {
+      used0XUnits = [
+        ...used0XUnits,
+        ...unitsInList.map((unit) => unit.id.split(".")[0]),
+      ];
+    }
+  };
+
+  characterUnitsRules &&
+    characterUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "characters" });
+    });
+
+  coreUnitsRules &&
+    coreUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "core" });
+    });
+
+  specialUnitsRules &&
+    specialUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "special" });
+    });
+
+  rareUnitsRules &&
+    rareUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "rare" });
+    });
+
+  alliesUnitsRules &&
+    alliesUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "allies" });
+    });
+
+  mercenariesUnitsRules &&
+    mercenariesUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "mercenaries" });
+    });
 
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
@@ -799,15 +865,5 @@ export const validateList = ({ list, language, intl }) => {
       checkRules({ ruleUnit, type: "mercenaries" });
     });
 
-  // 0-X units check for Battle March
-  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
-    // TODO: Format the error with the names of the units
-    if (used0XUnits.length > 2) {
-      errors.push({
-        message: "misc.error.battleMarchMultiple0XUnits",
-        section: "global",
-      });
-    }
-  }
   return errors;
 };
