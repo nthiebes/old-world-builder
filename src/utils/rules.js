@@ -1540,12 +1540,6 @@ export const rules = {
           requiresType: "characters",
           requires: ["priest-of-ulric", "high-priest-of-ulric"],
         },
-        {
-          ids: ["great-cannon", "mortar"],
-          min: 0,
-          max: 3,
-          points: 1000,
-        },
       ],
     },
     rare: {
