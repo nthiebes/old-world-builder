@@ -15,7 +15,7 @@ import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { equalsOrIncludes } from "../../utils/string";
+import { equalsOrIncludes, namesForSpread } from "../../utils/string";
 import { getUnitName } from "../../utils/unit";
 import { getGameSystems } from "../../utils/game-systems";
 import {
@@ -319,8 +319,7 @@ export const Magic = ({ isMobile }) => {
           const allItems = itemCategories.map((itemCategory) => {
             return {
               items: data[itemCategory],
-              name_de: nameMap[itemCategory].name_de,
-              name_en: nameMap[itemCategory].name_en,
+              ...namesForSpread(nameMap[itemCategory]),
               id: itemCategory,
             };
           });
