@@ -1405,7 +1405,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["doomseekers"],
+          ids: ["doomseeker"],
           min: 0,
           max: 4,
           requiresType: "characters",

@@ -190,9 +190,6 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="simple" className="checkbox__label">
             <FormattedMessage id="export.minimalistList" />
-            <b>
-              <i>New!</i>
-            </b>
           </label>
         </div>
         <p className="export__radio-description">
@@ -230,9 +227,6 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="markdown" className="checkbox__label">
             <FormattedMessage id="export.isMarkdownList" />
-            <b>
-              <i>New!</i>
-            </b>
           </label>
         </div>
 
