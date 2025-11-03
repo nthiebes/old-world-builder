@@ -43,9 +43,24 @@
   margin-left: 0.5rem;
 }
 
+
 .print li {
   margin-bottom: 1rem;
   break-inside: avoid;
+}
+
+.print.print__two-columns ul,
+.print.print__three-columns ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.print.print__two-columns li {
+  width: 50%;
+}
+
+.print.print__three-columns li {
+  width: 33%;
 }
 
 .print__points {
