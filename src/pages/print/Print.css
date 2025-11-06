@@ -49,10 +49,21 @@
   break-inside: avoid;
 }
 
+.print.print__two-columns,
+.print.print__three-columns {
+  padding: 0;
+}
+
 .print.print__two-columns ul,
 .print.print__three-columns ul {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 0;
+}
+
+.print.print__two-columns li,
+.print.print__three-columns li {
+  padding: 0 .5rem;
 }
 
 .print.print__two-columns li {
