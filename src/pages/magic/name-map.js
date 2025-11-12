@@ -780,4 +780,16 @@ export const nameMap = {
     name_cn: "Battle March",
     name_fr: "Battle March",
   },
+  "incantation-scrolls": {
+    name_de: "Incantation Scrolls",
+    name_en: "Incantation Scrolls",
+    name_cn: "Incantation Scrolls",
+    name_fr: "Incantation Scrolls",
+  },
+  "incantation-scroll": {
+    name_de: "Incantation Scroll",
+    name_en: "Incantation Scroll",
+    name_cn: "Incantation Scroll",
+    name_fr: "Incantation Scroll",
+  },
 };
