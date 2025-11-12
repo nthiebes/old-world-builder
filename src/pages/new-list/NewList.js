@@ -60,9 +60,15 @@ export const NewList = ({ isMobile }) => {
     },
   ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
-  const quickActions = lists.length
-    ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
-    : [500, 1000, 1500, 2000, 2500];
+  const quickActions =
+    compositionRule === "battle-march"
+      ? [500, 600, 750]
+      : lists.length
+      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(
+          0,
+          5
+        )
+      : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
     const newList = {
