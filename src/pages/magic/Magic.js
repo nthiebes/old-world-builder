@@ -635,7 +635,7 @@ export const Magic = ({ isMobile }) => {
                 // Combo Exclusive item types are things like runes and incantation scrolls,
                 // where 1 to 3 items in a category can be used but the combination of items 
                 // must be unique within the army.
-                const isComboExclusive = Boolean(magicItem.type.includes("runes") || magicItem.type === "incantation-scroll");
+                const isComboExclusive = Boolean(magicItem.type.includes("runes") || magicItem.type === "runic-tattoos" || magicItem.type === "incantation-scroll");
 
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
