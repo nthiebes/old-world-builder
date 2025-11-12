@@ -13,56 +13,56 @@ const getFilteredOptions = (unit, intl, params) => {
   // Items to exclude
   let itemsToExclude = ["Hand weapon", "Hand weapons"];
 
-  if (unit.equipment) {
-    if (unit.equipment.length === 1 && unit.equipment[0].active) {
-      itemsToExclude = [
-        ...itemsToExclude,
-        ...unit.equipment[0].name_en.split(", "),
-      ];
-    } else {
-      const activeEquipment = unit.equipment.find((eq) => eq.active);
-      if (activeEquipment && activeEquipment.points === 0) {
-        itemsToExclude = [
-          ...itemsToExclude,
-          ...activeEquipment.name_en.split(", "),
-        ];
-      }
-    }
-  }
+  // if (unit.equipment) {
+  //   if (unit.equipment.length === 1 && unit.equipment[0].active) {
+  //     itemsToExclude = [
+  //       ...itemsToExclude,
+  //       ...unit.equipment[0].name_en.split(", "),
+  //     ];
+  //   } else {
+  //     const activeEquipment = unit.equipment.find((eq) => eq.active);
+  //     if (activeEquipment && activeEquipment.points === 0) {
+  //       itemsToExclude = [
+  //         ...itemsToExclude,
+  //         ...activeEquipment.name_en.split(", "),
+  //       ];
+  //     }
+  //   }
+  // }
 
-  if (unit.armor) {
-    if (unit.armor.length === 1 && unit.armor[0].active) {
-      itemsToExclude = [
-        ...itemsToExclude,
-        ...unit.armor[0].name_en.split(", "),
-      ];
-    } else {
-      const activeArmor = unit.armor.find((ar) => ar.active);
-      if (activeArmor && activeArmor.points === 0) {
-        itemsToExclude = [
-          ...itemsToExclude,
-          ...activeArmor.name_en.split(", "),
-        ];
-      }
-    }
-  }
+  // if (unit.armor) {
+  //   if (unit.armor.length === 1 && unit.armor[0].active) {
+  //     itemsToExclude = [
+  //       ...itemsToExclude,
+  //       ...unit.armor[0].name_en.split(", "),
+  //     ];
+  //   } else {
+  //     const activeArmor = unit.armor.find((ar) => ar.active);
+  //     if (activeArmor && activeArmor.points === 0) {
+  //       itemsToExclude = [
+  //         ...itemsToExclude,
+  //         ...activeArmor.name_en.split(", "),
+  //       ];
+  //     }
+  //   }
+  // }
 
-  if (unit.mounts) {
-    if (unit.mounts.length === 1 && unit.mounts[0].active) {
-      itemsToExclude = [
-        ...itemsToExclude,
-        ...unit.mounts[0].name_en.split(", "),
-      ];
-    } else {
-      const activeMount = unit.mounts.find((m) => m.active);
-      if (activeMount && activeMount.points === 0) {
-        itemsToExclude = [
-          ...itemsToExclude,
-          ...activeMount.name_en.split(", "),
-        ];
-      }
-    }
-  }
+  // if (unit.mounts) {
+  //   if (unit.mounts.length === 1 && unit.mounts[0].active) {
+  //     itemsToExclude = [
+  //       ...itemsToExclude,
+  //       ...unit.mounts[0].name_en.split(", "),
+  //     ];
+  //   } else {
+  //     const activeMount = unit.mounts.find((m) => m.active);
+  //     if (activeMount && activeMount.points === 0) {
+  //       itemsToExclude = [
+  //         ...itemsToExclude,
+  //         ...activeMount.name_en.split(", "),
+  //       ];
+  //     }
+  //   }
+  // }
 
   // Split into array of individual options
   const optionsArray = allOptionsString.split(", ");
