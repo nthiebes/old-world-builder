@@ -15,6 +15,7 @@ import polen from "../../assets/polen.svg";
 import china from "../../assets/china.svg";
 
 import "./Page.css";
+import { InstallPWA } from "../install-pwa";
 
 export const Main = ({ className, children, isDesktop, compact, loading }) => {
   const { language } = useLanguage();
@@ -39,6 +40,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
       {!loading && (
         <footer className="footer">
           <nav className="footer__navigation">
+            <InstallPWA />
             <Link to="/about">
               <FormattedMessage id="footer.about" />
             </Link>
