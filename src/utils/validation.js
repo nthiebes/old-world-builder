@@ -427,6 +427,7 @@ export const validateList = ({ list, language, intl }) => {
       list.core.forEach((unit) => {
         const unitPoints = getUnitPoints(unit, {
           armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
         });
         if (unitPoints > list.points * 0.35) {
           errors.push({
@@ -440,6 +441,7 @@ export const validateList = ({ list, language, intl }) => {
       list.special.forEach((unit) => {
         const unitPoints = getUnitPoints(unit, {
           armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
         });
         if (unitPoints > list.points * 0.3) {
           errors.push({
@@ -453,6 +455,7 @@ export const validateList = ({ list, language, intl }) => {
       list.rare.forEach((unit) => {
         const unitPoints = getUnitPoints(unit, {
           armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
         });
         if (unitPoints > list.points * 0.25) {
           errors.push({
@@ -465,6 +468,7 @@ export const validateList = ({ list, language, intl }) => {
       list.mercenaries.forEach((unit) => {
         const unitPoints = getUnitPoints(unit, {
           armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
         });
         if (unitPoints > list.points * 0.25) {
           errors.push({
