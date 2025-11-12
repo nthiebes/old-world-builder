@@ -14,6 +14,7 @@ import { nameMap } from "../magic";
 import { getGameSystems } from "../../utils/game-systems";
 
 import "./Print.css";
+import classNames from "classnames";
 
 export const Print = () => {
   const { listId } = useParams();
@@ -25,6 +26,9 @@ export const Print = () => {
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [showStats, setShowStats] = useState(true);
   const [showCustomNotes, setShowCustomNotes] = useState(true);
+  const [useTwoColumns, setUseTwoColumns] = useState(false);
+  const [useThreeColumns, setUseThreeColumns] = useState(false);
+  const [showHeadings, setShowHeadings] = useState(true);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -108,6 +112,38 @@ export const Print = () => {
       checked: isShowList,
       callback: () => {
         setIsShowList(!isShowList);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "print.showHeadings",
+      }),
+      id: "isShowHeadings",
+      checked: showHeadings,
+      callback: () => {
+        setShowHeadings(!showHeadings);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "print.useTwoColumns",
+      }),
+      id: "isShowTwoColumns",
+      checked: useTwoColumns,
+      callback: () => {
+        setUseTwoColumns(!useTwoColumns);
+        setUseThreeColumns(false);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "print.useThreeColumns",
+      }),
+      id: "isShowThreeColumns",
+      checked: useThreeColumns,
+      callback: () => {
+        setUseThreeColumns(!useThreeColumns);
+        setUseTwoColumns(false);
       },
     },
   ];
@@ -269,101 +305,125 @@ export const Print = () => {
         </h2>
       </div>
 
-      <main className="print">
-        <h1>
-          {list.name}{" "}
-          {!isShowList && (
-            <span className="print__points">
-              [{allPoints} <FormattedMessage id="app.points" />]
-            </span>
-          )}
-        </h1>
-        <p className="print__subheader">
-          {game.name}, {armyName}
-          {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
-          <FormattedMessage id={`misc.${list.compositionRule || "open-war"}`} />
-        </p>
+      <main
+        className={classNames(
+          "print",
+          useTwoColumns && "print--two-columns",
+          useThreeColumns && "print--three-columns"
+        )}
+      >
+        {showHeadings && (
+          <section>
+            <h1>
+              {list.name}{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{allPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h1>
+            <p className="print__subheader">
+              {game.name}, {armyName}
+              {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
+              <FormattedMessage
+                id={`misc.${list.compositionRule || "open-war"}`}
+              />
+            </p>
+          </section>
+        )}
 
         {list.characters.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.characters" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{charactersPoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.characters" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{charactersPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "characters" })}
           </section>
         )}
 
         {list.core.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.core" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{corePoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.core" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{corePoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "core" })}
           </section>
         )}
 
         {list.special.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.special" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{specialPoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.special" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{specialPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "special" })}
           </section>
         )}
 
         {list.rare.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.rare" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{rarePoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.rare" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{rarePoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "rare" })}
           </section>
         )}
 
         {list.allies.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.allies" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{alliesPoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.allies" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{alliesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "allies" })}
           </section>
         )}
 
         {list.mercenaries.length > 0 && (
           <section>
-            <h2>
-              <FormattedMessage id="editor.mercenaries" />{" "}
-              {!isShowList && (
-                <span className="print__points">
-                  [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                </span>
-              )}
-            </h2>
+            {showHeadings && (
+              <h2>
+                <FormattedMessage id="editor.mercenaries" />{" "}
+                {!isShowList && (
+                  <span className="print__points">
+                    [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            )}
             {getSection({ type: "mercenaries" })}
           </section>
         )}

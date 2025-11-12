@@ -24,6 +24,18 @@
   padding: 1rem;
 }
 
+.print--two-columns ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.print--three-columns ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
 .print h1 {
   text-align: center;
   margin-bottom: 0;
