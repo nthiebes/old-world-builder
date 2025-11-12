@@ -89,6 +89,9 @@ const additionalOWBRules = {
   "helstorm rocket battery weapon": {
     url: "weapons-of-war/helstorm-rocket-battery",
   },
+  "organ gun weapon": {
+    url: "war-machines/organ-guns",
+  },
 };
 
 export const synonyms = {
@@ -247,6 +250,7 @@ export const synonyms = {
   "veteran officer": "champions",
   commander: "champions",
   "shrine keeper": "champions",
+  "veteran commander": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -291,6 +295,8 @@ export const synonyms = {
   "cathayan lances": "cathayan lance",
   "sky lantern crane guns": "sky lantern crane gun",
   "iron hail guns": "iron hail gun",
+  warhorses: "warhorse",
+  "barded warhorses": "barded warhorse",
 };
 
 export const rulesMap = {
