@@ -105,6 +105,7 @@ export const Magic = ({ isMobile }) => {
 
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
+  let maxItems = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
     const inputType = event.target.type;
@@ -286,7 +287,7 @@ export const Magic = ({ isMobile }) => {
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
       const typeIsRunic = (type) =>
-        type.indexOf("runes") >= 0 || type === "runic-tattoos";
+        type.indexOf("runes") >= 0 || type === "runic-tattoos" || type === "incantation-scroll";
       const isRune =
         (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
         (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
@@ -484,6 +485,12 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: commandOptions[command].magic.selected,
     });
+    maxItems = (commandOptions[command].magic.armyComposition &&
+        commandOptions[command].magic.armyComposition[
+          list.armyComposition || list.army
+        ]?.maxItems) ||
+      commandOptions[command].magic.maxItems ||
+      3; // backwards compatibility for runes 
   } else if (hasMagicItems) {
     maxMagicPoints =
       (unit.items[group].armyComposition &&
@@ -493,6 +500,12 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
+    maxItems =
+      (unit.items[group].armyComposition &&
+        unit.items[group].armyComposition[list.armyComposition || list.army]
+          ?.maxItems) ||
+      unit.items[group].maxItems ||
+      3; // backwards compatibility for runes 
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -604,13 +617,12 @@ export const Magic = ({ isMobile }) => {
                 const selectedItem = unitSelectedItems.find(
                   ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                 );
-                let runesAmountInCategory = 0;
+                let itemCountInCategory = 0;
                 let masterRuneInCategory = false;
-
                 unitSelectedItems.forEach(
                   ({ name_en, type: itemType, amount }) => {
                     if (itemType === magicItem.type) {
-                      runesAmountInCategory += amount ?? 1;
+                      itemCountInCategory += amount ?? 1;
 
                       if (name_en.includes("Master")) {
                         masterRuneInCategory = true;
@@ -620,7 +632,11 @@ export const Magic = ({ isMobile }) => {
                 );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
-                const isRune = Boolean(magicItem.type.includes("runes"));
+                // Combo Exclusive item types are things like runes and incantation scrolls,
+                // where 1 to 3 items in a category can be used but the combination of items 
+                // must be unique within the army.
+                const isComboExclusive = Boolean(magicItem.type.includes("runes") || magicItem.type === "incantation-scroll");
+
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
                   : unitSelectedItems.some(
@@ -628,12 +644,12 @@ export const Magic = ({ isMobile }) => {
                         (!magicItem.stackable &&
                           !selectedItem.stackable &&
                           selectedItem.type === magicItem.type &&
-                          !isRune) ||
-                        (isRune && runesAmountInCategory >= 3) ||
-                        (isRune &&
+                          !isComboExclusive) ||
+                        (isComboExclusive && itemCountInCategory >= maxItems) ||
+                        (isComboExclusive &&
                           masterRuneInCategory &&
                           magicItem.name_en.includes("Master")) ||
-                        (isRune &&
+                        (isComboExclusive &&
                           magicItem.type === selectedItem.type &&
                           (magicItem.nonExclusive === false ||
                             selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
