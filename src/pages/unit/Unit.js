@@ -811,6 +811,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   />
                                 )}
                             </div>
+                            {magic.maxItems && magic.maxItems > 0 && (
+                              <p className="unit__option-note unit__option-note--maxitems">
+                                <FormattedMessage
+                                  id={magic.types.length > 1 ? "unit.maxItemsPerCategory" : "unit.maxItems"}
+                                  values={{
+                                    maxItems: magic.maxItems,
+                                  }}
+                                />
+                              </p>
+                            )}
                             {magic?.selected && (
                               <p>
                                 {magic.selected
@@ -1859,7 +1869,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     )}
                   </div>
                   {item.maxItems && item.maxItems > 0 && (
-                    <p className="unit__option-note unit__option-note--items">
+                    <p className="unit__option-note unit__option-note--maxitems">
                       <FormattedMessage
                         id={item.types.length > 1 ? "unit.maxItemsPerCategory" : "unit.maxItems"}
                         values={{
