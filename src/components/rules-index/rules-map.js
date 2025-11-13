@@ -297,6 +297,10 @@ export const synonyms = {
   "iron hail guns": "iron hail gun",
   warhorses: "warhorse",
   "barded warhorses": "barded warhorse",
+  "chaos furies of tzeentch": "chaos furies",
+  "chaos furies of nurgle": "chaos furies",
+  "chaos furies of slaanesh": "chaos furies",
+  "chaos furies of khorne": "chaos furies",
 };
 
 export const rulesMap = {
