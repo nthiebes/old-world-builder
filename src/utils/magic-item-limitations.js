@@ -106,15 +106,31 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
 };
 
 /**
- * Checks if an item's rune loadout is shared by other units. Corresponds to the Rule of Pride, FoF pg 32.
+ * Combination Exculsive item categories are categories like runes and incantation scrolls where one or more
+ * items can be taken but a particular combination of items must be unique within an army.
+ */
+export const comboExclusiveCategories = [
+  "weapon-runes",
+  "armor-runes",
+  "talismanic-runes",
+  "banner-runes",
+  "engineering-runes",
+  "ranged-weapon-runes",
+  "runic-tattoos",
+  "incantation-scroll"
+];
+
+/**
+ * Checks if an unit's combination of items, grouped by type or category, is shared by other units.
+ * Corresponds to the Rule of Pride, FoF pg 32.
  * We treat an item's rune loadout as synonymous with an item category, like Weapon, Armour, etc.
  *
- * @param {object[]} runes Array of runes to be looked for in the list
+ * @param {object[]} items Array of items to be looked for in the list
  * @param {object} list The army list to be checked
- * @param {string} excludeId The id of the character/unit with the runes, which will be skipped by the check
- * @returns {object[]} List of error messages for rune categories that have failed validation
+ * @param {string} excludeId The id of the character/unit with the items, which will be skipped by the check
+ * @returns {object[]} List of error messages for item categories that have failed validation
  */
-export const runeLoadoutElsewhere = (runes, list, excludeId) => {
+export const combosUsedElsewhere = (items, list, excludeId) => {
   const unitCategories = [
     "characters",
     "core",
@@ -125,28 +141,28 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
   ];
   let errors = [];
   let groupedByType = {};
-  for (let i in runes) {
-    let rune = runes[i];
-    groupedByType[rune.type] = groupedByType[rune.type] || [];
-    groupedByType[rune.type].push(rune);
+  for (let i in items) {
+    let item = items[i];
+    groupedByType[item.type] = groupedByType[item.type] || [];
+    groupedByType[item.type].push(item);
   }
-  for (let runeType in groupedByType) {
-    let itemRunes = groupedByType[runeType];
+  for (let itemType in groupedByType) {
+    let categoryItems = groupedByType[itemType];
     for (let categoryIndex in unitCategories) {
       let category = unitCategories[categoryIndex];
       for (let i in list[category]) {
         let unit = list[category][i];
         if (unit.id !== excludeId) {
-          let collectedItemRunes = [];
+          let collectedItemCombos = [];
 
           for (let itemGroup in unit.items) {
-            // get all items that match the current item's runeType
-            let targetItemRunes = unit.items[itemGroup].selected.filter(
-              (targetItem) => targetItem.type === runeType
+            // get all items that match the current item's category
+            let targetCategoryItems = unit.items[itemGroup].selected.filter(
+              (targetItem) => targetItem.type === itemType
             );
-            if (targetItemRunes.length > 0) {
-              collectedItemRunes.push({
-                itemRunes: targetItemRunes,
+            if (targetCategoryItems.length > 0) {
+              collectedItemCombos.push({
+                itemCombos: targetCategoryItems,
                 url: `/editor/${list.id}/${category}/${unit.id}/items/${itemGroup}`,
               });
             }
@@ -156,36 +172,36 @@ export const runeLoadoutElsewhere = (runes, list, excludeId) => {
               unit.command[commandGroup].active &&
               unit.command[commandGroup].magic?.selected
             ) {
-              let targetItemRunes = unit.command[
+              let targetCategoryItems = unit.command[
                 commandGroup
               ].magic?.selected.filter(
-                (targetItem) => targetItem.type === runeType
+                (targetItem) => targetItem.type === itemType
               );
-              if (targetItemRunes.length > 0) {
-                collectedItemRunes.push({
-                  itemRunes: targetItemRunes,
+              if (targetCategoryItems.length > 0) {
+                collectedItemCombos.push({
+                  itemCombos: targetCategoryItems,
                   url: `/editor/${list.id}/${category}/${unit.id}/magic/${commandGroup}`,
                 });
               }
             }
           }
 
-          for (let j in collectedItemRunes) {
-            let targetItemRunesObj = collectedItemRunes[j];
-            if (targetItemRunesObj.itemRunes.length === itemRunes.length) {
+          for (let j in collectedItemCombos) {
+            let targetItemComboObj = collectedItemCombos[j];
+            if (targetItemComboObj.itemCombos.length === categoryItems.length) {
               if (
-                itemRunes.every((rune) =>
-                  targetItemRunesObj.itemRunes.some(
-                    (targetRune) =>
-                      rune.name_en === targetRune.name_en &&
-                      (rune.amount || 1) === (targetRune.amount || 1)
+                categoryItems.every((item) =>
+                  targetItemComboObj.itemCombos.some(
+                    (targetItem) =>
+                      item.name_en === targetItem.name_en &&
+                      (item.amount || 1) === (targetItem.amount || 1)
                   )
                 )
               ) {
                 errors.push({
-                  runeType: runeType,
+                  category: itemType,
                   unit: unit,
-                  url: targetItemRunesObj.url,
+                  url: targetItemComboObj.url,
                 });
               }
             }
