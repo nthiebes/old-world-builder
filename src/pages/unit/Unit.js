@@ -1858,6 +1858,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       />
                     )}
                   </div>
+                  {item.maxItems && item.maxItems > 0 && (
+                    <p className="unit__option-note unit__option-note--items">
+                      <FormattedMessage
+                        id={item.types.length > 1 ? "unit.maxItemsPerCategory" : "unit.maxItems"}
+                        values={{
+                          maxItems: item.maxItems,
+                        }}
+                      />
+                    </p>
+                  )}
                   {getUnitOptionNotes({
                     notes: item.notes,
                     key: `options-${itemIndex}-note`,

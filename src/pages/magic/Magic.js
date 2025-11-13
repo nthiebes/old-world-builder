@@ -676,8 +676,13 @@ export const Magic = ({ isMobile }) => {
                     {isFirstItemType && (
                       <>
                         <h3 className="magic__type">
-                          {nameMap[magicItem.type][`name_${language}`] ||
-                            nameMap[magicItem.type].name_en}
+                          <span>
+                            {nameMap[magicItem.type][`name_${language}`] ||
+                              nameMap[magicItem.type].name_en}
+                          </span>
+                          {isComboExclusiveCategory && maxItems > 0 &&
+                            (<i className="magic__item-count">{`${itemCountInCategory}/${maxItems}`}</i>)
+                          }
                         </h3>
                         {comboUsedBy && (
                           <ErrorMessage
