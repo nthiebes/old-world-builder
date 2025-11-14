@@ -122,7 +122,9 @@ export const getUnitPoints = (unit, settings) => {
       }
       if (option.active && option.options && option.options.length > 0) {
         option.options.forEach((commandOption) => {
-          if (commandOption.active) {
+          if (commandOption.active && commandOption.perModel) {
+            unitPoints += (unit.strength || 1) * commandOption.points;
+          } else if (commandOption.active) {
             unitPoints += commandOption.points;
           }
         });
@@ -137,12 +139,16 @@ export const getUnitPoints = (unit, settings) => {
           (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
       )
       .forEach((option) => {
-        if (option.active) {
+        if (option.active && option.perModel) {
+          unitPoints += (unit.strength || 1) * option.points;
+        } else if (option.active) {
           unitPoints += option.points;
         }
         if (option.active && option.options && option.options.length > 0) {
           option.options.forEach((mountOption) => {
-            if (mountOption.active) {
+            if (mountOption.active && mountOption.perModel) {
+              unitPoints += (unit.strength || 1) * mountOption.points;
+            } else if (mountOption.active) {
               unitPoints += mountOption.points;
             }
           });
@@ -165,7 +171,10 @@ export const getUnitPoints = (unit, settings) => {
 
         if (equipment && equipment.length) {
           equipment.forEach((option) => {
-            if (option.active && option.perModel) {
+            if (option.stackable) {
+              unitPoints +=
+                (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
               unitPoints += strength * option.points;
             } else if (option.active && !option.perModel) {
               unitPoints += option.points;

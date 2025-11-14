@@ -8,6 +8,7 @@ import {
   getUnitRuleData,
   findOption,
 } from "./unit";
+import { joinWithAnd, joinWithOr } from "./string";
 
 const filterByTroopType = (unit) => {
   const ruleData = getUnitRuleData(unit.name_en);
@@ -115,304 +116,22 @@ export const validateList = ({ list, language, intl }) => {
     ? rules[list.armyComposition]?.mercenaries?.units
     : rules["grand-army"]?.mercenaries?.units;
 
-  const checkRules = ({ ruleUnit, type }) => {
-    const unitsInList = (
-      ruleUnit?.requiredByType === "all"
-        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
-        : list[type]
-    ).filter(
-      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
-    );
-    const requiredUnitsInList =
-      ruleUnit.requiresType &&
-      (ruleUnit.requiresType === "all"
-        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
-        : list[ruleUnit.requiresType]
-      ).filter(
-        (unit) =>
-          ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
-      );
-    const namesInList = uniq(
-      unitsInList.map((unit) => getUnitName({ unit, language }))
-    )
-      .join(", ")
-      .replace(/, ([^,]*)$/, " or $1");
-    const unitNames =
-      ruleUnit.min > 0 &&
-      uniq(
-        ruleUnit.ids.map((id) => {
-          const name = intl.formatMessage({ id });
-
-          return getUnitName({ unit: { name }, language });
-        })
-      )
-        .join(", ")
-        .replace(/, ([^,]*)$/, " or $1");
-    const requiredNames =
-      ruleUnit.requires &&
-      uniq(
-        ruleUnit.requires.map((id) => {
-          const name = intl.formatMessage({ id });
-
-          return getUnitName({ unit: { name }, language });
-        })
-      )
-        .join(", ")
-        .replace(/, ([^,]*)$/, " or $1");
-    const points = ruleUnit.points;
-    const min = points
-      ? Math.floor(list.points / points) * ruleUnit.min
-      : ruleUnit.min;
-    const max = points
-      ? Math.floor(list.points / points) * ruleUnit.max
-      : ruleUnit.max;
-
-    // Not enough units
-    if (
-      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
-      unitsInList.length < min
-    ) {
-      errors.push({
-        message: "misc.error.minUnits",
-        section: type,
-        name: unitNames,
-        min,
-      });
-    }
-
-    // Too many units
-    if (
-      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
-      unitsInList.length > max
-    ) {
-      errors.push({
-        message: "misc.error.maxUnits",
-        section: type,
-        name: namesInList,
-        diff: unitsInList.length - max,
-      });
-    }
-
-    // Unit requires general
-    if (ruleUnit.requiresGeneral && unitsInList.length > 0) {
-      const matchingGeneral = generals.find((general) => {
-        return ruleUnit.requires.includes(general.id.split(".")[0]);
-      });
-
-      !matchingGeneral &&
-        errors.push({
-          message: "misc.error.requiresGeneral",
-          section: type,
-          name: requiredNames,
-        });
-
-      // Unit requires general with specific active option
-      if (ruleUnit.requiresOption) {
-        const generalWithOption = generals
-          .filter(
-            (general) =>
-              ruleUnit.requiresOption.unit === general.id.split(".")[0]
-          )
-          .find((general) =>
-            general.options.find(
-              (option) =>
-                option.id === ruleUnit.requiresOption.id && option.active
-            )
-          );
-
-        if (
-          !generalWithOption &&
-          matchingGeneral &&
-          matchingGeneral.id.split(".")[0] === ruleUnit.requiresOption.unit
-        ) {
-          errors.push({
-            message: "misc.error.requiresOption",
-            section: type,
-            name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
-            option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
-          });
-        }
-      }
-    }
-
-    // General requires unit (especially for the renegade rules)
-    if (ruleUnit.requiresIfGeneral && generals.length > 0) {
-      const requiredUnitsByGeneralInList = [
-        ...list.characters,
-        ...list.core,
-        ...list.special,
-        ...list.rare,
-      ].filter(
-        (unit) =>
-          ruleUnit.requiresIfGeneral &&
-          ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
-      );
-      if (requiredUnitsByGeneralInList.length === 0) {
-        errors.push({
-          message: "misc.error.requiresUnits",
-          section: type,
-          name: ruleUnit.requiresIfGeneral,
-          diff: 1,
-        });
-      }
-    }
-
-    // Unit should be mounted
-    if (ruleUnit.requiresMounted && unitsInList.length > 0) {
-      const charactersNotMounted = unitsInList.filter(
-        (character) =>
-          !Boolean(
-            character.mounts.find(
-              (mount) => mount.active && mount.name_en !== "On foot"
-            )
-          )
-      );
-      const requiredNames = charactersNotMounted
-        .map((unit) => getUnitName({ unit, language }))
-        .join(", ")
-        .replace(/, ([^,]*)$/, " and $1");
-
-      charactersNotMounted.length &&
-        errors.push({
-          message: "misc.error.requiresMounted",
-          section: type,
-          name: requiredNames,
-        });
-    }
-
-    // Unit requires specific active option
-    if (ruleUnit.requiresOption) {
-      const charactersInList = unitsInList.filter(
-        (character) =>
-          ruleUnit.requiresOption.unit === character.id.split(".")[0]
-      );
-      const characterWithOption = charactersInList.find((character) =>
-        character.options.find(
-          (option) => option.id === ruleUnit.requiresOption.id && option.active
-        )
-      );
-
-      if (charactersInList.length && !characterWithOption) {
-        errors.push({
-          message: "misc.error.requiresOption",
-          section: type,
-          name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
-          option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
-        });
-      }
-    }
-
-    // Unit requires specific active command
-    if (ruleUnit.requiresCommand) {
-      const charactersInList = unitsInList.filter(
-        (character) =>
-          ruleUnit.requiresCommand.unit === character.id.split(".")[0]
-      );
-      const characterWithCommand = charactersInList.find((character) =>
-        character.commands.find(
-          (command) =>
-            command.id === ruleUnit.requiresCommand.id && command.active
-        )
-      );
-
-      if (charactersInList.length && !characterWithCommand) {
-        errors.push({
-          message: "misc.error.requiresCommand",
-          section: type,
-          name: intl.formatMessage({ id: ruleUnit.requiresCommand.unit }),
-          command: intl.formatMessage({ id: ruleUnit.requiresCommand.id }),
-        });
-      }
-    }
-
-    // Requires other unit
-    if (!ruleUnit.requiresGeneral && ruleUnit.requires) {
-      if (!max && ruleUnit.perUnit && unitsInList.length < min) {
-        errors.push({
-          message: "misc.error.minUnits",
-          section: type,
-          name: unitNames,
-          min,
-        });
-      }
-
-      // Each other unit allows another unit
-      if (
-        max &&
-        ruleUnit.perUnit &&
-        unitsInList.length > requiredUnitsInList.length
-      ) {
-        errors.push({
-          message: "misc.error.requiresUnits",
-          section: type,
-          name: requiredNames,
-          diff: unitsInList.length - requiredUnitsInList.length,
-        });
-        // Each other unit allows another unit with scaling max value
-      } else if (
-        !max &&
-        ruleUnit.perUnit &&
-        unitsInList.length > requiredUnitsInList.length + min
-      ) {
-        errors.push({
-          message: "misc.error.requiresUnits",
-          section: type,
-          name: requiredNames,
-          diff: unitsInList.length - requiredUnitsInList.length - min,
-        });
-      } else if (
-        !ruleUnit.perUnit &&
-        !requiredUnitsInList.length &&
-        unitsInList.length > 0
-      ) {
-        errors.push({
-          message: "misc.error.requiresUnits",
-          section: type,
-          name: requiredNames,
-          diff: 1,
-        });
-      }
-      if (!ruleUnit.perUnit && unitsInList.length > max) {
-        errors.push({
-          message: "misc.error.maxUnits",
-          section: type,
-          name: namesInList,
-          diff: unitsInList.length - max,
-        });
-      }
-    }
-
-    // Requires magic item
-    if (ruleUnit.requiresMagicItem && unitsInList.length > 0) {
-      let hasMagicItem;
-
-      generals.forEach((unit) => {
-        unit.items.forEach((itemCategory) => {
-          if (
-            itemCategory.selected.find(
-              (item) => item.name === ruleUnit.requiresMagicItem
-            )
-          ) {
-            hasMagicItem = true;
-          }
-        });
-      });
-
-      !hasMagicItem &&
-        errors.push({
-          message: "misc.error.requiresMagicItem",
-          section: type,
-          name: intl.formatMessage({ id: ruleUnit.requiresMagicItem }),
-        });
-    }
-  };
-
   // Not enough non-character units
-  nonCharactersCount < 3 &&
-    errors.push({
-      message: "misc.error.notEnoughNonCharacters",
-      section: "global",
-    });
+  if (!list.compositionRule || !list.compositionRule.includes("battle-march")) {
+    if (nonCharactersCount < 3) {
+      errors.push({
+        message: "misc.error.notEnoughNonCharacters",
+        section: "global",
+      });
+    }
+  } else {
+    if (nonCharactersCount < 2) {
+      errors.push({
+        message: "misc.error.notEnoughNonCharactersBattleMarch",
+        section: "global",
+      });
+    }
+  }
 
   // No general
   generalsCount === 0 &&
@@ -686,6 +405,439 @@ export const validateList = ({ list, language, intl }) => {
       });
     });
   }
+
+  // Battle March
+  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
+    // Neither player can spend more than 25% of their total points on a single character.
+    list?.characters &&
+      list.characters.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+        });
+        if (unitPoints > list.points / 4) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerCharacter",
+            section: "characters",
+          });
+        }
+      });
+
+    // Neither player can spend more than 35% of their total points on a single core unit.
+    list?.core &&
+      list.core.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
+        });
+        if (unitPoints > list.points * 0.35) {
+          errors.push({
+            message: "misc.error.battleMarch35PercentPerCore",
+            section: "core",
+          });
+        }
+      });
+    // Neither player can spend more than 30% of their total points on a single special unit.
+    list.special &&
+      list.special.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
+        });
+        if (unitPoints > list.points * 0.3) {
+          errors.push({
+            message: "misc.error.battleMarch30PercentPerSpecial",
+            section: "special",
+          });
+        }
+      });
+    // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
+    list.rare &&
+      list.rare.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
+        });
+        if (unitPoints > list.points * 0.25) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerRare",
+            section: "rare",
+          });
+        }
+      });
+    list.mercenaries &&
+      list.mercenaries.forEach((unit) => {
+        const unitPoints = getUnitPoints(unit, {
+          armyComposition: list.armyComposition || list.army,
+          noDetachments: true,
+        });
+        if (unitPoints > list.points * 0.25) {
+          errors.push({
+            message: "misc.error.battleMarch25PercentPerMercenary",
+            section: "mercenaries",
+          });
+        }
+      });
+  }
+
+  let used0XUnits = [];
+
+  const checkRules = ({ ruleUnit, type }) => {
+    const unitsInList = (
+      ruleUnit?.requiredByType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[type]
+    ).filter(
+      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
+    );
+    const requiredUnitsInList =
+      ruleUnit.requiresType &&
+      (ruleUnit.requiresType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[ruleUnit.requiresType]
+      ).filter(
+        (unit) =>
+          ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
+      );
+    const namesInList = joinWithOr(
+      uniq(unitsInList.map((unit) => getUnitName({ unit, language })))
+    );
+    const unitNames =
+      ruleUnit.min > 0 &&
+      joinWithOr(
+        uniq(
+          ruleUnit.ids.map((id) => {
+            const name = intl.formatMessage({ id });
+
+            return getUnitName({ unit: { name }, language });
+          })
+        )
+      );
+    const requiredNames =
+      ruleUnit.requires &&
+      joinWithOr(
+        uniq(
+          ruleUnit.requires.map((id) => {
+            const name = intl.formatMessage({ id });
+
+            return getUnitName({ unit: { name }, language });
+          })
+        )
+      );
+    const points = ruleUnit.points;
+    const min = points
+      ? Math.floor(list.points / points) * ruleUnit.min
+      : ruleUnit.min;
+    const max = points
+      ? Math.floor(list.points / points) * ruleUnit.max
+      : ruleUnit.max;
+
+    // Not enough units
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length < min
+    ) {
+      errors.push({
+        message: "misc.error.minUnits",
+        section: type,
+        name: unitNames,
+        min,
+      });
+    }
+
+    // Too many units
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length > max &&
+      ((list.compositionRule && // Exception for Battle March 0-X units
+        !list.compositionRule.includes("battle-march")) ||
+        !list.compositionRule)
+    ) {
+      errors.push({
+        message: "misc.error.maxUnits",
+        section: type,
+        name: namesInList,
+        diff: unitsInList.length - max,
+      });
+    }
+
+    // 0-X units check for Battle March
+    if (
+      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
+      unitsInList.length > max &&
+      list.compositionRule &&
+      list.compositionRule.includes("battle-march") &&
+      used0XUnits.length > 1
+    ) {
+      errors.push({
+        message: "misc.error.battleMarchMultiple0XUnits",
+        section: type,
+      });
+    }
+
+    // Unit requires general
+    if (ruleUnit.requiresGeneral && unitsInList.length > 0) {
+      const matchingGeneral = generals.find((general) => {
+        return ruleUnit.requires.includes(general.id.split(".")[0]);
+      });
+
+      !matchingGeneral &&
+        errors.push({
+          message: "misc.error.requiresGeneral",
+          section: type,
+          name: requiredNames,
+        });
+
+      // Unit requires general with specific active option
+      if (ruleUnit.requiresOption) {
+        const generalWithOption = generals
+          .filter(
+            (general) =>
+              ruleUnit.requiresOption.unit === general.id.split(".")[0]
+          )
+          .find((general) =>
+            general.options.find(
+              (option) =>
+                option.id === ruleUnit.requiresOption.id && option.active
+            )
+          );
+
+        if (
+          !generalWithOption &&
+          matchingGeneral &&
+          matchingGeneral.id.split(".")[0] === ruleUnit.requiresOption.unit
+        ) {
+          errors.push({
+            message: "misc.error.requiresOption",
+            section: type,
+            name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
+            option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
+          });
+        }
+      }
+    }
+
+    // General requires unit (especially for the renegade rules)
+    if (ruleUnit.requiresIfGeneral && generals.length > 0) {
+      const requiredUnitsByGeneralInList = [
+        ...list.characters,
+        ...list.core,
+        ...list.special,
+        ...list.rare,
+      ].filter(
+        (unit) =>
+          ruleUnit.requiresIfGeneral &&
+          ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
+      );
+      if (requiredUnitsByGeneralInList.length === 0) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: ruleUnit.requiresIfGeneral,
+          diff: 1,
+        });
+      }
+    }
+
+    // Unit should be mounted
+    if (ruleUnit.requiresMounted && unitsInList.length > 0) {
+      const charactersNotMounted = unitsInList.filter(
+        (character) =>
+          !Boolean(
+            character.mounts.find(
+              (mount) => mount.active && mount.name_en !== "On foot"
+            )
+          )
+      );
+      const requiredNames = joinWithAnd(
+        charactersNotMounted.map((unit) => getUnitName({ unit, language }))
+      );
+
+      charactersNotMounted.length &&
+        errors.push({
+          message: "misc.error.requiresMounted",
+          section: type,
+          name: requiredNames,
+        });
+    }
+
+    // Unit requires specific active option
+    if (ruleUnit.requiresOption) {
+      const charactersInList = unitsInList.filter(
+        (character) =>
+          ruleUnit.requiresOption.unit === character.id.split(".")[0]
+      );
+      const characterWithOption = charactersInList.find((character) =>
+        character.options.find(
+          (option) => option.id === ruleUnit.requiresOption.id && option.active
+        )
+      );
+
+      if (charactersInList.length && !characterWithOption) {
+        errors.push({
+          message: "misc.error.requiresOption",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresOption.unit }),
+          option: intl.formatMessage({ id: ruleUnit.requiresOption.id }),
+        });
+      }
+    }
+
+    // Unit requires specific active command
+    if (ruleUnit.requiresCommand) {
+      const charactersInList = unitsInList.filter(
+        (character) =>
+          ruleUnit.requiresCommand.unit === character.id.split(".")[0]
+      );
+      const characterWithCommand = charactersInList.find((character) =>
+        character.commands.find(
+          (command) =>
+            command.id === ruleUnit.requiresCommand.id && command.active
+        )
+      );
+
+      if (charactersInList.length && !characterWithCommand) {
+        errors.push({
+          message: "misc.error.requiresCommand",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresCommand.unit }),
+          command: intl.formatMessage({ id: ruleUnit.requiresCommand.id }),
+        });
+      }
+    }
+
+    // Requires other unit
+    if (!ruleUnit.requiresGeneral && ruleUnit.requires) {
+      if (!max && ruleUnit.perUnit && unitsInList.length < min) {
+        errors.push({
+          message: "misc.error.minUnits",
+          section: type,
+          name: unitNames,
+          min,
+        });
+      }
+
+      // Each other unit allows another unit
+      if (
+        max &&
+        ruleUnit.perUnit &&
+        unitsInList.length > requiredUnitsInList.length * max
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: unitsInList.length - requiredUnitsInList.length * max,
+        });
+        // Each other unit allows another unit with scaling max value
+      } else if (
+        !max &&
+        ruleUnit.perUnit &&
+        unitsInList.length > requiredUnitsInList.length + min
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: unitsInList.length - requiredUnitsInList.length - min,
+        });
+      } else if (
+        !ruleUnit.perUnit &&
+        !requiredUnitsInList.length &&
+        unitsInList.length > 0
+      ) {
+        errors.push({
+          message: "misc.error.requiresUnits",
+          section: type,
+          name: requiredNames,
+          diff: 1,
+        });
+      }
+      if (!ruleUnit.perUnit && unitsInList.length > max) {
+        errors.push({
+          message: "misc.error.maxUnits",
+          section: type,
+          name: namesInList,
+          diff: unitsInList.length - max,
+        });
+      }
+    }
+
+    // Requires magic item
+    if (ruleUnit.requiresMagicItem && unitsInList.length > 0) {
+      let hasMagicItem;
+
+      generals.forEach((unit) => {
+        unit.items.forEach((itemCategory) => {
+          if (
+            itemCategory.selected.find(
+              (item) => item.name === ruleUnit.requiresMagicItem
+            )
+          ) {
+            hasMagicItem = true;
+          }
+        });
+      });
+
+      !hasMagicItem &&
+        errors.push({
+          message: "misc.error.requiresMagicItem",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresMagicItem }),
+        });
+    }
+  };
+
+  // Marking used 0-X per 1000 pts units for Battle March
+  const checkFor0XRules = ({ ruleUnit, type }) => {
+    const unitsInList = (
+      ruleUnit?.requiredByType === "all"
+        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        : list[type]
+    ).filter(
+      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
+    );
+
+    if (
+      ruleUnit.max > 0 &&
+      ruleUnit.points === 1000 &&
+      unitsInList.length > 0
+    ) {
+      used0XUnits = [
+        ...used0XUnits,
+        ...unitsInList.map((unit) => unit.id.split(".")[0]),
+      ];
+    }
+  };
+
+  characterUnitsRules &&
+    characterUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "characters" });
+    });
+
+  coreUnitsRules &&
+    coreUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "core" });
+    });
+
+  specialUnitsRules &&
+    specialUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "special" });
+    });
+
+  rareUnitsRules &&
+    rareUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "rare" });
+    });
+
+  alliesUnitsRules &&
+    alliesUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "allies" });
+    });
+
+  mercenariesUnitsRules &&
+    mercenariesUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "mercenaries" });
+    });
 
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {

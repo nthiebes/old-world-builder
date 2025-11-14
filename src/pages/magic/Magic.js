@@ -1,5 +1,5 @@
-import { Fragment, useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { Fragment, useEffect, useState } from "react";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
@@ -9,16 +9,20 @@ import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
+import { ErrorMessage } from "../../components/error-message";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { equalsOrIncludes } from "../../utils/string";
+import { equalsOrIncludes, namesForSpread } from "../../utils/string";
+import { getUnitName } from "../../utils/unit";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
+  itemsUsedElsewhere,
   maxAllowedOfItem,
+  runeLoadoutElsewhere,
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -64,11 +68,41 @@ export const Magic = ({ isMobile }) => {
   const unit = units && units.find(({ id }) => id === unitId);
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
-  const army =
+  let army =
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(({ id }) => armyId === id);
+      .armies.find(
+        ({ id }) =>
+          (unit && unit.items && unit.items[group]?.magicItemsArmy === id) ||
+          (command !== undefined &&
+            unit &&
+            unit.command &&
+            unit.command[command]?.magic?.magicItemsArmy === id)
+      );
+  const [usedElsewhere, setUsedElsewhere] = useState([]);
+  const [runesUsedElsewhere, setRunesUsedElsewhere] = useState([]);
+
+  // Fallback to list army if no specific army for items is set
+  if (!army) {
+    army =
+      list &&
+      gameSystems
+        .find(({ id }) => id === list.game)
+        .armies.find(({ id }) => armyId === id);
+  }
+
+  // Use list army for arcane journals
+  if (!army) {
+    army =
+      list &&
+      gameSystems
+        .find(({ id }) => id === list.game)
+        .armies.find(
+          ({ id }) => unit.magicItemsArmy === id || list.army === id
+        );
+  }
+
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
@@ -244,6 +278,26 @@ export const Magic = ({ isMobile }) => {
   }, [list]);
 
   useEffect(() => {
+    if (unit && list && unitId) {
+      let items = (unit?.items && unit.items[group || 0]?.selected) || [];
+      if (command) {
+        items = items.concat(unit?.command[command]?.magic?.selected || []);
+      }
+      setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
+
+      const typeIsRunic = (type) =>
+        type.indexOf("runes") >= 0 || type === "runic-tattoos";
+      const isRune =
+        (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
+        (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
+      if (isRune) {
+        setRunesUsedElsewhere(runeLoadoutElsewhere(items, list, unitId));
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [unit, list, unitId, command]);
+
+  useEffect(() => {
     army &&
       list &&
       unit &&
@@ -257,14 +311,15 @@ export const Magic = ({ isMobile }) => {
             itemCategories = itemCategories.filter(
               (itemCategory) => itemCategory !== army.id
             );
-            itemCategories.push(unit.magicItemsArmy);
+            if (data[unit.magicItemsArmy]) {
+              itemCategories.push(unit.magicItemsArmy);
+            }
           }
 
           const allItems = itemCategories.map((itemCategory) => {
             return {
               items: data[itemCategory],
-              name_de: nameMap[itemCategory].name_de,
-              name_en: nameMap[itemCategory].name_en,
+              ...namesForSpread(nameMap[itemCategory]),
               id: itemCategory,
             };
           });
@@ -299,6 +354,7 @@ export const Magic = ({ isMobile }) => {
     itemGroup,
     isConditional,
     isTypeLimitReached,
+    usedElsewhereErrors,
   }) => {
     const isCommand = Boolean(
       unit && commandOptions[command]?.magic?.types.length
@@ -308,6 +364,15 @@ export const Magic = ({ isMobile }) => {
       ? // No maximum of this item if there is no point max.
         undefined
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
+
+    const usedElsewhereBy = usedElsewhereErrors?.map((error, index) => (
+      <Fragment key={`${error.unit.id}-error-link`}>
+        <Link to={error.url}>
+          {getUnitName({ unit: error.unit, language })}
+        </Link>
+        {index !== usedElsewhereErrors.length - 1 ? ", " : ""}
+      </Fragment>
+    ));
 
     return (
       <Fragment key={`${magicItem.name_en}-${magicItem.id}`}>
@@ -358,6 +423,22 @@ export const Magic = ({ isMobile }) => {
             />
           </label>
         </div>
+        {usedElsewhereErrors && usedElsewhereErrors.length > 0 && (
+          <ErrorMessage
+            key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`}
+            spaceAfter
+            spaceBefore={isMobile}
+          >
+            <span>
+              <FormattedMessage
+                id="misc.error.itemUsedElsewhereBy"
+                values={{
+                  usedby: usedElsewhereBy,
+                }}
+              />
+            </span>
+          </ErrorMessage>
+        )}
 
         {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
           <NumberInput
@@ -383,7 +464,7 @@ export const Magic = ({ isMobile }) => {
     (commandOption) =>
       !commandOption.armyComposition ||
       commandOption.armyComposition.includes(
-        list?.armyComposition || list?.army
+        unit.army || list?.armyComposition || list?.army
       )
   );
   const hasCommandMagicItems = Boolean(
@@ -492,7 +573,7 @@ export const Magic = ({ isMobile }) => {
               (!item.armyComposition ||
                 equalsOrIncludes(
                   item.armyComposition,
-                  list?.armyComposition || list?.army
+                  unit.army || list?.armyComposition || list?.army
                 ))
           );
 
@@ -558,13 +639,48 @@ export const Magic = ({ isMobile }) => {
                             selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
                     );
 
+                const usedElsewhereErrors = usedElsewhere.filter(
+                  (e) => e.itemName === magicItem.name_en
+                );
+                const runesElsewhereErrors =
+                  isFirstItemType &&
+                  runesUsedElsewhere.filter(
+                    (e) => e.runeType === magicItem.type
+                  );
+                const runesUsedBy =
+                  runesElsewhereErrors?.length > 0 &&
+                  runesElsewhereErrors.map((error, index) => (
+                    <Fragment key={`${error.unit.id}-rune-error-link`}>
+                      <Link to={error.url}>
+                        {getUnitName({ unit: error.unit, language })}
+                      </Link>
+                      {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
+
                 return (
                   <Fragment key={`${magicItem.name_en}${magicItem.id}`}>
                     {isFirstItemType && (
-                      <h3 className="magic__type">
-                        {nameMap[magicItem.type][`name_${language}`] ||
-                          nameMap[magicItem.type].name_en}
-                      </h3>
+                      <>
+                        <h3 className="magic__type">
+                          {nameMap[magicItem.type][`name_${language}`] ||
+                            nameMap[magicItem.type].name_en}
+                        </h3>
+                        {runesUsedBy && (
+                          <ErrorMessage
+                            key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`}
+                          >
+                            <span>
+                              <FormattedMessage
+                                id="misc.error.runesUsedElsewhereBy"
+                                values={{
+                                  usedby: runesUsedBy,
+                                }}
+                              />
+                            </span>
+                          </ErrorMessage>
+                        )}
+                      </>
                     )}
                     {getCheckbox({
                       magicItem,
@@ -572,6 +688,7 @@ export const Magic = ({ isMobile }) => {
                       selectedAmount,
                       isChecked,
                       isTypeLimitReached,
+                      usedElsewhereErrors,
                     })}
 
                     {magicItem.conditional && isChecked
@@ -583,6 +700,7 @@ export const Magic = ({ isMobile }) => {
                             isChecked,
                             isConditional: true,
                             isTypeLimitReached,
+                            usedElsewhereErrors,
                           })
                         )
                       : null}

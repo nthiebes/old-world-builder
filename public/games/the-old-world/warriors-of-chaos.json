@@ -1655,14 +1655,35 @@
           "maximum": 0
         },
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 30,
-          "minimum": 0,
-          "maximum": 0
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1869,7 +1890,7 @@
             "name_cn": "若处于骑乘状态",
             "name_de": "if appropriately mounted",
             "name_es": "if appropriately mounted",
-            "name_fr": "s'il est monté"
+            "name_fr": "si monté"
           }
         }
       ],
@@ -2528,7 +2549,7 @@
         "name_cn": "伏击, 铸链者, 混沌甲 {warriors of chaos}(5+), 领航指挥官, 附魔武器, 诸神凝视, 撞击(1), 混沌无分之印, 无双掠袭者, 集结战吼",
         "name_de": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
         "name_es": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
-        "name_fr": "Embusqueurs, Forgechaîne, Armure du Chaos (5+), Commandante & Capitaine, Armes Ensorcelées, Regard des Dieux, Touches d'Impact (1), Marque du Chaos Universel, Pillarde Inégalée, Cri de Ralliement",
+        "name_fr": "Embusqueurs, Forgechaîne, Armure du Chaos (5+), Commandante & Capitaine, Armes Ensorcelées, Regard des Dieux, Touches d’Impact (1), Marque du Chaos Universel, Pillarde Inégalée, Cri de Ralliement",
         "name_it": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry",
         "name_pl": "Ambushers, Chainmaker, Chaos Armour (5+), Commander & Captain, Ensorcelled Weapons, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Peerless Raider, Rallying Cry"
       },
@@ -2593,18 +2614,29 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_cn": "4级法师",
+          "name_de": "Zauberer der Stufe 4",
+          "name_es": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": ["dark-magic"],
       "specialRules": {
-        "name_en": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_cn": "4级法师, 坚硬皮肤(1), 变化吐息, 紧密阵型, 飞行(10), 大型目标, 奸奇之印, 重生(5+), 迦尔洛希之魂, 践踏攻击(D6), 快速行进, 惊骇, 双头龙",
-        "name_de": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_es": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_fr": "Sorcier de Niveau 4, Peau Blindée (1), Souffle du Changement, Ordre Serré, Vol (10), Grande Cible, Marque de Tzeentch, Régénération (5+), Esprit de Galrauch, Attaques de Piétinement (D6), Rapide, Terreur, Dragon Bicéphale",
-        "name_it": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
-        "name_pl": "Level 4 Wizard, Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon"
+        "name_en": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_cn": "坚硬皮肤(1), 变化吐息, 紧密阵型, 飞行(10), 大型目标, 奸奇之印, 重生(5+), 迦尔洛希之魂, 践踏攻击(D6), 快速行进, 惊骇, 双头龙",
+        "name_de": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_es": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_fr": "Peau Blindée (1), Souffle du Changement, Ordre Serré, Vol (10), Grande Cible, Marque de Tzeentch, Régénération (5+), Esprit de Galrauch, Attaques de Piétinement (D6), Rapide, Terreur, Dragon Bicéphale",
+        "name_it": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon",
+        "name_pl": "Armoured Hide (1), Breath of Change, Close Order, Fly (10), Large Target, Mark of Tzeentch, Regeneration (5+), Spirit of Galrauch, Stomp Attacks (D6), Swiftstride, Terror, Two-headed Dragon"
       },
       "notes": {
         "name_en": "",
@@ -2960,7 +2992,7 @@
         "name_cn": "紧密阵型, 附魔武器, 先行冲锋, 快速行进, Counter Charge",
         "name_de": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
-        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Rapide, Counter Charge"
+        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Rapide, Contre-charge"
       }
     },
     {
@@ -3044,7 +3076,7 @@
           "name_cn": "无甲",
           "name_de": "No armour",
           "name_es": "No armour",
-          "name_fr": "Pas d'armure",
+          "name_fr": "Pas d’armure",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3183,7 +3215,8 @@
           "perModel": true,
           "armyComposition": "wolves-of-the-sea",
           "notes": {
-            "name_en": "If Frydaal is in the army"
+            "name_en": "If Frydaal is in the army",
+            "name_fr": "Si Frydaal est incluse dans l’armée"
           }
         }
       ],
@@ -3413,7 +3446,8 @@
           "perModel": true,
           "armyComposition": "wolves-of-the-sea",
           "notes": {
-            "name_en": "If Frydaal is in the army"
+            "name_en": "If Frydaal is in the army",
+            "name_fr": "Si Frydaal est incluse dans l’armée"
           }
         }
       ],
@@ -3807,7 +3841,7 @@
             "name_cn": "0-1 混沌战车可作为核心选择",
             "name_de": "0-1 Chaos Chariot may be taken as a Core choice",
             "name_es": "0-1 Chaos Chariot may be taken as a Core choice",
-            "name_fr": "0-1 Char du Chaos peut être choisi en Unité de Base"
+            "name_fr": "0-1 Char du Chaos peut être prise comme choix d’Unité de Base"
           }
         }
       },
@@ -3884,7 +3918,7 @@
         "name_cn": "紧密阵型, 附魔武器, 先行冲锋, 撞击(D6+1)",
         "name_de": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
-        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Touches d'Impact (D6+1)"
+        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Touches d’Impact (D6+1)"
       }
     }
   ],
@@ -4328,7 +4362,8 @@
           "name_en": "3+",
           "name_cn": "3+",
           "points": 0,
-          "active": true
+          "active": true,
+          "name_fr": "3+"
         }
       ],
       "options": [
@@ -4405,7 +4440,7 @@
         "name_cn": "紧密阵型, 反制冲锋, 附魔武器, 先行冲锋, 撞击(D6+1 - Chariot only), 混沌无分之印",
         "name_de": "Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Impact Hits (D6+1 - Chariot only), Mark of Chaos Undivided",
         "name_es": "Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Impact Hits (D6+1 - Chariot only), Mark of Chaos Undivided",
-        "name_fr": "Ordre Serré, Contre-charge, Armes Ensorcelées, Première Charge, Touches d'Impact (D6+1 - Char uniquement), Marque du Chaos Universel",
+        "name_fr": "Ordre Serré, Contre-charge, Armes Ensorcelées, Première Charge, Touches d’Impact (D6+1 - Char uniquement), Marque du Chaos Universel",
         "name_it": "Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Impact Hits (D6+1 - Chariot only), Mark of Chaos Undivided",
         "name_pl": "Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Impact Hits (D6+1 - Chariot only), Mark of Chaos Undivided"
       },
@@ -4501,7 +4536,7 @@
         "name_cn": "紧密阵型, 附魔武器, 先行冲锋, 撞击(D6+1)",
         "name_de": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
-        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Touches d'Impact (D6+1)"
+        "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Touches d’Impact (D6+1)"
       }
     },
     {
@@ -4656,7 +4691,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
         "name_de": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
         "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d'Impact (1), Charge Ogre"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre"
       }
     },
     {
@@ -4731,7 +4766,7 @@
         "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 易燃, 重生(5+), 愚笨, Motley Crew",
         "name_de": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
         "name_es": "Armour Bane (1), Close Order, Fear, Flammable, Regeneration (5+), Stupidity, Motley Crew",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Motley Crew"
+        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Inflammable, Régénération (5+), Stupidité, Bande Hétéroclite"
       }
     },
     {
@@ -4947,7 +4982,8 @@
           "maxPoints": 25,
           "notes": {
             "name_en": "Requires Shartak",
-            "name_cn": "需要沙塔克"
+            "name_cn": "需要沙塔克",
+            "name_fr": "Nécessite un Shartak"
           }
         }
       ],
@@ -5101,7 +5137,7 @@
         "name_cn": "血怒, 混沌无分之印, 开放阵型, 原始狂怒, 重生(5+), 散兵, 快速行进, 异变形体, 恐惧",
         "name_de": "Blood Rage, Mark of Chaos Undivided, Open Order, Primal Fury, Regeneration (5+), Skirmishers, Swiftstride, Warped Form, Fear",
         "name_es": "Blood Rage, Mark of Chaos Undivided, Open Order, Primal Fury, Regeneration (5+), Skirmishers, Swiftstride, Warped Form, Fear",
-        "name_fr": "Soif de Sang, Marque du Chaos Universel, Ordre Dispersé, Fureur Primale, Régénération (5+), Tirailleurs, Rapide, Forme Pervertie, Fear",
+        "name_fr": "Soif de Sang, Marque du Chaos Universel, Ordre Dispersé, Fureur Primale, Régénération (5+), Tirailleurs, Rapide, Forme Pervertie, Peur",
         "name_it": "Blood Rage, Mark of Chaos Undivided, Open Order, Primal Fury, Regeneration (5+), Skirmishers, Swiftstride, Warped Form, Fear",
         "name_pl": "Blood Rage, Mark of Chaos Undivided, Open Order, Primal Fury, Regeneration (5+), Skirmishers, Swiftstride, Warped Form, Fear"
       },
@@ -5273,9 +5309,7 @@
           "name_pl": "Shields",
           "points": 1,
           "perModel": true,
-          "stackable": false,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": false
         },
         {
           "name_en": "Drilled",
@@ -5472,7 +5506,7 @@
         "name_cn": "碎甲攻击(1 - Gorebeast only), 紧密阵型, 附魔武器, 先行冲锋, 撞击(D6+2), 一击必杀(Gorebeast only)",
         "name_de": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)",
         "name_es": "Armour Bane (1 - Gorebeast only), Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+2), Killing Blow (Gorebeast only)",
-        "name_fr": "Arme Perforante (1 - Éventreur uniquement), Ordre Serré, Armes Ensorcelées, Première Charge, Touches d'Impact (D6+2), Coup Fatal (Éventreur uniquement)"
+        "name_fr": "Arme Perforante (1 - Éventreur uniquement), Ordre Serré, Armes Ensorcelées, Première Charge, Touches d’Impact (D6+2), Coup Fatal (Éventreur uniquement)"
       }
     },
     {
@@ -5687,7 +5721,7 @@
         "name_cn": "碎甲攻击(1), 束缚之怒, 紧密阵型, 附魔武器, 心理免疫, 撞击(D6), 大型目标, 怪兽驭手, 重生(6+), 惊骇, 永不战败, 次元产物",
         "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
-        "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
+        "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d’Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
       },
       "notes": {
         "name_en": "0-1 Hellcannon per 1000 points",
@@ -5885,7 +5919,7 @@
         "name_cn": "爆炸衰亡, 混沌之火, 飞行(10), 大型目标, 混沌法系, 魔法攻击, 魔法抗性(-2), 混沌无分之印, 重生(5+), 践踏攻击(D6), 快速行进, 惊骇, 次元火光环, 紧密阵型",
         "name_de": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lore of Chaos, Magical Attacks, Magic Resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura, Close Order",
         "name_es": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lore of Chaos, Magical Attacks, Magic Resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura, Close Order",
-        "name_fr": "Fin Explosive, Feu & Chaos, Vol (10), Grande Cible, Domaine du Chaos, Attaques Magiques, Résistance à la Magie (-2), Marque du Chaos Universel, Régénération (+5), Attaques de Piétinement (D6), Rapide, Terreur, Aura de Maleflamme, Close Order",
+        "name_fr": "Fin Explosive, Feu & Chaos, Vol (10), Grande Cible, Domaine du Chaos, Attaques Magiques, Résistance à la Magie (-2), Marque du Chaos Universel, Régénération (+5), Attaques de Piétinement (D6), Rapide, Terreur, Aura de Maleflamme, Ordre Serré",
         "name_it": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lore of Chaos, Magical Attacks, Magic Resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura, Close Order",
         "name_pl": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lore of Chaos, Magical Attacks, Magic Resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura, Close Order"
       },

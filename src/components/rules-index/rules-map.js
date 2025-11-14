@@ -67,9 +67,39 @@ const additionalOWBRules = {
   "nuln state troops empire": {
     url: "special-rules/nuln-state-troops",
   },
+  "crown of horns beastmen": {
+    url: "magic-item/crown-of-horns-beastmen",
+  },
+  "crown of horns cathay": {
+    url: "weapons-of-war/crown-of-horns-grand-cathay",
+  },
+  "engine of the gods renegade": {
+    url: "special-rules/engine-of-the-gods-renegade",
+  },
+  "crown of antlers beastmen": {
+    url: "special-rules/crown-of-antlers",
+  },
+  "crown of antlers wood-elf-realms": {
+    url: "magic-item/crown-of-antlers",
+  },
+  "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
+  "helblaster volley gun weapon": {
+    url: "weapons-of-war/helblaster-volley-gun",
+  },
+  "helstorm rocket battery weapon": {
+    url: "weapons-of-war/helstorm-rocket-battery",
+  },
+  "organ gun weapon": {
+    url: "war-machines/organ-guns",
+  },
 };
 
 export const synonyms = {
+  "the witch": "suffer not...",
+  "the revenant": "suffer not...",
+  "the mutant": "suffer not...",
+  "the daemon": "suffer not...",
+  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
@@ -216,6 +246,11 @@ export const synonyms = {
   "skin wolf jarl": "champions",
   "first sword": "champions",
   captain: "champions",
+  officer: "champions",
+  "veteran officer": "champions",
+  commander: "champions",
+  "shrine keeper": "champions",
+  "veteran commander": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -260,6 +295,12 @@ export const synonyms = {
   "cathayan lances": "cathayan lance",
   "sky lantern crane guns": "sky lantern crane gun",
   "iron hail guns": "iron hail gun",
+  warhorses: "warhorse",
+  "barded warhorses": "barded warhorse",
+  "chaos furies of tzeentch": "chaos furies",
+  "chaos furies of nurgle": "chaos furies",
+  "chaos furies of slaanesh": "chaos furies",
+  "chaos furies of khorne": "chaos furies",
 };
 
 export const rulesMap = {

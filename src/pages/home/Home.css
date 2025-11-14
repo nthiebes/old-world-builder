@@ -10,12 +10,22 @@
   flex-grow: 1;
 }
 
+.home__folder .list__inner {
+  padding: 1rem 0;
+}
+
 .home__headline {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 0.5rem;
   margin-bottom: 0;
+}
+
+.home__headline--folder {
+  margin-right: 0;
+  display: flex;
+  align-items: center;
 }
 
 .home__logo {
@@ -50,4 +60,70 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   max-width: 30rem;
+}
+
+.home__folder {
+  padding: 0 1rem;
+  background: var(--color-list);
+  margin: 0 -1rem 0 -1rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-list) 0%,
+    rgba(232, 221, 203, 1) 50%,
+    var(--color-list) 100%
+  );
+}
+
+.home__folder .list__inner::before {
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.home__folder--active {
+  z-index: 2;
+}
+
+.home__folder-name {
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.folder__more {
+  right: auto;
+  left: 0;
+  border-radius: 0px 0px 5px 0px;
+}
+
+@media (min-width: 1280px) {
+  .folder__more {
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+.home__folder-icon {
+  margin-right: 0.5rem;
+}
+
+.home__header {
+  margin-bottom: 0;
+}
+
+.home__divider {
+  margin: 0;
+}
+
+.home__list--dragging {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.home__delete-text {
+  margin-bottom: 1rem;
+}
+
+.home__sort-icon {
+  margin-left: 0.5rem;
 }

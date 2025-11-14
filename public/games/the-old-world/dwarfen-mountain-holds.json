@@ -660,6 +660,17 @@
         "name_de": "Rüstungsfluch (1), Schmiedefeuer, Gromrilrüstung, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-2), Resolut, Runenwissen, Unnachgiebig",
         "name_es": "Armour Bane (1), Forgefire, Gromril Armour, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-2), Resolute, Rune Lore, Stubborn",
         "name_fr": "Arme Perforante (1), Forgefeu, Armure en Gromril, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-2), Résolu, Savoir Runique, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters"
+        },
+        "expeditionary-force": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -670,7 +681,21 @@
       "name_fr": "Tueur de Démons",
       "id": "daemon-slayer",
       "points": 130,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_it": "Generalee",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0,
+          "notes": {
+            "name_en": "Only if Ungrim Ironfist is not in your list",
+            "name_fr": "Only if Ungrim Ironfist is not in your list"
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -700,7 +725,20 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_fr": "Éclaireurs",
+          "name_es": "Exploradores",
+          "points": 10,
+          "armyComposition": "slayer-host",
+          "notes": {
+            "name_en": "0-1 character per 1000 points"
+          }
+        }
+      ],
       "mounts": [],
       "items": [
         {
@@ -708,7 +746,7 @@
           "name_cn": "武器符文",
           "name_it": "Armi Runiche",
           "name_de": "Waffenrunen",
-          "name_fr": "Runes d'Arme",
+          "name_fr": "Runes d’Arme",
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 100,
@@ -770,6 +808,14 @@
             "name_cn": "0-1恶魔屠夫或巨龙屠夫",
             "name_fr": "0-1 Tueur de Démons ou Tueur de Dragons"
           }
+        },
+        "slayer-host": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Daemon Slayer per 1000 points",
+            "name_cn": "0-1 Daemon Slayer per 1000 points",
+            "name_fr": "0-1 Tueur de Démons par tranche de 1000 points"
+          }
         }
       }
     },
@@ -781,7 +827,33 @@
       "name_fr": "Tueur de Dragons",
       "id": "dragon-slayer",
       "points": 70,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_it": "Generalee",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0,
+          "notes": {
+            "name_en": "Only if Ungrim Ironfist is not in your list"
+          }
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_it": "Stendardo da Battaglia",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "armyComposition": "slayer-host",
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 0
+          }
+        }
+      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -811,7 +883,20 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_fr": "Éclaireurs",
+          "name_es": "Exploradores",
+          "points": 10,
+          "armyComposition": "slayer-host",
+          "notes": {
+            "name_en": "0-1 character per 1000 points"
+          }
+        }
+      ],
       "mounts": [],
       "items": [
         {
@@ -819,7 +904,7 @@
           "name_cn": "武器符文",
           "name_it": "Weapon Rune",
           "name_de": "Waffenrunen",
-          "name_fr": "Runes d'Arme",
+          "name_fr": "Runes d’Arme",
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 75,
@@ -870,6 +955,14 @@
             "name_en": "0-1 Daemon Slayer or Dragon Slayer",
             "name_cn": "0-1恶魔屠夫或巨龙屠夫",
             "name_fr": "0-1 Tueur de Démons ou Tueur de Dragons"
+          }
+        },
+        "slayer-host": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-2 Dragon Slayers per unit of Slayers taken",
+            "name_cn": "0-2 Dragon Slayers per unit of Slayers taken",
+            "name_fr": "0-2 Dragon Slayers per unit of Slayers taken"
           }
         }
       }
@@ -967,7 +1060,7 @@
           "name_cn": "远征军神射手",
           "name_it": "Expeditionary Marksman",
           "name_de": "Expeditionsschützen",
-          "name_fr": "Tireur d'Élite Expéditionnaire",
+          "name_fr": "Tireur d’Élite Expéditionnaire",
           "points": 10,
           "armyComposition": "expeditionary-force"
         }
@@ -1001,7 +1094,7 @@
         "name_it": "Maestro Artigliere, Fattura Nanica, Trinceramento, Armatura di Gromril, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, \"Stia Indietro Capo!\", Determinato",
         "name_de": "Geschützmeister, Zwergengefertigt, Befestigen, Gromrilrüstung, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, \"Bleibt in Deckung, Herr\", Unnachgiebig",
         "name_es": "Artillery Master, Dwarf Crafted, Entrenchment, Gromril Armour, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, \"Stand Back Chief\", Stubborn",
-        "name_fr": "Maître de l'Artillerie, Facture Naine, Retranchement, Armure en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, \"Restez en Retrait Chef\", Obstiné"
+        "name_fr": "Maître de l’Artillerie, Facture Naine, Retranchement, Armure en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, \"Restez en Retrait Chef\", Obstiné"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -1163,7 +1256,7 @@
           "name_de": "Die Rüstung von Skaldour, Schild",
           "name_en": "The Armour of Skaldour, Shield",
           "name_cn": "斯凯督尔护甲, 盾牌",
-          "name_fr": "L'Armure de Skaldor, Bouclier",
+          "name_fr": "L’Armure de Skaldor, Bouclier",
           "points": 0,
           "active": true
         }
@@ -1177,6 +1270,17 @@
         "name_en": "Gromril Armour, Grudgelore, Hatred (Orcs & Goblins), Magic Resistance (-1), Rallying Cry, Resolute, Stubborn",
         "name_cn": "陨铁铠甲, 仇恨学识, 仇恨(兽人 & 地精), 魔法抗性(-1), 集结战吼, 坚决, 坚毅",
         "name_fr": "Armure en Gromril, Science des Rancunes, Haine (Orques & Gobelins), Résistance à la Magie (-1), Cri de Ralliement, Résolu, Obstiné"
+      },
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "characters"
+        },
+        "royal-clan": {
+          "category": "characters"
+        },
+        "expeditionary-force": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -1195,7 +1299,10 @@
           "name_de": "General",
           "name_fr": "Général",
           "name_es": "General",
-          "points": 0
+          "points": 0,
+          "notes": {
+            "name_en": "Must be your general"
+          }
         }
       ],
       "equipment": [
@@ -1233,6 +1340,9 @@
           "category": "characters"
         },
         "royal-clan": {
+          "category": "characters"
+        },
+        "slayer-host": {
           "category": "characters"
         }
       }
@@ -1471,7 +1581,7 @@
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
             "name_en": "Up to 25 points of each rune type",
             "name_cn": "每类符文最多25点",
-            "name_fr": "Jusqu'à 25 points de chaque type de rune"
+            "name_fr": "Jusqu’à 25 points de chaque type de rune"
           }
         },
         {
@@ -1614,7 +1724,7 @@
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
             "name_en": "Up to 25 points of each rune type",
             "name_cn": "每类符文最多25点",
-            "name_fr": "Jusqu'à 25 points de chaque type de rune"
+            "name_fr": "Jusqu’à 25 points de chaque type de rune"
           }
         },
         {
@@ -1719,7 +1829,7 @@
           "notes": {
             "name_en": "If your General is a King, 0-1 unit of Longbeards may be taken as a Core choice",
             "name_cn": "若主将为国王, 0-1个单位的Longbeards may be taken as a Core choice",
-            "name_fr": "Si votre Général est un Roi, 0-1 unité de Longues-barbes peut être prise comme choix d'Unité de Base"
+            "name_fr": "Si votre Général est un Roi, 0-1 unité de Longues-barbes peut être prise comme choix d’Unité de Base"
           }
         },
         "royal-clan": {
@@ -1969,7 +2079,7 @@
           "name_cn": "远征军神射手",
           "name_it": "Expeditionary Marksmen",
           "name_de": "Expeditionsschützen",
-          "name_fr": "Tireurs d'Élite Expéditionnaires",
+          "name_fr": "Tireurs d’Élite Expéditionnaires",
           "points": 1,
           "perModel": true,
           "armyComposition": "expeditionary-force",
@@ -2005,7 +2115,7 @@
       "name_it": "Ranger",
       "name_de": "Grenzläufer",
       "name_fr": "Rangers",
-      "id": "rangers",
+      "id": "rangers-core",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
@@ -2151,7 +2261,7 @@
           "notes": {
             "name_en": "0-1 unit of Rangers may be taken as a Core choice",
             "name_cn": "0-1个单位的Rangers may be taken as a Core choice",
-            "name_fr": "0-1 unité de Rangers peut être prise comme choix d'Unité de Base"
+            "name_fr": "0-1 unité de Rangers peut être prise comme choix d’Unité de Base"
           }
         },
         "expeditionary-force": {
@@ -2209,7 +2319,7 @@
         "name_de": "Erweiterte Formation, Schießen und Verschwinden, Fliegen (10), Hass (Orks & Goblins), Zuschlagen und Verschwinden, Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
         "name_en": "Extended Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
         "name_cn": "开放阵型, 游击, 飞行(10), 仇恨(兽人 & 地精), 打了就跑, 撞击(D3), 魔法抗性(-1), 散兵, 快速行进, 先锋",
-        "name_fr": "Formation Étendue, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d'Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
+        "name_fr": "Formation Étendue, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d’Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
       },
       "armyComposition": {
         "expeditionary-force": {
@@ -2218,7 +2328,7 @@
             "name_de": "0-1 Einheit Kundschafter-Gyrokopter darf pro 1000 Punkte als Kernauswahl gewählt werden",
             "name_en": "0-1 unit of Scout Gyrocopters per 1000 points may be taken as a Core choice",
             "name_cn": "0-1个单位的Scout Gyrocopters per 1000 points may be taken as a Core choice",
-            "name_fr": "0-1 unité de Gyrocoptères de Reconnaissance par tranche de 1000 points peut être prise comme choix d'Unité de Base"
+            "name_fr": "0-1 unité de Gyrocoptères de Reconnaissance par tranche de 1000 points peut être prise comme choix d’Unité de Base"
           }
         }
       }
@@ -2249,11 +2359,18 @@
         "name_de": "Hass (Orks & Goblins), Aufpralltreffer (W3), Magieresistenz (-1), Offene Ränge, Resolut",
         "name_en": "Hatred (Orcs & Goblins), Impact Hits (D3), Magic Resistance (-1), Open Order, Resolute",
         "name_cn": "仇恨(兽人 & 地精), 撞击(D3), 魔法抗性(-1), 开放阵型, 坚决",
-        "name_fr": "Haine (Orques & Gobelins), Touches d'Impact (D3), Résistance à la Magie (-1), Ordre Dispersé, Résolu"
+        "name_fr": "Haine (Orques & Gobelins), Touches d’Impact (D3), Résistance à la Magie (-1), Ordre Dispersé, Résolu"
       },
       "armyComposition": {
         "royal-clan": {
           "category": "special"
+        },
+        "slayer-host": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dwarf Cart per 1000 points",
+            "name_fr": "0-1 Chariot Nain par tranche de 1000 points"
+          }
         }
       }
     },
@@ -2291,7 +2408,7 @@
         "name_de": "Hass (Orks & Goblins), Aufpralltreffer (W3), Magieresistenz (-1), Offene Ränge, Resolut",
         "name_en": "Hatred (Orcs & Goblins), Impact Hits (D3), Magic Resistance (-1), Open Order, Resolute",
         "name_cn": "仇恨(兽人 & 地精), 撞击(D3), 魔法抗性(-1), 开放阵型, 坚决",
-        "name_fr": "Haine (Orques & Gobelins), Touches d'Impact (D3), Résistance à la Magie (-1), Ordre Dispersé, Résolu"
+        "name_fr": "Haine (Orques & Gobelins), Touches d’Impact (D3), Résistance à la Magie (-1), Ordre Dispersé, Résolu"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -2336,7 +2453,7 @@
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
             "name_en": "Up to 25 points of each rune type",
             "name_cn": "每类符文最多25点",
-            "name_fr": "Jusqu'à 25 points de chaque type de rune"
+            "name_fr": "Jusqu’à 25 points de chaque type de rune"
           }
         },
         {
@@ -2467,7 +2584,7 @@
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
             "name_en": "Up to 25 points of each rune type",
             "name_cn": "每类符文最多25点",
-            "name_fr": "Jusqu'à 25 points de chaque type de rune"
+            "name_fr": "Jusqu’à 25 points de chaque type de rune"
           }
         },
         {
@@ -2485,7 +2602,19 @@
                 "maxPoints": 100
               }
             }
-          }
+          },
+          "options": [
+            {
+              "name_en": "Wards of Grimnir",
+              "name_cn": "Wards of Grimnir",
+              "name_it": "Wards of Grimnir",
+              "name_de": "Wards of Grimnir",
+              "name_fr": "Wards of Grimnir",
+              "points": 1,
+              "perModel": true,
+              "armyComposition": "slayer-host"
+            }
+          ]
         },
         {
           "name_en": "Musician",
@@ -2556,7 +2685,7 @@
         "name_it": "Formazione Serrata, Armi di Gromril, Odio (Orchi & Goblin), Resistenza alla Magia (-1), Risoluti, Guardia Reale, Muro di Scudi, Stoici Difensori, Determinato, Gromril Armour",
         "name_de": "Geschlossene Ränge, Gromrilwaffen, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Königswache, Schildwall, Sture Verteidiger, Unnachgiebig, Gromril Armour",
         "name_es": "Close Order, Gromril Weapons, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Royal Guard, Shieldwall, Stoic Defenders, Stubborn, Gromril Armour",
-        "name_fr": "Ordre Serré, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Garde Royale, Mur de Boucliers, Défenseurs Stoïques, Obstiné, Gromril Armour"
+        "name_fr": "Ordre Serré, Armes en Gromril, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Garde Royale, Mur de Boucliers, Défenseurs Stoïques, Obstiné, Armure en Gromril"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -2569,6 +2698,14 @@
         },
         "royal-clan": {
           "category": "special"
+        },
+        "slayer-host": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 unit if your army includes Ungrim Ironfist",
+            "name_cn": "0-1 unit if your army includes Ungrim Ironfist",
+            "name_fr": "0-1 unit if your army includes Ungrim Ironfist"
+          }
         }
       }
     },
@@ -2908,7 +3045,19 @@
                 "maxPoints": 75
               }
             }
-          }
+          },
+          "options": [
+            {
+              "name_en": "Wards of Grimnir",
+              "name_cn": "Wards of Grimnir",
+              "name_it": "Wards of Grimnir",
+              "name_de": "Wards of Grimnir",
+              "name_fr": "Wards of Grimnir",
+              "points": 1,
+              "perModel": true,
+              "armyComposition": "slayer-host"
+            }
+          ]
         },
         {
           "name_en": "Musician",
@@ -2959,6 +3108,19 @@
           "name_fr": "Armes lourdes",
           "points": 2,
           "stackable": true
+        },
+        {
+          "name_en": "Ambushers, Skirmishers",
+          "name_cn": "伏击, 散兵",
+          "name_de": "Überfall, Plänkler",
+          "name_fr": "Embusqueurs, Tirailleurs",
+          "name_es": "Ambushers, Hostigadores",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "slayer-host",
+          "notes": {
+            "name_en": "0-1 unit of Slayers with a Unit Strength of 10 or less"
+          }
         }
       ],
       "mounts": [],
@@ -2988,6 +3150,146 @@
             "name_cn": "0-1个单位的Slayers per army",
             "name_fr": "0-1 unité de Tueurs par armée"
           }
+        },
+        "slayer-host": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Brotherhood of Grimnir",
+      "name_cn": "Brotherhood of Grimnir",
+      "name_it": "Brotherhood of Grimnir",
+      "name_de": "Brotherhood of Grimnir",
+      "name_fr": "Brotherhood of Grimnir",
+      "id": "brotherhood-of-grimnir",
+      "points": 18,
+      "minimum": 5,
+      "maximum": 30,
+      "command": [
+        {
+          "name_en": "Shrine Keeper (champion)",
+          "name_cn": "Shrine Keeper (冠军)",
+          "name_it": "Shrine Keeper (campione)",
+          "name_de": "Shrine Keeper (Champion)",
+          "name_fr": "Shrine Keeper (champion)",
+          "points": 21,
+          "notes": {
+            "name_en": "Only a single runic tattoo"
+          },
+          "magic": {
+            "types": ["runic-tattoos"],
+            "maxPoints": 0
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_it": "Alfiere",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner-runes"],
+            "maxPoints": 100
+          },
+          "options": [
+            {
+              "name_en": "Wards of Grimnir",
+              "name_cn": "Wards of Grimnir",
+              "name_it": "Wards of Grimnir",
+              "name_de": "Wards of Grimnir",
+              "name_fr": "Wards of Grimnir",
+              "points": 1,
+              "perModel": true,
+              "armyComposition": "slayer-host"
+            }
+          ]
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_it": "Musico",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_it": "Armi Bianche",
+          "name_de": "Handwaffen",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_it": "Armi Addizionali",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_fr": "Armes de base additionnelles",
+          "points": 1,
+          "stackable": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_cn": "重型武器",
+          "name_it": "Grandi Armi",
+          "name_de": "Zweihandwaffen",
+          "name_fr": "Armes lourdes",
+          "points": 2,
+          "stackable": true
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Weapon runes",
+          "name_cn": "Weapon runes",
+          "name_it": "Weapon runes",
+          "name_de": "Weapon runes",
+          "name_fr": "Weapon runes",
+          "types": ["weapon-runes"],
+          "selected": [],
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "Only for the Shrine Keeper"
+          }
+        },
+        {
+          "name_en": "Talismanic runes",
+          "name_cn": "Talismanic runes",
+          "name_it": "Talismanic runes",
+          "name_de": "Talismanic runes",
+          "name_fr": "Talismanic runes",
+          "types": ["talismanic-runes"],
+          "selected": [],
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "Only for the Shrine Keeper"
+          }
+        }
+      ],
+      "specialRules": {
+        "name_en": "Blessings of Grimnir (Shrine Keeper only), Close Order, Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Resolute, Slayer, Unbreakable",
+        "name_cn": "Blessings of Grimnir (Shrine Keeper only), Close Order, Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Resolute, Slayer, Unbreakable",
+        "name_it": "Blessings of Grimnir (Shrine Keeper only), Close Order, Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Resolute, Slayer, Unbreakable",
+        "name_de": "Blessings of Grimnir (Shrine Keeper only), Close Order, Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Resolute, Slayer, Unbreakable",
+        "name_fr": "Blessings of Grimnir (Shrine Keeper only), Close Order, Deathblow, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Resolute, Slayer, Unbreakable"
+      },
+      "notes": {
+        "name_en": "0-1 Brotherhood of Grimnir"
+      },
+      "armyComposition": {
+        "slayer-host": {
+          "category": "special"
         }
       }
     },
@@ -3016,7 +3318,20 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_fr": "Éclaireurs",
+          "name_es": "Exploradores",
+          "points": 10,
+          "armyComposition": "slayer-host",
+          "notes": {
+            "name_en": "0-1 character per 1000 points"
+          }
+        }
+      ],
       "mounts": [],
       "items": [
         {
@@ -3024,7 +3339,7 @@
           "name_cn": "武器符文",
           "name_it": "Armi Runiche",
           "name_de": "Waffenrunen",
-          "name_fr": "Runes d'Arme",
+          "name_fr": "Runes d’Arme",
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 50,
@@ -3053,7 +3368,7 @@
         "name_de": "Letzter Hieb, Dammaz Drengi, Erster im Getümmel, Gromrilwaffen, Hass (Orks & Goblins), Immun gegen Psychologie, Aufpralltreffer (W3+1), Einzelgänger, Magieresistenz (-2), Zufällige Attacken, Resolut, Unerschütterlich, Vorhut, Wirbelwind des Todes",
         "name_en": "Deathblow, Doomseeker {dwarfs}, First to the Fray, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Impact Hits (D3+1), Loner, Magic Resistance (-2), Random Attacks, Resolute, Unbreakable, Vanguard, Whirlwind of Death",
         "name_cn": "死亡反击, 末日追寻者（矮人）, 先遣先锋, 陨铁武器, 仇恨(兽人 & 地精), 心理免疫, 撞击(D3+1), 独行, 魔法抗性(-2), 随机攻击, 坚决, 永不战败, 先锋, 死亡旋风",
-        "name_fr": "Ultime Attaque, Cherche-mort, Premier au Combat, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Touches d'Impact (D3+1), Solitaire, Résistance à la Magie (-2), Attaques Aléatoires, Résolu, Indémoralisable, Avant-garde, Tourbillon de Mort"
+        "name_fr": "Ultime Attaque, Cherche-mort, Premier au Combat, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Touches d’Impact (D3+1), Solitaire, Résistance à la Magie (-2), Attaques Aléatoires, Résolu, Indémoralisable, Avant-garde, Tourbillon de Mort"
       },
       "armyComposition": {
         "royal-clan": {
@@ -3063,6 +3378,15 @@
             "name_en": "0-4 Doomseeker per 1000 points if your general is Ungrim Ironfist",
             "name_cn": "每1000分0-4名末日追寻者（主将为阿格里姆·铁拳时）",
             "name_fr": "0-4 Cherche-mort par tranche de 1000 points si votre général est Ungrim Poing-de-Fer"
+          }
+        },
+        "slayer-host": {
+          "category": "special",
+          "notes": {
+            "name_de": "0-4 Doomseekers per Daemon Slayer or Dragon Slayer taken",
+            "name_en": "0-4 Doomseekers per Daemon Slayer or Dragon Slayer taken",
+            "name_cn": "0-4 Doomseekers per Daemon Slayer or Dragon Slayer taken",
+            "name_fr": "0-4 Doomseekers par Tueur de Démons ou Tueur de Dragons sélectionné"
           }
         }
       }
@@ -3135,7 +3459,7 @@
         "name_it": "Bomba in Picchiata, Tirare e Fuggire, Volo (9), Colpi da Impatto (D3), Resistenza alla Magia (-1), Schermagliatori, Passo Rapido, Avanguardia",
         "name_de": "Bombenabwurf, Schießen und Verschwinden, Fliegen (9), Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
         "name_es": "Dive Bomb, Fire & Flee, Fly (9), Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
-        "name_fr": "Largage en Piqué, Tir & Fuite, Vol (9), Touches d'Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
+        "name_fr": "Largage en Piqué, Tir & Fuite, Vol (9), Touches d’Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -3191,7 +3515,7 @@
         "name_de": "Erweiterte Formation, Schießen und Verschwinden, Fliegen (10), Hass (Orks & Goblins), Zuschlagen und Verschwinden, Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
         "name_en": "Extended Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
         "name_cn": "开放阵型, 游击, 飞行(10), 仇恨(兽人 & 地精), 打了就跑, 撞击(D3), 魔法抗性(-1), 散兵, 快速行进, 先锋",
-        "name_fr": "Formation Étendue, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d'Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
+        "name_fr": "Formation Étendue, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d’Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
       },
       "armyComposition": {
         "expeditionary-force": {
@@ -3238,7 +3562,7 @@
           "name_cn": "工程符文",
           "name_it": "Engineering Rune",
           "name_de": "Maschinenrunen",
-          "name_fr": "Runes d'Ingéniérie",
+          "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
           "maxPoints": 100
@@ -3313,7 +3637,7 @@
           "name_cn": "工程符文",
           "name_it": "Engineering Rune",
           "name_de": "Maschinenrunen",
-          "name_fr": "Runes d'Ingéniérie",
+          "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
           "maxPoints": 100
@@ -3380,7 +3704,17 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Function over form",
+          "name_cn": "Function over form",
+          "name_it": "Function over form",
+          "name_de": "Function over form",
+          "name_fr": "Function over form",
+          "points": 0,
+          "armyComposition": "expeditionary-force"
+        }
+      ],
       "mounts": [],
       "items": [
         {
@@ -3388,7 +3722,7 @@
           "name_cn": "工程符文",
           "name_it": "Engineering Rune",
           "name_de": "Maschinenrunen",
-          "name_fr": "Runes d'Ingéniérie",
+          "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
           "maxPoints": 100
@@ -3484,7 +3818,21 @@
                 "maxPoints": 50
               }
             }
-          }
+          },
+          "options": [
+            {
+              "name_en": "Wards of Grimnir",
+              "name_cn": "Wards of Grimnir",
+              "name_it": "Wards of Grimnir",
+              "name_de": "Wards of Grimnir",
+              "name_fr": "Wards of Grimnir",
+              "points": 1,
+              "perModel": true,
+              "notes": {
+                "name_en": "Only in a Slayer Host Army of Infamy"
+              }
+            }
+          ]
         },
         {
           "name_en": "Musician",
@@ -3572,6 +3920,16 @@
         },
         "royal-clan": {
           "category": "rare"
+        },
+        "slayer-host": {
+          "category": "mercenaries",
+          "notes": {
+            "name_de": "0-1 unit of Rangers",
+            "name_en": "0-1 unit of Rangers",
+            "name_cn": "0-1 unit of Rangers",
+            "name_fr": "0-1 unité de Rangers",
+            "name_it": "0-1 unit of Rangers"
+          }
         }
       }
     },
@@ -3796,7 +4154,7 @@
         "name_it": "Corsa di Bombardamento, Formazione Serrata, Volo (8), Colpi da Impatto (D3+1), Passo Rapido, Resistenza alla Magia (-1), Odio (Orchi & Goblin)",
         "name_de": "Bombenangriff, Geschlossene Ränge, Fliegen (8), Aufpralltreffer (W3+1), Schnelle Bewegung, Magieresistenz (-1), Hass (Orks & Goblins)",
         "name_es": "Bombing Run, Close Order, Fly (8), Impact Hits (D3+1), Swiftstride, Magic Resistance (-1), Hatred (Orcs & Goblins)",
-        "name_fr": "Bombardement, Ordre Serré, Vol (8), Touches d'Impact (D3+1), Rapide, Résistance à la Magie (-1), Haine (Orques & Gobelins)"
+        "name_fr": "Bombardement, Ordre Serré, Vol (8), Touches d’Impact (D3+1), Rapide, Résistance à la Magie (-1), Haine (Orques & Gobelins)"
       },
       "armyComposition": {
         "dwarfen-mountain-holds": {
@@ -3823,7 +4181,7 @@
       },
       "equipment": [
         {
-          "name_en": "Organ gun, Hand weapons",
+          "name_en": "Organ gun {weapon}, Hand weapons",
           "name_cn": "风琴炮, 单手武器",
           "name_it": "Cannone Organo G30” Fo5 PA-1 [Rottura dell'Armatura (2), Ingombrante, Muovere o Tirare, Multicanna], Armi Bianche",
           "name_de": "Orgelkanone, Handwaffen",
@@ -3843,7 +4201,17 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Function over form",
+          "name_cn": "Function over form",
+          "name_it": "Function over form",
+          "name_de": "Function over form",
+          "name_fr": "Function over form",
+          "points": 0,
+          "armyComposition": "expeditionary-force"
+        }
+      ],
       "mounts": [],
       "specialRules": {
         "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
@@ -3898,7 +4266,17 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Function over form",
+          "name_cn": "Function over form",
+          "name_it": "Function over form",
+          "name_de": "Function over form",
+          "name_fr": "Function over form",
+          "points": 0,
+          "armyComposition": "expeditionary-force"
+        }
+      ],
       "mounts": [],
       "specialRules": {
         "name_en": "Hatred (Orcs & Goblins), Magic Resistance (-1), Skirmishers, Stubborn",
@@ -3943,7 +4321,7 @@
           "name_cn": "工程符文",
           "name_it": "Engineering Rune",
           "name_de": "Maschinenrunen",
-          "name_fr": "Runes d'Ingéniérie",
+          "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
           "maxPoints": 50
@@ -3964,6 +4342,15 @@
             "name_en": "0-1 Goblin-Hewer per 1000 points if your army includes 1+ Slayer of Legend",
             "name_cn": "每1000分0-1台地精收割机（若含至少1名传奇屠夫）",
             "name_fr": "0-1 Faucheuse de Gobelins par tranche de 1000 points si votre armée inclut 1+ Tueur de Légende"
+          }
+        },
+        "slayer-host": {
+          "category": "rare",
+          "notes": {
+            "name_de": "0-1 Goblinschnitter pro 1000 Punkte",
+            "name_en": "0-1 Goblin-Hewer per 1000 points",
+            "name_cn": "每1000分0-1台地精收割机",
+            "name_fr": "0-1 Faucheuse de Gobelins par tranche de 1000 points"
           }
         }
       }
@@ -4004,7 +4391,7 @@
           "name_cn": "武器符文",
           "name_it": "Armi Runiche",
           "name_de": "Waffenrunen",
-          "name_fr": "Runes d'Arme",
+          "name_fr": "Runes d’Arme",
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 50,
@@ -4033,7 +4420,7 @@
         "name_de": "Letzter Hieb, Dammaz Drengi, Erster im Getümmel, Gromrilwaffen, Hass (Orks & Goblins), Immun gegen Psychologie, Aufpralltreffer (W3+1), Einzelgänger, Magieresistenz (-2), Zufällige Attacken, Resolut, Unerschütterlich, Vorhut, Wirbelwind des Todes",
         "name_en": "Deathblow, Doomseeker {dwarfs}, First to the Fray, Gromril Weapons, Hatred (Orcs & Goblins), Immune to Psychology, Impact Hits (D3+1), Loner, Magic Resistance (-2), Random Attacks, Resolute, Unbreakable, Vanguard, Whirlwind of Death",
         "name_cn": "死亡反击, 末日追寻者（矮人）, 先遣先锋, 陨铁武器, 仇恨(兽人 & 地精), 心理免疫, 撞击(D3+1), 独行, 魔法抗性(-2), 随机攻击, 坚决, 永不战败, 先锋, 死亡旋风",
-        "name_fr": "Ultime Attaque, Cherche-mort, Premier au Combat, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Touches d'Impact (D3+1), Solitaire, Résistance à la Magie (-2), Attaques Aléatoires, Résolu, Indémoralisable, Avant-garde, Tourbillon de Mort"
+        "name_fr": "Ultime Attaque, Cherche-mort, Premier au Combat, Armes en Gromril, Haine (Orques & Gobelins), Immunisé à la Psychologie, Touches d’Impact (D3+1), Solitaire, Résistance à la Magie (-2), Attaques Aléatoires, Résolu, Indémoralisable, Avant-garde, Tourbillon de Mort"
       },
       "notes": {
         "name_de": "0-3 Dammaz Drengi pro Armee",
@@ -4146,7 +4533,7 @@
           "name_de": "Stoßspeere",
           "name_en": "Thrusting spears",
           "name_cn": "刺矛",
-          "name_fr": "Lances d'infanterie",
+          "name_fr": "Lances d’infanterie",
           "points": 1,
           "perModel": true
         },
@@ -4267,7 +4654,7 @@
           "name_cn": "工程符文",
           "name_it": "Engineering Rune",
           "name_de": "Maschinenrunen",
-          "name_fr": "Runes d'Ingéniérie",
+          "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
           "maxPoints": 50
@@ -4413,7 +4800,7 @@
         "name_cn": "必须包含指挥组和乌瑟王子",
         "name_de": "Muss die Kommandoabteilung und Prinz Ulther enthalten",
         "name_es": "Must include Command Group and Prince Ulther",
-        "name_fr": "Doit inclure l'État-Major et Prince Ulther",
+        "name_fr": "Doit inclure l’État-Major et Prince Ulther",
         "name_it": "Must include Command Group and Prince Ulther",
         "name_pl": "Must include Command Group and Prince Ulther"
       }

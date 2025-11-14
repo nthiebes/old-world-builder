@@ -12,13 +12,13 @@
         "skaven": {
           "category": "characters",
           "notes": {
-            "name_en": "Skaven Warlord or Grey Seer per 1,000 points",
+            "name_en": "Skaven Warlord or Grey Seer per 1000 points",
             "name_cn": "每1000分1个斯卡文军阀或灰先知",
-            "name_de": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_es": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_fr": "0-1 Seigneur de Guerre ou Prophète Gris par tranche de 1000 points",
-            "name_it": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_pl": "Skaven Warlord or Grey Seer per 1,000 points"
+            "name_de": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_es": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_fr": "Seigneur de Guerre ou Prophète Gris par tranche de 1000 points",
+            "name_it": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_pl": "Skaven Warlord or Grey Seer per 1000 points"
           }
         },
         "sk-renegade": {
@@ -268,13 +268,13 @@
         "skaven": {
           "category": "characters",
           "notes": {
-            "name_en": "Skaven Warlord or Grey Seer per 1,000 points",
+            "name_en": "Skaven Warlord or Grey Seer per 1000 points",
             "name_cn": "每1000分一个斯卡文军阀或灰先知",
-            "name_de": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_es": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_fr": "0-1 Seigneur de Guerre ou Prophète Gris par tranche de 1000 points",
-            "name_it": "Skaven Warlord or Grey Seer per 1,000 points",
-            "name_pl": "Skaven Warlord or Grey Seer per 1,000 points"
+            "name_de": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_es": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_fr": "Seigneur de Guerre ou Prophète Gris par tranche de 1000 points",
+            "name_it": "Skaven Warlord or Grey Seer per 1000 points",
+            "name_pl": "Skaven Warlord or Grey Seer per 1000 points"
           }
         },
         "sk-renegade": {
@@ -394,7 +394,7 @@
         "name_cn": "大角鼠法系, 魔法攻击, 魔法抗性(-1), 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
         "name_de": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_es": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
-        "name_fr": "Domaine du Rat Cornu, Attaques Magiques, Résistance à la Magie (-1), Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s'applique pas à la monture)"
+        "name_fr": "Domaine du Rat Cornu, Attaques Magiques, Résistance à la Magie (-1), Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s’applique pas à la monture)"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
@@ -469,20 +469,33 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_de": "Level 1 Wizard",
-          "name_es": "Level 1 Wizard",
-          "name_fr": "Sorcier de Niveau 1",
-          "points": 40
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "points": 70
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 40,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 70,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Warpstone Tokens (D3)",
@@ -720,7 +733,7 @@
         "name_cn": "蝇之云, 狂暴, 大角鼠法系, 魔法攻击, 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
         "name_de": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_es": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
-        "name_fr": "Nuage de Mouches, Frénésie, Domaine du Rat Cornu, Attaques Magiques, Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s'applique pas à la monture)"
+        "name_fr": "Nuage de Mouches, Frénésie, Domaine du Rat Cornu, Attaques Magiques, Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s’applique pas à la monture)"
       }
     }
   ],
@@ -745,7 +758,7 @@
             "name_cn": "每1000分0-1",
             "name_de": "0-1 per 1000 points",
             "name_es": "0-1 per 1000 points",
-            "name_fr": "0-1 per 1000 points",
+            "name_fr": "0-1 par tranche de 1000 points",
             "name_it": "0-1 per 1000 points",
             "name_pl": "0-1 per 1000 points"
           }
@@ -757,18 +770,18 @@
             "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器, 主团单位",
             "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
             "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Unité Régimentaire",
             "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
             "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
           },
           "notes": {
-            "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
+            "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
             "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
-            "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
-            "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
-            "name_fr": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
-            "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest",
-            "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of plague monks if army includes a plague priest"
+            "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+            "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+            "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
+            "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+            "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
           }
         }
       },
@@ -894,7 +907,7 @@
             "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 主团单位",
             "name_de": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
             "name_es": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Unité Régimentaire",
             "name_it": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
             "name_pl": "Close Order, Horde, Scurry Away, Warband, Regimental Unit"
           }
@@ -942,7 +955,7 @@
           "name_cn": "单手武器, 刺矛",
           "name_de": "Handwaffe, Stoßspeer",
           "name_es": "Hand weapon, Thrusting spear",
-          "name_fr": "Arme de base, Lance d'infanterie",
+          "name_fr": "Arme de base, Lance d’infanterie",
           "points": 1,
           "perModel": true
         }
@@ -988,7 +1001,7 @@
       "name_cn": "武器小组",
       "name_de": "Waffenteam",
       "name_es": "Weapon Team",
-      "name_fr": "Équipes d'armes",
+      "name_fr": "Équipes d’armes",
       "id": "weapon-team",
       "points": 15,
       "detachment": true,
@@ -1005,7 +1018,7 @@
             "name_cn": "独行, 开放阵型, 抱头鼠窜, 分遣队",
             "name_de": "Loner, Open Order, Scurry Away, Detachment",
             "name_es": "Loner, Open Order, Scurry Away, Detachment",
-            "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Detachment",
+            "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Détachement",
             "name_it": "Loner, Open Order, Scurry Away, Detachment",
             "name_pl": "Loner, Open Order, Scurry Away, Detachment"
           }
@@ -1346,7 +1359,7 @@
             "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
             "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
             "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_fr": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+            "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
             "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
             "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
           }
@@ -1442,7 +1455,7 @@
             "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器, 主团单位",
             "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
             "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Regimental Unit",
+            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Unité Régimentaire",
             "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
             "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
           }
@@ -1542,7 +1555,7 @@
       "name_cn": "阴沟奔行鼠",
       "name_de": "Gossenläufer",
       "name_es": "Gutter Runners",
-      "name_fr": "Coureurs d'Égouts",
+      "name_fr": "Coureurs d’Égouts",
       "id": "gutter-runners",
       "points": 14,
       "minimum": 5,
@@ -1642,7 +1655,7 @@
       "name_fr": "Rat-ogres",
       "id": "rat-ogres",
       "points": 48,
-      "minimum": 2,
+      "minimum": 3,
       "maximum": 0,
       "armyComposition": {
         "skaven": {
@@ -1756,7 +1769,7 @@
         "name_cn": "碎甲攻击(2), 紧密阵型, 恐惧, 狂暴, 部群, 保其周全, 抱头鼠窜, 战帮",
         "name_de": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
         "name_es": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband",
-        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Frénésie, Horde, À l'Abri du Danger, Sauve qui Peut!, Bande de Guerre"
+        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Frénésie, Horde, À l’Abri du Danger, Sauve qui Peut!, Bande de Guerre"
       }
     },
     {
@@ -1884,7 +1897,7 @@
             "name_cn": "若你的军队中包含1个史库里氏族工程术士",
             "name_de": "If your army includes a Clan Skryre Warlock Engineer",
             "name_es": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_fr": "If your army includes a Clan Skryre Warlock Engineer",
+            "name_fr": "Si votre armée inclut un Technomage du Clan Skryre",
             "name_it": "If your army includes a Clan Skryre Warlock Engineer",
             "name_pl": "If your army includes a Clan Skryre Warlock Engineer"
           }
@@ -1957,7 +1970,7 @@
             "name_cn": "若你的军队中包含1个史库里氏族工程术士",
             "name_de": "If your army includes a Clan Skryre Warlock Engineer",
             "name_es": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_fr": "If your army includes a Clan Skryre Warlock Engineer",
+            "name_fr": "Si votre armée inclut un Technomage du Clan Skryre",
             "name_it": "If your army includes a Clan Skryre Warlock Engineer",
             "name_pl": "If your army includes a Clan Skryre Warlock Engineer"
           }
@@ -2021,7 +2034,7 @@
             "name_cn": "憎恶攻击, 紧密阵型, 心理免疫, 大型目标, 魔法抗性(-1), 随机攻击, 随机移动, 重生(5+), 践踏攻击(D3+1), 惊骇, 倒啦！, 祸害活千年, 永不战败, 撞击(D3+1)",
             "name_de": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
             "name_es": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
-            "name_fr": "Attaques Abominables, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Résistance à la Magie (-1), Attaques Aléatoires, Mouvement Aléatoire, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Timmm-berrr!, Trop Horrible pour Mourir, Indémoralisable, Impact Hits (D3+1)",
+            "name_fr": "Attaques Abominables, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Résistance à la Magie (-1), Attaques Aléatoires, Mouvement Aléatoire, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Timmm-berrr!, Trop Horrible pour Mourir, Indémoralisable, Touches d’Impact (D3+1)",
             "name_it": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)",
             "name_pl": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1)"
           }
@@ -2091,14 +2104,14 @@
         "name_cn": "紧密阵型, 碾碎敌人, 心理免疫, 撞击(D3+1), 大型目标, 随机攻击(仅限老鼠), 随机移动, 践踏攻击(2), 吱吱啪！",
         "name_de": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
         "name_es": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D3+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (2), Zzzzap!",
-        "name_fr": "Ordre Serré, Écrasement, Immunisé à la Psychologie, Touches d'Impact (D3+1), Grande Cible, Attaques Aléatoires (Rats uniquement), Mouvement Aléatoire, Attaques de Piétinement (2), Zzzzap!"
+        "name_fr": "Ordre Serré, Écrasement, Immunisé à la Psychologie, Touches d’Impact (D3+1), Grande Cible, Attaques Aléatoires (Rats uniquement), Mouvement Aléatoire, Attaques de Piétinement (2), Zzzzap!"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
         "name_cn": "如果你的军队包含一个或更多史库里氏族工程术士, 每1000分可以选取0-1毁灭巨轮或次元闪电炮",
         "name_de": "Wenn deine Armee mindestes einen Clan Skryre Warlocktechniker enthält, können 0-1 Todesrad oder Warpblitzkanone pro 1000 Punkte gewählt werden",
         "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
-        "name_fr": "Si votre armée inclut un Technomages du Clan Skryre ou plus, 0-1 Roue Infernale ou Canon à Malefoudre peut être pris par tranche de 1000 points",
+        "name_fr": "Si votre armée inclut un Technomages du Clan Skryre ou plus, 0-1 Roue Infernale ou Canon à Malefoudre peuvent être pris par tranche de 1000 points",
         "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
         "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points"
       }
@@ -2152,7 +2165,7 @@
         "name_cn": "如果你的军队包含一个或更多史库里氏族工程术士, 每1000分可以选取0-1毁灭巨轮或次元闪电炮",
         "name_de": "Wenn deine Armee mindestes einen Clan Skryre Warlocktechniker enthält, können 0-1 Todesrad oder Warpblitzkanone pro 1000 Punkte gewählt werden",
         "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
-        "name_fr": "Si votre armée inclut un Technomages du Clan Skryre ou plus, 0-1 Roue Infernale ou Canon à Malefoudre peut être pris par tranche de 1000 points",
+        "name_fr": "Si votre armée inclut un Technomages du Clan Skryre ou plus, 0-1 Roue Infernale ou Canon à Malefoudre peuvent être pris par tranche de 1000 points",
         "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
         "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points"
       }
@@ -2206,7 +2219,7 @@
         "name_cn": "如果你的军队包含一个或更多的疫病氏族瘟疫祭司, 每1000分可以选取0-1个瘟疫利爪投石机或瘟疫香炉僧",
         "name_de": "Wenn deine Armee mindestes einen Clan Pestilens Seuchenpriester enthält, können 0-1 Seuchenklauen Katapult oder Seuchenschläuderer gewählt werden",
         "name_es": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points",
-        "name_fr": "Si votre armée inclut un Prêtres de la Peste du Clan Pestilens ou plus, 0-1 Catapulte de la Peste ou unité d'Encenseurs à Peste peut être prise par tranche de 1000 points",
+        "name_fr": "Si votre armée inclut un Prêtres de la Peste du Clan Pestilens ou plus, 0-1 Catapulte de la Peste ou unité de Encenseurs à Peste peuvent être pris par tranche de 1000 points",
         "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points",
         "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points"
       }
@@ -2251,7 +2264,7 @@
         "name_cn": "如果你的军队包含一个或更多的疫病氏族瘟疫祭司, 每1000分可以选取0-1个瘟疫利爪投石机或瘟疫香炉僧",
         "name_de": "Wenn deine Armee mindestes einen Clan Pestilens Seuchenpriester enthält, können 0-1 Seuchenklauen Katapult oder Seuchenschläuderer gewählt werden",
         "name_es": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points",
-        "name_fr": "Si votre armée inclut un Prêtres de la Peste du Clan Pestilens ou plus, 0-1 Catapulte de la Peste ou unité d'Encenseurs à Peste peut être prise par tranche de 1000 points",
+        "name_fr": "Si votre armée inclut un Prêtres de la Peste du Clan Pestilens ou plus, 0-1 Catapulte de la Peste ou unité de Encenseurs à Peste peuvent être pris par tranche de 1000 points",
         "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points",
         "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points"
       }

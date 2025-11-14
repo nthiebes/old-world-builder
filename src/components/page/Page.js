@@ -14,6 +14,7 @@ import italy from "../../assets/italy.svg";
 import polen from "../../assets/polen.svg";
 import china from "../../assets/china.svg";
 
+import { InstallPWA } from "../install-pwa";
 import "./Page.css";
 
 export const Main = ({ className, children, isDesktop, compact, loading }) => {
@@ -45,14 +46,15 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <Link to="/help">
               <FormattedMessage id="footer.help" />
             </Link>
+            <InstallPWA />
+            <Link to="/changelog">
+              <FormattedMessage id="footer.changelog" />
+            </Link>
             <Link to="/custom-datasets">
               <FormattedMessage id="footer.custom-datasets" />
             </Link>
             <Link to="/datasets">
               <FormattedMessage id="footer.datasets-editor" />
-            </Link>
-            <Link to="/changelog">
-              <FormattedMessage id="footer.changelog" />
             </Link>
             <Link to="/privacy">
               <FormattedMessage id="footer.privacy" />

@@ -47,17 +47,17 @@ export const Header = ({
     },
     {
       name: intl.formatMessage({
-        id: "footer.custom-datasets",
-      }),
-      to: "/custom-datasets",
-      icon: "datasets",
-    },
-    {
-      name: intl.formatMessage({
         id: "footer.changelog",
       }),
       to: "/changelog",
       icon: "news",
+    },
+    {
+      name: intl.formatMessage({
+        id: "footer.custom-datasets",
+      }),
+      to: "/custom-datasets",
+      icon: "datasets",
     },
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
@@ -172,6 +172,10 @@ export const Header = ({
             !hasMainNavigation && "header__more--secondary-navigation"
           )}
         >
+          {/*
+            * Can't add <InstallPwa /> here, as it needs to be rendered
+            * on page load to catch the beforeinstallprompt event.
+            */}
           {filters.map(({ callback, name, description, id, checked }) => (
             <li key={id}>
               <div className="checkbox header__checkbox">

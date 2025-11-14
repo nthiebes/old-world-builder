@@ -370,7 +370,10 @@ export const GameView = () => {
                     ))}
                   {showGeneratedSpells && unitGeneratedSpellCount > 0 && (
                     <GeneratedSpells
-                      availableLoresWithSpells={getUnitLoresWithSpells(unit)}
+                      availableLoresWithSpells={getUnitLoresWithSpells(
+                        unit,
+                        armyComposition
+                      )}
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
                       maxSignatureSpells={unit.maxSignatureSpells}

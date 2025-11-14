@@ -8,6 +8,21 @@
       "name_fr": "Sorcier-Prophète",
       "id": "sorcerer-prophet",
       "points": 195,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters"
+        },
+        "cd-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut {renegade}, Resolute, Sorcerer's Curse, Stubborn",
+            "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
+            "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -71,9 +86,7 @@
           "name_fr": "Sang d’Hashut",
           "points": 20,
           "perModel": true,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Wizard",
@@ -131,7 +144,17 @@
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
-          "points": 120
+          "points": 120,
+          "armyComposition": "chaos-dwarfs"
+        },
+        {
+          "name_en": "Great Taurus {renegade}",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": "cd-renegade"
         },
         {
           "name_en": "Lammasu",
@@ -188,11 +211,11 @@
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
         "name_cn": "0-1术士先知或地狱卫堡主每1, 000分",
         "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
         "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
-        "name_fr": "0-1 Sorcerer-Prophet ou Châtelain Infernal par tranche de 1000 points"
+        "name_fr": "0-1 Sorcier-Prophète ou Châtelain Infernal par tranche de 1000 points"
       }
     },
     {
@@ -203,6 +226,21 @@
       "name_fr": "Forgeron-Démoniste",
       "id": "daemonsmith-sorcerer",
       "points": 85,
+      "armyComposition": {
+        "chaos-dwarfs": {
+          "category": "characters"
+        },
+        "cd-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut {renegade}, Resolute, Sorcerer's Curse, Stubborn",
+            "name_cn": "黑铁鳞甲, 附魔武器, 地狱工程师, 哈苏特法系, 坚决, 术士诅咒, 坚毅",
+            "name_de": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_es": "Blackshard Armour, Ensorcelled Weapons, Infernal Engineer, Lore of Hashut, Resolute, Sorcerer's Curse, Stubborn",
+            "name_fr": "Armure Sombréclat, Armes Ensorcelées, Ingénieur Infernal, Domaine d’Hashut, Résolu, Malédiction du Sorcier, Obstiné"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -266,9 +304,7 @@
           "name_fr": "Sang d’Hashut",
           "points": 20,
           "perModel": true,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Wizard",
@@ -318,7 +354,17 @@
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
           "name_fr": "Grand Taurus",
-          "points": 120
+          "points": 120,
+          "armyComposition": "chaos-dwarfs"
+        },
+        {
+          "name_en": "Great Taurus {renegade}",
+          "name_cn": "巨型魔牛",
+          "name_de": "Great Taurus",
+          "name_es": "Great Taurus",
+          "name_fr": "Grand Taurus",
+          "points": 120,
+          "armyComposition": "cd-renegade"
         },
         {
           "name_en": "Lammasu",
@@ -463,7 +509,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Naptha bombs",
-            "name_cn": "若不使用火油炸弹"
+            "name_cn": "若不使用火油炸弹",
+            "name_fr": "si n’utilise pas de Bombes au Naptha"
           }
         },
         {
@@ -476,7 +523,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Pistol",
-            "name_cn": "若不使用手枪"
+            "name_cn": "若不使用手枪",
+            "name_fr": "si n’utilise pas de Pistolet"
           }
         },
         {
@@ -489,7 +537,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Hailshot blunderbuss",
-            "name_cn": "若不使用霰弹短枪"
+            "name_cn": "若不使用霰弹短枪",
+            "name_fr": "si n’utilise pas de Tromblon Grêle-de-Tir"
           }
         },
         {
@@ -502,7 +551,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Fireglaive",
-            "name_cn": "若不使用阔刃火枪"
+            "name_cn": "若不使用阔刃火枪",
+            "name_fr": "si n’utilise pas de Glaive Ardent"
           }
         },
         {
@@ -526,7 +576,7 @@
           "active": true
         },
         {
-          "name_en": "Great Taurus",
+          "name_en": "Great Taurus {renegade}",
           "name_cn": "巨型魔牛",
           "name_de": "Great Taurus",
           "name_es": "Great Taurus",
@@ -565,11 +615,11 @@
         "name_fr": "Armure Sombréclat, Armes Ensorcelées, Cri de Ralliement, Résolu, Obstiné"
       },
       "notes": {
-        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
+        "name_en": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
         "name_cn": "0-1术士先知或地狱卫堡主每1, 000分",
-        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
-        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1,000 points",
-        "name_fr": "0-1 Infernal Castellan ou Sorcier-Prophète par tranche de 1000 points"
+        "name_de": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_es": "0-1 Sorcerer-Prophet or Infernal Castellan per 1000 points",
+        "name_fr": "0-1 Sorcier-Prophète ou Châtelain Infernal par tranche de 1000 points"
       }
     },
     {
@@ -665,7 +715,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Naptha bombs",
-            "name_cn": "若不使用火油炸弹"
+            "name_cn": "若不使用火油炸弹",
+            "name_fr": "si n’utilise pas de Bombes au Naptha"
           }
         },
         {
@@ -678,7 +729,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Pistol",
-            "name_cn": "若不使用手枪"
+            "name_cn": "若不使用手枪",
+            "name_fr": "si n’utilise pas de Pistolet"
           }
         },
         {
@@ -691,7 +743,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Hailshot blunderbuss",
-            "name_cn": "若不使用霰弹短枪"
+            "name_cn": "若不使用霰弹短枪",
+            "name_fr": "si n’utilise pas de Tromblon Grêle-de-Tir"
           }
         },
         {
@@ -704,7 +757,8 @@
           "perModel": true,
           "notes": {
             "name_en": "if not using Fireglaive",
-            "name_cn": "若不使用阔刃火枪"
+            "name_cn": "若不使用阔刃火枪",
+            "name_fr": "si n’utilise pas de Glaive Ardent"
           }
         },
         {
@@ -872,7 +926,7 @@
         "name_cn": "碎甲攻击(1), 坚硬皮肤(1), 黑铁鳞甲, 附魔武器, 恐惧, 先行冲锋, 撞击(D3+1), 独行, 奔涌狂潮, 坚毅, 快速行进",
         "name_de": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
         "name_es": "Armour Bane(1), Armoured Hide(1), Blackshard Armour, Ensorcelled Weapons, Fear, First Charge, Impact Hits(D3+1), Loner, Stampede, Stubborn, Swiftstride",
-        "name_fr": "Arme Perforante (1), Peau Blindée (1), Armure Sombréclat, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3+1), Solitaire, Ruée, Obstiné, Rapide"
+        "name_fr": "Arme Perforante (1), Peau Blindée (1), Armure Sombréclat, Armes Ensorcelées, Peur, Première Charge, Touches d’Impact (D3+1), Solitaire, Ruée, Obstiné, Rapide"
       }
     },
     {
@@ -961,11 +1015,11 @@
           "perModel": true
         },
         {
-          "name_en": "Shortbow (replaces throwing weapons)",
-          "name_cn": "短弓(replaces throwing weapons)",
-          "name_de": "Shortbow (replaces throwing weapons)",
-          "name_es": "Shortbow (replaces throwing weapons)",
-          "name_fr": "Arc court (replaces throwing weapons)",
+          "name_en": "Shortbow (replaces Throwing weapons)",
+          "name_cn": "短弓(replaces Throwing weapons)",
+          "name_de": "Shortbow (replaces Throwing weapons)",
+          "name_es": "Shortbow (replaces Throwing weapons)",
+          "name_fr": "Arc court (remplace Armes de lancer)",
           "points": 2,
           "perModel": true
         }
@@ -1137,14 +1191,14 @@
               "name_cn": "狂暴(if 2 crew members)",
               "name_de": "Frenzy (if 2 crew members)",
               "points": 4,
-              "name_fr": "Frénésie (si 2 membres d'équipage)"
+              "name_fr": "Frénésie (si 2 membres d’équipage)"
             },
             {
               "name_en": "Frenzy (if 3 crew members)",
               "name_cn": "狂暴(if 3 crew members)",
               "name_de": "Frenzy (if 3 crew members)",
               "points": 6,
-              "name_fr": "Frénésie (si 3 membres d'équipage)"
+              "name_fr": "Frénésie (si 3 membres d’équipage)"
             },
             {
               "name_en": "Warpaint (if frenzied)",
@@ -1215,14 +1269,14 @@
         "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
         "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
+        "name_fr": "Kikoup’, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Calme l’Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
         "name_en": "0-1 Black Orc Warboss or Black Orc Bigboss",
         "name_cn": "0-1 Black Orc Warboss或黑兽人勇士",
         "name_de": "0-1 Black Orc Warboss or Black Orc Bigboss",
         "name_es": "0-1 Black Orc Warboss or Black Orc Bigboss",
-        "name_fr": "0-1 Black Orc Warboss ou Grand Chef Orque Noir"
+        "name_fr": "0-1 Chef de Guerre Orque Noir ou Grand Chef Orque Noir"
       }
     },
     {
@@ -1345,14 +1399,14 @@
               "name_cn": "狂暴(if 2 crew members)",
               "name_de": "Frenzy (if 2 crew members)",
               "points": 4,
-              "name_fr": "Frénésie (si 2 membres d'équipage)"
+              "name_fr": "Frénésie (si 2 membres d’équipage)"
             },
             {
               "name_en": "Frenzy (if 3 crew members)",
               "name_cn": "狂暴(if 3 crew members)",
               "name_de": "Frenzy (if 3 crew members)",
               "points": 6,
-              "name_fr": "Frénésie (si 3 membres d'équipage)"
+              "name_fr": "Frénésie (si 3 membres d’équipage)"
             },
             {
               "name_en": "Warpaint (if frenzied)",
@@ -1415,14 +1469,14 @@
         "name_cn": "大砍刀, 大只佬, 狂怒冲锋*, 无视恐慌, 抑制鲁莽, 集结战吼, Waaagh!",
         "name_de": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
         "name_es": "Choppas, Da Boyz, Furious Charge, Ignore Panic, Quell Impetuosity, Rallying Cry, Waaagh!",
-        "name_fr": "Kikoup', Lé Boyz, Charge Dévastatrice*, Ignore la Panique, Calme l'Impétuosité, Cri de Ralliement, Waaagh!"
+        "name_fr": "Kikoup’, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Calme l’Impétuosité, Cri de Ralliement, Waaagh!"
       },
       "notes": {
         "name_en": "0-1 Black Orc Bigboss or Black Orc Warboss",
         "name_cn": "0-1 Black Orc Bigboss或黑兽人老大",
         "name_de": "0-1 Black Orc Bigboss or Black Orc Warboss",
         "name_es": "0-1 Black Orc Bigboss or Black Orc Warboss",
-        "name_fr": "0-1 Black Orc Bigboss ou Chef de Guerre Orque Noir"
+        "name_fr": "0-1 Grand Chef Orque Noir ou Chef de Guerre Orque Noir"
       }
     }
   ],
@@ -1712,7 +1766,7 @@
       "name_cn": "黑兽人战帮",
       "name_de": "Black Orc Mob",
       "name_es": "Black Orc Mob",
-      "name_fr": "Bande d'Orques Noirs",
+      "name_fr": "Bande d’Orques Noirs",
       "id": "black-orc-mob",
       "magicItemsArmy": "orc-and-goblin-tribes",
       "points": 12,
@@ -1806,9 +1860,7 @@
           "name_es": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Great weapon",
@@ -1817,9 +1869,7 @@
           "name_es": "Great weapon",
           "name_fr": "Arme lourde",
           "points": 2,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         },
         {
           "name_en": "Additional hand weapon",
@@ -1828,9 +1878,7 @@
           "name_es": "Additional hand weapon",
           "name_fr": "Arme de base additionnelle",
           "points": 1,
-          "stackable": true,
-          "minimum": 0,
-          "maximum": 0
+          "stackable": true
         }
       ],
       "mounts": [],
@@ -1841,14 +1889,14 @@
         "name_cn": "大砍刀, 紧密阵型, 大只佬, 狂怒冲锋, 无视恐慌, 散兵游勇, 抑制鲁莽",
         "name_de": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
         "name_es": "Choppas, Close Order, Da Boyz, Furious Charge, Ignore Panic, Motley Crew, Quell Impetuosity",
-        "name_fr": "Kikoup', Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l'Impétuosité"
+        "name_fr": "Kikoup’, Ordre Serré, Lé Boyz, Charge Dévastatrice, Ignore la Panique, Bande Hétéroclite, Calme l’Impétuosité"
       },
       "notes": {
         "name_en": "0-1 Black Orc Mob",
         "name_cn": "0-1 黑兽人战帮",
         "name_de": "0-1 Black Orc Mob",
         "name_es": "0-1 Black Orc Mob",
-        "name_fr": "0-1 Black Orc Mob"
+        "name_fr": "0-1 Bande d’Orques Noirs"
       }
     },
     {
@@ -1869,7 +1917,7 @@
             "name_cn": "0-1 若没有选择任何黑兽人, 且你的主将为地狱卫堡主",
             "name_de": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
             "name_es": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan",
-            "name_fr": "0-1 if no Black Orcs are taken, and your General is an Infernal Castellan"
+            "name_fr": "0-1 si aucun Orques Noirs ne sont sélectionnés, et votre Général est un Châtelain Infernal"
           }
         }
       },
@@ -2212,7 +2260,7 @@
       "name_cn": "卡德艾焰魔 {renegade}",
       "name_de": "K'daai Fireborn",
       "name_es": "K'daai Fireborn",
-      "name_fr": "K'daai Rejetons de Feu",
+      "name_fr": "K’daai Rejetons de Feu",
       "id": "k'daai-fireborn",
       "points": 41,
       "minimum": 3,
@@ -2228,7 +2276,7 @@
             "name_cn": "炽焰之躯, 紧密阵型, 附魔武器, 恐惧, 火焰攻击, 心理免疫, 重生(5+), 永不战败, 不稳定, 次元产物, 生于烈火 {renegade}",
             "name_de": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire",
             "name_es": "Blazing Body, Close Order, Ensorcelled Weapons, Fear, Flaming Attacks, Immune to Psychology, Regeneration (5+), Unbreakable, Unstable, Warp-spawned, Born of Fire",
-            "name_fr": "Corps Embrasé, Ordre Serré, Armes Ensorcelées, Peur, Attaques Enflammées, Immunisé à la Psychologie, Régénération (5+), Indémoralisable, Instables, Engeance du Warp, Born of Fire"
+            "name_fr": "Corps Embrasé, Ordre Serré, Armes Ensorcelées, Peur, Attaques Enflammées, Immunisé à la Psychologie, Régénération (5+), Indémoralisable, Instables, Engeance du Warp, Né du Feu"
           }
         }
       },
@@ -2301,7 +2349,7 @@
           "name_cn": "半人牛头目",
           "name_de": "Ba'hal",
           "name_es": "Ba'hal",
-          "name_fr": "Ba'hal",
+          "name_fr": "Ba’hal",
           "points": 6,
           "magic": {
             "types": ["weapon", "talisman", "armor", "enchanted-item"],
@@ -2381,7 +2429,7 @@
         "name_cn": "坚硬皮肤(1), 黑铁鳞甲, 紧密阵型, 附魔武器, 恐惧, 先行冲锋, 撞击(D3), 独行, 奔涌狂潮, 坚毅, 快速行进",
         "name_de": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
         "name_es": "Armoured Hide (1), Blackshard Armour, Close Order, Ensorcelled Weapons, Fear, First Charge, Impact Hits (D3), Loner, Stampede, Stubborn, Swiftstride",
-        "name_fr": "Peau Blindée (1), Armure Sombréclat, Ordre Serré, Armes Ensorcelées, Peur, Première Charge, Touches d'Impact (D3), Solitaire, Ruée, Obstiné, Rapide"
+        "name_fr": "Peau Blindée (1), Armure Sombréclat, Ordre Serré, Armes Ensorcelées, Peur, Première Charge, Touches d’Impact (D3), Solitaire, Ruée, Obstiné, Rapide"
       },
       "notes": {
         "name_en": "",
@@ -2443,7 +2491,7 @@
         "name_cn": "拖运车厢, 紧密阵型, 恐惧, 碾碎车轮, 心理免疫, 撞击(D6+1), 大型目标, 缓慢毁灭, 践踏攻击(D3+1), 永不战败",
         "name_de": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Target, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
         "name_es": "Carriage Hauler, Close Order, Fear, Grinding Wheels, Immune to Psychology, Impact Hits (D6+1), Large Target, Lumbering Destruction, Stomp Attacks (D3+1), Unbreakable",
-        "name_fr": "Train d’Artillerie, Ordre Serré, Peur, Roues de Broyage, Immunisé à la Psychologie, Touches d'Impact (D6+1), Grande Cible, Destruction Inexorable, Attaques de Piétinement (D3+1), Indémoralisable"
+        "name_fr": "Train d’Artillerie, Ordre Serré, Peur, Roues de Broyage, Immunisé à la Psychologie, Touches d’Impact (D6+1), Grande Cible, Destruction Inexorable, Attaques de Piétinement (D3+1), Indémoralisable"
       },
       "notes": {
         "name_en": "0-1 per 1000 points",
@@ -2469,7 +2517,7 @@
             "name_cn": "每1000分0-1 Deathshrieker Rocket Launcher或Magma Cannon chosen",
             "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
             "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
-            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionné par tranche de 1000 points"
           }
         },
         "cd-renegade": {
@@ -2479,7 +2527,7 @@
             "name_cn": "每1000分0-2 Deathshrieker Rocket Launcher或Magma Cannon chosen",
             "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
             "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
-            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionné par tranche de 1000 points"
           }
         }
       },
@@ -2566,7 +2614,7 @@
             "name_cn": "每1000分0-1 Deathshrieker Rocket Launcher或Magma Cannon chosen",
             "name_de": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
             "name_es": "0-1 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
-            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+            "name_fr": "0-1 Lance-Fusées Hurlemort ou Canon à Magma sélectionné par tranche de 1000 points"
           }
         },
         "cd-renegade": {
@@ -2576,7 +2624,7 @@
             "name_cn": "每1000分0-2 Deathshrieker Rocket Launcher或Magma Cannon chosen",
             "name_de": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
             "name_es": "0-2 Deathshrieker Rocket Launcher or Magma Cannon chosen per 1000 points",
-            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionnée par tranche de 1000 points"
+            "name_fr": "0-2 Lance-Fusées Hurlemort ou Canon à Magma sélectionné par tranche de 1000 points"
           }
         }
       },
@@ -2896,7 +2944,7 @@
         "name_cn": "每1000分选取0-1恐震臼炮或地狱炮",
         "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
         "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
-        "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
+        "name_fr": "0-1 Mortier Trembleffroi ou Canon Apocalypse sélectionné par tranche de 1000 points"
       }
     },
     {
@@ -2915,7 +2963,7 @@
             "name_cn": "每1000分选取0-1恐震臼炮或地狱炮",
             "name_de": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
             "name_es": "0-1 Dreadquake Mortar or Hellcannon chosen per 1000 points",
-            "name_fr": "0-1 Mortier Trembleffroi or Canon Apocalypse sélectionnée par tranche de 1000 points"
+            "name_fr": "0-1 Mortier Trembleffroi ou Canon Apocalypse sélectionné par tranche de 1000 points"
           }
         },
         "cd-renegade": {
@@ -2944,7 +2992,7 @@
         "name_cn": "碎甲攻击(1), 束缚之怒, 紧密阵型, 附魔武器, 心理免疫, 撞击(D6), 大型目标, 怪兽驭手, 重生(6+), 惊骇, 永不战败, 次元产物",
         "name_de": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
         "name_es": "Armour Bane (1), Caged Fury, Close Order, Ensorcelled Weapons, Immune to Psychology, Impact Hits (D6), Large Target, Monster Handlers, Regeneration (6+), Terror, Unbreakable, Warp-spawned",
-        "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d'Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
+        "name_fr": "Arme Perforante (1), Fureur Entravée, Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Touches d’Impact (D6), Grande Cible, Dresseurs de Monstres, Régénération (6+), Terreur, Indémoralisable, Engeance du Warp"
       }
     },
     {

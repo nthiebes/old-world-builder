@@ -26,16 +26,16 @@ export const NewList = ({ isMobile }) => {
   const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
   const [game, setGame] = useState("the-old-world");
-  const [army, setArmy] = useState(
-    gameSystems.find(({ id }) => id === game).armies[0].id
-  );
+  const [army, setArmy] = useState("empire-of-man");
   const [compositionRule, setCompositionRule] = useState("open-war");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
   const [armyComposition, setArmyComposition] = useState("empire-of-man");
   const [redirect, setRedirect] = useState(null);
-  const armies = gameSystems.filter(({ id }) => id === game)[0].armies;
+  const armies = gameSystems
+    .filter(({ id }) => id === game)[0]
+    .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
   const compositionRules = [
     {
@@ -54,11 +54,21 @@ export const NewList = ({ isMobile }) => {
       id: "grand-melee-combined-arms",
       name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
     },
+    {
+      id: "battle-march",
+      name_en: intl.formatMessage({ id: "misc.battle-march" }),
+    },
   ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
-  const quickActions = lists.length
-    ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
-    : [500, 1000, 1500, 2000, 2500];
+  const quickActions =
+    compositionRule === "battle-march"
+      ? [500, 600, 750]
+      : lists.length
+      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(
+          0,
+          5
+        )
+      : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
     const newList = {
@@ -83,7 +93,7 @@ export const NewList = ({ isMobile }) => {
       armyComposition,
       compositionRule,
     };
-    const newLists = [...lists, newList];
+    const newLists = [newList, ...lists];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));

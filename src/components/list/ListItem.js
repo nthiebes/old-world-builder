@@ -7,7 +7,7 @@ import "./List.css";
 
 export const ListItem = forwardRef(
   (
-    { to, onClick, children, className, active, disabled, ...attributes },
+    { to, onClick, children, className, active, disabled, hide, ...attributes },
     ref
   ) => {
     const Component = to ? Link : "button";
@@ -16,7 +16,12 @@ export const ListItem = forwardRef(
       <li
         {...attributes}
         ref={ref}
-        className={classNames("list", active && "list--active", className)}
+        className={classNames(
+          "list",
+          active && "list--active",
+          hide && "list--hidden",
+          className
+        )}
       >
         <Component
           to={to}
@@ -40,4 +45,5 @@ ListItem.propTypes = {
   to: PropTypes.string,
   active: PropTypes.bool,
   disabled: PropTypes.bool,
+  hide: PropTypes.bool,
 };

@@ -1,0 +1,22 @@
+.install-pwa-button {
+  margin: 0 0.5rem;
+  white-space: nowrap;
+  font-family: var(--font-family);
+  color: var(--color-headline);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: underline;
+  background: none;
+  cursor: pointer;
+}
+
+.install-pwa-button:focus,
+.install-pwa-button:active {
+  color: var(--color-button);
+}
+
+@media (hover: hover) {
+  .install-pwa-button:hover {
+    color: var(--color-button);
+  }
+}

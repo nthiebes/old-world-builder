@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.list--hidden {
+  display: none;
+}
+
 .list__inner::before {
   content: "";
   position: absolute;

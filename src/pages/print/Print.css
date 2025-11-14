@@ -24,6 +24,18 @@
   padding: 1rem;
 }
 
+.print--two-columns ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.print--three-columns ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
 .print h1 {
   text-align: center;
   margin-bottom: 0;
@@ -39,13 +51,10 @@
   margin-bottom: 0.5rem;
 }
 
-.print ul {
-  margin-left: 0.5rem;
-}
-
 .print li {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   break-inside: avoid;
+  list-style: none;
 }
 
 .print__points {

@@ -756,4 +756,28 @@ export const nameMap = {
     name_cn: "阴系法术",
     name_fr: "Lore of Yin",
   },
+  "jade-fleet": {
+    name_de: "Jade Fleet",
+    name_en: "Jade Fleet",
+    name_cn: "玉舰队",
+    name_fr: "Jade Fleet",
+  },
+  "renegade-crowns": {
+    name_de: "Renegade Crowns",
+    name_en: "Renegade Crowns",
+    name_cn: "变节王冠",
+    name_fr: "Renegade Crowns",
+  },
+  "slayer-host": {
+    name_de: "Slayer Host",
+    name_en: "Slayer Host",
+    name_cn: "屠夫军团",
+    name_fr: "Slayer Host",
+  },
+  "battle-march": {
+    name_de: "Battle March",
+    name_en: "Battle March",
+    name_cn: "Battle March",
+    name_fr: "Battle March",
+  },
 };

@@ -3,6 +3,32 @@
   "name": "Warhammer: The Old World",
   "armies": [
     {
+      "id": "renegade-crowns",
+      "name_de": "Renegade Crowns",
+      "name_en": "Renegade Crowns",
+      "name_cn": "Renegade Crowns",
+      "name_es": "Renegade Crowns",
+      "name_fr": "Renegade Crowns",
+      "items": ["general"],
+      "armyComposition": ["renegade-crowns"],
+      "mercenaries": {
+        "renegade-crowns": [
+          {
+            "army": "dwarfen-mountain-holds",
+            "units": ["doomseeker-merc", "imperial-dwarf-mercenaries"]
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+          },
+          {
+            "army": "empire-of-man",
+            "units": ["imperial-ogres"]
+          }
+        ]
+      }
+    },
+    {
       "id": "empire-of-man",
       "name_de": "Empire of Man",
       "name_en": "Empire of Man",
@@ -165,7 +191,8 @@
       "armyComposition": [
         "dwarfen-mountain-holds",
         "royal-clan",
-        "expeditionary-force"
+        "expeditionary-force",
+        "slayer-host"
       ],
       "allies": [
         {
@@ -187,6 +214,10 @@
         {
           "army": "dwarfen-mountain-holds",
           "armyComposition": "expeditionary-force"
+        },
+        {
+          "army": "dwarfen-mountain-holds",
+          "armyComposition": "slayer-host"
         }
       ],
       "mercenaries": {
@@ -236,6 +267,12 @@
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls"]
+          }
+        ],
+        "slayer-host": [
+          {
+            "army": "dwarfen-mountain-holds",
+            "units": ["rangers"]
           }
         ]
       }
@@ -427,6 +464,9 @@
           "army": "high-elf-realms"
         },
         {
+          "army": "grand-cathay"
+        },
+        {
           "army": "wood-elf-realms",
           "armyComposition": "orions-wild-hunt"
         },
@@ -507,6 +547,9 @@
         },
         {
           "army": "wood-elf-realms"
+        },
+        {
+          "army": "grand-cathay"
         },
         {
           "army": "high-elf-realms",
@@ -715,7 +758,8 @@
         },
         {
           "army": "daemons-of-chaos",
-          "armyComposition": "cd-renegade"
+          "armyComposition": "doc-renegade",
+          "magicItemsArmy": "daemons-of-chaos"
         }
       ],
       "mercenaries": {
@@ -745,8 +789,12 @@
       "name_es": "Grand Cathay",
       "name_fr": "Grand Cathay",
       "items": ["general", "grand-cathay"],
-      "armyComposition": ["grand-cathay"],
+      "armyComposition": ["grand-cathay", "jade-fleet"],
       "allies": [
+        {
+          "army": "grand-cathay",
+          "armyComposition": "jade-fleet"
+        },
         { "army": "dwarfen-mountain-holds" },
         {
           "army": "empire-of-man"
@@ -761,7 +809,31 @@
           "army": "high-elf-realms"
         }
       ],
-      "mercenaries": {}
+      "mercenaries": {
+        "grand-cathay": [
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["badland-ogre-bulls"]
+          }
+        ],
+        "jade-fleet": [
+          {
+            "army": "empire-of-man",
+            "units": [
+              "captain-of-the-empire",
+              "master-mage",
+              "priest-of-sigmar",
+              "priest-of-ulric",
+              "state-troops",
+              "state-missile-troops",
+              "free-company-militia",
+              "empire-archers",
+              "pistoliers",
+              "outriders"
+            ]
+          }
+        ]
+      }
     }
   ]
 }
