@@ -54,8 +54,7 @@ const updateIds = (items) => {
 };
 
 export const isAllowedShield = (unit) => {
-    return (unit.options && unit.options.find(option => option.name_en.toLowerCase().includes("shield")))
-    || (unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield")))
+    return unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield"));
 }
 
 export const Magic = ({ isMobile }) => {
