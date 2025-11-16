@@ -26,6 +26,30 @@ const filterByTroopType = (unit) => {
   ].includes(ruleData?.troopType);
 };
 
+function incrementLevels(listOfOptionHolders, wizardLevels) {
+    if (listOfOptionHolders && listOfOptionHolders.length) {
+        listOfOptionHolders.filter(optionHolder => optionHolder.options)
+            .flatMap(optionHolder => optionHolder.options)
+            .filter(option => option.active)
+            .forEach(activeOption => {
+                const match = activeOption.name_en.toLowerCase().match(/level\s*(\d+)\s*wizard/);
+                if (match && match[1]) {
+                    wizardLevels[parseInt(match[1], 10)]++;
+                }
+            });
+    }
+}
+
+const getWizardLevels = (unitToCheck) => {
+    let wizardLevels = [0, 0, 0, 0, 0];
+
+    incrementLevels([unitToCheck], wizardLevels);
+    incrementLevels(unitToCheck.command, wizardLevels);
+    incrementLevels(unitToCheck.mounts, wizardLevels);
+
+    return wizardLevels;
+};
+
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
   const generals = !list?.characters?.length
@@ -182,46 +206,21 @@ export const validateList = ({ list, language, intl }) => {
     };
     const level3Max = Math.floor(list.points / 1000);
     const level4Max = Math.floor(list.points / 2000);
-    let level3Wizards = 0;
-    let level4Wizards = 0;
+    let characterWizards = [0, 0, 0, 0, 0];
+    let specialWizards = [0, 0, 0, 0, 0];
+    let rareWizards = [0, 0, 0, 0, 0];
+    let totalWizards = [0, 0, 0, 0, 0];
 
     list?.characters &&
       list.characters.forEach((unit) => {
         checkFor25Percent(unit, "characters");
-
-        if (
-          unit.options &&
-          findOption(
-            unit.options,
-            ({ name_en, active }) =>
-              active && name_en.toLowerCase().includes("level 4 wizard")
-          )
-        ) {
-          level4Wizards++;
-        }
-        if (
-          unit.options &&
-          findOption(
-            unit.options,
-            ({ name_en, active }) =>
-              active && name_en.toLowerCase().includes("level 3 wizard")
-          )
-        ) {
-          level3Wizards++;
-        }
-
-        if (level4Wizards > level4Max) {
-          errors.push({
-            message: "misc.error.grandMeleeLevel4",
-            section: "characters",
-          });
-        }
-        if (level3Wizards > level3Max) {
-          errors.push({
-            message: "misc.error.grandMeleeLevel3",
-            section: "characters",
-          });
-        }
+        let characterWizard = getWizardLevels(unit);
+        characterWizard.forEach((numberAtThisLevel, level) => {
+            if (numberAtThisLevel > 0) {
+                characterWizards[level] += numberAtThisLevel;
+                totalWizards[level] += numberAtThisLevel;
+            }
+        })
       });
     list?.core &&
       list.core.forEach((unit) => {
@@ -230,10 +229,24 @@ export const validateList = ({ list, language, intl }) => {
     list?.special &&
       list.special.forEach((unit) => {
         checkFor25Percent(unit, "special");
+          let specialWizard = getWizardLevels(unit);
+          specialWizard.forEach((numberAtThisLevel, level) => {
+              if (numberAtThisLevel > 0) {
+                  specialWizards[level] += numberAtThisLevel;
+                  totalWizards[level] += numberAtThisLevel;
+              }
+          })
       });
     list?.rare &&
       list.rare.forEach((unit) => {
         checkFor25Percent(unit, "rare");
+          let rareWizard = getWizardLevels(unit);
+          rareWizard.forEach((numberAtThisLevel, level) => {
+              if (numberAtThisLevel > 0) {
+                  rareWizards[level] += numberAtThisLevel;
+                  totalWizards[level] += numberAtThisLevel;
+              }
+          })
       });
     list?.mercenaries &&
       list.mercenaries.forEach((unit) => {
@@ -243,6 +256,46 @@ export const validateList = ({ list, language, intl }) => {
       list.allies.forEach((unit) => {
         checkFor25Percent(unit, "allies");
       });
+      if (totalWizards[4] > level4Max) {
+          if(characterWizards[4] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel4",
+                  section: "characters",
+              });
+          }
+          if(specialWizards[4] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel4",
+                  section: "special",
+              });
+          }
+          if(rareWizards[4] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel4",
+                  section: "rare",
+              });
+          }
+      }
+      if (totalWizards[3] > level3Max) {
+          if(characterWizards[3] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel3",
+                  section: "characters",
+              });
+          }
+          if(specialWizards[3] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel3",
+                  section: "special",
+              });
+          }
+          if(rareWizards[3] > 0) {
+              errors.push({
+                  message: "misc.error.grandMeleeLevel3",
+                  section: "rare",
+              });
+          }
+      }
   }
 
   // Combined Arms
