@@ -400,7 +400,7 @@ export const Magic = ({ isMobile }) => {
               // otherwise we need to check if the unit has enough points left.
               ((maxMagicPoints && magicItem.points > unitPointsRemaining) ||
                 isTypeLimitReached)) ||
-              (magicItem.name_en.toLowerCase().includes("shield") && !isAllowedShield(unit))
+              (magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield") && !isAllowedShield(unit))
             }
           />
           <label
