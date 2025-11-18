@@ -57,6 +57,18 @@ export const isAllowedShield = (unit) => {
     return unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield"));
 }
 
+export const isMagicShield = (magicItem) => {
+    return magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield");
+}
+
+export const isDisallowedShield = (magicItem, unit) => {
+    return isMagicShield(magicItem) && !isAllowedShield(unit);
+}
+
+export const notEnoughPointsRemaining = (maxMagicPoints, magicItem, unitPointsRemaining) => {
+    return maxMagicPoints && magicItem.points > unitPointsRemaining;
+}
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -394,12 +406,12 @@ export const Magic = ({ isMobile }) => {
             checked={isChecked}
             className="checkbox__input"
             disabled={
-              (!isChecked &&
+              !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              ((maxMagicPoints && magicItem.points > unitPointsRemaining) ||
-                isTypeLimitReached)) ||
-              (magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield") && !isAllowedShield(unit))
+              (notEnoughPointsRemaining(maxMagicPoints, magicItem, unitPointsRemaining) ||
+                isTypeLimitReached ||
+              isDisallowedShield(magicItem, unit))
             }
           />
           <label
