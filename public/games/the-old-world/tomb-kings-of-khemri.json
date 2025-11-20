@@ -136,6 +136,14 @@
           "points": 12
         },
         {
+          "name_en": "Barded Skeletal Steed",
+          "name_cn": "Barded Skeletal Steed",
+          "name_it": "Barded Destriero Scheletrico",
+          "name_de": "Barded Skelettpferd",
+          "name_fr": "Barded Coursier Squelette",
+          "points": 16
+        },
+        {
           "name_en": "Skeleton Chariot",
           "name_cn": "骷髅战车",
           "name_it": "Carro Scheletrico",
@@ -409,6 +417,14 @@
           "points": 12
         },
         {
+          "name_en": "Barded Skeletal Steed",
+          "name_cn": "Barded Skeletal Steed",
+          "name_it": "Barded Destriero Scheletrico",
+          "name_de": "Barded Skelettpferd",
+          "name_fr": "Barded Coursier Squelette",
+          "points": 16
+        },
+        {
           "name_en": "Skeleton Chariot",
           "name_cn": "骷髅战车",
           "name_it": "Carro Scheletrico",
@@ -639,6 +655,14 @@
           "points": 12
         },
         {
+          "name_en": "Barded Skeletal Steed",
+          "name_cn": "Barded Skeletal Steed",
+          "name_it": "Barded Destriero Scheletrico",
+          "name_de": "Barded Skelettpferd",
+          "name_fr": "Barded Coursier Squelette",
+          "points": 16
+        },
+        {
           "name_en": "Skeleton Chariot",
           "name_cn": "骷髅战车",
           "name_it": "Carro Scheletrico",
@@ -775,6 +799,14 @@
           "name_de": "Skelettpferd",
           "name_fr": "Coursier Squelette",
           "points": 12
+        },
+        {
+          "name_en": "Barded Skeletal Steed",
+          "name_cn": "Barded Skeletal Steed",
+          "name_it": "Barded Destriero Scheletrico",
+          "name_de": "Barded Skelettpferd",
+          "name_fr": "Barded Coursier Squelette",
+          "points": 16
         },
         {
           "name_en": "Necrolith Bone Dragon",
@@ -944,6 +976,14 @@
           "name_de": "Skelettpferd",
           "name_fr": "Coursier Squelette",
           "points": 12
+        },
+        {
+          "name_en": "Barded Skeletal Steed",
+          "name_cn": "Barded Skeletal Steed",
+          "name_it": "Barded Destriero Scheletrico",
+          "name_de": "Barded Skelettpferd",
+          "name_fr": "Barded Coursier Squelette",
+          "points": 16
         }
       ],
       "items": [
@@ -3639,7 +3679,17 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_en": "May add up to two additional Tomb Guard Crew",
@@ -3697,6 +3747,87 @@
         },
         "nehekharan-royal-hosts": {
           "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Winged Warsphinx",
+      "name_cn": "Winged Warsphinx",
+      "name_de": "Winged Warsphinx",
+      "name_es": "Winged Warsphinx",
+      "name_fr": "Winged Warsphinx",
+      "name_it": "Winged Warsphinx",
+      "id": "winged-warsphinx",
+      "points": 180,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_it": "Artigli Malvagi",
+          "name_de": "Scheußliche Krallen",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Envenomed sting",
+          "name_cn": "毒液尾刺",
+          "name_it": "Aculeo avvelenato",
+          "name_de": "Giftstachel",
+          "name_fr": "Dard venimeux",
+          "points": 5,
+          "perModel": true
+        },
+        {
+          "name_en": "Fiery roar",
+          "name_cn": "凶猛咆哮",
+          "name_it": "Ruggito Infuocato",
+          "name_de": "Flammendes Brüllen",
+          "name_fr": "Rugissement ardent",
+          "points": 20,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Counter Charge, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Terror",
+        "name_cn": "紧密阵型, 反制冲锋, 飞行(9), 顽强不屈(2), 大型目标, 尼赫喀拉亡灵, 重生(6+), 践踏攻击(D3), 快速行进, 惊骇",
+        "name_de": "Geschlossene Ränge, Gegenangriff, Fliegen (9), Unverwüstlich (2), Großes Ziel, Unote von Nehekhara, Regeneration (6+), Stampfattacken (W3), Schnelle Bewegung, Entsetzen",
+        "name_es": "Close Order, Contracarga, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (6+), Stomp Attacks (D3), Swiftstride, Terror",
+        "name_fr": "Ordre Serré, Contre-charge, Vol (9), Indomptable (2), Grande Cible, Morts-vivants de Nehekhara, Régénération (6+), Attaques de Piétinement (D3), Rapide, Terreur",
+        "name_it": "Formazione Serrata, Controcarica, Volo (9), Costrutto (2), Bersaglio Grande, Rigenerazione (6+), Non morto di Nehekharan, Calpestamento (D3), Passo Rapido, Terrore"
+      },
+      "notes": {
+        "name_en": "0-1 Winged Warsphinx per 1000 points",
+        "name_cn": "每1000分0-1喀穆里征战斯芬克斯",
+        "name_de": "0-1 Winged Kriegsshinx pro 1000 Punkte",
+        "name_es": "0-1 Winged Warsphinx per 1000 points",
+        "name_fr": "0-1 Sphinx de Guerre de Winged par tranche de 1000 points",
+        "name_it": "0-1 Sfinge da Guerra Winged ogni 1.000 punti"
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "rare"
+        },
+        "mortuary-cults": {
+          "category": "rare"
         }
       }
     },
