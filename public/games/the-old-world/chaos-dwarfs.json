@@ -960,29 +960,29 @@
           "equippedDefault": true
         },
         {
-          "name_en": "Hand weapon, Throwing weapons, Additional hand weapon",
-          "name_cn": "单手武器, 投掷武器, 额外单手武器",
-          "name_de": "Hand weapon, Throwing weapons, Additional hand weapon",
-          "name_es": "Hand weapon, Throwing weapons, Additional hand weapon",
-          "name_fr": "Arme de base, Armes de lancer, Arme de base additionnelle",
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapon",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
           "points": 3,
           "perModel": true
         },
         {
-          "name_en": "Hand weapon, Throwing weapons, Great weapon",
-          "name_cn": "单手武器, 投掷武器, 重型武器",
-          "name_de": "Hand weapon, Throwing weapons, Great weapon",
-          "name_es": "Hand weapon, Throwing weapons, Great weapon",
-          "name_fr": "Arme de base, Armes de lancer, Arme lourde",
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Great weapon",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
           "points": 4,
           "perModel": true
         },
         {
-          "name_en": "Hand weapon, Throwing weapons, Cavalry spear",
-          "name_cn": "单手武器, 投掷武器, 骑兵长矛",
-          "name_de": "Hand weapon, Throwing weapons, Cavalry spear",
-          "name_es": "Hand weapon, Throwing weapons, Cavalry spear",
-          "name_fr": "Arme de base, Armes de lancer, Lance de cavalerie",
+          "name_en": "Cavalry spear",
+          "name_cn": " 骑兵长矛",
+          "name_de": "Cavalry spear",
+          "name_es": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
           "points": 2,
           "perModel": true,
           "notes": {
@@ -2787,24 +2787,15 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Cavalry spears",
-          "name_cn": "单手武器, 骑兵长矛",
-          "name_de": "Hand weapons, Cavalry spears",
-          "name_es": "Hand weapons, Cavalry spears",
-          "name_fr": "Armes de base, Lances de cavalerie",
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Hand weapons, Shortbow",
-          "name_cn": "单手武器, 短弓",
-          "name_de": "Hand weapons, Shortbow",
-          "name_es": "Hand weapons, Shortbow",
-          "name_fr": "Armes de base, Arc court",
-          "points": 1,
-          "perModel": true
         }
       ],
       "armor": [
@@ -2820,6 +2811,26 @@
         }
       ],
       "options": [
+        {
+          "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
+          "name_de": "Cavalry spears",
+          "name_es": "Cavalry spears",
+          "name_fr": "Lances de cavalerie",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Shortbow",
+          "name_cn": "短弓",
+          "name_de": "Shortbow",
+          "name_es": "Shortbow",
+          "name_fr": "Arc court",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
         {
           "name_en": "Feigned Flight (0-1 per 1000 points)",
           "name_cn": "诱敌诈退(每1000分0-1)",
