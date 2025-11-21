@@ -130,6 +130,7 @@
           ],
           "selected": [],
           "maxPoints": 125,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 150
@@ -191,7 +192,8 @@
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 0
+            "maxPoints": 0,
+            "maxItems": 3
           }
         }
       ],
@@ -306,6 +308,7 @@
           ],
           "selected": [],
           "maxPoints": 75,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 100
@@ -391,6 +394,7 @@
           "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
           "selected": [],
           "maxPoints": 100,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 125
@@ -512,6 +516,7 @@
           "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
           "selected": [],
           "maxPoints": 125,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 150
@@ -573,7 +578,8 @@
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 0
+            "maxPoints": 0,
+            "maxItems": 3
           },
           "armyComposition": "royal-clan"
         }
@@ -646,6 +652,7 @@
           "types": ["weapon-runes", "armor-runes", "talismanic-runes"],
           "selected": [],
           "maxPoints": 75,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 100
@@ -750,6 +757,7 @@
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 100,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 125
@@ -764,7 +772,8 @@
           "name_fr": "Runes de Talisman",
           "types": ["talismanic-runes"],
           "selected": [],
-          "maxPoints": 25
+          "maxPoints": 25,
+          "maxItems": 3
         },
         {
           "name_de": "Runentätowierungen",
@@ -774,11 +783,7 @@
           "types": ["runic-tattoos"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最大 2",
-            "name_fr": "Maximum 2"
-          }
+          "maxItems": 2
         }
       ],
       "specialRules": {
@@ -850,7 +855,8 @@
           "armyComposition": "slayer-host",
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 0
+            "maxPoints": 0,
+            "maxItems": 3
           }
         }
       ],
@@ -908,6 +914,7 @@
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 75,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 100
@@ -922,11 +929,7 @@
           "types": ["runic-tattoos"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          }
+          "maxItems": 1
         }
       ],
       "specialRules": {
@@ -994,7 +997,8 @@
           "points": 25,
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 0
+            "maxPoints": 0,
+            "maxItems": 3
           },
           "armyComposition": "expeditionary-force"
         }
@@ -1081,6 +1085,7 @@
           ],
           "selected": [],
           "maxPoints": 50,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 75
@@ -1201,7 +1206,8 @@
             "talismanic-runes"
           ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -1434,7 +1440,8 @@
           "points": 5,
           "magic": {
             "types": ["weapon-runes"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "maxItems": 3
           }
         },
         {
@@ -1447,6 +1454,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -1575,7 +1583,8 @@
           "points": 6,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "maxItems": 3
           },
           "notes": {
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
@@ -1593,7 +1602,8 @@
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 75
+            "maxPoints": 75,
+            "maxItems": 3
           }
         },
         {
@@ -1718,7 +1728,8 @@
           "points": 6,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "maxItems": 3
           },
           "notes": {
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
@@ -1737,6 +1748,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -2168,6 +2180,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 25,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 50
@@ -2447,7 +2460,8 @@
           "points": 6,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "maxItems": 3
           },
           "notes": {
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
@@ -2466,6 +2480,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -2578,7 +2593,8 @@
           "points": 7,
           "magic": {
             "types": ["weapon-runes", "talismanic-runes"],
-            "maxPoints": 50
+            "maxPoints": 50,
+            "maxItems": 3
           },
           "notes": {
             "name_de": "Bis zu 25 Punkte von jedem Runentyp",
@@ -2597,6 +2613,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 75,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 100
@@ -2736,7 +2753,8 @@
           "points": 7,
           "magic": {
             "types": ["weapon-runes"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "maxItems": 3
           },
           "options": [
             {
@@ -2787,6 +2805,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -2902,6 +2921,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 25,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 50
@@ -3040,6 +3060,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -3174,12 +3195,11 @@
           "name_de": "Shrine Keeper (Champion)",
           "name_fr": "Shrine Keeper (champion)",
           "points": 21,
-          "notes": {
-            "name_en": "Only a single runic tattoo"
-          },
+          "maxItems": 1,
           "magic": {
             "types": ["runic-tattoos"],
-            "maxPoints": 0
+            "maxPoints": 0,
+            "maxItems": 3
           }
         },
         {
@@ -3191,7 +3211,8 @@
           "points": 6,
           "magic": {
             "types": ["banner-runes"],
-            "maxPoints": 100
+            "maxPoints": 100,
+            "maxItems": 3
           },
           "options": [
             {
@@ -3343,6 +3364,7 @@
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 50,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 75
@@ -3357,11 +3379,7 @@
           "types": ["runic-tattoos"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 3",
-            "name_cn": "最多3个",
-            "name_fr": "Maximum 3"
-          }
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -3565,7 +3583,8 @@
           "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -3640,7 +3659,8 @@
           "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -3725,7 +3745,8 @@
           "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
-          "maxPoints": 100
+          "maxPoints": 100,
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -3813,6 +3834,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 25,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 50
@@ -4001,6 +4023,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -4324,7 +4347,8 @@
           "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "maxItems": 3
         }
       ],
       "mounts": [],
@@ -4395,6 +4419,7 @@
           "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 50,
+          "maxItems": 3,
           "armyComposition": {
             "royal-clan": {
               "maxPoints": 75
@@ -4409,11 +4434,7 @@
           "types": ["runic-tattoos"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 3",
-            "name_cn": "最多3个",
-            "name_fr": "Maximum 3"
-          }
+          "maxItems": 3
         }
       ],
       "specialRules": {
@@ -4479,7 +4500,8 @@
           "points": 5,
           "magic": {
             "types": ["weapon-runes"],
-            "maxPoints": 25
+            "maxPoints": 25,
+            "maxItems": 3
           }
         },
         {
@@ -4492,6 +4514,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
+            "maxItems": 3,
             "armyComposition": {
               "royal-clan": {
                 "maxPoints": 75
@@ -4657,7 +4680,8 @@
           "name_fr": "Runes d’Ingénierie",
           "types": ["engineering-runes"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "maxItems": 3
         }
       ],
       "mounts": [],
