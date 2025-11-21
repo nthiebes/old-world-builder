@@ -507,6 +507,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -811,11 +812,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最多2个",
-            "name_fr": "Maximum 2"
-          }
+          "maxItemsPerCategory": 2
         }
       ],
       "lores": [],
@@ -901,45 +898,59 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Wizard",
@@ -1117,11 +1128,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最多2个",
-            "name_fr": "Maximum 2"
-          }
+          "maxItemsPerCategory": 2
         }
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
@@ -1279,6 +1286,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -1583,11 +1591,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          }
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -1659,45 +1663,59 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Wizard",
@@ -1849,11 +1867,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          }
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
@@ -1986,6 +2000,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2279,11 +2294,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          }
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -2447,6 +2458,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2544,11 +2556,7 @@
           "types": ["chaotic-trait"],
           "selected": [],
           "maxPoints": 0,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          }
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -2863,6 +2871,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2916,159 +2925,22 @@
               "exclusive": true
             }
           ]
-        },
+        }
+      ],
+      "mounts": [],
+      "items": [
         {
           "name_en": "Chaotic Traits",
           "name_cn": "Chaotic Traits",
           "name_it": "Chaotic Traits",
           "name_de": "Chaotic Traits",
           "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": true,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": true,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": true,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": true,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": true,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
-      "mounts": [],
-      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Ensorcelled Weapons",
@@ -3172,208 +3044,85 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_cn": "恐虐之印",
-          "name_de": "Mal des Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_cn": "恐虐之印",
+              "name_de": "Mal des Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
         {
           "name_en": "Chaotic Traits",
           "name_cn": "Chaotic Traits",
           "name_it": "Chaotic Traits",
           "name_de": "Chaotic Traits",
           "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": true,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": true,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": true,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": true,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": true,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
-      "mounts": [],
-      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
@@ -3649,7 +3398,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Horde, Mark of Chaos Undivided, Shieldwall, Warband",
@@ -3919,7 +3680,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
@@ -4258,156 +4031,6 @@
           "perModel": true
         },
         {
-          "name_en": "Chaotic Traits",
-          "name_cn": "Chaotic Traits",
-          "name_it": "Chaotic Traits",
-          "name_de": "Chaotic Traits",
-          "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": true,
-          "notes": {
-            "name_en": "Maximum 1",
-            "name_cn": "最多1个",
-            "name_fr": "Maximum 1"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": true,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": true,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": true,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": true,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": true,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
-        },
-
-        {
           "name_en": "Ambushers",
           "name_cn": "伏击",
           "name_de": "Überfall",
@@ -4420,7 +4043,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Frenzy, Mark of Chaos Undivided, Move Through Cover, Open Order, Relentless Warriors, Skirmishers, Warband",
@@ -4671,6 +4306,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -4726,155 +4362,6 @@
           ]
         },
         {
-          "name_en": "Chaotic Traits",
-          "name_cn": "Chaotic Traits",
-          "name_it": "Chaotic Traits",
-          "name_de": "Chaotic Traits",
-          "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": false,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最多2个",
-            "name_fr": "Maximum 2"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": false,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": false,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": false,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": false,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
-        },
-        {
           "name_en": "Drilled",
           "name_cn": "受训",
           "name_de": "Gut Ausgebildet",
@@ -4887,7 +4374,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Ensorcelled Weapons, Stubborn",
@@ -5009,6 +4508,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -5064,155 +4564,6 @@
           ]
         },
         {
-          "name_en": "Chaotic Traits",
-          "name_cn": "Chaotic Traits",
-          "name_it": "Chaotic Traits",
-          "name_de": "Chaotic Traits",
-          "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": true,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最多2个",
-            "name_fr": "Maximum 2"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": false,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": false,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": false,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": false,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
-        },
-        {
           "name_en": "Drilled",
           "name_cn": "受训",
           "name_de": "Gut Ausgebildet",
@@ -5225,7 +4576,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride",
@@ -5292,6 +4655,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -6255,6 +5619,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -6308,159 +5673,22 @@
               "exclusive": true
             }
           ]
-        },
+        }
+      ],
+      "mounts": [],
+      "items": [
         {
           "name_en": "Chaotic Traits",
           "name_cn": "Chaotic Traits",
           "name_it": "Chaotic Traits",
           "name_de": "Chaotic Traits",
           "name_fr": "Chaotic Traits",
-          "points": 0,
-          "active": true,
-          "notes": {
-            "name_en": "Maximum 2",
-            "name_cn": "最多2个",
-            "name_fr": "Maximum 2"
-          },
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "exclusive": false,
-              "points": 2,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "exclusive": false,
-              "points": 1,
-              "perModel": true,
-              "stackable": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "exclusive": false,
-              "points": 20,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "exclusive": false,
-              "points": 15,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "exclusive": false,
-              "points": 10,
-              "perModel": false,
-              "stackable": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
         }
       ],
-      "mounts": [],
-      "items": [],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Counter Charge, Furious Charge, Mark of Chaos Undivided, Swiftstride, Warband",
