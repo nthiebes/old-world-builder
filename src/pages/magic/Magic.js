@@ -106,7 +106,7 @@ export const Magic = ({ isMobile }) => {
 
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
-  let maxItems = 0;
+  let maxItemsPerCategory = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
     const inputType = event.target.type;
@@ -287,10 +287,13 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
-      const categoryIsComboExclusive = (type) => comboExclusiveCategories.indexOf(type) >= 0;
+      const categoryIsComboExclusive = (type) =>
+        comboExclusiveCategories.indexOf(type) >= 0;
       const hasComboExculsiveCategory =
-        (unit?.items && unit.items[group || 0]?.types?.some(categoryIsComboExclusive)) ||
-        (command && unit?.command[command]?.magic?.types?.some(categoryIsComboExclusive));
+        (unit?.items &&
+          unit.items[group || 0]?.types?.some(categoryIsComboExclusive)) ||
+        (command &&
+          unit?.command[command]?.magic?.types?.some(categoryIsComboExclusive));
       if (hasComboExculsiveCategory) {
         setComboUsedElsewhere(combosUsedElsewhere(items, list, unitId));
       }
@@ -485,12 +488,13 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: commandOptions[command].magic.selected,
     });
-    maxItems = (commandOptions[command].magic.armyComposition &&
+    maxItemsPerCategory =
+      (commandOptions[command].magic.armyComposition &&
         commandOptions[command].magic.armyComposition[
           list.armyComposition || list.army
-        ]?.maxItems) ||
-      commandOptions[command].magic.maxItems ||
-      3; // backwards compatibility for runes 
+        ]?.maxItemsPerCategory) ||
+      commandOptions[command].magic.maxItemsPerCategory ||
+      3; // backwards compatibility for runes
   } else if (hasMagicItems) {
     maxMagicPoints =
       (unit.items[group].armyComposition &&
@@ -500,12 +504,12 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
-    maxItems =
+    maxItemsPerCategory =
       (unit.items[group].armyComposition &&
         unit.items[group].armyComposition[list.armyComposition || list.army]
-          ?.maxItems) ||
-      unit.items[group].maxItems ||
-      3; // backwards compatibility for runes 
+          ?.maxItemsPerCategory) ||
+      unit.items[group].maxItemsPerCategory ||
+      3; // backwards compatibility for runes
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -632,8 +636,9 @@ export const Magic = ({ isMobile }) => {
                 );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
-                const isComboExclusiveCategory = comboExclusiveCategories.indexOf(magicItem.type) >= 0;
-                
+                const isComboExclusiveCategory =
+                  comboExclusiveCategories.indexOf(magicItem.type) >= 0;
+
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
                   : unitSelectedItems.some(
@@ -642,7 +647,8 @@ export const Magic = ({ isMobile }) => {
                           !selectedItem.stackable &&
                           selectedItem.type === magicItem.type &&
                           !isComboExclusiveCategory) ||
-                        (isComboExclusiveCategory && itemCountInCategory >= maxItems) ||
+                        (isComboExclusiveCategory &&
+                          itemCountInCategory >= maxItemsPerCategory) ||
                         (isComboExclusiveCategory &&
                           masterRuneInCategory &&
                           magicItem.name_en.includes("Master")) ||
@@ -667,7 +673,9 @@ export const Magic = ({ isMobile }) => {
                       <Link to={error.url}>
                         {getUnitName({ unit: error.unit, language })}
                       </Link>
-                      {index !== comboUsedElsewhereErrors.length - 1 ? ", " : ""}
+                      {index !== comboUsedElsewhereErrors.length - 1
+                        ? ", "
+                        : ""}
                     </Fragment>
                   ));
 
@@ -680,9 +688,10 @@ export const Magic = ({ isMobile }) => {
                             {nameMap[magicItem.type][`name_${language}`] ||
                               nameMap[magicItem.type].name_en}
                           </span>
-                          {isComboExclusiveCategory && maxItems > 0 &&
-                            (<i className="magic__item-count">{`${itemCountInCategory}/${maxItems}`}</i>)
-                          }
+                          {isComboExclusiveCategory &&
+                            maxItemsPerCategory > 0 && (
+                              <i className="magic__item-count">{`${itemCountInCategory}/${maxItemsPerCategory}`}</i>
+                            )}
                         </h3>
                         {comboUsedBy && (
                           <ErrorMessage
