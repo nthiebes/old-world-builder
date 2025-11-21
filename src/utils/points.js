@@ -181,8 +181,6 @@ export const getUnitPoints = (unit, settings) => {
   if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {
       (item.selected || []).forEach((selected) => {
-        console.log(unit.type);
-
         // Units with points per model
         if (unit.type !== "characters" && selected.perModel) {
           unitPoints +=

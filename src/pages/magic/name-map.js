@@ -342,6 +342,12 @@ export const nameMap = {
     name_cn: "巨魔法系",
     name_fr: "Magie Troll",
   },
+  shadowlands: {
+    name_de: "Shadowlands",
+    name_en: "Shadowlands",
+    name_cn: "Shadowlands",
+    name_fr: "Shadowlands",
+  },
   "errantry-crusades": {
     name_de: "Errantry Crusades",
     name_en: "Errantry Crusades",
