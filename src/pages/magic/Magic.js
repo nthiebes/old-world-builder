@@ -119,6 +119,45 @@ export const Magic = ({ isMobile }) => {
       );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [comboUsedElsewhere, setComboUsedElsewhere] = useState([]);
+  const getPointsText = ({
+    points: regularPoints,
+    perModelPoints,
+    perUnitPoints,
+    perModel,
+  }) => {
+    let points = regularPoints;
+
+    if (type !== "characters" && perUnitPoints) {
+      points = perUnitPoints;
+    } else if (type !== "characters" && perModelPoints) {
+      points = perModelPoints;
+    }
+
+    if (points === 0) {
+      return intl.formatMessage({
+        id: "app.free",
+      });
+    }
+
+    return (
+      <>
+        {`${points} ${
+          points === 1
+            ? intl.formatMessage({
+                id: "app.point",
+              })
+            : intl.formatMessage({
+                id: "app.points",
+              })
+        }`}
+        {perModel &&
+          type !== "characters" &&
+          ` ${intl.formatMessage({
+            id: "unit.perModel",
+          })}`}
+      </>
+    );
+  };
 
   // Fallback to list army if no specific army for items is set
   if (!army) {
@@ -453,13 +492,12 @@ export const Magic = ({ isMobile }) => {
               )}
             </span>
             <i className="checkbox__points">
-              {magicItem.points === 0
-                ? intl.formatMessage({
-                    id: "app.free",
-                  })
-                : `${magicItem.points} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}
+              {getPointsText({
+                points: magicItem.points,
+                perModelPoints: magicItem.perModelPoints,
+                perUnitPoints: magicItem.perUnitPoints,
+                perModel: magicItem.perModel,
+              })}
             </i>
             <RuleWithIcon
               name={magicItem.name_en}

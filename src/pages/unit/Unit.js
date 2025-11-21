@@ -592,9 +592,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               className="unit__header-rule-icon"
             />
           }
-          subheadline={`${getUnitPoints(unit, {
-            armyComposition: unitArmyComposition,
-          })} ${intl.formatMessage({
+          subheadline={`${getUnitPoints(
+            { ...unit, type },
+            {
+              armyComposition: unitArmyComposition,
+            }
+          )} ${intl.formatMessage({
             id: "app.points",
           })}`}
           navigationIcon="more"
@@ -617,9 +620,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 className="unit__header-rule-icon"
               />
             }
-            subheadline={`${getUnitPoints(unit, {
-              armyComposition: unitArmyComposition,
-            })} ${intl.formatMessage({
+            subheadline={`${getUnitPoints(
+              { ...unit, type },
+              {
+                armyComposition: unitArmyComposition,
+              }
+            )} ${intl.formatMessage({
               id: "app.points",
             })}`}
             navigationIcon="more"
@@ -652,7 +658,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               </span>
               <i className="unit__strength-points">
                 {getPointsText({
-                  points: getPointsPerModel(unit),
+                  points: getPointsPerModel({ ...unit, type }),
                   perModel: true,
                 })}
               </i>
