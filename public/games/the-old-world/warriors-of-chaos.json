@@ -3682,11 +3682,11 @@
       },
       "command": [
         {
-          "name_en": "Marauder Horsemaster",
-          "name_cn": "掠夺者大师",
-          "name_de": "Barbaren-Pferdeherr",
-          "name_es": "Marauder Horsemaster",
-          "name_fr": "Chef Cavalier Maraudeur",
+          "name_en": "Marauder Horsemaster (champion)",
+          "name_cn": "掠夺者大师 (champion)",
+          "name_de": "Barbaren-Pferdeherr (champion)",
+          "name_es": "Marauder Horsemaster (champion)",
+          "name_fr": "Chef Cavalier Maraudeur (champion)",
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
@@ -3763,11 +3763,11 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Leichte Rüstung",
-          "name_es": "Light armour",
-          "name_fr": "Armure légère",
+          "name_en": "Light armour, Shields",
+          "name_cn": "轻甲, 盾牌",
+          "name_de": "Leichte Rüstung, Schilde",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Armure légère, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3785,18 +3785,6 @@
           "exclusive": true
         },
         {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_de": "Schilde",
-          "name_es": "Shields",
-          "name_fr": "Boucliers",
-          "points": 0,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
           "name_en": "Chaotic Cult",
           "name_cn": "Chaotic Cult",
           "name_de": "Chaotic Cult",
@@ -3806,7 +3794,19 @@
           "name_pl": "Chaotic Cult",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
+            {
+              "name_en": "None",
+              "name_cn": "None",
+              "name_de": "None",
+              "name_es": "None",
+              "name_fr": "None",
+              "points": 0,
+              "perModel": true,
+              "active": true,
+              "exclusive": true
+            },
             {
               "name_en": "The Cult of the Bloodied Hound",
               "name_cn": "The Cult of the Bloodied Hound",
@@ -3850,145 +3850,6 @@
           ]
         },
         {
-          "name_en": "Chaotic Trait",
-          "name_cn": "Chaotic Trait",
-          "name_de": "Chaotic Trait",
-          "name_es": "Chaotic Trait",
-          "name_fr": "Chaotic Trait",
-          "name_it": "Chaotic Trait",
-          "name_pl": "Chaotic Trait",
-          "points": 0,
-          "active": true,
-          "options": [
-            {
-              "name_de": "Unnatural Fortitude",
-              "name_en": "Unnatural Fortitude",
-              "name_cn": "Unnatural Fortitude",
-              "name_es": "Unnatural Fortitude",
-              "name_fr": "Unnatural Fortitude",
-              "name_it": "Unnatural Fortitude",
-              "points": 2,
-              "perModel": true,
-              "exclusive": true,
-              "notes": {
-                "name_en": "No heavy armor or full plate",
-                "name_cn": "No heavy armor or full plate",
-                "name_de": "No heavy armor or full plate",
-                "name_fr": "No heavy armor or full plate",
-                "name_it": "No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Dark Hearts",
-              "name_en": "Dark Hearts",
-              "name_cn": "Dark Hearts",
-              "name_es": "Dark Hearts",
-              "name_fr": "Dark Hearts",
-              "name_it": "Dark Hearts",
-              "points": 1,
-              "perModel": true,
-              "exclusive": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Longstriders",
-              "name_en": "Longstriders",
-              "name_cn": "Longstriders",
-              "name_es": "Longstriders",
-              "name_fr": "Longstriders",
-              "name_it": "Longstriders",
-              "points": 1,
-              "perModel": true,
-              "exclusive": true,
-              "notes": {
-                "name_en": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_cn": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_de": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_fr": "0-1 per 1000 points, No heavy armor or full plate",
-                "name_it": "0-1 per 1000 points, No heavy armor or full plate"
-              }
-            },
-            {
-              "name_de": "Enhanced Reflexes",
-              "name_en": "Enhanced Reflexes",
-              "name_cn": "Enhanced Reflexes",
-              "name_es": "Enhanced Reflexes",
-              "name_fr": "Enhanced Reflexes",
-              "name_it": "Enhanced Reflexes",
-              "points": 1,
-              "perModel": true,
-              "exclusive": true,
-              "notes": {
-                "name_en": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_cn": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_de": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_fr": "Only active with single hand weapon/Ensorcelled weapon",
-                "name_it": "Only active with single hand weapon/Ensorcelled weapon"
-              }
-            },
-            {
-              "name_de": "Battle Hunger",
-              "name_en": "Battle Hunger",
-              "name_cn": "Battle Hunger",
-              "name_es": "Battle Hunger",
-              "name_fr": "Battle Hunger",
-              "name_it": "Battle Hunger",
-              "points": 1,
-              "perModel": true,
-              "exclusive": true,
-              "notes": {
-                "name_en": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_cn": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_de": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_fr": "Infantry only, all models in the unit must have this mark for it to work",
-                "name_it": "Infantry only, all models in the unit must have this mark for it to work"
-              }
-            },
-            {
-              "name_de": "Brazen Will",
-              "name_en": "Brazen Will",
-              "name_cn": "Brazen Will",
-              "name_es": "Brazen Will",
-              "name_fr": "Brazen Will",
-              "name_it": "Brazen Will",
-              "points": 10,
-              "perModel": false,
-              "exclusive": true,
-              "notes": {
-                "name_en": "Infantry or Cavalry only",
-                "name_cn": "Infantry or Cavalry only",
-                "name_de": "Infantry or Cavalry only",
-                "name_fr": "Infantry or Cavalry only",
-                "name_it": "Infantry or Cavalry only"
-              }
-            },
-            {
-              "name_de": "Prophetic Foresight",
-              "name_en": "Prophetic Foresight",
-              "name_cn": "Prophetic Foresight",
-              "name_es": "Prophetic Foresight",
-              "name_fr": "Prophetic Foresight",
-              "name_it": "Prophetic Foresight",
-              "points": 10,
-              "perModel": false,
-              "exclusive": true,
-              "notes": {
-                "name_en": "all models in the unit must have this mark for it to work",
-                "name_cn": "all models in the unit must have this mark for it to work",
-                "name_de": "all models in the unit must have this mark for it to work",
-                "name_fr": "all models in the unit must have this mark for it to work",
-                "name_it": "all models in the unit must have this mark for it to work"
-              }
-            }
-          ]
-        },
-        {
           "name_en": "Ambushers",
           "name_cn": "伏击",
           "name_de": "Überfall",
@@ -4019,30 +3880,53 @@
           }
         },
         {
-          "name_en": "Skirmishers",
-          "name_cn": "散兵",
-          "name_de": "Skirmishers",
-          "name_es": "Skirmishers",
-          "name_fr": "Tirailleurs",
+          "name_en": "Formation",
+          "name_cn": "Formation",
+          "name_de": "Formation",
+          "name_es": "Formation",
+          "name_fr": "Formation",
           "points": 0,
-          "notes": {
-            "name_en": "0-1 unit per 1000 points",
-            "name_cn": "每1000分0-1单位",
-            "name_de": "0-1 Einheit pro 1000 Punkte",
-            "name_fr": "0-1 unité par tranche de 1000 points",
-            "name_it": "0-1 unità ogni 1000p.ti"
-          }
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Open Order",
+              "name_cn": "开放阵型",
+              "name_de": "Offene Ränge",
+              "name_es": "Open Order",
+              "name_fr": "Ordre Dispersé",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Skirmishers",
+              "name_cn": "散兵",
+              "name_de": "Plänkler",
+              "name_es": "Skirmishers",
+              "name_fr": "Tirailleurs",
+              "points": 0,
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 unit per 1000 points",
+                "name_cn": "每1000分0-1单位",
+                "name_de": "0-1 Einheit pro 1000 Punkte",
+                "name_fr": "0-1 unité par tranche de 1000 points",
+                "name_it": "0-1 unità ogni 1000p.ti"
+              }
+            }
+          ]
         }
       ],
       "mounts": [],
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Swiftstride, Warband",
-        "name_cn": "快速骑兵, 游击, 混沌无分之印, 开放阵型, 快速行进, 战帮",
-        "name_de": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Swiftstride, Warband",
-        "name_es": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Open Order, Swiftstride, Warband",
-        "name_fr": "Cavalerie Rapide, Tir & Fuite, Marque du Chaos Universel, Ordre Dispersé, Rapide, Bande de Guerre"
+        "name_en": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_cn": "快速骑兵, 游击, 混沌无分之印, 快速行进, 战帮",
+        "name_de": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_es": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Marque du Chaos Universel, Rapide, Bande de Guerre"
       }
     },
     {
