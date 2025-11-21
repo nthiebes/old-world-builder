@@ -26,6 +26,13 @@ const filterByTroopType = (unit) => {
   ].includes(ruleData?.troopType);
 };
 
+export const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
+  return (
+    otherUnit.sharedCombinedArmsUnits &&
+    otherUnit.sharedCombinedArmsUnits.includes(unitToValidate.id.split(".")[0])
+  );
+};
+
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
   const generals = !list?.characters?.length
@@ -293,7 +300,9 @@ export const validateList = ({ list, language, intl }) => {
           )?.max
       );
       const coreCount = list.core.filter(
-        (core) => core.id.split(".")[0] === unit.id.split(".")[0]
+        (core) =>
+          core.id.split(".")[0] === unit.id.split(".")[0] ||
+          hasSharedCombinedArmsLimit(core, unit)
       ).length;
 
       if (

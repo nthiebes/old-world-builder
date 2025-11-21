@@ -22,7 +22,8 @@ import {
   isMultipleAllowedItem,
   itemsUsedElsewhere,
   maxAllowedOfItem,
-  runeLoadoutElsewhere,
+  comboExclusiveCategories,
+  combosUsedElsewhere,
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -53,6 +54,24 @@ const updateIds = (items) => {
   }));
 };
 
+export const isAllowedShield = (unit) => {
+    return (unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield")))
+        || (unit.options && unit.options.find(option => option.name_en.toLowerCase().includes("shield")))
+        || (unit.armor && unit.armor.find(option => option.name_en.toLowerCase().includes("shield")));
+}
+
+export const isMagicShield = (magicItem) => {
+    return magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield");
+}
+
+export const isDisallowedShield = (magicItem, unit) => {
+    return isMagicShield(magicItem) && !isAllowedShield(unit);
+}
+
+export const notEnoughPointsRemaining = (maxMagicPoints, magicItem, unitPointsRemaining) => {
+    return maxMagicPoints && magicItem.points > unitPointsRemaining;
+}
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -81,7 +100,7 @@ export const Magic = ({ isMobile }) => {
             unit.command[command]?.magic?.magicItemsArmy === id)
       );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
-  const [runesUsedElsewhere, setRunesUsedElsewhere] = useState([]);
+  const [comboUsedElsewhere, setComboUsedElsewhere] = useState([]);
 
   // Fallback to list army if no specific army for items is set
   if (!army) {
@@ -105,6 +124,7 @@ export const Magic = ({ isMobile }) => {
 
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
+  let maxItemsPerCategory = 0;
   const handleMagicChange = (event, magicItem, isCommand) => {
     let magicItems;
     const inputType = event.target.type;
@@ -285,13 +305,15 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
-      const typeIsRunic = (type) =>
-        type.indexOf("runes") >= 0 || type === "runic-tattoos";
-      const isRune =
-        (unit?.items && unit.items[group || 0]?.types?.some(typeIsRunic)) ||
-        (command && unit?.command[command]?.magic?.types?.some(typeIsRunic));
-      if (isRune) {
-        setRunesUsedElsewhere(runeLoadoutElsewhere(items, list, unitId));
+      const categoryIsComboExclusive = (type) =>
+        comboExclusiveCategories.indexOf(type) >= 0;
+      const hasComboExculsiveCategory =
+        (unit?.items &&
+          unit.items[group || 0]?.types?.some(categoryIsComboExclusive)) ||
+        (command &&
+          unit?.command[command]?.magic?.types?.some(categoryIsComboExclusive));
+      if (hasComboExculsiveCategory) {
+        setComboUsedElsewhere(combosUsedElsewhere(items, list, unitId));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -393,8 +415,9 @@ export const Magic = ({ isMobile }) => {
               !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              ((maxMagicPoints && magicItem.points > unitPointsRemaining) ||
-                isTypeLimitReached)
+              (notEnoughPointsRemaining(maxMagicPoints, magicItem, unitPointsRemaining) ||
+                isTypeLimitReached ||
+              isDisallowedShield(magicItem, unit))
             }
           />
           <label
@@ -484,6 +507,13 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: commandOptions[command].magic.selected,
     });
+    maxItemsPerCategory =
+      (commandOptions[command].magic.armyComposition &&
+        commandOptions[command].magic.armyComposition[
+          list.armyComposition || list.army
+        ]?.maxItemsPerCategory) ||
+      commandOptions[command].magic.maxItemsPerCategory ||
+      3; // backwards compatibility for runes
   } else if (hasMagicItems) {
     maxMagicPoints =
       (unit.items[group].armyComposition &&
@@ -493,6 +523,12 @@ export const Magic = ({ isMobile }) => {
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
     });
+    maxItemsPerCategory =
+      (unit.items[group].armyComposition &&
+        unit.items[group].armyComposition[list.armyComposition || list.army]
+          ?.maxItemsPerCategory) ||
+      unit.items[group].maxItemsPerCategory ||
+      3; // backwards compatibility for runes
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -604,13 +640,12 @@ export const Magic = ({ isMobile }) => {
                 const selectedItem = unitSelectedItems.find(
                   ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
                 );
-                let runesAmountInCategory = 0;
+                let itemCountInCategory = 0;
                 let masterRuneInCategory = false;
-
                 unitSelectedItems.forEach(
                   ({ name_en, type: itemType, amount }) => {
                     if (itemType === magicItem.type) {
-                      runesAmountInCategory += amount ?? 1;
+                      itemCountInCategory += amount ?? 1;
 
                       if (name_en.includes("Master")) {
                         masterRuneInCategory = true;
@@ -620,7 +655,9 @@ export const Magic = ({ isMobile }) => {
                 );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
-                const isRune = Boolean(magicItem.type.includes("runes"));
+                const isComboExclusiveCategory =
+                  comboExclusiveCategories.indexOf(magicItem.type) >= 0;
+
                 const isTypeLimitReached = magicItem.nonExclusive
                   ? false
                   : unitSelectedItems.some(
@@ -628,33 +665,36 @@ export const Magic = ({ isMobile }) => {
                         (!magicItem.stackable &&
                           !selectedItem.stackable &&
                           selectedItem.type === magicItem.type &&
-                          !isRune) ||
-                        (isRune && runesAmountInCategory >= 3) ||
-                        (isRune &&
+                          !isComboExclusiveCategory) ||
+                        (isComboExclusiveCategory &&
+                          itemCountInCategory >= maxItemsPerCategory) ||
+                        (isComboExclusiveCategory &&
                           masterRuneInCategory &&
                           magicItem.name_en.includes("Master")) ||
-                        (isRune &&
+                        (isComboExclusiveCategory &&
                           magicItem.type === selectedItem.type &&
                           (magicItem.nonExclusive === false ||
-                            selectedItem.nonExclusive === false)) // If the rune is exclusive, it can't be combined with other runes.
+                            selectedItem.nonExclusive === false)) // If a rune is exclusive, it can't be combined with other runes.
                     );
 
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en
                 );
-                const runesElsewhereErrors =
+                const comboUsedElsewhereErrors =
                   isFirstItemType &&
-                  runesUsedElsewhere.filter(
-                    (e) => e.runeType === magicItem.type
+                  comboUsedElsewhere.filter(
+                    (e) => e.category === magicItem.type
                   );
-                const runesUsedBy =
-                  runesElsewhereErrors?.length > 0 &&
-                  runesElsewhereErrors.map((error, index) => (
-                    <Fragment key={`${error.unit.id}-rune-error-link`}>
+                const comboUsedBy =
+                  comboUsedElsewhereErrors?.length > 0 &&
+                  comboUsedElsewhereErrors.map((error, index) => (
+                    <Fragment key={`${error.unit.id}-combo-error-link`}>
                       <Link to={error.url}>
                         {getUnitName({ unit: error.unit, language })}
                       </Link>
-                      {index !== runesElsewhereErrors.length - 1 ? ", " : ""}
+                      {index !== comboUsedElsewhereErrors.length - 1
+                        ? ", "
+                        : ""}
                     </Fragment>
                   ));
 
@@ -663,18 +703,24 @@ export const Magic = ({ isMobile }) => {
                     {isFirstItemType && (
                       <>
                         <h3 className="magic__type">
-                          {nameMap[magicItem.type][`name_${language}`] ||
-                            nameMap[magicItem.type].name_en}
+                          <span>
+                            {nameMap[magicItem.type][`name_${language}`] ||
+                              nameMap[magicItem.type].name_en}
+                          </span>
+                          {isComboExclusiveCategory &&
+                            maxItemsPerCategory > 0 && (
+                              <i className="magic__item-count">{`${itemCountInCategory}/${maxItemsPerCategory}`}</i>
+                            )}
                         </h3>
-                        {runesUsedBy && (
+                        {comboUsedBy && (
                           <ErrorMessage
                             key={`${magicItem.name_en}-${magicItem.id}-usedElsewhere`}
                           >
                             <span>
                               <FormattedMessage
-                                id="misc.error.runesUsedElsewhereBy"
+                                id="misc.error.itemComboUsedElsewhereBy"
                                 values={{
-                                  usedby: runesUsedBy,
+                                  usedby: comboUsedBy,
                                 }}
                               />
                             </span>

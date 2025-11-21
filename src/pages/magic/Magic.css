@@ -1,6 +1,13 @@
 .magic__type {
   margin-top: 1rem;
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.magic__item-count {
+  font-weight: normal;
 }
 
 .magic__header-points {

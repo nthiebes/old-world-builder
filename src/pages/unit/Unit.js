@@ -811,6 +811,21 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   />
                                 )}
                             </div>
+                            {magic.maxItemsPerCategory &&
+                              magic.maxItemsPerCategory > 0 && (
+                                <p className="unit__option-note unit__option-note--maxitems">
+                                  <FormattedMessage
+                                    id={
+                                      magic.types.length > 1
+                                        ? "unit.maxItemsPerCategory"
+                                        : "unit.maxItems"
+                                    }
+                                    values={{
+                                      maxItems: magic.maxItemsPerCategory,
+                                    }}
+                                  />
+                                </p>
+                              )}
                             {magic?.selected && (
                               <p>
                                 {magic.selected
@@ -1858,6 +1873,20 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       />
                     )}
                   </div>
+                  {item.maxItemsPerCategory && item.maxItemsPerCategory > 0 && (
+                    <p className="unit__option-note unit__option-note--maxitems">
+                      <FormattedMessage
+                        id={
+                          item.types.length > 1
+                            ? "unit.maxItemsPerCategory"
+                            : "unit.maxItems"
+                        }
+                        values={{
+                          maxItems: item.maxItemsPerCategory,
+                        }}
+                      />
+                    </p>
+                  )}
                   {getUnitOptionNotes({
                     notes: item.notes,
                     key: `options-${itemIndex}-note`,
