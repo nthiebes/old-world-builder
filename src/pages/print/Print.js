@@ -178,9 +178,12 @@ export const Print = () => {
                 {!isShowList && (
                   <span className="print__points">
                     [
-                    {getUnitPoints(unit, {
-                      armyComposition,
-                    })}{" "}
+                    {getUnitPoints(
+                      { ...unit, type },
+                      {
+                        armyComposition,
+                      }
+                    )}{" "}
                     <FormattedMessage id="app.points" />]
                   </span>
                 )}
@@ -384,7 +387,7 @@ export const Print = () => {
           )}
 
           {list.rare.length > 0 && (
-            <section>
+            <>
               {showHeadings && (
                 <h2>
                   <FormattedMessage id="editor.rare" />{" "}
@@ -396,7 +399,7 @@ export const Print = () => {
                 </h2>
               )}
               {getSection({ type: "rare" })}
-            </section>
+            </>
           )}
 
           {list.allies.length > 0 && (
