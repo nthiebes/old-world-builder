@@ -26,6 +26,13 @@ const filterByTroopType = (unit) => {
   ].includes(ruleData?.troopType);
 };
 
+export const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
+  return (
+    otherUnit.sharedCombinedArmsUnits &&
+    otherUnit.sharedCombinedArmsUnits.includes(unitToValidate.id.split(".")[0])
+  );
+};
+
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
   const generals = !list?.characters?.length
@@ -169,9 +176,12 @@ export const validateList = ({ list, language, intl }) => {
   // Grand Melee
   if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
     const checkFor25Percent = (unit, type) => {
-      const unitPoints = getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
+      const unitPoints = getUnitPoints(
+        { ...unit, type },
+        {
+          armyComposition: list.armyComposition || list.army,
+        }
+      );
 
       if (unitPoints > list.points / 4) {
         errors.push({
@@ -293,7 +303,9 @@ export const validateList = ({ list, language, intl }) => {
           )?.max
       );
       const coreCount = list.core.filter(
-        (core) => core.id.split(".")[0] === unit.id.split(".")[0]
+        (core) =>
+          core.id.split(".")[0] === unit.id.split(".")[0] ||
+          hasSharedCombinedArmsLimit(core, unit)
       ).length;
 
       if (
@@ -411,9 +423,12 @@ export const validateList = ({ list, language, intl }) => {
     // Neither player can spend more than 25% of their total points on a single character.
     list?.characters &&
       list.characters.forEach((unit) => {
-        const unitPoints = getUnitPoints(unit, {
-          armyComposition: list.armyComposition || list.army,
-        });
+        const unitPoints = getUnitPoints(
+          { ...unit, type: "characters" },
+          {
+            armyComposition: list.armyComposition || list.army,
+          }
+        );
         if (unitPoints > list.points / 4) {
           errors.push({
             message: "misc.error.battleMarch25PercentPerCharacter",
@@ -425,10 +440,13 @@ export const validateList = ({ list, language, intl }) => {
     // Neither player can spend more than 35% of their total points on a single core unit.
     list?.core &&
       list.core.forEach((unit) => {
-        const unitPoints = getUnitPoints(unit, {
-          armyComposition: list.armyComposition || list.army,
-          noDetachments: true,
-        });
+        const unitPoints = getUnitPoints(
+          { ...unit, type: "core" },
+          {
+            armyComposition: list.armyComposition || list.army,
+            noDetachments: true,
+          }
+        );
         if (unitPoints > list.points * 0.35) {
           errors.push({
             message: "misc.error.battleMarch35PercentPerCore",
@@ -439,10 +457,13 @@ export const validateList = ({ list, language, intl }) => {
     // Neither player can spend more than 30% of their total points on a single special unit.
     list.special &&
       list.special.forEach((unit) => {
-        const unitPoints = getUnitPoints(unit, {
-          armyComposition: list.armyComposition || list.army,
-          noDetachments: true,
-        });
+        const unitPoints = getUnitPoints(
+          { ...unit, type: "special" },
+          {
+            armyComposition: list.armyComposition || list.army,
+            noDetachments: true,
+          }
+        );
         if (unitPoints > list.points * 0.3) {
           errors.push({
             message: "misc.error.battleMarch30PercentPerSpecial",
@@ -453,10 +474,13 @@ export const validateList = ({ list, language, intl }) => {
     // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
     list.rare &&
       list.rare.forEach((unit) => {
-        const unitPoints = getUnitPoints(unit, {
-          armyComposition: list.armyComposition || list.army,
-          noDetachments: true,
-        });
+        const unitPoints = getUnitPoints(
+          { ...unit, type: "rare" },
+          {
+            armyComposition: list.armyComposition || list.army,
+            noDetachments: true,
+          }
+        );
         if (unitPoints > list.points * 0.25) {
           errors.push({
             message: "misc.error.battleMarch25PercentPerRare",
@@ -466,10 +490,13 @@ export const validateList = ({ list, language, intl }) => {
       });
     list.mercenaries &&
       list.mercenaries.forEach((unit) => {
-        const unitPoints = getUnitPoints(unit, {
-          armyComposition: list.armyComposition || list.army,
-          noDetachments: true,
-        });
+        const unitPoints = getUnitPoints(
+          { ...unit, type: "mercenaries" },
+          {
+            armyComposition: list.armyComposition || list.army,
+            noDetachments: true,
+          }
+        );
         if (unitPoints > list.points * 0.25) {
           errors.push({
             message: "misc.error.battleMarch25PercentPerMercenary",

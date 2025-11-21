@@ -284,6 +284,12 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["winged-warsphinx"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     mercenaries: {
@@ -423,6 +429,12 @@ export const rules = {
         },
         {
           ids: ["casket-of-souls"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["winged-warsphinx"],
           min: 0,
           max: 1,
           points: 1000,

@@ -2,7 +2,7 @@ import {
   isMultipleAllowedItem,
   maxAllowedOfItem,
   itemsUsedElsewhere,
-  runeLoadoutElsewhere
+  combosUsedElsewhere
 } from "./magic-item-limitations";
 import magicItems from "../../public/games/the-old-world/magic-items.json";
 
@@ -286,13 +286,13 @@ const runesElsewhereList = {
   "armyComposition": "dwarfen-mountain-holds"
 };
 
-describe("runeLoadoutElsewhere", () => {
+describe("combosUsedElsewhere", () => {
   test("No errors if no rune loadouts are shared", () => {
     // Deep copy of list. structuredClone() would do this cleaner, but it 
     // doesn't seem supported by whatever version of node is running tests here.
     const list = JSON.parse(JSON.stringify(runesElsewhereList));
     const items = list.characters[0].items[0].selected; // Runes of Striking and Cleaving
-    expect(runeLoadoutElsewhere(items, list, kingId)).toHaveLength(0);
+    expect(combosUsedElsewhere(items, list, kingId)).toHaveLength(0);
   });
   
   test("Warns if a rune loadout is used by more than one hero", () => {
@@ -316,7 +316,7 @@ describe("runeLoadoutElsewhere", () => {
         ]
       }
     );
-    let elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    let elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
 
     // Add a Rune of Cleaving to the Thane, completing a shared loudout with the King
@@ -325,7 +325,7 @@ describe("runeLoadoutElsewhere", () => {
         (item) => item.name_en === "Rune of Cleaving*"
       )
     );
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(1);
     
     // Add a Rune of Speed to the Thane, making the loadout different again
@@ -334,7 +334,7 @@ describe("runeLoadoutElsewhere", () => {
         (item) => item.name_en === "Rune of Speed*"
       )
     );
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
   });
 
@@ -366,7 +366,7 @@ describe("runeLoadoutElsewhere", () => {
         ]
       }
     );
-    let elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    let elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
 
     // Add a Rune of Cleaving to the champion, completing a shared loudout with the King
@@ -375,7 +375,7 @@ describe("runeLoadoutElsewhere", () => {
         (item) => item.name_en === "Rune of Cleaving*"
       )
     );
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(1);
     
     // Add a Rune of Speed to the champion, making the loadout different again
@@ -384,7 +384,7 @@ describe("runeLoadoutElsewhere", () => {
         (item) => item.name_en === "Rune of Speed*"
       )
     );
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
   });
 
@@ -413,18 +413,18 @@ describe("runeLoadoutElsewhere", () => {
         ]
       }
     );
-    let elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    let elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
 
     // Give a second Rune of Striking, matching the King
     list.characters[2].items[0].selected[0].amount = 2;
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(1);
 
     // Change the Thane to 1 Rune of Striking and 2 of Cleaving
     list.characters[2].items[0].selected[0].amount = 1;
     list.characters[2].items[0].selected[1].amount = 2;
-    elsewhereErrors = runeLoadoutElsewhere(items, list, kingId);
+    elsewhereErrors = combosUsedElsewhere(items, list, kingId);
     expect(elsewhereErrors).toHaveLength(0);
   });
 });
