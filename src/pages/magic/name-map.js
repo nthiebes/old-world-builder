@@ -174,6 +174,18 @@ export const nameMap = {
     name_cn: "混沌赠礼",
     name_fr: "Don du Chaos",
   },
+  "chaotic-traits": {
+    name_de: "Chaotic Traits",
+    name_en: "Chaotic Traits",
+    name_cn: "Chaotic Traits",
+    name_fr: "Chaotic Traits",
+  },
+  "chaotic-trait": {
+    name_de: "Chaotic Trait",
+    name_en: "Chaotic Trait",
+    name_cn: "Chaotic Trait",
+    name_fr: "Chaotic Trait",
+  },
   "forest-spites": {
     name_de: "Forest Spites",
     name_en: "Forest Spites",
