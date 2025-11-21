@@ -55,22 +55,40 @@ const updateIds = (items) => {
 };
 
 export const isAllowedShield = (unit) => {
-    return (unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield")))
-        || (unit.options && unit.options.find(option => option.name_en.toLowerCase().includes("shield")))
-        || (unit.armor && unit.armor.find(option => option.name_en.toLowerCase().includes("shield")));
-}
+  return (
+    (unit.equipment &&
+      unit.equipment.find((option) =>
+        option.name_en.toLowerCase().includes("shield")
+      )) ||
+    (unit.options &&
+      unit.options.find((option) =>
+        option.name_en.toLowerCase().includes("shield")
+      )) ||
+    (unit.armor &&
+      unit.armor.find((option) =>
+        option.name_en.toLowerCase().includes("shield")
+      ))
+  );
+};
 
 export const isMagicShield = (magicItem) => {
-    return magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield");
-}
+  return (
+    magicItem.type === "armor" &&
+    magicItem.name_en.toLowerCase().includes("shield")
+  );
+};
 
 export const isDisallowedShield = (magicItem, unit) => {
-    return isMagicShield(magicItem) && !isAllowedShield(unit);
-}
+  return isMagicShield(magicItem) && !isAllowedShield(unit);
+};
 
-export const notEnoughPointsRemaining = (maxMagicPoints, magicItem, unitPointsRemaining) => {
-    return maxMagicPoints && magicItem.points > unitPointsRemaining;
-}
+export const notEnoughPointsRemaining = (
+  maxMagicPoints,
+  magicItem,
+  unitPointsRemaining
+) => {
+  return maxMagicPoints && magicItem.points > unitPointsRemaining;
+};
 
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
@@ -101,6 +119,45 @@ export const Magic = ({ isMobile }) => {
       );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [comboUsedElsewhere, setComboUsedElsewhere] = useState([]);
+  const getPointsText = ({
+    points: regularPoints,
+    perModelPoints,
+    perUnitPoints,
+    perModel,
+  }) => {
+    let points = regularPoints;
+
+    if (type !== "characters" && perUnitPoints) {
+      points = perUnitPoints;
+    } else if (type !== "characters" && perModelPoints) {
+      points = perModelPoints;
+    }
+
+    if (points === 0) {
+      return intl.formatMessage({
+        id: "app.free",
+      });
+    }
+
+    return (
+      <>
+        {`${points} ${
+          points === 1
+            ? intl.formatMessage({
+                id: "app.point",
+              })
+            : intl.formatMessage({
+                id: "app.points",
+              })
+        }`}
+        {perModel &&
+          type !== "characters" &&
+          ` ${intl.formatMessage({
+            id: "unit.perModel",
+          })}`}
+      </>
+    );
+  };
 
   // Fallback to list army if no specific army for items is set
   if (!army) {
@@ -415,9 +472,13 @@ export const Magic = ({ isMobile }) => {
               !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              (notEnoughPointsRemaining(maxMagicPoints, magicItem, unitPointsRemaining) ||
+              (notEnoughPointsRemaining(
+                maxMagicPoints,
+                magicItem,
+                unitPointsRemaining
+              ) ||
                 isTypeLimitReached ||
-              isDisallowedShield(magicItem, unit))
+                isDisallowedShield(magicItem, unit))
             }
           />
           <label
@@ -431,13 +492,12 @@ export const Magic = ({ isMobile }) => {
               )}
             </span>
             <i className="checkbox__points">
-              {magicItem.points === 0
-                ? intl.formatMessage({
-                    id: "app.free",
-                  })
-                : `${magicItem.points} ${intl.formatMessage({
-                    id: "app.points",
-                  })}`}
+              {getPointsText({
+                points: magicItem.points,
+                perModelPoints: magicItem.perModelPoints,
+                perUnitPoints: magicItem.perUnitPoints,
+                perModel: magicItem.perModel,
+              })}
             </i>
             <RuleWithIcon
               name={magicItem.name_en}

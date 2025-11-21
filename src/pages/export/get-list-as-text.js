@@ -110,11 +110,15 @@ const getUnitsString = ({
   showCustomNotes,
   armyComposition,
   isSimpleList,
+  type,
 }) => {
   if (isSimpleList) {
     return units
       .map((unit) => {
-        const unitPoints = getUnitPoints(unit, { armyComposition });
+        const unitPoints = getUnitPoints(
+          { type, ...unit },
+          { armyComposition }
+        );
         const unitName = getUnitName({ unit, language });
 
         const filteredOptions = getFilteredOptions(unit, intl, {
@@ -213,7 +217,7 @@ const getUnitsString = ({
 
       // prettier-ignore
       return `${isMarkdownList ? `- ` : ''}${unit.strength || unit.minimum ? `${unit.strength || unit.minimum} ` : ""
-}${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints(unit, {armyComposition}) + ' ' + intl.formatMessage({
+}${getUnitName({ unit, language })}${isShowList ? '' : ' [' + getUnitPoints({...unit, type}, {armyComposition}) + ' ' + intl.formatMessage({
   id: "app.points",
 }) + '] '}
 ${isMarkdownList && optionsString ? ' -# ' : ''}${optionsString}${isMarkdownList ? '' : '\n'}`;
@@ -270,14 +274,18 @@ export const getListAsText = ({
     listString += `${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}\n\n`;
 
     const allUnits = [
-      ...(list.characters || []),
-      ...(list.lords || []),
-      ...(list.heroes || []),
-      ...(list.core || []),
-      ...(list.special || []),
-      ...(list.rare || []),
-      ...(list.mercenaries || []),
-      ...(list.allies || []),
+      ...(list.characters.map((unit) => ({ type: "characters", ...unit })) ||
+        []),
+      ...(list.lords || []).map((unit) => ({ type: "lords", ...unit })),
+      ...(list.heroes || []).map((unit) => ({ type: "heroes", ...unit })),
+      ...(list.core || []).map((unit) => ({ type: "core", ...unit })),
+      ...(list.special || []).map((unit) => ({ type: "special", ...unit })),
+      ...(list.rare || []).map((unit) => ({ type: "rare", ...unit })),
+      ...(list.mercenaries || []).map((unit) => ({
+        type: "mercenaries",
+        ...unit,
+      })),
+      ...(list.allies || []).map((unit) => ({ type: "allies", ...unit })),
     ];
 
     listString += getUnitsString({
@@ -345,7 +353,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       isShowList,
       intl,
       language,showStats,
-      armyComposition
+      armyComposition,
+      type: "characters",
     })}`;
   }
 
@@ -370,7 +379,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       isShowList,
       intl,
       language,showStats,
-      armyComposition
+      armyComposition,
+      type: "lords",
     })}`;
   }
 
@@ -395,7 +405,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       isShowList,
       intl,
       language,
-      armyComposition
+      armyComposition,
+      type: "heroes",
     })}`;
   }
 
@@ -421,7 +432,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       showStats,
-      armyComposition
+      armyComposition,
+      type: "core",
     })}`;
   }
 
@@ -447,7 +459,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       showStats,
-      armyComposition
+      armyComposition,
+      type: "special",
     })}`;
   }
 
@@ -473,7 +486,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       showStats,
-      armyComposition
+      armyComposition,
+      type: "rare",
     })}`;
   }
 
@@ -499,7 +513,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       showStats,
-      armyComposition
+      armyComposition,
+      type: "mercenaries",
     })}`;
   }
 
@@ -525,7 +540,8 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       showStats,
-      armyComposition
+      armyComposition,
+      type: "allies",
     })}`;
   }
 

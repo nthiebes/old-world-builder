@@ -365,7 +365,7 @@
           "maxPoints": 50
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": ["battle-magic", "daemonology", "dark-magic", "shadowlands"],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (4+), Ensorcelled Weapons, Fear, Gaze of the Gods, Immune to Psychology, Lore of Chaos, Regeneration (5+), Unbreakable, Unstable, Warp-spawned",
         "name_cn": "混沌甲 {warriors of chaos}(4+), 附魔武器, 恐惧, 诸神凝视, 心理免疫, 混沌法系, 重生(5+), 永不战败, 不稳定, 次元产物",
@@ -507,6 +507,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -801,6 +802,17 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
         }
       ],
       "lores": [],
@@ -886,45 +898,59 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Wizard",
@@ -1092,9 +1118,20 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": ["battle-magic", "daemonology", "dark-magic", "shadowlands"],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
         "name_cn": "混沌甲 {warriors of chaos}(5+), 附魔武器, 诸神凝视, 混沌法系",
@@ -1249,6 +1286,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -1543,6 +1581,17 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -1614,45 +1663,59 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 10,
-          "minimum": 0,
-          "maximum": 0
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Wizard",
@@ -1794,9 +1857,20 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": ["battle-magic", "daemonology", "dark-magic", "shadowlands"],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Lore of Chaos",
         "name_cn": "混沌甲 {warriors of chaos}(5+), 附魔武器, 诸神凝视, 混沌法系",
@@ -1926,6 +2000,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2209,6 +2284,17 @@
           "types": ["gift-of-chaos"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -2372,6 +2458,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2459,6 +2546,17 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
         }
       ],
       "lores": [],
@@ -2773,6 +2871,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -2829,7 +2928,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Ensorcelled Weapons",
@@ -2933,59 +3044,85 @@
       ],
       "options": [
         {
-          "name_en": "Mark of Chaos Undivided",
-          "name_cn": "混沌无分之印",
-          "name_de": "Mal des Ungeteilten Chaos",
-          "name_es": "Mark of Chaos Undivided",
-          "name_fr": "Marque du Chaos Universel",
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Khorne",
-          "name_cn": "恐虐之印",
-          "name_de": "Mal des Khorne",
-          "name_es": "Mark of Khorne",
-          "name_fr": "Marque de Khorne",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Nurgle",
-          "name_cn": "纳垢之印",
-          "name_de": "Mal des Nurgle",
-          "name_es": "Mark of Nurgle",
-          "name_fr": "Marque de Nurgle",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Slaanesh",
-          "name_cn": "色孽之印",
-          "name_de": "Mal des Slaanesh",
-          "name_es": "Mark of Slaanesh",
-          "name_fr": "Marque de Slaanesh",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Tzeentch",
-          "name_cn": "奸奇之印",
-          "name_de": "Mal des Tzeentch",
-          "name_es": "Mark of Tzeentch",
-          "name_fr": "Marque de Tzeentch",
-          "points": 2,
-          "exclusive": true,
-          "perModel": true
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_cn": "恐虐之印",
+              "name_de": "Mal des Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 2,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Ensorcelled Weapons, First Charge, Swiftstride, Counter Charge",
@@ -3015,12 +3152,16 @@
       },
       "command": [
         {
-          "name_en": "Marauder Chieftain",
-          "name_cn": "掠夺者酋长",
-          "name_de": "Häuptling",
-          "name_es": "Marauder Chieftain",
-          "name_fr": "Chef Maraudeur",
-          "points": 7
+          "name_en": "Marauder Headman (champion)",
+          "name_cn": "Marauder Headman (champion)",
+          "name_de": "Marauder Headman (champion)",
+          "name_es": "Marauder Headman (champion)",
+          "name_fr": "Marauder Headman (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -3028,6 +3169,17 @@
           "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "每1000分，0-1个单位可以购买一面魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique"
+          },
           "points": 5
         },
         {
@@ -3072,23 +3224,14 @@
       ],
       "armor": [
         {
-          "name_en": "No armour",
-          "name_cn": "无甲",
-          "name_de": "Keine Rüstung",
-          "name_es": "No armour",
-          "name_fr": "Pas d’armure",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
           "name_en": "Light armour",
           "name_cn": "轻甲",
           "name_de": "Leichte Rüstung",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
-          "points": 1,
-          "perModel": true
+          "points": 0,
+          "perModel": true,
+          "active": true
         }
       ],
       "options": [
@@ -3104,96 +3247,69 @@
           "perModel": true
         },
         {
-          "name_en": "Mark of Chaos",
-          "name_cn": "混沌之印",
-          "name_de": "Mal des Chaos",
-          "name_es": "Mark of Chaos",
-          "name_fr": "Marque du Chaos",
-          "name_it": "Mark of Chaos",
-          "name_pl": "Mark of Chaos",
+          "name_en": "Chaotic Cult",
+          "name_cn": "Chaotic Cult",
+          "name_de": "Chaotic Cult",
+          "name_es": "Chaotic Cult",
+          "name_fr": "Chaotic Cult",
+          "name_it": "Chaotic Cult",
+          "name_pl": "Chaotic Cult",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
-              "name_en": "Mark of Chaos Undivided",
-              "name_cn": "混沌无分之印",
-              "name_de": "Mal des Ungeteilten Chaos",
-              "name_es": "Mark of Chaos Undivided",
-              "name_fr": "Marque du Chaos Universel",
+              "name_en": "None",
+              "name_cn": "None",
+              "name_de": "None",
+              "name_es": "None",
+              "name_fr": "None",
               "points": 0,
+              "perModel": true,
               "active": true,
-              "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Khorne",
-              "name_cn": "恐虐之印",
-              "name_de": "Mal des Khorne",
-              "name_es": "Mark of Khorne",
-              "name_fr": "Marque de Khorne",
+              "name_en": "The Cult of the Bloodied Hound",
+              "name_cn": "The Cult of the Bloodied Hound",
+              "name_de": "The Cult of the Bloodied Hound",
+              "name_es": "The Cult of the Bloodied Hound",
+              "name_fr": "The Cult of the Bloodied Hound",
               "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Nurgle",
-              "name_cn": "纳垢之印",
-              "name_de": "Mal des Nurgle",
-              "name_es": "Mark of Nurgle",
-              "name_fr": "Marque de Nurgle",
+              "name_en": "The Cult of the Carrion Crow",
+              "name_cn": "The Cult of the Carrion Crow",
+              "name_de": "The Cult of the Carrion Crow",
+              "name_es": "The Cult of the Carrion Crow",
+              "name_fr": "The Cult of the Carrion Crow",
               "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Slaanesh",
-              "name_cn": "色孽之印",
-              "name_de": "Mal des Slaanesh",
-              "name_es": "Mark of Slaanesh",
-              "name_fr": "Marque de Slaanesh",
+              "name_en": "The Cult of the Slithering Serpent",
+              "name_cn": "The Cult of the Slithering Serpent",
+              "name_de": "The Cult of the Slithering Serpent",
+              "name_es": "The Cult of the Slithering Serpent",
+              "name_fr": "The Cult of the Slithering Serpent",
               "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Tzeentch",
-              "name_cn": "奸奇之印",
-              "name_de": "Mal des Tzeentch",
-              "name_es": "Mark of Tzeentch",
-              "name_fr": "Marque de Tzeentch",
+              "name_en": "The Cult of the Fell Raptor",
+              "name_cn": "The Cult of the Fell Raptor",
+              "name_de": "The Cult of the Fell Raptor",
+              "name_es": "The Cult of the Fell Raptor",
+              "name_fr": "The Cult of the Fell Raptor",
               "points": 1,
               "perModel": true,
               "exclusive": true
             }
           ]
-        },
-        {
-          "name_en": "Skirmishers",
-          "name_cn": "散兵",
-          "name_de": "Plänkler",
-          "name_es": "Skirmishers",
-          "name_fr": "Tirailleurs",
-          "points": 0,
-          "notes": {
-            "name_en": "0-1 unit in your army",
-            "name_cn": "本军队0-1个单位",
-            "name_de": "0-1 Einheit in deiner Armee",
-            "name_fr": "0-1 unité de votre armée"
-          }
-        },
-        {
-          "name_en": "Open Order",
-          "name_cn": "开放阵型",
-          "name_de": "Offene Ränge",
-          "name_es": "Open Order",
-          "name_fr": "Ordre Dispersé",
-          "points": 0,
-          "notes": {
-            "name_en": "0-1 unit in your army",
-            "name_cn": "本军队0-1个单位",
-            "name_de": "0-1 Einheit in deiner Armee",
-            "name_fr": "0-1 unité de votre armée"
-          }
         },
         {
           "name_en": "Ambushers",
@@ -3203,7 +3319,13 @@
           "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "armyComposition": "wolves-of-the-sea"
+          "notes": {
+            "name_en": "0-1 unit per 1000 points",
+            "name_cn": "每1000分0-1单位",
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
         },
         {
           "name_en": "Ambushers",
@@ -3219,17 +3341,83 @@
             "name_fr": "Si Frydaal est incluse dans l’armée",
             "name_de": "Wenn Frydaal Teil der Armee ist"
           }
+        },
+        {
+          "name_en": "Formation",
+          "name_cn": "Formation",
+          "name_de": "Formation",
+          "name_es": "Formation",
+          "name_fr": "Formation",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Close Order",
+              "name_cn": "紧密阵型",
+              "name_de": "Geschlossene Ränge",
+              "name_es": "Close Order",
+              "name_fr": "Ordre Serré",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Skirmishers",
+              "name_cn": "散兵",
+              "name_de": "Plänkler",
+              "name_es": "Skirmishers",
+              "name_fr": "Tirailleurs",
+              "points": 0,
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 unit per 1000 points",
+                "name_cn": "每1000分0-1单位",
+                "name_de": "0-1 Einheit pro 1000 Punkte",
+                "name_fr": "0-1 unité par tranche de 1000 points",
+                "name_it": "0-1 unità ogni 1000p.ti"
+              }
+            },
+            {
+              "name_en": "Open Order",
+              "name_cn": "开放阵型",
+              "name_de": "Offene Ränge",
+              "name_es": "Open Order",
+              "name_fr": "Ordre Dispersé",
+              "points": 0,
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 unit per 1000 points",
+                "name_cn": "每1000分0-1单位",
+                "name_de": "0-1 Einheit pro 1000 Punkte",
+                "name_fr": "0-1 unité par tranche de 1000 points",
+                "name_it": "0-1 unità ogni 1000p.ti"
+              }
+            }
+          ]
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Shieldwall, Warband",
-        "name_cn": "紧密阵型, 盾墙, 战帮",
-        "name_de": "Geschlossene Ränge, Schildwall, Kriegerschar",
-        "name_es": "Close Order, Shieldwall, Warband",
-        "name_fr": "Ordre Serré, Mur de Boucliers, Bande de Guerre"
+        "name_en": "Horde, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_cn": "部群, 混沌无分之印, 盾墙, 战帮",
+        "name_de": "Horde, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_es": "Horde, Mark of Chaos Undivided, Shieldwall, Warband",
+        "name_fr": "Horde, Marque du Chaos Universel, Mur de Boucliers, Bande de Guerre"
       }
     },
     {
@@ -3255,11 +3443,15 @@
       },
       "command": [
         {
-          "name_en": "Marauder Horsemaster",
-          "name_cn": "掠夺者大师",
-          "name_de": "Barbaren-Pferdeherr",
-          "name_es": "Marauder Horsemaster",
-          "name_fr": "Chef Cavalier Maraudeur",
+          "name_en": "Marauder Horsemaster (champion)",
+          "name_cn": "掠夺者大师 (champion)",
+          "name_de": "Barbaren-Pferdeherr (champion)",
+          "name_es": "Marauder Horsemaster (champion)",
+          "name_fr": "Chef Cavalier Maraudeur (champion)",
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
           "points": 7
         },
         {
@@ -3268,6 +3460,17 @@
           "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "每1000分，0-1个单位可以购买一面魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique"
+          },
           "points": 5
         },
         {
@@ -3321,27 +3524,17 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Leichte Rüstung",
-          "name_es": "Light armour",
-          "name_fr": "Armure légère",
+          "name_en": "Light armour, Shields",
+          "name_cn": "轻甲, 盾牌",
+          "name_de": "Leichte Rüstung, Schilde",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Armure légère, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
         }
       ],
       "options": [
-        {
-          "name_en": "Javelins",
-          "name_cn": "标枪",
-          "name_de": "Wurfspieße",
-          "name_es": "Javelins",
-          "name_fr": "Javelines",
-          "points": 1,
-          "perModel": true,
-          "exclusive": true
-        },
         {
           "name_en": "Throwing axes",
           "name_cn": "飞斧",
@@ -3353,75 +3546,65 @@
           "exclusive": true
         },
         {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_de": "Schilde",
-          "name_es": "Shields",
-          "name_fr": "Boucliers",
-          "points": 1,
-          "minimum": 0,
-          "maximum": 0,
-          "perModel": true
-        },
-        {
-          "name_en": "Mark of Chaos",
-          "name_cn": "混沌之印",
-          "name_de": "Mal des Chaos",
-          "name_es": "Mark of Chaos",
-          "name_fr": "Marque du Chaos",
-          "name_it": "Mark of Chaos",
-          "name_pl": "Mark of Chaos",
+          "name_en": "Chaotic Cult",
+          "name_cn": "Chaotic Cult",
+          "name_de": "Chaotic Cult",
+          "name_es": "Chaotic Cult",
+          "name_fr": "Chaotic Cult",
+          "name_it": "Chaotic Cult",
+          "name_pl": "Chaotic Cult",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
-              "name_en": "Mark of Chaos Undivided",
-              "name_cn": "混沌无分之印",
-              "name_de": "Mal des Ungeteilten Chaos",
-              "name_es": "Mark of Chaos Undivided",
-              "name_fr": "Marque du Chaos Universel",
+              "name_en": "None",
+              "name_cn": "None",
+              "name_de": "None",
+              "name_es": "None",
+              "name_fr": "None",
               "points": 0,
+              "perModel": true,
               "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "The Cult of the Bloodied Hound",
+              "name_cn": "The Cult of the Bloodied Hound",
+              "name_de": "The Cult of the Bloodied Hound",
+              "name_es": "The Cult of the Bloodied Hound",
+              "name_fr": "The Cult of the Bloodied Hound",
+              "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Khorne",
-              "name_cn": "恐虐之印",
-              "name_de": "Mal des Khorne",
-              "name_es": "Mark of Khorne",
-              "name_fr": "Marque de Khorne",
-              "points": 2,
+              "name_en": "The Cult of the Carrion Crow",
+              "name_cn": "The Cult of the Carrion Crow",
+              "name_de": "The Cult of the Carrion Crow",
+              "name_es": "The Cult of the Carrion Crow",
+              "name_fr": "The Cult of the Carrion Crow",
+              "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Nurgle",
-              "name_cn": "纳垢之印",
-              "name_de": "Mal des Nurgle",
-              "name_es": "Mark of Nurgle",
-              "name_fr": "Marque de Nurgle",
-              "points": 2,
+              "name_en": "The Cult of the Slithering Serpent",
+              "name_cn": "The Cult of the Slithering Serpent",
+              "name_de": "The Cult of the Slithering Serpent",
+              "name_es": "The Cult of the Slithering Serpent",
+              "name_fr": "The Cult of the Slithering Serpent",
+              "points": 1,
               "perModel": true,
               "exclusive": true
             },
             {
-              "name_en": "Mark of Slaanesh",
-              "name_cn": "色孽之印",
-              "name_de": "Mal des Slaanesh",
-              "name_es": "Mark of Slaanesh",
-              "name_fr": "Marque de Slaanesh",
-              "points": 2,
-              "perModel": true,
-              "exclusive": true
-            },
-            {
-              "name_en": "Mark of Tzeentch",
-              "name_cn": "奸奇之印",
-              "name_de": "Mal des Tzeentch",
-              "name_es": "Mark of Tzeentch",
-              "name_fr": "Marque de Tzeentch",
-              "points": 2,
+              "name_en": "The Cult of the Fell Raptor",
+              "name_cn": "The Cult of the Fell Raptor",
+              "name_de": "The Cult of the Fell Raptor",
+              "name_es": "The Cult of the Fell Raptor",
+              "name_fr": "The Cult of the Fell Raptor",
+              "points": 1,
               "perModel": true,
               "exclusive": true
             }
@@ -3435,7 +3618,13 @@
           "name_fr": "Embusqueurs",
           "points": 1,
           "perModel": true,
-          "armyComposition": "wolves-of-the-sea"
+          "notes": {
+            "name_en": "0-1 unit per 1000 points",
+            "name_cn": "每1000分0-1单位",
+            "name_de": "0-1 Einheit pro 1000 Punkte",
+            "name_fr": "0-1 unité par tranche de 1000 points",
+            "name_it": "0-1 unità ogni 1000p.ti"
+          }
         },
         {
           "name_en": "Ambushers",
@@ -3450,17 +3639,67 @@
             "name_en": "If Frydaal is in the army",
             "name_fr": "Si Frydaal est incluse dans l’armée"
           }
+        },
+        {
+          "name_en": "Formation",
+          "name_cn": "Formation",
+          "name_de": "Formation",
+          "name_es": "Formation",
+          "name_fr": "Formation",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Open Order",
+              "name_cn": "开放阵型",
+              "name_de": "Offene Ränge",
+              "name_es": "Open Order",
+              "name_fr": "Ordre Dispersé",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Skirmishers",
+              "name_cn": "散兵",
+              "name_de": "Plänkler",
+              "name_es": "Skirmishers",
+              "name_fr": "Tirailleurs",
+              "points": 0,
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 unit per 1000 points",
+                "name_cn": "每1000分0-1单位",
+                "name_de": "0-1 Einheit pro 1000 Punkte",
+                "name_fr": "0-1 unité par tranche de 1000 points",
+                "name_it": "0-1 unità ogni 1000p.ti"
+              }
+            }
+          ]
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
-        "name_en": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband",
-        "name_cn": "快速骑兵, 游击, 开放阵型, 散兵, 快速行进, 战帮",
-        "name_de": "Wendige Kavallerie, Schießen und Verschwinden, Offene Ränge, Plänkler, Schnelle Bewegung, Kriegerschar",
-        "name_es": "Fast Cavalry, Fire & Flee, Open Order, Skirmishers, Swiftstride, Warband",
-        "name_fr": "Cavalerie Rapide, Tir & Fuite, Ordre Dispersé, Tirailleurs, Rapide, Bande de Guerre"
+        "name_en": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_cn": "快速骑兵, 游击, 混沌无分之印, 快速行进, 战帮",
+        "name_de": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_es": "Fast Cavalry, Fire & Flee, Mark of Chaos Undivided, Swiftstride, Warband",
+        "name_fr": "Cavalerie Rapide, Tir & Fuite, Marque du Chaos Universel, Rapide, Bande de Guerre"
       }
     },
     {
@@ -3804,7 +4043,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 1
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Frenzy, Mark of Chaos Undivided, Move Through Cover, Open Order, Relentless Warriors, Skirmishers, Warband",
@@ -4055,6 +4306,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -4122,7 +4374,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Ensorcelled Weapons, Stubborn",
@@ -4244,6 +4508,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -4311,7 +4576,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Chaos Armour {warriors of chaos} (6+), Close Order, Counter Charge, Ensorcelled Weapons, First Charge, Stubborn, Swiftstride",
@@ -4378,6 +4655,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -5341,6 +5619,7 @@
           "name_pl": "Mark of Chaos",
           "points": 0,
           "active": true,
+          "alwaysActive": true,
           "options": [
             {
               "name_en": "Mark of Chaos Undivided",
@@ -5397,7 +5676,19 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Chaotic Traits",
+          "name_cn": "Chaotic Traits",
+          "name_it": "Chaotic Traits",
+          "name_de": "Chaotic Traits",
+          "name_fr": "Chaotic Traits",
+          "types": ["chaotic-trait"],
+          "selected": [],
+          "maxPoints": 0,
+          "maxItemsPerCategory": 2
+        }
+      ],
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Counter Charge, Furious Charge, Mark of Chaos Undivided, Swiftstride, Warband",
@@ -5917,7 +6208,7 @@
       ],
       "mounts": [],
       "items": [],
-      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "lores": ["battle-magic", "daemonology", "dark-magic", "shadowlands"],
       "specialRules": {
         "name_en": "Explosive Demise, Fire & Chaos, Fly (10), Large Target, Lore of Chaos, Magical Attacks, Magic Resistance (-2), Mark of Chaos Undivided, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Warpfire Aura, Close Order",
         "name_cn": "爆炸衰亡, 混沌之火, 飞行(10), 大型目标, 混沌法系, 魔法攻击, 魔法抗性(-2), 混沌无分之印, 重生(5+), 践踏攻击(D6), 快速行进, 惊骇, 次元火光环, 紧密阵型",

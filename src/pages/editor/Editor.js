@@ -799,9 +799,12 @@ export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
                 <span>{`${unit.strength || unit.minimum}`}</span>
               ) : null}
               <b>{getUnitName({ unit, language })}</b>
-              <i>{`${getUnitPoints(unit, {
-                armyComposition,
-              })} ${intl.formatMessage({
+              <i>{`${getUnitPoints(
+                { ...unit, type },
+                {
+                  armyComposition,
+                }
+              )} ${intl.formatMessage({
                 id: "app.points",
               })}`}</i>
             </div>

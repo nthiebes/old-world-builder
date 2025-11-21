@@ -536,6 +536,7 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
           illusion: loresOfMagicWithSpells["illusion"],
           necromancy: loresOfMagicWithSpells["necromancy"],
           "waaagh-magic": loresOfMagicWithSpells["waaagh-magic"],
+          shadowlands: loresOfMagicWithSpells["shadowlands"],
         }
       : unitHasItem(unit, "Loremaster")
       ? {

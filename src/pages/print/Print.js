@@ -178,9 +178,12 @@ export const Print = () => {
                 {!isShowList && (
                   <span className="print__points">
                     [
-                    {getUnitPoints(unit, {
-                      armyComposition,
-                    })}{" "}
+                    {getUnitPoints(
+                      { ...unit, type },
+                      {
+                        armyComposition,
+                      }
+                    )}{" "}
                     <FormattedMessage id="app.points" />]
                   </span>
                 )}
