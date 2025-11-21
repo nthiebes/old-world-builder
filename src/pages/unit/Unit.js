@@ -1169,6 +1169,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         <i className="checkbox__points">
                                           {getPointsText({
                                             points: option.points,
+                                            perModel: option.perModel,
                                           })}
                                         </i>
                                       </label>
