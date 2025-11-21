@@ -54,6 +54,24 @@ const updateIds = (items) => {
   }));
 };
 
+export const isAllowedShield = (unit) => {
+    return (unit.equipment && unit.equipment.find(option => option.name_en.toLowerCase().includes("shield")))
+        || (unit.options && unit.options.find(option => option.name_en.toLowerCase().includes("shield")))
+        || (unit.armor && unit.armor.find(option => option.name_en.toLowerCase().includes("shield")));
+}
+
+export const isMagicShield = (magicItem) => {
+    return magicItem.type === "armor" && magicItem.name_en.toLowerCase().includes("shield");
+}
+
+export const isDisallowedShield = (magicItem, unit) => {
+    return isMagicShield(magicItem) && !isAllowedShield(unit);
+}
+
+export const notEnoughPointsRemaining = (maxMagicPoints, magicItem, unitPointsRemaining) => {
+    return maxMagicPoints && magicItem.points > unitPointsRemaining;
+}
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -397,8 +415,9 @@ export const Magic = ({ isMobile }) => {
               !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              ((maxMagicPoints && magicItem.points > unitPointsRemaining) ||
-                isTypeLimitReached)
+              (notEnoughPointsRemaining(maxMagicPoints, magicItem, unitPointsRemaining) ||
+                isTypeLimitReached ||
+              isDisallowedShield(magicItem, unit))
             }
           />
           <label
