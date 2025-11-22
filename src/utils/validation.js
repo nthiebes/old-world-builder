@@ -36,6 +36,8 @@ function incrementLevels(listOfOptionHolders, wizardLevels) {
                 if (match && match[1]) {
                     wizardLevels[parseInt(match[1], 10)]++;
                 }
+                // Sometimes the options are nested, check them recursively
+                activeOption.options && incrementLevels([activeOption], wizardLevels);
             });
     }
 }
@@ -48,7 +50,9 @@ const getWizardLevels = (unitToCheck) => {
     incrementLevels(unitToCheck.mounts, wizardLevels);
 
     return wizardLevels;
-export const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
+};
+
+const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
     otherUnit.sharedCombinedArmsUnits &&
     otherUnit.sharedCombinedArmsUnits.includes(unitToValidate.id.split(".")[0])
