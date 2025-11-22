@@ -1605,26 +1605,50 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "name_it": "Level 2 Wizard",
-          "name_pl": "Level 2 Wizard",
-          "points": 30,
-          "exclusive": true
-        },
-        {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_de": "Level 3 Wizard",
-          "name_es": "Level 3 Wizard",
-          "name_fr": "Sorcier de Niveau 3",
-          "name_it": "Level 3 Wizard",
-          "name_pl": "Level 3 Wizard",
-          "points": 60,
-          "exclusive": true
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -1669,6 +1693,18 @@
           "name_pl": "Burning Chariot of Tzeentch",
           "points": 190,
           "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
             {
               "name_en": "Level 2 Wizard",
               "name_cn": "2级法师",
@@ -4102,14 +4138,15 @@
           },
           "options": [
             {
-              "name_en": "Exalted Flamer",
-              "name_cn": "高阶火妖",
-              "name_de": "Exalted Flamer",
-              "name_es": "Exalted Flamer",
-              "name_fr": "Incendiaire Exalté",
-              "name_it": "Exalted Flamer",
-              "name_pl": "Exalted Flamer",
-              "points": 40
+              "name_en": "Level 1 Wizard (Exalted Flamer)",
+              "name_cn": "1级法师(高阶火妖)",
+              "name_de": "Level 1 Wizard (Exalted Flamer)",
+              "name_es": "Level 1 Wizard (Exalted Flamer)",
+              "name_fr": "Sorcier de Niveau 1 (Incendiaire Exalté)",
+              "name_it": "Level 1 Wizard (Exalted Flamer)",
+              "name_pl": "Level 1 Wizard (Exalted Flamer)",
+              "points": 40,
+              "exclusive": true
             },
             {
               "name_en": "Level 2 Wizard (Exalted Flamer)",
@@ -4119,7 +4156,7 @@
               "name_fr": "Sorcier de Niveau 2 (Incendiaire Exalté)",
               "name_it": "Level 2 Wizard (Exalted Flamer)",
               "name_pl": "Level 2 Wizard (Exalted Flamer)",
-              "points": 30,
+              "points": 70,
               "exclusive": true
             },
             {
@@ -4130,7 +4167,7 @@
               "name_fr": "Sorcier de Niveau 3 (Incendiaire Exalté)",
               "name_it": "Level 3 Wizard (Exalted Flamer)",
               "name_pl": "Level 3 Wizard (Exalted Flamer)",
-              "points": 60,
+              "points": 100,
               "exclusive": true
             }
           ]
@@ -4662,14 +4699,15 @@
           },
           "options": [
             {
-              "name_en": "Exalted Flamer",
-              "name_cn": "高阶火妖",
-              "name_de": "Exalted Flamer",
-              "name_es": "Exalted Flamer",
-              "name_fr": "Incendiaire Exalté",
-              "name_it": "Exalted Flamer",
-              "name_pl": "Exalted Flamer",
-              "points": 40
+              "name_en": "Level 1 Wizard (Exalted Flamer)",
+              "name_cn": "1级法师(高阶火妖)",
+              "name_de": "Level 1 Wizard (Exalted Flamer)",
+              "name_es": "Level 1 Wizard (Exalted Flamer)",
+              "name_fr": "Sorcier de Niveau 1 (Incendiaire Exalté)",
+              "name_it": "Level 1 Wizard (Exalted Flamer)",
+              "name_pl": "Level 1 Wizard (Exalted Flamer)",
+              "points": 40,
+              "exclusive": true
             },
             {
               "name_en": "Level 2 Wizard (Exalted Flamer)",
@@ -4679,7 +4717,7 @@
               "name_fr": "Sorcier de Niveau 2 (Incendiaire Exalté)",
               "name_it": "Level 2 Wizard (Exalted Flamer)",
               "name_pl": "Level 2 Wizard (Exalted Flamer)",
-              "points": 30,
+              "points": 70,
               "exclusive": true
             },
             {
@@ -4690,7 +4728,7 @@
               "name_fr": "Sorcier de Niveau 3 (Incendiaire Exalté)",
               "name_it": "Level 3 Wizard (Exalted Flamer)",
               "name_pl": "Level 3 Wizard (Exalted Flamer)",
-              "points": 60,
+              "points": 100,
               "exclusive": true
             }
           ]
@@ -4834,6 +4872,21 @@
       ],
       "options": [
         {
+          "name_en": "Level 1 Wizard (Exalted Flamer)",
+          "name_cn": "1级法师(高阶火妖)",
+          "name_de": "Level 1 Wizard (Exalted Flamer)",
+          "name_es": "Level 1 Wizard (Exalted Flamer)",
+          "name_fr": "Sorcier de Niveau 1 (Incendiaire Exalté)",
+          "name_it": "Level 1 Wizard (Exalted Flamer)",
+          "name_pl": "Level 1 Wizard (Exalted Flamer)",
+          "points": 0,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "exclusive": true,
+          "active": true
+        },
+        {
           "name_en": "Level 2 Wizard (Exalted Flamer)",
           "name_cn": "2级法师(高阶火妖)",
           "name_de": "Level 2 Wizard (Exalted Flamer)",
@@ -4844,7 +4897,8 @@
           "points": 30,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Level 3 Wizard (Exalted Flamer)",
@@ -4857,7 +4911,8 @@
           "points": 60,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         }
       ],
       "mounts": [],
