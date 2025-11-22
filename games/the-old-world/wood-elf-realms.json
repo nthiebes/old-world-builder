@@ -1074,26 +1074,74 @@
           "points": 0
         }
       ],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Oaken fists, Strangleroots",
+          "name_cn": "Oaken fists, Strangleroots",
+          "name_de": "Oaken fists, Strangleroots",
+          "name_es": "Oaken fists, Strangleroots",
+          "name_fr": "Oaken fists, Strangleroots",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_de": "Zauberer der Stufe 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "name_pl": "Czarodziej poziomu 3",
-          "points": 30,
-          "perModel": true
-        },
-        {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_de": "Zauberer der Stufe 4",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_pl": "Czarodziej poziomu 4",
-          "points": 60,
-          "perModel": true
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Ambushers",
@@ -1163,6 +1211,17 @@
       ],
       "equipment": [
         {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
           "name_en": "Additional hand weapon",
           "name_cn": "额外单手武器",
           "name_de": "Zusätzliche Handwaffe",
@@ -1179,25 +1238,15 @@
           "name_pl": "Broń ciężka",
           "points": 4,
           "perModel": true
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_cn": "单手武器",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
-          "name_pl": "Lekka zbroja",
+          "name_en": "Light armour (Sapwood flesh)",
+          "name_cn": "轻甲(Sapwood flesh)",
+          "name_de": "Leichte Rüstung (Splintholzhaut)",
+          "name_fr": "Armure légère (Chair d'aubier)",
+          "name_pl": "Lekka zbroja z bielu",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2754,11 +2803,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Cavalry spear, Asrai longbow",
-          "name_cn": "单手武器, 骑兵长矛, 阿斯莱长弓",
-          "name_de": "Handwaffe, Kavalleriespeer, Asrai-Langbogen",
-          "name_fr": "Arme de base, Lance de cavalerie, Arc long Asrai",
-          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai",
+          "name_en": "Hand weapon, Cavalry spear, Asrai longbow, Wicked claws (Warhawk)",
+          "name_cn": "单手武器, 骑兵长矛, 阿斯莱长弓, 恶毒之爪 (Warhawk)",
+          "name_de": "Handwaffe, Kavalleriespeer, Asrai-Langbogen, Scheußliche Krallen (Warhawk)",
+          "name_fr": "Arme de base, Lance de cavalerie, Arc long Asrai, Griffes mortelles (Warhawk)",
+          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai, Wicked claws (Warhawk)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -3164,7 +3213,18 @@
       "id": "giant-eagle",
       "points": 60,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, Serrated maw",
+          "name_cn": "恶毒之爪, 锯齿巨口",
+          "name_de": "Wicked claws, Serrated maw",
+          "name_es": "Garras crueles, Dientes serrados",
+          "name_fr": "Griffes mortelles, Gueules dentelées",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -3194,8 +3254,28 @@
         }
       },
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Oaken fists, Strangleroots",
+          "name_cn": "Oaken fists, Strangleroots",
+          "name_de": "Oaken fists, Strangleroots",
+          "name_es": "Oaken fists, Strangleroots",
+          "name_fr": "Oaken fists, Strangleroots",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_en": "Ambushers",

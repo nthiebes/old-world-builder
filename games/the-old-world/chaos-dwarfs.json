@@ -949,11 +949,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Throwing weapons",
-          "name_cn": "单手武器, 投掷武器",
-          "name_de": "Hand weapon, Throwing weapons",
-          "name_es": "Hand weapon, Throwing weapons",
-          "name_fr": "Arme de base, Armes de lancer",
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapon",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -979,12 +979,11 @@
         },
         {
           "name_en": "Cavalry spear",
-          "name_cn": "骑兵长矛",
+          "name_cn": " 骑兵长矛",
           "name_de": "Cavalry spear",
           "name_es": "Cavalry spear",
           "name_fr": "Lance de cavalerie",
           "points": 2,
-          "perModel": true,
           "notes": {
             "name_en": "if appropriately mounted",
             "name_cn": "若处于骑乘状态",
@@ -1002,8 +1001,7 @@
           "name_de": "Light armour",
           "name_es": "Light armour",
           "name_fr": "Armure légère",
-          "points": 3,
-          "perModel": true
+          "points": 3
         },
         {
           "name_en": "Shield",
@@ -1011,17 +1009,38 @@
           "name_de": "Shield",
           "name_es": "Shield",
           "name_fr": "Bouclier",
-          "points": 2,
-          "perModel": true
+          "points": 2
         },
         {
-          "name_en": "Shortbow (replaces Throwing weapons)",
-          "name_cn": "短弓(replaces Throwing weapons)",
-          "name_de": "Shortbow (replaces Throwing weapons)",
-          "name_es": "Shortbow (replaces Throwing weapons)",
-          "name_fr": "Arc court (remplace Armes de lancer)",
-          "points": 2,
-          "perModel": true
+          "name_en": "Ranged weapon",
+          "name_cn": "Ranged weapon",
+          "name_de": "Ranged weapon",
+          "name_es": "Ranged weapon",
+          "name_fr": "Ranged weapon",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Throwing weapons",
+              "name_cn": "投掷武器",
+              "name_de": "Throwing weapons",
+              "name_es": "Throwing weapons",
+              "name_fr": "Armes de lancer",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Shortbow",
+              "name_cn": "短弓",
+              "name_de": "Shortbow",
+              "name_es": "Shortbow",
+              "name_fr": "Arc court",
+              "points": 2,
+              "exclusive": true
+            }
+          ]
         }
       ],
       "mounts": [
@@ -2796,15 +2815,6 @@
           "perModel": true,
           "active": true,
           "equippedDefault": true
-        },
-        {
-          "name_en": "Cavalry spears",
-          "name_cn": "骑兵长矛",
-          "name_de": "Cavalry spears",
-          "name_es": "Cavalry spears",
-          "name_fr": "Lances de cavalerie",
-          "points": 0,
-          "perModel": true
         }
       ],
       "armor": [
@@ -2821,6 +2831,15 @@
       ],
       "options": [
         {
+          "name_en": "Cavalry spears",
+          "name_cn": "骑兵长矛",
+          "name_de": "Cavalry spears",
+          "name_es": "Cavalry spears",
+          "name_fr": "Lances de cavalerie",
+          "points": 0,
+          "perModel": true
+        },
+        {
           "name_en": "Shortbow",
           "name_cn": "短弓",
           "name_de": "Shortbow",
@@ -2832,26 +2851,32 @@
           "maximum": 0
         },
         {
-          "name_en": "Feigned Flight (0-1 per 1000 points)",
-          "name_cn": "诱敌诈退(每1000分0-1)",
-          "name_de": "Feigned Flight (0-1 per 1000 points)",
-          "name_es": "Feigned Flight (0-1 per 1000 points)",
-          "name_fr": "Fuite Feinte (0-1 par tranche de 1000 points)",
+          "name_en": "Feigned Flight",
+          "name_cn": "诱敌诈退",
+          "name_de": "Feigned Flight",
+          "name_es": "Feigned Flight",
+          "name_fr": "Fuite Feinte",
           "points": 2,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Reserve Move (0-1 per 1000 points)",
-          "name_cn": "预备移动(每1000分0-1)",
-          "name_de": "Reserve Move (0-1 per 1000 points)",
-          "name_es": "Reserve Move (0-1 per 1000 points)",
-          "name_fr": "Mouvement de Réserve (0-1 par tranche de 1000 points)",
+          "name_en": "Reserve Move",
+          "name_cn": "预备移动",
+          "name_de": "Reserve Move",
+          "name_es": "Reserve Move",
+          "name_fr": "Mouvement de Réserve",
           "points": 1,
           "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
