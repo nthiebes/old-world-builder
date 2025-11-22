@@ -1702,6 +1702,17 @@
           "name_fr": "Musicien"
         }
       ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Hand weapons, Great weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Armes de base, Armes lourdes"
+        }
+      ],
       "armor": [
         {
           "name_en": "Heavy armour",
@@ -1827,33 +1838,23 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_cn": "单手武器",
-          "name_de": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "equippedDefault": true,
-          "name_es": "Hand weapons",
-          "name_fr": "Armes de base"
-        },
-        {
-          "name_en": "Additional hand weapons",
-          "name_cn": "额外单手武器",
-          "name_de": "Additional hand weapons",
-          "points": 0,
-          "perModel": true,
+          "name_en": "Hand weapons, Additional hand weapons",
+          "name_cn": "单手武器, 额外单手武器",
+          "name_de": "Hand weapons, Additional hand weapons",
           "name_es": "Arma de mano adicional",
-          "name_fr": "Armes de base additionnelles"
+          "name_fr": "Armes de base additionnelles",
+          "points": 0,
+          "active": true,
+          "perModel": true
         },
         {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_de": "Shields",
-          "points": 0,
-          "perModel": true,
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
+          "name_de": "Hand weapons, Shields",
           "name_es": "Escudos",
-          "name_fr": "Boucliers"
+          "name_fr": "Boucliers",
+          "points": 0,
+          "perModel": true
         }
       ],
       "armor": [],
@@ -4049,13 +4050,13 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_cn": "单手武器",
-          "name_de": "Hand weapons",
+          "name_en": "Hand weapons, Troll vomit",
+          "name_cn": "单手武器, 巨魔呕吐",
+          "name_de": "Handwaffen, Trollkotze",
+          "name_fr": "Armes de base, Vomi de troll",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_fr": "Armes de base"
+          "active": true
         }
       ],
       "armor": [
@@ -4063,10 +4064,10 @@
           "name_en": "Light armour (calloused hide)",
           "name_cn": "轻甲(坚硬皮肤)",
           "name_de": "Light armour (calloused hide)",
+          "name_fr": "Armure légère (peau calleuse)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_fr": "Armure légère (peau calleuse)"
+          "active": true
         }
       ],
       "options": [

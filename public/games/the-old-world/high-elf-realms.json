@@ -3215,11 +3215,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Bows of Avelorn",
-          "name_cn": "阿瓦隆之弓",
-          "name_it": "Bows of Avelorn",
-          "name_de": "Bögen von Avelorn",
-          "name_es": "Arcos de Avelorn",
+          "name_en": "Hand weapons, Bows of Avelorn",
+          "name_cn": "单手武器, 阿瓦隆之弓",
+          "name_it": "Armi Bianche, Bows of Avelorn",
+          "name_de": "Handwaffen, Bögen von Avelorn",
+          "name_es": "Armas de mano, Arcos de Avelorn",
           "points": 0,
           "active": true,
           "name_fr": "Arcs d’Avelorn"
@@ -4344,11 +4344,11 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry spears, Shortbows",
-          "name_cn": "骑兵长矛, 短弓",
-          "name_it": "Lancia Leggera, Archi Corti",
-          "name_de": "Kavalleriespeere, Kurzbögen",
-          "name_es": "Lanzas de caballería, Arcos cortos",
+          "name_en": "Cavalry spears, Shortbows, Wicked claws (Swiftfeather roc)",
+          "name_cn": "骑兵长矛, 短弓, 恶毒之爪 (Swiftfeather roc)",
+          "name_it": "Lancia Leggera, Archi Corti, Artigli Malvagi (Swiftfeather roc)",
+          "name_de": "Kavalleriespeere, Kurzbögen, Scheußliche Krallen (Swiftfeather roc)",
+          "name_es": "Lanzas de caballería, Arcos cortos, Garras crueles (Swiftfeather roc)",
           "points": 0,
           "active": true,
           "name_fr": "Lances de cavalerie, Arcs courts"
@@ -4490,11 +4490,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Bows of Avelorn",
-          "name_cn": "阿瓦隆之弓",
-          "name_it": "Bows of Avelorn",
-          "name_de": "Bögen von Avelorn",
-          "name_es": "Arcos de Avelorn",
+          "name_en": "Hand weapons, Bows of Avelorn",
+          "name_cn": "单手武器, 阿瓦隆之弓",
+          "name_it": "Armi Bianche, Bows of Avelorn",
+          "name_de": "Handwaffen, Bögen von Avelorn",
+          "name_es": "Armas de mano, Arcos de Avelorn",
           "points": 0,
           "active": true,
           "name_fr": "Arcs d’Avelorn"
@@ -4577,12 +4577,12 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Chracian great blades",
-          "name_cn": "查瑞斯巨斧",
-          "name_it": "Chracian great blades",
-          "name_de": "Chracianische Zweihandklingen",
-          "name_fr": "Grandes lames de Chrace",
-          "name_es": "Gran hacha de Cracia",
+          "name_en": "Hand weapons, Chracian great blades",
+          "name_cn": "单手武器, 查瑞斯巨斧",
+          "name_it": "Armi Bianche, Chracian great blades",
+          "name_de": "Handwaffen, Chracianische Zweihandklingen",
+          "name_es": "Armas de mano, Gran hacha de Cracia",
+          "name_fr": "Armes de base, Grandes lames de Chrace",
           "points": 0,
           "active": true
         }
@@ -4623,7 +4623,18 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_it": "Artigli Malvagi",
+          "name_de": "Scheußliche Krallen",
+          "name_es": "Garras crueles",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [
         {
           "name_en": "Heavy armour",
@@ -4670,7 +4681,18 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_it": "Artigli Malvagi",
+          "name_de": "Scheußliche Krallen",
+          "name_es": "Garras crueles",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [
         {
           "name_en": "Full plate armour",
@@ -4725,7 +4747,17 @@
         }
       },
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, Serrated maw",
+          "name_cn": "恶毒之爪, 锯齿巨口",
+          "name_de": "Wicked claws, Serrated maw",
+          "name_es": "Garras crueles, Dientes serrados",
+          "name_fr": "Griffes mortelles, Gueules dentelées",
+          "points": 0,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -4769,8 +4801,31 @@
         }
       },
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Repeater Bolt Thrower, Hand weapons",
+          "name_cn": "连发弩炮, 单手武器",
+          "name_it": "Repeater bolt thrower, Arma Bianca",
+          "name_de": "Repeater bolt thrower, Handwaffen",
+          "name_fr": "Baliste à répétition, Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_it": "Armatura Leggera",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "specialRules": {
@@ -4799,14 +4854,14 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry spears, Shortbows",
-          "name_cn": "骑兵长矛, 短弓",
-          "name_it": "Lancia Leggera, Archi Corti",
-          "name_de": "Kavalleriespeere, Kurzbögen",
-          "name_es": "Lanzas de caballería, Arcos cortos",
+          "name_en": "Cavalry spears, Shortbows, Wicked claws (Swiftfeather roc)",
+          "name_cn": "骑兵长矛, 短弓, 恶毒之爪 (Swiftfeather roc)",
+          "name_it": "Lancia Leggera, Archi Corti, Artigli Malvagi (Swiftfeather roc)",
+          "name_de": "Kavalleriespeere, Kurzbögen, Scheußliche Krallen (Swiftfeather roc)",
+          "name_es": "Lanzas de caballería, Arcos cortos, Garras crueles (Swiftfeather roc)",
+          "name_fr": "Lances de cavalerie, Arcs courts, Griffes mortelles (Swiftfeather roc)",
           "points": 0,
-          "active": true,
-          "name_fr": "Lances de cavalerie, Arcs courts"
+          "active": true
         }
       ],
       "armor": [],

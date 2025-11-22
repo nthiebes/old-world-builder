@@ -92,6 +92,9 @@ const additionalOWBRules = {
   "organ gun weapon": {
     url: "war-machines/organ-guns",
   },
+  "screaming skull catapult weapon": {
+    url: "weapons-of-war/screaming-skull-catapult",
+  },
 };
 
 export const synonyms = {
