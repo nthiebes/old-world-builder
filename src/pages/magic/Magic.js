@@ -16,7 +16,7 @@ import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { equalsOrIncludes, namesForSpread } from "../../utils/string";
-import { getUnitName } from "../../utils/unit";
+import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
 import { getGameSystems } from "../../utils/game-systems";
 import {
   isMultipleAllowedItem,
@@ -573,7 +573,7 @@ export const Magic = ({ isMobile }) => {
           list.armyComposition || list.army
         ]?.maxItemsPerCategory) ||
       commandOptions[command].magic.maxItemsPerCategory ||
-      3; // backwards compatibility for runes
+      0;
   } else if (hasMagicItems) {
     maxMagicPoints =
       (unit.items[group].armyComposition &&
@@ -588,7 +588,12 @@ export const Magic = ({ isMobile }) => {
         unit.items[group].armyComposition[list.armyComposition || list.army]
           ?.maxItemsPerCategory) ||
       unit.items[group].maxItemsPerCategory ||
-      3; // backwards compatibility for runes
+      0;
+  }
+
+  // Backwards compatibility for runes
+  if (list.army === "dwarfen-mountain-holds") {
+    maxItemsPerCategory = 3;
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -649,7 +654,7 @@ export const Magic = ({ isMobile }) => {
             }
           />
         )}
-        {items.map((itemGroup) => {
+        {items.map((itemGroup, index) => {
           const commandMagicItems = itemGroup.items.filter(
             (item) =>
               hasCommandMagicItems &&
@@ -718,24 +723,29 @@ export const Magic = ({ isMobile }) => {
                 const isComboExclusiveCategory =
                   comboExclusiveCategories.indexOf(magicItem.type) >= 0;
 
-                const isTypeLimitReached = magicItem.nonExclusive
-                  ? false
-                  : unitSelectedItems.some(
-                      (selectedItem) =>
-                        (!magicItem.stackable &&
-                          !selectedItem.stackable &&
-                          selectedItem.type === magicItem.type &&
-                          !isComboExclusiveCategory) ||
-                        (isComboExclusiveCategory &&
-                          itemCountInCategory >= maxItemsPerCategory) ||
-                        (isComboExclusiveCategory &&
-                          masterRuneInCategory &&
-                          magicItem.name_en.includes("Master")) ||
-                        (isComboExclusiveCategory &&
-                          magicItem.type === selectedItem.type &&
-                          (magicItem.nonExclusive === false ||
-                            selectedItem.nonExclusive === false)) // If a rune is exclusive, it can't be combined with other runes.
-                    );
+                const isTypeLimitReached =
+                  magicItem.nonExclusive && magicItem.type !== "chaotic-trait"
+                    ? false
+                    : unitSelectedItems.some(
+                        (selectedItem) =>
+                          (!magicItem.stackable &&
+                            !selectedItem.stackable &&
+                            selectedItem.type === magicItem.type &&
+                            !isComboExclusiveCategory &&
+                            !maxItemsPerCategory) ||
+                          (!isComboExclusiveCategory &&
+                            maxItemsPerCategory > 0 &&
+                            itemCountInCategory >= maxItemsPerCategory) ||
+                          (isComboExclusiveCategory &&
+                            itemCountInCategory >= maxItemsPerCategory) ||
+                          (isComboExclusiveCategory &&
+                            masterRuneInCategory &&
+                            magicItem.name_en.includes("Master")) ||
+                          (isComboExclusiveCategory &&
+                            magicItem.type === selectedItem.type &&
+                            (magicItem.nonExclusive === false ||
+                              selectedItem.nonExclusive === false)) // If a rune is exclusive, it can't be combined with other runes.
+                      );
 
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en
@@ -767,10 +777,9 @@ export const Magic = ({ isMobile }) => {
                             {nameMap[magicItem.type][`name_${language}`] ||
                               nameMap[magicItem.type].name_en}
                           </span>
-                          {isComboExclusiveCategory &&
-                            maxItemsPerCategory > 0 && (
-                              <i className="magic__item-count">{`${itemCountInCategory}/${maxItemsPerCategory}`}</i>
-                            )}
+                          {maxItemsPerCategory > 0 && (
+                            <i className="magic__item-count">{`${itemCountInCategory}/${maxItemsPerCategory}`}</i>
+                          )}
                         </h3>
                         {comboUsedBy && (
                           <ErrorMessage
@@ -795,6 +804,12 @@ export const Magic = ({ isMobile }) => {
                       isChecked,
                       isTypeLimitReached,
                       usedElsewhereErrors,
+                    })}
+                    {getUnitOptionNotes({
+                      notes: magicItem.notes,
+                      key: `magic-${index}-note`,
+                      className: "unit__option-note",
+                      language,
                     })}
 
                     {magicItem.conditional && isChecked

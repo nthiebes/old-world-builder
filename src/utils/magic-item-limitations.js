@@ -118,7 +118,6 @@ export const comboExclusiveCategories = [
   "ranged-weapon-runes",
   "runic-tattoos",
   "incantation-scroll",
-  "chaotic-trait",
 ];
 
 /**
