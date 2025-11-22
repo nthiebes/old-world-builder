@@ -90,6 +90,25 @@ export const notEnoughPointsRemaining = (
   return maxMagicPoints && magicItem.points > unitPointsRemaining;
 };
 
+const getMagicItemsStillSelected = (selectedItems, event, magicItem) => {
+  const itemsToRemove = selectedItems
+    .filter(({id}) => id === event.target.value);
+  if (itemsToRemove.length > 0) {
+    return selectedItems
+      .filter((entry) => !itemsToRemove.includes(entry));
+  } else { // Couldn't find matching ID, this might mean new magic items added to dataset shifted the existing ones
+    // Attempt to repair mismatch
+    const detectedDuplicates = selectedItems
+      .filter(selectedItem => selectedItem.name_en === magicItem.name_en)
+    if (detectedDuplicates.length > 0) {
+      return selectedItems
+        .filter((entry) => !detectedDuplicates.includes(entry));
+    } else { // Couldn't repair mismatch, uncheck all selected magic items
+      return [];
+    }
+  }
+}
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -223,15 +242,8 @@ export const Magic = ({ isMobile }) => {
         }
       }
     } else {
-      if (isCommand) {
-        magicItems = commandOptions[command].magic.selected.filter(
-          ({ id }) => id !== event.target.value
-        );
-      } else {
-        magicItems = unit.items[group].selected.filter(
-          ({ id }) => id !== event.target.value
-        );
-      }
+      const selectedItems = isCommand ? commandOptions[command].magic.selected : unit.items[group].selected;
+      magicItems = getMagicItemsStillSelected(selectedItems, event, magicItem);
     }
 
     if (isCommand) {
@@ -703,7 +715,14 @@ export const Magic = ({ isMobile }) => {
                 }
 
                 const selectedItem = unitSelectedItems.find(
-                  ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                  (item) => {
+                    if (item.id === `${itemGroup.id}-${magicItem.id}`) {
+                      return true;
+                    }
+                    //TODO improve me: this is not ideal, we will be checking this for each magic item everytime
+                    // for something that really is just a once off for each old list when we add new magic items
+                    return `${item.id.split("-")[0]}${item.name_en}` === `${itemGroup.id}${magicItem.name_en}`;
+                  }
                 );
                 let itemCountInCategory = 0;
                 let masterRuneInCategory = false;
