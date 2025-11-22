@@ -1593,15 +1593,26 @@
         {
           "name_en": "Crusher (champion)",
           "name_cn": "碾压者(冠军)",
+          "name_de": "Quetscher (Champion)",
+          "name_es": "Crusher (champion)",
+          "name_fr": "Broyeur (champion)",
+          "name_it": "Crusher (champion)",
           "points": 7,
           "magic": {
             "types": ["weapon", "armor", "talisman", "enchanted-item"],
             "maxPoints": 25
           },
-          "name_de": "Quetscher (Champion)",
-          "name_es": "Crusher (champion)",
-          "name_fr": "Broyeur (champion)",
-          "name_it": "Crusher (champion)"
+          "options": [
+            {
+              "name_en": "Brace of Ogre pistols",
+              "name_cn": "成对食人魔手枪",
+              "name_de": "Ogerpistolenpaar",
+              "name_es": "Brace of Ogre pistols",
+              "name_fr": "Paire de pistolets Ogres",
+              "name_it": "Brace of Ogre pistols",
+              "points": 12
+            }
+          ]
         },
         {
           "name_en": "Standard bearer",
@@ -1695,17 +1706,7 @@
           "perModel": true
         }
       ],
-      "options": [
-        {
-          "name_en": "Brace of Ogre pistols (Crusher)",
-          "name_cn": "成对食人魔手枪(碾压者)",
-          "name_de": "Ogerpistolenpaar (Quetscher)",
-          "name_es": "Brace of Ogre pistols (Crusher)",
-          "name_fr": "Paire de pistolets Ogres (Broyeur)",
-          "name_it": "Brace of Ogre pistols (Crusher)",
-          "points": 12
-        }
-      ],
+      "options": [],
       "mounts": [],
       "items": [],
       "lores": [],

@@ -1098,22 +1098,50 @@
       ],
       "options": [
         {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_de": "Zauberer der Stufe 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "name_pl": "Czarodziej poziomu 3",
-          "points": 30,
-          "perModel": true
-        },
-        {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_de": "Zauberer der Stufe 4",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_pl": "Czarodziej poziomu 4",
-          "points": 60,
-          "perModel": true
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Ambushers",
