@@ -26,6 +26,9 @@ const filterByTroopType = (unit) => {
   ].includes(ruleData?.troopType);
 };
 
+/**
+ * In a single pass recursively find all wizard levels
+ */
 function incrementLevels(listOfOptionHolders, wizardLevels) {
     if (listOfOptionHolders && listOfOptionHolders.length) {
         listOfOptionHolders.filter(optionHolder => optionHolder.options)
@@ -42,10 +45,18 @@ function incrementLevels(listOfOptionHolders, wizardLevels) {
     }
 }
 
+/**
+ * Iterate the target Character or Units Options stored in the target itself, it's Command Group and mounts
+ * This is because in some armies (Mainly Daemons), Unit Champions and Mounts can also be high level wizards
+ * which can breach validation rules
+ */
 const getWizardLevels = (unitToCheck) => {
+    // Quantity of wizards of each level from 0-4 (though we're only going to be validating 3 & 4)
     let wizardLevels = [0, 0, 0, 0, 0];
 
+    // Check the unit itself
     incrementLevels([unitToCheck], wizardLevels);
+    // Check the units champion and mounts
     incrementLevels(unitToCheck.command, wizardLevels);
     incrementLevels(unitToCheck.mounts, wizardLevels);
 
