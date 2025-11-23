@@ -1697,7 +1697,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               detachmentActive;
 
                             return (
-                              <Fragment key={option.name_en}>
+                              <Fragment
+                                key={`${option.name_en}-${optionIndex}`}
+                              >
                                 <div className="checkbox checkbox--conditional">
                                   <input
                                     type="checkbox"

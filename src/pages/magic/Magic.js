@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 import { getUnitMagicPoints } from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
+import { normalizeRuleName } from "../../utils/string";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { ErrorMessage } from "../../components/error-message";
@@ -189,47 +190,33 @@ export const Magic = ({ isMobile }) => {
     if (event.target.checked) {
       if (isCommand) {
         if (inputType === "radio") {
-          magicItems = [
-            {
-              ...magicItem,
-              id: event.target.value,
-            },
-          ];
+          magicItems = [magicItem];
         } else {
           magicItems = [
             ...(commandOptions[command].magic.selected || []),
-            {
-              ...magicItem,
-              id: event.target.value,
-            },
+            magicItem,
           ];
         }
       } else {
         if (inputType === "radio") {
-          magicItems = [
-            {
-              ...magicItem,
-              id: event.target.value,
-            },
-          ];
+          magicItems = [magicItem];
         } else {
-          magicItems = [
-            ...(unit.items[group].selected || []),
-            {
-              ...magicItem,
-              id: event.target.value,
-            },
-          ];
+          magicItems = [...(unit.items[group].selected || []), magicItem];
         }
       }
     } else {
       if (isCommand) {
         magicItems = commandOptions[command].magic.selected.filter(
-          ({ id }) => id !== event.target.value
+          ({ name_en, name }) =>
+            name
+              ? name !== event.target.value
+              : normalizeRuleName(name_en) !== event.target.value
         );
       } else {
-        magicItems = unit.items[group].selected.filter(
-          ({ id }) => id !== event.target.value
+        magicItems = unit.items[group].selected.filter(({ name_en, name }) =>
+          name
+            ? name !== event.target.value
+            : normalizeRuleName(name_en) !== event.target.value
         );
       }
     }
@@ -279,23 +266,42 @@ export const Magic = ({ isMobile }) => {
     let magicItems;
 
     if (isCommand) {
-      magicItems = (commandOptions[command].magic.selected || []).map((item) =>
-        item.id === parentId
-          ? {
+      magicItems = (commandOptions[command].magic.selected || []).map(
+        (item) => {
+          if (item.name && item.name === parentId) {
+            return {
               ...item,
               amount: event.target.value,
-            }
-          : item
+            };
+          } else if (
+            !item.name &&
+            normalizeRuleName(item.name_en) === parentId
+          ) {
+            return {
+              ...item,
+              amount: event.target.value,
+            };
+          } else {
+            return item;
+          }
+        }
       );
     } else {
-      magicItems = (unit.items[group].selected || []).map((item) =>
-        item.id === parentId
-          ? {
-              ...item,
-              amount: event.target.value,
-            }
-          : item
-      );
+      magicItems = (unit.items[group].selected || []).map((item) => {
+        if (item.name && item.name === parentId) {
+          return {
+            ...item,
+            amount: event.target.value,
+          };
+        } else if (!item.name && normalizeRuleName(item.name_en) === parentId) {
+          return {
+            ...item,
+            amount: event.target.value,
+          };
+        } else {
+          return item;
+        }
+      });
     }
 
     if (isCommand) {
@@ -464,7 +470,7 @@ export const Magic = ({ isMobile }) => {
           <input
             type="checkbox"
             id={`${itemGroup.id}-${magicItem.id}`}
-            value={`${itemGroup.id}-${magicItem.id}`}
+            value={magicItem.name}
             onChange={(event) => handleMagicChange(event, magicItem, isCommand)}
             checked={isChecked}
             className="checkbox__input"
@@ -531,7 +537,7 @@ export const Magic = ({ isMobile }) => {
             value={selectedAmount}
             onChange={(event) => {
               handleAmountChange({
-                parentId: `${itemGroup.id}-${magicItem.id}`,
+                parentId: magicItem.name,
                 event,
                 isCommand,
               });
@@ -703,7 +709,10 @@ export const Magic = ({ isMobile }) => {
                 }
 
                 const selectedItem = unitSelectedItems.find(
-                  ({ id }) => id === `${itemGroup.id}-${magicItem.id}`
+                  ({ name, name_en }) =>
+                    name
+                      ? name === magicItem.name
+                      : normalizeRuleName(name_en) === magicItem.name
                 );
                 let itemCountInCategory = 0;
                 let masterRuneInCategory = false;
