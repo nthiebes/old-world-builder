@@ -58,16 +58,32 @@ const updateIds = (items) => {
 export const isAllowedShield = (unit) => {
   return (
     (unit.equipment &&
-      unit.equipment.find((option) =>
+      unit.equipment.some((option) =>
         option.name_en.toLowerCase().includes("shield")
       )) ||
     (unit.options &&
-      unit.options.find((option) =>
+      unit.options.some((option) =>
         option.name_en.toLowerCase().includes("shield")
       )) ||
     (unit.armor &&
-      unit.armor.find((option) =>
+      unit.armor.some((option) =>
         option.name_en.toLowerCase().includes("shield")
+      )) ||
+    (unit.detachments &&
+      unit.detachments.some(
+        (option) =>
+          (option.options &&
+            option.options.some((subOption) =>
+              subOption.name_en.toLowerCase().includes("shield")
+            )) ||
+          (option.equipment &&
+            option.equipment.some((subOption) =>
+              subOption.name_en.toLowerCase().includes("shield")
+            )) ||
+          (option.armor &&
+            option.armor.some((subOption) =>
+              subOption.name_en.toLowerCase().includes("shield")
+            ))
       ))
   );
 };
