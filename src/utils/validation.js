@@ -121,6 +121,17 @@ export const validateList = ({ list, language, intl }) => {
   const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
     : 0;
+  let coreUnitsDetachmentCount = 0;
+
+  if (list?.core?.length) {
+    list.core.forEach((unit) => {
+      if (unit.detachments && unit.detachments.length) {
+        coreUnitsDetachmentCount +=
+          unit.detachments.filter(filterByTroopType).length;
+      }
+    });
+  }
+
   const specialUnits = list?.special?.length
     ? list.special.filter(filterByTroopType).length
     : 0;
@@ -138,7 +149,12 @@ export const validateList = ({ list, language, intl }) => {
   const generalsCount = generals.length;
   const BSBsCount = BSBs.length;
   const nonCharactersCount =
-    coreUnits + specialUnits + rareUnits + mercUnits + allyUnits;
+    coreUnits +
+    coreUnitsDetachmentCount +
+    specialUnits +
+    rareUnits +
+    mercUnits +
+    allyUnits;
   const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
