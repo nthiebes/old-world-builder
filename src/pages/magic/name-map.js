@@ -177,13 +177,13 @@ export const nameMap = {
   "chaotic-traits": {
     name_de: "Chaotic Traits",
     name_en: "Chaotic Traits",
-    name_cn: "Chaotic Traits",
+    name_cn: "混沌特质",
     name_fr: "Chaotic Traits",
   },
   "chaotic-trait": {
     name_de: "Chaotic Trait",
     name_en: "Chaotic Trait",
-    name_cn: "Chaotic Trait",
+    name_cn: "混沌特质",
     name_fr: "Chaotic Trait",
   },
   "forest-spites": {
@@ -345,7 +345,7 @@ export const nameMap = {
   shadowlands: {
     name_de: "Shadowlands",
     name_en: "Shadowlands",
-    name_cn: "Shadowlands",
+    name_cn: "阴影之地法系",
     name_fr: "Shadowlands",
   },
   "errantry-crusades": {
@@ -741,19 +741,19 @@ export const nameMap = {
   "minotaur-blood-herd": {
     name_de: "Minotaur Blood Herd",
     name_en: "Minotaur Blood Herd",
-    name_cn: "Minotaur Blood Herd",
+    name_cn: "牛头人血兽群",
     name_fr: "Minotaur Blood Herd",
   },
   "wild-herd": {
     name_de: "Wild Herd",
     name_en: "Wild Herd",
-    name_cn: "Wild Herd",
+    name_cn: "狂野兽群",
     name_fr: "Wild Herd",
   },
   "primal-magic": {
     name_de: "Lore of Primal Magic",
     name_en: "Lore of Primal Magic",
-    name_cn: "Lore of Primal Magic",
+    name_cn: "原始法系",
     name_fr: "Lore of Primal Magic",
   },
   "grand-cathay": {
@@ -795,19 +795,19 @@ export const nameMap = {
   "battle-march": {
     name_de: "Battle March",
     name_en: "Battle March",
-    name_cn: "Battle March",
+    name_cn: "战斗行军",
     name_fr: "Battle March",
   },
   "incantation-scrolls": {
     name_de: "Incantation Scrolls",
     name_en: "Incantation Scrolls",
-    name_cn: "Incantation Scrolls",
+    name_cn: "咒语卷轴",
     name_fr: "Incantation Scrolls",
   },
   "incantation-scroll": {
     name_de: "Incantation Scroll",
     name_en: "Incantation Scroll",
-    name_cn: "Incantation Scroll",
+    name_cn: "咒语卷轴",
     name_fr: "Incantation Scroll",
   },
 };
