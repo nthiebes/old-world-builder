@@ -267,7 +267,6 @@ export const synonyms = {
   "expeditionary marksman": "expeditionary marksmen",
   "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
-  "nuln veteran state troops": "nuln state troops",
   "empire knights panther": "empire knights",
   "empire knights of the white wolf": "empire knights",
   "empire knights of the fiery heart": "empire knights",

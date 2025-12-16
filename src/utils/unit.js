@@ -445,29 +445,38 @@ export const isWizard = (unitToCheck) => {
     ...unitToCheck,
     options: unitToCheck.options || [],
   };
-  return optionsHaveActiveWizard(unit)
-    || hasActiveWizardOption(unitToCheck.command)
-    || hasActiveWizardOption(unitToCheck.mounts);
+  return (
+    optionsHaveActiveWizard(unit) ||
+    hasActiveWizardOption(unitToCheck.command) ||
+    hasActiveWizardOption(unitToCheck.mounts)
+  );
 };
 
 export const optionsHaveActiveWizard = (optionHolder) => {
-    return Boolean(
-        findOption(
-            optionHolder.options,
-            ({ name_en, active }) =>
-                active && name_en.toLowerCase().includes("wizard")
-        )
-    );
+  return Boolean(
+    findOption(
+      optionHolder.options,
+      ({ name_en, active }) =>
+        active && name_en.toLowerCase().includes("wizard")
+    )
+  );
 };
 
 export const hasActiveWizardOption = (optionHoldersList) => {
-    const allOptionsForActiveHolders = {
-        ...optionHoldersList,
-        options: optionHoldersList && optionHoldersList.length ? optionHoldersList.filter(optionHolder => optionHolder.active)
-            .filter(activeOptionHolder => activeOptionHolder.options)
-            .flatMap(activeOptionHolderWithOptions => activeOptionHolderWithOptions.options) : [],
-    };
-    return optionsHaveActiveWizard(allOptionsForActiveHolders);
+  const allOptionsForActiveHolders = {
+    ...optionHoldersList,
+    options:
+      optionHoldersList && optionHoldersList.length
+        ? optionHoldersList
+            .filter((optionHolder) => optionHolder.active)
+            .filter((activeOptionHolder) => activeOptionHolder.options)
+            .flatMap(
+              (activeOptionHolderWithOptions) =>
+                activeOptionHolderWithOptions.options
+            )
+        : [],
+  };
+  return optionsHaveActiveWizard(allOptionsForActiveHolders);
 };
 
 /**
