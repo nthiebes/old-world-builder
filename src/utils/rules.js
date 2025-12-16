@@ -4005,7 +4005,7 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["border-princes-organ-gun", "border-princes-mortar"],
+          ids: ["border-princes-organ-gun", "border-princes-bombard"],
           min: 0,
           max: 1,
           points: 1000,
