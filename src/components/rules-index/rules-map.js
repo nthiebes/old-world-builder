@@ -95,6 +95,21 @@ const additionalOWBRules = {
   "screaming skull catapult weapon": {
     url: "weapons-of-war/screaming-skull-catapult",
   },
+  "open-war": {
+    url: "matched-play/open-war",
+  },
+  "grand-melee": {
+    url: "matched-play/grand-melee",
+  },
+  "combined-arms": {
+    url: "matched-play/combined-arms",
+  },
+  "grand-melee-combined-arms": {
+    url: "warhammer-armies/army-composition-lists",
+  },
+  "battle-march": {
+    url: "warhammer-armies/battle-march",
+  },
 };
 
 export const synonyms = {

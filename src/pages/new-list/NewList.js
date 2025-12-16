@@ -12,6 +12,7 @@ import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
+import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
 import { nameMap } from "../magic";
 
@@ -64,10 +65,7 @@ export const NewList = ({ isMobile }) => {
     compositionRule === "battle-march"
       ? [500, 600, 750]
       : lists.length
-      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(
-          0,
-          5
-        )
+      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
       : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
@@ -150,6 +148,8 @@ export const NewList = ({ isMobile }) => {
         <Header to="/" headline={intl.formatMessage({ id: "new.title" })} />
       )}
 
+      <RulesIndex />
+
       <MainComponent>
         {!isMobile && (
           <Header
@@ -226,6 +226,18 @@ export const NewList = ({ isMobile }) => {
             selected={compositionRule}
             spaceBottom
           />
+          <p className="new-list__composition-description">
+            <i>
+              <FormattedMessage
+                id={`new.armyCompositionRuleDescription.${compositionRule}`}
+              />
+            </i>
+            <RuleWithIcon
+              name={compositionRule}
+              isDark
+              className="game-view__rule-icon"
+            />
+          </p>
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>
