@@ -4046,10 +4046,10 @@ export const getMaxPercentData = ({
   }
 
   const maxPercent = categoryData.maxPercent;
-  const maxPoints = (armyPoints / 100) * maxPercent;
+  const maxPoints = Math.floor((armyPoints / 100) * maxPercent);
 
   return {
-    points: Math.floor(maxPoints),
+    points: maxPoints,
     overLimit: points > maxPoints,
     diff: points > maxPoints ? Math.ceil(points - maxPoints) : 0,
   };
@@ -4064,10 +4064,10 @@ export const getMinPercentData = ({
   const minPercent = rules[armyComposition]
     ? rules[armyComposition][type].minPercent
     : rules["grand-army"][type].minPercent;
-  const minPoints = (armyPoints / 100) * minPercent;
+  const minPoints = Math.floor((armyPoints / 100) * minPercent);
 
   return {
-    points: Math.floor(minPoints),
+    points: minPoints,
     overLimit: points <= minPoints,
     diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
   };
