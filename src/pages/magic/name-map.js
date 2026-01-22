@@ -3,7 +3,7 @@ export const nameMap = {
     name_de: "Glitzakram",
     name_en: "Shiny Stuff",
     name_cn: "闪亮小玩意",
-    name_fr: "Lé Trucs Ki Brill'",
+    name_fr: "Lé Trucs Ki Brill’",
   },
   "the-empire": {
     name_de: "Magische Erbstücke",
@@ -82,19 +82,19 @@ export const nameMap = {
     name_de: "Waffenrunen",
     name_en: "Weapon Runes",
     name_cn: "武器符文",
-    name_fr: "Runes d'Arme",
+    name_fr: "Runes d’Arme",
   },
   "ranged-weapon-runes": {
     name_de: "Ranged Weapon Runes",
     name_en: "Ranged Weapon Runes",
     name_cn: "远程武器符文",
-    name_fr: "Ranged Weapon Runes",
+    name_fr: "Runes d’Arme d’Ingénieur",
   },
   "armor-runes": {
     name_de: "Rüstungsrunen",
     name_en: "Armour Runes",
     name_cn: "护甲符文",
-    name_fr: "Runes d'Armure",
+    name_fr: "Runes d’Armure",
   },
   "banner-runes": {
     name_de: "Standartenrunen",
@@ -112,13 +112,13 @@ export const nameMap = {
     name_de: "Maschinenrunen",
     name_en: "Engineering Runes",
     name_cn: "工程符文",
-    name_fr: "Runes d'Ingénierie",
+    name_fr: "Runes d’Ingénierie",
   },
   "runic-tattoos": {
     name_de: "Runic Tattoos",
     name_en: "Runic Tattoos",
     name_cn: "符文纹身",
-    name_fr: "Runic Tattoos",
+    name_fr: "Tatouages Runiques",
   },
   triptych: {
     name_de: "Triptych",
@@ -166,7 +166,7 @@ export const nameMap = {
     name_de: "Gifts of Chaos",
     name_en: "Gifts of Chaos",
     name_cn: "混沌赠礼",
-    name_fr: "Dons de Chaos",
+    name_fr: "Dons du Chaos",
   },
   "gift-of-chaos": {
     name_de: "Gift of Chaos",
@@ -232,7 +232,7 @@ export const nameMap = {
     name_de: "Empire of Man",
     name_en: "Empire of Man",
     name_cn: "人类帝国",
-    name_fr: "Empire de l'Homme",
+    name_fr: "Empire de l’Homme",
   },
   "wood-elf-realms": {
     name_de: "Wood Elf Realms",
@@ -286,7 +286,7 @@ export const nameMap = {
     name_de: "Keine",
     name_en: "None",
     name_cn: "无",
-    name_fr: "None",
+    name_fr: "Aucun",
   },
   daemonology: {
     name_de: "Dämonologie",
@@ -352,7 +352,7 @@ export const nameMap = {
     name_de: "Errantry Crusades",
     name_en: "Errantry Crusades",
     name_cn: "侠义远征军",
-    name_fr: "Croisades d'Errance",
+    name_fr: "Croisades d’Errance",
   },
   "bretonnian-exiles": {
     name_de: "Bretonnian Exiles",
@@ -448,7 +448,7 @@ export const nameMap = {
     name_de: "Skaven",
     name_en: "Skaven",
     name_cn: "斯卡文鼠人",
-    name_fr: "Skaven",
+    name_fr: "Skavens",
   },
   "sk-renegade": {
     name_de: "Renegade",
@@ -700,7 +700,7 @@ export const nameMap = {
     name_de: "The Chracian Warhost",
     name_en: "The Chracian Warhost",
     name_cn: "查瑞斯战团",
-    name_fr: "L'Ost de Chrace",
+    name_fr: "L’Ost de Chrace",
   },
   "sea-guard-garrison": {
     name_de: "Sea Guard Garrison",
@@ -712,7 +712,7 @@ export const nameMap = {
     name_de: "Orion's Wild Hunt",
     name_en: "Orion's Wild Hunt",
     name_cn: "奥莱恩的狂猎",
-    name_fr: "Chasse Sauvage d'Orion",
+    name_fr: "Chasse Sauvage d’Orion",
   },
   "host-of-talsyn": {
     name_de: "Host of Talsyn",
@@ -784,30 +784,30 @@ export const nameMap = {
     name_de: "Renegade Crowns",
     name_en: "Renegade Crowns",
     name_cn: "变节王冠",
-    name_fr: "Renegade Crowns",
+    name_fr: "Couronnes Renégates",
   },
   "slayer-host": {
     name_de: "Slayer Host",
     name_en: "Slayer Host",
     name_cn: "屠夫军团",
-    name_fr: "Slayer Host",
+    name_fr: "Ost Tueur",
   },
   "battle-march": {
     name_de: "Battle March",
     name_en: "Battle March",
     name_cn: "战斗行军",
-    name_fr: "Battle March",
+    name_fr: "Colonne de Bataille",
   },
   "incantation-scrolls": {
     name_de: "Incantation Scrolls",
     name_en: "Incantation Scrolls",
     name_cn: "咒语卷轴",
-    name_fr: "Incantation Scrolls",
+    name_fr: "Parchemins d’Incantation",
   },
   "incantation-scroll": {
     name_de: "Incantation Scroll",
     name_en: "Incantation Scroll",
     name_cn: "咒语卷轴",
-    name_fr: "Incantation Scroll",
+    name_fr: "Parchemins d’Incantation",
   },
 };
