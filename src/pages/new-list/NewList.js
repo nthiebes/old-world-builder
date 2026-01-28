@@ -101,14 +101,14 @@ export const NewList = ({ isMobile }) => {
   const handleSystemChange = (event) => {
     setGame(event.target.value);
     setArmy(
-      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id
+      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id,
     );
     setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
     setArmy(value);
     setArmyComposition(
-      armies.find(({ id }) => value === id).armyComposition[0]
+      armies.find(({ id }) => value === id).armyComposition[0],
     );
     setCompositionRule("open-war");
   };
@@ -164,7 +164,8 @@ export const NewList = ({ isMobile }) => {
               className={classNames(
                 "radio",
                 "new-list__radio",
-                index === gameSystems.length - 1 && "new-list__radio--last-item"
+                index === gameSystems.length - 1 &&
+                  "new-list__radio--last-item",
               )}
               key={id}
             >
@@ -207,7 +208,8 @@ export const NewList = ({ isMobile }) => {
                     name_en:
                       journalArmy === army
                         ? intl.formatMessage({ id: "new.grandArmy" })
-                        : nameMap[journalArmy].name_en,
+                        : nameMap[journalArmy][`name_${language}`] ||
+                          nameMap[journalArmy].name_en,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
