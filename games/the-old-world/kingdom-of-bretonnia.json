@@ -1195,7 +1195,30 @@
         }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "active": true,
+              "alwaysActive": true
+            }
+          ]
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": ["elementalism"],
@@ -1922,7 +1945,7 @@
       "name_de": "Gralspilger",
       "name_fr": "Pèlerins du Graal",
       "id": "battle-pilgrims",
-      "points": 8,
+      "points": 6,
       "minimum": 5,
       "maximum": 30,
       "command": [
@@ -2344,7 +2367,7 @@
       "name_de": "Gralspilger",
       "name_fr": "Pèlerins du Graal",
       "id": "battle-pilgrims",
-      "points": 8,
+      "points": 6,
       "minimum": 5,
       "maximum": 30,
       "armyComposition": {

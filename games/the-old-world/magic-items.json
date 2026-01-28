@@ -4611,6 +4611,7 @@
       "name_fr": "Soif de Batailles",
       "name_it": "Battle Hunger",
       "points": 10,
+      "perUnitPoints": 20,
       "perModel": false,
       "type": "chaotic-trait",
       "onePerArmy": false,
@@ -7952,6 +7953,18 @@
       "name": "crown of jade"
     },
     {
+      "name_en": "Standard of Wei-Jin",
+      "name_de": "Wei-Jin-Standarte",
+      "name_cn": "巍京战旗",
+      "name_es": "Standard of Wei-Jin",
+      "name_fr": "Étendard de Wei-Jin",
+      "name_it": "Standard of Wei-Jin",
+      "points": 60,
+      "type": "banner",
+      "onePerArmy": true,
+      "name": "standard of wei-jin"
+    },
+    {
       "name_en": "Banner of the Dragon's Wrath",
       "name_de": "Banner des Drachenzorns",
       "name_cn": "龙怒战旗",
@@ -7964,6 +7977,18 @@
       "name": "banner of the dragon's wrath"
     },
     {
+      "name_en": "Icon of Heavenly Fury",
+      "name_de": "Ikone der Göttlichen Wut",
+      "name_cn": "天怒圣像",
+      "name_es": "Icon of Heavenly Fury",
+      "name_fr": "Icône de Fureur Céleste",
+      "name_it": "Icon of Heavenly Fury",
+      "points": 45,
+      "type": "banner",
+      "onePerArmy": true,
+      "name": "icon of heavenly fury"
+    },
+    {
       "name_en": "The Jade Banner",
       "name_de": "Jadestandarte",
       "name_cn": "翠玉战旗",
@@ -7974,30 +7999,6 @@
       "type": "banner",
       "onePerArmy": true,
       "name": "the jade banner"
-    },
-    {
-      "name_en": "Standard of Wei-Jin",
-      "name_de": "Wei-Jin-Standarte",
-      "name_cn": "巍京战旗",
-      "name_es": "Standard of Wei-Jin",
-      "name_fr": "Étendard de Wei-Jin",
-      "name_it": "Standard of Wei-Jin",
-      "points": 40,
-      "type": "banner",
-      "onePerArmy": true,
-      "name": "standard of wei-jin"
-    },
-    {
-      "name_en": "Icon of Heavenly Fury",
-      "name_de": "Ikone der Göttlichen Wut",
-      "name_cn": "天怒圣像",
-      "name_es": "Icon of Heavenly Fury",
-      "name_fr": "Icône de Fureur Céleste",
-      "name_it": "Icon of Heavenly Fury",
-      "points": 35,
-      "type": "banner",
-      "onePerArmy": true,
-      "name": "icon of heavenly fury"
     },
     {
       "name_en": "Dragon's Eye Banner",
@@ -8054,7 +8055,7 @@
       "name_es": "Maw Shard",
       "name_fr": "Éclat de la Gueule",
       "name_it": "Maw Shard",
-      "points": 40,
+      "points": 50,
       "type": "enchanted-item",
       "onePerArmy": true,
       "name": "maw shard"
@@ -8072,16 +8073,15 @@
       "name": "alchemist's mask"
     },
     {
-      "name_en": "Ring of Jet*",
-      "name_de": "Pechkohlenring*",
-      "name_cn": "墨玉指环*",
-      "name_es": "Ring of Jet*",
-      "name_fr": "Anneau de Jais*",
-      "name_it": "Ring of Jet*",
+      "name_en": "Ring of Jet",
+      "name_de": "Pechkohlenring",
+      "name_cn": "墨玉指环",
+      "name_es": "Ring of Jet",
+      "name_fr": "Anneau de Jais",
+      "name_it": "Ring of Jet",
       "points": 30,
-      "stackable": true,
       "type": "enchanted-item",
-      "onePerArmy": false,
+      "onePerArmy": true,
       "name": "ring of jet"
     },
     {
@@ -8166,7 +8166,7 @@
       "name_es": "Seal of Xing Po*",
       "name_fr": "Sceau de Xing Po*",
       "name_it": "Seal of Xing Po*",
-      "points": 25,
+      "points": 35,
       "stackable": true,
       "type": "arcane-item",
       "onePerArmy": false,
