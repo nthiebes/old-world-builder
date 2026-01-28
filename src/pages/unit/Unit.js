@@ -1834,7 +1834,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         ) : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
-              const itemsPoints = getUnitMagicPoints({ ...unit, type });
+              const itemsPoints = getUnitMagicPoints({
+                unit: { ...unit, type },
+                item,
+              });
               const maxPoints =
                 (item.armyComposition &&
                   item.armyComposition[unitArmyComposition]?.maxPoints) ||

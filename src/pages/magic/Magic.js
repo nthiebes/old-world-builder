@@ -606,7 +606,10 @@ export const Magic = ({ isMobile }) => {
         unit.items[group].armyComposition[list.armyComposition || list.army]
           ?.maxPoints) ||
       unit.items[group].maxPoints;
-    unitMagicPoints = getUnitMagicPoints({ ...unit, type });
+    unitMagicPoints = getUnitMagicPoints({
+      unit: { ...unit, type },
+      item: unit.items[group],
+    });
     maxItemsPerCategory =
       (unit.items[group].armyComposition &&
         unit.items[group].armyComposition[list.armyComposition || list.army]

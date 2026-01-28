@@ -178,7 +178,7 @@ export const getUnitPoints = (unit, settings) => {
       });
   }
 
-  unitPoints += getUnitMagicPoints(unit);
+  unitPoints += getUnitMagicPoints({ unit });
 
   if (unit.detachments && !settings?.noDetachments) {
     unit.detachments.forEach(
@@ -222,34 +222,42 @@ export const getUnitPoints = (unit, settings) => {
   return unitPoints;
 };
 
-export const getUnitMagicPoints = (unit) => {
+const getMagicItemPoints = ({ item, unit }) => {
   let unitPoints = 0;
 
-  if (unit?.items && unit?.items.length) {
+  // Units with points per model
+  if (unit.type !== "characters" && item.perModel) {
+    unitPoints +=
+      (unit.strength || 1) *
+      (item.amount ? item.amount * item.perModelPoints : item.perModelPoints);
+  }
+
+  // Units with points per unit
+  else if (unit.type !== "characters" && item.perUnitPoints) {
+    unitPoints += item.amount
+      ? item.amount * item.perUnitPoints
+      : item.perUnitPoints;
+  }
+
+  // Characters
+  else {
+    unitPoints += item.amount ? item.amount * item.points : item.points;
+  }
+
+  return unitPoints;
+};
+
+export const getUnitMagicPoints = ({ unit, item }) => {
+  let unitPoints = 0;
+
+  if (item) {
+    (item.selected || []).forEach((selected) => {
+      unitPoints += getMagicItemPoints({ item: selected, unit });
+    });
+  } else if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {
       (item.selected || []).forEach((selected) => {
-        // Units with points per model
-        if (unit.type !== "characters" && selected.perModel) {
-          unitPoints +=
-            (unit.strength || 1) *
-            (selected.amount
-              ? selected.amount * selected.perModelPoints
-              : selected.perModelPoints);
-        }
-
-        // Units with points per unit
-        else if (unit.type !== "characters" && selected.perUnitPoints) {
-          unitPoints += selected.amount
-            ? selected.amount * selected.perUnitPoints
-            : selected.perUnitPoints;
-        }
-
-        // Characters
-        else {
-          unitPoints += selected.amount
-            ? selected.amount * selected.points
-            : selected.points;
-        }
+        unitPoints += getMagicItemPoints({ item: selected, unit });
       });
     });
   }
