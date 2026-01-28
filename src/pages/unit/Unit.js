@@ -11,6 +11,7 @@ import {
   getPointsPerModel,
   getUnitPoints,
   getUnitMagicPoints,
+  getUnitCommandMagicPoints,
 } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
@@ -711,7 +712,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   },
                   index,
                 ) => {
-                  const commandMagicPoints = getUnitMagicPoints({
+                  const commandMagicPoints = getUnitCommandMagicPoints({
                     selected: magic?.selected,
                     strength: unit.strength,
                   });
@@ -1833,10 +1834,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         ) : null}
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
-              const itemsPoints = getUnitMagicPoints({
-                selected: item.selected,
-                strength: unit.strength,
-              });
+              const itemsPoints = getUnitMagicPoints({ ...unit, type });
               const maxPoints =
                 (item.armyComposition &&
                   item.armyComposition[unitArmyComposition]?.maxPoints) ||

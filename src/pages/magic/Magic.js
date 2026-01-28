@@ -5,7 +5,10 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import { getUnitMagicPoints } from "../../utils/points";
+import {
+  getUnitMagicPoints,
+  getUnitCommandMagicPoints,
+} from "../../utils/points";
 import { fetcher } from "../../utils/fetcher";
 import { normalizeRuleName } from "../../utils/string";
 import { Header, Main } from "../../components/page";
@@ -586,7 +589,7 @@ export const Magic = ({ isMobile }) => {
           list.armyComposition || list.army
         ]?.maxPoints) ||
       commandOptions[command].magic.maxPoints;
-    unitMagicPoints = getUnitMagicPoints({
+    unitMagicPoints = getUnitCommandMagicPoints({
       selected: commandOptions[command].magic.selected,
       strength: unit.strength,
     });
@@ -603,10 +606,7 @@ export const Magic = ({ isMobile }) => {
         unit.items[group].armyComposition[list.armyComposition || list.army]
           ?.maxPoints) ||
       unit.items[group].maxPoints;
-    unitMagicPoints = getUnitMagicPoints({
-      selected: unit.items[group].selected,
-      strength: unit.strength,
-    });
+    unitMagicPoints = getUnitMagicPoints({ ...unit, type });
     maxItemsPerCategory =
       (unit.items[group].armyComposition &&
         unit.items[group].armyComposition[list.armyComposition || list.army]

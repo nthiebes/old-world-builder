@@ -178,34 +178,7 @@ export const getUnitPoints = (unit, settings) => {
       });
   }
 
-  if (unit?.items && unit?.items.length) {
-    unit.items.forEach((item) => {
-      (item.selected || []).forEach((selected) => {
-        // Units with points per model
-        if (unit.type !== "characters" && selected.perModel) {
-          unitPoints +=
-            (unit.strength || 1) *
-            (selected.amount
-              ? selected.amount * selected.perModelPoints
-              : selected.perModelPoints);
-        }
-
-        // Units with points per unit
-        else if (unit.type !== "characters" && selected.perUnitPoints) {
-          unitPoints += selected.amount
-            ? selected.amount * selected.perUnitPoints
-            : selected.perUnitPoints;
-        }
-
-        // Characters
-        else {
-          unitPoints += selected.amount
-            ? selected.amount * selected.points
-            : selected.points;
-        }
-      });
-    });
-  }
+  unitPoints += getUnitMagicPoints(unit);
 
   if (unit.detachments && !settings?.noDetachments) {
     unit.detachments.forEach(
@@ -249,7 +222,42 @@ export const getUnitPoints = (unit, settings) => {
   return unitPoints;
 };
 
-export const getUnitMagicPoints = ({ selected, strength }) => {
+export const getUnitMagicPoints = (unit) => {
+  let unitPoints = 0;
+
+  if (unit?.items && unit?.items.length) {
+    unit.items.forEach((item) => {
+      (item.selected || []).forEach((selected) => {
+        // Units with points per model
+        if (unit.type !== "characters" && selected.perModel) {
+          unitPoints +=
+            (unit.strength || 1) *
+            (selected.amount
+              ? selected.amount * selected.perModelPoints
+              : selected.perModelPoints);
+        }
+
+        // Units with points per unit
+        else if (unit.type !== "characters" && selected.perUnitPoints) {
+          unitPoints += selected.amount
+            ? selected.amount * selected.perUnitPoints
+            : selected.perUnitPoints;
+        }
+
+        // Characters
+        else {
+          unitPoints += selected.amount
+            ? selected.amount * selected.points
+            : selected.points;
+        }
+      });
+    });
+  }
+
+  return unitPoints;
+};
+
+export const getUnitCommandMagicPoints = ({ selected, strength }) => {
   let unitPoints = 0;
 
   selected &&
