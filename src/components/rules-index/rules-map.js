@@ -318,6 +318,7 @@ export const synonyms = {
   "chaos furies of nurgle": "chaos furies",
   "chaos furies of slaanesh": "chaos furies",
   "chaos furies of khorne": "chaos furies",
+  shadowlands: "lore of the shadowlands",
 };
 
 export const rulesMap = {
