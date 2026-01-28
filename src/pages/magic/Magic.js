@@ -42,7 +42,7 @@ const updateIds = (items) => {
             (conditionalItem, conditionalIndex) => ({
               ...conditionalItem,
               id: `${index}-${conditionalIndex}`,
-            })
+            }),
           ),
         };
       }
@@ -59,31 +59,31 @@ export const isAllowedShield = (unit) => {
   return (
     (unit.equipment &&
       unit.equipment.some((option) =>
-        option.name_en.toLowerCase().includes("shield")
+        option.name_en.toLowerCase().includes("shield"),
       )) ||
     (unit.options &&
       unit.options.some((option) =>
-        option.name_en.toLowerCase().includes("shield")
+        option.name_en.toLowerCase().includes("shield"),
       )) ||
     (unit.armor &&
       unit.armor.some((option) =>
-        option.name_en.toLowerCase().includes("shield")
+        option.name_en.toLowerCase().includes("shield"),
       )) ||
     (unit.detachments &&
       unit.detachments.some(
         (option) =>
           (option.options &&
             option.options.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield")
+              subOption.name_en.toLowerCase().includes("shield"),
             )) ||
           (option.equipment &&
             option.equipment.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield")
+              subOption.name_en.toLowerCase().includes("shield"),
             )) ||
           (option.armor &&
             option.armor.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield")
-            ))
+              subOption.name_en.toLowerCase().includes("shield"),
+            )),
       ))
   );
 };
@@ -102,7 +102,7 @@ export const isDisallowedShield = (magicItem, unit) => {
 export const notEnoughPointsRemaining = (
   maxMagicPoints,
   magicItem,
-  unitPointsRemaining
+  unitPointsRemaining,
 ) => {
   return maxMagicPoints && magicItem.points > unitPointsRemaining;
 };
@@ -116,7 +116,7 @@ export const Magic = ({ isMobile }) => {
   const { listId, type, unitId, command, group } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
@@ -132,7 +132,7 @@ export const Magic = ({ isMobile }) => {
           (command !== undefined &&
             unit &&
             unit.command &&
-            unit.command[command]?.magic?.magicItemsArmy === id)
+            unit.command[command]?.magic?.magicItemsArmy === id),
       );
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [comboUsedElsewhere, setComboUsedElsewhere] = useState([]);
@@ -192,7 +192,7 @@ export const Magic = ({ isMobile }) => {
       gameSystems
         .find(({ id }) => id === list.game)
         .armies.find(
-          ({ id }) => unit.magicItemsArmy === id || list.army === id
+          ({ id }) => unit.magicItemsArmy === id || list.army === id,
         );
   }
 
@@ -226,13 +226,13 @@ export const Magic = ({ isMobile }) => {
           ({ name_en, name }) =>
             name
               ? name !== event.target.value
-              : normalizeRuleName(name_en) !== event.target.value
+              : normalizeRuleName(name_en) !== event.target.value,
         );
       } else {
         magicItems = unit.items[group].selected.filter(({ name_en, name }) =>
           name
             ? name !== event.target.value
-            : normalizeRuleName(name_en) !== event.target.value
+            : normalizeRuleName(name_en) !== event.target.value,
         );
       }
     }
@@ -247,7 +247,7 @@ export const Magic = ({ isMobile }) => {
                 selected: magicItems,
               },
             }
-          : entry
+          : entry,
       );
 
       dispatch(
@@ -256,7 +256,7 @@ export const Magic = ({ isMobile }) => {
           type,
           unitId,
           command: newCommand,
-        })
+        }),
       );
     } else {
       const newItems = unit.items.map((entry, entryIndex) =>
@@ -265,7 +265,7 @@ export const Magic = ({ isMobile }) => {
               ...entry,
               selected: magicItems,
             }
-          : entry
+          : entry,
       );
 
       dispatch(
@@ -274,7 +274,7 @@ export const Magic = ({ isMobile }) => {
           type,
           unitId,
           items: newItems,
-        })
+        }),
       );
     }
   };
@@ -300,7 +300,7 @@ export const Magic = ({ isMobile }) => {
           } else {
             return item;
           }
-        }
+        },
       );
     } else {
       magicItems = (unit.items[group].selected || []).map((item) => {
@@ -330,7 +330,7 @@ export const Magic = ({ isMobile }) => {
                 selected: magicItems,
               },
             }
-          : entry
+          : entry,
       );
 
       dispatch(
@@ -339,7 +339,7 @@ export const Magic = ({ isMobile }) => {
           type,
           unitId,
           command: newCommand,
-        })
+        }),
       );
     } else {
       const newItems = unit.items.map((entry, entryIndex) =>
@@ -348,7 +348,7 @@ export const Magic = ({ isMobile }) => {
               ...entry,
               selected: magicItems,
             }
-          : entry
+          : entry,
       );
 
       dispatch(
@@ -357,7 +357,7 @@ export const Magic = ({ isMobile }) => {
           type,
           unitId,
           items: newItems,
-        })
+        }),
       );
     }
   };
@@ -410,7 +410,7 @@ export const Magic = ({ isMobile }) => {
 
           if (unit.magicItemsArmy) {
             itemCategories = itemCategories.filter(
-              (itemCategory) => itemCategory !== army.id
+              (itemCategory) => itemCategory !== army.id,
             );
             if (data[unit.magicItemsArmy]) {
               itemCategories.push(unit.magicItemsArmy);
@@ -458,7 +458,7 @@ export const Magic = ({ isMobile }) => {
     usedElsewhereErrors,
   }) => {
     const isCommand = Boolean(
-      unit && commandOptions[command]?.magic?.types.length
+      unit && commandOptions[command]?.magic?.types.length,
     );
 
     const max = !maxMagicPoints
@@ -480,7 +480,7 @@ export const Magic = ({ isMobile }) => {
         <div
           className={classNames(
             "checkbox",
-            isConditional && "checkbox--conditional"
+            isConditional && "checkbox--conditional",
           )}
         >
           <input
@@ -497,7 +497,7 @@ export const Magic = ({ isMobile }) => {
               (notEnoughPointsRemaining(
                 maxMagicPoints,
                 magicItem,
-                unitPointsRemaining
+                unitPointsRemaining,
               ) ||
                 isTypeLimitReached ||
                 isDisallowedShield(magicItem, unit))
@@ -510,7 +510,7 @@ export const Magic = ({ isMobile }) => {
             <span className="magic__label-text">
               {(magicItem[`name_${language}`] || magicItem.name_en).replace(
                 / *\{[^)]*\}/g,
-                ""
+                "",
               )}
             </span>
             <i className="checkbox__points">
@@ -569,13 +569,13 @@ export const Magic = ({ isMobile }) => {
     (commandOption) =>
       !commandOption.armyComposition ||
       commandOption.armyComposition.includes(
-        unit.army || list?.armyComposition || list?.army
-      )
+        unit.army || list?.armyComposition || list?.army,
+      ),
   );
   const hasCommandMagicItems = Boolean(
     commandOptions &&
       commandOptions[command] &&
-      commandOptions[command]?.magic?.types.length
+      commandOptions[command]?.magic?.types.length,
   );
   const hasMagicItems = Boolean(unit?.items?.length);
 
@@ -611,6 +611,8 @@ export const Magic = ({ isMobile }) => {
           ?.maxItemsPerCategory) ||
       unit.items[group].maxItemsPerCategory ||
       0;
+
+    console.log(unit.items[group].selected);
   }
 
   // Backwards compatibility for runes
@@ -680,13 +682,13 @@ export const Magic = ({ isMobile }) => {
           const commandMagicItems = itemGroup.items.filter(
             (item) =>
               hasCommandMagicItems &&
-              commandOptions[command].magic.types.includes(item.type)
+              commandOptions[command].magic.types.includes(item.type),
           );
           const magicItems = itemGroup.items.filter(
             (item) =>
               hasMagicItems &&
               !command &&
-              unit.items[group].types.includes(item.type)
+              unit.items[group].types.includes(item.type),
           );
           const itemGroupItems = (
             hasCommandMagicItems ? commandMagicItems : magicItems
@@ -696,8 +698,8 @@ export const Magic = ({ isMobile }) => {
               (!item.armyComposition ||
                 equalsOrIncludes(
                   item.armyComposition,
-                  unit.army || list?.armyComposition || list?.army
-                ))
+                  unit.army || list?.armyComposition || list?.army,
+                )),
           );
 
           if (itemGroupItems.length > 0) {
@@ -728,7 +730,7 @@ export const Magic = ({ isMobile }) => {
                   ({ name, name_en }) =>
                     name
                       ? name === magicItem.name
-                      : normalizeRuleName(name_en) === magicItem.name
+                      : normalizeRuleName(name_en) === magicItem.name,
                 );
                 let itemCountInCategory = 0;
                 let masterRuneInCategory = false;
@@ -741,7 +743,7 @@ export const Magic = ({ isMobile }) => {
                         masterRuneInCategory = true;
                       }
                     }
-                  }
+                  },
                 );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
@@ -769,16 +771,16 @@ export const Magic = ({ isMobile }) => {
                           (isComboExclusiveCategory &&
                             magicItem.type === selectedItem.type &&
                             (magicItem.nonExclusive === false ||
-                              selectedItem.nonExclusive === false)) // If a rune is exclusive, it can't be combined with other runes.
+                              selectedItem.nonExclusive === false)), // If a rune is exclusive, it can't be combined with other runes.
                       );
 
                 const usedElsewhereErrors = usedElsewhere.filter(
-                  (e) => e.itemName === magicItem.name_en
+                  (e) => e.itemName === magicItem.name_en,
                 );
                 const comboUsedElsewhereErrors =
                   isFirstItemType &&
                   comboUsedElsewhere.filter(
-                    (e) => e.category === magicItem.type
+                    (e) => e.category === magicItem.type,
                   );
                 const comboUsedBy =
                   comboUsedElsewhereErrors?.length > 0 &&
@@ -847,7 +849,7 @@ export const Magic = ({ isMobile }) => {
                             isConditional: true,
                             isTypeLimitReached,
                             usedElsewhereErrors,
-                          })
+                          }),
                         )
                       : null}
                   </Fragment>

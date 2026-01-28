@@ -24,7 +24,7 @@ export const getUnitLeadership = (unitName) => {
           (parseInt(statLine.Ld) || 0) > previousValue
             ? parseInt(statLine.Ld)
             : previousValue,
-        0
+        0,
       )
     : 0;
 };
@@ -48,13 +48,15 @@ export const getAllOptions = (
     language: overrideLanguage,
     pageNumbers,
     armyComposition,
-  } = {}
+  } = {},
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
   const detachmentActive =
     options?.length > 0 &&
     Boolean(
-      options.find((option) => option.name_en === "Detachment" && option.active)
+      options.find(
+        (option) => option.name_en === "Detachment" && option.active,
+      ),
     );
   const lores = unitArmyComposition?.[armyComposition]?.lores || unitLores;
   const allCommand = [];
@@ -81,7 +83,7 @@ export const getAllOptions = (
               selectedItem.amount > 1
                 ? `${selectedItem.amount}x ` +
                     selectedItem[`name_${language}`] || selectedItem.name_en
-                : selectedItem[`name_${language}`] || selectedItem.name_en
+                : selectedItem[`name_${language}`] || selectedItem.name_en,
             );
           });
         }
@@ -102,7 +104,7 @@ export const getAllOptions = (
             (equippedDefault && !requiredMagicItem) ||
             (active &&
               requiredMagicItem &&
-              unitHasItem({ items }, requiredMagicItem))
+              unitHasItem({ items }, requiredMagicItem)),
         )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
@@ -113,7 +115,7 @@ export const getAllOptions = (
             (active && !requiredMagicItem) ||
             (active &&
               requiredMagicItem &&
-              unitHasItem({ items }, requiredMagicItem))
+              unitHasItem({ items }, requiredMagicItem)),
         )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
@@ -155,10 +157,10 @@ export const getAllOptions = (
           allOptions.push(optionEntry);
         } else if (stackableCount > 0) {
           allOptions.push(
-            `${stackableCount}x ${entry[`name_${language}`] || name_en}`
+            `${stackableCount}x ${entry[`name_${language}`] || name_en}`,
           );
         }
-      }
+      },
     );
   }
 
@@ -170,7 +172,7 @@ export const getAllOptions = (
           (equippedDefault && !requiredMagicItem) ||
           (active &&
             requiredMagicItem &&
-            unitHasItem({ items }, requiredMagicItem))
+            unitHasItem({ items }, requiredMagicItem)),
       )
       .forEach(({ active, name_en, options, ...entry }) => {
         if (active) {
@@ -202,7 +204,7 @@ export const getAllOptions = (
           selectedItem.amount > 1
             ? `${selectedItem.amount}x ` +
                 (selectedItem[`name_${language}`] || selectedItem.name_en)
-            : selectedItem[`name_${language}`] || selectedItem.name_en
+            : selectedItem[`name_${language}`] || selectedItem.name_en,
         );
       });
     });
@@ -218,12 +220,12 @@ export const getAllOptions = (
               if (option.stackable && option.stackableCount > 0) {
                 equipmentSelection.push(
                   `${option.stackableCount}x ${option[`name_${language}`]}` ||
-                    option.name_en
+                    option.name_en,
                 );
               } else {
                 (option.active || option.equippedDefault) &&
                   equipmentSelection.push(
-                    `${option[`name_${language}`]}` || option.name_en
+                    `${option[`name_${language}`]}` || option.name_en,
                   );
               }
             });
@@ -232,7 +234,7 @@ export const getAllOptions = (
             armor.forEach((option) => {
               option.active &&
                 equipmentSelection.push(
-                  `${option[`name_${language}`]}` || option.name_en
+                  `${option[`name_${language}`]}` || option.name_en,
                 );
             });
           }
@@ -240,7 +242,7 @@ export const getAllOptions = (
             options.forEach((option) => {
               option.active &&
                 equipmentSelection.push(
-                  `${option[`name_${language}`]}` || option.name_en
+                  `${option[`name_${language}`]}` || option.name_en,
                 );
             });
           }
@@ -258,11 +260,11 @@ export const getAllOptions = (
   if (isWizard({ options, command, mounts })) {
     if (activeLore && nameMap[activeLore].name_en !== "None") {
       lore.push(
-        nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en
+        nameMap[activeLore][`name_${language}`] || nameMap[activeLore].name_en,
       );
     } else if (lores?.length && nameMap[lores[0]].name_en !== "None") {
       lore.push(
-        nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en
+        nameMap[lores[0]][`name_${language}`] || nameMap[lores[0]].name_en,
       );
     }
   }
@@ -326,7 +328,7 @@ export const getStats = (unit, armyComposition) => {
     const detachmentSynonym = synonyms[normalizedDetachment];
 
     detachmentStats.push(
-      ...(rulesMap[detachmentSynonym || normalizedDetachment]?.stats || [])
+      ...(rulesMap[detachmentSynonym || normalizedDetachment]?.stats || []),
     );
   });
 
@@ -336,7 +338,7 @@ export const getStats = (unit, armyComposition) => {
 export const getUnitName = ({ unit, language }) => {
   return (unit.name || unit[`name_${language}`] || unit.name_en).replace(
     / *\{[^)]*\}/g,
-    ""
+    "",
   );
 };
 
@@ -352,13 +354,13 @@ export const getUnitOptionNotes = ({
       <p
         className={classNames(
           className,
-          disabled && "unit__option-note--disabled"
+          disabled && "unit__option-note--disabled",
         )}
         key={`${key}-${index}`}
       >
         {note[`name_${language}`] || note.name_en}
       </p>
-    )
+    ),
   );
 };
 
@@ -371,7 +373,7 @@ export const getUnitOptionNotes = ({
 export const findOption = (
   options,
   testFunc,
-  onlyFollowActiveOptions = true
+  onlyFollowActiveOptions = true,
 ) => {
   if (Array.isArray(options)) {
     for (const option of options) {
@@ -397,14 +399,14 @@ export const findOption = (
 export const findAllOptions = (
   options,
   testFunc,
-  onlyFollowActiveOptions = true
+  onlyFollowActiveOptions = true,
 ) => {
   const foundOptions = [];
 
   if (Array.isArray(options)) {
     for (const option of options) {
       foundOptions.push(
-        ...findAllOptions(option, testFunc, onlyFollowActiveOptions)
+        ...findAllOptions(option, testFunc, onlyFollowActiveOptions),
       );
     }
   } else if (options) {
@@ -413,7 +415,7 @@ export const findAllOptions = (
     }
     if ((!onlyFollowActiveOptions || options.active) && options.options) {
       foundOptions.push(
-        ...findAllOptions(options.options, testFunc, onlyFollowActiveOptions)
+        ...findAllOptions(options.options, testFunc, onlyFollowActiveOptions),
       );
     }
   }
@@ -430,7 +432,7 @@ export const unitHasItem = (unit, itemName) => {
       if (
         itemCategory.selected &&
         itemCategory.selected.find(
-          ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase()
+          ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase(),
         )
       ) {
         return true;
@@ -457,8 +459,8 @@ export const optionsHaveActiveWizard = (optionHolder) => {
     findOption(
       optionHolder.options,
       ({ name_en, active }) =>
-        active && name_en.toLowerCase().includes("wizard")
-    )
+        active && name_en.toLowerCase().includes("wizard"),
+    ),
   );
 };
 
@@ -472,7 +474,7 @@ export const hasActiveWizardOption = (optionHoldersList) => {
             .filter((activeOptionHolder) => activeOptionHolder.options)
             .flatMap(
               (activeOptionHolderWithOptions) =>
-                activeOptionHolderWithOptions.options
+                activeOptionHolderWithOptions.options,
             )
         : [],
   };
@@ -488,7 +490,10 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
     .split(", ")
     .filter((rule) => /^Lore of/.test(rule))
     .reduce((result, rule) => {
-      const loreId = rule.toLowerCase().replace(/ /g, "-");
+      const loreId = rule
+        .toLowerCase()
+        .replace(/ /g, "-")
+        .replace("-{renegade}", "");
 
       // If the unit has the Lore of Chaos, only the spell matching its Mark of Chaos must be available
       if (loreId === "lore-of-chaos") {
@@ -497,8 +502,8 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
           ({ active, name_en }) =>
             active &&
             /^Mark of (Chaos Undivided|Nurgle|Khorne|Slaanesh|Tzeentch)/.test(
-              name_en
-            )
+              name_en,
+            ),
         );
         const markOfChaos = markOfChaosOption
           ? markOfChaosOption.name_en.slice(8).toLowerCase().replace(/ /g, "-")
@@ -510,9 +515,9 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
         }
 
         const loreOfChaosSpell = Object.entries(
-          loresOfMagicWithSpells[loreId]
+          loresOfMagicWithSpells[loreId],
         ).find(
-          ([spellId, spellData]) => spellData["mark-of-chaos"] === markOfChaos
+          ([spellId, spellData]) => spellData["mark-of-chaos"] === markOfChaos,
         );
         return {
           ...result,
@@ -535,7 +540,7 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
   // Lores added via unit option
   let optionsLore = findOption(
     unit.options,
-    ({ active, name_en }) => active && /Lore of Yang|Lore of Yin/.test(name_en)
+    ({ active, name_en }) => active && /Lore of Yang|Lore of Yin/.test(name_en),
   );
 
   if (optionsLore) {
@@ -574,7 +579,7 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
       : findOption(
           unit.options || [],
           ({ active, name_en }) =>
-            active && /^Arise!, Level 1 Wizard/.test(name_en)
+            active && /^Arise!, Level 1 Wizard/.test(name_en),
         )
       ? { necromancy: loresOfMagicWithSpells["necromancy"] }
       : unitLores.length > 0
@@ -603,7 +608,7 @@ export const getUnitWizardryLevel = (unit) => {
   }
 
   const levelOptions = findAllOptions(unit?.options, (option) =>
-    /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en)
+    /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
   );
 
   let wizardryLevel = 4;
