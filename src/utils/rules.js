@@ -1098,7 +1098,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["centigore-chieftain"],
+          requires: ["centigore-chieftain", "ghorros"],
           perUnit: true,
         },
         {
