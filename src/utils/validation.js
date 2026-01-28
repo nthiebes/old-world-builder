@@ -76,8 +76,8 @@ export const validateList = ({ list, language, intl }) => {
         (unit) =>
           unit.command &&
           unit.command.find(
-            (command) => command.active && command.name_en === "General"
-          )
+            (command) => command.active && command.name_en === "General",
+          ),
       );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
@@ -89,7 +89,7 @@ export const validateList = ({ list, language, intl }) => {
           (command) =>
             command.name_en === "General" &&
             (!command.armyComposition ||
-              equalsOrIncludes(command.armyComposition, list.armyComposition))
+              equalsOrIncludes(command.armyComposition, list.armyComposition)),
         )
       ) {
         const unitName =
@@ -114,8 +114,8 @@ export const validateList = ({ list, language, intl }) => {
           unit.command.find(
             (command) =>
               command.active &&
-              command.name_en.includes("Battle Standard Bearer")
-          )
+              command.name_en.includes("Battle Standard Bearer"),
+          ),
       );
 
   const coreUnits = list?.core?.length
@@ -231,7 +231,7 @@ export const validateList = ({ list, language, intl }) => {
         { ...unit, type },
         {
           armyComposition: list.armyComposition || list.army,
-        }
+        },
       );
 
       if (unitPoints > list.points / 4) {
@@ -350,11 +350,11 @@ export const validateList = ({ list, language, intl }) => {
       const characterRestricted = Boolean(
         characterUnitsRules &&
           characterUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+            ruleUnit.ids.includes(unit.id.split(".")[0]),
+          )?.max,
       );
       const characterCount = list.characters.filter(
-        (character) => character.id.split(".")[0] === unit.id.split(".")[0]
+        (character) => character.id.split(".")[0] === unit.id.split(".")[0],
       ).length;
 
       if (
@@ -362,7 +362,7 @@ export const validateList = ({ list, language, intl }) => {
         !unit.named &&
         characterCount > charactersMax &&
         !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
         )
       ) {
         restrictedUnits.push({
@@ -379,20 +379,20 @@ export const validateList = ({ list, language, intl }) => {
       const coreRestricted = Boolean(
         coreUnitsRules &&
           coreUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+            ruleUnit.ids.includes(unit.id.split(".")[0]),
+          )?.max,
       );
       const coreCount = list.core.filter(
         (core) =>
           core.id.split(".")[0] === unit.id.split(".")[0] ||
-          hasSharedCombinedArmsLimit(core, unit)
+          hasSharedCombinedArmsLimit(core, unit),
       ).length;
 
       if (
         !coreRestricted &&
         coreCount > coreMax &&
         !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
         )
       ) {
         restrictedUnits.push({
@@ -409,18 +409,18 @@ export const validateList = ({ list, language, intl }) => {
       const specialRestricted = Boolean(
         specialUnitsRules &&
           specialUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+            ruleUnit.ids.includes(unit.id.split(".")[0]),
+          )?.max,
       );
       const specialCount = list.special.filter(
-        (special) => special.id.split(".")[0] === unit.id.split(".")[0]
+        (special) => special.id.split(".")[0] === unit.id.split(".")[0],
       ).length;
 
       if (
         !specialRestricted &&
         specialCount > specialMax &&
         !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
         )
       ) {
         restrictedUnits.push({
@@ -437,18 +437,18 @@ export const validateList = ({ list, language, intl }) => {
       const rareRestricted = Boolean(
         rareUnitsRules &&
           rareUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+            ruleUnit.ids.includes(unit.id.split(".")[0]),
+          )?.max,
       );
       const rareCount = list.rare.filter(
-        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0]
+        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0],
       ).length;
 
       if (
         !rareRestricted &&
         rareCount > rareAndMercMax &&
         !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
         )
       ) {
         restrictedUnits.push({
@@ -465,18 +465,18 @@ export const validateList = ({ list, language, intl }) => {
       const mercRestricted = Boolean(
         mercenariesUnitsRules &&
           mercenariesUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0])
-          )?.max
+            ruleUnit.ids.includes(unit.id.split(".")[0]),
+          )?.max,
       );
       const mercCount = list.mercenaries.filter(
-        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0]
+        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0],
       ).length;
 
       if (
         !mercRestricted &&
         mercCount > rareAndMercMax &&
         !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0]
+          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
         )
       ) {
         restrictedUnits.push({
@@ -507,7 +507,7 @@ export const validateList = ({ list, language, intl }) => {
           { ...unit, type: "characters" },
           {
             armyComposition: list.armyComposition || list.army,
-          }
+          },
         );
         if (unitPoints > list.points / 4) {
           errors.push({
@@ -525,7 +525,7 @@ export const validateList = ({ list, language, intl }) => {
           {
             armyComposition: list.armyComposition || list.army,
             noDetachments: true,
-          }
+          },
         );
         if (unitPoints > list.points * 0.35) {
           errors.push({
@@ -542,7 +542,7 @@ export const validateList = ({ list, language, intl }) => {
           {
             armyComposition: list.armyComposition || list.army,
             noDetachments: true,
-          }
+          },
         );
         if (unitPoints > list.points * 0.3) {
           errors.push({
@@ -559,7 +559,7 @@ export const validateList = ({ list, language, intl }) => {
           {
             armyComposition: list.armyComposition || list.army,
             noDetachments: true,
-          }
+          },
         );
         if (unitPoints > list.points * 0.25) {
           errors.push({
@@ -575,7 +575,7 @@ export const validateList = ({ list, language, intl }) => {
           {
             armyComposition: list.armyComposition || list.army,
             noDetachments: true,
-          }
+          },
         );
         if (unitPoints > list.points * 0.25) {
           errors.push({
@@ -594,7 +594,7 @@ export const validateList = ({ list, language, intl }) => {
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
         : list[type]
     ).filter(
-      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
+      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
     );
     const requiredUnitsInList =
       ruleUnit.requiresType &&
@@ -603,10 +603,11 @@ export const validateList = ({ list, language, intl }) => {
         : list[ruleUnit.requiresType]
       ).filter(
         (unit) =>
-          ruleUnit.requires && ruleUnit.requires.includes(unit.id.split(".")[0])
+          ruleUnit.requires &&
+          ruleUnit.requires.includes(unit.id.split(".")[0]),
       );
     const namesInList = joinWithOr(
-      uniq(unitsInList.map((unit) => getUnitName({ unit, language })))
+      uniq(unitsInList.map((unit) => getUnitName({ unit, language }))),
     );
     const unitNames =
       ruleUnit.min > 0 &&
@@ -616,8 +617,8 @@ export const validateList = ({ list, language, intl }) => {
             const name = intl.formatMessage({ id });
 
             return getUnitName({ unit: { name }, language });
-          })
-        )
+          }),
+        ),
       );
     const requiredNames =
       ruleUnit.requires &&
@@ -627,8 +628,8 @@ export const validateList = ({ list, language, intl }) => {
             const name = intl.formatMessage({ id });
 
             return getUnitName({ unit: { name }, language });
-          })
-        )
+          }),
+        ),
       );
     const points = ruleUnit.points;
     const min = points
@@ -699,13 +700,13 @@ export const validateList = ({ list, language, intl }) => {
         const generalWithOption = generals
           .filter(
             (general) =>
-              ruleUnit.requiresOption.unit === general.id.split(".")[0]
+              ruleUnit.requiresOption.unit === general.id.split(".")[0],
           )
           .find((general) =>
             general.options.find(
               (option) =>
-                option.id === ruleUnit.requiresOption.id && option.active
-            )
+                option.id === ruleUnit.requiresOption.id && option.active,
+            ),
           );
 
         if (
@@ -733,7 +734,7 @@ export const validateList = ({ list, language, intl }) => {
       ].filter(
         (unit) =>
           ruleUnit.requiresIfGeneral &&
-          ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0])
+          ruleUnit.requiresIfGeneral.includes(unit.id.split(".")[0]),
       );
       if (requiredUnitsByGeneralInList.length === 0) {
         errors.push({
@@ -751,12 +752,12 @@ export const validateList = ({ list, language, intl }) => {
         (character) =>
           !Boolean(
             character.mounts.find(
-              (mount) => mount.active && mount.name_en !== "On foot"
-            )
-          )
+              (mount) => mount.active && mount.name_en !== "On foot",
+            ),
+          ),
       );
       const requiredNames = joinWithAnd(
-        charactersNotMounted.map((unit) => getUnitName({ unit, language }))
+        charactersNotMounted.map((unit) => getUnitName({ unit, language })),
       );
 
       charactersNotMounted.length &&
@@ -771,12 +772,12 @@ export const validateList = ({ list, language, intl }) => {
     if (ruleUnit.requiresOption) {
       const charactersInList = unitsInList.filter(
         (character) =>
-          ruleUnit.requiresOption.unit === character.id.split(".")[0]
+          ruleUnit.requiresOption.unit === character.id.split(".")[0],
       );
       const characterWithOption = charactersInList.find((character) =>
         character.options.find(
-          (option) => option.id === ruleUnit.requiresOption.id && option.active
-        )
+          (option) => option.id === ruleUnit.requiresOption.id && option.active,
+        ),
       );
 
       if (charactersInList.length && !characterWithOption) {
@@ -793,13 +794,13 @@ export const validateList = ({ list, language, intl }) => {
     if (ruleUnit.requiresCommand) {
       const charactersInList = unitsInList.filter(
         (character) =>
-          ruleUnit.requiresCommand.unit === character.id.split(".")[0]
+          ruleUnit.requiresCommand.unit === character.id.split(".")[0],
       );
       const characterWithCommand = charactersInList.find((character) =>
         character.commands.find(
           (command) =>
-            command.id === ruleUnit.requiresCommand.id && command.active
-        )
+            command.id === ruleUnit.requiresCommand.id && command.active,
+        ),
       );
 
       if (charactersInList.length && !characterWithCommand) {
@@ -877,7 +878,7 @@ export const validateList = ({ list, language, intl }) => {
         unit.items.forEach((itemCategory) => {
           if (
             itemCategory.selected.find(
-              (item) => item.name === ruleUnit.requiresMagicItem
+              (item) => item.name === ruleUnit.requiresMagicItem,
             )
           ) {
             hasMagicItem = true;
@@ -901,7 +902,7 @@ export const validateList = ({ list, language, intl }) => {
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
         : list[type]
     ).filter(
-      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0])
+      (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
     );
 
     if (

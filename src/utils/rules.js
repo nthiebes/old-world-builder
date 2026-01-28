@@ -1151,7 +1151,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["rangers"],
+          ids: ["rangers-core"],
           min: 0,
           max: 1,
         },
@@ -1321,7 +1321,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["rangers"],
+          ids: ["rangers-core"],
           min: 0,
           max: 1,
           points: 1000,
