@@ -58,8 +58,8 @@ export const getUnitPoints = (unit, settings) => {
     unit?.options?.length > 0 &&
     Boolean(
       unit.options.find(
-        (option) => option.name_en === "Detachment" && option.active
-      )
+        (option) => option.name_en === "Detachment" && option.active,
+      ),
     );
   let unitPoints = 0;
 
@@ -102,7 +102,7 @@ export const getUnitPoints = (unit, settings) => {
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
-          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem)),
       )
       .forEach((option) => {
         if (option.active && option.perModel) {
@@ -118,7 +118,7 @@ export const getUnitPoints = (unit, settings) => {
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
-          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem)),
       )
       .forEach((option) => {
         if (option.active && option.perModel) {
@@ -158,7 +158,7 @@ export const getUnitPoints = (unit, settings) => {
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
-          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
+          (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem)),
       )
       .forEach((option) => {
         if (option.active && option.perModel) {
@@ -242,21 +242,29 @@ export const getUnitPoints = (unit, settings) => {
             }
           });
         }
-      }
+      },
     );
   }
 
   return unitPoints;
 };
 
-export const getUnitMagicPoints = ({ selected }) => {
+export const getUnitMagicPoints = ({ selected, strength }) => {
   let unitPoints = 0;
 
   selected &&
     selected.forEach((option) => {
-      unitPoints += option.amount
-        ? option.amount * option.points
-        : option.points;
+      const isCharacter = !strength || strength === 1;
+
+      if (option.perModelPoints && !isCharacter) {
+        unitPoints += option.amount
+          ? option.amount * option.perModelPoints * strength
+          : option.perModelPoints * strength;
+      } else {
+        unitPoints += option.amount
+          ? option.amount * option.points
+          : option.points;
+      }
     });
 
   return unitPoints;
@@ -283,7 +291,7 @@ export const getPoints = ({ type, list }) => {
         { ...unit, type },
         {
           armyComposition: list.armyComposition || list.army,
-        }
+        },
       );
     });
 

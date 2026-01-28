@@ -588,6 +588,7 @@ export const Magic = ({ isMobile }) => {
       commandOptions[command].magic.maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: commandOptions[command].magic.selected,
+      strength: unit.strength,
     });
     maxItemsPerCategory =
       (commandOptions[command].magic.armyComposition &&
@@ -604,6 +605,7 @@ export const Magic = ({ isMobile }) => {
       unit.items[group].maxPoints;
     unitMagicPoints = getUnitMagicPoints({
       selected: unit.items[group].selected,
+      strength: unit.strength,
     });
     maxItemsPerCategory =
       (unit.items[group].armyComposition &&
@@ -611,8 +613,6 @@ export const Magic = ({ isMobile }) => {
           ?.maxItemsPerCategory) ||
       unit.items[group].maxItemsPerCategory ||
       0;
-
-    console.log(unit.items[group].selected);
   }
 
   // Backwards compatibility for runes

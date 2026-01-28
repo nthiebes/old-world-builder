@@ -52,7 +52,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const location = useLocation();
   const intl = useIntl();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
@@ -64,13 +64,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     unit?.options?.length > 0 &&
     Boolean(
       unit.options.find(
-        (option) => option.name_en === "Detachment" && option.active
-      )
+        (option) => option.name_en === "Detachment" && option.active,
+      ),
     );
   const detachments =
     army &&
     [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment
+      (coreUnit) => coreUnit.detachment,
     );
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
@@ -87,7 +87,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         strength: event.target.value,
-      })
+      }),
     );
   };
   const handleCustomNoteChange = (event) => {
@@ -97,7 +97,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         customNote: event.target.value,
-      })
+      }),
     );
   };
   const handleStackableOptionChange = ({ id, stackableCount }) => {
@@ -117,7 +117,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         options,
-      })
+      }),
     );
   };
   const handleAddDetachmentClick = ({ id }) => {
@@ -145,12 +145,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDeleteDetachmentClick = ({ id }) => {
     const unitDetachments = [...unit.detachments].filter(
-      (detachment) => detachment.id !== id
+      (detachment) => detachment.id !== id,
     );
 
     dispatch(
@@ -159,12 +159,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDetachmentStrengthClick = ({ id, strength }) => {
     const unitDetachments = [...unit.detachments].map((detachment) =>
-      detachment.id === id ? { ...detachment, strength } : detachment
+      detachment.id === id ? { ...detachment, strength } : detachment,
     );
 
     dispatch(
@@ -173,7 +173,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDetachmentEquipmentChange = ({
@@ -213,7 +213,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleStackableDetachmentChange = ({
@@ -246,7 +246,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleOptionsChange = (id, optionIndex, isRadio) => {
@@ -299,7 +299,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         options: newOptions,
-      })
+      }),
     );
   };
   const handleCommandChange = (id, optionIndex) => {
@@ -354,7 +354,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           ...unit.magic,
           items: magicItems,
         },
-      })
+      }),
     );
   };
   const handleEquipmentChange = ({ id, group }) => {
@@ -374,7 +374,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         equipment,
-      })
+      }),
     );
   };
   const handleArmorChange = (id) => {
@@ -397,7 +397,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         armor,
-      })
+      }),
     );
   };
   const handleMountsChange = (id, optionIndex) => {
@@ -437,7 +437,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         mounts,
-      })
+      }),
     );
   };
   const handleLoresChange = (lore) => {
@@ -447,7 +447,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         activeLore: lore,
-      })
+      }),
     );
   };
   const getPointsText = ({ points, perModel }) => {
@@ -497,8 +497,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             getArmyData({
               data,
               armyComposition: list.armyComposition,
-            })
-          )
+            }),
+          ),
         );
       } else {
         fetcher({
@@ -509,8 +509,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 getArmyData({
                   data,
                   armyComposition: list.armyComposition || list.army,
-                })
-              )
+                }),
+              ),
             );
           },
         });
@@ -596,7 +596,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             { ...unit, type },
             {
               armyComposition: unitArmyComposition,
-            }
+            },
           )} ${intl.formatMessage({
             id: "app.points",
           })}`}
@@ -624,7 +624,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               { ...unit, type },
               {
                 armyComposition: unitArmyComposition,
-              }
+              },
             )} ${intl.formatMessage({
               id: "app.points",
             })}`}
@@ -693,7 +693,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitCommand) =>
                   !unitCommand.armyComposition ||
-                  unitCommand.armyComposition.includes(unitArmyComposition)
+                  unitCommand.armyComposition.includes(unitArmyComposition),
               )
               .map(
                 (
@@ -709,10 +709,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     alwaysActive,
                     ...command
                   },
-                  index
+                  index,
                 ) => {
                   const commandMagicPoints = getUnitMagicPoints({
                     selected: magic?.selected,
+                    strength: unit.strength,
                   });
                   let commandMaxPoints = 0;
 
@@ -729,7 +730,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       <div
                         className={classNames(
                           "checkbox",
-                          type === "characters" && "unit__bsb"
+                          type === "characters" && "unit__bsb",
                         )}
                       >
                         <input
@@ -750,7 +751,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 (commandUnit) =>
                                   commandUnit.active &&
                                   commandUnit.id !== id &&
-                                  commandUnit.exclusive !== false
+                                  commandUnit.exclusive !== false,
                               ))
                           }
                         />
@@ -779,7 +780,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                             className="editor__list unit__link unit__command-list"
                             active={location.pathname.includes(
-                              `magic/${index}`
+                              `magic/${index}`,
                             )}
                             disabled={detachmentActive}
                           >
@@ -789,7 +790,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   .map(
                                     (itemType) =>
                                       nameMap[itemType][`name_${language}`] ||
-                                      nameMap[itemType].name_en
+                                      nameMap[itemType].name_en,
                                   )
                                   .join(", ")}
                               </b>
@@ -798,7 +799,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   className={classNames(
                                     commandMagicPoints > commandMaxPoints &&
                                       commandMaxPoints > 0 &&
-                                      "editor__error"
+                                      "editor__error",
                                   )}
                                 >
                                   {commandMagicPoints}
@@ -841,7 +842,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         (selectedItem[`name_${language}`] ||
                                           selectedItem.name_en)
                                       : selectedItem[`name_${language}`] ||
-                                        selectedItem.name_en
+                                        selectedItem.name_en,
                                   )
                                   .join(", ")
                                   .replace(/\*/g, "")}
@@ -857,14 +858,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               (option) =>
                                 !option.armyComposition ||
                                 option.armyComposition.includes(
-                                  unitArmyComposition
-                                )
+                                  unitArmyComposition,
+                                ),
                             )
                             .map((option, optionIndex) => {
                               const exclusiveCheckedOption = options.find(
                                 (exclusiveOption) =>
                                   exclusiveOption.exclusive &&
-                                  exclusiveOption.active
+                                  exclusiveOption.active,
                               );
 
                               return (
@@ -916,7 +917,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       )}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -929,10 +930,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitEquipment) =>
                   !unitEquipment.armyComposition ||
-                  unitEquipment.armyComposition.includes(unitArmyComposition)
+                  unitEquipment.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -974,7 +975,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       language,
                     })}
                   </Fragment>
-                )
+                ),
               )}
           </>
         )}
@@ -987,10 +988,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitArmor) =>
                   !unitArmor.armyComposition ||
-                  unitArmor.armyComposition.includes(unitArmyComposition)
+                  unitArmor.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -1040,7 +1041,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       })}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -1053,10 +1054,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitOption) =>
                   !unitOption.armyComposition ||
-                  unitOption.armyComposition.includes(unitArmyComposition)
+                  unitOption.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -1077,7 +1078,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
                     (exclusiveOption) =>
-                      exclusiveOption.exclusive && exclusiveOption.active
+                      exclusiveOption.exclusive && exclusiveOption.active,
                   );
 
                   if (!stackable) {
@@ -1124,14 +1125,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 (option) =>
                                   !option.armyComposition ||
                                   option.armyComposition.includes(
-                                    unitArmyComposition
-                                  )
+                                    unitArmyComposition,
+                                  ),
                               )
                               .map((option, optionIndex) => {
                                 const exclusiveCheckedOption = options.find(
                                   (exclusiveOption) =>
                                     exclusiveOption.exclusive &&
-                                    exclusiveOption.active
+                                    exclusiveOption.active,
                                 );
                                 const allOptionsExclusive = useCheckboxes
                                   ? false
@@ -1152,7 +1153,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           handleOptionsChange(
                                             id,
                                             optionIndex,
-                                            allOptionsExclusive
+                                            allOptionsExclusive,
                                           )
                                         }
                                         checked={Boolean(option.active)}
@@ -1233,7 +1234,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       })}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -1282,7 +1283,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     unit.detachments
                       .filter(
                         (detachment) =>
-                          detachment.id.split(".")[0] === id.split(".")[0]
+                          detachment.id.split(".")[0] === id.split(".")[0],
                       )
                       .map(
                         ({
@@ -1420,7 +1421,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                       category: "equipment",
                                                       stackableCount:
                                                         event.target.value,
-                                                    }
+                                                    },
                                                   )
                                                 }
                                               />
@@ -1444,7 +1445,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                     detachmentId: id,
                                                     equipmentId: equipment.id,
                                                     category: "equipment",
-                                                  }
+                                                  },
                                                 )
                                               }
                                               checked={
@@ -1500,7 +1501,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                     equipmentId: armor.id,
                                                     category: "armor",
                                                     isCheckbox: !isRadio,
-                                                  }
+                                                  },
                                                 )
                                               }
                                               checked={armor.active}
@@ -1546,7 +1547,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           detachmentOptions.find(
                                             (exclusiveOption) =>
                                               exclusiveOption.exclusive &&
-                                              exclusiveOption.active
+                                              exclusiveOption.active,
                                           );
 
                                         return (
@@ -1563,7 +1564,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                       equipmentId: option.id,
                                                       category: "options",
                                                       isCheckbox: true,
-                                                    }
+                                                    },
                                                   )
                                                 }
                                                 checked={option.active || false}
@@ -1618,7 +1619,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               </div>
                             </div>
                           );
-                        }
+                        },
                       )}
                 </Fragment>
               ))}
@@ -1633,10 +1634,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 ({ armyComposition }) =>
                   !armyComposition ||
-                  armyComposition.includes(unitArmyComposition)
+                  armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -1681,14 +1682,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             (option) =>
                               !option.armyComposition ||
                               option.armyComposition.includes(
-                                unitArmyComposition
-                              )
+                                unitArmyComposition,
+                              ),
                           )
                           .map((option, optionIndex) => {
                             const exclusiveCheckedOption = options.find(
                               (exclusiveOption) =>
                                 exclusiveOption.exclusive &&
-                                exclusiveOption.active
+                                exclusiveOption.active,
                             );
                             const isDisabled =
                               (exclusiveCheckedOption &&
@@ -1741,7 +1742,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       </>
                     )}
                   </Fragment>
-                )
+                ),
               )}
           </>
         )}
@@ -1758,7 +1759,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
-                      (item) => item.name_en === "Da Hag's Brew"
+                      (item) => item.name_en === "Da Hag's Brew",
                     ) === undefined &&
                   index !== 0
                 ) {
@@ -1789,7 +1790,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
-                      (item) => item.name_en === "Heartwood Pendant*"
+                      (item) => item.name_en === "Heartwood Pendant*",
                     ) === undefined &&
                   index !== 0
                 ) {
@@ -1834,6 +1835,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           ? unit.items.map((item, itemIndex) => {
               const itemsPoints = getUnitMagicPoints({
                 selected: item.selected,
+                strength: unit.strength,
               });
               const maxPoints =
                 (item.armyComposition &&
@@ -1866,7 +1868,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className={classNames(
                           itemsPoints > maxPoints &&
                             maxPoints > 0 &&
-                            "editor__error"
+                            "editor__error",
                         )}
                       >
                         {itemsPoints}
@@ -1911,7 +1913,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               (selectedItem[`name_${language}`] ||
                                 selectedItem.name_en)
                             : selectedItem[`name_${language}`] ||
-                              selectedItem.name_en
+                              selectedItem.name_en,
                         )
                         .join(", ")
                         .replace(/\*/g, "")}
