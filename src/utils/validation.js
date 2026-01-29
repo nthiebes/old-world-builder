@@ -879,7 +879,8 @@ export const validateList = ({ list, language, intl }) => {
           if (
             itemCategory.selected.find(
               (item) =>
-                item.name.replace(/ /g, "-") === ruleUnit.requiresMagicItem,
+                item.name_en.replace(/ /g, "-").toLowerCase() ===
+                ruleUnit.requiresMagicItem,
             )
           ) {
             hasMagicItem = true;
