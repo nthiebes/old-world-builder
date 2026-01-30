@@ -220,6 +220,10 @@ export const Header = ({
             !hasMainNavigation && "header__more--secondary-navigation"
           )}
         >
+          {/*
+            * Can't add <InstallPwa /> here, as it needs to be rendered
+            * on page load to catch the beforeinstallprompt event.
+            */}
           {filters.map(({ callback, name, description, id, checked }) => (
             <li key={id}>
               <div className="checkbox header__checkbox">

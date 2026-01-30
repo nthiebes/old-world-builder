@@ -3,6 +3,32 @@
   "name": "Warhammer: The Old World",
   "armies": [
     {
+      "id": "renegade-crowns",
+      "name_de": "Renegade Crowns",
+      "name_en": "Renegade Crowns",
+      "name_cn": "Renegade Crowns",
+      "name_es": "Renegade Crowns",
+      "name_fr": "Couronnes Renégates",
+      "items": ["general"],
+      "armyComposition": ["renegade-crowns"],
+      "mercenaries": {
+        "renegade-crowns": [
+          {
+            "army": "dwarfen-mountain-holds",
+            "units": ["doomseeker-merc", "imperial-dwarf-mercenaries"]
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["badland-ogre-bulls", "bonegrinder-giant"]
+          },
+          {
+            "army": "empire-of-man",
+            "units": ["imperial-ogres"]
+          }
+        ]
+      }
+    },
+    {
       "id": "empire-of-man",
       "name_de": "Empire of Man",
       "name_en": "Empire of Man",
@@ -140,13 +166,13 @@
             "units": ["badland-ogre-bulls", "bonegrinder-giant"]
           }
         ],
-        "troll-horde": [
+        "nomadic-waaagh": [
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls", "bonegrinder-giant"]
           }
         ],
-        "nomadic-waaagh": [
+        "troll-horde": [
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls", "bonegrinder-giant"]
@@ -165,7 +191,8 @@
       "armyComposition": [
         "dwarfen-mountain-holds",
         "royal-clan",
-        "expeditionary-force"
+        "expeditionary-force",
+        "slayer-host"
       ],
       "allies": [
         {
@@ -187,6 +214,10 @@
         {
           "army": "dwarfen-mountain-holds",
           "armyComposition": "expeditionary-force"
+        },
+        {
+          "army": "dwarfen-mountain-holds",
+          "armyComposition": "slayer-host"
         }
       ],
       "mercenaries": {
@@ -217,10 +248,6 @@
               "goblin-hewer-merc",
               "prince-ulther's-dragon-company"
             ]
-          },
-          {
-            "army": "orc-and-goblin-tribes",
-            "units": ["badland-ogre-bulls"]
           }
         ],
         "expeditionary-force": [
@@ -232,10 +259,12 @@
               "goblin-hewer-merc",
               "prince-ulther's-dragon-company"
             ]
-          },
+          }
+        ],
+        "slayer-host": [
           {
-            "army": "orc-and-goblin-tribes",
-            "units": ["badland-ogre-bulls"]
+            "army": "dwarfen-mountain-holds",
+            "units": ["rangers", "prince-ulther's-dragon-company"]
           }
         ]
       }
@@ -251,7 +280,8 @@
         "general",
         "warriors-of-chaos",
         "gifts-of-chaos",
-        "chaos-mutations"
+        "chaos-mutations",
+        "chaotic-traits"
       ],
       "armyComposition": [
         "warriors-of-chaos",
@@ -427,6 +457,9 @@
           "army": "high-elf-realms"
         },
         {
+          "army": "grand-cathay"
+        },
+        {
           "army": "wood-elf-realms",
           "armyComposition": "orions-wild-hunt"
         },
@@ -451,7 +484,7 @@
       "name_cn": "喀穆里古墓王",
       "name_es": "Tomb Kings of Khemri",
       "name_fr": "Rois des Tombes de Khemri",
-      "items": ["general", "tomb-kings-of-khemri"],
+      "items": ["general", "tomb-kings-of-khemri", "incantation-scrolls"],
       "armyComposition": [
         "tomb-kings-of-khemri",
         "nehekharan-royal-hosts",
@@ -509,6 +542,9 @@
           "army": "wood-elf-realms"
         },
         {
+          "army": "grand-cathay"
+        },
+        {
           "army": "high-elf-realms",
           "armyComposition": "the-chracian-warhost"
         },
@@ -519,18 +555,6 @@
       ],
       "mercenaries": {
         "high-elf-realms": [
-          {
-            "army": "orc-and-goblin-tribes",
-            "units": ["badland-ogre-bulls"]
-          }
-        ],
-        "the-chracian-warhost": [
-          {
-            "army": "orc-and-goblin-tribes",
-            "units": ["badland-ogre-bulls"]
-          }
-        ],
-        "sea-guard-garrison": [
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls"]
@@ -578,7 +602,7 @@
       "name_en": "Skaven",
       "name_cn": "斯卡文",
       "name_es": "Skaven",
-      "name_fr": "Skaven",
+      "name_fr": "Skavens",
       "items": ["general", "skaven"],
       "armyComposition": ["skaven", "sk-renegade"],
       "allies": [
@@ -746,8 +770,12 @@
       "name_es": "Grand Cathay",
       "name_fr": "Grand Cathay",
       "items": ["general", "grand-cathay"],
-      "armyComposition": ["grand-cathay"],
+      "armyComposition": ["grand-cathay", "jade-fleet"],
       "allies": [
+        {
+          "army": "grand-cathay",
+          "armyComposition": "jade-fleet"
+        },
         { "army": "dwarfen-mountain-holds" },
         {
           "army": "empire-of-man"
@@ -767,6 +795,23 @@
           {
             "army": "orc-and-goblin-tribes",
             "units": ["badland-ogre-bulls"]
+          }
+        ],
+        "jade-fleet": [
+          {
+            "army": "empire-of-man",
+            "units": [
+              "captain-of-the-empire",
+              "master-mage",
+              "priest-of-sigmar",
+              "priest-of-ulric",
+              "state-troops",
+              "state-missile-troops",
+              "free-company-militia",
+              "empire-archers",
+              "pistoliers",
+              "outriders"
+            ]
           }
         ]
       }

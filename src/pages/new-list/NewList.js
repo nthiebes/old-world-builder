@@ -12,6 +12,7 @@ import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
+import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
 import { nameMap } from "../magic";
 
@@ -54,11 +55,18 @@ export const NewList = ({ isMobile }) => {
       id: "grand-melee-combined-arms",
       name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
     },
+    {
+      id: "battle-march",
+      name_en: intl.formatMessage({ id: "misc.battle-march" }),
+    },
   ];
   const listsPoints = [...lists.map((list) => list.points)].reverse();
-  const quickActions = lists.length
-    ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
-    : [500, 1000, 1500, 2000, 2500];
+  const quickActions =
+    compositionRule === "battle-march"
+      ? [500, 600, 750]
+      : lists.length
+      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
+      : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
     const newList = {
@@ -93,14 +101,14 @@ export const NewList = ({ isMobile }) => {
   const handleSystemChange = (event) => {
     setGame(event.target.value);
     setArmy(
-      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id
+      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id,
     );
     setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
     setArmy(value);
     setArmyComposition(
-      armies.find(({ id }) => value === id).armyComposition[0]
+      armies.find(({ id }) => value === id).armyComposition[0],
     );
     setCompositionRule("open-war");
   };
@@ -140,6 +148,8 @@ export const NewList = ({ isMobile }) => {
         <Header to="/" headline={intl.formatMessage({ id: "new.title" })} />
       )}
 
+      <RulesIndex />
+
       <MainComponent>
         {!isMobile && (
           <Header
@@ -154,7 +164,8 @@ export const NewList = ({ isMobile }) => {
               className={classNames(
                 "radio",
                 "new-list__radio",
-                index === gameSystems.length - 1 && "new-list__radio--last-item"
+                index === gameSystems.length - 1 &&
+                  "new-list__radio--last-item",
               )}
               key={id}
             >
@@ -197,7 +208,8 @@ export const NewList = ({ isMobile }) => {
                     name_en:
                       journalArmy === army
                         ? intl.formatMessage({ id: "new.grandArmy" })
-                        : nameMap[journalArmy].name_en,
+                        : nameMap[journalArmy][`name_${language}`] ||
+                          nameMap[journalArmy].name_en,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
@@ -216,6 +228,18 @@ export const NewList = ({ isMobile }) => {
             selected={compositionRule}
             spaceBottom
           />
+          <p className="new-list__composition-description">
+            <i>
+              <FormattedMessage
+                id={`new.armyCompositionRuleDescription.${compositionRule}`}
+              />
+            </i>
+            <RuleWithIcon
+              name={compositionRule}
+              isDark
+              className="game-view__rule-icon"
+            />
+          </p>
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>

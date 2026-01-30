@@ -284,6 +284,12 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["winged-warsphinx"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     mercenaries: {
@@ -423,6 +429,12 @@ export const rules = {
         },
         {
           ids: ["casket-of-souls"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["winged-warsphinx"],
           min: 0,
           max: 1,
           points: 1000,
@@ -1086,7 +1098,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["centigore-chieftain"],
+          requires: ["centigore-chieftain", "ghorros"],
           perUnit: true,
         },
         {
@@ -1139,7 +1151,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["rangers"],
+          ids: ["rangers-core"],
           min: 0,
           max: 1,
         },
@@ -1309,7 +1321,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["rangers"],
+          ids: ["rangers-core"],
           min: 0,
           max: 1,
           points: 1000,
@@ -1363,6 +1375,88 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
+        },
+      ],
+    },
+  },
+  "slayer-host": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["ungrim-ironfist"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["daemon-slayer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dragon-slayer"],
+          min: 0,
+          max: 2,
+          requiresType: "core",
+          requires: ["slayers"],
+          perUnit: true,
+        },
+      ],
+    },
+    core: {
+      minPercent: 20,
+      units: [],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["brotherhood-of-grimnir"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["doomseeker"],
+          min: 0,
+          max: 4,
+          requiresType: "characters",
+          requires: ["daemon-slayer", "dragon-slayer"],
+          perUnit: true,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["goblin-hewer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["dwarf-cart"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["hammerers"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["ungrim-ironfist"],
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["rangers"],
+          min: 0,
+          max: 1,
         },
       ],
     },
@@ -1457,12 +1551,6 @@ export const rules = {
           max: 1,
           requiresType: "characters",
           requires: ["priest-of-ulric", "high-priest-of-ulric"],
-        },
-        {
-          ids: ["great-cannon", "mortar"],
-          min: 0,
-          max: 3,
-          points: 1000,
         },
       ],
     },
@@ -2488,7 +2576,7 @@ export const rules = {
       maxPercent: 20,
       units: [
         {
-          id: ["bonegrinder-giant"],
+          ids: ["bonegrinder-giant"],
           min: 0,
           max: 1,
         },
@@ -2521,6 +2609,7 @@ export const rules = {
             "flesh-hounds-of-khorne-core",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
+            "chaos-furies-of-khorne",
           ],
           perUnit: true,
         },
@@ -2535,6 +2624,7 @@ export const rules = {
             "nurglings-core",
             "beasts-of-nurgle",
             "plague-drones-of-nurgle",
+            "chaos-furies-of-nurgle",
           ],
           perUnit: true,
         },
@@ -2550,6 +2640,7 @@ export const rules = {
             "fiends-of-slaanesh",
             "hellflayer-of-slaanesh",
             "seeker-chariot-of-slaanesh",
+            "chaos-furies-of-slaanesh",
           ],
           perUnit: true,
         },
@@ -2567,6 +2658,7 @@ export const rules = {
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
+            "chaos-furies-of-tzeentch",
           ],
           perUnit: true,
         },
@@ -2795,6 +2887,7 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne",
             "flesh-hounds-of-khorne",
+            "flesh-hounds-of-khorne-core",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
           ],
@@ -2808,6 +2901,7 @@ export const rules = {
           requires: [
             "plaguebearers-of-nurgle",
             "nurglings",
+            "nurglings-core",
             "beasts-of-nurgle",
             "plague-drones-of-nurgle",
           ],
@@ -2821,6 +2915,7 @@ export const rules = {
           requires: [
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh",
+            "seekers-of-slaanesh-core",
             "fiends-of-slaanesh",
             "hellflayer-of-slaanesh",
             "seeker-chariot-of-slaanesh",
@@ -2835,6 +2930,8 @@ export const rules = {
           requires: [
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
+            "pink-horrors-of-tzeentch-core",
+            "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
@@ -3807,6 +3904,131 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
+  "jade-fleet": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["miao-ying"],
+        },
+        {
+          ids: ["shugengan-lord", "lord-magistrate"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["jade-lancers-core"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
+          min: 0,
+          max: 3,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: [
+            "captain-of-the-empire",
+            "master-mage",
+            "priest-of-sigmar",
+            "priest-of-ulric",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["pistoliers", "outriders"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "renegade-crowns": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["renegade-prince"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["veteran-sellswords"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["border-princes-mortar"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["border-princes-organ-gun", "border-princes-bombard"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["steam-tank"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["war-wagon"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    mercenaries: {
+      maxPercent: 33,
+      units: [],
+    },
+  },
 };
 
 export const getMaxPercentData = ({
@@ -3824,10 +4046,10 @@ export const getMaxPercentData = ({
   }
 
   const maxPercent = categoryData.maxPercent;
-  const maxPoints = (armyPoints / 100) * maxPercent;
+  const maxPoints = Math.floor((armyPoints / 100) * maxPercent);
 
   return {
-    points: Math.floor(maxPoints),
+    points: maxPoints,
     overLimit: points > maxPoints,
     diff: points > maxPoints ? Math.ceil(points - maxPoints) : 0,
   };
@@ -3842,10 +4064,10 @@ export const getMinPercentData = ({
   const minPercent = rules[armyComposition]
     ? rules[armyComposition][type].minPercent
     : rules["grand-army"][type].minPercent;
-  const minPoints = (armyPoints / 100) * minPercent;
+  const minPoints = Math.floor((armyPoints / 100) * minPercent);
 
   return {
-    points: Math.floor(minPoints),
+    points: minPoints,
     overLimit: points <= minPoints,
     diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
   };

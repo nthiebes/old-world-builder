@@ -27,8 +27,8 @@ export const GeneratedSpells = ({
   const [generatedSpells, setGeneratedSpells] = useState(
     Object.keys(availableLoresWithSpells).reduce(
       (initialState, loreId) => ({ ...initialState, [loreId]: [] }),
-      {}
-    )
+      {},
+    ),
   );
   const [showGenerationList, setShowGenerationList] = useState(false);
 
@@ -127,7 +127,7 @@ export const GeneratedSpells = ({
                             handleSpellSelectionChange(
                               loreId,
                               spellId,
-                              event.target.checked
+                              event.target.checked,
                             );
                           }}
                         />
@@ -166,7 +166,7 @@ export const GeneratedSpells = ({
                 showPageNumber={showPageNumbers}
               />
             </span>
-          ))
+          )),
         )
       )}
     </div>

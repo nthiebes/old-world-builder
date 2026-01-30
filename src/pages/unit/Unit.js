@@ -11,6 +11,7 @@ import {
   getPointsPerModel,
   getUnitPoints,
   getUnitMagicPoints,
+  getUnitCommandMagicPoints,
 } from "../../utils/points";
 import { ListItem } from "../../components/list";
 import { NumberInput } from "../../components/number-input";
@@ -30,6 +31,7 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
+import { namesForSpread } from "../../utils/string";
 import {
   getUnitName,
   getUnitOptionNotes,
@@ -51,7 +53,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const location = useLocation();
   const intl = useIntl();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
@@ -63,13 +65,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     unit?.options?.length > 0 &&
     Boolean(
       unit.options.find(
-        (option) => option.name_en === "Detachment" && option.active
-      )
+        (option) => option.name_en === "Detachment" && option.active,
+      ),
     );
   const detachments =
     army &&
     [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment
+      (coreUnit) => coreUnit.detachment,
     );
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
@@ -86,7 +88,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         strength: event.target.value,
-      })
+      }),
     );
   };
   const handleCustomNoteChange = (event) => {
@@ -96,7 +98,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         customNote: event.target.value,
-      })
+      }),
     );
   };
   const handleStackableOptionChange = ({ id, stackableCount }) => {
@@ -116,7 +118,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         options,
-      })
+      }),
     );
   };
   const handleAddDetachmentClick = ({ id }) => {
@@ -125,8 +127,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
     unitDetachments.push({
       id: `${id}.${getRandomId()}`,
-      name_de: detachment.name_de,
-      name_en: detachment.name_en,
+      ...namesForSpread(detachment),
       points: detachment.points,
       strength: detachment.minDetachmentSize || 5,
       minDetachmentSize: detachment.minDetachmentSize || 5,
@@ -145,12 +146,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDeleteDetachmentClick = ({ id }) => {
     const unitDetachments = [...unit.detachments].filter(
-      (detachment) => detachment.id !== id
+      (detachment) => detachment.id !== id,
     );
 
     dispatch(
@@ -159,12 +160,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDetachmentStrengthClick = ({ id, strength }) => {
     const unitDetachments = [...unit.detachments].map((detachment) =>
-      detachment.id === id ? { ...detachment, strength } : detachment
+      detachment.id === id ? { ...detachment, strength } : detachment,
     );
 
     dispatch(
@@ -173,7 +174,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleDetachmentEquipmentChange = ({
@@ -213,7 +214,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleStackableDetachmentChange = ({
@@ -246,7 +247,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         detachments: unitDetachments,
-      })
+      }),
     );
   };
   const handleOptionsChange = (id, optionIndex, isRadio) => {
@@ -299,7 +300,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         options: newOptions,
-      })
+      }),
     );
   };
   const handleCommandChange = (id, optionIndex) => {
@@ -354,7 +355,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           ...unit.magic,
           items: magicItems,
         },
-      })
+      }),
     );
   };
   const handleEquipmentChange = ({ id, group }) => {
@@ -374,7 +375,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         equipment,
-      })
+      }),
     );
   };
   const handleArmorChange = (id) => {
@@ -397,7 +398,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         armor,
-      })
+      }),
     );
   };
   const handleMountsChange = (id, optionIndex) => {
@@ -437,7 +438,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         mounts,
-      })
+      }),
     );
   };
   const handleLoresChange = (lore) => {
@@ -447,7 +448,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         activeLore: lore,
-      })
+      }),
     );
   };
   const getPointsText = ({ points, perModel }) => {
@@ -497,8 +498,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             getArmyData({
               data,
               armyComposition: list.armyComposition,
-            })
-          )
+            }),
+          ),
         );
       } else {
         fetcher({
@@ -509,8 +510,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 getArmyData({
                   data,
                   armyComposition: list.armyComposition || list.army,
-                })
-              )
+                }),
+              ),
             );
           },
         });
@@ -592,9 +593,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               className="unit__header-rule-icon"
             />
           }
-          subheadline={`${getUnitPoints(unit, {
-            armyComposition: unitArmyComposition,
-          })} ${intl.formatMessage({
+          subheadline={`${getUnitPoints(
+            { ...unit, type },
+            {
+              armyComposition: unitArmyComposition,
+            },
+          )} ${intl.formatMessage({
             id: "app.points",
           })}`}
           navigationIcon="more"
@@ -617,9 +621,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 className="unit__header-rule-icon"
               />
             }
-            subheadline={`${getUnitPoints(unit, {
-              armyComposition: unitArmyComposition,
-            })} ${intl.formatMessage({
+            subheadline={`${getUnitPoints(
+              { ...unit, type },
+              {
+                armyComposition: unitArmyComposition,
+              },
+            )} ${intl.formatMessage({
               id: "app.points",
             })}`}
             navigationIcon="more"
@@ -652,7 +659,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               </span>
               <i className="unit__strength-points">
                 {getPointsText({
-                  points: getPointsPerModel(unit),
+                  points: getPointsPerModel({ ...unit, type }),
                   perModel: true,
                 })}
               </i>
@@ -687,7 +694,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitCommand) =>
                   !unitCommand.armyComposition ||
-                  unitCommand.armyComposition.includes(unitArmyComposition)
+                  unitCommand.armyComposition.includes(unitArmyComposition),
               )
               .map(
                 (
@@ -703,10 +710,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     alwaysActive,
                     ...command
                   },
-                  index
+                  index,
                 ) => {
-                  const commandMagicPoints = getUnitMagicPoints({
+                  const commandMagicPoints = getUnitCommandMagicPoints({
                     selected: magic?.selected,
+                    strength: unit.strength,
                   });
                   let commandMaxPoints = 0;
 
@@ -723,7 +731,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       <div
                         className={classNames(
                           "checkbox",
-                          type === "characters" && "unit__bsb"
+                          type === "characters" && "unit__bsb",
                         )}
                       >
                         <input
@@ -742,7 +750,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               exclusive &&
                               unit.command.find(
                                 (commandUnit) =>
-                                  commandUnit.active && commandUnit.id !== id
+                                  commandUnit.active &&
+                                  commandUnit.id !== id &&
+                                  commandUnit.exclusive !== false,
                               ))
                           }
                         />
@@ -771,7 +781,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
                             className="editor__list unit__link unit__command-list"
                             active={location.pathname.includes(
-                              `magic/${index}`
+                              `magic/${index}`,
                             )}
                             disabled={detachmentActive}
                           >
@@ -781,7 +791,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   .map(
                                     (itemType) =>
                                       nameMap[itemType][`name_${language}`] ||
-                                      nameMap[itemType].name_en
+                                      nameMap[itemType].name_en,
                                   )
                                   .join(", ")}
                               </b>
@@ -790,7 +800,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   className={classNames(
                                     commandMagicPoints > commandMaxPoints &&
                                       commandMaxPoints > 0 &&
-                                      "editor__error"
+                                      "editor__error",
                                   )}
                                 >
                                   {commandMagicPoints}
@@ -809,6 +819,21 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                   />
                                 )}
                             </div>
+                            {magic.maxItemsPerCategory &&
+                              magic.maxItemsPerCategory > 0 && (
+                                <p className="unit__option-note unit__option-note--maxitems">
+                                  <FormattedMessage
+                                    id={
+                                      magic.types.length > 1
+                                        ? "unit.maxItemsPerCategory"
+                                        : "unit.maxItems"
+                                    }
+                                    values={{
+                                      maxItems: magic.maxItemsPerCategory,
+                                    }}
+                                  />
+                                </p>
+                              )}
                             {magic?.selected && (
                               <p>
                                 {magic.selected
@@ -818,7 +843,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         (selectedItem[`name_${language}`] ||
                                           selectedItem.name_en)
                                       : selectedItem[`name_${language}`] ||
-                                        selectedItem.name_en
+                                        selectedItem.name_en,
                                   )
                                   .join(", ")
                                   .replace(/\*/g, "")}
@@ -829,54 +854,71 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       ) : null}
                       {options?.length > 0 && active && (
                         <Fragment>
-                          {options.map((option, optionIndex) => {
-                            const exclusiveCheckedOption = options.find(
-                              (exclusiveOption) =>
-                                exclusiveOption.exclusive &&
-                                exclusiveOption.active
-                            );
+                          {options
+                            .filter(
+                              (option) =>
+                                !option.armyComposition ||
+                                option.armyComposition.includes(
+                                  unitArmyComposition,
+                                ),
+                            )
+                            .map((option, optionIndex) => {
+                              const exclusiveCheckedOption = options.find(
+                                (exclusiveOption) =>
+                                  exclusiveOption.exclusive &&
+                                  exclusiveOption.active,
+                              );
 
-                            return (
-                              <div
-                                className="checkbox checkbox--conditional"
-                                key={option.name_en}
-                              >
-                                <input
-                                  type="checkbox"
-                                  id={`command-${id}-option-${optionIndex}`}
-                                  value={`${id}-${optionIndex}`}
-                                  onChange={() =>
-                                    handleCommandChange(id, optionIndex)
-                                  }
-                                  checked={Boolean(option.active)}
-                                  className="checkbox__input"
-                                  disabled={
-                                    (exclusiveCheckedOption &&
-                                      option.exclusive &&
-                                      !option.active) ||
-                                    detachmentActive
-                                  }
-                                />
-                                <label
-                                  htmlFor={`command-${id}-option-${optionIndex}`}
-                                  className="checkbox__label"
-                                >
-                                  <span className="unit__label-text">
-                                    <RulesWithIcon textObject={option} />
-                                  </span>
-                                  <i className="checkbox__points">
-                                    {getPointsText({ points: option.points })}
-                                  </i>
-                                </label>
-                              </div>
-                            );
-                          })}
+                              return (
+                                <Fragment key={option.name_en}>
+                                  <div className="checkbox checkbox--conditional">
+                                    <input
+                                      type="checkbox"
+                                      id={`command-${id}-option-${optionIndex}`}
+                                      value={`${id}-${optionIndex}`}
+                                      onChange={() =>
+                                        handleCommandChange(id, optionIndex)
+                                      }
+                                      checked={Boolean(option.active)}
+                                      className="checkbox__input"
+                                      disabled={
+                                        (exclusiveCheckedOption &&
+                                          option.exclusive &&
+                                          !option.active) ||
+                                        detachmentActive ||
+                                        option.alwaysActive
+                                      }
+                                    />
+                                    <label
+                                      htmlFor={`command-${id}-option-${optionIndex}`}
+                                      className="checkbox__label"
+                                    >
+                                      <span className="unit__label-text">
+                                        <RulesWithIcon textObject={option} />
+                                      </span>
+                                      <i className="checkbox__points">
+                                        {getPointsText({
+                                          points: option.points,
+                                          perModel: option.perModel,
+                                        })}
+                                      </i>
+                                    </label>
+                                  </div>
+                                  {getUnitOptionNotes({
+                                    notes: option.notes,
+                                    key: `options-${index}-${optionIndex}-note`,
+                                    className: "unit__option-note",
+                                    language,
+                                  })}
+                                </Fragment>
+                              );
+                            })}
                           <hr className="unit__command-option-hr" />
                         </Fragment>
                       )}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -889,10 +931,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitEquipment) =>
                   !unitEquipment.armyComposition ||
-                  unitEquipment.armyComposition.includes(unitArmyComposition)
+                  unitEquipment.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -934,7 +976,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       language,
                     })}
                   </Fragment>
-                )
+                ),
               )}
           </>
         )}
@@ -947,10 +989,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitArmor) =>
                   !unitArmor.armyComposition ||
-                  unitArmor.armyComposition.includes(unitArmyComposition)
+                  unitArmor.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -1000,7 +1042,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       })}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -1013,10 +1055,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 (unitOption) =>
                   !unitOption.armyComposition ||
-                  unitOption.armyComposition.includes(unitArmyComposition)
+                  unitOption.armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
                 ({
@@ -1031,12 +1073,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   exclusive = false,
                   options,
+                  useCheckboxes,
                   alwaysActive,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
                     (exclusiveOption) =>
-                      exclusiveOption.exclusive && exclusiveOption.active
+                      exclusiveOption.exclusive && exclusiveOption.active,
                   );
 
                   if (!stackable) {
@@ -1083,19 +1126,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 (option) =>
                                   !option.armyComposition ||
                                   option.armyComposition.includes(
-                                    unitArmyComposition
-                                  )
+                                    unitArmyComposition,
+                                  ),
                               )
                               .map((option, optionIndex) => {
                                 const exclusiveCheckedOption = options.find(
                                   (exclusiveOption) =>
                                     exclusiveOption.exclusive &&
-                                    exclusiveOption.active
+                                    exclusiveOption.active,
                                 );
-                                const allOptionsExclusive = options.every(
-                                  (opt) => opt.exclusive
-                                );
-
+                                const allOptionsExclusive = useCheckboxes
+                                  ? false
+                                  : options.every((opt) => opt.exclusive);
                                 return (
                                   <Fragment key={option.name_en}>
                                     <div className="checkbox checkbox--conditional">
@@ -1112,7 +1154,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           handleOptionsChange(
                                             id,
                                             optionIndex,
-                                            allOptionsExclusive
+                                            allOptionsExclusive,
                                           )
                                         }
                                         checked={Boolean(option.active)}
@@ -1135,10 +1177,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         <i className="checkbox__points">
                                           {getPointsText({
                                             points: option.points,
+                                            perModel: option.perModel,
                                           })}
                                         </i>
                                       </label>
                                     </div>
+                                    {getUnitOptionNotes({
+                                      notes: option.notes,
+                                      key: `options-${id}-${optionIndex}-note`,
+                                      className: "unit__option-note",
+                                      language,
+                                      disabled: option.disabled,
+                                    })}
                                     {optionIndex === options.length - 1 && (
                                       <hr className="unit__command-option-hr" />
                                     )}
@@ -1185,7 +1235,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       })}
                     </Fragment>
                   );
-                }
+                },
               )}
           </>
         )}
@@ -1234,7 +1284,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     unit.detachments
                       .filter(
                         (detachment) =>
-                          detachment.id.split(".")[0] === id.split(".")[0]
+                          detachment.id.split(".")[0] === id.split(".")[0],
                       )
                       .map(
                         ({
@@ -1372,7 +1422,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                       category: "equipment",
                                                       stackableCount:
                                                         event.target.value,
-                                                    }
+                                                    },
                                                   )
                                                 }
                                               />
@@ -1396,7 +1446,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                     detachmentId: id,
                                                     equipmentId: equipment.id,
                                                     category: "equipment",
-                                                  }
+                                                  },
                                                 )
                                               }
                                               checked={
@@ -1452,7 +1502,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                     equipmentId: armor.id,
                                                     category: "armor",
                                                     isCheckbox: !isRadio,
-                                                  }
+                                                  },
                                                 )
                                               }
                                               checked={armor.active}
@@ -1498,7 +1548,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           detachmentOptions.find(
                                             (exclusiveOption) =>
                                               exclusiveOption.exclusive &&
-                                              exclusiveOption.active
+                                              exclusiveOption.active,
                                           );
 
                                         return (
@@ -1515,7 +1565,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                                       equipmentId: option.id,
                                                       category: "options",
                                                       isCheckbox: true,
-                                                    }
+                                                    },
                                                   )
                                                 }
                                                 checked={option.active || false}
@@ -1570,7 +1620,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               </div>
                             </div>
                           );
-                        }
+                        },
                       )}
                 </Fragment>
               ))}
@@ -1585,13 +1635,21 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .filter(
                 ({ armyComposition }) =>
                   !armyComposition ||
-                  armyComposition.includes(unitArmyComposition)
+                  armyComposition.includes(unitArmyComposition),
               )
               .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true
+                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
               )
               .map(
-                ({ points, id, active = false, options, notes, ...mount }) => (
+                ({
+                  points,
+                  id,
+                  active = false,
+                  options,
+                  notes,
+                  perModel,
+                  ...mount
+                }) => (
                   <Fragment key={id}>
                     <div className="radio">
                       <input
@@ -1608,7 +1666,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           <RulesWithIcon textObject={mount} />
                         </span>
                         <i className="checkbox__points">
-                          {getPointsText({ points })}
+                          {getPointsText({ points, perModel })}
                         </i>
                       </label>
                     </div>
@@ -1625,14 +1683,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             (option) =>
                               !option.armyComposition ||
                               option.armyComposition.includes(
-                                unitArmyComposition
-                              )
+                                unitArmyComposition,
+                              ),
                           )
                           .map((option, optionIndex) => {
                             const exclusiveCheckedOption = options.find(
                               (exclusiveOption) =>
                                 exclusiveOption.exclusive &&
-                                exclusiveOption.active
+                                exclusiveOption.active,
                             );
                             const isDisabled =
                               (exclusiveCheckedOption &&
@@ -1641,7 +1699,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               detachmentActive;
 
                             return (
-                              <Fragment key={option.name_en}>
+                              <Fragment
+                                key={`${option.name_en}-${optionIndex}`}
+                              >
                                 <div className="checkbox checkbox--conditional">
                                   <input
                                     type="checkbox"
@@ -1683,7 +1743,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       </>
                     )}
                   </Fragment>
-                )
+                ),
               )}
           </>
         )}
@@ -1700,7 +1760,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
-                      (item) => item.name_en === "Da Hag's Brew"
+                      (item) => item.name_en === "Da Hag's Brew",
                     ) === undefined &&
                   index !== 0
                 ) {
@@ -1709,13 +1769,29 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   }
                   return false;
                 }
+                // if (
+                //   lore === "primal-magic" &&
+                //   ((unitArmyComposition !== "wild-herd" &&
+                //     unit.name_en !== "Kralmaw") ||
+                //     unit.name_en !== "Kralmaw") &&
+                //   unit.items
+                //     .find((items) => items.name_en === "Magic Items")
+                //     ?.selected.find((item) => item.name_en === "Goretooth*") ===
+                //     undefined &&
+                //   index !== 0
+                // ) {
+                //   if (unit.activeLore === "primal-magic") {
+                //     handleLoresChange(lores[0]);
+                //   }
+                //   return false;
+                // }
                 if (
                   lore === "lore-of-the-wilds" &&
                   unitArmyComposition !== "host-of-talsyn" &&
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
-                      (item) => item.name_en === "Heartwood Pendant*"
+                      (item) => item.name_en === "Heartwood Pendant*",
                     ) === undefined &&
                   index !== 0
                 ) {
@@ -1729,12 +1805,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               .map((lore) => (
                 <div className="radio" key={lore}>
                   <input
-                    type="radio"
+                    type={unit.arcaneFamiliar ? "checkbox" : "radio"}
+                    disabled={unit.arcaneFamiliar}
                     id={`lore-${lore}`}
                     name="lores"
                     value={lore}
                     onChange={() => handleLoresChange(lore)}
-                    checked={(unit.activeLore || lores[0]) === lore}
+                    checked={
+                      (unit.activeLore || lores[0]) === lore ||
+                      unit.arcaneFamiliar
+                    }
                     className="radio__input"
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">
@@ -1755,7 +1835,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.items && unit.items.length
           ? unit.items.map((item, itemIndex) => {
               const itemsPoints = getUnitMagicPoints({
-                selected: item.selected,
+                unit: { ...unit, type },
+                item,
               });
               const maxPoints =
                 (item.armyComposition &&
@@ -1763,15 +1844,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 item.maxPoints;
 
               if (
-                item.armyComposition && (
-                  (
-                    typeof item.armyComposition === "string" &&
-                    !item.armyComposition.includes(unitArmyComposition)
-                  ) || (
-                    item.armyComposition.length > 0 &&
-                    item.armyComposition.indexOf(unitArmyComposition) < 0
-                  )
-                )
+                item.armyComposition &&
+                ((typeof item.armyComposition === "string" &&
+                  !item.armyComposition.includes(unitArmyComposition)) ||
+                  (item.armyComposition.length > 0 &&
+                    item.armyComposition.indexOf(unitArmyComposition) < 0))
               ) {
                 return null;
               }
@@ -1792,7 +1869,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className={classNames(
                           itemsPoints > maxPoints &&
                             maxPoints > 0 &&
-                            "editor__error"
+                            "editor__error",
                         )}
                       >
                         {itemsPoints}
@@ -1808,6 +1885,20 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       />
                     )}
                   </div>
+                  {item.maxItemsPerCategory && item.maxItemsPerCategory > 0 && (
+                    <p className="unit__option-note unit__option-note--maxitems">
+                      <FormattedMessage
+                        id={
+                          item.types.length > 1
+                            ? "unit.maxItemsPerCategory"
+                            : "unit.maxItems"
+                        }
+                        values={{
+                          maxItems: item.maxItemsPerCategory,
+                        }}
+                      />
+                    </p>
+                  )}
                   {getUnitOptionNotes({
                     notes: item.notes,
                     key: `options-${itemIndex}-note`,
@@ -1823,7 +1914,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               (selectedItem[`name_${language}`] ||
                                 selectedItem.name_en)
                             : selectedItem[`name_${language}`] ||
-                              selectedItem.name_en
+                              selectedItem.name_en,
                         )
                         .join(", ")
                         .replace(/\*/g, "")}

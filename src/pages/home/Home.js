@@ -33,6 +33,7 @@ import woodElves from "../../assets/army-icons/wood-elves.svg";
 import chaosDwarfs from "../../assets/army-icons/chaos-dwarfs.svg";
 import bretonnia from "../../assets/army-icons/bretonnia.svg";
 import cathay from "../../assets/army-icons/cathay.svg";
+import renegade from "../../assets/army-icons/renegade.svg";
 import forg3dBanner from "../../assets/forg3d.jpg";
 import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
 import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
@@ -67,6 +68,7 @@ const armyIconMap = {
   lizardmen: lizardmen,
   "chaos-dwarfs": chaosDwarfs,
   "grand-cathay": cathay,
+  "renegade-crowns": renegade,
 };
 
 export const Home = ({ isMobile }) => {
@@ -128,7 +130,9 @@ export const Home = ({ isMobile }) => {
           !a.folder &&
           !b.folder &&
           a.type !== "folder" &&
-          b.type !== "folder"
+          b.type !== "folder" &&
+          a.army &&
+          b.army
         ) {
           return a.army.localeCompare(b.army);
         }
@@ -137,7 +141,9 @@ export const Home = ({ isMobile }) => {
           a.folder &&
           a.folder === b.folder &&
           a.type !== "folder" &&
-          b.type !== "folder"
+          b.type !== "folder" &&
+          a.army &&
+          b.army
         ) {
           return a.army.localeCompare(b.army);
         }
@@ -179,13 +185,13 @@ export const Home = ({ isMobile }) => {
 
     if (draggedItem.type === "folder") {
       const listBeforeDestination = lists.find(
-        (_, index) => index === destinationIndex - 1
+        (_, index) => index === destinationIndex - 1,
       );
       const listAtDestination = lists.find(
-        (_, index) => index === destinationIndex
+        (_, index) => index === destinationIndex,
       );
       const listAfterDestination = lists.find(
-        (_, index) => index === destinationIndex + 1
+        (_, index) => index === destinationIndex + 1,
       );
 
       if (
@@ -196,14 +202,14 @@ export const Home = ({ isMobile }) => {
       ) {
         let newLists = swap(lists, sourceIndex, destinationIndex);
         const listsInFolder = lists.filter(
-          (list) => list.folder === draggedItem.id
+          (list) => list.folder === draggedItem.id,
         );
 
         listsInFolder.forEach((_, index) => {
           newLists = swap(
             newLists,
             sourceIndex + (destinationIndex < sourceIndex ? 1 + index : 0),
-            destinationIndex + (destinationIndex < sourceIndex ? 1 + index : 0)
+            destinationIndex + (destinationIndex < sourceIndex ? 1 + index : 0),
           );
         });
         newLists = updateListsFolder(newLists);
@@ -213,7 +219,7 @@ export const Home = ({ isMobile }) => {
       }
     } else {
       let newLists = updateListsFolder(
-        swap(lists, sourceIndex, destinationIndex)
+        swap(lists, sourceIndex, destinationIndex),
       );
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));
@@ -314,7 +320,7 @@ export const Home = ({ isMobile }) => {
 
     if (activeDeleteOption === "delete") {
       newLists = newLists.filter(
-        (list) => list.folder !== activeMenu || !list.folder
+        (list) => list.folder !== activeMenu || !list.folder,
       );
     }
 
@@ -356,7 +362,7 @@ export const Home = ({ isMobile }) => {
   const handleDragStart = (start) => {
     const draggedItem = lists.find(
       (list) =>
-        list.id === start.draggableId || list.folder === start.draggableId
+        list.id === start.draggableId || list.folder === start.draggableId,
     );
     const listsInFolder = lists
       .map((list, index) => ({ folder: list.folder, index: index }))
@@ -567,7 +573,7 @@ export const Home = ({ isMobile }) => {
                         {name}
                       </Button>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             )}
@@ -614,7 +620,7 @@ export const Home = ({ isMobile }) => {
                   to="#"
                   className={classNames(
                     "home__folder",
-                    activeMenu === id && "home__folder--active"
+                    activeMenu === id && "home__folder--active",
                   )}
                 >
                   <span className="home__list-item">
@@ -634,7 +640,7 @@ export const Home = ({ isMobile }) => {
                           }
                         }}
                         className={classNames(
-                          activeMenu === id && "header__more-button"
+                          activeMenu === id && "header__more-button",
                         )}
                       />
                       <span className="home__folder-name">{name}</span>
@@ -678,7 +684,7 @@ export const Home = ({ isMobile }) => {
                               {buttonName}
                             </Button>
                           </li>
-                        )
+                        ),
                       )}
                     </ul>
                   )}
@@ -694,7 +700,7 @@ export const Home = ({ isMobile }) => {
                       ?.open === false
                   }
                   className={classNames(
-                    listsInFolder.length > 0 && "home__list--dragging"
+                    listsInFolder.length > 0 && "home__list--dragging",
                   )}
                 >
                   {folder ? (
@@ -722,7 +728,7 @@ export const Home = ({ isMobile }) => {
                     />
                   </div>
                 </ListItem>
-              )
+              ),
           )}
         </OrderableList>
         <Button

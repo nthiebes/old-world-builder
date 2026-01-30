@@ -133,7 +133,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Swiftshiver Shards",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 6,
           "perModel": true,
@@ -376,7 +376,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 6,
           "exclusive": true
@@ -642,7 +642,7 @@
         "name_cn": "精灵反应, 艾索洛伦法系, 魔法攻击, 穿行掩体",
         "name_de": "Elfenreflexe, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert",
+        "name_fr": "Réflexes Elfiques, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert",
         "name_pl": "Elickie Refleksy, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony"
       }
     },
@@ -817,7 +817,7 @@
         "name_cn": "精灵反应, 艾索洛伦法系, 魔法攻击, 穿行掩体",
         "name_de": "Elfenreflexe, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert",
+        "name_fr": "Réflexes Elfiques, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert",
         "name_pl": "Elickie Refleksy, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony"
       }
     },
@@ -995,7 +995,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 6,
           "exclusive": true
@@ -1042,7 +1042,7 @@
         "name_cn": "精灵反应, 闪避, 诱敌诈退, 游击, 鹰眼, 无视掩体, 穿行掩体, 侦察",
         "name_de": "Elfenreflexe, Ausweichen, Vorgetäuschte Flucht, Schießen und Verschwinden, Falkenäugiger Schütze, Deckung ignorieren, Durch Deckung bewegen, Kundschafter",
         "name_es": "",
-        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir & Fuite, Archer à l'Œil de Faucon, Ignore les Couverts, Mouvement à Couvert, Éclaireurs",
+        "name_fr": "Réflexes Elfiques, Esquiveur, Fuite Feinte, Tir & Fuite, Archer à l’Œil de Faucon, Ignore les Couverts, Mouvement à Couvert, Éclaireurs",
         "name_pl": "Elfickie Refleksy, Nieuchwytny, Udawana Ucieczka, Strzał i Ucieczka, Sokole Oko, Ignorowanie Zasłon, Przechodzenie przez Zasłony, Zwiadowcy"
       }
     },
@@ -1074,26 +1074,74 @@
           "points": 0
         }
       ],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Oaken fists, Strangleroots",
+          "name_cn": "Oaken fists, Strangleroots",
+          "name_de": "Oaken fists, Strangleroots",
+          "name_es": "Oaken fists, Strangleroots",
+          "name_fr": "Poings de chêne, Racines étrangleuses",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète (Armure arboricole)",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
-          "name_en": "Level 3 Wizard",
-          "name_cn": "3级法师",
-          "name_de": "Zauberer der Stufe 3",
-          "name_fr": "Sorcier de Niveau 3",
-          "name_pl": "Czarodziej poziomu 3",
-          "points": 30,
-          "perModel": true
-        },
-        {
-          "name_en": "Level 4 Wizard",
-          "name_cn": "4级法师",
-          "name_de": "Zauberer der Stufe 4",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_pl": "Czarodziej poziomu 4",
-          "points": 60,
-          "perModel": true
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
         },
         {
           "name_en": "Ambushers",
@@ -1124,7 +1172,7 @@
         "name_cn": "紧密阵型, 易燃, 心理免疫, 大型目标, 艾索洛伦法系, 魔法攻击, 穿行掩体, 重生(5+), 践踏攻击(D3), 坚毅, 惊骇, 倒啦！, 树木精魂, 树根重击",
         "name_de": "Geschlossene Ränge, Brennbar, Immun gegen Psychologie, Großes Ziel, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen, Regeneration (5+), Stampfattacken (W3), Unnachgiebig, Entsetzen, Baum fällt!, Baumgeist, Baumprügel",
         "name_es": "",
-        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage",
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage",
         "name_pl": "Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr!, Duch Drzew, Drzewne Uderzenie"
       }
     },
@@ -1163,6 +1211,17 @@
       ],
       "equipment": [
         {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_pl": "Broń ręczna",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
           "name_en": "Additional hand weapon",
           "name_cn": "额外单手武器",
           "name_de": "Zusätzliche Handwaffe",
@@ -1179,25 +1238,15 @@
           "name_pl": "Broń ciężka",
           "points": 4,
           "perModel": true
-        },
-        {
-          "name_en": "Hand weapon",
-          "name_cn": "单手武器",
-          "name_de": "Handwaffe",
-          "name_fr": "Arme de base",
-          "name_pl": "Broń ręczna",
-          "points": 0,
-          "perModel": true,
-          "active": true
         }
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
-          "name_pl": "Lekka zbroja",
+          "name_en": "Light armour (Sapwood flesh)",
+          "name_cn": "轻甲(Sapwood flesh)",
+          "name_de": "Leichte Rüstung (Splintholzhaut)",
+          "name_fr": "Armure légère (Chair d’aubier)",
+          "name_pl": "Lekka zbroja z bielu",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1255,7 +1304,7 @@
         "name_cn": "恐惧, 易燃, 心理免疫, 艾索洛伦法系, 魔法攻击, 穿行掩体, 重生(6+), 树木精魂",
         "name_de": "Angst, Brennbar, Immun gegen Psychologie, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen, Regeneration (6+), Baumgeist",
         "name_es": "",
-        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Domaine d'Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (6+), Esprit des Forêts",
+        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (6+), Esprit des Forêts",
         "name_pl": "Strach, Łatwopalny, Odporność na Psychologię, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłonę, Regeneracja (6+), Duch Drzew"
       }
     },
@@ -1281,10 +1330,10 @@
       ],
       "equipment": [
         {
-          "name_en": "Cloak of Isha, Hawks Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
+          "name_en": "Cloak of Isha, Hawk's Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
           "name_cn": "艾莎斗, 隼爪, 狂猎号角, 库诺斯之矛, 单手武器(猎犬)",
           "name_de": "Cloak of Isha, Hawks Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
-          "name_fr": "Cape d'Isha, Serre du Faucon, Cor de la Chasse Sauvage, Lance de Kurnous, Arme de base (Chien)",
+          "name_fr": "Cape d’Isha, Serre du Faucon, Cor de la Chasse Sauvage, Lance de Kurnous, Arme de base (Chien)",
           "name_pl": "Cloak of Isha, Hawks Talon, Horn of the Wild Hunt, Spear of Kurnous, Hand weapon (Hound)",
           "points": 0,
           "active": true
@@ -1292,12 +1341,12 @@
       ],
       "options": [],
       "specialRules": {
-        "name_en": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_cn": "恐惧, 狂暴, 心理免疫, 魔法攻击(猎犬), 穿行掩体, 魔法抗性(2 - 奥莱恩), 开放阵型, 践踏攻击(D3+2), 先攻(奥莱恩), 惊骇, 幽魂猎犬(猎犬), 永不战败",
-        "name_de": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_es": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
-        "name_fr": "Peur, Frénésie, Immunisé à la Psychologie, Attaques Magiques (Chien), Mouvement à Couvert, Résistance à la Magie (2 - Orion), Ordre Dispersé, Attaques de Piétinement (D3+2), Frappe En Premier (Orion), Terreur, Limiers Spectraux (Chien), Indémoralisable",
-        "name_pl": "Fear, Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable"
+        "name_en": "Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_cn": "狂暴, 心理免疫, 魔法攻击(猎犬), 穿行掩体, 魔法抗性(2 - 奥莱恩), 开放阵型, 践踏攻击(D3+2), 先攻(奥莱恩), 惊骇, 幽魂猎犬(猎犬), 永不战败",
+        "name_de": "Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_es": "Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable",
+        "name_fr": "Frénésie, Immunisé à la Psychologie, Attaques Magiques (Chien), Mouvement à Couvert, Résistance à la Magie (2 - Orion), Ordre Dispersé, Attaques de Piétinement (D3+2), Frappe En Premier (Orion), Terreur, Limiers Spectraux (Chien), Indémoralisable",
+        "name_pl": "Frenzy, Immune to Psychology, Magical Attacks (Hound), Move Through Cover, Magic Resistance (2 - Orion), Open Order, Stomp Attacks (D3+2), Strike First (Orion), Terror, Spectral Hounds (Hound), Unbreakable"
       }
     },
     {
@@ -1307,7 +1356,7 @@
       "name_fr": "Araloth",
       "name_pl": "Araloth",
       "id": "araloth",
-      "points": 170,
+      "points": 150,
       "named": true,
       "command": [
         {
@@ -1466,7 +1515,7 @@
       "name_fr": "Gardes Sylvains",
       "name_pl": "Strażnik Polany",
       "id": "glade-guard",
-      "points": 11,
+      "points": 10,
       "minimum": 5,
       "maximum": 0,
       "armyComposition": {
@@ -1577,7 +1626,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -1701,7 +1750,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -1736,7 +1785,7 @@
       "name_fr": "Garde Éternelle",
       "name_pl": "Wieczna Straż",
       "id": "eternal-guard",
-      "points": 13,
+      "points": 12,
       "minimum": 5,
       "maximum": 0,
       "armyComposition": {
@@ -1894,7 +1943,7 @@
           "name_en": "Light armour (Sapwood flesh)",
           "name_cn": "轻甲(Sapwood flesh)",
           "name_de": "Leichte Rüstung (Splintholzhaut)",
-          "name_fr": "Armure légère (Chair d'aubier)",
+          "name_fr": "Armure légère (Chair d’aubier)",
           "name_pl": "Lekka zbroja z bielu",
           "points": 0,
           "perModel": true,
@@ -1916,12 +1965,12 @@
       "mounts": [],
       "items": [],
       "specialRules": {
-        "name_en": "Fear, Flammable, Immune to Psychology, Magical Attacks, Move Through Cover, Open Order, Regeneration (6+), Skirmishers, Stubborn, Tree Spirit",
-        "name_cn": "恐惧, 易燃, 心理免疫, 魔法攻击, 穿行掩体, 开放阵型, 重生(6+), 散兵, 坚毅, 树木精魂",
-        "name_de": "Angst, Brennbar, Immun gegen Psychologie, Magische Attacken, Durch Deckung bewegen, Offene Ränge, Regeneration (6+), Plänkler, Unnachgiebig, Baumgeist",
-        "name_es": "",
-        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Ordre Dispersé, Régénération (6+), Tirailleurs, Obstiné, Esprit des Forêts",
-        "name_pl": "Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Przeszkody, Luźny Szyk, Regeneracja (6+), Harcownicy, Upartość, Duch Drzew"
+        "name_en": "Fear, Flammable, Immune to Psychology, Magical Attacks, Move Through Cover, Open Order, Regeneration (6+), Skirmishers, Stubborn, Tree Spirit, Armour Bane (1)",
+        "name_cn": "恐惧, 易燃, 心理免疫, 魔法攻击, 穿行掩体, 开放阵型, 重生(6+), 散兵, 坚毅, 树木精魂, 碎甲攻击(1)",
+        "name_de": "Angst, Brennbar, Immun gegen Psychologie, Magische Attacken, Durch Deckung bewegen, Offene Ränge, Regeneration (6+), Plänkler, Unnachgiebig, Baumgeist, Rüstungsfluch (1)",
+        "name_es": "Fear, Flammable, Immune to Psychology, Magical Attacks, Move Through Cover, Open Order, Regeneration (6+), Skirmishers, Stubborn, Tree Spirit, Armour Bane (1)",
+        "name_fr": "Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Ordre Dispersé, Régénération (6+), Tirailleurs, Obstiné, Esprit des Forêts, Arme Perforante (1)",
+        "name_pl": "Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Przeszkody, Luźny Szyk, Regeneracja (6+), Harcownicy, Upartość, Duch Drzew, Arme Perforante (1)"
       }
     },
     {
@@ -1931,9 +1980,9 @@
       "name_fr": "Cavaliers Sylvains",
       "name_pl": "Jeźdzcy Polany",
       "id": "glade-riders",
-      "points": 18,
-      "minimum": 5,
-      "maximum": 96,
+      "points": 17,
+      "minimum": 4,
+      "maximum": 0,
       "armyComposition": {
         "wood-elf-realms": {
           "category": "core"
@@ -2095,7 +2144,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -2130,7 +2179,7 @@
       "name_fr": "Cavaliers Sauvages",
       "name_pl": "Dzicy Jeźdzcy",
       "id": "wild-riders-core",
-      "points": 27,
+      "points": 26,
       "minimum": 5,
       "maximum": 0,
       "armyComposition": {
@@ -2267,11 +2316,7 @@
           "name_de": "Standartenträger",
           "name_fr": "Porte-étendard",
           "name_pl": "Sztandarowy",
-          "points": 6,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          }
+          "points": 6
         },
         {
           "name_en": "Musician",
@@ -2330,7 +2375,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -2561,10 +2606,10 @@
       "name_en": "Sisters of the Thorn",
       "name_cn": "荆棘姐妹",
       "name_de": "Schwestern der Dornen",
-      "name_fr": "Sœurs de l'Épine",
+      "name_fr": "Sœurs de l’Épine",
       "name_pl": "Siostry Ciernia",
       "id": "sisters-of-the-thorn",
-      "points": 24,
+      "points": 22,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2572,11 +2617,11 @@
           "name_en": "Handmaiden of the Thorn",
           "name_cn": "荆棘侍女",
           "name_de": "Zofe der Dornen",
-          "name_fr": "Suivante de l'Épine",
+          "name_fr": "Suivante de l’Épine",
           "name_pl": "Służka Ciernia",
           "points": 8,
           "magic": {
-            "types": ["weapon", "talisman", "enchanted-item", "arcane-item"],
+            "types": ["weapon", "talisman", "enchanted-item"],
             "maxPoints": 25
           }
         },
@@ -2622,7 +2667,7 @@
         "name_cn": "永恒之女, 深林密会, 精灵反应, 快速骑兵, 游击, 穿行掩体, 开放阵型, 淬毒攻击, 快速行进",
         "name_de": "Töchter der Ewigkeit, Zirkel des tiefen Waldes, Elfenreflexe, Wendige Kavallerie, Schießen und Verschwinden, Durch Deckung bewegen, Offene Ränge, Giftattacken, Schnelle Bewegung",
         "name_es": "",
-        "name_fr": "Filles de l'Éternité, Sabbat du Grand-bois, Réflexes Elfiques, Cavalerie Rapide, Tir & Fuite, Mouvement à Couvert, Ordre Dispersé, Attaques Empoisonnées, Rapide",
+        "name_fr": "Filles de l’Éternité, Sabbat du Grand-bois, Réflexes Elfiques, Cavalerie Rapide, Tir & Fuite, Mouvement à Couvert, Ordre Dispersé, Attaques Empoisonnées, Rapide",
         "name_pl": "Córki Wiecznośći, Kowen Głębokiego Lasu, Elfickie Refleksy, Szybka Kawaleria, Strzał i Ucieczka, Przechodzenie przez Zasłony, Luźny Szyk, Trujące Ataki, Szybki Krok"
       }
     },
@@ -2633,7 +2678,7 @@
       "name_fr": "Cavaliers Sauvages",
       "name_pl": "Dzicy Jeźdzcy",
       "id": "wild-riders",
-      "points": 27,
+      "points": 26,
       "minimum": 5,
       "maximum": 0,
       "armyComposition": {
@@ -2758,11 +2803,11 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Cavalry spear, Asrai longbow",
-          "name_cn": "单手武器, 骑兵长矛, 阿斯莱长弓",
-          "name_de": "Handwaffe, Kavalleriespeer, Asrai-Langbogen",
-          "name_fr": "Arme de base, Lance de cavalerie, Arc long Asrai",
-          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai",
+          "name_en": "Hand weapon, Cavalry spear, Asrai longbow, Wicked claws (Warhawk)",
+          "name_cn": "单手武器, 骑兵长矛, 阿斯莱长弓, 恶毒之爪 (Warhawk)",
+          "name_de": "Handwaffe, Kavalleriespeer, Asrai-Langbogen, Scheußliche Krallen (Warhawk)",
+          "name_fr": "Arme de base, Lance de cavalerie, Arc long Asrai, Griffes mortelles (Faucon de Guerre)",
+          "name_pl": "Broń ręczna, Lanca, Długi łuk Asrai, Wicked claws (Warhawk)",
           "points": 0,
           "perModel": true,
           "active": true
@@ -2820,7 +2865,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -3131,7 +3176,7 @@
           "name_en": "Swiftshiver Shards",
           "name_cn": "迅银箭头",
           "name_de": "Geschwinde Pfeile",
-          "name_fr": "Échardes d'Archère Hâtive",
+          "name_fr": "Échardes d’Archère Hâtive",
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
@@ -3168,7 +3213,18 @@
       "id": "giant-eagle",
       "points": 60,
       "command": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, Serrated maw",
+          "name_cn": "恶毒之爪, 锯齿巨口",
+          "name_de": "Wicked claws, Serrated maw",
+          "name_es": "Garras crueles, Dientes serrados",
+          "name_fr": "Griffes mortelles, Gueule dentelée",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
       "armor": [],
       "options": [],
       "mounts": [],
@@ -3198,8 +3254,28 @@
         }
       },
       "command": [],
-      "equipment": [],
-      "armor": [],
+      "equipment": [
+        {
+          "name_en": "Oaken fists, Strangleroots",
+          "name_cn": "Oaken fists, Strangleroots",
+          "name_de": "Oaken fists, Strangleroots",
+          "name_es": "Oaken fists, Strangleroots",
+          "name_fr": "Poings de chêne, Racines étrangleuses",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète (Armure arboricole)",
+          "name_es": "Armadura completa",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [
         {
           "name_en": "Ambushers",
@@ -3286,7 +3362,7 @@
       "notes": {
         "name_en": "Note that each Beast Keeper within a Beast Pack must take the same. In other words, a Beast Pack can only contain Deepwood Hounds, Forest Cats, Sylvan Boars or Bears of Loren, not a mixture of different beasts.",
         "name_cn": "在一个野兽猎群中的每个野兽饲养者必须选择相同的选项，换言之，一个野兽猎群中，只能包含深林猎犬、森林猫类、丛林野猪或洛伦熊，不能多种野兽混合。",
-        "name_fr": "Notez que tous les Gardien des Bêtes d’une Meute de Bêtes doivent prendre la même option. En d’autres termes, une Meute de Bêtes ne peut contenir que des Chiens du Grand-bois, Chats des Forêts, Sangliers Sylvains ou Ours de Loren, et non un mélange de différentes bêtes."
+        "name_fr": "Notez que tous les Gardiens des Bêtes d’une Meute de Bêtes doivent prendre la même option. En d’autres termes, une Chiens du Grand-bois ne peut contenir que des Chats des Forêts, Sangliers Sylvains, Ours de Loren ou $7, et non un mélange de différentes bêtes."
       }
     },
     {
@@ -3294,7 +3370,7 @@
       "name_cn": "深林猎犬",
       "name_de": "Deepwood Hound",
       "name_es": "Deepwood Hound",
-      "name_fr": "Chiens du Grand-bois",
+      "name_fr": "Chien du Grand-bois",
       "id": "deepwood-hounds",
       "points": 8,
       "detachment": true,

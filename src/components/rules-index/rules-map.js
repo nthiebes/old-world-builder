@@ -76,9 +76,48 @@ const additionalOWBRules = {
   "engine of the gods renegade": {
     url: "special-rules/engine-of-the-gods-renegade",
   },
+  "crown of antlers beastmen": {
+    url: "special-rules/crown-of-antlers",
+  },
+  "crown of antlers wood-elf-realms": {
+    url: "magic-item/crown-of-antlers",
+  },
+  "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
+  "helblaster volley gun weapon": {
+    url: "weapons-of-war/helblaster-volley-gun",
+  },
+  "helstorm rocket battery weapon": {
+    url: "weapons-of-war/helstorm-rocket-battery",
+  },
+  "organ gun weapon": {
+    url: "war-machines/organ-guns",
+  },
+  "screaming skull catapult weapon": {
+    url: "weapons-of-war/screaming-skull-catapult",
+  },
+  "open-war": {
+    url: "matched-play/open-war",
+  },
+  "grand-melee": {
+    url: "matched-play/grand-melee",
+  },
+  "combined-arms": {
+    url: "matched-play/combined-arms",
+  },
+  "grand-melee-combined-arms": {
+    url: "warhammer-armies/army-composition-lists",
+  },
+  "battle-march": {
+    url: "warhammer-armies/battle-march",
+  },
 };
 
 export const synonyms = {
+  "the witch": "suffer not...",
+  "the revenant": "suffer not...",
+  "the mutant": "suffer not...",
+  "the daemon": "suffer not...",
+  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
@@ -89,9 +128,9 @@ export const synonyms = {
   "wolf hammers": "wolf hammer",
   shields: "shield",
   bellower: "bellowers & musicians",
-  "revered guardian": "battle standard bearer",
-  "patrol leader": "battle standard bearer",
-  "sky leader": "battle standard bearer",
+  "revered guardian": "champions",
+  "patrol leader": "champions",
+  "sky leader": "champions",
   "great cannon": "cannon",
   "repeater bolt thrower": "bolt thrower",
   "bolt thrower": "bolt throwers",
@@ -225,6 +264,11 @@ export const synonyms = {
   "skin wolf jarl": "champions",
   "first sword": "champions",
   captain: "champions",
+  officer: "champions",
+  "veteran officer": "champions",
+  commander: "champions",
+  "shrine keeper": "champions",
+  "veteran commander": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -238,7 +282,6 @@ export const synonyms = {
   "expeditionary marksman": "expeditionary marksmen",
   "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
-  "nuln veteran state troops": "nuln state troops",
   "empire knights panther": "empire knights",
   "empire knights of the white wolf": "empire knights",
   "empire knights of the fiery heart": "empire knights",
@@ -269,6 +312,13 @@ export const synonyms = {
   "cathayan lances": "cathayan lance",
   "sky lantern crane guns": "sky lantern crane gun",
   "iron hail guns": "iron hail gun",
+  warhorses: "warhorse",
+  "barded warhorses": "barded warhorse",
+  "chaos furies of tzeentch": "chaos furies",
+  "chaos furies of nurgle": "chaos furies",
+  "chaos furies of slaanesh": "chaos furies",
+  "chaos furies of khorne": "chaos furies",
+  shadowlands: "lore of the shadowlands",
 };
 
 export const rulesMap = {
