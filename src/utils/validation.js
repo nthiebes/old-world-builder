@@ -349,9 +349,12 @@ export const validateList = ({ list, language, intl }) => {
     list.characters.forEach((unit) => {
       const characterRestricted = Boolean(
         characterUnitsRules &&
-          characterUnitsRules.find((ruleUnit) =>
+          (characterUnitsRules.find((ruleUnit) =>
             ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max,
+          )?.max ||
+            characterUnitsRules.find((ruleUnit) =>
+              ruleUnit.ids.includes(unit.id.split(".")[0]),
+            )?.min),
       );
       const characterCount = list.characters.filter(
         (character) => character.id.split(".")[0] === unit.id.split(".")[0],
