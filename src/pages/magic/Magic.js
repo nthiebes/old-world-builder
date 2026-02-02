@@ -58,7 +58,7 @@ const updateIds = (items) => {
   }));
 };
 
-export const isAllowedShield = (unit) => {
+export const isAllowedShield = (unit, armyComposition) => {
   return (
     (unit.equipment &&
       unit.equipment.some((option) =>
@@ -71,6 +71,15 @@ export const isAllowedShield = (unit) => {
     (unit.armor &&
       unit.armor.some((option) =>
         option.name_en.toLowerCase().includes("shield"),
+      )) ||
+    // Renegade rules allow Ironfist to act like a shield for magic shield eligibility
+    (armyComposition?.includes("renegade") && unit.equipment &&
+      unit.equipment.some((option) =>
+        option.name_en.toLowerCase().includes("ironfist"),
+      )) ||
+    (armyComposition?.includes("renegade") && unit.options &&
+      unit.options.some((option) =>
+        option.name_en.toLowerCase().includes("ironfist"),
       )) ||
     (unit.detachments &&
       unit.detachments.some(
@@ -98,8 +107,8 @@ export const isMagicShield = (magicItem) => {
   );
 };
 
-export const isDisallowedShield = (magicItem, unit) => {
-  return isMagicShield(magicItem) && !isAllowedShield(unit);
+export const isDisallowedShield = (magicItem, unit, armyComposition) => {
+  return isMagicShield(magicItem) && !isAllowedShield(unit, armyComposition);
 };
 
 export const notEnoughPointsRemaining = (
@@ -497,13 +506,15 @@ export const Magic = ({ isMobile }) => {
               !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              (notEnoughPointsRemaining(
-                maxMagicPoints,
-                magicItem,
-                unitPointsRemaining,
-              ) ||
+              (
+                notEnoughPointsRemaining(
+                  maxMagicPoints,
+                  magicItem,
+                  unitPointsRemaining,
+                ) ||
                 isTypeLimitReached ||
-                isDisallowedShield(magicItem, unit))
+                isDisallowedShield(magicItem, unit, list.armyComposition)
+              )
             }
           />
           <label
