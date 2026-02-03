@@ -51,8 +51,9 @@ export const Button = ({
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         disabled && "button--disabled",
+        icon === "sync" && "button--spinning",
         `button--${size}`,
-        className
+        className,
       )}
       onClick={onClick}
       to={to}

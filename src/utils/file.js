@@ -17,8 +17,22 @@ export const getFile = ({ list, listText, asText, isLists }) => {
   };
 };
 
-export const getOwbFile = (owbObject) => {
-  const fileName = "owb.json";
+export const getSyncFile = (lastChanged) => {
+  const fileName = "owb-sync.txt";
+  const file = new File([lastChanged.toString()], fileName, {
+    type: "text/plain",
+  });
+  const fileUrl = URL.createObjectURL(file);
+
+  return {
+    file,
+    fileUrl,
+    fileName,
+  };
+};
+
+export const getDataFile = (owbObject) => {
+  const fileName = "owb-data.json";
   const file = new File([JSON.stringify(owbObject)], fileName, {
     type: "application/json",
   });

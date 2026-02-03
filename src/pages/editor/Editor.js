@@ -183,10 +183,10 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
-        id: "misc.gameView",
+        id: "misc.delete",
       }),
-      icon: "shield",
-      to: `/game-view/${listId}`,
+      icon: "delete",
+      callback: () => setIsDialogOpen(true),
     },
     {
       name: intl.formatMessage({
@@ -204,10 +204,10 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
-        id: "misc.delete",
+        id: "misc.gameView",
       }),
-      icon: "delete",
-      callback: () => setIsDialogOpen(true),
+      icon: "shield",
+      to: `/game-view/${listId}`,
     },
   ];
 

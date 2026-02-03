@@ -31,7 +31,7 @@ export const Header = ({
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
-  const { listId } = useParams();
+  const { listId, unitId } = useParams();
   const { loginLoading, loggedIn, dpxAuthUrl, isSyncing } = useSelector(
     (state) => state.login,
   );
@@ -85,11 +85,14 @@ export const Header = ({
 
   useEffect(() => {
     if (list) {
-      console.log("list changed");
       updateLocalList(list);
-      dispatch(updateSetting({ lastChanged: new Date().getTime() }));
+
+      const newSettings = { ...settings, lastChanged: new Date().toString() };
+      dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+      localStorage.setItem("owb.settings", JSON.stringify(newSettings));
     }
-  }, [list, dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list]);
 
   return (
     <Component
@@ -125,7 +128,7 @@ export const Header = ({
                 <Button
                   type="text"
                   onClick={logout}
-                  label={intl.formatMessage({ id: "misc.dropboxLogout" })}
+                  label={intl.formatMessage({ id: "header.dropboxLogout" })}
                   color="light"
                   icon="logout"
                   showLabelRight
@@ -137,7 +140,7 @@ export const Header = ({
                   label={
                     loginLoading
                       ? ""
-                      : intl.formatMessage({ id: "misc.dropboxLogin" })
+                      : intl.formatMessage({ id: "header.dropboxLogin" })
                   }
                   color="light"
                   icon={loginLoading ? "spinner" : "dropbox"}
@@ -157,19 +160,30 @@ export const Header = ({
                   {headline}
                 </Link>
                 {!isSection && (
-                  <Button
-                    type="text"
-                    color="light"
-                    className="header__cloud-icon"
-                    label={intl.formatMessage({ id: "header.sync" })}
-                    icon={isSyncing ? "sync" : "cloud"}
-                    onClick={() => {
-                      syncLists({
-                        dispatch,
-                        settings,
-                      });
-                    }}
-                  />
+                  <>
+                    {loggedIn ? (
+                      <Button
+                        type="text"
+                        color="light"
+                        className="header__cloud-icon"
+                        label={intl.formatMessage({ id: "header.sync" })}
+                        icon={isSyncing ? "sync" : "cloud"}
+                        onClick={() => {
+                          syncLists({
+                            dispatch,
+                          });
+                        }}
+                      />
+                    ) : (
+                      <Button
+                        type="text"
+                        color="light"
+                        className="header__cloud-icon"
+                        disabled
+                        icon="cloud-off"
+                      />
+                    )}
+                  </>
                 )}
               </h1>
             ) : (
@@ -185,18 +199,30 @@ export const Header = ({
             {subheadline}{" "}
             {hasPointsError && <Icon symbol="error" color="red" />}
             {!isSection && (
-              <Button
-                type="text"
-                color="light"
-                className="header__cloud-icon"
-                label={intl.formatMessage({ id: "header.sync" })}
-                icon={isSyncing ? "sync" : "cloud"}
-                onClick={() => {
-                  syncLists({
-                    dispatch,
-                  });
-                }}
-              />
+              <>
+                {loggedIn ? (
+                  <Button
+                    type="text"
+                    color="light"
+                    className="header__cloud-icon"
+                    label={intl.formatMessage({ id: "header.sync" })}
+                    icon={isSyncing ? "sync" : "cloud"}
+                    onClick={() => {
+                      syncLists({
+                        dispatch,
+                      });
+                    }}
+                  />
+                ) : (
+                  <Button
+                    type="text"
+                    color="light"
+                    className="header__cloud-icon"
+                    disabled
+                    icon="cloud-off"
+                  />
+                )}
+              </>
             )}
           </p>
         )}
@@ -208,7 +234,9 @@ export const Header = ({
           color={isSection ? "dark" : "light"}
           label={
             navigationIcon
-              ? intl.formatMessage({ id: "header.more" })
+              ? unitId
+                ? intl.formatMessage({ id: "header.moreUnit" })
+                : intl.formatMessage({ id: "header.moreList" })
               : intl.formatMessage({ id: "header.menu" })
           }
           icon={navigationIcon ? navigationIcon : "menu"}

@@ -131,6 +131,19 @@
   max-width: 25rem;
 }
 
+.button--spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button__icon {
   margin-right: 0.5rem;
 }
@@ -151,13 +164,13 @@
 }
 
 .button__label--right {
-  width: 10rem;
+  width: 8rem;
   margin-left: 0.5rem;
   text-align: left;
 }
 
 .button__label--left {
-  width: 10rem;
+  width: 8rem;
   margin-right: 0.5rem;
   text-align: right;
 }

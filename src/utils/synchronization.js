@@ -1,4 +1,4 @@
-import { getOwbFile } from "../utils/file";
+import { getSyncFile, getDataFile } from "../utils/file";
 
 import { updateLogin } from "../state/login";
 import { setLists } from "../state/lists";
@@ -7,13 +7,27 @@ import { setSettings, updateSetting } from "../state/settings";
 export const syncLists = ({ dispatch, settings }) => {
   const accessToken = localStorage.getItem("owb.token");
   const dbx = new Dropbox.Dropbox({ accessToken });
-  const uploadOwbFile = (owbObject) => {
+  const uploadSyncFile = (sync) => {
     return new Promise((resolve, reject) => {
-      const { file } = getOwbFile(owbObject);
+      const { file } = getSyncFile(sync);
 
       dbx
         .filesUpload({
-          path: "/owb.json",
+          path: "/owb-sync.txt",
+          contents: file,
+          mode: { ".tag": "overwrite" },
+        })
+        .then(() => resolve())
+        .catch((err) => reject(err));
+    });
+  };
+  const uploadDataFile = (data) => {
+    return new Promise((resolve, reject) => {
+      const { file } = getDataFile(data);
+
+      dbx
+        .filesUpload({
+          path: "/owb-data.json",
           contents: file,
           mode: { ".tag": "overwrite" },
         })
@@ -33,15 +47,25 @@ export const syncLists = ({ dispatch, settings }) => {
       const localLists = JSON.parse(localStorage.getItem("owb.lists")) || [];
 
       if (response) {
-        const owbFiles = entries.filter(({ name }) => name === "owb.json");
+        const syncFiles = entries.filter(({ name }) => name === "owb-sync.txt");
+        const dataFiles = entries.filter(
+          ({ name }) => name === "owb-data.json",
+        );
 
-        // Upload new file if none exist remotely
-        if (owbFiles.length === 0) {
-          console.log("no owb file found");
-          const lastChanged = new Date().getTime();
+        // Upload new files if none exist remotely
+        if (syncFiles.length === 0) {
+          console.log("no sync file found");
+          const lastChanged = new Date().toString();
 
-          uploadOwbFile({
-            lastChanged,
+          uploadSyncFile(lastChanged)
+            .then(() => {
+              dispatch(updateLogin({ isSyncing: false }));
+            })
+            .catch((error) => {
+              dispatch(updateLogin({ isSyncing: false }));
+              console.log(error);
+            });
+          uploadDataFile({
             lists: localLists,
             settings,
           })
@@ -52,76 +76,119 @@ export const syncLists = ({ dispatch, settings }) => {
               dispatch(updateLogin({ isSyncing: false }));
               console.log(error);
             });
-          dispatch(updateSetting({ lastChanged }));
+          dispatch(updateSetting({ lastChanged, lastSynced: lastChanged }));
           localStorage.setItem(
             "owb.settings",
             JSON.stringify({
               ...settings,
               lastChanged,
+              lastSynced: lastChanged,
             }),
           );
         }
 
         // Download existing file
         else {
-          console.log("owb file found", settings.lastChanged);
-          const owbFile = owbFiles[0];
+          console.log("sync file found");
+          const syncFile = syncFiles[0];
+          const dataFile = dataFiles[0];
 
           dbx
-            .filesDownload({ path: owbFile.path_display })
+            .filesDownload({ path: syncFile.path_display })
             .then(function (response) {
               const reader = new FileReader();
 
               reader.readAsText(response.result.fileBlob, "UTF-8");
               reader.onload = (event) => {
-                const downloadedOwbFile = JSON.parse(event.target.result);
+                const downloadedSyncFile = event.target.result;
+                const remoteLastChanged = new Date(
+                  downloadedSyncFile,
+                ).getTime();
+                const localLastChanged = new Date(
+                  settings.lastChanged,
+                ).getTime();
 
                 console.log("file downloaded");
-                console.log(downloadedOwbFile);
 
                 // First time sync
-                if (!settings.lastChanged) {
-                  console.log(
-                    "first time sync with remote owb file - ask user?",
-                  );
-                }
+                // if (!settings.lastSynced && localLists.length > 0) {
+                //   console.log(
+                //     "first time sync with remote sync file - ask user?",
+                //   );
+                // }
 
                 // New local changes
-                else if (downloadedOwbFile.lastChanged < settings.lastChanged) {
-                  console.log("uploading owb file with local changes");
+                if (remoteLastChanged < localLastChanged) {
+                  console.log("uploading files with local changes");
 
-                  uploadOwbFile({
-                    lastChanged: settings.lastChanged,
+                  uploadSyncFile(settings.lastChanged)
+                    .then(() => {
+                      dispatch(updateLogin({ isSyncing: false }));
+                    })
+                    .catch((error) => {
+                      dispatch(updateLogin({ isSyncing: false }));
+                      console.log(error);
+                    });
+                  uploadDataFile({
                     lists: localLists,
                     settings,
-                  });
+                  })
+                    .then(() => {
+                      dispatch(updateLogin({ isSyncing: false }));
+                    })
+                    .catch((error) => {
+                      dispatch(updateLogin({ isSyncing: false }));
+                      console.log(error);
+                    });
                 }
 
                 // Remote changes
-                else if (downloadedOwbFile.lastChanged > settings.lastChanged) {
-                  console.log("updating local from remote owb file");
+                else if (remoteLastChanged > localLastChanged) {
+                  console.log("downloading remote data file");
 
-                  // Update local lists
-                  dispatch(setLists(downloadedOwbFile.lists));
-                  dispatch(setSettings(downloadedOwbFile.settings));
-                  localStorage.setItem(
-                    "owb.lists",
-                    JSON.stringify(downloadedOwbFile.lists),
-                  );
-                  localStorage.setItem(
-                    "owb.settings",
-                    JSON.stringify(downloadedOwbFile.settings),
-                  );
+                  dbx
+                    .filesDownload({ path: dataFile.path_display })
+                    .then(function (response) {
+                      const reader = new FileReader();
+
+                      reader.readAsText(response.result.fileBlob, "UTF-8");
+                      reader.onload = (event) => {
+                        const downloadedDataFile = JSON.parse(
+                          event.target.result,
+                        );
+
+                        console.log("updating local data with remote file");
+
+                        // Update local lists
+                        dispatch(setLists(downloadedDataFile.lists));
+                        dispatch(setSettings(downloadedDataFile.settings));
+                        dispatch(updateLogin({ isSyncing: false }));
+                        localStorage.setItem(
+                          "owb.lists",
+                          JSON.stringify(downloadedDataFile.lists),
+                        );
+                        localStorage.setItem(
+                          "owb.settings",
+                          JSON.stringify(downloadedDataFile.settings),
+                        );
+                      };
+                    })
+                    .catch(function (error) {
+                      console.log(error);
+                      dispatch(updateLogin({ isSyncing: false }));
+                    });
                 }
 
                 // In sync
                 else {
-                  console.log("local and remote owb file are in sync");
+                  console.log("local and remote file are in sync");
+                  dispatch(updateLogin({ isSyncing: false }));
                 }
               };
             })
             .catch(function (error) {
               console.log(error);
+              dispatch(updateLogin({ isSyncing: false }));
             });
         }
       }

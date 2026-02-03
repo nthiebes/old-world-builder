@@ -13,6 +13,7 @@ export const settingsSlice = createSlice({
     listSorting: "manual",
     showStats: true,
     lastChanged: null,
+    lastSynced: null,
   },
   reducers: {
     setSettings: (_, { payload }) => {
