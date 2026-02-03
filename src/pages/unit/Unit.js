@@ -28,7 +28,6 @@ import { nameMap } from "../magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
 import { namesForSpread } from "../../utils/string";
@@ -481,10 +480,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
-  useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
 
   useEffect(() => {
     if (list && !army) {

@@ -24,7 +24,7 @@ export const DuplicateList = ({ isMobile }) => {
   const [redirect, setRedirect] = useState(null);
   const lists = useSelector((state) => state.lists);
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
 
   const handlePointsChange = (event) => {
@@ -66,7 +66,7 @@ export const DuplicateList = ({ isMobile }) => {
       setName(
         `${intl.formatMessage({
           id: "duplicate.copyOf",
-        })} ${list?.name}`
+        })} ${list?.name}`,
       );
       setPoints(list.points);
       setDescription(list.description);

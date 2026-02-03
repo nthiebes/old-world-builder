@@ -10,18 +10,22 @@ export const settingsSlice = createSlice({
     showVictoryPoints: false,
     showCustomNotes: false,
     showGeneratedSpells: true,
-    showStats: true,
-    loggedIn: false,
     listSorting: "manual",
+    showStats: true,
+    lastChanged: null,
   },
   reducers: {
     setSettings: (_, { payload }) => {
-      return payload || settingsSlice.initialState;
+      return payload
+        ? { ...settingsSlice.getInitialState(), ...payload }
+        : settingsSlice.getInitialState();
     },
-    updateSetting: (state, { payload }) => ({
-      ...state,
-      [payload.key]: payload.value,
-    }),
+    updateSetting: (state, { payload }) => {
+      return {
+        ...state,
+        ...payload,
+      };
+    },
   },
 });
 

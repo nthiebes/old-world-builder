@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
-import { useDropboxAuthentication } from "../../utils/useDropboxAuthentication";
+import { syncLists } from "../../utils/synchronization";
+import { updateLocalList } from "../../utils/list";
+import { updateSetting } from "../../state/settings";
 
 import "./Header.css";
 
@@ -27,7 +30,15 @@ export const Header = ({
   const intl = useIntl();
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
-  const { dpxAuthUrl, isLoggedIn, isLoginLoading } = useDropboxAuthentication();
+  const dispatch = useDispatch();
+  const { listId } = useParams();
+  const { loginLoading, loggedIn, dpxAuthUrl, isSyncing } = useSelector(
+    (state) => state.login,
+  );
+  const list = useSelector((state) =>
+    state.lists.find(({ id }) => listId === id),
+  );
+  const settings = useSelector((state) => state.settings);
   const Component = isSection ? "section" : "header";
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
@@ -68,11 +79,17 @@ export const Header = ({
     window.location.reload();
   };
 
-  // console.log("header");
-
   useEffect(() => {
     setShowMenu(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (list) {
+      console.log("list changed");
+      updateLocalList(list);
+      dispatch(updateSetting({ lastChanged: new Date().getTime() }));
+    }
+  }, [list, dispatch]);
 
   return (
     <Component
@@ -104,7 +121,7 @@ export const Header = ({
             />
           ) : (
             <>
-              {isLoggedIn ? (
+              {loggedIn ? (
                 <Button
                   type="text"
                   onClick={logout}
@@ -118,12 +135,12 @@ export const Header = ({
                   type="text"
                   href={dpxAuthUrl}
                   label={
-                    isLoginLoading
+                    loginLoading
                       ? ""
                       : intl.formatMessage({ id: "misc.dropboxLogin" })
                   }
                   color="light"
-                  icon={isLoginLoading ? "spinner" : "dropbox"}
+                  icon={loginLoading ? "spinner" : "dropbox"}
                   showLabelRight
                 />
               )}
@@ -139,6 +156,21 @@ export const Header = ({
                 <Link className="header__name-link" to="/">
                   {headline}
                 </Link>
+                {!isSection && (
+                  <Button
+                    type="text"
+                    color="light"
+                    className="header__cloud-icon"
+                    label={intl.formatMessage({ id: "header.sync" })}
+                    icon={isSyncing ? "sync" : "cloud"}
+                    onClick={() => {
+                      syncLists({
+                        dispatch,
+                        settings,
+                      });
+                    }}
+                  />
+                )}
               </h1>
             ) : (
               <h1 className="header__name">
@@ -152,6 +184,20 @@ export const Header = ({
           <p className="header__points">
             {subheadline}{" "}
             {hasPointsError && <Icon symbol="error" color="red" />}
+            {!isSection && (
+              <Button
+                type="text"
+                color="light"
+                className="header__cloud-icon"
+                label={intl.formatMessage({ id: "header.sync" })}
+                icon={isSyncing ? "sync" : "cloud"}
+                onClick={() => {
+                  syncLists({
+                    dispatch,
+                  });
+                }}
+              />
+            )}
           </p>
         )}
       </div>
@@ -175,7 +221,7 @@ export const Header = ({
             <div
               className={classNames(
                 "header__empty-icon",
-                isSection && "header__empty-icon--small"
+                isSection && "header__empty-icon--small",
               )}
             />
           )}
@@ -196,7 +242,7 @@ export const Header = ({
         <ul
           className={classNames(
             "header__more",
-            !hasMainNavigation && "header__more--secondary-navigation"
+            !hasMainNavigation && "header__more--secondary-navigation",
           )}
         >
           {navigation.map(({ callback, name, icon, to: moreButtonTo }) => (
@@ -217,13 +263,13 @@ export const Header = ({
         <ul
           className={classNames(
             "header__more",
-            !hasMainNavigation && "header__more--secondary-navigation"
+            !hasMainNavigation && "header__more--secondary-navigation",
           )}
         >
           {/*
-            * Can't add <InstallPwa /> here, as it needs to be rendered
-            * on page load to catch the beforeinstallprompt event.
-            */}
+           * Can't add <InstallPwa /> here, as it needs to be rendered
+           * on page load to catch the beforeinstallprompt event.
+           */}
           {filters.map(({ callback, name, description, id, checked }) => (
             <li key={id}>
               <div className="checkbox header__checkbox">

@@ -216,6 +216,7 @@ export const Home = ({ isMobile }) => {
 
         localStorage.setItem("owb.lists", JSON.stringify(newLists));
         dispatch(setLists(newLists));
+        dispatch(updateSetting({ lastChanged: new Date().getTime() }));
       }
     } else {
       let newLists = updateListsFolder(
@@ -224,6 +225,7 @@ export const Home = ({ isMobile }) => {
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));
       dispatch(setLists(newLists));
+      dispatch(updateSetting({ lastChanged: new Date().getTime() }));
     }
   };
   const folders = lists.filter((list) => list.type === "folder");
@@ -263,7 +265,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "manual",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "manual" }));
+        dispatch(
+          updateSetting({
+            listSorting: "manual",
+            lastChanged: new Date().getTime(),
+          }),
+        );
       },
     },
     {
@@ -277,7 +284,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "faction",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "faction" }));
+        dispatch(
+          updateSetting({
+            listSorting: "faction",
+            lastChanged: new Date().getTime(),
+          }),
+        );
       },
     },
     {
@@ -291,7 +303,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "nameAsc",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "nameAsc" }));
+        dispatch(
+          updateSetting({
+            listSorting: "nameAsc",
+            lastChanged: new Date().getTime(),
+          }),
+        );
       },
     },
     {
@@ -305,7 +322,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "nameDesc",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "nameDesc" }));
+        dispatch(
+          updateSetting({
+            listSorting: "nameDesc",
+            lastChanged: new Date().getTime(),
+          }),
+        );
       },
     },
   ];
@@ -329,6 +351,7 @@ export const Home = ({ isMobile }) => {
     setDialogOpen(null);
     setActiveMenu(null);
     dispatch(setLists(newLists));
+    dispatch(updateSetting({ lastChanged: new Date().getTime() }));
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
   };
   const handleEditConfirm = () => {
@@ -337,6 +360,7 @@ export const Home = ({ isMobile }) => {
     setDialogOpen(null);
     setActiveMenu(null);
     dispatch(updateList({ ...list, listId: list.id, name: folderName }));
+    dispatch(updateSetting({ lastChanged: new Date().getTime() }));
     updateLocalList({
       ...list,
       name: folderName,
@@ -354,6 +378,7 @@ export const Home = ({ isMobile }) => {
     ]);
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    dispatch(updateSetting({ lastChanged: new Date().getTime() }));
     dispatch(setLists(newLists));
     setFolderName("");
     setDialogOpen(null);

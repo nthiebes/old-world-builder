@@ -26,13 +26,16 @@ import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 
+import { useDropboxAuthentication } from "./utils/useDropboxAuthentication";
+
 import "./App.css";
 
 export const App = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 1279px)").matches
+    window.matchMedia("(max-width: 1279px)").matches,
   );
+  useDropboxAuthentication();
 
   useEffect(() => {
     const localLists = localStorage.getItem("owb.lists");
@@ -47,7 +50,7 @@ export const App = () => {
 
     if (mediaQuery?.addEventListener) {
       mediaQuery.addEventListener("change", (event) =>
-        setIsMobile(event.matches)
+        setIsMobile(event.matches),
       );
     } else {
       mediaQuery.addListener((event) => setIsMobile(event.matches));

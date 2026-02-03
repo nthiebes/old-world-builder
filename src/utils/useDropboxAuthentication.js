@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { loadDropboxLists } from "./list";
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import { updateLogin } from "../state/login";
 
 const clientId = "7l38e9ahse786da";
 
@@ -53,95 +54,43 @@ const isUserAuthenticated = () => {
   return !!getAccessTokenFromUrl();
 };
 
-let dpxAuthUrl = "";
-
 export const useDropboxAuthentication = () => {
   const accessToken = localStorage.getItem("owb.token");
-  const lists = useSelector((state) => state.lists);
-  // const { loginLoading } = useSelector((state) => state.settings);
   const dispatch = useDispatch();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoginLoading, setIsLoginLoading] = useState(false);
 
-  console.log("isLoginLoading", isLoginLoading);
-  console.log("isLoggedIn", isLoggedIn);
+  useEffect(() => {
+    if (accessToken) {
+      console.log("local storage token found");
 
-  if (accessToken && !isLoggedIn && !isLoginLoading) {
-    const dbx = new Dropbox.Dropbox({ accessToken });
+      dispatch(updateLogin({ loggedIn: true }));
+    } else if (isUserAuthenticated()) {
+      console.log("start loading with access token from url");
 
-    console.log("start loading with local access token");
+      dispatch(updateLogin({ loggedIn: true }));
+      localStorage.setItem("owb.token", getAccessTokenFromUrl());
+      window.location.hash = "";
+    } else {
+      // Set the login anchors href using dbx.getAuthenticationUrl()
+      const dbx = new Dropbox.Dropbox({ clientId: clientId });
 
-    setIsLoginLoading(true);
+      console.log("not logged in getting URL");
 
-    dbx
-      .filesListFolder({ path: "" })
-      .then(function (response) {
-        loadDropboxLists({
-          entries: response.result.entries,
-          dbx,
-          lists,
-          dispatch,
+      dispatch(updateLogin({ loginLoading: true }));
+
+      dbx.auth
+        .getAuthenticationUrl(
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:3000/"
+            : "https://old-world-builder.com/",
+        )
+        .then((authUrl) => {
+          dispatch(
+            updateLogin({
+              loginLoading: false,
+              dpxAuthUrl: authUrl,
+            }),
+          );
         });
-        setIsLoggedIn(true);
-        setIsLoginLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error.error || error);
-        setIsLoginLoading(false);
-        setIsLoggedIn(false);
-        localStorage.setItem("owb.token", "");
-      });
-  } else if (isUserAuthenticated() && !isLoggedIn && !isLoginLoading) {
-    // Create an instance of Dropbox with the access token and use it to
-    // fetch and render the files in the users root directory.
-    const dbx = new Dropbox.Dropbox({ accessToken: getAccessTokenFromUrl() });
-
-    console.log("start loading with access token from url");
-
-    setIsLoginLoading(true);
-    localStorage.setItem("owb.token", getAccessTokenFromUrl());
-    window.location.hash = "";
-
-    dbx
-      .filesListFolder({ path: "" })
-      .then(function (response) {
-        if (response?.result?.entries) {
-          loadDropboxLists({
-            entries: response.result.entries,
-            dbx,
-            lists,
-            dispatch,
-          });
-        }
-        setIsLoggedIn(true);
-        setIsLoginLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error.error || error);
-        setIsLoginLoading(false);
-        setIsLoggedIn(false);
-        localStorage.setItem("owb.token", "");
-      });
-  } else if (!dpxAuthUrl && !isLoggedIn && !isLoginLoading) {
-    // Set the login anchors href using dbx.getAuthenticationUrl()
-    const dbx = new Dropbox.Dropbox({ clientId: clientId });
-
-    console.log("not logged in getting URL");
-
-    dbx.auth
-      .getAuthenticationUrl(
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:3000/"
-          : "https://old-world-builder.com/"
-      )
-      .then((authUrl) => {
-        dpxAuthUrl = authUrl;
-      });
-  }
-
-  return {
-    isLoggedIn,
-    dpxAuthUrl,
-    isLoginLoading,
-  };
+    }
+  }, [accessToken, dispatch]);
 };

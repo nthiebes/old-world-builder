@@ -51,7 +51,7 @@ export const GameView = () => {
   const [detachmentsDead, setDetachmentsDead] = useState({});
   const [victoryPoints, setVictoryPoints] = useState({});
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const handleCustomNoteChange = ({ value, type, unitId }) => {
     dispatch(
@@ -60,7 +60,7 @@ export const GameView = () => {
         type,
         unitId,
         customNote: value,
-      })
+      }),
     );
   };
   const updateLocalSettings = (newSettings) => {
@@ -149,9 +149,7 @@ export const GameView = () => {
           ...settings,
           showSpecialRules: !showSpecialRules,
         });
-        dispatch(
-          updateSetting({ key: "showSpecialRules", value: !showSpecialRules })
-        );
+        dispatch(updateSetting({ showSpecialRules: !showSpecialRules }));
       },
     },
     {
@@ -165,7 +163,7 @@ export const GameView = () => {
           ...settings,
           showStats: !showStats,
         });
-        dispatch(updateSetting({ key: "showStats", value: !showStats }));
+        dispatch(updateSetting({ showStats: !showStats }));
       },
     },
     {
@@ -179,7 +177,7 @@ export const GameView = () => {
           ...settings,
           showPoints: !showPoints,
         });
-        dispatch(updateSetting({ key: "showPoints", value: !showPoints }));
+        dispatch(updateSetting({ showPoints: !showPoints }));
       },
     },
     {
@@ -193,9 +191,7 @@ export const GameView = () => {
           ...settings,
           showPageNumbers: !showPageNumbers,
         });
-        dispatch(
-          updateSetting({ key: "showPageNumbers", value: !showPageNumbers })
-        );
+        dispatch(updateSetting({ showPageNumbers: !showPageNumbers }));
       },
     },
     {
@@ -209,9 +205,7 @@ export const GameView = () => {
           ...settings,
           showCustomNotes: !showCustomNotes,
         });
-        dispatch(
-          updateSetting({ key: "showCustomNotes", value: !showCustomNotes })
-        );
+        dispatch(updateSetting({ showCustomNotes: !showCustomNotes }));
       },
     },
     {
@@ -227,9 +221,8 @@ export const GameView = () => {
         });
         dispatch(
           updateSetting({
-            key: "showGeneratedSpells",
-            value: !showGeneratedSpells,
-          })
+            showGeneratedSpells: !showGeneratedSpells,
+          }),
         );
       },
     },
@@ -245,7 +238,9 @@ export const GameView = () => {
           showVictoryPoints: !showVictoryPoints,
         });
         dispatch(
-          updateSetting({ key: "showVictoryPoints", value: !showVictoryPoints })
+          updateSetting({
+            showVictoryPoints: !showVictoryPoints,
+          }),
         );
       },
     },
@@ -283,7 +278,7 @@ export const GameView = () => {
                           { ...unit, type },
                           {
                             armyComposition,
-                          }
+                          },
                         )}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
@@ -376,7 +371,7 @@ export const GameView = () => {
                     <GeneratedSpells
                       availableLoresWithSpells={getUnitLoresWithSpells(
                         unit,
-                        armyComposition
+                        armyComposition,
                       )}
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
@@ -442,15 +437,15 @@ export const GameView = () => {
     const isGeneral = Boolean(
       unit?.command?.length &&
         unit.command.find(
-          (command) => command.name_en === "General" && command.active
-        )
+          (command) => command.name_en === "General" && command.active,
+        ),
     );
     const isBSB = Boolean(
       unit?.command?.length &&
         unit.command.find(
           (command) =>
-            command.name_en === "Battle Standard Bearer" && command.active
-        )
+            command.name_en === "Battle Standard Bearer" && command.active,
+        ),
     );
 
     // eslint-disable-next-line default-case
@@ -465,7 +460,7 @@ export const GameView = () => {
                 {
                   noDetachments: true,
                   armyComposition,
-                }
+                },
               ),
           fleeing: 0,
           25: 0,
@@ -490,8 +485,8 @@ export const GameView = () => {
                   {
                     noDetachments: true,
                     armyComposition,
-                  }
-                ) / 2
+                  },
+                ) / 2,
               ),
           25: 0,
         };
@@ -516,8 +511,8 @@ export const GameView = () => {
                   {
                     noDetachments: true,
                     armyComposition,
-                  }
-                ) / 2
+                  },
+                ) / 2,
               ),
         };
         break;
@@ -536,7 +531,7 @@ export const GameView = () => {
                     strength: 1,
                     type,
                   },
-                  { armyComposition }
+                  { armyComposition },
                 ),
             },
           };
