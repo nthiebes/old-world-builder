@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import { updateLogin } from "../state/login";
+import { syncLists } from "../utils/synchronization";
 
 const clientId = "7l38e9ahse786da";
 
@@ -69,6 +70,9 @@ export const useDropboxAuthentication = () => {
       dispatch(updateLogin({ loggedIn: true }));
       localStorage.setItem("owb.token", getAccessTokenFromUrl());
       window.location.hash = "";
+      syncLists({
+        dispatch,
+      });
     } else {
       // Set the login anchors href using dbx.getAuthenticationUrl()
       const dbx = new Dropbox.Dropbox({ clientId: clientId });

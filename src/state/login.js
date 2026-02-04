@@ -7,6 +7,7 @@ export const loginSlice = createSlice({
     loginLoading: true,
     dpxAuthUrl: "",
     isSyncing: false,
+    syncConflict: false,
   },
   reducers: {
     updateLogin: (state, { payload }) => {

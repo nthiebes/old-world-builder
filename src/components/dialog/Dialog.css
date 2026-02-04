@@ -22,6 +22,12 @@
   padding: 2.5rem 1rem 1rem 1rem;
 }
 
+.dialog__content--no-close {
+  padding-top: 1rem;
+  text-align: center;
+  width: 20rem;
+}
+
 .dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }

@@ -5,17 +5,25 @@ import { useIntl } from "react-intl";
 import { Button } from "../button";
 
 import "./Dialog.css";
+import classNames from "classnames";
 
 export const Dialog = ({ open, onClose, children }) => {
   const dialogRef = useRef(null);
   const intl = useIntl();
   const handleClose = () => {
-    dialogRef?.current?.close && dialogRef.current.close();
-    onClose();
+    if (onClose) {
+      dialogRef?.current?.close && dialogRef.current.close();
+      onClose();
+    }
   };
   const handleClick = (event) => {
     if (event.target.className === "dialog") {
       handleClose();
+    }
+  };
+  const handleKeydown = (event) => {
+    if (event.key === "Escape" && !onClose) {
+      event.preventDefault();
     }
   };
   useEffect(() => {
@@ -32,16 +40,24 @@ export const Dialog = ({ open, onClose, children }) => {
       ref={dialogRef}
       onClose={handleClose}
       onClick={handleClick}
+      onKeyDown={handleKeydown}
     >
-      <div className="dialog__content">
-        <Button
-          className="dialog__close"
-          icon="close"
-          type="text"
-          label={intl.formatMessage({ id: "header.close" })}
-          color="dark"
-          onClick={handleClose}
-        />
+      <div
+        className={classNames(
+          "dialog__content",
+          !onClose && "dialog__content--no-close",
+        )}
+      >
+        {onClose && (
+          <Button
+            className="dialog__close"
+            icon="close"
+            type="text"
+            label={intl.formatMessage({ id: "header.close" })}
+            color="dark"
+            onClick={handleClose}
+          />
+        )}
         {children}
       </div>
     </dialog>

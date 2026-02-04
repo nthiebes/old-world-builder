@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select";
+import { Expandable } from "../../components/expandable";
 import { NumberInput } from "../../components/number-input";
 import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
@@ -60,7 +61,11 @@ export const NewList = ({ isMobile }) => {
       name_en: intl.formatMessage({ id: "misc.battle-march" }),
     },
   ];
-  const listsPoints = [...lists.map((list) => list.points)].reverse();
+  const listsPoints = [
+    ...lists
+      .filter((list) => list.type !== "folder")
+      .map((list) => list.points),
+  ].reverse();
   const quickActions =
     compositionRule === "battle-march"
       ? [500, 600, 750]
@@ -159,31 +164,33 @@ export const NewList = ({ isMobile }) => {
           />
         )}
         <form onSubmit={handleSubmit} className="new-list">
-          {gameSystems.map(({ name, id }, index) => (
-            <div
-              className={classNames(
-                "radio",
-                "new-list__radio",
-                index === gameSystems.length - 1 &&
-                  "new-list__radio--last-item",
-              )}
-              key={id}
-            >
-              <input
-                type="radio"
-                id={id}
-                name="new-list"
-                value={id}
-                onChange={handleSystemChange}
-                checked={id === game}
-                className="radio__input"
-                aria-label={name}
-              />
-              <label htmlFor={id} className="radio__label">
-                <span className="new-list__game-name">{name}</span>
-              </label>
-            </div>
-          ))}
+          {gameSystems.length > 1 &&
+            gameSystems.map(({ name, id }, index) => (
+              <div
+                className={classNames(
+                  "radio",
+                  "new-list__radio",
+                  index === gameSystems.length - 1 &&
+                    "new-list__radio--last-item",
+                )}
+                key={id}
+              >
+                <input
+                  type="radio"
+                  id={id}
+                  name="new-list"
+                  value={id}
+                  onChange={handleSystemChange}
+                  checked={id === game}
+                  className="radio__input"
+                  aria-label={name}
+                />
+                <label htmlFor={id} className="radio__label">
+                  <span className="new-list__game-name">{name}</span>
+                </label>
+              </div>
+            ))}
+
           <label htmlFor="army">
             <FormattedMessage id="new.army" />
           </label>
@@ -195,6 +202,7 @@ export const NewList = ({ isMobile }) => {
             spaceBottom
             required
           />
+
           {journalArmies ? (
             <>
               <label htmlFor="arcane-journal">
@@ -218,6 +226,7 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
+
           <label htmlFor="composition-rule">
             <FormattedMessage id="new.armyCompositionRule" />
           </label>
@@ -228,18 +237,27 @@ export const NewList = ({ isMobile }) => {
             selected={compositionRule}
             spaceBottom
           />
-          <p className="new-list__composition-description">
-            <i>
-              <FormattedMessage
-                id={`new.armyCompositionRuleDescription.${compositionRule}`}
+          <Expandable
+            headline={
+              <span className="new-list__composition-info">
+                <FormattedMessage id="new.armyCompositionRuleInfo" />
+              </span>
+            }
+          >
+            <p className="new-list__composition-description">
+              <i>
+                <FormattedMessage
+                  id={`new.armyCompositionRuleDescription.${compositionRule}`}
+                />
+              </i>
+              <RuleWithIcon
+                name={compositionRule}
+                isDark
+                className="game-view__rule-icon"
               />
-            </i>
-            <RuleWithIcon
-              name={compositionRule}
-              isDark
-              className="game-view__rule-icon"
-            />
-          </p>
+            </p>
+          </Expandable>
+
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>
@@ -283,6 +301,7 @@ export const NewList = ({ isMobile }) => {
             autoComplete="off"
             maxLength="100"
           />
+
           <label htmlFor="description">
             <FormattedMessage id="misc.description" />
           </label>
@@ -295,6 +314,7 @@ export const NewList = ({ isMobile }) => {
             autoComplete="off"
             maxLength="255"
           />
+
           <Button
             centered
             icon="add-list"

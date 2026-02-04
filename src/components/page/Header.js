@@ -3,13 +3,19 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import { useLocation, Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
-import { syncLists } from "../../utils/synchronization";
+import { Dialog } from "../../components/dialog";
+import {
+  syncLists,
+  uploadLocalDataToDropbox,
+  downloadRemoteDataFromDropbox,
+} from "../../utils/synchronization";
 import { updateLocalList } from "../../utils/list";
 import { updateSetting } from "../../state/settings";
+// import { updateLogin } from "../../state/login";
 
 import "./Header.css";
 
@@ -32,9 +38,8 @@ export const Header = ({
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
   const { listId, unitId } = useParams();
-  const { loginLoading, loggedIn, dpxAuthUrl, isSyncing } = useSelector(
-    (state) => state.login,
-  );
+  const { loginLoading, loggedIn, dpxAuthUrl, isSyncing, syncConflict } =
+    useSelector((state) => state.login);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
@@ -318,6 +323,35 @@ export const Header = ({
             </li>
           ))}
         </ul>
+      )}
+      {!isSection && syncConflict && (
+        <Dialog open={syncConflict}>
+          <p>
+            <FormattedMessage id="header.syncConflict" />
+          </p>
+          <div className="header__sync-conflict-buttons">
+            <Button
+              type="primary"
+              icon="cloud-upload"
+              spaceTop
+              onClick={() => {
+                uploadLocalDataToDropbox({ dispatch, settings });
+              }}
+            >
+              <FormattedMessage id="header.useLocal" />
+            </Button>
+            <Button
+              type="primary"
+              icon="cloud-download"
+              spaceTop
+              onClick={() => {
+                downloadRemoteDataFromDropbox({ dispatch });
+              }}
+            >
+              <FormattedMessage id="header.useRemote" />
+            </Button>
+          </div>
+        </Dialog>
       )}
     </Component>
   );
