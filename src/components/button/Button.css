@@ -131,11 +131,7 @@
   max-width: 25rem;
 }
 
-.button--spinning {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
+@keyframes sync {
   from {
     transform: rotate(360deg);
   }
@@ -144,8 +140,25 @@
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button__icon {
   margin-right: 0.5rem;
+}
+
+.button__icon--spinning {
+  animation: spin 1s linear infinite;
+}
+
+.button__icon--syncing {
+  animation: sync 1s linear infinite;
 }
 
 .button--text.button--dark {

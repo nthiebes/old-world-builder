@@ -1,15 +1,20 @@
-import { getSyncFile, getDataFile } from "../utils/file";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 import { updateLogin } from "../state/login";
-import { setLists } from "../state/lists";
 import { setSettings, updateSetting } from "../state/settings";
+import { setLists } from "../state/lists";
+import { getSyncFile, getDataFile } from "./file";
+import { parseQueryString } from "../utils/query-string";
 
+const clientId = "7l38e9ahse786da";
+const dbxAuth = new Dropbox.DropboxAuth({
+  clientId,
+});
+let dbx = null;
 const DATA_FILE_PATH = "/owb-data.json";
 const SYNC_FILE_PATH = "/owb-sync.txt";
 const uploadSyncFile = (sync) => {
-  const accessToken = localStorage.getItem("owb.token");
-  const dbx = new Dropbox.Dropbox({ accessToken });
-
   return new Promise((resolve, reject) => {
     const { file } = getSyncFile(sync);
 
@@ -24,9 +29,6 @@ const uploadSyncFile = (sync) => {
   });
 };
 const uploadDataFile = (data) => {
-  const accessToken = localStorage.getItem("owb.token");
-  const dbx = new Dropbox.Dropbox({ accessToken });
-
   return new Promise((resolve, reject) => {
     const { file } = getDataFile(data);
 
@@ -39,6 +41,98 @@ const uploadDataFile = (data) => {
       .then(() => resolve())
       .catch((err) => reject(err));
   });
+};
+
+// Parses the url and gets the access token if it is in the urls hash
+const getCodeFromUrl = () => {
+  return parseQueryString(window.location.search).code;
+};
+
+// If the user was just redirected from authenticating, the urls hash will
+// contain the access token.
+const hasRedirectedFromAuth = () => {
+  return !!getCodeFromUrl();
+};
+
+export const useDropboxAuthentication = () => {
+  const accessToken = localStorage.getItem("owb.accessToken");
+  const refreshToken = localStorage.getItem("owb.refreshToken");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (refreshToken && accessToken) {
+      console.log("local storage token found");
+
+      dbxAuth.setAccessToken(accessToken);
+      dbxAuth.setRefreshToken(refreshToken);
+      dbx = new Dropbox.Dropbox({
+        auth: dbxAuth,
+      });
+
+      dispatch(updateLogin({ loggedIn: true, loginLoading: false }));
+    } else if (hasRedirectedFromAuth()) {
+      console.log("start loading with code from url");
+
+      const code = getCodeFromUrl();
+
+      dbxAuth.setCodeVerifier(window.sessionStorage.getItem("codeVerifier"));
+      dbxAuth
+        .getAccessTokenFromCode(
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:3000/"
+            : "https://old-world-builder.com/",
+          code,
+        )
+        .then((response) => {
+          console.log("got token from code", response);
+
+          dbxAuth.setAccessToken(response.result.access_token);
+          dbxAuth.setRefreshToken(response.result.refresh_token);
+          localStorage.setItem("owb.accessToken", response.result.access_token);
+          localStorage.setItem(
+            "owb.refreshToken",
+            response.result.refresh_token,
+          );
+          dbx = new Dropbox.Dropbox({
+            auth: dbxAuth,
+          });
+
+          dispatch(updateLogin({ loggedIn: true, loginLoading: false }));
+
+          syncLists({
+            dispatch,
+          });
+        })
+        .catch((error) => console.error(error));
+    } else {
+      console.log("no token found, not logged in");
+
+      dispatch(updateLogin({ loginLoading: false }));
+    }
+  }, [accessToken, refreshToken, dispatch]);
+};
+
+export const login = () => {
+  console.log("not logged in getting URL");
+
+  dbxAuth
+    .getAuthenticationUrl(
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000/"
+        : "https://old-world-builder.com/",
+      null,
+      "code",
+      "offline",
+      null,
+      "none",
+      true,
+    )
+    .then((authUrl) => {
+      window.sessionStorage.clear();
+      window.sessionStorage.setItem("codeVerifier", dbxAuth.codeVerifier);
+      window.location.href = authUrl;
+    })
+    .catch((error) => console.error(error));
 };
 
 export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
@@ -65,20 +159,10 @@ export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
       dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
       console.log(error);
     });
-  dispatch(updateSetting({ lastSynced: settings.lastChanged }));
-  localStorage.setItem(
-    "owb.settings",
-    JSON.stringify({
-      ...settings,
-      lastSynced: settings.lastChanged,
-    }),
-  );
 };
 
 export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
   console.log("downloading remote data file");
-  const accessToken = localStorage.getItem("owb.token");
-  const dbx = new Dropbox.Dropbox({ accessToken });
 
   dbx
     .filesDownload({ path: DATA_FILE_PATH })
@@ -112,9 +196,7 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
 };
 
 export const syncLists = ({ dispatch }) => {
-  const accessToken = localStorage.getItem("owb.token");
   const settings = JSON.parse(localStorage.getItem("owb.settings")) || {};
-  const dbx = new Dropbox.Dropbox({ accessToken });
 
   console.log("SYNC LISTS");
 
@@ -192,13 +274,16 @@ export const syncLists = ({ dispatch }) => {
                   ? new Date(settings.lastSynced).getTime()
                   : 0;
 
-                console.log("file downloaded");
-
                 // First time sync or conflict
-                if (lastSynced < remoteLastChanged) {
+                if (
+                  lastSynced < remoteLastChanged &&
+                  localLastChanged > remoteLastChanged
+                ) {
                   console.log("last sync is older than remote changes");
 
-                  dispatch(updateLogin({ syncConflict: true }));
+                  dispatch(
+                    updateLogin({ syncConflict: true, isSyncing: false }),
+                  );
                 }
 
                 // New local changes
@@ -208,7 +293,7 @@ export const syncLists = ({ dispatch }) => {
 
                 // Remote changes
                 else if (remoteLastChanged > localLastChanged) {
-                  downloadRemoteDataFromDropbox({ dispatch });
+                  downloadRemoteDataFromDropbox({ dispatch, settings });
                 }
 
                 // In sync
@@ -216,6 +301,19 @@ export const syncLists = ({ dispatch }) => {
                   console.log("local and remote file are in sync");
                   dispatch(updateLogin({ isSyncing: false }));
                 }
+
+                dispatch(
+                  updateSetting({
+                    lastSynced: settings.lastChanged,
+                  }),
+                );
+                localStorage.setItem(
+                  "owb.settings",
+                  JSON.stringify({
+                    ...settings,
+                    lastSynced: settings.lastChanged,
+                  }),
+                );
               };
             })
             .catch(function (error) {
@@ -226,11 +324,16 @@ export const syncLists = ({ dispatch }) => {
       }
     })
     .catch(function (error) {
-      console.log(error);
+      console.log("error", error);
 
       dispatch(
         updateLogin({ isSyncing: false, loggedIn: false, loginLoading: false }),
       );
-      localStorage.setItem("owb.token", "");
+      window.location.href =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000/"
+          : "https://old-world-builder.com/";
+      localStorage.setItem("owb.accessToken", "");
+      localStorage.setItem("owb.refreshToken", "");
     });
 };

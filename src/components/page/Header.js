@@ -8,14 +8,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Dialog } from "../../components/dialog";
+import { updateLocalList } from "../../utils/list";
 import {
+  login,
   syncLists,
   uploadLocalDataToDropbox,
   downloadRemoteDataFromDropbox,
-} from "../../utils/synchronization";
-import { updateLocalList } from "../../utils/list";
+} from "../../utils/dropbox-auth-and-synchronization";
 import { updateSetting } from "../../state/settings";
-// import { updateLogin } from "../../state/login";
+import { updateLogin } from "../../state/login";
 
 import "./Header.css";
 
@@ -38,8 +39,9 @@ export const Header = ({
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
   const { listId, unitId } = useParams();
-  const { loginLoading, loggedIn, dpxAuthUrl, isSyncing, syncConflict } =
-    useSelector((state) => state.login);
+  const { loginLoading, loggedIn, isSyncing, syncConflict } = useSelector(
+    (state) => state.login,
+  );
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
@@ -80,8 +82,9 @@ export const Header = ({
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
   const logout = () => {
-    localStorage.removeItem("owb.token");
-    window.location.reload();
+    localStorage.removeItem("owb.accessToken");
+    localStorage.removeItem("owb.refreshToken");
+    dispatch(updateLogin({ loggedIn: false }));
   };
 
   useEffect(() => {
@@ -128,31 +131,22 @@ export const Header = ({
               showLabelRight
             />
           ) : (
-            <>
-              {loggedIn ? (
-                <Button
-                  type="text"
-                  onClick={logout}
-                  label={intl.formatMessage({ id: "header.dropboxLogout" })}
-                  color="light"
-                  icon="logout"
-                  showLabelRight
-                />
-              ) : (
-                <Button
-                  type="text"
-                  href={dpxAuthUrl}
-                  label={
-                    loginLoading
-                      ? ""
-                      : intl.formatMessage({ id: "header.dropboxLogin" })
-                  }
-                  color="light"
-                  icon={loginLoading ? "spinner" : "dropbox"}
-                  showLabelRight
-                />
-              )}
-            </>
+            <Button
+              type="text"
+              onClick={loggedIn ? logout : login}
+              label={
+                loginLoading
+                  ? ""
+                  : intl.formatMessage({
+                      id: loggedIn
+                        ? "header.dropboxLogout"
+                        : "header.dropboxLogin",
+                    })
+              }
+              color="light"
+              icon={loginLoading ? "spinner" : loggedIn ? "logout" : "dropbox"}
+              showLabelRight
+            />
           )}
         </>
       )}
@@ -336,6 +330,7 @@ export const Header = ({
               spaceTop
               onClick={() => {
                 uploadLocalDataToDropbox({ dispatch, settings });
+                dispatch(updateLogin({ isSyncing: true, syncConflict: false }));
               }}
             >
               <FormattedMessage id="header.useLocal" />
@@ -346,9 +341,21 @@ export const Header = ({
               spaceTop
               onClick={() => {
                 downloadRemoteDataFromDropbox({ dispatch });
+                dispatch(updateLogin({ isSyncing: true, syncConflict: false }));
               }}
             >
               <FormattedMessage id="header.useRemote" />
+            </Button>
+            <Button
+              type="text"
+              icon="close"
+              color="dark"
+              spaceTop
+              onClick={() => {
+                dispatch(updateLogin({ syncConflict: false }));
+              }}
+            >
+              <FormattedMessage id="misc.cancel" />
             </Button>
           </div>
         </Dialog>

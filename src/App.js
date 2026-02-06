@@ -26,7 +26,7 @@ import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 
-import { useDropboxAuthentication } from "./utils/useDropboxAuthentication";
+import { useDropboxAuthentication } from "./utils/dropbox-auth-and-synchronization";
 
 import "./App.css";
 

@@ -5,7 +5,6 @@ export const loginSlice = createSlice({
   initialState: {
     loggedIn: false,
     loginLoading: true,
-    dpxAuthUrl: "",
     isSyncing: false,
     syncConflict: false,
   },

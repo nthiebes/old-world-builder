@@ -51,7 +51,6 @@ export const Button = ({
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         disabled && "button--disabled",
-        icon === "sync" && "button--spinning",
         `button--${size}`,
         className,
       )}
@@ -68,7 +67,11 @@ export const Button = ({
       {showLabelLeft && <span className="button__label--left">{label}</span>}
       {icon && (
         <Icon
-          className={classNames(children && "button__icon")}
+          className={classNames(
+            children && "button__icon",
+            icon === "sync" && "button__icon--syncing",
+            icon === "spinner" && "button__icon--spinning",
+          )}
           symbol={icon}
         />
       )}
