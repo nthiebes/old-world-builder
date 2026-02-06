@@ -101,7 +101,7 @@ export const Header = ({
       <div className="header__text">
         {headline && (
           <>
-            {headline === "Old World Builder" ? (
+            {headline === "Warhammer Fantasy Builder" ? (
               <h1 className="header__name">
                 <Link className="header__name-link" to="/">
                   {headline}

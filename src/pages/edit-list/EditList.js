@@ -107,7 +107,7 @@ export const EditList = ({ isMobile }) => {
   return (
     <>
       <Helmet>
-        <title>{`Old World Builder | ${list?.name}`}</title>
+        <title>{`Warhammer Fantasy Builder | ${list?.name}`}</title>
       </Helmet>
 
       {isMobile && (

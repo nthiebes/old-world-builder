@@ -92,7 +92,7 @@ export const DuplicateList = ({ isMobile }) => {
       {redirect && <Redirect to={`/editor/${redirect}`} />}
 
       <Helmet>
-        <title>{`Old World Builder | ${list?.name}`}</title>
+        <title>{`Warhammer Fantasy Builder | ${list?.name}`}</title>
       </Helmet>
 
       {isMobile && (

@@ -74,7 +74,7 @@ const armyIconMap = {
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const settings = useSelector((state) => state.settings);
-  let lists = updateListsFolder(useSelector((state) => state.lists));
+  let lists = updateListsFolder(useSelector((state) => state.lists ?? []));
 
   // Sort lists based on the current sorting setting
   switch (settings.listSorting) {
@@ -384,7 +384,7 @@ export const Home = ({ isMobile }) => {
     <>
       <Helmet>
         <title>
-          Old World Builder - Army builder for Warhammer: The Old World
+          Warhammer Fantasy Builder - Army builder for Warhammer: The Old World
         </title>
         <link rel="canonical" href="https://old-world-builder.com/" />
       </Helmet>
@@ -530,7 +530,7 @@ export const Home = ({ isMobile }) => {
         </form>
       </Dialog>
 
-      {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
+      {isMobile && <Header headline="Warhammer Fantasy Builder" hasMainNavigation />}
       <MainComponent>
         {listsWithoutFolders.length > 0 && (
           <section className="column-header home__header">

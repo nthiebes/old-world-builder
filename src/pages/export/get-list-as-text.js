@@ -305,7 +305,7 @@ export const getListAsText = ({
 
     listString += `\n\n---\n${intl.formatMessage({
       id: "export.createdWith",
-    })} "Old World Builder"\n\n[https://old-world-builder.com]`;
+    })} "Warhammer Fantasy Builder"\n\n[https://old-world-builder.com]`;
 
     return listString;
   }
@@ -549,12 +549,12 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
     listString += `
 *${intl.formatMessage({
       id: "export.createdWith",
-    })} "Old World Builder"* - https://old-world-builder.com`;
+    })} "Warhammer Fantasy Builder"* - https://old-world-builder.com`;
   } else {
     listString += `---
 ${intl.formatMessage({
   id: "export.createdWith",
-})} "Old World Builder"
+})} "Warhammer Fantasy Builder"
 
 [https://old-world-builder.com]`;
   }

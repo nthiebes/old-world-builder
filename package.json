@@ -1,7 +1,7 @@
 {
-  "name": "old-world-builder",
-  "version": "1.26.5",
-  "author": "Nico Thiebes",
+  "name": "warhammer-fantasy-builder",
+  "version": "0.1.0",
+  "author": "Aleix Paradell",
   "homepage": "https://old-world-builder.com",
   "private": true,
   "dependencies": {
@@ -49,7 +49,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project old-world-builder ./build && sentry-cli sourcemaps upload --org booky --project old-world-builder ./build"
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project warhammer-fantasy-builder ./build && sentry-cli sourcemaps upload --org booky --project warhammer-fantasy-builder ./build"
   },
   "eslintConfig": {
     "extends": [

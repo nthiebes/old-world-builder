@@ -133,7 +133,7 @@ export const CustomDatasets = () => {
     <>
       <Helmet>
         <title>
-          {`Old World Builder | ${intl.formatMessage({
+          {`Warhammer Fantasy Builder | ${intl.formatMessage({
             id: "footer.custom-datasets",
           })}`}
         </title>
@@ -143,7 +143,7 @@ export const CustomDatasets = () => {
         />
       </Helmet>
 
-      <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
+      <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
 
       <Main compact className="custom">
         <h2 className="page-headline">
