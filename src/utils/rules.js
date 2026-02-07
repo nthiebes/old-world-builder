@@ -1,14 +1,24 @@
 export const rules = {
   "grand-army": {
-    lords: { maxPercent: 25 },
-    heroes: { maxPercent: 25 },
-    characters: { maxPercent: 50 },
-    core: { minPercent: 25 },
+    lords: {
+      maxPercent: 25,
+      maxSlots: 1 },
+    heroes: {
+      maxPercent: 25,
+      maxSlots: 4 },
+    characters: {
+      maxPercent: 50,
+      maxSlots: 4 },
+    core: {
+      minPercent: 25,
+      minSlots: 3},
     special: {
       maxPercent: 50,
+      maxSlots: 4,
     },
     rare: {
       maxPercent: 25,
+      maxSlots: 2,
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
@@ -16,6 +26,7 @@ export const rules = {
   "kingdom-of-bretonnia": {
     characters: {
       maxPercent: 50,
+      maxSlots: 4,
       units: [
         {
           ids: ["duke"],
@@ -37,6 +48,7 @@ export const rules = {
     },
     core: {
       minPercent: 25,
+      minSlots: 3,
       units: [
         {
           ids: ["knights-of-the-realm", "mounted-knights-of-the-realm"],
@@ -58,6 +70,7 @@ export const rules = {
     },
     special: {
       maxPercent: 50,
+      maxSlots: 4,
       units: [
         {
           ids: ["battle-pilgrims"],
@@ -69,6 +82,7 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
+      maxSlots: 2,
       units: [
         {
           ids: ["field-trebuchet"],
@@ -4070,5 +4084,46 @@ export const getMinPercentData = ({
     points: minPoints,
     overLimit: points <= minPoints,
     diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
+  };
+};
+
+export const getMinSlots = ({
+                              type,
+                              armyPoints,
+                              slots,
+                              armyComposition,
+                            }) => {
+  // TODO, calculate here the minSlots value depending on the armyPoints
+  const minSlots = rules[armyComposition]
+      ? rules[armyComposition][type].minSlots
+      : rules["grand-army"][type].minSlots;
+
+  return {
+    points: Math.floor(armyPoints),
+    overLimit: slots <= minSlots,
+    diff: slots <= minSlots ? Math.ceil(minSlots - slots) : 0,
+    slots: slots,
+    minSlots: minSlots
+  };
+};
+
+export const getMaxSlots = ({
+                              type,
+                              armyPoints,
+                              slots,
+                              armyComposition,
+                            }) => {
+
+  // TODO, calculate here the maxSlots value depending on the armyPoints
+  const maxSlots = rules[armyComposition]
+      ? rules[armyComposition][type].maxSlots
+      : rules["grand-army"][type].maxSlots;
+
+  return {
+    points: Math.floor(armyPoints),
+    overLimit: slots <= maxSlots,
+    diff: slots > maxSlots ? Math.ceil(slots - maxSlots) : 0,
+    slots: slots,
+    maxSlots: maxSlots
   };
 };

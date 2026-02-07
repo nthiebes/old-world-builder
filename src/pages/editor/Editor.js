@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
+import { getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -112,44 +112,44 @@ export const Editor = ({ isMobile }) => {
   const alliesPoints = getPoints({ list, type: "allies" });
   const lordsData =
     list.lords &&
-    getMaxPercentData({
+    getMaxSlots({
       type: "lords",
       armyPoints: list.points,
-      points: lordsPoints,
+      slots: list.lords.length,
       armyComposition,
     });
   const heroesData =
     list.lords &&
-    getMaxPercentData({
+    getMaxSlots({
       type: "heroes",
       armyPoints: list.points,
-      points: heroesPoints,
+      slots: list.heroes.length,
       armyComposition,
     });
   const charactersData =
     list.characters &&
-    getMaxPercentData({
+    getMaxSlots({
       type: "characters",
       armyPoints: list.points,
-      points: charactersPoints,
+      slots: list.characters.length,
       armyComposition,
     });
-  const coreData = getMinPercentData({
+  const coreData = getMinSlots({
     type: "core",
     armyPoints: list.points,
-    points: corePoints,
+    slots: list.core.length,
     armyComposition,
   });
-  const specialData = getMaxPercentData({
+  const specialData = getMaxSlots({
     type: "special",
     armyPoints: list.points,
-    points: specialPoints,
+    slots: list.special.length,
     armyComposition,
   });
-  const rareData = getMaxPercentData({
+  const rareData = getMaxSlots({
     type: "rare",
     armyPoints: list.points,
-    points: rarePoints,
+    slots: list.rare.length,
     armyComposition,
   });
   const mercenariesData =
@@ -320,13 +320,13 @@ export const Editor = ({ isMobile }) => {
                 {lordsData.diff > 0 ? (
                   <>
                     <strong>{lordsData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
+                    <FormattedMessage id="editor.tooManySlots" />
                     <Icon symbol="error" color="red" />
                   </>
                 ) : (
                   <>
-                    <strong>{lordsData.points - lordsPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
+                    <strong>{lordsData.maxSlots - lordsData.slots}</strong>
+                    <FormattedMessage id="editor.availableSlots" />
                     <Icon symbol="check" />
                   </>
                 )}
@@ -362,13 +362,13 @@ export const Editor = ({ isMobile }) => {
                 {heroesData.diff > 0 ? (
                   <>
                     <strong>{heroesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
+                    <FormattedMessage id="editor.tooManySlots" />
                     <Icon symbol="error" color="red" />
                   </>
                 ) : (
                   <>
-                    <strong>{heroesData.points - heroesPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
+                    <strong>{heroesData.maxSlots - heroesData.slots}</strong>
+                    <FormattedMessage id="editor.availableSlots" />
                     <Icon symbol="check" />
                   </>
                 )}
@@ -404,13 +404,13 @@ export const Editor = ({ isMobile }) => {
                 {charactersData.diff > 0 ? (
                   <>
                     <strong>{charactersData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
+                    <FormattedMessage id="editor.tooManySlots" />
                     <Icon symbol="error" color="red" />
                   </>
                 ) : (
                   <>
-                    <strong>{charactersData.points - charactersPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
+                    <strong>{charactersData.maxSlots - charactersData.slots}</strong>
+                    <FormattedMessage id="editor.availableSlots" />
                     <Icon symbol="check" />
                   </>
                 )}
@@ -462,14 +462,14 @@ export const Editor = ({ isMobile }) => {
               {coreData.diff > 0 ? (
                 <>
                   <strong>{coreData.diff}</strong>
-                  <FormattedMessage id="editor.missingPoints" />
+                  <FormattedMessage id="editor.missingSlots" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{corePoints}</strong>
-                  {` / ${coreData.points} `}
-                  <FormattedMessage id="app.points" />
+                  <strong>{coreData.slots}</strong>
+                  {` / ${coreData.minSlots} `}
+                  <FormattedMessage id="app.slots" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -520,13 +520,13 @@ export const Editor = ({ isMobile }) => {
               {specialData.diff > 0 ? (
                 <>
                   <strong>{specialData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
+                  <FormattedMessage id="editor.tooManySlots" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{specialData.points - specialPoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
+                  <strong>{specialData.maxSlots- specialData.slots}</strong>
+                  <FormattedMessage id="editor.availableSlots" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -577,13 +577,13 @@ export const Editor = ({ isMobile }) => {
               {rareData.diff > 0 ? (
                 <>
                   <strong>{rareData.diff}</strong>
-                  <FormattedMessage id="editor.tooManyPoints" />
+                  <FormattedMessage id="editor.tooManySlots" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{rareData.points - rarePoints}</strong>
-                  <FormattedMessage id="editor.availablePoints" />
+                  <strong>{rareData.maxSlots- rareData.slots}</strong>
+                  <FormattedMessage id="editor.availableSlots" />
                   <Icon symbol="check" />
                 </>
               )}
