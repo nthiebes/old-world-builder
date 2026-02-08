@@ -1,5 +1,5 @@
 export const updateLocalList = (updatedList) => {
-  const localLists = JSON.parse(localStorage.getItem("owb.lists"));
+  const localLists = JSON.parse(localStorage.getItem("whfb.lists"));
   const updatedLists =
     localLists &&
     localLists.map((list) => {
@@ -12,15 +12,15 @@ export const updateLocalList = (updatedList) => {
 
   try {
     localLists &&
-      localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+      localStorage.setItem("whfb.lists", JSON.stringify(updatedLists));
   } catch (error) {}
 };
 
 export const removeFromLocalList = (listId) => {
-  const localLists = JSON.parse(localStorage.getItem("owb.lists"));
+  const localLists = JSON.parse(localStorage.getItem("whfb.lists"));
   const updatedLists = localLists.filter(({ id }) => listId !== id);
 
-  localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+  localStorage.setItem("whfb.lists", JSON.stringify(updatedLists));
 };
 
 export const updateListsFolder = (lists) => {

@@ -15,10 +15,10 @@ export const CustomDatasets = () => {
   const location = useLocation();
   const intl = useIntl();
   const [customGames, setCustomGames] = useState(
-    JSON.parse(localStorage.getItem("owb.systems")) || [],
+    JSON.parse(localStorage.getItem("whfb.systems")) || [],
   );
   const [customDatasets, setCustomDatasets] = useState(
-    JSON.parse(localStorage.getItem("owb.datasets")) || [],
+    JSON.parse(localStorage.getItem("whfb.datasets")) || [],
   );
   const [gameFromFile, setGameFromFile] = useState(null);
   const [datasetFromFile, setDatasetFromFile] = useState(null);
@@ -69,7 +69,7 @@ export const CustomDatasets = () => {
     const newDatasets = [...customDatasets, importedDataset];
 
     setCustomDatasets(newDatasets);
-    localStorage.setItem("owb.datasets", JSON.stringify(newDatasets));
+    localStorage.setItem("whfb.datasets", JSON.stringify(newDatasets));
   };
 
   const deleteDataset = (id) => {
@@ -78,7 +78,7 @@ export const CustomDatasets = () => {
     );
 
     setCustomDatasets(updatedDatasets);
-    localStorage.setItem("owb.datasets", JSON.stringify(updatedDatasets));
+    localStorage.setItem("whfb.datasets", JSON.stringify(updatedDatasets));
   };
 
   const handleSubmit = (event) => {
@@ -100,14 +100,14 @@ export const CustomDatasets = () => {
     const newGames = [...customGames, game];
 
     setCustomGames(newGames);
-    localStorage.setItem("owb.systems", JSON.stringify(newGames));
+    localStorage.setItem("whfb.systems", JSON.stringify(newGames));
   };
 
   const deleteGame = (id) => {
     const updatedGames = customGames.filter((game) => game.id !== id);
 
     setCustomGames(updatedGames);
-    localStorage.setItem("owb.systems", JSON.stringify(updatedGames));
+    localStorage.setItem("whfb.systems", JSON.stringify(updatedGames));
   };
 
   const handleGameSubmit = (event) => {

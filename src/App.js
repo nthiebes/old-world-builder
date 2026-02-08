@@ -35,8 +35,8 @@ export const App = () => {
   );
 
   useEffect(() => {
-    const localLists = localStorage.getItem("owb.lists");
-    const localSettings = localStorage.getItem("owb.settings");
+    const localLists = localStorage.getItem("whfb.lists");
+    const localSettings = localStorage.getItem("whfb.settings");
 
     dispatch(setLists(JSON.parse(localLists)));
     dispatch(setSettings(JSON.parse(localSettings)));

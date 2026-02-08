@@ -93,7 +93,7 @@ export const NewList = ({ isMobile }) => {
     };
     const newLists = [newList, ...lists];
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    localStorage.setItem("whfb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
 
     setRedirect(newId);

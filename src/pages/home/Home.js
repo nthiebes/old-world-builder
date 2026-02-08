@@ -15,7 +15,7 @@ import { getAllPoints } from "../../utils/points";
 import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
 import { setItems } from "../../state/items";
-import owb from "../../assets/army-icons/owb.svg";
+import owb from "../../assets/army-icons/whfb.svg";
 import theEmpire from "../../assets/army-icons/the-empire.svg";
 import dwarfs from "../../assets/army-icons/dwarfs.svg";
 import greenskins from "../../assets/army-icons/greenskins.svg";
@@ -171,7 +171,7 @@ export const Home = ({ isMobile }) => {
     dispatch(setItems(null));
   };
   const updateLocalSettings = (newSettings) => {
-    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    localStorage.setItem("whfb.settings", JSON.stringify(newSettings));
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
     const draggedItem = lists.find((list, index) => index === sourceIndex);
@@ -214,7 +214,7 @@ export const Home = ({ isMobile }) => {
         });
         newLists = updateListsFolder(newLists);
 
-        localStorage.setItem("owb.lists", JSON.stringify(newLists));
+        localStorage.setItem("whfb.lists", JSON.stringify(newLists));
         dispatch(setLists(newLists));
       }
     } else {
@@ -222,7 +222,7 @@ export const Home = ({ isMobile }) => {
         swap(lists, sourceIndex, destinationIndex),
       );
 
-      localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      localStorage.setItem("whfb.lists", JSON.stringify(newLists));
       dispatch(setLists(newLists));
     }
   };
@@ -329,7 +329,7 @@ export const Home = ({ isMobile }) => {
     setDialogOpen(null);
     setActiveMenu(null);
     dispatch(setLists(newLists));
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    localStorage.setItem("whfb.lists", JSON.stringify(newLists));
   };
   const handleEditConfirm = () => {
     const list = lists.find((list) => list.id === activeMenu);
@@ -353,7 +353,7 @@ export const Home = ({ isMobile }) => {
       ...lists,
     ]);
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    localStorage.setItem("whfb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
     setFolderName("");
     setDialogOpen(null);

@@ -44,7 +44,7 @@ try {
     .timeZone.toLowerCase()
     .split("/")[0];
 
-  localStorage.setItem("owb.timezone", timezone);
+  localStorage.setItem("whfb.timezone", timezone);
 } catch {}
 
 // Language detection

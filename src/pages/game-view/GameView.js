@@ -64,7 +64,7 @@ export const GameView = () => {
     );
   };
   const updateLocalSettings = (newSettings) => {
-    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    localStorage.setItem("whfb.settings", JSON.stringify(newSettings));
   };
 
   if (!list) {

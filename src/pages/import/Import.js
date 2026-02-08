@@ -43,7 +43,7 @@ export const Import = ({ isMobile }) => {
       const importedList = { ...JSON.parse(event.target.result), id: newId };
       const newLists = [...lists, importedList];
 
-      localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      localStorage.setItem("whfb.lists", JSON.stringify(newLists));
       dispatch(setLists(newLists));
       setRedirect(importedList.id);
     };

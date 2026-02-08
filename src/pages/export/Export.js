@@ -16,7 +16,7 @@ const getFile = ({ list, listText, asText }) => {
   const fileName = `${list?.name
     .toLowerCase()
     .replace(/ /g, "-")
-    .replace(/,/g, "")}.${asText ? "txt" : "owb.json"}`;
+    .replace(/,/g, "")}.${asText ? "txt" : "whfb.json"}`;
   const file = new File([asText ? listText : JSON.stringify(list)], fileName, {
     type: asText ? "text/plain" : "application/json",
   });

@@ -27,7 +27,7 @@ export const Datasets = ({ isMobile }) => {
   const [army, setArmy] = useState("empire-of-man");
   const game = "the-old-world";
   const gameSystems = getGameSystems();
-  const localDataset = localStorage.getItem("owb.dataset");
+  const localDataset = localStorage.getItem("whfb.dataset");
   const [dataset, setDataset] = useState({
     characters: [],
     core: [],
@@ -53,7 +53,7 @@ export const Datasets = ({ isMobile }) => {
       const newDataset = { ...dataset, [type]: [...dataset[type], unit] };
 
       setDataset(newDataset);
-      localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
+      localStorage.setItem("whfb.dataset", JSON.stringify(newDataset, null, 2));
     } else {
       const newDataset = {
         ...dataset,
@@ -63,7 +63,7 @@ export const Datasets = ({ isMobile }) => {
       };
 
       setDataset(newDataset);
-      localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
+      localStorage.setItem("whfb.dataset", JSON.stringify(newDataset, null, 2));
     }
 
     window.scrollTo(0, 0);
@@ -75,7 +75,7 @@ export const Datasets = ({ isMobile }) => {
     };
 
     setDataset(newDataset);
-    localStorage.setItem("owb.dataset", JSON.stringify(newDataset, null, 2));
+    localStorage.setItem("whfb.dataset", JSON.stringify(newDataset, null, 2));
     window.scrollTo(0, 0);
   };
   const handleArmyChange = (value) => {
@@ -88,7 +88,7 @@ export const Datasets = ({ isMobile }) => {
       onSuccess: (existingDataset) => {
         setDataset(existingDataset);
         localStorage.setItem(
-          "owb.dataset",
+          "whfb.dataset",
           JSON.stringify(existingDataset, null, 2)
         );
         setIsLoading(false);
@@ -101,7 +101,7 @@ export const Datasets = ({ isMobile }) => {
   const handleArmyFromJsonClick = () => {
     try {
       setDataset(JSON.parse(armyInput));
-      localStorage.setItem("owb.dataset", armyInput);
+      localStorage.setItem("whfb.dataset", armyInput);
       setArmyInput("");
     } catch (error) {
       console.log(error);
@@ -109,7 +109,7 @@ export const Datasets = ({ isMobile }) => {
   };
   const handleArmyFromLocalClick = () => {
     try {
-      setDataset(JSON.parse(localStorage.getItem("owb.dataset")));
+      setDataset(JSON.parse(localStorage.getItem("whfb.dataset")));
     } catch (error) {
       console.log(error);
     }

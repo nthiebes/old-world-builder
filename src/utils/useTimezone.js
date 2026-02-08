@@ -1,3 +1,3 @@
 export const useTimezone = () => {
-  return { timezone: localStorage.getItem("owb.timezone") };
+  return { timezone: localStorage.getItem("whfb.timezone") };
 };

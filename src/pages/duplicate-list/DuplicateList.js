@@ -51,7 +51,7 @@ export const DuplicateList = ({ isMobile }) => {
 
     event.preventDefault();
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    localStorage.setItem("whfb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
 
     setRedirect(newId);
