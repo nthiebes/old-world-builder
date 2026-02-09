@@ -15,10 +15,10 @@ export const CustomDatasets = () => {
   const location = useLocation();
   const intl = useIntl();
   const [customGames, setCustomGames] = useState(
-    JSON.parse(localStorage.getItem("owb.systems")) || []
+    JSON.parse(localStorage.getItem("owb.systems")) || [],
   );
   const [customDatasets, setCustomDatasets] = useState(
-    JSON.parse(localStorage.getItem("owb.datasets")) || []
+    JSON.parse(localStorage.getItem("owb.datasets")) || [],
   );
   const [gameFromFile, setGameFromFile] = useState(null);
   const [datasetFromFile, setDatasetFromFile] = useState(null);
@@ -74,7 +74,7 @@ export const CustomDatasets = () => {
 
   const deleteDataset = (id) => {
     const updatedDatasets = customDatasets.filter(
-      (dataset) => dataset.id !== id
+      (dataset) => dataset.id !== id,
     );
 
     setCustomDatasets(updatedDatasets);
@@ -196,35 +196,36 @@ export const CustomDatasets = () => {
                 className="datasets__unit"
                 key={game.id}
               >
-                {game.armies.map((army) => {
-                  const dataset = allDatasets.find(
-                    (dataset) => dataset.id === army.id
-                  );
-                  const isCustom = Boolean(dataset?.data);
+                {game &&
+                  game.armies.map((army) => {
+                    const dataset = allDatasets.find(
+                      (dataset) => dataset.id === army.id,
+                    );
+                    const isCustom = Boolean(dataset?.data);
 
-                  return (
-                    <p className="custom__army" key={army.id}>
-                      <span>
-                        <b>{army.name_en}</b>
-                        <br />
-                        <i>
-                          {`${army.id}.json`}
-                          {isCustom && " (custom)"}
-                        </i>
-                        {!dataset && (
-                          <i className="error-message">
-                            No dataset found with the same file name.
+                    return (
+                      <p className="custom__army" key={army.id}>
+                        <span>
+                          <b>{army.name_en}</b>
+                          <br />
+                          <i>
+                            {`${army.id}.json`}
+                            {isCustom && " (custom)"}
                           </i>
+                          {!dataset && (
+                            <i className="error-message">
+                              No dataset found with the same file name.
+                            </i>
+                          )}
+                        </span>
+                        {dataset ? (
+                          <Icon symbol="check" color="green" />
+                        ) : (
+                          <Icon symbol="error" color="red" />
                         )}
-                      </span>
-                      {dataset ? (
-                        <Icon symbol="check" color="green" />
-                      ) : (
-                        <Icon symbol="error" color="red" />
-                      )}
-                    </p>
-                  );
-                })}
+                      </p>
+                    );
+                  })}
               </Expandable>
             ))}
           </ul>
