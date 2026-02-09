@@ -43,7 +43,6 @@ const additionalOWBRules = {
   "daemons of slaanesh": { url: "special-rules/daemon-of-slaanesh" },
   "asrai spears": { url: "weapons-of-war/asrai-spear" },
   "asrai longbows": { url: "weapons-of-war/asrai-longbow" },
-  ironfists: { url: "weapons-of-war/ironfist" },
   general: { url: "characters/the-general-characters" },
   "moonfire shots": { url: "weapons-of-war/moonfire-shot" },
   "battle standard bearer": { url: "characters/the-battle-standard" },
@@ -110,6 +109,9 @@ const additionalOWBRules = {
   "battle-march": {
     url: "warhammer-armies/battle-march",
   },
+  "dreadquake mortar weapon": {
+    url: "weapons-of-war/dreadquake-mortar",
+  },
 };
 
 export const synonyms = {
@@ -149,6 +151,8 @@ export const synonyms = {
   polearms: "polearm",
   gyrocopters: "gyrocopter",
   "scout gyrocopters": "scout gyrocopter",
+  ironfists: "ironfist",
+  "ironfists renegade": "ironfist renegade",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
