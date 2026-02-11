@@ -28,7 +28,7 @@ export const updateListsFolder = (lists) => {
   let latestFolderIndex = null;
 
   lists.forEach((folder, index) => {
-    if (folder.type === "folder") {
+    if (folder && folder.type === "folder") {
       folderIndexes[index] = folder.id;
     }
   });
@@ -38,7 +38,7 @@ export const updateListsFolder = (lists) => {
       latestFolderIndex = index;
     }
 
-    if (list.type === "folder") {
+    if (!list || list.type === "folder") {
       return list;
     }
 

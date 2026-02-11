@@ -12,6 +12,7 @@ import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
+import { updateSetting } from "../../state/settings";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
 import { nameMap } from "../magic";
@@ -26,7 +27,7 @@ export const NewList = ({ isMobile }) => {
   const { language } = useLanguage();
   const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
-  const [game, setGame] = useState("the-old-world");
+  const game = useSelector((state) => state.settings.selectedGame);
   const [army, setArmy] = useState("empire-of-man");
   const [compositionRule, setCompositionRule] = useState("open-war");
   const [name, setName] = useState("");
@@ -99,7 +100,7 @@ export const NewList = ({ isMobile }) => {
     setRedirect(newId);
   };
   const handleSystemChange = (event) => {
-    setGame(event.target.value);
+    dispatch(updateSetting({ key: "selectedGame", value: event.target.value }));
     setArmy(
       gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id,
     );
@@ -139,6 +140,23 @@ export const NewList = ({ isMobile }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    // Sincronizar ejército cuando cambia el sistema de juego
+    if (armies && armies.length > 0) {
+      const firstArmy = armies[0].id;
+      setArmy(firstArmy);
+      setCompositionRule("open-war");
+    }
+  }, [game, armies]);
+
+  useEffect(() => {
+    // Sincronizar armyComposition cuando cambia el ejército seleccionado
+    const selectedArmy = armies.find(({ id }) => army === id);
+    if (selectedArmy?.armyComposition) {
+      setArmyComposition(selectedArmy.armyComposition[0]);
+    }
+  }, [army, armies]);
 
   return (
     <>
@@ -191,7 +209,7 @@ export const NewList = ({ isMobile }) => {
             id="army"
             options={armies}
             onChange={handleArmyChange}
-            selected="empire-of-man"
+            selected={army}
             spaceBottom
             required
           />
@@ -213,7 +231,7 @@ export const NewList = ({ isMobile }) => {
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
-                selected={army}
+                selected={armyComposition}
                 spaceBottom
               />
             </>

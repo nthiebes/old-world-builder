@@ -38,7 +38,7 @@ import {
   unitHasItem,
   isWizard,
 } from "../../utils/unit";
-import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
+import {getGameSystems, getCustomDatasetData, isOfficialSystem} from "../../utils/game-systems";
 
 import "./Unit.css";
 
@@ -488,7 +488,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
   useEffect(() => {
     if (list && !army) {
-      const isCustom = game.id !== "the-old-world";
+      const isCustom = !isOfficialSystem(game.id);
 
       if (isCustom) {
         const data = getCustomDatasetData(list.army);

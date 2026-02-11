@@ -416,7 +416,7 @@ export const Magic = ({ isMobile }) => {
       unit &&
       !items &&
       fetcher({
-        url: "games/the-old-world/magic-items",
+        url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
           let itemCategories = army.items;
 

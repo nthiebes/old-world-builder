@@ -12,6 +12,7 @@ export const settingsSlice = createSlice({
     showGeneratedSpells: true,
     showStats: true,
     listSorting: "manual",
+    selectedGame: "warhammer-fantasy-6th",
   },
   reducers: {
     setSettings: (state, { payload }) => {
