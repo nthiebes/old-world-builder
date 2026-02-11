@@ -82,6 +82,8 @@ export const NewList = ({ isMobile }) => {
       game: game,
       points: points,
       army: army,
+      lords: [],
+      heroes: [],
       characters: [],
       core: [],
       special: [],
@@ -236,28 +238,32 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
-          <label htmlFor="composition-rule">
-            <FormattedMessage id="new.armyCompositionRule" />
-          </label>
-          <Select
-            id="composition-rule"
-            options={compositionRules}
-            onChange={handleCompositionRuleChange}
-            selected={compositionRule}
-            spaceBottom
-          />
-          <p className="new-list__composition-description">
-            <i>
-              <FormattedMessage
-                id={`new.armyCompositionRuleDescription.${compositionRule}`}
+          {game === "the-old-world" && (
+            <>
+              <label htmlFor="composition-rule">
+                <FormattedMessage id="new.armyCompositionRule" />
+              </label>
+              <Select
+                id="composition-rule"
+                options={compositionRules}
+                onChange={handleCompositionRuleChange}
+                selected={compositionRule}
+                spaceBottom
               />
-            </i>
-            <RuleWithIcon
-              name={compositionRule}
-              isDark
-              className="game-view__rule-icon"
-            />
-          </p>
+              <p className="new-list__composition-description">
+                <i>
+                  <FormattedMessage
+                    id={`new.armyCompositionRuleDescription.${compositionRule}`}
+                  />
+                </i>
+                <RuleWithIcon
+                  name={compositionRule}
+                  isDark
+                  className="game-view__rule-icon"
+                />
+              </p>
+            </>
+          )}
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>

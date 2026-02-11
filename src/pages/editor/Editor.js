@@ -21,6 +21,7 @@ import { validateList } from "../../utils/validation";
 import { removeFromLocalList, updateLocalList } from "../../utils/list";
 import { deleteList, moveUnit } from "../../state/lists";
 import { setErrors } from "../../state/errors";
+import { getGameSystems } from "../../utils/game-systems";
 
 import "./Editor.css";
 
@@ -110,6 +111,13 @@ export const Editor = ({ isMobile }) => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
+
+  // Get game and army data to check if allies/mercenaries are available
+  const gameSystems = getGameSystems();
+  const game = gameSystems.find((g) => g.id === list.game);
+  const armyData = game?.armies.find((a) => a.id === list.army);
+  const hasAllies = armyData?.allies && armyData.allies.length > 0;
+  const hasMercenaries = armyData?.mercenaries && Object.keys(armyData.mercenaries).length > 0;
   const lordsData =
     list.lords &&
     getMaxSlots({
@@ -310,7 +318,7 @@ export const Editor = ({ isMobile }) => {
               </ErrorMessage>
             ))}
         </section>
-        {list.lords && (
+        {list.lords && list.game !== "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -352,7 +360,7 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.heroes && (
+        {list.heroes && list.game !== "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -394,7 +402,7 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.characters && (
+        {list.characters && list.game === "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -628,8 +636,7 @@ export const Editor = ({ isMobile }) => {
         {list.mercenaries &&
           mercenariesData &&
           armyComposition &&
-          list?.army !== "daemons-of-chaos" &&
-          list?.army !== "vampire-counts" && (
+          hasMercenaries && (
             <section className="editor__section">
               <header className="editor__header">
                 <h2>
@@ -690,64 +697,66 @@ export const Editor = ({ isMobile }) => {
             </section>
           )}
 
-        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.allies" />
-              </h2>
-              <p className="editor__points">
-                {alliesData.diff > 0 ? (
-                  <>
-                    <strong>{alliesData.diff}</strong>
-                    <FormattedMessage id="editor.tooManyPoints" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>{alliesData.points - alliesPoints}</strong>
-                    <FormattedMessage id="editor.availablePoints" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
+        {list.allies &&
+          alliesData &&
+          hasAllies && (
+            <section className="editor__section">
+              <header className="editor__header">
+                <h2>
+                  <FormattedMessage id="editor.allies" />
+                </h2>
+                <p className="editor__points">
+                  {alliesData.diff > 0 ? (
+                    <>
+                      <strong>{alliesData.diff}</strong>
+                      <FormattedMessage id="editor.tooManyPoints" />
+                      <Icon symbol="error" color="red" />
+                    </>
+                  ) : (
+                    <>
+                      <strong>{alliesData.points - alliesPoints}</strong>
+                      <FormattedMessage id="editor.availablePoints" />
+                      <Icon symbol="check" />
+                    </>
+                  )}
+                </p>
+              </header>
 
-            <OrderableUnitList
-              units={list.allies}
-              type="allies"
-              listId={listId}
-              armyComposition={armyComposition}
-            />
+              <OrderableUnitList
+                units={list.allies}
+                type="allies"
+                listId={listId}
+                armyComposition={armyComposition}
+              />
 
-            {errors
-              .filter(({ section }) => section === "allies")
-              .map(({ message, name, diff, min, max, option }, index) => (
-                <ErrorMessage key={message + index} spaceBefore>
-                  <FormattedMessage
-                    id={message}
-                    values={{
-                      name,
-                      diff,
-                      min,
-                      max,
-                      option,
-                    }}
-                  />
-                </ErrorMessage>
-              ))}
+              {errors
+                .filter(({ section }) => section === "allies")
+                .map(({ message, name, diff, min, max, option }, index) => (
+                  <ErrorMessage key={message + index} spaceBefore>
+                    <FormattedMessage
+                      id={message}
+                      values={{
+                        name,
+                        diff,
+                        min,
+                        max,
+                        option,
+                      }}
+                    />
+                  </ErrorMessage>
+                ))}
 
-            <Button
-              type="primary"
-              centered
-              to={`/editor/${listId}/add/allies`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button>
-          </section>
-        )}
+              <Button
+                type="primary"
+                centered
+                to={`/editor/${listId}/add/allies`}
+                icon="add"
+                spaceTop
+              >
+                <FormattedMessage id="editor.add" />
+              </Button>
+            </section>
+          )}
 
         <Button
           type="secondary"
