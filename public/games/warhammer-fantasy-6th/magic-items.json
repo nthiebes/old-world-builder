@@ -2,163 +2,390 @@
   "general": [
     {
       "name_es": "Espada Veloz",
-      "name_en": "Sword of Strife",
+      "name_en": "Sword of Striking",
       "points": 30,
-      "type": "weapon"
+      "type": "weapon",
+      "name": "sword of striking"
     },
     {
       "name_es": "Espada de Batalla",
       "name_en": "Sword of Battle",
       "points": 25,
-      "type": "weapon"
+      "type": "weapon",
+      "name": "sword of battle"
     },
     {
       "name_es": "Espada de Poder",
       "name_en": "Sword of Might",
       "points": 20,
-      "type": "weapon"
+      "type": "weapon",
+      "name": "sword of might"
     },
     {
       "name_es": "Mordisco de Acero",
       "name_en": "Biting Blade",
       "points": 10,
-      "type": "weapon"
+      "type": "weapon",
+      "name": "biting blade"
     },
-
     {
       "name_es": "Escudo Hechizado",
       "name_en": "Enchanted Shield",
       "points": 10,
-      "type": "armor"
-    },
-    {
-      "name_de": "Estandarte de la Guerra",
-      "name_en": "War Banner",
-      "points": 25,
-      "type": "banner"
+      "type": "armor",
+      "name": "enchanted shield"
     },
     {
       "name_es": "Báculo del Hechicero",
       "name_en": "Staff of Sorcery",
       "points": 50,
-      "type": "arcane-item"
+      "type": "arcane-item",
+      "name": "staff of sorcery"
     },
     {
       "name_es": "Pergamino de Dispersión",
-      "name_en": "Dispel Scroll",
+      "name_en": "Dispell Scroll",
       "points": 25,
-      "type": "arcane-item"
+      "type": "arcane-item",
+      "name": "dispell scroll"
     },
     {
       "name_es": "Piedra de Energía",
       "name_en": "Power Stone",
       "points": 25,
-      "type": "arcane-item"
+      "type": "arcane-item",
+      "name": "power stone"
+    },
+    {
+      "name_es": "Talisman de Protección",
+      "name_en": "Talisman of Protection",
+      "points": 15,
+      "type": "talisman",
+      "name": "talisman of protection"
     }
   ],
-  "bretonnia": [{
-    "name_de": "Schwert der Queste",
-    "name_en": "Sword of the Quest",
-    "name_cn": "远征之剑",
-    "name_fr": "Épée de la Quête",
-    "name_it": "Spada of the Quest",
-    "name_pl": "Miecz Wyprawy",
-    "points": 70,
-    "type": "weapon",
-    "onePerArmy": true,
-    "name": "sword of the quest"
-  }],
-  "knightly-virtues": [{
-    "name_en": "Virtue of Penitent",
-    "name_es": "Virtud del Penitente",
-    "points": 40,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of penitent"
-  },{
-    "name_en": "Virtue of Knightly Value",
-    "name_es": "Virtud del Ardor Caballeresco",
-    "points": 40,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of knightly value"
-  },{
-    "name_en": "Virtue of Heroism",
-    "name_es": "Virtud de la Heroicidad",
-    "points": 40,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of penitent"
-  },{
-    "name_en": "Virtue of Stoicism",
-    "name_es": "Virtud del Estoicismo",
-    "points": 35,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of sctoicism"
-  },{
-    "name_en": "Virtue of the Ideal",
-    "name_es": "Virtud del Ideal",
-    "points": 35,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of the ideal"
-  },{
-    "name_en": "Virtue of Audacity",
-    "name_es": "Virtud de la Audacia",
-    "points": 30,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of audacity"
-  },{
-    "name_en": "Virtue of Duty",
-    "name_es": "Virtud del Deber",
-    "points": 30,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of duty"
-  },{
-    "name_en": "Virtue of the Joust",
-    "name_es": "Virtud de la Jsuta",
-    "points": 25,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of the joust"
-  },{
-    "name_en": "Virtue of the Confidence",
-    "name_es": "Virtud de la Confianza",
-    "points": 25,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of the confidence"
-  },{
-    "name_en": "Virtue of Noble Desdain",
-    "name_es": "Virtud del Noble Desdén",
-    "points": 20,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of noble desdain"
-  },{
-    "name_en": "Virtue of Purity",
-    "name_es": "Virtud de la Pureza",
-    "points": 20,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of purity"
-  },{
-    "name_en": "Virtue of Discipline",
-    "name_es": "Virtud de la Disciplina",
-    "points": 15,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of discipline"
-  },{
-    "name_en": "Virtue of Empathy",
-    "name_es": "Virtud de la Empatía",
-    "points": 10,
-    "type": "knightly-virtue",
-    "onePerArmy": false,
-    "name": "virtue of empathy"
-  }
+  "bretonnia": [
+    {
+      "name_en": "The Silver Lance of the Blessed",
+      "points": 65,
+      "type": "weapon",
+      "name": "the silver lance of the blessed"
+    },
+    {
+      "name_en": "Sword of the Quest",
+      "points": 50,
+      "type": "weapon",
+      "name": "sword of the quest"
+    },
+    {
+      "name_en": "Sword of the Lady's Champion",
+      "points": 40,
+      "type": "weapon",
+      "name": "sword of the lady's champion"
+    },
+    {
+      "name_en": "Sword of Heroes",
+      "points": 35,
+      "type": "weapon",
+      "name": "sword of heroes"
+    },
+    {
+      "name_en": "The Heartwood Lance",
+      "points": 35,
+      "type": "weapon",
+      "name": "the heartwood lance"
+    },
+    {
+      "name_en": "Birth-sword of Carcassonne",
+      "points": 35,
+      "type": "weapon",
+      "name": "birth-sword of carcassonne"
+    },
+    {
+      "name_en": "Morning Star of Fracasse",
+      "points": 25,
+      "type": "weapon",
+      "name": "morning star of fracasse"
+    },
+    {
+      "name_en": "The Lance of Artois",
+      "points": 25,
+      "type": "weapon",
+      "name": "the lance of artois"
+    },
+    {
+      "name_en": "The Wyrmlance",
+      "points": 20,
+      "type": "weapon",
+      "name": "the wyrmlance"
+    },
+    {
+      "name_en": "Gilded Cuirass",
+      "points": 55,
+      "type": "armor",
+      "name": "gilded cuirass"
+    },
+    {
+      "name_en": "Armour of the Midsummer Sun",
+      "points": 45,
+      "type": "armor",
+      "name": "armour of the midsummer sun"
+    },
+    {
+      "name_en": "The Grail Shield",
+      "points": 30,
+      "type": "armor",
+      "name": "the grail shield"
+    },
+    {
+      "name_en": "Gromril Great Helm",
+      "points": 30,
+      "type": "armor",
+      "name": "gromril great helm"
+    },
+    {
+      "name_en": "Armour of Agilulf",
+      "points": 25,
+      "type": "armor",
+      "name": "armour of agilulf"
+    },
+    {
+      "name_en": "Cuirass of Fortune",
+      "points": 20,
+      "type": "armor",
+      "name": "cuirass of fortune"
+    },
+    {
+      "name_en": "Orcbane Shield",
+      "points": 15,
+      "type": "armor",
+      "name": "orcbane shield"
+    },
+    {
+      "name_en": "Enchanted Shield",
+      "points": 10,
+      "type": "armor",
+      "name": "enchanted shield"
+    },
+    {
+      "name_en": "Sirienne's Locket",
+      "points": 55,
+      "type": "talisman",
+      "name": "sirienne's locket"
+    },
+    {
+      "name_en": "Token of the Damsel",
+      "points": 35,
+      "type": "talisman",
+      "name": "token of the damsel"
+    },
+    {
+      "name_en": "Insignia of the Quest",
+      "points": 30,
+      "type": "talisman",
+      "name": "insignia of the quest"
+    },
+    {
+      "name_en": "Holy Icon",
+      "points": 30,
+      "type": "talisman",
+      "name": "holy icon"
+    },
+    {
+      "name_en": "Braid of Bordeleaux",
+      "points": 25,
+      "type": "talisman",
+      "name": "braid of bordeleaux"
+    },
+    {
+      "name_en": "Mantle of Damsel Elena",
+      "points": 20,
+      "type": "talisman",
+      "name": "mantle of damsel elena"
+    },
+    {
+      "name_en": "The Ruby Goblet",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "the ruby goblet"
+    },
+    {
+      "name_en": "The Mane of the Purebreed",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "the mane of the purebreed"
+    },
+    {
+      "name_en": "Antlers of the Great Hunt",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "antlers of the great hunt"
+    },
+    {
+      "name_en": "Tress of Isoulde",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "tress of isoulde"
+    },
+    {
+      "name_en": "Gauntlet of the Duel",
+      "points": 10,
+      "type": "enchanted-item",
+      "name": "gauntlet of the duel"
+    },
+    {
+      "name_en": "Silver Mirror",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "silver mirror"
+    },
+    {
+      "name_en": "Chalice of Malfleur",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "chalice of malfleur"
+    },
+    {
+      "name_en": "Potion Sacre",
+      "points": 10,
+      "type": "arcane-item",
+      "name": "potion sacre"
+    },
+    {
+      "name_en": "Banner of the Lady",
+      "points": 100,
+      "type": "banner",
+      "name": "banner of the lady"
+    },
+    {
+      "name_en": "Valorous Standard",
+      "points": 50,
+      "type": "banner",
+      "name": "valorous standard"
+    },
+    {
+      "name_en": "Banner of Defence",
+      "points": 30,
+      "type": "banner",
+      "name": "banner of defence"
+    },
+    {
+      "name_en": "Errantry Banner",
+      "points": 20,
+      "type": "banner",
+      "name": "errantry banner"
+    },
+    {
+      "name_en": "Banner of Chalons",
+      "points": 10,
+      "type": "banner",
+      "name": "banner of chalons"
+    }
+  ],
+  "knightly-virtues": [
+    {
+      "name_en": "Virtue of Penitent",
+      "name_es": "Virtud del Penitente",
+      "points": 40,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of penitent"
+    },
+    {
+      "name_en": "Virtue of Knightly Value",
+      "name_es": "Virtud del Ardor Caballeresco",
+      "points": 40,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of knightly value"
+    },
+    {
+      "name_en": "Virtue of Heroism",
+      "name_es": "Virtud de la Heroicidad",
+      "points": 40,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of heroism"
+    },
+    {
+      "name_en": "Virtue of Stoicism",
+      "name_es": "Virtud del Estoicismo",
+      "points": 35,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of stoicism"
+    },
+    {
+      "name_en": "Virtue of the Ideal",
+      "name_es": "Virtud del Ideal",
+      "points": 35,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of the ideal"
+    },
+    {
+      "name_en": "Virtue of Audacity",
+      "name_es": "Virtud de la Audacia",
+      "points": 30,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of audacity"
+    },
+    {
+      "name_en": "Virtue of Duty",
+      "name_es": "Virtud del Deber",
+      "points": 30,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of duty"
+    },
+    {
+      "name_en": "Virtue of the Joust",
+      "name_es": "Virtud de la Jsuta",
+      "points": 25,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of the joust"
+    },
+    {
+      "name_en": "Virtue of the Confidence",
+      "name_es": "Virtud de la Confianza",
+      "points": 25,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of the confidence"
+    },
+    {
+      "name_en": "Virtue of Noble Desdain",
+      "name_es": "Virtud del Noble Desd\u00e9n",
+      "points": 20,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of noble desdain"
+    },
+    {
+      "name_en": "Virtue of Purity",
+      "name_es": "Virtud de la Pureza",
+      "points": 20,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of purity"
+    },
+    {
+      "name_en": "Virtue of Discipline",
+      "name_es": "Virtud de la Disciplina",
+      "points": 15,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Virtue of Empathy",
+      "name_es": "Virtud de la Empat\u00eda",
+      "points": 10,
+      "type": "knightly-virtue",
+      "onePerArmy": false,
+      "name": "virtue of empathy"
+    }
   ]
 }
