@@ -175,6 +175,7 @@ export const validateList = ({ list, language, intl }) => {
     : rules["grand-army"]?.mercenaries?.units;
 
   // Not enough non-character units
+  if (list.game === "the-old-world"){
   if (!list.compositionRule || !list.compositionRule.includes("battle-march")) {
     if (nonCharactersCount < 3) {
       errors.push({
@@ -186,6 +187,27 @@ export const validateList = ({ list, language, intl }) => {
     if (nonCharactersCount < 2) {
       errors.push({
         message: "misc.error.notEnoughNonCharactersBattleMarch",
+        section: "global",
+      });
+    }
+  }
+  }
+
+  // Check total character slots (lords + heroes for non-old-world games)
+  if (list.game !== "the-old-world") {
+    const lordsSlots = list.lords?.length || 0;
+    const heroesSlots = list.heroes?.length || 0;
+    const totalCharacterSlots = lordsSlots + heroesSlots;
+
+    const CharactersRules = rules[list.armyComposition]
+      ? rules[list.armyComposition].characters
+      : rules["grand-army"].characters;
+
+    const totalMaxCharacterSlots = CharactersRules?.maxSlots || 0;
+
+    if (totalCharacterSlots > totalMaxCharacterSlots) {
+      errors.push({
+        message: "misc.error.tooManyCharacterSlots",
         section: "global",
       });
     }
