@@ -12,6 +12,11 @@ import { closeRulesIndex } from "../../state/rules-index";
 import { rulesMap, synonyms } from "./rules-map";
 import "./RulesIndex.css";
 
+const RULES_BASE_URLS = {
+  "the-old-world": "https://tow.whfb.app",
+  "warhammer-fantasy-6th": "https://6th.whfb.app",
+};
+
 export const RulesIndex = () => {
   const { open, activeRule } = useSelector((state) => state.rulesIndex);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +25,7 @@ export const RulesIndex = () => {
     state.lists.find(({ id }) => listId === id)
   );
   const listArmyComposition = list?.armyComposition || list?.army;
+  const listGame = list?.game || "warhammer-fantasy-6th";
   const dispatch = useDispatch();
   const handleClose = () => {
     setIsLoading(true);
@@ -32,6 +38,7 @@ export const RulesIndex = () => {
   const synonym = synonyms[normalizedName];
   const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
   const rulePath = ruleData?.url;
+  const baseUrl = RULES_BASE_URLS[listGame] || RULES_BASE_URLS["warhammer-fantasy-6th"];
 
   return (
     <Dialog open={open} onClose={handleClose}>
@@ -43,7 +50,7 @@ export const RulesIndex = () => {
               "rules-index__iframe",
               !isLoading && "rules-index__iframe--show"
             )}
-            src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
+            src={`${baseUrl}/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="Warhammer: The Old World Online Rules Index"
             height="500"
             width="700"
