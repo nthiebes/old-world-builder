@@ -91,6 +91,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 onChange={handleLanguageChange}
                 defaultChecked={language === "de"}
                 className="radio__input"
+                disabled
               />
               <label htmlFor="deutsch" className="radio__label">
                 <img
@@ -112,6 +113,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 onChange={handleLanguageChange}
                 defaultChecked={language === "fr"}
                 className="radio__input"
+                disabled
               />
               <label htmlFor="french" className="radio__label">
                 <img
@@ -154,6 +156,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 onChange={handleLanguageChange}
                 defaultChecked={language === "it"}
                 className="radio__input"
+                disabled
               />
               <label htmlFor="italian" className="radio__label">
                 <img
@@ -175,6 +178,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 onChange={handleLanguageChange}
                 defaultChecked={language === "pl"}
                 className="radio__input"
+                disabled
               />
               <label htmlFor="polish" className="radio__label">
                 <img
@@ -196,6 +200,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
                 onChange={handleLanguageChange}
                 defaultChecked={language === "cn"}
                 className="radio__input"
+                disabled
               />
               <label htmlFor="chinese" className="radio__label">
                 <img

@@ -198,6 +198,7 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
+                disabled={id === "the-old-world"}
               />
               <label htmlFor={id} className="radio__label">
                 <span className="new-list__game-name">{name}</span>
