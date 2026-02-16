@@ -2,7 +2,7 @@
   "name": "warhammer-fantasy-builder",
   "version": "0.1.0",
   "author": "Aleix Paradell",
-  "homepage": "https://old-world-builder.com",
+  "homepage": "https://paradell.github.io/whfb6th-builder/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
@@ -47,8 +47,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b main -d build",
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project warhammer-fantasy-builder ./build && sentry-cli sourcemaps upload --org booky --project warhammer-fantasy-builder ./build"
   },
   "eslintConfig": {
