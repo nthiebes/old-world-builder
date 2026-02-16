@@ -1,6 +1,6 @@
 import "abortcontroller-polyfill/dist/abortcontroller-polyfill-only";
 
-const baseUrl = "/";
+const baseUrl = process.env.PUBLIC_URL || "/";
 let controller;
 
 const abortFetch = () => {
