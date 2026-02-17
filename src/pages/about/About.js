@@ -15,17 +15,17 @@ export const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    loadScript("https://www.paypalobjects.com/donate/sdk/donate-sdk.js", () => {
-      window.PayPal.Donation.Button({
-        env: "production",
-        hosted_button_id: "VU2Z6Q32Q656A",
-        image: {
-          src: "https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif",
-          alt: "Donate with PayPal button",
-          title: "PayPal - The safer, easier way to pay online!",
-        },
-      }).render("#donate-button");
-    });
+    // loadScript("https://www.paypalobjects.com/donate/sdk/donate-sdk.js", () => {
+    //   window.PayPal.Donation.Button({
+    //     env: "production",
+    //     hosted_button_id: "VU2Z6Q32Q656A",
+    //     image: {
+    //       src: "https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif",
+    //       alt: "Donate with PayPal button",
+    //       title: "PayPal - The safer, easier way to pay online!",
+    //     },
+    //   }).render("#donate-button");
+    // });
   }, [location.pathname]);
 
   return (
@@ -34,7 +34,7 @@ export const About = () => {
         <title>
           {`Warhammer Fantasy Builder | ${intl.formatMessage({ id: "footer.about" })}`}
         </title>
-        <link rel="canonical" href="https://old-world-builder.com/about" />
+        <link rel="canonical" href="https://paradell.github.io/about" />
       </Helmet>
 
       <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
@@ -76,9 +76,9 @@ export const About = () => {
         <p>
           <FormattedMessage id="about.donation" />
         </p>
-        <div id="donate-button-container" className="about__donation">
+        {/* <div id="donate-button-container" className="about__donation">
           <div id="donate-button"></div>
-        </div>
+        </div> */}
 
         <h2>Credits</h2>
         <p>
@@ -87,7 +87,7 @@ export const About = () => {
             values={{
               github: (
                 <a
-                  href="https://github.com/nthiebes/old-world-builder"
+                  href="https://github.com/paradell/whfb6th-builder"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -148,7 +148,7 @@ export const About = () => {
           </b>
         </p>
         <p>
-          Warhammer: the Old World, Citadel, Forge World, Games Workshop, GW,
+          Warhammer: the Old World, Warhammer Fantasy Battles, Citadel, Forge World, Games Workshop, GW,
           Warhammer, the 'winged-hammer' Warhammer logo, the Chaos devices, the
           Chaos logo, Citadel Device, the Double-Headed/Imperial Eagle device,
           'Eavy Metal, Games Workshop logo, Golden Demon, Great Unclean One, the

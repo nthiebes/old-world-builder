@@ -755,6 +755,7 @@ export const Home = ({ isMobile }) => {
 
         <hr />
 
+        {/* Partnerships section hidden
         <p>
           <b>
             <i>
@@ -808,6 +809,7 @@ export const Home = ({ isMobile }) => {
             />
           </a>
         )}
+        */}
       </MainComponent>
     </>
   );
