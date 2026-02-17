@@ -19,6 +19,9 @@
     "armyComposition": {
       "bretonnia": {
         "category": "lords"
+      },
+      "errantry-war": {
+        "category": "lords"
       }
     },
     "equipment": [
@@ -278,6 +281,9 @@
     "armyComposition": {
       "bretonnia": {
         "category": "heroes"
+      },
+      "errantry-war": {
+        "category": "heroes"
       }
     },
     "command": [
@@ -424,6 +430,9 @@
       "points": 70,
       "armyComposition": {
         "bretonnia": {
+          "category": "heroes"
+        },
+        "errantry-war": {
           "category": "heroes"
         }
       },
@@ -606,6 +615,9 @@
       "armyComposition": {
         "bretonnia": {
           "category": "core"
+        },
+        "errantry-war": {
+          "category": "core"
         }
       }
     },
@@ -705,27 +717,10 @@
       },
       "armyComposition": {
         "bretonnia": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Men-at-Arms and/or Peasant Bowmen",
-            "name_cn": "1个单位以上的武装民兵和/或民兵弓箭手",
-            "name_de": "1+ Einheiten Landsknechte und/oder Bogenschützen ",
-            "name_es": "",
-            "name_fr": "1+ unité d’Hommes d’Armes et/ou de Paysans Archers"
-          }
+          "category": "core"
         },
-        "errantry-crusades": {
-          "category": "special"
-        },
-        "bretonnian-exiles": {
-          "category": "core",
-          "notes": {
-            "name_en": "1+ unit of Yeomen Guard and/or Peasant Bowmen",
-            "name_cn": "1个单位以上的民兵卫队和/或民兵弓箭手",
-            "name_de": "1+ Einheiten Freisassengarde und/oder Bogenschützen",
-            "name_es": "",
-            "name_fr": "1+ unité de Gardes Roturiers et/ou de Paysans Archers"
-          }
+        "errantry-war": {
+          "category": "core"
         }
       }
     },
@@ -748,6 +743,9 @@
             "name_es": "",
             "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
           }
+        },
+        "errantry-war": {
+          "category": "core"
         }
       },
       "command": [
@@ -822,6 +820,16 @@
       "armyComposition": {
         "bretonnia": {
           "category": "core"
+        },
+        "errantry-war": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights Errant",
+            "name_cn": "1个单位以上的侠义骑士",
+            "name_de": "1+ Einheiten Fahrende Ritter",
+            "name_es": "1+ unidad de Caballeros Noveles",
+            "name_fr": "1+ unité de Chevaliers Errants"
+          }
         }
       },
       "command": [
@@ -959,6 +967,9 @@
       },
       "armyComposition": {
         "bretonnia": {
+          "category": "special"
+        },
+        "errantry-war": {
           "category": "special"
         }
       }
@@ -1111,6 +1122,9 @@
       "armyComposition": {
         "bretonnia": {
           "category": "special"
+        },
+        "errantry-war": {
+          "category": "special"
         }
       }
     },
@@ -1133,6 +1147,9 @@
             "name_es": "",
             "name_fr": "0-21 unités de Pèlerins du Graal par tranche de 1000 points"
           }
+        },
+        "errantry-war": {
+          "category": "rare"
         }
       },
       "command": [
@@ -1248,7 +1265,7 @@
             "name_cn": "每1000分0-2个单位的战斗朝圣者",
             "name_de": "0-1 Einheiten Gralspilger pro 1.000 Punkte",
             "name_es": "",
-            "name_fr": "0-21 unités de Pèlerins du Graal par tranche de 1000 points"
+            "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         }
       }
@@ -1272,6 +1289,17 @@
       "armyComposition": {
         "bretonnia": {
           "category": "rare"
+        },
+
+        "errantry-war": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 units of Trebuchet per army",
+            "name_cn": "每1000分0-2个单位的战斗朝圣者",
+            "name_de": "0-1 Einheiten Gralspilger pro 1.000 Punkte",
+            "name_es": "0-1 unidad de Trebuchet por ejército",
+            "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
+          }
         }
       },
       "equipment": [

@@ -101,9 +101,25 @@ export const getArmyData = ({ data, armyComposition }) => {
       !unit.armyComposition,
   );
 
+  const lords =
+    data &&
+    data.lords.filter(
+      (unit) =>
+        (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+        !unit.armyComposition,
+    );
+
+  const heroes =
+    data &&
+    data.heroes.filter(
+      (unit) =>
+        (unit?.armyComposition && unit.armyComposition[armyComposition]) ||
+        !unit.armyComposition,
+    );
+
   return {
-    lords: updateIds(data.lords),
-    heroes: updateIds(data.heroes),
+    lords: updateIds(lords),
+    heroes: updateIds(heroes),
     characters: updateIds(allCharacters),
     core: updateIds(allCore),
     special: updateIds(allSpecial),

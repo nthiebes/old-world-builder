@@ -149,6 +149,54 @@ export const rules = {
       maxSlots: 0,
     },
   },
+  "errantry-war": {
+  characters: {
+    maxSlots: 5,
+  },
+  lords:{
+    maxSlots: 1,
+  },
+  heroes: {
+    maxSlots: 5,
+        units: [
+      {
+        ids: ["paladin"],
+        min: 1,
+      },
+    ],
+  },
+  core: {
+    minSlots: 3,
+        units: [
+      {
+        ids: ["knights-errant"],
+        min: 1,
+      },
+    ],
+  },
+  special: {
+    maxSlots: 4,
+        units: [
+      {
+        ids: ["pegasus-knights"],
+        max: 1
+      },
+    ],
+  },
+  rare: {
+    maxSlots: 2,
+        units: [
+      {
+        ids: ["field-trebuchet"],
+        max: 1,
+      },
+    ],
+  },
+  mercenaries: { maxSlots: 0 },
+  allies: {
+    maxSlots: 0,
+  },
+},
   "errantry-crusades": {
     characters: {
       maxPercent: 50,

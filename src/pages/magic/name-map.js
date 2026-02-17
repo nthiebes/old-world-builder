@@ -367,6 +367,10 @@ export const nameMap = {
     name_cn: "巴托尼亚放逐者",
     name_fr: "Exilés Bretonniens",
   },
+  "errantry-war":{
+    name_en: "Errantry War",
+    name_es: "Guerra de Caballeros Noveles",
+  },
   "nehekharan-royal-hosts": {
     name_de: "Nehekharan Royal Hosts",
     name_en: "Nehekharan Royal Hosts",
