@@ -139,11 +139,11 @@ export const nameMap = {
     name_fr: "Royaume de Bretonnie",
   },
   "bretonnia": {
-    name_de: "Kingdom of Bretonnia",
-    name_en: "Kingdom of Bretonnia",
+    name_de: "Bretonnia",
+    name_en: "Bretonnia",
     name_es: "Bretonia",
     name_cn: "巴托尼亚王国",
-    name_fr: "Royaume de Bretonnie",
+    name_fr: "Bretonnie",
   },
   "chaos-mutations": {
     name_de: "Chaos Mutations",
