@@ -313,6 +313,10 @@ export const nameMap = {
     name_cn: "元素法系",
     name_fr: "Élémentalisme",
   },
+  "lore-of-the-heavens":{
+    name_en: "Lore of the Heavens",
+    name_es: "Saber de los Cielos",
+  },
   "battle-magic": {
     name_de: "Kampfmagie",
     name_en: "Battle Magic",
