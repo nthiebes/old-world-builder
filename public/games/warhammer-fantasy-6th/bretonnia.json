@@ -140,7 +140,7 @@
       }
     ],
     "specialRules": {
-      "name_en": "Blessings of the Lady, The Knight's Vow",
+      "name_en": "The Blessing of the Lady, The Knight's Vow",
       "name_cn": "女神祝福, 集结战吼, 骑士誓言",
       "name_de": "Segen der Herrin, Sammelruf, Rittertugend",
       "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Vœu du Chevalier"
@@ -259,8 +259,9 @@
       ],
       "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens"],
       "specialRules": {
-        "name_en": "Aura of the Lady, Blessings of the Lady, Lore of the Lady, Magical Attacks, Magic Resistance (-2), Shield of the Lady",
+        "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-2)",
         "name_cn": "女神光辉, 女神祝福, 女神法系, 魔法攻击, 魔法抗性(-2), 女神之盾",
+        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-2)",
         "name_de": "Aura der Herrin, Segen der Herrin, Lehre der Herrin, Magische Attacken, Magieresistenz (-2), Schild der Herrin",
         "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       },
@@ -415,7 +416,7 @@
       }
     ],
     "specialRules": {
-      "name_en": "Blessings of the Lady, The Knight's Vow",
+      "name_en": "The Blessing of the Lady, The Knight's Vow",
       "name_cn": "女神祝福, 集结战吼, 骑士誓言",
       "name_de": "Segen der Herrin, Sammelruf, Rittergelübde",
       "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Vœu du Chevalier"
@@ -534,8 +535,9 @@
       ],
       "lores": ["lore-of-life", "lore-of-beasts"],
       "specialRules": {
-        "name_en": "Aura of the Lady, Blessings of the Lady, Magic Resistance (-2)",
+        "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-1)",
         "name_cn": "女神光辉, 女神祝福, 女神法系, 魔法攻击, 魔法抗性(-2), 女神之盾",
+        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-1)",
         "name_de": "Aura der Herrin, Segen der Herrin, Lehre der Herrin, Magische Attacken, Magieresistenz (-2), Schild der Herrin",
         "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       }
@@ -576,7 +578,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Polearms",
+          "name_en": "Hand weapons, Halberd",
           "name_cn": "单手武器, 长柄武器, 盾牌",
           "name_de": "Handwaffe, Stangenwaffe, Schild",
           "name_fr": "Armes de base, Armes d’hast, Boucliers",
@@ -607,7 +609,7 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Peasantry",
+        "name_en": "The Peasant's Duty",
         "name_cn": "紧密阵型, 部群, 炮灰, 农民, 盾墙, 战帮",
         "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
         "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
@@ -710,7 +712,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Peasantry",
+        "name_en": "The Peasant's Duty",
         "name_cn": "紧密阵型, 炮灰, 农民",
         "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
         "name_fr": "Ordre Serré, Conscrits, Paysannerie"
@@ -755,7 +757,8 @@
           "name_de": "Erster Ritter",
           "name_fr": "Champion du Royaume (champion)",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
@@ -802,9 +805,9 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Finest Warhorses, Lance Formation, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, The Knight's Vow",
         "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 快速行进, 骑士誓言",
-        "name_de": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
+        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     },
@@ -839,7 +842,8 @@
           "name_de": "Heißsporn",
           "name_fr": "Preux Chevalier (champion)",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
@@ -887,9 +891,9 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Finest Warhorses, Impetuous, Lance Formation, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Impetuous, Lance Formation, The Knight's Vow",
         "name_cn": "女神祝福, 紧密阵型, 良种战马, 先行冲锋, 鲁莽, 枪骑阵型, 快速行进, 骑士誓言",
-        "name_de": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Impetuous, Lance Formation, Swiftstride, The Knight's Vow",
+        "name_de": "The Blessing of the Lady, Close Order, Purebreed Warhorse, First Charge, Impetuous, Lance Formation, Swiftstride, The Knight's Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Impétueux, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     }
@@ -911,7 +915,8 @@
           "name_de": "Eremit",
           "name_fr": "Champion de la Quête (champion)",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
@@ -960,9 +965,9 @@
       "items": [
       ],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Finest Warhorses, Lance Formation, the Questing Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, the Questing Vow",
         "name_cn": "女神祝福, 紧密阵型, 良种战马, 先行冲锋, 枪骑阵型, 快速行进, 探索誓言",
-        "name_de": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Questing Vow",
+        "name_de": "The Blessing of the Lady, Close Order, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, the Questing Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Vœu de la Quête"
       },
       "armyComposition": {
@@ -990,7 +995,8 @@
           "name_de": "Erster Ritter",
           "name_fr": "Champion Pégase (champion)",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
@@ -1034,9 +1040,9 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Fly (10), Skirmishers, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Flying Cavalry, Skirmishers, The Knight's Vow",
         "name_cn": "女神祝福, 反制冲锋, 分散阵型, 先行冲锋, 飞行(10), 狂怒冲锋(仅限飞马骑士&首席骑士), 散兵, 快速行进, 骑士誓言",
-        "name_de": "Blessings of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Skirmishers, Swiftstride, The Knight's Vow",
+        "name_de": "The Blessing of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Skirmishers, Swiftstride, The Knight's Vow",
         "name_fr": "Bénédiction de la Dame, Contre-charge, Formation Éparse, Première Charge, Vol (10), Charge Dévastatrice (Chevaliers Pégases & Champion Pégase uniquement), Tirailleurs, Rapide, Le Vœu du Chevalier"
       }
     },
@@ -1074,7 +1080,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Cavalry spears, Shortbows",
+          "name_en": "Hand weapons, Cavalry spear, Shortbows",
           "name_cn": "单手武器, 骑兵长矛, 短弓",
           "name_de": "Handwaffen, Kavalleriespeere, Kurzbogen",
           "name_fr": "Armes de base, Lances de cavalerie, Arcs courts",
@@ -1114,9 +1120,9 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Fast Cavalry, Peasantry",
+        "name_en": "Fast Cavalry, The Peasant's Duty",
         "name_cn": "快速骑兵, 游击, 炮灰, 开放阵型, 农民, 预备移动, 散兵, 快速行进",
-        "name_de": "Fast Cavalry, Fire & Flee, Levies, Open Order, Peasantry, Reserve Move, Skirmishers, Swiftstride",
+        "name_de": "Fast Cavalry, Fire & Flee, Levies, Open Order, The Peasant's Duty, Reserve Move, Skirmishers, Swiftstride",
         "name_fr": "Cavalerie Rapide, Tir & Fuite, Conscrits, Ordre Dispersé, Paysannerie, Mouvement de Réserve, Tirailleurs, Rapide"
       },
       "armyComposition": {
@@ -1183,13 +1189,14 @@
           "name_de": "Gralsreliquie",
           "name_fr": "Reliquaire du Graal",
           "points": 64,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         }],
       "mounts": [],
       "specialRules": {
-        "name_en": "Hatred (all enemies), Peasantry, Stubborn",
+        "name_en": "Hatred (all enemies), The Peasant's Duty, Stubborn",
         "name_cn": "紧密阵型, 仇恨(所有敌人), 炮灰, 农民, 坚毅",
-        "name_de": "Close Order, Hatred (all enemies), Levies, Peasantry, Stubborn",
+        "name_de": "Close Order, Hatred (all enemies), Levies, The Peasant's Duty, Stubborn",
         "name_fr": "Ordre Serré, Haine (Tous les ennemis), Conscrits, Paysannerie, Obstiné"
       }
     }
@@ -1252,9 +1259,9 @@
       "items": [
       ],
       "specialRules": {
-        "name_en": "Blessings of the Lady, Finest Warhorses, Lance Formation, Living Saints, The Grail Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
         "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 活圣人, 快速行进, 圣杯誓言",
-        "name_de": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
+        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
       },
       "armyComposition": {
@@ -1316,7 +1323,8 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "Levies, Peasantry, Skirmishers",
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
         "name_cn": "炮灰, 农民, 散兵",
         "name_de": "Bauernvolk, Gesindel, Plänkler",
         "name_fr": "Conscrits, Paysannerie, Tirailleurs"
