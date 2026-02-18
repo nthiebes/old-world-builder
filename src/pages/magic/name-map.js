@@ -313,6 +313,35 @@ export const nameMap = {
     name_cn: "元素法系",
     name_fr: "Élémentalisme",
   },
+  "lore-of-fire": {
+    name_en: "Lore of Fire",
+    name_es: "Saber del Fuego",
+  },
+  "lore-of-metal":
+  {
+    name_en: "Lore of Metal",
+    name_es: "Saber del Metal",
+  },
+  "lore-of-shadow": {
+    name_en: "Lore of Shadow",
+    name_es: "Saber de las Sombras",
+  },
+  "lore-of-light": {
+    name_en: "Lore of Light",
+    name_es: "Saber de la Luz",
+  },
+  "lore-of-life": {
+    name_en: "Lore of Life",
+    name_es: "Saber de la Vida",
+  },
+  "lore-of-death": {
+    name_en: "Lore of Death",
+    name_es: "Saber de la Muerte",
+  },
+  "lore-of-beasts": {
+    name_en: "Lore of Beasts",
+    name_es: "Saber de las Bestias",
+  },
   "lore-of-the-heavens":{
     name_en: "Lore of the Heavens",
     name_es: "Saber de los Cielos",
