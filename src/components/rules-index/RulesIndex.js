@@ -15,6 +15,7 @@ import "./RulesIndex.css";
 const RULES_BASE_URLS = {
   "the-old-world": "https://tow.whfb.app",
   "warhammer-fantasy-6th": "https://6th.whfb.app",
+  "warhammer-fantasy-nuth": "https://6th.whfb.app",
 };
 
 export const RulesIndex = () => {
