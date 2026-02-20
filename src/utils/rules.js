@@ -97,106 +97,6 @@ export const rules = {
       maxPercent: 25,
     },
   },
-  "bretonnia": {
-    characters: {
-      maxSlots: 5,
-    },
-    lords:{
-      maxSlots: 1,
-    },
-    heroes: {
-      maxSlots: 5,
-      units: [
-        {
-          ids: ["paladin"],
-          min: 1,
-        },
-      ],
-    },
-    core: {
-      minSlots: 3,
-      units: [
-        {
-          ids: ["mounted-knights-of-the-realm"],
-          min: 1,
-        },
-      ],
-    },
-    special: {
-      maxSlots: 4,
-      units: [
-        {
-          ids: ["battle-pilgrims"],
-          max: 1
-        },
-        {
-          ids: ["pegasus-knights"],
-          max: 1
-        },
-      ],
-    },
-    rare: {
-      maxSlots: 2,
-      units: [
-        {
-          ids: ["grail-knights"],
-          max: 1,
-        },
-      ],
-    },
-    mercenaries: { maxSlots: 0 },
-    allies: {
-      maxSlots: 0,
-    },
-  },
-  "errantry-war": {
-  characters: {
-    maxSlots: 5,
-  },
-  lords:{
-    maxSlots: 1,
-  },
-  heroes: {
-    maxSlots: 5,
-        units: [
-      {
-        ids: ["paladin"],
-        min: 1,
-      },
-    ],
-  },
-  core: {
-    minSlots: 3,
-        units: [
-      {
-        ids: ["knights-errant"],
-        min: 1,
-      },
-    ],
-  },
-  special: {
-    maxSlots: 4,
-        units: [
-      {
-        ids: ["pegasus-knights"],
-        max: 1
-      },
-    ],
-  },
-  rare: {
-    maxSlots: 2,
-        units: [
-      {
-        ids: ["field-trebuchet"],
-        max: 1,
-      },
-    ],
-  },
-  mercenaries: { maxSlots: 0 },
-  allies: {
-    maxSlots: 0,
-  },
-},
   "errantry-crusades": {
     characters: {
       maxPercent: 50,
@@ -4141,6 +4041,228 @@ export const rules = {
     mercenaries: {
       maxPercent: 33,
       units: [],
+    },
+  },
+  // Warhammer Fantasy 6th
+  "bretonnia": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["mounted-knights-of-the-realm"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["battle-pilgrims"],
+          max: 1
+        },
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["grail-knights"],
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
+    },
+  },
+  "errantry-war": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["knights-errant"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["field-trebuchet"],
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
+    },
+  },
+  // Warhammer Fantasy MdN
+  "bretonnia-mdn": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["mounted-knights-of-the-realm"],
+          min: 1,
+        },
+        {
+          ids: ["arblastiers"],
+          max: 1,
+        },
+        {
+          ids: ["hunters"],
+          max: 1,
+        },
+        {
+          ids: ["yeomen"],
+          max: 1,
+        },
+        {
+          ids: ["brigands"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["battle-pilgrims"],
+          max: 1
+        },
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["grail-knights"],
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
+    },
+  },
+  "errantry-war-mdn": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["knights-errant"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["field-trebuchet"],
+          max: 1,
+        },
+        {
+          ids: ["bretonnian-cannon"],
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
     },
   },
 };

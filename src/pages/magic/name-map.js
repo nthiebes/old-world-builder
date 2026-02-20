@@ -138,13 +138,6 @@ export const nameMap = {
     name_cn: "巴托尼亚王国",
     name_fr: "Royaume de Bretonnie",
   },
-  "bretonnia": {
-    name_de: "Bretonnia",
-    name_en: "Bretonnia",
-    name_es: "Bretonia",
-    name_cn: "巴托尼亚王国",
-    name_fr: "Bretonnie",
-  },
   "chaos-mutations": {
     name_de: "Chaos Mutations",
     name_en: "Chaos Mutations",
@@ -399,10 +392,6 @@ export const nameMap = {
     name_en: "Bretonnian Exiles",
     name_cn: "巴托尼亚放逐者",
     name_fr: "Exilés Bretonniens",
-  },
-  "errantry-war":{
-    name_en: "Errantry War",
-    name_es: "Guerra de Caballeros Noveles",
   },
   "nehekharan-royal-hosts": {
     name_de: "Nehekharan Royal Hosts",
@@ -853,5 +842,24 @@ export const nameMap = {
     name_en: "Incantation Scroll",
     name_cn: "咒语卷轴",
     name_fr: "Parchemins d’Incantation",
+  },
+  // Warhammer Fantasy 6th
+  "bretonnia": {
+      name_en: "Bretonnia",
+      name_es: "Bretonia",
+  },
+    "errantry-war":{
+      name_en: "Errantry War",
+      name_es: "Guerra de Caballeros Noveles",
+  },
+  // Warhammer Fantasy MdN
+
+  "bretonnia-mdn": {
+    name_en: "Bretonnia MdN",
+    name_es: "Bretonia MdN",
+  },
+  "errantry-war-mdn":{
+    name_en: "Errantry War - MdN",
+    name_es: "Guerra de Caballeros Noveles - MdN",
   },
 };
