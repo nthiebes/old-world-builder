@@ -785,9 +785,6 @@
       "armyComposition": {
         "bretonnia": {
           "category": "core"
-        },
-        "errantry-war": {
-          "category": "core"
         }
       }
     },
@@ -1076,9 +1073,6 @@
       "armyComposition": {
         "bretonnia": {
           "category": "core"
-        },
-        "errantry-war": {
-          "category": "core"
         }
       }
     },
@@ -1200,6 +1194,12 @@
           "points": 0,
           "active": true,
           "alwaysActive": true
+        },
+        {
+          "name_en": "Grail Knight (champion)",
+          "name_es": "Caballero del Grial (campeón)",
+          "points": 22,
+          "armyComposition": ["errantry-war"]
         },
         {
           "name_en": "Standard bearer",
@@ -1349,7 +1349,7 @@
           "category": "special"
         },
         "errantry-war": {
-          "category": "special"
+          "category": "rare"
         }
       },
       "command": [
@@ -1669,6 +1669,90 @@
         "name_de": "Close Order, Hatred (all enemies), Levies, The Peasant's Duty, Stubborn",
         "name_fr": "Ordre Serré, Haine (Tous les ennemis), Conscrits, Paysannerie, Obstiné"
       }
+    },
+    {
+      "name_en": "Siege Balista",
+      "name_es": "Balista de Asedio",
+      "id": "siege-balista",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Bolt Thrower",
+          "name_es": "Lanzavirotes",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Pot-de-Feu",
+      "name_es": "Pot-de-Feu",
+      "id": "pot-de-feu",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Bolt Thrower",
+          "name_es": "Lanzavirotes",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty, Pot-de-Feu",
+        "name_es": "El Deber del Campesino, Pot-de-Feu, Desdén por la Pólvora",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
+      }
     }
   ],
   "rare": [
@@ -1748,6 +1832,34 @@
       }
     },
     {
+      "name_en": "Royal Pegasus",
+      "name_es": "Pegaso Real",
+      "id": "royal-pegasus",
+      "points": 50,
+      "command": [
+      ],
+      "armyComposition": {
+        "bretonnia": {
+          "category": "rare"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_es": "Armas de mano",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Fly",
+        "name_es": "Volar"
+      }
+    },
+    {
       "name_en": "Field Trebuchet",
       "name_cn": "野战投石机",
       "name_de": "Feldtrebuchet",
@@ -1785,6 +1897,50 @@
           "name_cn": "野战投石机, 单手武器",
           "name_de": "Feldtrebuchet, Handwaffen",
           "name_fr": "Trébuchet de Campagne, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Bretonnian Cannon",
+      "name_es": "Cañón Bretoniano",
+      "id": "bretonnian-cannon",
+      "points": 70,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia": {
+          "category": "rare"
+        },
+
+        "errantry-war": {
+          "category": "rare"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Cannon, Breonnian Cannon, Hand weapons",
+          "name_es": "Cañón, Cañón Bretoniano, Armas de mano",
           "points": 0,
           "active": true
         }
