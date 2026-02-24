@@ -252,7 +252,7 @@ export const GameView = () => {
       <ul>
         {units.map((unit, index) => {
           const stats = getStats(unit, armyComposition);
-          //TODO update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
+          // TODO: update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
 
           return (
@@ -376,6 +376,9 @@ export const GameView = () => {
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
                       maxSignatureSpells={unit.maxSignatureSpells}
+                      unitId={unit.id}
+                      type={type}
+                      generatedSpells={unit.generatedSpells}
                     />
                   )}
                   {showCustomNotes && (

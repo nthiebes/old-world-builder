@@ -122,6 +122,7 @@ export const listsSlice = createSlice({
         detachments,
         activeLore,
         customNote,
+        generatedSpells,
       } = payload;
       const newValues = {
         strength,
@@ -136,6 +137,7 @@ export const listsSlice = createSlice({
         activeLore,
         name,
         customNote,
+        generatedSpells,
       };
       const unit = state
         .find(({ id }) => id === listId)

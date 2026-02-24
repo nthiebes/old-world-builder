@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
