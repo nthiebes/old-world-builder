@@ -120,6 +120,8 @@ export const notEnoughPointsRemaining = (
   return maxMagicPoints && magicItem.points > unitPointsRemaining;
 };
 
+let magicDataFetching = false;
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -409,10 +411,9 @@ export const Magic = ({ isMobile }) => {
   }, [unit, list, unitId, command]);
 
   useEffect(() => {
-    army &&
-      list &&
-      unit &&
-      !items &&
+    if (army && list && unit && !items && !magicDataFetching) {
+      magicDataFetching = true;
+
       fetcher({
         url: game.magicItems || "games/the-old-world/magic-items",
         baseUrl: game.magicItems ? "" : undefined,
@@ -420,6 +421,8 @@ export const Magic = ({ isMobile }) => {
         version: game.version,
         onSuccess: (data) => {
           let itemCategories = army.items;
+
+          magicDataFetching = false;
 
           if (unit.magicItemsArmy) {
             itemCategories = itemCategories.filter(
@@ -441,6 +444,7 @@ export const Magic = ({ isMobile }) => {
           dispatch(setItems(updateIds(allItems)));
         },
       });
+    }
   }, [army, game, list, unit, items, dispatch]);
 
   if (!unit || !army || !items) {
