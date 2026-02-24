@@ -56,6 +56,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   );
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
+  const armyData = game?.armies.find((army) => army.id === list.army);
   const units = list ? list[type] : null;
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
@@ -485,7 +486,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     if (list && !army) {
       const isCustom = game.id !== "the-old-world";
 
-      if (isCustom) {
+      if (isCustom && !list.url) {
         const data = getCustomDatasetData(list.army);
 
         dispatch(
@@ -498,7 +499,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         );
       } else {
         fetcher({
-          url: `games/${list.game}/${list.army}`,
+          url: list.url || `games/${list.game}/${list.army}`,
+          baseUrl: list.url ? "" : undefined,
+          appendJson: Boolean(!list.url),
+          version: armyData.version,
           onSuccess: (data) => {
             dispatch(
               setArmy(

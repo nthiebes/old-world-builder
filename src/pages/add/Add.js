@@ -35,7 +35,7 @@ export const Add = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const gameSystems = getGameSystems();
   const army = useSelector((state) => state.army);
@@ -85,7 +85,7 @@ export const Add = ({ isMobile }) => {
     if (list && !army && type !== "allies") {
       const isCustom = game.id !== "the-old-world";
 
-      if (isCustom) {
+      if (isCustom && !list.url) {
         const data = getCustomDatasetData(list.army);
 
         dispatch(
@@ -93,20 +93,23 @@ export const Add = ({ isMobile }) => {
             getArmyData({
               data,
               armyComposition: list.armyComposition,
-            })
-          )
+            }),
+          ),
         );
       } else {
         fetcher({
-          url: `games/${list.game}/${list.army}`,
+          url: list.url || `games/${list.game}/${list.army}`,
+          baseUrl: list.url ? "" : undefined,
+          appendJson: Boolean(!list.url),
+          version: armyData.version,
           onSuccess: (data) => {
             dispatch(
               setArmy(
                 getArmyData({
                   data,
                   armyComposition: list.armyComposition || list.army,
-                })
-              )
+                }),
+              ),
             );
           },
         });
@@ -116,8 +119,10 @@ export const Add = ({ isMobile }) => {
       allies.forEach(({ army, armyComposition, magicItemsArmy }, index) => {
         const isCustom = game.id !== "the-old-world";
         const customData = isCustom && getCustomDatasetData(army);
+        const customUrl =
+          isCustom && game.armies.find((a) => a.id === army)?.url;
 
-        if (customData) {
+        if (customData && !customUrl) {
           const armyData = getArmyData({
             data: customData,
             armyComposition: armyComposition || army,
@@ -134,7 +139,10 @@ export const Add = ({ isMobile }) => {
           setAlliesLoaded(index + 1);
         } else {
           fetcher({
-            url: `games/the-old-world/${army}`,
+            url: customUrl || `games/the-old-world/${army}`,
+            baseUrl: customUrl ? "" : undefined,
+            appendJson: Boolean(!customUrl),
+            version: armyData.version,
             onSuccess: (data) => {
               const armyData = getArmyData({
                 data,
@@ -166,8 +174,11 @@ export const Add = ({ isMobile }) => {
         mercenaries[list.armyComposition].forEach((mercenary, index) => {
           const isCustom = game.id !== "the-old-world";
           const customData = isCustom && getCustomDatasetData(mercenary.army);
+          const customUrl =
+            isCustom &&
+            game.armies.find((army) => army.id === mercenary.army)?.url;
 
-          if (customData) {
+          if (customData && !customUrl) {
             const armyData = getArmyData({
               data: customData,
               armyComposition: mercenary.army,
@@ -186,7 +197,10 @@ export const Add = ({ isMobile }) => {
             setMercenariesLoaded(index + 1);
           } else {
             fetcher({
-              url: `games/the-old-world/${mercenary.army}`,
+              url: customUrl || `games/the-old-world/${mercenary.army}`,
+              baseUrl: customUrl ? "" : undefined,
+              appendJson: Boolean(!customUrl),
+              version: armyData.version,
               onSuccess: (data) => {
                 const armyData = getArmyData({
                   data,
@@ -290,7 +304,7 @@ export const Add = ({ isMobile }) => {
                     armyComposition,
                     magicItemsArmy,
                   },
-                  index
+                  index,
                 ) => {
                   // Remove duplicate units
                   const uniqueUnits = [];
@@ -353,13 +367,18 @@ export const Add = ({ isMobile }) => {
                           unit,
                           armyComposition,
                           "characters",
-                          magicItemsArmy
-                        )
+                          magicItemsArmy,
+                        ),
                       )}
                       {tempCore
                         .filter((unit) => !unit.detachment)
                         .map((unit) =>
-                          getUnit(unit, armyComposition, "core", magicItemsArmy)
+                          getUnit(
+                            unit,
+                            armyComposition,
+                            "core",
+                            magicItemsArmy,
+                          ),
                         )}
                       {tempSpecial
                         .filter((unit) => !unit.detachment)
@@ -368,17 +387,22 @@ export const Add = ({ isMobile }) => {
                             unit,
                             armyComposition,
                             "special",
-                            magicItemsArmy
-                          )
+                            magicItemsArmy,
+                          ),
                         )}
                       {tempRare
                         .filter((unit) => !unit.detachment)
                         .map((unit) =>
-                          getUnit(unit, armyComposition, "rare", magicItemsArmy)
+                          getUnit(
+                            unit,
+                            armyComposition,
+                            "rare",
+                            magicItemsArmy,
+                          ),
                         )}
                     </Expandable>
                   );
-                }
+                },
               )}
             </ul>
           </>

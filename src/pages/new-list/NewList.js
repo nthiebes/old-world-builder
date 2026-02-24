@@ -74,6 +74,7 @@ export const NewList = ({ isMobile }) => {
       : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
+    const armyData = armies.find(({ id }) => id === army);
     const newList = {
       name:
         name ||
@@ -93,6 +94,7 @@ export const NewList = ({ isMobile }) => {
       mercenaries: [],
       allies: [],
       id: newId,
+      url: armyData?.url,
       armyComposition,
       compositionRule,
     };

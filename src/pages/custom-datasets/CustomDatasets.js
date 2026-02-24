@@ -7,6 +7,7 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Expandable } from "../../components/expandable";
+import { fetcher } from "../../utils/fetcher";
 import theOldWorld from "../../assets/the-old-world.json";
 
 import "./CustomDatasets.css";
@@ -21,9 +22,12 @@ export const CustomDatasets = () => {
     JSON.parse(localStorage.getItem("owb.datasets")) || [],
   );
   const [gameFromFile, setGameFromFile] = useState(null);
+  const [gameSystemFromInput, setGameSystemFromInput] = useState("");
   const [datasetFromFile, setDatasetFromFile] = useState(null);
   const [error, setError] = useState(false);
+  const [gameSystemError, setGameSystemError] = useState(false);
   const [typeError, setTypeError] = useState(false);
+  const [gameSystemLoading, setGameSystemLoading] = useState(false);
   const fileInput = createRef();
   const gameFileInput = createRef();
   const allDatasets = [
@@ -33,6 +37,10 @@ export const CustomDatasets = () => {
       name: `${army.id}.json`,
     })),
   ];
+
+  const handleGameInputChange = (event) => {
+    setGameSystemFromInput(event.target.value);
+  };
 
   const handleDatasetChange = () => {
     const files = fileInput.current.files;
@@ -81,19 +89,22 @@ export const CustomDatasets = () => {
     localStorage.setItem("owb.datasets", JSON.stringify(updatedDatasets));
   };
 
-  const handleSubmit = (event) => {
-    const reader = new FileReader();
-
-    setError(false);
-    reader.readAsText(datasetFromFile, "UTF-8");
-    reader.onload = (event) => {
-      addDataset(JSON.parse(event.target.result));
-    };
-    reader.onerror = () => {
-      setError(true);
-    };
-
+  const handleDatasetSubmit = (event) => {
     event.preventDefault();
+
+    // From file
+    if (datasetFromFile) {
+      const reader = new FileReader();
+
+      setError(false);
+      reader.readAsText(datasetFromFile, "UTF-8");
+      reader.onload = (event) => {
+        addDataset(JSON.parse(event.target.result));
+      };
+      reader.onerror = () => {
+        setError(true);
+      };
+    }
   };
 
   const addGame = (game) => {
@@ -111,18 +122,41 @@ export const CustomDatasets = () => {
   };
 
   const handleGameSubmit = (event) => {
-    const reader = new FileReader();
-
-    setError(false);
-    reader.readAsText(gameFromFile, "UTF-8");
-    reader.onload = (event) => {
-      addGame(JSON.parse(event.target.result));
-    };
-    reader.onerror = () => {
-      setError(true);
-    };
-
     event.preventDefault();
+    setError(false);
+
+    // From file
+    if (gameFromFile) {
+      const reader = new FileReader();
+
+      reader.readAsText(gameFromFile, "UTF-8");
+      reader.onload = (event) => {
+        addGame(JSON.parse(event.target.result));
+      };
+      reader.onerror = () => {
+        setError(true);
+      };
+    }
+
+    // From URL
+    else if (gameSystemFromInput) {
+      setGameSystemLoading(true);
+      fetcher({
+        url: gameSystemFromInput,
+        baseUrl: "",
+        appendJson: false,
+        onSuccess: (gameSystem) => {
+          addGame({ ...gameSystem, url: gameSystemFromInput });
+          setGameSystemFromInput("");
+          setGameSystemLoading(false);
+        },
+        onError: (error) => {
+          console.log(error);
+          setGameSystemError(true);
+          setGameSystemLoading(false);
+        },
+      });
+    }
   };
 
   useEffect(() => {
@@ -181,7 +215,14 @@ export const CustomDatasets = () => {
               <Expandable
                 headline={
                   <span className="dataset__unit-header">
-                    <b>{game.name}</b>
+                    <b>
+                      {game.name}
+                      {game.version && (
+                        <span className="custom__version">
+                          {` (v${game.version})`}
+                        </span>
+                      )}
+                    </b>
                     <Button
                       type="text"
                       icon="delete"
@@ -202,23 +243,36 @@ export const CustomDatasets = () => {
                       (dataset) => dataset.id === army.id,
                     );
                     const isCustom = Boolean(dataset?.data);
+                    const hasUrl = Boolean(army.url);
 
                     return (
                       <p className="custom__army" key={army.id}>
                         <span>
-                          <b>{army.name_en}</b>
+                          <b>
+                            {army.name_en}
+                            {army.version && (
+                              <span className="custom__version">
+                                {` (v${army.version})`}
+                              </span>
+                            )}
+                          </b>
                           <br />
-                          <i>
-                            {`${army.id}.json`}
-                            {isCustom && " (custom)"}
-                          </i>
-                          {!dataset && (
+                          {hasUrl ? (
+                            <i>{army.url}</i>
+                          ) : (
+                            <i>
+                              {`${army.id}.json`}
+                              {isCustom && " (custom)"}
+                            </i>
+                          )}
+
+                          {!dataset && !hasUrl && (
                             <i className="error-message">
                               No dataset found with the same file name.
                             </i>
                           )}
                         </span>
-                        {dataset ? (
+                        {dataset || hasUrl ? (
                           <Icon symbol="check" color="green" />
                         ) : (
                           <Icon symbol="error" color="red" />
@@ -247,6 +301,16 @@ export const CustomDatasets = () => {
             </a>
           </p>
           <form onSubmit={handleGameSubmit}>
+            <label htmlFor="gameSystemFromInput">From a URL</label>
+            <input
+              type="url"
+              id="gameSystemFromInput"
+              className="input"
+              value={gameSystemFromInput}
+              onChange={handleGameInputChange}
+              autoComplete="off"
+              maxLength="255"
+            />
             <label htmlFor="system-file">Select a .json file:</label>
             <input
               type="file"
@@ -255,19 +319,23 @@ export const CustomDatasets = () => {
               className="input"
               onChange={handleGameChange}
               autoComplete="off"
-              required
               ref={gameFileInput}
             />
             <Button
               centered
-              icon="add-list"
+              icon={gameSystemLoading ? "spinner" : "add-list"}
+              disabled={gameSystemLoading}
               submitButton
               spaceTop
               size="large"
-              lo
             >
               Add game system
             </Button>
+            {gameSystemError && (
+              <p className="custom__error">
+                <FormattedMessage id="export.error" />
+              </p>
+            )}
           </form>
         </section>
 
@@ -278,21 +346,32 @@ export const CustomDatasets = () => {
             <h2>Datasets</h2>
           </header>
           <ul>
-            {theOldWorld.armies.map((game) => (
-              <li className="list" key={game.id}>
-                <div className="list__inner">
-                  {game.name_en}
-                  <Button
-                    type="text"
-                    icon="download"
-                    color="dark"
-                    download={`${game.id}.json`}
-                    label="Download dataset"
-                    href={`/games/the-old-world/${game.id}.json`}
-                  ></Button>
-                </div>
-              </li>
-            ))}
+            <Expandable
+              headline={
+                <span className="dataset__unit-header">
+                  Warhammer: The Old World
+                  <i>Expand to download datasets</i>
+                </span>
+              }
+              noMargin
+              className="datasets__unit"
+            >
+              {theOldWorld.armies.map((game) => (
+                <li className="list" key={game.id}>
+                  <div className="list__inner">
+                    {game.name_en}
+                    <Button
+                      type="text"
+                      icon="download"
+                      color="dark"
+                      download={`${game.id}.json`}
+                      label="Download dataset"
+                      href={`/games/the-old-world/${game.id}.json`}
+                    ></Button>
+                  </div>
+                </li>
+              ))}
+            </Expandable>
             {customDatasets.map((dataset) => (
               <li className="list" key={dataset.id}>
                 <div className="list__inner">
@@ -323,7 +402,7 @@ export const CustomDatasets = () => {
               Datasets documentation
             </a>
           </p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleDatasetSubmit}>
             <label htmlFor="dataset-file">Select a .json file:</label>
             <input
               type="file"
@@ -332,29 +411,21 @@ export const CustomDatasets = () => {
               className="input"
               onChange={handleDatasetChange}
               autoComplete="off"
-              required
               ref={fileInput}
             />
+            <Button centered icon="add-list" submitButton spaceTop size="large">
+              Add dataset
+            </Button>
             {typeError && (
-              <p className="export__error">
+              <p className="custom__error">
                 <FormattedMessage id="import.typeError" />
               </p>
             )}
             {error && (
-              <p className="export__error">
+              <p className="custom__error">
                 <FormattedMessage id="export.error" />
               </p>
             )}
-            <Button
-              centered
-              icon="add-list"
-              submitButton
-              spaceTop
-              size="large"
-              lo
-            >
-              Add dataset
-            </Button>
           </form>
         </section>
       </Main>
