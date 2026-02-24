@@ -119,110 +119,63 @@ export const BattleTavern = () => {
   return (
     <>
       <Helmet>
-        <title>{`Old World Builder | ${intl.formatMessage({ id: "battleTavern.title" })}`}</title>
-        <link
-          rel="canonical"
-          href="https://old-world-builder.com/battletavern"
-        />
+        <title>
+          {`Old World Builder | ${intl.formatMessage({ id: "battleTavern.title" })}`}
+        </title>
+        <link rel="canonical" href="https://old-world-builder.com/battletavern" />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact>
-        <div
-          style={{
-            background: "var(--color-white)",
-            border: "1px solid var(--color-list)",
-            borderRadius: "8px",
-            boxShadow: "0 2px 12px rgba(0, 0, 0, 0.08)",
-            maxWidth: "480px",
-            margin: "0 auto",
-            overflow: "hidden",
-          }}
+        <h2 className="page-headline">
+          <FormattedMessage id="battleTavern.title" />
+        </h2>
+        {hasLists ? (
+          <>
+            <p>
+              <b>
+                <FormattedMessage
+                  id="battleTavern.ready"
+                  values={{ count: listCount }}
+                />
+              </b>
+            </p>
+            <p>
+              <FormattedMessage id="battleTavern.description" />
+            </p>
+          </>
+        ) : (
+          <p>
+            <FormattedMessage id="battleTavern.empty" />
+          </p>
+        )}
+
+        {result && (
+          <p>
+            <b>{result.message}</b>
+          </p>
+        )}
+
+        <Button
+          centered
+          size="large"
+          spaceTop
+          onClick={handleSend}
+          disabled={!hasLists || sending}
         >
-          <div
-            style={{
-              background: "var(--color-header-menu)",
-              padding: "16px 24px",
-            }}
-          >
-            <h1
-              style={{
-                color: "var(--color-font-light)",
-                margin: 0,
-              }}
-            >
-              <FormattedMessage id="battleTavern.title" />
-            </h1>
-          </div>
+          {sending
+            ? intl.formatMessage({ id: "battleTavern.sending" })
+            : intl.formatMessage({ id: "battleTavern.send" })}
+        </Button>
 
-          <div
-            style={{
-              padding: "32px 24px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "16px",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ margin: 0 }}>
-              {hasLists ? (
-                <>
-                  <strong>
-                    <FormattedMessage
-                      id="battleTavern.ready"
-                      values={{ count: listCount }}
-                    />
-                  </strong>
-                  <br />
-                  <FormattedMessage id="battleTavern.description" />
-                </>
-              ) : (
-                <FormattedMessage id="battleTavern.empty" />
-              )}
-            </p>
+        <hr />
 
-            {result && (
-              <p
-                style={{
-                  margin: 0,
-                  color: result.success
-                    ? "var(--color-success)"
-                    : "var(--color-error)",
-                  fontWeight: 700,
-                }}
-              >
-                {result.message}
-              </p>
-            )}
-
-            <Button
-              type="primary"
-              size="large"
-              fullWidth
-              onClick={handleSend}
-              disabled={!hasLists || sending}
-            >
-              {sending
-                ? intl.formatMessage({ id: "battleTavern.sending" })
-                : intl.formatMessage({ id: "battleTavern.send" })}
-            </Button>
-          </div>
-
-          <div
-            style={{
-              padding: "16px 24px",
-              borderTop: "1px solid var(--color-list)",
-              background: "rgba(243, 222, 191, 0.3)",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ fontSize: "12px", margin: 0 }}>
-              <FormattedMessage id="battleTavern.footer" />
-            </p>
-          </div>
-        </div>
+        <p>
+          <i>
+            <FormattedMessage id="battleTavern.footer" />
+          </i>
+        </p>
       </Main>
     </>
   );
