@@ -80,6 +80,22 @@ if (language === "de") {
   messages = English;
 }
 
+const darkColorScheme = window.matchMedia(
+  "(prefers-color-scheme: dark)",
+).matches;
+const localStorageColorScheme = JSON.parse(
+  localStorage.getItem("owb.settings"),
+)?.colorScheme;
+let colorScheme;
+
+if (localStorageColorScheme === "auto") {
+  colorScheme = darkColorScheme ? "dark" : "light";
+} else {
+  colorScheme = localStorageColorScheme;
+}
+
+document.documentElement.classList.add(colorScheme);
+
 ReactDOM.render(
   <IntlProvider locale={locale} messages={messages}>
     <ReduxProvider store={store}>

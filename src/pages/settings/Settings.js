@@ -22,6 +22,21 @@ export const Settings = () => {
 
     dispatch(updateSetting(newSettings));
     updateLocalSettings(newSettings);
+
+    if (settingKey === "colorScheme") {
+      const defaultColorScheme = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      document.documentElement.className =
+        newSettings.colorScheme === "dark"
+          ? "dark"
+          : newSettings.colorScheme === "light"
+          ? "light"
+          : defaultColorScheme
+          ? "dark"
+          : "light";
+    }
   };
 
   useEffect(() => {

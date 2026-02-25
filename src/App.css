@@ -7,13 +7,32 @@
   --color-font-light: #f6fffd;
   --color-headline: #384043;
   --color-background: rgb(243, 222, 191);
+  --color-background-lighter: rgba(254, 245, 230, 1);
   --color-list: rgb(221, 196, 165);
+  --color-list-lighter: rgba(232, 221, 203, 1);
   --color-white: #f6fffd;
   --color-button: #4f7f6b;
   --color-header: #303d4d;
   --color-button-secondary: #303d4d;
   --color-header-menu: #2b3745;
   --color-error: #d14500;
+  --color-success: #92b06a;
+}
+
+:root.dark {
+  --color-font: #eee;
+  --color-font-medium: #4f7f6b;
+  --color-font-light: #fff;
+  --color-headline: #fff;
+  --color-background: #3e3e42;
+  --color-background-lighter: #444;
+  --color-list: #222;
+  --color-list-lighter: #333;
+  --color-white: #111;
+  --color-button: #4f7f6b;
+  --color-button-secondary: #000;
+  --color-header-menu: #2b3745;
+  --color-error: #ff5400;
   --color-success: #92b06a;
 }
 
@@ -96,7 +115,7 @@ body {
   background: linear-gradient(
     90deg,
     var(--color-background) 0%,
-    rgba(254, 245, 230, 1) 50%,
+    var(--color-background-lighter) 50%,
     var(--color-background) 100%
   );
 }
@@ -230,10 +249,17 @@ hr {
   padding: 1rem;
   font-size: 1rem;
   transition: box-shadow 0.2s linear;
-  border: 0 none;
+  border: 2px solid var(--color-background);
   width: 100%;
   margin: 0 1rem 1rem 0;
   height: 48px;
+  color: var(--color-font);
+  font-family: var(--font-family);
+}
+
+.dark .input {
+  border-color: var(--color-list);
+  background-color: var(--color-list-lighter);
 }
 
 @media (hover: hover) {

@@ -5,7 +5,7 @@
   background-color: var(--color-white);
   padding: 0 1rem;
   transition: box-shadow 0.2s linear;
-  border: 0 none;
+  border: 2px solid var(--color-background);
   width: 100%;
   margin: 0 1rem 1rem 0;
   height: 48px;
@@ -16,6 +16,11 @@
   .select:hover {
     box-shadow: 0 0 10px 2px var(--color-list);
   }
+}
+
+.dark .select {
+  border-color: var(--color-list);
+  background-color: var(--color-list-lighter);
 }
 
 .select:focus,
