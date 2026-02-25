@@ -31,8 +31,8 @@ if (process.env.NODE_ENV !== "development") {
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World.",
   en: "Army builder for Warhammer: The Old World.",
-  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World'.",
-  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World.",
+  fr: "Un créateur de liste d'armée pour 'Warhammer: The Old World'.",
+  es: "Creador de listas de ejército para Warhammer: The Old World.",
   it: "Costruttore di eserciti per Warhammer: The Old World.",
   pl: "Konstruktor armii dla Warhammer: The Old World.",
   cn: "《战锤：旧世界》的军队建造者。",
@@ -90,7 +90,7 @@ ReactDOM.render(
       </React.StrictMode>
     </ReduxProvider>
   </IntlProvider>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function

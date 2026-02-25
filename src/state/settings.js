@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const settingsSlice = createSlice({
   name: "settings",
   initialState: {
-    darkMode: false,
+    colorScheme: "auto",
     showPoints: true,
     showSpecialRules: true,
     showPageNumbers: false,
@@ -14,6 +14,7 @@ export const settingsSlice = createSlice({
     showStats: true,
     lastChanged: null,
     lastSynced: null,
+    autoSync: false,
   },
   reducers: {
     setSettings: (_, { payload }) => {

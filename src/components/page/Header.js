@@ -67,6 +67,13 @@ export const Header = ({
     },
     {
       name: intl.formatMessage({
+        id: "footer.settings",
+      }),
+      to: "/settings",
+      icon: "settings",
+    },
+    {
+      name: intl.formatMessage({
         id: "footer.changelog",
       }),
       to: "/changelog",

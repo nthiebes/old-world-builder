@@ -22,6 +22,7 @@ import { Changelog } from "./pages/changelog";
 import { Import } from "./pages/import";
 import { GameView } from "./pages/game-view";
 import { CustomDatasets } from "./pages/custom-datasets";
+import { Settings } from "./pages/settings";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
@@ -85,6 +86,7 @@ export const App = () => {
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
+          <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
@@ -100,6 +102,7 @@ export const App = () => {
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
+          <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>

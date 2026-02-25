@@ -41,7 +41,7 @@ export const Import = ({ isMobile }) => {
     reader.onload = (event) => {
       const newId = getRandomId();
       const importedList = { ...JSON.parse(event.target.result), id: newId };
-      const newLists = [...lists, importedList];
+      const newLists = [importedList, ...lists];
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));
       dispatch(setLists(newLists));
