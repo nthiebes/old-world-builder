@@ -254,6 +254,9 @@ export const GameView = () => {
           const stats = getStats(unit, armyComposition);
           // TODO: update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
+          const specialRules =
+            unit.armyComposition?.[armyComposition]?.specialRules ||
+            unit.specialRules;
 
           return (
             <li key={index} className="list">
@@ -299,7 +302,7 @@ export const GameView = () => {
                       }),
                     }}
                   />
-                  {showSpecialRules && unit.specialRules ? (
+                  {showSpecialRules && specialRules ? (
                     <>
                       <p className="game-view__special-rules">
                         <b>
@@ -308,7 +311,7 @@ export const GameView = () => {
                           </i>
                         </b>{" "}
                         <RulesLinksText
-                          textObject={unit.specialRules}
+                          textObject={specialRules}
                           showPageNumbers={showPageNumbers}
                         />
                       </p>
@@ -576,6 +579,7 @@ export const GameView = () => {
           {"<25%"}
         </Button>
         {unit.detachments &&
+          !unit.ignoreNoDetachment &&
           unit.detachments.length &&
           unit.detachments.map((detachment) => (
             <span key={detachment.id} className="game-view__detachment">

@@ -184,7 +184,10 @@ export const getUnitPoints = (unit, settings) => {
 
   unitPoints += getUnitMagicPoints({ unit });
 
-  if (unit.detachments && !settings?.noDetachments) {
+  if (
+    unit.detachments &&
+    (!settings.noDetachments || unit.ignoreNoDetachment)
+  ) {
     unit.detachments.forEach(
       ({ strength, points, equipment, armor, options }) => {
         unitPoints += strength * points;
