@@ -101,7 +101,14 @@ export const Header = ({
   }, [location.pathname]);
 
   useEffect(() => {
-    if (list) {
+    const updatedList = JSON.stringify(list);
+    const localList = JSON.stringify(
+      JSON.parse(localStorage.getItem("owb.lists") || "[]").find(
+        (localList) => localList.id === listId,
+      ),
+    );
+
+    if (list && updatedList !== localList) {
       updateLocalList(list);
 
       const newSettings = { ...settings, lastChanged: new Date().toString() };
