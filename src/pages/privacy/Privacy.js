@@ -70,6 +70,16 @@ export const Privacy = () => {
           </li> */}
           <li>
             <a
+              href="https://www.dropbox.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dropbox
+            </a>{" "}
+            (file storage and synchronization)
+          </li>
+          <li>
+            <a
               href="https://sentry.io/privacy/"
               target="_blank"
               rel="noopener noreferrer"

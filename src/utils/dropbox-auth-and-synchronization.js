@@ -61,8 +61,6 @@ export const useDropboxAuthentication = () => {
 
   useEffect(() => {
     if (refreshToken && accessToken) {
-      console.log("local storage token found");
-
       dbxAuth.setAccessToken(accessToken);
       dbxAuth.setRefreshToken(refreshToken);
       dbx = new Dropbox.Dropbox({
@@ -71,8 +69,6 @@ export const useDropboxAuthentication = () => {
 
       dispatch(updateLogin({ loggedIn: true, loginLoading: false }));
     } else if (hasRedirectedFromAuth()) {
-      console.log("start loading with code from url");
-
       const code = getCodeFromUrl();
 
       dbxAuth.setCodeVerifier(window.sessionStorage.getItem("codeVerifier"));
@@ -84,8 +80,6 @@ export const useDropboxAuthentication = () => {
           code,
         )
         .then((response) => {
-          console.log("got token from code", response);
-
           dbxAuth.setAccessToken(response.result.access_token);
           dbxAuth.setRefreshToken(response.result.refresh_token);
           localStorage.setItem("owb.accessToken", response.result.access_token);
@@ -105,16 +99,12 @@ export const useDropboxAuthentication = () => {
         })
         .catch((error) => console.error(error));
     } else {
-      console.log("no token found, not logged in");
-
       dispatch(updateLogin({ loginLoading: false }));
     }
   }, [accessToken, refreshToken, dispatch]);
 };
 
 export const login = () => {
-  console.log("not logged in getting URL");
-
   dbxAuth
     .getAuthenticationUrl(
       process.env.NODE_ENV === "development"
@@ -136,8 +126,6 @@ export const login = () => {
 };
 
 export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
-  console.log("uploading files with local changes");
-
   const localLists = JSON.parse(localStorage.getItem("owb.lists")) || [];
 
   uploadSyncFile(settings.lastChanged)
@@ -162,8 +150,6 @@ export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
 };
 
 export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
-  console.log("downloading remote data file");
-
   dbx
     .filesDownload({ path: DATA_FILE_PATH })
     .then(function (response) {
@@ -172,8 +158,6 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
       reader.readAsText(response.result.fileBlob, "UTF-8");
       reader.onload = (event) => {
         const downloadedDataFile = JSON.parse(event.target.result);
-
-        console.log("updating local data with remote file");
 
         // Update local lists
         dispatch(setLists(downloadedDataFile.lists));
@@ -198,8 +182,6 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
 export const syncLists = ({ dispatch }) => {
   const settings = JSON.parse(localStorage.getItem("owb.settings")) || {};
 
-  console.log("SYNC LISTS");
-
   dispatch(updateLogin({ isSyncing: true }));
 
   dbx
@@ -216,7 +198,6 @@ export const syncLists = ({ dispatch }) => {
 
         // Upload new files if none exist remotely
         if (syncFiles.length === 0 || dataFiles.length === 0) {
-          console.log("no sync file found");
           const lastChanged = new Date().toString();
           const newSettings = {
             ...settings,
@@ -254,8 +235,6 @@ export const syncLists = ({ dispatch }) => {
 
         // Download existing file
         else {
-          console.log("sync file found");
-
           dbx
             .filesDownload({ path: SYNC_FILE_PATH })
             .then(function (response) {
@@ -279,8 +258,6 @@ export const syncLists = ({ dispatch }) => {
                   lastSynced < remoteLastChanged &&
                   localLastChanged > remoteLastChanged
                 ) {
-                  console.log("last sync is older than remote changes");
-
                   dispatch(
                     updateLogin({ syncConflict: true, isSyncing: false }),
                   );
@@ -298,7 +275,6 @@ export const syncLists = ({ dispatch }) => {
 
                 // In sync
                 else {
-                  console.log("local and remote file are in sync");
                   dispatch(updateLogin({ isSyncing: false }));
                 }
 
