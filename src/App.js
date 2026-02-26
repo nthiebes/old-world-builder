@@ -22,6 +22,7 @@ import { Changelog } from "./pages/changelog";
 import { Import } from "./pages/import";
 import { GameView } from "./pages/game-view";
 import { CustomDatasets } from "./pages/custom-datasets";
+import { BattleTavern } from "./pages/battle-tavern/BattleTavern";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
@@ -87,6 +88,7 @@ export const App = () => {
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>
+          <Route path="/battletavern">{<BattleTavern />}</Route>
           <Route path="/" exact>
             {<Home isMobile />}
           </Route>
@@ -102,6 +104,7 @@ export const App = () => {
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>
+          <Route path="/battletavern">{<BattleTavern />}</Route>
           <Route path="/">
             <Header headline="Old World Builder" hasMainNavigation />
             <Main isDesktop>
