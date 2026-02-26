@@ -584,7 +584,16 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxPercent: 20 },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["bonegrinder-giant"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     allies: { maxPercent: 25 },
   },
   "nomadic-waaagh": {
@@ -785,7 +794,16 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxPercent: 20 },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["bonegrinder-giant"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     allies: { maxPercent: 25 },
   },
   "wolves-of-the-sea": {
@@ -1014,7 +1032,16 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxPercent: 20 },
+    mercenaries: {
+      maxPercent: 20,
+      units: [
+        {
+          ids: ["bonegrinder-giant"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
     allies: { maxPercent: 25 },
   },
   "minotaur-blood-herd": {
