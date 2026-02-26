@@ -51,7 +51,7 @@ export const GameView = () => {
   const [detachmentsDead, setDetachmentsDead] = useState({});
   const [victoryPoints, setVictoryPoints] = useState({});
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const handleCustomNoteChange = ({ value, type, unitId }) => {
     dispatch(
@@ -60,7 +60,7 @@ export const GameView = () => {
         type,
         unitId,
         customNote: value,
-      })
+      }),
     );
   };
   const updateLocalSettings = (newSettings) => {
@@ -150,7 +150,7 @@ export const GameView = () => {
           showSpecialRules: !showSpecialRules,
         });
         dispatch(
-          updateSetting({ key: "showSpecialRules", value: !showSpecialRules })
+          updateSetting({ key: "showSpecialRules", value: !showSpecialRules }),
         );
       },
     },
@@ -194,7 +194,7 @@ export const GameView = () => {
           showPageNumbers: !showPageNumbers,
         });
         dispatch(
-          updateSetting({ key: "showPageNumbers", value: !showPageNumbers })
+          updateSetting({ key: "showPageNumbers", value: !showPageNumbers }),
         );
       },
     },
@@ -210,7 +210,7 @@ export const GameView = () => {
           showCustomNotes: !showCustomNotes,
         });
         dispatch(
-          updateSetting({ key: "showCustomNotes", value: !showCustomNotes })
+          updateSetting({ key: "showCustomNotes", value: !showCustomNotes }),
         );
       },
     },
@@ -229,7 +229,7 @@ export const GameView = () => {
           updateSetting({
             key: "showGeneratedSpells",
             value: !showGeneratedSpells,
-          })
+          }),
         );
       },
     },
@@ -245,7 +245,10 @@ export const GameView = () => {
           showVictoryPoints: !showVictoryPoints,
         });
         dispatch(
-          updateSetting({ key: "showVictoryPoints", value: !showVictoryPoints })
+          updateSetting({
+            key: "showVictoryPoints",
+            value: !showVictoryPoints,
+          }),
         );
       },
     },
@@ -283,7 +286,7 @@ export const GameView = () => {
                           { ...unit, type },
                           {
                             armyComposition,
-                          }
+                          },
                         )}{" "}
                         <FormattedMessage id="app.points" />]
                       </span>
@@ -376,7 +379,7 @@ export const GameView = () => {
                     <GeneratedSpells
                       availableLoresWithSpells={getUnitLoresWithSpells(
                         unit,
-                        armyComposition
+                        armyComposition,
                       )}
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
@@ -442,15 +445,15 @@ export const GameView = () => {
     const isGeneral = Boolean(
       unit?.command?.length &&
         unit.command.find(
-          (command) => command.name_en === "General" && command.active
-        )
+          (command) => command.name_en === "General" && command.active,
+        ),
     );
     const isBSB = Boolean(
       unit?.command?.length &&
         unit.command.find(
           (command) =>
-            command.name_en === "Battle Standard Bearer" && command.active
-        )
+            command.name_en === "Battle Standard Bearer" && command.active,
+        ),
     );
 
     // eslint-disable-next-line default-case
@@ -465,7 +468,7 @@ export const GameView = () => {
                 {
                   noDetachments: true,
                   armyComposition,
-                }
+                },
               ),
           fleeing: 0,
           25: 0,
@@ -490,8 +493,8 @@ export const GameView = () => {
                   {
                     noDetachments: true,
                     armyComposition,
-                  }
-                ) / 2
+                  },
+                ) / 2,
               ),
           25: 0,
         };
@@ -516,8 +519,8 @@ export const GameView = () => {
                   {
                     noDetachments: true,
                     armyComposition,
-                  }
-                ) / 2
+                  },
+                ) / 2,
               ),
         };
         break;
@@ -536,7 +539,7 @@ export const GameView = () => {
                     strength: 1,
                     type,
                   },
-                  { armyComposition }
+                  { armyComposition },
                 ),
             },
           };
@@ -578,6 +581,7 @@ export const GameView = () => {
           {"<25%"}
         </Button>
         {unit.detachments &&
+          !unit.ignoreNoDetachment &&
           unit.detachments.length &&
           unit.detachments.map((detachment) => (
             <span key={detachment.id} className="game-view__detachment">
