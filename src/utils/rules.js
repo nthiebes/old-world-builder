@@ -4112,6 +4112,9 @@ export const rules = {
       maxPercent: 33,
       units: [],
     },
+    allies: {
+      maxPercent: 25,
+    },
   },
 };
 
