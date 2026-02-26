@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { NewList } from "./pages/new-list";
 import { Editor } from "./pages/editor";
@@ -27,15 +28,32 @@ import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 
-import { useDropboxAuthentication } from "./utils/dropbox-auth-and-synchronization";
+import {
+  useDropboxAuthentication,
+  syncLists,
+} from "./utils/dropbox-auth-and-synchronization";
 
 import "./App.css";
+
+let intervalId = null;
+const autoSyncLists = ({ dispatch }) => {
+  intervalId = setInterval(() => {
+    const settings = JSON.parse(localStorage.getItem("owb.settings"));
+    const lastChanged = new Date(settings.lastChanged).getTime();
+    const lastSynced = new Date(settings.lastSynced).getTime();
+
+    if (lastChanged && lastSynced && lastChanged > lastSynced) {
+      syncLists({ dispatch });
+    }
+  }, 30000);
+};
 
 export const App = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 1279px)").matches,
   );
+  const settings = useSelector((state) => state.settings);
   useDropboxAuthentication();
 
   useEffect(() => {
@@ -45,6 +63,12 @@ export const App = () => {
     dispatch(setLists(JSON.parse(localLists)));
     dispatch(setSettings(JSON.parse(localSettings)));
   }, [dispatch]);
+
+  useEffect(() => {
+    if (settings.autoSync && !intervalId) {
+      autoSyncLists({ dispatch });
+    }
+  }, [settings.autoSync, dispatch]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1279px)");

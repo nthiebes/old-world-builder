@@ -72,6 +72,16 @@ export const Changelog = () => {
                 b: (msg) => <b>{msg}</b>,
               }}
             />
+            <div>
+              <i>
+                <FormattedMessage
+                  id="changelog.change78"
+                  values={{
+                    a: (msg) => <Link to="/settings">{msg}</Link>,
+                  }}
+                />
+              </i>
+            </div>
           </li>
         </ul>
         <p>

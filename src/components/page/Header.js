@@ -39,14 +39,16 @@ export const Header = ({
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
   const { listId, unitId } = useParams();
-  const { loginLoading, loggedIn, isSyncing, syncConflict } = useSelector(
-    (state) => state.login,
-  );
+  const { loginLoading, loggedIn, isSyncing, syncConflict, syncError } =
+    useSelector((state) => state.login);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
   const settings = useSelector((state) => state.settings);
   const Component = isSection ? "section" : "header";
+  const hasLocalChanges =
+    new Date(settings.lastChanged).getTime() >
+    new Date(settings.lastSynced).getTime();
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
@@ -140,7 +142,13 @@ export const Header = ({
           ) : (
             <Button
               type="text"
-              onClick={loggedIn ? logout : login}
+              onClick={() => {
+                if (loggedIn) {
+                  logout();
+                } else {
+                  login({ dispatch });
+                }
+              }}
               label={
                 loginLoading
                   ? ""
@@ -168,18 +176,34 @@ export const Header = ({
                 {!isSection && (
                   <>
                     {loggedIn ? (
-                      <Button
-                        type="text"
-                        color="light"
-                        className="header__cloud-icon"
-                        label={intl.formatMessage({ id: "header.sync" })}
-                        icon={isSyncing ? "sync" : "cloud"}
-                        onClick={() => {
-                          syncLists({
-                            dispatch,
-                          });
-                        }}
-                      />
+                      <>
+                        <Button
+                          type="text"
+                          color="light"
+                          className="header__cloud-icon"
+                          label={intl.formatMessage({ id: "header.sync" })}
+                          icon={
+                            isSyncing
+                              ? "sync"
+                              : hasLocalChanges
+                              ? "cloud-upload"
+                              : "cloud"
+                          }
+                          disabled={isSyncing}
+                          onClick={() => {
+                            syncLists({
+                              dispatch,
+                            });
+                          }}
+                        />
+                        {syncError && (
+                          <Icon
+                            symbol="error"
+                            color="red"
+                            className="header__sync-error"
+                          />
+                        )}
+                      </>
                     ) : (
                       <Button
                         type="text"
@@ -212,7 +236,14 @@ export const Header = ({
                     color="light"
                     className="header__cloud-icon"
                     label={intl.formatMessage({ id: "header.sync" })}
-                    icon={isSyncing ? "sync" : "cloud"}
+                    icon={
+                      isSyncing
+                        ? "sync"
+                        : hasLocalChanges
+                        ? "cloud-upload"
+                        : "cloud"
+                    }
+                    disabled={isSyncing}
                     onClick={() => {
                       syncLists({
                         dispatch,

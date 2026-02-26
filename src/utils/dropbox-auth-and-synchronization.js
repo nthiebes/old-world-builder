@@ -12,6 +12,7 @@ const dbxAuth = new Dropbox.DropboxAuth({
   clientId,
 });
 let dbx = null;
+let isSyncing = false;
 const DATA_FILE_PATH = "/owb-data.json";
 const SYNC_FILE_PATH = "/owb-sync.txt";
 const uploadSyncFile = (sync) => {
@@ -48,8 +49,7 @@ const getCodeFromUrl = () => {
   return parseQueryString(window.location.search).code;
 };
 
-// If the user was just redirected from authenticating, the urls hash will
-// contain the access token.
+// If the user was just redirected from authenticating, the urls hash will contain the access token
 const hasRedirectedFromAuth = () => {
   return !!getCodeFromUrl();
 };
@@ -67,7 +67,9 @@ export const useDropboxAuthentication = () => {
         auth: dbxAuth,
       });
 
-      dispatch(updateLogin({ loggedIn: true, loginLoading: false }));
+      dispatch(
+        updateLogin({ loggedIn: true, loginLoading: false, loginError: false }),
+      );
     } else if (hasRedirectedFromAuth()) {
       const code = getCodeFromUrl();
 
@@ -91,20 +93,28 @@ export const useDropboxAuthentication = () => {
             auth: dbxAuth,
           });
 
-          dispatch(updateLogin({ loggedIn: true, loginLoading: false }));
+          dispatch(
+            updateLogin({
+              loggedIn: true,
+              loginLoading: false,
+              loginError: false,
+            }),
+          );
 
           syncLists({
             dispatch,
           });
         })
-        .catch((error) => console.error(error));
+        .catch(() => {
+          dispatch(updateLogin({ loginError: true, loginLoading: false }));
+        });
     } else {
       dispatch(updateLogin({ loginLoading: false }));
     }
   }, [accessToken, refreshToken, dispatch]);
 };
 
-export const login = () => {
+export const login = ({ dispatch }) => {
   dbxAuth
     .getAuthenticationUrl(
       process.env.NODE_ENV === "development"
@@ -122,7 +132,9 @@ export const login = () => {
       window.sessionStorage.setItem("codeVerifier", dbxAuth.codeVerifier);
       window.location.href = authUrl;
     })
-    .catch((error) => console.error(error));
+    .catch(() => {
+      dispatch(updateLogin({ loginError: true, loginLoading: false }));
+    });
 };
 
 export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
@@ -131,10 +143,13 @@ export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
   uploadSyncFile(settings.lastChanged)
     .then(() => {
       dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
+      isSyncing = false;
     })
-    .catch((error) => {
-      dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
-      console.log(error);
+    .catch(() => {
+      dispatch(
+        updateLogin({ isSyncing: false, syncConflict: false, syncError: true }),
+      );
+      isSyncing = false;
     });
   uploadDataFile({
     lists: localLists,
@@ -142,10 +157,13 @@ export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
   })
     .then(() => {
       dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
+      isSyncing = false;
     })
-    .catch((error) => {
-      dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
-      console.log(error);
+    .catch(() => {
+      dispatch(
+        updateLogin({ isSyncing: false, syncConflict: false, syncError: true }),
+      );
+      isSyncing = false;
     });
 };
 
@@ -163,6 +181,7 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
         dispatch(setLists(downloadedDataFile.lists));
         dispatch(setSettings(downloadedDataFile.settings));
         dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
+        isSyncing = false;
         localStorage.setItem(
           "owb.lists",
           JSON.stringify(downloadedDataFile.lists),
@@ -173,16 +192,23 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
         );
       };
     })
-    .catch(function (error) {
-      console.log(error);
-      dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
+    .catch(() => {
+      dispatch(
+        updateLogin({ isSyncing: false, syncConflict: false, syncError: true }),
+      );
+      isSyncing = false;
     });
 };
 
 export const syncLists = ({ dispatch }) => {
   const settings = JSON.parse(localStorage.getItem("owb.settings")) || {};
 
-  dispatch(updateLogin({ isSyncing: true }));
+  if (isSyncing) {
+    return;
+  }
+
+  dispatch(updateLogin({ isSyncing: true, syncError: false }));
+  isSyncing = true;
 
   dbx
     .filesListFolder({ path: "" })
@@ -208,10 +234,11 @@ export const syncLists = ({ dispatch }) => {
           uploadSyncFile(lastChanged)
             .then(() => {
               dispatch(updateLogin({ isSyncing: false }));
+              isSyncing = false;
             })
-            .catch((error) => {
-              dispatch(updateLogin({ isSyncing: false }));
-              console.log(error);
+            .catch(() => {
+              dispatch(updateLogin({ isSyncing: false, syncError: true }));
+              isSyncing = false;
             });
           uploadDataFile({
             lists: localLists,
@@ -219,10 +246,11 @@ export const syncLists = ({ dispatch }) => {
           })
             .then(() => {
               dispatch(updateLogin({ isSyncing: false }));
+              isSyncing = false;
             })
-            .catch((error) => {
-              dispatch(updateLogin({ isSyncing: false }));
-              console.log(error);
+            .catch(() => {
+              dispatch(updateLogin({ isSyncing: false, syncError: true }));
+              isSyncing = false;
             });
           dispatch(
             updateSetting({
@@ -261,6 +289,7 @@ export const syncLists = ({ dispatch }) => {
                   dispatch(
                     updateLogin({ syncConflict: true, isSyncing: false }),
                   );
+                  isSyncing = false;
                 }
 
                 // New local changes
@@ -276,6 +305,7 @@ export const syncLists = ({ dispatch }) => {
                 // In sync
                 else {
                   dispatch(updateLogin({ isSyncing: false }));
+                  isSyncing = false;
                 }
 
                 dispatch(
@@ -292,19 +322,18 @@ export const syncLists = ({ dispatch }) => {
                 );
               };
             })
-            .catch(function (error) {
-              console.log(error);
-              dispatch(updateLogin({ isSyncing: false }));
+            .catch(() => {
+              dispatch(updateLogin({ isSyncing: false, syncError: true }));
+              isSyncing = false;
             });
         }
       }
     })
-    .catch(function (error) {
-      console.log("error", error);
-
+    .catch(() => {
       dispatch(
         updateLogin({ isSyncing: false, loggedIn: false, loginLoading: false }),
       );
+      isSyncing = false;
       window.location.href =
         process.env.NODE_ENV === "development"
           ? "http://localhost:3000/"
