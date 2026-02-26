@@ -3851,7 +3851,12 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["shugengan-lord", "lord-magistrate"],
+          ids: [
+            "shugengan-lord",
+            "gate-master",
+            "lord-magistrate",
+            "supreme-astromancer",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -3865,7 +3870,9 @@ export const rules = {
           ids: ["jade-lancers-core"],
           min: 0,
           max: 1,
-          points: 1000,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["gate-master", "gate-keeper"],
         },
       ],
     },
@@ -3875,7 +3882,7 @@ export const rules = {
         {
           ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
           min: 0,
-          max: 3,
+          max: 2,
           points: 1000,
         },
         {
@@ -3903,6 +3910,56 @@ export const rules = {
       maxPercent: 20,
     },
     allies: { maxPercent: 25 },
+  },
+  "warriors-of-wind-and-field": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["gate-master", "lord-magistrate", "supreme-astromancer"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["peasant-levy"],
+          min: 1,
+        },
+        {
+          ids: ["jade-warriors"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+        {
+          ids: ["jade-lancers"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 20,
+    },
   },
   "jade-fleet": {
     characters: {

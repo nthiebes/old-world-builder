@@ -273,6 +273,7 @@ export const synonyms = {
   commander: "champions",
   "shrine keeper": "champions",
   "veteran commander": "champions",
+  "peasant elder": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
