@@ -780,6 +780,12 @@ export const nameMap = {
     name_cn: "玉舰队",
     name_fr: "Jade Fleet",
   },
+  "land-and-field": {
+    name_de: "Warriors of Land and Field",
+    name_en: "Warriors of Land and Field",
+    name_cn: "Warriors of Land and Field",
+    name_fr: "Warriors of Land and Field",
+  },
   "renegade-crowns": {
     name_de: "Renegade Crowns",
     name_en: "Renegade Crowns",

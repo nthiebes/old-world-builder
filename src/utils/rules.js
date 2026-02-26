@@ -3851,7 +3851,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["shugengan-lord", "lord-magistrate"],
+          ids: ["shugengan-lord", "lord-magistrate", "supreme-astromancer", "gate-master"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3865,7 +3865,9 @@ export const rules = {
           ids: ["jade-lancers-core"],
           min: 0,
           max: 1,
-          points: 1000,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["gate-master", "gate-keeper"],
         },
       ],
     },
@@ -3875,7 +3877,7 @@ export const rules = {
         {
           ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
           min: 0,
-          max: 3,
+          max: 2,
           points: 1000,
         },
         {
@@ -3965,6 +3967,62 @@ export const rules = {
           points: 1000,
         },
       ],
+    },
+  },
+  "land-and-field": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["shugengan", "gate-keeper", "strategist", "astromancer"],
+        },
+        {
+          ids: ["lord-magistrate", "gate-master", "supreme-astromancer" ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["peasant-levy"],
+          min: 1,
+        },
+        {
+          ids: ["iron-hail-gunners"],
+        },
+        {
+          ids: ["jade-warriors"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["jade-lancers"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["fire-rain-rocket-battery", "cathayan-grand-cannon"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+    },
+    mercenaries: {
+      maxPercent: 20,
     },
   },
   "renegade-crowns": {
