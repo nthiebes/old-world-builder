@@ -36,6 +36,7 @@ import {
   getUnitOptionNotes,
   unitHasItem,
   isWizard,
+  getStats,
 } from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
@@ -603,6 +604,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       ?.specialRules || unit.specialRules;
   const listArmyComposition = list?.armyComposition || list?.army;
   const unitArmyComposition = unit.army ? unit.army : listArmyComposition;
+  const stats = unit.profile?.stats || getStats(unit, unitArmyComposition);
 
   return (
     <>
@@ -666,6 +668,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             {notes[`name_${language}`] || notes.name_en}
           </p>
         ) : null}
+        {stats && <Stats values={stats} className="unit__stats" />}
         {!unit.minimum &&
           (!lores || (lores && !lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
@@ -1984,15 +1987,24 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             <h2>
               <FormattedMessage id="unit.customProfile" />
             </h2>
-            {unit.profile.stats && (
-              <Stats values={unit.profile.stats} className="game-view__stats" />
+            {unit.profile.category && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.category" />:
+                </h3>
+                <p>
+                  <RulesLinksText textObject={unit.profile.category} />
+                </p>
+              </>
             )}
             {unit.profile.troopType && (
               <>
                 <h3 className="unit__tertiary-headline">
                   <FormattedMessage id="unit.troopType" />:
                 </h3>
-                <p>{unit.profile.troopType}</p>
+                <p>
+                  <RulesLinksText textObject={unit.profile.troopType} />
+                </p>
               </>
             )}
             {unit.profile.baseSize && (
