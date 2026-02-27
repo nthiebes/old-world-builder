@@ -30,7 +30,7 @@ export const Print = () => {
   const [useThreeColumns, setUseThreeColumns] = useState(false);
   const [showHeadings, setShowHeadings] = useState(true);
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
 
   if (!list) {
@@ -164,7 +164,7 @@ export const Print = () => {
     return (
       <>
         {units.map((unit) => {
-          const stats = getStats(unit, armyComposition);
+          const stats = unit.profile?.stats || getStats(unit, armyComposition);
 
           return (
             <li key={unit.id}>
@@ -182,7 +182,7 @@ export const Print = () => {
                       { ...unit, type },
                       {
                         armyComposition,
-                      }
+                      },
                     )}{" "}
                     <FormattedMessage id="app.points" />]
                   </span>
@@ -314,7 +314,7 @@ export const Print = () => {
         className={classNames(
           "print",
           useTwoColumns && "print--two-columns",
-          useThreeColumns && "print--three-columns"
+          useThreeColumns && "print--three-columns",
         )}
       >
         <ul>

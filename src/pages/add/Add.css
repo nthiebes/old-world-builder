@@ -9,12 +9,31 @@
 }
 
 .add__rules-icon {
-  margin-left: 1rem;
   z-index: 1;
+  margin-right: -1rem;
+  padding: 1rem 0.9rem 1rem 0.6rem;
+  position: absolute;
+  right: 0;
 }
 
 .add__army-composition {
   text-align: right;
   font-weight: bold;
   font-style: italic;
+}
+
+.add__favorites {
+  margin-top: 2rem;
+}
+
+.add__delete {
+  z-index: 1;
+  height: auto;
+  position: absolute;
+  right: 1.5rem;
+  padding: 1rem 0.7rem;
+}
+
+.list__inner--delete {
+  padding-right: 5.5rem;
 }

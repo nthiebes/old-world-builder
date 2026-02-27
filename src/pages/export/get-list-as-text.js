@@ -90,7 +90,7 @@ const getFilteredOptions = (unit, intl, params) => {
     filteredOptions.push(
       intl.formatMessage({
         id: "unit.fullCommand",
-      })
+      }),
     );
   }
 
@@ -117,7 +117,7 @@ const getUnitsString = ({
       .map((unit) => {
         const unitPoints = getUnitPoints(
           { type, ...unit },
-          { armyComposition }
+          { armyComposition },
         );
         const unitName = getUnitName({ unit, language });
 
@@ -196,7 +196,7 @@ const getUnitsString = ({
         }${isMarkdownList ? "*" : ""}\n`;
       }
       if (showStats) {
-        const stats = getStats(unit, armyComposition);
+        const stats = unit.profile?.stats || getStats(unit, armyComposition);
 
         if (!isCompactList && !isMarkdownList) {
           optionsString += "\n";

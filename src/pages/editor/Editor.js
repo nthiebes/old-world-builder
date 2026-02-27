@@ -691,67 +691,64 @@ export const Editor = ({ isMobile }) => {
             </section>
           )}
 
-        {game.allies &&
-          list.allies &&
-          alliesData &&
-          list?.army !== "daemons-of-chaos" && (
-            <section className="editor__section">
-              <header className="editor__header">
-                <h2>
-                  <FormattedMessage id="editor.allies" />
-                </h2>
-                <p className="editor__points">
-                  {alliesData.diff > 0 ? (
-                    <>
-                      <strong>{alliesData.diff}</strong>
-                      <FormattedMessage id="editor.tooManyPoints" />
-                      <Icon symbol="error" color="red" />
-                    </>
-                  ) : (
-                    <>
-                      <strong>{alliesData.points - alliesPoints}</strong>
-                      <FormattedMessage id="editor.availablePoints" />
-                      <Icon symbol="check" />
-                    </>
-                  )}
-                </p>
-              </header>
+        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.allies" />
+              </h2>
+              <p className="editor__points">
+                {alliesData.diff > 0 ? (
+                  <>
+                    <strong>{alliesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
+                ) : (
+                  <>
+                    <strong>{alliesData.points - alliesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
+                )}
+              </p>
+            </header>
 
-              <OrderableUnitList
-                units={list.allies}
-                type="allies"
-                listId={listId}
-                armyComposition={armyComposition}
-              />
+            <OrderableUnitList
+              units={list.allies}
+              type="allies"
+              listId={listId}
+              armyComposition={armyComposition}
+            />
 
-              {errors
-                .filter(({ section }) => section === "allies")
-                .map(({ message, name, diff, min, max, option }, index) => (
-                  <ErrorMessage key={message + index} spaceBefore>
-                    <FormattedMessage
-                      id={message}
-                      values={{
-                        name,
-                        diff,
-                        min,
-                        max,
-                        option,
-                      }}
-                    />
-                  </ErrorMessage>
-                ))}
+            {errors
+              .filter(({ section }) => section === "allies")
+              .map(({ message, name, diff, min, max, option }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
+                      min,
+                      max,
+                      option,
+                    }}
+                  />
+                </ErrorMessage>
+              ))}
 
-              <Button
-                type="primary"
-                centered
-                to={`/editor/${listId}/add/allies`}
-                icon="add"
-                spaceTop
-              >
-                <FormattedMessage id="editor.add" />
-              </Button>
-            </section>
-          )}
+            <Button
+              type="primary"
+              centered
+              to={`/editor/${listId}/add/allies`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
 
         <Button
           type="secondary"

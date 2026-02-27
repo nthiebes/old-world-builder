@@ -15,6 +15,7 @@ export const settingsSlice = createSlice({
     lastChanged: null,
     lastSynced: null,
     autoSync: false,
+    favorites: [],
   },
   reducers: {
     setSettings: (_, { payload }) => {

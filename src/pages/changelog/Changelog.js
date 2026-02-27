@@ -33,8 +33,6 @@ export const Changelog = () => {
           <FormattedMessage id="changelog.title" />
         </h2>
 
-        <hr />
-
         <h3>v2.0</h3>
         <p>
           <time>
@@ -83,7 +81,16 @@ export const Changelog = () => {
               </i>
             </div>
           </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change79"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
         </ul>
+
         <p>
           <b>
             <FormattedMessage id="changelog.change72" />

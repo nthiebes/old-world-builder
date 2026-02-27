@@ -317,18 +317,26 @@ export const Header = ({
             !hasMainNavigation && "header__more--secondary-navigation",
           )}
         >
-          {navigation.map(({ callback, name, icon, to: moreButtonTo }) => (
-            <li key={name}>
-              <Button
-                type="text"
-                onClick={callback}
-                to={moreButtonTo}
-                icon={icon}
-              >
-                {name}
-              </Button>
-            </li>
-          ))}
+          {navigation.map(
+            ({ callback, name, icon, to: moreButtonTo, closeOnClick }) => (
+              <li key={name}>
+                <Button
+                  type="text"
+                  onClick={() => {
+                    callback && callback();
+
+                    if (closeOnClick) {
+                      setShowMenu(false);
+                    }
+                  }}
+                  to={moreButtonTo}
+                  icon={icon}
+                >
+                  {name}
+                </Button>
+              </li>
+            ),
+          )}
         </ul>
       )}
       {showMenu && filters && (

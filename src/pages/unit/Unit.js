@@ -17,6 +17,7 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { Stats } from "../../components/stats";
 import {
   RulesIndex,
   RulesLinksText,
@@ -39,6 +40,7 @@ import {
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
 import "./Unit.css";
+import { updateSetting } from "../../state/settings";
 
 export const Unit = ({ isMobile, previewData = {} }) => {
   const isPreview = Boolean(previewData?.type);
@@ -59,6 +61,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const units = list ? list[type] : null;
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
+  const settings = useSelector((state) => state.settings);
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
@@ -476,6 +479,25 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       </>
     );
   };
+  const handleSave = () => {
+    const unitToSave = {
+      ...unit,
+      id: `${unit.id.split(".")[0]}.${getRandomId()}`,
+      armyComposition: list?.armyComposition || list?.army,
+      category: type,
+    };
+    const newSettings = {
+      ...settings,
+      favorites: [...settings.favorites, unitToSave],
+    };
+
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    dispatch(
+      updateSetting({
+        favorites: newSettings.favorites,
+      }),
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -515,7 +537,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         });
       }
     }
-  }, [list, army, dispatch, game]);
+  }, [list, army, dispatch, game, armyData?.version]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
@@ -553,6 +575,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       }),
       icon: "duplicate",
       callback: () => handleDuplicate(unit.id),
+    },
+    {
+      name: intl.formatMessage({
+        id: "misc.save",
+      }),
+      icon: "favorite",
+      callback: () => handleSave(unit.id),
+      closeOnClick: true,
     },
     {
       name: intl.formatMessage({
@@ -1947,6 +1977,34 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           autoComplete="off"
           maxLength="200"
         />
+
+        <hr />
+        {unit.profile && (
+          <>
+            <h2>
+              <FormattedMessage id="unit.customProfile" />
+            </h2>
+            {unit.profile.stats && (
+              <Stats values={unit.profile.stats} className="game-view__stats" />
+            )}
+            {unit.profile.troopType && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.troopType" />:
+                </h3>
+                <p>{unit.profile.troopType}</p>
+              </>
+            )}
+            {unit.profile.baseSize && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.baseSize" />:
+                </h3>
+                <p>{unit.profile.baseSize}</p>
+              </>
+            )}
+          </>
+        )}
       </MainComponent>
     </>
   );

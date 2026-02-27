@@ -180,28 +180,7 @@ export const CustomDatasets = () => {
       <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
 
       <Main compact className="custom">
-        <h2 className="page-headline">
-          <FormattedMessage id="footer.custom-datasets" />
-        </h2>
-        <p>Manage and add custom game systems and datasets.</p>
-        <p className="unit__notes">
-          <Icon symbol="error" className="unit__notes-icon" />
-          Custom game systems also utilize ToW's list validation and magic
-          items. Game systems that are not derived from ToW and have different
-          rules are currently not supported (e.g., Warhammer 40k).
-        </p>
-        <p className="unit__notes">
-          <Icon symbol="error" className="unit__notes-icon" />
-          <span>
-            Each new army in a custom game system needs a dataset with the same
-            file name as the army ID.
-          </span>
-        </p>
-        <p className="unit__notes">
-          <Icon symbol="error" className="unit__notes-icon" />
-          In a custom game system, custom datasets overwrite existing datasets
-          with the same file name.
-        </p>
+        <h2 className="page-headline">Custom game systems and datasets</h2>
 
         <section className="column custom__column">
           <header className="editor__header">
@@ -289,19 +268,8 @@ export const CustomDatasets = () => {
 
         <section>
           <h2>Add a custom game system</h2>
-          <p>
-            Template file:
-            <a
-              className="custom__link"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/nthiebes/old-world-builder/blob/main/src/assets/the-old-world.json"
-            >
-              the-old-world.json
-            </a>
-          </p>
           <form onSubmit={handleGameSubmit}>
-            <label htmlFor="gameSystemFromInput">From a URL</label>
+            <label htmlFor="gameSystemFromInput">From a URL:</label>
             <input
               type="url"
               id="gameSystemFromInput"
@@ -311,7 +279,7 @@ export const CustomDatasets = () => {
               autoComplete="off"
               maxLength="255"
             />
-            <label htmlFor="system-file">Select a .json file:</label>
+            <label htmlFor="system-file">From a .json file:</label>
             <input
               type="file"
               accept=".json, application/json"
@@ -321,6 +289,63 @@ export const CustomDatasets = () => {
               autoComplete="off"
               ref={gameFileInput}
             />
+
+            <Expandable
+              headline="How to create a game system?"
+              noMargin
+              className="custom__guide"
+            >
+              <p>
+                Template files:
+                <a
+                  className="custom__link"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/nthiebes/old-world-builder/blob/main/src/assets/the-old-world.json"
+                >
+                  the-old-world.json
+                </a>
+                ,
+                <a
+                  className="custom__link"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/nthiebes/old-world-builder/blob/main/public/games/the-old-world/magic-items.json"
+                >
+                  magic-items.json
+                </a>
+              </p>
+              <p className="unit__notes">
+                <Icon symbol="error" className="unit__notes-icon" />
+                Custom game systems also utilize ToW's list validation and magic
+                items. Game systems that are not derived from ToW and have
+                different rules are currently not supported (e.g., Warhammer
+                40k).
+              </p>
+              <p className="unit__notes">
+                <Icon symbol="error" className="unit__notes-icon" />
+                <span>
+                  Each new army in a custom game system needs a dataset with the
+                  same file name as the army ID.
+                </span>
+              </p>
+              <p className="unit__notes">
+                <Icon symbol="error" className="unit__notes-icon" />
+                In a custom game system, custom datasets overwrite existing
+                datasets with the same file name.
+              </p>
+              <p className="unit__notes">
+                <Icon symbol="error" className="unit__notes-icon" />
+                To load specific armies via a URL, a "url" parameter can be
+                added to each army. Make sure to also add a "version" parameter
+                to avoid version conflicts with existing datasets.
+              </p>
+              <p className="unit__notes">
+                <Icon symbol="error" className="unit__notes-icon" />
+                Magic items can also be customized and linked using a
+                "magicItems" parameter.
+              </p>
+            </Expandable>
             <Button
               centered
               icon={gameSystemLoading ? "spinner" : "add-list"}
@@ -403,7 +428,7 @@ export const CustomDatasets = () => {
             </a>
           </p>
           <form onSubmit={handleDatasetSubmit}>
-            <label htmlFor="dataset-file">Select a .json file:</label>
+            <label htmlFor="dataset-file">From a .json file:</label>
             <input
               type="file"
               accept=".json, application/json"
