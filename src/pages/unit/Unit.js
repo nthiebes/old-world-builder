@@ -1981,9 +1981,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           maxLength="200"
         />
 
-        <hr />
         {unit.profile && (
           <>
+            <hr />
             <h2>
               <FormattedMessage id="unit.customProfile" />
             </h2>
