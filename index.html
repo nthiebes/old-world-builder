@@ -2,25 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="%PUBLIC_URL%/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="%PUBLIC_URL%/favicon-16x16.png"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
-      rel="mask-icon"
-      href="%PUBLIC_URL%/safari-pinned-tab.svg"
-      color="#303d4d"
-    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#303d4d" />
     <meta name="apple-mobile-web-app-title" content="Old World Builder" />
     <meta name="application-name" content="Old World Builder" />
     <meta name="msapplication-TileColor" content="#303d4d" />
@@ -45,13 +31,6 @@
       content="Old World Builder - Army builder for Warhammer: The Old World"
     />
     <meta property="og:url" content="https://old-world-builder.com" />
-    <!-- <meta property="og:image" content="https://booky.io/_assets/booky.png" /> -->
-    <!-- <meta property="og:image:width" content="499" />
-    <meta property="og:image:height" content="295" /> -->
-    <!-- <meta
-      property="og:image:alt"
-      content="Illustration with three different devices and colors"
-    /> -->
 
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -76,11 +55,12 @@
           window.history.replaceState(
             null,
             null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+            l.pathname.slice(0, -1) + decoded + l.hash,
           );
         }
       })(window.location);
     </script>
+    <script type="module" src="/src/index.jsx"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/10.34.0/Dropbox-sdk.min.js"></script>
   </head>
   <body>

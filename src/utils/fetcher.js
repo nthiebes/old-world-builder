@@ -17,7 +17,7 @@ export const fetcher = ({
 
   fetch(
     `${baseUrl}${url}${appendJson ? ".json" : ""}?v=${
-      version || process.env.REACT_APP_VERSION
+      version || import.meta.env.VITE_VERSION
     }`,
     {
       headers: {

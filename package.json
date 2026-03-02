@@ -22,7 +22,6 @@
     "react-intl": "^6.3.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "5.0.1",
     "web-vitals": "^1.0.1",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
@@ -38,15 +37,18 @@
     "workbox-streams": "^5.1.4"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
     "eslint": "^7.11.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-config-react-app": "^7.0.1"
+    "eslint-config-react-app": "^7.0.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project old-world-builder ./build && sentry-cli sourcemaps upload --org booky --project old-world-builder ./build"
