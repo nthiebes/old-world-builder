@@ -58,7 +58,7 @@ export const Settings = () => {
 
       <Main compact>
         <h2 className="page-headline">
-          <FormattedMessage id="settings.title" />
+          <FormattedMessage id="footer.settings" />
         </h2>
 
         <h3>
