@@ -668,7 +668,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             {notes[`name_${language}`] || notes.name_en}
           </p>
         ) : null}
-        {stats && <Stats values={stats} className="unit__stats" />}
+        {stats && <Stats values={stats} className={classNames("unit__stats", specialRules && 'unit__stats--spaceTop')} />}
         {!unit.minimum &&
           (!lores || (lores && !lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&

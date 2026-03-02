@@ -448,8 +448,8 @@ export const Add = ({ isMobile }) => {
         )}
         {validFavorites.length > 0 && (
           <>
-            <h2 className="add__favorites">Favorites</h2>
-            <ul>
+            <h2 className="add__favorites-headline">Favorites</h2>
+            <ul className="add__favorites-list">
               {validFavorites.map((unit) =>
                 getUnit({ unit, deleteButton: true }),
               )}

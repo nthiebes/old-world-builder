@@ -13,6 +13,7 @@ import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
+import { updateSetting } from "../../state/settings";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
 import { nameMap } from "../magic";
@@ -27,6 +28,7 @@ export const NewList = ({ isMobile }) => {
   const { language } = useLanguage();
   const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
+  const settings = useSelector((state) => state.settings);
   const [game, setGame] = useState("the-old-world");
   const [army, setArmy] = useState("empire-of-man");
   const [compositionRule, setCompositionRule] = useState("open-war");
@@ -99,9 +101,12 @@ export const NewList = ({ isMobile }) => {
       compositionRule,
     };
     const newLists = [newList, ...lists];
+    const newSettings = { ...settings, lastChanged: new Date().toString() };
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
     dispatch(setLists(newLists));
+    dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
 
     setRedirect(newId);
   };

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { Dropbox, DropboxAuth } from "dropbox";
 
 import { updateLogin } from "../state/login";
 import { setSettings, updateSetting } from "../state/settings";
@@ -8,7 +9,7 @@ import { getSyncFile, getDataFile } from "./file";
 import { parseQueryString } from "../utils/query-string";
 
 const clientId = "7l38e9ahse786da";
-const dbxAuth = new Dropbox.DropboxAuth({
+const dbxAuth = new DropboxAuth({
   clientId,
 });
 let dbx = null;
@@ -63,7 +64,7 @@ export const useDropboxAuthentication = () => {
     if (refreshToken && accessToken) {
       dbxAuth.setAccessToken(accessToken);
       dbxAuth.setRefreshToken(refreshToken);
-      dbx = new Dropbox.Dropbox({
+      dbx = new Dropbox({
         auth: dbxAuth,
       });
 
@@ -77,7 +78,7 @@ export const useDropboxAuthentication = () => {
       dbxAuth
         .getAccessTokenFromCode(
           process.env.NODE_ENV === "development"
-            ? "http://localhost:3000/"
+            ? "http://localhost:5173/"
             : "https://old-world-builder.com/",
           code,
         )
@@ -89,7 +90,7 @@ export const useDropboxAuthentication = () => {
             "owb.refreshToken",
             response.result.refresh_token,
           );
-          dbx = new Dropbox.Dropbox({
+          dbx = new Dropbox({
             auth: dbxAuth,
           });
 
@@ -118,7 +119,7 @@ export const login = ({ dispatch }) => {
   dbxAuth
     .getAuthenticationUrl(
       process.env.NODE_ENV === "development"
-        ? "http://localhost:3000/"
+        ? "http://localhost:5173/"
         : "https://old-world-builder.com/",
       null,
       "code",
@@ -176,20 +177,21 @@ export const downloadRemoteDataFromDropbox = ({ dispatch }) => {
       reader.readAsText(response.result.fileBlob, "UTF-8");
       reader.onload = (event) => {
         const downloadedDataFile = JSON.parse(event.target.result);
+        const newSettings = {
+          ...downloadedDataFile.settings,
+          lastSynced: downloadedDataFile.settings.lastChanged,
+        };
 
         // Update local lists
         dispatch(setLists(downloadedDataFile.lists));
-        dispatch(setSettings(downloadedDataFile.settings));
+        dispatch(setSettings(newSettings));
         dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
         isSyncing = false;
         localStorage.setItem(
           "owb.lists",
           JSON.stringify(downloadedDataFile.lists),
         );
-        localStorage.setItem(
-          "owb.settings",
-          JSON.stringify(downloadedDataFile.settings),
-        );
+        localStorage.setItem("owb.settings", JSON.stringify(newSettings));
       };
     })
     .catch(() => {
@@ -274,9 +276,8 @@ export const syncLists = ({ dispatch }) => {
                 const remoteLastChanged = new Date(
                   downloadedSyncFile,
                 ).getTime();
-                const localLastChanged = new Date(
-                  settings.lastChanged,
-                ).getTime();
+                const localLastChanged =
+                  new Date(settings.lastChanged).getTime() || 0;
                 const lastSynced = settings.lastSynced
                   ? new Date(settings.lastSynced).getTime()
                   : 0;
@@ -336,7 +337,7 @@ export const syncLists = ({ dispatch }) => {
       isSyncing = false;
       window.location.href =
         process.env.NODE_ENV === "development"
-          ? "http://localhost:3000/"
+          ? "http://localhost:5173/"
           : "https://old-world-builder.com/";
       localStorage.setItem("owb.accessToken", "");
       localStorage.setItem("owb.refreshToken", "");

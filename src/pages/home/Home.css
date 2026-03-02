@@ -33,6 +33,10 @@
   margin: 2rem auto;
 }
 
+.dark .home__logo {
+  filter: invert(1);
+}
+
 .home__description {
   text-overflow: ellipsis;
   overflow: hidden;

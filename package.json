@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.1.10",
     "abortcontroller-polyfill": "^1.7.3",
     "classnames": "^2.3.1",
+    "dropbox": "^10.34.0",
     "gh-pages": "^6.1.1",
     "prettier": "^2.4.0",
     "react": "^17.0.2",
@@ -45,7 +46,7 @@
     "vitest": "^4.0.18"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",

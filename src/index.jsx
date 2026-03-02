@@ -88,7 +88,7 @@ const localStorageColorScheme = JSON.parse(
 )?.colorScheme;
 let colorScheme;
 
-if (localStorageColorScheme === "auto") {
+if (localStorageColorScheme === "auto" || !localStorageColorScheme) {
   colorScheme = darkColorScheme ? "dark" : "light";
 } else {
   colorScheme = localStorageColorScheme;

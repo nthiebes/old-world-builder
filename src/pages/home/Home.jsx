@@ -621,7 +621,7 @@ export const Home = ({ isMobile }) => {
           </section>
         )}
 
-        <hr className="home__divider" />
+        {lists.length > 0 ? <hr className="home__divider" /> : null}
 
         {listsWithoutFolders.length === 0 && (
           <>

@@ -22,8 +22,16 @@
   font-style: italic;
 }
 
-.add__favorites {
+.add__favorites-headline {
   margin-top: 2rem;
+}
+
+.add__favorites-list {
+  margin-bottom: 1rem;
+}
+
+.add__favorites-list .list__inner:first-of-type {
+  border-top: 2px solid var(--color-list);
 }
 
 .add__delete {
