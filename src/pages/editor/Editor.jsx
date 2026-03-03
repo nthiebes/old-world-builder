@@ -41,7 +41,7 @@ export const Editor = ({ isMobile }) => {
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
 
-  const handleDeleteClick = (event) => {
+  const handleCancel = (event) => {
     event.preventDefault();
     setIsDialogOpen(false);
   };
@@ -232,7 +232,7 @@ export const Editor = ({ isMobile }) => {
         <div className="editor__delete-dialog">
           <Button
             type="text"
-            onClick={handleDeleteClick}
+            onClick={handleCancel}
             icon="close"
             spaceTop
             color="dark"
