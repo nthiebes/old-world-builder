@@ -143,22 +143,36 @@ export const uploadLocalDataToDropbox = ({ dispatch, settings }) => {
 
   uploadSyncFile(settings.lastChanged)
     .then(() => {
-      dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
-      isSyncing = false;
-    })
-    .catch(() => {
-      dispatch(
-        updateLogin({ isSyncing: false, syncConflict: false, syncError: true }),
-      );
-      isSyncing = false;
-    });
-  uploadDataFile({
-    lists: localLists,
-    settings,
-  })
-    .then(() => {
-      dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
-      isSyncing = false;
+      uploadDataFile({
+        lists: localLists,
+        settings,
+      })
+        .then(() => {
+          dispatch(updateLogin({ isSyncing: false, syncConflict: false }));
+          dispatch(
+            updateSetting({
+              lastSynced: settings.lastChanged,
+            }),
+          );
+          localStorage.setItem(
+            "owb.settings",
+            JSON.stringify({
+              ...settings,
+              lastSynced: settings.lastChanged,
+            }),
+          );
+          isSyncing = false;
+        })
+        .catch(() => {
+          dispatch(
+            updateLogin({
+              isSyncing: false,
+              syncConflict: false,
+              syncError: true,
+            }),
+          );
+          isSyncing = false;
+        });
     })
     .catch(() => {
       dispatch(
@@ -269,6 +283,7 @@ export const syncLists = ({ dispatch }) => {
             .filesDownload({ path: SYNC_FILE_PATH })
             .then(function (response) {
               const reader = new FileReader();
+              let syncConflict = false;
 
               reader.readAsText(response.result.fileBlob, "UTF-8");
               reader.onload = (event) => {
@@ -290,6 +305,7 @@ export const syncLists = ({ dispatch }) => {
                   dispatch(
                     updateLogin({ syncConflict: true, isSyncing: false }),
                   );
+                  syncConflict = true;
                   isSyncing = false;
                 }
 
@@ -309,18 +325,20 @@ export const syncLists = ({ dispatch }) => {
                   isSyncing = false;
                 }
 
-                dispatch(
-                  updateSetting({
-                    lastSynced: settings.lastChanged,
-                  }),
-                );
-                localStorage.setItem(
-                  "owb.settings",
-                  JSON.stringify({
-                    ...settings,
-                    lastSynced: settings.lastChanged,
-                  }),
-                );
+                if (!syncConflict) {
+                  dispatch(
+                    updateSetting({
+                      lastSynced: settings.lastChanged,
+                    }),
+                  );
+                  localStorage.setItem(
+                    "owb.settings",
+                    JSON.stringify({
+                      ...settings,
+                      lastSynced: settings.lastChanged,
+                    }),
+                  );
+                }
               };
             })
             .catch(() => {
