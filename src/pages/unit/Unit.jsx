@@ -641,6 +641,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {!isMobile && (
           <Header
             isSection
+            isPreview
             to={isPreview ? "" : `/editor/${listId}`}
             moreButton={isPreview ? null : moreButtons}
             headline={getUnitName({ unit, language })}

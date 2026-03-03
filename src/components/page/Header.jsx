@@ -27,7 +27,7 @@ export const Header = ({
   subheadline,
   moreButton,
   to,
-  isSection,
+  isSection,isPreview,
   hasPointsError,
   hasMainNavigation,
   navigationIcon,
@@ -137,7 +137,7 @@ export const Header = ({
         />
       ) : (
         <>
-          {hasHomeButton ? (
+          {hasHomeButton && (
             <Button
               type="text"
               to="/"
@@ -146,7 +146,8 @@ export const Header = ({
               icon="home"
               showLabelRight
             />
-          ) : (
+          )}
+          {!hasHomeButton && !isPreview && (
             <Button
               type="text"
               onClick={() => {
@@ -381,6 +382,7 @@ export const Header = ({
               type="primary"
               icon="cloud-upload"
               spaceTop
+              autoHeight
               onClick={() => {
                 uploadLocalDataToDropbox({ dispatch, settings });
                 dispatch(updateLogin({ isSyncing: true, syncConflict: false }));
@@ -392,6 +394,7 @@ export const Header = ({
               type="primary"
               icon="cloud-download"
               spaceTop
+              autoHeight
               onClick={() => {
                 downloadRemoteDataFromDropbox({ dispatch });
                 dispatch(updateLogin({ isSyncing: true, syncConflict: false }));

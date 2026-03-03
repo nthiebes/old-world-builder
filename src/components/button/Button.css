@@ -131,6 +131,11 @@
   max-width: 25rem;
 }
 
+.button--autoHeight {
+  height: auto;
+  white-space: unset;
+}
+
 @keyframes sync {
   from {
     transform: rotate(360deg);

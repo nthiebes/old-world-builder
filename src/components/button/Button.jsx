@@ -27,6 +27,7 @@ export const Button = ({
   download,
   value,
   showLabelRight,
+  autoHeight,
   showLabelLeft,
 }) => {
   const Component = to || href ? (to ? Link : "a") : "button";
@@ -51,6 +52,7 @@ export const Button = ({
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         disabled && "button--disabled",
+        autoHeight && "button--autoHeight",
         `button--${size}`,
         className,
       )}
