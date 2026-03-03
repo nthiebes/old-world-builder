@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 import { NewList } from "./pages/new-list";
 import { Editor } from "./pages/editor";
