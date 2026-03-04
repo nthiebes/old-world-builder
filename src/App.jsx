@@ -41,7 +41,7 @@ const autoSyncLists = ({ dispatch }) => {
     const lastChanged = new Date(settings.lastChanged).getTime();
     const lastSynced = new Date(settings.lastSynced).getTime();
 
-    if (lastChanged && lastSynced && lastChanged > lastSynced) {
+    if (lastChanged > lastSynced) {
       syncLists({ dispatch });
     }
   }, 30000);
