@@ -165,6 +165,9 @@ export const Print = () => {
       <>
         {units.map((unit) => {
           const stats = unit.profile?.stats || getStats(unit, armyComposition);
+          const specialRules =
+            unit.armyComposition?.[armyComposition]?.specialRules ||
+            unit.specialRules;
 
           return (
             <li key={unit.id}>
@@ -193,7 +196,7 @@ export const Print = () => {
                 pageNumbers: showPageNumbers,
                 armyComposition,
               })}
-              {showSpecialRules && unit.specialRules ? (
+              {showSpecialRules && specialRules ? (
                 <>
                   <p className="print__special-rules">
                     <i>
@@ -201,9 +204,8 @@ export const Print = () => {
                         <FormattedMessage id="unit.specialRules" />:
                       </b>{" "}
                       {(
-                        unit.specialRules[`name_${language}`] ||
-                        unit.specialRules.name_en
-                      )?.replace(/ *\{[^)]*\}/g, "")}
+                        specialRules[`name_${language}`] || specialRules.name_en
+                      )?.replace(/\s\{.*?\}/g, "")}
                     </i>
                   </p>
                   {unit.detachments &&
@@ -233,7 +235,7 @@ export const Print = () => {
                           {(
                             specialRulesDetachment[`name_${language}`] ||
                             specialRulesDetachment.name_en
-                          ).replace(/ *\{[^)]*\}/g, "")}
+                          ).replace(/\s\{.*?\}/g, "")}
                         </p>
                       );
                     })}
