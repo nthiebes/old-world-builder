@@ -37,13 +37,13 @@ import "./App.css";
 let intervalId = null;
 const autoSyncLists = ({ dispatch }) => {
   intervalId = setInterval(() => {
-    const settings = JSON.parse(localStorage.getItem("owb.settings"));
-    const lastChanged = new Date(settings.lastChanged).getTime();
-    const lastSynced = new Date(settings.lastSynced).getTime();
+    // const settings = JSON.parse(localStorage.getItem("owb.settings"));
+    // const lastChanged = new Date(settings.lastChanged).getTime();
+    // const lastSynced = new Date(settings.lastSynced).getTime();
 
-    if (lastChanged > lastSynced) {
-      syncLists({ dispatch });
-    }
+    // if (lastChanged > lastSynced) {
+    syncLists({ dispatch });
+    // }
   }, 30000);
 };
 
