@@ -150,8 +150,7 @@ export const CustomDatasets = () => {
           setGameSystemFromInput("");
           setGameSystemLoading(false);
         },
-        onError: (error) => {
-          console.log(error);
+        onError: () => {
           setGameSystemError(true);
           setGameSystemLoading(false);
         },
