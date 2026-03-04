@@ -81,8 +81,12 @@ export const validateList = ({ list, language, intl }) => {
       );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
+  // The hierophant must be one of the liche priests with the highest leadership
+  let highestLichePriestLeadership = 0;
+
   if (list?.characters?.length) {
     list.characters.forEach((unit) => {
+      // Highest leadership for general
       if (
         unit.command &&
         unit.command.find(
@@ -103,8 +107,35 @@ export const validateList = ({ list, language, intl }) => {
           highestLeadership = leadership;
         }
       }
+
+      // Highest liche priest leadership
+      if (
+        unit.command &&
+        unit.command.find(
+          (command) =>
+            command.name_en === "The Hierophant" &&
+            (!command.armyComposition ||
+              equalsOrIncludes(command.armyComposition, list.armyComposition)),
+        )
+      ) {
+        const leadership = getUnitLeadership(unit.name_en);
+
+        if (leadership && leadership > highestLichePriestLeadership) {
+          highestLichePriestLeadership = leadership;
+        }
+      }
     });
   }
+
+  const hierophants = !list?.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "The Hierophant",
+          ),
+      );
 
   const BSBs = !list.characters?.length
     ? []
@@ -205,6 +236,13 @@ export const validateList = ({ list, language, intl }) => {
       section: "characters",
     });
 
+  // Multiple hierophants
+  hierophants.length > 1 &&
+    errors.push({
+      message: "misc.error.multipleHierophants",
+      section: "characters",
+    });
+
   // General doesn't have highest leadership in the army
   const unitLeadership =
     generalsCount === 1 && getUnitLeadership(generals[0].name_en);
@@ -214,6 +252,18 @@ export const validateList = ({ list, language, intl }) => {
     unitLeadership < highestLeadership &&
     errors.push({
       message: "misc.error.generalLeadership",
+      section: "characters",
+    });
+
+  // Hierophant doesn't have highest leadership
+  const hierophantLeadership =
+    hierophants.length > 0 && getUnitLeadership(hierophants[0].name_en);
+
+  hierophants.length > 0 &&
+    hierophantLeadership &&
+    hierophantLeadership < highestLichePriestLeadership &&
+    errors.push({
+      message: "misc.error.hierophantLeadership",
       section: "characters",
     });
 
