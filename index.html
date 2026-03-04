@@ -59,8 +59,14 @@
           );
         }
       })(window.location);
+
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (const registration of registrations) {
+          registration.unregister();
+        }
+      });
     </script>
-    <script type="module" crossorigin src="/assets/index-DrGZ7fms.js"></script>
+    <script type="module" crossorigin src="/assets/index-lLQutr6k.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-7k41MQ_5.css">
   </head>
   <body>
