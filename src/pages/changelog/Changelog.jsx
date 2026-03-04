@@ -38,7 +38,7 @@ export const Changelog = () => {
           <time>
             <i>
               <FormattedDate
-                value={new Date("2026-03-01 11:11:11")}
+                value={new Date("2026-03-04 11:11:11")}
                 month="long"
                 day="2-digit"
                 year="numeric"
