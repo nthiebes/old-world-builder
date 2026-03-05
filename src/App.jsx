@@ -35,6 +35,7 @@ import {
 import "./App.css";
 
 let intervalId = null;
+let isWindowActive = true;
 const autoSyncLists = ({ dispatch }) => {
   intervalId = setInterval(() => {
     // const settings = JSON.parse(localStorage.getItem("owb.settings"));
@@ -42,10 +43,19 @@ const autoSyncLists = ({ dispatch }) => {
     // const lastSynced = new Date(settings.lastSynced).getTime();
 
     // if (lastChanged > lastSynced) {
-    syncLists({ dispatch });
-    // }
+    if (isWindowActive) {
+      syncLists({ dispatch });
+    }
   }, 30000);
 };
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    isWindowActive = true;
+  } else if (document.visibilityState === "hidden") {
+    isWindowActive = false;
+  }
+});
 
 export const App = () => {
   const dispatch = useDispatch();
