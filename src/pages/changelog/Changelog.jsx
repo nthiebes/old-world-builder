@@ -33,6 +33,138 @@ export const Changelog = () => {
           <FormattedMessage id="changelog.title" />
         </h2>
 
+        <h3>v2.0</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2026-03-04 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change77"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change71"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change76"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+            <div>
+              <i>
+                <FormattedMessage
+                  id="changelog.change78"
+                  values={{
+                    a: (msg) => <Link to="/settings">{msg}</Link>,
+                  }}
+                />
+              </i>
+            </div>
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change79"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change80"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <p>
+          <b>
+            <FormattedMessage id="changelog.change72" />
+          </b>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change73"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change74"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change75"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change81"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>v1.27</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2026-02-26 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change70"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
+        </ul>
+
         <hr />
 
         <h3>v1.26</h3>

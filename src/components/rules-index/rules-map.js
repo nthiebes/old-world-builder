@@ -273,6 +273,7 @@ export const synonyms = {
   commander: "champions",
   "shrine keeper": "champions",
   "veteran commander": "champions",
+  "peasant elder": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -323,6 +324,7 @@ export const synonyms = {
   "chaos furies of slaanesh": "chaos furies",
   "chaos furies of khorne": "chaos furies",
   shadowlands: "lore of the shadowlands",
+  "celestial dragon guard": "supreme matriarch of nan-gau",
 };
 
 export const rulesMap = {

@@ -11,12 +11,26 @@ export const listsSlice = createSlice({
       return payload || [];
     },
     updateList: (state, { payload }) => {
-      const { listId, name, points, description, compositionRule, folder } =
-        payload;
-      const newValues = { name, points, description, compositionRule, folder };
+      const {
+        listId,
+        name,
+        points,
+        description,
+        compositionRule,
+        folder,
+        lastChanged,
+      } = payload;
+      const newValues = {
+        name,
+        points,
+        description,
+        compositionRule,
+        folder,
+        lastChanged,
+      };
 
       Object.keys(newValues).forEach((key) =>
-        newValues[key] === undefined ? delete newValues[key] : {}
+        newValues[key] === undefined ? delete newValues[key] : {},
       );
 
       return state.map((list) => {
@@ -108,6 +122,7 @@ export const listsSlice = createSlice({
         detachments,
         activeLore,
         customNote,
+        generatedSpells,
       } = payload;
       const newValues = {
         strength,
@@ -122,13 +137,14 @@ export const listsSlice = createSlice({
         activeLore,
         name,
         customNote,
+        generatedSpells,
       };
       const unit = state
         .find(({ id }) => id === listId)
         [type].find(({ id }) => id === unitId);
 
       Object.keys(newValues).forEach((key) =>
-        newValues[key] === undefined ? delete newValues[key] : {}
+        newValues[key] === undefined ? delete newValues[key] : {},
       );
 
       const newUnit = {

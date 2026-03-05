@@ -13,57 +13,6 @@ const getFilteredOptions = (unit, intl, params) => {
   // Items to exclude
   let itemsToExclude = ["Hand weapon", "Hand weapons"];
 
-  // if (unit.equipment) {
-  //   if (unit.equipment.length === 1 && unit.equipment[0].active) {
-  //     itemsToExclude = [
-  //       ...itemsToExclude,
-  //       ...unit.equipment[0].name_en.split(", "),
-  //     ];
-  //   } else {
-  //     const activeEquipment = unit.equipment.find((eq) => eq.active);
-  //     if (activeEquipment && activeEquipment.points === 0) {
-  //       itemsToExclude = [
-  //         ...itemsToExclude,
-  //         ...activeEquipment.name_en.split(", "),
-  //       ];
-  //     }
-  //   }
-  // }
-
-  // if (unit.armor) {
-  //   if (unit.armor.length === 1 && unit.armor[0].active) {
-  //     itemsToExclude = [
-  //       ...itemsToExclude,
-  //       ...unit.armor[0].name_en.split(", "),
-  //     ];
-  //   } else {
-  //     const activeArmor = unit.armor.find((ar) => ar.active);
-  //     if (activeArmor && activeArmor.points === 0) {
-  //       itemsToExclude = [
-  //         ...itemsToExclude,
-  //         ...activeArmor.name_en.split(", "),
-  //       ];
-  //     }
-  //   }
-  // }
-
-  // if (unit.mounts) {
-  //   if (unit.mounts.length === 1 && unit.mounts[0].active) {
-  //     itemsToExclude = [
-  //       ...itemsToExclude,
-  //       ...unit.mounts[0].name_en.split(", "),
-  //     ];
-  //   } else {
-  //     const activeMount = unit.mounts.find((m) => m.active);
-  //     if (activeMount && activeMount.points === 0) {
-  //       itemsToExclude = [
-  //         ...itemsToExclude,
-  //         ...activeMount.name_en.split(", "),
-  //       ];
-  //     }
-  //   }
-  // }
-
   // Split into array of individual options
   const optionsArray = allOptionsString.split(", ");
 
@@ -90,7 +39,7 @@ const getFilteredOptions = (unit, intl, params) => {
     filteredOptions.push(
       intl.formatMessage({
         id: "unit.fullCommand",
-      })
+      }),
     );
   }
 
@@ -117,7 +66,7 @@ const getUnitsString = ({
       .map((unit) => {
         const unitPoints = getUnitPoints(
           { type, ...unit },
-          { armyComposition }
+          { armyComposition },
         );
         const unitName = getUnitName({ unit, language });
 
@@ -152,6 +101,9 @@ const getUnitsString = ({
         pageNumbers: showPageNumbers,
         armyComposition,
       });
+      const specialRules =
+        unit.armyComposition?.[armyComposition]?.specialRules ||
+        unit.specialRules;
       let optionsString = "";
 
       if (allOptions) {
@@ -161,12 +113,12 @@ const getUnitsString = ({
           optionsString = `- ${allOptions.split(", ").join("\n- ")}\n`;
         }
       }
-      if (showSpecialRules && unit.specialRules) {
+      if (showSpecialRules && specialRules) {
         optionsString += `${isMarkdownList ? " - __" : ""}${intl.formatMessage({
           id: "unit.specialRules",
         })}:${isMarkdownList ? "__ *" : " "}${(
-          unit.specialRules[`name_${language}`] || unit.specialRules.name_en
-        ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
+          specialRules[`name_${language}`] || specialRules.name_en
+        ).replace(/\s\{.*?\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
       }
       if (showSpecialRules && unit.detachments) {
         unit.detachments.forEach((detachment) => {
@@ -184,7 +136,7 @@ const getUnitsString = ({
             }${(
               specialRulesDetachment[`name_${language}`] ||
               specialRulesDetachment.name_en
-            ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
+            ).replace(/\s\{.*?\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
           }
         });
       }
@@ -196,7 +148,7 @@ const getUnitsString = ({
         }${isMarkdownList ? "*" : ""}\n`;
       }
       if (showStats) {
-        const stats = getStats(unit, armyComposition);
+        const stats = unit.profile?.stats || getStats(unit, armyComposition);
 
         if (!isCompactList && !isMarkdownList) {
           optionsString += "\n";

@@ -30,7 +30,7 @@ export const Print = () => {
   const [useThreeColumns, setUseThreeColumns] = useState(false);
   const [showHeadings, setShowHeadings] = useState(true);
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
 
   if (!list) {
@@ -164,7 +164,10 @@ export const Print = () => {
     return (
       <>
         {units.map((unit) => {
-          const stats = getStats(unit, armyComposition);
+          const stats = unit.profile?.stats || getStats(unit, armyComposition);
+          const specialRules =
+            unit.armyComposition?.[armyComposition]?.specialRules ||
+            unit.specialRules;
 
           return (
             <li key={unit.id}>
@@ -182,7 +185,7 @@ export const Print = () => {
                       { ...unit, type },
                       {
                         armyComposition,
-                      }
+                      },
                     )}{" "}
                     <FormattedMessage id="app.points" />]
                   </span>
@@ -193,7 +196,7 @@ export const Print = () => {
                 pageNumbers: showPageNumbers,
                 armyComposition,
               })}
-              {showSpecialRules && unit.specialRules ? (
+              {showSpecialRules && specialRules ? (
                 <>
                   <p className="print__special-rules">
                     <i>
@@ -201,9 +204,8 @@ export const Print = () => {
                         <FormattedMessage id="unit.specialRules" />:
                       </b>{" "}
                       {(
-                        unit.specialRules[`name_${language}`] ||
-                        unit.specialRules.name_en
-                      )?.replace(/ *\{[^)]*\}/g, "")}
+                        specialRules[`name_${language}`] || specialRules.name_en
+                      )?.replace(/\s\{.*?\}/g, "")}
                     </i>
                   </p>
                   {unit.detachments &&
@@ -233,7 +235,7 @@ export const Print = () => {
                           {(
                             specialRulesDetachment[`name_${language}`] ||
                             specialRulesDetachment.name_en
-                          ).replace(/ *\{[^)]*\}/g, "")}
+                          ).replace(/\s\{.*?\}/g, "")}
                         </p>
                       );
                     })}
@@ -314,7 +316,7 @@ export const Print = () => {
         className={classNames(
           "print",
           useTwoColumns && "print--two-columns",
-          useThreeColumns && "print--three-columns"
+          useThreeColumns && "print--three-columns",
         )}
       >
         <ul>

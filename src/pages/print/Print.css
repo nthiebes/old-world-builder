@@ -24,6 +24,11 @@
   padding: 1rem;
 }
 
+.print * {
+  color: #384043;
+  border-color: #384043 !important;
+}
+
 .print--two-columns ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

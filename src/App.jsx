@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import { NewList } from "./pages/new-list";
@@ -23,17 +23,48 @@ import { Import } from "./pages/import";
 import { GameView } from "./pages/game-view";
 import { CustomDatasets } from "./pages/custom-datasets";
 import { BattleTavern } from "./pages/battle-tavern/BattleTavern";
+import { Settings } from "./pages/settings";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 
+import {
+  useDropboxAuthentication,
+  syncLists,
+} from "./utils/dropbox-auth-and-synchronization";
+
 import "./App.css";
+
+let intervalId = null;
+let isWindowActive = true;
+const autoSyncLists = ({ dispatch }) => {
+  intervalId = setInterval(() => {
+    // const settings = JSON.parse(localStorage.getItem("owb.settings"));
+    // const lastChanged = new Date(settings.lastChanged).getTime();
+    // const lastSynced = new Date(settings.lastSynced).getTime();
+
+    // if (lastChanged > lastSynced) {
+    if (isWindowActive) {
+      syncLists({ dispatch });
+    }
+  }, 30000);
+};
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    isWindowActive = true;
+  } else if (document.visibilityState === "hidden") {
+    isWindowActive = false;
+  }
+});
 
 export const App = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 1279px)").matches
+    window.matchMedia("(max-width: 1279px)").matches,
   );
+  const settings = useSelector((state) => state.settings);
+  useDropboxAuthentication();
 
   useEffect(() => {
     const localLists = localStorage.getItem("owb.lists");
@@ -44,11 +75,17 @@ export const App = () => {
   }, [dispatch]);
 
   useEffect(() => {
+    if (settings.autoSync && !intervalId) {
+      autoSyncLists({ dispatch });
+    }
+  }, [settings.autoSync, dispatch]);
+
+  useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1279px)");
 
     if (mediaQuery?.addEventListener) {
       mediaQuery.addEventListener("change", (event) =>
-        setIsMobile(event.matches)
+        setIsMobile(event.matches),
       );
     } else {
       mediaQuery.addListener((event) => setIsMobile(event.matches));
@@ -83,6 +120,7 @@ export const App = () => {
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
+          <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
@@ -99,6 +137,7 @@ export const App = () => {
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
+          <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
           <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>

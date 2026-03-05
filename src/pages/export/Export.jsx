@@ -8,26 +8,10 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Expandable } from "../../components/expandable";
 import { useLanguage } from "../../utils/useLanguage";
+import { getFile } from "../../utils/file";
 
 import { getListAsText } from "./get-list-as-text";
 import "./Export.css";
-
-const getFile = ({ list, listText, asText }) => {
-  const fileName = `${list?.name
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/,/g, "")}.${asText ? "txt" : "owb.json"}`;
-  const file = new File([asText ? listText : JSON.stringify(list)], fileName, {
-    type: asText ? "text/plain" : "application/json",
-  });
-  const fileUrl = URL.createObjectURL(file);
-
-  return {
-    file,
-    fileUrl,
-    fileName,
-  };
-};
 
 export const Export = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
@@ -47,7 +31,7 @@ export const Export = ({ isMobile }) => {
   const [listType, setListType] = useState("regular");
   const [listFormatting, setListFormatting] = useState("text");
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const listText = list
     ? getListAsText({
@@ -72,7 +56,7 @@ export const Export = ({ isMobile }) => {
         },
         () => {
           setCopyError(true);
-        }
+        },
       );
   };
   const { file, fileUrl, fileName } = getFile({ list });

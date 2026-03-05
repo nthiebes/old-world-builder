@@ -3,13 +3,16 @@ import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
+import classNames from "classnames";
 
 import { Icon } from "../../components/icon";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { Header, Main } from "../../components/page";
 import { Expandable } from "../../components/expandable";
+import { Button } from "../../components/button";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
+import { updateSetting } from "../../state/settings";
 import { getUnitName } from "../../utils/unit";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
@@ -35,14 +38,19 @@ export const Add = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const gameSystems = getGameSystems();
   const army = useSelector((state) => state.army);
+  const settings = useSelector((state) => state.settings);
   const game = gameSystems.find((game) => game.id === list?.game);
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
   const mercenaries = armyData?.mercenaries;
+  const validFavorites = settings.favorites.filter(
+    (unit) =>
+      unit.armyComposition === list?.armyComposition && unit.category === type,
+  );
   const handleAdd = (unit, ally, unitType, magicItemsArmy) => {
     const newUnit = {
       ...unit,
@@ -55,10 +63,13 @@ export const Add = ({ isMobile }) => {
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = (unit, ally, unitType, magicItemsArmy) => (
+  const getUnit = ({ unit, ally, unitType, magicItemsArmy, deleteButton }) => (
     <li key={unit.id} className="list">
       <button
-        className="list__inner add__list-inner"
+        className={classNames(
+          "list__inner add__list-inner",
+          deleteButton && "list__inner--delete",
+        )}
         onClick={() => handleAdd(unit, ally, unitType, magicItemsArmy)}
       >
         <span className="add__name">
@@ -72,6 +83,24 @@ export const Add = ({ isMobile }) => {
         })}`}</i>
       </button>
       <RuleWithIcon name={unit.name_en} isDark className="add__rules-icon" />
+      {deleteButton && (
+        <Button
+          icon="delete"
+          type="text"
+          color="dark"
+          className="add__delete"
+          label={intl.formatMessage({ id: "misc.delete" })}
+          onClick={() => {
+            const newSettings = {
+              ...settings,
+              favorites: settings.favorites.filter((fav) => fav.id !== unit.id),
+            };
+
+            localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+            dispatch(updateSetting({ favorites: newSettings.favorites }));
+          }}
+        />
+      )}
     </li>
   );
 
@@ -85,7 +114,7 @@ export const Add = ({ isMobile }) => {
     if (list && !army && type !== "allies") {
       const isCustom = game.id !== "the-old-world";
 
-      if (isCustom) {
+      if (isCustom && !list.url) {
         const data = getCustomDatasetData(list.army);
 
         dispatch(
@@ -93,20 +122,23 @@ export const Add = ({ isMobile }) => {
             getArmyData({
               data,
               armyComposition: list.armyComposition,
-            })
-          )
+            }),
+          ),
         );
       } else {
         fetcher({
-          url: `games/${list.game}/${list.army}`,
+          url: list.url || `games/${list.game}/${list.army}`,
+          baseUrl: list.url ? "" : undefined,
+          appendJson: Boolean(!list.url),
+          version: armyData.version,
           onSuccess: (data) => {
             dispatch(
               setArmy(
                 getArmyData({
                   data,
                   armyComposition: list.armyComposition || list.army,
-                })
-              )
+                }),
+              ),
             );
           },
         });
@@ -116,8 +148,10 @@ export const Add = ({ isMobile }) => {
       allies.forEach(({ army, armyComposition, magicItemsArmy }, index) => {
         const isCustom = game.id !== "the-old-world";
         const customData = isCustom && getCustomDatasetData(army);
+        const customUrl =
+          isCustom && game.armies.find((a) => a.id === army)?.url;
 
-        if (customData) {
+        if (customData && !customUrl) {
           const armyData = getArmyData({
             data: customData,
             armyComposition: armyComposition || army,
@@ -134,7 +168,10 @@ export const Add = ({ isMobile }) => {
           setAlliesLoaded(index + 1);
         } else {
           fetcher({
-            url: `games/the-old-world/${army}`,
+            url: customUrl || `games/the-old-world/${army}`,
+            baseUrl: customUrl ? "" : undefined,
+            appendJson: Boolean(!customUrl),
+            version: armyData.version,
             onSuccess: (data) => {
               const armyData = getArmyData({
                 data,
@@ -166,8 +203,11 @@ export const Add = ({ isMobile }) => {
         mercenaries[list.armyComposition].forEach((mercenary, index) => {
           const isCustom = game.id !== "the-old-world";
           const customData = isCustom && getCustomDatasetData(mercenary.army);
+          const customUrl =
+            isCustom &&
+            game.armies.find((army) => army.id === mercenary.army)?.url;
 
-          if (customData) {
+          if (customData && !customUrl) {
             const armyData = getArmyData({
               data: customData,
               armyComposition: mercenary.army,
@@ -186,7 +226,10 @@ export const Add = ({ isMobile }) => {
             setMercenariesLoaded(index + 1);
           } else {
             fetcher({
-              url: `games/the-old-world/${mercenary.army}`,
+              url: customUrl || `games/the-old-world/${mercenary.army}`,
+              baseUrl: customUrl ? "" : undefined,
+              appendJson: Boolean(!customUrl),
+              version: armyData.version,
               onSuccess: (data) => {
                 const armyData = getArmyData({
                   data,
@@ -290,7 +333,7 @@ export const Add = ({ isMobile }) => {
                     armyComposition,
                     magicItemsArmy,
                   },
-                  index
+                  index,
                 ) => {
                   // Remove duplicate units
                   const uniqueUnits = [];
@@ -349,45 +392,71 @@ export const Add = ({ isMobile }) => {
                       }`}
                     >
                       {tempCharacters.map((unit) =>
-                        getUnit(
+                        getUnit({
                           unit,
-                          armyComposition,
-                          "characters",
-                          magicItemsArmy
-                        )
+                          ally: armyComposition,
+                          unitType: "characters",
+                          magicItemsArmy,
+                        }),
                       )}
                       {tempCore
                         .filter((unit) => !unit.detachment)
                         .map((unit) =>
-                          getUnit(unit, armyComposition, "core", magicItemsArmy)
+                          getUnit({
+                            unit,
+                            ally: armyComposition,
+                            unitType: "core",
+                            magicItemsArmy,
+                          }),
                         )}
                       {tempSpecial
                         .filter((unit) => !unit.detachment)
                         .map((unit) =>
-                          getUnit(
+                          getUnit({
                             unit,
-                            armyComposition,
-                            "special",
-                            magicItemsArmy
-                          )
+                            ally: armyComposition,
+                            unitType: "special",
+                            magicItemsArmy,
+                          }),
                         )}
                       {tempRare
                         .filter((unit) => !unit.detachment)
                         .map((unit) =>
-                          getUnit(unit, armyComposition, "rare", magicItemsArmy)
+                          getUnit({
+                            unit,
+                            ally: armyComposition,
+                            unitType: "rare",
+                            magicItemsArmy,
+                          }),
                         )}
                     </Expandable>
                   );
-                }
+                },
               )}
             </ul>
           </>
         )}
         {type === "mercenaries" && (
-          <ul>{allMercenaries.map((unit) => getUnit(unit, unit.army))}</ul>
+          <ul>
+            {allMercenaries.map((unit) => getUnit({ unit, ally: unit.army }))}
+          </ul>
         )}
         {type !== "allies" && type !== "mercenaries" && (
-          <ul>{army[type].map((unit) => !unit.detachment && getUnit(unit))}</ul>
+          <ul>
+            {army[type].map((unit) => !unit.detachment && getUnit({ unit }))}
+          </ul>
+        )}
+        {validFavorites.length > 0 && (
+          <>
+            <h2 className="add__favorites-headline">
+              <FormattedMessage id="add.favorites" />
+            </h2>
+            <ul className="add__favorites-list">
+              {validFavorites.map((unit) =>
+                getUnit({ unit, deleteButton: true }),
+              )}
+            </ul>
+          </>
         )}
       </MainComponent>
     </>

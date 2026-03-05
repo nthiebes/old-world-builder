@@ -6,7 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import * as Sentry from "@sentry/react";
 
 import reportWebVitals from "./reportWebVitals";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { App } from "./App";
 import store from "./store";
 
@@ -24,15 +24,15 @@ if (process.env.NODE_ENV !== "development") {
     dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
     integrations: [],
     environment: process.env.NODE_ENV,
-    release: `owb@${process.env.REACT_APP_VERSION}`,
+    release: `owb@${import.meta.env.VITE_VERSION}`,
   });
 }
 
 const metaDescription = {
   de: "Armeebauer für Warhammer: The Old World.",
   en: "Army builder for Warhammer: The Old World.",
-  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World'.",
-  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World.",
+  fr: "Un créateur de liste d'armée pour 'Warhammer: The Old World'.",
+  es: "Creador de listas de ejército para Warhammer: The Old World.",
   it: "Costruttore di eserciti per Warhammer: The Old World.",
   pl: "Konstruktor armii dla Warhammer: The Old World.",
   cn: "《战锤：旧世界》的军队建造者。",
@@ -80,6 +80,22 @@ if (language === "de") {
   messages = English;
 }
 
+const darkColorScheme = window.matchMedia(
+  "(prefers-color-scheme: dark)",
+).matches;
+const localStorageColorScheme = JSON.parse(
+  localStorage.getItem("owb.settings"),
+)?.colorScheme;
+let colorScheme;
+
+if (localStorageColorScheme === "auto" || !localStorageColorScheme) {
+  colorScheme = darkColorScheme ? "dark" : "light";
+} else {
+  colorScheme = localStorageColorScheme;
+}
+
+document.documentElement.classList.add(colorScheme);
+
 ReactDOM.render(
   <IntlProvider locale={locale} messages={messages}>
     <ReduxProvider store={store}>
@@ -90,7 +106,7 @@ ReactDOM.render(
       </React.StrictMode>
     </ReduxProvider>
   </IntlProvider>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -98,4 +114,9 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register();
+navigator.serviceWorker.getRegistrations().then((registrations) => {
+  for (const registration of registrations) {
+    registration.unregister();
+  }
+});

@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+
+import { editUnit } from "../../state/lists";
 
 import { Button } from "../button";
 import { LocalizedRuleLink, RuleWithIcon } from "../rules-index";
@@ -22,15 +26,21 @@ export const GeneratedSpells = ({
   maxGeneratedSpellCount,
   showPageNumbers,
   maxSignatureSpells = 1,
+  unitId,
+  type,
+  generatedSpells: initialGeneratedSpells,
 }) => {
   const intl = useIntl();
-  const [generatedSpells, setGeneratedSpells] = useState(
-    Object.keys(availableLoresWithSpells).reduce(
-      (initialState, loreId) => ({ ...initialState, [loreId]: [] }),
-      {},
-    ),
-  );
+  const dispatch = useDispatch();
+  const { listId } = useParams();
   const [showGenerationList, setShowGenerationList] = useState(false);
+  const [generatedSpells, setGeneratedSpells] = useState(
+    initialGeneratedSpells ||
+      Object.keys(availableLoresWithSpells).reduce(
+        (initialState, loreId) => ({ ...initialState, [loreId]: [] }),
+        {},
+      ),
+  );
 
   const handleSpellSelectionChange = (loreId, spellId, selected) => {
     if (selected) {
@@ -65,6 +75,19 @@ export const GeneratedSpells = ({
       }));
     }
   };
+
+  useEffect(() => {
+    if ((listId, type, unitId)) {
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          generatedSpells,
+        }),
+      );
+    }
+  }, [generatedSpells, dispatch, listId, type, unitId]);
 
   let generatedSpellCount = 0;
   let signatureSpellsGenerated = 0;

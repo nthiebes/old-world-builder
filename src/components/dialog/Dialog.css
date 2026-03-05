@@ -11,15 +11,30 @@
   min-width: 20rem;
   background: linear-gradient(
     90deg,
-    var(--color-background) 0%,
+    rgb(243, 222, 191) 0%,
     rgba(254, 245, 230, 1) 50%,
-    var(--color-background) 100%
+    rgb(243, 222, 191) 100%
   );
   border: 2px solid var(--color-list);
 }
 
+.dark .dialog {
+  background: #111;
+  border-color: #999;
+}
+
+.dark label {
+  color: var(--color-font);
+}
+
 .dialog__content {
   padding: 2.5rem 1rem 1rem 1rem;
+}
+
+.dialog__content--no-close {
+  padding-top: 1rem;
+  text-align: center;
+  width: 20rem;
 }
 
 .dialog::backdrop {

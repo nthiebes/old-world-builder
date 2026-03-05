@@ -31,7 +31,7 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
           "main",
           isDesktop ? "main--desktop" : "main--mobile",
           compact && "main--compact",
-          className
+          className,
         )}
       >
         {children}
@@ -45,6 +45,9 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             </Link>
             <Link to="/help">
               <FormattedMessage id="footer.help" />
+            </Link>
+            <Link to="/settings">
+              <FormattedMessage id="footer.settings" />
             </Link>
             <InstallPWA />
             <Link to="/changelog">

@@ -3479,6 +3479,7 @@
       },
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "ignoreNoDetachment": true,
       "command": [
         {
           "name_en": "Boss (champion)",
@@ -5541,17 +5542,24 @@
       "name_pl": "Bonegrinder Giant",
       "id": "bonegrinder-giant",
       "army": "orc-and-goblin-tribes",
+      "armyComposition": {
+        "renegade-crowns": {
+          "notes": {
+            "name_en": ""
+          }
+        }
+      },
       "points": 300,
       "command": [],
       "equipment": [
         {
-          "name_en": "Bonegrinders Giant's club",
+          "name_en": "Bonegrinder Giant's club",
           "name_cn": "碾骨者巨人大棒",
           "name_de": "Knochenmalmer-Riesenkeule",
-          "name_es": "Bonegrinders Giant's club",
+          "name_es": "Bonegrinder Giant's club",
           "name_fr": "Massue de Géant Broyeur d’Os",
-          "name_it": "Bonegrinders Giant's club",
-          "name_pl": "Bonegrinders Giant's club",
+          "name_it": "Bonegrinder Giant's club",
+          "name_pl": "Bonegrinder Giant's club",
           "points": 0,
           "active": true
         }

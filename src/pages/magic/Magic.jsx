@@ -18,7 +18,6 @@ import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 import { setItems } from "../../state/items";
 import { editUnit } from "../../state/lists";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList } from "../../utils/list";
 import { equalsOrIncludes, namesForSpread } from "../../utils/string";
 import { getUnitName, getUnitOptionNotes } from "../../utils/unit";
 import { getGameSystems } from "../../utils/game-systems";
@@ -73,11 +72,13 @@ export const isAllowedShield = (unit, armyComposition) => {
         option.name_en.toLowerCase().includes("shield"),
       )) ||
     // Renegade rules allow Ironfist to act like a shield for magic shield eligibility
-    (armyComposition?.includes("renegade") && unit.equipment &&
+    (armyComposition?.includes("renegade") &&
+      unit.equipment &&
       unit.equipment.some((option) =>
         option.name_en.toLowerCase().includes("ironfist"),
       )) ||
-    (armyComposition?.includes("renegade") && unit.options &&
+    (armyComposition?.includes("renegade") &&
+      unit.options &&
       unit.options.some((option) =>
         option.name_en.toLowerCase().includes("ironfist"),
       )) ||
@@ -119,6 +120,8 @@ export const notEnoughPointsRemaining = (
   return maxMagicPoints && magicItem.points > unitPointsRemaining;
 };
 
+let magicDataFetching = false;
+
 export const Magic = ({ isMobile }) => {
   let prevItemType, isFirstItemType;
   const MainComponent = isMobile ? Main : Fragment;
@@ -134,6 +137,7 @@ export const Magic = ({ isMobile }) => {
   const unit = units && units.find(({ id }) => id === unitId);
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
+  const game = gameSystems.find((game) => game.id === list?.game);
   let army =
     list &&
     gameSystems
@@ -385,10 +389,6 @@ export const Magic = ({ isMobile }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
-
-  useEffect(() => {
     if (unit && list && unitId) {
       let items = (unit?.items && unit.items[group || 0]?.selected) || [];
       if (command) {
@@ -411,14 +411,18 @@ export const Magic = ({ isMobile }) => {
   }, [unit, list, unitId, command]);
 
   useEffect(() => {
-    army &&
-      list &&
-      unit &&
-      !items &&
+    if (army && list && unit && !items && !magicDataFetching) {
+      magicDataFetching = true;
+
       fetcher({
-        url: "games/the-old-world/magic-items",
+        url: game.magicItems || "games/the-old-world/magic-items",
+        baseUrl: game.magicItems ? "" : undefined,
+        appendJson: Boolean(!game.magicItems),
+        version: game.version,
         onSuccess: (data) => {
           let itemCategories = army.items;
+
+          magicDataFetching = false;
 
           if (unit.magicItemsArmy) {
             itemCategories = itemCategories.filter(
@@ -440,7 +444,8 @@ export const Magic = ({ isMobile }) => {
           dispatch(setItems(updateIds(allItems)));
         },
       });
-  }, [army, list, unit, items, dispatch]);
+    }
+  }, [army, game, list, unit, items, dispatch]);
 
   if (!unit || !army || !items) {
     if (isMobile) {
@@ -506,15 +511,13 @@ export const Magic = ({ isMobile }) => {
               !isChecked &&
               // Sometimes there is no limit (often for magic banners),
               // otherwise we need to check if the unit has enough points left.
-              (
-                notEnoughPointsRemaining(
-                  maxMagicPoints,
-                  magicItem,
-                  unitPointsRemaining,
-                ) ||
+              (notEnoughPointsRemaining(
+                maxMagicPoints,
+                magicItem,
+                unitPointsRemaining,
+              ) ||
                 isTypeLimitReached ||
-                isDisallowedShield(magicItem, unit, list.armyComposition)
-              )
+                isDisallowedShield(magicItem, unit, list.armyComposition))
             }
           />
           <label

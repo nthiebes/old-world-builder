@@ -18,7 +18,8 @@ import { throttle } from "../../utils/throttle";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { validateList } from "../../utils/validation";
-import { removeFromLocalList, updateLocalList } from "../../utils/list";
+import { removeFromLocalList } from "../../utils/list";
+import { getGameSystems } from "../../utils/game-systems";
 import { deleteList, moveUnit } from "../../state/lists";
 import { setErrors } from "../../state/errors";
 
@@ -35,10 +36,12 @@ export const Editor = ({ isMobile }) => {
   const location = useLocation();
   const errors = useSelector((state) => state.errors);
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
+  const gameSystems = getGameSystems();
+  const game = gameSystems.find((game) => game.id === list?.game);
 
-  const handleDeleteClick = (event) => {
+  const handleCancel = (event) => {
     event.preventDefault();
     setIsDialogOpen(false);
   };
@@ -70,11 +73,9 @@ export const Editor = ({ isMobile }) => {
             list,
             language,
             intl,
-          })
-        )
+          }),
+        ),
       );
-
-      updateLocalList(list);
     }
   }, [list, dispatch, language, intl]);
 
@@ -185,10 +186,10 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
-        id: "misc.gameView",
+        id: "misc.delete",
       }),
-      icon: "shield",
-      to: `/game-view/${listId}`,
+      icon: "delete",
+      callback: () => setIsDialogOpen(true),
     },
     {
       name: intl.formatMessage({
@@ -206,10 +207,10 @@ export const Editor = ({ isMobile }) => {
     },
     {
       name: intl.formatMessage({
-        id: "misc.delete",
+        id: "misc.gameView",
       }),
-      icon: "delete",
-      callback: () => setIsDialogOpen(true),
+      icon: "shield",
+      to: `/game-view/${listId}`,
     },
   ];
 
@@ -231,7 +232,7 @@ export const Editor = ({ isMobile }) => {
         <div className="editor__delete-dialog">
           <Button
             type="text"
-            onClick={handleDeleteClick}
+            onClick={handleCancel}
             icon="close"
             spaceTop
             color="dark"
@@ -259,7 +260,7 @@ export const Editor = ({ isMobile }) => {
               <span
                 className={classNames(
                   "magic__header-points",
-                  allPoints > list.points && "magic__header-points--error"
+                  allPoints > list.points && "magic__header-points--error",
                 )}
               >
                 {allPoints}&nbsp;
@@ -286,7 +287,7 @@ export const Editor = ({ isMobile }) => {
                 <span
                   className={classNames(
                     "magic__header-points",
-                    allPoints > list.points && "magic__header-points--error"
+                    allPoints > list.points && "magic__header-points--error",
                   )}
                 >
                   {allPoints}&nbsp;
@@ -781,7 +782,7 @@ export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
         listId,
         type,
         ...indexes,
-      })
+      }),
     );
 
   return (
@@ -803,7 +804,7 @@ export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
                 { ...unit, type },
                 {
                   armyComposition,
-                }
+                },
               )} ${intl.formatMessage({
                 id: "app.points",
               })}`}</i>

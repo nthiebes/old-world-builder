@@ -26,6 +26,9 @@ export const Button = ({
   size,
   download,
   value,
+  showLabelRight,
+  autoHeight,
+  showLabelLeft,
 }) => {
   const Component = to || href ? (to ? Link : "a") : "button";
   const buttonProps = {};
@@ -49,8 +52,9 @@ export const Button = ({
         fullWidth && "button--fullWidth",
         centered && "button--centered",
         disabled && "button--disabled",
+        autoHeight && "button--autoHeight",
         `button--${size}`,
-        className
+        className,
       )}
       onClick={onClick}
       to={to}
@@ -62,13 +66,19 @@ export const Button = ({
       value={value}
       {...buttonProps}
     >
+      {showLabelLeft && <span className="button__label--left">{label}</span>}
       {icon && (
         <Icon
-          className={classNames(children && "button__icon")}
+          className={classNames(
+            children && "button__icon",
+            icon === "sync" && "button__icon--syncing",
+            icon === "spinner" && "button__icon--spinning",
+          )}
           symbol={icon}
         />
       )}
       {children && children}
+      {showLabelRight && <span className="button__label--right">{label}</span>}
     </Component>
   );
 };

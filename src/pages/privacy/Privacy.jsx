@@ -58,7 +58,7 @@ export const Privacy = () => {
           the app:
         </p>
         <ul>
-          <li>
+          {/* <li>
             <a
               href="https://www.google.com/policies/privacy/"
               target="_blank"
@@ -67,6 +67,16 @@ export const Privacy = () => {
               Google Play Services
             </a>{" "}
             (Android App)
+          </li> */}
+          <li>
+            <a
+              href="https://www.dropbox.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dropbox
+            </a>{" "}
+            (file storage and synchronization)
           </li>
           <li>
             <a
@@ -178,7 +188,7 @@ export const Privacy = () => {
           notify you of any changes by posting the new Privacy Policy on this
           page.
         </p>
-        <p>This policy is effective as of 2024-01-04.</p>
+        <p>This policy is effective as of 2026-03-01.</p>
 
         <h3>Contact Us</h3>
         <p>

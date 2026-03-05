@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { editUnit } from "../../state/lists";
-import { updateLocalList } from "../../utils/list";
 import { useLanguage } from "../../utils/useLanguage";
 
 import "./Rename.css";
@@ -19,7 +18,7 @@ export const Rename = ({ isMobile }) => {
   const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
@@ -38,17 +37,13 @@ export const Rename = ({ isMobile }) => {
         type,
         unitId,
         name: event.target.value,
-      })
+      }),
     );
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
-  useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
 
   if (!list) {
     return (
