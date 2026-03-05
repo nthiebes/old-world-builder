@@ -81,8 +81,8 @@ export const validateList = ({ list, language, intl }) => {
       );
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
-  // The hierophant must be one of the liche priests with the highest leadership
-  let highestLichePriestLeadership = 0;
+  // The hierophant must be one of the liche priests with the highest wizard level
+  let highestLichePriestLevel = 0;
 
   if (list?.characters?.length) {
     list.characters.forEach((unit) => {
@@ -108,7 +108,7 @@ export const validateList = ({ list, language, intl }) => {
         }
       }
 
-      // Highest liche priest leadership
+      // Highest liche priest level
       if (
         unit.command &&
         unit.command.find(
@@ -118,10 +118,14 @@ export const validateList = ({ list, language, intl }) => {
               equalsOrIncludes(command.armyComposition, list.armyComposition)),
         )
       ) {
-        const leadership = getUnitLeadership(unit.name_en);
-
-        if (leadership && leadership > highestLichePriestLeadership) {
-          highestLichePriestLeadership = leadership;
+        const wizardLevel = getWizardLevels(unit).lastIndexOf(1);
+        if (wizardLevel && wizardLevel > highestLichePriestLevel) {
+          if (unit.name_en === "Settra the Imperishable") {
+            // Settra is always the Hierophant
+            highestLichePriestLevel = 6;
+          } else {
+            highestLichePriestLevel = wizardLevel;
+          }
         }
       }
     });
@@ -255,15 +259,17 @@ export const validateList = ({ list, language, intl }) => {
       section: "characters",
     });
 
-  // Hierophant doesn't have highest leadership
-  const hierophantLeadership =
-    hierophants.length > 0 && getUnitLeadership(hierophants[0].name_en);
+  // Hierophant doesn't have highest wizard level
+  console.log(hierophants);
+  const hierophantLevel =
+    hierophants.length > 0 && 
+    (hierophants[0].name_en === "Settra the Imperishable" ? 6 : getWizardLevels(hierophants[0]).lastIndexOf(1));
 
   hierophants.length > 0 &&
-    hierophantLeadership &&
-    hierophantLeadership < highestLichePriestLeadership &&
+    hierophantLevel &&
+    hierophantLevel < highestLichePriestLevel &&
     errors.push({
-      message: "misc.error.hierophantLeadership",
+      message: "misc.error.hierophantLevel",
       section: "characters",
     });
 
