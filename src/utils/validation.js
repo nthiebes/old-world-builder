@@ -120,12 +120,8 @@ export const validateList = ({ list, language, intl }) => {
       ) {
         const wizardLevel = getWizardLevels(unit).lastIndexOf(1);
         if (wizardLevel && wizardLevel > highestLichePriestLevel) {
-          if (unit.name_en === "Settra the Imperishable") {
-            // Settra is always the Hierophant
-            highestLichePriestLevel = 6;
-          } else {
-            highestLichePriestLevel = wizardLevel;
-          }
+          // Settra is always the Hierophant
+          highestLichePriestLevel = unit.name_en === "Settra the Imperishable" ? 6 : wizardLevel;
         }
       }
     });
