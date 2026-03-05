@@ -74,9 +74,13 @@ export const getUnitPoints = (unit, settings) => {
       if (option.stackable) {
         unitPoints +=
           (option.stackableCount || option.minimum || 0) * option.points;
-      } else if (option.active && option.perModel) {
+      } else if ((option.active || option.alwaysActive) && option.perModel) {
         unitPoints += (unit.strength || 1) * option.points;
-      } else if (option.active && option.options && option.options.length > 0) {
+      } else if (
+        (option.active || option.alwaysActive) &&
+        option.options &&
+        option.options.length > 0
+      ) {
         unitPoints += option.points;
         option.options.forEach((subOption) => {
           if (subOption.active) {

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,6 +17,7 @@ import { NumberInput } from "../../components/number-input";
 import { Icon } from "../../components/icon";
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { Stats } from "../../components/stats";
 import {
   RulesIndex,
   RulesLinksText,
@@ -28,7 +28,6 @@ import { nameMap } from "../magic";
 import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
 import { namesForSpread } from "../../utils/string";
@@ -37,10 +36,12 @@ import {
   getUnitOptionNotes,
   unitHasItem,
   isWizard,
+  getStats,
 } from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
 import "./Unit.css";
+import { updateSetting } from "../../state/settings";
 
 export const Unit = ({ isMobile, previewData = {} }) => {
   const isPreview = Boolean(previewData?.type);
@@ -57,9 +58,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   );
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
+  const armyData = game?.armies.find((army) => army.id === list.army);
   const units = list ? list[type] : null;
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
+  const settings = useSelector((state) => state.settings);
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
@@ -477,20 +480,35 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       </>
     );
   };
+  const handleSave = () => {
+    const unitToSave = {
+      ...unit,
+      id: `${unit.id.split(".")[0]}.${getRandomId()}`,
+      armyComposition: list?.armyComposition || list?.army,
+      category: type,
+    };
+    const newSettings = {
+      ...settings,
+      favorites: [...settings.favorites, unitToSave],
+    };
+
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    dispatch(
+      updateSetting({
+        favorites: newSettings.favorites,
+      }),
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
-
-  useEffect(() => {
     if (list && !army) {
       const isCustom = game.id !== "the-old-world";
 
-      if (isCustom) {
+      if (isCustom && !list.url) {
         const data = getCustomDatasetData(list.army);
 
         dispatch(
@@ -503,7 +521,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         );
       } else {
         fetcher({
-          url: `games/${list.game}/${list.army}`,
+          url: list.url || `games/${list.game}/${list.army}`,
+          baseUrl: list.url ? "" : undefined,
+          appendJson: Boolean(!list.url),
+          version: armyData.version,
           onSuccess: (data) => {
             dispatch(
               setArmy(
@@ -517,7 +538,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         });
       }
     }
-  }, [list, army, dispatch, game]);
+  }, [list, army, dispatch, game, armyData?.version]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
@@ -558,6 +579,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     },
     {
       name: intl.formatMessage({
+        id: "misc.save",
+      }),
+      icon: "favorite",
+      callback: () => handleSave(unit.id),
+      closeOnClick: true,
+    },
+    {
+      name: intl.formatMessage({
         id: "misc.remove",
       }),
       icon: "delete",
@@ -575,6 +604,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       ?.specialRules || unit.specialRules;
   const listArmyComposition = list?.armyComposition || list?.army;
   const unitArmyComposition = unit.army ? unit.army : listArmyComposition;
+  const stats = unit.profile?.stats || getStats(unit, unitArmyComposition);
 
   return (
     <>
@@ -611,6 +641,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {!isMobile && (
           <Header
             isSection
+            isPreview
             to={isPreview ? "" : `/editor/${listId}`}
             moreButton={isPreview ? null : moreButtons}
             headline={getUnitName({ unit, language })}
@@ -638,6 +669,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             {notes[`name_${language}`] || notes.name_en}
           </p>
         ) : null}
+        {stats && <Stats values={stats} className={classNames("unit__stats", specialRules && 'unit__stats--spaceTop')} />}
         {!unit.minimum &&
           (!lores || (lores && !lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
@@ -1949,6 +1981,43 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           autoComplete="off"
           maxLength="200"
         />
+
+        {unit.profile && (
+          <>
+            <hr />
+            <h2>
+              <FormattedMessage id="unit.customProfile" />
+            </h2>
+            {unit.profile.category && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.category" />:
+                </h3>
+                <p>
+                  <RulesLinksText textObject={unit.profile.category} />
+                </p>
+              </>
+            )}
+            {unit.profile.troopType && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.troopType" />:
+                </h3>
+                <p>
+                  <RulesLinksText textObject={unit.profile.troopType} />
+                </p>
+              </>
+            )}
+            {unit.profile.baseSize && (
+              <>
+                <h3 className="unit__tertiary-headline">
+                  <FormattedMessage id="unit.baseSize" />:
+                </h3>
+                <p>{unit.profile.baseSize}</p>
+              </>
+            )}
+          </>
+        )}
       </MainComponent>
     </>
   );

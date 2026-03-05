@@ -9,7 +9,6 @@ import { NumberInput } from "../../components/number-input";
 import { Select } from "../../components/select";
 import { Icon } from "../../components/icon";
 import { updateList } from "../../state/lists";
-import { updateLocalList } from "../../utils/list";
 import { useLanguage } from "../../utils/useLanguage";
 
 import { nameMap } from "../magic";
@@ -46,7 +45,7 @@ export const EditList = ({ isMobile }) => {
     },
   ];
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
 
   const handlePointsChange = (event) => {
@@ -54,7 +53,7 @@ export const EditList = ({ isMobile }) => {
       updateList({
         listId,
         points: Number(event.target.value),
-      })
+      }),
     );
   };
   const handleNameChange = (event) => {
@@ -62,7 +61,7 @@ export const EditList = ({ isMobile }) => {
       updateList({
         listId,
         name: event.target.value,
-      })
+      }),
     );
   };
   const handleDescriptionChange = (event) => {
@@ -70,7 +69,7 @@ export const EditList = ({ isMobile }) => {
       updateList({
         listId,
         description: event.target.value,
-      })
+      }),
     );
   };
   const handleCompositionRuleChange = (value) => {
@@ -78,13 +77,9 @@ export const EditList = ({ isMobile }) => {
       updateList({
         listId,
         compositionRule: value,
-      })
+      }),
     );
   };
-
-  useEffect(() => {
-    list && updateLocalList(list);
-  }, [list]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

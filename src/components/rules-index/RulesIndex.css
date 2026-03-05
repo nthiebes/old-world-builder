@@ -14,3 +14,8 @@
 .rules-index__iframe--show {
   opacity: 1;
 }
+
+.dark .rules-index__iframe {
+  filter: invert(1) hue-rotate(175deg);
+  background: #eee;
+}

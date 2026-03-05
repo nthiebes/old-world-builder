@@ -18,10 +18,8 @@ export const normalizeRuleName = (string = "") => {
  * and a target string, checks whether the target is equal to the
  * string or is in the array. Useful for armyComposition checks.
  */
-export const equalsOrIncludes = (strOrArray, x) => (
-  x === strOrArray ||
-  (Array.isArray(strOrArray) && strOrArray.includes(x))
-);
+export const equalsOrIncludes = (strOrArray, x) =>
+  x === strOrArray || (Array.isArray(strOrArray) && strOrArray.includes(x));
 
 /**
  * Picks out the various localized names of a unit or item object
@@ -37,10 +35,10 @@ export const namesForSpread = (obj) => ({
   name_pl: obj.name_pl,
 });
 
-/** 
- * Given a list of strings, combines them with commas, 
+/**
+ * Given a list of strings, combines them with commas,
  * except for the last one, which is combined with "or".
- * 
+ *
  * TODO: Localize "or"
  */
 export function joinWithOr(arr) {
@@ -53,11 +51,11 @@ export function joinWithOr(arr) {
   }
 }
 
-/** 
- * Given a list of strings, combines them with commas, 
+/**
+ * Given a list of strings, combines them with commas,
  * except for the last one, which is combined with "and"
  * and no comma.
- * 
+ *
  * TODO: Localize "and"
  */
 export function joinWithAnd(arr) {

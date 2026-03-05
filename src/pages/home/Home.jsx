@@ -216,6 +216,10 @@ export const Home = ({ isMobile }) => {
 
         localStorage.setItem("owb.lists", JSON.stringify(newLists));
         dispatch(setLists(newLists));
+
+        const newSettings = { ...settings, lastChanged: new Date().toString() };
+        dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+        localStorage.setItem("owb.settings", JSON.stringify(newSettings));
       }
     } else {
       let newLists = updateListsFolder(
@@ -224,6 +228,10 @@ export const Home = ({ isMobile }) => {
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));
       dispatch(setLists(newLists));
+
+      const newSettings = { ...settings, lastChanged: new Date().toString() };
+      dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+      localStorage.setItem("owb.settings", JSON.stringify(newSettings));
     }
   };
   const folders = lists.filter((list) => list.type === "folder");
@@ -263,7 +271,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "manual",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "manual" }));
+        dispatch(
+          updateSetting({
+            listSorting: "manual",
+            lastChanged: new Date().toString(),
+          }),
+        );
       },
     },
     {
@@ -277,7 +290,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "faction",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "faction" }));
+        dispatch(
+          updateSetting({
+            listSorting: "faction",
+            lastChanged: new Date().toString(),
+          }),
+        );
       },
     },
     {
@@ -291,7 +309,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "nameAsc",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "nameAsc" }));
+        dispatch(
+          updateSetting({
+            listSorting: "nameAsc",
+            lastChanged: new Date().toString(),
+          }),
+        );
       },
     },
     {
@@ -305,7 +328,12 @@ export const Home = ({ isMobile }) => {
           ...settings,
           listSorting: "nameDesc",
         });
-        dispatch(updateSetting({ key: "listSorting", value: "nameDesc" }));
+        dispatch(
+          updateSetting({
+            listSorting: "nameDesc",
+            lastChanged: new Date().toString(),
+          }),
+        );
       },
     },
   ];
@@ -330,6 +358,10 @@ export const Home = ({ isMobile }) => {
     setActiveMenu(null);
     dispatch(setLists(newLists));
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+
+    const newSettings = { ...settings, lastChanged: new Date().toString() };
+    dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const handleEditConfirm = () => {
     const list = lists.find((list) => list.id === activeMenu);
@@ -341,6 +373,10 @@ export const Home = ({ isMobile }) => {
       ...list,
       name: folderName,
     });
+
+    const newSettings = { ...settings, lastChanged: new Date().toString() };
+    dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const handleNewConfirm = () => {
     const newLists = updateListsFolder([
@@ -355,6 +391,11 @@ export const Home = ({ isMobile }) => {
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
+
+    const newSettings = { ...settings, lastChanged: new Date().toString() };
+    dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+
     setFolderName("");
     setDialogOpen(null);
     window.scrollTo(0, 0);
@@ -580,7 +621,7 @@ export const Home = ({ isMobile }) => {
           </section>
         )}
 
-        <hr className="home__divider" />
+        {lists.length > 0 ? <hr className="home__divider" /> : null}
 
         {listsWithoutFolders.length === 0 && (
           <>

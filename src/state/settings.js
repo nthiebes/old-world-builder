@@ -3,24 +3,32 @@ import { createSlice } from "@reduxjs/toolkit";
 export const settingsSlice = createSlice({
   name: "settings",
   initialState: {
-    darkMode: false,
+    colorScheme: "auto",
     showPoints: true,
     showSpecialRules: true,
     showPageNumbers: false,
     showVictoryPoints: false,
     showCustomNotes: false,
     showGeneratedSpells: true,
-    showStats: true,
     listSorting: "manual",
+    showStats: true,
+    lastChanged: null,
+    lastSynced: null,
+    autoSync: false,
+    favorites: [],
   },
   reducers: {
-    setSettings: (state, { payload }) => {
-      return payload || settingsSlice.initialState;
+    setSettings: (_, { payload }) => {
+      return payload
+        ? { ...settingsSlice.getInitialState(), ...payload }
+        : settingsSlice.getInitialState();
     },
-    updateSetting: (state, { payload }) => ({
-      ...state,
-      [payload.key]: payload.value,
-    }),
+    updateSetting: (state, { payload }) => {
+      return {
+        ...state,
+        ...payload,
+      };
+    },
   },
 });
 

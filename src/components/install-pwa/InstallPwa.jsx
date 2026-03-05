@@ -10,7 +10,7 @@ export const InstallPWA = () => {
   const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
   const [showPrompt, setShowPrompt] = useState(
-    localStorage.getItem("owb.pwa") !== "true"
+    localStorage.getItem("owb.pwa") !== "true",
   );
   const handleClick = () => {
     if (!promptInstall) {

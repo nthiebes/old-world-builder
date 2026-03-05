@@ -131,8 +131,39 @@
   max-width: 25rem;
 }
 
+.button--autoHeight {
+  height: auto;
+  white-space: unset;
+}
+
+@keyframes sync {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button__icon {
   margin-right: 0.5rem;
+}
+
+.button__icon--spinning {
+  animation: spin 1s linear infinite;
+}
+
+.button__icon--syncing {
+  animation: sync 1s linear infinite;
 }
 
 .button--text.button--dark {
@@ -148,4 +179,23 @@
 .button--text.button--dark:focus,
 .button--text.button--dark:active {
   color: var(--color-button);
+}
+
+.button__label--right {
+  width: 8rem;
+  margin-left: 0.5rem;
+  text-align: left;
+}
+
+.button__label--left {
+  width: 8rem;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+
+@media (max-width: 599px) {
+  .button__label--right,
+  .button__label--left {
+    display: none;
+  }
 }

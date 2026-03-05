@@ -109,7 +109,7 @@
   background: linear-gradient(
     90deg,
     var(--color-list) 0%,
-    rgba(232, 221, 203, 1) 50%,
+    var(--color-list-lighter) 50%,
     var(--color-list) 100%
   );
 }
@@ -256,4 +256,17 @@
 
 .unit__option-note--detachment {
   margin: 0.3rem 0 0.5rem 0;
+}
+
+.unit__tertiary-headline {
+  margin-top: 1rem;
+}
+
+.unit__stats {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.unit__stats--spaceTop {
+  margin-top: 1rem;
 }

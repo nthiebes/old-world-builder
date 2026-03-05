@@ -149,9 +149,7 @@ export const GameView = () => {
           ...settings,
           showSpecialRules: !showSpecialRules,
         });
-        dispatch(
-          updateSetting({ key: "showSpecialRules", value: !showSpecialRules }),
-        );
+        dispatch(updateSetting({ showSpecialRules: !showSpecialRules }));
       },
     },
     {
@@ -165,7 +163,7 @@ export const GameView = () => {
           ...settings,
           showStats: !showStats,
         });
-        dispatch(updateSetting({ key: "showStats", value: !showStats }));
+        dispatch(updateSetting({ showStats: !showStats }));
       },
     },
     {
@@ -179,7 +177,7 @@ export const GameView = () => {
           ...settings,
           showPoints: !showPoints,
         });
-        dispatch(updateSetting({ key: "showPoints", value: !showPoints }));
+        dispatch(updateSetting({ showPoints: !showPoints }));
       },
     },
     {
@@ -193,9 +191,7 @@ export const GameView = () => {
           ...settings,
           showPageNumbers: !showPageNumbers,
         });
-        dispatch(
-          updateSetting({ key: "showPageNumbers", value: !showPageNumbers }),
-        );
+        dispatch(updateSetting({ showPageNumbers: !showPageNumbers }));
       },
     },
     {
@@ -209,9 +205,7 @@ export const GameView = () => {
           ...settings,
           showCustomNotes: !showCustomNotes,
         });
-        dispatch(
-          updateSetting({ key: "showCustomNotes", value: !showCustomNotes }),
-        );
+        dispatch(updateSetting({ showCustomNotes: !showCustomNotes }));
       },
     },
     {
@@ -227,8 +221,7 @@ export const GameView = () => {
         });
         dispatch(
           updateSetting({
-            key: "showGeneratedSpells",
-            value: !showGeneratedSpells,
+            showGeneratedSpells: !showGeneratedSpells,
           }),
         );
       },
@@ -246,8 +239,7 @@ export const GameView = () => {
         });
         dispatch(
           updateSetting({
-            key: "showVictoryPoints",
-            value: !showVictoryPoints,
+            showVictoryPoints: !showVictoryPoints,
           }),
         );
       },
@@ -259,8 +251,8 @@ export const GameView = () => {
     return (
       <ul>
         {units.map((unit, index) => {
-          const stats = getStats(unit, armyComposition);
-          //TODO update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
+          const stats = unit.profile?.stats || getStats(unit, armyComposition);
+          // TODO: update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
           const specialRules =
             unit.armyComposition?.[armyComposition]?.specialRules ||
@@ -387,6 +379,9 @@ export const GameView = () => {
                       maxGeneratedSpellCount={unitGeneratedSpellCount}
                       showPageNumbers={showPageNumbers}
                       maxSignatureSpells={unit.maxSignatureSpells}
+                      unitId={unit.id}
+                      type={type}
+                      generatedSpells={unit.generatedSpells}
                     />
                   )}
                   {showCustomNotes && (

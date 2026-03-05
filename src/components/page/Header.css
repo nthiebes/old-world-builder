@@ -42,7 +42,7 @@
 }
 
 .column-header .header__name-text {
-  color: var(--color-header);
+  color: var(--color-headline);
 }
 
 .column-header .header__points {
@@ -134,6 +134,16 @@
 
 .header__empty-icon {
   width: 54px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .header__empty-icon {
+    width: calc(10.5rem + 54px);
+  }
+  .header__empty-icon--small {
+    width: 54px;
+  }
 }
 
 .header__checkbox {
@@ -147,4 +157,20 @@
   padding: 0 1rem;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+.header__cloud-icon {
+  margin-left: 0.5rem;
+  height: auto;
+  padding: 0;
+  z-index: 3;
+}
+
+.header__sync-conflict-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__sync-error {
+  margin-left: 5px;
 }
