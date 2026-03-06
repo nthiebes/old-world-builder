@@ -256,7 +256,6 @@ export const validateList = ({ list, language, intl }) => {
     });
 
   // Hierophant doesn't have highest wizard level
-  console.log(hierophants);
   const hierophantLevel =
     hierophants.length > 0 && 
     (hierophants[0].name_en === "Settra the Imperishable" ? 6 : getWizardLevels(hierophants[0]).lastIndexOf(1));
