@@ -1,3 +1,4 @@
+import { expect, test, describe } from "vitest";
 import { normalizeRuleName, equalsOrIncludes } from "./string";
 
 describe("normalizeRuleName", () => {
