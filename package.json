@@ -1,6 +1,6 @@
 {
   "name": "old-world-builder",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "author": "Nico Thiebes",
   "homepage": "https://old-world-builder.com",
   "private": true,
@@ -38,8 +38,13 @@
     "workbox-streams": "^5.1.4"
   },
   "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/json": "^1.0.1",
+    "@eslint/markdown": "^7.5.1",
     "@vitejs/plugin-react": "^5.1.4",
-    "eslint": "^7.11.0",
+    "eslint": "^10.0.2",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.4.0",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   },
@@ -48,18 +53,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "predeploy": "npm run test && npm run build",
+    "predeploy": "yarn test --run && yarn build",
     "deploy": "gh-pages -d build",
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project old-world-builder ./build && sentry-cli sourcemaps upload --org booky --project old-world-builder ./build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "globals": {
-      "Dropbox": "writable"
-    }
   },
   "browserslist": {
     "production": [

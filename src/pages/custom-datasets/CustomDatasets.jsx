@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState, createRef } from "react";
 import { useLocation } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
