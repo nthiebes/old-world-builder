@@ -121,7 +121,8 @@ export const validateList = ({ list, language, intl }) => {
         const wizardLevel = getWizardLevels(unit).lastIndexOf(1);
         if (wizardLevel && wizardLevel > highestLichePriestLevel) {
           // Settra is always the Hierophant
-          highestLichePriestLevel = unit.name_en === "Settra the Imperishable" ? 6 : wizardLevel;
+          highestLichePriestLevel =
+            unit.name_en === "Settra the Imperishable" ? 6 : wizardLevel;
         }
       }
     });
@@ -257,8 +258,10 @@ export const validateList = ({ list, language, intl }) => {
 
   // Hierophant doesn't have highest wizard level
   const hierophantLevel =
-    hierophants.length > 0 && 
-    (hierophants[0].name_en === "Settra the Imperishable" ? 6 : getWizardLevels(hierophants[0]).lastIndexOf(1));
+    hierophants.length > 0 &&
+    (hierophants[0].name_en === "Settra the Imperishable"
+      ? 6
+      : getWizardLevels(hierophants[0]).lastIndexOf(1));
 
   hierophants.length > 0 &&
     hierophantLevel &&
@@ -851,7 +854,7 @@ export const validateList = ({ list, language, intl }) => {
           ruleUnit.requiresCommand.unit === character.id.split(".")[0],
       );
       const characterWithCommand = charactersInList.find((character) =>
-        character.commands.find(
+        character.command.find(
           (command) =>
             command.id === ruleUnit.requiresCommand.id && command.active,
         ),
