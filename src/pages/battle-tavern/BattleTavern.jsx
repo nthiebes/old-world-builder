@@ -1,10 +1,15 @@
+import React from "react";
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
+import classNames from "classnames";
 
 import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
+import { Icon } from "../../components/icon";
+
+import "./BattleTavern.css";
 
 const DEFAULT_PORT = 47823;
 
@@ -47,17 +52,25 @@ export const BattleTavern = () => {
   useEffect(() => {
     const onMessage = (event) => {
       const msg = event.data;
+
       if (!msg || !msg.status) return;
+
       setSending(false);
+
       if (msg.status === "success") {
-        showResult(true, msg.message || intl.formatMessage({ id: "battleTavern.success" }));
+        showResult(
+          true,
+          msg.message || intl.formatMessage({ id: "battleTavern.success" }),
+        );
       } else if (msg.status === "error") {
-        showResult(false, msg.message || intl.formatMessage({ id: "battleTavern.error" }));
+        showResult(
+          false,
+          msg.message || intl.formatMessage({ id: "battleTavern.error" }),
+        );
       }
     };
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const showResult = useCallback((success, message) => {
@@ -78,7 +91,7 @@ export const BattleTavern = () => {
     const popup = window.open(
       "about:blank",
       "bt_import",
-      "width=1,height=1,left=-100,top=-100"
+      "width=1,height=1,left=-100,top=-100",
     );
 
     const form = document.createElement("form");
@@ -105,7 +118,7 @@ export const BattleTavern = () => {
         if (current) {
           showResult(
             false,
-            intl.formatMessage({ id: "battleTavern.unreachable" })
+            intl.formatMessage({ id: "battleTavern.unreachable" }),
           );
           return false;
         }
@@ -120,9 +133,15 @@ export const BattleTavern = () => {
     <>
       <Helmet>
         <title>
-          {`Old World Builder | ${intl.formatMessage({ id: "battleTavern.title" })}`}
+          {`Old World Builder | ${intl.formatMessage({
+            id: "battleTavern.title",
+          })}`}
         </title>
-        <link rel="canonical" href="https://old-world-builder.com/battletavern" />
+        <meta name="robots" content="noindex" />
+        <link
+          rel="canonical"
+          href="https://old-world-builder.com/battletavern"
+        />
       </Helmet>
 
       <Header headline="Old World Builder" hasMainNavigation hasHomeButton />
@@ -151,30 +170,35 @@ export const BattleTavern = () => {
           </p>
         )}
 
-        {result && (
-          <p>
-            <b>{result.message}</b>
-          </p>
-        )}
-
         <Button
           centered
           size="large"
           spaceTop
           onClick={handleSend}
           disabled={!hasLists || sending}
+          icon="send"
         >
           {sending
             ? intl.formatMessage({ id: "battleTavern.sending" })
             : intl.formatMessage({ id: "battleTavern.send" })}
         </Button>
+        {result && (
+          <p
+            className={classNames(
+              result.success
+                ? "battle-tavern__success"
+                : "battle-tavern__error",
+            )}
+          >
+            {result.message}
+          </p>
+        )}
 
         <hr />
 
-        <p>
-          <i>
-            <FormattedMessage id="battleTavern.footer" />
-          </i>
+        <p className="unit__notes">
+          <Icon symbol="error" className="unit__notes-icon" />
+          <FormattedMessage id="battleTavern.footer" />
         </p>
       </Main>
     </>
