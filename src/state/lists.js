@@ -53,7 +53,7 @@ export const listsSlice = createSlice({
       const { listId, type, unit } = payload;
       const newUnit = {
         ...unit,
-        strength: unit.minimum,
+        strength: unit.strength || unit.minimum,
       };
 
       return state.map((list) => {
