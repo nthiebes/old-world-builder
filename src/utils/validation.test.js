@@ -1,6 +1,5 @@
 import { describe, expect, test } from "vitest";
 import { validateList } from "./validation";
-import { rules } from "./rules";
 
 const intl = {
   formatMessage: ({ id }) => id,
@@ -114,6 +113,7 @@ describe("validateList", () => {
   test("adds hierophantLevel when active hierophant has lower wizard level", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
         {
           id: "baron.1",
@@ -188,6 +188,7 @@ describe("validateList", () => {
   test("adds multipleHierophants when more than one active hierophant is selected", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
         {
           id: "baron.1",
@@ -698,6 +699,7 @@ describe("validateList", () => {
   test("applies Settra special hierophant priority level", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
         makeCharacter({
           id: "settra-the-imperishable-the-great-king-of-nehekhara.1",

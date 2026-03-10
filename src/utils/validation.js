@@ -69,7 +69,20 @@ const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
 };
 
 export const validateList = ({ list, language, intl }) => {
-  const errors = [];
+  let errors = [];
+
+  let checks = [
+    oneGeneral,
+    generalLeadership,
+    maxOneBSB,
+  ];
+  if (list?.army === "tomb-kings-of-khemri") {
+    checks.push(hierophantChecks);
+  }
+  for (let check of checks) {
+    errors = errors.concat(check(list, language, intl));
+  }
+
   const generals = !list?.characters?.length
     ? []
     : list.characters.filter(
@@ -79,77 +92,7 @@ export const validateList = ({ list, language, intl }) => {
             (command) => command.active && command.name_en === "General",
           ),
       );
-  // The general must be one of the characters with the highest leadership
-  let highestLeadership = 0;
-  // The hierophant must be one of the liche priests with the highest wizard level
-  let highestLichePriestLevel = 0;
-
-  if (list?.characters?.length) {
-    list.characters.forEach((unit) => {
-      // Highest leadership for general
-      if (
-        unit.command &&
-        unit.command.find(
-          (command) =>
-            command.name_en === "General" &&
-            (!command.armyComposition ||
-              equalsOrIncludes(command.armyComposition, list.armyComposition)),
-        )
-      ) {
-        const unitName =
-          unit.name_en.includes("renegade") &&
-          list.armyComposition?.includes("renegade")
-            ? unit.name_en
-            : unit.name_en.replace(" {renegade}", "");
-        const leadership = getUnitLeadership(unitName);
-
-        if (leadership && leadership > highestLeadership) {
-          highestLeadership = leadership;
-        }
-      }
-
-      // Highest liche priest level
-      if (
-        unit.command &&
-        unit.command.find(
-          (command) =>
-            command.name_en === "The Hierophant" &&
-            (!command.armyComposition ||
-              equalsOrIncludes(command.armyComposition, list.armyComposition)),
-        )
-      ) {
-        const wizardLevel = getWizardLevels(unit).lastIndexOf(1);
-        if (wizardLevel && wizardLevel > highestLichePriestLevel) {
-          // Settra is always the Hierophant
-          highestLichePriestLevel =
-            unit.name_en === "Settra the Imperishable" ? 6 : wizardLevel;
-        }
-      }
-    });
-  }
-
-  const hierophants = !list?.characters?.length
-    ? []
-    : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) => command.active && command.name_en === "The Hierophant",
-          ),
-      );
-
-  const BSBs = !list.characters?.length
-    ? []
-    : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) =>
-              command.active &&
-              command.name_en.includes("Battle Standard Bearer"),
-          ),
-      );
-
+  
   const coreUnits = list?.core?.length
     ? list.core.filter(filterByTroopType).length
     : 0;
@@ -178,8 +121,6 @@ export const validateList = ({ list, language, intl }) => {
         .filter((unit) => unit.unitType !== "characters")
         .filter(filterByTroopType).length
     : 0;
-  const generalsCount = generals.length;
-  const BSBsCount = BSBs.length;
   const nonCharactersCount =
     coreUnits +
     coreUnitsDetachmentCount +
@@ -222,61 +163,6 @@ export const validateList = ({ list, language, intl }) => {
       });
     }
   }
-
-  // No general
-  generalsCount === 0 &&
-    errors.push({
-      message: "misc.error.noGeneral",
-      section: "characters",
-    });
-
-  // Multiple generals
-  generalsCount > 1 &&
-    errors.push({
-      message: "misc.error.multipleGenerals",
-      section: "characters",
-    });
-
-  // Multiple hierophants
-  hierophants.length > 1 &&
-    errors.push({
-      message: "misc.error.multipleHierophants",
-      section: "characters",
-    });
-
-  // General doesn't have highest leadership in the army
-  const unitLeadership =
-    generalsCount === 1 && getUnitLeadership(generals[0].name_en);
-
-  generalsCount === 1 &&
-    unitLeadership &&
-    unitLeadership < highestLeadership &&
-    errors.push({
-      message: "misc.error.generalLeadership",
-      section: "characters",
-    });
-
-  // Hierophant doesn't have highest wizard level
-  const hierophantLevel =
-    hierophants.length > 0 &&
-    (hierophants[0].name_en === "Settra the Imperishable"
-      ? 6
-      : getWizardLevels(hierophants[0]).lastIndexOf(1));
-
-  hierophants.length > 0 &&
-    hierophantLevel &&
-    hierophantLevel < highestLichePriestLevel &&
-    errors.push({
-      message: "misc.error.hierophantLevel",
-      section: "characters",
-    });
-
-  // Multiple BSBs
-  BSBsCount > 1 &&
-    errors.push({
-      message: "misc.error.multipleBSBs",
-      section: "characters",
-    });
 
   // Grand Melee
   if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
@@ -1038,3 +924,158 @@ export const validateList = ({ list, language, intl }) => {
 
   return errors;
 };
+
+const oneGeneral = (list) => {
+  const errors = [];
+  const generals = !list?.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General",
+          ),
+      );
+  if (generals.length < 1) {
+    errors.push({
+      message: "misc.error.noGeneral",
+      section: "characters",
+    });
+  } else if (generals.length > 1) {
+    errors.push({
+      message: "misc.error.multipleGenerals",
+      section: "characters",
+    });
+  }
+  return errors;
+}
+
+const generalLeadership = (list) => {
+  const errors = [];
+  let highestLeadership = 0;
+  const generals = !list?.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General",
+          ),
+      );
+  if (list?.characters?.length) {
+    list.characters.forEach((unit) => {
+      if (
+        unit.command &&
+        unit.command.find(
+          (command) =>
+            command.name_en === "General" &&
+            (!command.armyComposition ||
+              equalsOrIncludes(command.armyComposition, list.armyComposition)),
+        )
+      ) {
+        const unitName =
+          unit.name_en.includes("renegade") &&
+          list.armyComposition?.includes("renegade")
+            ? unit.name_en
+            : unit.name_en.replace(" {renegade}", "");
+        const leadership = getUnitLeadership(unitName);
+
+        if (leadership && leadership > highestLeadership) {
+          highestLeadership = leadership;
+        }
+      }
+    })
+  }
+  if (generals.length === 1) {
+    const unitLeadership = getUnitLeadership(generals[0].name_en);
+    if (unitLeadership && unitLeadership < highestLeadership) {
+      errors.push({
+        message: "misc.error.generalLeadership",
+        section: "characters",
+      });
+    }
+  }
+  return errors;
+}
+
+const maxOneBSB = (list) => {
+  const errors = [];
+  const BSBs = !list.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.active &&
+              command.name_en.includes("Battle Standard Bearer"),
+          ),
+      );
+  if (BSBs.length > 1) {
+    errors.push({
+      message: "misc.error.multipleBSBs",
+      section: "characters",
+    })
+  }
+  return errors;
+}
+
+const hierophantChecks = (list) => {
+  const hierophants = !list?.characters?.length
+    ? []
+    : list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "The Hierophant",
+          ),
+      );
+
+  if (hierophants.length < 1) {
+    return [{
+      message: "misc.error.noHierophant",
+      section: "characters",
+    }];
+  } else if (hierophants.length > 1) {
+    return [{
+      message: "misc.error.multipleHierophants",
+      section: "characters",
+    }];
+  } else {
+    let highestLichePriestLevel = 0;
+    if (list?.characters?.length) {
+      list.characters.forEach((unit) => {
+        if (
+          unit.command &&
+          unit.command.find(
+            (command) =>
+              command.name_en === "The Hierophant" &&
+              (!command.armyComposition ||
+                equalsOrIncludes(command.armyComposition, list.armyComposition)),
+          )
+        ) {
+          const wizardLevel = getWizardLevels(unit).lastIndexOf(1);
+          if (wizardLevel && wizardLevel > highestLichePriestLevel) {
+            // Settra is always the Hierophant
+            highestLichePriestLevel =
+              unit.name_en === "Settra the Imperishable" ? 6 : wizardLevel;
+          }
+        }
+      });
+    }
+
+    const hierophantLevel =
+      (hierophants[0].name_en === "Settra the Imperishable"
+        ? 6
+        : getWizardLevels(hierophants[0]).lastIndexOf(1));
+
+    if (hierophantLevel < highestLichePriestLevel) {
+      return [{
+        message: "misc.error.hierophantLevel",
+        section: "characters",
+      }];
+    } else {
+      return [];
+    }
+  }
+}
