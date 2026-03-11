@@ -76,6 +76,24 @@ export const validateList = ({ list, language, intl }) => {
     generalLeadership,
     maxOneBSB,
   ];
+  if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "characters", "misc.error.grandMelee25"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "core", "misc.error.grandMelee25"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "special", "misc.error.grandMelee25"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.grandMelee25"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.grandMelee25"));
+    checks.push(grandMeleeWizardLimits);
+  }
+  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
+    checks.push(makeMinNonCharacters(2, "misc.error.notEnoughNonCharactersBattleMarch"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "characters", "misc.error.battleMarch25PercentPerCharacter"));
+    checks.push(makeMaxPointsSingleUnit(.35 * list.points, "core", "misc.error.battleMarch35PercentPerCore"));
+    checks.push(makeMaxPointsSingleUnit(.30 * list.points, "special", "misc.error.battleMarch30PercentPerSpecial"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.battleMarch25PercentPerRare"));
+    checks.push(makeMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.battleMarch25PercentPerMercenary"));
+  } else {
+    checks.push(makeMinNonCharacters(3, "misc.error.notEnoughNonCharacters"));
+  }
   if (list?.army === "tomb-kings-of-khemri") {
     checks.push(hierophantChecks);
   }
@@ -92,42 +110,7 @@ export const validateList = ({ list, language, intl }) => {
             (command) => command.active && command.name_en === "General",
           ),
       );
-  
-  const coreUnits = list?.core?.length
-    ? list.core.filter(filterByTroopType).length
-    : 0;
-  let coreUnitsDetachmentCount = 0;
 
-  if (list?.core?.length) {
-    list.core.forEach((unit) => {
-      if (unit.detachments && unit.detachments.length) {
-        coreUnitsDetachmentCount +=
-          unit.detachments.filter(filterByTroopType).length;
-      }
-    });
-  }
-
-  const specialUnits = list?.special?.length
-    ? list.special.filter(filterByTroopType).length
-    : 0;
-  const rareUnits = list?.rare?.length
-    ? list.rare.filter(filterByTroopType).length
-    : 0;
-  const mercUnits = list?.mercenaries?.length
-    ? list.mercenaries.filter(filterByTroopType).length
-    : 0;
-  const allyUnits = list?.allies?.length
-    ? list.allies
-        .filter((unit) => unit.unitType !== "characters")
-        .filter(filterByTroopType).length
-    : 0;
-  const nonCharactersCount =
-    coreUnits +
-    coreUnitsDetachmentCount +
-    specialUnits +
-    rareUnits +
-    mercUnits +
-    allyUnits;
   const characterUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition].characters.units
     : rules["grand-army"].characters.units;
@@ -146,134 +129,6 @@ export const validateList = ({ list, language, intl }) => {
   const mercenariesUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition]?.mercenaries?.units
     : rules["grand-army"]?.mercenaries?.units;
-
-  // Not enough non-character units
-  if (!list.compositionRule || !list.compositionRule.includes("battle-march")) {
-    if (nonCharactersCount < 3) {
-      errors.push({
-        message: "misc.error.notEnoughNonCharacters",
-        section: "global",
-      });
-    }
-  } else {
-    if (nonCharactersCount < 2) {
-      errors.push({
-        message: "misc.error.notEnoughNonCharactersBattleMarch",
-        section: "global",
-      });
-    }
-  }
-
-  // Grand Melee
-  if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
-    const checkFor25Percent = (unit, type) => {
-      const unitPoints = getUnitPoints(
-        { ...unit, type },
-        {
-          armyComposition: list.armyComposition || list.army,
-        },
-      );
-
-      if (unitPoints > list.points / 4) {
-        errors.push({
-          message: "misc.error.grandMelee25",
-          section: type,
-        });
-      }
-    };
-    const level3Max = Math.floor(list.points / 1000);
-    const level4Max = Math.floor(list.points / 2000);
-    let characterWizards = [0, 0, 0, 0, 0];
-    let specialWizards = [0, 0, 0, 0, 0];
-    let rareWizards = [0, 0, 0, 0, 0];
-    let totalWizards = [0, 0, 0, 0, 0];
-
-    list?.characters &&
-      list.characters.forEach((unit) => {
-        checkFor25Percent(unit, "characters");
-        let characterWizard = getWizardLevels(unit);
-        characterWizard.forEach((numberAtThisLevel, level) => {
-          if (numberAtThisLevel > 0) {
-            characterWizards[level] += numberAtThisLevel;
-            totalWizards[level] += numberAtThisLevel;
-          }
-        });
-      });
-    list?.core &&
-      list.core.forEach((unit) => {
-        checkFor25Percent(unit, "core");
-      });
-    list?.special &&
-      list.special.forEach((unit) => {
-        checkFor25Percent(unit, "special");
-        let specialWizard = getWizardLevels(unit);
-        specialWizard.forEach((numberAtThisLevel, level) => {
-          if (numberAtThisLevel > 0) {
-            specialWizards[level] += numberAtThisLevel;
-            totalWizards[level] += numberAtThisLevel;
-          }
-        });
-      });
-    list?.rare &&
-      list.rare.forEach((unit) => {
-        checkFor25Percent(unit, "rare");
-        let rareWizard = getWizardLevels(unit);
-        rareWizard.forEach((numberAtThisLevel, level) => {
-          if (numberAtThisLevel > 0) {
-            rareWizards[level] += numberAtThisLevel;
-            totalWizards[level] += numberAtThisLevel;
-          }
-        });
-      });
-    list?.mercenaries &&
-      list.mercenaries.forEach((unit) => {
-        checkFor25Percent(unit, "mercenaries");
-      });
-    list?.allies &&
-      list.allies.forEach((unit) => {
-        checkFor25Percent(unit, "allies");
-      });
-    if (totalWizards[4] > level4Max) {
-      if (characterWizards[4] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel4",
-          section: "characters",
-        });
-      }
-      if (specialWizards[4] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel4",
-          section: "special",
-        });
-      }
-      if (rareWizards[4] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel4",
-          section: "rare",
-        });
-      }
-    }
-    if (totalWizards[3] > level3Max) {
-      if (characterWizards[3] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel3",
-          section: "characters",
-        });
-      }
-      if (specialWizards[3] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel3",
-          section: "special",
-        });
-      }
-      if (rareWizards[3] > 0) {
-        errors.push({
-          message: "misc.error.grandMeleeLevel3",
-          section: "rare",
-        });
-      }
-    }
-  }
 
   // Combined Arms
   if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
@@ -439,94 +294,6 @@ export const validateList = ({ list, language, intl }) => {
         name: restrictedUnit.name,
       });
     });
-  }
-
-  // Battle March
-  if (list.compositionRule && list.compositionRule.includes("battle-march")) {
-    // Neither player can spend more than 25% of their total points on a single character.
-    list?.characters &&
-      list.characters.forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: "characters" },
-          {
-            armyComposition: list.armyComposition || list.army,
-          },
-        );
-        if (unitPoints > list.points / 4) {
-          errors.push({
-            message: "misc.error.battleMarch25PercentPerCharacter",
-            section: "characters",
-          });
-        }
-      });
-
-    // Neither player can spend more than 35% of their total points on a single core unit.
-    list?.core &&
-      list.core.forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: "core" },
-          {
-            armyComposition: list.armyComposition || list.army,
-            noDetachments: true,
-          },
-        );
-        if (unitPoints > list.points * 0.35) {
-          errors.push({
-            message: "misc.error.battleMarch35PercentPerCore",
-            section: "core",
-          });
-        }
-      });
-    // Neither player can spend more than 30% of their total points on a single special unit.
-    list.special &&
-      list.special.forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: "special" },
-          {
-            armyComposition: list.armyComposition || list.army,
-            noDetachments: true,
-          },
-        );
-        if (unitPoints > list.points * 0.3) {
-          errors.push({
-            message: "misc.error.battleMarch30PercentPerSpecial",
-            section: "special",
-          });
-        }
-      });
-    // Neither player can spend more than 25% of their total points on a single rare or mercenary unit.
-    list.rare &&
-      list.rare.forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: "rare" },
-          {
-            armyComposition: list.armyComposition || list.army,
-            noDetachments: true,
-          },
-        );
-        if (unitPoints > list.points * 0.25) {
-          errors.push({
-            message: "misc.error.battleMarch25PercentPerRare",
-            section: "rare",
-          });
-        }
-      });
-    list.mercenaries &&
-      list.mercenaries.forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: "mercenaries" },
-          {
-            armyComposition: list.armyComposition || list.army,
-            noDetachments: true,
-          },
-        );
-        if (unitPoints > list.points * 0.25) {
-          errors.push({
-            message: "misc.error.battleMarch25PercentPerMercenary",
-            section: "mercenaries",
-          });
-        }
-      });
   }
 
   let used0XUnits = [];
@@ -1078,4 +845,157 @@ const hierophantChecks = (list) => {
       return [];
     }
   }
+}
+
+function makeMinNonCharacters(minNum, errorMsg) {
+  return (list) => {
+    const coreUnits = list?.core?.length
+      ? list.core.filter(filterByTroopType).length
+      : 0;
+    let coreUnitsDetachmentCount = 0;
+
+    if (list?.core?.length) {
+      list.core.forEach((unit) => {
+        if (unit.detachments && unit.detachments.length) {
+          coreUnitsDetachmentCount +=
+            unit.detachments.filter(filterByTroopType).length;
+        }
+      });
+    }
+
+    const specialUnits = list?.special?.length
+      ? list.special.filter(filterByTroopType).length
+      : 0;
+    const rareUnits = list?.rare?.length
+      ? list.rare.filter(filterByTroopType).length
+      : 0;
+    const mercUnits = list?.mercenaries?.length
+      ? list.mercenaries.filter(filterByTroopType).length
+      : 0;
+    const allyUnits = list?.allies?.length
+      ? list.allies
+          .filter((unit) => unit.unitType !== "characters")
+          .filter(filterByTroopType).length
+      : 0;
+    const nonCharactersCount =
+      coreUnits +
+      coreUnitsDetachmentCount +
+      specialUnits +
+      rareUnits +
+      mercUnits +
+      allyUnits;
+    if (nonCharactersCount < minNum) {
+      return [{
+        message: errorMsg,
+        section: "global",
+      }];
+    } else {
+      return [];
+    }
+  }
+}
+
+function makeMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
+  return (list) => {
+    const errors = [];
+    list[unitCategory] &&
+      list[unitCategory].forEach((unit) => {
+        const unitPoints = getUnitPoints(
+          { ...unit, type: unitCategory },
+          {
+            armyComposition: list.armyComposition || list.army,
+          },
+        );
+        if (unitPoints > maxPoints) {
+          errors.push({
+            message: errorMsg,
+            section: unitCategory,
+          });
+        }
+      });
+    return errors;
+  }
+}
+
+const grandMeleeWizardLimits = (list) => {
+  // 1 level 3 wizard per 1000 points, 1 level 4 wizard per 2000 points
+  const errors = [];
+  const level3Max = Math.floor(list.points / 1000);
+  const level4Max = Math.floor(list.points / 2000);
+  let characterWizards = [0, 0, 0, 0, 0];
+  let specialWizards = [0, 0, 0, 0, 0];
+  let rareWizards = [0, 0, 0, 0, 0];
+  let totalWizards = [0, 0, 0, 0, 0];
+
+  list?.characters &&
+    list.characters.forEach((unit) => {
+      let characterWizard = getWizardLevels(unit);
+      characterWizard.forEach((numberAtThisLevel, level) => {
+        if (numberAtThisLevel > 0) {
+          characterWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        }
+      });
+    });
+  list?.special &&
+    list.special.forEach((unit) => {
+      let specialWizard = getWizardLevels(unit);
+      specialWizard.forEach((numberAtThisLevel, level) => {
+        if (numberAtThisLevel > 0) {
+          specialWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        }
+      });
+    });
+  list?.rare &&
+    list.rare.forEach((unit) => {
+      let rareWizard = getWizardLevels(unit);
+      rareWizard.forEach((numberAtThisLevel, level) => {
+        if (numberAtThisLevel > 0) {
+          rareWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        }
+      });
+    });
+  if (totalWizards[4] > level4Max) {
+    if (characterWizards[4] > 0) {
+      errors.push({   
+        message: "misc.error.grandMeleeLevel4",
+        section: "characters",
+      });
+    }
+    if (specialWizards[4] > 0) {
+      errors.push({
+        message: "misc.error.grandMeleeLevel4",
+        section: "special",
+      });
+    }
+    if (rareWizards[4] > 0) {
+      errors.push({
+        message: "misc.error.grandMeleeLevel4",
+        section: "rare",
+      });
+    }
+  }
+  if (totalWizards[3] > level3Max) {
+    if (characterWizards[3] > 0) {
+      errors.push({
+        message: "misc.error.grandMeleeLevel3",
+        section: "characters",
+      });
+    }
+    if (specialWizards[3] > 0) {
+      errors.push({
+        message: "misc.error.grandMeleeLevel3",
+        section: "special",
+      });
+    }
+    if (rareWizards[3] > 0) {
+      errors.push({
+        message: "misc.error.grandMeleeLevel3",
+        section: "rare",
+      });
+    }
+  }
+  return errors;
 }
