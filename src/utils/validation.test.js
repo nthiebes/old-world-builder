@@ -334,7 +334,7 @@ describe("validateList", () => {
     expect(getMessages(errors)).toEqual(["misc.error.grandMeleeLevel3"]);
   });
 
-  test("adds maxUnits in combined-arms when duplicate core unit count exceeds cap", () => {
+  test("adds maxUnits in combined-arms when duplicate core unit count exceeds 4", () => {
     const list = {
       ...baseList,
       compositionRule: "combined-arms",
@@ -360,6 +360,42 @@ describe("validateList", () => {
     expect(maxUnitsError).toBeTruthy();
     expect(maxUnitsError.section).toBe("core");
     expect(maxUnitsError.diff).toBe(1);
+  });
+
+  test("adds maxUnits in combined-arms when duplicate core unit count exceeds 5 at 3000 points", () => {
+    const list = {
+      ...baseList,
+      compositionRule: "combined-arms",
+      points: 3000,
+      characters: [
+        makeCharacter({
+          id: "baron.1",
+          name_en: "Baron",
+          isGeneral: true,
+        }),
+      ],
+      core: [
+        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.2", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.3", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.4", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.5", name_en: "Badlands Ogre Bulls" },
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+    const maxUnitsError = getErrorByMessage(errors, "misc.error.maxUnits");
+
+    expect(maxUnitsError).toBeFalsy();
+
+    list.core.push({ id: "badlands-ogre-bulls.6", name_en: "Badlands Ogre Bulls" });
+
+    const errors2 = validateList({ list, language: "en", intl });
+    const maxUnitsError2 = getErrorByMessage(errors2, "misc.error.maxUnits");
+
+    expect(maxUnitsError2).toBeTruthy();
+    expect(maxUnitsError2.section).toBe("core");
+    expect(maxUnitsError2.diff).toBe(1);
   });
 
   test("adds requiresGeneral for a unit that needs a specific general choice", () => {

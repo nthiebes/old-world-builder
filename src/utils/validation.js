@@ -61,6 +61,9 @@ const getWizardLevels = (unitToCheck) => {
   return wizardLevels;
 };
 
+const getUnitRulesByCategory = (armyComp, category) => 
+  rules[armyComp] ? (rules[armyComp][category]?.units) : rules["grand-army"][category]?.units;
+
 const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
     otherUnit.sharedCombinedArmsUnits &&
@@ -83,6 +86,14 @@ export const validateList = ({ list, language, intl }) => {
     checks.push(makeMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.grandMelee25"));
     checks.push(makeMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.grandMelee25"));
     checks.push(grandMeleeWizardLimits);
+  }
+  if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
+    const additionalUnits = Math.max(Math.floor((list.points - 2000) / 1000), 0);
+    checks.push(makeLimitUnitRepeats(3 + additionalUnits, "characters", "misc.error.maxUnits"));
+    checks.push(makeLimitUnitRepeats(4 + additionalUnits, "core", "misc.error.maxUnits"));
+    checks.push(makeLimitUnitRepeats(3 + additionalUnits, "special", "misc.error.maxUnits"));
+    checks.push(makeLimitUnitRepeats(2 + additionalUnits, "rare", "misc.error.maxUnits"));
+    checks.push(makeLimitUnitRepeats(2 + additionalUnits, "mercenaries", "misc.error.maxUnits"));
   }
   if (list.compositionRule && list.compositionRule.includes("battle-march")) {
     checks.push(makeMinNonCharacters(2, "misc.error.notEnoughNonCharactersBattleMarch"));
@@ -111,190 +122,12 @@ export const validateList = ({ list, language, intl }) => {
           ),
       );
 
-  const characterUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].characters.units
-    : rules["grand-army"].characters.units;
-  const coreUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].core.units
-    : rules["grand-army"].core.units;
-  const specialUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].special.units
-    : rules["grand-army"].special.units;
-  const rareUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].rare.units
-    : rules["grand-army"].rare.units;
-  const alliesUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition]?.allies?.units
-    : rules["grand-army"]?.allies?.units;
-  const mercenariesUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition]?.mercenaries?.units
-    : rules["grand-army"]?.mercenaries?.units;
-
-  // Combined Arms
-  if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
-    const charactersMax =
-      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
-    const coreMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 4;
-    const specialMax = Math.max(Math.floor((list.points - 2000) / 1000), 0) + 3;
-    const rareAndMercMax =
-      Math.max(Math.floor((list.points - 2000) / 1000), 0) + 2;
-    const restrictedUnits = [];
-
-    // Characters
-    list.characters.forEach((unit) => {
-      const characterRestricted = Boolean(
-        characterUnitsRules &&
-          (characterUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max ||
-            characterUnitsRules.find((ruleUnit) =>
-              ruleUnit.ids.includes(unit.id.split(".")[0]),
-            )?.min),
-      );
-      const characterCount = list.characters.filter(
-        (character) => character.id.split(".")[0] === unit.id.split(".")[0],
-      ).length;
-
-      if (
-        !characterRestricted &&
-        !unit.named &&
-        characterCount > charactersMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "characters",
-          diff: characterCount - charactersMax,
-        });
-      }
-    });
-
-    // Core
-    list.core.forEach((unit) => {
-      const coreRestricted = Boolean(
-        coreUnitsRules &&
-          coreUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max,
-      );
-      const coreCount = list.core.filter(
-        (core) =>
-          core.id.split(".")[0] === unit.id.split(".")[0] ||
-          hasSharedCombinedArmsLimit(core, unit),
-      ).length;
-
-      if (
-        !coreRestricted &&
-        coreCount > coreMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "core",
-          diff: coreCount - coreMax,
-        });
-      }
-    });
-
-    // Special
-    list.special.forEach((unit) => {
-      const specialRestricted = Boolean(
-        specialUnitsRules &&
-          specialUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max,
-      );
-      const specialCount = list.special.filter(
-        (special) => special.id.split(".")[0] === unit.id.split(".")[0],
-      ).length;
-
-      if (
-        !specialRestricted &&
-        specialCount > specialMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "special",
-          diff: specialCount - specialMax,
-        });
-      }
-    });
-
-    // Rare
-    list.rare.forEach((unit) => {
-      const rareRestricted = Boolean(
-        rareUnitsRules &&
-          rareUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max,
-      );
-      const rareCount = list.rare.filter(
-        (rare) => rare.id.split(".")[0] === unit.id.split(".")[0],
-      ).length;
-
-      if (
-        !rareRestricted &&
-        rareCount > rareAndMercMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "rare",
-          diff: rareCount - rareAndMercMax,
-        });
-      }
-    });
-
-    // Mercenaries
-    list.mercenaries.forEach((unit) => {
-      const mercRestricted = Boolean(
-        mercenariesUnitsRules &&
-          mercenariesUnitsRules.find((ruleUnit) =>
-            ruleUnit.ids.includes(unit.id.split(".")[0]),
-          )?.max,
-      );
-      const mercCount = list.mercenaries.filter(
-        (merc) => merc.id.split(".")[0] === unit.id.split(".")[0],
-      ).length;
-
-      if (
-        !mercRestricted &&
-        mercCount > rareAndMercMax &&
-        !restrictedUnits.find(
-          (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
-        )
-      ) {
-        restrictedUnits.push({
-          id: unit.id.split(".")[0],
-          name: getUnitName({ unit, language }),
-          section: "mercenaries",
-          diff: mercCount - rareAndMercMax,
-        });
-      }
-    });
-
-    restrictedUnits.forEach((restrictedUnit) => {
-      errors.push({
-        message: "misc.error.maxUnits",
-        section: restrictedUnit.section,
-        diff: restrictedUnit.diff,
-        name: restrictedUnit.name,
-      });
-    });
-  }
+  const characterUnitsRules = getUnitRulesByCategory(list.armyComposition, "characters");
+  const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
+  const specialUnitsRules = getUnitRulesByCategory(list.armyComposition, "special");
+  const rareUnitsRules = getUnitRulesByCategory(list.armyComposition, "rare");
+  const alliesUnitsRules = getUnitRulesByCategory(list.armyComposition, "allies");
+  const mercenariesUnitsRules = getUnitRulesByCategory(list.armyComposition, "mercenaries");
 
   let used0XUnits = [];
 
@@ -692,6 +525,9 @@ export const validateList = ({ list, language, intl }) => {
   return errors;
 };
 
+/**
+ * An army must include exactly one general.
+ */
 const oneGeneral = (list) => {
   const errors = [];
   const generals = !list?.characters?.length
@@ -717,6 +553,11 @@ const oneGeneral = (list) => {
   return errors;
 }
 
+/**
+ * An army's general must be chosen from the set of characters with the highest
+ * leadership in the army, not including characters ineligible to be the 
+ * general like Loners.
+ */
 const generalLeadership = (list) => {
   const errors = [];
   let highestLeadership = 0;
@@ -765,6 +606,9 @@ const generalLeadership = (list) => {
   return errors;
 }
 
+/**
+ * An army can have at most one Battle Standard Bearer.
+ */
 const maxOneBSB = (list) => {
   const errors = [];
   const BSBs = !list.characters?.length
@@ -787,6 +631,12 @@ const maxOneBSB = (list) => {
   return errors;
 }
 
+/**
+ * A Tomb Kings list requires a wizard character to be the army's Hierophant.
+ * This Hierophant must be chosen from the highest level wizards in the army.
+ * If a Tomb King with The Language of the Priests or Settra is included in the
+ * army, they must be the Hierophant.
+ */
 const hierophantChecks = (list) => {
   const hierophants = !list?.characters?.length
     ? []
@@ -847,13 +697,17 @@ const hierophantChecks = (list) => {
   }
 }
 
+/**
+ * Creates a function that checks whether the army list has a minimum number
+ * of non-character units who aren't warmachines, swarms, or war beasts.
+ */
 function makeMinNonCharacters(minNum, errorMsg) {
   return (list) => {
     const coreUnits = list?.core?.length
       ? list.core.filter(filterByTroopType).length
       : 0;
+    
     let coreUnitsDetachmentCount = 0;
-
     if (list?.core?.length) {
       list.core.forEach((unit) => {
         if (unit.detachments && unit.detachments.length) {
@@ -895,6 +749,10 @@ function makeMinNonCharacters(minNum, errorMsg) {
   }
 }
 
+/**
+ * Creates a function that checks an army for if a single unit in the
+ * target category exceeds a given point value.
+ */
 function makeMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
   return (list) => {
     const errors = [];
@@ -917,8 +775,11 @@ function makeMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
   }
 }
 
+/**
+ * In Grand Melee, an army can only have 1 level 3 wizard per 1000 points,
+ * and 1 level 4 wizard per 2000 points.
+ */
 const grandMeleeWizardLimits = (list) => {
-  // 1 level 3 wizard per 1000 points, 1 level 4 wizard per 2000 points
   const errors = [];
   const level3Max = Math.floor(list.points / 1000);
   const level4Max = Math.floor(list.points / 2000);
@@ -998,4 +859,58 @@ const grandMeleeWizardLimits = (list) => {
     }
   }
   return errors;
+}
+
+/**
+ * Creates a function that checks for duplicate units up to a given number
+ * in a target category
+ */
+function makeLimitUnitRepeats(max, unitCategory, errorMsg) {
+  return (list, language) => {
+    const errors = [];
+    const restrictedUnits = [];
+
+    list[unitCategory] &&
+      list[unitCategory].forEach((unit) => {
+        const unitRules = getUnitRulesByCategory(list.armyComposition, unitCategory);
+        const restrictions = Boolean(
+          unitRules &&
+            (unitRules.find((ruleUnit) =>
+              ruleUnit.ids.includes(unit.id.split(".")[0]),
+            )?.max ||
+              unitRules.find((ruleUnit) =>
+                ruleUnit.ids.includes(unit.id.split(".")[0]),
+              )?.min),
+        );
+        const count = list[unitCategory].filter(
+          (targetUnit) => targetUnit.id.split(".")[0] === unit.id.split(".")[0] || 
+          hasSharedCombinedArmsLimit(targetUnit, unit),
+        ).length;
+
+        if (
+          !restrictions &&
+          count > max &&
+          !restrictedUnits.find(
+            (restrictedUnit) => restrictedUnit.id === unit.id.split(".")[0],
+          )
+        ) {
+          restrictedUnits.push({
+            id: unit.id.split(".")[0],
+            name: getUnitName({ unit, language }),
+            section: unitCategory,
+            diff: count - max,
+          });
+        }
+      });
+    
+    restrictedUnits.forEach((restrictedUnit) => {
+      errors.push({
+        message: errorMsg,
+        section: restrictedUnit.section,
+        diff: restrictedUnit.diff,
+        name: restrictedUnit.name,
+      });
+    });
+    return errors;
+  }
 }
