@@ -61,8 +61,24 @@ const getWizardLevels = (unitToCheck) => {
   return wizardLevels;
 };
 
+/**
+ * Gets all characters with the General command option
+ */
+const getGeneralCandidates = (list) =>
+  list?.characters?.length
+    ? list.characters.filter(
+        (unit) =>
+          unit.command &&
+          unit.command.find(
+            (command) => command.active && command.name_en === "General",
+          ),
+      )
+    : [];
+
 const getUnitRulesByCategory = (armyComp, category) => 
-  rules[armyComp] ? (rules[armyComp][category]?.units) : rules["grand-army"][category]?.units;
+  rules[armyComp] 
+    ? rules[armyComp][category]?.units
+    : rules["grand-army"][category]?.units;
 
 const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
@@ -112,15 +128,7 @@ export const validateList = ({ list, language, intl }) => {
     errors = errors.concat(check(list, language, intl));
   }
 
-  const generals = !list?.characters?.length
-    ? []
-    : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) => command.active && command.name_en === "General",
-          ),
-      );
+  const generals = getGeneralCandidates(list);
 
   const characterUnitsRules = getUnitRulesByCategory(list.armyComposition, "characters");
   const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
@@ -200,7 +208,7 @@ export const validateList = ({ list, language, intl }) => {
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
       unitsInList.length > max &&
       ((list.compositionRule && // Exception for Battle March 0-X units
-        !list.compositionRule.includes("battle-march")) ||
+        !(list.compositionRule.includes("battle-march") && points)) ||
         !list.compositionRule)
     ) {
       errors.push({
@@ -215,6 +223,7 @@ export const validateList = ({ list, language, intl }) => {
     if (
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
       unitsInList.length > max &&
+      points &&
       list.compositionRule &&
       list.compositionRule.includes("battle-march") &&
       used0XUnits.length > 1
@@ -530,15 +539,7 @@ export const validateList = ({ list, language, intl }) => {
  */
 const oneGeneral = (list) => {
   const errors = [];
-  const generals = !list?.characters?.length
-    ? []
-    : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) => command.active && command.name_en === "General",
-          ),
-      );
+  const generals = getGeneralCandidates(list);
   if (generals.length < 1) {
     errors.push({
       message: "misc.error.noGeneral",
@@ -561,15 +562,7 @@ const oneGeneral = (list) => {
 const generalLeadership = (list) => {
   const errors = [];
   let highestLeadership = 0;
-  const generals = !list?.characters?.length
-    ? []
-    : list.characters.filter(
-        (unit) =>
-          unit.command &&
-          unit.command.find(
-            (command) => command.active && command.name_en === "General",
-          ),
-      );
+  const generals = getGeneralCandidates(list);
   if (list?.characters?.length) {
     list.characters.forEach((unit) => {
       if (
