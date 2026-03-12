@@ -2019,7 +2019,7 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["deepwood-scouts"],
+          ids: ["deepwood-scouts-core"],
           min: 0,
           max: 1,
           points: 1000,
