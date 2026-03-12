@@ -77,8 +77,8 @@ const getGeneralCandidates = (list) =>
 
 const getUnitRulesByCategory = (armyComp, category) => 
   rules[armyComp] 
-    ? rules[armyComp][category]?.units
-    : rules["grand-army"][category]?.units;
+    ? (rules[armyComp][category]?.units || [])
+    : (rules["grand-army"][category]?.units || []);
 
 const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
@@ -128,18 +128,10 @@ export const validateList = ({ list, language, intl }) => {
     errors = errors.concat(check(list, language, intl));
   }
 
-  const generals = getGeneralCandidates(list);
-
-  const characterUnitsRules = getUnitRulesByCategory(list.armyComposition, "characters");
-  const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
-  const specialUnitsRules = getUnitRulesByCategory(list.armyComposition, "special");
-  const rareUnitsRules = getUnitRulesByCategory(list.armyComposition, "rare");
-  const alliesUnitsRules = getUnitRulesByCategory(list.armyComposition, "allies");
-  const mercenariesUnitsRules = getUnitRulesByCategory(list.armyComposition, "mercenaries");
-
   let used0XUnits = [];
 
   const checkRules = ({ ruleUnit, type }) => {
+    const generals = getGeneralCandidates(list);
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
@@ -471,65 +463,60 @@ export const validateList = ({ list, language, intl }) => {
     }
   };
 
-  characterUnitsRules &&
-    characterUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "characters" });
-    });
+  const characterUnitsRules = getUnitRulesByCategory(list.armyComposition, "characters");
+  const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
+  const specialUnitsRules = getUnitRulesByCategory(list.armyComposition, "special");
+  const rareUnitsRules = getUnitRulesByCategory(list.armyComposition, "rare");
+  const alliesUnitsRules = getUnitRulesByCategory(list.armyComposition, "allies");
+  const mercenariesUnitsRules = getUnitRulesByCategory(list.armyComposition, "mercenaries");
 
-  coreUnitsRules &&
-    coreUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "core" });
-    });
+  characterUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "characters" });
+  });
 
-  specialUnitsRules &&
-    specialUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "special" });
-    });
+  coreUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "core" });
+  });
 
-  rareUnitsRules &&
-    rareUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "rare" });
-    });
+  specialUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "special" });
+  });
 
-  alliesUnitsRules &&
-    alliesUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "allies" });
-    });
+  rareUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "rare" });
+  });
 
-  mercenariesUnitsRules &&
-    mercenariesUnitsRules.forEach((ruleUnit) => {
-      checkFor0XRules({ ruleUnit, type: "mercenaries" });
-    });
+  alliesUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "allies" });
+  });
 
-  characterUnitsRules &&
-    characterUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "characters" });
-    });
+  mercenariesUnitsRules.forEach((ruleUnit) => {
+    checkFor0XRules({ ruleUnit, type: "mercenaries" });
+  });
 
-  coreUnitsRules &&
-    coreUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "core" });
-    });
+  characterUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "characters" });
+  });
 
-  specialUnitsRules &&
-    specialUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "special" });
-    });
+  coreUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "core" });
+  });
 
-  rareUnitsRules &&
-    rareUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "rare" });
-    });
+  specialUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "special" });
+  });
 
-  alliesUnitsRules &&
-    alliesUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "allies" });
-    });
+  rareUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "rare" });
+  });
 
-  mercenariesUnitsRules &&
-    mercenariesUnitsRules.forEach((ruleUnit) => {
-      checkRules({ ruleUnit, type: "mercenaries" });
-    });
+  alliesUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "allies" });
+  });
+
+  mercenariesUnitsRules.forEach((ruleUnit) => {
+    checkRules({ ruleUnit, type: "mercenaries" });
+  });
 
   return errors;
 };
@@ -692,7 +679,7 @@ const hierophantChecks = (list) => {
 
 /**
  * Creates a function that checks whether the army list has a minimum number
- * of non-character units who aren't warmachines, swarms, or war beasts.
+ * of non-character units who aren't war machines, swarms, or war beasts.
  */
 function makeMinNonCharacters(minNum, errorMsg) {
   return (list) => {
