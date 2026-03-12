@@ -452,6 +452,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         activeLore: lore,
+        generatedSpells: null,
       }),
     );
   };
