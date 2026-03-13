@@ -175,7 +175,7 @@ describe("validateList", () => {
       ],
       core: [
         { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
-        { id: "helblaster-volley-gun.1", name_en: "Helblaster Volley Gun" },
+        { id: "chaos-warhounds.1", name_en: "Chaos Warhounds" },
       ],
     };
 

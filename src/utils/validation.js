@@ -5,22 +5,6 @@ import { getUnitPoints } from "./points";
 import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 import { joinWithAnd, joinWithOr } from "./string";
 
-const filterByTroopType = (unit) => {
-  const ruleData = getUnitRuleData(unit.name_en);
-  return [
-    "MCa",
-    "LCa",
-    "HCa",
-    "MI",
-    "RI",
-    "HI",
-    "HCh",
-    "LCh",
-    "MCr",
-    "Be",
-  ].includes(ruleData?.troopType);
-};
-
 /**
  * In a single pass recursively find all wizard levels
  */
@@ -112,14 +96,14 @@ export const validateList = ({ list, language, intl }) => {
     checks.push(makeLimitUnitRepeats(2 + additionalUnits, "mercenaries", "misc.error.maxUnits"));
   }
   if (list.compositionRule && list.compositionRule.includes("battle-march")) {
-    checks.push(makeMinNonCharacters(2, "misc.error.notEnoughNonCharactersBattleMarch"));
+    checks.push(makeMinNonCharacters(2, ["WB", "Sw"], "misc.error.notEnoughNonCharactersBattleMarch"));
     checks.push(makeMaxPointsSingleUnit(.25 * list.points, "characters", "misc.error.battleMarch25PercentPerCharacter"));
     checks.push(makeMaxPointsSingleUnit(.35 * list.points, "core", "misc.error.battleMarch35PercentPerCore"));
     checks.push(makeMaxPointsSingleUnit(.30 * list.points, "special", "misc.error.battleMarch30PercentPerSpecial"));
     checks.push(makeMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.battleMarch25PercentPerRare"));
     checks.push(makeMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.battleMarch25PercentPerMercenary"));
   } else {
-    checks.push(makeMinNonCharacters(3, "misc.error.notEnoughNonCharacters"));
+    checks.push(makeMinNonCharacters(3, ["WM", "WB", "Sw"], "misc.error.notEnoughNonCharacters"));
   }
   if (list?.army === "tomb-kings-of-khemri") {
     checks.push(hierophantChecks);
@@ -644,7 +628,7 @@ const hierophantChecks = (list) => {
       list.characters.forEach((unit) => {
         if (
           unit.command &&
-          unit.command.find(
+          unit.command?.find(
             (command) =>
               command.name_en === "The Hierophant" &&
               (!command.armyComposition ||
@@ -681,44 +665,24 @@ const hierophantChecks = (list) => {
  * Creates a function that checks whether the army list has a minimum number
  * of non-character units who aren't war machines, swarms, or war beasts.
  */
-function makeMinNonCharacters(minNum, errorMsg) {
+function makeMinNonCharacters(minNum, notCountedTypes, errorMsg) {
   return (list) => {
-    const coreUnits = list?.core?.length
-      ? list.core.filter(filterByTroopType).length
-      : 0;
+    const allUnits = [
+      ...(list.core || []),
+      ...(list.special || []),
+      ...(list.rare || []),
+      ...(list.mercenaries || []),
+      ...(list.allies || []),
+    ];
+    const count = allUnits
+      .filter((unit) => unit.unitType !== "characters")
+      .filter((unit) => {
+        const ruleData = getUnitRuleData(unit.name_en);
+        return !notCountedTypes.includes(ruleData?.troopType);
+      })
+      .length;
     
-    let coreUnitsDetachmentCount = 0;
-    if (list?.core?.length) {
-      list.core.forEach((unit) => {
-        if (unit.detachments && unit.detachments.length) {
-          coreUnitsDetachmentCount +=
-            unit.detachments.filter(filterByTroopType).length;
-        }
-      });
-    }
-
-    const specialUnits = list?.special?.length
-      ? list.special.filter(filterByTroopType).length
-      : 0;
-    const rareUnits = list?.rare?.length
-      ? list.rare.filter(filterByTroopType).length
-      : 0;
-    const mercUnits = list?.mercenaries?.length
-      ? list.mercenaries.filter(filterByTroopType).length
-      : 0;
-    const allyUnits = list?.allies?.length
-      ? list.allies
-          .filter((unit) => unit.unitType !== "characters")
-          .filter(filterByTroopType).length
-      : 0;
-    const nonCharactersCount =
-      coreUnits +
-      coreUnitsDetachmentCount +
-      specialUnits +
-      rareUnits +
-      mercUnits +
-      allyUnits;
-    if (nonCharactersCount < minNum) {
+    if (count < minNum) {
       return [{
         message: errorMsg,
         section: "global",
