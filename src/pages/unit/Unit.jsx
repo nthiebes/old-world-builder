@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import { useParams, useLocation, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
@@ -451,6 +452,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         activeLore: lore,
+        generatedSpells: null,
       }),
     );
   };
@@ -669,7 +671,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             {notes[`name_${language}`] || notes.name_en}
           </p>
         ) : null}
-        {stats && <Stats values={stats} className={classNames("unit__stats", specialRules && 'unit__stats--spaceTop')} />}
+        {stats && (
+          <Stats
+            values={stats}
+            className={classNames(
+              "unit__stats",
+              specialRules && "unit__stats--spaceTop",
+            )}
+          />
+        )}
         {!unit.minimum &&
           (!lores || (lores && !lores.length)) &&
           (!unit.command || (unit.command && !unit.command.length)) &&
@@ -732,7 +742,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 (
                   {
                     points,
-                    perModel,
                     id,
                     active = false,
                     magic,
@@ -2021,4 +2030,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       </MainComponent>
     </>
   );
+};
+
+Unit.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+  previewData: PropTypes.shape({
+    type: PropTypes.string,
+    unit: PropTypes.object,
+  }),
 };

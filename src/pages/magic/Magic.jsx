@@ -290,6 +290,7 @@ export const Magic = ({ isMobile }) => {
           type,
           unitId,
           items: newItems,
+          generatedSpells: null,
         }),
       );
     }

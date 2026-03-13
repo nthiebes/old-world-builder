@@ -91,6 +91,7 @@ export const GeneratedSpells = ({
 
   let generatedSpellCount = 0;
   let signatureSpellsGenerated = 0;
+  // let loresWithSpellCount = 0;
 
   for (const loreId in generatedSpells) {
     generatedSpellCount += generatedSpells[loreId].length;
@@ -98,11 +99,30 @@ export const GeneratedSpells = ({
     for (let j = 0; j < generatedSpells[loreId].length; j++) {
       const spellId = generatedSpells[loreId][j];
 
-      if (availableLoresWithSpells[loreId][spellId]?.index === "signature") {
+      if (
+        availableLoresWithSpells[loreId] &&
+        availableLoresWithSpells[loreId][spellId]?.index === "signature"
+      ) {
         signatureSpellsGenerated++;
       }
     }
   }
+
+  // Object.keys(generatedSpells).forEach((loreId) => {
+  //   const spells = generatedSpells[loreId];
+
+  //   if (spells.length > 0) {
+  //     const isSignatureOnlyLore =
+  //       availableLoresWithSpells[loreId] &&
+  //       !Object.values(availableLoresWithSpells[loreId]).find(
+  //         (spell) => spell.index !== "signature",
+  //       );
+
+  //     if (!isSignatureOnlyLore) {
+  //       loresWithSpellCount++;
+  //     }
+  //   }
+  // });
 
   return (
     <div className="generated-spells__wrapper">
@@ -122,62 +142,69 @@ export const GeneratedSpells = ({
       </p>
       {showGenerationList ? (
         <ul className="generated-spells__spells-selection-list">
-          {Object.entries(availableLoresWithSpells).map(([loreId, spells]) => (
-            <li key={loreId}>
-              <ul>
-                <div className="generated-spells__list-header">
-                  <FormattedMessage id={`magic.lore.${loreId}`} />
-                </div>
-                {Object.entries(spells).map(([spellId, spell]) => {
-                  const spellIsGenerated =
-                    generatedSpells[loreId].find((id) => id === spellId) !==
-                    undefined;
+          {Object.entries(availableLoresWithSpells).map(([loreId, spells]) => {
+            if (!generatedSpells[loreId]) {
+              return null;
+            }
 
-                  return (
-                    <li key={spellId}>
-                      <label className="generated-spells__spell-label">
-                        <input
-                          type="checkbox"
-                          checked={spellIsGenerated}
-                          disabled={
-                            (generatedSpellCount === maxGeneratedSpellCount &&
-                              !spellIsGenerated) ||
-                            (spell.index === "signature" &&
-                              signatureSpellsGenerated >= maxSignatureSpells &&
-                              !spellIsGenerated)
-                          }
-                          onChange={(event) => {
-                            handleSpellSelectionChange(
-                              loreId,
-                              spellId,
-                              event.target.checked,
-                            );
-                          }}
-                        />
-                        <span className="generated-spells__rules-wrapper">
-                          <span className="generated-spells__spell-index">
-                            {spell.index === "signature"
-                              ? intl.formatMessage({
-                                  id: "misc.signatureAbbr",
-                                })
-                              : spell.index}
+            return (
+              <li key={loreId}>
+                <ul>
+                  <div className="generated-spells__list-header">
+                    <FormattedMessage id={`magic.lore.${loreId}`} />
+                  </div>
+                  {Object.entries(spells).map(([spellId, spell]) => {
+                    const spellIsGenerated =
+                      generatedSpells[loreId].find((id) => id === spellId) !==
+                      undefined;
+
+                    return (
+                      <li key={spellId}>
+                        <label className="generated-spells__spell-label">
+                          <input
+                            type="checkbox"
+                            checked={spellIsGenerated}
+                            disabled={
+                              (generatedSpellCount === maxGeneratedSpellCount &&
+                                !spellIsGenerated) ||
+                              (spell.index === "signature" &&
+                                signatureSpellsGenerated >=
+                                  maxSignatureSpells &&
+                                !spellIsGenerated)
+                            }
+                            onChange={(event) => {
+                              handleSpellSelectionChange(
+                                loreId,
+                                spellId,
+                                event.target.checked,
+                              );
+                            }}
+                          />
+                          <span className="generated-spells__rules-wrapper">
+                            <span className="generated-spells__spell-index">
+                              {spell.index === "signature"
+                                ? intl.formatMessage({
+                                    id: "misc.signatureAbbr",
+                                  })
+                                : spell.index}
+                            </span>
+                            <FormattedMessage
+                              id={spellIdToFormattedMessageId(spellId)}
+                            />
+                            <RuleWithIcon
+                              name={spellId}
+                              isDark
+                              className="generated-spells__rule-icon"
+                            />
                           </span>
-                          <FormattedMessage
-                            id={spellIdToFormattedMessageId(spellId)}
-                          />
-                          <RuleWithIcon
-                            name={spellId}
-                            isDark
-                            className="generated-spells__rule-icon"
-                          />
-                        </span>
-                      </label>
-                    </li>
-                  );
-                })}
-              </ul>
-            </li>
-          ))}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            );
+          })}
         </ul>
       ) : (
         Object.values(generatedSpells).map((spells) =>

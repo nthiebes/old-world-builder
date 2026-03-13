@@ -555,41 +555,40 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
       : unit.lores || []
     : unit.lores || [];
 
-  const selectedLores =
-    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Arcane Familiar")
-      ? {
-          "battle-magic": loresOfMagicWithSpells["battle-magic"],
-          daemonology: loresOfMagicWithSpells["daemonology"],
-          "dark-magic": loresOfMagicWithSpells["dark-magic"],
-          elementalism: loresOfMagicWithSpells["elementalism"],
-          "high-magic": loresOfMagicWithSpells["high-magic"],
-          illusion: loresOfMagicWithSpells["illusion"],
-          necromancy: loresOfMagicWithSpells["necromancy"],
-          "waaagh-magic": loresOfMagicWithSpells["waaagh-magic"],
-          shadowlands: loresOfMagicWithSpells["shadowlands"],
-        }
-      : unitHasItem(unit, "Loremaster")
-      ? {
-          "lore-of-saphery": loresOfMagicWithSpells["lore-of-saphery"],
-          "battle-magic": loresOfMagicWithSpells["battle-magic"],
-          elementalism: loresOfMagicWithSpells["elementalism"],
-          "high-magic": loresOfMagicWithSpells["high-magic"],
-          illusion: loresOfMagicWithSpells["illusion"],
-        }
-      : findOption(
-          unit.options || [],
-          ({ active, name_en }) =>
-            active && /^Arise!, Level 1 Wizard/.test(name_en),
-        )
-      ? { necromancy: loresOfMagicWithSpells["necromancy"] }
-      : unitLores.length > 0
-      ? {
-          [unit.activeLore ?? unitLores[0]]:
-            loresOfMagicWithSpells[unit.activeLore ?? unitLores[0]],
-        }
-      : {};
+  const selectedLores = unitHasItem(unit, "Wizarding Hat")
+    ? {
+        "battle-magic": loresOfMagicWithSpells["battle-magic"],
+        daemonology: loresOfMagicWithSpells["daemonology"],
+        "dark-magic": loresOfMagicWithSpells["dark-magic"],
+        elementalism: loresOfMagicWithSpells["elementalism"],
+        "high-magic": loresOfMagicWithSpells["high-magic"],
+        illusion: loresOfMagicWithSpells["illusion"],
+        necromancy: loresOfMagicWithSpells["necromancy"],
+        "waaagh-magic": loresOfMagicWithSpells["waaagh-magic"],
+        shadowlands: loresOfMagicWithSpells["shadowlands"],
+      }
+    : unitHasItem(unit, "Loremaster")
+    ? {
+        "lore-of-saphery": loresOfMagicWithSpells["lore-of-saphery"],
+        "battle-magic": loresOfMagicWithSpells["battle-magic"],
+        elementalism: loresOfMagicWithSpells["elementalism"],
+        "high-magic": loresOfMagicWithSpells["high-magic"],
+        illusion: loresOfMagicWithSpells["illusion"],
+      }
+    : findOption(
+        unit.options || [],
+        ({ active, name_en }) =>
+          active && /^Arise!, Level 1 Wizard/.test(name_en),
+      )
+    ? { necromancy: loresOfMagicWithSpells["necromancy"] }
+    : unitLores.length > 0
+    ? {
+        [unit.activeLore ?? unitLores[0]]:
+          loresOfMagicWithSpells[unit.activeLore ?? unitLores[0]],
+      }
+    : {};
 
-  if (unit.arcaneFamiliar) {
+  if (unit.arcaneFamiliar || unitHasItem(unit, "Arcane Familiar")) {
     unitLores.forEach((lore) => {
       selectedLores[lore] = loresOfMagicWithSpells[lore];
     });

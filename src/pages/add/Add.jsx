@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Helmet } from "react-helmet-async";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 import { Icon } from "../../components/icon";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
@@ -73,7 +74,11 @@ export const Add = ({ isMobile }) => {
         onClick={() => handleAdd(unit, ally, unitType, magicItemsArmy)}
       >
         <span className="add__name">
-          {unit.minimum ? `${unit.minimum} ` : null}
+          {unit.strength
+            ? `${unit.strength} `
+            : unit.minimum
+            ? `${unit.minimum} `
+            : null}
           <b>{getUnitName({ unit, language })}</b>
         </span>
         <i className="unit__points">{`${
@@ -461,4 +466,8 @@ export const Add = ({ isMobile }) => {
       </MainComponent>
     </>
   );
+};
+
+Add.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
 };
