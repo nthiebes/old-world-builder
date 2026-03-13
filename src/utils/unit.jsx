@@ -588,7 +588,11 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
       }
     : {};
 
-  if (unit.arcaneFamiliar || unitHasItem(unit, "Arcane Familiar")) {
+  if (
+    unit.arcaneFamiliar ||
+    unitHasItem(unit, "Arcane Familiar") ||
+    unit.spellCount
+  ) {
     unitLores.forEach((lore) => {
       selectedLores[lore] = loresOfMagicWithSpells[lore];
     });
@@ -609,6 +613,17 @@ export const getUnitWizardryLevel = (unit) => {
   const levelOptions = findAllOptions(unit?.options, (option) =>
     /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
   );
+
+  if (unit?.command) {
+    unit?.command.forEach(({ active, options }) => {
+      if (active && options) {
+        const activeLevelOptions = findAllOptions(options, (option) =>
+          /^Level [1234] Wizard/.test(option?.name_en),
+        );
+        levelOptions.push(...activeLevelOptions);
+      }
+    });
+  }
 
   let wizardryLevel = 4;
 
@@ -633,7 +648,7 @@ export const getUnitWizardryLevel = (unit) => {
  * wizardry, magic items and special rules.
  */
 export const getUnitGeneratedSpellCount = (unit) => {
-  let generatedSpellsCount = getUnitWizardryLevel(unit);
+  let generatedSpellsCount = unit.spellCount || getUnitWizardryLevel(unit);
 
   if (unitHasItem(unit, "Wizarding Hat")) {
     generatedSpellsCount += 1;
