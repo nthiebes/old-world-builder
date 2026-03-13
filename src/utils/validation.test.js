@@ -1,6 +1,5 @@
 import { describe, expect, test } from "vitest";
 import { validateList } from "./validation";
-import { rules } from "./rules";
 
 const intl = {
   formatMessage: ({ id }) => id,
@@ -64,7 +63,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.noGeneral");
+    expect(getMessages(errors)).toEqual(["misc.error.noGeneral"]);
   });
 
   test("adds multipleGenerals when more than one active general is selected", () => {
@@ -86,7 +85,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.multipleGenerals");
+    expect(getMessages(errors)).toEqual(["misc.error.multipleGenerals"]);
   });
 
   test("adds generalLeadership when active general does not have the highest leadership", () => {
@@ -108,12 +107,13 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.generalLeadership");
+    expect(getMessages(errors)).toEqual(["misc.error.generalLeadership"]);
   });
 
   test("adds hierophantLevel when active hierophant has lower wizard level", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
         {
           id: "baron.1",
@@ -137,7 +137,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.hierophantLevel");
+    expect(getMessages(errors)).toEqual(["misc.error.hierophantLevel"]);
   });
 
   test("adds notEnoughNonCharacters when fewer than 3 qualifying non-character units are present", () => {
@@ -159,7 +159,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.notEnoughNonCharacters");
+    expect(getMessages(errors)).toEqual(["misc.error.notEnoughNonCharacters"]);
   });
 
   test("adds notEnoughNonCharactersBattleMarch when battle-march has fewer than 2 qualifying non-character units", () => {
@@ -175,20 +175,20 @@ describe("validateList", () => {
       ],
       core: [
         { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
-        { id: "helblaster-volley-gun.1", name_en: "Helblaster Volley Gun" },
+        { id: "chaos-warhounds.1", name_en: "Chaos Warhounds" },
       ],
     };
 
     const errors = validateList({ list, language: "en", intl });
     const messages = getMessages(errors);
 
-    expect(messages).toContain("misc.error.notEnoughNonCharactersBattleMarch");
-    expect(messages).not.toContain("misc.error.notEnoughNonCharacters");
+    expect(messages).toEqual(["misc.error.notEnoughNonCharactersBattleMarch"]);
   });
 
   test("adds multipleHierophants when more than one active hierophant is selected", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
         {
           id: "baron.1",
@@ -212,7 +212,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.multipleHierophants");
+    expect(getMessages(errors)).toEqual(["misc.error.multipleHierophants"]);
   });
 
   test("adds multipleBSBs when more than one active battle standard bearer is selected", () => {
@@ -239,7 +239,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.multipleBSBs");
+    expect(getMessages(errors)).toEqual(["misc.error.multipleBSBs"]);
   });
 
   test("adds battleMarch25PercentPerCharacter when a character exceeds 25% points in battle-march", () => {
@@ -259,9 +259,9 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain(
+    expect(getMessages(errors)).toEqual([
       "misc.error.battleMarch25PercentPerCharacter",
-    );
+    ]);
   });
 
   test("adds grandMelee25 when a single unit exceeds 25% in grand-melee", () => {
@@ -281,7 +281,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.grandMelee25");
+    expect(getMessages(errors)).toEqual(["misc.error.grandMelee25"]);
   });
 
   test("adds grandMeleeLevel4 when total level 4 wizards exceed the cap", () => {
@@ -291,14 +291,10 @@ describe("validateList", () => {
       compositionRule: "grand-melee",
       characters: [
         makeCharacter({
-          id: "baron.1",
-          name_en: "Baron",
-          isGeneral: true,
-        }),
-        makeCharacter({
           id: "archmage.1",
           name_en: "Archmage",
           options: [{ name_en: "Level 4 Wizard", active: true }],
+          isGeneral: true,
         }),
         makeCharacter({
           id: "aspiring-champion.1",
@@ -310,7 +306,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.grandMeleeLevel4");
+    expect(getMessages(errors)).toEqual(["misc.error.grandMeleeLevel4"]);
   });
 
   test("adds grandMeleeLevel3 when total level 3 wizards exceed the cap", () => {
@@ -320,14 +316,10 @@ describe("validateList", () => {
       compositionRule: "grand-melee",
       characters: [
         makeCharacter({
-          id: "baron.1",
-          name_en: "Baron",
-          isGeneral: true,
-        }),
-        makeCharacter({
           id: "archmage.1",
           name_en: "Archmage",
           options: [{ name_en: "Level 3 Wizard", active: true }],
+          isGeneral: true,
         }),
         makeCharacter({
           id: "aspiring-champion.1",
@@ -339,10 +331,10 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.grandMeleeLevel3");
+    expect(getMessages(errors)).toEqual(["misc.error.grandMeleeLevel3"]);
   });
 
-  test("adds maxUnits in combined-arms when duplicate core unit count exceeds cap", () => {
+  test("adds maxUnits in combined-arms when duplicate core unit count exceeds 4", () => {
     const list = {
       ...baseList,
       compositionRule: "combined-arms",
@@ -370,6 +362,42 @@ describe("validateList", () => {
     expect(maxUnitsError.diff).toBe(1);
   });
 
+  test("adds maxUnits in combined-arms when duplicate core unit count exceeds 5 at 3000 points", () => {
+    const list = {
+      ...baseList,
+      compositionRule: "combined-arms",
+      points: 3000,
+      characters: [
+        makeCharacter({
+          id: "baron.1",
+          name_en: "Baron",
+          isGeneral: true,
+        }),
+      ],
+      core: [
+        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.2", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.3", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.4", name_en: "Badlands Ogre Bulls" },
+        { id: "badlands-ogre-bulls.5", name_en: "Badlands Ogre Bulls" },
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+    const maxUnitsError = getErrorByMessage(errors, "misc.error.maxUnits");
+
+    expect(maxUnitsError).toBeFalsy();
+
+    list.core.push({ id: "badlands-ogre-bulls.6", name_en: "Badlands Ogre Bulls" });
+
+    const errors2 = validateList({ list, language: "en", intl });
+    const maxUnitsError2 = getErrorByMessage(errors2, "misc.error.maxUnits");
+
+    expect(maxUnitsError2).toBeTruthy();
+    expect(maxUnitsError2.section).toBe("core");
+    expect(maxUnitsError2.diff).toBe(1);
+  });
+
   test("adds requiresGeneral for a unit that needs a specific general choice", () => {
     const list = {
       ...baseList,
@@ -382,7 +410,7 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "sister-of-avelorn.1", name_en: "Sister of Avelorn" },
+        { id: "sister-of-avelorn.1", name_en: "Sisters of Avelorn" },
         { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
         { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
       ],
@@ -390,7 +418,20 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.requiresGeneral");
+    expect(getMessages(errors)).toEqual(["misc.error.requiresGeneral"]);
+
+    // no error if the required general is present
+    list.characters = [
+      makeCharacter({
+        id: "handmaiden-of-the-everqueen.1",
+        name_en: "Handmaiden of the Everqueen",
+        isGeneral: true,
+      }),
+    ];
+
+    const noErrors = validateList({ list, language: "en", intl });
+
+    expect(getMessages(noErrors)).toEqual([]);
   });
 
   test("adds requiresMagicItem when a restricted unit is taken without the required item", () => {
@@ -412,7 +453,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.requiresMagicItem");
+    expect(getMessages(errors)).toEqual(["misc.error.requiresMagicItem"]);
   });
 
   test("adds requiresMounted when nomadic-waaagh character is not mounted", () => {
@@ -431,7 +472,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.requiresMounted");
+    expect(getMessages(errors)).toEqual(["misc.error.requiresMounted"]);
   });
 
   test("adds requiresOption when a character is missing a required active option", () => {
@@ -455,7 +496,7 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.requiresOption");
+    expect(getMessages(errors)).toEqual(["misc.error.requiresOption"]);
   });
 
   test("adds requiresUnits for per-unit dependency when required units are missing", () => {
@@ -472,13 +513,14 @@ describe("validateList", () => {
       core: [
         { id: "knights-errant.1", name_en: "Knights Errant" },
         { id: "knights-errant.2", name_en: "Knights Errant" },
-        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
+        { id: "men-at-arms.1", name_en: "Men-at-Arms" },
+        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
       ],
     };
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.requiresUnits");
+    expect(getMessages(errors)).toEqual(["misc.error.requiresUnits"]);
   });
 
   test("adds minUnits from composition rules when mandatory unit groups are missing", () => {
@@ -493,18 +535,15 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
-        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
-        {
-          id: "black-guard-of-naggarond.1",
-          name_en: "Black Guard of Naggarond",
-        },
+        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
+        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        { id: "knights-errant.1", name_en: "Knights Errant" },
       ],
     };
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.minUnits");
+    expect(getMessages(errors)).toEqual(["misc.error.minUnits"]);
   });
 
   test("adds maxUnits from composition rules when an explicit cap is exceeded", () => {
@@ -522,11 +561,16 @@ describe("validateList", () => {
           name_en: "Duke",
         }),
       ],
+      core: [
+        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
+        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        { id: "men-at-arms.1", name_en: "Men-at-Arms" },
+      ],
     };
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain("misc.error.maxUnits");
+    expect(getMessages(errors)).toEqual(["misc.error.maxUnits"]);
   });
 
   test("adds battleMarchMultiple0XUnits when battle-march exceeds a 0-X-per-1000 cap", () => {
@@ -546,13 +590,18 @@ describe("validateList", () => {
           name_en: "Baron",
         }),
       ],
+      core: [
+        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
+        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        { id: "men-at-arms.1", name_en: "Men-at-Arms" },
+      ],
     };
 
     const errors = validateList({ list, language: "en", intl });
 
-    expect(getMessages(errors)).toContain(
+    expect(getMessages(errors)).toEqual([
       "misc.error.battleMarchMultiple0XUnits",
-    );
+    ]);
   });
 
   test("adds battleMarch35PercentPerCore when a core unit exceeds 35% in battle-march", () => {
@@ -578,9 +627,9 @@ describe("validateList", () => {
     };
 
     const errors = validateList({ list, language: "en", intl });
-    expect(getMessages(errors)).toContain(
+    expect(getMessages(errors)).toEqual([
       "misc.error.battleMarch35PercentPerCore",
-    );
+    ]);
   });
 
   test("adds battleMarch30PercentPerSpecial when a special unit exceeds 30% in battle-march", () => {
@@ -599,9 +648,9 @@ describe("validateList", () => {
     };
 
     const errors = validateList({ list, language: "en", intl });
-    expect(getMessages(errors)).toContain(
+    expect(getMessages(errors)).toEqual([
       "misc.error.battleMarch30PercentPerSpecial",
-    );
+    ]);
   });
 
   test("adds battleMarch25PercentPerRare and battleMarch25PercentPerMercenary for oversized units", () => {
@@ -628,8 +677,10 @@ describe("validateList", () => {
 
     const errors = validateList({ list, language: "en", intl });
     const messages = getMessages(errors);
-    expect(messages).toContain("misc.error.battleMarch25PercentPerRare");
-    expect(messages).toContain("misc.error.battleMarch25PercentPerMercenary");
+    expect(messages).toEqual([
+      "misc.error.battleMarch25PercentPerRare",
+      "misc.error.battleMarch25PercentPerMercenary",
+    ]);
   });
 
   test("counts sharedCombinedArmsUnits toward combined-arms cap", () => {
@@ -684,21 +735,18 @@ describe("validateList", () => {
   test("applies Settra special hierophant priority level", () => {
     const list = {
       ...baseList,
+      army: "tomb-kings-of-khemri",
       characters: [
-        makeCharacter({
-          id: "baron.1",
-          name_en: "Baron",
-          isGeneral: true,
-        }),
         makeCharacter({
           id: "settra-the-imperishable-the-great-king-of-nehekhara.1",
           name_en: "Settra the Imperishable",
           command: [{ name_en: "The Hierophant", active: false, points: 0 }],
           options: [{ name_en: "Level 1 Wizard", active: true }],
+          isGeneral: true,
         }),
         makeCharacter({
-          id: "archmage.1",
-          name_en: "Archmage",
+          id: "high-priest.1",
+          name_en: "High Priest",
           command: [{ name_en: "The Hierophant", active: true, points: 0 }],
           options: [{ name_en: "Level 4 Wizard", active: true }],
         }),
@@ -706,6 +754,36 @@ describe("validateList", () => {
     };
 
     const errors = validateList({ list, language: "en", intl });
-    expect(getMessages(errors)).toContain("misc.error.hierophantLevel");
+    expect(getMessages(errors)).toEqual(["misc.error.hierophantLevel"]);
+  });
+
+  test("adds wizardGeneral if a Vampire Count general is not a wizard", () => {
+    const list = {
+      ...baseList,
+      army: "vampire-counts",
+      characters: [
+        makeCharacter({
+          id: "vampire-thrall",
+          name_en: "Vampire Thrall",
+          isGeneral: true,
+        }),
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+    expect(getMessages(errors)).toEqual(["misc.error.wizardGeneral"]);
+
+    // Giving the vampire thrall a wizard level makes the error go away
+    list.characters = [
+      makeCharacter({
+        id: "vampire-thrall",
+        name_en: "Vampire Thrall",
+        options: [{ name_en: "Level 1 Wizard", active: true }],
+        isGeneral: true,
+      }),
+    ];
+
+    const errors2 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors2)).toEqual([]);
   });
 });
