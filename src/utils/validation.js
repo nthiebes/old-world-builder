@@ -46,9 +46,9 @@ const getWizardLevels = (unitToCheck) => {
 };
 
 /**
- * Gets all characters with the General command option
+ * Gets all characters with the General command option active
  */
-const getGeneralCandidates = (list) =>
+const getGenerals = (list) =>
   list?.characters?.length
     ? list.characters.filter(
         (unit) =>
@@ -108,6 +108,9 @@ export const validateList = ({ list, language, intl }) => {
   if (list?.army === "tomb-kings-of-khemri") {
     checks.push(hierophantChecks);
   }
+  if (list?.army === "vampire-counts") {
+    checks.push(generalIsWizard);
+  }
   for (let check of checks) {
     errors = errors.concat(check(list, language, intl));
   }
@@ -115,7 +118,7 @@ export const validateList = ({ list, language, intl }) => {
   let used0XUnits = [];
 
   const checkRules = ({ ruleUnit, type }) => {
-    const generals = getGeneralCandidates(list);
+    const generals = getGenerals(list);
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
@@ -510,7 +513,7 @@ export const validateList = ({ list, language, intl }) => {
  */
 const oneGeneral = (list) => {
   const errors = [];
-  const generals = getGeneralCandidates(list);
+  const generals = getGenerals(list);
   if (generals.length < 1) {
     errors.push({
       message: "misc.error.noGeneral",
@@ -533,7 +536,7 @@ const oneGeneral = (list) => {
 const generalLeadership = (list) => {
   const errors = [];
   let highestLeadership = 0;
-  const generals = getGeneralCandidates(list);
+  const generals = getGenerals(list);
   if (list?.characters?.length) {
     list.characters.forEach((unit) => {
       if (
@@ -659,6 +662,20 @@ const hierophantChecks = (list) => {
       return [];
     }
   }
+}
+
+const generalIsWizard = (list) => {
+  const errors = [];
+  const generals = getGenerals(list) || [];
+  if (generals.length === 1) {
+    if (getWizardLevels(generals[0]).lastIndexOf(1) < 0) {
+      errors.push({
+        message: "misc.error.wizardGeneral",
+        section: "characters",
+      });
+    }
+  }
+  return errors;
 }
 
 /**

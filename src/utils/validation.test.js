@@ -756,4 +756,34 @@ describe("validateList", () => {
     const errors = validateList({ list, language: "en", intl });
     expect(getMessages(errors)).toEqual(["misc.error.hierophantLevel"]);
   });
+
+  test("adds wizardGeneral if a Vampire Count general is not a wizard", () => {
+    const list = {
+      ...baseList,
+      army: "vampire-counts",
+      characters: [
+        makeCharacter({
+          id: "vampire-thrall",
+          name_en: "Vampire Thrall",
+          isGeneral: true,
+        }),
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+    expect(getMessages(errors)).toEqual(["misc.error.wizardGeneral"]);
+
+    // Giving the vampire thrall a wizard level makes the error go away
+    list.characters = [
+      makeCharacter({
+        id: "vampire-thrall",
+        name_en: "Vampire Thrall",
+        options: [{ name_en: "Level 1 Wizard", active: true }],
+        isGeneral: true,
+      }),
+    ];
+
+    const errors2 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors2)).toEqual([]);
+  });
 });
