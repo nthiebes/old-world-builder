@@ -52,7 +52,7 @@ const getCodeFromUrl = () => {
 
 // If the user was just redirected from authenticating, the urls hash will contain the access token
 const hasRedirectedFromAuth = () => {
-  return !!getCodeFromUrl();
+  return !!getCodeFromUrl() && !sessionStorage.getItem("owrCodeVerifier");
 };
 
 export const useDropboxAuthentication = () => {
@@ -69,7 +69,7 @@ export const useDropboxAuthentication = () => {
       });
 
       dispatch(
-        updateLogin({ loggedIn: true, loginLoading: false, loginError: false }),
+        updateLogin({ loggedIn: true, loginLoading: false, loginError: false, provider: "dropbox" }),
       );
     } else if (hasRedirectedFromAuth()) {
       const code = getCodeFromUrl();
@@ -99,6 +99,7 @@ export const useDropboxAuthentication = () => {
               loggedIn: true,
               loginLoading: false,
               loginError: false,
+              provider: "dropbox",
             }),
           );
 

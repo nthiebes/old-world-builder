@@ -1,0 +1,142 @@
+.login {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.login__headline {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--color-headline);
+}
+
+.login__subtext {
+  text-align: center;
+  color: var(--color-font);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.login__option {
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.15s;
+  background: var(--color-background);
+}
+
+.login__option:hover {
+  border-color: var(--color-button);
+}
+
+.login__option--recommended {
+  border-color: var(--color-button);
+  position: relative;
+}
+
+.login__option-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.login__option-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-headline);
+}
+
+.login__option-name img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.login__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-button);
+  border: 1px solid var(--color-button);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  white-space: nowrap;
+}
+
+.login__option-description {
+  color: var(--color-font);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.login__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+.login__benefits li {
+  color: var(--color-font);
+  font-size: 0.9rem;
+  padding: 0.2rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.login__benefits li::before {
+  content: "\2713";
+  color: var(--color-button);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.login__pro-note {
+  color: var(--color-font);
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.login__pro-link {
+  color: var(--color-button);
+  text-decoration: underline;
+}
+
+.login__connect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.login__connect-button:hover {
+  opacity: 0.85;
+}
+
+.login__connect-button--dropbox {
+  background: #0061fe;
+  color: #fff;
+}
+
+.login__connect-button--owr {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.login__button-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}

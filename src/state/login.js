@@ -9,6 +9,7 @@ export const loginSlice = createSlice({
     isSyncing: false,
     syncConflict: false,
     syncError: false,
+    provider: null,
   },
   reducers: {
     updateLogin: (state, { payload }) => {

@@ -14,4 +14,7 @@ export default defineConfig({
     outDir: "build",
     sourcemap: true,
   },
+  server: {
+    allowedHosts: true,
+  },
 });
