@@ -10,11 +10,11 @@ import { Icon } from "../../components/icon";
 import { Dialog } from "../../components/dialog";
 import { updateLocalList } from "../../utils/list";
 import {
-  login,
   syncLists,
   uploadLocalDataToDropbox,
   downloadRemoteDataFromDropbox,
 } from "../../utils/dropbox-auth-and-synchronization";
+import { owrLogout } from "../../utils/owr-auth-and-synchronization";
 import { updateSetting } from "../../state/settings";
 import { updateLogin } from "../../state/login";
 
@@ -41,7 +41,7 @@ export const Header = ({
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const dispatch = useDispatch();
   const { listId, unitId } = useParams();
-  const { loginLoading, loggedIn, isSyncing, syncConflict, syncError } =
+  const { loginLoading, loggedIn, isSyncing, syncConflict, syncError, provider } =
     useSelector((state) => state.login);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
@@ -93,9 +93,13 @@ export const Header = ({
   ];
   const navigation = hasMainNavigation ? navigationLinks : moreButton;
   const logout = () => {
-    localStorage.removeItem("owb.accessToken");
-    localStorage.removeItem("owb.refreshToken");
-    dispatch(updateLogin({ loggedIn: false }));
+    if (provider === "owr") {
+      owrLogout({ dispatch });
+    } else {
+      localStorage.removeItem("owb.accessToken");
+      localStorage.removeItem("owb.refreshToken");
+      dispatch(updateLogin({ loggedIn: false, provider: null }));
+    }
     setIsDialogOpen(false);
   };
 
@@ -181,30 +185,39 @@ export const Header = ({
               />
             )}
             {!hasHomeButton && !isPreview && (
-              <Button
-                type="text"
-                onClick={() => {
-                  if (loggedIn) {
-                    setIsDialogOpen(true);
-                  } else {
-                    login({ dispatch });
-                  }
-                }}
-                label={
-                  loginLoading
-                    ? ""
-                    : intl.formatMessage({
-                        id: loggedIn
-                          ? "header.dropboxLogout"
-                          : "header.dropboxLogin",
-                      })
-                }
-                color="light"
-                icon={
-                  loginLoading ? "spinner" : loggedIn ? "logout" : "dropbox"
-                }
-                showLabelRight
-              />
+              <>
+                {loggedIn ? (
+                  <Button
+                    type="text"
+                    onClick={() => setIsDialogOpen(true)}
+                    label={intl.formatMessage({
+                      id: provider === "owr"
+                        ? "header.owrLogout"
+                        : "header.dropboxLogout",
+                    })}
+                    color="light"
+                    icon="logout"
+                    showLabelRight
+                  />
+                ) : loginLoading ? (
+                  <Button
+                    type="text"
+                    label=""
+                    color="light"
+                    icon="spinner"
+                    showLabelRight
+                  />
+                ) : (
+                  <Button
+                    type="text"
+                    to="/login"
+                    label={intl.formatMessage({ id: "header.login" })}
+                    color="light"
+                    icon="login"
+                    showLabelRight
+                  />
+                )}
+              </>
             )}
           </>
         )}
@@ -234,9 +247,7 @@ export const Header = ({
                             }
                             disabled={isSyncing}
                             onClick={() => {
-                              syncLists({
-                                dispatch,
-                              });
+                              syncLists({ dispatch });
                             }}
                           />
                           {syncError && (
@@ -288,9 +299,7 @@ export const Header = ({
                       }
                       disabled={isSyncing}
                       onClick={() => {
-                        syncLists({
-                          dispatch,
-                        });
+                        syncLists({ dispatch });
                       }}
                     />
                   ) : (
