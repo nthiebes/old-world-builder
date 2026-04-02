@@ -18,7 +18,45 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"]
+          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"],
+          "options": [
+            {
+              "name_en": "Arise!, Level 1 Wizard",
+              "name_cn": "唤醒!, 1级法师",
+              "name_it": "Risorgi!, Mago di 1° Livello",
+              "name_de": "Erhebt euch!, Level 1 Zauberer",
+              "name_fr": "Levez-vous!, Sorcier de Niveau 1",
+              "points": 35,
+              "notes": {
+                "name_en": "Must be Hierophant",
+                "name_cn": "Must be Hierophant",
+                "name_de": "Must be Hierophant",
+                "name_es": "Must be Hierophant",
+                "name_fr": "Must be Hierophant",
+                "name_it": "Must be Hierophant"
+              },
+              "armyComposition": "nehekharan-royal-hosts"
+            }
+          ]
+        },
+        {
+          "name_en": "The Hierophant",
+          "name_cn": "The Hierophant",
+          "name_it": "The Hierophant",
+          "name_de": "The Hierophant",
+          "name_fr": "The Hierophant",
+          "name_es": "The Hierophant",
+          "points": 0,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Only available to General if given Arise and Level 1 Wizard",
+            "name_cn": "Only available to General if given Arise and Level 1 Wizard",
+            "name_de": "Only available to General if given Arise and Level 1 Wizard",
+            "name_es": "Only available to General if given Arise and Level 1 Wizard",
+            "name_fr": "Only available to General if given Arise and Level 1 Wizard",
+            "name_it": "Only available to General if given Arise and Level 1 Wizard"
+          },
+          "armyComposition": ["nehekharan-royal-hosts"]
         }
       ],
       "equipment": [
@@ -106,15 +144,6 @@
           "name_fr": "Bouclier",
           "points": 2,
           "perModel": true
-        },
-        {
-          "name_en": "Arise!, Level 1 Wizard",
-          "name_cn": "唤醒!, 1级法师",
-          "name_it": "Risorgi!, Mago di 1° Livello",
-          "name_de": "Erhebt euch!, Level 1 Zauberer",
-          "name_fr": "Levez-vous!, Sorcier de Niveau 1",
-          "points": 35,
-          "armyComposition": "nehekharan-royal-hosts"
         }
       ],
       "mounts": [
@@ -236,7 +265,7 @@
           }
         }
       ],
-      "lores": [],
+      "lores": ["necromancy"],
       "specialRules": {
         "name_en": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
         "name_cn": "墓地诅咒, 干枯如尘, 易燃, 顽强不屈(2), 霍佩什, 吾愿必达, 尼赫喀拉亡灵, 重生(5+)",
@@ -299,7 +328,45 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"]
+          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"],
+          "options": [
+            {
+              "name_en": "Arise!, Level 1 Wizard",
+              "name_cn": "唤醒!, 1级法师",
+              "name_it": "Risorgi!, Mago di 1° Livello",
+              "name_de": "Erhebt euch!, Level 1 Zauberer",
+              "name_fr": "Levez-vous!, Sorcier de Niveau 1",
+              "points": 35,
+              "notes": {
+                "name_en": "Must be Hierophant",
+                "name_cn": "Must be Hierophant",
+                "name_de": "Must be Hierophant",
+                "name_es": "Must be Hierophant",
+                "name_fr": "Must be Hierophant",
+                "name_it": "Must be Hierophant"
+              },
+              "armyComposition": "nehekharan-royal-hosts"
+            }
+          ]
+        },
+        {
+          "name_en": "The Hierophant",
+          "name_cn": "The Hierophant",
+          "name_it": "The Hierophant",
+          "name_de": "The Hierophant",
+          "name_fr": "The Hierophant",
+          "name_es": "The Hierophant",
+          "points": 0,
+          "exclusive": false,
+          "notes": {
+            "name_en": "Only available to General if given Arise and Level 1 Wizard",
+            "name_cn": "Only available to General if given Arise and Level 1 Wizard",
+            "name_de": "Only available to General if given Arise and Level 1 Wizard",
+            "name_es": "Only available to General if given Arise and Level 1 Wizard",
+            "name_fr": "Only available to General if given Arise and Level 1 Wizard",
+            "name_it": "Only available to General if given Arise and Level 1 Wizard"
+          },
+          "armyComposition": ["nehekharan-royal-hosts"]
         }
       ],
       "equipment": [
@@ -387,15 +454,6 @@
           "name_fr": "Bouclier",
           "points": 2,
           "perModel": true
-        },
-        {
-          "name_en": "Arise!, Level 1 Wizard",
-          "name_cn": "唤醒!, 1级法师",
-          "name_it": "Risorgi!, Mago di 1° Livello",
-          "name_de": "Erhebt euch!, Level 1 Zauberer",
-          "name_fr": "Levez-vous!, Sorcier de Niveau 1",
-          "points": 35,
-          "armyComposition": "nehekharan-royal-hosts"
         }
       ],
       "mounts": [
@@ -467,7 +525,7 @@
           }
         }
       ],
-      "lores": [],
+      "lores": ["necromancy"],
       "specialRules": {
         "name_en": "Curse of the Necropolis, Dry as Dust, Flammable, Indomitable (2), Khopesh, My Will Be Done, Nehekharan Undead, Regeneration (5+)",
         "name_cn": "墓地诅咒, 干枯如尘, 易燃, 顽强不屈(2), 霍佩什, 吾愿必达, 尼赫喀拉亡灵, 重生(5+)",
