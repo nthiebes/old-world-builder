@@ -24,6 +24,7 @@ import { GameView } from "./pages/game-view";
 import { CustomDatasets } from "./pages/custom-datasets";
 import { BattleTavern } from "./pages/battle-tavern/BattleTavern";
 import { Settings } from "./pages/settings";
+import { Login } from "./pages/login";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
@@ -32,6 +33,7 @@ import {
   useDropboxAuthentication,
   syncLists,
 } from "./utils/dropbox-auth-and-synchronization";
+import { useOWRAuthentication } from "./utils/owr-auth-and-synchronization";
 
 import "./App.css";
 
@@ -39,11 +41,6 @@ let intervalId = null;
 let isWindowActive = true;
 const autoSyncLists = ({ dispatch }) => {
   intervalId = setInterval(() => {
-    // const settings = JSON.parse(localStorage.getItem("owb.settings"));
-    // const lastChanged = new Date(settings.lastChanged).getTime();
-    // const lastSynced = new Date(settings.lastSynced).getTime();
-
-    // if (lastChanged > lastSynced) {
     if (isWindowActive) {
       syncLists({ dispatch });
     }
@@ -65,6 +62,7 @@ export const App = () => {
   );
   const settings = useSelector((state) => state.settings);
   useDropboxAuthentication();
+  useOWRAuthentication();
 
   useEffect(() => {
     const localLists = localStorage.getItem("owb.lists");
@@ -119,6 +117,7 @@ export const App = () => {
           <Route path="/new">{<NewList isMobile />}</Route>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/login">{<Login />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
@@ -136,6 +135,7 @@ export const App = () => {
         <Switch>
           <Route path="/about">{<About />}</Route>
           <Route path="/help">{<Help />}</Route>
+          <Route path="/login">{<Login />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/settings">{<Settings />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
