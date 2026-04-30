@@ -92,11 +92,25 @@
   z-index: 2;
 }
 
+/* Empty folders that are open get a small breather below so you can see they
+   really do have nothing in them. */
+.home__folder--empty-open {
+  margin-bottom: 0.5rem;
+}
+
 .home__folder-name {
   flex-grow: 1;
   text-overflow: ellipsis;
   overflow-x: hidden;
   white-space: nowrap;
+}
+
+.home__folder-count {
+  font-size: 0.75em;
+  font-weight: normal;
+  opacity: 0.55;
+  margin-left: 0.25em;
+  vertical-align: 0.15em;
 }
 
 .folder__more {
@@ -113,6 +127,12 @@
 
 .home__folder-icon {
   margin-right: 0.5rem;
+}
+
+/* Hide the in-folder indicator while the item is being dragged — its real
+   destination is unknown until drop. */
+[dragging] .home__folder-icon {
+  display: none;
 }
 
 .home__header {

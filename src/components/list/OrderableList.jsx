@@ -21,7 +21,18 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
  * @param {React.ReactElement[]} props.children
  * @param {string} props.id
  */
-export const OrderableList = ({ id, children, onMoved, onDragStart }) => {
+// X offset (in px) applied to the dragged element when the drop will land
+// inside a folder. Visual cue that the item is about to be filed.
+const INTO_FOLDER_OFFSET_PX = 24;
+
+export const OrderableList = ({
+  id,
+  children,
+  onMoved,
+  onDragStart,
+  onDragUpdate,
+  intoFolder,
+}) => {
   const handleDragEnd = (result) => {
     if (!result.destination) {
       return;
@@ -33,7 +44,11 @@ export const OrderableList = ({ id, children, onMoved, onDragStart }) => {
   };
 
   return (
-    <DragDropContext onDragEnd={handleDragEnd} onBeforeDragStart={onDragStart}>
+    <DragDropContext
+      onDragEnd={handleDragEnd}
+      onBeforeDragStart={onDragStart}
+      onDragUpdate={onDragUpdate}
+    >
       <Droppable droppableId={`droppable-${id}`}>
         {(provided, _snapshot) => (
           <ol {...provided.droppableProps} ref={provided.innerRef}>
@@ -47,10 +62,22 @@ export const OrderableList = ({ id, children, onMoved, onDragStart }) => {
                     index={index}
                   >
                     {(provided, snapshot) => {
-                      // Block horizontal movement
-                      const style = provided.draggableProps.style;
-                      if (style.transform) {
-                        style.transform = style.transform.replace(/\d+/, "0");
+                      // Clone style — rbd's object is frozen.
+                      const style = provided.draggableProps.style
+                        ? { ...provided.draggableProps.style }
+                        : provided.draggableProps.style;
+                      if (style?.transform) {
+                        // rbd transforms look like `translate(Xpx, Ypx)`.
+                        // Block horizontal motion, then optionally indent
+                        // when landing in a folder.
+                        const shiftX =
+                          snapshot.isDragging && intoFolder
+                            ? INTO_FOLDER_OFFSET_PX
+                            : 0;
+                        style.transform = style.transform.replace(
+                          /translate\(\s*-?\d+px/,
+                          `translate(${shiftX}px`,
+                        );
                       }
 
                       return React.cloneElement(child, {
@@ -60,6 +87,7 @@ export const OrderableList = ({ id, children, onMoved, onDragStart }) => {
                           : {}),
                         ref: provided.innerRef,
                         ...provided.draggableProps,
+                        style,
                         ...provided.dragHandleProps,
                       });
                     }}

@@ -1,53 +1,22 @@
+// Merges `updatedList` into the existing localStorage entry rather than
+// replacing it — partial updates (e.g. folder toggle passing only id/open)
+// would otherwise wipe rank/folder/units.
 export const updateLocalList = (updatedList) => {
   const localLists = JSON.parse(localStorage.getItem("owb.lists"));
-  const updatedLists =
-    localLists &&
-    localLists.map((list) => {
-      if (list.id === updatedList.id) {
-        return updatedList;
-      } else {
-        return list;
-      }
-    });
+  if (!localLists || !updatedList) return;
+
+  const updatedLists = localLists.map((list) =>
+    list.id === updatedList.id ? { ...list, ...updatedList } : list,
+  );
 
   try {
-    localLists &&
-      localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
+    localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
   } catch (error) {}
 };
 
 export const removeFromLocalList = (listId) => {
   const localLists = JSON.parse(localStorage.getItem("owb.lists"));
-  const updatedLists = localLists.filter(({ id }) => listId !== id);
+  const updatedLists = localLists.filter((list) => list.id !== listId);
 
   localStorage.setItem("owb.lists", JSON.stringify(updatedLists));
-};
-
-export const updateListsFolder = (lists) => {
-  const folderIndexes = {};
-  let latestFolderIndex = null;
-
-  lists.forEach((folder, index) => {
-    if (folder.type === "folder") {
-      folderIndexes[index] = folder.id;
-    }
-  });
-
-  const newLists = lists.map((list, index) => {
-    if (folderIndexes[index]) {
-      latestFolderIndex = index;
-    }
-
-    if (list.type === "folder") {
-      return list;
-    }
-
-    return {
-      ...list,
-      folder:
-        latestFolderIndex !== null ? folderIndexes[latestFolderIndex] : null,
-    };
-  });
-
-  return newLists;
 };
