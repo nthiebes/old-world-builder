@@ -1165,6 +1165,14 @@
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
           }
         },
         {
@@ -1441,7 +1449,7 @@
       "name_de": "Verfluchte",
       "name_es": "Grave Guard",
       "name_fr": "Garde des Cryptes",
-      "id": "grave-guard",
+      "id": "grave-guard-core",
       "points": 11,
       "minimum": 10,
       "maximum": 0,
@@ -1532,26 +1540,40 @@
           "active": true
         },
         {
-          "name_en": "Drilled (0-1 per 1000 points)",
-          "name_cn": "受训(每1000分0-1)",
-          "name_de": "Gut ausgebildet (0-1 pro 1000 Punkte)",
-          "name_es": "Drilled (0-1 per 1000 points)",
-          "name_fr": "Bien Entraînés (0-1 par tranche de 1000 points)",
+          "name_en": "Drilled",
+          "name_cn": "受训)",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Implacable Defence (0-1 per 1000 points)",
-          "name_cn": "无懈防御(每1000分0-1)",
-          "name_de": "Unerbittliche Verteidigung (0-1 pro 1000 Punkte)",
-          "name_es": "Implacable Defence (0-1 per 1000 points)",
-          "name_fr": "Défense Implacable (0-1 par tranche de 1000 points)",
+          "name_en": "Implacable Defence",
+          "name_cn": "无懈防御",
+          "name_de": "Unerbittliche Verteidigung",
+          "name_es": "Implacable Defence",
+          "name_fr": "Défense Implacable",
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
@@ -1785,26 +1807,40 @@
           "active": true
         },
         {
-          "name_en": "Drilled (0-1 per 1000 points)",
-          "name_cn": "受训(每1000分0-1)",
-          "name_de": "Gut ausgebildet (0-1 pro 1000 Punkte)",
-          "name_es": "Drilled (0-1 per 1000 points)",
-          "name_fr": "Bien Entraînés (0-1 par tranche de 1000 points)",
+          "name_en": "Drilled",
+          "name_cn": "受训)",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
-          "name_en": "Implacable Defence (0-1 per 1000 points)",
-          "name_cn": "无懈防御(每1000分0-1)",
-          "name_de": "Unerbittliche Verteidigung (0-1 pro 1000 Punkte)",
-          "name_es": "Implacable Defence (0-1 per 1000 points)",
-          "name_fr": "Défense Implacable (0-1 par tranche de 1000 points)",
+          "name_en": "Implacable Defence",
+          "name_cn": "无懈防御",
+          "name_de": "Unerbittliche Verteidigung",
+          "name_es": "Implacable Defence",
+          "name_fr": "Défense Implacable",
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
