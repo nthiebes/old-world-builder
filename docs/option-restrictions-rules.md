@@ -13,7 +13,7 @@ Restricted options must have a unique `id` parameter. This is used to find other
   "perModel": true,
   "notes": {
     "name_en": "0-1 per army"
-  }
+  },
   "restrictions": {
     "max": 1
   }
@@ -30,10 +30,10 @@ Restricted options must have a unique `id` parameter. This is used to find other
   "perModel": true,
   "notes": {
     "name_en": "0-1 per 1000 points"
-  }
+  },
   "restrictions": {
     "max": 1,
-    "perArmyPoints": 1000
+    "points": 1000
   }
 }
 ```
@@ -55,7 +55,7 @@ Restricted options must have a unique `id` parameter. This is used to find other
   "restrictions": {
     "subOption": "magic",
     "max": 1,
-    "perArmyPoints": 1000
+    "points": 1000
   }
 }
 ```

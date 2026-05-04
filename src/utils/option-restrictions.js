@@ -1,4 +1,12 @@
-
+/**
+ * Finds all active options with restrictions and checks them against the
+ * army list to find any violations.
+ * 
+ * @param {object} unit The unit to be checked
+ * @param {object} list The army list the unit is part of
+ * @returns {object} A dictionary of the errors found. key is the option's id,
+ * value is an error message object of type {message: string, otherUnits: string[]}
+ */
 export const checkUnitOptionRestrictions = (unit, list) => {
   const errors = {};
   const categories = [
@@ -11,7 +19,7 @@ export const checkUnitOptionRestrictions = (unit, list) => {
   for (let category of categories) {
     if (unit[category] && unit[category].length) {
       for (let option of unit.options) {
-        if (option.active && option.restrictions) {
+        if (option.active && option.restrictions && option.id) {
           errors[option.id] = checkOptionRestrictions(unit.id, option, list, "options");
         }
       }
@@ -20,10 +28,22 @@ export const checkUnitOptionRestrictions = (unit, list) => {
   return errors;
 }
 
+/**
+ * Checks whether a specific option's restrictions are violated by other units in the
+ * army list
+ * 
+ * @param {string} unitId The id of the unit with the option
+ * @param {object} option The object definition of the option
+ * @param {object} list The army list the unit is a part of
+ * @param {string} optionType The category of the option, ie "command", "armor", "options"
+ * @returns {{message: string, otherUnits: {url: string, unit: object}[]} || undefined} An error message
+ * object, with a list of the other units that violate the option's restrictions. If there is no
+ * error, returns undefined.
+ */
 export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   if (option.id === undefined) {
     console.log("Options with restrictions require ids");
-    return null;
+    return undefined;
   }
   const type = optionType || "options";
 
@@ -57,6 +77,7 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   const max = option.restrictions.points
       ? Math.floor(list.points / option.restrictions.points) * option.restrictions.max
       : option.restrictions.max;
+  console.log(`max: ${max}, count: ${count}`)
   if (count > max) {
     return {
       message: "misc.error.maxOptionPerArmy",
