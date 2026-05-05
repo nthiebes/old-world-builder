@@ -324,6 +324,28 @@ describe("ensureRanks", () => {
     expect(ranked.rank < "D").toBe(true);
     expect(ranked.folder).toBeNull();
   });
+
+  test("stamps updated_at on items it migrates so the new rank syncs", () => {
+    // Two clients running ensureRanks independently on the same legacy data
+    // would otherwise generate different ranks AND keep identical (legacy)
+    // updated_at values, leaving sync unable to converge.
+    const lists = [
+      { id: "1", name: "Has rank", rank: "h", updated_at: "2026-01-01T00:00:00.000Z" },
+      { id: "2", name: "No rank yet", updated_at: "2026-01-01T00:00:00.000Z" },
+    ];
+
+    const before = new Date().toISOString();
+    const { lists: result } = ensureRanks(lists);
+    const after = new Date().toISOString();
+
+    // Untouched item keeps its original updated_at.
+    expect(result.find((l) => l.id === "1").updated_at).toBe("2026-01-01T00:00:00.000Z");
+
+    // Migrated item gets a fresh updated_at so sync recognises it as dirty.
+    const migrated = result.find((l) => l.id === "2");
+    expect(migrated.updated_at >= before).toBe(true);
+    expect(migrated.updated_at <= after).toBe(true);
+  });
 });
 
 describe("reorderList", () => {
@@ -592,6 +614,34 @@ describe("reorderList", () => {
       expect(unchanged.rank).toBe("b");
     });
   });
+
+  describe("updated_at stamping", () => {
+    test("stamps updated_at on the moved item so sync sees it as dirty", () => {
+      const lists = [
+        { ...makeList("1", "First", "d"), updated_at: "2026-01-01T00:00:00.000Z" },
+        { ...makeList("2", "Second", "m"), updated_at: "2026-01-01T00:00:00.000Z" },
+      ];
+
+      const before = new Date().toISOString();
+      const result = reorderList(lists, 0, 1);
+      const after = new Date().toISOString();
+
+      const moved = result.find((l) => l.id === "1");
+      expect(moved.updated_at >= before).toBe(true);
+      expect(moved.updated_at <= after).toBe(true);
+    });
+
+    test("does not stamp updated_at on untouched items", () => {
+      const lists = [
+        { ...makeList("1", "First", "d"), updated_at: "2026-01-01T00:00:00.000Z" },
+        { ...makeList("2", "Second", "m"), updated_at: "2026-01-01T00:00:00.000Z" },
+      ];
+
+      const result = reorderList(lists, 0, 1);
+      const unchanged = result.find((l) => l.id === "2");
+      expect(unchanged.updated_at).toBe("2026-01-01T00:00:00.000Z");
+    });
+  });
 });
 
 describe("reorderFolder", () => {
@@ -730,6 +780,25 @@ describe("reorderFolder", () => {
       // Must sort AFTER all current top-level ranks (max is "004")
       expect(movedFolder.rank > "004").toBe(true);
       expect(movedFolder.rank).not.toBe("001");
+    });
+  });
+
+  describe("updated_at stamping", () => {
+    test("stamps updated_at on the moved folder so sync sees it as dirty", () => {
+      const folder = { ...makeFolder("folder1", "My Folder", "b"), updated_at: "2026-01-01T00:00:00.000Z" };
+      const lists = [
+        { ...makeList("1", "First", "a"), updated_at: "2026-01-01T00:00:00.000Z" },
+        folder,
+        { ...makeList("2", "Second", "c"), updated_at: "2026-01-01T00:00:00.000Z" },
+      ];
+
+      const before = new Date().toISOString();
+      const result = reorderFolder(lists, 1, 2);
+      const after = new Date().toISOString();
+
+      const moved = result.find((l) => l.id === "folder1");
+      expect(moved.updated_at >= before).toBe(true);
+      expect(moved.updated_at <= after).toBe(true);
     });
   });
 });

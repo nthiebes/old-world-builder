@@ -103,6 +103,7 @@ export const ensureRanks = (lists) => {
       ...list,
       rank: newRank,
       folder: newFolder,
+      updated_at: new Date().toISOString(),
     };
   });
 
@@ -151,7 +152,7 @@ export const reorderList = (lists, sourceIndex, destIndex) => {
 
   return lists.map((l) =>
     l.id === item.id
-      ? { ...l, rank: newRank, folder: newFolder }
+      ? { ...l, rank: newRank, folder: newFolder, updated_at: new Date().toISOString() }
       : l
   );
 };
@@ -213,6 +214,8 @@ export const reorderFolder = (lists, sourceIndex, destIndex) => {
   const newRank = generateRank(prevRank, next?.rank || null);
 
   return lists.map((l) =>
-    l.id === folder.id ? { ...l, rank: newRank } : l,
+    l.id === folder.id
+      ? { ...l, rank: newRank, updated_at: new Date().toISOString() }
+      : l,
   );
 };
