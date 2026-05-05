@@ -750,6 +750,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     exclusive = true,
                     notes,
                     alwaysActive,
+                    restrictions,
                     ...command
                   },
                   index,
@@ -767,6 +768,17 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           ?.maxPoints) ||
                       magic.maxPoints;
                   }
+                  const restrictionError = active && restrictions
+                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "command")
+                    : undefined;
+                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
+                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
+                      <Link to={otherUnit.url}>
+                        {getUnitName({ unit: otherUnit.unit, language })}
+                      </Link>
+                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
 
                   return (
                     <Fragment key={id}>
@@ -958,6 +970,22 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           <hr className="unit__command-option-hr" />
                         </Fragment>
                       )}
+                      {restrictionError &&
+                        <ErrorMessage
+                          key={`${id}-restrictederror`}
+                          spaceAfter
+                          spaceBefore={isMobile}
+                        >
+                          <span>
+                            <FormattedMessage
+                              id={restrictionError.message}
+                              values={{
+                                usedby: usedElsewhereBy,
+                              }}
+                            />
+                          </span>
+                        </ErrorMessage>
+                      }
                     </Fragment>
                   );
                 },
@@ -986,39 +1014,70 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   notes,
                   group,
+                  restrictions,
                   ...equipment
-                }) => (
-                  <Fragment key={id}>
-                    <div className={group ? "checkbox" : "radio"}>
-                      <input
-                        type={group ? "checkbox" : "radio"}
-                        id={`equipment-${id}`}
-                        name="equipment"
-                        value={group || id}
-                        onChange={() => handleEquipmentChange({ id, group })}
-                        checked={active}
-                        className={group ? "checkbox__input" : "radio__input"}
-                      />
-                      <label
-                        htmlFor={`equipment-${id}`}
-                        className={group ? "checkbox__label" : "radio__label"}
-                      >
-                        <span className="unit__label-text">
-                          <RulesWithIcon textObject={equipment} />
-                        </span>
-                        <i className="checkbox__points">
-                          {getPointsText({ points, perModel })}
-                        </i>
-                      </label>
-                    </div>
-                    {getUnitOptionNotes({
-                      notes,
-                      key: `equipment-${id}-note`,
-                      className: "unit__option-note",
-                      language,
-                    })}
-                  </Fragment>
-                ),
+                }) => {
+                  const restrictionError = active && restrictions
+                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "equipment")
+                    : undefined;
+                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
+                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
+                      <Link to={otherUnit.url}>
+                        {getUnitName({ unit: otherUnit.unit, language })}
+                      </Link>
+                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
+
+                  return (
+                    <Fragment key={id}>
+                      <div className={group ? "checkbox" : "radio"}>
+                        <input
+                          type={group ? "checkbox" : "radio"}
+                          id={`equipment-${id}`}
+                          name="equipment"
+                          value={group || id}
+                          onChange={() => handleEquipmentChange({ id, group })}
+                          checked={active}
+                          className={group ? "checkbox__input" : "radio__input"}
+                        />
+                        <label
+                          htmlFor={`equipment-${id}`}
+                          className={group ? "checkbox__label" : "radio__label"}
+                        >
+                          <span className="unit__label-text">
+                            <RulesWithIcon textObject={equipment} />
+                          </span>
+                          <i className="checkbox__points">
+                            {getPointsText({ points, perModel })}
+                          </i>
+                        </label>
+                      </div>
+                      {getUnitOptionNotes({
+                        notes,
+                        key: `equipment-${id}-note`,
+                        className: "unit__option-note",
+                        language,
+                      })}
+                      {restrictionError &&
+                        <ErrorMessage
+                          key={`${id}-restrictederror`}
+                          spaceAfter
+                          spaceBefore={isMobile}
+                        >
+                          <span>
+                            <FormattedMessage
+                              id={restrictionError.message}
+                              values={{
+                                usedby: usedElsewhereBy,
+                              }}
+                            />
+                          </span>
+                        </ErrorMessage>
+                      }
+                    </Fragment>
+                  );
+                },
               )}
           </>
         )}
@@ -1044,9 +1103,21 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   activeDefault,
                   active = false,
                   notes,
+                  restrictions,
                   ...equipment
                 }) => {
                   const isRadio = unit.armor.length > 1 || activeDefault;
+                  const restrictionError = active && restrictions
+                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "armor")
+                    : undefined;
+                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
+                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
+                      <Link to={otherUnit.url}>
+                        {getUnitName({ unit: otherUnit.unit, language })}
+                      </Link>
+                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
+                    </Fragment>
+                  ));
 
                   return (
                     <Fragment key={id}>
@@ -1082,6 +1153,22 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className: "unit__option-note",
                         language,
                       })}
+                      {restrictionError &&
+                        <ErrorMessage
+                          key={`${id}-restrictederror`}
+                          spaceAfter
+                          spaceBefore={isMobile}
+                        >
+                          <span>
+                            <FormattedMessage
+                              id={restrictionError.message}
+                              values={{
+                                usedby: usedElsewhereBy,
+                              }}
+                            />
+                          </span>
+                        </ErrorMessage>
+                      }
                     </Fragment>
                   );
                 },

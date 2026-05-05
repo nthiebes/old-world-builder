@@ -35,19 +35,8 @@ describe("checkOptionRestrictions", () => {
       }]
     }
     const orcMob2 = {
+      ...orcMob1,
       id: "orc-mob.2",
-      name_en: "Orc Mob",
-      options: [{
-        id: "orc-mob-biguns",
-        active: true,
-        name_en: "Big 'Uns",
-        notes: {
-          name_en: "0-1 per army",
-        },
-        restrictions: {
-          max: 1
-        },
-      }]
     }
     const list = {
       ...baseList,
@@ -56,11 +45,9 @@ describe("checkOptionRestrictions", () => {
 
     const errors = checkOptionRestrictions(orcMob1.id, orcMob1.options[0], list, "options");
     expect(errors.message).toEqual("misc.error.maxOptionPerArmy");
-    expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/")
+    expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
   });
-});
 
-describe("checkOptionRestrictions", () => {
   test("adds maxOptionPerArmy when exceeding a max 1 per 1000 option", () => {
     const orcMob1 = {
       id: "orc-mob.1",
@@ -109,5 +96,90 @@ describe("checkOptionRestrictions", () => {
     expect(errors3.message).toEqual("misc.error.maxOptionPerArmy");
     expect(errors3.otherUnits.length).toEqual(2);
     expect(errors3.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
+  });
+
+  test("works with other option types like weapon and armour", () => {
+    const orcMob1 = {
+      id: "orc-mob.1",
+      name_en: "Orc Mob",
+      weapons: [{
+        id: "orc-mob-big-guns",
+        active: true,
+        name_en: "Big Guns",
+        notes: {
+          name_en: "0-1 per army",
+        },
+        restrictions: {
+          max: 1
+        },
+      }]
+    }
+    const orcMob2 = {
+      ...orcMob1,
+      id: "orc-mob.2",
+    }
+    const list = {
+      ...baseList,
+      core: [...baseList.core, orcMob1, orcMob2]
+    }
+
+    const errors = checkOptionRestrictions(orcMob1.id, orcMob1.weapons[0], list, "weapons");
+    expect(errors.message).toEqual("misc.error.maxOptionPerArmy");
+    expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
+  });
+
+  test("options with an id in 'restrictions.ids' are counted", () => {
+    const orcChariot1 = {
+      id: "orc-chariot.1",
+      name_en: "Orc Chariot",
+      options: [{
+        id: "orc-chariot-frenzy-2",
+        active: true,
+        name_en: "Frenzy with two crew",
+        notes: {
+          name_en: "0-1 per army",
+        },
+        restrictions: {
+          max: 1,
+          ids: ["orc-chariot-frenzy-2", "orc-chariot-frenzy-3"]
+        },
+      }]
+    }
+    const orcChariot2 = {
+      id: "orc-chariot.2",
+      name_en: "Orc Chariot",
+      options: [{
+        id: "orc-chariot-frenzy-3",
+        active: true,
+        name_en: "Frenzy with three crew",
+        notes: {
+          name_en: "0-1 per army",
+        },
+        restrictions: {
+          max: 1,
+          ids: ["orc-chariot-frenzy-2", "orc-chariot-frenzy-3"]
+        },
+      }]
+    }
+    const list = {
+      ...baseList,
+      core: [...baseList.core, orcChariot1, orcChariot2]
+    }
+
+    const errors = checkOptionRestrictions(orcChariot1.id, orcChariot1.options[0], list, "options");
+    expect(errors.message).toEqual("misc.error.maxOptionPerArmy");
+    expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-chariot.2/");
+  });
+
+  test("adds maxOptionPerArmy if requires character max limit is exceeded", () => {
+    // TO DO
+  });
+
+  test("adds maxOptionPerArmy if requires character with specific option max limit is exceeded", () => {
+    // TO DO
+  });
+
+  test("adds maxOptionPerArmy if subOption: magic (command banners)", () => {
+    // TO DO
   });
 });

@@ -20,7 +20,7 @@ export const checkUnitOptionRestrictions = (unit, list) => {
     if (unit[category] && unit[category].length) {
       for (let option of unit.options) {
         if (option.active && option.restrictions && option.id) {
-          errors[option.id] = checkOptionRestrictions(unit.id, option, list, "options");
+          errors[option.id] = checkOptionRestrictions(unit.id, option, list, category);
         }
       }
     }
@@ -62,7 +62,10 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
       if (targetUnit.id !== unitId) {
         if (targetUnit[type]) {
           for (let targetOption of targetUnit[type]) {
-            if (targetOption.id === option.id && targetOption.active) {
+            const violation = targetOption.active && option.restrictions.ids
+              ? option.restrictions.ids.includes(targetOption.id)
+              : targetOption.id === option.id
+            if (violation) {
               count += 1;
               otherUnits.push({
                 url: `/editor/${list.id}/${targetCategory}/${targetUnit.id}/`,
@@ -77,7 +80,6 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   const max = option.restrictions.points
       ? Math.floor(list.points / option.restrictions.points) * option.restrictions.max
       : option.restrictions.max;
-  console.log(`max: ${max}, count: ${count}`)
   if (count > max) {
     return {
       message: "misc.error.maxOptionPerArmy",
