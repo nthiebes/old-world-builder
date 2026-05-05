@@ -30,20 +30,19 @@ import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
 import { ensureRanks } from "./utils/list-ordering";
 
-import {
-  useDropboxAuthentication,
-  syncLists,
-} from "./utils/dropbox-auth-and-synchronization";
+import { useDropboxAuthentication } from "./utils/dropbox-auth-and-synchronization";
 import { useOWRAuthentication } from "./utils/owr-auth-and-synchronization";
+import { cleanupDeletedLists, markDirty, pushToOWR } from "./utils/owr-sync";
+import { getSyncProvider } from "./utils/sync-provider";
 
 import "./App.css";
 
 let intervalId = null;
 let isWindowActive = true;
-const autoSyncLists = ({ dispatch }) => {
+const autoSyncLists = ({ dispatch, provider }) => {
   intervalId = setInterval(() => {
     if (isWindowActive) {
-      syncLists({ dispatch });
+      getSyncProvider(provider).syncLists({ dispatch });
     }
   }, 30000);
 };
@@ -62,6 +61,7 @@ export const App = () => {
     window.matchMedia("(max-width: 1279px)").matches,
   );
   const settings = useSelector((state) => state.settings);
+  const { provider } = useSelector((state) => state.login);
   useDropboxAuthentication();
   useOWRAuthentication();
 
@@ -72,6 +72,15 @@ export const App = () => {
     const { lists: rankedLists, needsUpdate } = ensureRanks(localLists);
     if (needsUpdate) {
       localStorage.setItem("owb.lists", JSON.stringify(rankedLists));
+      const rawById = new Map(localLists.map((l) => [l.id, l]));
+      let dirty = false;
+      rankedLists.forEach((l) => {
+        if (rawById.get(l.id)?.rank !== l.rank) {
+          markDirty(l.id);
+          dirty = true;
+        }
+      });
+      if (dirty) pushToOWR();
     }
 
     dispatch(setLists(rankedLists));
@@ -80,9 +89,13 @@ export const App = () => {
 
   useEffect(() => {
     if (settings.autoSync && !intervalId) {
-      autoSyncLists({ dispatch });
+      autoSyncLists({ dispatch, provider });
     }
-  }, [settings.autoSync, dispatch]);
+  }, [settings.autoSync, dispatch, provider]);
+
+  useEffect(() => {
+    cleanupDeletedLists();
+  }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1279px)");

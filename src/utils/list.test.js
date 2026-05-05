@@ -43,11 +43,10 @@ describe("updateLocalList", () => {
     ];
     localStorage.setItem("owb.lists", JSON.stringify(lists));
 
-    // Folder toggle only passes id/name/type/open
     updateLocalList({ id: "folder-1", name: "My Folder", type: "folder", open: false });
 
     const result = JSON.parse(localStorage.getItem("owb.lists"));
-    expect(result[0]).toEqual({
+    expect(result[0]).toMatchObject({
       id: "folder-1",
       name: "My Folder",
       type: "folder",
@@ -56,12 +55,90 @@ describe("updateLocalList", () => {
       folder: null,
     });
   });
+
+  test("bumps updated_at when `open` changes (folder toggle)", () => {
+    const lists = [
+      {
+        id: "folder-1",
+        name: "My Folder",
+        type: "folder",
+        open: true,
+        rank: "h",
+        folder: null,
+        updated_at: "2026-01-01T00:00:00.000Z",
+      },
+    ];
+    localStorage.setItem("owb.lists", JSON.stringify(lists));
+
+    const before = new Date().toISOString();
+    updateLocalList({ id: "folder-1", open: false });
+    const after = new Date().toISOString();
+
+    const result = JSON.parse(localStorage.getItem("owb.lists"));
+    expect(result[0].open).toBe(false);
+    expect(result[0].updated_at >= before).toBe(true);
+    expect(result[0].updated_at <= after).toBe(true);
+  });
+
+  test("bumps updated_at when name changes", () => {
+    const lists = [
+      {
+        id: "1",
+        name: "Old name",
+        rank: "h",
+        updated_at: "2026-01-01T00:00:00.000Z",
+      },
+    ];
+    localStorage.setItem("owb.lists", JSON.stringify(lists));
+
+    const before = new Date().toISOString();
+    updateLocalList({ id: "1", name: "New name" });
+    const after = new Date().toISOString();
+
+    const result = JSON.parse(localStorage.getItem("owb.lists"));
+    expect(result[0].name).toBe("New name");
+    expect(result[0].updated_at >= before).toBe(true);
+    expect(result[0].updated_at <= after).toBe(true);
+  });
+
+  test("does not bump updated_at when nothing changed", () => {
+    const lists = [
+      {
+        id: "1",
+        name: "Same",
+        rank: "h",
+        updated_at: "2026-01-01T00:00:00.000Z",
+      },
+    ];
+    localStorage.setItem("owb.lists", JSON.stringify(lists));
+
+    updateLocalList({ id: "1", name: "Same" });
+
+    const result = JSON.parse(localStorage.getItem("owb.lists"));
+    expect(result[0].updated_at).toBe("2026-01-01T00:00:00.000Z");
+  });
+
+  test("is a no-op when the id is not present", () => {
+    const lists = [{ id: "1", name: "Keep", updated_at: "2026-01-01T00:00:00.000Z" }];
+    localStorage.setItem("owb.lists", JSON.stringify(lists));
+
+    updateLocalList({ id: "nonexistent", name: "Whatever" });
+
+    const result = JSON.parse(localStorage.getItem("owb.lists"));
+    expect(result).toEqual([{ id: "1", name: "Keep", updated_at: "2026-01-01T00:00:00.000Z" }]);
+  });
 });
 
 describe("removeFromLocalList", () => {
-  test("removes the list from localStorage", () => {
+  test("replaces the list with a slim tombstone", () => {
     const lists = [
-      { id: "1", name: "First" },
+      {
+        id: "1",
+        name: "First",
+        units: [{ id: "u1" }],
+        points: 1500,
+        rank: "0|hzzzzz:",
+      },
       { id: "2", name: "Second" },
     ];
     localStorage.setItem("owb.lists", JSON.stringify(lists));
@@ -69,7 +146,26 @@ describe("removeFromLocalList", () => {
     removeFromLocalList("1");
 
     const result = JSON.parse(localStorage.getItem("owb.lists"));
-    expect(result).toEqual([{ id: "2", name: "Second" }]);
+    expect(result.length).toBe(2);
+    expect(result[0]).toEqual({
+      id: "1",
+      _deleted: true,
+      updated_at: expect.any(String),
+    });
+    expect(result[1]._deleted).toBeUndefined();
+  });
+
+  test("sets updated_at on the deleted list", () => {
+    const lists = [{ id: "1", name: "First" }];
+    localStorage.setItem("owb.lists", JSON.stringify(lists));
+
+    const before = new Date().toISOString();
+    removeFromLocalList("1");
+    const after = new Date().toISOString();
+
+    const result = JSON.parse(localStorage.getItem("owb.lists"));
+    expect(result[0].updated_at >= before).toBe(true);
+    expect(result[0].updated_at <= after).toBe(true);
   });
 
   test("does not modify other lists", () => {
@@ -82,7 +178,7 @@ describe("removeFromLocalList", () => {
     removeFromLocalList("2");
 
     const result = JSON.parse(localStorage.getItem("owb.lists"));
-    expect(result).toEqual([{ id: "1", name: "First" }]);
+    expect(result[0]).toEqual({ id: "1", name: "First" });
   });
 
   test("is a no-op when the id is not present", () => {

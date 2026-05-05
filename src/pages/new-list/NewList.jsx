@@ -14,6 +14,7 @@ import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 import { rankAtTop } from "../../utils/list-ordering";
+import { markDirty, pushToOWR } from "../../utils/owr-sync";
 import { updateSetting } from "../../state/settings";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
@@ -108,6 +109,8 @@ export const NewList = ({ isMobile }) => {
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    markDirty(newId);
+    pushToOWR();
     dispatch(setLists(newLists));
     dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
 

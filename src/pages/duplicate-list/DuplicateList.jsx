@@ -10,6 +10,7 @@ import { NumberInput } from "../../components/number-input";
 import { getRandomId } from "../../utils/id";
 import { setLists } from "../../state/lists";
 import { rankAfter } from "../../utils/list-ordering";
+import { markDirty, pushToOWR } from "../../utils/owr-sync";
 
 import "./DuplicateList.css";
 
@@ -53,6 +54,8 @@ export const DuplicateList = ({ isMobile }) => {
     ];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    markDirty(newId);
+    pushToOWR();
     dispatch(setLists(newLists));
 
     setRedirect(newId);

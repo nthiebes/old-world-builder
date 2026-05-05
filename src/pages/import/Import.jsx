@@ -8,6 +8,7 @@ import { Header, Main } from "../../components/page";
 import { getRandomId } from "../../utils/id";
 import { setLists } from "../../state/lists";
 import { rankAtTop } from "../../utils/list-ordering";
+import { markDirty, pushToOWR } from "../../utils/owr-sync";
 
 import "./Import.css";
 
@@ -50,6 +51,8 @@ export const Import = ({ isMobile }) => {
       const newLists = [importedList, ...lists];
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      markDirty(importedList.id);
+      pushToOWR();
       dispatch(setLists(newLists));
       setRedirect(importedList.id);
     };
