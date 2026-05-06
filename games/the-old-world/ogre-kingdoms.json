@@ -841,7 +841,15 @@
               "name_it": "Look-out Gnoblar",
               "points": 5
             }
-          ]
+          ],
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
         },
         {
           "name_en": "Bellower (musician)",
@@ -1435,7 +1443,15 @@
               "name_de": "Spähgnoblar",
               "points": 5
             }
-          ]
+          ],
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
         },
         {
           "name_en": "Bellower (musician)",
@@ -1473,28 +1489,60 @@
           "name_cn": "心理免疫",
           "name_fr": "Immunisé à la Psychologie",
           "name_de": "Immung gegen Psychologie",
-          "points": 0
+          "points": 0,
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
         },
         {
           "name_en": "Poisoned Attacks",
           "name_cn": "淬毒攻击",
           "name_fr": "Attaques Empoisonnées",
           "name_de": "Giftattacken",
-          "points": 0
+          "points": 0,
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
         },
         {
           "name_en": "Stubborn",
           "name_cn": "坚毅",
           "name_fr": "Obstiné",
           "name_de": "Unnachgiebig",
-          "points": 0
+          "points": 0,
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
         },
         {
           "name_en": "Vanguard",
           "name_cn": "先锋",
           "name_fr": "Avant-garde",
           "name_de": "Vorhut",
-          "points": 0
+          "points": 0,
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
         },
         {
           "name_en": "Additional hand weapons",
@@ -1616,16 +1664,24 @@
         },
         {
           "name_en": "Standard bearer",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
           "name_cn": "旗手",
           "points": 7,
           "magic": {
             "types": ["banner"],
             "maxPoints": 50
           },
-          "name_de": "Standartenträger",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer"
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
         },
         {
           "name_en": "Bellower (musician)",
@@ -1775,7 +1831,14 @@
           "name_fr": "Éclaireurs",
           "name_it": "Scouts",
           "points": 3,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         },
         {
           "name_en": "Vanguard",
@@ -1785,7 +1848,14 @@
           "name_fr": "Avant-garde",
           "name_it": "Vanguard",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
         }
       ],
       "mounts": [],
