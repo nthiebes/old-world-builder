@@ -110,6 +110,92 @@ export const ensureRanks = (lists) => {
   return { lists: result, needsUpdate };
 };
 
+// Float pinned items.
+//   - Top-level pinned (no folder): hoisted to the very top, ABOVE any folder,
+//     in pinned_at ascending order. Folders never push above pinned lists.
+//   - Folder-content pinned: hoisted to the top of that folder's contents.
+// Runs after sortByRank.
+export const sortWithPins = (lists) => {
+  const topLevelPinned = [];
+  const remaining = [];
+  for (const item of lists) {
+    if (item.type !== "folder" && !item.folder && item.pinned_at) {
+      topLevelPinned.push(item);
+    } else {
+      remaining.push(item);
+    }
+  }
+  topLevelPinned.sort((a, b) => new Date(a.pinned_at) - new Date(b.pinned_at));
+
+  const result = [...topLevelPinned];
+  let i = 0;
+  while (i < remaining.length) {
+    const item = remaining[i];
+    if (item.type === "folder") {
+      result.push(item);
+      i++;
+      const contents = [];
+      while (i < remaining.length && remaining[i].folder === item.id) {
+        contents.push(remaining[i]);
+        i++;
+      }
+      const pinned = contents
+        .filter((c) => c.pinned_at)
+        .sort((a, b) => new Date(a.pinned_at) - new Date(b.pinned_at));
+      const unpinned = contents.filter((c) => !c.pinned_at);
+      result.push(...pinned, ...unpinned);
+    } else {
+      result.push(item);
+      i++;
+    }
+  }
+  return result;
+};
+
+// Decide which folder a drop position falls into. Shared by reorderList
+// (commits the rank) and handleDragUpdate (shows the visual indent cue) so
+// they agree.
+//
+// To make "drop into the last position of an open folder" reachable, Home.jsx
+// inserts a phantom drop-zone item after each open folder's last child (or
+// right after the header for empty open folders). Phantoms have folder=X so
+// they match the same-folder branches below; dropping past the phantom lands
+// on top-level naturally.
+export const dropFolderFor = (withoutItem, insertAt) => {
+  const prev = withoutItem[insertAt - 1] || null;
+  const next = withoutItem[insertAt] || null;
+
+  if (prev?.type === "folder") {
+    return prev.open === false ? null : prev.id;
+  }
+  if (prev?.folder) {
+    if (!next) return prev.folder;
+    if (next.folder === prev.folder) return prev.folder;
+    if (next.type === "folder") return prev.folder;
+    if (next.folder) return prev.folder;
+    return null;
+  }
+  if (next?.folder && next.type !== "folder") {
+    return next.folder;
+  }
+  return null;
+};
+
+// Choose a rank that doesn't collide with any existing rank in `lists`.
+// generateRank is unaware of in-use ranks — when it picks one that's already
+// taken, ensureRanks would later see a duplicate and reassign by JSON array
+// position, often back to the very rank we wanted to replace. Tighten the
+// lower bound iteratively until we land on a free slot.
+const uniqueRankBetween = (prevRank, nextRank, used) => {
+  let candidate = generateRank(prevRank, nextRank);
+  let lower = prevRank;
+  while (used.has(candidate)) {
+    lower = candidate;
+    candidate = generateRank(lower, nextRank);
+  }
+  return candidate;
+};
+
 export const reorderList = (lists, sourceIndex, destIndex) => {
   const item = lists[sourceIndex];
 
@@ -119,36 +205,52 @@ export const reorderList = (lists, sourceIndex, destIndex) => {
   const prev = withoutItem[insertAt - 1] || null;
   let next = withoutItem[insertAt] || null;
 
-  let newFolder = null;
+  const newFolder = dropFolderFor(withoutItem, insertAt);
+
+  // If dropping after a collapsed folder, advance both bounds past its
+  // hidden children so the new rank lands cleanly after the whole group.
+  // (Hidden children have height:0 but still occupy rbd flat indices.)
+  // Rank-prev / rank-next must come from the SAME context as the new
+  // folder placement, otherwise we'd anchor against an unrelated rank
+  // space. E.g. dropping a top-level item just past a folder's children
+  // would anchor on those children's rank (high in lex), which then
+  // sorts the new item way down the top-level run. Walk to find anchors
+  // that share context (top-level + folder headers, OR same-folder
+  // children), skipping pinned floaters at the top level.
+  const sameContext = (c) => {
+    if (!c) return false;
+    // Phantom drop-slots have no real rank — they exist only to give the
+    // user a target for "drop into folder, last position". Anchoring rank
+    // against them would push generateRank into a (null, null) call and
+    // place the item arbitrarily within the folder.
+    if (c._phantom) return false;
+    if (newFolder === null) {
+      // Pinned top-level items float to the visual top — they don't sit
+      // at their rank position, so they're invalid rank anchors.
+      if (c.pinned_at && !c.folder && c.type !== "folder") return false;
+      return c.type === "folder" || !c.folder;
+    }
+    return c.folder === newFolder;
+  };
+  let prevRank = null;
   for (let i = insertAt - 1; i >= 0; i--) {
-    if (withoutItem[i]?.type === "folder") {
-      if (withoutItem[i].open === false) break;
-      newFolder = withoutItem[i].id;
+    if (sameContext(withoutItem[i])) {
+      prevRank = withoutItem[i].rank || null;
+      break;
+    }
+  }
+  let nextRank = null;
+  for (let i = insertAt; i < withoutItem.length; i++) {
+    if (sameContext(withoutItem[i])) {
+      nextRank = withoutItem[i].rank || null;
       break;
     }
   }
 
-  // If dropping after a collapsed folder, advance BOTH bounds past its
-  // hidden children so the new rank lands cleanly after the whole group.
-  // (Hidden children have height:0 but still occupy rbd flat indices, so
-  // `next` could otherwise be a hidden child, producing a degenerate range.)
-  let prevRank = prev?.rank || null;
-  if (prev?.type === "folder" && prev.open === false) {
-    const contents = lists.filter((l) => l.folder === prev.id);
-    if (contents.length > 0) {
-      const last = contents.reduce((a, b) =>
-        (b.rank || "") > (a.rank || "") ? b : a,
-      );
-      prevRank = last.rank;
-    }
-    let i = insertAt;
-    while (i < withoutItem.length && withoutItem[i]?.folder === prev.id) {
-      i++;
-    }
-    next = withoutItem[i] || null;
-  }
-
-  const newRank = generateRank(prevRank, next?.rank || null);
+  const usedRanks = new Set(
+    lists.filter((l) => l.id !== item.id && l.rank).map((l) => l.rank),
+  );
+  const newRank = uniqueRankBetween(prevRank, nextRank, usedRanks);
 
   return lists.map((l) =>
     l.id === item.id
@@ -211,7 +313,10 @@ export const reorderFolder = (lists, sourceIndex, destIndex) => {
     if (next?.folder === prev.id) next = null;
   }
 
-  const newRank = generateRank(prevRank, next?.rank || null);
+  const usedRanks = new Set(
+    lists.filter((l) => l.id !== folder.id && l.rank).map((l) => l.rank),
+  );
+  const newRank = uniqueRankBetween(prevRank, next?.rank || null, usedRanks);
 
   return lists.map((l) =>
     l.id === folder.id

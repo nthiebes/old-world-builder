@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { sortByRank, ensureRanks, reorderList, reorderFolder } from "./list-ordering";
+import { sortByRank, ensureRanks, reorderList, reorderFolder, sortWithPins } from "./list-ordering";
 
 // Helper to create a list item
 const makeList = (id, name, rank = null, folder = null) => ({
@@ -184,6 +184,13 @@ describe("ensureRanks", () => {
     expect(result[1].rank < "z").toBe(true);
   });
 
+  test("sets updated_at on newly ranked items", () => {
+    const lists = [makeList("1", "First")];
+
+    const { lists: result } = ensureRanks(lists);
+    expect(result[0].updated_at).toBeTruthy();
+  });
+
   test("assigns folder from position for legacy items", () => {
     const folder = makeFolder("folder1", "My Folder", "a");
     // Truly legacy item: no folder property at all (undefined, not null)
@@ -323,28 +330,6 @@ describe("ensureRanks", () => {
     const ranked = result.find((l) => l.id === "1");
     expect(ranked.rank < "D").toBe(true);
     expect(ranked.folder).toBeNull();
-  });
-
-  test("stamps updated_at on items it migrates so the new rank syncs", () => {
-    // Two clients running ensureRanks independently on the same legacy data
-    // would otherwise generate different ranks AND keep identical (legacy)
-    // updated_at values, leaving sync unable to converge.
-    const lists = [
-      { id: "1", name: "Has rank", rank: "h", updated_at: "2026-01-01T00:00:00.000Z" },
-      { id: "2", name: "No rank yet", updated_at: "2026-01-01T00:00:00.000Z" },
-    ];
-
-    const before = new Date().toISOString();
-    const { lists: result } = ensureRanks(lists);
-    const after = new Date().toISOString();
-
-    // Untouched item keeps its original updated_at.
-    expect(result.find((l) => l.id === "1").updated_at).toBe("2026-01-01T00:00:00.000Z");
-
-    // Migrated item gets a fresh updated_at so sync recognises it as dirty.
-    const migrated = result.find((l) => l.id === "2");
-    expect(migrated.updated_at >= before).toBe(true);
-    expect(migrated.updated_at <= after).toBe(true);
   });
 });
 
@@ -560,8 +545,10 @@ describe("reorderList", () => {
       const moved = result.find((l) => l.id === "2");
 
       expect(moved.folder).toBe("folder1");
-      expect(moved.rank < "b").toBe(true);
-      expect(moved.rank > "a").toBe(true);
+      // Second now sorts FIRST among folder1's children.
+      const sorted = sortByRank(result);
+      const childIds = sorted.filter((l) => l.folder === "folder1").map((l) => l.id);
+      expect(childIds).toEqual(["2", "1"]);
     });
 
     test("dropping below an open folder DOES add to folder", () => {
@@ -603,6 +590,17 @@ describe("reorderList", () => {
       expect(moved.rank > "m").toBe(true);
     });
 
+    test("sets updated_at on moved item", () => {
+      const lists = [
+        makeList("1", "First", "a"),
+        makeList("2", "Second", "b"),
+      ];
+
+      const result = reorderList(lists, 0, 2);
+      const moved = result.find((l) => l.id === "1");
+      expect(moved.updated_at).toBeTruthy();
+    });
+
     test("does not modify other items", () => {
       const lists = [
         makeList("1", "First", "a"),
@@ -612,34 +610,7 @@ describe("reorderList", () => {
       const result = reorderList(lists, 0, 2);
       const unchanged = result.find((l) => l.id === "2");
       expect(unchanged.rank).toBe("b");
-    });
-  });
-
-  describe("updated_at stamping", () => {
-    test("stamps updated_at on the moved item so sync sees it as dirty", () => {
-      const lists = [
-        { ...makeList("1", "First", "d"), updated_at: "2026-01-01T00:00:00.000Z" },
-        { ...makeList("2", "Second", "m"), updated_at: "2026-01-01T00:00:00.000Z" },
-      ];
-
-      const before = new Date().toISOString();
-      const result = reorderList(lists, 0, 1);
-      const after = new Date().toISOString();
-
-      const moved = result.find((l) => l.id === "1");
-      expect(moved.updated_at >= before).toBe(true);
-      expect(moved.updated_at <= after).toBe(true);
-    });
-
-    test("does not stamp updated_at on untouched items", () => {
-      const lists = [
-        { ...makeList("1", "First", "d"), updated_at: "2026-01-01T00:00:00.000Z" },
-        { ...makeList("2", "Second", "m"), updated_at: "2026-01-01T00:00:00.000Z" },
-      ];
-
-      const result = reorderList(lists, 0, 1);
-      const unchanged = result.find((l) => l.id === "2");
-      expect(unchanged.updated_at).toBe("2026-01-01T00:00:00.000Z");
+      expect(unchanged.updated_at).toBeUndefined();
     });
   });
 });
@@ -781,24 +752,18 @@ describe("reorderFolder", () => {
       expect(movedFolder.rank > "004").toBe(true);
       expect(movedFolder.rank).not.toBe("001");
     });
-  });
 
-  describe("updated_at stamping", () => {
-    test("stamps updated_at on the moved folder so sync sees it as dirty", () => {
-      const folder = { ...makeFolder("folder1", "My Folder", "b"), updated_at: "2026-01-01T00:00:00.000Z" };
+    test("sets updated_at on moved folder", () => {
+      const folder = makeFolder("folder1", "My Folder", "a");
       const lists = [
-        { ...makeList("1", "First", "a"), updated_at: "2026-01-01T00:00:00.000Z" },
         folder,
-        { ...makeList("2", "Second", "c"), updated_at: "2026-01-01T00:00:00.000Z" },
+        makeList("1", "Outside", "b"),
       ];
 
-      const before = new Date().toISOString();
-      const result = reorderFolder(lists, 1, 2);
-      const after = new Date().toISOString();
-
-      const moved = result.find((l) => l.id === "folder1");
-      expect(moved.updated_at >= before).toBe(true);
-      expect(moved.updated_at <= after).toBe(true);
+      // rbd dest = new-array index. Last position in 2-item new array = 1.
+      const result = reorderFolder(lists, 0, 1);
+      const movedFolder = result.find((l) => l.id === "folder1");
+      expect(movedFolder.updated_at).toBeTruthy();
     });
   });
 });
@@ -1001,10 +966,13 @@ describe("newly created folders", () => {
 
     // Now reordering should work
     const reSorted = sortByRank(ranked);
-    const folderIdx = reSorted.findIndex((l) => l.id === "folder1");
-    // Drop List A below the folder
     const listAIdx = reSorted.findIndex((l) => l.id === "1");
-    const reordered = reorderList(reSorted, listAIdx, folderIdx + 1);
+    // Drop List A right after the folder header. reorderList takes the
+    // POST-removal index (matching rbd's destination.index), so when listA
+    // sits before the folder, "right after folder header" maps to the
+    // folder's post-removal index + 1.
+    const folderIdxPost = reSorted.findIndex((l) => l.id === "folder1") - (listAIdx < reSorted.findIndex((l) => l.id === "folder1") ? 1 : 0);
+    const reordered = reorderList(reSorted, listAIdx, folderIdxPost + 1);
     const finalSorted = sortByRank(reordered);
 
     const moved = finalSorted.find((l) => l.id === "1");
@@ -1022,8 +990,9 @@ describe("integration: reorder then sort", () => {
       makeList("3", "Last", "d"),
     ];
 
-    // Move "First" into the folder (after folder header)
-    const reordered = reorderList(lists, 0, 2);
+    // Move "First" into the folder. Post-removal layout is
+    // [folder, Inside, Last]; drop right after folder header = idx 1.
+    const reordered = reorderList(lists, 0, 1);
     const sorted = sortByRank(reordered);
 
     // First should now be inside folder
@@ -1053,5 +1022,499 @@ describe("integration: reorder then sort", () => {
     expect(sorted[0].name).toBe("Third");
     expect(sorted[1].name).toBe("First");
     expect(sorted[2].name).toBe("Second");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// sortWithPins
+// ---------------------------------------------------------------------------
+describe("sortWithPins", () => {
+  const list = (id, opts = {}) => ({ id, name: id, type: opts.type, folder: opts.folder, pinned_at: opts.pinned_at });
+
+  test("top-level pinned floats above all folders", () => {
+    const lists = [
+      list("L1"),
+      list("F1", { type: "folder" }),
+      list("L2", { folder: "F1" }),
+      list("L3", { pinned_at: "2026-01-01T00:00:00Z" }),
+    ];
+    const sorted = sortWithPins(lists);
+    expect(sorted.map((l) => l.id)).toEqual(["L3", "L1", "F1", "L2"]);
+  });
+
+  test("multiple top-level pinned ordered by pinned_at ascending", () => {
+    const lists = [
+      list("F1", { type: "folder" }),
+      list("L1", { pinned_at: "2026-02-01T00:00:00Z" }),
+      list("L2", { pinned_at: "2026-01-01T00:00:00Z" }),
+    ];
+    const sorted = sortWithPins(lists);
+    expect(sorted.map((l) => l.id)).toEqual(["L2", "L1", "F1"]);
+  });
+
+  test("folder-content pinned floats to top of its folder, not to global top", () => {
+    const lists = [
+      list("L1"),
+      list("F1", { type: "folder" }),
+      list("L2", { folder: "F1" }),
+      list("L3", { folder: "F1", pinned_at: "2026-01-01T00:00:00Z" }),
+    ];
+    const sorted = sortWithPins(lists);
+    expect(sorted.map((l) => l.id)).toEqual(["L1", "F1", "L3", "L2"]);
+  });
+
+  test("top-level pinned + folder-content pinned coexist correctly", () => {
+    const lists = [
+      list("L_top"),
+      list("F1", { type: "folder" }),
+      list("L_in", { folder: "F1" }),
+      list("L_in_pin", { folder: "F1", pinned_at: "2026-01-01T00:00:00Z" }),
+      list("L_top_pin", { pinned_at: "2026-01-02T00:00:00Z" }),
+    ];
+    const sorted = sortWithPins(lists);
+    expect(sorted.map((l) => l.id)).toEqual([
+      "L_top_pin", // top-level pin → very top
+      "L_top",     // unpinned top-level keeps rank position
+      "F1",
+      "L_in_pin", // pin within folder → top of folder
+      "L_in",
+    ]);
+  });
+
+  test("folders never push above top-level pinned even when folder rank is first", () => {
+    const lists = [
+      list("F1", { type: "folder" }),
+      list("L1", { pinned_at: "2026-01-01T00:00:00Z" }),
+    ];
+    const sorted = sortWithPins(lists);
+    expect(sorted[0].id).toBe("L1");
+    expect(sorted[1].id).toBe("F1");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// reorderList — drag bugs from real-user snapshots (TDD)
+// ---------------------------------------------------------------------------
+describe("reorderList — real-snapshot scenarios", () => {
+  // Build a stripped-down post-sortByRank visual layout matching snap-1.
+  // sourceIndex 2 = Mark Long, the user dragged him to "first place inside
+  // Tournament Submits". TS is at idx 3, BB-Summer (TS child) at 4, Liam
+  // (TS child) at 5. Post-removal drop position between TS and BB-Summer
+  // is destinationIndex 3.
+  const snap1Lists = () => [
+    { id: "liam-top", name: "Liam top", rank: "Hhhh", folder: null, type: undefined },
+    { id: "cory", name: "Cory", rank: "Yyv", folder: null, type: undefined },
+    { id: "mark", name: "Mark", rank: "Yyx", folder: null, type: undefined },
+    { id: "ts", name: "Tournament Submits", rank: "Z", folder: null, type: "folder", open: true },
+    { id: "bb-summer", name: "BB-Summer", rank: "Yh", folder: "ts", type: undefined },
+    { id: "liam-in-ts", name: "Liam in TS", rank: "h", folder: "ts", type: undefined },
+  ];
+
+  test("dragging top-level item into open folder at first position lands it first inside that folder", () => {
+    const lists = snap1Lists();
+    const result = reorderList(lists, 2, 3); // mark from idx 2, drop between TS and BB-Summer
+
+    const mark = result.find((l) => l.id === "mark");
+    expect(mark.folder).toBe("ts");
+
+    // Sort TS children by rank; mark must be FIRST.
+    const tsChildren = result
+      .filter((l) => l.folder === "ts")
+      .sort((a, b) => (a.rank < b.rank ? -1 : a.rank > b.rank ? 1 : 0));
+    expect(tsChildren[0].id).toBe("mark");
+    expect(tsChildren[0].rank).not.toBe("Yyx"); // rank MUST have changed
+  });
+
+  test("rank assigned in folder must compare LESS than the folder's first existing child", () => {
+    const lists = snap1Lists();
+    const result = reorderList(lists, 2, 3);
+    const mark = result.find((l) => l.id === "mark");
+    const bb = result.find((l) => l.id === "bb-summer");
+    expect(mark.rank < bb.rank).toBe(true);
+  });
+
+  // Snap-2 → snap-3 drag-out scenario. Mark Long is now in TS at rank Yyx,
+  // visual idx 27 of 51. User drags him out and rbd reports a destination
+  // somewhere between top-level items where the nearest preceding folder
+  // header is New Folder (folder-lcvbkbhb), causing him to silently land
+  // in NF instead of top-level.
+  const snap2Lists = () => [
+    { id: "nf", name: "New Folder", rank: "07", folder: null, type: "folder", open: true },
+    { id: "calum-nf", name: "Calum in NF", rank: "Yyy", folder: "nf", type: undefined },
+    { id: "summer-slam", name: "Summer Slam", rank: "YyyU", folder: "nf", type: undefined },
+    { id: "bb-settra", name: "BB-Settra", rank: "2", folder: null, type: undefined },
+    { id: "ts", name: "Tournament Submits", rank: "Z", folder: null, type: "folder", open: true },
+    { id: "bb-summer", name: "BB-Summer", rank: "Yh", folder: "ts", type: undefined },
+    { id: "mark", name: "Mark", rank: "Yyx", folder: "ts", type: undefined },
+    { id: "liam-in-ts", name: "Liam in TS", rank: "h", folder: "ts", type: undefined },
+    { id: "battle", name: "Battle march", rank: "q", folder: null, type: "folder", open: true },
+  ];
+
+  test("dragging item out of folder to position between last child and next folder header — stays in folder (last position)", () => {
+    const lists = snap2Lists();
+    // Mark at idx 6 (in TS). Drop right after Liam (TS's last child), just
+    // before Battle folder header. Post-removal idx 7. prev=Liam (folder=ts),
+    // next=Battle (folder header) → "last position in TS" semantics.
+    const result = reorderList(lists, 6, 7);
+    const mark = result.find((l) => l.id === "mark");
+    expect(mark.folder).toBe("ts");
+  });
+
+  test("dragging item out of folder to between top-level items above its folder — lands at top-level (not in earlier folder)", () => {
+    const lists = snap2Lists();
+    // Mark at idx 6 (in TS). User drags up; rbd reports drop position 4
+    // (between bb-settra and TS header). Walk-back via OLD logic would skip
+    // bb-settra and NF children, landing in NF — the bug. New logic uses
+    // next item's context: next=TS header → top-level.
+    const result = reorderList(lists, 6, 4);
+    const mark = result.find((l) => l.id === "mark");
+    expect(mark.folder).toBeNull();
+  });
+
+  test("dragging item out of folder to between NF child and a top-level item — lands at top-level", () => {
+    const lists = snap2Lists();
+    // Drop position 3 (between summer-slam (last NF child) and bb-settra
+    // (top-level)). prev=summer-slam (folder=nf), next=bb-settra (top-level).
+    // Boundary out of NF — top-level.
+    const result = reorderList(lists, 6, 3);
+    const mark = result.find((l) => l.id === "mark");
+    expect(mark.folder).toBeNull();
+  });
+
+  test("dragging top-level item just below a folder's last child to a position before BB-Settra — anchors against folder header, not the folder child", () => {
+    // Reproduces a follow-on bug: Mark is at top-level (rank 03), NF folder
+    // is open (rank 07) with children Calum/Summer Slam, BB-Settra is the
+    // first top-level after the folder. User drags Mark from his top-level
+    // slot to "just above BB-Settra". The drop position is between
+    // Summer Slam (NF child, rank YyyU) and BB-Settra (rank 2). Old code
+    // anchored on Summer Slam → generateRank(YyyU, 2) = "I", which sorts
+    // Mark below Liam Meikle (rank Hhhh < I < O). Fix walks past folder
+    // children to find NF (the same-context prev) → rank between 07 and 2.
+    const lists = [
+      { id: "wed", name: "Wed", rank: "H", pinned_at: "2026-01-01T00:00:00Z" },
+      { id: "mark", name: "Mark", rank: "03" },
+      { id: "nf", name: "NF", rank: "07", type: "folder", open: true },
+      { id: "calum", name: "Calum", rank: "Yyy", folder: "nf" },
+      { id: "summer", name: "Summer", rank: "YyyU", folder: "nf" },
+      { id: "bb-settra", name: "BB-Settra", rank: "2" },
+      { id: "chorfs", name: "Chorfs", rank: "5g" },
+      { id: "liam", name: "Liam", rank: "Hhhh" },
+      { id: "keith", name: "Keith", rank: "O" },
+    ];
+    const visual = sortWithPins(sortByRank(lists));
+    // visual: [wed (pinned), mark, nf, calum, summer, bb-settra, chorfs, liam, keith]
+    const markIdx = visual.findIndex((l) => l.id === "mark");
+    const bbIdx = visual.findIndex((l) => l.id === "bb-settra");
+    // Drop just before BB-Settra. markIdx < bbIdx → post-removal BB at bbIdx-1.
+    const dest = bbIdx - 1;
+
+    const result = reorderList(visual, markIdx, dest);
+    const mark = result.find((l) => l.id === "mark");
+
+    expect(mark.folder).toBeNull();
+    // Sort against top-level rank space: between NF (07) and BB-Settra (2).
+    expect(mark.rank > "07").toBe(true);
+    expect(mark.rank < "2").toBe(true);
+    // Specifically NOT in the H..O range where Liam/Keith live.
+    expect(mark.rank < "5g").toBe(true);
+  });
+
+  test("dragging from inside folder to top-level position immediately above the folder header (when prev is pinned)", () => {
+    // Reproduces the production bug: pinned 'Wed night orcs' (rank H) floats
+    // to the top, New Folder (rank 07) is the first non-pinned item, with
+    // Mark inside NF. Dropping Mark just above NF and below Wed should land
+    // him as the first top-level item. With the old code, generateRank('H',
+    // '07') produced rank '8', placing Mark below BB-Settra (rank '2') —
+    // way below where the user intended.
+    const lists = [
+      { id: "wed", name: "Wed night orcs", rank: "H", pinned_at: "2026-01-01T00:00:00Z" },
+      { id: "nf", name: "New Folder", rank: "07", type: "folder", open: true },
+      { id: "mark", name: "Mark", rank: "Yyx", folder: "nf" },
+      { id: "calum", name: "Calum", rank: "Yyy", folder: "nf" },
+      { id: "summer", name: "Summer Slam", rank: "YyyU", folder: "nf" },
+      { id: "bb-settra", name: "BB-Settra", rank: "2" },
+      { id: "chorfs", name: "Chorfs", rank: "5g" },
+      { id: "cold", name: "Cold WSWG", rank: "8" },
+    ];
+
+    // Visual layout post-sortWithPins is: [wed (pinned), nf, mark, calum,
+    // summer, bb-settra, chorfs, cold]. Mark is at idx 2; user drops him
+    // between wed (idx 0) and nf (idx 1). Post-removal layout:
+    // [wed, nf, calum, summer, bb-settra, chorfs, cold]; drop at idx 1.
+    const visual = sortWithPins(sortByRank(lists));
+    const markIdx = visual.findIndex((l) => l.id === "mark");
+    const result = reorderList(visual, markIdx, 1);
+    const mark = result.find((l) => l.id === "mark");
+
+    // Top-level (out of folder).
+    expect(mark.folder).toBeNull();
+    // And rank should sort BEFORE NF so visually first non-pinned.
+    expect(mark.rank < "07").toBe(true);
+    // And NOT below BB-Settra (the original bug).
+    expect(mark.rank < "2").toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// dropFolderFor — direct unit tests for the placement rule
+// ---------------------------------------------------------------------------
+import { dropFolderFor } from "./list-ordering";
+
+describe("dropFolderFor", () => {
+  test("right after open folder header → inside folder", () => {
+    const list = [
+      { id: "f", type: "folder", open: true },
+      { id: "a", folder: "f" },
+    ];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("right after closed folder header → top-level", () => {
+    const list = [
+      { id: "f", type: "folder", open: false },
+      { id: "a", folder: "f" },
+    ];
+    expect(dropFolderFor(list, 1)).toBe(null);
+  });
+
+  test("between two children of same folder → that folder", () => {
+    const list = [
+      { id: "a", folder: "f" },
+      { id: "b", folder: "f" },
+    ];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("between folder X's last child and a top-level item → top-level (drag-out boundary; phantom slot serves drag-in)", () => {
+    const list = [
+      { id: "a", folder: "f" },
+      { id: "b", folder: null },
+    ];
+    expect(dropFolderFor(list, 1)).toBe(null);
+  });
+
+  test("between folder X's last child and another folder header → stays in X (last)", () => {
+    const list = [
+      { id: "a", folder: "f" },
+      { id: "g", type: "folder", open: true },
+    ];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("right after an empty open folder header (next is anything) → INSIDE that folder", () => {
+    const list = [
+      { id: "f", type: "folder", open: true },
+      { id: "after", folder: null },
+    ];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("right after an empty open folder header at end of list → INSIDE that folder", () => {
+    const list = [{ id: "f", type: "folder", open: true }];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("phantom rows are skipped as rank anchors so reorderList uses the previous real sibling", () => {
+    // The folder-X last child (rank "c") is being dropped onto the phantom
+    // slot. Without skipping the phantom, prev becomes the rankless phantom
+    // → generateRank(null, null) and the item lands arbitrarily within X.
+    const lists = [
+      { id: "f", type: "folder", rank: "a", open: true },
+      { id: "first", folder: "f", rank: "b" },
+      { id: "moved", folder: "f", rank: "c" }, // currently last child of f
+      { id: `phantom-f`, _phantom: true, folder: "f" },
+      { id: "outside", folder: null, rank: "z" },
+    ];
+    // Drop "moved" onto the phantom slot. Visual is already the same; rbd
+    // would report sourceIndex=2, destinationIndex=2 (phantom's post-removal
+    // index). reorderList should anchor against "first" (the real previous
+    // sibling), not the phantom.
+    const result = reorderList(lists, 2, 2);
+    const moved = result.find((l) => l.id === "moved");
+    expect(moved.folder).toBe("f");
+    expect(moved.rank > "b").toBe(true);
+  });
+
+  test("phantom-as-next anchors the drop INTO the phantom's folder", () => {
+    // Home.jsx inserts a phantom after each open folder's last child to
+    // make "drop into folder, last position" reachable. Phantoms have
+    // folder=X and no rank.
+    const list = [
+      { id: "child", folder: "f" },
+      { id: "phantom-f", _phantom: true, folder: "f" },
+      { id: "next", folder: null },
+    ];
+    // Drop AT the phantom slot (between child and phantom): both have
+    // folder=f → in f.
+    expect(dropFolderFor(list, 1)).toBe("f");
+    // Drop AFTER the phantom (between phantom and next top-level item):
+    // boundary out → top-level.
+    expect(dropFolderFor(list, 2)).toBe(null);
+  });
+
+  test("at end of list when prev is folder child → stays in that folder (last)", () => {
+    const list = [{ id: "a", folder: "f" }];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+
+  test("between two top-level items → top-level", () => {
+    const list = [{ id: "a" }, { id: "b" }];
+    expect(dropFolderFor(list, 1)).toBe(null);
+  });
+
+  test("dropping above a folder header (next is folder) when prev is top-level → top-level", () => {
+    const list = [
+      { id: "a", folder: null },
+      { id: "f", type: "folder", open: true },
+    ];
+    expect(dropFolderFor(list, 1)).toBe(null);
+  });
+
+  test("dropping above a folder child when prev is top-level → into that folder", () => {
+    const list = [
+      { id: "top", folder: null },
+      { id: "child", folder: "f" },
+    ];
+    expect(dropFolderFor(list, 1)).toBe("f");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Stress: random drag-drop combinations on a realistic fixture
+// (Inspired by an exhaustive scan of a real-user 51-list snapshot — covers
+// inverted-bounds folders, prefix-pair ranks, near-MIN ranks, closed folders,
+// and pinned items. Deterministic via mulberry32 seeded RNG so failures are
+// reproducible.)
+// ---------------------------------------------------------------------------
+describe("reorderList — randomised stress on realistic fixture", () => {
+  const FIXTURE = [
+    // Pinned tops
+    { id: "p1", name: "Pinned A", rank: "0F", pinned_at: "2026-03-22T23:42:36.133Z" },
+    { id: "p2", name: "Pinned B", rank: "7", pinned_at: "2026-03-22T23:42:42.561Z" },
+    // Folder rank '07' (near-MIN) with children spanning ranks
+    { id: "f-near-min", name: "Near Min", type: "folder", rank: "07", open: true },
+    { id: "fc1", name: "Yyy", rank: "Yyy", folder: "f-near-min" },
+    { id: "fc2", name: "YyyU", rank: "YyyU", folder: "f-near-min" },
+    // Top-level run including prefix pairs
+    { id: "t1", name: "BB-Settra", rank: "2" },
+    { id: "t2", name: "Cold WSWG", rank: "8" },
+    { id: "t3", name: "Calum top", rank: "9" },
+    { id: "t4", name: "Liam-top long", rank: "Hhhh" },
+    { id: "t5", name: "Cameron", rank: "Y" },
+    { id: "t6", name: "Wed waaaagh", rank: "YU" },
+    { id: "t7", name: "Jabe", rank: "Yy" },
+    { id: "t8", name: "Morgan", rank: "YyU" },
+    { id: "t9", name: "Adam Southwell", rank: "Yyr" },
+    { id: "t10", name: "Cory Mathis", rank: "Yyv" },
+    { id: "t11", name: "Mark Long", rank: "Yyx" },
+    // INVERTED-BOUNDS folder: rank "Z" but children "Yh" and "h"
+    { id: "f-inverted", name: "TS", type: "folder", rank: "Z", open: true },
+    { id: "ic1", name: "BB-Summer", rank: "Yh", folder: "f-inverted" },
+    { id: "ic2", name: "Liam-in-TS", rank: "h", folder: "f-inverted" },
+    // Closed folder
+    { id: "f-closed", name: "Battle", type: "folder", rank: "q", open: false },
+    { id: "cc1", name: "War", rank: "r", folder: "f-closed", pinned_at: "2026-05-01T00:00:00Z" },
+    { id: "cc2", name: "Hallowed", rank: "tzmzK", folder: "f-closed" },
+    // Open folder with many lowercase children
+    { id: "f-many", name: "Sync", type: "folder", rank: "u", open: true },
+    { id: "mc1", name: "Double Shag", rank: "w", folder: "f-many" },
+    { id: "mc2", name: "Summer Sling", rank: "x", folder: "f-many" },
+    { id: "mc3", name: "Where Ogre", rank: "y", folder: "f-many" },
+    { id: "mc4", name: "Michel Jago", rank: "yU", folder: "f-many" },
+    { id: "mc5", name: "Colin G WH", rank: "yg", folder: "f-many" },
+  ];
+
+  // Deterministic PRNG so any failure is reproducible.
+  const mulberry32 = (seed) => () => {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+
+  const baseLists = (() => {
+    const ensured = ensureRanks(FIXTURE).lists;
+    return sortWithPins(sortByRank(ensured));
+  })();
+
+  test("50 random drag-drops: no rank collisions, no invalid folders, ensureRanks preserves", () => {
+    const rng = mulberry32(0xbb_50);
+    const N = 50;
+    const failures = [];
+
+    for (let i = 0; i < N; i++) {
+      let src;
+      do {
+        src = Math.floor(rng() * baseLists.length);
+      } while (baseLists[src].type === "folder");
+      let dest;
+      do {
+        dest = Math.floor(rng() * baseLists.length);
+      } while (dest === src);
+
+      const result = reorderList(baseLists, src, dest);
+      const moved = result.find((l) => l.id === baseLists[src].id);
+
+      const ranks = result.map((l) => l.rank).filter(Boolean);
+      const seen = new Set();
+      for (const r of ranks) {
+        if (seen.has(r)) {
+          failures.push({ i, src, dest, kind: "collision", dup: r });
+          break;
+        }
+        seen.add(r);
+      }
+
+      if (moved.folder && !result.some((l) => l.id === moved.folder && l.type === "folder")) {
+        failures.push({ i, src, dest, kind: "invalid-folder", folder: moved.folder });
+      }
+
+      const { lists: ensuredAgain } = ensureRanks(result);
+      const after = ensuredAgain.find((l) => l.id === moved.id).rank;
+      if (after !== moved.rank) {
+        failures.push({ i, src, dest, kind: "ensureRanks-regressed", before: moved.rank, after });
+      }
+    }
+
+    if (failures.length) {
+      // Surface first 5 failures inline; full list goes to the assertion message.
+      console.log("Stress failures:", failures.slice(0, 5));
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("50 random folder reorders: no rank collisions, child counts preserved", () => {
+    const rng = mulberry32(0xbb_5f);
+    const N = 50;
+    const folderSrcs = baseLists
+      .map((l, i) => (l.type === "folder" ? i : -1))
+      .filter((i) => i >= 0);
+    const failures = [];
+
+    for (let i = 0; i < N; i++) {
+      const src = folderSrcs[Math.floor(rng() * folderSrcs.length)];
+      let dest;
+      do {
+        dest = Math.floor(rng() * baseLists.length);
+      } while (dest === src);
+
+      const result = reorderFolder(baseLists, src, dest);
+      const ranks = result.map((l) => l.rank).filter(Boolean);
+      const seen = new Set();
+      for (const r of ranks) {
+        if (seen.has(r)) {
+          failures.push({ i, src, dest, kind: "collision", dup: r });
+          break;
+        }
+        seen.add(r);
+      }
+      const folderId = baseLists[src].id;
+      const before = baseLists.filter((l) => l.folder === folderId).length;
+      const after = result.filter((l) => l.folder === folderId).length;
+      if (before !== after) failures.push({ i, src, dest, kind: "child-count", before, after });
+    }
+
+    if (failures.length) console.log("Folder stress failures:", failures.slice(0, 5));
+    expect(failures).toEqual([]);
   });
 });

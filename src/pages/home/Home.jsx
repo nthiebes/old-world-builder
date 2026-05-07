@@ -40,7 +40,7 @@ import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import mwgForge from "../../assets/mwg-forge.gif";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
-import { sortByRank, ensureRanks, reorderList, reorderFolder } from "../../utils/list-ordering";
+import { sortByRank, ensureRanks, reorderList, reorderFolder, dropFolderFor } from "../../utils/list-ordering";
 import { generateRank } from "../../utils/lexorank";
 import { setLists, toggleFolder, updateList } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
@@ -197,6 +197,30 @@ export const Home = ({ isMobile }) => {
   const [folderName, setFolderName] = useState("");
   const [activeDeleteOption, setActiveDeleteOption] = useState("delete");
   const [dragIntoFolder, setDragIntoFolder] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const listsWithPhantoms = useMemo(() => {
+    const result = [];
+    let i = 0;
+    while (i < lists.length) {
+      const item = lists[i];
+      result.push(item);
+      i++;
+      if (item.type === "folder" && item.open !== false) {
+        while (i < lists.length && lists[i].folder === item.id) {
+          result.push(lists[i]);
+          i++;
+        }
+        result.push({
+          id: `phantom-${item.id}`,
+          _phantom: true,
+          folder: item.id,
+        });
+      }
+    }
+    return result;
+  }, [lists]);
+
   const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
@@ -206,15 +230,26 @@ export const Home = ({ isMobile }) => {
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
     setListsInFolder([]);
+    setIsDragging(false);
+    setDragIntoFolder(false);
 
     if (sourceIndex === destinationIndex) {
       return;
     }
 
-    const draggedItem = lists[sourceIndex];
-    const newLists = draggedItem.type === "folder"
-      ? reorderFolder(lists, sourceIndex, destinationIndex)
-      : reorderList(lists, sourceIndex, destinationIndex);
+    const draggedItem = listsWithPhantoms[sourceIndex];
+    if (!draggedItem || draggedItem._phantom) {
+      return;
+    }
+
+    const newLists =
+      draggedItem.type === "folder"
+        ? reorderFolder(listsWithPhantoms, sourceIndex, destinationIndex).filter(
+            (l) => !l._phantom,
+          )
+        : reorderList(listsWithPhantoms, sourceIndex, destinationIndex).filter(
+            (l) => !l._phantom,
+          );
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
@@ -395,6 +430,7 @@ export const Home = ({ isMobile }) => {
     window.scrollTo(0, 0);
   };
   const handleDragStart = (start) => {
+    setIsDragging(true);
     const draggedItem = lists.find(
       (list) =>
         list.id === start.draggableId || list.folder === start.draggableId,
@@ -412,27 +448,17 @@ export const Home = ({ isMobile }) => {
       setDragIntoFolder(false);
       return;
     }
-    const sourceItem = lists[update.source.index];
-    // Folders never go INTO folders
+    const sourceItem = listsWithPhantoms[update.source.index];
     if (sourceItem?.type === "folder") {
       setDragIntoFolder(false);
       return;
     }
-    // Mirror reorderList: walk back past contents until we hit a folder
-    // header, then it's "into folder" only if that folder is open. (Drops
-    // after a closed folder land at top-level.)
-    const withoutItem = lists.filter((_, i) => i !== update.source.index);
-    let intoFolder = false;
-    for (let i = update.destination.index - 1; i >= 0; i--) {
-      const item = withoutItem[i];
-      if (item?.type === "folder") {
-        intoFolder = item.open !== false;
-        break;
-      }
-      // contents (non-folder with folder ref) — skip past them to find the
-      // folder header above
-    }
-    setDragIntoFolder(intoFolder);
+    const withoutItem = listsWithPhantoms.filter(
+      (_, i) => i !== update.source.index,
+    );
+    setDragIntoFolder(
+      dropFolderFor(withoutItem, update.destination.index) !== null,
+    );
   };
   const handleDeleteOptionChange = (option) => {
     setActiveDeleteOption(option);
@@ -665,7 +691,7 @@ export const Home = ({ isMobile }) => {
           onDragUpdate={handleDragUpdate}
           intoFolder={dragIntoFolder}
         >
-          {lists.map(
+          {listsWithPhantoms.map(
             ({
               id,
               name,
@@ -676,9 +702,20 @@ export const Home = ({ isMobile }) => {
               type,
               folder,
               open,
+              _phantom,
               ...list
             }) =>
-              type === "folder" ? (
+              _phantom ? (
+                <li
+                  key={id}
+                  className={classNames(
+                    "home__phantom-drop",
+                    isDragging && "home__phantom-drop--active",
+                  )}
+                  data-folder={folder}
+                  dragDisabled
+                />
+              ) : type === "folder" ? (
                 <ListItem
                   key={id}
                   to="#"

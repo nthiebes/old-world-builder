@@ -148,6 +148,21 @@
   opacity: 0.5;
 }
 
+.home__phantom-drop {
+  list-style: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height 120ms ease, margin 120ms ease;
+  pointer-events: none;
+}
+
+.home__phantom-drop--active {
+  height: 1.5rem;
+  pointer-events: auto;
+}
+
 .home__delete-text {
   margin-bottom: 1rem;
 }

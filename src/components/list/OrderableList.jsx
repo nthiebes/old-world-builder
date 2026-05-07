@@ -29,11 +29,16 @@ export const OrderableList = ({
   id,
   children,
   onMoved,
+  onBeforeCapture,
   onDragStart,
   onDragUpdate,
+  onDragEnd,
   intoFolder,
 }) => {
   const handleDragEnd = (result) => {
+    // Always fire a cleanup callback so callers can reset transient drag
+    // state even when the drop is cancelled (no destination).
+    onDragEnd?.(result);
     if (!result.destination) {
       return;
     }
@@ -45,9 +50,10 @@ export const OrderableList = ({
 
   return (
     <DragDropContext
-      onDragEnd={handleDragEnd}
+      onBeforeCapture={onBeforeCapture}
       onBeforeDragStart={onDragStart}
       onDragUpdate={onDragUpdate}
+      onDragEnd={handleDragEnd}
     >
       <Droppable droppableId={`droppable-${id}`}>
         {(provided, _snapshot) => (
@@ -60,6 +66,7 @@ export const OrderableList = ({
                     key={child.key}
                     draggableId={child.key}
                     index={index}
+                    isDragDisabled={!!child.props?.dragDisabled}
                   >
                     {(provided, snapshot) => {
                       // Clone style — rbd's object is frozen.
