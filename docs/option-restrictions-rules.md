@@ -74,7 +74,7 @@ Restricted options must have a unique `id` parameter. This is used to find other
   "restrictions": {
     "requires": {
       "unitIds": ["kiknik-toofsnatcha"],
-      "types": "characters"
+      "type": "characters"
     },
     "max": 1
   }

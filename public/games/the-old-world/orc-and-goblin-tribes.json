@@ -3971,19 +3971,26 @@
           "armyComposition": ["nomadic-waaagh"]
         },
         {
+          "id": "wolf-rider-kiknik-ambushers",
           "name_en": "Ambushers",
           "name_cn": "伏击",
           "name_de": "Überfall",
           "name_fr": "Embusqueurs",
           "points": 0,
           "perModel": true,
-          "armyComposition": ["nomadic-waaagh"],
           "notes": {
             "name_en": "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
             "name_cn": "0-1Goblin Wolf Rider Mob if Kiknik is in the army",
             "name_de": "0-1 Goblin Wolfsreiter-Mob, wenn Kiknik Teil der Armee ist",
             "name_es": "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
             "name_fr": "0-1 Bande de Gobelins sur Loups si Kiknik est dans l’armée"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["kiknik-toofsnatcha"],
+              "type": "characters"
+            },
+            "max": 1
           }
         },
         {

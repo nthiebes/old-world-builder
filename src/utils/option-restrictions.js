@@ -47,6 +47,7 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   }
   const type = optionType || "options";
 
+  // Count how many units have this option
   const unitCategories = [
     "characters",
     "core",
@@ -62,10 +63,10 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
       if (targetUnit.id !== unitId) {
         if (targetUnit[type]) {
           for (let targetOption of targetUnit[type]) {
-            const violation = targetOption.active && option.restrictions.ids
+            const hasOption = targetOption.active && (option.restrictions.ids
               ? option.restrictions.ids.includes(targetOption.id)
-              : targetOption.id === option.id
-            if (violation) {
+              : targetOption.id === option.id);
+            if (hasOption) {
               count += 1;
               otherUnits.push({
                 url: `/editor/${list.id}/${targetCategory}/${targetUnit.id}/`,
@@ -77,12 +78,31 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
       }
     }
   }
-  const max = option.restrictions.points
-      ? Math.floor(list.points / option.restrictions.points) * option.restrictions.max
-      : option.restrictions.max;
+  // Determine if that count exceeds the maximum number allowed.
+  // If restriction is poorly formatted and max can't be determined, allow any number.
+  let max = Infinity;
+  let message = "misc.error.maxOptionPerArmy";
+  if (option.restrictions.requires) {
+    if (option.restrictions.requires.unitIds) {
+      max = 0;
+      message = "misc.error.optionRequiresUnit";
+      for (let unitCandidate of list[option.restrictions.requires.type]) {
+        if (option.restrictions.requires.unitIds.includes(unitCandidate.id.split('.')[0])) {
+          max = option.restrictions.perUnit
+            ? max + 1
+            : option.restrictions.max;
+          message = "misc.error.maxOptionPerArmy";
+        }
+      }
+    }
+  } else if (option.restrictions.points) {
+    max = Math.floor(list.points / option.restrictions.points) * option.restrictions.max;
+  } else if (option.restrictions.max) {
+    max = option.restrictions.max;
+  }
   if (count > max) {
     return {
-      message: "misc.error.maxOptionPerArmy",
+      message,
       otherUnits
     }
   } else {

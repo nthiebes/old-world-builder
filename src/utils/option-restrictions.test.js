@@ -76,12 +76,13 @@ describe("checkOptionRestrictions", () => {
 
     // No errors with 2 units at 2000 points
     const errors1 = checkOptionRestrictions(orcMob1.id, orcMob1.options[0], list, "options");
-    expect(errors1).toEqual(undefined);
+    expect(errors1).toBeUndefined();
 
     // Error with 2 units at 1000 points
     list.points = 1000;
 
     const errors2 = checkOptionRestrictions(orcMob1.id, orcMob1.options[0], list, "options");
+    expect(errors2).toBeDefined();
     expect(errors2.message).toEqual("misc.error.maxOptionPerArmy");
     expect(errors2.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
 
@@ -93,6 +94,7 @@ describe("checkOptionRestrictions", () => {
     list.points = 2000;
     list.core.push(orcMob3);
     const errors3 = checkOptionRestrictions(orcMob1.id, orcMob1.options[0], list, "options");
+    expect(errors3).toBeDefined();
     expect(errors3.message).toEqual("misc.error.maxOptionPerArmy");
     expect(errors3.otherUnits.length).toEqual(2);
     expect(errors3.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
@@ -124,6 +126,7 @@ describe("checkOptionRestrictions", () => {
     }
 
     const errors = checkOptionRestrictions(orcMob1.id, orcMob1.weapons[0], list, "weapons");
+    expect(errors).toBeDefined();
     expect(errors.message).toEqual("misc.error.maxOptionPerArmy");
     expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
   });
@@ -167,19 +170,68 @@ describe("checkOptionRestrictions", () => {
     }
 
     const errors = checkOptionRestrictions(orcChariot1.id, orcChariot1.options[0], list, "options");
+    expect(errors).toBeDefined();
     expect(errors.message).toEqual("misc.error.maxOptionPerArmy");
     expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-chariot.2/");
   });
 
   test("adds maxOptionPerArmy if requires character max limit is exceeded", () => {
+    const wolfRiders1 = {
+      id: "goblin-wolf-riders.1",
+      name: "Goblin Wolf Riders",
+      options: [
+        {
+          "id": "wolf-rider-kiknik-ambushers",
+          "name_en": "Ambushers",
+          "active": true,
+          "notes": {
+            "name_en": "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["kiknik-toofsnatcha"],
+              "type": "characters"
+            },
+            "max": 1
+          }
+        }
+      ]
+    }
+    const list = {
+      ...baseList,
+      core: [...baseList.core, wolfRiders1]
+    }
+    // Without Kiknik, having the option enabled throws throws an error
+    const errors1 = checkOptionRestrictions(wolfRiders1.id, wolfRiders1.options[0], list, "options");
+    expect(errors1).toBeDefined();
+    expect(errors1.message).toEqual("misc.error.optionRequiresUnit");
+    expect(errors1.otherUnits.length).toEqual(0);
+
+    // With Kiknik, the error goes away
+    list.characters = [{
+      id: "kiknik-toofsnatcha.1",
+      name_en: "Kiknik Toofsnatcha",
+    }];
+    const errors2 = checkOptionRestrictions(wolfRiders1.id, wolfRiders1.options[0], list, "options");
+    expect(errors2).toBeUndefined();
+
+    // With another wolf rider with the option, throws a different error
+    const wolfRiders2 = {
+      ...wolfRiders1,
+      id: "wolfRiders2"
+    }
+    list.core.push(wolfRiders2);
+    const errors3 = checkOptionRestrictions(wolfRiders1.id, wolfRiders1.options[0], list, "options");
+    expect(errors3).toBeDefined();
+    expect(errors3.message).toEqual("misc.error.maxOptionPerArmy");
+    expect(errors3.otherUnits.length).toEqual(1);
+  });
+
+  test.todo("adds maxOptionPerArmy if requires character with specific option max limit is exceeded", () => {
     // TO DO
   });
 
-  test("adds maxOptionPerArmy if requires character with specific option max limit is exceeded", () => {
-    // TO DO
-  });
-
-  test("adds maxOptionPerArmy if subOption: magic (command banners)", () => {
+  test.todo("adds maxOptionPerArmy if subOption: magic (command banners)", () => {
     // TO DO
   });
 });
