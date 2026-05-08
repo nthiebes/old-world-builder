@@ -96,8 +96,9 @@ Restricted options must have a unique `id` parameter. This is used to find other
     "requires": {
       "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
       "option": "renegade-knight",
+      "optionType": "command",
       "perUnit": true,
-      "types": "characters"
+      "type": "characters"
     },
     "max": 1
   }

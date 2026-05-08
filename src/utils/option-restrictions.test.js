@@ -175,7 +175,7 @@ describe("checkOptionRestrictions", () => {
     expect(errors.otherUnits[0].url).toEqual("/editor/test-army/core/orc-chariot.2/");
   });
 
-  test("adds maxOptionPerArmy if requires character max limit is exceeded", () => {
+  test("adds errors if requires character max limit is exceeded", () => {
     const wolfRiders1 = {
       id: "goblin-wolf-riders.1",
       name: "Goblin Wolf Riders",
@@ -227,8 +227,90 @@ describe("checkOptionRestrictions", () => {
     expect(errors3.otherUnits.length).toEqual(1);
   });
 
-  test.todo("adds maxOptionPerArmy if requires character with specific option max limit is exceeded", () => {
-    // TO DO
+  test("adds errors if requires character with specific option max limit is exceeded", () => {
+    const freebladeKnights1 = {
+      id: "freebladeKnights.1",
+      name: "Freeblade Knights",
+      options: [
+        {
+          "id": "knights-lance-noble-disdain",
+          "name_en": "Lance Formation, Noble Disdain",
+          "active": true,
+          "notes": {
+            "name_en": "0-1 unit for each character with the Renegade Knight Infamous Origin",
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "renegade-knight",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
+          }
+        }
+      ]
+    }
+    const list = {
+      ...baseList,
+      core: [...baseList.core, freebladeKnights1]
+    }
+    // Without a Renegade Knight, having the option enabled throws throws an error
+    const errors1 = checkOptionRestrictions(freebladeKnights1.id, freebladeKnights1.options[0], list, "options");
+    expect(errors1).toBeDefined();
+    expect(errors1.message).toEqual("misc.error.optionRequiresUnitWithOption");
+    expect(errors1.otherUnits.length).toEqual(0);
+
+    // Error still occurs if a character of the right type is added who doesn't have the option
+    const prince1 = {
+      id: "renegade-prince.1",
+      name_en: "Renegade Prince",
+      command: []
+    }
+    list.characters = [prince1];
+    const errors2 = checkOptionRestrictions(freebladeKnights1.id, freebladeKnights1.options[0], list, "options");
+    expect(errors2).toBeDefined();
+    expect(errors2.message).toEqual("misc.error.optionRequiresUnitWithOption");
+    expect(errors2.otherUnits.length).toEqual(0);
+
+    // Adding required option makes error go away
+    list.characters[0].command = [
+      {
+        id: "renegade-knight",
+        name_en: "Renegade Knight",
+        active: true
+      }
+    ]
+    const errors3 = checkOptionRestrictions(freebladeKnights1.id, freebladeKnights1.options[0], list, "options");
+    expect(errors3).toBeUndefined();
+
+    // Adding another unit with the option throws a different error
+    const freebladeKnights2 = {
+      ...freebladeKnights1,
+      id: "freebladeKnights.2"
+    }
+    list.core.push(freebladeKnights2);
+    const errors4 = checkOptionRestrictions(freebladeKnights1.id, freebladeKnights1.options[0], list, "options");
+    expect(errors4).toBeDefined();
+    expect(errors4.message).toEqual("misc.error.maxOptionPerArmy");
+    expect(errors4.otherUnits.length).toEqual(1);
+
+    // Adding another character with the required option makes error go away
+    const captain1 = {
+      id: "renegade-captain.1",
+      name_en: "Renegade Captain",
+      command: [
+        {
+          id: "renegade-knight",
+          name_en: "Renegade Knight",
+          active: true
+        }
+      ]
+    }
+    list.characters.push(captain1);
+    const errors5 = checkOptionRestrictions(freebladeKnights1.id, freebladeKnights1.options[0], list, "options");
+    expect(errors5).toBeUndefined();
   });
 
   test.todo("adds maxOptionPerArmy if subOption: magic (command banners)", () => {

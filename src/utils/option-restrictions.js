@@ -85,13 +85,29 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   if (option.restrictions.requires) {
     if (option.restrictions.requires.unitIds) {
       max = 0;
-      message = "misc.error.optionRequiresUnit";
-      for (let unitCandidate of list[option.restrictions.requires.type]) {
+      if (option.restrictions.requires.option) {
+        message = "misc.error.optionRequiresUnitWithOption";
+      } else {
+        message = "misc.error.optionRequiresUnit";
+      }
+      for (let unitCandidate of list[option.restrictions.requires.type] || []) {
         if (option.restrictions.requires.unitIds.includes(unitCandidate.id.split('.')[0])) {
-          max = option.restrictions.perUnit
-            ? max + 1
-            : option.restrictions.max;
-          message = "misc.error.maxOptionPerArmy";
+          if (option.restrictions.requires.option) {
+            const hasOption = unitCandidate[option.restrictions.requires.optionType || "options"]
+              .reduce((prev, current) => 
+                prev || (current.active && current.id === option.restrictions.requires.option), false);
+            if (hasOption) {
+              max = option.restrictions.requires.perUnit
+                ? max + 1
+                : option.restrictions.max;
+              message = "misc.error.maxOptionPerArmy";
+            }
+          } else {
+            max = option.restrictions.requires.perUnit
+              ? max + 1
+              : option.restrictions.max;
+            message = "misc.error.maxOptionPerArmy";
+          }
         }
       }
     }
