@@ -53,7 +53,7 @@ Restricted options must have a unique `id` parameter. This is used to find other
     "name_en": "0-1 unit per 1000 points may purchase a magic standard",
   },
   "restrictions": {
-    "subOption": "magic",
+    "restrictMagicItems": true,
     "max": 1,
     "points": 1000
   }

@@ -769,7 +769,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       magic.maxPoints;
                   }
                   const restrictionError = active && restrictions
-                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "command")
+                    ? checkOptionRestrictions(unit.id, {id, restrictions, magic}, list, "command")
                     : undefined;
                   const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
                     <Fragment key={`${otherUnit.unit.id}-error-link`}>

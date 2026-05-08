@@ -181,18 +181,18 @@ describe("checkOptionRestrictions", () => {
       name: "Goblin Wolf Riders",
       options: [
         {
-          "id": "wolf-rider-kiknik-ambushers",
-          "name_en": "Ambushers",
-          "active": true,
-          "notes": {
-            "name_en": "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
+          id: "wolf-rider-kiknik-ambushers",
+          name_en: "Ambushers",
+          active: true,
+          notes: {
+            name_en: "0-1 Goblin Wolf Rider Mob if Kiknik is in the army",
           },
-          "restrictions": {
-            "requires": {
-              "unitIds": ["kiknik-toofsnatcha"],
-              "type": "characters"
+          restrictions: {
+            requires: {
+              unitIds: ["kiknik-toofsnatcha"],
+              type: "characters"
             },
-            "max": 1
+            max: 1
           }
         }
       ]
@@ -233,21 +233,21 @@ describe("checkOptionRestrictions", () => {
       name: "Freeblade Knights",
       options: [
         {
-          "id": "knights-lance-noble-disdain",
-          "name_en": "Lance Formation, Noble Disdain",
-          "active": true,
-          "notes": {
-            "name_en": "0-1 unit for each character with the Renegade Knight Infamous Origin",
+          id: "knights-lance-noble-disdain",
+          name_en: "Lance Formation, Noble Disdain",
+          active: true,
+          notes: {
+            name_en: "0-1 unit for each character with the Renegade Knight Infamous Origin",
           },
-          "restrictions": {
-            "requires": {
-              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
-              "option": "renegade-knight",
-              "optionType": "command",
-              "perUnit": true,
-              "type": "characters"
+          restrictions: {
+            requires: {
+              unitIds: ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              option: "renegade-knight",
+              optionType: "command",
+              perUnit: true,
+              type: "characters"
             },
-            "max": 1
+            max: 1
           }
         }
       ]
@@ -313,7 +313,62 @@ describe("checkOptionRestrictions", () => {
     expect(errors5).toBeUndefined();
   });
 
-  test.todo("adds maxOptionPerArmy if subOption: magic (command banners)", () => {
-    // TO DO
+  test("adds maxOptionPerArmy if subOption: magic (command banners)", () => {
+    const orcMob1 = {
+      id: "orc-mob.1",
+      name_en: "Orc Mob",
+      command: [{
+        id: "orc-mob-standard-bearer",
+        name_en: "Standard Bearer",
+        active: true,
+        magic: {
+          types: ["banner"],
+          selected: [
+            {
+              name_en: "War Banner",
+              points: 25
+            }
+          ]
+        },
+        notes: {
+          name_en: "0-1 unit per 1000 points may purchase a magic standard",
+        },
+        restrictions: {
+          restrictMagicItems: true,
+          max: 1,
+          points: 1000
+        }
+      }],
+    }
+    const orcMob2 = {
+      ...orcMob1,
+      id: "orc-mob.2",
+    }
+    // One mob with a standard bearer but no magic banner
+    const orcMob3 = {
+      ...orcMob1,
+      id: "orc-mob.3",
+      command: [{
+        id: "orc-mob-standard-bearer",
+        name_en: "Standard Bearer",
+        active: true,
+      }]
+    }
+    const list = {
+      ...baseList,
+      core: [...baseList.core, orcMob1, orcMob2, orcMob3]
+    }
+
+    // No errors with 2 units at 2000 points
+    const errors1 = checkOptionRestrictions(orcMob1.id, orcMob1.command[0], list, "command");
+    expect(errors1).toBeUndefined();
+
+    // Error with 2 units at 1000 points
+    list.points = 1000;
+
+    const errors2 = checkOptionRestrictions(orcMob1.id, orcMob1.command[0], list, "command");
+    expect(errors2).toBeDefined();
+    expect(errors2.message).toEqual("misc.error.maxOptionPerArmy");
+    expect(errors2.otherUnits[0].url).toEqual("/editor/test-army/core/orc-mob.2/");
   });
 });

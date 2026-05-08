@@ -1,6 +1,6 @@
 /**
- * Finds all active options with restrictions and checks them against the
- * army list to find any violations.
+ * Finds all active options with restrictions and checks them against the army list to
+ * find any violations.
  * 
  * @param {object} unit The unit to be checked
  * @param {object} list The army list the unit is part of
@@ -29,20 +29,23 @@ export const checkUnitOptionRestrictions = (unit, list) => {
 }
 
 /**
- * Checks whether a specific option's restrictions are violated by other units in the
- * army list
+ * Checks whether a specific active option's restrictions are violated by other units in
+ * the army list
  * 
  * @param {string} unitId The id of the unit with the option
  * @param {object} option The object definition of the option
  * @param {object} list The army list the unit is a part of
  * @param {string} optionType The category of the option, ie "command", "armor", "options"
- * @returns {{message: string, otherUnits: {url: string, unit: object}[]} || undefined} An error message
- * object, with a list of the other units that violate the option's restrictions. If there is no
- * error, returns undefined.
+ * @returns {{message: string, otherUnits: {url: string, unit: object}[]} || undefined} 
+ *    An error message object, with a list of the other units that violate the option's 
+ *    restrictions. If there is no error, returns undefined.
  */
 export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   if (option.id === undefined) {
     console.log("Options with restrictions require ids");
+    return undefined;
+  }
+  if (option.restrictions?.restrictMagicItems && (option.magic?.selected?.length || 0) < 1) {
     return undefined;
   }
   const type = optionType || "options";
@@ -63,9 +66,12 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
       if (targetUnit.id !== unitId) {
         if (targetUnit[type]) {
           for (let targetOption of targetUnit[type]) {
-            const hasOption = targetOption.active && (option.restrictions.ids
+            let hasOption = targetOption.active && (option.restrictions.ids 
               ? option.restrictions.ids.includes(targetOption.id)
               : targetOption.id === option.id);
+            if (option.restrictions.restrictMagicItems) {
+              hasOption = hasOption && targetOption.magic?.selected?.length > 0;
+            }
             if (hasOption) {
               count += 1;
               otherUnits.push({
@@ -85,11 +91,9 @@ export const checkOptionRestrictions = (unitId, option, list, optionType) => {
   if (option.restrictions.requires) {
     if (option.restrictions.requires.unitIds) {
       max = 0;
-      if (option.restrictions.requires.option) {
-        message = "misc.error.optionRequiresUnitWithOption";
-      } else {
-        message = "misc.error.optionRequiresUnit";
-      }
+      message = option.restrictions.requires.option
+        ? "misc.error.optionRequiresUnitWithOption"
+        : "misc.error.optionRequiresUnit";
       for (let unitCandidate of list[option.restrictions.requires.type] || []) {
         if (option.restrictions.requires.unitIds.includes(unitCandidate.id.split('.')[0])) {
           if (option.restrictions.requires.option) {
