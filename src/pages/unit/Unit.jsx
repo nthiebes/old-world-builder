@@ -44,7 +44,7 @@ import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
 import "./Unit.css";
 import { updateSetting } from "../../state/settings";
-import { checkOptionRestrictions } from "../../utils/option-restrictions";
+import { checkUnitOptionRestrictions } from "../../utils/option-restrictions";
 
 export const Unit = ({ isMobile, previewData = {} }) => {
   const isPreview = Boolean(previewData?.type);
@@ -66,6 +66,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
   const settings = useSelector((state) => state.settings);
+  const [optionErrors, setOptionErrors] = useState({});
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
@@ -544,6 +545,42 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     }
   }, [list, army, dispatch, game, armyData?.version]);
 
+  useEffect(() => {
+    if (unit && list) {
+      setOptionErrors(checkUnitOptionRestrictions(unit, list));
+    }
+  }, [unit, list]);
+
+  const optionErrorMessage = (optionId) => {
+    if (!optionId || !optionErrors[optionId]) {
+      return null;
+    }
+    const usedElsewhereBy = optionErrors[optionId]?.otherUnits?.map((otherUnit, index) => (
+      <Fragment key={`${otherUnit.unit.id}-error-link`}>
+        <Link to={otherUnit.url}>
+          {getUnitName({ unit: otherUnit.unit, language })}
+        </Link>
+        {index !== optionErrors[optionId].otherUnits.length - 1 ? ", " : ""}
+      </Fragment>
+    ));
+    return (
+      <ErrorMessage
+        key={`${optionId}-restrictederror`}
+        spaceAfter
+        spaceBefore={isMobile}
+      >
+        <span>
+          <FormattedMessage
+            id={optionErrors[optionId].message}
+            values={{
+              usedby: usedElsewhereBy,
+            }}
+          />
+        </span>
+      </ErrorMessage>
+    );
+  }
+
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
   }
@@ -750,7 +787,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     exclusive = true,
                     notes,
                     alwaysActive,
-                    restrictions,
                     ...command
                   },
                   index,
@@ -768,18 +804,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           ?.maxPoints) ||
                       magic.maxPoints;
                   }
-                  const restrictionError = active && restrictions
-                    ? checkOptionRestrictions(unit.id, {id, restrictions, magic}, list, "command")
-                    : undefined;
-                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
-                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
-                      <Link to={otherUnit.url}>
-                        {getUnitName({ unit: otherUnit.unit, language })}
-                      </Link>
-                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
-                    </Fragment>
-                  ));
-
+                  
                   return (
                     <Fragment key={id}>
                       <div
@@ -970,22 +995,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           <hr className="unit__command-option-hr" />
                         </Fragment>
                       )}
-                      {restrictionError &&
-                        <ErrorMessage
-                          key={`${id}-restrictederror`}
-                          spaceAfter
-                          spaceBefore={isMobile}
-                        >
-                          <span>
-                            <FormattedMessage
-                              id={restrictionError.message}
-                              values={{
-                                usedby: usedElsewhereBy,
-                              }}
-                            />
-                          </span>
-                        </ErrorMessage>
-                      }
+                      {optionErrors[id] && optionErrorMessage(id)}
                     </Fragment>
                   );
                 },
@@ -1014,21 +1024,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   active = false,
                   notes,
                   group,
-                  restrictions,
                   ...equipment
                 }) => {
-                  const restrictionError = active && restrictions
-                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "equipment")
-                    : undefined;
-                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
-                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
-                      <Link to={otherUnit.url}>
-                        {getUnitName({ unit: otherUnit.unit, language })}
-                      </Link>
-                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
-                    </Fragment>
-                  ));
-
                   return (
                     <Fragment key={id}>
                       <div className={group ? "checkbox" : "radio"}>
@@ -1059,22 +1056,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className: "unit__option-note",
                         language,
                       })}
-                      {restrictionError &&
-                        <ErrorMessage
-                          key={`${id}-restrictederror`}
-                          spaceAfter
-                          spaceBefore={isMobile}
-                        >
-                          <span>
-                            <FormattedMessage
-                              id={restrictionError.message}
-                              values={{
-                                usedby: usedElsewhereBy,
-                              }}
-                            />
-                          </span>
-                        </ErrorMessage>
-                      }
+                      {optionErrors[id] && optionErrorMessage(id)}
                     </Fragment>
                   );
                 },
@@ -1103,21 +1085,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   activeDefault,
                   active = false,
                   notes,
-                  restrictions,
                   ...equipment
                 }) => {
                   const isRadio = unit.armor.length > 1 || activeDefault;
-                  const restrictionError = active && restrictions
-                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "armor")
-                    : undefined;
-                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
-                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
-                      <Link to={otherUnit.url}>
-                        {getUnitName({ unit: otherUnit.unit, language })}
-                      </Link>
-                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
-                    </Fragment>
-                  ));
 
                   return (
                     <Fragment key={id}>
@@ -1153,22 +1123,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className: "unit__option-note",
                         language,
                       })}
-                      {restrictionError &&
-                        <ErrorMessage
-                          key={`${id}-restrictederror`}
-                          spaceAfter
-                          spaceBefore={isMobile}
-                        >
-                          <span>
-                            <FormattedMessage
-                              id={restrictionError.message}
-                              values={{
-                                usedby: usedElsewhereBy,
-                              }}
-                            />
-                          </span>
-                        </ErrorMessage>
-                      }
+                      {optionErrors[id] && optionErrorMessage(id)}
                     </Fragment>
                   );
                 },
@@ -1204,25 +1159,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   options,
                   useCheckboxes,
                   alwaysActive,
-                  restrictions,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
                     (exclusiveOption) =>
                       exclusiveOption.exclusive && exclusiveOption.active,
                   );
-
-                  const restrictionError = active && restrictions
-                    ? checkOptionRestrictions(unit.id, {id, restrictions}, list, "options")
-                    : undefined;
-                  const usedElsewhereBy = restrictionError?.otherUnits?.map((otherUnit, index) => (
-                    <Fragment key={`${otherUnit.unit.id}-error-link`}>
-                      <Link to={otherUnit.url}>
-                        {getUnitName({ unit: otherUnit.unit, language })}
-                      </Link>
-                      {index !== restrictionError.otherUnits.length - 1 ? ", " : ""}
-                    </Fragment>
-                  ));
 
                   if (!stackable) {
                     const isDisabled =
@@ -1261,22 +1203,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           language,
                           disabled: isDisabled,
                         })}
-                        {restrictionError &&
-                          <ErrorMessage
-                            key={`${id}-restrictederror`}
-                            spaceAfter
-                            spaceBefore={isMobile}
-                          >
-                            <span>
-                              <FormattedMessage
-                                id={restrictionError.message}
-                                values={{
-                                  usedby: usedElsewhereBy,
-                                }}
-                              />
-                            </span>
-                          </ErrorMessage>
-                        }
+                        {optionErrors[id] && optionErrorMessage(id)}
                         {options?.length > 0 && active && (
                           <>
                             {options

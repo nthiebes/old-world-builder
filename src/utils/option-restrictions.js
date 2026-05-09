@@ -18,7 +18,7 @@ export const checkUnitOptionRestrictions = (unit, list) => {
   ]
   for (let category of categories) {
     if (unit[category] && unit[category].length) {
-      for (let option of unit.options) {
+      for (let option of unit[category]) {
         if (option.active && option.restrictions && option.id) {
           errors[option.id] = checkOptionRestrictions(unit.id, option, list, category);
         }
