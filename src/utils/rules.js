@@ -642,7 +642,7 @@ export const rules = {
           requires: ["orc-warboss", "orc-bigboss"],
         },
         {
-          ids: ["black-orc-boar-chariot", "black-orc-boar-chariot-rare"],
+          ids: ["black-orc-boar-chariot"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -655,15 +655,7 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
-      units: [
-        {
-          ids: ["black-orc-boar-chariot", "black-orc-boar-chariot-rare"],
-          min: 0,
-          max: 1,
-          requiresGeneral: true,
-          requires: ["black-orc-warboss", "black-orc-bigboss"],
-        },
-      ],
+      units: [],
     },
     mercenaries: {
       maxPercent: 25,
