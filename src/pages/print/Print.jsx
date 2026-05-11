@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Header } from "../../components/page";
 import { Button } from "../../components/button";
+import { NumberInput } from "../../components/number-input";
+import { Header } from "../../components/page";
 import { Stats } from "../../components/stats";
 import { getAllOptions } from "../../utils/unit";
 import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
@@ -26,9 +27,8 @@ export const Print = () => {
   const [showPageNumbers, setShowPageNumbers] = useState(false);
   const [showStats, setShowStats] = useState(true);
   const [showCustomNotes, setShowCustomNotes] = useState(true);
-  const [useTwoColumns, setUseTwoColumns] = useState(false);
-  const [useThreeColumns, setUseThreeColumns] = useState(false);
-  const [showHeadings, setShowHeadings] = useState(true);
+  const [useCardView, setUseCardView] = useState(false);
+  const [numberOfColumns, setNumberOfColumns] = useState(2);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
@@ -60,6 +60,9 @@ export const Print = () => {
       ? nameMap[list.armyComposition][`name_${language}`] ||
         nameMap[list.armyComposition].name_en
       : "";
+  const handleNumberOfColumnsChange = (event) => {
+    setNumberOfColumns(event.target.value);
+  };
   const filters = [
     {
       name: intl.formatMessage({
@@ -116,36 +119,12 @@ export const Print = () => {
     },
     {
       name: intl.formatMessage({
-        id: "print.showHeadings",
+        id: "print.cardView",
       }),
-      id: "isShowHeadings",
-      checked: showHeadings,
+      id: "isCardView",
+      checked: useCardView,
       callback: () => {
-        setShowHeadings(!showHeadings);
-      },
-    },
-    {
-      name: intl.formatMessage({
-        id: "print.useTwoColumns",
-      }),
-      id: "isShowTwoColumns",
-      checked: useTwoColumns,
-      callback: () => {
-        setUseTwoColumns(!useTwoColumns);
-        setUseThreeColumns(false);
-        setShowHeadings(false);
-      },
-    },
-    {
-      name: intl.formatMessage({
-        id: "print.useThreeColumns",
-      }),
-      id: "isShowThreeColumns",
-      checked: useThreeColumns,
-      callback: () => {
-        setUseThreeColumns(!useThreeColumns);
-        setUseTwoColumns(false);
-        setShowHeadings(false);
+        setUseCardView(!useCardView);
       },
     },
   ];
@@ -291,166 +270,241 @@ export const Print = () => {
           filters={filters}
         />
 
-        <Button
-          onClick={handlePrintClick}
-          centered
-          icon="print"
-          spaceTop
-          spaceBottom
-          size="large"
-          disabled={isPrinting}
-          className="print__button"
-        >
-          {isPrinting ? (
-            <FormattedMessage id="print.printing" />
-          ) : (
-            <FormattedMessage id="misc.print" />
+        <div className={classNames("print--controls")}>
+          <Button
+            onClick={handlePrintClick}
+            centered
+            icon="print"
+            spaceTop
+            spaceBottom
+            size="large"
+            disabled={isPrinting}
+            className="print__button"
+          >
+            {isPrinting ? (
+              <FormattedMessage id="print.printing" />
+            ) : (
+              <FormattedMessage id="misc.print" />
+            )}
+          </Button>
+
+          {useCardView && (
+            <div>
+              <label htmlFor="numberOfColumns">
+                <FormattedMessage id="print.numberOfColumns" />
+              </label>
+              <NumberInput
+                id="numberOfColumns"
+                min={2}
+                max={10}
+                value={numberOfColumns}
+                onChange={handleNumberOfColumnsChange}
+                required
+                interval={1}
+              />
+            </div>
           )}
-        </Button>
+        </div>
+
         <h2>
           <FormattedMessage id="print.preview" />
         </h2>
-      </div>
-
-      <main
-        className={classNames(
-          "print",
-          useTwoColumns && "print--two-columns",
-          useThreeColumns && "print--three-columns",
+        {useCardView && (
+          <>
+            <FormattedMessage id="print.cardHelp" />
+          </>
         )}
-      >
-        <ul>
-          {showHeadings && (
-            <>
-              <h1>
-                {list.name}{" "}
-                {!isShowList && (
-                  <span className="print__points">
-                    [{allPoints} <FormattedMessage id="app.points" />]
-                  </span>
+      </div>
+      
+      {!useCardView && (
+        <main className={classNames("print")}>
+          <ul>
+            <h1>
+              {list.name}{" "}
+              {!isShowList && (
+                <span className="print__points">
+                  [{allPoints} <FormattedMessage id="app.points" />]
+                </span>
+              )}
+            </h1>
+            <p className="print__subheader">
+              {game.name}, {armyName}
+              {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
+              <FormattedMessage
+                id={`misc.${list.compositionRule || "open-war"}`}
+              />
+            </p>
+
+            {list.characters.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.characters" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{charactersPoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
                 )}
-              </h1>
-              <p className="print__subheader">
-                {game.name}, {armyName}
-                {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
-                <FormattedMessage
-                  id={`misc.${list.compositionRule || "open-war"}`}
-                />
+                {getSection({ type: "characters" })}
+              </>
+            )}
+
+            {list.core.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.core" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{corePoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
+                )}
+                {getSection({ type: "core" })}
+              </>
+            )}
+
+            {list.special.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.special" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{specialPoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
+                )}
+                {getSection({ type: "special" })}
+              </>
+            )}
+
+            {list.rare.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.rare" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{rarePoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
+                )}
+                {getSection({ type: "rare" })}
+              </>
+            )}
+
+            {list.allies.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.allies" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{alliesPoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
+                )}
+                {getSection({ type: "allies" })}
+              </>
+            )}
+
+            {list.mercenaries.length > 0 && (
+              <>
+                {(
+                  <h2>
+                    <FormattedMessage id="editor.mercenaries" />{" "}
+                    {!isShowList && (
+                      <span className="print__points">
+                        [{mercenariesPoints} <FormattedMessage id="app.points" />]
+                      </span>
+                    )}
+                  </h2>
+                )}
+                {getSection({ type: "mercenaries" })}
+              </>
+            )}
+
+            <div className="print-footer">
+              <p>
+                <FormattedMessage id="export.createdWith" />{" "}
+                <b>"Old World Builder"</b>
               </p>
-            </>
-          )}
+              <p>
+                [
+                <a href="https://old-world-builder.com">
+                  <i>old-world-builder.com</i>
+                </a>
+                ]
+              </p>
+            </div>
+          </ul>
+        </main>
+      )}
 
-          {list.characters.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.characters" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{charactersPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+      {useCardView && (
+        <>
+          <main className={classNames("print", `print--${numberOfColumns}-columns`)}>
+            <ul>
+              {list.characters.length > 0 && (
+                <>
+                  {getSection({ type: "characters" })}
+                </>
               )}
-              {getSection({ type: "characters" })}
-            </>
-          )}
 
-          {list.core.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.core" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{corePoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+              {list.core.length > 0 && (
+                <>
+                  {getSection({ type: "core" })}
+                </>
               )}
-              {getSection({ type: "core" })}
-            </>
-          )}
 
-          {list.special.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.special" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{specialPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+              {list.special.length > 0 && (
+                <>
+                  {getSection({ type: "special" })}
+                </>
               )}
-              {getSection({ type: "special" })}
-            </>
-          )}
 
-          {list.rare.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.rare" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{rarePoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+              {list.rare.length > 0 && (
+                <>
+                  {getSection({ type: "rare" })}
+                </>
               )}
-              {getSection({ type: "rare" })}
-            </>
-          )}
 
-          {list.allies.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.allies" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{alliesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+              {list.allies.length > 0 && (
+                <>
+                  {getSection({ type: "allies" })}
+                </>
               )}
-              {getSection({ type: "allies" })}
-            </>
-          )}
 
-          {list.mercenaries.length > 0 && (
-            <>
-              {showHeadings && (
-                <h2>
-                  <FormattedMessage id="editor.mercenaries" />{" "}
-                  {!isShowList && (
-                    <span className="print__points">
-                      [{mercenariesPoints} <FormattedMessage id="app.points" />]
-                    </span>
-                  )}
-                </h2>
+              {list.mercenaries.length > 0 && (
+                <>
+                  {getSection({ type: "mercenaries" })}
+                </>
               )}
-              {getSection({ type: "mercenaries" })}
-            </>
-          )}
 
-          <div className="print-footer">
-            <p>
-              <FormattedMessage id="export.createdWith" />{" "}
-              <b>"Old World Builder"</b>
-            </p>
-            <p>
-              [
-              <a href="https://old-world-builder.com">
-                <i>old-world-builder.com</i>
-              </a>
-              ]
-            </p>
-          </div>
-        </ul>
-      </main>
+              <div className="print-footer">
+                <p>
+                  <FormattedMessage id="export.createdWith" />{" "}
+                  <b>"Old World Builder"</b>
+                </p>
+                <p>
+                  [
+                  <a href="https://old-world-builder.com">
+                    <i>old-world-builder.com</i>
+                  </a>
+                  ]
+                </p>
+              </div>
+            </ul>
+          </main>
+        </>
+      )}
     </>
   );
 };

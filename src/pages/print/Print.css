@@ -29,15 +29,66 @@
   border-color: #384043 !important;
 }
 
-.print--two-columns ul {
+
+@media (min-width: 600px) {
+  .print--controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.print--2-columns ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-.print--three-columns ul {
+.print--3-columns ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.print--4-columns ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.print--5-columns ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.print--6-columns ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.print--7-columns ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.print--8-columns ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+}
+
+.print--9-columns ul {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem;
+}
+
+.print--10-columns ul {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
   gap: 1rem;
 }
 
