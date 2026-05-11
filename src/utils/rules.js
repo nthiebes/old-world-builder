@@ -246,7 +246,7 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["tomb-guard", "sepulchral-stalkers"],
+          ids: ["tomb-guard-core", "sepulchral-stalkers-core"],
           min: 0,
           max: 1,
         },
@@ -328,7 +328,7 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["tomb-guard", "tomb-guard-chariots"],
+          ids: ["tomb-guard-core", "tomb-guard-chariots-core"],
           min: 0,
           max: 1,
         },
@@ -497,14 +497,14 @@ export const rules = {
           perUnit: true,
         },
         {
-          ids: ["black-orc-mob"],
+          ids: ["black-orc-mob-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
           requires: ["black-orc-warboss", "black-orc-bigboss"],
         },
         {
-          ids: ["black-orc-mob"],
+          ids: ["black-orc-mob-core", "black-orc-mob"],
           requires: ["black-orc-warboss", "black-orc-bigboss"],
           requiresType: "characters",
           requiredByType: "all",
@@ -537,7 +537,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["black-orc-mob"],
+          ids: ["black-orc-mob-core", "black-orc-mob"],
           requires: ["black-orc-warboss", "black-orc-bigboss"],
           requiresType: "characters",
           requiredByType: "all",
@@ -605,7 +605,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "all",
-          requires: ["black-orc-boar-chariot"],
+          requires: ["black-orc-boar-chariot", "black-orc-boar-chariot-rare"],
           perUnit: true,
         },
         {
@@ -635,7 +635,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["orc-boar-boy-mob"],
+          ids: ["orc-boar-boy-mob-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -655,6 +655,7 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
+      units: [],
     },
     mercenaries: {
       maxPercent: 25,
@@ -976,14 +977,14 @@ export const rules = {
           min: 1,
         },
         {
-          ids: ["bestigor-herds"],
+          ids: ["bestigor-herds-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
           requires: ["beastlord", "wargor"],
         },
         {
-          ids: ["minotaur-herd"],
+          ids: ["minotaur-herds-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -1066,8 +1067,8 @@ export const rules = {
       minPercent: 33,
       units: [
         {
-          ids: ["minotaur-herd"],
-          min: 0,
+          ids: ["minotaur-herds-core"],
+          min: 1,
           max: 1,
           points: 1000,
         },
@@ -1183,7 +1184,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["long-beards"],
+          ids: ["long-beards-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -3477,7 +3478,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["grave-guard", "black-knights"],
+          ids: ["grave-guard-core", "black-knights-core"],
           min: 0,
           max: 1,
           requiresType: "characters",
