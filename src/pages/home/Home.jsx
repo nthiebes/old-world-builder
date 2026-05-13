@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -38,9 +38,10 @@ import forg3dBanner from "../../assets/forg3d.jpg";
 import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
 import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import mwgForge from "../../assets/mwg-forge.gif";
-import { swap } from "../../utils/collection";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList, updateListsFolder } from "../../utils/list";
+import { updateLocalList } from "../../utils/list";
+import { sortByRank, ensureRanks, reorderList, reorderFolder, dropFolderFor } from "../../utils/list-ordering";
+import { generateRank } from "../../utils/lexorank";
 import { setLists, toggleFolder, updateList } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
 import { getRandomId } from "../../utils/id";
@@ -74,9 +75,39 @@ const armyIconMap = {
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const settings = useSelector((state) => state.settings);
-  let lists = updateListsFolder(useSelector((state) => state.lists));
+  const dispatch = useDispatch();
+  const rawLists = useSelector((state) => state.lists);
 
-  // Sort lists based on the current sorting setting
+  const { lists: rankedLists, needsUpdate } = useMemo(
+    () => ensureRanks(rawLists),
+    [rawLists],
+  );
+
+  useEffect(() => {
+    if (!rawLists || rawLists.length === 0) return;
+    if (needsUpdate) {
+      localStorage.setItem("owb.lists", JSON.stringify(rankedLists));
+      dispatch(setLists(rankedLists));
+    }
+  }, [rawLists, needsUpdate, rankedLists, dispatch]);
+
+  const sortedLists = useMemo(() => sortByRank(rankedLists), [rankedLists]);
+  let lists = sortedLists;
+
+  const folderIndex = useMemo(() => {
+    const byId = new Map();
+    const childCounts = new Map();
+    for (const item of rankedLists) {
+      if (item.type === "folder") {
+        byId.set(item.id, item);
+        if (!childCounts.has(item.id)) childCounts.set(item.id, 0);
+      } else if (item.folder) {
+        childCounts.set(item.folder, (childCounts.get(item.folder) || 0) + 1);
+      }
+    }
+    return { byId, childCounts };
+  }, [rankedLists]);
+
   switch (settings.listSorting) {
     case "nameAsc":
       lists = [...lists].sort((a, b) => {
@@ -158,7 +189,6 @@ export const Home = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const { timezone } = useTimezone();
-  const dispatch = useDispatch();
   const intl = useIntl();
   const [listsInFolder, setListsInFolder] = useState([]);
   const [dialogOpen, setDialogOpen] = useState(null);
@@ -166,6 +196,31 @@ export const Home = ({ isMobile }) => {
   const [sortMenuOpen, setSortMenuOpen] = useState(false);
   const [folderName, setFolderName] = useState("");
   const [activeDeleteOption, setActiveDeleteOption] = useState("delete");
+  const [dragIntoFolder, setDragIntoFolder] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const listsWithPhantoms = useMemo(() => {
+    const result = [];
+    let i = 0;
+    while (i < lists.length) {
+      const item = lists[i];
+      result.push(item);
+      i++;
+      if (item.type === "folder" && item.open !== false) {
+        while (i < lists.length && lists[i].folder === item.id) {
+          result.push(lists[i]);
+          i++;
+        }
+        result.push({
+          id: `phantom-${item.id}`,
+          _phantom: true,
+          folder: item.id,
+        });
+      }
+    }
+    return result;
+  }, [lists]);
+
   const resetState = () => {
     dispatch(setArmy(null));
     dispatch(setItems(null));
@@ -174,65 +229,34 @@ export const Home = ({ isMobile }) => {
     localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const handleListMoved = ({ sourceIndex, destinationIndex }) => {
-    const draggedItem = lists.find((list, index) => index === sourceIndex);
-    const difference = sourceIndex - destinationIndex;
-
     setListsInFolder([]);
+    setIsDragging(false);
+    setDragIntoFolder(false);
 
-    if (difference === 0) {
+    if (sourceIndex === destinationIndex) {
       return;
     }
 
-    if (draggedItem.type === "folder") {
-      const listBeforeDestination = lists.find(
-        (_, index) => index === destinationIndex - 1,
-      );
-      const listAtDestination = lists.find(
-        (_, index) => index === destinationIndex,
-      );
-      const listAfterDestination = lists.find(
-        (_, index) => index === destinationIndex + 1,
-      );
-
-      if (
-        !listBeforeDestination ||
-        !listAfterDestination ||
-        (difference > 0 && listAtDestination.type === "folder") || // Moving up
-        (difference < 0 && listAfterDestination.type === "folder") // Moving down
-      ) {
-        let newLists = swap(lists, sourceIndex, destinationIndex);
-        const listsInFolder = lists.filter(
-          (list) => list.folder === draggedItem.id,
-        );
-
-        listsInFolder.forEach((_, index) => {
-          newLists = swap(
-            newLists,
-            sourceIndex + (destinationIndex < sourceIndex ? 1 + index : 0),
-            destinationIndex + (destinationIndex < sourceIndex ? 1 + index : 0),
-          );
-        });
-        newLists = updateListsFolder(newLists);
-
-        localStorage.setItem("owb.lists", JSON.stringify(newLists));
-        dispatch(setLists(newLists));
-
-        const newSettings = { ...settings, lastChanged: new Date().toString() };
-        dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
-        localStorage.setItem("owb.settings", JSON.stringify(newSettings));
-      }
-    } else {
-      let newLists = updateListsFolder(
-        swap(lists, sourceIndex, destinationIndex),
-      );
-
-      localStorage.setItem("owb.lists", JSON.stringify(newLists));
-      dispatch(setLists(newLists));
-
-      const newSettings = { ...settings, lastChanged: new Date().toString() };
-      dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
-      localStorage.setItem("owb.settings", JSON.stringify(newSettings));
+    const draggedItem = listsWithPhantoms[sourceIndex];
+    if (!draggedItem || draggedItem._phantom) {
+      return;
     }
+
+    const newLists =
+      draggedItem.type === "folder"
+        ? reorderFolder(listsWithPhantoms, sourceIndex, destinationIndex).filter(
+            (l) => !l._phantom,
+          )
+        : reorderList(listsWithPhantoms, sourceIndex, destinationIndex).filter(
+            (l) => !l._phantom,
+          );
+
+    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    dispatch(setLists(newLists));
+
+    const newSettings = { ...settings, lastChanged: new Date().toString() };
+    dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
+    localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const folders = lists.filter((list) => list.type === "folder");
   const listsWithoutFolders = lists.filter((list) => list.type !== "folder");
@@ -350,9 +374,11 @@ export const Home = ({ isMobile }) => {
       newLists = newLists.filter(
         (list) => list.folder !== activeMenu || !list.folder,
       );
+    } else {
+      newLists = newLists.map((list) =>
+        list.folder === activeMenu ? { ...list, folder: null } : list,
+      );
     }
-
-    newLists = updateListsFolder(newLists);
 
     setDialogOpen(null);
     setActiveMenu(null);
@@ -379,15 +405,18 @@ export const Home = ({ isMobile }) => {
     localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
   const handleNewConfirm = () => {
-    const newLists = updateListsFolder([
+    const firstRank = lists.length > 0 ? lists[0].rank : null;
+    const newLists = [
       {
         id: `folder-${getRandomId()}`,
         name: folderName || intl.formatMessage({ id: "home.newFolder" }),
         type: "folder",
         open: true,
+        folder: null,
+        rank: generateRank(null, firstRank),
       },
       ...lists,
-    ]);
+    ];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
@@ -401,17 +430,35 @@ export const Home = ({ isMobile }) => {
     window.scrollTo(0, 0);
   };
   const handleDragStart = (start) => {
+    setIsDragging(true);
     const draggedItem = lists.find(
       (list) =>
         list.id === start.draggableId || list.folder === start.draggableId,
     );
-    const listsInFolder = lists
-      .map((list, index) => ({ folder: list.folder, index: index }))
-      .filter((list) => list.folder);
-
-    if (draggedItem.type === "folder") {
-      setListsInFolder(listsInFolder);
+    if (draggedItem?.type === "folder") {
+      setListsInFolder(
+        lists
+          .map((list, index) => ({ folder: list.folder, index }))
+          .filter((list) => list.folder),
+      );
     }
+  };
+  const handleDragUpdate = (update) => {
+    if (!update.destination) {
+      setDragIntoFolder(false);
+      return;
+    }
+    const sourceItem = listsWithPhantoms[update.source.index];
+    if (sourceItem?.type === "folder") {
+      setDragIntoFolder(false);
+      return;
+    }
+    const withoutItem = listsWithPhantoms.filter(
+      (_, i) => i !== update.source.index,
+    );
+    setDragIntoFolder(
+      dropFolderFor(withoutItem, update.destination.index) !== null,
+    );
   };
   const handleDeleteOptionChange = (option) => {
     setActiveDeleteOption(option);
@@ -641,8 +688,10 @@ export const Home = ({ isMobile }) => {
           id="armies"
           onMoved={handleListMoved}
           onDragStart={handleDragStart}
+          onDragUpdate={handleDragUpdate}
+          intoFolder={dragIntoFolder}
         >
-          {lists.map(
+          {listsWithPhantoms.map(
             ({
               id,
               name,
@@ -653,16 +702,35 @@ export const Home = ({ isMobile }) => {
               type,
               folder,
               open,
+              _phantom,
               ...list
             }) =>
-              type === "folder" ? (
+              _phantom ? (
+                <li
+                  key={id}
+                  className={classNames(
+                    "home__phantom-drop",
+                    isDragging && "home__phantom-drop--active",
+                  )}
+                  data-folder={folder}
+                  dragDisabled
+                />
+              ) : type === "folder" ? (
                 <ListItem
                   key={id}
                   to="#"
                   className={classNames(
                     "home__folder",
                     activeMenu === id && "home__folder--active",
+                    open &&
+                      (folderIndex.childCounts.get(id) || 0) === 0 &&
+                      "home__folder--empty-open",
                   )}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    updateLocalList({ id, name, type, open: !open });
+                    dispatch(toggleFolder({ folderId: id }));
+                  }}
                 >
                   <span className="home__list-item">
                     <h2 className="home__headline home__headline--folder">
@@ -673,7 +741,9 @@ export const Home = ({ isMobile }) => {
                         })}
                         color="dark"
                         icon="more"
-                        onClick={() => {
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          event.preventDefault();
                           if (activeMenu === id) {
                             setActiveMenu(null);
                           } else {
@@ -684,7 +754,13 @@ export const Home = ({ isMobile }) => {
                           activeMenu === id && "header__more-button",
                         )}
                       />
-                      <span className="home__folder-name">{name}</span>
+                      <span className="home__folder-name">
+                        {name}
+                        {" "}
+                        <span className="home__folder-count">
+                          ({folderIndex.childCounts.get(id) || 0})
+                        </span>
+                      </span>
                       <Button
                         type="text"
                         label={
@@ -694,15 +770,6 @@ export const Home = ({ isMobile }) => {
                         }
                         color="dark"
                         icon={open ? "collapse" : "expand"}
-                        onClick={() => {
-                          updateLocalList({
-                            id,
-                            name,
-                            type,
-                            open: !open,
-                          });
-                          dispatch(toggleFolder({ folderId: id }));
-                        }}
                       />
                     </h2>
                   </span>
@@ -718,7 +785,11 @@ export const Home = ({ isMobile }) => {
                           <li key={buttonName}>
                             <Button
                               type="text"
-                              onClick={() => callback({ name })}
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                event.preventDefault();
+                                callback({ name });
+                              }}
                               to={moreButtonTo}
                               icon={icon}
                             >
@@ -736,10 +807,7 @@ export const Home = ({ isMobile }) => {
                   to={`/editor/${id}`}
                   active={location.pathname.includes(id)}
                   onClick={resetState}
-                  hide={
-                    folders.find((folderData) => folderData.id === folder)
-                      ?.open === false
-                  }
+                  hide={folderIndex.byId.get(folder)?.open === false}
                   className={classNames(
                     listsInFolder.length > 0 && "home__list--dragging",
                   )}

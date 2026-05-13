@@ -13,6 +13,7 @@ import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
+import { rankAtTop } from "../../utils/list-ordering";
 import { updateSetting } from "../../state/settings";
 import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
 
@@ -99,6 +100,8 @@ export const NewList = ({ isMobile }) => {
       url: armyData?.url,
       armyComposition,
       compositionRule,
+      rank: rankAtTop(lists),
+      folder: null,
     };
     const newLists = [newList, ...lists];
     const newSettings = { ...settings, lastChanged: new Date().toString() };

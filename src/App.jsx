@@ -28,6 +28,7 @@ import { Login } from "./pages/login";
 import { setLists } from "./state/lists";
 import { setSettings } from "./state/settings";
 import { Header, Main } from "./components/page";
+import { ensureRanks } from "./utils/list-ordering";
 
 import {
   useDropboxAuthentication,
@@ -65,10 +66,15 @@ export const App = () => {
   useOWRAuthentication();
 
   useEffect(() => {
-    const localLists = localStorage.getItem("owb.lists");
+    const localLists = JSON.parse(localStorage.getItem("owb.lists")) || [];
     const localSettings = localStorage.getItem("owb.settings");
 
-    dispatch(setLists(JSON.parse(localLists)));
+    const { lists: rankedLists, needsUpdate } = ensureRanks(localLists);
+    if (needsUpdate) {
+      localStorage.setItem("owb.lists", JSON.stringify(rankedLists));
+    }
+
+    dispatch(setLists(rankedLists));
     dispatch(setSettings(JSON.parse(localSettings)));
   }, [dispatch]);
 

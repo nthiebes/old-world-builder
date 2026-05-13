@@ -7,6 +7,7 @@ import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
 import { getRandomId } from "../../utils/id";
 import { setLists } from "../../state/lists";
+import { rankAtTop } from "../../utils/list-ordering";
 
 import "./Import.css";
 
@@ -40,7 +41,12 @@ export const Import = ({ isMobile }) => {
     reader.readAsText(list, "UTF-8");
     reader.onload = (event) => {
       const newId = getRandomId();
-      const importedList = { ...JSON.parse(event.target.result), id: newId };
+      const importedList = {
+        ...JSON.parse(event.target.result),
+        id: newId,
+        rank: rankAtTop(lists),
+        folder: null,
+      };
       const newLists = [importedList, ...lists];
 
       localStorage.setItem("owb.lists", JSON.stringify(newLists));

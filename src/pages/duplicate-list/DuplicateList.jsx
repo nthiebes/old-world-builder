@@ -9,6 +9,7 @@ import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { getRandomId } from "../../utils/id";
 import { setLists } from "../../state/lists";
+import { rankAfter } from "../../utils/list-ordering";
 
 import "./DuplicateList.css";
 
@@ -37,19 +38,19 @@ export const DuplicateList = ({ isMobile }) => {
     setDescription(event.target.value);
   };
   const handleSubmit = (event) => {
+    event.preventDefault();
     const newId = getRandomId();
     const newLists = [
+      ...lists,
       {
         ...list,
         name,
         points,
         description,
         id: newId,
+        rank: rankAfter(lists, list),
       },
-      ...lists,
     ];
-
-    event.preventDefault();
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
     dispatch(setLists(newLists));
