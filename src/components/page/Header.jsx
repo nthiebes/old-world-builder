@@ -9,12 +9,8 @@ import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Dialog } from "../../components/dialog";
 import { updateLocalList } from "../../utils/list";
-import {
-  syncLists,
-  uploadLocalDataToDropbox,
-  downloadRemoteDataFromDropbox,
-} from "../../utils/dropbox-auth-and-synchronization";
 import { owrLogout } from "../../utils/owr-auth-and-synchronization";
+import { getSyncProvider } from "../../utils/sync-provider";
 import { updateSetting } from "../../state/settings";
 import { updateLogin } from "../../state/login";
 
@@ -247,7 +243,7 @@ export const Header = ({
                             }
                             disabled={isSyncing}
                             onClick={() => {
-                              syncLists({ dispatch });
+                              getSyncProvider(provider).syncLists({ dispatch });
                             }}
                           />
                           {syncError && (
@@ -428,7 +424,7 @@ export const Header = ({
                 spaceTop
                 autoHeight
                 onClick={() => {
-                  uploadLocalDataToDropbox({ dispatch, settings });
+                  getSyncProvider(provider).uploadLocal({ dispatch, settings });
                   dispatch(
                     updateLogin({ isSyncing: true, syncConflict: false }),
                   );
@@ -442,7 +438,7 @@ export const Header = ({
                 spaceTop
                 autoHeight
                 onClick={() => {
-                  downloadRemoteDataFromDropbox({ dispatch });
+                  getSyncProvider(provider).downloadRemote({ dispatch });
                   dispatch(
                     updateLogin({ isSyncing: true, syncConflict: false }),
                   );
