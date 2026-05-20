@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -12,9 +12,55 @@ import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { nameMap } from "../magic";
 import { getGameSystems } from "../../utils/game-systems";
+import { normalizeRuleName } from "../../utils/string";
+import { rulesMap, synonyms } from "../../components/rules-index/rules-map";
+import { fetchRuleDescription } from "../../utils/rule-descriptions";
 
 import "./Print.css";
 import classNames from "classnames";
+
+const collectUniqueRules = (list, armyComposition) => {
+  const allUnits = [
+    ...(list.characters || []),
+    ...(list.core || []),
+    ...(list.special || []),
+    ...(list.rare || []),
+    ...(list.allies || []),
+    ...(list.mercenaries || []),
+  ];
+  const seen = new Map();
+  for (const unit of allUnits) {
+    const processRules = (sr) => {
+      if (!sr?.name_en) return;
+      for (const rawName of sr.name_en.split(", ")) {
+        const displayName = rawName.replace(/\s\{.*?\}/g, "").trim();
+        if (!displayName) continue;
+        const normalized = normalizeRuleName(displayName);
+        if (seen.has(normalized)) continue;
+        const synonym = synonyms[normalized];
+        const ruleData = rulesMap[normalized] || rulesMap[synonym];
+        if (ruleData?.url) {
+          seen.set(normalized, {
+              displayName,
+              rulePath: ruleData.url,
+              pageRef: ruleData.page || null,
+            });
+        }
+      }
+    };
+    processRules(
+      unit.armyComposition?.[armyComposition]?.specialRules || unit.specialRules
+    );
+    for (const det of unit.detachments || []) {
+      processRules(
+        det.armyComposition?.[armyComposition]?.specialRules || det.specialRules
+      );
+    }
+  }
+  return Array.from(seen.values()).sort((a, b) =>
+    a.displayName.localeCompare(b.displayName)
+  );
+};
 
 export const Print = () => {
   const { listId } = useParams();
@@ -29,9 +75,28 @@ export const Print = () => {
   const [useTwoColumns, setUseTwoColumns] = useState(false);
   const [useThreeColumns, setUseThreeColumns] = useState(false);
   const [showHeadings, setShowHeadings] = useState(true);
+  const [showRuleDescriptions, setShowRuleDescriptions] = useState(false);
+  const [ruleDescriptions, setRuleDescriptions] = useState({});
+  const [isLoadingDescriptions, setIsLoadingDescriptions] = useState(false);
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
+
+  useEffect(() => {
+    if (!showRuleDescriptions || !list) return;
+    const ac = list.armyComposition || list.army;
+    const rules = collectUniqueRules(list, ac);
+    if (rules.length === 0) return;
+    setIsLoadingDescriptions(true);
+    Promise.all(
+      rules.map(({ rulePath }) =>
+        fetchRuleDescription(rulePath).then((desc) => [rulePath, desc])
+      )
+    ).then((results) => {
+      setRuleDescriptions(Object.fromEntries(results));
+      setIsLoadingDescriptions(false);
+    });
+  }, [showRuleDescriptions]); // only re-fetch when the toggle changes
 
   if (!list) {
     return (
@@ -60,6 +125,7 @@ export const Print = () => {
       ? nameMap[list.armyComposition][`name_${language}`] ||
         nameMap[list.armyComposition].name_en
       : "";
+
   const filters = [
     {
       name: intl.formatMessage({
@@ -146,6 +212,16 @@ export const Print = () => {
         setUseThreeColumns(!useThreeColumns);
         setUseTwoColumns(false);
         setShowHeadings(false);
+      },
+    },
+    {
+      name: intl.formatMessage({
+        id: "print.showRuleDescriptions",
+      }),
+      id: "showRuleDescriptions",
+      checked: showRuleDescriptions,
+      callback: () => {
+        setShowRuleDescriptions(!showRuleDescriptions);
       },
     },
   ];
@@ -434,6 +510,37 @@ export const Print = () => {
               )}
               {getSection({ type: "mercenaries" })}
             </>
+          )}
+
+          {showRuleDescriptions && (
+            <li className="print__rules-reference">
+              <h2>
+                <FormattedMessage id="print.rulesReference" />
+              </h2>
+              {isLoadingDescriptions ? (
+                <p className="print__rules-loading">
+                  <FormattedMessage id="print.loadingRules" />
+                </p>
+              ) : (
+                <dl className="print__rules-list">
+                  {collectUniqueRules(list, armyComposition).map(
+                    ({ displayName, rulePath, pageRef }) => {
+                      const desc = ruleDescriptions[rulePath];
+                      const content = desc || pageRef;
+                      if (!content) return null;
+                      return (
+                        <div key={rulePath} className="print__rule-entry">
+                          <dt>{displayName}</dt>
+                          <dd className={!desc ? "print__rule-pageref" : undefined}>
+                            {content}
+                          </dd>
+                        </div>
+                      );
+                    }
+                  )}
+                </dl>
+              )}
+            </li>
           )}
 
           <div className="print-footer">
