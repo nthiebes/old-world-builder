@@ -439,6 +439,17 @@ export const unitHasItem = (unit, itemName) => {
       }
     }
   }
+  if (unit.command) {
+    for (const commandOption of unit.command) {
+      if (
+        commandOption.magic?.selected?.find(
+          ({ name_en }) => name_en.toLowerCase() === itemName.toLowerCase(),
+        )
+      ) {
+        return true;
+      }
+    }
+  }
   return false;
 };
 
@@ -653,17 +664,23 @@ export const getUnitGeneratedSpellCount = (unit) => {
   if (unitHasItem(unit, "Wizarding Hat")) {
     generatedSpellsCount += 1;
   }
-  if (unitHasItem(unit, "Spell Familiar*")) {
-    generatedSpellsCount += 1;
-  }
   if (
+    unitHasItem(unit, "Spell Familiar*") ||
     unitHasItem(unit, "Twin Heads") ||
     unitHasItem(unit, "Silvery Wand") ||
     unitHasItem(unit, "Tome Of Furion") ||
-    unitHasItem(unit, "Tome Of Midnight")
+    unitHasItem(unit, "Tome Of Midnight") ||
+    unitHasItem(unit, "Scrolls of Wei-jin")
   ) {
     generatedSpellsCount += 1;
   }
+  if (unitHasItem(unit, "Learned Feng Shi Bo*")) {
+    generatedSpellsCount += unit.items.find(
+      ({ name_en }) => name_en.toLowerCase() === "magic items"
+    ).selected?.find(
+      ({ name_en }) => name_en.toLowerCase() === "Learned Feng Shi Bo*".toLowerCase(),
+    )?.amount || 0;
+  }
 
-  return generatedSpellsCount;
+  return Math.min(generatedSpellsCount, 6);
 };
