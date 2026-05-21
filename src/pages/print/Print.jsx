@@ -84,8 +84,8 @@ export const Print = () => {
 
   useEffect(() => {
     if (!showRuleDescriptions || !list) return;
-    const ac = list.armyComposition || list.army;
-    const rules = collectUniqueRules(list, ac);
+    const armyComposition = list.armyComposition || list.army;
+    const rules = collectUniqueRules(list, armyComposition);
     if (rules.length === 0) return;
     setIsLoadingDescriptions(true);
     Promise.all(
