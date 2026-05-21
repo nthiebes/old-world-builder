@@ -1,4 +1,5 @@
-const cache = new Map();
+// Cache is keyed by OWB version so it auto-invalidates on each release.
+const CACHE_STORAGE_KEY = `owb-rule-descriptions-v${import.meta.env.VITE_VERSION}`;
 
 // Selectors tried in order — first non-empty match wins.
 const DESCRIPTION_SELECTORS = [
@@ -8,6 +9,38 @@ const DESCRIPTION_SELECTORS = [
   "main article p",
   "article p",
 ];
+
+const loadCache = () => {
+  try {
+    const stored = localStorage.getItem(CACHE_STORAGE_KEY);
+    return stored ? new Map(JSON.parse(stored)) : new Map();
+  } catch {
+    return new Map();
+  }
+};
+
+const purgeOldCaches = () => {
+  try {
+    Object.keys(localStorage)
+      .filter(
+        (k) =>
+          k.startsWith("owb-rule-descriptions-") && k !== CACHE_STORAGE_KEY
+      )
+      .forEach((k) => localStorage.removeItem(k));
+  } catch {}
+};
+
+const cache = loadCache();
+purgeOldCaches();
+
+const persistCache = () => {
+  try {
+    localStorage.setItem(
+      CACHE_STORAGE_KEY,
+      JSON.stringify(Array.from(cache.entries()))
+    );
+  } catch {}
+};
 
 export const fetchRuleDescription = async (rulePath) => {
   if (cache.has(rulePath)) return cache.get(rulePath);
@@ -41,6 +74,7 @@ export const fetchRuleDescription = async (rulePath) => {
     const text = paragraphs.map((p) => p.textContent.trim()).join(" ");
     const result = text || null;
     cache.set(rulePath, result);
+    persistCache();
     return result;
   } catch (error) {
     // CORS or network failure — visible in browser DevTools console
