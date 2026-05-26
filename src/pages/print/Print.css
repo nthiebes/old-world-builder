@@ -103,3 +103,48 @@
   margin-left: 0;
   transform: none;
 }
+
+.print__rules-reference {
+  break-before: page;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-font);
+}
+
+.print--two-columns .print__rules-reference,
+.print--three-columns .print__rules-reference {
+  grid-column: 1 / -1;
+}
+
+.print__rules-loading {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.print__rules-list {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.print__rule-entry {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
+}
+
+.print__rule-entry dt {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.print__rule-entry dd {
+  margin: 0.1rem 0 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.print__rule-pageref {
+  font-style: italic;
+  opacity: 0.7;
+}
