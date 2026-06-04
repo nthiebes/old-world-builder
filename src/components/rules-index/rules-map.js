@@ -150,6 +150,7 @@ export const synonyms = {
   "steam tank": "empire steam tank",
   halberds: "halberd",
   polearms: "polearm",
+  "crane guns": "crane gun",
   gyrocopters: "gyrocopter",
   "scout gyrocopters": "scout gyrocopter",
   ironfists: "ironfist",

@@ -29,6 +29,14 @@ export const getPointsPerModel = (unit) => {
     });
   }
 
+  if (unit.mounts) {
+    unit.mounts.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+
   if (unit.armor) {
     unit.armor.forEach((option) => {
       if (option.active && option.perModel) {
