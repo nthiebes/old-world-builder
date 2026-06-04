@@ -39,7 +39,8 @@ import fantasyweltDe from "../../assets/fantasywelt_de.jpg";
 import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import mwgForge from "../../assets/mwg-forge.gif";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList } from "../../utils/list";
+import { updateLocalList, makeTombstone } from "../../utils/list";
+import { pushToOWR, markDirty } from "../../utils/owr-sync";
 import { sortByRank, ensureRanks, reorderList, reorderFolder, dropFolderFor } from "../../utils/list-ordering";
 import { generateRank } from "../../utils/lexorank";
 import { setLists, toggleFolder, updateList } from "../../state/lists";
@@ -87,6 +88,15 @@ export const Home = ({ isMobile }) => {
     if (!rawLists || rawLists.length === 0) return;
     if (needsUpdate) {
       localStorage.setItem("owb.lists", JSON.stringify(rankedLists));
+      const rawById = new Map(rawLists.map((l) => [l.id, l]));
+      let dirty = false;
+      rankedLists.forEach((l) => {
+        if (rawById.get(l.id)?.rank !== l.rank) {
+          markDirty(l.id);
+          dirty = true;
+        }
+      });
+      if (dirty) pushToOWR();
       dispatch(setLists(rankedLists));
     }
   }, [rawLists, needsUpdate, rankedLists, dispatch]);
@@ -252,6 +262,8 @@ export const Home = ({ isMobile }) => {
           );
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    markDirty(draggedItem.id);
+    pushToOWR();
     dispatch(setLists(newLists));
 
     const newSettings = { ...settings, lastChanged: new Date().toString() };
@@ -368,22 +380,35 @@ export const Home = ({ isMobile }) => {
     setFolderName("");
   };
   const handleDeleteConfirm = () => {
-    let newLists = lists.filter((list) => list.id !== activeMenu);
+    const dirtied = new Set([activeMenu]);
+    let newLists = lists.map((list) =>
+      list.id === activeMenu ? makeTombstone(list.id) : list,
+    );
 
     if (activeDeleteOption === "delete") {
-      newLists = newLists.filter(
-        (list) => list.folder !== activeMenu || !list.folder,
-      );
+      newLists = newLists.map((list) => {
+        if (list.folder === activeMenu) {
+          dirtied.add(list.id);
+          return makeTombstone(list.id);
+        }
+        return list;
+      });
     } else {
-      newLists = newLists.map((list) =>
-        list.folder === activeMenu ? { ...list, folder: null } : list,
-      );
+      newLists = newLists.map((list) => {
+        if (list.folder === activeMenu) {
+          dirtied.add(list.id);
+          return { ...list, folder: null };
+        }
+        return list;
+      });
     }
 
     setDialogOpen(null);
     setActiveMenu(null);
-    dispatch(setLists(newLists));
+    dispatch(setLists(newLists.filter((l) => !l._deleted)));
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    dirtied.forEach((id) => markDirty(id));
+    pushToOWR(newLists);
 
     const newSettings = { ...settings, lastChanged: new Date().toString() };
     dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
@@ -406,19 +431,19 @@ export const Home = ({ isMobile }) => {
   };
   const handleNewConfirm = () => {
     const firstRank = lists.length > 0 ? lists[0].rank : null;
-    const newLists = [
-      {
-        id: `folder-${getRandomId()}`,
-        name: folderName || intl.formatMessage({ id: "home.newFolder" }),
-        type: "folder",
-        open: true,
-        folder: null,
-        rank: generateRank(null, firstRank),
-      },
-      ...lists,
-    ];
+    const newFolder = {
+      id: `folder-${getRandomId()}`,
+      name: folderName || intl.formatMessage({ id: "home.newFolder" }),
+      type: "folder",
+      open: true,
+      folder: null,
+      rank: generateRank(null, firstRank),
+    };
+    const newLists = [newFolder, ...lists];
 
     localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    markDirty(newFolder.id);
+    pushToOWR();
     dispatch(setLists(newLists));
 
     const newSettings = { ...settings, lastChanged: new Date().toString() };
