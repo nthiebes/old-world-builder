@@ -62,9 +62,10 @@ export const getUnitPoints = (unit, settings) => {
       ),
     );
   let unitPoints = 0;
+  const unitStrength = unit.strength || unit.minimum || 1;
 
-  if (unit.strength) {
-    unitPoints = unit.strength * unit.points;
+  if (unitStrength > 1) {
+    unitPoints = unitStrength * unit.points;
   } else {
     unitPoints = unit.points;
   }
@@ -231,7 +232,9 @@ export const getUnitPoints = (unit, settings) => {
 
 const getMagicItemPoints = ({ item, unit }) => {
   let unitPoints = 0;
-  const isCharacter = unit.type === "characters" || (!!unit.unitType && unit.unitType === "characters");
+  const isCharacter =
+    unit.type === "characters" ||
+    (!!unit.unitType && unit.unitType === "characters");
 
   // Units with points per model
   if (!isCharacter && item.perModel) {
