@@ -19,36 +19,137 @@ import {
 export const validateList = ({ list, language, intl }) => {
   let errors = [];
 
-  let checks = [
-    oneGeneral,
-    generalLeadership,
-    maxOneBSB,
-  ];
+  let checks = [oneGeneral, generalLeadership, maxOneBSB];
   if (list.compositionRule && list.compositionRule.includes("grand-melee")) {
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "characters", "misc.error.grandMelee25"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "core", "misc.error.grandMelee25"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "special", "misc.error.grandMelee25"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.grandMelee25"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.grandMelee25"));
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "characters",
+        "misc.error.grandMelee25",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "core",
+        "misc.error.grandMelee25",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "special",
+        "misc.error.grandMelee25",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "rare",
+        "misc.error.grandMelee25",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "mercenaries",
+        "misc.error.grandMelee25",
+      ),
+    );
     checks.push(grandMeleeWizardLimits);
   }
   if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
-    const additionalUnits = Math.max(Math.floor((list.points - 2000) / 1000), 0);
-    checks.push(createLimitUnitRepeats(3 + additionalUnits, "characters", "misc.error.maxUnits"));
-    checks.push(createLimitUnitRepeats(4 + additionalUnits, "core", "misc.error.maxUnits"));
-    checks.push(createLimitUnitRepeats(3 + additionalUnits, "special", "misc.error.maxUnits"));
-    checks.push(createLimitUnitRepeats(2 + additionalUnits, "rare", "misc.error.maxUnits"));
-    checks.push(createLimitUnitRepeats(2 + additionalUnits, "mercenaries", "misc.error.maxUnits"));
+    const additionalUnits = Math.max(
+      Math.floor((list.points - 2000) / 1000),
+      0,
+    );
+    checks.push(
+      createLimitUnitRepeats(
+        3 + additionalUnits,
+        "characters",
+        "misc.error.maxUnits",
+      ),
+    );
+    checks.push(
+      createLimitUnitRepeats(
+        4 + additionalUnits,
+        "core",
+        "misc.error.maxUnits",
+      ),
+    );
+    checks.push(
+      createLimitUnitRepeats(
+        3 + additionalUnits,
+        "special",
+        "misc.error.maxUnits",
+      ),
+    );
+    checks.push(
+      createLimitUnitRepeats(
+        2 + additionalUnits,
+        "rare",
+        "misc.error.maxUnits",
+      ),
+    );
+    checks.push(
+      createLimitUnitRepeats(
+        2 + additionalUnits,
+        "mercenaries",
+        "misc.error.maxUnits",
+      ),
+    );
   }
   if (list.compositionRule && list.compositionRule.includes("battle-march")) {
-    checks.push(createMinNonCharacters(2, ["WB", "Sw"], "misc.error.notEnoughNonCharactersBattleMarch"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "characters", "misc.error.battleMarch25PercentPerCharacter"));
-    checks.push(createMaxPointsSingleUnit(.35 * list.points, "core", "misc.error.battleMarch35PercentPerCore"));
-    checks.push(createMaxPointsSingleUnit(.30 * list.points, "special", "misc.error.battleMarch30PercentPerSpecial"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "rare", "misc.error.battleMarch25PercentPerRare"));
-    checks.push(createMaxPointsSingleUnit(.25 * list.points, "mercenaries", "misc.error.battleMarch25PercentPerMercenary"));
+    checks.push(
+      createMinNonCharacters(
+        2,
+        ["WB", "Sw"],
+        "misc.error.notEnoughNonCharactersBattleMarch",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "characters",
+        "misc.error.battleMarch25PercentPerCharacter",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.35 * list.points,
+        "core",
+        "misc.error.battleMarch35PercentPerCore",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.3 * list.points,
+        "special",
+        "misc.error.battleMarch30PercentPerSpecial",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "rare",
+        "misc.error.battleMarch25PercentPerRare",
+      ),
+    );
+    checks.push(
+      createMaxPointsSingleUnit(
+        0.25 * list.points,
+        "mercenaries",
+        "misc.error.battleMarch25PercentPerMercenary",
+      ),
+    );
   } else {
-    checks.push(createMinNonCharacters(3, ["WM", "WB", "Sw"], "misc.error.notEnoughNonCharacters"));
+    checks.push(
+      createMinNonCharacters(
+        3,
+        ["WM", "WB", "Sw"],
+        "misc.error.notEnoughNonCharacters",
+      ),
+    );
   }
   if (list?.army === "tomb-kings-of-khemri") {
     checks.push(hierophantChecks);
@@ -398,12 +499,24 @@ export const validateList = ({ list, language, intl }) => {
     }
   };
 
-  const characterUnitsRules = getUnitRulesByCategory(list.armyComposition, "characters");
+  const characterUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "characters",
+  );
   const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
-  const specialUnitsRules = getUnitRulesByCategory(list.armyComposition, "special");
+  const specialUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "special",
+  );
   const rareUnitsRules = getUnitRulesByCategory(list.armyComposition, "rare");
-  const alliesUnitsRules = getUnitRulesByCategory(list.armyComposition, "allies");
-  const mercenariesUnitsRules = getUnitRulesByCategory(list.armyComposition, "mercenaries");
+  const alliesUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "allies",
+  );
+  const mercenariesUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "mercenaries",
+  );
 
   characterUnitsRules.forEach((ruleUnit) => {
     checkFor0XRules({ ruleUnit, type: "characters" });
