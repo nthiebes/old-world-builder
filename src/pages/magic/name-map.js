@@ -273,12 +273,14 @@ export const nameMap = {
   "elven-honours": {
     name_de: "Elven Honours",
     name_en: "Elven Honours",
+    name_es: "Honores Élficos",
     name_cn: "精灵荣耀",
     name_fr: "Honneurs Elfiques",
   },
   "elven-honour": {
     name_de: "Elven Honour",
     name_en: "Elven Honour",
+    name_es: "Honor Élfico",
     name_cn: "精灵荣耀",
     name_fr: "Honneur Elfique",
   },

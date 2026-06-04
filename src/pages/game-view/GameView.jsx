@@ -252,7 +252,6 @@ export const GameView = () => {
       <ul>
         {units.map((unit, index) => {
           const stats = unit.profile?.stats || getStats(unit, armyComposition);
-          // TODO: update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
           const specialRules =
             unit.armyComposition?.[armyComposition]?.specialRules ||
