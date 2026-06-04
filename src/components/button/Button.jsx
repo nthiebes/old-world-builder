@@ -101,6 +101,10 @@ Button.propTypes = {
   size: PropTypes.string,
   download: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  label: PropTypes.string,
+  showLabelRight: PropTypes.bool,
+  autoHeight: PropTypes.bool,
+  showLabelLeft: PropTypes.bool,
 };
 
 Button.defaultProps = {

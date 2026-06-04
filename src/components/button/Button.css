@@ -136,6 +136,38 @@
   white-space: unset;
 }
 
+.button--dropbox {
+  background: #0061fe;
+  color: #eee;
+}
+
+@media (hover: hover) {
+  .button--dropbox:hover {
+    color: var(--color-font-light);
+  }
+}
+
+.button--dropbox:focus,
+.button--dropbox:active {
+  color: var(--color-font-light);
+}
+
+.button--owr {
+  background: #1a1a1a;
+  color: var(--color-font-light);
+}
+
+@media (hover: hover) {
+  .button--owr:hover {
+    color: var(--color-gold);
+  }
+}
+
+.button--owr:focus,
+.button--owr:active {
+  color: var(--color-gold);
+}
+
 @keyframes sync {
   from {
     transform: rotate(360deg);
