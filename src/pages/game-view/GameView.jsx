@@ -115,11 +115,23 @@ export const GameView = () => {
     return allPoints;
   };
   const getAllVictoryPoints = () => {
-    let allVictoryPoints =
-      banners * 50 +
-      scenarioPoints +
-      (generalDead ? 100 : 0) +
-      (BSBDead ? 50 : 0);
+    let allVictoryPoints = 0;
+
+    console.log(list.compositionRule);
+
+    if (list.compositionRule === "battle-march") {
+      allVictoryPoints =
+        banners * 25 +
+        scenarioPoints +
+        (generalDead ? 50 : 0) +
+        (BSBDead ? 25 : 0);
+    } else {
+      allVictoryPoints =
+        banners * 50 +
+        scenarioPoints +
+        (generalDead ? 100 : 0) +
+        (BSBDead ? 50 : 0);
+    }
 
     Object.keys(victoryPoints).forEach((unitId) => {
       allVictoryPoints += getUnitVictoryPoints(unitId);
@@ -769,7 +781,7 @@ export const GameView = () => {
                       {": "}
                     </i>
                   </b>
-                  100
+                  {list.compositionRule === "battle-march" ? 50 : 100}
                 </p>
               )}
               {BSBDead && (
@@ -780,7 +792,7 @@ export const GameView = () => {
                       {": "}
                     </i>
                   </b>
-                  50
+                  {list.compositionRule === "battle-march" ? 25 : 50}
                 </p>
               )}
               {Object.keys(victoryPoints).map((unitId) => {
