@@ -22,11 +22,11 @@ export const oneGeneral = (list) => {
     });
   }
   return errors;
-}
+};
 
 /**
  * An army's general must be chosen from the set of characters with the highest
- * leadership in the army, not including characters ineligible to be the 
+ * leadership in the army, not including characters ineligible to be the
  * general like Loners.
  */
 export const generalLeadership = (list) => {
@@ -43,23 +43,22 @@ export const generalLeadership = (list) => {
             (command) =>
               command.name_en === "General" &&
               (!command.armyComposition ||
-                equalsOrIncludes(command.armyComposition, list.armyComposition)),
+                equalsOrIncludes(
+                  command.armyComposition,
+                  list.armyComposition,
+                )),
           )
         ) {
-          const unitName =
-            unit.name_en.includes("renegade") &&
-            list.armyComposition?.includes("renegade")
-              ? unit.name_en
-              : unit.name_en.replace(" {renegade}", "");
-          const leadership = getUnitLeadership(unitName);
+          const leadership = getUnitLeadership({ unit, list });
 
           if (leadership && leadership > highestLeadership) {
             highestLeadership = leadership;
           }
         }
-      })
+      });
     }
-    const unitLeadership = getUnitLeadership(generals[0].name_en);
+    const unitLeadership = getUnitLeadership({ unit: generals[0], list });
+
     if (unitLeadership && unitLeadership < highestLeadership) {
       errors.push({
         message: "misc.error.generalLeadership",
@@ -68,7 +67,7 @@ export const generalLeadership = (list) => {
     }
   }
   return errors;
-}
+};
 
 /**
  * An army can have at most one Battle Standard Bearer.
@@ -90,10 +89,10 @@ export const maxOneBSB = (list) => {
     errors.push({
       message: "misc.error.multipleBSBs",
       section: "characters",
-    })
+    });
   }
   return errors;
-}
+};
 
 /**
  * A Tomb Kings list requires a wizard character to be the army's Hierophant.
@@ -113,15 +112,19 @@ export const hierophantChecks = (list) => {
       );
 
   if (hierophants.length < 1) {
-    return [{
-      message: "misc.error.noHierophant",
-      section: "characters",
-    }];
+    return [
+      {
+        message: "misc.error.noHierophant",
+        section: "characters",
+      },
+    ];
   } else if (hierophants.length > 1) {
-    return [{
-      message: "misc.error.multipleHierophants",
-      section: "characters",
-    }];
+    return [
+      {
+        message: "misc.error.multipleHierophants",
+        section: "characters",
+      },
+    ];
   } else {
     let highestLichePriestLevel = 0;
     if (list?.characters?.length) {
@@ -132,49 +135,64 @@ export const hierophantChecks = (list) => {
             (command) =>
               command.name_en === "The Hierophant" &&
               (!command.armyComposition ||
-                equalsOrIncludes(command.armyComposition, list.armyComposition)),
+                equalsOrIncludes(
+                  command.armyComposition,
+                  list.armyComposition,
+                )),
           )
         ) {
           // Settra and characters with the "Language of the Priests" option are always the Hierophant
-          const hasLanguageOfThePriests = (unit.name_en === "Tomb King" || unit.name_en === "Tomb Prince") &&
+          const hasLanguageOfThePriests =
+            (unit.name_en === "Tomb King" || unit.name_en === "Tomb Prince") &&
             unit.command[0].options?.find(
-              (option) => option.name_en === "Arise!, Level 1 Wizard" && option.active
+              (option) =>
+                option.name_en === "Arise!, Level 1 Wizard" && option.active,
             ) !== undefined;
-          const wizardLevel = (unit.name_en === "Settra the Imperishable" || hasLanguageOfThePriests) 
-            ? 6 
-            : getWizardLevels(unit).lastIndexOf(1);
+          const wizardLevel =
+            unit.name_en === "Settra the Imperishable" ||
+            hasLanguageOfThePriests
+              ? 6
+              : getWizardLevels(unit).lastIndexOf(1);
           if (wizardLevel && wizardLevel > highestLichePriestLevel) {
             highestLichePriestLevel = wizardLevel;
           }
         }
       });
     }
-    
-    const hasLanguageOfThePriests = (hierophants[0].name_en === "Tomb King" || hierophants[0].name_en === "Tomb Prince") &&
+
+    const hasLanguageOfThePriests =
+      (hierophants[0].name_en === "Tomb King" ||
+        hierophants[0].name_en === "Tomb Prince") &&
       hierophants[0].command[0].options?.find(
-        (option) => option.name_en === "Arise!, Level 1 Wizard" && option.active
+        (option) =>
+          option.name_en === "Arise!, Level 1 Wizard" && option.active,
       ) !== undefined;
     const hierophantLevel =
-      (hierophants[0].name_en === "Settra the Imperishable" || hasLanguageOfThePriests)
+      hierophants[0].name_en === "Settra the Imperishable" ||
+      hasLanguageOfThePriests
         ? 6
         : getWizardLevels(hierophants[0]).lastIndexOf(1);
 
     if (hierophantLevel < highestLichePriestLevel) {
-      return [{
-        message: "misc.error.hierophantLevel",
-        section: "characters",
-      }];
+      return [
+        {
+          message: "misc.error.hierophantLevel",
+          section: "characters",
+        },
+      ];
     } else {
       return [];
     }
   }
-}
+};
 
 export const generalIsHierophant = (list) => {
   const errors = [];
   const generals = getGenerals(list);
   if (generals.length === 1) {
-    const isHierophant = generals[0].command.find((command) => command.active && command.name_en === "The Hierophant");
+    const isHierophant = generals[0].command.find(
+      (command) => command.active && command.name_en === "The Hierophant",
+    );
     if (!isHierophant) {
       errors.push({
         message: "misc.error.hierophantGeneral",
@@ -183,7 +201,7 @@ export const generalIsHierophant = (list) => {
     }
   }
   return errors;
-}
+};
 
 export const generalIsWizard = (list) => {
   const errors = [];
@@ -197,7 +215,7 @@ export const generalIsWizard = (list) => {
     }
   }
   return errors;
-}
+};
 
 /**
  * Factory function for creating validation for whether the army list has a minimum number
@@ -217,18 +235,19 @@ export function createMinNonCharacters(minNum, notCountedTypes, errorMsg) {
       .filter((unit) => {
         const ruleData = getUnitRuleData(unit.name_en);
         return !notCountedTypes.includes(ruleData?.troopType);
-      })
-      .length;
-    
+      }).length;
+
     if (count < minNum) {
-      return [{
-        message: errorMsg,
-        section: "global",
-      }];
+      return [
+        {
+          message: errorMsg,
+          section: "global",
+        },
+      ];
     } else {
       return [];
     }
-  }
+  };
 }
 
 /**
@@ -254,7 +273,7 @@ export function createMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
         }
       });
     return errors;
-  }
+  };
 }
 
 /**
@@ -293,7 +312,7 @@ export const grandMeleeWizardLimits = (list) => {
     });
   if (totalWizards[4] > level4Max) {
     if (characterWizards[4] > 0) {
-      errors.push({   
+      errors.push({
         message: "misc.error.grandMeleeLevel4",
         section: "characters",
       });
@@ -332,7 +351,7 @@ export const grandMeleeWizardLimits = (list) => {
     }
   }
   return errors;
-}
+};
 
 /**
  * Factory function for creating checks for duplicate units up to a given number
@@ -345,7 +364,10 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
 
     list[unitCategory] &&
       list[unitCategory].forEach((unit) => {
-        const unitRules = getUnitRulesByCategory(list.armyComposition, unitCategory);
+        const unitRules = getUnitRulesByCategory(
+          list.armyComposition,
+          unitCategory,
+        );
         const restrictions = Boolean(
           unitRules &&
             (unitRules.find((ruleUnit) =>
@@ -356,8 +378,9 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
               )?.min),
         );
         const count = list[unitCategory].filter(
-          (targetUnit) => targetUnit.id.split(".")[0] === unit.id.split(".")[0] || 
-          hasSharedCombinedArmsLimit(targetUnit, unit),
+          (targetUnit) =>
+            targetUnit.id.split(".")[0] === unit.id.split(".")[0] ||
+            hasSharedCombinedArmsLimit(targetUnit, unit),
         ).length;
 
         if (
@@ -375,7 +398,7 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
           });
         }
       });
-    
+
     restrictedUnits.forEach((restrictedUnit) => {
       errors.push({
         message: errorMsg,
@@ -385,7 +408,7 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
       });
     });
     return errors;
-  }
+  };
 }
 
 // Helper functions for these checks

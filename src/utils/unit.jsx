@@ -11,14 +11,23 @@ export const getUnitRuleData = (unitName) => {
   return rulesMap[synonym || normalizedRuleName];
 };
 
-export const getUnitLeadership = (unitName) => {
+export const getUnitLeadership = ({ unit, list }) => {
+  const unitName =
+    unit.name_en.includes("renegade") &&
+    list.armyComposition?.includes("renegade")
+      ? unit.name_en
+      : unit.name_en.replace(" {renegade}", "");
   const ruleData = getUnitRuleData(unitName);
+  const includesCommandOptionIncreasingLeadership = unit.command.find(
+    (command) => command.name_en === "The Might of Miragliano",
+  )?.active;
+  let leadership = 0;
 
   if (!ruleData) {
     return false;
   }
 
-  return ruleData.stats?.length
+  leadership = ruleData.stats?.length
     ? ruleData.stats.reduce(
         (previousValue, statLine) =>
           (parseInt(statLine.Ld) || 0) > previousValue
@@ -27,6 +36,12 @@ export const getUnitLeadership = (unitName) => {
         0,
       )
     : 0;
+
+  if (leadership && includesCommandOptionIncreasingLeadership) {
+    leadership += 1;
+  }
+
+  return leadership;
 };
 
 export const getAllOptions = (
@@ -675,11 +690,13 @@ export const getUnitGeneratedSpellCount = (unit) => {
     generatedSpellsCount += 1;
   }
   if (unitHasItem(unit, "Learned Feng Shi Bo*")) {
-    generatedSpellsCount += unit.items.find(
-      ({ name_en }) => name_en.toLowerCase() === "magic items"
-    ).selected?.find(
-      ({ name_en }) => name_en.toLowerCase() === "Learned Feng Shi Bo*".toLowerCase(),
-    )?.amount || 0;
+    generatedSpellsCount +=
+      unit.items
+        .find(({ name_en }) => name_en.toLowerCase() === "magic items")
+        .selected?.find(
+          ({ name_en }) =>
+            name_en.toLowerCase() === "Learned Feng Shi Bo*".toLowerCase(),
+        )?.amount || 0;
   }
 
   return Math.min(generatedSpellsCount, 6);
