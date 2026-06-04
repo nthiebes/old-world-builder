@@ -1126,6 +1126,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     const isDisabled =
                       (exclusiveUnitCheckedOption && exclusive && !active) ||
                       alwaysActive;
+
                     return (
                       <Fragment key={id}>
                         <div className="checkbox">

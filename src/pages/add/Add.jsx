@@ -83,7 +83,7 @@ export const Add = ({ isMobile }) => {
           <b>{getUnitName({ unit, language })}</b>
         </span>
         <i className="unit__points">{`${getUnitPoints(unit, {
-          armyComposition: unit.armyComposition,
+          ally,
         })} ${intl.formatMessage({
           id: "app.points",
         })}`}</i>

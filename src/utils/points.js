@@ -102,8 +102,8 @@ export const getUnitPoints = (unit, settings) => {
         });
       } else if (
         option.active ||
-        (option.alwaysActive &&
-          option.armyComposition === settings.armyComposition)
+        (option.alwaysActive && option.armyComposition === unit.army) ||
+        (option.alwaysActive && option.armyComposition === settings.ally)
       ) {
         unitPoints += option.points;
       }
