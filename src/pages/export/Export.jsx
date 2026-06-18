@@ -65,20 +65,17 @@ export const Export = ({ isMobile }) => {
     listText,
     asText: true,
   });
-  const share = async ({ asText }) => {
-    const shareData = {};
-
+  const share = async ({ asText } = {}) => {
     asText ? setShareError(false) : setOwbShareError(false);
 
-    if (asText) {
-      shareData.text = listText;
-    } else {
-      shareData.title = list.name;
-      shareData.files = [file];
-      shareData.text = list.description;
-    }
+    const shareData = asText
+      ? { text: listText }
+      : { title: list.name, text: list.description, files: [file] };
 
-    if (!navigator.canShare) {
+    // navigator.canShare(data) — without the argument this only checks the
+    // API exists, not whether the browser can share THIS data (file shares
+    // fail this check on some browsers).
+    if (!navigator.canShare?.(shareData)) {
       asText ? setShareError(true) : setOwbShareError(true);
       return;
     }
@@ -86,6 +83,8 @@ export const Export = ({ isMobile }) => {
     try {
       await navigator.share(shareData);
     } catch (error) {
+      // AbortError = user dismissed the system share sheet, not a failure.
+      if (error?.name === "AbortError") return;
       asText ? setShareError(true) : setOwbShareError(true);
     }
   };
