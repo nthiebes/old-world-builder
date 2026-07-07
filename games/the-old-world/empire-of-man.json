@@ -4408,11 +4408,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Detachment, Horde, Impetuous, Levies, Open Order, Warband",
-        "name_cn": "分遣队, 部群, 鲁莽, 炮灰, 开放阵型, 战帮",
-        "name_de": "Abteilung, Horde, Ungestüm, Gesindel, Offene Ränge, Kriegerschar",
-        "name_fr": "Détachement, Horde, Impétueux, Conscrits, Ordre Dispersé, Bande de Guerre",
-        "name_es": "Destacamento, Horda, Impetuoso, Levas, Formación Abierta, Partida de Guerra"
+        "name_en": "Detachment, Horde, Impetuous, Levies, Open Order, Warband, Furious Charge",
+        "name_cn": "分遣队, 部群, 鲁莽, 炮灰, 开放阵型, 战帮, Furious Charge",
+        "name_de": "Abteilung, Horde, Ungestüm, Gesindel, Offene Ränge, Kriegerschar, Furious Charge",
+        "name_fr": "Détachement, Horde, Impétueux, Conscrits, Ordre Dispersé, Bande de Guerre, Furious Charge",
+        "name_es": "Destacamento, Horda, Impetuoso, Levas, Formación Abierta, Partida de Guerra, Furious Charge"
       },
       "notes": {
         "name_en": "",
@@ -4602,7 +4602,20 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veteran Outriders",
+          "name_cn": "Veteran Outriders",
+          "name_de": "Veteran Outriders",
+          "name_fr": "Veteran Outriders",
+          "name_es": "Veteran Outriders",
+          "points": 0,
+          "armyComposition": "city-state-of-nuln",
+          "notes": {
+            "name_en": "0-1 unit of Outriders in a City-state of Nuln army"
+          }
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -4636,7 +4649,7 @@
           "category": "special"
         }
       },
-      "points": 21,
+      "points": 20,
       "minimum": 4,
       "maximum": 0,
       "command": [
@@ -5728,11 +5741,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Regimental Unit, Stubborn",
-        "name_cn": "紧密阵型, 主团单位, 坚毅",
-        "name_de": "Geschlossene Ränge, Hauptregiment, Unnachgiebig",
-        "name_fr": "Ordre Serré, Unité Régimentaire, Obstiné",
-        "name_es": "Formación Cerrada, Unidad Regimental, Tozudo"
+        "name_en": "Close Order, Regimental Unit, Stubborn, Furious Charge",
+        "name_cn": "紧密阵型, 主团单位, 坚毅, Furious Charge",
+        "name_de": "Geschlossene Ränge, Hauptregiment, Unnachgiebig, Furious Charge",
+        "name_fr": "Ordre Serré, Unité Régimentaire, Obstiné, Furious Charge",
+        "name_es": "Formación Cerrada, Unidad Regimental, Tozudo, Furious Charge"
       },
       "notes": {
         "name_en": "",
@@ -5857,7 +5870,7 @@
       "name_fr": "Pistoliers",
       "name_es": "Herreruelos",
       "id": "pistoliers",
-      "points": 16,
+      "points": 15,
       "armyComposition": {
         "empire-of-man": {
           "category": "special"
@@ -6099,7 +6112,20 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veteran Outriders",
+          "name_cn": "Veteran Outriders",
+          "name_de": "Veteran Outriders",
+          "name_fr": "Veteran Outriders",
+          "name_es": "Veteran Outriders",
+          "points": 0,
+          "armyComposition": "city-state-of-nuln",
+          "notes": {
+            "name_en": "0-1 unit of Outriders in a City-state of Nuln army"
+          }
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -6354,7 +6380,7 @@
       "name_fr": "Chevaliers du Cercle Intérieur",
       "name_es": "Caballeros del Círculo Interior",
       "id": "inner-circle-knights",
-      "points": 29,
+      "points": 28,
       "armyComposition": {
         "empire-of-man": {
           "category": "special"
@@ -8300,7 +8326,7 @@
       "name_fr": "Ogres Impériaux",
       "name_es": "Ogros Imperiales",
       "id": "imperial-ogres",
-      "points": 31,
+      "points": 29,
       "minimum": 3,
       "maximum": 0,
       "command": [
