@@ -9,6 +9,7 @@ import {
   createMinNonCharacters,
   generalIsHierophant,
   generalIsWizard,
+  grandMeleeMaxModelsSingleUnit,
   generalLeadership,
   grandMeleeWizardLimits,
   hierophantChecks,
@@ -57,6 +58,7 @@ export const validateList = ({ list, language, intl }) => {
       ),
     );
     checks.push(grandMeleeWizardLimits);
+    checks.push(grandMeleeMaxModelsSingleUnit);
   }
   if (list.compositionRule && list.compositionRule.includes("combined-arms")) {
     const additionalUnits = Math.max(

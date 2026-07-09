@@ -284,6 +284,100 @@ describe("validateList", () => {
     expect(getMessages(errors)).toEqual(["misc.error.grandMelee25"]);
   });
 
+  test("adds grandMelee50Models when a single unit has more than half the army models", () => {
+    const list = {
+      ...baseList,
+      compositionRule: "grand-melee",
+      characters: [
+        makeCharacter({
+          id: "baron.1",
+          name_en: "Baron",
+          isGeneral: true,
+        }),
+      ],
+      core: [
+        {
+          id: "badlands-ogre-bulls.1",
+          name_en: "Badlands Ogre Bulls",
+          strength: 12,
+        },
+        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims", strength: 5 },
+        {
+          id: "black-guard-of-naggarond.1",
+          name_en: "Black Guard of Naggarond",
+          strength: 5,
+        },
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+
+    expect(getMessages(errors)).toEqual(["misc.error.grandMelee50Models"]);
+  });
+
+  test("does not add grandMelee50Models outside grand-melee", () => {
+    const list = {
+      ...baseList,
+      compositionRule: "open-war",
+      characters: [
+        makeCharacter({
+          id: "baron.1",
+          name_en: "Baron",
+          isGeneral: true,
+        }),
+      ],
+      core: [
+        {
+          id: "badlands-ogre-bulls.1",
+          name_en: "Badlands Ogre Bulls",
+          strength: 12,
+        },
+        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims", strength: 5 },
+        {
+          id: "black-guard-of-naggarond.1",
+          name_en: "Black Guard of Naggarond",
+          strength: 5,
+        },
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+
+    expect(getMessages(errors)).not.toContain("misc.error.grandMelee50Models");
+  });
+
+  test("allows a grand-melee unit with exactly half the army models", () => {
+    const list = {
+      ...baseList,
+      compositionRule: "grand-melee",
+      characters: [
+        makeCharacter({
+          id: "baron.1",
+          name_en: "Baron",
+          isGeneral: true,
+          strength: 1,
+        }),
+      ],
+      core: [
+        {
+          id: "badlands-ogre-bulls.1",
+          name_en: "Badlands Ogre Bulls",
+          strength: 11,
+        },
+        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims", strength: 5 },
+        {
+          id: "black-guard-of-naggarond.1",
+          name_en: "Black Guard of Naggarond",
+          strength: 5,
+        },
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+
+    expect(getMessages(errors)).not.toContain("misc.error.grandMelee50Models");
+  });
+
   test("adds grandMeleeLevel4 when total level 4 wizards exceed the cap", () => {
     const list = {
       ...baseList,

@@ -354,6 +354,28 @@ export const grandMeleeWizardLimits = (list) => {
 };
 
 /**
+ * In Grand Melee, no single unit can contain more than half the models in the army.
+ */
+export const grandMeleeMaxModelsSingleUnit = (list) => {
+  const unitEntries = getArmyModelEntries(list);
+  const totalModels = unitEntries.reduce(
+    (total, { models }) => total + models,
+    0,
+  );
+
+  if (totalModels <= 0) {
+    return [];
+  }
+
+  return unitEntries
+    .filter(({ models }) => models > totalModels / 2)
+    .map(({ section }) => ({
+      message: "misc.error.grandMelee50Models",
+      section,
+    }));
+};
+
+/**
  * Factory function for creating checks for duplicate units up to a given number
  * in a target category
  */
@@ -417,6 +439,38 @@ const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
     otherUnit.sharedCombinedArmsUnits &&
     otherUnit.sharedCombinedArmsUnits.includes(unitToValidate.id.split(".")[0])
+  );
+};
+
+const unitCategories = [
+  "lords",
+  "heroes",
+  "characters",
+  "core",
+  "special",
+  "rare",
+  "mercenaries",
+  "allies",
+];
+
+const getModelCount = (unit) => {
+  const modelCount = Number(unit?.strength || unit?.minimum || 1);
+
+  return Number.isFinite(modelCount) ? modelCount : 1;
+};
+
+const getArmyModelEntries = (list) => {
+  return unitCategories.flatMap((section) =>
+    (list[section] || []).flatMap((unit) => [
+      {
+        section,
+        models: getModelCount(unit),
+      },
+      ...(unit.detachments || []).map((detachment) => ({
+        section,
+        models: getModelCount(detachment),
+      })),
+    ]),
   );
 };
 
