@@ -80,6 +80,8 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.options) {
     unit.options.forEach((option) => {
+      console.log(option, settings.armyComposition);
+
       if (option.stackable) {
         unitPoints +=
           (option.stackableCount || option.minimum || 0) * option.points;
@@ -103,6 +105,8 @@ export const getUnitPoints = (unit, settings) => {
       } else if (
         option.active ||
         (option.alwaysActive && option.armyComposition === unit.army) ||
+        (option.alwaysActive &&
+          option.armyComposition === settings.armyComposition) ||
         (option.alwaysActive && option.armyComposition === settings.ally)
       ) {
         unitPoints += option.points;
