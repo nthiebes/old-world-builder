@@ -159,7 +159,9 @@ export const Magic = ({ isMobile }) => {
     perModel,
   }) => {
     let points = regularPoints;
-    const isCharacter = type === "characters" || (!!unit.unitType && unit.unitType === "characters");
+    const isCharacter =
+      type === "characters" ||
+      (!!unit.unitType && unit.unitType === "characters");
 
     if (!isCharacter && perUnitPoints) {
       points = perUnitPoints;
@@ -184,7 +186,8 @@ export const Magic = ({ isMobile }) => {
                 id: "app.points",
               })
         }`}
-        {perModel && !isCharacter &&
+        {perModel &&
+          !isCharacter &&
           ` ${intl.formatMessage({
             id: "unit.perModel",
           })}`}
@@ -713,6 +716,8 @@ export const Magic = ({ isMobile }) => {
           ).filter(
             (item) =>
               (!maxMagicPoints || item.points <= maxMagicPoints) &&
+              (!item.compositionRule ||
+                item.compositionRule === list.compositionRule) &&
               (!item.armyComposition ||
                 equalsOrIncludes(
                   item.armyComposition,
