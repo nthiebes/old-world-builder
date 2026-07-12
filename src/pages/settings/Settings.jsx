@@ -14,6 +14,8 @@ export const Settings = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const settings = useSelector((state) => state.settings);
+  const { loggedIn, loginLoading } = useSelector((state) => state.login);
+  const isAutoSyncDisabled = !loggedIn || loginLoading;
   const updateLocalSettings = (newSettings) => {
     localStorage.setItem("owb.settings", JSON.stringify(newSettings));
   };
@@ -70,16 +72,29 @@ export const Settings = () => {
             id="auto-sync"
             value="auto-sync"
             onChange={handleSettingChange("autoSync", !settings.autoSync)}
-            checked={settings.autoSync}
+            checked={loggedIn && settings.autoSync}
+            disabled={isAutoSyncDisabled}
+            title={
+              isAutoSyncDisabled
+                ? intl.formatMessage({ id: "settings.autoSyncLoginRequired" })
+                : undefined
+            }
+            aria-describedby="auto-sync-description"
             className="checkbox__input"
           />
           <label htmlFor="auto-sync" className="checkbox__label">
             <FormattedMessage id="settings.autoSync" />
           </label>
         </div>
-        <p className="settings__radio-description">
+        <p id="auto-sync-description" className="settings__radio-description">
           <i>
-            <FormattedMessage id="settings.autoSyncDescription" />
+            <FormattedMessage
+              id={
+                isAutoSyncDisabled
+                  ? "settings.autoSyncLoginRequired"
+                  : "settings.autoSyncDescription"
+              }
+            />
           </i>
         </p>
 
