@@ -155,6 +155,7 @@ export const synonyms = {
   "scout gyrocopters": "scout gyrocopter",
   ironfists: "ironfist",
   "ironfists renegade": "ironfist renegade",
+  "great throwing spear": "great throwing spears",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
