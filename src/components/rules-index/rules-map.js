@@ -156,6 +156,7 @@ export const synonyms = {
   ironfists: "ironfist",
   "ironfists renegade": "ironfist renegade",
   "great throwing spear": "great throwing spears",
+  "huge gobs": "huge gob",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
