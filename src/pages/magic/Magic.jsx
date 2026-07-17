@@ -3,6 +3,7 @@ import { Link, useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
 
 import {
@@ -637,10 +638,13 @@ export const Magic = ({ isMobile }) => {
   }
 
   // Backwards compatibility for runes
-  if (list.army === "dwarfen-mountain-holds") {
+  if (
+    list.army === "dwarfen-mountain-holds" && 
+    maxItemsPerCategory < 1 &&
+    !unit.army // if unit.army is defined, this is an ally unit
+  ) {
     maxItemsPerCategory = 3;
   }
-
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
 
   return (
@@ -884,4 +888,8 @@ export const Magic = ({ isMobile }) => {
       </MainComponent>
     </>
   );
+};
+
+Magic.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
 };
