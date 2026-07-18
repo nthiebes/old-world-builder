@@ -427,6 +427,35 @@ describe("validateList", () => {
 
     expect(getMessages(errors)).toEqual(["misc.error.grandMeleeLevel3"]);
   });
+  
+  test("ignores named characters for grand melee checks", () => {
+    const list = {
+      ...baseList,
+      points: 2000,
+      compositionRule: "grand-melee",
+      characters: [
+        makeCharacter({
+          id: "miao-ying.1",
+          name_en: "Miao Ying",
+          isGeneral: true,
+          named: true,
+          points: 600,
+          options: [{ name_en: "Level 4 Wizard", active: true, points: 0}],
+        }),
+        makeCharacter({
+          id: "archmage.1",
+          name_en: "Archmage",
+          points: 100,
+          options: [{ name_en: "Level 4 Wizard", active: true, points: 0 }],
+        }),
+      ],
+    };
+
+    const errors = validateList({ list, language: "en", intl });
+
+    expect(getMessages(errors)).not.toContain("misc.error.grandMelee25");
+    expect(getMessages(errors)).not.toContain("misc.error.grandMeleeLevel4");
+  });
 
   test("adds maxUnits in combined-arms when duplicate core unit count exceeds 4", () => {
     const list = {

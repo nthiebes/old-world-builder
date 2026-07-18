@@ -253,23 +253,27 @@ export function createMinNonCharacters(minNum, notCountedTypes, errorMsg) {
 /**
  * Factory function for creating checks for if a single unit in the
  * target category exceeds a given point value.
+ * skipNamed is for Grand Melee, where named characters are ignored
+ * for these checks.
  */
-export function createMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
+export function createMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg, skipNamed) {
   return (list) => {
     const errors = [];
     list[unitCategory] &&
       list[unitCategory].forEach((unit) => {
-        const unitPoints = getUnitPoints(
-          { ...unit, type: unitCategory },
-          {
-            armyComposition: list.armyComposition || list.army,
-          },
-        );
-        if (unitPoints > maxPoints) {
-          errors.push({
-            message: errorMsg,
-            section: unitCategory,
-          });
+        if (!(!!skipNamed && unit.named)) {
+          const unitPoints = getUnitPoints(
+            { ...unit, type: unitCategory },
+            {
+              armyComposition: list.armyComposition || list.army,
+            },
+          );
+          if (unitPoints > maxPoints) {
+            errors.push({
+              message: errorMsg,
+              section: unitCategory,
+            });
+          }
         }
       });
     return errors;
@@ -278,7 +282,7 @@ export function createMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg) {
 
 /**
  * In Grand Melee, an army can only have 1 level 3 wizard per 1000 points,
- * and 1 level 4 wizard per 2000 points.
+ * and 1 level 4 wizard per 2000 points. Named characters are ignored.
  */
 export const grandMeleeWizardLimits = (list) => {
   const errors = [];
@@ -291,24 +295,30 @@ export const grandMeleeWizardLimits = (list) => {
 
   list?.characters &&
     list.characters.forEach((unit) => {
-      getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
-        characterWizards[level] += numberAtThisLevel;
-        totalWizards[level] += numberAtThisLevel;
-      });
+      if (!unit.named) {
+        getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
+          characterWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        });
+      }
     });
   list?.special &&
     list.special.forEach((unit) => {
-      getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
-        specialWizards[level] += numberAtThisLevel;
-        totalWizards[level] += numberAtThisLevel;
-      });
+      if (!unit.named) {
+        getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
+          specialWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        });
+      }
     });
   list?.rare &&
     list.rare.forEach((unit) => {
-      getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
-        rareWizards[level] += numberAtThisLevel;
-        totalWizards[level] += numberAtThisLevel;
-      });
+      if (!unit.named) {
+        getWizardLevels(unit).forEach((numberAtThisLevel, level) => {
+          rareWizards[level] += numberAtThisLevel;
+          totalWizards[level] += numberAtThisLevel;
+        });
+      }
     });
   if (totalWizards[4] > level4Max) {
     if (characterWizards[4] > 0) {
