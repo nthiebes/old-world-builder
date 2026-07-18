@@ -19,6 +19,7 @@
           "exclusive": false
         },
         {
+          "id": "might-of-miragliano",
           "name_en": "The Might of Miragliano",
           "name_cn": "米拉格连诺伟力",
           "name_de": "The Might of Miragliano",
@@ -39,6 +40,7 @@
           ]
         },
         {
+          "id": "renegade-knight",
           "name_en": "The Renegade Knight",
           "name_cn": "变节骑士",
           "name_de": "The Renegade Knight",
@@ -59,6 +61,7 @@
           ]
         },
         {
+          "id": "noble-outlaw",
           "name_en": "The Noble Outlaw",
           "name_cn": "强盗贵族",
           "name_de": "The Noble Outlaw",
@@ -154,6 +157,7 @@
           ]
         },
         {
+          "id": "wandering-diestro",
           "name_en": "The Wandering Diestro",
           "name_cn": "游荡决斗士",
           "name_de": "The Wandering Diestro",
@@ -478,6 +482,7 @@
           }
         },
         {
+          "id": "might-of-miragliano",
           "name_en": "The Might of Miragliano",
           "name_cn": "米拉格连诺伟力",
           "name_de": "The Might of Miragliano",
@@ -498,6 +503,7 @@
           ]
         },
         {
+          "id": "renegade-knight",
           "name_en": "The Renegade Knight",
           "name_cn": "变节骑士",
           "name_de": "The Renegade Knight",
@@ -518,6 +524,7 @@
           ]
         },
         {
+          "id": "noble-outlaw",
           "name_en": "The Noble Outlaw",
           "name_cn": "强盗贵族",
           "name_de": "The Noble Outlaw",
@@ -613,6 +620,7 @@
           ]
         },
         {
+          "id": "wandering-diestro",
           "name_en": "The Wandering Diestro",
           "name_cn": "游荡决斗士",
           "name_de": "The Wandering Diestro",
@@ -867,6 +875,7 @@
           "exclusive": false
         },
         {
+          "id": "might-of-miragliano",
           "name_en": "The Might of Miragliano",
           "name_cn": "米拉格连诺伟力",
           "name_de": "The Might of Miragliano",
@@ -887,6 +896,7 @@
           ]
         },
         {
+          "id": "renegade-knight",
           "name_en": "The Renegade Knight",
           "name_cn": "变节骑士",
           "name_de": "The Renegade Knight",
@@ -907,6 +917,7 @@
           ]
         },
         {
+          "id": "noble-outlaw",
           "name_en": "The Noble Outlaw",
           "name_cn": "贵族强盗",
           "name_de": "The Noble Outlaw",
@@ -1002,6 +1013,7 @@
           ]
         },
         {
+          "id": "wandering-diestro",
           "name_en": "The Wandering Diestro",
           "name_cn": "游荡决斗士",
           "name_de": "The Wandering Diestro",
@@ -1306,6 +1318,7 @@
           "perModel": true
         },
         {
+          "id": "sellsword-heavy-phalanx",
           "name_en": "Heavy Infantry, Phalanx",
           "name_cn": "重步兵, 方阵",
           "name_it": "Heavy Infantry, Phalanx",
@@ -1316,6 +1329,16 @@
             "name_en": "0-1 unit for each character with the Might of Miragliano Infamous Origin",
             "name_cn": "每有一个米拉格连诺伟力恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé la Puissance de Miragliano"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "might-of-miragliano",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         },
         {
@@ -1491,6 +1514,7 @@
           "perModel": true
         },
         {
+          "id": "sellsword-heavy-phalanx",
           "name_en": "Heavy Infantry, Phalanx",
           "name_cn": "重步兵, 方阵",
           "name_it": "Heavy Infantry, Phalanx",
@@ -1501,6 +1525,16 @@
             "name_en": "0-1 unit for each character with the Might of Miragliano Infamous Origin",
             "name_cn": "每有一个米拉格连诺伟力恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé la Puissance de Miragliano"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "might-of-miragliano",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         },
         {
@@ -1622,6 +1656,7 @@
           "perModel": true
         },
         {
+          "id": "freeblade-lance-noble-disdain",
           "name_en": "Lance Formation, Noble Disdain",
           "name_cn": "骑枪阵型, 贵族蔑视",
           "name_it": "Lance Formation, Noble Disdain",
@@ -1633,6 +1668,16 @@
             "name_en": "0-1 unit for each character with the Renegade Knight Infamous Origin",
             "name_cn": "每有一个变节骑士恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé le Chevalier Renégat"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "renegade-knight",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         }
       ],
@@ -1815,6 +1860,7 @@
           }
         },
         {
+          "id": "outriders-ambushers",
           "name_en": "Ambushers",
           "name_cn": "伏击",
           "name_de": "Überfall",
@@ -1826,6 +1872,16 @@
             "name_en": "0-1 unit for each character with the Noble Outlaw Infamous Origin",
             "name_cn": "每有一个强盗贵族恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé le Noble Hors-la-Loi"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "noble-outlaw",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         }
       ],
@@ -2101,6 +2157,7 @@
           "perModel": true
         },
         {
+          "id": "freeblade-lance-noble-disdain",
           "name_en": "Lance Formation, Noble Disdain",
           "name_cn": "骑枪阵型, 贵族蔑视",
           "name_it": "Lance Formation, Noble Disdain",
@@ -2112,6 +2169,16 @@
             "name_en": "0-1 unit for each character with the Renegade Knight Infamous Origin",
             "name_cn": "每有一个变节骑士恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé le Chevalier Renégat"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "renegade-knight",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         }
       ],
@@ -2355,6 +2422,7 @@
           }
         },
         {
+          "id": "brigands-weapon-skill",
           "name_en": "+1 to Weapon Skill",
           "name_cn": "+1武器技能",
           "name_de": "+1 to Weapon Skill",
@@ -2366,6 +2434,16 @@
             "name_en": "0-1 unit for each character with the Wandering Diestro Infamous Origin",
             "name_cn": "每有一个游荡决斗家恶名起源角色则0-1单位",
             "name_fr": "0-1 unité pour chaque personnage avec l’Origine d’Exilé le Diestro Errant"
+          },
+          "restrictions": {
+            "requires": {
+              "unitIds": ["renegade-prince", "renegade-captain", "outcast-wizard"],
+              "option": "wandering-diestro",
+              "optionType": "command",
+              "perUnit": true,
+              "type": "characters"
+            },
+            "max": 1
           }
         }
       ],
