@@ -19,8 +19,10 @@ export const getUnitLeadership = ({ unit, list }) => {
       : unit.name_en.replace(" {renegade}", "");
   const ruleData = getUnitRuleData(unitName);
   const includesCommandOptionIncreasingLeadership = unit.command.find(
-    (command) => command.name_en === "The Might of Miragliano",
-  )?.active;
+    (command) =>
+      (command.name_en === "The Might of Miragliano" && command.active) ||
+      (command.name_en === "The Noble Outlaw" && command.active),
+  );
   let leadership = 0;
 
   if (!ruleData) {
