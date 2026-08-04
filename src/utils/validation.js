@@ -247,9 +247,11 @@ export const validateList = ({ list, language, intl }) => {
     if (
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
       unitsInList.length > max &&
-      ((list.compositionRule && // Exception for Battle March 0-X units
-        !(list.compositionRule.includes("battle-march") && points)) ||
-        !list.compositionRule)
+      !(
+        list.compositionRule &&
+        list.compositionRule.includes("battle-march") &&
+        points
+      ) // Exception for Battle March 0-X units
     ) {
       errors.push({
         message: "misc.error.maxUnits",
@@ -261,7 +263,6 @@ export const validateList = ({ list, language, intl }) => {
 
     // 0-X units check for Battle March
     if (
-      (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
       unitsInList.length > max &&
       points &&
       list.compositionRule &&
@@ -452,7 +453,14 @@ export const validateList = ({ list, language, intl }) => {
           diff: 1,
         });
       }
-      if (!ruleUnit.perUnit && unitsInList.length > max) {
+      if (
+        !ruleUnit.perUnit && unitsInList.length > max &&
+        !(
+          list.compositionRule && 
+          list.compositionRule.includes("battle-march") && 
+          points
+        ) // Exception for Battle March 0-X units
+      ) {
         errors.push({
           message: "misc.error.maxUnits",
           section: type,
