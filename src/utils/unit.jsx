@@ -720,17 +720,14 @@ const unitStrengthByType = {
   WM: "w",
 }
 
-export const getUnitStrength = (unit) => {
+/**
+ * Returns the unit's total unit strength, based on the troop type.
+ */
+export const getUnitStrength = (unit, includeDetachments) => {
   if (unit) {
-    const unitName =
-      unit.name_en.includes("renegade")
-        ? unit.name_en
-        : unit.name_en.replace(" {renegade}", "");
-    const unitRules = getUnitRuleData(unitName);
-    const activeMount = unit.mounts
-      ? unit.mounts.find((mount) => mount.active)
-      : null;
-    const mountRules = activeMount ? getUnitRuleData(activeMount.name_en) : null;
+    const unitRules = getUnitRuleData(unit.name_en);
+    const activeMount = unit.mounts?.find((mount) => mount.active);
+    const mountRules = activeMount ? getUnitRuleData(activeMount.name_en) : undefined;
     const unitType = mountRules?.troopType || unitRules?.troopType || "RI";
     let str = unitStrengthByType[unitType];
     if (str === "w") {
@@ -741,11 +738,21 @@ export const getUnitStrength = (unit) => {
           additionalWounds += parseInt(cur["W"].slice(2));
           return prev;
         } else {
-          return (Math.max(parseInt(cur["W"]) || 1, prev));
+          return Math.max(parseInt(cur["W"]) || 1, prev);
         }
       }, 0);
       str += additionalWounds;
     }
-    return str * (unit.strength || 1);
+    str = str * (unit.strength || 1);
+    if (includeDetachments && unit.detachments) {
+      unit.detachments.forEach((detachment) => {
+        const detachmentRules = getUnitRuleData(detachment.name_en);
+        const detachmentType = detachmentRules?.troopType || "RI";
+        str += unitStrengthByType[detachmentType] * (detachment.strength || 1);
+      });
+    }
+    return str;
+  } else {
+    return 0;
   }
 }

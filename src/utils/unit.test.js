@@ -65,4 +65,22 @@ describe("getUnitStrength", () => {
     });
     expect(unitStr).toBe(6);
   });
+
+  test("Includes detachment strength when parameter is true", () => {
+    const unitStr = getUnitStrength({
+      name_en: "Nuln State Troops",
+      strength: 20,
+      detachments: [
+        {
+          name_en: "State Troops",
+          strength: 5
+        },
+        {
+          name_en: "State Missile Troops",
+          strength: 5
+        },
+      ],
+    }, true);
+    expect(unitStr).toBe(30);
+  });
 });
