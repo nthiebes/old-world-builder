@@ -703,3 +703,49 @@ export const getUnitGeneratedSpellCount = (unit) => {
 
   return Math.min(generatedSpellsCount, 6);
 };
+
+const unitStrengthByType = {
+  RI: 1,
+  HI: 1,
+  MI: 3,
+  Sw: 3,
+  LCa: 2,
+  HCa: 2,
+  MCa: 3,
+  WB: 1,
+  LCh: 3,
+  HCh: 5,
+  MCr: "w",
+  Be: "w",
+  WM: "w",
+}
+
+export const getUnitStrength = (unit) => {
+  if (unit) {
+    const unitName =
+      unit.name_en.includes("renegade")
+        ? unit.name_en
+        : unit.name_en.replace(" {renegade}", "");
+    const unitRules = getUnitRuleData(unitName);
+    const activeMount = unit.mounts
+      ? unit.mounts.find((mount) => mount.active)
+      : null;
+    const mountRules = activeMount ? getUnitRuleData(activeMount.name_en) : null;
+    const unitType = mountRules?.troopType || unitRules?.troopType || "RI";
+    let str = unitStrengthByType[unitType];
+    if (str === "w") {
+      const stats = unitRules?.stats.concat(mountRules?.stats || []);
+      let additionalWounds = 0;
+      str = stats.reduce((prev, cur) => {
+        if (cur["W"].startsWith("(+")) {
+          additionalWounds += parseInt(cur["W"].slice(2));
+          return prev;
+        } else {
+          return (Math.max(parseInt(cur["W"]) || 1, prev));
+        }
+      }, 0);
+      str += additionalWounds;
+    }
+    return str * (unit.strength || 1);
+  }
+}
