@@ -38,6 +38,16 @@
             "name_es": "0-1 Chaos Lord or Daemon Prince",
             "name_fr": "0-1 Seigneur du Chaos ou Prince Démon"
           }
+        },
+        "hordes-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+            "name_cn": "0-1 混沌领主, 恶魔亲王或兽王",
+            "name_de": "0-1 Kriegsherr des Chaos, Dämonenprinz oder Großhäuptling",
+            "name_es": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+            "name_fr": "0-1 Seigneur du Chaos, Prince Démon ou Seigneur des Bêtes"
+          }
         }
       },
       "command": [
@@ -412,6 +422,14 @@
             "name_es": "0-1 Chaos Lord or Daemon Prince",
             "name_fr": "0-1 Seigneur du Chaos ou Prince Démon"
           }
+        },
+        "hordes-of-chaos": {
+          "category": "characters",
+          "name_en": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+          "name_cn": "0-1 混沌领主, 恶魔亲王或兽王",
+          "name_de": "0-1 Kriegsherr des Chaos, Dämonenprinz oder Großhäuptling",
+          "name_es": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+          "name_fr": "0-1 Seigneur du Chaos, Prince Démon ou Seigneur des Bêtes"
         }
       },
       "command": [
@@ -862,6 +880,16 @@
             "name_es": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
             "name_fr": "0-1 Champion Exalté ou Seigneur Sorcier par tranche de 1000 points"
           }
+        },
+        "hordes-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_cn": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_de": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_es": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_fr": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points"
+          }
         }
       },
       "command": [
@@ -1177,6 +1205,16 @@
             "name_de": "0-1 Erhabener Champion oder Meisterhexer pro 1.000 Punkte",
             "name_es": "0-1 Exalted Champion or Sorcerer Lord per 1000 points",
             "name_fr": "0-1 Champion Exalté ou Seigneur Sorcier par tranche de 1000 points"
+          }
+        },
+        "hordes-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_cn": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_de": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_es": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_fr": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points"
           }
         }
       },
@@ -2745,6 +2783,1430 @@
         "name_it": "",
         "name_pl": ""
       }
+    },
+    {
+      "name_en": "Champion Of Ruin",
+      "name_cn": "Champion Of Ruin",
+      "name_de": "Champion Of Ruin",
+      "name_es": "Champion Of Ruin",
+      "name_fr": "Champion Of Ruin",
+      "id": "champion-of-ruin",
+      "points": 90,
+      "armyComposition": {
+        "warriors-of-chaos": {
+          "category": "characters"
+        },
+        "wolves-of-the-sea": {
+          "category": "characters"
+        },
+        "heralds-of-darkness": {
+          "category": "characters"
+        },
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 6
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4
+        },
+        {
+          "name_en": "Lance",
+          "name_cn": "长枪",
+          "name_de": "Lanze",
+          "name_es": "Lance",
+          "name_fr": "Lance de joute",
+          "points": 4
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Mark of Chaos",
+          "name_cn": "混沌之印",
+          "name_de": "Mal des Chaos",
+          "name_es": "Mark of Chaos",
+          "name_fr": "Marque du Chaos",
+          "name_it": "Mark of Chaos",
+          "name_pl": "Mark of Chaos",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "active": true,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_cn": "恐虐之印",
+              "name_de": "Mal des Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "perModel": true,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Chaos Rewards",
+          "name_cn": "Chaos Rewards",
+          "name_de": "Chaos Rewards",
+          "name_es": "Chaos Rewards",
+          "name_fr": "Chaos Rewards",
+          "points": 25,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Chaos Steed",
+          "name_cn": "混沌战马",
+          "name_de": "Chaosross",
+          "name_es": "Chaos Steed",
+          "name_fr": "Destrier du Chaos",
+          "points": 16
+        },
+        {
+          "name_en": "Daemonic Mount",
+          "name_cn": "恶魔坐骑",
+          "name_de": "Dämonisches Reittier",
+          "name_es": "Daemonic Mount",
+          "name_fr": "Monture Démoniaque",
+          "points": 35
+        },
+        {
+          "name_en": "Chaos Chariot",
+          "name_cn": "混沌战车",
+          "name_de": "Chaos-Streitwagen",
+          "name_es": "Chaos Chariot",
+          "name_fr": "Char du Chaos",
+          "points": 110,
+          "options": [
+            {
+              "name_en": "Mark of Chaos Undivided",
+              "name_cn": "混沌无分之印",
+              "name_de": "Mal des Ungeteilten Chaos",
+              "name_es": "Mark of Chaos Undivided",
+              "name_fr": "Marque du Chaos Universel",
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Khorne",
+              "name_cn": "恐虐之印",
+              "name_de": "Mal des Khorne",
+              "name_es": "Mark of Khorne",
+              "name_fr": "Marque de Khorne",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Nurgle",
+              "name_cn": "纳垢之印",
+              "name_de": "Mal des Nurgle",
+              "name_es": "Mark of Nurgle",
+              "name_fr": "Marque de Nurgle",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Slaanesh",
+              "name_cn": "色孽之印",
+              "name_de": "Mal des Slaanesh",
+              "name_es": "Mark of Slaanesh",
+              "name_fr": "Marque de Slaanesh",
+              "points": 10,
+              "exclusive": true
+            },
+            {
+              "name_en": "Mark of Tzeentch",
+              "name_cn": "奸奇之印",
+              "name_de": "Mal des Tzeentch",
+              "name_es": "Mark of Tzeentch",
+              "name_fr": "Marque de Tzeentch",
+              "points": 10,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Chaos Dragon",
+          "name_cn": "混沌龙",
+          "name_de": "Chaosdrache",
+          "name_es": "Chaos Dragon",
+          "name_fr": "Dragon du Chaos",
+          "points": 285
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Gifts of Chaos, Chaos Mutations",
+          "name_cn": "混沌赠礼, 混沌变异",
+          "name_de": "Gaben des Chaosm, Chaosmutationen",
+          "name_es": "Gifts of Chaos, Chaos Mutations",
+          "name_fr": "Dons du Chaos, Mutations du Chaos",
+          "types": ["gift-of-chaos", "chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Chaos Armour {warriors of chaos} (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
+        "name_cn": "混沌甲 {warriors of chaos}(5+), 附魔武器, 诸神凝视, 集结战吼",
+        "name_de": "Chaosrüstung (5+), Verzauberte Waffen, Blick der Götter, Sammelruf",
+        "name_es": "Chaos Armour (5+), Ensorcelled Weapons, Gaze of the Gods, Rallying Cry",
+        "name_fr": "Armure du Chaos (5+), Armes Ensorcelées, Regard des Dieux, Cri de Ralliement"
+      }
+    },
+    {
+      "name_en": "Chieftain of Ruin",
+      "name_cn": "Chieftain of Ruin",
+      "name_de": "Chieftain of Ruin",
+      "name_es": "Chieftain of Ruin",
+      "name_fr": "Chieftain of Ruin",
+      "id": "chieftain-of-ruin",
+      "points": 70,
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true,
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "points": 0,
+          "active": true,
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d’armure"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 2,
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 4,
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
+        },
+        {
+          "name_en": "Chaos Rewards",
+          "name_cn": "Chaos Rewards",
+          "name_de": "Chaos Rewards",
+          "name_es": "Chaos Rewards",
+          "name_fr": "Chaos Rewards",
+          "points": 25,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaosmutationen",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation", "gift-of-chaos"],
+          "selected": [],
+          "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover*, Primal Fury, Warband",
+        "name_cn": "血怒, 嘶叫号角(主将限定), 裂敌者, 诸神凝视, 混沌无分之印, Move Through Cover*, 原始狂怒, 战帮",
+        "name_de": "Blindwütig, Herdenhorn (nur General), Feindreißer, Blick der Götter, Mal des Ungeteilten Chaos, Move Through Cover*, Urwut, Kriegerschar",
+        "name_es": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover*, Primal Fury, Warband",
+        "name_fr": "Rage Sanguinaire, Braillecorne (Général Uniquement), Déchiqueteur, Regard des Dieux, Marque du Chaos Universel, Move Through Cover*, Fureur Primale, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Beastlord",
+      "name_cn": "兽王",
+      "name_de": "Großhäuptling",
+      "name_es": "Caudillo",
+      "name_fr": "Seigneur des Bêtes",
+      "id": "beastlord",
+      "points": 115,
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true,
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "points": 0,
+          "active": true,
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d’armure"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 2,
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 4,
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 10,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "notes": [
+            {
+              "name_en": "Cannot be mounted on a chariot",
+              "name_cn": "Cannot be mounted on a chariot",
+              "name_de": "Cannot be mounted on a chariot",
+              "name_es": "Cannot be mounted on a chariot",
+              "name_fr": "Cannot be mounted on a chariot"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_cn": "每1000分0-1",
+              "name_de": "0-1 pro 1000 Punkte",
+              "name_es": "0-1 por cada 1000 puntos",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_cn": "剃刀兽战车",
+          "name_de": "Gnargor-Streitwagen",
+          "points": 120,
+          "name_es": "Carro de Garragors",
+          "name_fr": "Char à Razorgors",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Chaos Mutations, Gifts of Chaos",
+          "name_cn": "混沌变异, 混沌赠礼",
+          "name_de": "Chaosmutationen, Gaben des Chaos",
+          "name_es": "Mutaciones del caos, Gifts of Chaos",
+          "name_fr": "Mutations du Chaos, Dons du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "血怒, 嘶叫号角(主将限定), 裂敌者, 诸神凝视, 混沌无分之印, 原始狂怒, 战帮",
+        "name_de": "Blindwütig, Herdenhorn (nur General), Feindreißer, Blick der Götter, Mal des Ungeteilten Chaos, Urwut, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Rage Sanguinaire, Braillecorne (Général Uniquement), Déchiqueteur, Regard des Dieux, Marque du Chaos Universel, Fureur Primale, Bande de Guerre"
+      },
+      "notes": {
+        "name_en": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+        "name_de": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+        "name_cn": "0-1 Chaos Lord, Daemon Prince or Beastlord",
+        "name_fr": "0-1 Chaos Lord, Daemon Prince or Beastlord"
+      }
+    },
+    {
+      "name_en": "Wargor",
+      "name_cn": "战角兽",
+      "name_de": "Häuptling",
+      "name_es": "Beligor",
+      "name_fr": "Wargor",
+      "id": "wargor",
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "points": 55,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true,
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "points": 0,
+          "active": true,
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d’armure"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 2,
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 4,
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 10,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "notes": [
+            {
+              "name_en": "Cannot be mounted on a chariot",
+              "name_cn": "Cannot be mounted on a chariot",
+              "name_de": "Cannot be mounted on a chariot",
+              "name_es": "Cannot be mounted on a chariot",
+              "name_fr": "Cannot be mounted on a chariot"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_cn": "每1000分0-1",
+              "name_de": "0-1 pro 1000 Punkte",
+              "name_es": "0-1 por cada 1000 puntos",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_cn": "剃刀兽战车",
+          "name_de": "Gnargor-Streitwagen",
+          "points": 120,
+          "name_es": "Carro de Garragors",
+          "name_fr": "Char à Razorgors",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaosmutationen",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "血怒, 嘶叫号角(主将限定), 裂敌者, 诸神凝视, 混沌无分之印, 原始狂怒, 战帮",
+        "name_de": "Blindwütig, Herdenhorn (nur General), Feindreißer, Blick der Götter, Mal des Ungeteilten Chaos, Urwut, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Rage Sanguinaire, Braillecorne (Général Uniquement), Déchiqueteur, Regard des Dieux, Marque du Chaos Universel, Fureur Primale, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Great Bray-Shaman",
+      "name_cn": "大嘶叫萨满",
+      "name_de": "Großschamane",
+      "name_es": "Gran Chamán del rebaño",
+      "name_fr": "Grand Braillechamane",
+      "id": "great-bray-shaman",
+      "points": 150,
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_cn": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_de": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_es": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points",
+            "name_fr": "0-1 Exalted Champion, Sorcerer Lord  or Great Bray-Shaman per 1000 points"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Braystaff",
+          "name_cn": "嘶叫法杖",
+          "name_de": "Schamanenstab",
+          "points": 0,
+          "active": true,
+          "name_es": "Cayado de la manada",
+          "name_fr": "Braillesceptre"
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 10,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "notes": [
+            {
+              "name_en": "Cannot be mounted on a chariot",
+              "name_cn": "Cannot be mounted on a chariot",
+              "name_de": "Cannot be mounted on a chariot",
+              "name_es": "Cannot be mounted on a chariot",
+              "name_fr": "Cannot be mounted on a chariot"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_cn": "每1000分0-1",
+              "name_de": "0-1 pro 1000 Punkte",
+              "name_es": "0-1 por cada 1000 puntos",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Zauberer",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Zauberer der Stufe 3",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Zauberer der Stufe 4",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_cn": "剃刀兽战车",
+          "name_de": "Gnargor-Streitwagen",
+          "points": 120,
+          "name_es": "Carro de Garragors",
+          "name_fr": "Char à Razorgors",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor-mages",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaosmutationen",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "嘶叫法杖, 诸神凝视, 野兽法系, 混沌无分之印, 原始狂怒, 战帮",
+        "name_de": "Schamanenstab, Blick der Götter, Lehre der Bestien, Mal des Ungeteilten Chaos, Urwut, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Braillesceptre, Regard des Dieux, Domaine des Bêtes, Marque du Chaos Universel, Fureur Primale, Bande de Guerre"
+      },
+      "notes": {
+        "name_en": "0-1 Exalted Champion, Sorceror Lord or Great Bray-Shaman per 1000 points",
+        "name_de": "0-1 Exalted Champion, Sorceror Lord or Great Bray-Shaman per 1000 points",
+        "name_cn": "0-1 Exalted Champion, Sorceror Lord or Great Bray-Shaman per 1000 points",
+        "name_fr": "0-1 Exalted Champion, Sorceror Lord or Great Bray-Shaman per 1000 points"
+      }
+    },
+    {
+      "name_en": "Bray-Shaman",
+      "name_cn": "嘶叫萨满",
+      "name_de": "Schamane",
+      "name_es": "Chamán del rebaño",
+      "name_fr": "Braillechamane",
+      "id": "bray-shaman",
+      "points": 65,
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Braystaff",
+          "name_cn": "嘶叫法杖",
+          "name_de": "Schamanenstab",
+          "points": 0,
+          "active": true,
+          "name_es": "Cayado de la manada",
+          "name_fr": "Braillesceptre"
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 10,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "notes": [
+            {
+              "name_en": "Cannot be mounted on a chariot",
+              "name_cn": "Cannot be mounted on a chariot",
+              "name_de": "Cannot be mounted on a chariot",
+              "name_es": "Cannot be mounted on a chariot",
+              "name_fr": "Cannot be mounted on a chariot"
+            },
+            {
+              "name_en": "0-1 per 1000 points",
+              "name_cn": "每1000分0-1",
+              "name_de": "0-1 pro 1000 Punkte",
+              "name_es": "0-1 por cada 1000 puntos",
+              "name_fr": "0-1 par tranche de 1000 points"
+            }
+          ]
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Zauberer",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Zauberer der Stufe 1",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Zauberer der Stufe 2",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Razorgor Chariot",
+          "name_cn": "剃刀兽战车",
+          "name_de": "Gnargor-Streitwagen",
+          "points": 120,
+          "name_es": "Carro de Garragors",
+          "name_fr": "Char à Razorgors",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "enchanted-item",
+            "talisman",
+            "armor-mages",
+            "weapon",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaosmutationen",
+          "name_es": "Mutaciones del caos",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "elementalism"],
+      "specialRules": {
+        "name_en": "Braystaff, Gaze of the Gods, Lore of Beasts, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "嘶叫法杖, 诸神凝视, 野兽法系, 混沌无分之印, 原始狂怒, 战帮",
+        "name_de": "Schamanenstab, Blick der Götter, Lehre der Bestien, Mal des Ungeteilten Chaos, Urwut, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Braillesceptre, Regard des Dieux, Domaine des Bêtes, Marque du Chaos Universel, Fureur Primale, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Gorebull",
+      "name_cn": "利角公牛",
+      "name_de": "Sturmbulle",
+      "name_es": "Gorebull",
+      "name_fr": "Gorebull",
+      "id": "gorebull",
+      "points": 130,
+      "magicItemsArmy": "beastmen-brayherds",
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true,
+          "name_fr": "Arme de base"
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "name_fr": "Arme lourde"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "points": 0,
+          "active": true,
+          "name_fr": "Pas d’armure"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 3,
+          "name_fr": "Armure légère"
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 6,
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_fr": "Bouclier",
+          "points": 5
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 50,
+          "name_fr": "Objets Magiques"
+        },
+        {
+          "name_en": "Chaos Mutations",
+          "name_cn": "混沌变异",
+          "name_de": "Chaosmutationen",
+          "name_fr": "Mutations du Chaos",
+          "types": ["chaos-mutation"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Blood Greed, Blood Rage, Bull-gors, Fear, Foe Render, Gaze of the Gods, Impact Hits (1), Mark of Chaos Undivided, Primal Fury, Slaughterer's Call, Warband",
+        "name_cn": "碎甲攻击(1), 嗜血, 血怒, 牛角, 恐惧, 裂敌者, 诸神凝视, 撞击(1), 混沌无分之印, 原始狂怒, 杀戮召唤, 战帮",
+        "name_de": "Rüstungsfluch (1), Blutgier, Blood Rage, Bull-gors, Angst, Feindreißer, Blick der Götter, Aufpralltreffer (1), Mal des Ungeteilten Chaos, Urwut, Ruf des Schlächters, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Arme Perforante (1), Soif de Sang, Rage Sanguinaire, Taurogors, Peur, Déchiqueteur, Regard des Dieux, Touches d’Impact (1), Marque du Chaos Universel, Fureur Primale, Appel du Massacreur, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Cult Magister",
+      "name_cn": "Cult Magister",
+      "name_de": "Cult Magister",
+      "name_es": "Cult Magister",
+      "name_fr": "Cult Magister",
+      "id": "cult-magister",
+      "points": 55,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "characters"
+        }
+      },
+      "command": [
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, sacrificial dagger",
+          "name_cn": "单手武器, sacrificial dagger",
+          "name_de": "Handwaffe, sacrificial dagger",
+          "name_es": "Hand weapon, sacrificial dagger",
+          "name_fr": "Arme de base, sacrificial dagger",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon, sacrificial dagger",
+          "name_cn": "额外单手武器, sacrificial dagger",
+          "name_de": "Zusätzliche Handwaffe, sacrificial dagger",
+          "name_es": "Additional hand weapon, sacrificial dagger",
+          "name_fr": "Arme de base additionnelle, sacrificial dagger",
+          "points": 3
+        },
+        {
+          "name_en": "Flail, sacrificial dagger",
+          "name_cn": "连枷, sacrificial dagger",
+          "name_de": "Flegel, sacrificial dagger",
+          "name_es": "Flail, sacrificial dagger",
+          "name_fr": "Fléau, sacrificial dagger",
+          "points": 3
+        }
+      ],
+      "armor": [
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 5,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs"
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Zauberer der Stufe 1",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Magic Items",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 25
+        }
+      ],
+      "lores": ["daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "Lore of Chaos, Mark of Chaos Undivided, Sacrifice, Thralls of Chaos",
+        "name_cn": "混沌法系, 混沌无分之印, Sacrifice, Thralls of Chaos",
+        "name_de": "Lehre des Chaos, Mark of Chaos Undivided, Sacrifice, Thralls of Chaos",
+        "name_es": "Lore of Chaos, Mark of Chaos Undivided, Sacrifice, Thralls of Chaos",
+        "name_fr": "Domaine du Chaos, Marque du Chaos Universel, Sacrifice, Thralls of Chaos"
+      }
     }
   ],
   "core": [
@@ -2764,6 +4226,9 @@
         },
         "wolves-of-the-sea": {
           "category": "special"
+        },
+        "hordes-of-chaos": {
+          "category": "core"
         }
       },
       "command": [
@@ -2973,6 +4438,9 @@
             "name_es": "1+ unit of Chaos Knights",
             "name_fr": "1+ unité de Chevaliers du Chaos"
           }
+        },
+        "hordes-of-chaos": {
+          "category": "special"
         }
       },
       "command": [
@@ -3147,6 +4615,9 @@
           "category": "core"
         },
         "wolves-of-the-sea": {
+          "category": "core"
+        },
+        "hordes-of-chaos": {
           "category": "core"
         }
       },
@@ -3450,6 +4921,9 @@
         },
         "heralds-of-darkness": {
           "category": "core"
+        },
+        "hordes-of-chaos": {
+          "category": "special"
         }
       },
       "command": [
@@ -3743,6 +5217,9 @@
           "category": "core"
         },
         "heralds-of-darkness": {
+          "category": "core"
+        },
+        "hordes-of-chaos": {
           "category": "core"
         }
       },
@@ -4200,6 +5677,423 @@
         "name_es": "Close Order, Ensorcelled Weapons, First Charge, Impact Hits (D6+1)",
         "name_fr": "Ordre Serré, Armes Ensorcelées, Première Charge, Touches d’Impact (D6+1)"
       }
+    },
+    {
+      "name_en": "Gor Herd",
+      "name_cn": "角兽群",
+      "name_de": "Gor-Herde",
+      "name_es": "Rebaño de gors",
+      "name_fr": "Harde de Gor",
+      "id": "gor-herds",
+      "magicItemsArmy": "beastmen-brayherds",
+      "points": 7,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ Gor Herd and/or Ungor Herd",
+            "name_de": "1+ Gor Herd and/or Ungor Herd",
+            "name_fr": "1+ Gor Herd and/or Ungor Herd"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "True-horn (champion)",
+          "name_cn": "真角",
+          "name_de": "Wahrhorn (Champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          },
+          "name_es": "Desgarrador",
+          "options": [
+            {
+              "name_en": "Great weapon",
+              "name_cn": "重型武器",
+              "name_de": "Zweihandwaffe",
+              "points": 0,
+              "name_fr": "Arme lourde"
+            }
+          ],
+          "name_fr": "Pure-corne (champion)"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "points": 5,
+          "name_es": "Músico",
+          "name_fr": "Musicien"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Additional hand weapons",
+          "name_cn": "单手武器, 额外单手武器",
+          "name_de": "Handwaffen, Zusätzliche Handwaffen",
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Armes de base, Armes de base additionnelles",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
+          "name_de": "Handwaffen, Schilde",
+          "name_es": "Escudos",
+          "name_fr": "Armes de base, Boucliers",
+          "points": 0,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Furious Charge",
+        "name_cn": "野蛮冲锋, 血怒, 部群, 混沌无分之印, 穿行掩体, 开放阵型, 原始狂怒, 散兵, 战帮, Furious Charge",
+        "name_de": "Bestialischer Angriff, Blindwütig, Horde, Mal des Ungeteilten Chaos, Durch Deckung bewegung, Offene Ränge, Urwut, Plänkler, Kriegerschar, Furious Charge",
+        "name_es": "Bestial Charge, Blood Rage, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband, Furious Charge",
+        "name_fr": "Charge Bestiale, Rage Sanguinaire, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Bande de Guerre, Furious Charge"
+      }
+    },
+    {
+      "name_en": "Ungor Herd",
+      "name_cn": "劣角兽群",
+      "name_de": "Ungor-Herde",
+      "name_es": "Rebaño de ungors",
+      "name_fr": "Harde d’Ungor",
+      "id": "ungor-herd",
+      "magicItemsArmy": "beastmen-brayherds",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ Gor Herd and/or Ungor Herd",
+            "name_de": "1+ Gor Herd and/or Ungor Herd",
+            "name_fr": "1+ Gor Herd and/or Ungor Herd"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Half-horn (champion)",
+          "name_cn": "半角",
+          "name_de": "Halbhorn (Champion)",
+          "name_es": "Mediocuerno",
+          "points": 7,
+          "name_fr": "Mi-corne (champion)"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Portaestandarte",
+          "points": 5,
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Músico",
+          "points": 5,
+          "name_fr": "Musicien"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "单手武器, 盾牌",
+          "name_de": "Handwaffen, Schilde",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_es": "Arma de mano y escudo",
+          "name_fr": "Armes de base, Boucliers"
+        },
+        {
+          "name_en": "Thrusting spears, Shields",
+          "name_cn": "刺矛, 盾牌",
+          "name_de": "Stoßspeere, Schilde",
+          "points": 1,
+          "perModel": true,
+          "name_es": "Lanzas",
+          "name_fr": "Lances d’infanterie, Boucliers"
+        },
+        {
+          "name_en": "Throwing spears, Shields",
+          "name_cn": "投矛, 盾牌",
+          "name_de": "Wurfspeere, Schilde",
+          "points": 1,
+          "perModel": true,
+          "name_es": "Lanzas arrojadizas",
+          "name_fr": "Javelots, Boucliers"
+        },
+        {
+          "name_en": "Shortbows",
+          "name_cn": "短弓",
+          "name_de": "Kurzbögen",
+          "points": 0,
+          "perModel": true,
+          "name_es": "Cambiar escudos por arcos cortos",
+          "name_fr": "Arcs courts"
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Chariot Runners, Horde, Mark of Chaos Undivided, Move Through Cover, Open Order, Primal Fury, Skirmishers, Warband",
+        "name_cn": "战车骑伴, 部群, 混沌无分之印, 穿行掩体, 开放阵型, 原始狂怒, 散兵, 战帮",
+        "name_de": "Streitwagengarde, Horde, Mal des Ungeteilten Chaos, Durch Deckung bewegen, Offene Ränge, Urwut, Plänkler, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Escorteurs de Chars, Horde, Marque du Chaos Universel, Mouvement à Couvert, Ordre Dispersé, Fureur Primale, Tirailleurs, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Bestigor Herd",
+      "name_cn": "大角兽群",
+      "name_de": "Bestigor-Herde",
+      "name_es": "Bestigor Herd",
+      "name_fr": "Harde de Bestigor",
+      "id": "bestigor-herds",
+      "magicItemsArmy": "beastmen-brayherds",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Gouge-horn (champion)",
+          "name_cn": "巨角",
+          "name_de": "Großhorn (Champion)",
+          "points": 8,
+          "notes": {
+            "name_en": "25 pts of Magic Items, 25 pts of Chaos Mutations",
+            "name_de": "25 Punkte and Magischen Gegenständen, 25 Punkte an Chaosmutationen",
+            "name_cn": "25分的魔法物品, 25分的混沌变异",
+            "name_fr": "25 points d’Objets Magiques, 25 points de Mutations du Chaos"
+          },
+          "magic": {
+            "types": [
+              "enchanted-item",
+              "talisman",
+              "armor",
+              "weapon",
+              "chaos-mutation"
+            ],
+            "maxPoints": 50
+          },
+          "name_fr": "Encorneur (champion)"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "points": 6,
+          "name_fr": "Musicien"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "单手武器, 重型武器",
+          "name_de": "Handwaffen, Zweihandwaffen",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Armes de base, Armes lourdes"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stubborn",
+          "name_cn": "坚毅",
+          "name_de": "Unnachgiebig",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true,
+          "name_fr": "Obstiné",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
+        },
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteranen",
+          "points": 1,
+          "minimum": 0,
+          "maximum": 0,
+          "perModel": true,
+          "name_fr": "Vétérans",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Close Order, Mark of Chaos Undivided, Primal Fury, Warband",
+        "name_cn": "血怒, 紧密阵型, 混沌无分之印, 原始狂怒, 战帮",
+        "name_de": "Blindwütig, Geschlossene Ränge, Mal des Ungeteilten Chaos, Urwut, Kriegerbande",
+        "name_es": "",
+        "name_fr": "Rage Sanguinaire, Ordre Serré, Marque du Chaos Universel, Fureur Primale, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Chaos Cultists",
+      "name_cn": "Chaos Cultists",
+      "name_de": "Chaos Cultists",
+      "name_es": "Chaos Cultists",
+      "name_fr": "Chaos Cultists",
+      "id": "chaos-cultists",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Apostle (Champion)",
+          "name_cn": "Apostle (Champion)",
+          "name_de": "Apostle (Champion)",
+          "points": 7,
+          "name_fr": "Apostle (champion)"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Additional Hand Weapons, Throwing Weapons",
+          "name_cn": "Additional Hand Weapons, Throwing Weapons",
+          "name_de": "Additional Hand Weapons, Throwing Weapons",
+          "name_es": "Additional Hand Weapons, Throwing Weapons",
+          "name_fr": "Additional Hand Weapons, Throwing Weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Shortbow",
+          "name_cn": "Hand weapons, Shortbow",
+          "name_de": "Hand weapons, Shortbow",
+          "points": 0,
+          "perModel": true,
+          "name_es": "Hand weapons, Shortbow",
+          "name_fr": "Hand weapons, Shortbow"
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ambushers, Dark Pawns, Mark of Chaos Undivided, Open Order, Skirmishers, Unseen Threat, Warband",
+        "name_cn": "Ambushers, Dark Pawns, Mark of Chaos Undivided, Open Order, Skirmishers, Unseen Threat, Warband",
+        "name_de": "Ambushers, Dark Pawns, Mark of Chaos Undivided, Open Order, Skirmishers, Unseen Threat, Warband",
+        "name_es": "Ambushers, Dark Pawns, Mark of Chaos Undivided, Open Order, Skirmishers, Unseen Threat, Warband",
+        "name_fr": "Ambushers, Dark Pawns, Mark of Chaos Undivided, Open Order, Skirmishers, Unseen Threat, Warband"
+      }
     }
   ],
   "special": [
@@ -4216,6 +6110,9 @@
       "armyComposition": {
         "warriors-of-chaos": {
           "category": "special"
+        },
+        "hordes-of-chaos": {
+          "category": "core"
         }
       },
       "command": [
@@ -4446,6 +6343,9 @@
           "category": "special"
         },
         "heralds-of-darkness": {
+          "category": "special"
+        },
+        "hordes-of-chaos": {
           "category": "special"
         }
       },
@@ -5096,6 +6996,9 @@
         },
         "heralds-of-darkness": {
           "category": "special"
+        },
+        "hordes-of-chaos": {
+          "category": "rare"
         }
       },
       "command": [],
@@ -5196,6 +7099,9 @@
         },
         "heralds-of-darkness": {
           "category": "special"
+        },
+        "hordes-of-chaos": {
+          "category": "rare"
         }
       },
       "command": [
@@ -5315,6 +7221,9 @@
         },
         "heralds-of-darkness": {
           "category": "special"
+        },
+        "hordes-of-chaos": {
+          "category": "rare"
         }
       },
       "command": [],
@@ -5906,6 +7815,48 @@
       "id": "dragon-ogre-shaggoth",
       "magicItemsArmy": "beastmen-brayherds",
       "points": 225,
+      "armyComposition": {
+        "warriors-of-chaos": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_cn": "0-1 远古龙魔/每队龙魔",
+            "name_de": "0-1 Drachenoger-Shaggoth pro Einheit von Drachenogern",
+            "name_es": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_fr": "0-1 Shaggoth Dragon Ogre par unité de Dragons Ogres"
+          }
+        },
+        "wolves-of-the-sea": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_cn": "0-1 远古龙魔/每队龙魔",
+            "name_de": "0-1 Drachenoger-Shaggoth pro Einheit von Drachenogern",
+            "name_es": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_fr": "0-1 Shaggoth Dragon Ogre par unité de Dragons Ogres"
+          }
+        },
+        "heralds-of-darkness": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_cn": "0-1 远古龙魔/每队龙魔",
+            "name_de": "0-1 Drachenoger-Shaggoth pro Einheit von Drachenogern",
+            "name_es": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
+            "name_fr": "0-1 Shaggoth Dragon Ogre par unité de Dragons Ogres"
+          }
+        },
+        "hordes-of-chaos": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Dragon Ogre Shaggoth",
+            "name_cn": "0-1 远古龙魔",
+            "name_de": "0-1 Drachenoger-Shaggoth",
+            "name_es": "0-1 Dragon Ogre Shaggoth",
+            "name_fr": "0-1 Shaggoth Dragon Ogre"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -5984,13 +7935,6 @@
         "name_de": "Rüstungsfluch (2), Zähe Haut (2), Geschlossene Ränge, Verzauberte Waffen, Immun gegen Psychologie, Großes Ziel, Stampfattacken (D3+1), Sturmrufer, Entsetzen, Belebender Sturm",
         "name_es": "Armour Bane (2), Armoured Hide (2), Close Order, Ensorcelled Weapons, Immune to Psychology, Large Target, Stomp Attacks (D3+1), Storm Call, Terror, The Quickening Storm",
         "name_fr": "Arme Perforante (2), Peau Blindée (2), Ordre Serré, Armes Ensorcelées, Immunisé à la Psychologie, Grande Cible, Attaques de Piétinement (D3+1), Appeler la Tempête, Terreur, Orage Revitalisant"
-      },
-      "notes": {
-        "name_en": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
-        "name_cn": "0-1 远古龙魔/每队龙魔",
-        "name_de": "0-1 Drachenoger-Shaggoth pro Einheit von Drachenogern",
-        "name_es": "0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres",
-        "name_fr": "0-1 Shaggoth Dragon Ogre par unité de Dragons Ogres"
       }
     },
     {
@@ -6250,6 +8194,228 @@
         "name_fr": "",
         "name_it": "",
         "name_pl": ""
+      }
+    },
+    {
+      "name_en": "Minotaur Herd",
+      "name_cn": "牛头人群",
+      "name_de": "Minotauren-Herde",
+      "name_es": "Minotaur Herd",
+      "name_fr": "Harde de Minotaure",
+      "id": "minotaur-herds",
+      "points": 44,
+      "minimum": 2,
+      "maximum": 0,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "rare"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Bloodkine (champion)",
+          "name_cn": "血牛",
+          "name_de": "Blutbulle (Champion)",
+          "points": 6,
+          "magic": {
+            "types": ["enchanted-item", "talisman", "armor", "weapon"],
+            "maxPoints": 25
+          },
+          "name_fr": "Sangor (champion)"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standarten Träger",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "name_fr": "Porte-étendard"
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "points": 6,
+          "name_fr": "Musicien"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Arme de base"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_fr": "Armure légère"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "stackable": true,
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "stackable": true,
+          "name_fr": "Arme lourde"
+        },
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "points": 2,
+          "stackable": true,
+          "name_fr": "Bouclier"
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "points": 3,
+          "perModel": true,
+          "name_fr": "Embusqueurs",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Chaos Mutations (Bloodkine)",
+          "name_cn": "混沌变异(血牛)",
+          "name_de": "Chaosmutationen (Blutbulle)",
+          "points": 0,
+          "types": ["chaos-mutation"],
+          "maxPoints": 25,
+          "name_fr": "Mutations du Chaos (Sangor)"
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Blood Rage, Bull-gors, Close Order, Fear, Foe Render, Impact Hits (1), Mark of Chaos Undivided, Motley Crew, Primal Fury, Warband",
+        "name_cn": "嗜血, 血怒, 牛角, 紧密阵型, 恐惧, 裂敌者, 撞击(1), 混沌无分之印, 散兵游勇, 原始狂怒, 战帮",
+        "name_de": "Blutgier, Blindwütig, Bullgors, Geschlossene Ränge, Angst, Feindreißer, Aufpralltreffer (1), Mal des Ungeteilten Chaos, Zusammengewürfelter Haufen, Urwut, Kriegerschar",
+        "name_es": "",
+        "name_fr": "Soif de Sang, Rage Sanguinaire, Taurogors, Ordre Serré, Peur, Déchiqueteur, Touches d’Impact (1), Marque du Chaos Universel, Bande Hétéroclite, Fureur Primale, Bande de Guerre"
+      }
+    },
+    {
+      "name_en": "Cygor",
+      "name_cn": "独眼巨人",
+      "name_de": "Zygor",
+      "name_es": "Cygor",
+      "name_fr": "Cygor",
+      "id": "cygor",
+      "points": 215,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon (claws), Hurl attack",
+          "name_cn": "单手武器(claws), 投石攻击",
+          "name_de": "Handwaffen (Krallen), Schleudern",
+          "points": 0,
+          "active": true,
+          "name_fr": "Arme de base (griffes), Jet de roc"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (calloused hide)",
+          "name_cn": "轻甲(坚硬皮肤)",
+          "name_de": "Leichte Rüstung (Schwielige Haut)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure légère (peau calleuse)"
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Ghostsight, Immune to Psychology, Large Target, Soul-eater, Stomp Attacks (D3), Stubborn, Terror, Timmm-berrr!",
+        "name_cn": "紧密阵型, 灵视, 心理免疫, 大型目标, 噬魂者, 践踏攻击(D3), 坚毅, 惊骇, 倒啦！",
+        "name_de": "Geschlossene Ränger, Geistersicht, Immung gegen Psychologie, Großes Ziel, Seelenfresser, Stampfattacken (W3), Unnachgiebig, Entsetzen, Baum fällt!",
+        "name_es": "",
+        "name_fr": "Ordre Serré, Vue Spirituelle, Immunisé à la Psychologie, Grande Cible, Mangeur d’Âmes, Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!"
+      }
+    },
+    {
+      "name_en": "Ghorgon",
+      "name_cn": "牛头巨人",
+      "name_de": "Ghorgor",
+      "name_es": "Ghorgon",
+      "name_fr": "Ghorgon",
+      "id": "ghorgon",
+      "points": 245,
+      "armyComposition": {
+        "hordes-of-chaos": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cleaver-limbs",
+          "name_cn": "砍刀手臂",
+          "name_de": "Klingenarme",
+          "points": 0,
+          "active": true,
+          "name_fr": "Membres-hachoirs"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (calloused hide)",
+          "name_cn": "轻甲(坚硬皮肤)",
+          "name_de": "Leichte Rüstung (Schwielige Haut)",
+          "points": 0,
+          "active": true,
+          "name_fr": "Armure légère (peau calleuse)"
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Greed, Close Order, Frenzy, Large Target, Primal Fury, Regeneration (6+), Stomp Attacks (D3), Stubborn, Swallow Whole, Terror, Timmm-berrr!",
+        "name_cn": "嗜血, 紧密阵型, 狂暴, 大型目标, 原始狂怒, 重生(6+), 践踏攻击(D3), 坚毅, 生吞, 惊骇, 倒啦！",
+        "name_de": "Blutgier, Geschlossene Ränge, Raserei, Großes Ziel, Urwut, Regeneration (6+), Stampfattacken (W3), Unnachgiebig, Ganz verschlingen, Entsetzen, Baum fällt!",
+        "name_es": "",
+        "name_fr": "Soif de Sang, Ordre Serré, Frénésie, Grande Cible, Fureur Primale, Régénération (6+), Attaques de Piétinement (D3), Obstiné, Avaler Tout Rond, Terreur, Timmm-berrr!"
       }
     }
   ],
