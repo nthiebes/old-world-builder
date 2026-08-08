@@ -15,6 +15,7 @@ import {
   hierophantChecks,
   maxOneBSB,
   oneGeneral,
+  theShadowGrows,
 } from "./validation-checks";
 
 export const validateList = ({ list, language, intl }) => {
@@ -167,6 +168,11 @@ export const validateList = ({ list, language, intl }) => {
     checks.push(hierophantChecks);
     if (list.armyComposition === "mortuary-cults") {
       checks.push(generalIsHierophant);
+    }
+  }
+  if (list?.army === "warriors-of-chaos") {
+    if (list.armyComposition === "heralds-of-darkness" || list.armyComposition === "hordes-of-chaos") {
+      checks.push(theShadowGrows);
     }
   }
   if (list?.army === "vampire-counts") {

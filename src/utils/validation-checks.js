@@ -4,6 +4,13 @@ import { getUnitPoints } from "./points";
 import { equalsOrIncludes } from "./string";
 import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
 
+const DIVIDED_MARKS = [
+  "Mark of Khorne",
+  "Mark of Nurgle",
+  "Mark of Slaanesh",
+  "Mark of Tzeentch"
+];
+
 /**
  * An army must include exactly one general.
  */
@@ -443,7 +450,86 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
   };
 }
 
+/**
+ * Some Chaos armies of Infamy have "the Shadow Grows",
+ * which requires the count of each divided mark of chaos amongst characters to match the count for units
+ */
+export const theShadowGrows = (list) => {
+
+  const characterMarkCounts = countActiveMarks(list?.characters);
+
+  const coreMarks = countActiveMarks(list?.core);
+  const specialMarks = countActiveMarks(list?.special);
+  const rareMarks = countActiveMarks(list?.rare);
+
+  const errors = [];
+
+  const allKeys = new Set([
+    ...Object.keys(characterMarkCounts ?? {}),
+    ...Object.keys(coreMarks ?? {}),
+    ...Object.keys(specialMarks ?? {}),
+    ...Object.keys(rareMarks ?? {})
+  ]);
+
+  for (const mark of allKeys) {
+    const charCount = characterMarkCounts?.[mark] ?? 0;
+    const coreCount = coreMarks?.[mark] ?? 0;
+    const specialCount = specialMarks?.[mark] ?? 0;
+    const rareCount = rareMarks?.[mark] ?? 0;
+    const armyCount = coreCount + specialCount + rareCount;
+
+    if (charCount !== armyCount) {
+      const involvedSections = [
+        "characters",
+        ...(coreCount > 0 ? ["core"] : []),
+        ...(specialCount > 0 ? ["special"] : []),
+        ...(rareCount > 0 ? ["rare"] : [])
+      ];
+      involvedSections.forEach(section =>
+        errors.push({
+          message: "misc.error.shadowGrows",
+          section: section,
+          name: mark,
+          min: charCount,
+          max: armyCount
+        })
+      );
+    }
+  }
+
+  return errors;
+};
+
 // Helper functions for these checks
+const countActiveMarks = (items) => {
+  const flattenOptions = (optionList) => {
+    if (!Array.isArray(optionList)) return [];
+
+    return optionList.flatMap(opt => {
+      if (!opt) return [];
+
+      return [
+        opt,
+        ...flattenOptions(opt.options) // Recursively unpack deeper levels
+      ];
+    });
+  };
+
+  const allRootOptions = (items ?? []).flatMap(item => item?.options ?? []);
+
+  const completelyFlatOptions = flattenOptions(allRootOptions);
+
+  return completelyFlatOptions
+      .filter(subOption =>
+          subOption?.active &&
+          DIVIDED_MARKS.includes(subOption?.name_en)
+      )
+      .reduce((acc, subOption) => {
+        const name = subOption.name_en;
+        acc[name] = (acc[name] ?? 0) + 1;
+        return acc;
+      }, {});
+};
 
 const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
   return (
