@@ -64,9 +64,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
   const settings = useSelector((state) => state.settings);
-  const isCharacter = 
-    type === "characters" || 
-    (!!unit.unitType && unit.unitType === "characters");
+  const isCharacter =
+    type === "characters" ||
+    (!!unit?.unitType && unit.unitType === "characters");
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
