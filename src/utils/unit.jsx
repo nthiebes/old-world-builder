@@ -743,8 +743,12 @@ export const getUnitStrength = (unit, includeDetachments) => {
       }, 0);
       str += additionalWounds;
     }
-    str = str * (unit.strength || 1);
-    if (includeDetachments && unit.detachments) {
+    console.log(unit);
+    // Usually a unit no strength defined has one model in it, but "detachment only"
+    // units like Primal Warherds or Skeleton Cohorts have their model counts entirely
+    // in the detachments.
+    str = str * (unit.strength || (unit.detachmentsInUnitStr ? 0 : 1));
+    if ((includeDetachments || unit.detachmentsInUnitStr) && unit.detachments) {
       unit.detachments.forEach((detachment) => {
         const detachmentRules = getUnitRuleData(detachment.name_en);
         const detachmentType = detachmentRules?.troopType || "RI";

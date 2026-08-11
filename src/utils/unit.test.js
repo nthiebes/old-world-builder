@@ -80,7 +80,25 @@ describe("getUnitStrength", () => {
           strength: 5
         },
       ],
-    }, true);
+    }, true, false);
     expect(unitStr).toBe(30);
+  });
+  
+  test("Can get correct strength for detachment only units", () => {
+    const unitStr = getUnitStrength({
+      name_en: "Primal Warherd",
+      detachmentsInUnitStr: true,
+      detachments: [
+        {
+          name_en: "Gors",
+          strength: 10
+        },
+        {
+          name_en: "Ungors",
+          strength: 12
+        },
+      ],
+    }, true);
+    expect(unitStr).toBe(22);
   });
 });
