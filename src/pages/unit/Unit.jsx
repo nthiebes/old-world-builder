@@ -66,6 +66,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const army = useSelector((state) => state.army);
   const settings = useSelector((state) => state.settings);
   const currentUnitStrength = getUnitStrength(unit, false);
+  const isCharacter =
+    type === "characters" ||
+    (!!unit?.unitType && unit.unitType === "characters");
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
@@ -477,7 +480,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               })
         }`}
         {perModel &&
-          type !== "characters" &&
+          !isCharacter &&
           ` ${intl.formatMessage({
             id: "unit.perModel",
           })}`}
@@ -734,7 +737,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         )}
         {unit.command && unit.command.length > 0 && (
           <>
-            {type !== "characters" && (
+            {!isCharacter && (
               <h2 className="unit__subline">
                 <FormattedMessage id="unit.command" />
               </h2>
@@ -779,7 +782,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       <div
                         className={classNames(
                           "checkbox",
-                          type === "characters" && "unit__bsb",
+                          isCharacter && "unit__bsb",
                         )}
                       >
                         <input
@@ -794,7 +797,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           disabled={
                             detachmentActive ||
                             alwaysActive ||
-                            (type === "characters" &&
+                            (isCharacter &&
                               exclusive &&
                               unit.command.find(
                                 (commandUnit) =>
