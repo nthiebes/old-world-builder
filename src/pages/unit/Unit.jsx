@@ -38,6 +38,7 @@ import {
   unitHasItem,
   isWizard,
   getStats,
+  getUnitStrength,
 } from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
@@ -64,6 +65,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
   const settings = useSelector((state) => state.settings);
+  const currentUnitStrength = getUnitStrength(unit, false);
   const detachmentActive =
     unit &&
     unit?.options?.length > 0 &&
@@ -724,6 +726,12 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             />
           </>
         ) : null}
+        {currentUnitStrength > 20 && list.compositionRule && list.compositionRule.includes("battle-march") && (
+          <p className="unit__error">
+            <Icon symbol="error" className="unit__notes-icon" />
+            <FormattedMessage id="unit.battleMarchUnitStrErr" />
+          </p>
+        )}
         {unit.command && unit.command.length > 0 && (
           <>
             {type !== "characters" && (

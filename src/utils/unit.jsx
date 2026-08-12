@@ -743,7 +743,6 @@ export const getUnitStrength = (unit, includeDetachments) => {
       }, 0);
       str += additionalWounds;
     }
-    console.log(unit);
     // Usually a unit no strength defined has one model in it, but "detachment only"
     // units like Primal Warherds or Skeleton Cohorts have their model counts entirely
     // in the detachments.
