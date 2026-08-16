@@ -818,4 +818,10 @@ export const nameMap = {
     name_cn: "Warriors of Wind & Field",
     name_fr: "Warriors of Wind & Field",
   },
+  "hordes-of-chaos": {
+    name_de: "Hordes Of Chaos",
+    name_en: "Hordes Of Chaos",
+    name_cn: "Hordes Of Chaos",
+    name_fr: "Hordes Of Chaos",
+  }
 };

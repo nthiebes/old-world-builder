@@ -957,6 +957,77 @@ export const rules = {
     },
     mercenaries: { maxPercent: 25 },
   },
+  "hordes-of-chaos": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["chaos-lord", "daemon-prince", "beastlord"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["exalted-champion", "sorcerer-lord", "great-bray-shaman"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        }
+      ],
+    },
+    core: {
+      minPercent: 33,
+      units: [
+        {
+          ids: ["chaos-marauders", "chaos-warriors"],
+          min: 1,
+        },
+        {
+          ids: ["gor-herds", "ungor-herd"],
+          min: 1,
+        },
+        {
+          ids: ["chosen-chaos-warriors"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["chaos-lord", "exalted-champion", "daemon-prince"],
+        },
+        {
+          ids: ["bestigor-herds"],
+          min: 0,
+          max: 1,
+          points: 1000,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["beastlord", "wargor"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["chosen-chaos-knights"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requiresType: "characters",
+          requires: ["chaos-lord", "exalted-champion", "daemon-prince"],
+        }
+      ],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["dragon-ogre-shaggoth"],
+          min: 0,
+          max: 1
+        }
+      ],
+    }
+  },
   "beastmen-brayherds": {
     characters: {
       maxPercent: 50,

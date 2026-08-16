@@ -1592,6 +1592,184 @@
         "name_es": "Drunken, Father of Beasts, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover, Primal Fury, Stomp Attacks (D3), Swiftstride, The Sons of Ghorros, Warband",
         "name_fr": "Ivres, Père des Bêtes, Regard des Dieux, Marque du Chaos Universel, Mouvement à Couvert, Fureur Primale, Attaques de Piétinement (D3), Rapide, Les Fils de Ghorros, Bande de Guerre"
       }
+    },
+    {
+      "name_en": "Chieftain of Ruin",
+      "name_cn": "Chieftain of Ruin",
+      "name_de": "Chieftain of Ruin",
+      "name_es": "Chieftain of Ruin",
+      "name_fr": "Chieftain of Ruin",
+      "id": "chieftain-of-ruin",
+      "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0,
+          "armyComposition": ["beastmen-brayherds", "wild-herd"]
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "active": true,
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base"
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 3,
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle"
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "points": 4,
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "points": 0,
+          "active": true,
+          "name_es": "Sin armadura",
+          "name_fr": "Pas d’armure"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "points": 2,
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère"
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "points": 4,
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde"
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0,
+          "name_es": "Escudo",
+          "name_fr": "Bouclier"
+        },
+        {
+          "name_en": "Chaos Rewards",
+          "name_cn": "Chaos Rewards",
+          "name_de": "Chaos Rewards",
+          "name_es": "Chaos Rewards",
+          "name_fr": "Chaos Rewards",
+          "points": 25,
+          "perModel": true,
+          "stackable": true,
+          "minimum": 0,
+          "maximum": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Huf",
+          "points": 0,
+          "active": true,
+          "name_es": "A pie",
+          "name_fr": "À Pied"
+        },
+        {
+          "name_en": "Tuskgor Chariot",
+          "name_cn": "獠牙兽战车",
+          "name_de": "Tuskgor-Streitwagen",
+          "points": 85,
+          "name_es": "Carro de Tuskgors",
+          "name_fr": "Char à Sangleboucs"
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 100,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["enchanted-item", "talisman", "armor", "weapon"],
+          "selected": [],
+          "maxPoints": 125,
+          "armyComposition": "wild-herd"
+        },
+        {
+          "name_en": "Chaos Mutations, Gifts of Chaos",
+          "name_cn": "混沌变异, 混沌赠礼",
+          "name_de": "Chaosmutationen, Gaben des Chaos",
+          "name_es": "Mutaciones del caos, Gifts of Chaos",
+          "name_fr": "Mutations du Chaos, Dons du Chaos",
+          "types": ["chaos-mutation", "gift-of-chaos"],
+          "selected": [],
+          "maxPoints": 50,
+          "armyComposition": ["beastmen-brayherds", "minotaur-blood-herd"]
+        },
+        {
+          "name_en": "Chaos Mutations, Gifts of Chaos",
+          "name_cn": "混沌变异, 混沌赠礼",
+          "name_de": "Chaosmutationen, Gaben des Chaos",
+          "name_es": "Mutaciones del caos, Gifts of Chaos",
+          "name_fr": "Mutations du Chaos, Dons du Chaos",
+          "types": ["chaos-mutation", "gift-of-chaos"],
+          "selected": [],
+          "maxPoints": 75,
+          "notes": {
+            "name_en": "Maximum spend of 50 pts on Gifts of Chaos",
+            "name_cn": "Maximum spend of 50 pts on Gifts of Chaos",
+            "name_de": "Maximum spend of 50 pts on Gifts of Chaos",
+            "name_es": "Maximum spend of 50 pts on Gifts of Chaos",
+            "name_fr": "Maximum spend of 50 pts on Gifts of Chaos"
+          },
+          "armyComposition": "wild-herd"
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover*, Primal Fury, Warband",
+        "name_cn": "血怒, 嘶叫号角(主将限定), 裂敌者, 诸神凝视, 混沌无分之印, Move Through Cover*, 原始狂怒, 战帮",
+        "name_de": "Blindwütig, Herdenhorn (nur General), Feindreißer, Blick der Götter, Mal des Ungeteilten Chaos, Move Through Cover*, Urwut, Kriegerschar",
+        "name_es": "Blood Rage, Brayhorn (General Only), Foe Render, Gaze of the Gods, Mark of Chaos Undivided, Move Through Cover*, Primal Fury, Warband",
+        "name_fr": "Rage Sanguinaire, Braillecorne (Général Uniquement), Déchiqueteur, Regard des Dieux, Marque du Chaos Universel, Move Through Cover*, Fureur Primale, Bande de Guerre"
+      }
     }
   ],
   "core": [
