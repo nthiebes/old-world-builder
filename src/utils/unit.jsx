@@ -707,6 +707,7 @@ export const getUnitGeneratedSpellCount = (unit) => {
 const unitStrengthByType = {
   RI: 1,
   HI: 1,
+  NChar: 1,
   MI: 3,
   Sw: 3,
   LCa: 2,
@@ -718,7 +719,7 @@ const unitStrengthByType = {
   MCr: "w",
   Be: "w",
   WM: "w",
-}
+};
 
 /**
  * Returns the unit's total unit strength, based on the troop type.
@@ -727,12 +728,16 @@ export const getUnitStrength = (unit, includeDetachments) => {
   if (unit) {
     const unitRules = getUnitRuleData(unit.name_en);
     const activeMount = unit.mounts?.find((mount) => mount.active);
-    const mountRules = activeMount ? getUnitRuleData(activeMount.name_en) : undefined;
+    const mountRules = activeMount
+      ? getUnitRuleData(activeMount.name_en)
+      : undefined;
     const unitType = mountRules?.troopType || unitRules?.troopType || "RI";
     let str = unitStrengthByType[unitType];
+
     if (str === "w") {
-      const stats = unitRules?.stats.concat(mountRules?.stats || []);
+      const stats = (unitRules?.stats || []).concat(mountRules?.stats || []);
       let additionalWounds = 0;
+
       str = stats.reduce((prev, cur) => {
         if (cur["W"].startsWith("(+")) {
           additionalWounds += parseInt(cur["W"].slice(2));
@@ -743,10 +748,12 @@ export const getUnitStrength = (unit, includeDetachments) => {
       }, 0);
       str += additionalWounds;
     }
+
     // Usually a unit no strength defined has one model in it, but "detachment only"
     // units like Primal Warherds or Skeleton Cohorts have their model counts entirely
     // in the detachments.
     str = str * (unit.strength || (unit.detachmentsInUnitStr ? 0 : 1));
+
     if ((includeDetachments || unit.detachmentsInUnitStr) && unit.detachments) {
       unit.detachments.forEach((detachment) => {
         const detachmentRules = getUnitRuleData(detachment.name_en);
@@ -754,8 +761,9 @@ export const getUnitStrength = (unit, includeDetachments) => {
         str += unitStrengthByType[detachmentType] * (detachment.strength || 1);
       });
     }
+
     return str;
   } else {
     return 0;
   }
-}
+};
