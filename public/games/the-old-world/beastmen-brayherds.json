@@ -1785,6 +1785,7 @@
       "regimentalUnit": true,
       "minDetachments": 2,
       "maxDetachments": 2,
+      "detachmentsInUnitStr": true,
       "armyComposition": {
         "wild-herd": {
           "category": "core"
@@ -1844,6 +1845,7 @@
           "id": "gors.gxjrykvifu",
           "name_de": "Gors",
           "name_en": "Gors",
+          "name_fr": "Gors",
           "points": 7,
           "strength": 10,
           "minDetachmentSize": 10,
@@ -1894,13 +1896,13 @@
               }
             }
           ],
-          "specialRules": {},
-          "name_fr": "Gors"
+          "specialRules": {}
         },
         {
           "id": "ungors.xtxqwnwp",
           "name_de": "Ungors",
           "name_en": "Ungors",
+          "name_fr": "Ungors",
           "points": 6,
           "strength": 10,
           "minDetachmentSize": 10,
@@ -1951,8 +1953,7 @@
               }
             }
           ],
-          "specialRules": {},
-          "name_fr": "Ungors"
+          "specialRules": {}
         }
       ],
       "specialRules": {
