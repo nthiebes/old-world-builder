@@ -2036,7 +2036,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 };
 
 Unit.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
   previewData: PropTypes.shape({
     type: PropTypes.string,
     unit: PropTypes.object,

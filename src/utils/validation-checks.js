@@ -8,7 +8,7 @@ const DIVIDED_MARKS = [
   "Mark of Khorne",
   "Mark of Nurgle",
   "Mark of Slaanesh",
-  "Mark of Tzeentch"
+  "Mark of Tzeentch",
 ];
 
 /**
@@ -263,7 +263,12 @@ export function createMinNonCharacters(minNum, notCountedTypes, errorMsg) {
  * skipNamed is for Grand Melee, where named characters are ignored
  * for these checks.
  */
-export function createMaxPointsSingleUnit(maxPoints, unitCategory, errorMsg, skipNamed) {
+export function createMaxPointsSingleUnit(
+  maxPoints,
+  unitCategory,
+  errorMsg,
+  skipNamed,
+) {
   return (list) => {
     const errors = [];
     list[unitCategory] &&
@@ -455,20 +460,16 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
  * which requires the count of each divided mark of chaos amongst characters to match the count for units
  */
 export const theShadowGrows = (list) => {
-
   const characterMarkCounts = countActiveMarks(list?.characters);
-
   const coreMarks = countActiveMarks(list?.core);
   const specialMarks = countActiveMarks(list?.special);
   const rareMarks = countActiveMarks(list?.rare);
-
   const errors = [];
-
   const allKeys = new Set([
     ...Object.keys(characterMarkCounts ?? {}),
     ...Object.keys(coreMarks ?? {}),
     ...Object.keys(specialMarks ?? {}),
-    ...Object.keys(rareMarks ?? {})
+    ...Object.keys(rareMarks ?? {}),
   ]);
 
   for (const mark of allKeys) {
@@ -483,16 +484,16 @@ export const theShadowGrows = (list) => {
         "characters",
         ...(coreCount > 0 ? ["core"] : []),
         ...(specialCount > 0 ? ["special"] : []),
-        ...(rareCount > 0 ? ["rare"] : [])
+        ...(rareCount > 0 ? ["rare"] : []),
       ];
-      involvedSections.forEach(section =>
+      involvedSections.forEach((section) =>
         errors.push({
           message: "misc.error.shadowGrows",
           section: section,
           name: mark,
           min: charCount,
-          max: armyCount
-        })
+          max: armyCount,
+        }),
       );
     }
   }
@@ -505,30 +506,30 @@ const countActiveMarks = (items) => {
   const flattenOptions = (optionList) => {
     if (!Array.isArray(optionList)) return [];
 
-    return optionList.flatMap(opt => {
+    return optionList.flatMap((opt) => {
       if (!opt) return [];
 
       return [
         opt,
-        ...flattenOptions(opt.options) // Recursively unpack deeper levels
+        ...flattenOptions(opt.options), // Recursively unpack deeper levels
       ];
     });
   };
 
-  const allRootOptions = (items ?? []).flatMap(item => item?.options ?? []);
+  const allRootOptions = (items ?? []).flatMap((item) => item?.options ?? []);
 
   const completelyFlatOptions = flattenOptions(allRootOptions);
 
   return completelyFlatOptions
-      .filter(subOption =>
-          subOption?.active &&
-          DIVIDED_MARKS.includes(subOption?.name_en)
-      )
-      .reduce((acc, subOption) => {
-        const name = subOption.name_en;
-        acc[name] = (acc[name] ?? 0) + 1;
-        return acc;
-      }, {});
+    .filter(
+      (subOption) =>
+        subOption?.active && DIVIDED_MARKS.includes(subOption?.name_en),
+    )
+    .reduce((acc, subOption) => {
+      const name = subOption.name_en;
+      acc[name] = (acc[name] ?? 0) + 1;
+      return acc;
+    }, {});
 };
 
 const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {

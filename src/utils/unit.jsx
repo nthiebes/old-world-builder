@@ -659,7 +659,7 @@ export const getUnitWizardryLevel = (unit) => {
     const levelOptionValue = Number(levelOptions[i].name_en.match(/[1234]/)[0]);
 
     if (levelOptions[i].active) {
-      return unitHasItem(unit, "Master Of The Black Arts")
+      return unitHasItem(unit, "Master of The Black Arts")
         ? levelOptionValue + 1
         : levelOptionValue;
     }
@@ -685,8 +685,8 @@ export const getUnitGeneratedSpellCount = (unit) => {
     unitHasItem(unit, "Spell Familiar*") ||
     unitHasItem(unit, "Twin Heads") ||
     unitHasItem(unit, "Silvery Wand") ||
-    unitHasItem(unit, "Tome Of Furion") ||
-    unitHasItem(unit, "Tome Of Midnight") ||
+    unitHasItem(unit, "Tome of Furion") ||
+    unitHasItem(unit, "Tome of Midnight") ||
     unitHasItem(unit, "Scrolls of Wei-jin")
   ) {
     generatedSpellsCount += 1;

@@ -639,7 +639,7 @@ export const Magic = ({ isMobile }) => {
 
   // Backwards compatibility for runes
   if (
-    list.army === "dwarfen-mountain-holds" && 
+    list.army === "dwarfen-mountain-holds" &&
     maxItemsPerCategory < 1 &&
     !unit.army // if unit.army is defined, this is an ally unit
   ) {
@@ -888,8 +888,4 @@ export const Magic = ({ isMobile }) => {
       </MainComponent>
     </>
   );
-};
-
-Magic.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
 };

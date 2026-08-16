@@ -448,7 +448,17 @@ export const Add = ({ isMobile }) => {
         )}
         {type !== "allies" && type !== "mercenaries" && (
           <ul>
-            {army[type].map((unit) => !unit.detachment && getUnit({ unit }))}
+            {[...army[type]]
+              .sort((a, b) => {
+                const pointsA = getUnitPoints(a, {
+                  ally: a.army,
+                });
+                const pointsB = getUnitPoints(b, {
+                  ally: b.army,
+                });
+                return pointsB - pointsA;
+              })
+              .map((unit) => !unit.detachment && getUnit({ unit }))}
           </ul>
         )}
         {validFavorites.length > 0 && (
@@ -466,8 +476,4 @@ export const Add = ({ isMobile }) => {
       </MainComponent>
     </>
   );
-};
-
-Add.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
 };
