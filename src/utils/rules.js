@@ -3919,7 +3919,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["doomwheel", "warp-lightning-cannon"],
+          ids: ["doomwheel"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -3927,7 +3927,23 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["plagueclaw-catapult", "plague-censer-bearers"],
+          ids: ["warp-lightning-cannon"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["warlock-engineer"],
+          points: 1000,
+        },
+        {
+          ids: ["plagueclaw-catapult"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: ["plague-priest"],
+          points: 1000,
+        },
+        {
+          ids: ["plague-censer-bearers"],
           min: 0,
           max: 1,
           requiresType: "characters",
