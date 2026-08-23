@@ -72,10 +72,7 @@ export const Export = ({ isMobile }) => {
       ? { text: listText }
       : { title: list.name, text: list.description, files: [file] };
 
-    // navigator.canShare(data) — without the argument this only checks the
-    // API exists, not whether the browser can share THIS data (file shares
-    // fail this check on some browsers).
-    if (!navigator.canShare?.(shareData)) {
+    if (typeof navigator.canShare !== "function") {
       asText ? setShareError(true) : setOwbShareError(true);
       return;
     }
