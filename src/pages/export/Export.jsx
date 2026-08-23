@@ -80,7 +80,7 @@ export const Export = ({ isMobile }) => {
     try {
       await navigator.share(shareData);
     } catch (error) {
-      // AbortError = user dismissed the system share sheet, not a failure.
+      // AbortError = user dismissed the system share sheet, but can also mean that no share targets are available
       if (error?.name === "AbortError") return;
       asText ? setShareError(true) : setOwbShareError(true);
     }
