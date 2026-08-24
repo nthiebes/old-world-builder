@@ -53,6 +53,9 @@ export const Help = () => {
             }}
           />
         </p>
+        <p>
+          <b>OWB version:</b> v{import.meta.env.VITE_VERSION}
+        </p>
       </Main>
     </>
   );
