@@ -831,7 +831,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       magic.types.length &&
                       active &&
                       (magic.armyComposition === unitArmyComposition ||
-                        !magic.armyComposition) ? (
+                        typeof magic.armyComposition !== "string") ? (
                         <>
                           <hr className="unit__hr" />
                           <ListItem

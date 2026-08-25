@@ -1429,6 +1429,14 @@
       "points": 8,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "dwarfen-mountain-holds": {
+          "category": "core"
+        },
+        "expeditionary-force": {
+          "category": "core"
+        }
+      },
       "command": [
         {
           "name_en": "Veteran (champion)",
@@ -1453,12 +1461,7 @@
           "magic": {
             "types": ["banner-runes"],
             "maxPoints": 50,
-            "maxItemsPerCategory": 3,
-            "armyComposition": {
-              "royal-clan": {
-                "maxPoints": 75
-              }
-            }
+            "maxItemsPerCategory": 3
           },
           "notes": {
             "name_de": "0-1 Einheit Zwergenkrieger pro 1000 Punkte kann Standartenrunen erwerben",
@@ -1562,14 +1565,6 @@
         "name_de": "Geschlossene Ränge, Hass (Orks & Goblins), Magieresistenz (-1), Resolut, Schildwall",
         "name_es": "Close Order, Hatred (Orcs & Goblins), Magic Resistance (-1), Resolute, Shieldwall",
         "name_fr": "Ordre Serré, Haine (Orques & Gobelins), Résistance à la Magie (-1), Résolu, Mur de Boucliers"
-      },
-      "armyComposition": {
-        "dwarfen-mountain-holds": {
-          "category": "core"
-        },
-        "expeditionary-force": {
-          "category": "core"
-        }
       }
     },
     {
@@ -3531,10 +3526,10 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_de": "Erweiterte Formation, Schießen und Verschwinden, Fliegen (10), Hass (Orks & Goblins), Zuschlagen und Verschwinden, Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
-        "name_en": "Extended Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
-        "name_cn": "开放阵型, 游击, 飞行(10), 仇恨(兽人 & 地精), 打了就跑, 撞击(D3), 魔法抗性(-1), 散兵, 快速行进, 先锋",
-        "name_fr": "Formation Étendue, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d’Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
+        "name_en": "Dispersed Formation, Fire & Flee, Fly (10), Hatred (Orcs & Goblins), Hit & Run, Impact Hits (D3), Magic Resistance (-1), Skirmishers, Swiftstride, Vanguard",
+        "name_de": "Dispersed Formation, Schießen und Verschwinden, Fliegen (10), Hass (Orks & Goblins), Zuschlagen und Verschwinden, Aufpralltreffer (W3), Magieresistenz (-1), Plänkler, Schnelle Bewegung, Vorhut",
+        "name_cn": "Dispersed Formation, 游击, 飞行(10), 仇恨(兽人 & 地精), 打了就跑, 撞击(D3), 魔法抗性(-1), 散兵, 快速行进, 先锋",
+        "name_fr": "Dispersed Formation, Tir & Fuite, Vol (10), Haine (Orques & Gobelins), Mitraillage au Sol, Touches d’Impact (D3), Résistance à la Magie (-1), Tirailleurs, Rapide, Avant-garde"
       },
       "armyComposition": {
         "expeditionary-force": {
