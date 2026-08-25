@@ -971,7 +971,7 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
-        }
+        },
       ],
     },
     core: {
@@ -1014,7 +1014,7 @@ export const rules = {
           requiresGeneral: true,
           requiresType: "characters",
           requires: ["chaos-lord", "exalted-champion", "daemon-prince"],
-        }
+        },
       ],
     },
     rare: {
@@ -1023,10 +1023,10 @@ export const rules = {
         {
           ids: ["dragon-ogre-shaggoth"],
           min: 0,
-          max: 1
-        }
+          max: 1,
+        },
       ],
-    }
+    },
   },
   "beastmen-brayherds": {
     characters: {
@@ -3311,7 +3311,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["saurus-oldblood", "skink-priest"],
+          ids: ["slann-mage-priest", "saurus-oldblood", "skink-priest"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3384,13 +3384,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["slann-mage-priest"],
-          min: 0,
-          max: 1,
-          points: 1500,
-        },
-        {
-          ids: ["saurus-oldblood"],
+          ids: ["slann-mage-priest", "saurus-oldblood"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3401,7 +3395,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["temple-guard"],
+          ids: ["temple-guard-renegade"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -4279,7 +4273,7 @@ export const getMinPercentData = ({
 /**
  * Gets the limitations and requirements for units in a specified army composition and category
  */
-export const getUnitRulesByCategory = (armyComp, category) => 
+export const getUnitRulesByCategory = (armyComp, category) =>
   rules[armyComp]
-    ? (rules[armyComp][category]?.units || [])
-    : (rules["grand-army"][category]?.units || []);
+    ? rules[armyComp][category]?.units || []
+    : rules["grand-army"][category]?.units || [];

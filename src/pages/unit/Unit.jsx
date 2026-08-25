@@ -729,12 +729,14 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             />
           </>
         ) : null}
-        {currentUnitStrength > 20 && list.compositionRule && list.compositionRule.includes("battle-march") && (
-          <p className="unit__error">
-            <Icon symbol="error" className="unit__notes-icon" />
-            <FormattedMessage id="unit.battleMarchUnitStrErr" />
-          </p>
-        )}
+        {currentUnitStrength > 20 &&
+          list.compositionRule &&
+          list.compositionRule.includes("battle-march") && (
+            <p className="unit__error">
+              <Icon symbol="error" className="unit__notes-icon" />
+              <FormattedMessage id="unit.battleMarchUnitStrErr" />
+            </p>
+          )}
         {unit.command && unit.command.length > 0 && (
           <>
             {!isCharacter && (
@@ -825,7 +827,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         className: "unit__option-note",
                         language,
                       })}
-                      {magic?.types && magic.types.length && active ? (
+                      {magic?.types &&
+                      magic.types.length &&
+                      active &&
+                      (magic.armyComposition === unitArmyComposition ||
+                        !magic.armyComposition) ? (
                         <>
                           <hr className="unit__hr" />
                           <ListItem

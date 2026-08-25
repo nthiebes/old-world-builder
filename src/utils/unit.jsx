@@ -116,22 +116,50 @@ export const getAllOptions = (
   const allEquipment = equipment
     ? equipment
         .filter(
-          ({ active, equippedDefault, requiredMagicItem }) =>
-            (active && !requiredMagicItem) ||
-            (equippedDefault && !requiredMagicItem) ||
+          ({
+            active,
+            equippedDefault,
+            requiredMagicItem,
+            armyComposition: optionArmyComposition,
+          }) =>
+            (active &&
+              !requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition)) ||
+            (equippedDefault &&
+              !requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition)) ||
             (active &&
               requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition) &&
               unitHasItem({ items }, requiredMagicItem)),
         )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
+
   const allArmor = armor
     ? armor
         .filter(
-          ({ active, requiredMagicItem }) =>
-            (active && !requiredMagicItem) ||
+          ({
+            active,
+            equippedDefault,
+            requiredMagicItem,
+            armyComposition: optionArmyComposition,
+          }) =>
+            (active &&
+              !requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition)) ||
+            (equippedDefault &&
+              !requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition)) ||
             (active &&
               requiredMagicItem &&
+              (optionArmyComposition === armyComposition ||
+                !optionArmyComposition) &&
               unitHasItem({ items }, requiredMagicItem)),
         )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)

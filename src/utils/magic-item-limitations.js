@@ -23,7 +23,7 @@ export const isMultipleAllowedItem = ({ stackable, maximum }) =>
 export const maxAllowedOfItem = (
   magicItem,
   selectedAmount,
-  unitPointsRemaining
+  unitPointsRemaining,
 ) => {
   if (!magicItem.stackable && !magicItem.maximum) {
     return 1;
@@ -158,7 +158,7 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
           for (let itemGroup in unit.items) {
             // get all items that match the current item's category
             let targetCategoryItems = unit.items[itemGroup].selected.filter(
-              (targetItem) => targetItem.type === itemType
+              (targetItem) => targetItem.type === itemType,
             );
             if (targetCategoryItems.length > 0) {
               collectedItemCombos.push({
@@ -175,7 +175,7 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
               let targetCategoryItems = unit.command[
                 commandGroup
               ].magic?.selected.filter(
-                (targetItem) => targetItem.type === itemType
+                (targetItem) => targetItem.type === itemType,
               );
               if (targetCategoryItems.length > 0) {
                 collectedItemCombos.push({
@@ -194,8 +194,8 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
                   targetItemComboObj.itemCombos.some(
                     (targetItem) =>
                       item.name_en === targetItem.name_en &&
-                      (item.amount || 1) === (targetItem.amount || 1)
-                  )
+                      (item.amount || 1) === (targetItem.amount || 1),
+                  ),
                 )
               ) {
                 errors.push({
