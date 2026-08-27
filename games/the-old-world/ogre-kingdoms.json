@@ -7,6 +7,26 @@
       "name_de": "Tyrann",
       "id": "tyrant",
       "points": 185,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+            "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋",
+            "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre",
+            "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff"
+          }
+        },
+        "ok-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge, Ogre Club",
+            "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋, Ogre Club",
+            "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre, Ogre Club",
+            "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff, Ogre Club"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -109,18 +129,47 @@
           "active": true
         },
         {
-          "name_en": "Stonehorn",
-          "name_cn": "石角兽",
-          "name_fr": "Mastauroc",
-          "name_de": "Steinyak",
-          "points": 195
+          "name_en": "Thundertusk",
+          "name_cn": "雷牙兽",
+          "name_fr": "Mégastodonte",
+          "name_de": "Donnerhorn",
+          "points": 165,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Thundertusk",
           "name_cn": "雷牙兽",
           "name_fr": "Mégastodonte",
           "name_de": "Donnerhorn",
-          "points": 165
+          "points": 185,
+          "armyComposition": "ok-renegade"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "armyComposition": "ok-renegade",
+          "options": [
+            {
+              "name_en": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_cn": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_de": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_es": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_fr": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_it": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "points": 25
+            }
+          ]
         }
       ],
       "items": [
@@ -144,12 +193,6 @@
         }
       ],
       "lores": [],
-      "specialRules": {
-        "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
-        "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋",
-        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre",
-        "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff"
-      },
       "notes": {
         "name_en": "0-1 per 1000 points",
         "name_cn": "每1000分0-1",
@@ -164,6 +207,26 @@
       "name_de": "Brecher",
       "id": "bruiser",
       "points": 110,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
+            "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋",
+            "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre",
+            "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff"
+          }
+        },
+        "ok-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge, Ogre Club",
+            "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋, Ogre Club",
+            "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre, Ogre Club",
+            "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff, Ogre Club"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -277,18 +340,47 @@
           "active": true
         },
         {
-          "name_en": "Stonehorn",
-          "name_cn": "石角兽",
-          "name_fr": "Mastauroc",
-          "name_de": "Steinyak",
-          "points": 195
+          "name_en": "Thundertusk",
+          "name_cn": "雷牙兽",
+          "name_fr": "Mégastodonte",
+          "name_de": "Donnerhorn",
+          "points": 165,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Thundertusk",
           "name_cn": "雷牙兽",
           "name_fr": "Mégastodonte",
           "name_de": "Donnerhorn",
-          "points": 165
+          "points": 185,
+          "armyComposition": "ok-renegade"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "options": [
+            {
+              "name_en": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_cn": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_de": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_es": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_fr": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_it": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "points": 25
+            }
+          ],
+          "armyComposition": "ok-renegade"
         }
       ],
       "items": [
@@ -311,18 +403,7 @@
           "maxPoints": 0
         }
       ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Armour Bane (1), Bull Charge, Fear, Impact Hits (2), Ogre Charge",
-        "name_cn": "碎甲攻击(1), 蛮牛冲锋, 恐惧, 撞击(2), 食人魔冲锋",
-        "name_fr": "Arme Perforante (1), Charge Buffle, Peur, Touches d’Impact (2), Charge Ogre",
-        "name_de": "Rüstungsfluch (1), Walze, Angst, Aufpralltreffer (2), Ogerangriff"
-      },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_fr": ""
-      }
+      "lores": []
     },
     {
       "name_en": "Slaughtermaster",
@@ -331,6 +412,11 @@
       "name_de": "Fleischermeister",
       "id": "slaughtermaster",
       "points": 230,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -440,12 +526,137 @@
       }
     },
     {
+      "name_en": "Slaughtermaster",
+      "name_cn": "屠宰大师",
+      "name_fr": "Désosseur",
+      "name_de": "Fleischermeister",
+      "id": "slaughtermaster-renegade",
+      "points": 180,
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_fr": "Arme de base",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_fr": "Arme de base additionnelle",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Butcher's Cauldron",
+          "name_cn": "屠夫大锅",
+          "name_fr": "Chaudron de Boucher",
+          "name_de": "Fleischerkessel",
+          "points": 30,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_fr": "Objets Magiques",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "weapon", "arcane-item"],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Big Name",
+          "name_cn": "威名",
+          "name_de": "Großer Name",
+          "name_fr": "Grand Nom",
+          "types": ["big-name"],
+          "selected": [],
+          "maxPoints": 0
+        }
+      ],
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw {renegade}, Ogre Charge",
+        "name_cn": "碎甲攻击(1), 恐惧, 撞击(2), 大胃之神法系, 食人魔冲锋",
+        "name_fr": "Arme Perforante (1), Peur, Touches d’Impact (2), Domaine de La Gueule, Charge Ogre",
+        "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (2), Lehre des Großen Schlundes, Ogerangriff"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_de": "0-1 pro 1.000 Punkte"
+      }
+    },
+    {
       "name_en": "Butcher",
       "name_cn": "屠夫",
       "name_fr": "Boucher",
       "name_de": "Fleischer",
       "id": "butcher",
       "points": 105,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -551,12 +762,148 @@
       }
     },
     {
+      "name_en": "Butcher",
+      "name_cn": "屠夫",
+      "name_fr": "Boucher",
+      "name_de": "Fleischer",
+      "id": "butcher-renegade",
+      "points": 95,
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_fr": "Arme de base",
+          "name_de": "Handwaffe",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_fr": "Arme de base additionnelle",
+          "name_de": "Zusätzliche Handwaffe",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Butcher's Cauldron",
+          "name_cn": "屠夫大锅",
+          "name_fr": "Chaudron de Boucher",
+          "name_de": "Fleischerkessel",
+          "points": 30
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_fr": "Objets Magiques",
+          "name_de": "Magische Gegenstände",
+          "types": ["enchanted-item", "talisman", "weapon", "arcane-item"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Big Name",
+          "name_cn": "威名",
+          "name_de": "Großer Name",
+          "name_fr": "Grand Nom",
+          "types": ["big-name"],
+          "selected": [],
+          "maxPoints": 0
+        }
+      ],
+      "lores": ["battle-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Fear, Impact Hits (2), Lore of the Great Maw {renegade}, Ogre Charge",
+        "name_cn": "碎甲攻击(1), 恐惧, 撞击(2), 大胃之神法系, 食人魔冲锋",
+        "name_fr": "Arme Perforante (1), Peur, Touches d’Impact (2), Domaine de La Gueule, Charge Ogre",
+        "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (2), Lehre des Großen Schlundes, Ogerangriff"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_fr": ""
+      }
+    },
+    {
       "name_en": "Hunter",
       "name_cn": "猎人",
       "name_fr": "Chasseur",
       "name_de": "Jäger",
       "id": "hunter",
       "points": 115,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack",
+            "name_cn": "碎甲攻击(1), 恐惧, 撞击(1), 独行, 穿行掩体, 食人魔冲锋, 与兽同行",
+            "name_fr": "Arme Perforante (1), Peur, Touches d’Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute",
+            "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (1), Einzelgänger, Durch Deckung bewegen, Ogerangriff, Teil des Rudels"
+          }
+        },
+        "ok-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack {renegade}, Vanguard, Ogre Club",
+            "name_cn": "碎甲攻击(1), 恐惧, 撞击(1), 独行, 穿行掩体, 食人魔冲锋, 与兽同行, Vanguard, Ogre Club",
+            "name_fr": "Arme Perforante (1), Peur, Touches d’Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute, Vanguard, Ogre Club",
+            "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (1), Einzelgänger, Durch Deckung bewegen, Ogerangriff, Teil des Rudels, Vanguard, Ogre Club"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -589,11 +936,39 @@
           "points": 4
         },
         {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde",
+          "points": 5,
+          "armyComposition": "ok-renegade"
+        },
+        {
           "name_en": "Harpoon launcher",
           "name_cn": "鱼叉发射器",
           "name_fr": "Lance-harpon",
           "name_de": "Harpunenschleuder",
-          "points": 10
+          "points": 10,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Harpoon launcher",
+          "name_cn": "鱼叉发射器",
+          "name_fr": "Lance-harpon",
+          "name_de": "Harpunenschleuder",
+          "points": 15,
+          "exclusive": true,
+          "armyComposition": "ok-renegade"
+        },
+        {
+          "name_en": "Blood Vulture",
+          "name_cn": "Blood Vulture",
+          "name_fr": "Blood Vulture",
+          "name_de": "Blood Vulture",
+          "points": 5,
+          "exclusive": true,
+          "armyComposition": "ok-renegade"
         }
       ],
       "mounts": [
@@ -604,6 +979,7 @@
           "name_de": "Zu Fuß",
           "points": 0,
           "active": true,
+          "armyComposition": "ogre-kingdoms",
           "options": [
             {
               "name_en": "Ambushers",
@@ -622,31 +998,80 @@
               "points": 5,
               "perModel": true,
               "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_fr": "À Pied",
+          "name_de": "Zu Fuß",
+          "points": 0,
+          "active": true,
+          "armyComposition": "ok-renegade",
+          "options": [
+            {
+              "name_en": "Ambushers",
+              "name_cn": "伏击",
+              "name_fr": "Embusqueurs",
+              "name_de": "Überfall",
+              "points": 6,
+              "perModel": true,
+              "exclusive": true
             },
             {
-              "name_en": "Vanguard",
-              "name_cn": "先锋",
-              "name_fr": "Avant-garde",
-              "name_de": "Vorhut",
-              "points": 3,
+              "name_en": "Scouts",
+              "name_cn": "侦察",
+              "name_fr": "Éclaireurs",
+              "name_de": "Kundschafter",
+              "points": 4,
               "perModel": true,
               "exclusive": true
             }
           ]
         },
         {
-          "name_en": "Stonehorn",
-          "name_cn": "石角兽",
-          "name_fr": "Mastauroc",
-          "name_de": "Steinyak",
-          "points": 195
+          "name_en": "Thundertusk",
+          "name_cn": "雷牙兽",
+          "name_fr": "Mégastodonte",
+          "name_de": "Donnerhorn",
+          "points": 165,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Thundertusk",
           "name_cn": "雷牙兽",
           "name_fr": "Mégastodonte",
           "name_de": "Donnerhorn",
-          "points": 165
+          "points": 185,
+          "armyComposition": "ok-renegade"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Stonehorn",
+          "name_cn": "石角兽",
+          "name_fr": "Mastauroc",
+          "name_de": "Steinyak",
+          "points": 195,
+          "options": [
+            {
+              "name_en": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_cn": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_de": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_es": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_fr": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "name_it": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+              "points": 25
+            }
+          ],
+          "armyComposition": "ok-renegade"
         }
       ],
       "items": [
@@ -657,7 +1082,12 @@
           "name_de": "Magische Gegenstände",
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "armyComposition": {
+            "ok-renegade": {
+              "maxPoints": 75
+            }
+          }
         },
         {
           "name_en": "Big Name",
@@ -669,18 +1099,7 @@
           "maxPoints": 0
         }
       ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Armour Bane (1), Fear, Impact Hits (1), Loner, Move Through Cover, Ogre Charge, Running with the Pack {renegade}",
-        "name_cn": "碎甲攻击(1), 恐惧, 撞击(1), 独行, 穿行掩体, 食人魔冲锋, 与兽同行 {renegade}",
-        "name_fr": "Arme Perforante (1), Peur, Touches d’Impact (1), Solitaire, Mouvement à Couvert, Charge Ogre, Courir avec la Meute",
-        "name_de": "Rüstungsfluch (1), Angst, Aufpralltreffer (1), Einzelgänger, Durch Deckung bewegen, Ogerangriff, Teil des Rudels"
-      },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_fr": ""
-      }
+      "lores": []
     },
     {
       "name_en": "Firebelly",
@@ -729,6 +1148,7 @@
           "points": 0,
           "active": true,
           "alwaysActive": true,
+          "armyComposition": "ogre-kingdoms",
           "options": [
             {
               "name_en": "Level 1 Wizard",
@@ -747,6 +1167,38 @@
               "name_fr": "Sorcier de Niveau 2",
               "name_es": "Hechicero de Nivel 2",
               "points": 35,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "armyComposition": "ok-renegade",
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
               "exclusive": true
             }
           ]
@@ -790,6 +1242,14 @@
       "armyComposition": {
         "ogre-kingdoms": {
           "category": "core",
+          "specialRules": {
+            "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
+            "name_de": "Rüstungsfluch (1), Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff",
+            "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
+            "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
+          },
           "notes": {
             "name_en": "1+",
             "name_cn": "1+",
@@ -800,12 +1260,12 @@
         "ok-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
-            "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
-            "name_de": "Rüstungsfluch (1), Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff, Monstrous Ranks",
-            "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
-            "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre, Rangs Monstrueux",
-            "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+            "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger, Ogre Club",
+            "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Ravenous Hunger, Ogre Club",
+            "name_de": "Rüstungsfluch (1), Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff, Ravenous Hunger, Ogre Club",
+            "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger, Ogre Club",
+            "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre, Ravenous Hunger, Ogre Club",
+            "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger, Ogre Club"
           }
         }
       },
@@ -922,15 +1382,7 @@
       "options": [],
       "mounts": [],
       "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_cn": "碎甲攻击(1), 紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
-        "name_de": "Rüstungsfluch (1), Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff",
-        "name_es": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_fr": "Arme Perforante (1), Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
-        "name_it": "Armour Bane (1), Close Order, Fear, Impact Hits (1), Ogre Charge"
-      }
+      "lores": []
     },
     {
       "name_en": "Ironguts",
@@ -947,17 +1399,25 @@
       "detachment": false,
       "armyComposition": {
         "ogre-kingdoms": {
-          "category": "core"
+          "category": "core",
+          "specialRules": {
+            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
+            "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff",
+            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
+            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
+          }
         },
         "ok-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
-            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
-            "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff, Monstrous Ranks",
-            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
-            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre, Rangs Monstrueux",
-            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Ravenous Hunger",
+            "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff, Ravenous Hunger",
+            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger",
+            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre, Ravenous Hunger",
+            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge, Ravenous Hunger"
           }
         }
       },
@@ -1059,23 +1519,7 @@
           "maxPoints": 0
         }
       ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
-        "name_de": "Angst, Aufpralltreffer (1), Geschlossene Ränge, Ogerangriff",
-        "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
-        "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
-      },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": "",
-        "name_it": ""
-      }
+      "lores": []
     },
     {
       "name_en": "Gnoblar Fighters",
@@ -1149,6 +1593,30 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
+            "name_cn": "微不足道, 穿行掩体, 侦察, 散兵, 陷阱与圈套",
+            "name_de": "Völlig Unbedeutend, Durch Deckung bewegen, Kundschafter, Plänkler, Fallen & Schlingen",
+            "name_es": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
+            "name_fr": "Complètement Insignifiant, Mouvement à Couvert, Éclaireurs, Tirailleurs, Pièges & Collets",
+            "name_it": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares"
+          }
+        },
+        "ok-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares, Entourage",
+            "name_cn": "微不足道, 穿行掩体, 侦察, 散兵, 陷阱与圈套, Entourage",
+            "name_de": "Völlig Unbedeutend, Durch Deckung bewegen, Kundschafter, Plänkler, Fallen & Schlingen, Entourage",
+            "name_es": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares, Entourage",
+            "name_fr": "Complètement Insignifiant, Mouvement à Couvert, Éclaireurs, Tirailleurs, Pièges & Collets, Entourage",
+            "name_it": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares, Entourage"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Snarefinger (champion)",
@@ -1177,23 +1645,7 @@
       "options": [],
       "mounts": [],
       "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
-        "name_cn": "微不足道, 穿行掩体, 侦察, 散兵, 陷阱与圈套",
-        "name_de": "Völlig Unbedeutend, Durch Deckung bewegen, Kundschafter, Plänkler, Fallen & Schlingen",
-        "name_es": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares",
-        "name_fr": "Complètement Insignifiant, Mouvement à Couvert, Éclaireurs, Tirailleurs, Pièges & Collets",
-        "name_it": "Largely Insignificant, Move Through Cover, Scouts, Skirmishers, Traps & Snares"
-      },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": "",
-        "name_it": ""
-      }
+      "lores": []
     },
     {
       "name_en": "Sabretusk Pack",
@@ -1292,17 +1744,14 @@
       "detachment": false,
       "armyComposition": {
         "ogre-kingdoms": {
-          "category": "special"
-        },
-        "ok-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks {renegade}",
-            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋, Monstrous Ranks",
-            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff, Monstrous Ranks",
-            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks",
-            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre, Rangs Monstrueux",
-            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge, Monstrous Ranks"
+            "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
+            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff",
+            "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
+            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
+            "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
           }
         }
       },
@@ -1366,23 +1815,95 @@
       ],
       "mounts": [],
       "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_cn": "紧密阵型, 恐惧, 撞击(1), 食人魔冲锋",
-        "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Ogerangriff",
-        "name_es": "Close Order, Fear, Impact Hits (1), Ogre Charge",
-        "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Charge Ogre",
-        "name_it": "Close Order, Fear, Impact Hits (1), Ogre Charge"
+      "lores": []
+    },
+    {
+      "name_en": "Leadbelchers {renegade}",
+      "name_cn": "喷铅者",
+      "name_de": "Bleispucker",
+      "name_es": "Leadbelchers",
+      "name_fr": "Crache-plomb",
+      "name_it": "Leadbelchers",
+      "id": "leadbelchers-renegade",
+      "points": 39,
+      "minimum": 2,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Open Order, Fear, Impact Hits (1), Ogre Charge, Ogre Club, Ravenous Hunger",
+            "name_cn": "Open Order, 恐惧, 撞击(1), 食人魔冲锋, Ogre Club, Ravenous Hunger",
+            "name_de": "Open Order, Angst, Aufpralltreffer (1), Ogerangriff, Ogre Club, Ravenous Hunger",
+            "name_es": "Open Order, Fear, Impact Hits (1), Ogre Charge, Ogre Club, Ravenous Hunger",
+            "name_fr": "Open Order, Peur, Touches d’Impact (1), Charge Ogre, Ogre Club, Ravenous Hunger",
+            "name_it": "Open Order, Fear, Impact Hits (1), Ogre Charge, Ogre Club, Ravenous Hunger"
+          }
+        }
       },
-      "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": "",
-        "name_it": ""
-      }
+      "command": [
+        {
+          "name_en": "Thunderfist (champion)",
+          "name_cn": "雷霆拳(冠军)",
+          "name_de": "Donnerfaust (Champion)",
+          "name_es": "Thunderfist",
+          "name_fr": "Crache-tonnerre (champion)",
+          "name_it": "Thunderfist",
+          "points": 8
+        },
+        {
+          "name_en": "Bellower (musician)",
+          "name_cn": "大嗓门(乐手)",
+          "name_de": "Brüller (Musiker)",
+          "name_es": "Bellower (musician)",
+          "name_fr": "Beugleur (musicien)",
+          "name_it": "Bellower (musician)",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Leadbelcher guns {renegade}",
+          "name_cn": "单手武器, 喷铅炮",
+          "name_de": "Handwaffen, Donnerrohr",
+          "name_es": "Hand weapons, Leadbelcher guns",
+          "name_fr": "Armes de base, Crache-plomb",
+          "name_it": "Hand weapons, Leadbelcher guns",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "name_it": "Light armour",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteranen",
+          "name_es": "Veteran",
+          "name_fr": "Vétérans",
+          "name_it": "Veteran",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": []
     },
     {
       "name_en": "Maneaters",
@@ -1399,17 +1920,25 @@
       "detachment": false,
       "armyComposition": {
         "ogre-kingdoms": {
-          "category": "special"
+          "category": "special",
+          "specialRules": {
+            "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 散兵游勇, 食人魔冲锋",
+            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Zusammengewürfelter Haufen, Ogerangriff",
+            "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
+            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Bande Hétéroclite, Charge Ogre",
+            "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
+          }
         },
         "ok-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks {renegade}",
-            "name_cn": "紧密阵型, 恐惧, 撞击(1), 散兵游勇, 食人魔冲锋, Monstrous Ranks",
-            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Zusammengewürfelter Haufen, Ogerangriff, Monstrous Ranks",
-            "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks",
-            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Bande Hétéroclite, Charge Ogre, Rangs Monstrueux",
-            "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Monstrous Ranks"
+            "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Veteran, Ogre Club",
+            "name_cn": "紧密阵型, 恐惧, 撞击(1), 散兵游勇, 食人魔冲锋, Veteran, Ogre Club",
+            "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Zusammengewürfelter Haufen, Ogerangriff, Veteran, Ogre Club",
+            "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Veteran, Ogre Club",
+            "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Bande Hétéroclite, Charge Ogre, Veteran, Ogre Club",
+            "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge, Veteran, Ogre Club"
           }
         }
       },
@@ -1469,7 +1998,18 @@
           "name_de": "Handwaffen",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Hand weapons, Ogre pistols",
+          "name_cn": "单手武器, Ogre pistols",
+          "name_fr": "Armes de base, Ogre pistols",
+          "name_de": "Handwaffen, Ogre pistols",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "ok-renegade"
         }
       ],
       "armor": [
@@ -1545,12 +2085,61 @@
           }
         },
         {
+          "name_en": "Scouts",
+          "name_cn": "Scouts",
+          "name_fr": "Scouts",
+          "name_de": "Scouts",
+          "points": 0,
+          "armyComposition": "ok-renegade",
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
+        },
+        {
+          "name_en": "Move Through Cover",
+          "name_cn": "Move Through Cover",
+          "name_fr": "Move Through Cover",
+          "name_de": "Move Through Cover",
+          "points": 0,
+          "armyComposition": "ok-renegade",
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
+        },
+        {
+          "name_en": "Swiftstride",
+          "name_cn": "Swiftstride",
+          "name_fr": "Swiftstride",
+          "name_de": "Swiftstride",
+          "points": 0,
+          "armyComposition": "ok-renegade",
+          "notes": {
+            "name_en": "A unit may have 0-2 of these options",
+            "name_cn": "A unit may have 0-2 of these options",
+            "name_it": "A unit may have 0-2 of these options",
+            "name_de": "A unit may have 0-2 of these options",
+            "name_fr": "A unit may have 0-2 of these options",
+            "name_es": "A unit may have 0-2 of these options"
+          }
+        },
+        {
           "name_en": "Additional hand weapons",
           "name_cn": "额外单手武器",
           "name_fr": "Armes de base additionnelles",
           "name_de": "Zusätzliche Handwaffen",
           "points": 3,
-          "stackable": true
+          "stackable": true,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Ironfists",
@@ -1562,21 +2151,13 @@
           "armyComposition": "ogre-kingdoms"
         },
         {
-          "name_en": "Ironfists {renegade}",
-          "name_cn": "铁拳套",
-          "name_fr": "Poings d’Acier",
-          "name_de": "Eisenfäuste",
-          "points": 4,
-          "stackable": true,
-          "armyComposition": "ok-renegade"
-        },
-        {
           "name_en": "Great weapons",
           "name_cn": "重型武器",
           "name_fr": "Armes lourdes",
           "name_de": "Zweihandwaffen",
           "points": 4,
-          "stackable": true
+          "stackable": true,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Ogre pistols",
@@ -1584,7 +2165,8 @@
           "name_fr": "Pistolets Ogres",
           "name_de": "Ogerpistolen",
           "points": 6,
-          "stackable": true
+          "stackable": true,
+          "armyComposition": "ogre-kingdoms"
         },
         {
           "name_en": "Brace of Ogre pistols",
@@ -1592,7 +2174,17 @@
           "name_fr": "Paire de pistolets Ogres",
           "name_de": "Ogerpistolenpaar",
           "points": 12,
-          "stackable": true
+          "stackable": true,
+          "armyComposition": "ogre-kingdoms"
+        },
+        {
+          "name_en": "Brace of Ogre pistols",
+          "name_cn": "成对食人魔手枪",
+          "name_fr": "Paire de pistolets Ogres",
+          "name_de": "Ogerpistolenpaar",
+          "points": 6,
+          "stackable": true,
+          "armyComposition": "ok-renegade"
         },
         {
           "name_en": "Heavy armour",
@@ -1604,16 +2196,25 @@
         }
       ],
       "mounts": [],
-      "items": [],
+      "items": [
+        {
+          "name_en": "Big Name",
+          "name_cn": "威名",
+          "name_de": "Großer Name",
+          "name_fr": "Grand Nom",
+          "types": ["big-name"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "ok-renegade",
+          "notes": {
+            "name_en": "A Maneater Captain may take a single Big Name",
+            "name_cn": "A Maneater Captain may take a single Big Name",
+            "name_fr": "A Maneater Captain may take a single Big Name",
+            "name_de": "A Maneater Captain may take a single Big Name"
+          }
+        }
+      ],
       "lores": [],
-      "specialRules": {
-        "name_en": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
-        "name_cn": "紧密阵型, 恐惧, 撞击(1), 散兵游勇, 食人魔冲锋",
-        "name_de": "Geschlossene Ränge, Angst, Aufpralltreffer (1), Zusammengewürfelter Haufen, Ogerangriff",
-        "name_es": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge",
-        "name_fr": "Ordre Serré, Peur, Touches d’Impact (1), Bande Hétéroclite, Charge Ogre",
-        "name_it": "Close Order, Fear, Impact Hits (1), Motley Crew, Ogre Charge"
-      },
       "notes": {
         "name_en": "0-1 unit of Maneaters per 1000 points",
         "name_cn": "0-1个单位的Maneaters per 1, 000分",
@@ -1637,6 +2238,30 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
+            "name_cn": "坚硬皮肤(1), 紧密阵型, 恐惧, 撞击(D3), 丧牙兽冲锋, 快速行进",
+            "name_de": "Zähe Haut (1), Geschlossene Ränge, Angst, Aufpralltreffer (W3), Trauerfangangriff, Schnelle Bewegung",
+            "name_es": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
+            "name_fr": "Peau Blindée (1), Ordre Serré, Peur, Touches d’Impact (D3), Charge Férox, Rapide",
+            "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride"
+          }
+        },
+        "ok-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride, Ogre Club",
+            "name_cn": "坚硬皮肤(1), 紧密阵型, 恐惧, 撞击(D3), 丧牙兽冲锋, 快速行进, Ogre Club",
+            "name_de": "Zähe Haut (1), Geschlossene Ränge, Angst, Aufpralltreffer (W3), Trauerfangangriff, Schnelle Bewegung, Ogre Club",
+            "name_es": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride, Ogre Club",
+            "name_fr": "Peau Blindée (1), Ordre Serré, Peur, Touches d’Impact (D3), Charge Férox, Rapide, Ogre Club",
+            "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride, Ogre Club"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Crusher (champion)",
@@ -1766,14 +2391,6 @@
       "mounts": [],
       "items": [],
       "lores": [],
-      "specialRules": {
-        "name_en": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
-        "name_cn": "坚硬皮肤(1), 紧密阵型, 恐惧, 撞击(D3), 丧牙兽冲锋, 快速行进",
-        "name_de": "Zähe Haut (1), Geschlossene Ränge, Angst, Aufpralltreffer (W3), Trauerfangangriff, Schnelle Bewegung",
-        "name_es": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride",
-        "name_fr": "Peau Blindée (1), Ordre Serré, Peur, Touches d’Impact (D3), Charge Férox, Rapide",
-        "name_it": "Armoured Hide (1), Close Order, Fear, Impact Hits (D3), Mournfang Charge, Swiftstride"
-      },
       "notes": {
         "name_en": "0-1 unit of Mournfang Cavalry per 1000 points",
         "name_cn": "0-1个单位的Mournfang Cavalry per 1, 000分",
@@ -1797,6 +2414,11 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "special"
+        }
+      },
       "command": [
         {
           "name_en": "Greyback",
@@ -1832,6 +2454,7 @@
           "name_it": "Scouts",
           "points": 3,
           "perModel": true,
+          "exclusive": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
             "name_cn": "每1000分0-1",
@@ -1849,6 +2472,7 @@
           "name_it": "Vanguard",
           "points": 2,
           "perModel": true,
+          "exclusive": true,
           "notes": {
             "name_en": "0-1 per 1000 points",
             "name_cn": "每1000分0-1",
@@ -1876,6 +2500,117 @@
         "name_es": "",
         "name_fr": "",
         "name_it": ""
+      }
+    },
+    {
+      "name_en": "Yhetees",
+      "name_cn": "雪怪",
+      "name_de": "Yhetis",
+      "name_es": "Yhetees",
+      "name_fr": "Yétis",
+      "name_it": "Yhetees",
+      "id": "yhetees-renegade",
+      "points": 43,
+      "minimum": 3,
+      "maximum": 0,
+      "regimentalUnit": false,
+      "detachment": false,
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Greyback",
+          "name_cn": "灰背",
+          "name_de": "Silberrücken",
+          "name_es": "Greyback",
+          "name_fr": "Dos-gris",
+          "name_it": "Greyback",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Grimfrost weapons",
+          "name_cn": "寒霜武器",
+          "name_de": "Eiswaffen",
+          "name_es": "Grimfrost weapons",
+          "name_fr": "Arme de Sinistregivre",
+          "name_it": "Grimfrost weapons",
+          "points": 0,
+          "perModel": false,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "name_it": "Ambushers",
+          "points": 3,
+          "perModel": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Kundschafter",
+          "name_es": "Scouts",
+          "name_fr": "Éclaireurs",
+          "name_it": "Scouts",
+          "points": 2,
+          "perModel": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Vanguard",
+          "name_cn": "先锋",
+          "name_de": "Vorhut",
+          "name_es": "Vanguard",
+          "name_fr": "Avant-garde",
+          "name_it": "Vanguard",
+          "points": 1,
+          "perModel": true,
+          "exclusive": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride, Ravenous Hunger",
+        "name_cn": "坚硬皮肤(1), 恐惧, 易燃, 独行, 穿行掩体, 麻木寒意, 开放阵型, 快速行进, Ravenous Hunger",
+        "name_de": "Zähe Haut (1), Angst, Brennbar, Einzelgänger, Durch Deckung bewegen, Lähmende Kälte, Offene Ränge, Schnelle Bewegung, Ravenous Hunger",
+        "name_es": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride, Ravenous Hunger",
+        "name_fr": "Peau Blindée (1), Peur, Inflammable, Solitaire, Mouvement à Couvert, Frisson Paralysant, Ordre Dispersé, Rapide, Ravenous Hunger",
+        "name_it": "Armoured Hide (1), Fear, Flammable, Loner, Move Through Cover, Numbing Chill, Open Order, Swiftstride, Ravenous Hunger"
       }
     },
     {
@@ -2012,6 +2747,11 @@
       "points": 245,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2032,7 +2772,13 @@
           "perModel": false
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "4+",
+          "active": true,
+          "points": 0
+        }
+      ],
       "options": [
         {
           "name_en": "Harpoon launcher (Ogre Beast Rider)",
@@ -2063,6 +2809,115 @@
       }
     },
     {
+      "name_en": "Stonehorn Riders",
+      "name_cn": "石角兽骑兵",
+      "name_de": "Steinyakreiter",
+      "name_es": "Stonehorn Riders",
+      "name_fr": "Chevaucheurs de Mastauroc",
+      "name_it": "Stonehorn Riders",
+      "id": "stonehorn-riders-renegade",
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "rare"
+        }
+      },
+      "points": 220,
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Horns of stone (Stonehorn), Chaintrap (Ogre Beast Rider)",
+          "name_cn": "单手武器, 石角(石角兽), 投索陷阱(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Croque-monsieur (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Steinerne Hörner (Steinyak), Ketten-Fangeisen (Ogerreiter)",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Horns of stone (Stonehorn), Blood vulture (Ogre Beast Rider)",
+          "name_cn": "单手武器, 石角(石角兽), 寻血秃鹫(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Vautour de sang (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Steinerne Hörner (Steinyak), Blutgeier (Ogerreiter)",
+          "points": 5
+        },
+        {
+          "name_en": "Hand weapon, Horns of stone (Stonehorn), Harpoon launcher (Ogre Beast Rider)",
+          "name_cn": "单手武器, 石角(石角兽), 鱼叉发射器(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Cornes de pierre (Mastauroc), Lance-harpon (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Steinerne Hörner (Steinyak), Harpunenschleuder (Ogerreiter)",
+          "points": 15
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ogre Beast Rider",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0,
+          "options": [
+            {
+              "name_en": "Hand weapon",
+              "active": true,
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "active": false,
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Great weapon",
+              "active": false,
+              "points": 4,
+              "exclusive": true
+            },
+            {
+              "name_en": "Ironfist",
+              "active": false,
+              "points": 4,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "name_cn": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "name_de": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "name_es": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "name_fr": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "name_it": "Additional Ogre Crew (Hand weapon, Harpoon launcher)",
+          "points": 25
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge, Stomp Attacks (D3)",
+        "name_cn": "碎甲攻击(2 - 仅限石角兽), 紧密阵型, 先行冲锋, 驼轿, 撞击(D6+1), 大型目标, 石化骨架, 快速行进, 惊骇, 雷霆冲锋, Stomp Attacks (D3)",
+        "name_de": "Rüstungsfluch (2 - Nur Steinyak), Geschlossene Ränge, Erster Angriff, Sänfte, Aufpralltreffer (W6+1), Großes Ziel, Steinernes Skelett, Schnelle Bewegung, Entsetzen, Donnernder Angriff, Stomp Attacks (D3)",
+        "name_es": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge, Stomp Attacks (D3)",
+        "name_fr": "Arme Perforante (2 - Mastauroc uniquement), Ordre Serré, Première Charge, Howdah, Touches d’Impact (D6+1), Grande Cible, Squelette de Pierre, Rapide, Terreur, Charge Tonnerre, Stomp Attacks (D3)",
+        "name_it": "Armour Bane (2 - Stonehorn only), Close Order, First Charge, Howdah, Impact Hits (D6+1), Large Target, Stone Skeleton, Swiftstride, Terror, Thunderous Charge, Stomp Attacks (D3)"
+      },
+      "notes": {
+        "name_en": "0-1 Stonehorn Riders per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_fr": "0-1 Chevaucheurs de Mastauroc par tranche de 1000 points",
+        "name_de": "0-1 Steinyakreiter pro 1.000 Punkte"
+      }
+    },
+    {
       "name_en": "Thundertusk Riders",
       "name_cn": "雷牙兽骑兵",
       "name_de": "Donnerhornreiter",
@@ -2075,6 +2930,11 @@
       "maximum": 0,
       "regimentalUnit": false,
       "detachment": false,
+      "armyComposition": {
+        "ogre-kingdoms": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2094,7 +2954,13 @@
           "perModel": false
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "5+",
+          "active": true,
+          "points": 0
+        }
+      ],
       "options": [
         {
           "name_en": "Harpoon launcher (Ogre Beast Rider)",
@@ -2117,6 +2983,108 @@
         "name_es": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror",
         "name_fr": "Ordre Serré, Première Charge, Howdah, Touches d’Impact (D3), Grande Cible, Frisson Paralysant, Attaques de Piétinement (3), Rapide, Terreur",
         "name_it": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Swiftstride, Terror"
+      },
+      "notes": {
+        "name_en": "0-1 Thundertusk Riders per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_fr": "0-1 Chevaucheurs de Mégastodonte par tranche de 1000 points",
+        "name_de": "0-1 Donnerhornreiter pro 1.000 Punkte"
+      }
+    },
+    {
+      "name_en": "Thundertusk Riders",
+      "name_cn": "雷牙兽骑兵",
+      "name_de": "Donnerhornreiter",
+      "name_es": "Thundertusk Riders",
+      "name_fr": "Chevaucheurs de Mégastodonte",
+      "name_it": "Thundertusk Riders",
+      "id": "thundertusk-riders",
+      "points": 215,
+      "minimum": 0,
+      "maximum": 0,
+      "armyComposition": {
+        "ok-renegade": {
+          "category": "rare"
+        }
+      },
+      "regimentalUnit": false,
+      "detachment": false,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Great tusks (Thundertusk), Sphere of Frost-wreathed Ice (Thundertusk), Harpoon launcher (Ogre Crew), Chaintrap (Ogre Beast Rider)",
+          "name_cn": "单手武器, 巨型长牙(雷牙兽), Sphere of Frost-wreathed Ice(雷牙兽), 鱼叉发射器(食人魔组员), 投索陷阱(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Sphere of Frost-wreathed Ice (Mégastodonte), Lance-harpon (Servant Ogre), Croque-monsieur (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Gewalltige Hauer (Donnerhorn), Sphere of Frost-wreathed Ice (Donnerhorn), Harpunenschleuder (Oger-Besatzung), Ketten-Fangeisen (Ogerreiter)",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Great tusks (Thundertusk), Sphere of Frost-wreathed Ice (Thundertusk), Harpoon launcher (Ogre Crew), Blood vulture (Ogre Beast Rider)",
+          "name_cn": "单手武器, 巨型长牙(雷牙兽), Sphere of Frost-wreathed Ice(雷牙兽), 鱼叉发射器(食人魔组员), 寻血秃鹫(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Sphere of Frost-wreathed Ice (Mégastodonte), Lance-harpon (Servant Ogre), Vautour de sang (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Gewaltige Hauer (Thundertusk), Sphere of Frost-wreathed Ice (Donnerhorn), Harpunenschleuder (Oger-Besatzung), Ketten-Fangeisen (Ogerreiter)",
+          "points": 5
+        },
+        {
+          "name_en": "Hand weapon, Great tusks (Thundertusk), Sphere of Frost-wreathed Ice (Thundertusk), Harpoon launcher (Ogre Crew), Harpoon launcher (Ogre Beast Rider)",
+          "name_cn": "单手武器, 巨型长牙(雷牙兽), Sphere of Frost-wreathed Ice(雷牙兽), 鱼叉发射器(食人魔组员), 鱼叉发射器(食人魔野兽骑手)",
+          "name_fr": "Arme de base, Grandes défenses (Mégastodonte), Sphere of Frost-wreathed Ice (Mégastodonte), Lance-harpon (Servant Ogre), Lance-harpon (Chevaucheur Ogre)",
+          "name_de": "Handwaffen, Gewaltige Hauer (Thundertusk), Sphere of Frost-wreathed Ice (Donnerhorn), Harpunenschleuder (Oger-Besatzung), Harpunenschleuder (Ogerreiter)",
+          "points": 15
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ogre Beast Rider",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0,
+          "options": [
+            {
+              "name_en": "Hand weapon",
+              "active": true,
+              "points": 0,
+              "exclusive": true
+            },
+            {
+              "name_en": "Additional hand weapon",
+              "active": false,
+              "points": 3,
+              "exclusive": true
+            },
+            {
+              "name_en": "Great weapon",
+              "active": false,
+              "points": 4,
+              "exclusive": true
+            },
+            {
+              "name_en": "Ironfist",
+              "active": false,
+              "points": 4,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, Terror, Ogre Club",
+        "name_cn": "紧密阵型, 先行冲锋, 驼轿, 撞击(D3), 大型目标, 麻木寒意, 践踏攻击(3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, 惊骇, Ogre Club",
+        "name_de": "Geschlossene Ränge, Erster Angriff, Sänfte, Aufpralltreffer (W3), Großes Ziel, Lähmende Kälte, Stampfattacken (3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, Entsetzen, Ogre Club",
+        "name_es": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, Terror, Ogre Club",
+        "name_fr": "Ordre Serré, Première Charge, Howdah, Touches d’Impact (D3), Grande Cible, Frisson Paralysant, Attaques de Piétinement (3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, Terreur, Ogre Club",
+        "name_it": "Close Order, First Charge, Howdah, Impact Hits (D3), Large Target, Numbing Chill, Stomp Attacks (3), Stomp Attacks (D3+1), Smooth Ride, Strike Last, Terror, Ogre Club"
       },
       "notes": {
         "name_en": "0-1 Thundertusk Riders per 1000 points",
@@ -2198,6 +3166,14 @@
       "armyComposition": {
         "ogre-kingdoms": {
           "category": "rare",
+          "specialRules": {
+            "name_en": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
+            "name_cn": "伏击, 紧密阵型, 恐惧, 狂暴, 贪婪饥渴, 重生(6+), 快速行进, 永不战败",
+            "name_de": "Überfall, Geschlossene Ränge, Angst, Raserei, Ausgehungert, Regeneration (6+), Schnelle Bewegung, Unerschütterlich",
+            "name_es": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
+            "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
+            "name_it": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
+          },
           "notes": {
             "name_en": "0-3 Gorgers",
             "name_cn": "0-3贪吃魔",
@@ -2209,7 +3185,15 @@
           }
         },
         "ok-renegade": {
-          "category": "rare"
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Ambushers, Armoured Hide (2), Open Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
+            "name_cn": "伏击, Armoured Hide (2), Open Order, 恐惧, 狂暴, 贪婪饥渴, 重生(6+), 快速行进, 永不战败",
+            "name_de": "Überfall, Armoured Hide (2), Open Order, Angst, Raserei, Ausgehungert, Regeneration (6+), Schnelle Bewegung, Unerschütterlich",
+            "name_es": "Ambushers, Armoured Hide (2), Open Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
+            "name_fr": "Embusqueurs, Armoured Hide (2), Open Order, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
+            "name_it": "Ambushers, Armoured Hide (2), Open Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
+          }
         }
       },
       "command": [],
@@ -2263,15 +3247,7 @@
       ],
       "mounts": [],
       "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
-        "name_cn": "伏击, 紧密阵型, 恐惧, 狂暴, 贪婪饥渴, 重生(6+), 快速行进, 永不战败",
-        "name_de": "Überfall, Geschlossene Ränge, Angst, Raserei, Ausgehungert, Regeneration (6+), Schnelle Bewegung, Unerschütterlich",
-        "name_es": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable",
-        "name_fr": "Embusqueurs, Ordre Serré, Peur, Frénésie, Faim Dévorante, Régénération (6+), Rapide, Indémoralisable",
-        "name_it": "Ambushers, Close Order, Fear, Frenzy, Ravenous Hunger, Regeneration (6+), Swiftstride, Unbreakable"
-      }
+      "lores": []
     }
   ],
   "mercenaries": [],
