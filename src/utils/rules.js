@@ -2954,7 +2954,7 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
-            "flesh-hounds-of-khorne-core",
+            "flesh-hounds-of-khorne-core-renegade",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
             "soul-grinder-khorne-renegade"
@@ -3015,9 +3015,10 @@ export const rules = {
           requires: [
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
-            "flesh-hounds-of-khorne-core",
+            "flesh-hounds-of-khorne-core-renegade",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
+            "soul-grinder-khorne-renegade",
           ],
           perUnit: true,
         },
@@ -3079,7 +3080,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["flesh-hounds-of-khorne-core"],
+          ids: ["flesh-hounds-of-khorne-core-renegade"],
           requiresGeneral: true,
           requires: [
             "bloodthirster",
