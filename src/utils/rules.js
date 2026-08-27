@@ -3486,7 +3486,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tyrant", "slaughtermaster"],
+          ids: ["tyrant", "slaughtermaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3523,13 +3523,13 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["thundertusk-riders"],
+          ids: ["thundertusk-riders-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["stonehorn-riders"],
+          ids: ["stonehorn-riders-renegade"],
           min: 0,
           max: 1,
           points: 1000,
