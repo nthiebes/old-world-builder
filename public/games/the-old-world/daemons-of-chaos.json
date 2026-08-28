@@ -1813,9 +1813,6 @@
       "id": "lord-of-change-renegade",
       "points": 340,
       "armyComposition": {
-        "daemons-of-chaos": {
-          "category": "characters"
-        },
         "doc-renegade": {
           "category": "characters",
           "specialRules": {
@@ -2337,6 +2334,11 @@
       "name_pl": "Seekers of Slaanesh",
       "id": "seekers-of-slaanesh-core",
       "points": 21,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2423,6 +2425,11 @@
       "name_pl": "Seekers of Slaanesh",
       "id": "seekers-of-slaanesh-core-renegade",
       "points": 19,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2759,9 +2766,6 @@
             "name_it": "If your General is a Daemon of Khorne",
             "name_pl": "If your General is a Daemon of Khorne"
           }
-        },
-        "doc-renegade": {
-          "category": "core"
         }
       },
       "command": [
@@ -2928,7 +2932,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne {renegade}, Impetuous, Magic Resistance (-1)",
         "name_cn": "紧密阵型, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-1)",
         "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
@@ -3059,9 +3063,6 @@
       "minimum": 4,
       "maximum": 0,
       "armyComposition": {
-        "daemons-of-chaos": {
-          "category": "core"
-        },
         "doc-renegade": {
           "category": "core",
           "specialRules": {
@@ -3918,7 +3919,7 @@
       "name_fr": "Gargouilles du Chaos de Tzeentch",
       "name_it": "Chaos Furies of Tzeentch",
       "name_pl": "Chaos Furies of Tzeentch",
-      "id": "chaos-furies-of-tzeentch",
+      "id": "chaos-furies-of-tzeentch-renegade",
       "sharedCombinedArmsUnits": [
         "chaos-furies-renegade",
         "chaos-furies-of-slaanesh-renegade",
@@ -4066,6 +4067,11 @@
       "name_pl": "Seekers of Slaanesh",
       "id": "seekers-of-slaanesh",
       "points": 21,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -4152,6 +4158,11 @@
       "name_pl": "Seekers of Slaanesh",
       "id": "seekers-of-slaanesh-renegade",
       "points": 19,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -4727,9 +4738,6 @@
             "name_it": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
             "name_pl": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices"
           }
-        },
-        "doc-renegade": {
-          "category": "special"
         }
       },
       "command": [],
@@ -5077,18 +5085,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "special"
-        },
-        "doc-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
-            "name_cn": "碎甲攻击(1), 紧密阵型, 反制冲锋, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-2), 快速行进",
-            "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
-            "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
-            "name_fr": "Arme Perforante (1), Ordre Serré, Contre-charge, Démoniaque, Démons de Khorne, Impétueux, Résistance à la Magie (-2), Rapide",
-            "name_it": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
-            "name_pl": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride"
-          }
         }
       },
       "command": [],
@@ -5875,9 +5871,6 @@
             "name_it": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices",
             "name_pl": "If your General is a Daemon of Tzeentch, Flamers and Screamers may be taken as Special choices"
           }
-        },
-        "doc-renegade": {
-          "category": "special"
         }
       },
       "command": [
@@ -6453,18 +6446,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "rare"
-        },
-        "doc-renegade": {
-          "category": "rare",
-          "specialRules": {
-            "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh {renegade}, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
-            "name_cn": "碎甲攻击 (1, 仅色孽蹄兽), 紧密阵型, 反制冲锋, 恶魔, 色孽恶魔, 先行冲锋, 撞击(2D6+1), 淬毒攻击(仅色孽蹄兽), 快速行进, 破甲（1，仅限撞击）",
-            "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
-            "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
-            "name_fr": "Arme Perforante (1 - Monture de Slaanesh uniquement), Ordre Serré, Contre-charge, Démoniaque, Démon de Slaanesh, Première Charge, Touches d’Impact (2D6+1), Attaques Empoisonnées (Monture de Slaanesh uniquement), Rapide, Perce Armure (1 - Touches d’Impact uniquement)",
-            "name_it": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
-            "name_pl": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)"
-          }
         }
       },
       "command": [],
@@ -6797,6 +6778,11 @@
       "name_pl": "Burning Chariot of Tzeentch",
       "id": "burning-chariot-of-tzeentch",
       "points": 190,
+      "armyComposition": {
+        "daemons-of-chaos": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -7105,7 +7091,8 @@
           "name_pl": "Daemon of Khorne",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Nurgle",
@@ -7117,7 +7104,8 @@
           "name_pl": "Daemon of Nurgle",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Slaanesh",
@@ -7129,7 +7117,8 @@
           "name_pl": "Daemon of Slaanesh",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Tzeentch",
@@ -7141,7 +7130,8 @@
           "name_pl": "Daemon of Tzeentch",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         }
       ],
       "mounts": [],
@@ -7239,7 +7229,8 @@
           "name_pl": "Daemon of Khorne",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Nurgle {renegade}",
@@ -7251,7 +7242,8 @@
           "name_pl": "Daemon of Nurgle",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Slaanesh {renegade}",
@@ -7263,7 +7255,8 @@
           "name_pl": "Daemon of Slaanesh",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Daemon of Tzeentch {renegade}",
@@ -7275,7 +7268,8 @@
           "name_pl": "Daemon of Tzeentch",
           "points": 10,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         }
       ],
       "mounts": [],
