@@ -7582,18 +7582,17 @@
       "armyComposition": "daemons-of-chaos"
     },
     {
-      "name-fr": "Nombreux Bras*",
-      "name_de": "Vielarmiges Monstrum*",
-      "name_en": "Many Arms* {renegade}",
-      "name_cn": "额外臂膀*",
-      "name_it": "Many Arms*",
-      "points": 30,
-      "stackable": true,
+      "name_de": "Geflügelter Alptraum",
+      "name_en": "Winged Horror",
+      "name_cn": "有翼惧物",
+      "name_fr": "Horreur Ailée",
+      "name_it": "Winged Horror",
+      "points": 50,
       "type": "daemonic-gift-common",
-      "name_fr": "Bras Multiples*",
-      "onePerArmy": false,
-      "maximum": 2,
-      "name": "many arms renegade",
+      "onePerArmy": true,
+      "stackable": true,
+      "maximum": 1,
+      "name": "winged horror",
       "armyComposition": "doc-renegade"
     },
     {
@@ -7611,20 +7610,6 @@
       "armyComposition": "daemons-of-chaos"
     },
     {
-      "name_de": "Geflügelter Alptraum",
-      "name_en": "Winged Horror",
-      "name_cn": "有翼惧物",
-      "name_fr": "Horreur Ailée",
-      "name_it": "Winged Horror",
-      "points": 50,
-      "type": "daemonic-gift-common",
-      "onePerArmy": true,
-      "stackable": true,
-      "maximum": 1,
-      "name": "winged horror",
-      "armyComposition": "doc-renegade"
-    },
-    {
       "name_de": "Dämonische Roben",
       "name_en": "Daemonic Robes",
       "name_cn": "恶魔长袍",
@@ -7638,8 +7623,23 @@
       "name": "daemonic robes"
     },
     {
+      "name-fr": "Nombreux Bras*",
+      "name_de": "Vielarmiges Monstrum*",
+      "name_en": "Many Arms* {renegade}",
+      "name_cn": "额外臂膀*",
+      "name_it": "Many Arms*",
+      "points": 30,
+      "stackable": true,
+      "type": "daemonic-gift-common",
+      "name_fr": "Bras Multiples*",
+      "onePerArmy": false,
+      "maximum": 2,
+      "name": "many arms renegade",
+      "armyComposition": "doc-renegade"
+    },
+    {
       "name_de": "",
-      "name_en": "Chromatic Tome {renegade}",
+      "name_en": "Chromatic Tome* {renegade}",
       "name_cn": "",
       "name_fr": "",
       "name_it": "",
@@ -7677,7 +7677,7 @@
       "name": "banner of unholy victory",
       "armyComposition": "daemons-of-chaos"
     },
-        {
+    {
       "name_de": "Banner des unheiligen Sieges",
       "name_en": "Banner of Unholy Victory",
       "name_cn": "不洁胜利之旗",
@@ -7754,6 +7754,20 @@
       "armyComposition": "daemons-of-chaos"
     },
     {
+      "name_de": "Axt des Khorne*",
+      "name_en": "Axe of Khorne*",
+      "name_cn": "恐虐大斧*",
+      "name_fr": "Hache de Khorne*",
+      "name_it": "Axe of Khorne*",
+      "points": 35,
+      "stackable": true,
+      "type": "daemonic-gift-khorne",
+      "onePerArmy": false,
+      "maximum": 1,
+      "name": "axe of khorne",
+      "armyComposition": "daemons-of-chaos"
+    },
+    {
       "name_de": "Rüstung des Khorne",
       "name_en": "Armour of Khorne {renegade}",
       "name_cn": "恐虐甲胄",
@@ -7769,24 +7783,12 @@
     },
     {
       "name_de": "Axt des Khorne*",
-      "name_en": "Axe of Khorne*",
-      "name_cn": "恐虐大斧*",
-      "name_fr": "Hache de Khorne*",
-      "name_it": "Axe of Khorne*",
-      "points": 35,
-      "stackable": true,
-      "type": "daemonic-gift-khorne",
-      "onePerArmy": false,
-      "name": "axe of khorne",
-      "armyComposition": "daemons-of-chaos"
-    },
-    {
-      "name_de": "Axt des Khorne*",
       "name_en": "Axe of Khorne* {renegade}",
       "name_cn": "恐虐大斧*",
       "name_fr": "Hache de Khorne*",
       "name_it": "Axe of Khorne*",
       "points": 25,
+      "maximum": 1,
       "stackable": true,
       "type": "daemonic-gift-khorne",
       "onePerArmy": false,
@@ -7815,6 +7817,7 @@
       "points": 25,
       "stackable": true,
       "type": "daemonic-gift-khorne",
+      "maximum": 1,
       "onePerArmy": false,
       "name": "collar of khorne"
     }
@@ -8305,6 +8308,7 @@
       "stackable": true,
       "type": "daemonic-icon-tzeentch",
       "onePerArmy": false,
+      "maximum": 1,
       "name": "icon of sorcery",
       "armyComposition": "daemons-of-chaos"
     },
@@ -8318,7 +8322,8 @@
       "stackable": true,
       "type": "daemonic-icon-tzeentch",
       "onePerArmy": false,
-      "name": "icon of sorcery renegade",
+      "maximum": 1,
+      "name": "icon of sorcery",
       "armyComposition": "doc-renegade"
     }
   ],

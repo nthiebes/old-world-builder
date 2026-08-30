@@ -567,21 +567,24 @@ export const Magic = ({ isMobile }) => {
           </ErrorMessage>
         )}
 
-        {isMultipleAllowedItem(magicItem) && isChecked && max !== 1 && (
-          <NumberInput
-            id={`${itemGroup.id}-${magicItem.id}-amount`}
-            min={1}
-            max={isTypeLimitReached ? selectedAmount : max}
-            value={selectedAmount}
-            onChange={(event) => {
-              handleAmountChange({
-                parentId: magicItem.name,
-                event,
-                isCommand,
-              });
-            }}
-          />
-        )}
+        {isMultipleAllowedItem(magicItem) &&
+          isChecked &&
+          max !== 1 &&
+          magicItem.maximum !== 1 && (
+            <NumberInput
+              id={`${itemGroup.id}-${magicItem.id}-amount`}
+              min={1}
+              max={isTypeLimitReached ? selectedAmount : max}
+              value={selectedAmount}
+              onChange={(event) => {
+                handleAmountChange({
+                  parentId: magicItem.name,
+                  event,
+                  isCommand,
+                });
+              }}
+            />
+          )}
       </Fragment>
     );
   };

@@ -171,7 +171,10 @@ export const validateList = ({ list, language, intl }) => {
     }
   }
   if (list?.army === "warriors-of-chaos") {
-    if (list.armyComposition === "heralds-of-darkness" || list.armyComposition === "hordes-of-chaos") {
+    if (
+      list.armyComposition === "heralds-of-darkness" ||
+      list.armyComposition === "hordes-of-chaos"
+    ) {
       checks.push(theShadowGrows);
     }
   }
@@ -222,7 +225,9 @@ export const validateList = ({ list, language, intl }) => {
       joinWithOr(
         uniq(
           ruleUnit.requires.map((id) => {
-            const name = intl.formatMessage({ id });
+            const name = intl.formatMessage({
+              id: id.replace("-renegade", "").replace("-rare", ""),
+            });
 
             return getUnitName({ unit: { name }, language });
           }),
@@ -460,10 +465,11 @@ export const validateList = ({ list, language, intl }) => {
         });
       }
       if (
-        !ruleUnit.perUnit && unitsInList.length > max &&
+        !ruleUnit.perUnit &&
+        unitsInList.length > max &&
         !(
-          list.compositionRule && 
-          list.compositionRule.includes("battle-march") && 
+          list.compositionRule &&
+          list.compositionRule.includes("battle-march") &&
           points
         ) // Exception for Battle March 0-X units
       ) {

@@ -2958,7 +2958,7 @@ export const rules = {
             "flesh-hounds-of-khorne-core-renegade",
             "bloodcrushers-of-khorne",
             "skull-cannon-of-khorne",
-            "soul-grinder-khorne-renegade"
+            "soul-grinder-khorne-renegade",
           ],
           perUnit: true,
         },
@@ -2974,7 +2974,7 @@ export const rules = {
             "nurglings-core",
             "beasts-of-nurgle-renegade",
             "plague-drones-of-nurgle",
-            "plague-drones-of-nurgle-rare"
+            "plague-drones-of-nurgle-rare",
           ],
           perUnit: true,
         },
@@ -3178,7 +3178,7 @@ export const rules = {
           ids: ["hellflayer-of-slaanesh-renegade"],
           requiresGeneral: true,
           requires: [
-            "keeper-of-secret",
+            "keeper-of-secrets",
             "daemonic-herald-of-slaanesh",
             "daemon-prince",
           ],
@@ -3199,8 +3199,8 @@ export const rules = {
             id: "daemon-of-tzeentch",
             unit: "daemon-prince",
           },
-        }
-      ]
+        },
+      ],
     },
     rare: {
       maxPercent: 25,
