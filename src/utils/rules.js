@@ -2952,6 +2952,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-khorne",
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
             "flesh-hounds-of-khorne-core-renegade",
@@ -2967,11 +2968,13 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-nurgle",
             "plaguebearers-of-nurgle-renegade",
             "nurglings",
             "nurglings-core",
             "beasts-of-nurgle-renegade",
             "plague-drones-of-nurgle",
+            "plague-drones-of-nurgle-rare"
           ],
           perUnit: true,
         },
@@ -2981,6 +2984,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-slaanesh",
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh-renegade",
             "seekers-of-slaanesh-core-renegade",
@@ -2996,6 +3000,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-tzeentch",
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
@@ -3013,6 +3018,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-khorne",
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
             "flesh-hounds-of-khorne-core-renegade",
@@ -3028,6 +3034,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-nurgle",
             "plaguebearers-of-nurgle-renegade",
             "nurglings",
             "nurglings-core",
@@ -3042,6 +3049,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-slaanesh",
             "daemonettes-of-slaanesh",
             "seekers-of-slaanesh-renegade",
             "seekers-of-slaanesh-core-renegade",
@@ -3057,6 +3065,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
+            "chaos-furies-of-tzeentch",
             "pink-horrors-of-tzeentch",
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
@@ -3151,6 +3160,45 @@ export const rules = {
             id: "daemon-of-khorne",
             unit: "daemon-prince",
           },
+        },
+        {
+          ids: ["plague-drones-of-nurgle"],
+          requiresGeneral: true,
+          requires: [
+            "great-unclean-one-renegade",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["hellflayer-of-slaanesh-renegade"],
+          requiresGeneral: true,
+          requires: [
+            "keeper-of-secret",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slaanesh",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["burning-chariot-of-tzeentch-renegade"],
+          requiresGeneral: true,
+          requires: [
+            "lord-of-change-renegade",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
         }
       ]
     },
@@ -3165,6 +3213,7 @@ export const rules = {
         },
       ],
     },
+    allies: { maxPercent: 25 },
   },
   "dark-elves": {
     characters: {

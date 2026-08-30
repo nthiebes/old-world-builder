@@ -688,7 +688,7 @@ export const Editor = ({ isMobile }) => {
             </section>
           )}
 
-        {list.allies && alliesData && list?.army !== "daemons-of-chaos" && (
+        {list.allies && alliesData && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>

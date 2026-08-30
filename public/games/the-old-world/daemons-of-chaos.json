@@ -6058,6 +6058,131 @@
         "name_it": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_pl": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers"
       }
+    },
+    {
+      "name_en": "Burning Chariot of Tzeentch",
+      "name_cn": "奸奇燃烧战车",
+      "name_de": "Burning Chariot of Tzeentch",
+      "name_es": "Burning Chariot of Tzeentch",
+      "name_fr": "Char Incendiaire de Tzeentch",
+      "name_it": "Burning Chariot of Tzeentch",
+      "name_pl": "Burning Chariot of Tzeentch",
+      "id": "burning-chariot-of-tzeentch-renegade",
+      "points": 140,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "special"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_cn": "单手武器, 次元烈焰, 奸奇烈焰, 飞鲨撕咬",
+          "name_de": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_es": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_fr": "Armes de base, Feu mutant, Flammes de Tzeentch, Morsure de lamproie",
+          "name_it": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_pl": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "name_it": "4+",
+          "name_pl": "4+",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard (Exalted Flamer)",
+              "name_cn": "1级法师 (Exalted Flamer)",
+              "name_de": "Level 1 Wizard (Exalted Flamer)",
+              "name_es": "Level 1 Wizard (Exalted Flamer)",
+              "name_fr": "Sorcier de Niveau 1 (Incendiaire Exalté)",
+              "name_it": "Level 1 Wizard (Exalted Flamer)",
+              "name_pl": "Level 1 Wizard (Exalted Flamer)",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard (Exalted Flamer)",
+              "name_cn": "2级法师 (Exalted Flamer)",
+              "name_de": "Level 2 Wizard (Exalted Flamer)",
+              "name_es": "Level 2 Wizard (Exalted Flamer)",
+              "name_fr": "Sorcier de Niveau 2 (Incendiaire Exalté)",
+              "name_it": "Level 2 Wizard (Exalted Flamer)",
+              "name_pl": "Level 2 Wizard (Exalted Flamer)",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard (Exalted Flamer)",
+              "name_cn": "3级法师 (Exalted Flamer)",
+              "name_de": "Level 3 Wizard (Exalted Flamer)",
+              "name_es": "Level 3 Wizard (Exalted Flamer)",
+              "name_fr": "Sorcier de Niveau 3 (Incendiaire Exalté)",
+              "name_it": "Level 3 Wizard (Exalted Flamer)",
+              "name_pl": "Level 3 Wizard (Exalted Flamer)",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only)",
+        "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 飞行(9), 撞击(D6+1), 恶魔法系, 鞭笞打击(仅尖啸飞鲨)",
+        "name_de": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_es": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_fr": "Ordre Serré, Démoniaque, Démon de Tzeentch, Vol (9), Touches d’Impact (D6+1), Domaine des Démons, Attaque au Passage (Hurleurs uniquement)",
+        "name_it": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
+        "name_pl": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)"
+      },
+      "notes": {
+        "name_en": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_cn": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_de": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_es": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_fr": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_it": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices",
+        "name_pl": "If your General is a Daemon of Tzeentch, 0-1 Burning Chariots may be taken as Special choices"
+      }
     }
   ],
   "rare": [
