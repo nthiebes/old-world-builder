@@ -226,7 +226,10 @@ export const validateList = ({ list, language, intl }) => {
         uniq(
           ruleUnit.requires.map((id) => {
             const name = intl.formatMessage({
-              id: id.replace("-renegade", "").replace("-rare", ""),
+              id: id
+                .replace("-renegade", "")
+                .replace("-rare", "")
+                .replace("-special", ""),
             });
 
             return getUnitName({ unit: { name }, language });

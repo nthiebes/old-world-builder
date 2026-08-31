@@ -6844,7 +6844,22 @@
       "points": 45,
       "type": "armor",
       "onePerArmy": true,
-      "name": "gut maw"
+      "stackable": true,
+      "maximum": 1,
+      "name": "gut maw",
+      "armyComposition": "ok-renegade"
+    },
+    {
+      "name_de": "Bauchschlud",
+      "name_en": "Gut Maw",
+      "name_cn": "大胃护腹",
+      "name_fr": "Plaque Ventrale de La Gueule",
+      "name_it": "Gut Maw",
+      "points": 45,
+      "type": "armor",
+      "onePerArmy": true,
+      "name": "gut maw",
+      "armyComposition": "ogre-kingdoms"
     },
     {
       "name_de": "Mastodon Rüstung",
@@ -6863,10 +6878,23 @@
       "name_cn": "闪光碎片",
       "name_fr": "Éclat Scintillant",
       "name_it": "Spangleshard",
+      "points": 30,
+      "type": "talisman",
+      "onePerArmy": true,
+      "name": "spangleshard",
+      "armyComposition": "ok-renegade"
+    },
+    {
+      "name_de": "Glanzsplitter",
+      "name_en": "Spangleshard",
+      "name_cn": "闪光碎片",
+      "name_fr": "Éclat Scintillant",
+      "name_it": "Spangleshard",
       "points": 35,
       "type": "talisman",
       "onePerArmy": true,
-      "name": "spangleshard"
+      "name": "spangleshard",
+      "armyComposition": "ogre-kingdoms"
     },
     {
       "name_de": "Cathayanisches Schutzhalsband*",
@@ -6886,10 +6914,23 @@
       "name_cn": "龙皮旗帜",
       "name_fr": "Bannière en Peau de Dragon",
       "name_it": "Dragonhide Banner",
+      "points": 75,
+      "type": "banner",
+      "onePerArmy": true,
+      "name": "dragonhide banner",
+      "armyComposition": "ok-renegade"
+    },
+    {
+      "name_de": "Drachenhautbanner",
+      "name_en": "Dragonhide Banner",
+      "name_cn": "龙皮旗帜",
+      "name_fr": "Bannière en Peau de Dragon",
+      "name_it": "Dragonhide Banner",
       "points": 45,
       "type": "banner",
       "onePerArmy": true,
-      "name": "dragonhide banner"
+      "name": "dragonhide banner",
+      "armyComposition": "ogre-kingdoms"
     },
     {
       "name_de": "Runenschlund",
@@ -6960,6 +7001,18 @@
       "name": "fistful of laurels"
     },
     {
+      "name_de": "Gruts Sichel",
+      "name_en": "Grut's Sickle",
+      "name_cn": "格鲁特之镰",
+      "name_fr": "Serpe de Grut",
+      "name_it": "Grut's Sickle",
+      "points": 40,
+      "type": "arcane-item",
+      "onePerArmy": true,
+      "name": "grut's sickle",
+      "armyComposition": "ok-renegade"
+    },
+    {
       "name_de": "Halbling-Kochbuch",
       "name_en": "Halfling Cookbook",
       "name_cn": "半身人烹饪书",
@@ -6982,18 +7035,45 @@
       "name": "hellheart"
     },
     {
-      "name_de": "Gruts Sichel",
-      "name_en": "Grut's Sickle",
-      "name_cn": "格鲁特之镰",
-      "name_fr": "Serpe de Grut",
-      "name_it": "Grut's Sickle",
-      "points": 40,
+      "name_en": "Tooth-Gnoblar*",
+      "name_de": "Tooth-Gnoblar*",
+      "name_cn": "Tooth-Gnoblar*",
+      "name_fr": "Tooth-Gnoblar*",
+      "name_it": "Tooth-Gnoblar*",
+      "points": 10,
       "type": "arcane-item",
-      "onePerArmy": true,
-      "name": "grut's sickle"
+      "onePerArmy": false,
+      "stackable": true,
+      "maximum": 3,
+      "name": "tooth-gnoblar",
+      "armyComposition": "ok-renegade"
     }
   ],
   "big-names": [
+    {
+      "name_de": "Bestienschlächter",
+      "name_en": "Beastkiller",
+      "name_cn": "屠兽者",
+      "name_fr": "Trucide-fauve",
+      "name_it": "Beastkiller",
+      "points": 40,
+      "type": "big-name",
+      "onePerArmy": true,
+      "name": "beastkiller",
+      "armyComposition": "ok-renegade"
+    },
+    {
+      "name_de": "Schlundpilger",
+      "name_en": "Mawseeker",
+      "name_cn": "大胃朝圣者",
+      "name_fr": "Cherche-gueule",
+      "name_it": "Mawseeker",
+      "points": 30,
+      "type": "big-name",
+      "onePerArmy": true,
+      "name": "mawseeker",
+      "armyComposition": "ok-renegade"
+    },
     {
       "name_de": "Schlundpilger",
       "name_en": "Mawseeker",
@@ -7003,7 +7083,32 @@
       "points": 30,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "mawseeker"
+      "name": "mawseeker",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Wallcrusher",
+      "name_en": "Wallcrusher",
+      "name_cn": "Wallcrusher",
+      "name_fr": "Wallcrusher",
+      "name_it": "Wallcrusher",
+      "points": 30,
+      "type": "big-name",
+      "onePerArmy": false,
+      "name": "wallcrusher",
+      "armyComposition": "ok-renegade"
+    },
+    {
+      "name_de": "Bergfresser",
+      "name_en": "Mountaineater",
+      "name_cn": "吞山者",
+      "name_fr": "Mange-montagne",
+      "name_it": "Mountaineater",
+      "points": 25,
+      "type": "big-name",
+      "onePerArmy": true,
+      "name": "mountaineater",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Bergfresser",
@@ -7014,7 +7119,8 @@
       "points": 25,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "mountaineater"
+      "name": "mountaineater",
+      "armyComposition": "ogre-kingdoms"
     },
     {
       "name_de": "Riesenbrecher",
@@ -7058,7 +7164,8 @@
       "points": 5,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "beastkiller"
+      "name": "beastkiller",
+      "armyComposition": "ogre-kingdoms"
     },
     {
       "name_de": "Todpreller",

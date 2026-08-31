@@ -181,7 +181,7 @@ export const rules = {
       maxPercent: 33,
       units: [
         {
-          ids: ["battle-pilgrims"],
+          ids: ["battle-pilgrims-special"],
           min: 0,
           max: 1,
           points: 1000,
@@ -580,7 +580,11 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "all",
-          requires: ["common-troll-mob", "river-troll-mob", "stone-troll-mob"],
+          requires: [
+            "common-troll-mob-special",
+            "river-troll-mob-special",
+            "stone-troll-mob-special",
+          ],
         },
       ],
     },
@@ -2321,7 +2325,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["sister-of-avelorn"],
+          ids: ["sister-of-avelorn-core"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -2415,7 +2419,7 @@ export const rules = {
       minPercent: 33,
       units: [
         {
-          ids: ["white-lions"],
+          ids: ["white-lions-core"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3552,7 +3556,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tyrant", "slaughtermaster"],
+          ids: ["tyrant", "slaughtermaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3589,13 +3593,13 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["thundertusk-riders"],
+          ids: ["thundertusk-riders-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["stonehorn-riders"],
+          ids: ["stonehorn-riders-renegade"],
           min: 0,
           max: 1,
           points: 1000,
