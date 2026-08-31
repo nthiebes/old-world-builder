@@ -427,7 +427,7 @@ describe("validateList", () => {
 
     expect(getMessages(errors)).toEqual(["misc.error.grandMeleeLevel3"]);
   });
-  
+
   test("ignores named characters for grand melee checks", () => {
     const list = {
       ...baseList,
@@ -440,7 +440,7 @@ describe("validateList", () => {
           isGeneral: true,
           named: true,
           points: 600,
-          options: [{ name_en: "Level 4 Wizard", active: true, points: 0}],
+          options: [{ name_en: "Level 4 Wizard", active: true, points: 0 }],
         }),
         makeCharacter({
           id: "archmage.1",
@@ -511,7 +511,10 @@ describe("validateList", () => {
 
     expect(maxUnitsError).toBeFalsy();
 
-    list.core.push({ id: "badlands-ogre-bulls.6", name_en: "Badlands Ogre Bulls" });
+    list.core.push({
+      id: "badlands-ogre-bulls.6",
+      name_en: "Badlands Ogre Bulls",
+    });
 
     const errors2 = validateList({ list, language: "en", intl });
     const maxUnitsError2 = getErrorByMessage(errors2, "misc.error.maxUnits");
@@ -533,7 +536,7 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "sister-of-avelorn.1", name_en: "Sisters of Avelorn" },
+        { id: "sister-of-avelorn-core.1", name_en: "Sisters of Avelorn" },
         { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
         { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
       ],
@@ -637,7 +640,10 @@ describe("validateList", () => {
         { id: "knights-errant.1", name_en: "Knights Errant" },
         { id: "knights-errant.2", name_en: "Knights Errant" },
         { id: "men-at-arms.1", name_en: "Men-at-Arms" },
-        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
+        {
+          id: "mounted-knights-of-the-realm.1",
+          name_en: "Mounted Knights of the Realm",
+        },
       ],
     };
 
@@ -658,8 +664,14 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
-        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        {
+          id: "mounted-knights-of-the-realm.1",
+          name_en: "Mounted Knights of the Realm",
+        },
+        {
+          id: "mounted-knights-of-the-realm.2",
+          name_en: "Mounted Knights of the Realm",
+        },
         { id: "knights-errant.1", name_en: "Knights Errant" },
       ],
     };
@@ -685,8 +697,14 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
-        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        {
+          id: "mounted-knights-of-the-realm.1",
+          name_en: "Mounted Knights of the Realm",
+        },
+        {
+          id: "mounted-knights-of-the-realm.2",
+          name_en: "Mounted Knights of the Realm",
+        },
         { id: "men-at-arms.1", name_en: "Men-at-Arms" },
       ],
     };
@@ -714,8 +732,14 @@ describe("validateList", () => {
         }),
       ],
       core: [
-        { id: "mounted-knights-of-the-realm.1", name_en: "Mounted Knights of the Realm" },
-        { id: "mounted-knights-of-the-realm.2", name_en: "Mounted Knights of the Realm" },
+        {
+          id: "mounted-knights-of-the-realm.1",
+          name_en: "Mounted Knights of the Realm",
+        },
+        {
+          id: "mounted-knights-of-the-realm.2",
+          name_en: "Mounted Knights of the Realm",
+        },
         { id: "men-at-arms.1", name_en: "Men-at-Arms" },
       ],
     };
@@ -889,10 +913,13 @@ describe("validateList", () => {
           id: "tomb-king.1",
           name_en: "Settra the Imperishable",
           command: [
-            { name_en: "General", active: true, points: 0, options: [
-              { name_en: "Arise!, Level 1 Wizard", active: true }
-            ] },
-            { name_en: "The Hierophant", active: false, points: 0 }
+            {
+              name_en: "General",
+              active: true,
+              points: 0,
+              options: [{ name_en: "Arise!, Level 1 Wizard", active: true }],
+            },
+            { name_en: "The Hierophant", active: false, points: 0 },
           ],
           isGeneral: true,
         }),
@@ -920,7 +947,7 @@ describe("validateList", () => {
           name_en: "High Priest",
           command: [{ name_en: "The Hierophant", active: false, points: 0 }],
           options: [{ name_en: "Level 3 Wizard", active: true }],
-          isGeneral: true
+          isGeneral: true,
         }),
         makeCharacter({
           id: "high-priest.2",
@@ -931,9 +958,9 @@ describe("validateList", () => {
         }),
       ],
       special: [
-        {id: "tomb-scorpion.1", name_en:"Tomb Scorpion"},
-        {id: "tomb-scorpion.2", name_en:"Tomb Scorpion"},
-      ]
+        { id: "tomb-scorpion.1", name_en: "Tomb Scorpion" },
+        { id: "tomb-scorpion.2", name_en: "Tomb Scorpion" },
+      ],
     };
 
     const errors = validateList({ list, language: "en", intl });
