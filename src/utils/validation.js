@@ -225,7 +225,12 @@ export const validateList = ({ list, language, intl }) => {
       joinWithOr(
         uniq(
           ruleUnit.requires.map((id) => {
-            const name = intl.formatMessage({ id: id.replace("-special", "") });
+            const name = intl.formatMessage({
+              id: id
+                .replace("-renegade", "")
+                .replace("-rare", "")
+                .replace("-special", ""),
+            });
 
             return getUnitName({ unit: { name }, language });
           }),
