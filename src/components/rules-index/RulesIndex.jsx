@@ -17,7 +17,7 @@ export const RulesIndex = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { listId } = useParams();
   const list = useSelector((state) =>
-    state.lists.find(({ id }) => listId === id)
+    state.lists.find(({ id }) => listId === id),
   );
   const listArmyComposition = list?.armyComposition || list?.army;
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ export const RulesIndex = () => {
             onLoad={() => setIsLoading(false)}
             className={classNames(
               "rules-index__iframe",
-              !isLoading && "rules-index__iframe--show"
+              !isLoading && "rules-index__iframe--show",
             )}
             src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
             title="Warhammer: The Old World Online Rules Index"

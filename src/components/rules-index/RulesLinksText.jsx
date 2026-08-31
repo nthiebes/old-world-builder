@@ -41,7 +41,7 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
           </>
         ) : (
           <>
-            {rule}
+            {rule.replace(" {renegade}", "")}
             {index !== ruleButtons.length - 1 && ", "}
           </>
         )}

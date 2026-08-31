@@ -117,8 +117,6 @@ export const GameView = () => {
   const getAllVictoryPoints = () => {
     let allVictoryPoints = 0;
 
-    console.log(list.compositionRule);
-
     if (list.compositionRule === "battle-march") {
       allVictoryPoints =
         banners * 25 +
