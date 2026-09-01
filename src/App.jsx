@@ -38,6 +38,8 @@ import "./App.css";
 let intervalId = null;
 let isWindowActive = true;
 const autoSyncLists = ({ dispatch }) => {
+  syncLists({ dispatch });
+
   intervalId = setInterval(() => {
     // const settings = JSON.parse(localStorage.getItem("owb.settings"));
     // const lastChanged = new Date(settings.lastChanged).getTime();
@@ -77,6 +79,11 @@ export const App = () => {
   useEffect(() => {
     if (settings.autoSync && !intervalId) {
       autoSyncLists({ dispatch });
+    }
+
+    if (!settings.autoSync && intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
     }
   }, [settings.autoSync, dispatch]);
 
