@@ -279,6 +279,8 @@ export const synonyms = {
   "veteran commander": "champions",
   "peasant elder": "champions",
   "skink brave": "champions",
+  "veteran warrior": "champions",
+  "ba'hal": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",

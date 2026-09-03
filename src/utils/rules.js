@@ -2619,7 +2619,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["sorcerer-prophet", "infernal-castellan"],
+          ids: ["sorcerer-prophet-renegade", "despot-renegades"],
           min: 0,
           max: 1,
           points: 1000,
@@ -2628,6 +2628,12 @@ export const rules = {
           ids: ["black-orc-bigboss", "black-orc-warboss"],
           min: 0,
           max: 1,
+        },
+        {
+          ids: ["bull-centaur-taur'ruk-renegade"],
+          min: 0,
+          max: 1,
+          points: 1000,
         },
       ],
     },
@@ -2640,11 +2646,16 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["infernal-ironsworn-core"],
+          ids: ["hobgoblin-wolf-raiders-core-renegade"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["infernal-ironsworn-core-renegade"],
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: ["infernal-castellan"],
+          requires: ["castellan-renegade"],
           perUnit: true,
         },
       ],
@@ -2653,55 +2664,28 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["iron-daemon"],
+          ids: ["iron-daemon-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["deathshrieker-rocket-launcher", "magma-cannon"],
+          ids: ["deathshrieker-rocket-launcher-renegade"],
           min: 0,
           max: 2,
           points: 1000,
         },
         {
-          ids: ["hobgoblin-bolt-thrower"],
+          ids: ["hobgoblin-bolt-thrower-renegade"],
           min: 0,
-          max: 2,
+          max: 3,
           points: 1000,
         },
       ],
     },
     rare: {
       maxPercent: 25,
-      units: [
-        {
-          ids: ["hobgoblin-wolf-raiders"],
-          min: 0,
-          max: 1,
-          requiresType: "characters",
-          requires: ["hobgoblin-khan"],
-          perUnit: true,
-        },
-        {
-          ids: ["bull-centaur-taur'ruk"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-        {
-          ids: ["dreadquake-mortar", "hellcannon"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-        {
-          ids: ["chaos-giant"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-      ],
+      units: [],
     },
     mercenaries: {
       maxPercent: 20,

@@ -171,6 +171,11 @@
         },
         {
           "army": "tomb-kings-of-khemri"
+        },
+        {
+          "army": "chaos-dwarfs",
+          "armyComposition": "cd-renegade",
+          "magicItemsArmy": "chaos-dwarfs"
         }
       ],
       "mercenaries": {
@@ -324,6 +329,11 @@
         {
           "army": "warriors-of-chaos",
           "armyComposition": "hordes-of-chaos"
+        },
+        {
+          "army": "chaos-dwarfs",
+          "armyComposition": "cd-renegade",
+          "magicItemsArmy": "chaos-dwarfs"
         }
       ],
       "mercenaries": {
@@ -692,15 +702,18 @@
         },
         {
           "army": "dark-elves",
-          "armyComposition": "de-renegade"
+          "armyComposition": "de-renegade",
+          "magicItemsArmy": "dark-elves"
         },
         {
           "army": "chaos-dwarfs",
-          "armyComposition": "cd-renegade"
+          "armyComposition": "cd-renegade",
+          "magicItemsArmy": "chaos-dwarfs"
         },
         {
           "army": "skaven",
-          "armyComposition": "sk-renegade"
+          "armyComposition": "sk-renegade",
+          "magicItemsArmy": "skaven"
         }
       ]
     },
@@ -780,9 +793,12 @@
           "army": "warriors-of-chaos"
         },
         {
-          "army": "daemons-of-chaos",
-          "armyComposition": "doc-renegade",
-          "magicItemsArmy": "daemons-of-chaos"
+          "army": "orc-and-goblin-tribes"
+        },
+        {
+          "army": "ogre-kingdoms",
+          "armyComposition": "ok-renegade",
+          "magicItemsArmy": "ogre-kingdoms"
         }
       ],
       "mercenaries": {
@@ -796,6 +812,14 @@
           {
             "army": "orc-and-goblin-tribes",
             "units": ["bonegrinder-giant"]
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["orc-mob"]
+          },
+          {
+            "army": "orc-and-goblin-tribes",
+            "units": ["goblin-mob"]
           },
           {
             "army": "orc-and-goblin-tribes",
