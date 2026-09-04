@@ -3879,7 +3879,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["grey-seer"],
+          ids: ["grey-seer-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3887,7 +3887,7 @@ export const rules = {
         {
           ids: ["plague-priest"],
           requiresType: "all",
-          requires: ["plague-monks", "plague-monks-core"],
+          requires: ["plague-monks-renegade", "plague-monks-core-renegade"],
           perUnit: true,
         },
       ],
@@ -3896,24 +3896,32 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["stormvermin"],
+          ids: ["stormvermin-core-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
           requires: ["skaven-warlord"],
         },
         {
-          ids: ["plague-monks-core"],
+          ids: ["plague-monks-core-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
           requires: ["plague-priest"],
         },
         {
-          ids: ["plague-monks-core", "stormvermin"],
+          ids: ["plague-monks-core-renegade", "stormvermin-core-renegade"],
           min: 0,
           max: 1,
         },
+        {
+          id: ["skaven-dregs-renegade"],
+          min: 0,
+          max: 1,
+          requiresType: "all",
+          requires: ["clanrats"],
+          perUnit: true,
+        }
       ],
     },
     special: {
@@ -3922,12 +3930,15 @@ export const rules = {
         {
           ids: ["warplock-jezzails"],
           requiresType: "characters",
-          requires: ["warlock-engineer"],
+          requires: ["warlock-engineer-renegade"],
         },
         {
           ids: ["poisoned-wind-globadiers"],
           requiresType: "characters",
-          requires: ["warlock-engineer"],
+          requires: ["warlock-engineer-renegade"],
+          min: 0,
+          max: 1,
+          points: 1000,
         },
       ],
     },
@@ -3945,7 +3956,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["warlock-engineer"],
+          requires: ["warlock-engineer-renegade"],
           points: 1000,
         },
         {
@@ -3953,7 +3964,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["warlock-engineer"],
+          requires: ["warlock-engineer-renegade"],
           points: 1000,
         },
         {
