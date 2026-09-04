@@ -1422,108 +1422,6 @@
   ],
   "core": [
     {
-      "name_en": "Dark Elf Warriors",
-      "name_cn": "黑暗精灵战士",
-      "name_de": "Dark Elf Warriors",
-      "name_es": "Guerreros elfos oscuros",
-      "name_fr": "Guerriers Elfes Noirs",
-      "id": "dark-elf-warriors",
-      "points": 8,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": "dark-elves",
-
-      "command": [
-        {
-          "name_en": "Lordling (champion)",
-          "name_cn": "领队(冠军)",
-          "name_de": "Lordling (champion)",
-          "name_es": "Señor (campeón)",
-          "name_fr": "Patricien (champion)",
-          "points": 5
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "Portaestandarte",
-          "name_fr": "Porte-étendard",
-          "points": 5,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          },
-          "notes": {
-            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
-            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
-            "name_it": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
-            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
-            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
-            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros cada 1.000 puntos puede adquirir un estandarte mágico"
-          }
-        },
-        {
-          "name_en": "Musician",
-          "name_cn": "乐手",
-          "name_de": "Musician",
-          "name_es": "Músico",
-          "name_fr": "Musicien",
-          "points": 5
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons",
-          "name_cn": "单手武器",
-          "name_de": "Hand weapons",
-          "name_es": "Arma de mano",
-          "name_fr": "Armes de base",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Thrusting spears",
-          "name_cn": "刺矛",
-          "name_de": "Thrusting spear",
-          "name_es": "Lanza",
-          "name_fr": "Lances d’infanterie",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour, Shields",
-          "name_cn": "轻甲, 盾牌",
-          "name_de": "Light armour, Shields",
-          "name_es": "Armadura ligera, Escudos",
-          "name_fr": "Armure légère, Boucliers",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Veteran",
-          "name_cn": "老兵",
-          "name_de": "Veteran",
-          "name_es": "Veterano",
-          "name_fr": "Vétérans",
-          "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "notes": {
-            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points",
-            "name_cn": "每1000分0-1",
-            "name_de": "0-1 pro 1000 Punkte",
-            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros por cada 1000 puntos",
-            "name_fr": "0-1 par tranche de 1000 points"
-          }
-        },
-        {
       "name_en": "Dark Elf Warriors {renegade}",
       "name_cn": "黑暗精灵战士",
       "name_de": "Dark Elf Warriors",
@@ -1738,8 +1636,248 @@
             "name_es": "0-1 Guerreros elfos oscuros o Ballesteros por cada 1000 puntos",
             "name_fr": "0-1 par tranche de 1000 points"
           }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 精湛武艺",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza marcial",
+        "name_fr": "Ordre Serré, Réflexes Elfiques, Haine (Hauts Elfes), Prouesses Martiales"
+      }
+    },
+    {
+      "name_en": "Dark Elf Warriors",
+      "name_cn": "黑暗精灵战士",
+      "name_de": "Dark Elf Warriors",
+      "name_es": "Guerreros elfos oscuros",
+      "name_fr": "Guerriers Elfes Noirs",
+      "id": "dark-elf-warriors",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": "dark-elves",
+      "command": [
+        {
+          "name_en": "Lordling (champion)",
+          "name_cn": "领队(冠军)",
+          "name_de": "Lordling (champion)",
+          "name_es": "Señor (campeón)",
+          "name_fr": "Patricien (champion)",
+          "points": 5
         },
         {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapons",
+          "name_es": "Arma de mano",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_cn": "刺矛",
+          "name_de": "Thrusting spear",
+          "name_es": "Lanza",
+          "name_fr": "Lances d’infanterie",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour, Shields",
+          "name_cn": "轻甲, 盾牌",
+          "name_de": "Light armour, Shields",
+          "name_es": "Armadura ligera, Escudos",
+          "name_fr": "Armure légère, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteran",
+          "name_es": "Veterano",
+          "name_fr": "Vétérans",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 精湛武艺",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza marcial",
+        "name_fr": "Ordre Serré, Réflexes Elfiques, Haine (Hauts Elfes), Prouesses Martiales"
+      }
+    },
+    {
+      "name_en": "Repeater Crossbowmen",
+      "name_cn": "黑锐连弩手",
+      "name_de": "Repeater Crossbowmen",
+      "name_es": "Ballesteros",
+      "name_fr": "Arbalétriers Elfes Noirs",
+      "id": "repeater-crossbowmen",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": "dark-elves",
+      "command": [
+        {
+          "name_en": "Lordling (champion)",
+          "name_cn": "领队(冠军)",
+          "name_de": "Lordling (champion)",
+          "name_es": "Maestro Uraizen (campeón)",
+          "name_fr": "Patricien (champion)",
+          "points": 5
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Repeater crossbows",
+          "name_cn": "单手武器, 连发弩",
+          "name_de": "Hand weapons, Repeater crossbows",
+          "name_es": "Armas de mano, Ballestas de repetición",
+          "name_fr": "Armes de base, Arbalètes à répétition",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Shields",
+          "name_es": "Escudos",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteran",
+          "name_es": "Veterano",
+          "name_fr": "Vétérans",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 Dark Elf Warriors or Repeater Crossbowman per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 Guerreros elfos oscuros o Ballesteros por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 精湛武艺",
+        "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza marcial",
+        "name_fr": "Ordre Serré, Réflexes Elfiques, Haine (Hauts Elfes), Prouesses Martiales"
+      }
+    },
+      {
       "name_en": "Repeater Crossbowmen {renegade}",
       "name_cn": "黑锐连弩手",
       "name_de": "Repeater Crossbowmen",
