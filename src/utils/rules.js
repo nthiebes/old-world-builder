@@ -3250,13 +3250,6 @@ export const rules = {
           max: 2,
           points: 1000,
         },
-        {
-          ids: ["war-hydra", "kharybdiss"],
-          min: 0,
-          max: 1,
-          requiresGeneral: true,
-          requires: ["high-beastmaster"],
-        },
       ],
     },
     rare: {
@@ -3325,13 +3318,13 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["war-hydra", "kharybdiss"],
+          ids: ["war-hydra", "kharibdyss"],
           min: 0,
           max: 1,
           requiresGeneral: false,
+          requiresType: "characters",
           requires: ["high-beastmaster"],
         },
-      
       ],
     },
     rare: {
@@ -3349,7 +3342,12 @@ export const rules = {
           max: 2,
           points: 1000,
         },
-        
+        {
+          ids: ["war-hydra", "kharibdyss"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
       ],
     },
     mercenaries: { maxPercent: 20 },
