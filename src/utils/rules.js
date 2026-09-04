@@ -3310,9 +3310,7 @@ export const rules = {
           ids: ["black-guard-of-naggarond"],
           min: 0,
           max: 1,
-          requiresType: "characters",
-          requires: ["dark-elf-dreadlord", "dark-elf-master"],
-          perUnit: true,
+          points: 1000,
         },
         {
           ids: ["cold-one-knights"],
@@ -3330,9 +3328,10 @@ export const rules = {
           ids: ["war-hydra", "kharybdiss"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresGeneral: false,
           requires: ["high-beastmaster"],
         },
+      
       ],
     },
     rare: {
@@ -3350,6 +3349,7 @@ export const rules = {
           max: 2,
           points: 1000,
         },
+        
       ],
     },
     mercenaries: { maxPercent: 20 },
