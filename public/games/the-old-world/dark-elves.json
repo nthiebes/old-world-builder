@@ -210,7 +210,7 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "dark-elves",
+          
           "points": 130,
           "options": [
             {
@@ -229,7 +229,6 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "de-renegade",
           "points": 130,
           "options": [
             {
@@ -468,8 +467,7 @@
           "name_de": "Dark Pegasus",
           "name_es": "Pegaso negro",
           "name_fr": "Pégase Noir",
-          "points": 35,
-          "armyComposition": "de-renegade"
+          "points": 35
         },
         {
           "name_en": "Cold One Chariot",
@@ -514,7 +512,7 @@
       "name_de": "Supreme Sorceress",
       "name_es": "Gran hechicera",
       "name_fr": "Sorcière Suprême",
-      "id": "supreme-sorceress",
+      "id": "supreme-sorceress-renegade",
       "armyComposition": {
         "de-renegade": { "category": "characters" }
       },
@@ -666,7 +664,7 @@
       "name_fr": "Sorcière Suprême",
       "id": "supreme-sorceress",
       "points": 150,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "General",
@@ -814,7 +812,6 @@
       "name_fr": "Sorcière",
       "id": "sorceress",
       "points": 75,
-      "armyComposition": "dark-elves",
       "command": [
         {
           "name_en": "General",
@@ -952,7 +949,7 @@
       "name_de": "Sorceress",
       "name_es": "Hechicera ",
       "name_fr": "Sorcière",
-      "id": "sorceress",
+      "id": "sorceress-renegade",
       "armyComposition": {
         "de-renegade": { "category": "characters" }
       },
@@ -1199,7 +1196,7 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "dark-elves",
+          
           "points": 130,
           "options": [
             {
@@ -1431,7 +1428,7 @@
       "name_de": "Dark Elf Warriors",
       "name_es": "Guerreros elfos oscuros",
       "name_fr": "Guerriers Elfes Noirs",
-      "id": "dark-elf-warriors",
+      "id": "dark-elf-warriors-renegade",
       "points": 8,
       "minimum": 5,
       "maximum": 0,
@@ -1550,7 +1547,7 @@
       "points": 8,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1663,7 +1660,7 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1774,7 +1771,7 @@
       "name_de": "Repeater Crossbowmen",
       "name_es": "Ballesteros",
       "name_fr": "Arbalétriers Elfes Noirs",
-      "id": "repeater-crossbowmen",
+      "id": "repeater-crossbowmen-renegade",
       "points": 10,
       "minimum": 5,
       "maximum": 0,
@@ -1895,7 +1892,7 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Reaver (champion)",
@@ -2112,7 +2109,7 @@
       "name_de": "Black Ark Corsairs",
       "name_es": "Corsarios de arca negra",
       "name_fr": "Corsaires des Arches Noires",
-      "id": "black-ark-corsairs",
+      "id": "black-ark-corsairs-renegade",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
@@ -2241,135 +2238,7 @@
         "name_fr": ""
       }
     },
-    {
-      "name_en": "Dark Riders",
-      "name_cn": "黑暗骑手",
-      "name_de": "Dark Riders",
-      "name_es": "Jinetes oscuros",
-      "name_fr": "Cavaliers Noirs",
-      "id": "dark-riders",
-      "points": 16,
-      "minimum": 5,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "Herald (champion)",
-          "name_cn": "先驱(冠军)",
-          "name_de": "Herald (champion)",
-          "name_es": "Heraldo (campeón)",
-          "name_fr": "Héraut (champion)",
-          "points": 6
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "portaestandarte",
-          "name_fr": "Porte-étendard",
-          "points": 6
-        },
-        {
-          "name_en": "Musician",
-          "name_cn": "乐手",
-          "name_de": "Musician",
-          "name_es": "Músico",
-          "name_fr": "Musicien",
-          "points": 6
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapons, Cavalry spears",
-          "name_cn": "单手武器, 骑兵长矛",
-          "name_de": "Hand weapons, Cavalry spears",
-          "name_es": "Armas de mano, lanzas de caballería",
-          "name_fr": "Armes de base, Lances de cavalerie",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Hand weapons, Cavalry spears, Repeater crossbows",
-          "name_cn": "单手武器, 骑兵长矛, 连发弩",
-          "name_de": "Hand weapons, Cavalry spears, Repeater crossbows",
-          "name_es": "Armas de mano, Lanzas de caballería, Ballestas de repetición",
-          "name_fr": "Armes de base, Lances de cavalerie, Arbalètes à répétition",
-          "points": 2,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Light armour",
-          "name_es": "Armadura ligera",
-          "name_fr": "Armure légère",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_de": "Shields",
-          "name_es": "Escudos",
-          "name_fr": "Boucliers",
-          "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Fire & Flee",
-          "name_cn": "游击",
-          "name_de": "Fire & Fleet",
-          "name_es": "Disparar y huir",
-          "name_fr": "Tir & Fuite",
-          "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "notes": {
-            "name_en": "0-1 per 1000 points",
-            "name_cn": "每1000分0-1",
-            "name_de": "0-1 pro 1000 Punkte",
-            "name_es": "0-1 por cada 1000 puntos",
-            "name_fr": "0-1 par tranche de 1000 points"
-          }
-        },
-        {
-          "name_en": "Scouts",
-          "name_cn": "侦察",
-          "name_de": "Scouts",
-          "name_es": "Exploradores",
-          "name_fr": "Éclaireurs",
-          "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0,
-          "notes": {
-            "name_en": "0-1 per 1000 points",
-            "name_cn": "每1000分0-1",
-            "name_de": "0-1 pro 1000 Punkte",
-            "name_es": "0-1 por cada 1000 puntos",
-            "name_fr": "0-1 par tranche de 1000 points"
-          }
-        }
-      ],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
-        "name_cn": "精灵反应, 快速骑兵, 仇恨(高等精灵), 开放阵型, 散兵, 快速行进",
-        "name_de": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
-        "name_es": "Reflejos élficos, Caballería rápida, Odio (Altos elfos), Orden abierto, Escaramuzadores, Rápidos",
-        "name_fr": "Réflexes Elfiques, Cavalerie Rapide, Haine (Hauts Elfes), Ordre Dispersé, Tirailleurs, Rapide"
-      }
-    },
+ 
     {
       "name_en": "Witch Elves",
       "name_cn": "巫灵",
@@ -2380,7 +2249,7 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -2449,7 +2318,7 @@
       "name_de": "Witch Elves",
       "name_es": "Elfas brujas",
       "name_fr": "Furies",
-      "id": "witch-elves",
+      "id": "witch-elves-renegade",
       "points": 11,
       "minimum": 5,
       "maximum": 0,
@@ -2530,7 +2399,7 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Draich Master (champion)",
@@ -2626,7 +2495,7 @@
       "name_de": "Har Ganeth Executioners",
       "name_es": "Verdugos de Har Ganeth",
       "name_fr": "Exécuteurs de Har Ganeth",
-      "id": "har-ganeth-executioners",
+      "id": "har-ganeth-executioners-renegade",
       "points": 15,
       "minimum": 5,
       "maximum": 0,
@@ -2722,22 +2591,26 @@
         "name_fr": ""
       }
     },
+
     {
-      "name_en": "Witch Elves",
+      "name_en": "Witch Elves {renegade}",
       "name_cn": "巫灵",
       "name_de": "Witch Elves",
       "name_es": "Elfas brujas",
       "name_fr": "Furies",
-      "id": "witch-elves",
+      "id": "witch-elves-renegade-special",
       "points": 11,
-      "minimum": 10,
+      "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "de-renegade": { "category": "special" }
+      },
       "command": [
         {
           "name_en": "Hag (champion)",
           "name_cn": "魔女(冠军)",
           "name_de": "Hag (champion)",
-          "name_es": "Acólita (champion)",
+          "name_es": "Acólita (campeón)",
           "name_fr": "Doyenne (champion)",
           "points": 7
         },
@@ -2749,7 +2622,7 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -2780,20 +2653,20 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks",
-        "name_cn": "紧密阵型, 精灵反应, 狂暴, 仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击",
-        "name_de": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner,  Murderous, Poisoned Attacks",
-        "name_es": "Orden cerrado, Reflejos élficos, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados",
-        "name_fr": "Ordre Serré, Réflexes Elfiques, Frénésie, Haine (Hauts Elfes), Horde, Solitaire, Meurtriers, Attaques Empoisonnées"
+        "name_en": "Close Order, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Warband",
+        "name_cn": "紧密阵型, 精灵反应,  仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击, Strike First, Warband",
+        "name_de": "Close Order,  Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks, Strike First, Warband",
+        "name_es": "Orden cerrado, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados, Strike First, Warband",
+        "name_fr": "Ordre Serré, Frénésie, Haine (Hauts Elfes), Horde, Solitaire, Meurtriers, Attaques Empoisonnées, Strike First, Warband"
       },
       "notes": {
-        "name_en": "",
-        "name_cn": "",
-        "name_de": "",
-        "name_es": "",
-        "name_fr": ""
+        "name_en": "0-1 Core choice if your army includes one or more Death Hags",
+        "name_cn": "0-1Core choice if your army includes one或more Death Hags",
+        "name_de": "0-1 Core choice if your army includes one or more Death Hags",
+        "name_es": "0-1 Puede ser tropa de línea si tu ejército incluye una Sacerdotisa elfa bruja",
+        "name_fr": "0-1 en choix de Base si votre armée comprend une ou plusieurs Matriarches"
       }
-    },
+    }
     {
       "name_en": "Dark Elf Shades",
       "name_cn": "黯影",
@@ -2804,7 +2677,7 @@
       "points": 15,
       "minimum": 5,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Bloodshade (champion)",
@@ -2933,7 +2806,7 @@
       "name_de": "Dark Elf Shades",
       "name_es": "Sombras",
       "name_fr": "Ombres Elfes Noirs",
-      "id": "dark-elf-shades",
+      "id": "dark-elf-shades-renegade",
       "points": 15,
       "minimum": 5,
       "maximum": 0,
@@ -3134,7 +3007,7 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+      
       "command": [
         {
           "name_en": "Tower Master (champion)",
@@ -3231,7 +3104,7 @@
       "name_de": "Black Guard of Naggarond",
       "name_es": "Guardia negra de Naggarond",
       "name_fr": "Garde Noire de Naggarond",
-      "id": "black-guard-of-naggarond",
+      "id": "black-guard-of-naggarond-renegade",
       "points": 15,
       "minimum": 5,
       "maximum": 0,
@@ -3486,7 +3359,7 @@
       "name_fr": "Char à Sang-froid",
       "id": "cold-one-chariots",
       "points": 125,
-      "armyComposition": "dark-elves",
+      
       "command": [],
       "equipment": [
         {
@@ -3537,7 +3410,7 @@
       "name_de": "Cold One Chariot",
       "name_es": "Carros de gélidos",
       "name_fr": "Char à Sang-froid",
-      "id": "cold-one-chariots",
+      "id": "cold-one-chariots-renegade",
       "points": 110,
       "armyComposition": {
         "de-renegade": { "category": "special" }
@@ -3586,61 +3459,7 @@
         "name_fr": "0-2 Chars à Courre ou Chars à Sang-froid par tranche de 1000 points"
       }
     },
-    {
-      "name_en": "Kharibdyss {renegade}",
-      "name_cn": "深渊海妖",
-      "name_de": "Kharibdyss",
-      "name_es": "Kharibdyss",
-      "name_fr": "Kharibdyss",
-      "id": "kharibdyss",
-      "points": 145,
-      "armyComposition": {
-        "de-renegade": { "category": "rare" }
-      },
-      "command": [],
-      "equipment": [
-        {
-          "name_en": "Cavernous maw, Writhing tentacles {dark elves}, Hand weapons, Whips",
-          "name_cn": "绵状巨口, 扭动触手, 单手武器, 鞭子",
-          "name_de": "Cavernous maw, Writhing tentacles, Hand weapons, Whips",
-          "name_es": "Fauces cavernosas, Tentáculos serpenteantes, Armas de mano, Látigos",
-          "name_fr": "Gueule caverneuse, Tentacules sinueux, Armes de base, Fouets",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "4+",
-          "name_cn": "4+",
-          "name_de": "4+",
-          "name_es": "4+",
-          "name_fr": "4+",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "items": [],
-      "lores": [],
-      "specialRules": {
-        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_cn": "深渊嚎叫, 紧密阵型, 心理免疫, 大型目标, 怪兽驭手, 践踏攻击(D3+1), 惊骇",
-        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
-        "name_es": "Aullido abisal, Orden cerrado, Inmune a la psicología, Objetivo grande, Cuidadores, Pisotones (D3+1), Terror",
-        "name_fr": "Hurlement Abyssal, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Dresseurs de Monstres, Attaques de Piétinement (D3+1), Terreur"
-      },
-      "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_cn": "每1000分0-1",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 por cada 1000 puntos",
-        "name_fr": "0-1 par tranche de 1000 points"
-      }
-    },
+    
     {
       "name_en": "Kharibdyss",
       "name_cn": "深渊海妖",
@@ -3649,7 +3468,7 @@
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
       "points": 195,
-      "armyComposition": "dark-elves",
+      
       "command": [],
       "equipment": [
         {
@@ -3700,7 +3519,7 @@
       "name_de": "Kharibdyss",
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
-      "id": "kharibdyss",
+      "id": "kharibdyss-renegade-special",
       "points": 145,
       "armyComposition": {
         "de-renegade": {
@@ -3757,7 +3576,7 @@
       "name_de": "War Hydra",
       "name_es": "Hidra de guerra",
       "name_fr": "Hydre de Guerre",
-      "id": "war-hydra",
+      "id": "war-hydra-renegade-special",
       "points": 165,
       "armyComposition": {
         "de-renegade": {
@@ -3820,7 +3639,7 @@
       "points": 17,
       "minimum": 10,
       "maximum": 0,
-      "armyComposition": "dark-elves",
+
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -3838,7 +3657,7 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -3889,7 +3708,7 @@
       "name_de": "Sisters of Slaughter",
       "name_es": "Hermanas de la matanza",
       "name_fr": "Sœurs du Massacre",
-      "id": "sisters-of-slaughter",
+      "id": "sisters-of-slaughter-renegade",
       "points": 17,
       "minimum": 5,
       "maximum": 0,
@@ -3905,7 +3724,7 @@
           "name_fr": "Doyenne (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [ "weapon", "armor", "talisman", "enchanted-item" ],
             "maxPoints": 25
           }
         },
@@ -3917,7 +3736,7 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -3970,7 +3789,7 @@
       "name_fr": "Sanctuaires Incarnats",
       "id": "bloodwrack-shrines",
       "points": 175,
-      "armyComposition": "dark-elves",
+
       "command": [],
       "equipment": [
         {
@@ -4021,7 +3840,7 @@
       "name_de": "Bloodwrack Shrines",
       "name_es": "Altares drenasangre",
       "name_fr": "Sanctuaires Incarnats",
-      "id": "bloodwrack-shrines",
+      "id": "bloodwrack-shrines-renegade",
       "points": 140,
       "armyComposition": {
         "de-renegade": { "category": "rare" }
@@ -4078,7 +3897,7 @@
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra",
       "points": 200,
-      "armyComposition": "dark-elves",
+
       "command": [],
       "equipment": [
         {
@@ -4123,7 +3942,7 @@
         "name_fr": "0-1 Hydre de Guerre ou Kharibdyss en choix Spécial si votre général est un Haut Belluaire"
       }
     },
-     {
+    {
       "name_en": "War Hydra {renegade}",
       "name_cn": "战争多头蜥",
       "name_de": "War Hydra",
@@ -4178,7 +3997,7 @@
         "name_fr": "0-1 Hydre de Guerre ou Kharibdyss en choix Spécial si votre général est un Haut Belluaire"
       }
     },
-    
+
     {
       "name_en": "Bloodwrack Medusas",
       "name_cn": "血骸美杜莎",
@@ -4187,7 +4006,7 @@
       "name_fr": "Méduses Incarnates",
       "id": "bloodwrack-medusas",
       "points": 85,
-      "armyComposition": "dark-elves",
+
       "command": [],
       "equipment": [
         {
@@ -4238,7 +4057,7 @@
       "name_de": "Bloodwrack Medusas",
       "name_es": "Medusas drenasangre",
       "name_fr": "Méduses Incarnates",
-      "id": "bloodwrack-medusas",
+      "id": "bloodwrack-medusas-renegade",
       "points": 70,
       "armyComposition": {
         "de-renegade": { "category": "rare" }
@@ -4306,7 +4125,7 @@
           "name_fr": "Maître Conjurateur (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [ "weapon", "armor", "talisman", "enchanted-item" ],
             "maxPoints": 25
           }
         }
@@ -4327,7 +4146,7 @@
       "options": [],
       "mounts": [],
       "items": [],
-      "lores": ["dark-magic", "daemonology"],
+      "lores": [ "dark-magic", "daemonology" ],
       "spellCount": 1,
       "specialRules": {
         "name_en": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks (Doomfire Warlocks and Master only), Swiftstride",
@@ -4394,6 +4213,61 @@
         "name_de": "0-2 per 1000 points",
         "name_es": "0-2 por cada 1000 puntos",
         "name_fr": "0-2 par tranche de 1000 points"
+      }
+    },
+    {
+      "name_en": "Kharibdyss {renegade}",
+      "name_cn": "深渊海妖",
+      "name_de": "Kharibdyss",
+      "name_es": "Kharibdyss",
+      "name_fr": "Kharibdyss",
+      "id": "kharibdyss-renegade",
+      "points": 145,
+      "armyComposition": {
+        "de-renegade": { "category": "rare" }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavernous maw, Writhing tentacles {dark elves}, Hand weapons, Whips",
+          "name_cn": "绵状巨口, 扭动触手, 单手武器, 鞭子",
+          "name_de": "Cavernous maw, Writhing tentacles, Hand weapons, Whips",
+          "name_es": "Fauces cavernosas, Tentáculos serpenteantes, Armas de mano, Látigos",
+          "name_fr": "Gueule caverneuse, Tentacules sinueux, Armes de base, Fouets",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_cn": "深渊嚎叫, 紧密阵型, 心理免疫, 大型目标, 怪兽驭手, 践踏攻击(D3+1), 惊骇",
+        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Aullido abisal, Orden cerrado, Inmune a la psicología, Objetivo grande, Cuidadores, Pisotones (D3+1), Terror",
+        "name_fr": "Hurlement Abyssal, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Dresseurs de Monstres, Attaques de Piétinement (D3+1), Terreur"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_de": "0-1 pro 1000 Punkte",
+        "name_es": "0-1 por cada 1000 puntos",
+        "name_fr": "0-1 par tranche de 1000 points"
       }
     }
   ],
