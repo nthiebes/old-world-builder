@@ -513,10 +513,10 @@
       "name_es": "Gran hechicera",
       "name_fr": "Sorcière Suprême",
       "id": "supreme-sorceress-renegade",
+      "points": 155,
       "armyComposition": {
         "de-renegade": { "category": "characters" }
       },
-      "points": 155,
       "command": [
         {
           "name_en": "General",
@@ -663,8 +663,11 @@
       "name_es": "Gran hechicera",
       "name_fr": "Sorcière Suprême",
       "id": "supreme-sorceress",
+      "armyComposition": {
+        "dark-elves": { "category": "characters" }
+      },
       "points": 150,
-      
+
       "command": [
         {
           "name_en": "General",
@@ -812,6 +815,9 @@
       "name_fr": "Sorcière",
       "id": "sorceress",
       "points": 75,
+      "armyComposition": {
+        "dark-elves": { "category": "characters" }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1547,7 +1553,10 @@
       "points": 8,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "core" }
+      },
+
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1565,7 +1574,7 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           },
           "notes": {
@@ -1660,7 +1669,10 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "core" }
+      },
+
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1678,7 +1690,7 @@
           "name_fr": "Porte-étendard",
           "points": 5,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           },
           "notes": {
@@ -1892,7 +1904,10 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "core" }
+      },
+
       "command": [
         {
           "name_en": "Reaver (champion)",
@@ -1910,7 +1925,7 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -2238,7 +2253,7 @@
         "name_fr": ""
       }
     },
- 
+
     {
       "name_en": "Witch Elves",
       "name_cn": "巫灵",
@@ -2249,7 +2264,10 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "core" }
+      },
+
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -2267,7 +2285,7 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -2399,7 +2417,9 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "special" }
+      },
       "command": [
         {
           "name_en": "Draich Master (champion)",
@@ -2409,7 +2429,7 @@
           "name_fr": "Maître du Draich (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [ "weapon", "armor", "talisman", "enchanted-item" ],
             "maxPoints": 25
           }
         },
@@ -2421,7 +2441,7 @@
           "name_fr": "Porte-étendard",
           "points": 6,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 50
           }
         },
@@ -2677,7 +2697,9 @@
       "points": 15,
       "minimum": 5,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "special" }
+      },
       "command": [
         {
           "name_en": "Bloodshade (champion)",
@@ -2687,7 +2709,7 @@
           "name_fr": "Ombre Sanglante (champion)",
           "points": 6,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [ "weapon", "armor", "talisman", "enchanted-item" ],
             "maxPoints": 25
           }
         }
@@ -3007,7 +3029,9 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "special" }
+      },
       "command": [
         {
           "name_en": "Tower Master (champion)",
@@ -3017,7 +3041,7 @@
           "name_fr": "Maître de la Tour (champion)",
           "points": 7,
           "magic": {
-            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "types": [ "weapon", "armor", "talisman", "enchanted-item" ],
             "maxPoints": 50
           }
         },
@@ -3029,7 +3053,7 @@
           "name_fr": "Porte-étendard",
           "points": 7,
           "magic": {
-            "types": ["banner"],
+            "types": [ "banner" ],
             "maxPoints": 100
           }
         },
@@ -3359,7 +3383,9 @@
       "name_fr": "Char à Sang-froid",
       "id": "cold-one-chariots",
       "points": 125,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "special" }
+      },
       "command": [],
       "equipment": [
         {
@@ -3459,7 +3485,7 @@
         "name_fr": "0-2 Chars à Courre ou Chars à Sang-froid par tranche de 1000 points"
       }
     },
-    
+
     {
       "name_en": "Kharibdyss",
       "name_cn": "深渊海妖",
@@ -3468,7 +3494,9 @@
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
       "points": 195,
-      
+      "armyComposition": {
+        "dark-elves": { "category": "special" }
+      },
       "command": [],
       "equipment": [
         {
@@ -3639,7 +3667,9 @@
       "points": 17,
       "minimum": 10,
       "maximum": 0,
-
+      "armyComposition": {
+        "dark-elves": { "category": "rare" }
+      },
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -3789,7 +3819,9 @@
       "name_fr": "Sanctuaires Incarnats",
       "id": "bloodwrack-shrines",
       "points": 175,
-
+      "armyComposition": {
+        "dark-elves": { "category": "rare" }
+      },
       "command": [],
       "equipment": [
         {
@@ -3897,7 +3929,9 @@
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra",
       "points": 200,
-
+      "armyComposition": {
+        "dark-elves": { "category": "rare" }
+      },
       "command": [],
       "equipment": [
         {
@@ -4006,7 +4040,9 @@
       "name_fr": "Méduses Incarnates",
       "id": "bloodwrack-medusas",
       "points": 85,
-
+      "armyComposition": {
+        "dark-elves": { "category": "rare" }
+      },
       "command": [],
       "equipment": [
         {
