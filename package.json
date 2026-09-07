@@ -59,7 +59,8 @@
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org booky --project old-world-builder ./build && sentry-cli sourcemaps upload --org booky --project old-world-builder ./build"
   },
   "resolutions": {
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "brace-expansion": "5.0.9"
   },
   "browserslist": {
     "production": [
