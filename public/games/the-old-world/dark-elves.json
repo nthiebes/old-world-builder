@@ -177,7 +177,17 @@
           "name_de": "Cold One",
           "name_es": "Gélido",
           "name_fr": "Sang-froid",
-          "points": 18
+          "points": 18,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Cold One {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18,
+          "armyComposition": "de-renegade"
         },
         {
           "name_en": "Dark Pegasus",
@@ -460,7 +470,17 @@
           "name_de": "Cold One",
           "name_es": "Gélido",
           "name_fr": "Sang-froid",
-          "points": 18
+          "points": 18,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Cold One {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18,
+          "armyComposition": "de-renegade"
         },
         {
           "name_en": "Dark Pegasus",
@@ -516,6 +536,15 @@
       "name_fr": "Sorcière Suprême",
       "id": "supreme-sorceress",
       "points": 150,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        },
+        "de-renegade": {
+          "category": "characters",
+          "points": 155
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -596,7 +625,17 @@
           "name_de": "Cold One",
           "name_es": "Gélido",
           "name_fr": "Sang-froid",
-          "points": 18
+          "points": 18,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Cold One {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18,
+          "armyComposition": "de-renegade"
         },
         {
           "name_en": "Dark Pegasus",
@@ -641,7 +680,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing {renegade}, Lore of Naggaroth {renegade}, Murderous {renegade}",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -663,6 +702,15 @@
       "name_fr": "Sorcière",
       "id": "sorceress",
       "points": 75,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        },
+        "de-renegade": {
+          "category": "characters",
+          "points": 80
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -743,7 +791,17 @@
           "name_de": "Cold One",
           "name_es": "Gélido",
           "name_fr": "Sang-froid",
-          "points": 18
+          "points": 18,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Cold One {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18,
+          "armyComposition": "de-renegade"
         },
         {
           "name_en": "Dark Pegasus",
@@ -780,7 +838,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing {renegade}, Lore of Naggaroth {renegade}, Murderous {renegade}",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -967,6 +1025,21 @@
       "name_fr": "Matriarche",
       "id": "death-hag",
       "points": 70,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        },
+        "de-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Warband, Gifts of Khaine",
+            "name_cn": "亘古长恨, 狂暴, 仇恨(所有敌人), 独行, 嗜血（叛变）, 淬毒攻击, 先攻, Warband, 凯恩赠礼",
+            "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Warband, Gifts of Khaine",
+            "name_es": "Odio acérrimo, Furia asesina, Odio (a todos los enemigos), Solitaria, Destreza asesina, Ataques envenenados, Siempre ataca primero, Warband, Regalos de Khaine",
+            "name_fr": "Haine Éternelle, Frénésie, Haine (Tous les ennemis), Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Warband, Dons de Khaine"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -993,12 +1066,22 @@
           "active": true
         },
         {
+          "name_en": "Cauldron of Blood",
+          "name_cn": "Cauldron of Blood",
+          "name_de": "Cauldron of Blood",
+          "name_es": "Caldero de sangre",
+          "name_fr": "Chaudron de Sang",
+          "points": 150,
+          "armyComposition": "dark-elves"
+        },
+        {
           "name_en": "Cauldron of Blood {renegade}",
           "name_cn": "血骸神龛（叛变）",
           "name_de": "Cauldron of Blood",
           "name_es": "Caldero de sangre",
           "name_fr": "Chaudron de Sang",
-          "points": 150
+          "points": 150,
+          "armyComposition": "de-renegade"
         }
       ],
       "items": [
@@ -1047,6 +1130,21 @@
       "name_fr": "Assassin Khainite",
       "id": "khainite-assassin",
       "points": 80,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        },
+        "de-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {renegade}, Immune to Psychology, Murderous {renegade}, Poisoned Attacks, Strike First",
+            "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变）, 淬毒攻击, 先攻",
+            "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Giftattacken, Strike First",
+            "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Ataques envenenados, Siempre ataca primero",
+            "name_fr": "Haine Éternelle, Haine (Tous les ennemis), Caché, Immunisé à la Psychologie, Meurtriers, Attaques Empoisonnées, Frappe En Premier"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -1115,7 +1213,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves}, Immune to Psychology, Murderous {renegade}, Strike First",
+        "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves}, Immune to Psychology, Murderous, Strike First",
         "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变）, 先攻",
         "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Strike First",
         "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Siempre ataca primero",
@@ -1141,6 +1239,15 @@
       "points": 8,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        },
+        "de-renegade": {
+          "category": "core",
+          "minimum": 5
+        }
+      },
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1253,6 +1360,16 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        },
+        "de-renegade": {
+          "category": "core",
+          "points": 10,
+          "minimum": 5
+        }
+      },
       "command": [
         {
           "name_en": "Lordling (champion)",
@@ -1367,6 +1484,22 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        },
+        "de-renegade": {
+          "category": "core",
+          "minimum": 5,
+          "specialRules": {
+            "name_en": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order, Sea Dragon Cloak, Vanguard",
+            "name_cn": "精灵反应, 仇恨(高等精灵), 穿行掩体, 开放阵型, 海龙披风, 先锋",
+            "name_de": "Elven Reflexes, Hatred (High Elves), Move Through Cover, Open Order, Sea Dragon Cloak, Vorhut",
+            "name_es": "Reflejos élficos, Odio (Altos elfos), Mover a través de cobertura, Orden abierto, Capa de dragón marino, Vanguardia",
+            "name_fr": "Réflexes Elfiques, Haine (Hauts Elfes), Mouvement à Couvert, Ordre Dispersé, Cape en peau de Dragon des Mers, Avant-garde"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Reaver (champion)",
@@ -1374,7 +1507,12 @@
           "name_de": "Reaver (champion)",
           "name_es": "Gran corsario (campeón)",
           "name_fr": "Écumeur (champion)",
-          "points": 6
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25,
+            "armyComposition": "de-renegade"
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -1429,7 +1567,46 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteran",
+          "name_es": "Veterano",
+          "name_fr": "Vétérans",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -1587,6 +1764,22 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        },
+        "de-renegade": {
+          "category": "core",
+          "minimum": 5,
+          "specialRules": {
+            "name_en": "Close Order, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Warband",
+            "name_cn": "紧密阵型, 狂暴, 仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击, 先攻, Warband",
+            "name_de": "Close Order, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks, Strike First, Warband",
+            "name_es": "Orden cerrado, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados, Siempre ataca primero, Warband",
+            "name_fr": "Ordre Serré, Frénésie, Haine (Hauts Elfes), Horde, Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Warband"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -1661,6 +1854,16 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "points": 14,
+          "minimum": 5
+        }
+      },
       "command": [
         {
           "name_en": "Draich Master (champion)",
@@ -1704,7 +1907,19 @@
           "name_fr": "Armes de base, Grandes épées d’Har Ganeth",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Hand weapons, Har Ganeth greatswords {renegade}",
+          "name_cn": "单手武器, 哈尔冈西巨剑",
+          "name_de": "Hand weapons, Har Ganeth greatswords",
+          "name_es": "Armas de mano, Mandobles de Har Ganeth",
+          "name_fr": "Armes de base, Grandes épées d’Har Ganeth",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "de-renegade"
         }
       ],
       "armor": [
@@ -1729,7 +1944,20 @@
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_de": "Drilled",
+          "name_es": "Bien entrenados",
+          "name_fr": "Bien Entraînés",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade"
         }
       ],
       "mounts": [],
@@ -1760,6 +1988,22 @@
       "points": 11,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "minimum": 5,
+          "specialRules": {
+            "name_en": "Close Order, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Warband",
+            "name_cn": "紧密阵型, 狂暴, 仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击, 先攻, Warband",
+            "name_de": "Close Order, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks, Strike First, Warband",
+            "name_es": "Orden cerrado, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados, Siempre ataca primero, Warband",
+            "name_fr": "Ordre Serré, Frénésie, Haine (Hauts Elfes), Horde, Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Warband"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -1830,6 +2074,21 @@
       "name_fr": "Ombres Elfes Noirs",
       "id": "dark-elf-shades",
       "points": 15,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Elven Reflexes, Evasive, Fire & Flee, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+            "name_cn": "精灵反应, 闪避, 游击, 仇恨(高等精灵), 穿行掩体, 侦察, 散兵",
+            "name_de": "Elven Reflexes, Evasive, Schießen und Verschwinden, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+            "name_es": "Reflejos élficos, Evasivos, Disparar y Huir, Odio (Altos elfos), Mover a través de cobertura, Exploradores, Escaramuzadores",
+            "name_fr": "Réflexes Elfiques, Esquiveur, Tir & Fuite, Haine (Hauts Elfes), Mouvement à Couvert, Éclaireurs, Tirailleurs"
+          }
+        }
+      },
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1884,7 +2143,19 @@
           "name_es": "Armadura ligera",
           "name_fr": "Armure légère",
           "points": 1,
-          "perModel": true
+          "perModel": true,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "de-renegade"
         }
       ],
       "options": [
@@ -1898,6 +2169,7 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0,
+          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
@@ -1916,6 +2188,7 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0,
+          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
@@ -1934,12 +2207,89 @@
           "perModel": true,
           "minimum": 0,
           "maximum": 0,
+          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
             "name_de": "0-1 pro Armee",
             "name_es": "0-1 per army",
             "name_fr": "0-1 par armée"
+          }
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Emboscada",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Chariot Runners",
+          "name_cn": "战车骑伴",
+          "name_de": "Chariot Runners",
+          "name_es": "Corredores de carros",
+          "name_fr": "Escorteurs de Chars",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Veteran",
+          "name_cn": "老兵",
+          "name_de": "Veteran",
+          "name_es": "Veterano",
+          "name_fr": "Vétérans",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Feigned Flight",
+          "name_cn": "诱敌诈退",
+          "name_de": "Vorgetäuschte Flucht",
+          "name_es": "Falsa Retirada",
+          "name_fr": "Fuite Feinte",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "armyComposition": "de-renegade",
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
           }
         }
       ],
@@ -2007,6 +2357,30 @@
       "points": 15,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "minimum": 5,
+          "troopType": "HI",
+          "specialRules": {
+            "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hatred (all enemies), Immune to Psychology, Martial Prowess, Stubborn",
+            "name_cn": "紧密阵型, 精灵反应, 亘古长恨, 仇恨(高等精灵), 仇恨(所有敌人), 心理免疫, 精湛武艺, 坚毅",
+            "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hatred (all enemies), Immune to Psychology, Martial Prowess, Stubborn",
+            "name_es": "Orden cerrado, Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Odio (a todos los enemigos), Inmune a la psicología, Destreza marcial, Tozudo",
+            "name_fr": "Ordre Serré, Réflexes Elfiques, Haine Éternelle, Haine (Hauts Elfes), Haine (Tous les ennemis), Immunisé à la Psychologie, Prouesses Martiales, Obstiné"
+          },
+          "notes": {
+            "name_en": "0-1 units of Black Guard of Naggarond per 1,000 points",
+            "name_cn": "0-1 units of Black Guard of Naggarond per 1,000 points",
+            "name_de": "0-1 units of Black Guard of Naggarond per 1,000 points",
+            "name_es": "0-1 units of Black Guard of Naggarond per 1,000 points",
+            "name_fr": "0-1 units of Black Guard of Naggarond per 1,000 points"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Tower Master (champion)",
@@ -2106,6 +2480,21 @@
       "points": 31,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "specialRules": {
+          "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Counter Charge, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+          "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 反制冲锋, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进",
+          "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Counter Charge, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+          "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Contracarga, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido",
+          "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Contre-charge, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Dread Knight (champion)",
@@ -2212,7 +2601,19 @@
           "name_fr": "Harpon ravageur*, Armes de base, Lances de cavalerie, Arbalètes à répétition",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Ravager harpoon {renegade}*, Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_cn": "掠夺者鱼叉*, 单手武器, 骑兵长矛, 连发弩",
+          "name_de": "Ravager harpoon*, Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_es": "Arpón devastador*, Armas de mano, Lanzas de caballería, Ballestas de repetición",
+          "name_fr": "Harpon ravageur*, Armes de base, Lances de cavalerie, Arbalètes à répétition",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "de-renegade"
         }
       ],
       "armor": [
@@ -2254,6 +2655,15 @@
       "name_fr": "Char à Sang-froid",
       "id": "cold-one-chariots",
       "points": 125,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        },
+        "de-renegade": {
+          "category": "special",
+          "points": 110
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2306,10 +2716,15 @@
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra",
       "points": 200,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath, Hand weapons, Whips",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -2351,6 +2766,70 @@
       }
     },
     {
+      "name_en": "War Hydra {renegade}",
+      "name_cn": "战争多头蜥",
+      "name_de": "War Hydra",
+      "name_es": "Hidra de guerra",
+      "name_fr": "Hydre de Guerre",
+      "id": "war-hydra-renegade",
+      "points": 165,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+          }
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
+          "name_de": "Wicked claws, Serrated maws, Fiery breath, Hand weapons, Whips",
+          "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
+          "name_fr": "Griffes mortelles, Gueules dentelées, Souffle ardent, Armes de base, Fouets",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_cn": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror"
+      },
+      "notes": {
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+      }
+    },
+    {
       "name_en": "Kharibdyss",
       "name_cn": "深渊海妖",
       "name_de": "Kharibdyss",
@@ -2358,6 +2837,11 @@
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
       "points": 195,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2401,6 +2885,70 @@
         "name_es": "0-1 Hidra de guerra o Kharibdyss si tu general es un Gran señor de las bestias",
         "name_fr": "0-1 si votre général est un Haut Belluaire"
       }
+    },
+    {
+      "name_en": "Kharibdyss {renegade}",
+      "name_cn": "深渊海妖",
+      "name_de": "Kharibdyss",
+      "name_es": "Kharibdyss",
+      "name_fr": "Kharibdyss",
+      "id": "kharibdyss-renegade",
+      "points": 145,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+          }
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavernous maw, Writhing tentacles {dark elves}, Hand weapons, Whips",
+          "name_cn": "绵状巨口, 扭动触手, 单手武器, 鞭子",
+          "name_de": "Cavernous maw, Writhing tentacles, Hand weapons, Whips",
+          "name_es": "Fauces cavernosas, Tentáculos serpenteantes, Armas de mano, Látigos",
+          "name_fr": "Gueule caverneuse, Tentacules sinueux, Armes de base, Fouets",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_cn": "深渊嚎叫, 紧密阵型, 心理免疫, 大型目标, 怪兽驭手, 践踏攻击(D3+1), 惊骇",
+        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Aullido abisal, Orden cerrado, Inmune a la psicología, Objetivo grande, Cuidadores, Pisotones (D3+1), Terror",
+        "name_fr": "Hurlement Abyssal, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Dresseurs de Monstres, Attaques de Piétinement (D3+1), Terreur"
+      },
+      "notes": {
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+      }
     }
   ],
   "rare": [
@@ -2414,6 +2962,11 @@
       "points": 17,
       "minimum": 10,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
       "command": [
         {
           "name_en": "Hag (champion)",
@@ -2462,7 +3015,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous {renegade}, Open Order",
+        "name_en": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
         "name_cn": "死亡之舞, 精灵反应, 仇恨(高等精灵), 鲁莽, 独行, 嗜血（叛变）, 开放阵型",
         "name_de": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
         "name_es": "Danza de la muerte, Reflejos élficos, Odio (Altos elfos), Impetuoso, Solitario, Destreza homicida, Orden abierto",
@@ -2477,6 +3030,87 @@
       }
     },
     {
+      "name_en": "Sisters of Slaughter {renegade}",
+      "name_cn": "杀戮姐妹",
+      "name_de": "Sisters of Slaughter",
+      "name_es": "Hermanas de la matanza",
+      "name_fr": "Sœurs du Massacre",
+      "id": "sisters-of-slaughter-renegade",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Handmaiden of Shards (champion)",
+          "name_cn": "Handmaiden of Shards (champion)",
+          "name_de": "Handmaiden of Shards (champion)",
+          "name_es": "Handmaiden of Shards (champion)",
+          "name_fr": "Handmaiden of Shards (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lash & buckler",
+          "name_cn": "单手武器, 鞭子与格斗盾",
+          "name_de": "Hand weapons, Lash & buckler",
+          "name_es": "Armas de mano, Látigo y broquel",
+          "name_fr": "Armes de base, Lanières & bocle",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dance of Death {renegade}, First to the Fray, Hatred (High Elves), Impetuous, Loner, Murderous {renegade}, Open Order, Skirmishers, Strike First, Warband",
+        "name_cn": "死亡之舞, 先遣先锋, 仇恨(高等精灵), 鲁莽, 独行, 嗜血（叛变）, 开放阵型, 散兵, 先攻, 战帮",
+        "name_de": "Dance of Death, Erster im Getümmel, Hatred (High Elves), Impetuous, Loner, Murderous, Offene Ränge, Plänkler, Strike First, Kriegerschar",
+        "name_es": "Danza de la muerte, First to the Fray, Odio (Altos elfos), Impetuoso, Solitario, Destreza homicida, Orden abierto, Escaramuzadores, Siempre ataca primero, Warband",
+        "name_fr": "Danse de Mort, Premier au Combat, Haine (Hauts Elfes), Impétueux, Solitaire, Meurtriers, Ordre Dispersé, Tirailleurs, Frappe En Premier, Bande de Guerre"
+      },
+      "notes": {
+        "name_en": "A Lash & Buckler counts as both a handweapon and shield and allows the use of the Parry special rule.",
+        "name_cn": "A Lash & Buckler counts as both a handweapon and shield and allows the use of the Parry special rule.",
+        "name_de": "A Lash & Buckler counts as both a handweapon and shield and allows the use of the Parry special rule.",
+        "name_es": "A Lash & Buckler counts as both a handweapon and shield and allows the use of the Parry special rule.",
+        "name_fr": "A Lash & Buckler counts as both a handweapon and shield and allows the use of the Parry special rule."
+      }
+    },
+    {
       "name_en": "Bloodwrack Shrines",
       "name_cn": "血骸神龛（叛变）",
       "name_de": "Bloodwrack Shrines",
@@ -2484,6 +3118,11 @@
       "name_fr": "Sanctuaires Incarnats",
       "id": "bloodwrack-shrines",
       "points": 175,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2514,11 +3153,68 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare, Terror",
+        "name_en": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
         "name_cn": "紧密阵型, 拖曳, 精灵反应, 狂暴, 仇恨(高等精灵), 撞击(D6+1), 大型目标, 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视, 惊骇",
         "name_de": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
         "name_es": "Orden abierto, Arrastrado, reflejos élficos, Furia asesina, Odio (Altos elfos), Golpes de impacto (D6+1), Objetivo grande, Resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora, Terror",
         "name_fr": "Ordre Serré, Tracté, Réflexes Elfiques, Frénésie, Haine (Hauts Elfes), Touches d’Impact (D6+1), Grande Cible, Résistance à la Magie (-1), Meurtriers, Attaques Empoisonnées, Regard de Pierre, Terreur"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Bloodwrack Shrines {renegade}",
+      "name_cn": "血骸神龛（叛变）",
+      "name_de": "Bloodwrack Shrines",
+      "name_es": "Altares drenasangre",
+      "name_fr": "Sanctuaires Incarnats",
+      "id": "bloodwrack-shrines-renegade",
+      "points": 140,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavalry spears (Shrinekeepers), Halberd (Bloodwrack Medusa), Petrifying gaze {renegade}",
+          "name_cn": "骑兵长矛 (Shrinekeepers), 长戟 (Bloodwrack Medusa), 石化凝视",
+          "name_de": "Cavalry spears (Shrinekeepers), Halberd (Bloodwrack Medusa), Petrifying gaze",
+          "name_es": "Lanzas de caballería (Shrinekeepers), Alabarda (Bloodwrack Medusa), Mirada petrificante",
+          "name_fr": "Lances de cavalerie (Shrinekeepers), Hallebarde (Bloodwrack Medusa), Regard pétrificateur",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Will of the Gods {renegade}, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Impetuous, Large Target, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare, Terror",
+        "name_cn": "紧密阵型, Will of the Gods {renegade}, 精灵反应, 仇恨(高等精灵), 撞击(D6+1), 鲁莽, 大型目标, 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视, 惊骇",
+        "name_de": "Close Order, Will of the Gods {renegade}, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Impetuous, Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
+        "name_es": "Orden cerrado, Will of the Gods {renegade}, Reflejos élficos, Odio (Altos elfos), Golpes de impacto (D6+1), Impetuoso, Objetivo grande, Resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora, Terror",
+        "name_fr": "Ordre Serré, Will of the Gods {renegade}, Réflexes Elfiques, Haine (Hauts Elfes), Touches d’Impact (D6+1), Impétueux, Grande Cible, Résistance à la Magie (-1), Meurtriers, Attaques Empoisonnées, Regard de Pierre, Terreur"
       },
       "notes": {
         "name_en": "",
@@ -2536,10 +3232,15 @@
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra",
       "points": 200,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -2574,10 +3275,74 @@
       },
       "notes": {
         "name_en": "0-1 Special choice War Hydra or Kharibdyss if your general is a High Beastmaster",
-        "name_cn": "0-1Special choice War Hydra或Kharibdyss if your general is a High Beastmaster",
+        "name_cn": "0-1 Special choice War Hydra或Kharibdyss if your general is a High Beastmaster",
         "name_de": "0-1 if your general is a High Beastmaster",
         "name_es": "0-1 Hidra de guerra o Kharibdyss como unidad especial si tu general es un Gran señor de las bestias",
         "name_fr": "0-1 Hydre de Guerre ou Kharibdyss en choix Spécial si votre général est un Haut Belluaire"
+      }
+    },
+    {
+      "name_en": "War Hydra {renegade}",
+      "name_cn": "战争多头蜥",
+      "name_de": "War Hydra",
+      "name_es": "Hidra de guerra",
+      "name_fr": "Hydre de Guerre",
+      "id": "war-hydra-renegade",
+      "points": 165,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+          }
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
+          "name_de": "Wicked claws, Serrated maws, Fiery breath",
+          "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
+          "name_fr": "Griffes mortelles, Gueules dentelées, Souffle ardent, Armes de base, Fouets",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_cn": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_de": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_es": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror",
+        "name_fr": "Close Order, Extra Attacks (+remaining Wounds), Flammable, If One Head is Severed…Another Takes Its Place {renegade}, Immune to Psychology, Large Target, Monster Handlers, Regeneration (5+), Stomp Attacks (D3+1), Terror"
+      },
+      "notes": {
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
       }
     },
     {
@@ -2588,6 +3353,11 @@
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
       "points": 195,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2633,6 +3403,70 @@
       }
     },
     {
+      "name_en": "Kharibdyss {renegade}",
+      "name_cn": "深渊海妖",
+      "name_de": "Kharibdyss",
+      "name_es": "Kharibdyss",
+      "name_fr": "Kharibdyss",
+      "id": "kharibdyss-renegade",
+      "points": 145,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+            "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+          }
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Cavernous maw, Writhing tentacles {dark elves}, Hand weapons, Whips",
+          "name_cn": "绵状巨口, 扭动触手, 单手武器, 鞭子",
+          "name_de": "Cavernous maw, Writhing tentacles, Hand weapons, Whips",
+          "name_es": "Fauces cavernosas, Tentáculos serpenteantes, Armas de mano, Látigos",
+          "name_fr": "Gueule caverneuse, Tentacules sinueux, Armes de base, Fouets",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_cn": "深渊嚎叫, 紧密阵型, 心理免疫, 大型目标, 怪兽驭手, 践踏攻击(D3+1), 惊骇",
+        "name_de": "Abyssal Howl, Close Order, Immune to Psychology, Large Target, Monster Handlers, Stomp Attacks (D3+1), Terror",
+        "name_es": "Aullido abisal, Orden cerrado, Inmune a la psicología, Objetivo grande, Cuidadores, Pisotones (D3+1), Terror",
+        "name_fr": "Hurlement Abyssal, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Dresseurs de Monstres, Attaques de Piétinement (D3+1), Terreur"
+      },
+      "notes": {
+        "name_en": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_cn": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_de": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_es": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster",
+        "name_fr": "0-1 Special choice War Hydra or Kharibdyss if your army includes a High Beastmaster"
+      }
+    },
+    {
       "name_en": "Bloodwrack Medusas",
       "name_cn": "血骸美杜莎",
       "name_de": "Bloodwrack Medusas",
@@ -2640,6 +3474,22 @@
       "name_fr": "Méduses Incarnates",
       "id": "bloodwrack-medusas",
       "points": 85,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        },
+        "de-renegade": {
+          "category": "rare",
+          "points": 70,
+          "specialRules": {
+            "name_en": "Close Order, Elven Reflexes, Fear, Hatred (High Elves), Impetuous, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare",
+            "name_cn": "紧密阵型, 精灵反应, 恐惧, 仇恨(高等精灵), 鲁莽, 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视",
+            "name_de": "Close Order, Elven Reflexes, Fear, Hatred (High Elves), Impetuous, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
+            "name_es": "Orden cerrado, Reflejos élficos, Miedo, Odio (Altos elfos), Impetuoso, resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora",
+            "name_fr": "Ordre Serré, Réflexes Elfiques, Peur, Haine (Hauts Elfes), Impétueux, Résistance à la Magie (-1), Meurtriers, Attaques Empoisonnées, Regard de Pierre"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -2650,7 +3500,19 @@
           "name_fr": "Arme de base, Regard pétrificateur",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "armyComposition": "dark-elves"
+        },
+        {
+          "name_en": "Hand weapon, Petrifying gaze {renegade}",
+          "name_cn": "单手武器, 石化凝视",
+          "name_de": "Hand weapon, Petrifying gaze",
+          "name_es": "arma de mano, Mirada petrificante",
+          "name_fr": "Arme de base, Regard pétrificateur",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "armyComposition": "de-renegade"
         }
       ],
       "armor": [
@@ -2694,6 +3556,21 @@
       "points": 22,
       "minimum": 5,
       "maximum": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        },
+        "de-renegade": {
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Cursed Coven {renegade}, Dark Runes {renegade}, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks (Doomfire Warlocks and Master only), Swiftstride",
+            "name_cn": "诅咒巫会, 黑暗符文, 精灵反应, 快速骑兵, 仇恨(高等精灵), 开放阵型, 淬毒攻击(仅限地狱火术士与导师), 快速行进",
+            "name_de": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks (Doomfire Warlocks and Master only), Swiftstride",
+            "name_es": "Cónclave maldito, Runas oscuras, Reflejos élficos, Caballería rápida, Odio (Altos elfos), Orden abierto, Ataques envenenados (Doomfire Warlocks and Master only), Rápido",
+            "name_fr": "Cabale Maudite, Runes Sombres, Réflexes Elfiques, Cavalerie Rapide, Haine (Hauts Elfes), Ordre Dispersé, Attaques Empoisonnées (Conjurateurs du Feu Maudit et Maître Conjurateur uniquement), Rapide"
+          }
+        }
+      },
       "command": [
         {
           "name_en": "Master (champion)",
@@ -2792,6 +3669,55 @@
         "name_es": "0-2 por cada 1000 puntos",
         "name_fr": "0-2 par tranche de 1000 points"
       }
+    },
+    {
+      "name_en": "Merwyrm",
+      "name_cn": "海龙兽",
+      "name_it": "Merwyrm",
+      "name_de": "Merwyrm",
+      "name_fr": "Wyrm des Mers",
+      "name_es": "Merwyrm",
+      "id": "merwyrms",
+      "points": 200,
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Lashing talons, Serpentine tail, Briny breath",
+          "name_cn": "尖锐利爪, 蛇形尾击, 咸涩吐息",
+          "name_de": "Peitschende Krallen, Schlangenschwanz, Salziger Atem",
+          "name_es": "Garras Lacerantes, Cola Serpentina, Aliento Salino",
+          "name_fr": "Serres cinglantes, Queue de serpent, Souffle saumâtre",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Iridescent scales)",
+          "name_cn": "重甲(Iridescent scales)",
+          "name_de": "Schwere Rüstung (Schimmernde Schuppen)",
+          "name_es": "Armadura pesada (Escamas iridiscentes)",
+          "name_fr": "Armure lourde (Écailles irisées)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_cn": "深渊暗影, 紧密阵型, 极度深寒, 撞击(D3), 大型目标, 践踏攻击(D3+1), 惊骇",
+        "name_it": "Abyssal Cloak, Close Order, Enfeebling Cold, Impact Hits (D3), Large Target, Stomp Attacks (D3+1), Terror",
+        "name_fr": "Cape Abyssale, Ordre Serré, Froid Engourdissant, Touches d’Impact (D3), Grande Cible, Attaques de Piétinement (D3+1), Terreur",
+        "name_es": "Capa Abisal, Formación Cerrada, Frío Debilitante, Impactos por Carga (D3), Objetivo Grande, Golpetazo (D3+1), Terror",
+        "name_de": "Mantel des Abgrunds, Geschlossene Ränge, Entkräftende Kälte, Aufpralltreffer (W3), Großes Ziel, Stampfattacken (W3+1), Entsetzen"
+      },
+      "notes": {}
     }
   ],
   "mercenaries": [],

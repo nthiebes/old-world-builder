@@ -3310,9 +3310,7 @@ export const rules = {
           ids: ["black-guard-of-naggarond"],
           min: 0,
           max: 1,
-          requiresType: "characters",
-          requires: ["dark-elf-dreadlord", "dark-elf-master"],
-          perUnit: true,
+          points: 1000,
         },
         {
           ids: ["cold-one-knights"],
@@ -3327,10 +3325,10 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["war-hydra", "kharybdiss"],
+          ids: ["war-hydra-renegade", "kharibdyss-renegade"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresType: "characters",
           requires: ["high-beastmaster"],
         },
       ],
