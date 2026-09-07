@@ -14,7 +14,10 @@ import { Button } from "../../components/button";
 import { addUnit } from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { updateSetting } from "../../state/settings";
-import { getUnitName } from "../../utils/unit";
+import {
+  getUnitMinimum,
+  getUnitName,
+} from "../../utils/unit";
 import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { getArmyData } from "../../utils/army";
@@ -53,9 +56,13 @@ export const Add = ({ isMobile }) => {
     (unit) =>
       unit.armyComposition === list?.armyComposition && unit.category === type,
   );
+  const getMinimum = (unit) =>
+    getUnitMinimum(unit, list?.armyComposition || list?.army);
   const handleAdd = (unit, ally, unitType, magicItemsArmy) => {
+    const minimum = getMinimum(unit);
     const newUnit = {
       ...unit,
+      ...(typeof minimum === "number" ? { minimum } : {}),
       army: ally,
       unitType,
       id: `${unit.id}.${getRandomId()}`,
@@ -77,13 +84,14 @@ export const Add = ({ isMobile }) => {
         <span className="add__name">
           {unit.strength
             ? `${unit.strength} `
-            : unit.minimum
-            ? `${unit.minimum} `
+            : getMinimum(unit)
+            ? `${getMinimum(unit)} `
             : null}
           <b>{getUnitName({ unit, language })}</b>
         </span>
         <i className="unit__points">{`${getUnitPoints(unit, {
           ally,
+          armyComposition: list?.armyComposition || list?.army,
         })} ${intl.formatMessage({
           id: "app.points",
         })}`}</i>
@@ -452,9 +460,11 @@ export const Add = ({ isMobile }) => {
               .sort((a, b) => {
                 const pointsA = getUnitPoints(a, {
                   ally: a.army,
+                  armyComposition: list?.armyComposition || list?.army,
                 });
                 const pointsB = getUnitPoints(b, {
                   ally: b.army,
+                  armyComposition: list?.armyComposition || list?.army,
                 });
                 return pointsB - pointsA;
               })

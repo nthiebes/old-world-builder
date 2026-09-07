@@ -38,6 +38,7 @@ import {
   unitHasItem,
   isWizard,
   getStats,
+  getUnitMinimum,
   getUnitStrength,
 } from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
@@ -65,7 +66,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
   const army = useSelector((state) => state.army);
   const settings = useSelector((state) => state.settings);
-  const currentUnitStrength = getUnitStrength(unit, false);
+  const currentUnitStrength = getUnitStrength(
+    unit,
+    false,
+    unit?.army || list?.armyComposition || list?.army,
+  );
   const isCharacter =
     type === "characters" ||
     (!!unit?.unitType && unit.unitType === "characters");
@@ -705,7 +710,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               </span>
               <i className="unit__strength-points">
                 {getPointsText({
-                  points: getPointsPerModel({ ...unit, type }),
+                  points: getPointsPerModel(
+                    { ...unit, type },
+                    unitArmyComposition,
+                  ),
                   perModel: true,
                 })}
               </i>
@@ -715,7 +723,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               min={
                 detachmentActive && unit.minDetachmentSize
                   ? unit.minDetachmentSize
-                  : unit.minimum
+                  : getUnitMinimum(unit, unitArmyComposition)
               }
               max={
                 unit.armyComposition &&

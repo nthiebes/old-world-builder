@@ -1,9 +1,12 @@
-import { unitHasItem } from "./unit";
+import { getUnitMinimum, unitHasItem } from "./unit";
+
+export const getUnitBasePoints = (unit, armyComposition) =>
+  unit.armyComposition?.[armyComposition]?.points ?? unit.points;
 
 // returns the points cost for adding a single model in a unit, given the
 // selected options and equipment
-export const getPointsPerModel = (unit) => {
-  let modelPoints = unit.points;
+export const getPointsPerModel = (unit, armyComposition) => {
+  let modelPoints = getUnitBasePoints(unit, armyComposition);
 
   if (unit.options) {
     unit.options.forEach((option) => {
@@ -70,12 +73,16 @@ export const getUnitPoints = (unit, settings) => {
       ),
     );
   let unitPoints = 0;
-  const unitStrength = unit.strength || unit.minimum || 1;
+  const armyComposition =
+    unit.army || settings?.ally || settings?.armyComposition;
+  const unitStrength =
+    unit.strength || getUnitMinimum(unit, armyComposition) || 1;
+  const basePoints = getUnitBasePoints(unit, armyComposition);
 
   if (unitStrength > 1) {
-    unitPoints = unitStrength * unit.points;
+    unitPoints = unitStrength * basePoints;
   } else {
-    unitPoints = unit.points;
+    unitPoints = basePoints;
   }
 
   if (unit.options) {

@@ -2,7 +2,12 @@ import { getGenerals } from "./army";
 import { getUnitRulesByCategory } from "./rules";
 import { getUnitPoints } from "./points";
 import { equalsOrIncludes } from "./string";
-import { getUnitName, getUnitLeadership, getUnitRuleData } from "./unit";
+import {
+  getUnitName,
+  getUnitLeadership,
+  getUnitRuleData,
+  getUnitTroopType,
+} from "./unit";
 
 const DIVIDED_MARKS = [
   "Mark of Khorne",
@@ -239,10 +244,15 @@ export function createMinNonCharacters(minNum, notCountedTypes, errorMsg) {
     ];
     const count = allUnits
       .filter((unit) => unit.unitType !== "characters")
-      .filter((unit) => {
-        const ruleData = getUnitRuleData(unit.name_en);
-        return !notCountedTypes.includes(ruleData?.troopType);
-      }).length;
+      .filter(
+        (unit) =>
+          !notCountedTypes.includes(
+            getUnitTroopType(
+              unit,
+              unit.army || list.armyComposition || list.army,
+            ),
+          ),
+      ).length;
 
     if (count < minNum) {
       return [

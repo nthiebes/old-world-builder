@@ -537,6 +537,9 @@ export const hasActiveWizardOption = (optionHoldersList) => {
   return optionsHaveActiveWizard(allOptionsForActiveHolders);
 };
 
+export const getUnitMinimum = (unit, armyComposition) =>
+  unit.armyComposition?.[armyComposition]?.minimum ?? unit.minimum;
+
 /**
  * Returns the lores of magic and their spells the unit can use based on its
  * special rules and its selected lore.
@@ -550,6 +553,7 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
         .toLowerCase()
         .replace(/ /g, "-")
         .replace("-{renegade}", "");
+      const renegadeLoreId = `${loreId}-renegade`;
 
       // If the unit has the Lore of Chaos, only the spell matching its Mark of Chaos must be available
       if (loreId === "lore-of-chaos") {
@@ -585,7 +589,12 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
 
       return {
         ...result,
-        [loreId]: loresOfMagicWithSpells[loreId],
+        [loreId]:
+          armyComposition === "de-renegade" &&
+          rule.includes("{renegade}") &&
+          loresOfMagicWithSpells[renegadeLoreId]
+            ? loresOfMagicWithSpells[renegadeLoreId]
+            : loresOfMagicWithSpells[loreId],
       };
     }, {});
 
@@ -749,17 +758,23 @@ const unitStrengthByType = {
   WM: "w",
 };
 
+export const getUnitTroopType = (unit, armyComposition) =>
+  unit.armyComposition?.[armyComposition]?.troopType ||
+  getUnitRuleData(unit.name_en)?.troopType ||
+  "RI";
+
 /**
  * Returns the unit's total unit strength, based on the troop type.
  */
-export const getUnitStrength = (unit, includeDetachments) => {
+export const getUnitStrength = (unit, includeDetachments, armyComposition) => {
   if (unit) {
     const unitRules = getUnitRuleData(unit.name_en);
     const activeMount = unit.mounts?.find((mount) => mount.active);
     const mountRules = activeMount
       ? getUnitRuleData(activeMount.name_en)
       : undefined;
-    const unitType = mountRules?.troopType || unitRules?.troopType || "RI";
+    const unitType =
+      mountRules?.troopType || getUnitTroopType(unit, armyComposition);
     let str = unitStrengthByType[unitType];
 
     if (str === "w") {
@@ -784,8 +799,10 @@ export const getUnitStrength = (unit, includeDetachments) => {
 
     if ((includeDetachments || unit.detachmentsInUnitStr) && unit.detachments) {
       unit.detachments.forEach((detachment) => {
-        const detachmentRules = getUnitRuleData(detachment.name_en);
-        const detachmentType = detachmentRules?.troopType || "RI";
+        const detachmentType = getUnitTroopType(
+          detachment,
+          armyComposition,
+        );
         str += unitStrengthByType[detachmentType] * (detachment.strength || 1);
       });
     }

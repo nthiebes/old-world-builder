@@ -1,5 +1,72 @@
 import { describe, expect, test } from "vitest";
-import { getUnitStrength } from "./unit";
+import {
+  getUnitLoresWithSpells,
+  getUnitMinimum,
+  getUnitStrength,
+  getUnitTroopType,
+} from "./unit";
+
+describe("getUnitMinimum", () => {
+  const unit = {
+    minimum: 10,
+    armyComposition: {
+      "de-renegade": {
+        minimum: 5,
+      },
+    },
+  };
+
+  test("Returns the army-composition minimum when present", () => {
+    expect(getUnitMinimum(unit, "de-renegade")).toBe(5);
+  });
+
+  test("Falls back to the unit minimum", () => {
+    expect(getUnitMinimum(unit, "dark-elves")).toBe(10);
+  });
+});
+
+describe("getUnitTroopType", () => {
+  const unit = {
+    name_en: "State Troops",
+    armyComposition: {
+      "test-renegade": {
+        troopType: "HI",
+      },
+    },
+  };
+
+  test("Returns the army-composition troop type when present", () => {
+    expect(getUnitTroopType(unit, "test-renegade")).toBe("HI");
+  });
+
+  test("Falls back to the rules-index troop type", () => {
+    expect(getUnitTroopType(unit, "empire-of-man")).toBe("RI");
+  });
+});
+
+describe("getUnitLoresWithSpells", () => {
+  const sorceress = {
+    id: "sorceress",
+    options: [],
+    specialRules: {
+      name_en: "Lore of Naggaroth {renegade}",
+    },
+  };
+
+  test("Includes Power of Darkness for Dark Elf Renegades", () => {
+    const lores = getUnitLoresWithSpells(sorceress, "de-renegade");
+
+    expect(lores["lore-of-naggaroth"]["power of darkness"]).toEqual({
+      index: "signature",
+    });
+  });
+
+  test("Does not include Power of Darkness for normal Dark Elves", () => {
+    const lores = getUnitLoresWithSpells(sorceress, "dark-elves");
+
+    expect(lores["lore-of-naggaroth"]["power of darkness"]).toBeUndefined();
+  });
+});
 
 describe("getUnitStrength", () => {
   test("Returns correct unit strength of regular infantry", () => {
