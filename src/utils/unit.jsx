@@ -339,7 +339,7 @@ export const getAllOptions = (
   let allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
 
   if (removeFactionName) {
-    allOptionsString = allOptionsString.replace(/ *\{[^)]*\}/g, "");
+    allOptionsString = allOptionsString.replace(/ *\{[^}]*\}/g, "");
   }
 
   if (allOptionsString) {

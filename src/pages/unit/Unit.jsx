@@ -1983,7 +1983,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                               selectedItem.name_en,
                         )
                         .join(", ")
-                        .replace(/\*/g, "")}
+                        .replace(/\*/g, "")
+                        .replace(/ *\{[^}]*\}/g, "")}
                     </p>
                   )}
                 </ListItem>

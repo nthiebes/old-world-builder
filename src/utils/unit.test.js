@@ -1,10 +1,39 @@
 import { describe, expect, test } from "vitest";
 import {
+  getAllOptions,
   getUnitLoresWithSpells,
   getUnitMinimum,
   getUnitStrength,
   getUnitTroopType,
 } from "./unit";
+
+describe("getAllOptions", () => {
+  test("preserves items and amounts between multiple faction tags", () => {
+    const unit = {
+      mounts: [{ name_en: "Mount {renegade}", active: true }],
+      items: [
+        {
+          selected: [
+            { name_en: "Weapon {renegade}" },
+            { name_en: "Tome* {renegade}" },
+            { name_en: "Familiar* {renegade}", amount: 2 },
+            { name_en: "Ring" },
+          ],
+        },
+      ],
+    };
+
+    expect(getAllOptions(unit, { language: "en" })).toBe(
+      "Mount, Weapon, Tome, 2x Familiar, Ring",
+    );
+    expect(
+      getAllOptions(unit, { language: "en", removeFactionName: false }),
+    ).toBe(
+      "Mount {renegade}, Weapon {renegade}, Tome {renegade}, 2x Familiar {renegade}, Ring",
+    );
+    expect(unit.items[0].selected[2].name_en).toBe("Familiar* {renegade}");
+  });
+});
 
 describe("getUnitMinimum", () => {
   const unit = {
