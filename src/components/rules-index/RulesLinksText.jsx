@@ -7,7 +7,11 @@ import { openRulesIndex } from "../../state/rules-index";
 
 import { rulesMap, synonyms } from "./rules-map";
 
-export const RulesLinksText = ({ textObject, showPageNumbers }) => {
+export const RulesLinksText = ({
+  textObject,
+  showPageNumbers,
+  armyComposition,
+}) => {
   const dispatch = useDispatch();
   const { language } = useLanguage();
 
@@ -20,7 +24,13 @@ export const RulesLinksText = ({ textObject, showPageNumbers }) => {
   let ruleButtons = ruleString.split(", ");
 
   return ruleButtons.map((rule, index) => {
-    const normalizedName = normalizeRuleName(textEn[index]);
+    const isRenegade = armyComposition?.includes("renegade");
+    let normalizedName = normalizeRuleName(textEn[index]);
+
+    if (!isRenegade) {
+      normalizedName = normalizedName.replace(" renegade", "");
+    }
+
     const synonym = synonyms[normalizedName];
     const ruleData = rulesMap[synonym || normalizedName];
 

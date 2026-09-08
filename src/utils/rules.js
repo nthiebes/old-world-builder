@@ -3219,7 +3219,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["witch-elves"],
+          ids: ["witch-elves-core"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -3251,7 +3251,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["war-hydra", "kharybdiss"],
+          ids: ["war-hydra-special", "kharibdyss-special"],
           min: 0,
           max: 1,
           requiresGeneral: true,
@@ -3284,7 +3284,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["dark-elf-dreadlord", "supreme-sorceress"],
+          ids: ["dark-elf-dreadlord", "supreme-sorceress-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3295,7 +3295,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["witch-elves"],
+          ids: ["witch-elves-core-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -3307,7 +3307,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["black-guard-of-naggarond"],
+          ids: ["black-guard-of-naggarond-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -3327,10 +3327,10 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["war-hydra", "kharybdiss"],
+          ids: ["war-hydra-special-renegade", "kharibdyss-special-renegade"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresType: "characters",
           requires: ["high-beastmaster"],
         },
       ],

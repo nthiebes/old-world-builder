@@ -626,6 +626,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           headlineIcon={
             <RuleWithIcon
               name={unit.name_en}
+              armyComposition={unitArmyComposition}
               className="unit__header-rule-icon"
             />
           }
@@ -654,6 +655,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             headlineIcon={
               <RuleWithIcon
                 name={unit.name_en}
+                armyComposition={unitArmyComposition}
                 isDark
                 className="unit__header-rule-icon"
               />
@@ -1311,6 +1313,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         {detachment[`name_${language}`] || name_en}
                         <RuleWithIcon
                           name={name_en}
+                          armyComposition={unitArmyComposition}
                           isDark
                           className="unit__rules"
                         />
@@ -1671,6 +1674,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     <p className="unit__subline--space-after">
                                       <RulesLinksText
                                         textObject={specialRulesDetachment}
+                                        armyComposition={
+                                          detachmentArmyComposition
+                                        }
                                       />
                                     </p>
                                   </>
@@ -1879,6 +1885,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     {nameMap[lore][`name_${language}`] || nameMap[lore].name_en}
                     <RuleWithIcon
                       name={nameMap[lore].name_en}
+                      armyComposition={unitArmyComposition}
                       isDark
                       className="unit__rules"
                     />
@@ -1989,7 +1996,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.specialRules" />
             </h2>
             <p>
-              <RulesLinksText textObject={specialRules} />
+              <RulesLinksText
+                textObject={specialRules}
+                armyComposition={unitArmyComposition}
+              />
             </p>
           </>
         ) : null}
@@ -2020,7 +2030,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   <FormattedMessage id="unit.category" />:
                 </h3>
                 <p>
-                  <RulesLinksText textObject={unit.profile.category} />
+                  <RulesLinksText
+                    textObject={unit.profile.category}
+                    armyComposition={unitArmyComposition}
+                  />
                 </p>
               </>
             )}
@@ -2030,7 +2043,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   <FormattedMessage id="unit.troopType" />:
                 </h3>
                 <p>
-                  <RulesLinksText textObject={unit.profile.troopType} />
+                  <RulesLinksText
+                    textObject={unit.profile.troopType}
+                    armyComposition={unitArmyComposition}
+                  />
                 </p>
               </>
             )}

@@ -65,7 +65,14 @@ export const Add = ({ isMobile }) => {
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = ({ unit, ally, unitType, magicItemsArmy, deleteButton }) => (
+  const getUnit = ({
+    unit,
+    ally,
+    unitType,
+    magicItemsArmy,
+    deleteButton,
+    army,
+  }) => (
     <li key={unit.id} className="list">
       <button
         className={classNames(
@@ -88,7 +95,12 @@ export const Add = ({ isMobile }) => {
           id: "app.points",
         })}`}</i>
       </button>
-      <RuleWithIcon name={unit.name_en} isDark className="add__rules-icon" />
+      <RuleWithIcon
+        name={unit.name_en}
+        armyComposition={army || list.armyComposition}
+        isDark
+        className="add__rules-icon"
+      />
       {deleteButton && (
         <Button
           icon="delete"

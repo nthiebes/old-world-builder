@@ -545,6 +545,7 @@ export const Magic = ({ isMobile }) => {
             </i>
             <RuleWithIcon
               name={magicItem.name_en}
+              armyComposition={list.armyComposition}
               isDark
               className="magic__rules"
             />

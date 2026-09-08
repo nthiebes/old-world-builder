@@ -193,6 +193,7 @@ export const GeneratedSpells = ({
                             />
                             <RuleWithIcon
                               name={spellId}
+                              armyComposition={spell.armyComposition}
                               isDark
                               className="generated-spells__rule-icon"
                             />
