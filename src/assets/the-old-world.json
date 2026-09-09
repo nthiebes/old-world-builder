@@ -609,10 +609,15 @@
       ],
       "armyComposition": ["dark-elves", "de-renegade"],
       "versions": {
-        "de-renegade": {
-          "default": "1.5.2.2",
-          "all": ["1.5", "1.5.2.2"]
-        }
+        "de-renegade": [
+          {
+            "version": "1.5"
+          },
+          {
+            "isDefault": true,
+            "version": "1.5.2.2"
+          }
+        ]
       },
       "allies": [
         {
@@ -644,10 +649,12 @@
       "items": ["general", "skaven"],
       "armyComposition": ["skaven", "sk-renegade"],
       "versions": {
-        "sk-renegade": {
-          "default": "1.5",
-          "all": ["1.5"]
-        }
+        "sk-renegade": [
+          {
+            "isDefault": true,
+            "version": "1.5"
+          }
+        ]
       },
       "allies": [
         {
@@ -679,10 +686,12 @@
       "items": ["general", "vampire-counts", "vampiric-powers"],
       "armyComposition": ["vampire-counts", "vc-renegade"],
       "versions": {
-        "vc-renegade": {
-          "default": "1.5",
-          "all": ["1.5"]
-        }
+        "vc-renegade": [
+          {
+            "isDefault": true,
+            "version": "1.5"
+          }
+        ]
       },
       "allies": [
         {
@@ -699,10 +708,15 @@
       "name_fr": "Démons du Chaos",
       "armyComposition": ["daemons-of-chaos", "doc-renegade"],
       "versions": {
-        "doc-renegade": {
-          "default": "1.5.2.1",
-          "all": ["1.5", "1.5.2.1"]
-        }
+        "doc-renegade": [
+          {
+            "version": "1.5"
+          },
+          {
+            "isDefault": true,
+            "version": "1.5.2.1"
+          }
+        ]
       },
       "items": [
         "general",
@@ -751,10 +765,15 @@
       "items": ["general", "ogre-kingdoms", "big-names"],
       "armyComposition": ["ogre-kingdoms", "ok-renegade"],
       "versions": {
-        "ok-renegade": {
-          "default": "1.5.2.2",
-          "all": ["1.5", "1.5.2.2"]
-        }
+        "ok-renegade": [
+          {
+            "version": "1.5"
+          },
+          {
+            "isDefault": true,
+            "version": "1.5.2.2"
+          }
+        ]
       },
       "allies": [
         {
@@ -790,10 +809,15 @@
       "items": ["general", "lizardmen", "disciplines-old-ones"],
       "armyComposition": ["lizardmen", "lm-renegade"],
       "versions": {
-        "lm-renegade": {
-          "default": "1.5.2.2",
-          "all": ["1.5", "1.5.2.2"]
-        }
+        "lm-renegade": [
+          {
+            "version": "1.5"
+          },
+          {
+            "isDefault": true,
+            "version": "1.5.2.2"
+          }
+        ]
       },
       "allies": [
         {
@@ -825,10 +849,15 @@
       "items": ["general", "chaos-dwarfs"],
       "armyComposition": ["chaos-dwarfs", "cd-renegade"],
       "versions": {
-        "cd-renegade": {
-          "default": "1.5.2.2",
-          "all": ["1.5", "1.5.2.2"]
-        }
+        "cd-renegade": [
+          {
+            "version": "1.5"
+          },
+          {
+            "isDefault": true,
+            "version": "1.5.2.2"
+          }
+        ]
       },
       "allies": [
         {

@@ -161,13 +161,16 @@ export const NewList = ({ isMobile }) => {
   }, [location.pathname]);
 
   const armyCompositionOptions = [];
+  const defaultVersion = versions?.[armyComposition]?.find(
+    (v) => v.isDefault,
+  )?.version;
 
   if (journalArmies) {
     journalArmies.forEach((journalArmy) => {
       const matchingVersions = versions?.[journalArmy];
 
       if (matchingVersions) {
-        matchingVersions.all.forEach((version) => {
+        matchingVersions.forEach(({ version }) => {
           armyCompositionOptions.push({
             id: `${journalArmy}#${version}`,
             version,
@@ -262,7 +265,7 @@ export const NewList = ({ isMobile }) => {
               />
             </>
           ) : null}
-          {version && versions?.[armyComposition]?.default !== version ? (
+          {version && defaultVersion !== version ? (
             <p className="unit__notes new-list__unsupported-version">
               <Icon symbol="error" className="unit__notes-icon" />
               <FormattedMessage id="new.unsupportedVersion" />

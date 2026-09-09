@@ -527,10 +527,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           ),
         );
       } else {
+        const defaultVersion = armyData?.versions?.[list.armyComposition]?.find(
+          (v) => v.isDefault,
+        )?.version;
         const version =
           !armyData?.versions ||
           !list.version ||
-          armyData?.versions?.[list.armyComposition]?.default === list.version
+          defaultVersion === list.version
             ? ""
             : list.version;
 

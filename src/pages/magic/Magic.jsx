@@ -418,10 +418,11 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     if (army && list && unit && !items && !magicDataFetching) {
+      const defaultVersion = armyData?.versions?.[list.armyComposition]?.find(
+        (v) => v.isDefault,
+      )?.version;
       const version =
-        !armyData?.versions ||
-        !list.version ||
-        armyData?.versions?.[list.armyComposition]?.default === list.version
+        !armyData?.versions || !list.version || defaultVersion === list.version
           ? ""
           : list.version;
 
