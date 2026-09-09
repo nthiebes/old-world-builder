@@ -527,8 +527,17 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           ),
         );
       } else {
+        const version =
+          !armyData?.versions ||
+          !list.version ||
+          armyData?.versions?.[list.armyComposition]?.default === list.version
+            ? ""
+            : list.version;
+
         fetcher({
-          url: list.url || `games/${list.game}/${list.army}`,
+          url:
+            list.url ||
+            `games/${list.game}/${version ? `${version}/` : ""}${list.army}`,
           baseUrl: list.url ? "" : undefined,
           appendJson: Boolean(!list.url),
           version: armyData.version,

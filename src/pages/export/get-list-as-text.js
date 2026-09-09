@@ -155,7 +155,7 @@ const getUnitsString = ({
         }
 
         if (stats?.length > 0) {
-          stats.forEach((unitStats, index) => {
+          stats.forEach((unitStats) => {
             // prettier-ignore
             optionsString += `${isMarkdownList ? " - " : ""}[${unitStats.Name.replace(/ /g, '\xa0')}]\xa0${intl.formatMessage({id: "unit.m"})}(${unitStats.M})\xa0${intl.formatMessage({id: "unit.ws"})}(${unitStats.WS})\xa0${intl.formatMessage({id: "unit.bs"})}(${unitStats.BS})\xa0${intl.formatMessage({id: "unit.s"})}(${unitStats.S})\xa0${intl.formatMessage({id: "unit.t"})}(${unitStats.T})\xa0${intl.formatMessage({id: "unit.w"})}(${unitStats.W})\xa0${intl.formatMessage({id: "unit.i"})}(${unitStats.I})\xa0${intl.formatMessage({id: "unit.a"})}(${unitStats.A})\xa0${intl.formatMessage({id: "unit.ld"})}(${unitStats.Ld})
 `;
@@ -210,7 +210,7 @@ export const getListAsText = ({
         nameMap[list.armyComposition].name_en
       : "";
   const armyCompositionString = armyCompositionName
-    ? `, ${armyCompositionName}`
+    ? `, ${armyCompositionName}${list.version ? ` (v${list.version})` : ``}`
     : "";
   const compositionRuleString = intl.formatMessage({
     id: `misc.${list.compositionRule || "open-war"}`,

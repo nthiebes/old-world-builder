@@ -139,6 +139,7 @@ export const Magic = ({ isMobile }) => {
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
+  const armyData = game?.armies.find((army) => army.id === list.army);
   let army =
     list &&
     gameSystems
@@ -417,10 +418,19 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     if (army && list && unit && !items && !magicDataFetching) {
+      const version =
+        !armyData?.versions ||
+        !list.version ||
+        armyData?.versions?.[list.armyComposition]?.default === list.version
+          ? ""
+          : list.version;
+
       magicDataFetching = true;
 
       fetcher({
-        url: game.magicItems || "games/the-old-world/magic-items",
+        url:
+          game.magicItems ||
+          `games/the-old-world/${version ? `${version}/` : ""}magic-items`,
         baseUrl: game.magicItems ? "" : undefined,
         appendJson: Boolean(!game.magicItems),
         version: game.version,
