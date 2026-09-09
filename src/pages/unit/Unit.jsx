@@ -1674,9 +1674,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                     <p className="unit__subline--space-after">
                                       <RulesLinksText
                                         textObject={specialRulesDetachment}
-                                        armyComposition={
-                                          detachmentArmyComposition
-                                        }
+                                        armyComposition={unitArmyComposition}
                                       />
                                     </p>
                                   </>
