@@ -65,7 +65,14 @@ export const Add = ({ isMobile }) => {
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = ({ unit, ally, unitType, magicItemsArmy, deleteButton }) => (
+  const getUnit = ({
+    unit,
+    ally,
+    unitType,
+    magicItemsArmy,
+    deleteButton,
+    army,
+  }) => (
     <li key={unit.id} className="list">
       <button
         className={classNames(
@@ -88,7 +95,12 @@ export const Add = ({ isMobile }) => {
           id: "app.points",
         })}`}</i>
       </button>
-      <RuleWithIcon name={unit.name_en} isDark className="add__rules-icon" />
+      <RuleWithIcon
+        name={unit.name_en}
+        armyComposition={army || list?.armyComposition}
+        isDark
+        className="add__rules-icon"
+      />
       {deleteButton && (
         <Button
           icon="delete"
@@ -132,8 +144,17 @@ export const Add = ({ isMobile }) => {
           ),
         );
       } else {
+        const version =
+          !armyData?.versions ||
+          !list.version ||
+          armyData?.versions?.[list.armyComposition]?.default === list.version
+            ? ""
+            : list.version;
+
         fetcher({
-          url: list.url || `games/${list.game}/${list.army}`,
+          url:
+            list.url ||
+            `games/${list.game}/${version ? `${version}/` : ""}${list.army}`,
           baseUrl: list.url ? "" : undefined,
           appendJson: Boolean(!list.url),
           version: armyData.version,

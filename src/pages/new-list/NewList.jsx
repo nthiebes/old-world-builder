@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
 import { Select } from "../../components/select";
 import { Expandable } from "../../components/expandable";
+import { Icon } from "../../components/icon";
 import { NumberInput } from "../../components/number-input";
 import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
@@ -36,11 +37,13 @@ export const NewList = ({ isMobile }) => {
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
   const [armyComposition, setArmyComposition] = useState("empire-of-man");
+  const [version, setVersion] = useState(null);
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems
     .filter(({ id }) => id === game)[0]
     .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
+  const versions = armies.find(({ id }) => army === id)?.versions;
   const compositionRules = [
     {
       id: "open-war",
@@ -87,6 +90,7 @@ export const NewList = ({ isMobile }) => {
         army,
       description: description,
       game: game,
+      version: version,
       points: points,
       army: army,
       characters: [],
@@ -122,10 +126,14 @@ export const NewList = ({ isMobile }) => {
     setArmyComposition(
       armies.find(({ id }) => value === id).armyComposition[0],
     );
+    setVersion(null);
     setCompositionRule("open-war");
   };
   const handleArcaneJournalChange = (value) => {
-    setArmyComposition(value);
+    const [journalId, version] = value.split("#");
+
+    setArmyComposition(journalId);
+    setVersion(version || null);
   };
   const handleCompositionRuleChange = (value) => {
     setCompositionRule(value);
@@ -151,6 +159,37 @@ export const NewList = ({ isMobile }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  const armyCompositionOptions = [];
+
+  if (journalArmies) {
+    journalArmies.forEach((journalArmy) => {
+      const matchingVersions = versions?.[journalArmy];
+
+      if (matchingVersions) {
+        matchingVersions.all.forEach((version) => {
+          armyCompositionOptions.push({
+            id: `${journalArmy}#${version}`,
+            version,
+            name_en: `${
+              nameMap[journalArmy][`name_${language}`] ||
+              nameMap[journalArmy].name_en
+            } (v${version})`,
+          });
+        });
+      } else {
+        armyCompositionOptions.push({
+          id: journalArmy,
+          version: null,
+          name_en:
+            journalArmy === army
+              ? intl.formatMessage({ id: "new.grandArmy" })
+              : nameMap[journalArmy][`name_${language}`] ||
+                nameMap[journalArmy].name_en,
+        });
+      }
+    });
+  }
 
   return (
     <>
@@ -209,29 +248,25 @@ export const NewList = ({ isMobile }) => {
             spaceBottom
             required
           />
-
-          {journalArmies ? (
+          {armyCompositionOptions ? (
             <>
               <label htmlFor="arcane-journal">
                 <FormattedMessage id="new.armyComposition" />
               </label>
               <Select
                 id="arcane-journal"
-                options={[
-                  ...journalArmies.map((journalArmy) => ({
-                    id: journalArmy,
-                    name_en:
-                      journalArmy === army
-                        ? intl.formatMessage({ id: "new.grandArmy" })
-                        : nameMap[journalArmy][`name_${language}`] ||
-                          nameMap[journalArmy].name_en,
-                  })),
-                ]}
+                options={armyCompositionOptions}
                 onChange={handleArcaneJournalChange}
                 selected={army}
                 spaceBottom
               />
             </>
+          ) : null}
+          {version && versions?.[armyComposition]?.default !== version ? (
+            <p className="unit__notes new-list__unsupported-version">
+              <Icon symbol="error" className="unit__notes-icon" />
+              <FormattedMessage id="new.unsupportedVersion" />
+            </p>
           ) : null}
 
           <label htmlFor="composition-rule">

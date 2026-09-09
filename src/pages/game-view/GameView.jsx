@@ -117,8 +117,6 @@ export const GameView = () => {
   const getAllVictoryPoints = () => {
     let allVictoryPoints = 0;
 
-    console.log(list.compositionRule);
-
     if (list.compositionRule === "battle-march") {
       allVictoryPoints =
         banners * 25 +
@@ -282,6 +280,7 @@ export const GameView = () => {
                     <span>{getUnitName({ unit, language })}</span>
                     <RuleWithIcon
                       name={unit.name_en}
+                      armyComposition={armyComposition}
                       isDark
                       className="game-view__rule-icon"
                     />
@@ -324,6 +323,7 @@ export const GameView = () => {
                         <RulesLinksText
                           textObject={specialRules}
                           showPageNumbers={showPageNumbers}
+                          armyComposition={armyComposition}
                         />
                       </p>
                       {unit.detachments &&
@@ -353,6 +353,7 @@ export const GameView = () => {
                               <RulesLinksText
                                 textObject={specialRulesDetachment}
                                 showPageNumbers={showPageNumbers}
+                                armyComposition={armyComposition}
                               />
                             </p>
                           );

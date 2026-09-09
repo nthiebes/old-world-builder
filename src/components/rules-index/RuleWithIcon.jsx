@@ -10,7 +10,7 @@ import { openRulesIndex } from "../../state/rules-index";
 import { rulesMap, synonyms } from "./rules-map";
 import "./RuleWithIcon.css";
 
-export const RuleWithIcon = ({ name, isDark, className }) => {
+export const RuleWithIcon = ({ name, armyComposition, isDark, className }) => {
   const dispatch = useDispatch();
   const intl = useIntl();
 
@@ -18,10 +18,17 @@ export const RuleWithIcon = ({ name, isDark, className }) => {
     return null;
   }
 
-  const normalizedName = normalizeRuleName(name);
-  const synonym = synonyms[normalizedName];
+  const isRenegade = armyComposition?.includes("renegade");
+  let normalizedName = normalizeRuleName(name);
 
-  return rulesMap[normalizedName] || rulesMap[synonym] ? (
+  if (!isRenegade) {
+    normalizedName = normalizedName.replace(" renegade", "");
+  }
+
+  const synonym = synonyms[normalizedName];
+  const ruleExists = rulesMap[normalizedName] || rulesMap[synonym];
+
+  return ruleExists ? (
     <Button
       type="text"
       className={classNames("rule-icon", className && className)}
@@ -36,5 +43,6 @@ export const RuleWithIcon = ({ name, isDark, className }) => {
 RuleWithIcon.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string,
+  armyComposition: PropTypes.string,
   isDark: PropTypes.bool,
 };

@@ -41,24 +41,26 @@ const collectUniqueRules = (list, armyComposition) => {
         const ruleData = rulesMap[normalized] || rulesMap[synonym];
         if (ruleData?.url) {
           seen.set(normalized, {
-              displayName,
-              rulePath: ruleData.url,
-              pageRef: ruleData.page || null,
-            });
+            displayName,
+            rulePath: ruleData.url,
+            pageRef: ruleData.page || null,
+          });
         }
       }
     };
     processRules(
-      unit.armyComposition?.[armyComposition]?.specialRules || unit.specialRules
+      unit.armyComposition?.[armyComposition]?.specialRules ||
+        unit.specialRules,
     );
     for (const det of unit.detachments || []) {
       processRules(
-        det.armyComposition?.[armyComposition]?.specialRules || det.specialRules
+        det.armyComposition?.[armyComposition]?.specialRules ||
+          det.specialRules,
       );
     }
   }
   return Array.from(seen.values()).sort((a, b) =>
-    a.displayName.localeCompare(b.displayName)
+    a.displayName.localeCompare(b.displayName),
   );
 };
 
@@ -90,8 +92,8 @@ export const Print = () => {
     setIsLoadingDescriptions(true);
     Promise.all(
       rules.map(({ rulePath }) =>
-        fetchRuleDescription(rulePath).then((desc) => [rulePath, desc])
-      )
+        fetchRuleDescription(rulePath).then((desc) => [rulePath, desc]),
+      ),
     ).then((results) => {
       setRuleDescriptions(Object.fromEntries(results));
       setIsLoadingDescriptions(false);
@@ -408,7 +410,12 @@ export const Print = () => {
               </h1>
               <p className="print__subheader">
                 {game.name}, {armyName}
-                {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
+                {armyCompositionName
+                  ? `, ${armyCompositionName}${
+                      list.version ? ` (v${list.version})` : ``
+                    }`
+                  : ""}
+                ,{" "}
                 <FormattedMessage
                   id={`misc.${list.compositionRule || "open-war"}`}
                 />
@@ -531,12 +538,16 @@ export const Print = () => {
                       return (
                         <div key={rulePath} className="print__rule-entry">
                           <dt>{displayName}</dt>
-                          <dd className={!desc ? "print__rule-pageref" : undefined}>
+                          <dd
+                            className={
+                              !desc ? "print__rule-pageref" : undefined
+                            }
+                          >
                             {content}
                           </dd>
                         </div>
                       );
-                    }
+                    },
                   )}
                 </dl>
               )}
