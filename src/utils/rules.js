@@ -3921,7 +3921,7 @@ export const rules = {
           requiresType: "all",
           requires: ["clanrats"],
           perUnit: true,
-        }
+        },
       ],
     },
     special: {
