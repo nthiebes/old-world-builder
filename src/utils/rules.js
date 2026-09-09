@@ -3791,7 +3791,7 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["stormvermin"],
+          ids: ["stormvermin-core"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3873,7 +3873,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["skaven-warlord"],
+          ids: ["skaven-warlord", "master-assassin-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3915,7 +3915,7 @@ export const rules = {
           max: 1,
         },
         {
-          id: ["skaven-dregs-renegade"],
+          ids: ["skaven-dregs-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
@@ -3928,7 +3928,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["warplock-jezzails"],
+          ids: ["warplock-jezzails-renegade"],
           requiresType: "characters",
           requires: ["warlock-engineer-renegade"],
         },
@@ -3946,13 +3946,13 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["hell-pit-abomination"],
+          ids: ["hell-pit-abomination-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["doomwheel"],
+          ids: ["doomwheel-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -3976,7 +3976,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["plague-censer-bearers"],
+          ids: ["plague-censer-bearers-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",

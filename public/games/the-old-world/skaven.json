@@ -862,7 +862,7 @@
       "name_de": "Meisterassassine",
       "name_es": "Master Assassin",
       "name_fr": "Maître Assassin",
-      "id": "master-assassin",
+      "id": "master-assassin-renegade",
       "points": 120,
       "armyComposition": {
         "sk-renegade": {
@@ -2353,6 +2353,108 @@
       "name_de": "Gossenläufer",
       "name_es": "Gutter Runners",
       "name_fr": "Coureurs d’Égouts",
+      "id": "gutter-runners",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "skaven": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Assassin",
+          "name_cn": "刺客",
+          "name_de": "Assassine",
+          "name_es": "Assassin",
+          "name_fr": "Assassin",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_cn": "两把单手武器",
+          "name_de": "Zwei Handwaffen",
+          "name_es": "Two hand weapons",
+          "name_fr": "Deux armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Two hand weapons, Sling",
+          "name_cn": "两把单手武器, 投石索",
+          "name_de": "Zwei Handwaffen, Schleuder",
+          "name_es": "Two hand weapons, Sling",
+          "name_fr": "Deux armes de base, Fronde",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Two hand weapons, Throwing weapons",
+          "name_cn": "两把单手武器, 投掷武器",
+          "name_de": "Zwei Handwaffen, Wurfwaffen",
+          "name_es": "Two hand weapons, Throwing weapons",
+          "name_fr": "Deux armes de base, Armes de lancer",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Embusqueurs",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Poisoned Attacks",
+          "name_cn": "淬毒攻击",
+          "name_de": "Giftattacken",
+          "name_es": "Poisoned Attacks",
+          "name_fr": "Attaques Empoisonnées",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_cn": "闪避, 诱敌诈退, 游击, 穿行掩体, 侦察, 抱头鼠窜, 散兵",
+        "name_de": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_es": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers",
+        "name_fr": "Esquiveur, Fuite Feinte, Tir & Fuite, Mouvement à Couvert, Éclaireurs, Sauve qui Peut!, Tirailleurs"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Gutter Runners",
+      "name_cn": "阴沟奔行鼠",
+      "name_de": "Gossenläufer",
+      "name_es": "Gutter Runners",
+      "name_fr": "Coureurs d’Égouts",
       "id": "gutter-runners-renegade",
       "points": 14,
       "minimum": 5,
@@ -3244,7 +3346,7 @@
       "name_de": "Todesrad",
       "name_es": "Doomwheel",
       "name_fr": "Roue Infernale",
-      "id": "doomwheel",
+      "id": "doomwheel-renegade",
       "points": 145,
       "armyComposition": {
         "sk-renegade": {
@@ -3288,13 +3390,13 @@
         "name_fr": "Ordre Serré, Écrasement, Immunisé à la Psychologie, Touches d’Impact (D6+1), Grande Cible, Attaques Aléatoires (Rats uniquement), Mouvement Aléatoire, Attaques de Piétinement (D3), Zzzzap!"
       },
       "notes": {
-        "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
-        "name_cn": "如果你的军队包含一个或更多史库里氏族工程术士, 每1000分可以选取0-1毁灭巨轮或次元闪电炮",
-        "name_de": "Wenn deine Armee mindestes einen Clan Skryre Warlocktechniker enthält, können 0-1 Todesrad oder Warpblitzkanone pro 1000 Punkte gewählt werden",
-        "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
-        "name_fr": "Si votre armée inclut un Technomages du Clan Skryre ou plus, 0-1 Roue Infernale ou Canon à Malefoudre peuvent être pris par tranche de 1000 points",
-        "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points",
-        "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 Doomwheel or Warp Lightning Cannon may be taken per 1000 points"
+        "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_cn": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_de": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_fr": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon"
       }
     },
     {
@@ -3305,6 +3407,23 @@
       "name_fr": "Canon à Malefoudre",
       "id": "warp-lightning-cannon",
       "points": 110,
+      "armyComposition": {
+        "skaven": {
+          "category": "rare"
+        },
+        "sk-renegade": {
+          "category": "rare",
+          "notes": {
+            "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_cn": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_de": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_fr": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+            "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3359,6 +3478,23 @@
       "name_fr": "Catapulte de la Peste",
       "id": "plagueclaw-catapult",
       "points": 110,
+      "armyComposition": {
+        "skaven": {
+          "category": "rare"
+        },
+        "sk-renegade": {
+          "category": "rare",
+          "notes": {
+            "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_cn": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_de": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_es": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_fr": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+            "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers"
+          }
+        }
+      },
       "command": [],
       "equipment": [
         {
@@ -3465,6 +3601,8 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
+      "detachment": true,
+      "minDetachmentSize": 5,
       "armyComposition": {
         "sk-renegade": {
           "category": "rare"
