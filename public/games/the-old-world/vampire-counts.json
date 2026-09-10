@@ -85,16 +85,6 @@
           "name_fr": "Armure lourde",
           "points": 6,
           "perModel": true
-        },
-        {
-          "name_en": "Full plate armour",
-          "name_cn": "全身甲",
-          "name_de": "Plattenrüstung",
-          "name_es": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "points": 9,
-          "perModel": true,
-          "armyComposition": "vc-renegade"
         }
       ],
       "options": [
@@ -219,7 +209,267 @@
         "name_de": "0-1 pro 1000 Punkte, 1+ Zauberer",
         "name_es": "0-1 per 1000 points, 1+ Wizard",
         "name_fr": "0-1 par tranche de 1000 points, 1+ Sorcier"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
       }
+    },
+    {
+      "name_en": "Vampire Lord {renegade}",
+      "name_cn": "Vampire Lord",
+      "name_de": "Vampire Lord",
+      "name_es": "Vampire Lord",
+      "name_fr": "Vampire Lord",
+      "id": "vampire-lord-renegade",
+      "points": 185,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_cn": "长枪(若处于骑乘状态)",
+          "name_de": "Lanze (nur beritten)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance de joute (si monté)",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "name_es": "No armour",
+          "name_fr": "Pas d’armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 6,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 9,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Wizard",
+          "name_cn": "Wizard",
+          "name_de": "Wizard",
+          "name_es": "Wizard",
+          "name_fr": "Wizard",
+          "name_it": "Wizard",
+          "name_pl": "Wizard",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "Level 1 Wizard",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Level 1 Wizard",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "Level 2 Wizard",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Level 2 Wizard",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "Level 3 Wizard",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Level 3 Wizard",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_cn": "梦魇",
+          "name_de": "Nachtmahr",
+          "name_es": "Nightmare",
+          "name_fr": "Cauchemar",
+          "points": 16
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_cn": "女巫王座",
+          "name_de": "Hexenthron",
+          "name_es": "Coven Throne",
+          "name_fr": "Trône de Sabbat",
+          "points": 165
+        },
+        {
+          "name_en": "Abyssal Terror",
+          "name_cn": "深渊惊惧兽",
+          "name_de": "Schrecken der Unterwelt",
+          "name_es": "Abyssal Terror",
+          "name_fr": "Terreur des Abîmes",
+          "points": 120
+        },
+        {
+          "name_en": "Zombie Dragon",
+          "name_cn": "僵尸龙",
+          "name_de": "Zombiedrache",
+          "name_es": "Zombie Dragon",
+          "name_fr": "Dragon Zombie",
+          "points": 215
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_cn": "吸血鬼之力",
+          "name_de": "Vampirkräfte",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Pouvoirs Vampiriques",
+          "types": ["vampiric-power"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_it": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_pl": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
+      },
+      "name_it": "Vampire Lord",
+      "name_pl": "Vampire Lord"
     },
     {
       "name_en": "Vampire Thrall",
@@ -317,16 +567,6 @@
           "name_fr": "Armure lourde",
           "points": 6,
           "perModel": true
-        },
-        {
-          "name_en": "Full plate armour",
-          "name_cn": "全身甲",
-          "name_de": "Plattenrüstung",
-          "name_es": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "points": 9,
-          "perModel": true,
-          "armyComposition": "vc-renegade"
         }
       ],
       "options": [
@@ -422,6 +662,234 @@
         "name_de": "1+ Zauberer",
         "name_es": "1+ Wizard",
         "name_fr": "1+ Sorcier"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Vampire Thrall {renegade}",
+      "name_cn": "吸血鬼侍臣",
+      "name_de": "Vampir",
+      "name_es": "Vampire Thrall",
+      "name_fr": "Vampires Nouveau-né",
+      "id": "vampire-thrall-renegade",
+      "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          },
+          "name_fr": "Porteur de la Grande Bannière"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_cn": "长枪(若处于骑乘状态)",
+          "name_de": "Lanze (nur beritten)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance de joute (si monté)",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "Keine Rüstung",
+          "name_es": "No armour",
+          "name_fr": "Pas d’armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 6,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "points": 9,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Stufe 1 Zauberer",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 30,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "Level 2 Wizard",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Level 2 Wizard",
+          "name_it": "Level 2 Wizard",
+          "name_pl": "Level 2 Wizard",
+          "points": 60,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_cn": "梦魇",
+          "name_de": "Nachtmahr",
+          "name_es": "Nightmare",
+          "name_fr": "Cauchemar",
+          "points": 16
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_cn": "女巫王座",
+          "name_de": "Hexenthron",
+          "name_es": "Coven Throne",
+          "name_fr": "Trône de Sabbat",
+          "points": 165
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_cn": "吸血鬼之力",
+          "name_de": "Vampirkräfte",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Pouvoirs Vampiriques",
+          "types": ["vampiric-power"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_it": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_pl": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -563,6 +1031,159 @@
         "name_de": "0-1 pro 1000 Punkte, 1+ Zauberer",
         "name_es": "0-1 per 1000 points, 1+ Wizard",
         "name_fr": "0-1 par tranche de 1000 points, 1+ Sorcier"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Master Necromancer {renegade}",
+      "name_cn": "死灵大法师",
+      "name_de": "Meisternekromant",
+      "name_es": "Master Necromancer",
+      "name_fr": "Maître Nécromancien",
+      "id": "master-necromancer-renegade",
+      "points": 145,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_es": "Hechicero de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_es": "Hechicero de Nivel 4",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_cn": "梦魇",
+          "name_de": "Nachtmahr",
+          "name_es": "Nightmare",
+          "name_fr": "Cauchemar",
+          "points": 16
+        },
+        {
+          "name_en": "Mortis Engine",
+          "name_cn": "亡灵引擎",
+          "name_de": "Mortisschrein",
+          "name_es": "Mortis Engine",
+          "name_fr": "Machine Mortis",
+          "points": 195
+        },
+        {
+          "name_en": "Abyssal Terror",
+          "name_cn": "深渊惊惧兽",
+          "name_de": "Schrecken der Unterwelt",
+          "name_es": "Abyssal Terror",
+          "name_fr": "Terreur des Abîmes",
+          "points": 120
+        },
+        {
+          "name_en": "Zombie Dragon",
+          "name_cn": "僵尸龙",
+          "name_de": "Zombiedrache",
+          "name_es": "Zombie Dragon",
+          "name_fr": "Dragon Zombie",
+          "points": 215
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "arcane-item",
+            "enchanted-item",
+            "talisman"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "黑暗活力, 顽强不屈(1), 尼科之咒, 亡灵法系, 不死亡灵, 重生(5+)",
+        "name_de": "Dunkle Vitalität, Unverwüstlich (1), Anrufung von Nehek, Lehre des Untodes, Nekromantische Untote, Regeneration (5+)",
+        "name_es": "Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Sombre Vitalité, Indomptable (1), Invocation de Nehek, Domaine de la Non-vie, Mort-vivant Nécromantique, Régénération (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -688,6 +1309,175 @@
         "name_de": "1+ Zauberer",
         "name_es": "1+ Wizard",
         "name_fr": "1+ Sorcier"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Necromantic Acolyte {renegade}",
+      "name_cn": "死灵法师学徒",
+      "name_de": "Nekromant",
+      "name_es": "Necromantic Acolyte",
+      "name_fr": "Acolyte Nécromantique",
+      "id": "necromantic-acolyte-renegade",
+      "points": 60,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Nightmare",
+          "name_cn": "梦魇",
+          "name_de": "Nachtmahr",
+          "name_es": "Nightmare",
+          "name_fr": "Cauchemar",
+          "points": 16
+        },
+        {
+          "name_en": "Corpse Cart (Balefire Brazier)",
+          "name_cn": "Corpse Cart (Balefire Brazier)",
+          "name_de": "Corpse Cart (Balefire Brazier)",
+          "name_es": "Corpse Cart (Balefire Brazier)",
+          "name_fr": "Corpse Cart (Balefire Brazier)",
+          "name_it": "Corpse Cart (Balefire Brazier)",
+          "name_pl": "Corpse Cart (Balefire Brazier)",
+          "points": 70,
+          "notes": {
+            "name_en": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_cn": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_de": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_es": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_fr": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_it": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
+            "name_pl": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier."
+          }
+        },
+        {
+          "name_en": "Corpse Cart (Warped Tintinnabulation)",
+          "name_cn": "Corpse Cart (Warped Tintinnabulation)",
+          "name_de": "Corpse Cart (Warped Tintinnabulation)",
+          "name_es": "Corpse Cart (Warped Tintinnabulation)",
+          "name_fr": "Corpse Cart (Warped Tintinnabulation)",
+          "name_it": "Corpse Cart (Warped Tintinnabulation)",
+          "name_pl": "Corpse Cart (Warped Tintinnabulation)",
+          "points": 75,
+          "notes": {
+            "name_en": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_cn": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_de": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_es": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_fr": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_it": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
+            "name_pl": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation."
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["dark-magic", "illusion", "necromancy"],
+      "specialRules": {
+        "name_en": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_it": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_pl": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
+      },
+      "notes": {
+        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -802,6 +1592,153 @@
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
         "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Strigoi Ghoul King {renegade}",
+      "name_cn": "史崔格食尸鬼王",
+      "name_de": "Strigoi-Ghulkönig",
+      "name_es": "Strigoi Ghoul King",
+      "name_fr": "Roi Goule",
+      "id": "strigoi-ghoul-king-renegade",
+      "points": 145,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Wicked claws",
+          "name_cn": "Hand weapon, Wicked claws",
+          "name_de": "Hand weapon, Wicked claws",
+          "name_es": "Hand weapon, Wicked claws",
+          "name_fr": "Hand weapon, Wicked claws",
+          "name_it": "Hand weapon, Wicked claws",
+          "name_pl": "Hand weapon, Wicked claws",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_cn": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Heavy armour (Scaly skin)",
+          "name_it": "Heavy armour (Scaly skin)",
+          "name_pl": "Heavy armour (Scaly skin)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Stufe 1 Zauberer",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
+          "points": 30,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
+          "name_de": "Stufe 2 Zauberer",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
+          "points": 60,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Terrorgheist {mount}",
+          "name_cn": "惧龙蝠",
+          "name_de": "Flederbestie",
+          "name_es": "Terrorgheist",
+          "name_fr": "Terreurgheist",
+          "points": 185
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 75
+        },
+        {
+          "name_en": "Vampiric Powers",
+          "name_cn": "吸血鬼之力",
+          "name_de": "Vampirkräfte",
+          "name_es": "Vampiric Powers",
+          "name_fr": "Pouvoirs Vampiriques",
+          "types": ["vampiric-power"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": ["battle-magic", "dark-magic", "necromancy"],
+      "specialRules": {
+        "name_en": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_cn": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_de": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_es": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_fr": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_it": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_pl": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard"
+      },
+      "notes": {
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -843,6 +1780,70 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Cairn Wraith {renegade}",
+      "name_cn": "石冢恶灵",
+      "name_de": "Gespenst",
+      "name_es": "Cairn Wraith",
+      "name_fr": "Spectres des Cairns",
+      "id": "cairn-wraith-renegade",
+      "points": 50,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "General",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Spectral scythe {cairn wraith}",
+          "name_cn": "幽灵之镰",
+          "name_de": "Spektrale Sense",
+          "name_es": "Spectral scythe",
+          "name_fr": "Faux spectrale",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Indomitable (1), Necromantic Undead, Regeneration (6+), Terror",
+        "name_cn": "灵体, 顽强不屈(1), 不死亡灵, 重生(6+), 惊骇",
+        "name_de": "Körperlos, Unverwüstlich (1), Nekromantische Untote, Regeneration (6+), Entsetzen",
+        "name_es": "Ethereal, Indomitable (1), Necromantic Undead, Regeneration (6+), Terror",
+        "name_fr": "Éthéré, Indomptable (1), Mort-vivant Nécromantique, Régénération (6+), Terreur"
+      },
+      "notes": {
+        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -963,6 +1964,149 @@
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
         "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Wight King {renegade}",
+      "name_cn": "尸妖王",
+      "name_de": "Fluchfürst",
+      "name_es": "Wight King",
+      "name_fr": "Roi Revenant",
+      "id": "wight-king-renegade",
+      "points": 85,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "General",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_cn": "长枪(若处于骑乘状态)",
+          "name_de": "Lanze (nur beritten)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance de joute (si monté)",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed {vampire counts}",
+          "name_cn": "骷髅战马",
+          "name_de": "Skelettpferd",
+          "name_es": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
+          "points": 14
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Indomitable (1), Killing Blow, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "顽强不屈(1), 一击必杀, 不死亡灵, 重生(5+)",
+        "name_de": "Unverwüstlich (1), Todesstoß, Nekromantische Untote, Regeneration (5+)",
+        "name_es": "Indomitable (1), Killing Blow, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Indomptable (1), Coup Fatal, Mort-vivant Nécromantique, Régénération (5+)"
+      },
+      "notes": {
+        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -1095,6 +2239,160 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Wight Lord {renegade}",
+      "name_cn": "尸妖领主",
+      "name_de": "Fluchherr",
+      "name_es": "Wight Lord",
+      "name_fr": "Seigneur Revenant",
+      "id": "wight-lord-renegade",
+      "points": 60,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "General",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          },
+          "name_fr": "Porteur de la Grande Bannière"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance (when mounted)",
+          "name_cn": "长枪(若处于骑乘状态)",
+          "name_de": "Lanze (nur beritten)",
+          "name_es": "Lance (when mounted)",
+          "name_fr": "Lance de joute (si monté)",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Skeletal Steed {vampire counts}",
+          "name_cn": "骷髅战马",
+          "name_de": "Skelettpferd",
+          "name_es": "Skeletal Steed",
+          "name_fr": "Coursier Squelette",
+          "points": 14
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner",
+        "name_cn": "一击必杀, 不死亡灵, 重生(6+), 尸妖旗手",
+        "name_de": "Todesstoß, Nekromantische Untote, Regeneration (6+), Fluchbanner",
+        "name_es": "Killing Blow, Necromantic Undead, Regeneration (6+), Wight Banner",
+        "name_fr": "Coup Fatal, Mort-vivant Nécromantique, Régénération (6+), Bannière du Revenant"
+      },
+      "notes": {
+        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -1136,6 +2434,72 @@
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
         "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      }
+    },
+    {
+      "name_en": "Tomb Banshee {renegade}",
+      "name_cn": "荒坟女妖",
+      "name_de": "Banshee",
+      "name_es": "Tomb Banshee",
+      "name_fr": "Banshee",
+      "id": "tomb-banshee-renegade",
+      "points": 90,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "General",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "General",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_cn": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_de": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_es": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_fr": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_it": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}",
+        "name_pl": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}"
+      },
+      "notes": {
+        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
+        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
       }
     }
   ],
@@ -1238,6 +2602,150 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Skeleton Warriors {vampire counts}",
+      "name_cn": "骷髅战士",
+      "name_de": "Skelettkrieger",
+      "name_es": "Skeleton Warriors",
+      "name_fr": "Guerriers Squelette",
+      "id": "skeleton-warriors-renegade",
+      "points": 4,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Skeleton Champion",
+          "name_cn": "骷髅冠军",
+          "name_de": "Skeletthauptmann",
+          "name_es": "Skeleton Champion",
+          "name_fr": "Champion Squelette",
+          "points": 5
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_cn": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_de": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_es": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_fr": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_it": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_pl": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence."
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Thrusting spears",
+          "name_cn": "刺矛",
+          "name_de": "Stoßspeere",
+          "name_es": "Thrusting spears",
+          "name_fr": "Lances d’infanterie",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shields",
+          "name_cn": "Shields",
+          "name_de": "Shields",
+          "name_es": "Shields",
+          "name_fr": "Shields",
+          "name_it": "Shields",
+          "name_pl": "Shields",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        },
+        {
+          "name_en": "Light armour, Shields",
+          "name_cn": "Light armour, Shields",
+          "name_de": "Light armour, Shields",
+          "name_es": "Light armour, Shields",
+          "name_fr": "Light armour, Shields",
+          "name_it": "Light armour, Shields",
+          "name_pl": "Light armour, Shields",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Implacable Defence",
+          "name_cn": "Implacable Defence",
+          "name_de": "Implacable Defence",
+          "name_es": "Implacable Defence",
+          "name_fr": "Implacable Defence",
+          "name_it": "Implacable Defence",
+          "name_pl": "Implacable Defence",
+          "points": 10,
+          "notes": {
+            "name_en": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_cn": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_de": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_es": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_fr": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_it": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence.",
+            "name_pl": "0-1 unit per 1,000 points may purchase a magic standard and/or Implacable Defence."
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Necromantic Undead, Regeneration (6+)",
+        "name_cn": "紧密阵型, 部群, 不死亡灵, 重生(6+)",
+        "name_de": "Geschlossene Ränge, Horde, Nekromantische Untote, Regeneration (6+)",
+        "name_es": "Close Order, Horde, Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Ordre Serré, Horde, Mort-vivant Nécromantique, Régénération (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1298,6 +2806,78 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Zombies",
+      "name_cn": "僵尸",
+      "name_de": "Zombies",
+      "name_es": "Zombies",
+      "name_fr": "Zombies",
+      "id": "zombies-renegade",
+      "points": 3,
+      "minimum": 20,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 5
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_cn": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_de": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_es": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_fr": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_it": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}",
+        "name_pl": "Close Order, Horde, Necromantic Undead, Regeneration (6+), Shambling Horde {renegade}"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1350,6 +2930,95 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Crypt Ghouls",
+      "name_cn": "墓穴食尸鬼",
+      "name_de": "Gruftghule",
+      "name_es": "Crypt Ghouls",
+      "name_fr": "Goules",
+      "id": "crypt-ghouls-renegade",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crypt Ghast",
+          "name_cn": "墓穴妖鬼",
+          "name_de": "Gruftghast",
+          "name_es": "Crypt Ghast",
+          "name_fr": "Nécrophage",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (Calloused hide)",
+          "name_cn": "Light armour (Calloused hide)",
+          "name_de": "Light armour (Calloused hide)",
+          "name_es": "Light armour (Calloused hide)",
+          "name_fr": "Light armour (Calloused hide)",
+          "name_it": "Light armour (Calloused hide)",
+          "name_pl": "Light armour (Calloused hide)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "Ambushers",
+          "name_de": "Ambushers",
+          "name_es": "Ambushers",
+          "name_fr": "Ambushers",
+          "name_it": "Ambushers",
+          "name_pl": "Ambushers",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_cn": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_de": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_es": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_it": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1393,6 +3062,63 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Bat Swarms",
+      "name_cn": "蝙蝠群",
+      "name_de": "Fledermausschwarm",
+      "name_es": "Bat Swarms",
+      "name_fr": "Nuées de Chauves-souris",
+      "id": "bat-swarm-renegade",
+      "points": 39,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs)",
+          "name_cn": "Hand weapons (Claws and fangs)",
+          "name_de": "Hand weapons (Claws and fangs)",
+          "name_es": "Hand weapons (Claws and fangs)",
+          "name_fr": "Hand weapons (Claws and fangs)",
+          "name_it": "Hand weapons (Claws and fangs)",
+          "name_pl": "Hand weapons (Claws and fangs)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_cn": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_de": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_es": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_fr": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_it": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}",
+        "name_pl": "Fly (7), Necromantic Undead, Regeneration (6+), Skirmishers, Cloud of Horror {renegade}"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1596,6 +3322,161 @@
         "name_de": "Wenn deine Armee einen oder mehr Fluchfürsten/Fluchherren enthält, kann 0-1 Einheit Verfluchte oder Fluchritter als Kernauswahl genommen werden.",
         "name_es": "If your army includes one or more Wights, 0-1 unit of Grave Guard or Black Knights may be taken as a Core choice",
         "name_fr": "Si votre armée inclut un Revenants ou plus, 0-1 unité de Garde des Cryptes ou Chevaliers Noirs peut être prise comme choix d’Unité de Base"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Grave Guard",
+      "name_cn": "荒坟守卫",
+      "name_de": "Verfluchte",
+      "name_es": "Grave Guard",
+      "name_fr": "Garde des Cryptes",
+      "id": "grave-guard-core-renegade",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Seneschal",
+          "name_cn": "总管",
+          "name_de": "Seneschall",
+          "name_es": "Seneschal",
+          "name_fr": "Sénéchal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "Hand weapons, Shields",
+          "name_de": "Hand weapons, Shields",
+          "name_es": "Hand weapons, Shields",
+          "name_fr": "Hand weapons, Shields",
+          "name_it": "Hand weapons, Shields",
+          "name_pl": "Hand weapons, Shields",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_es": "Hand weapons, Great weapons",
+          "name_fr": "Hand weapons, Great weapons",
+          "name_it": "Hand weapons, Great weapons",
+          "name_pl": "Hand weapons, Great weapons",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训)",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Implacable Defence",
+          "name_cn": "无懈防御",
+          "name_de": "Unerbittliche Verteidigung",
+          "name_es": "Implacable Defence",
+          "name_fr": "Défense Implacable",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_cn": "劈裂打击, 紧密阵型, 顽强不屈(1), 不死亡灵, 重生(6+)",
+        "name_de": "Spaltender Schlag, Geschlossene Ränge, Unverwüstlich (1), Nekromantische Untote, Regeneration (6+)",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Coup de Fendoir, Ordre Serré, Indomptable (1), Mort-vivant Nécromantique, Régénération (6+)"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_cn": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_de": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_es": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_fr": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_it": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_pl": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -1710,6 +3591,245 @@
         "name_de": "Wenn deine Armee einen oder mehr Fluchfürsten/Fluchherren enthält, kann 0-1 Einheit Verfluchte oder Fluchritter als Kernauswahl genommen werden.",
         "name_es": "If your army includes one or more Wights, 0-1 unit of Grave Guard or Black Knights may be taken as a Core choice",
         "name_fr": "Si votre armée inclut un Revenants ou plus, 0-1 unité de Garde des Cryptes ou Chevaliers Noirs peut être prise comme choix d’Unité de Base"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Black Knights",
+      "name_cn": "黑骑士",
+      "name_de": "Fluchritter",
+      "name_es": "Black Knights",
+      "name_fr": "Chevaliers Noirs",
+      "id": "black-knights-core-renegade",
+      "points": 24,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Hell Knight",
+          "name_cn": "地狱骑士",
+          "name_de": "Höllenritter",
+          "name_es": "Hell Knight",
+          "name_fr": "Chevalier Infernal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Skeletal hooves",
+          "name_cn": "单手武器, 骷髅马蹄",
+          "name_de": "Handwaffen, Skeletthufe",
+          "name_es": "Hand weapons, Skeletal hooves",
+          "name_fr": "Armes de base, Sabots squelettiques",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances, Skeletal hooves",
+          "name_cn": "长枪, 骷髅马蹄",
+          "name_de": "Lanzen, Skeletthufe",
+          "name_es": "Lances, Skeletal hooves",
+          "name_fr": "Lances de joute, Sabots squelettiques",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shields, Barding",
+          "name_cn": "Heavy armour, Shields, Barding",
+          "name_de": "Heavy armour, Shields, Barding",
+          "name_es": "Heavy armour, Shields, Barding",
+          "name_fr": "Heavy armour, Shields, Barding",
+          "name_it": "Heavy armour, Shields, Barding",
+          "name_pl": "Heavy armour, Shields, Barding",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_cn": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_it": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_pl": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_cn": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_de": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_es": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_fr": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_it": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
+        "name_pl": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Corpse Cart",
+      "name_cn": "运尸车",
+      "name_de": "Leichenkarren",
+      "name_es": "Corpse Cart",
+      "name_fr": "Charrette Macabre",
+      "id": "corpse-cart-core-renegade",
+      "points": 60,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "Hand weapons",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Hand weapons",
+          "name_it": "Hand weapons",
+          "name_pl": "Hand weapons",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Whip (Corpsemaster only)",
+          "name_cn": "Hand weapons, Whip (Corpsemaster only)",
+          "name_de": "Hand weapons, Whip (Corpsemaster only)",
+          "name_es": "Hand weapons, Whip (Corpsemaster only)",
+          "name_fr": "Hand weapons, Whip (Corpsemaster only)",
+          "name_it": "Hand weapons, Whip (Corpsemaster only)",
+          "name_pl": "Hand weapons, Whip (Corpsemaster only)",
+          "points": 3
+        },
+        {
+          "name_en": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_cn": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_de": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_es": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_fr": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_it": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "name_pl": "Hand weapons, Cavalry spear (Corpsemaster only)",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_es": "4+",
+          "name_fr": "4+",
+          "name_it": "4+",
+          "name_pl": "4+",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Corpse Cart upgrade",
+          "name_cn": "Corpse Cart upgrade",
+          "name_de": "Corpse Cart upgrade",
+          "name_es": "Corpse Cart upgrade",
+          "name_fr": "Corpse Cart upgrade",
+          "name_it": "Corpse Cart upgrade",
+          "name_pl": "Corpse Cart upgrade",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Balefire Brazier",
+              "name_cn": "Balefire Brazier",
+              "name_de": "Balefire Brazier",
+              "name_es": "Balefire Brazier",
+              "name_fr": "Balefire Brazier",
+              "name_it": "Balefire Brazier",
+              "name_pl": "Balefire Brazier",
+              "points": 10,
+              "active": true,
+              "exclusive": true
+            },
+            {
+              "name_en": "Warped Tintinnabulation",
+              "name_cn": "Warped Tintinnabulation",
+              "name_de": "Warped Tintinnabulation",
+              "name_es": "Warped Tintinnabulation",
+              "name_fr": "Warped Tintinnabulation",
+              "name_it": "Warped Tintinnabulation",
+              "name_pl": "Warped Tintinnabulation",
+              "points": 15,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_cn": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_de": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_es": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_fr": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_it": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
+        "name_pl": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}"
+      },
+      "notes": {
+        "name_en": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_cn": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_de": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_es": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_fr": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_it": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
+        "name_pl": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     }
   ],
@@ -1863,6 +3983,161 @@
         "name_de": "0-1 pro 1000 Punkte (wechselseitig exklusiv mit Fluchrittern)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Black Knights)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité de Chevaliers Noirs)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Grave Guard",
+      "name_cn": "荒坟守卫",
+      "name_de": "Verfluchte",
+      "name_es": "Grave Guard",
+      "name_fr": "Garde des Cryptes",
+      "id": "grave-guard-renegade",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Seneschal",
+          "name_cn": "总管",
+          "name_de": "Seneschall",
+          "name_es": "Seneschal",
+          "name_fr": "Sénéchal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Shields",
+          "name_cn": "Hand weapons, Shields",
+          "name_de": "Hand weapons, Shields",
+          "name_es": "Hand weapons, Shields",
+          "name_fr": "Hand weapons, Shields",
+          "name_it": "Hand weapons, Shields",
+          "name_pl": "Hand weapons, Shields",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great weapons",
+          "name_cn": "Hand weapons, Great weapons",
+          "name_de": "Hand weapons, Great weapons",
+          "name_es": "Hand weapons, Great weapons",
+          "name_fr": "Hand weapons, Great weapons",
+          "name_it": "Hand weapons, Great weapons",
+          "name_pl": "Hand weapons, Great weapons",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训)",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Implacable Defence",
+          "name_cn": "无懈防御",
+          "name_de": "Unerbittliche Verteidigung",
+          "name_es": "Implacable Defence",
+          "name_fr": "Défense Implacable",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_cn": "劈裂打击, 紧密阵型, 顽强不屈(1), 不死亡灵, 重生(6+)",
+        "name_de": "Spaltender Schlag, Geschlossene Ränge, Unverwüstlich (1), Nekromantische Untote, Regeneration (6+)",
+        "name_es": "Cleaving Blow, Close Order, Indomitable (1), Necromantic Undead, Regeneration (6+)",
+        "name_fr": "Coup de Fendoir, Ordre Serré, Indomptable (1), Mort-vivant Nécromantique, Régénération (6+)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -1977,6 +4252,124 @@
         "name_de": "0-1 pro 1000 Punkte (wechselseitig exklusiv mit Verfluchten)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Grave Guard)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité de Garde des Cryptes)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Black Knights",
+      "name_cn": "黑骑士",
+      "name_de": "Fluchritter",
+      "name_es": "Black Knights",
+      "name_fr": "Chevaliers Noirs",
+      "id": "black-knights-renegade",
+      "points": 24,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Hell Knight",
+          "name_cn": "地狱骑士",
+          "name_de": "Höllenritter",
+          "name_es": "Hell Knight",
+          "name_fr": "Chevalier Infernal",
+          "points": 6,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Skeletal hooves",
+          "name_cn": "单手武器, 骷髅马蹄",
+          "name_de": "Handwaffen, Skeletthufe",
+          "name_es": "Hand weapons, Skeletal hooves",
+          "name_fr": "Armes de base, Sabots squelettiques",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Lances, Skeletal hooves",
+          "name_cn": "长枪, 骷髅马蹄",
+          "name_de": "Lanzen, Skeletthufe",
+          "name_es": "Lances, Skeletal hooves",
+          "name_fr": "Lances de joute, Sabots squelettiques",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shields, Barding",
+          "name_cn": "Heavy armour, Shields, Barding",
+          "name_de": "Heavy armour, Shields, Barding",
+          "name_es": "Heavy armour, Shields, Barding",
+          "name_fr": "Heavy armour, Shields, Barding",
+          "name_it": "Heavy armour, Shields, Barding",
+          "name_pl": "Heavy armour, Shields, Barding",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_cn": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_it": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
+        "name_pl": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2029,6 +4422,85 @@
         "name_de": "0-1 pro 1000 Punkte (wechselseitig exklusiv mit Vampirfledermäusen)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Fell Bats)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité de Chauves-Souris Géantes)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Crypt Horrors",
+      "name_cn": "墓穴恐鬼",
+      "name_de": "Gruftschrecken",
+      "name_es": "Crypt Horrors",
+      "name_fr": "Horreurs des Cryptes",
+      "id": "crypt-horrors-renegade",
+      "points": 46,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Crypt Haunter",
+          "name_cn": "墓穴骇鬼",
+          "name_de": "Gruftscheusal",
+          "name_es": "Crypt Haunter",
+          "name_fr": "Hideur des Cryptes",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Filth-encrusted claws",
+          "name_cn": "污秽之爪",
+          "name_de": "Schmutzverkrustete Klauen",
+          "name_es": "Filth-encrusted claws",
+          "name_fr": "Griffes crasseuses",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_cn": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Heavy armour (Scaly skin)",
+          "name_it": "Heavy armour (Scaly skin)",
+          "name_pl": "Heavy armour (Scaly skin)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_cn": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_de": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_es": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_fr": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_it": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_pl": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2072,6 +4544,63 @@
         "name_de": "0-1 pro 1000 Punkte (wechselseitig exklusiv mit Gruftschrecken)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Crypt Horrors)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité d’Horreurs des Cryptes)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Fell Bats",
+      "name_cn": "恶蝠",
+      "name_de": "Vampirfledermäuse",
+      "name_es": "Fell Bats",
+      "name_fr": "Chauves-Souris Géantes",
+      "id": "fell-bats-renegade",
+      "points": 15,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs)",
+          "name_cn": "Hand weapons (Claws and fangs)",
+          "name_de": "Hand weapons (Claws and fangs)",
+          "name_es": "Hand weapons (Claws and fangs)",
+          "name_fr": "Hand weapons (Claws and fangs)",
+          "name_it": "Hand weapons (Claws and fangs)",
+          "name_pl": "Hand weapons (Claws and fangs)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_cn": "飞行(10), 不死亡灵, 重生(6+), 散兵, 快速行进",
+        "name_de": "Fliegen (10), Nekromantische Untote, Regeneration (6+), Plänkler, Schnelle Bewegung",
+        "name_es": "Fly (10), Necromantic Undead, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Vol (10), Mort-vivant Nécromantique, Régénération (6+), Tirailleurs, Rapide"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2115,6 +4644,61 @@
         "name_de": "0-1 pro Gespenst oder Banshee",
         "name_es": "0-1 per Cairn Wraith or Tomb Banshee",
         "name_fr": "0-1 par Spectres des Cairns ou Banshee"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Spirit Hosts",
+      "name_cn": "幽灵群",
+      "name_de": "Geisterschar",
+      "name_es": "Spirit Hosts",
+      "name_fr": "Nuée d’Esprits",
+      "id": "spirit-hosts-renegade",
+      "points": 49,
+      "minimum": 2,
+      "maximum": 6,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move",
+        "name_cn": "受缚灵魂, 灵体, 魔法攻击, 不死亡灵, 开放阵型, 重生(6+), 预备移动",
+        "name_de": "Gebundene Geister, Körperlos, Magische Attacken, Nekromantische Untote, Offene Ränge, Regeneration (6+), Reservebewegung",
+        "name_es": "Bound Spirits, Ethereal, Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Reserve Move",
+        "name_fr": "Esprits Liés, Éthéré, Attaques Magiques, Mort-vivant Nécromantique, Ordre Dispersé, Régénération (6+), Mouvement de Réserve"
+      },
+      "notes": {
+        "name_en": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_cn": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_de": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_es": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_fr": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_it": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_pl": "0-1 unit per Cairn Wraith or Tomb Banshee taken."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2167,6 +4751,85 @@
         "name_de": "0-1, wenn dein General ein Strigoi-Ghulkönig ist (wechselseitig exklusiv mit Flederbestie)",
         "name_es": "0-1 if your general is a Strigoi Ghoul King (mutually exclusive with Terrorgheist)",
         "name_fr": "0-1 si votre général est un Roi Goule (mutuellement exclusif avec l’unité de Terreurgheist)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Vargheists",
+      "name_cn": "嗜血天鬼",
+      "name_de": "Vargheists",
+      "name_es": "Vargheists",
+      "name_fr": "Vargheists",
+      "id": "vargheists-special-renegade",
+      "points": 61,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Vargoyle",
+          "name_cn": "嗜血蝠妖",
+          "name_de": "Varghyl",
+          "name_es": "Vargoyle",
+          "name_fr": "Vargoyle",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_de": "Boshafte Klauen",
+          "name_es": "Wicked claws",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (Calloused hide)",
+          "name_cn": "Light armour (Calloused hide)",
+          "name_de": "Light armour (Calloused hide)",
+          "name_es": "Light armour (Calloused hide)",
+          "name_fr": "Light armour (Calloused hide)",
+          "name_it": "Light armour (Calloused hide)",
+          "name_pl": "Light armour (Calloused hide)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_cn": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_de": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_es": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_it": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
+      },
+      "notes": {
+        "name_en": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_cn": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_de": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_es": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_fr": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_it": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_pl": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2219,6 +4882,74 @@
         "name_de": "0-1, wenn dein General ein Strigoi-Ghulkönig ist (wechselseitig exklusiv mit Vargheists)",
         "name_es": "0-1 if your general is a Strigoi Ghoul King (mutually exclusive with Vargheists)",
         "name_fr": "0-1 si votre général est un Roi Goule (mutuellement exclusif avec l’unité de Vargheists)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Terrorgheist",
+      "name_cn": "惧龙蝠",
+      "name_de": "Flederbestie",
+      "name_es": "Terrorgheist",
+      "name_fr": "Terreurgheist",
+      "id": "terrorgheist-special-renegade",
+      "points": 205,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Filth-encrusted talons, Rancid maw",
+          "name_cn": "污秽之爪, 腐臭巨口",
+          "name_de": "Schmutzverkrustete Klauen, Fauliges Maul",
+          "name_es": "Filth-encrusted talons, Rancid maw",
+          "name_fr": "Serres crasseuses, Gueule pourrie",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_cn": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Heavy armour (Scaly skin)",
+          "name_it": "Heavy armour (Scaly skin)",
+          "name_pl": "Heavy armour (Scaly skin)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_cn": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_it": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_pl": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}"
+      },
+      "notes": {
+        "name_en": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_cn": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_de": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_es": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_fr": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_it": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
+        "name_pl": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     },
     {
@@ -2310,6 +5041,201 @@
         "name_de": "0-3",
         "name_es": "0-3",
         "name_fr": "0-3"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Varghulf",
+      "name_cn": "嗜血蝠狼",
+      "name_de": "Varghulf",
+      "name_es": "Varghulf",
+      "name_fr": "Varghulf",
+      "id": "varghulf-special-renegade",
+      "points": 110,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_de": "Boshafte Klauen",
+          "name_es": "Wicked claws",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_cn": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Heavy armour (Scaly skin)",
+          "name_it": "Heavy armour (Scaly skin)",
+          "name_pl": "Heavy armour (Scaly skin)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_cn": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_de": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_es": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_fr": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_it": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_pl": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger"
+      },
+      "notes": {
+        "name_en": "0-1 per 1,000 points.",
+        "name_cn": "0-1 per 1,000 points.",
+        "name_de": "0-1 per 1,000 points.",
+        "name_es": "0-1 per 1,000 points.",
+        "name_fr": "0-1 per 1,000 points.",
+        "name_it": "0-1 per 1,000 points.",
+        "name_pl": "0-1 per 1,000 points."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
+      }
+    },
+    {
+      "name_en": "Blood Knights",
+      "name_cn": "血骑士",
+      "name_de": "Blutritter",
+      "name_es": "Blood Knights",
+      "name_fr": "Chevaliers de Sang",
+      "id": "blood-knights-special-renegade",
+      "points": 39,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Kastellan (champion)",
+          "name_cn": "堡主",
+          "name_de": "Kastellan",
+          "name_es": "Kastellan",
+          "name_fr": "Kasztellan",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item",
+              "vampiric-power"
+            ],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_de": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_cn": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_fr": "Up to 25 points of magic items and 25 points of vampiric powers"
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Iron-shod hooves",
+          "name_cn": "单手武器, 长枪, 铁蹄",
+          "name_de": "Handwaffen, Lanzen, Eisenbeschlagene Hufe",
+          "name_es": "Hand weapons, Lances, Iron-shod hooves",
+          "name_fr": "Armes de base, Lances de joute, Sabots ferrés",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shields, Barding",
+          "name_cn": "重甲, 盾牌, 马铠",
+          "name_de": "Schwere Rüstung, Schilde, Rossharnisch",
+          "name_es": "Heavy armour, Shields, Barding",
+          "name_fr": "Armure lourde, Boucliers, Caparaçon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour, Shields, Barding",
+          "name_cn": "全身甲, 盾牌, 马铠",
+          "name_de": "Plattenrüstung, Schilde, Rossharnisch",
+          "name_es": "Full plate armour, Shields, Barding",
+          "name_fr": "Armure de plate complète, Boucliers, Caparaçon",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "points": 3,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_cn": "受诅武器, 紧密阵型, 反制冲锋, 黑暗活力, 先行冲锋, 易燃, 顽强不屈(1), 傲人武艺, 不死亡灵, 重生(6+), 快速行进",
+        "name_de": "Verfluchte Waffen, Geschlossene Ränge, Gegenangriff, Dunkle Vitalität, Erster Angriff, Brennbar, Unverwüstlich (1), Kriegerstolz, Nekromantische Untote, Regeneration (6+), Schnelle Bewegung",
+        "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Armes Maudites, Ordre Serré, Contre-charge, Sombre Vitalité, Première Charge, Inflammable, Indomptable (1), Fierté Martiale, Mort-vivant Nécromantique, Régénération (6+), Rapide"
+      },
+      "notes": {
+        "name_en": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_cn": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_de": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_es": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_fr": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_it": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
+        "name_pl": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "special"
+        }
       }
     }
   ],
@@ -2364,6 +5290,85 @@
         "name_de": "0-1 pro 1000 Punkte",
         "name_es": "0-1 per 1000 points",
         "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Vargheists",
+      "name_cn": "嗜血天鬼",
+      "name_de": "Vargheists",
+      "name_es": "Vargheists",
+      "name_fr": "Vargheists",
+      "id": "vargheists-renegade",
+      "points": 61,
+      "minimum": 2,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Vargoyle",
+          "name_cn": "嗜血蝠妖",
+          "name_de": "Varghyl",
+          "name_es": "Vargoyle",
+          "name_fr": "Vargoyle",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Wicked claws",
+          "name_cn": "恶毒之爪",
+          "name_de": "Boshafte Klauen",
+          "name_es": "Wicked claws",
+          "name_fr": "Griffes mortelles",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour (Calloused hide)",
+          "name_cn": "Light armour (Calloused hide)",
+          "name_de": "Light armour (Calloused hide)",
+          "name_es": "Light armour (Calloused hide)",
+          "name_fr": "Light armour (Calloused hide)",
+          "name_it": "Light armour (Calloused hide)",
+          "name_pl": "Light armour (Calloused hide)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_cn": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_de": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_es": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_it": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2405,6 +5410,73 @@
         "name_de": "0-2",
         "name_es": "0-2",
         "name_fr": "0-2"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Black Coach",
+      "name_cn": "黑马车",
+      "name_de": "Schwarze Kutsche",
+      "name_es": "Black Coach",
+      "name_fr": "Carrosse Noir",
+      "id": "black-coach-renegade",
+      "points": 205,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "name_cn": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "name_de": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "name_es": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "name_fr": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "name_it": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
+          "name_pl": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)"
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "3+",
+          "name_cn": "3+",
+          "name_de": "3+",
+          "name_es": "3+",
+          "name_fr": "3+",
+          "name_it": "3+",
+          "name_pl": "3+",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror",
+        "name_cn": "紧密阵型, 先行冲锋, 撞击(D6+2), 顽强不屈(1), 魔法攻击, 不死亡灵, 重生(6+), 幽魂马车, 惊骇",
+        "name_de": "Geschlossene Ränge, Erster Angriff, Aufpralltreffer (W6+2), Unverwüstlich (1), Magische Attacken, Nekromantische Untote, Regeneration (6+), Spektraler Kutschwagen, Entsetzen",
+        "name_es": "Close Order, First Charge, Impact Hits (D6+2), Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Spectral Coach, Terror",
+        "name_fr": "Ordre Serré, Première Charge, Touches d’Impact (D6+2), Indomptable (1), Attaques Magiques, Mort-vivant Nécromantique, Régénération (6+), Spectre, Terreur"
+      },
+      "notes": {
+        "name_en": "0-1 per 1,000 points.",
+        "name_cn": "0-1 per 1,000 points.",
+        "name_de": "0-1 per 1,000 points.",
+        "name_es": "0-1 per 1,000 points.",
+        "name_fr": "0-1 per 1,000 points.",
+        "name_it": "0-1 per 1,000 points.",
+        "name_pl": "0-1 per 1,000 points."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2457,6 +5529,74 @@
         "name_de": "0–1 pro 1000 Punkte (wechselseitig exklusiv mit Varghulf)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Varghulf)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité de Varghulf)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Terrorgheist",
+      "name_cn": "惧龙蝠",
+      "name_de": "Flederbestie",
+      "name_es": "Terrorgheist",
+      "name_fr": "Terreurgheist",
+      "id": "terrorgheist-renegade",
+      "points": 205,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Filth-encrusted talons, Rancid maw",
+          "name_cn": "污秽之爪, 腐臭巨口",
+          "name_de": "Schmutzverkrustete Klauen, Fauliges Maul",
+          "name_es": "Filth-encrusted talons, Rancid maw",
+          "name_fr": "Serres crasseuses, Gueule pourrie",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Scaly skin)",
+          "name_cn": "Heavy armour (Scaly skin)",
+          "name_de": "Heavy armour (Scaly skin)",
+          "name_es": "Heavy armour (Scaly skin)",
+          "name_fr": "Heavy armour (Scaly skin)",
+          "name_it": "Heavy armour (Scaly skin)",
+          "name_pl": "Heavy armour (Scaly skin)",
+          "points": 0,
+          "active": true,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_cn": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_it": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
+        "name_pl": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2509,6 +5649,11 @@
         "name_de": "0–1 pro 1000 Punkte (wechselseitig exklusiv mit Flederbestie)",
         "name_es": "0-1 per 1000 points (mutually exclusive with Terrorgheist)",
         "name_fr": "0-1 par tranche de 1000 points (mutuellement exclusif avec l’unité de Terreurgheist)"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2630,6 +5775,139 @@
         "name_de": " „0–1 pro 1000 Punkte, Kastellan darf bis zu 25 Punkte Magische Gegenstände und 25 Punkte Vampirkräfte wählen",
         "name_es": "0-1 per 1000 points, Kastellan chooses 25 points Magic Items and 25 points Vampiric Powers",
         "name_fr": "0-1 par tranche de 1000 points, Kasztellan peut prendre jusqu’à 25 points de Objets Magiques et jusqu’à 25 points de Pouvoirs Vampiriques"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Blood Knights",
+      "name_cn": "血骑士",
+      "name_de": "Blutritter",
+      "name_es": "Blood Knights",
+      "name_fr": "Chevaliers de Sang",
+      "id": "blood-knights-renegade",
+      "points": 39,
+      "minimum": 4,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Kastellan (champion)",
+          "name_cn": "堡主",
+          "name_de": "Kastellan",
+          "name_es": "Kastellan",
+          "name_fr": "Kasztellan",
+          "points": 7,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item",
+              "vampiric-power"
+            ],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_de": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_cn": "Up to 25 points of magic items and 25 points of vampiric powers",
+            "name_fr": "Up to 25 points of magic items and 25 points of vampiric powers"
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Iron-shod hooves",
+          "name_cn": "单手武器, 长枪, 铁蹄",
+          "name_de": "Handwaffen, Lanzen, Eisenbeschlagene Hufe",
+          "name_es": "Hand weapons, Lances, Iron-shod hooves",
+          "name_fr": "Armes de base, Lances de joute, Sabots ferrés",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shields, Barding",
+          "name_cn": "重甲, 盾牌, 马铠",
+          "name_de": "Schwere Rüstung, Schilde, Rossharnisch",
+          "name_es": "Heavy armour, Shields, Barding",
+          "name_fr": "Armure lourde, Boucliers, Caparaçon",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour, Shields, Barding",
+          "name_cn": "全身甲, 盾牌, 马铠",
+          "name_de": "Plattenrüstung, Schilde, Rossharnisch",
+          "name_es": "Full plate armour, Shields, Barding",
+          "name_fr": "Armure de plate complète, Boucliers, Caparaçon",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Drilled",
+          "name_cn": "受训",
+          "name_de": "Gut ausgebildet",
+          "name_es": "Drilled",
+          "name_fr": "Bien Entraînés",
+          "points": 3,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_cn": "受诅武器, 紧密阵型, 反制冲锋, 黑暗活力, 先行冲锋, 易燃, 顽强不屈(1), 傲人武艺, 不死亡灵, 重生(6+), 快速行进",
+        "name_de": "Verfluchte Waffen, Geschlossene Ränge, Gegenangriff, Dunkle Vitalität, Erster Angriff, Brennbar, Unverwüstlich (1), Kriegerstolz, Nekromantische Untote, Regeneration (6+), Schnelle Bewegung",
+        "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_fr": "Armes Maudites, Ordre Serré, Contre-charge, Sombre Vitalité, Première Charge, Inflammable, Indomptable (1), Fierté Martiale, Mort-vivant Nécromantique, Régénération (6+), Rapide"
+      },
+      "notes": {
+        "name_en": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_cn": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_de": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_es": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_fr": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_it": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
+        "name_pl": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "rare"
+        }
       }
     },
     {
@@ -2682,6 +5960,70 @@
         "name_de": "0-1 pro Gespenst oder Banshee",
         "name_es": "0-1 per Cairn Wraith or Tomb Banshee",
         "name_fr": "0-1 par Spectres des Cairns ou Banshee"
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "rare"
+        }
+      }
+    },
+    {
+      "name_en": "Hexwraiths",
+      "name_cn": "缚灵骑士",
+      "name_de": "Sensenreiter",
+      "name_es": "Hexwraiths",
+      "name_fr": "Émissaires d’Outre-tombe",
+      "id": "hexwraiths-renegade",
+      "points": 31,
+      "minimum": 5,
+      "maximum": 10,
+      "command": [
+        {
+          "name_en": "Hellwraith",
+          "name_cn": "地狱恶灵",
+          "name_de": "Schnitter",
+          "name_es": "Hellwraith",
+          "name_fr": "Émissaire Infernal",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons, Skeletal hooves (Hand weapons)",
+          "name_cn": "单手武器, 重型武器, 骷髅马蹄(单手武器)",
+          "name_de": "Handwaffen, Zweihandwaffen, Skeletthufe (Handwaffen)",
+          "name_es": "Hand weapons, Great weapons, Skeletal hooves (Hand weapons)",
+          "name_fr": "Armes de base, Armes lourdes, Sabots squelettiques (Armes de base)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror",
+        "name_cn": "灵体, 火焰攻击, 飞行(8), 魔法攻击, 不死亡灵, 开放阵型, 重生(6+), 幽魂收割, 快速行进, 惊骇",
+        "name_de": "Körperlos, Flammenattacken, Fliegen (8), Magische Attacken, Nekromantische Untote, Offene Ränge, Regeneration (6+), Spektrale Schnitter, Schnelle Bewegung, Entsetzen",
+        "name_es": "Ethereal, Flaming Attacks, Fly (8), Magical Attacks, Necromantic Undead, Open Order, Regeneration (6+), Spectral Reapers, Swiftstride, Terror",
+        "name_fr": "Éthéré, Attaques Enflammées, Vol (8), Attaques Magiques, Mort-vivant Nécromantique, Ordre Dispersé, Régénération (6+), Faucheurs Spectraux, Rapide, Terreur"
+      },
+      "notes": {
+        "name_en": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_cn": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_de": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_es": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_fr": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_it": "0-1 unit per Cairn Wraith or Tomb Banshee taken.",
+        "name_pl": "0-1 unit per Cairn Wraith or Tomb Banshee taken."
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "rare"
+        }
       }
     }
   ],
