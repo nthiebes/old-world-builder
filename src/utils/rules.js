@@ -2940,7 +2940,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-khorne",
             "chaos-furies-of-khorne-renegade",
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
@@ -2957,7 +2956,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-nurgle",
             "chaos-furies-of-nurgle-renegade",
             "plaguebearers-of-nurgle-renegade",
             "nurglings",
@@ -2973,9 +2971,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-slaanesh",
             "chaos-furies-of-slaanesh-renegade",
-            "daemonettes-of-slaanesh",
             "daemonettes-of-slaanesh-renegade",
             "seekers-of-slaanesh-renegade",
             "seekers-of-slaanesh-core-renegade",
@@ -2991,7 +2987,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-tzeentch",
             "chaos-furies-of-tzeentch-renegade",
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch",
@@ -3010,7 +3005,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-khorne",
             "chaos-furies-of-khorne-renegade",
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
@@ -3027,7 +3021,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-nurgle",
             "chaos-furies-of-nurgle-renegade",
             "plaguebearers-of-nurgle-renegade",
             "nurglings",
@@ -3043,9 +3036,7 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-slaanesh",
             "chaos-furies-of-slaanesh-renegade",
-            "daemonettes-of-slaanesh",
             "daemonettes-of-slaanesh-renegade",
             "seekers-of-slaanesh-renegade",
             "seekers-of-slaanesh-core-renegade",
@@ -3061,7 +3052,6 @@ export const rules = {
           max: 1,
           requiresType: "all",
           requires: [
-            "chaos-furies-of-tzeentch",
             "chaos-furies-of-tzeentch-renegade",
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch",
