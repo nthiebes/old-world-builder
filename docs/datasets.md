@@ -42,6 +42,10 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
   "magicItemsArmy": String, // Category the unit can take magic items from, optional
   "maxSignatureSpells": Number, // Number of maximum signature spells
   "army": String, // Only in mercanaries category, army ID, optional
+  "detachment": Boolean, // Hides a unit if it's only a detachment
+  "regimentalUnit": Boolean, // Allows detachments to be added
+  "maxDetachments": Number, // Maximum number of detachments
+  "allowedDetachments": Array[String], // IDs of units that can be taken as detachment
   "armyComposition": { // Army composition specific options, optional
     [army composition ID]: { // Example: "troll-horde"
       "category": "characters" | "core" | "special" | "rare", // Category where the unit can be added

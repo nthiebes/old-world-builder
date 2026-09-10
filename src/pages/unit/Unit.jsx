@@ -45,6 +45,28 @@ import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 import "./Unit.css";
 import { updateSetting } from "../../state/settings";
 
+const getDetachments = ({ army, unit }) => {
+  if (!army || !unit) {
+    return null;
+  }
+
+  const units = [...army.core, ...army.special, ...army.rare];
+  const detachments = [];
+
+  if (unit.allowedDetachments && unit.allowedDetachments.length > 0) {
+    unit.allowedDetachments.forEach((detachment) => {
+      const detachmentData = units.find((u) => u.id === detachment);
+
+      if (detachmentData) {
+        detachments.push(detachmentData);
+      }
+    });
+    return detachments;
+  } else {
+    return units.filter((unit) => unit.detachment);
+  }
+};
+
 export const Unit = ({ isMobile, previewData = {} }) => {
   const isPreview = Boolean(previewData?.type);
   const { type: previewType, unit: previewUnit } = previewData;
@@ -79,9 +101,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     );
   const detachments =
     army &&
-    [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment,
-    );
+    getDetachments({
+      army,
+      unit,
+    });
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -1322,7 +1345,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   <div className="list">
                     <div className="list__inner unit__detachments-header">
                       <b className="unit__magic-headline">
-                        {detachment[`name_${language}`] || name_en}
+                        {`${detachment[`name_${language}`] || name_en}`.replace(
+                          " {renegade}",
+                          "",
+                        )}
                         <RuleWithIcon
                           name={name_en}
                           armyComposition={unitArmyComposition}

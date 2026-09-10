@@ -657,7 +657,7 @@
       }
     },
     {
-      "name_en": "Warlock Engineer",
+      "name_en": "Warlock Engineer {renegade}",
       "name_cn": "工程术士",
       "name_de": "Warlocktechniker",
       "name_es": "Warlock Engineer",
@@ -706,12 +706,19 @@
           "points": 6
         },
         {
-          "name_en": "Hand weapon, Doomrocket (0-1 per army)",
-          "name_cn": "单手武器, 毁灭火箭 (每支军队0-1)",
-          "name_de": "Handwaffe, Todesrakete (0-1 pro Armee)",
-          "name_es": "Hand weapon, Doomrocket (0-1 per army)",
-          "name_fr": "Arme de base, Fusée Infernale (0-1 par armée)",
-          "points": 6
+          "name_en": "Hand weapon, Doomrocket",
+          "name_cn": "单手武器, 毁灭火箭",
+          "name_de": "Handwaffe, Todesrakete",
+          "name_es": "Hand weapon, Doomrocket",
+          "name_fr": "Arme de base, Fusée Infernale",
+          "points": 6,
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "每支军队0-1",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
         }
       ],
       "armor": [],
@@ -857,7 +864,7 @@
       }
     },
     {
-      "name_en": "Master Assassin",
+      "name_en": "Master Assassin {renegade}",
       "name_cn": "刺客死亡大师",
       "name_de": "Meisterassassine",
       "name_es": "Master Assassin",
@@ -1066,6 +1073,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team"],
       "armyComposition": {
         "skaven": {
           "category": "core",
@@ -1170,7 +1178,7 @@
       }
     },
     {
-      "name_en": "Stormvermin",
+      "name_en": "Stormvermin {renegade}",
       "name_cn": "风暴鼠",
       "name_de": "Sturmratten",
       "name_es": "Stormvermin",
@@ -1181,6 +1189,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team"],
       "armyComposition": {
         "sk-renegade": {
           "category": "core",
@@ -1303,29 +1312,22 @@
       },
       "command": [
         {
-          "name_en": "Master Moulder (champion)",
-          "name_cn": "莫德尔训鼠大师 (champion)",
-          "name_de": "Meisterzüchter (champion)",
-          "name_es": "Master Moulder (champion)",
-          "name_fr": "Maître corrupteur (champion)",
-          "points": 20,
-          "magic": {
-            "types": [
-              "weapon",
-              "armor",
-              "talisman",
-              "arcane-item",
-              "enchanted-item"
-            ],
-            "maxPoints": 25
-          },
-          "notes": {
-            "name_en": "Upgrade for one Packmaster",
-            "name_cn": "将一个鼠群饲主升级为",
-            "name_de": "Aufwertung für einen Meutenbändiger",
-            "name_es": "Upgrade for one Packmaster",
-            "name_fr": "Amélioration pour un Chef de meute"
-          }
+          "name_en": "Packmaster (champion)",
+          "name_cn": "鼠群饲主 (champion)",
+          "name_de": "Meutenbändiger (champion)",
+          "name_es": "Packmaster (champion)",
+          "name_fr": "Chef de meute (champion)",
+          "points": 5,
+          "options": [
+            {
+              "name_en": "Master Moulder (champion)",
+              "name_cn": "莫德尔训鼠大师 (champion)",
+              "name_de": "Meisterzüchter (champion)",
+              "name_es": "Master Moulder (champion)",
+              "name_fr": "Maître corrupteur (champion)",
+              "points": 20
+            }
+          ]
         },
         {
           "name_en": "Musician",
@@ -1357,9 +1359,7 @@
           "name_es": "Spears",
           "name_fr": "Spears",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Shields",
@@ -1368,9 +1368,7 @@
           "name_es": "Shields",
           "name_fr": "Boucliers",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
+          "perModel": true
         },
         {
           "name_en": "Slings",
@@ -1379,25 +1377,7 @@
           "name_es": "Slings",
           "name_fr": "Slings",
           "points": 1,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Packmaster, Whip",
-          "name_cn": "鼠群饲主, 长鞭",
-          "name_de": "Meutenbändiger, Peitsche",
-          "name_es": "Packmaster, Whip",
-          "name_fr": "Chef de meute, Fouet",
-          "points": 5
-        },
-        {
-          "name_en": "Packmaster, Things-catcher",
-          "name_cn": "鼠群饲主, 捕人器",
-          "name_de": "Meutenbändiger, Ding-Fänger",
-          "name_es": "Packmaster, Things-catcher",
-          "name_fr": "Chef de meute, Attrape-choses",
-          "points": 10
+          "perModel": true
         }
       ],
       "mounts": [],
@@ -1421,7 +1401,7 @@
       }
     },
     {
-      "name_en": "Clanrats",
+      "name_en": "Clanrats {renegade}",
       "name_cn": "氏族鼠",
       "name_de": "Klanratten",
       "name_es": "Clanrats",
@@ -1432,6 +1412,7 @@
       "maximum": 40,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team"],
       "armyComposition": {
         "skaven": {
           "category": "core",
@@ -1475,11 +1456,23 @@
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
           "points": 5,
+          "armyComposition": "skaven"
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 5,
           "magic": {
             "types": ["banner"],
-            "maxPoints": 50,
-            "armyComposition": "sk-renegade"
-          }
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1,000 points may purchase a magic standard"
+          },
+          "armyComposition": "sk-renegade"
         },
         {
           "name_en": "Musician",
@@ -1548,7 +1541,7 @@
       }
     },
     {
-      "name_en": "Weapon Team",
+      "name_en": "Weapon Team {renegade}",
       "name_cn": "武器小组",
       "name_de": "Waffenteam",
       "name_es": "Weapon Team",
@@ -1819,7 +1812,7 @@
       }
     },
     {
-      "name_en": "Giant Rats",
+      "name_en": "Giant Rats {renegade}",
       "name_cn": "巨鼠",
       "name_de": "Riesenratten",
       "name_es": "Giant Rats",
@@ -1944,11 +1937,11 @@
       },
       "command": [
         {
-          "name_en": "Nightleader",
-          "name_cn": "夜头领",
-          "name_de": "Schattenführer",
-          "name_es": "Nightleader",
-          "name_fr": "Grande-cape",
+          "name_en": "Nightleader (champion)",
+          "name_cn": "夜头领 (champion)",
+          "name_de": "Schattenführer (champion)",
+          "name_es": "Nightleader (champion)",
+          "name_fr": "Grande-cape (champion)",
           "points": 6
         }
       ],
@@ -2030,7 +2023,7 @@
       }
     },
     {
-      "name_en": "Night Runners",
+      "name_en": "Night Runners {renegade}",
       "name_cn": "夜奔鼠",
       "name_de": "Schattenläufer",
       "name_es": "Night Runners",
@@ -2041,6 +2034,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team"],
       "armyComposition": {
         "sk-renegade": {
           "category": "core"
@@ -2048,68 +2042,41 @@
       },
       "command": [
         {
-          "name_en": "Nightleader",
-          "name_cn": "夜头领",
-          "name_de": "Schattenführer",
-          "name_es": "Nightleader",
-          "name_fr": "Grande-cape",
+          "name_en": "Nightleader (champion)",
+          "name_cn": "夜头领 (champion)",
+          "name_de": "Schattenführer (champion)",
+          "name_es": "Nightleader (champion)",
+          "name_fr": "Grande-cape (champion)",
           "points": 6
         }
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon",
-          "name_cn": "单手武器",
-          "name_de": "Handwaffe",
-          "name_es": "Hand weapon",
-          "name_fr": "Arme de base",
+          "name_en": "Additional hand weapons",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffen",
+          "name_es": "Additional hand weapons",
+          "name_fr": "Armes de base additionnelles",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
-          "name_en": "Additional hand weapon",
-          "name_cn": "额外单手武器",
-          "name_de": "Zusätzliche Handwaffe",
-          "name_es": "Additional hand weapon",
-          "name_fr": "Arme de base additionnelle",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapon, Sling",
-          "name_cn": "单手武器, 投石索",
-          "name_de": "Handwaffe, Schleuder",
-          "name_es": "Hand weapon, Sling",
-          "name_fr": "Arme de base, Fronde",
-          "points": 2,
-          "perModel": true
-        },
-        {
-          "name_en": "Hand weapon, Throwing weapons",
-          "name_cn": "单手武器, 投掷武器",
-          "name_de": "Handwaffe, Wurfwaffen",
-          "name_es": "Hand weapon, Throwing weapons",
-          "name_fr": "Arme de base, Armes de lancer",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Additional hand weapon, Sling",
+          "name_en": "Additional hand weapons, Slings",
           "name_cn": "额外单手武器, 投石索",
-          "name_de": "Zusätzliche Handwaffe, Schleuder",
-          "name_es": "Additional hand weapon, Sling",
-          "name_fr": "Arme de base additionnelle, Fronde",
-          "points": 4,
+          "name_de": "Zusätzliche Handwaffen, Schleudern",
+          "name_es": "Additional hand weapons, Slings",
+          "name_fr": "Armes de base additionnelles, Frondes",
+          "points": 2,
           "perModel": true
         },
         {
-          "name_en": "Additional hand weapon, Throwing weapons",
+          "name_en": "Additional hand weapons, Throwing weapons",
           "name_cn": "额外单手武器, 投掷武器",
-          "name_de": "Zusätzliche Handwaffe, Wurfwaffen",
-          "name_es": "Additional hand weapon, Throwing weapons",
-          "name_fr": "Arme de base additionnelle, Armes de lancer",
-          "points": 3,
+          "name_de": "Zusätzliche Handwaffen, Wurfwaffen",
+          "name_es": "Additional hand weapons, Throwing weapons",
+          "name_fr": "Armes de base additionnelles, Armes de lancer",
+          "points": 1,
           "perModel": true
         }
       ],
@@ -2136,7 +2103,7 @@
       }
     },
     {
-      "name_en": "Plague Monks",
+      "name_en": "Plague Monks {renegade}",
       "name_cn": "瘟疫僧",
       "name_de": "Seuchenmönche",
       "name_es": "Plague Monks",
@@ -2147,6 +2114,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team", "plague-censer-bearers-renegade"],
       "armyComposition": {
         "sk-renegade": {
           "category": "core",
@@ -2186,12 +2154,12 @@
             "maxPoints": 50
           },
           "notes": {
-            "name_en": "0-1 unit per 1000 points may purchase a magic standard. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_it": "0-1 unit per 1000 points may purchase a magic standard. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment."
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
           }
         },
         {
@@ -2240,7 +2208,7 @@
   ],
   "special": [
     {
-      "name_en": "Stormvermin",
+      "name_en": "Stormvermin {renegade}",
       "name_cn": "风暴鼠",
       "name_de": "Sturmratten",
       "name_es": "Stormvermin",
@@ -2251,6 +2219,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team"],
       "armyComposition": {
         "sk-renegade": {
           "category": "special",
@@ -2457,7 +2426,7 @@
       }
     },
     {
-      "name_en": "Gutter Runners",
+      "name_en": "Gutter Runners {renegade}",
       "name_cn": "阴沟奔行鼠",
       "name_de": "Gossenläufer",
       "name_es": "Gutter Runners",
@@ -2670,7 +2639,7 @@
       }
     },
     {
-      "name_en": "Rat Ogres",
+      "name_en": "Rat Ogres {renegade}",
       "name_cn": "鼠巨魔",
       "name_de": "Rattenoger",
       "name_es": "Rat Ogres",
@@ -2883,7 +2852,7 @@
       }
     },
     {
-      "name_en": "Plague Monks",
+      "name_en": "Plague Monks {renegade}",
       "name_cn": "瘟疫僧",
       "name_de": "Seuchenmönche",
       "name_es": "Plague Monks",
@@ -2894,6 +2863,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team", "plague-censer-bearers-renegade"],
       "armyComposition": {
         "sk-renegade": {
           "category": "special"
@@ -2924,12 +2894,12 @@
             "maxPoints": 50
           },
           "notes": {
-            "name_en": "0-1 unit per 1000 points may purchase a magic standard. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_it": "0-1 unit per 1000 points may purchase a magic standard. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment.",
-            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico. 0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment."
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
           }
         },
         {
@@ -3037,7 +3007,7 @@
       }
     },
     {
-      "name_en": "Warplock Jezzails",
+      "name_en": "Warplock Jezzails {renegade}",
       "name_cn": "次元抬枪队",
       "name_de": "Warpschloss Jezzails",
       "name_es": "Warplock Jezzails",
@@ -3113,7 +3083,7 @@
       }
     },
     {
-      "name_en": "Poisoned Wind Globadiers",
+      "name_en": "Poisoned Wind Globadiers {renegade}",
       "name_cn": "毒风掷弹手",
       "name_de": "Giftwindkrieger",
       "name_es": "Poisoned Wind Globadiers",
@@ -3348,7 +3318,7 @@
       }
     },
     {
-      "name_en": "Doomwheel",
+      "name_en": "Doomwheel {renegade}",
       "name_cn": "毁灭巨轮",
       "name_de": "Todesrad",
       "name_es": "Doomwheel",
@@ -3407,7 +3377,7 @@
       }
     },
     {
-      "name_en": "Warp Lightning Cannon",
+      "name_en": "Warp Lightning Cannon {renegade}",
       "name_cn": "次元闪电炮",
       "name_de": "Warpblitzkanone",
       "name_es": "Warp Lightning Cannon",
@@ -3599,7 +3569,7 @@
       }
     },
     {
-      "name_en": "Plague Censer Bearers",
+      "name_en": "Plague Censer Bearers {renegade}",
       "name_cn": "瘟疫香炉僧",
       "name_de": "Seuchenschleuderer",
       "name_es": "Plague Censer Bearers",
@@ -3608,7 +3578,6 @@
       "points": 16,
       "minimum": 5,
       "maximum": 0,
-      "detachment": true,
       "minDetachmentSize": 5,
       "armyComposition": {
         "sk-renegade": {

@@ -7279,7 +7279,7 @@
   "skaven": [
     {
       "name_de": "Die Fellklinge",
-      "name_en": "The Fellblade",
+      "name_en": "The Fellblade {renegade}",
       "name_cn": "堕落之刃",
       "name_es": "La hoja caída",
       "name_fr": "Lame Fatale",
@@ -7291,7 +7291,7 @@
     },
     {
       "name_de": "Weinende Klinge",
-      "name_en": "Weeping Blade",
+      "name_en": "Weeping Blade {renegade}",
       "name_cn": "悲泣之刃",
       "name_es": "Hoja llorona",
       "name_fr": "Lame Suintante",
@@ -7330,7 +7330,7 @@
     },
     {
       "name_de": "Klinge von Nurglitch",
-      "name_en": "Blade of Nurglitch",
+      "name_en": "Blade of Nurglitch {renegade}",
       "name_cn": "纳垢里奇之刃",
       "name_es": "Hoja de Nurglitch",
       "name_fr": "Lame de Nurglitch",
@@ -7343,7 +7343,7 @@
     },
     {
       "name_de": "Todesglobus*",
-      "name_en": "Death Globe*",
+      "name_en": "Death Globe* {renegade}",
       "name_cn": "死亡之球*",
       "name_es": "Globo de la muerte*",
       "name_fr": "Sphère de Mort*",
@@ -7363,9 +7363,11 @@
       "name_it": "Warpstone Armour*",
       "points": 25,
       "stackable": true,
+      "maximum": 1,
       "type": "armor",
       "onePerArmy": false,
-      "name": "warpstone armour"
+      "name": "warpstone armour",
+      "armyComposition": "skaven"
     },
     {
       "name_de": "Vorsichtiger Schild",
@@ -7381,17 +7383,18 @@
     },
     {
       "name_de": "Warpstein-Rüstung*",
-      "name_en": "Warpstone Armour*",
+      "name_en": "Warpstone Armour* {renegade}",
       "name_cn": "次元石铠甲*",
       "name_es": "Armadura de piedra bruja*",
       "name_fr": "Armure d’Éclats de Malepierre*",
       "name_it": "Warpstone Armour*",
-      "points": 25,
+      "points": 15,
       "stackable": true,
-      "type": "armor-mages",
+      "maximum": 1,
+      "type": "armor",
       "onePerArmy": false,
       "name": "warpstone armour",
-      "armyComposition": "skaven"
+      "armyComposition": "sk-renegade"
     },
     {
       "name_de": "Warpstein-Rüstung*",
@@ -7400,8 +7403,24 @@
       "name_es": "Armadura de piedra bruja*",
       "name_fr": "Armure d’Éclats de Malepierre*",
       "name_it": "Warpstone Armour*",
+      "points": 25,
+      "stackable": true,
+      "maximum": 1,
+      "type": "armor-mages",
+      "onePerArmy": false,
+      "name": "warpstone armour",
+      "armyComposition": "skaven"
+    },
+    {
+      "name_de": "Warpstein-Rüstung*",
+      "name_en": "Warpstone Armour* {renegade}",
+      "name_cn": "次元石铠甲*",
+      "name_es": "Armadura de piedra bruja*",
+      "name_fr": "Armure d’Éclats de Malepierre*",
+      "name_it": "Warpstone Armour*",
       "points": 15,
       "stackable": true,
+      "maximum": 1,
       "type": "armor-mages",
       "onePerArmy": false,
       "name": "warpstone armour",
@@ -7446,7 +7465,7 @@
     },
     {
       "name_de": "Sturmbanner",
-      "name_en": "Storm Banner",
+      "name_en": "Storm Banner {renegade}",
       "name_cn": "风暴旗",
       "name_es": "Estandarte de tormenta",
       "name_fr": "Bannière d’Orage",
@@ -7472,7 +7491,7 @@
     },
     {
       "name_de": "Großes Banner der Überlegenheit",
-      "name_en": "Grand Banner of Superiority",
+      "name_en": "Grand Banner of Superiority {renegade}",
       "name_cn": "氏族优势旗帜",
       "name_es": "Gran Estandarte de Superioridad",
       "name_fr": "Bannière de Supériorité",
@@ -7522,7 +7541,7 @@
     },
     {
       "name_de": "Messingkugel",
-      "name_en": "Brass Orb",
+      "name_en": "Brass Orb {renegade}",
       "name_cn": "黄铜球",
       "name_es": "Orbe de latón",
       "name_fr": "Orbe d’Airain",
@@ -7534,7 +7553,7 @@
     },
     {
       "name_de": "Skalm",
-      "name_en": "Skalm",
+      "name_en": "Skalm {renegade}",
       "name_cn": "药膏",
       "name_es": "Skálm",
       "name_fr": "Skataplasme",
@@ -7584,7 +7603,7 @@
     },
     {
       "name_de": "Sturmdämon",
-      "name_en": "Storm Daemon",
+      "name_en": "Storm Daemon {renegade}",
       "name_cn": "风暴恶魔",
       "name_es": "Demonio de la tormenta",
       "name_fr": "Orbe des Tempêtes",
@@ -7597,7 +7616,7 @@
     },
     {
       "name_de": "Warpstein-Token*",
-      "name_en": "Warpstone Tokens*",
+      "name_en": "Warpstone Tokens* {renegade}",
       "name_cn": "次元石块*",
       "name_es": "Fichas de piedra bruja*",
       "name_fr": "Fragments de Malepierre*",
