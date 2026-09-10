@@ -46,6 +46,8 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
   "regimentalUnit": Boolean, // Allows detachments to be added
   "maxDetachments": Number, // Maximum number of detachments
   "allowedDetachments": Array[String], // IDs of units that can be taken as detachment
+  "minDetachmentSize": Number, // Minimum detachment size
+  "maxDetachmentSize": Number, // Maximum detachment size
   "armyComposition": { // Army composition specific options, optional
     [army composition ID]: { // Example: "troll-horde"
       "category": "characters" | "core" | "special" | "rare", // Category where the unit can be added

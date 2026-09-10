@@ -1440,7 +1440,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 />
                                 <span>
                                   <b>
-                                    {detachment[`name_${language}`] || name_en}{" "}
+                                    {`${
+                                      detachment[`name_${language}`] || name_en
+                                    }`.replace(" {renegade}", "")}{" "}
                                   </b>
                                   <i>{getPointsText({ points })}</i>
                                 </span>

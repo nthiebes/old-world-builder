@@ -1660,6 +1660,81 @@
       }
     },
     {
+      "name_en": "Weapon Team {renegade}",
+      "name_cn": "武器小组",
+      "name_de": "Waffenteam",
+      "name_es": "Weapon Team",
+      "name_fr": "Équipes d’armes",
+      "id": "weapon-team-detachment-renegade",
+      "points": 15,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 1,
+      "armyComposition": {
+        "skaven": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
+            "name_cn": "独行, 开放阵型, 抱头鼠窜, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
+            "name_de": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
+            "name_es": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
+            "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams"
+          }
+        },
+        "sk-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Loner, Skirmishers, Scurry Away, Detachment",
+            "name_cn": "独行, Skirmishers, 抱头鼠窜, 分遣队",
+            "name_de": "Einzelgänger, Plänkler, Nichts wie weg!, Abteilung",
+            "name_es": "Solitario, Hostigadores, ¡Sálvese quien pueda!, Destacamento",
+            "name_fr": "Solitaire, Skirmishers, Sauve qui Peut!, Détachement",
+            "name_it": "Loner, Skirmishers, Scurry Away, Detachment",
+            "name_pl": "Loner, Skirmishers, Scurry Away, Detachment"
+          }
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Warp Grinder",
+          "name_cn": "单手武器, 次元粉碎机",
+          "name_de": "Handwaffen, Warpbohrer",
+          "name_es": "Hand weapons, Warp Grinder",
+          "name_fr": "Armes de base, Foreuse à Malepierre",
+          "points": 30,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Loner, Open Order, Scurry Away",
+        "name_cn": "独行, 开放阵型, 抱头鼠窜",
+        "name_de": "Einzelgänger, Offene Ränge, Nichts wie weg!",
+        "name_es": "Solitario, Formación Abierta, ¡Sálvese quien pueda!",
+        "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!"
+      },
+      "notes": {
+        "name_en": "0-1 unit per 1000 points may take a single Weapon Team equipped with a Warpgrinder as a detachment"
+      }
+    },
+    {
       "name_en": "Rat Swarms",
       "name_cn": "鼠群",
       "name_de": "Rattenschwarm",
@@ -2034,7 +2109,7 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
-      "allowedDetachments": ["weapon-team"],
+      "allowedDetachments": ["weapon-team-detachment-renegade"],
       "armyComposition": {
         "sk-renegade": {
           "category": "core"
@@ -2114,7 +2189,10 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
-      "allowedDetachments": ["weapon-team", "plague-censer-bearers-renegade"],
+      "allowedDetachments": [
+        "weapon-team",
+        "plague-censer-bearers-detachment-renegade"
+      ],
       "armyComposition": {
         "sk-renegade": {
           "category": "core",
@@ -2863,7 +2941,10 @@
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
-      "allowedDetachments": ["weapon-team", "plague-censer-bearers-renegade"],
+      "allowedDetachments": [
+        "weapon-team",
+        "plague-censer-bearers-detachment-renegade"
+      ],
       "armyComposition": {
         "sk-renegade": {
           "category": "special"
@@ -3617,6 +3698,57 @@
         "name_fr": "Si votre armée inclut un Prêtre de la Peste du Clan Pestilens ou plus, 0-1 de chacun des suivants peuvent être pris par tranche de 1000 points : Catapulte de la Peste, Unité d’Encenseurs à Peste",
         "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
         "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers"
+      }
+    },
+    {
+      "name_en": "Plague Censer Bearers {renegade}",
+      "name_cn": "瘟疫香炉僧",
+      "name_de": "Seuchenschleuderer",
+      "name_es": "Plague Censer Bearers",
+      "name_fr": "Encenseurs à Peste",
+      "id": "plague-censer-bearers-detachment-renegade",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "minDetachmentSize": 5,
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "rare"
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Plague censers",
+          "name_cn": "单手武器, 瘟疫香炉",
+          "name_de": "Handwaffe, Seuchenschleuder",
+          "name_es": "Hand weapons, Plague censers",
+          "name_fr": "Armes de base, Encensoirs à Peste",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_cn": "狂暴, 抱头鼠窜, 散兵, 坚毅, 战帮, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_de": "Raserei, Nichts wie weg!, Plänkler, Unnachgiebig, Kriegerschar, Hass (alle Feinde), Abteilung, Seuchenjünger",
+        "name_es": "Furia asesina, ¡Sálvese quien pueda!, Hostigadores, Tozudo, Partida de Guerra, Odio (a todos los enemigos), Destacamento, Discípulos de la Plaga",
+        "name_fr": "Frénésie, Sauve qui Peut!, Tirailleurs, Obstiné, Bande de Guerre, Hatred (all enemies), Detachment, Plague Disciples"
+      },
+      "notes": {
+        "name_en": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_cn": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_de": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_es": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_fr": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_it": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment",
+        "name_pl": "0-1 unit per 1,000 points may select a single Plague Censer Bearer unit as a detachment"
       }
     }
   ],
