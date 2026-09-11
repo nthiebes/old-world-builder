@@ -477,7 +477,7 @@
           "name_fr": "Arme de base, Bloodflail",
           "name_it": "Hand weapon, Bloodflail",
           "name_pl": "Hand weapon, Bloodflail",
-          "points": 25,
+          "points": 20,
           "perModel": true,
           "armyComposition": "doc-renegade"
         },
@@ -968,7 +968,8 @@
           "points": 6,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Bilesword",
@@ -981,7 +982,8 @@
           "points": 10,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Plagueflail",
@@ -994,7 +996,8 @@
           "points": 25,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0
+          "maximum": 0,
+          "exclusive": true
         },
         {
           "name_en": "Wizard",
@@ -1581,7 +1584,19 @@
           "name_fr": "Char Traqueur de Slaanesh",
           "name_it": "Seeker Chariot",
           "name_pl": "Seeker Chariot",
-          "points": 100
+          "points": 100,
+          "armyComposition": "daemons-of-chaos"
+        },
+        {
+          "name_en": "Seeker Chariot of Slaanesh",
+          "name_cn": "搜查战车",
+          "name_de": "Seeker Chariot of Slaanesh",
+          "name_es": "Seeker Chariot",
+          "name_fr": "Char Traqueur de Slaanesh",
+          "name_it": "Seeker Chariot",
+          "name_pl": "Seeker Chariot",
+          "points": 85,
+          "armyComposition": "doc-renegade"
         },
         {
           "name_en": "Exalted Seeker Chariot of Slaanesh",
@@ -2211,18 +2226,6 @@
             "name_it": "If your General is a Daemon of Slaanesh",
             "name_pl": "If your General is a Daemon of Slaanesh"
           }
-        },
-        "doc-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Open Order, Daemonic {renegade}, Daemons of Slaanesh {renegade}",
-            "name_cn": "开放阵型, 恶魔, 色孽恶魔",
-            "name_de": "Open Order, Daemonic, Daemons of Slaanesh",
-            "name_es": "Open Order, Daemonic, Daemons of Slaanesh",
-            "name_fr": "Ordre Dispersé, Démoniaque, Démons de Slaanesh",
-            "name_it": "Open Order, Daemonic, Daemons of Slaanesh",
-            "name_pl": "Open Order, Daemonic, Daemons of Slaanesh"
-          }
         }
       },
       "command": [
@@ -2236,21 +2239,6 @@
           "name_pl": "Alluress (champion)",
           "points": 6,
           "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Alluress (champion)",
-          "name_cn": "魅魔（冠军)",
-          "name_de": "Alluress (champion)",
-          "name_es": "Alluress (champion)",
-          "name_fr": "Tentatrice (champion)",
-          "name_it": "Alluress (champion)",
-          "name_pl": "Alluress (champion)",
-          "points": 6,
-          "armyComposition": "doc-renegade",
-          "magic": {
-            "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
-            "maxPoints": 25
-          }
         },
         {
           "name_en": "Standard bearer",
@@ -2303,6 +2291,91 @@
         "name_fr": "Ordre Serré, Démoniaque, Démons de Slaanesh",
         "name_it": "Close Order, Daemonic, Daemons of Slaanesh",
         "name_pl": "Close Order, Daemonic, Daemons of Slaanesh"
+      }
+    },
+    {
+      "name_en": "Daemonettes of Slaanesh",
+      "name_cn": "色孽女妖",
+      "name_de": "Daemonettes of Slaanesh",
+      "name_es": "Daemonettes of Slaanesh",
+      "name_fr": "Démonettes de Slaanesh",
+      "name_it": "Daemonettes of Slaanesh",
+      "name_pl": "Daemonettes of Slaanesh",
+      "id": "daemonettes-of-slaanesh-renegade",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Alluress (champion)",
+          "name_cn": "魅魔（冠军)",
+          "name_de": "Alluress (champion)",
+          "name_es": "Alluress (champion)",
+          "name_fr": "Tentatrice (champion)",
+          "name_it": "Alluress (champion)",
+          "name_pl": "Alluress (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["daemonic-icon-slaanesh"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_cn": "穿刺之爪",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Pinces perforantes",
+          "name_it": "Piercing claws",
+          "name_pl": "Piercing claws",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Open Order, Daemonic {renegade}, Daemons of Slaanesh {renegade}",
+        "name_cn": "开放阵型, 恶魔, 色孽恶魔",
+        "name_de": "Open Order, Daemonic, Daemons of Slaanesh",
+        "name_es": "Open Order, Daemonic, Daemons of Slaanesh",
+        "name_fr": "Ordre Dispersé, Démoniaque, Démons de Slaanesh",
+        "name_it": "Open Order, Daemonic, Daemons of Slaanesh",
+        "name_pl": "Open Order, Daemonic, Daemons of Slaanesh"
       }
     },
     {
@@ -4525,7 +4598,19 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_cn": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "name_it": "5+",
+          "name_pl": "5+",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -4843,7 +4928,23 @@
           "name_fr": "Pouacre (champion)",
           "name_it": "Plagueridden (champion)",
           "name_pl": "Plagueridden (champion)",
-          "points": 7
+          "points": 7,
+          "armyComposition": "daemons-of-chaos"
+        },
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_cn": "瘟疫使者（冠军）",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Pouacre (champion)",
+          "name_it": "Plagueridden (champion)",
+          "name_pl": "Plagueridden (champion)",
+          "points": 7,
+          "armyComposition": "doc-renegade",
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
+            "maxPoints": 25
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -5440,13 +5541,13 @@
       ],
       "armor": [
         {
-          "name_en": "Daemonic flesh (counts as full plate)",
+          "name_en": "Full plate armour (Daemonic Flesh)",
           "name_cn": "恶魔血肉（视为全身甲）",
-          "name_de": "Daemonic flesh (counts as full plate)",
-          "name_es": "Daemonic flesh (counts as full plate)",
+          "name_de": "Full plate armour (Daemonic Flesh)",
+          "name_es": "Full plate armour (Daemonic Flesh)",
           "name_fr": "Chair démoniaque (compte comme une armure de plate complète)",
-          "name_it": "Daemonic flesh (counts as full plate)",
-          "name_pl": "Daemonic flesh (counts as full plate)",
+          "name_it": "Full plate armour (Daemonic Flesh)",
+          "name_pl": "Full plate armour (Daemonic Flesh)",
           "points": 0,
           "active": true
         }
@@ -5463,7 +5564,8 @@
           "points": 10,
           "minimum": 0,
           "maximum": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "mounts": [],
@@ -6610,7 +6712,19 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_cn": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "name_it": "5+",
+          "name_pl": "5+",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -7302,13 +7416,13 @@
       ],
       "armor": [
         {
-          "name_en": "Daemonic flesh (counts as full plate)",
+          "name_en": "Full plate armour (Daemonic Flesh)",
           "name_cn": "恶魔血肉（视为全身甲）",
-          "name_de": "Daemonic flesh (counts as full plate)",
-          "name_es": "Daemonic flesh (counts as full plate)",
+          "name_de": "Full plate armour (Daemonic Flesh)",
+          "name_es": "Full plate armour (Daemonic Flesh)",
           "name_fr": "Chair démoniaque (compte comme une armure de plate complète)",
-          "name_it": "Daemonic flesh (counts as full plate)",
-          "name_pl": "Daemonic flesh (counts as full plate)",
+          "name_it": "Full plate armour (Daemonic Flesh)",
+          "name_pl": "Full plate armour (Daemonic Flesh)",
           "points": 0,
           "active": true
         }
