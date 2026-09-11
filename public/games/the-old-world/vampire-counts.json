@@ -1,13 +1,18 @@
 {
   "characters": [
     {
-      "name_en": "Vampire Count {renegade}",
+      "name_en": "Vampire Count",
       "name_cn": "吸血鬼伯爵",
       "name_de": "Vampirfürst",
       "name_es": "Vampire Count",
       "name_fr": "Comte Vampire",
       "id": "vampire-count",
       "points": 160,
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -209,11 +214,6 @@
         "name_de": "0-1 pro 1000 Punkte, 1+ Zauberer",
         "name_es": "0-1 per 1000 points, 1+ Wizard",
         "name_fr": "0-1 par tranche de 1000 points, 1+ Sorcier"
-      },
-      "armyComposition": {
-        "vampire-counts": {
-          "category": "characters"
-        }
       }
     },
     {
@@ -224,6 +224,11 @@
       "name_fr": "Vampire Lord",
       "id": "vampire-lord-renegade",
       "points": 185,
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -446,30 +451,23 @@
       ],
       "lores": ["dark-magic", "illusion", "necromancy"],
       "specialRules": {
-        "name_en": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_cn": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_de": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_es": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_fr": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_it": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_pl": "Accursed Weapons, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
+        "name_en": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_it": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_pl": "Accursed Weapons {renegade}, Dark Vitality {renegade}, Flammable, Indomitable (2), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
       },
       "notes": {
-        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
-      },
-      "armyComposition": {
-        "vc-renegade": {
-          "category": "characters"
-        }
-      },
-      "name_it": "Vampire Lord",
-      "name_pl": "Vampire Lord"
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)"
+      }
     },
     {
       "name_en": "Vampire Thrall",
@@ -479,6 +477,11 @@
       "name_fr": "Vampires Nouveau-né",
       "id": "vampire-thrall",
       "points": 75,
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -662,11 +665,6 @@
         "name_de": "1+ Zauberer",
         "name_es": "1+ Wizard",
         "name_fr": "1+ Sorcier"
-      },
-      "armyComposition": {
-        "vampire-counts": {
-          "category": "characters"
-        }
       }
     },
     {
@@ -677,6 +675,11 @@
       "name_fr": "Vampires Nouveau-né",
       "id": "vampire-thrall-renegade",
       "points": 70,
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -869,27 +872,22 @@
       ],
       "lores": ["dark-magic", "illusion", "necromancy"],
       "specialRules": {
-        "name_en": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_cn": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_de": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_es": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_fr": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_it": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
-        "name_pl": "Accursed Weapons, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
+        "name_en": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_cn": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_de": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_es": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_fr": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_it": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_pl": "Accursed Weapons {renegade}, Banner of the Count, Dark Vitality {renegade}, Flammable, Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
       },
       "notes": {
-        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
-      },
-      "armyComposition": {
-        "vc-renegade": {
-          "category": "characters"
-        }
+        "name_en": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)"
       }
     },
     {
@@ -900,6 +898,11 @@
       "name_fr": "Maître Nécromancien",
       "id": "master-necromancer",
       "points": 130,
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1031,11 +1034,6 @@
         "name_de": "0-1 pro 1000 Punkte, 1+ Zauberer",
         "name_es": "0-1 per 1000 points, 1+ Wizard",
         "name_fr": "0-1 par tranche de 1000 points, 1+ Sorcier"
-      },
-      "armyComposition": {
-        "vampire-counts": {
-          "category": "characters"
-        }
       }
     },
     {
@@ -1046,6 +1044,11 @@
       "name_fr": "Maître Nécromancien",
       "id": "master-necromancer-renegade",
       "points": 145,
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1172,18 +1175,13 @@
         "name_fr": "Sombre Vitalité, Indomptable (1), Invocation de Nehek, Domaine de la Non-vie, Mort-vivant Nécromantique, Régénération (5+)"
       },
       "notes": {
-        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
-      },
-      "armyComposition": {
-        "vc-renegade": {
-          "category": "characters"
-        }
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)"
       }
     },
     {
@@ -1194,6 +1192,11 @@
       "name_fr": "Acolyte Nécromantique",
       "id": "necromantic-acolyte",
       "points": 60,
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "characters"
+        }
+      },
       "command": [
         {
           "name_en": "General",
@@ -1297,7 +1300,7 @@
       ],
       "lores": ["dark-magic", "illusion", "necromancy"],
       "specialRules": {
-        "name_en": "Level 1 (or 2) Wizard, Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)",
+        "name_en": "Level 1 (or 2) Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
         "name_cn": "1（或2）级法师, 黑暗活力, 顽强不屈(1), 尼科之咒, 亡灵法系, 不死亡灵, 重生(5+)",
         "name_de": "Stufe 1 (oder 2) Zauberer, Dunkle Vitalität, Unverwüstlich (1), Anrufung von Nehek, Lehre des Untodes, Nekromantische Untote, Regeneration (5+)",
         "name_es": "Level 1 (or 2) Wizard, Dark Vitality, Indomitable (1), Invocation of Nehek, Lore of Undeath, Necromantic Undead, Regeneration (5+)",
@@ -1309,11 +1312,6 @@
         "name_de": "1+ Zauberer",
         "name_es": "1+ Wizard",
         "name_fr": "1+ Sorcier"
-      },
-      "armyComposition": {
-        "vampire-counts": {
-          "category": "characters"
-        }
       }
     },
     {
@@ -1399,41 +1397,41 @@
           "points": 16
         },
         {
-          "name_en": "Corpse Cart (Balefire Brazier)",
-          "name_cn": "Corpse Cart (Balefire Brazier)",
-          "name_de": "Corpse Cart (Balefire Brazier)",
-          "name_es": "Corpse Cart (Balefire Brazier)",
-          "name_fr": "Corpse Cart (Balefire Brazier)",
-          "name_it": "Corpse Cart (Balefire Brazier)",
-          "name_pl": "Corpse Cart (Balefire Brazier)",
-          "points": 70,
+          "name_en": "Corpse Cart",
+          "name_cn": "Corpse Cart",
+          "name_de": "Corpse Cart",
+          "name_es": "Corpse Cart",
+          "name_fr": "Corpse Cart",
+          "name_it": "Corpse Cart",
+          "name_pl": "Corpse Cart",
+          "points": 60,
+          "options": [
+            {
+              "name_en": "Balefire Brazier",
+              "name_cn": "Balefire Brazier",
+              "name_de": "Balefire Brazier",
+              "name_es": "Balefire Brazier",
+              "name_fr": "Balefire Brazier",
+              "points": 10,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Warped Tintinnabulation",
+              "name_cn": "Warped Tintinnabulation",
+              "name_de": "Warped Tintinnabulation",
+              "name_es": "Warped Tintinnabulation",
+              "name_fr": "Warped Tintinnabulation",
+              "points": 15,
+              "exclusive": true
+            }
+          ],
           "notes": {
-            "name_en": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_cn": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_de": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_es": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_fr": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_it": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier.",
-            "name_pl": "The Necromantic Acolyte replaces the Corpsemaster. Includes Balefire Brazier."
-          }
-        },
-        {
-          "name_en": "Corpse Cart (Warped Tintinnabulation)",
-          "name_cn": "Corpse Cart (Warped Tintinnabulation)",
-          "name_de": "Corpse Cart (Warped Tintinnabulation)",
-          "name_es": "Corpse Cart (Warped Tintinnabulation)",
-          "name_fr": "Corpse Cart (Warped Tintinnabulation)",
-          "name_it": "Corpse Cart (Warped Tintinnabulation)",
-          "name_pl": "Corpse Cart (Warped Tintinnabulation)",
-          "points": 75,
-          "notes": {
-            "name_en": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_cn": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_de": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_es": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_fr": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_it": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation.",
-            "name_pl": "The Necromantic Acolyte replaces the Corpsemaster. Includes Warped Tintinnabulation."
+            "name_en": "The Necromantic Acolyte replaces the Corpsemaster",
+            "name_cn": "The Necromantic Acolyte replaces the Corpsemaster",
+            "name_de": "The Necromantic Acolyte replaces the Corpsemaster",
+            "name_es": "The Necromantic Acolyte replaces the Corpsemaster",
+            "name_fr": "The Necromantic Acolyte replaces the Corpsemaster"
           }
         }
       ],
@@ -1466,13 +1464,13 @@
         "name_pl": "Dark Vitality {renegade}, Indomitable (1), Invocation of Nehek, Lore of Undeath {renegade}, Necromantic Undead, Regeneration (5+)"
       },
       "notes": {
-        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_cn": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_de": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_es": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_fr": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_it": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_pl": "The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)"
       },
       "armyComposition": {
         "vc-renegade": {
@@ -1718,22 +1716,22 @@
       ],
       "lores": ["battle-magic", "dark-magic", "necromancy"],
       "specialRules": {
-        "name_en": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_cn": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_de": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_es": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_fr": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_it": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
-        "name_pl": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard"
+        "name_en": "Dark Vitality {renegade}, Flammable, Ghoulkin {renegade}, Hatred (all enemies), Indomitable (1), Lore of Undeath {renegade}, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger {renegade}, Vanguard",
+        "name_cn": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_de": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_es": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_fr": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_it": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard",
+        "name_pl": "Dark Vitality, Flammable, Ghoulkin, Hatred (all enemies), Indomitable (1), Lore of Undeath, Necromantic Undead, Poisoned Attacks, Regeneration (5+), The Hunger, Vanguard"
       },
       "notes": {
-        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_cn": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_de": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_es": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_fr": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_it": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)",
+        "name_pl": "0-1 Vampire Lord, Master Necromancer or Strigoi Ghoul King per 1,000 points. The army must include at least one Wizard as its Master of the Dead (this is the Wizard with the highest Level of Wizardry)"
       },
       "armyComposition": {
         "vc-renegade": {
@@ -1795,18 +1793,7 @@
       "name_fr": "Spectres des Cairns",
       "id": "cairn-wraith-renegade",
       "points": 50,
-      "command": [
-        {
-          "name_en": "General",
-          "name_cn": "General",
-          "name_de": "General",
-          "name_es": "General",
-          "name_fr": "General",
-          "name_it": "General",
-          "name_pl": "General",
-          "points": 0
-        }
-      ],
+      "command": [],
       "equipment": [
         {
           "name_en": "Spectral scythe {cairn wraith}",
@@ -1832,13 +1819,11 @@
         "name_fr": "Éthéré, Indomptable (1), Mort-vivant Nécromantique, Régénération (6+), Terreur"
       },
       "notes": {
-        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
       },
       "armyComposition": {
         "vc-renegade": {
@@ -1979,18 +1964,6 @@
       "name_fr": "Roi Revenant",
       "id": "wight-king-renegade",
       "points": 85,
-      "command": [
-        {
-          "name_en": "General",
-          "name_cn": "General",
-          "name_de": "General",
-          "name_es": "General",
-          "name_fr": "General",
-          "name_it": "General",
-          "name_pl": "General",
-          "points": 0
-        }
-      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -2095,13 +2068,13 @@
         "name_fr": "Indomptable (1), Coup Fatal, Mort-vivant Nécromantique, Régénération (5+)"
       },
       "notes": {
-        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points."
       },
       "armyComposition": {
         "vc-renegade": {
@@ -2256,16 +2229,6 @@
       "points": 60,
       "command": [
         {
-          "name_en": "General",
-          "name_cn": "General",
-          "name_de": "General",
-          "name_es": "General",
-          "name_fr": "General",
-          "name_it": "General",
-          "name_pl": "General",
-          "points": 0
-        },
-        {
           "name_en": "Battle Standard Bearer",
           "name_cn": "战旗手",
           "name_de": "Armeestandartenträger",
@@ -2381,13 +2344,13 @@
         "name_fr": "Coup Fatal, Mort-vivant Nécromantique, Régénération (6+), Bannière du Revenant"
       },
       "notes": {
-        "name_en": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
       },
       "armyComposition": {
         "vc-renegade": {
@@ -2422,8 +2385,8 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge {renegade}",
-        "name_cn": "灵体, 顽强不屈(1), 魔法攻击, 不死亡灵, 重生(6+), 惊骇, 哀嚎 {renegade}",
+        "name_en": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge",
+        "name_cn": "灵体, 顽强不屈(1), 魔法攻击, 不死亡灵, 重生(6+), 惊骇, 哀嚎",
         "name_de": "Körperlos, Unverwüstlich (1), Magische Attacken, Nekromantische Untote, Regeneration (6+), Entsetzen, Tödliches Kreischen",
         "name_es": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge",
         "name_fr": "Éthéré, Indomptable (1), Attaques Magiques, Mort-vivant Nécromantique, Régénération (6+), Terreur, Cri Funeste"
@@ -2449,18 +2412,6 @@
       "name_fr": "Banshee",
       "id": "tomb-banshee-renegade",
       "points": 90,
-      "command": [
-        {
-          "name_en": "General",
-          "name_cn": "General",
-          "name_de": "General",
-          "name_es": "General",
-          "name_fr": "General",
-          "name_it": "General",
-          "name_pl": "General",
-          "points": 0
-        }
-      ],
       "equipment": [
         {
           "name_en": "Hand weapon",
@@ -2488,13 +2439,13 @@
         "name_pl": "Ethereal, Indomitable (1), Magical Attacks, Necromantic Undead, Regeneration (6+), Terror, Wailing Dirge (-1) {renegade}"
       },
       "notes": {
-        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry.",
-        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points. The army must include at least one Wizard as its Master of the Dead; this is the Wizard with the highest Level of Wizardry."
+        "name_en": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_cn": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_de": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_es": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_fr": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_it": "0-1 Wight King or Tomb Banshee per 1,000 points.",
+        "name_pl": "0-1 Wight King or Tomb Banshee per 1,000 points."
       },
       "armyComposition": {
         "vc-renegade": {
@@ -2505,7 +2456,7 @@
   ],
   "core": [
     {
-      "name_en": "Skeleton Warriors {vampire counts}",
+      "name_en": "Skeleton Warriors",
       "name_cn": "骷髅战士",
       "name_de": "Skelettkrieger",
       "name_es": "Skeleton Warriors",
@@ -2610,7 +2561,7 @@
       }
     },
     {
-      "name_en": "Skeleton Warriors {vampire counts}",
+      "name_en": "Skeleton Warriors {renegade}",
       "name_cn": "骷髅战士",
       "name_de": "Skelettkrieger",
       "name_es": "Skeleton Warriors",
@@ -2814,7 +2765,7 @@
       }
     },
     {
-      "name_en": "Zombies",
+      "name_en": "Zombies {renegade}",
       "name_cn": "僵尸",
       "name_de": "Zombies",
       "name_es": "Zombies",
@@ -2938,7 +2889,7 @@
       }
     },
     {
-      "name_en": "Crypt Ghouls",
+      "name_en": "Crypt Ghouls {renegade}",
       "name_cn": "墓穴食尸鬼",
       "name_de": "Gruftghule",
       "name_es": "Crypt Ghouls",
@@ -3000,13 +2951,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_cn": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_de": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_es": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_fr": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_it": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
-        "name_pl": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger"
+        "name_en": "Armour Bane (1), Dark Vitality {renegade}, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger {renegade}",
+        "name_cn": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_de": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_es": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_it": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (1), Dark Vitality, Move Through Cover, Necromantic Undead, Open Order, Poisoned Attacks, Regeneration (6+), Reserve Move, Skirmishers, The Hunger"
       },
       "notes": {
         "name_en": "",
@@ -3070,7 +3021,7 @@
       }
     },
     {
-      "name_en": "Bat Swarms",
+      "name_en": "Bat Swarms {renegade}",
       "name_cn": "蝙蝠群",
       "name_de": "Fledermausschwarm",
       "name_es": "Bat Swarms",
@@ -3171,6 +3122,68 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Dire Wolves",
+      "name_cn": "恐狼",
+      "name_de": "Todeswölfe",
+      "name_es": "Dire Wolves",
+      "name_fr": "Loup Funeste",
+      "id": "dire-wolves-renegade",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 20,
+      "command": [
+        {
+          "name_en": "Doom Wolf",
+          "name_cn": "末日恐狼",
+          "name_de": "Warg",
+          "name_es": "Doom Wolf",
+          "name_fr": "Loup de Sang",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Claws and fangs (Hand weapons)",
+          "name_cn": "尖牙利爪(单手武器)",
+          "name_de": "Klauen und Fangzähne (Handwaffen)",
+          "name_es": "Claws and fangs (Hand weapons)",
+          "name_fr": "Griffes et crocs (Armes de base)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard",
+        "name_cn": "不死亡灵, 开放阵型, 重生(6+), 预备移动, 垂涎冲击, 快速行进, 先锋",
+        "name_de": "Nekromantische Untote, Offene Ränge, Regeneration (6+), Reservebewegung, Geifernder Angriff, Schnelle Bewegung, Vorhut",
+        "name_es": "Necromantic Undead, Open Order, Regeneration (6+), Reserve Move, Slavering Charge, Swiftstride, Vanguard",
+        "name_fr": "Mort-vivant Nécromantique, Ordre Dispersé, Régénération (6+), Mouvement de Réserve, Charge Écumante, Rapide, Avant-garde"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "armyComposition": {
+        "vc-renegade": {
+          "category": "core"
+        }
       }
     },
     {
@@ -3330,7 +3343,7 @@
       }
     },
     {
-      "name_en": "Grave Guard",
+      "name_en": "Grave Guard {renegade}",
       "name_cn": "荒坟守卫",
       "name_de": "Verfluchte",
       "name_es": "Grave Guard",
@@ -3599,7 +3612,7 @@
       }
     },
     {
-      "name_en": "Black Knights",
+      "name_en": "Black Knights {renegade}",
       "name_cn": "黑骑士",
       "name_de": "Fluchritter",
       "name_es": "Black Knights",
@@ -3689,12 +3702,12 @@
       "lores": [],
       "specialRules": {
         "name_en": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_cn": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_it": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}",
-        "name_pl": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed {renegade}"
+        "name_cn": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed",
+        "name_de": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed",
+        "name_es": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed",
+        "name_fr": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed",
+        "name_it": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed",
+        "name_pl": "Cleaving Blow (Black Knights & Hell Knight only), Close Order, First Charge, Necromantic Undead, Regeneration (6+), Swiftstride, Spectral Steed"
       },
       "notes": {
         "name_en": "0-1 unit of Grave Guard or Black Knights may be taken as a Core choice.",
@@ -3712,7 +3725,7 @@
       }
     },
     {
-      "name_en": "Corpse Cart",
+      "name_en": "Corpse Cart {renegade}",
       "name_cn": "运尸车",
       "name_de": "Leichenkarren",
       "name_es": "Corpse Cart",
@@ -3722,35 +3735,21 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_cn": "Hand weapons",
-          "name_de": "Hand weapons",
-          "name_es": "Hand weapons",
-          "name_fr": "Hand weapons",
-          "name_it": "Hand weapons",
-          "name_pl": "Hand weapons",
-          "points": 0,
+          "name_en": "Balefire Brazier",
+          "name_cn": "焚尸业火",
+          "name_de": "Hexenfeuer",
+          "name_es": "Balefire Brazier",
+          "name_fr": "Brasero Infernal",
+          "points": 10,
           "active": true
         },
         {
-          "name_en": "Hand weapons, Whip (Corpsemaster only)",
-          "name_cn": "Hand weapons, Whip (Corpsemaster only)",
-          "name_de": "Hand weapons, Whip (Corpsemaster only)",
-          "name_es": "Hand weapons, Whip (Corpsemaster only)",
-          "name_fr": "Hand weapons, Whip (Corpsemaster only)",
-          "name_it": "Hand weapons, Whip (Corpsemaster only)",
-          "name_pl": "Hand weapons, Whip (Corpsemaster only)",
-          "points": 3
-        },
-        {
-          "name_en": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_cn": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_de": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_es": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_fr": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_it": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "name_pl": "Hand weapons, Cavalry spear (Corpsemaster only)",
-          "points": 3
+          "name_en": "Warped Tintinnabulation",
+          "name_cn": "不洁磁石",
+          "name_de": "Unheiliger Sog",
+          "name_es": "Warped Tintinnabulation",
+          "name_fr": "Tintinnabulation Dissonante",
+          "points": 15
         }
       ],
       "armor": [
@@ -3760,49 +3759,53 @@
           "name_de": "4+",
           "name_es": "4+",
           "name_fr": "4+",
-          "name_it": "4+",
-          "name_pl": "4+",
           "points": 0,
+          "perModel": true,
           "active": true
         }
       ],
       "options": [
         {
-          "name_en": "Corpse Cart upgrade",
-          "name_cn": "Corpse Cart upgrade",
-          "name_de": "Corpse Cart upgrade",
-          "name_es": "Corpse Cart upgrade",
-          "name_fr": "Corpse Cart upgrade",
-          "name_it": "Corpse Cart upgrade",
-          "name_pl": "Corpse Cart upgrade",
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffen",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
           "points": 0,
-          "active": true,
-          "alwaysActive": true,
-          "options": [
-            {
-              "name_en": "Balefire Brazier",
-              "name_cn": "Balefire Brazier",
-              "name_de": "Balefire Brazier",
-              "name_es": "Balefire Brazier",
-              "name_fr": "Balefire Brazier",
-              "name_it": "Balefire Brazier",
-              "name_pl": "Balefire Brazier",
-              "points": 10,
-              "active": true,
-              "exclusive": true
-            },
-            {
-              "name_en": "Warped Tintinnabulation",
-              "name_cn": "Warped Tintinnabulation",
-              "name_de": "Warped Tintinnabulation",
-              "name_es": "Warped Tintinnabulation",
-              "name_fr": "Warped Tintinnabulation",
-              "name_it": "Warped Tintinnabulation",
-              "name_pl": "Warped Tintinnabulation",
-              "points": 15,
-              "exclusive": true
-            }
-          ]
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Whip",
+          "name_cn": "长鞭",
+          "name_de": "Peitsche",
+          "name_es": "Whip",
+          "name_fr": "Fouet",
+          "points": 3,
+          "perModel": true,
+          "notes": {
+            "name_en": "Corpsemaster only",
+            "name_cn": "仅守尸者",
+            "name_it": "Corpsemaster only",
+            "name_de": "Nur Leichenmeister",
+            "name_fr": "Croque-mort uniquement"
+          }
+        },
+        {
+          "name_en": "Cavalry spear",
+          "name_cn": "骑兵长矛",
+          "name_de": "Kavalleriespeer",
+          "name_es": "Cavalry spear",
+          "name_fr": "Lance de cavalerie",
+          "points": 3,
+          "perModel": true,
+          "notes": {
+            "name_en": "Corpsemaster only",
+            "name_cn": "仅守尸者",
+            "name_it": "Corpsemaster only",
+            "name_de": "Nur Leichenmeister",
+            "name_fr": "Croque-mort uniquement"
+          }
         }
       ],
       "mounts": [],
@@ -3810,21 +3813,21 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_cn": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_de": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_es": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_fr": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_it": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}",
-        "name_pl": "Close Order, Dark Vitality {renegade}, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis {renegade}"
+        "name_cn": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis",
+        "name_de": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis",
+        "name_es": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis",
+        "name_fr": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis",
+        "name_it": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis",
+        "name_pl": "Close Order, Dark Vitality, First Charge, Impact Hits (D3+1), Indomitable (1), Necromantic Undead, Random Attacks (The Restless Dead only), Regeneration (6+), Vigor Mortis"
       },
       "notes": {
-        "name_en": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_cn": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_de": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_es": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_fr": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_it": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation.",
-        "name_pl": "0-3 Corpse Carts. Must take either a Balefire Brazier or Warped Tintinnabulation."
+        "name_en": "0-3 Corpse Carts.",
+        "name_cn": "0-3 Corpse Carts.",
+        "name_de": "0-3 Corpse Carts.",
+        "name_es": "0-3 Corpse Carts.",
+        "name_fr": "0-3 Corpse Carts.",
+        "name_it": "0-3 Corpse Carts.",
+        "name_pl": "0-3 Corpse Carts."
       },
       "armyComposition": {
         "vc-renegade": {
@@ -3991,7 +3994,7 @@
       }
     },
     {
-      "name_en": "Grave Guard",
+      "name_en": "Grave Guard {renegade}",
       "name_cn": "荒坟守卫",
       "name_de": "Verfluchte",
       "name_es": "Grave Guard",
@@ -4260,7 +4263,7 @@
       }
     },
     {
-      "name_en": "Black Knights",
+      "name_en": "Black Knights {renegade}",
       "name_cn": "黑骑士",
       "name_de": "Fluchritter",
       "name_es": "Black Knights",
@@ -4430,7 +4433,7 @@
       }
     },
     {
-      "name_en": "Crypt Horrors",
+      "name_en": "Crypt Horrors {renegade}",
       "name_cn": "墓穴恐鬼",
       "name_de": "Gruftschrecken",
       "name_es": "Crypt Horrors",
@@ -4480,13 +4483,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_cn": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_de": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_es": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_fr": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_it": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
-        "name_pl": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger"
+        "name_en": "Dark Vitality {renegade}, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger {renegade}",
+        "name_cn": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_de": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_es": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_fr": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_it": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger",
+        "name_pl": "Dark Vitality, Indomitable (1), Move Through Cover, Necromantic Undead, Open Order, Regeneration (5+), Stomp Attacks (1), The Hunger"
       },
       "notes": {
         "name_en": "",
@@ -4552,7 +4555,7 @@
       }
     },
     {
-      "name_en": "Fell Bats",
+      "name_en": "Fell Bats {renegade}",
       "name_cn": "恶蝠",
       "name_de": "Vampirfledermäuse",
       "name_es": "Fell Bats",
@@ -4652,7 +4655,7 @@
       }
     },
     {
-      "name_en": "Spirit Hosts",
+      "name_en": "Spirit Hosts {renegade}",
       "name_cn": "幽灵群",
       "name_de": "Geisterschar",
       "name_es": "Spirit Hosts",
@@ -4759,7 +4762,7 @@
       }
     },
     {
-      "name_en": "Vargheists",
+      "name_en": "Vargheists {renegade}",
       "name_cn": "嗜血天鬼",
       "name_de": "Vargheists",
       "name_es": "Vargheists",
@@ -4809,13 +4812,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_cn": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_de": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_es": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_fr": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_it": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_pl": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
+        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger {renegade}",
+        "name_cn": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_de": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_es": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_it": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
       },
       "notes": {
         "name_en": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
@@ -4890,7 +4893,7 @@
       }
     },
     {
-      "name_en": "Terrorgheist",
+      "name_en": "Terrorgheist {renegade}",
       "name_cn": "惧龙蝠",
       "name_de": "Flederbestie",
       "name_es": "Terrorgheist",
@@ -4930,12 +4933,12 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_cn": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_it": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}",
-        "name_pl": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2) {renegade}"
+        "name_cn": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)",
+        "name_de": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)",
+        "name_es": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)",
+        "name_fr": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)",
+        "name_it": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)",
+        "name_pl": "Close Order, Fly (9), Indomitable (1), Infested, Large Target, Necromantic Undead, Regeneration (5+), Stomp Attacks (D6), Swiftstride, Terror, Wailing Dirge (-2)"
       },
       "notes": {
         "name_en": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists or Terrorgheist may be taken as a Special choice.",
@@ -5049,12 +5052,12 @@
       }
     },
     {
-      "name_en": "Varghulf",
+      "name_en": "Varghulf {renegade}",
       "name_cn": "嗜血蝠狼",
       "name_de": "Varghulf",
       "name_es": "Varghulf",
       "name_fr": "Varghulf",
-      "id": "varghulf-special-renegade",
+      "id": "varghulf-renegade",
       "points": 110,
       "command": [],
       "equipment": [
@@ -5087,13 +5090,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_cn": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_de": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_es": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_fr": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_it": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
-        "name_pl": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger"
+        "name_en": "Bestial Fury, Close Order, Counter Charge, Dark Vitality {renegade}, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger {renegade}",
+        "name_cn": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_de": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_es": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_fr": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_it": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger",
+        "name_pl": "Bestial Fury, Close Order, Counter Charge, Dark Vitality, Flammable, Indomitable (1), Necromantic Undead, Regeneration (5+), Swiftstride, Terror, The Hunger"
       },
       "notes": {
         "name_en": "0-1 per 1,000 points.",
@@ -5111,7 +5114,7 @@
       }
     },
     {
-      "name_en": "Blood Knights",
+      "name_en": "Blood Knights {renegade}",
       "name_cn": "血骑士",
       "name_de": "Blutritter",
       "name_es": "Blood Knights",
@@ -5217,20 +5220,20 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_en": "Accursed Weapons {renegade}, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_cn": "受诅武器, 紧密阵型, 反制冲锋, 黑暗活力, 先行冲锋, 易燃, 顽强不屈(1), 傲人武艺, 不死亡灵, 重生(6+), 快速行进",
         "name_de": "Verfluchte Waffen, Geschlossene Ränge, Gegenangriff, Dunkle Vitalität, Erster Angriff, Brennbar, Unverwüstlich (1), Kriegerstolz, Nekromantische Untote, Regeneration (6+), Schnelle Bewegung",
         "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_fr": "Armes Maudites, Ordre Serré, Contre-charge, Sombre Vitalité, Première Charge, Inflammable, Indomptable (1), Fierté Martiale, Mort-vivant Nécromantique, Régénération (6+), Rapide"
       },
       "notes": {
-        "name_en": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_cn": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_de": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_es": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_fr": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_it": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers.",
-        "name_pl": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice. Kastellan: up to 25 points of magic items and 25 points of Vampiric Powers."
+        "name_en": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_cn": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_de": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_es": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_fr": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_it": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice.",
+        "name_pl": "If your General is a Vampire Lord, 0-1 unit of Blood Knights may be taken as a Special choice."
       },
       "armyComposition": {
         "vc-renegade": {
@@ -5298,7 +5301,7 @@
       }
     },
     {
-      "name_en": "Vargheists",
+      "name_en": "Vargheists {renegade}",
       "name_cn": "嗜血天鬼",
       "name_de": "Vargheists",
       "name_es": "Vargheists",
@@ -5348,13 +5351,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_cn": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_de": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_es": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_fr": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_it": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
-        "name_pl": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
+        "name_en": "Armour Bane (2), Dark Vitality {renegade}, Dispersed Formation {renegade}, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger {renegade}",
+        "name_cn": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_de": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_es": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_fr": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_it": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger",
+        "name_pl": "Armour Bane (2), Dark Vitality, Dispersed Formation, Flammable, Fly (9), Furious Charge, Indomitable (1), Impetuous, Necromantic Undead, Regeneration (5+), Skirmishers, The Hunger"
       },
       "notes": {
         "name_en": "",
@@ -5418,7 +5421,7 @@
       }
     },
     {
-      "name_en": "Black Coach",
+      "name_en": "Black Coach {renegade}",
       "name_cn": "黑马车",
       "name_de": "Schwarze Kutsche",
       "name_es": "Black Coach",
@@ -5435,9 +5438,7 @@
           "name_fr": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "name_it": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)",
-          "name_pl": "Spectral scythe {black coach}, Hand weapons (Iron-shod hooves)"
+          "active": true
         }
       ],
       "armor": [
@@ -5447,8 +5448,6 @@
           "name_de": "3+",
           "name_es": "3+",
           "name_fr": "3+",
-          "name_it": "3+",
-          "name_pl": "3+",
           "points": 0,
           "active": true
         }
@@ -5537,7 +5536,7 @@
       }
     },
     {
-      "name_en": "Terrorgheist",
+      "name_en": "Terrorgheist {renegade}",
       "name_cn": "惧龙蝠",
       "name_de": "Flederbestie",
       "name_es": "Terrorgheist",
@@ -5763,10 +5762,10 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_en": "Accursed Weapons {renegade}, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_cn": "受诅武器, 紧密阵型, 反制冲锋, 黑暗活力, 先行冲锋, 易燃, 顽强不屈(1), 傲人武艺, 不死亡灵, 重生(6+), 快速行进",
         "name_de": "Verfluchte Waffen, Geschlossene Ränge, Gegenangriff, Dunkle Vitalität, Erster Angriff, Brennbar, Unverwüstlich (1), Kriegerstolz, Nekromantische Untote, Regeneration (6+), Schnelle Bewegung",
-        "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_es": "Accursed Weapons {renegade}, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_fr": "Armes Maudites, Ordre Serré, Contre-charge, Sombre Vitalité, Première Charge, Inflammable, Indomptable (1), Fierté Martiale, Mort-vivant Nécromantique, Régénération (6+), Rapide"
       },
       "notes": {
@@ -5783,7 +5782,7 @@
       }
     },
     {
-      "name_en": "Blood Knights",
+      "name_en": "Blood Knights {renegade}",
       "name_cn": "血骑士",
       "name_de": "Blutritter",
       "name_es": "Blood Knights",
@@ -5889,20 +5888,20 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
+        "name_en": "Accursed Weapons {renegade}, Close Order, Counter Charge, Dark Vitality {renegade}, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_cn": "受诅武器, 紧密阵型, 反制冲锋, 黑暗活力, 先行冲锋, 易燃, 顽强不屈(1), 傲人武艺, 不死亡灵, 重生(6+), 快速行进",
         "name_de": "Verfluchte Waffen, Geschlossene Ränge, Gegenangriff, Dunkle Vitalität, Erster Angriff, Brennbar, Unverwüstlich (1), Kriegerstolz, Nekromantische Untote, Regeneration (6+), Schnelle Bewegung",
         "name_es": "Accursed Weapons, Close Order, Counter Charge, Dark Vitality, First Charge, Flammable, Indomitable (1), Martial Pride, Necromantic Undead, Regeneration (6+), Swiftstride",
         "name_fr": "Armes Maudites, Ordre Serré, Contre-charge, Sombre Vitalité, Première Charge, Inflammable, Indomptable (1), Fierté Martiale, Mort-vivant Nécromantique, Régénération (6+), Rapide"
       },
       "notes": {
-        "name_en": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_cn": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_de": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_es": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_fr": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_it": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan.",
-        "name_pl": "Up to 25 points of magic items and 25 points of Vampiric Powers for the Kastellan."
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
       },
       "armyComposition": {
         "vc-renegade": {
@@ -5968,7 +5967,7 @@
       }
     },
     {
-      "name_en": "Hexwraiths",
+      "name_en": "Hexwraiths {renegade}",
       "name_cn": "缚灵骑士",
       "name_de": "Sensenreiter",
       "name_es": "Hexwraiths",
