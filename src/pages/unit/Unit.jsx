@@ -1478,6 +1478,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           0;
                                         let combinedStackableCount = 0;
 
+                                        if (
+                                          equipment.armyComposition &&
+                                          !equipment.armyComposition.includes(
+                                            unitArmyComposition,
+                                          )
+                                        ) {
+                                          return null;
+                                        }
+
                                         detachmentEquipment.forEach((item) => {
                                           if (item.exclusive) {
                                             combinedStackableCount +=
