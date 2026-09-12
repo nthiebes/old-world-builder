@@ -26,30 +26,23 @@ export const Select = ({
   };
 
   let innerElements;
+  const mapSelectElements = ({ id: optionValue, ...option }) => (
+    <option key={optionValue} value={optionValue}>
+      {option[`name_${language}`] || option.name_en}
+    </option>
+  );
   if (optionGroups) {
     innerElements = optionGroups.map(({ id: groupId, ...group }) => (
       <optgroup label={group[`name_${language}`] || group.name_en} key={groupId}>
-        {options.filter((option) => option.group === groupId).map(({ id: optionValue, ...option }) => (
-          <option key={optionValue} value={optionValue}>
-            {option[`name_${language}`] || option.name_en}
-          </option>
-        ))}
+        {options.filter((option) => option.group === groupId).map(mapSelectElements)}
       </optgroup>
     ));
     innerElements = innerElements.concat(
       options.filter((option) => !option.group || optionGroups.findIndex((group) => group.id === option.group) < 0)
-        .map(({ id: optionValue, ...option }) => (
-          <option key={optionValue} value={optionValue}>
-            {option[`name_${language}`] || option.name_en}
-          </option>
-        ))
+        .map(mapSelectElements)
     );
   } else {
-    innerElements = options.map(({ id: optionValue, ...option }) => (
-      <option key={optionValue} value={optionValue}>
-        {option[`name_${language}`] || option.name_en}
-      </option>
-    ));
+    innerElements = options.map(mapSelectElements);
   }
 
   return (
