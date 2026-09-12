@@ -3722,22 +3722,29 @@ export const rules = {
       units: [
         {
           ids: [
-            "vampire-count",
-            "vampire-thrall",
-            "master-necromancer",
-            "necromantic-acolyte",
-            "strigoi-ghoul-king",
+            "vampire-lord-renegade",
+            "vampire-thrall-renegade",
+            "master-necromancer-renegade",
+            "necromantic-acolyte-renegade",
+            "strigoi-ghoul-king-renegade",
           ],
           min: 1,
         },
         {
-          ids: ["vampire-count", "master-necromancer", "strigoi-ghoul-king"],
+          ids: [
+            "vampire-lord-renegade",
+            "master-necromancer-renegade",
+            "strigoi-ghoul-king-renegade",
+          ],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["wight-king", "tomb-banshee"],
+          ids: [
+            "wight-king-renegade",
+            "tomb-banshee-renegade",
+          ],
           min: 0,
           max: 1,
           points: 1000,
@@ -3748,11 +3755,14 @@ export const rules = {
       minPercent: 25,
       units: [
         {
-          ids: ["grave-guard", "black-knights"],
+          ids: ["grave-guard-core-renegade", "black-knights-core-renegade"],
           min: 0,
           max: 1,
-          requiresType: "characters",
-          requires: ["wight-king", "wight-lord"],
+        },
+        {
+          ids: ["corpse-cart-core-renegade"],
+          min: 0,
+          max: 3,
         },
       ],
     },
@@ -3760,71 +3770,56 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["grave-guard", "black-knights"],
+          ids: ["varghulf-renegade"],
           min: 0,
           max: 1,
-          points: 1000,
+          points: 1000
         },
         {
-          ids: ["crypt-horrors", "fell-bats"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-        {
-          ids: ["corpse-cart"],
-          min: 0,
-          max: 3,
-        },
-        {
-          ids: ["spirit-hosts"],
-          min: 0,
-          max: 1,
-          requiresType: "characters",
-          requires: ["cairn-wraith", "tomb-banshee"],
-          perUnit: true,
-        },
-        {
-          ids: ["vargheists", "terrorgheist"],
+          ids: ["blood-knights-special-renegade"],
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: ["strigoi-ghoul-king"],
+          requires: ["vampire-lord-renegade"],
         },
+        {
+          ids: ["vargheists-special-renegade", "terrorgheist-special-renegade"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["strigoi-ghoul-king-renegade"],
+        },
+        {
+          ids: ["spirit-hosts-renegade"],
+          min: 0,
+          max: 1,
+          requiresType: "characters",
+          requires: [
+            "cairn-wraith-renegade",
+            "tomb-banshee-renegade",
+          ],
+          perUnit: true,
+        }
       ],
     },
     rare: {
       maxPercent: 25,
       units: [
         {
-          ids: ["vargheists"],
+          ids: ["black-coach-renegade"],
           min: 0,
           max: 1,
-          points: 1000,
+          points: 1000
         },
         {
-          ids: ["black-coach"],
-          min: 0,
-          max: 2,
-        },
-        {
-          ids: ["terrorgheist", "varghulf"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-        {
-          ids: ["blood-knights"],
-          min: 0,
-          max: 1,
-          points: 1000,
-        },
-        {
-          ids: ["hexwraiths"],
+          ids: ["hexwraiths-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["cairn-wraith", "tomb-banshee"],
+          requires: [
+            "cairn-wraith-renegade",
+            "tomb-banshee-renegade",
+          ],
           perUnit: true,
         },
       ],
