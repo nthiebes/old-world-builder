@@ -8,6 +8,7 @@ import "./Select.css";
 
 export const Select = ({
   options,
+  optionGroups,
   className,
   id,
   name,
@@ -23,6 +24,33 @@ export const Select = ({
   const handleOnChange = (event) => {
     onChange(event.target.value);
   };
+
+  let innerElements;
+  if (optionGroups) {
+    innerElements = optionGroups.map(({ id: groupId, ...group }) => (
+      <optgroup label={group[`name_${language}`] || group.name_en} key={groupId}>
+        {options.filter((option) => option.group === groupId).map(({ id: optionValue, ...option }) => (
+          <option key={optionValue} value={optionValue}>
+            {option[`name_${language}`] || option.name_en}
+          </option>
+        ))}
+      </optgroup>
+    ));
+    innerElements = innerElements.concat(
+      options.filter((option) => !option.group || optionGroups.findIndex((group) => group.id === option.group) < 0)
+        .map(({ id: optionValue, ...option }) => (
+          <option key={optionValue} value={optionValue}>
+            {option[`name_${language}`] || option.name_en}
+          </option>
+        ))
+    );
+  } else {
+    innerElements = options.map(({ id: optionValue, ...option }) => (
+      <option key={optionValue} value={optionValue}>
+        {option[`name_${language}`] || option.name_en}
+      </option>
+    ));
+  }
 
   return (
     <select
@@ -40,17 +68,14 @@ export const Select = ({
         className
       )}
     >
-      {options.map(({ id: optionValue, ...option }) => (
-        <option key={optionValue} value={optionValue}>
-          {option[`name_${language}`] || option.name_en}
-        </option>
-      ))}
+      {innerElements}
     </select>
   );
 };
 
 Select.propTypes = {
   options: PropTypes.array.isRequired,
+  optionGroups: PropTypes.array,
   className: PropTypes.string,
   onChange: PropTypes.func,
   id: PropTypes.string,
@@ -58,6 +83,7 @@ Select.propTypes = {
   required: PropTypes.bool,
   selected: PropTypes.string,
   disabled: PropTypes.bool,
+  spaceTop: PropTypes.bool,
   spaceBottom: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
