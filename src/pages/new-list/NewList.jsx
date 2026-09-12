@@ -43,6 +43,9 @@ export const NewList = ({ isMobile }) => {
     .filter(({ id }) => id === game)[0]
     .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
+  const armyGroups = gameSystems
+    .filter(({ id }) => id === game)[0]
+    .armyGroups;
   const versions = armies.find(({ id }) => army === id)?.versions;
   const compositionRules = [
     {
@@ -246,6 +249,7 @@ export const NewList = ({ isMobile }) => {
           <Select
             id="army"
             options={armies}
+            optionGroups={armyGroups}
             onChange={handleArmyChange}
             selected="empire-of-man"
             spaceBottom
