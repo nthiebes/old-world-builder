@@ -7643,6 +7643,19 @@
       "armyComposition": "vampire-counts"
     },
     {
+      "name_de": "Drakenhofbanner",
+      "name_en": "Drakenhof Banner {renegade}",
+      "name_cn": "邓肯霍夫军旗",
+      "name_es": "Estandarte de Drakenhof",
+      "name_fr": "Bannière de Drakenhof",
+      "name_it": "Drakenhof Banner",
+      "points": 60,
+      "type": "banner",
+      "onePerArmy": true,
+      "name": "drakenhof banner",
+      "armyComposition": "vc-renegade"
+    },
+    {
       "name_de": "Banner der Hügelgräber",
       "name_en": "Banner of the Barrows {renegade}",
       "name_cn": "古坟军旗",
@@ -7667,19 +7680,6 @@
       "onePerArmy": true,
       "name": "drakenhof banner",
       "armyComposition": "vampire-counts"
-    },
-    {
-      "name_de": "Drakenhofbanner",
-      "name_en": "Drakenhof Banner {renegade}",
-      "name_cn": "邓肯霍夫军旗",
-      "name_es": "Estandarte de Drakenhof",
-      "name_fr": "Bannière de Drakenhof",
-      "name_it": "Drakenhof Banner",
-      "points": 60,
-      "type": "banner",
-      "onePerArmy": true,
-      "name": "drakenhof banner",
-      "armyComposition": "vc-renegade"
     },
     {
       "name_de": "Kreischendes Banner",
@@ -7894,11 +7894,11 @@
     },
     {
       "name_de": "Zepter des Noirot",
-      "name_en": "Sceptre of De Noirot {renegade}",
+      "name_en": "Sceptre de Noirot {renegade}",
       "name_cn": "德朗诺的权杖",
-      "name_es": "Cetro de De Noirot",
-      "name_fr": "Sceptre de De Noirot",
-      "name_it": "Sceptre of De Noirot",
+      "name_es": "Cetro de Noirot",
+      "name_fr": "Sceptre de Noirot",
+      "name_it": "Sceptre de Noirot",
       "points": 35,
       "type": "arcane-item",
       "onePerArmy": true,
@@ -8802,20 +8802,6 @@
       "armyComposition": "vampire-counts"
     },
     {
-      "name_de": "Bezauberndes Wesen",
-      "name_en": "Beguile {renegade}",
-      "name_cn": "欺瞒诱惑",
-      "name_es": "Beguile",
-      "name_fr": "Séduction",
-      "name_it": "Beguile",
-      "nonExclusive": true,
-      "points": 20,
-      "type": "vampiric-power",
-      "onePerArmy": true,
-      "name": "beguile",
-      "armyComposition": "vc-renegade"
-    },
-    {
       "name_de": "Honour of Death",
       "name_en": "Honour of Death {renegade}",
       "name_cn": "Honour of Death",
@@ -8830,30 +8816,17 @@
       "armyComposition": "vc-renegade"
     },
     {
-      "name_de": "Übernatürlicher Schrecken",
-      "name_en": "Supernatural Horror",
-      "name_cn": "超常恐惧",
-      "name_es": "Supernatural Horror",
-      "name_fr": "Horreur Surnaturelle",
-      "name_it": "Supernatural Horror",
+      "name_de": "Fliegender Schrecken",
+      "name_en": "Flying Horror",
+      "name_cn": "翱翔惧翼",
+      "name_es": "Flying Horror",
+      "name_fr": "Créature Ailée",
+      "name_it": "Flying Horror",
       "nonExclusive": true,
-      "points": 20,
+      "points": 35,
       "type": "vampiric-power",
       "onePerArmy": true,
-      "name": "supernatural horror"
-    },
-    {
-      "name_de": "Ritter der Nacht",
-      "name_en": "Lord of the Night",
-      "name_cn": "暗夜之王",
-      "name_es": "Lord of the Night",
-      "name_fr": "Seigneur de la Nuit",
-      "name_it": "Lord of the Night",
-      "nonExclusive": true,
-      "points": 15,
-      "type": "vampiric-power",
-      "onePerArmy": true,
-      "name": "lord of the night"
+      "name": "flying horror"
     },
     {
       "name_de": "Meister der schwarzen Künste",
@@ -8868,20 +8841,6 @@
       "onePerArmy": true,
       "name": "master of the black arts",
       "armyComposition": "vampire-counts"
-    },
-    {
-      "name_de": "Meister der schwarzen Künste",
-      "name_en": "Master of the Black Arts {renegade}",
-      "name_cn": "黑暗技艺大师",
-      "name_es": "Master of the Black Arts",
-      "name_fr": "Maître des Arts Noirs",
-      "name_it": "Master of the Black Arts",
-      "nonExclusive": true,
-      "points": 30,
-      "type": "vampiric-power",
-      "onePerArmy": true,
-      "name": "master of the black arts",
-      "armyComposition": "vc-renegade"
     },
     {
       "name_en": "Dark Acolyte",
@@ -8909,6 +8868,20 @@
       "type": "vampiric-power",
       "onePerArmy": true,
       "name": "dark acolyte",
+      "armyComposition": "vc-renegade"
+    },
+    {
+      "name_de": "Meister der schwarzen Künste",
+      "name_en": "Master of the Black Arts {renegade}",
+      "name_cn": "黑暗技艺大师",
+      "name_es": "Master of the Black Arts",
+      "name_fr": "Maître des Arts Noirs",
+      "name_it": "Master of the Black Arts",
+      "nonExclusive": true,
+      "points": 30,
+      "type": "vampiric-power",
+      "onePerArmy": true,
+      "name": "master of the black arts",
       "armyComposition": "vc-renegade"
     },
     {
@@ -8940,17 +8913,44 @@
       "armyComposition": "vc-renegade"
     },
     {
-      "name_de": "Fliegender Schrecken",
-      "name_en": "Flying Horror",
-      "name_cn": "翱翔惧翼",
-      "name_es": "Flying Horror",
-      "name_fr": "Créature Ailée",
-      "name_it": "Flying Horror",
+      "name_de": "Bezauberndes Wesen",
+      "name_en": "Beguile {renegade}",
+      "name_cn": "欺瞒诱惑",
+      "name_es": "Beguile",
+      "name_fr": "Séduction",
+      "name_it": "Beguile",
       "nonExclusive": true,
-      "points": 35,
+      "points": 20,
       "type": "vampiric-power",
       "onePerArmy": true,
-      "name": "flying horror"
+      "name": "beguile",
+      "armyComposition": "vc-renegade"
+    },
+    {
+      "name_de": "Übernatürlicher Schrecken",
+      "name_en": "Supernatural Horror",
+      "name_cn": "超常恐惧",
+      "name_es": "Supernatural Horror",
+      "name_fr": "Horreur Surnaturelle",
+      "name_it": "Supernatural Horror",
+      "nonExclusive": true,
+      "points": 20,
+      "type": "vampiric-power",
+      "onePerArmy": true,
+      "name": "supernatural horror"
+    },
+    {
+      "name_de": "Ritter der Nacht",
+      "name_en": "Lord of the Night",
+      "name_cn": "暗夜之王",
+      "name_es": "Lord of the Night",
+      "name_fr": "Seigneur de la Nuit",
+      "name_it": "Lord of the Night",
+      "nonExclusive": true,
+      "points": 15,
+      "type": "vampiric-power",
+      "onePerArmy": true,
+      "name": "lord of the night"
     }
   ],
   "forbidden-poisons": [

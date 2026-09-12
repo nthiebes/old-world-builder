@@ -627,7 +627,7 @@ export const Editor = ({ isMobile }) => {
           mercenariesData &&
           armyComposition &&
           list?.army !== "daemons-of-chaos" &&
-          list?.army !== "vampire-counts" && (
+          armyComposition !== "vampire-counts" && (
             <section className="editor__section">
               <header className="editor__header">
                 <h2>

@@ -214,7 +214,9 @@ export const validateList = ({ list, language, intl }) => {
       joinWithOr(
         uniq(
           ruleUnit.ids.map((id) => {
-            const name = intl.formatMessage({ id });
+            const name = intl.formatMessage({
+              id: id.replace("-renegade", ""),
+            });
 
             return getUnitName({ unit: { name }, language });
           }),

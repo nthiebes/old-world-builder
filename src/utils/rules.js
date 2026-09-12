@@ -3741,10 +3741,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: [
-            "wight-king-renegade",
-            "tomb-banshee-renegade",
-          ],
+          ids: ["wight-king-renegade", "tomb-banshee-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3773,7 +3770,7 @@ export const rules = {
           ids: ["varghulf-renegade"],
           min: 0,
           max: 1,
-          points: 1000
+          points: 1000,
         },
         {
           ids: ["blood-knights-special-renegade"],
@@ -3794,12 +3791,9 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: [
-            "cairn-wraith-renegade",
-            "tomb-banshee-renegade",
-          ],
+          requires: ["cairn-wraith-renegade", "tomb-banshee-renegade"],
           perUnit: true,
-        }
+        },
       ],
     },
     rare: {
@@ -3809,21 +3803,19 @@ export const rules = {
           ids: ["black-coach-renegade"],
           min: 0,
           max: 1,
-          points: 1000
+          points: 1000,
         },
         {
           ids: ["hexwraiths-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: [
-            "cairn-wraith-renegade",
-            "tomb-banshee-renegade",
-          ],
+          requires: ["cairn-wraith-renegade", "tomb-banshee-renegade"],
           perUnit: true,
         },
       ],
     },
+    mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
   skaven: {

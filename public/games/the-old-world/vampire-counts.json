@@ -148,20 +148,20 @@
           "points": 16
         },
         {
-          "name_en": "Coven Throne",
-          "name_cn": "女巫王座",
-          "name_de": "Hexenthron",
-          "name_es": "Coven Throne",
-          "name_fr": "Trône de Sabbat",
-          "points": 210
-        },
-        {
           "name_en": "Abyssal Terror",
           "name_cn": "深渊惊惧兽",
           "name_de": "Schrecken der Unterwelt",
           "name_es": "Abyssal Terror",
           "name_fr": "Terreur des Abîmes",
           "points": 120
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_cn": "女巫王座",
+          "name_de": "Hexenthron",
+          "name_es": "Coven Throne",
+          "name_fr": "Trône de Sabbat",
+          "points": 210
         },
         {
           "name_en": "Zombie Dragon",
@@ -397,20 +397,20 @@
           "points": 16
         },
         {
-          "name_en": "Coven Throne",
-          "name_cn": "女巫王座",
-          "name_de": "Hexenthron",
-          "name_es": "Coven Throne",
-          "name_fr": "Trône de Sabbat",
-          "points": 165
-        },
-        {
           "name_en": "Abyssal Terror",
           "name_cn": "深渊惊惧兽",
           "name_de": "Schrecken der Unterwelt",
           "name_es": "Abyssal Terror",
           "name_fr": "Terreur des Abîmes",
           "points": 120
+        },
+        {
+          "name_en": "Coven Throne",
+          "name_cn": "女巫王座",
+          "name_de": "Hexenthron",
+          "name_es": "Coven Throne",
+          "name_fr": "Trône de Sabbat",
+          "points": 165
         },
         {
           "name_en": "Zombie Dragon",
@@ -2456,7 +2456,7 @@
   ],
   "core": [
     {
-      "name_en": "Skeleton Warriors",
+      "name_en": "Skeleton Warriors {vampire counts}",
       "name_cn": "骷髅战士",
       "name_de": "Skelettkrieger",
       "name_es": "Skeleton Warriors",
@@ -2843,11 +2843,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Crypt Ghast",
-          "name_cn": "墓穴妖鬼",
-          "name_de": "Gruftghast",
-          "name_es": "Crypt Ghast",
-          "name_fr": "Nécrophage",
+          "name_en": "Crypt Ghast (champion)",
+          "name_cn": "墓穴妖鬼 (champion)",
+          "name_de": "Gruftghast (champion)",
+          "name_es": "Crypt Ghast (champion)",
+          "name_fr": "Nécrophage (champion)",
           "points": 6
         }
       ],
@@ -2900,11 +2900,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Crypt Ghast",
-          "name_cn": "墓穴妖鬼",
-          "name_de": "Gruftghast",
-          "name_es": "Crypt Ghast",
-          "name_fr": "Nécrophage",
+          "name_en": "Crypt Ghast (champion)",
+          "name_cn": "墓穴妖鬼 (champion)",
+          "name_de": "Gruftghast (champion)",
+          "name_es": "Crypt Ghast (champion)",
+          "name_fr": "Nécrophage (champion)",
           "points": 6
         }
       ],
@@ -3783,6 +3783,7 @@
           "name_fr": "Fouet",
           "points": 3,
           "perModel": true,
+          "exclusive": true,
           "notes": {
             "name_en": "Corpsemaster only",
             "name_cn": "仅守尸者",
@@ -3799,6 +3800,7 @@
           "name_fr": "Lance de cavalerie",
           "points": 3,
           "perModel": true,
+          "exclusive": true,
           "notes": {
             "name_en": "Corpsemaster only",
             "name_cn": "仅守尸者",
@@ -4387,11 +4389,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Crypt Haunter",
-          "name_cn": "墓穴骇鬼",
-          "name_de": "Gruftscheusal",
-          "name_es": "Crypt Haunter",
-          "name_fr": "Hideur des Cryptes",
+          "name_en": "Crypt Haunter (champion)",
+          "name_cn": "墓穴骇鬼 (champion)",
+          "name_de": "Gruftscheusal (champion)",
+          "name_es": "Crypt Haunter (champion)",
+          "name_fr": "Hideur des Cryptes (champion)",
           "points": 7
         }
       ],
@@ -4444,11 +4446,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Crypt Haunter",
-          "name_cn": "墓穴骇鬼",
-          "name_de": "Gruftscheusal",
-          "name_es": "Crypt Haunter",
-          "name_fr": "Hideur des Cryptes",
+          "name_en": "Crypt Haunter (champion)",
+          "name_cn": "墓穴骇鬼 (champion)",
+          "name_de": "Gruftscheusal (champion)",
+          "name_es": "Crypt Haunter (champion)",
+          "name_fr": "Hideur des Cryptes (champion)",
           "points": 7
         }
       ],
@@ -4716,11 +4718,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Vargoyle",
-          "name_cn": "嗜血蝠妖",
-          "name_de": "Varghyl",
-          "name_es": "Vargoyle",
-          "name_fr": "Vargoyle",
+          "name_en": "Vargoyle (champion)",
+          "name_cn": "嗜血蝠妖 (champion)",
+          "name_de": "Varghyl (champion)",
+          "name_es": "Vargoyle (champion)",
+          "name_fr": "Vargoyle (champion)",
           "points": 7
         }
       ],
@@ -4773,11 +4775,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Vargoyle",
-          "name_cn": "嗜血蝠妖",
-          "name_de": "Varghyl",
-          "name_es": "Vargoyle",
-          "name_fr": "Vargoyle",
+          "name_en": "Vargoyle (champion)",
+          "name_cn": "嗜血蝠妖 (champion)",
+          "name_de": "Varghyl (champion)",
+          "name_es": "Vargoyle (champion)",
+          "name_fr": "Vargoyle (champion)",
           "points": 7
         }
       ],
@@ -5255,11 +5257,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Vargoyle",
-          "name_cn": "嗜血蝠妖",
-          "name_de": "Varghyl",
-          "name_es": "Vargoyle",
-          "name_fr": "Vargoyle",
+          "name_en": "Vargoyle (champion)",
+          "name_cn": "嗜血蝠妖 (champion)",
+          "name_de": "Varghyl (champion)",
+          "name_es": "Vargoyle (champion)",
+          "name_fr": "Vargoyle (champion)",
           "points": 7
         }
       ],
@@ -5312,11 +5314,11 @@
       "maximum": 0,
       "command": [
         {
-          "name_en": "Vargoyle",
-          "name_cn": "嗜血蝠妖",
-          "name_de": "Varghyl",
-          "name_es": "Vargoyle",
-          "name_fr": "Vargoyle",
+          "name_en": "Vargoyle (champion)",
+          "name_cn": "嗜血蝠妖 (champion)",
+          "name_de": "Varghyl (champion)",
+          "name_es": "Vargoyle (champion)",
+          "name_fr": "Vargoyle (champion)",
           "points": 7
         }
       ],

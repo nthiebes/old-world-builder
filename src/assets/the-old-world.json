@@ -533,6 +533,10 @@
           "army": "beastmen-brayherds"
         },
         {
+          "army": "vampire-counts",
+          "armyComposition": "vc-renegade"
+        },
+        {
           "army": "tomb-kings-of-khemri",
           "armyComposition": "nehekharan-royal-hosts"
         },
@@ -696,6 +700,14 @@
           {
             "isDefault": true,
             "version": "1.5.3.1"
+          }
+        ]
+      },
+      "mercenaries": {
+        "vc-renegade": [
+          {
+            "army": "empire-of-man",
+            "units": ["free-company-militia", "empire-archers"]
           }
         ]
       },
