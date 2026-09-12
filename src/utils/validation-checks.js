@@ -411,6 +411,7 @@ export function createLimitUnitRepeats(max, unitCategory, errorMsg) {
         const unitRules = getUnitRulesByCategory(
           list.armyComposition,
           unitCategory,
+          list.version,
         );
         const restrictions = Boolean(
           unitRules &&

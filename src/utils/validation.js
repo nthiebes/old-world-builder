@@ -539,20 +539,32 @@ export const validateList = ({ list, language, intl }) => {
   const characterUnitsRules = getUnitRulesByCategory(
     list.armyComposition,
     "characters",
+    list.version,
   );
-  const coreUnitsRules = getUnitRulesByCategory(list.armyComposition, "core");
+  const coreUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "core",
+    list.version,
+  );
   const specialUnitsRules = getUnitRulesByCategory(
     list.armyComposition,
     "special",
+    list.version,
   );
-  const rareUnitsRules = getUnitRulesByCategory(list.armyComposition, "rare");
+  const rareUnitsRules = getUnitRulesByCategory(
+    list.armyComposition,
+    "rare",
+    list.version,
+  );
   const alliesUnitsRules = getUnitRulesByCategory(
     list.armyComposition,
     "allies",
+    list.version,
   );
   const mercenariesUnitsRules = getUnitRulesByCategory(
     list.armyComposition,
     "mercenaries",
+    list.version,
   );
 
   characterUnitsRules.forEach((ruleUnit) => {
