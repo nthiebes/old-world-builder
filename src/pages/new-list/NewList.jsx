@@ -43,9 +43,7 @@ export const NewList = ({ isMobile }) => {
     .filter(({ id }) => id === game)[0]
     .armies.sort((a, b) => a.id.localeCompare(b.id));
   const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
-  const armyGroups = gameSystems
-    .filter(({ id }) => id === game)[0]
-    .armyGroups;
+  const armyGroups = gameSystems.filter(({ id }) => id === game)[0].armyGroups;
   const versions = armies.find(({ id }) => army === id)?.versions;
   const compositionRules = [
     {
@@ -118,10 +116,16 @@ export const NewList = ({ isMobile }) => {
     setRedirect(newId);
   };
   const handleSystemChange = (event) => {
+    const gameSystem = gameSystems.filter(
+      ({ id }) => id === event.target.value,
+    )[0];
+    const army = gameSystem.armies[0];
+    const armyComposition = army.armyComposition[0];
+
     setGame(event.target.value);
-    setArmy(
-      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id,
-    );
+    setArmy(army.id);
+    setArmyComposition(armyComposition);
+    setVersion(null);
     setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
