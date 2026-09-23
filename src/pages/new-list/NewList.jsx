@@ -279,7 +279,7 @@ export const NewList = ({ isMobile }) => {
               <FormattedMessage id="new.unsupportedVersion" />
             </p>
           ) : null}
-          {version && defaultVersion && version.includes("1.5.") ? (
+          {version && version.includes("1.5.") ? (
             <p className="unit__notes new-list__unsupported-version">
               <Icon symbol="error" className="unit__notes-icon" />
               <FormattedMessage id="new.draftVersion" />

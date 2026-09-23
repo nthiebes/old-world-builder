@@ -300,6 +300,13 @@ export const Editor = ({ isMobile }) => {
           />
         )}
         <section>
+          {list?.version && list.version.includes("1.5.") ? (
+            <p className="unit__notes">
+              <Icon symbol="error" className="unit__notes-icon" />
+              <FormattedMessage id="new.draftVersion" />
+            </p>
+          ) : null}
+
           {errors
             .filter(({ section }) => section === "global")
             .map(({ message }) => (
