@@ -308,7 +308,7 @@ export const Editor = ({ isMobile }) => {
           ) : null}
 
           {errors
-            .filter(({ section }) => section === "global")
+            .filter(({ section }) => section === "global" || section === "home")
             .map(({ message }) => (
               <ErrorMessage key={message} spaceAfter spaceBefore={isMobile}>
                 <FormattedMessage id={message} />

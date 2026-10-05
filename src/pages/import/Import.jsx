@@ -6,6 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
 import { getRandomId } from "../../utils/id";
+import { saveLocalLists } from "../../utils/list";
 import { setLists } from "../../state/lists";
 
 import "./Import.css";
@@ -43,7 +44,7 @@ export const Import = ({ isMobile }) => {
       const importedList = { ...JSON.parse(event.target.result), id: newId };
       const newLists = [importedList, ...lists];
 
-      localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      saveLocalLists(newLists);
       dispatch(setLists(newLists));
       setRedirect(importedList.id);
     };

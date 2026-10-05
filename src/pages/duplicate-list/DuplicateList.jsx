@@ -8,6 +8,7 @@ import { Button } from "../../components/button";
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
 import { getRandomId } from "../../utils/id";
+import { saveLocalLists } from "../../utils/list";
 import { setLists } from "../../state/lists";
 
 import "./DuplicateList.css";
@@ -51,7 +52,7 @@ export const DuplicateList = ({ isMobile }) => {
 
     event.preventDefault();
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    saveLocalLists(newLists);
     dispatch(setLists(newLists));
 
     setRedirect(newId);

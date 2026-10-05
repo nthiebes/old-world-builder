@@ -11,6 +11,7 @@ import { Icon } from "../../components/icon";
 import { ListItem, OrderableList } from "../../components/list";
 import { Header, Main } from "../../components/page";
 import { Dialog } from "../../components/dialog";
+import { ErrorMessage } from "../../components/error-message";
 import { getAllPoints } from "../../utils/points";
 import { useTimezone } from "../../utils/useTimezone";
 import { setArmy } from "../../state/army";
@@ -40,7 +41,11 @@ import fantasyweltEn from "../../assets/fantasywelt_en.jpg";
 import mwgForge from "../../assets/mwg-forge.gif";
 import { swap } from "../../utils/collection";
 import { useLanguage } from "../../utils/useLanguage";
-import { updateLocalList, updateListsFolder } from "../../utils/list";
+import {
+  saveLocalLists,
+  updateLocalList,
+  updateListsFolder,
+} from "../../utils/list";
 import { setLists, toggleFolder, updateList } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
 import { getRandomId } from "../../utils/id";
@@ -74,6 +79,7 @@ const armyIconMap = {
 export const Home = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
   const settings = useSelector((state) => state.settings);
+  const errors = useSelector((state) => state.errors);
   let lists = updateListsFolder(useSelector((state) => state.lists));
 
   // Sort lists based on the current sorting setting
@@ -214,7 +220,7 @@ export const Home = ({ isMobile }) => {
         });
         newLists = updateListsFolder(newLists);
 
-        localStorage.setItem("owb.lists", JSON.stringify(newLists));
+        saveLocalLists(newLists);
         dispatch(setLists(newLists));
 
         const newSettings = { ...settings, lastChanged: new Date().toString() };
@@ -226,7 +232,7 @@ export const Home = ({ isMobile }) => {
         swap(lists, sourceIndex, destinationIndex),
       );
 
-      localStorage.setItem("owb.lists", JSON.stringify(newLists));
+      saveLocalLists(newLists);
       dispatch(setLists(newLists));
 
       const newSettings = { ...settings, lastChanged: new Date().toString() };
@@ -357,7 +363,7 @@ export const Home = ({ isMobile }) => {
     setDialogOpen(null);
     setActiveMenu(null);
     dispatch(setLists(newLists));
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    saveLocalLists(newLists);
 
     const newSettings = { ...settings, lastChanged: new Date().toString() };
     dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
@@ -389,7 +395,7 @@ export const Home = ({ isMobile }) => {
       ...lists,
     ]);
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    saveLocalLists(newLists);
     dispatch(setLists(newLists));
 
     const newSettings = { ...settings, lastChanged: new Date().toString() };
@@ -573,6 +579,13 @@ export const Home = ({ isMobile }) => {
 
       {isMobile && <Header headline="Old World Builder" hasMainNavigation />}
       <MainComponent>
+        {errors
+          .filter(({ section }) => section === "home")
+          .map(({ message }) => (
+            <ErrorMessage key={message} spaceAfter spaceBefore>
+              <FormattedMessage id={message} />
+            </ErrorMessage>
+          ))}
         {listsWithoutFolders.length > 0 && (
           <section className="column-header home__header">
             <Button

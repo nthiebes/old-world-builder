@@ -1,5 +1,7 @@
 // Cache is keyed by OWB version so it auto-invalidates on each release.
 const CACHE_STORAGE_KEY = `owb-rule-descriptions-v${import.meta.env.VITE_VERSION}`;
+// Shares the localStorage quota with owb.lists, so keep it bounded.
+const MAX_CACHE_ENTRIES = 150;
 
 // Selectors tried in order — first non-empty match wins.
 const DESCRIPTION_SELECTORS = [
@@ -13,7 +15,8 @@ const DESCRIPTION_SELECTORS = [
 const loadCache = () => {
   try {
     const stored = localStorage.getItem(CACHE_STORAGE_KEY);
-    return stored ? new Map(JSON.parse(stored)) : new Map();
+    const entries = stored ? JSON.parse(stored) : [];
+    return new Map(entries.slice(-MAX_CACHE_ENTRIES));
   } catch {
     return new Map();
   }
@@ -33,24 +36,55 @@ const purgeOldCaches = () => {
 const cache = loadCache();
 purgeOldCaches();
 
+// Map keeps insertion order, so the first key is the least recently used.
+const setCacheEntry = (rulePath, value) => {
+  cache.delete(rulePath);
+  cache.set(rulePath, value);
+
+  while (cache.size > MAX_CACHE_ENTRIES) {
+    cache.delete(cache.keys().next().value);
+  }
+};
+
 const persistCache = () => {
   try {
     localStorage.setItem(
       CACHE_STORAGE_KEY,
-      JSON.stringify(Array.from(cache.entries()))
+      JSON.stringify(
+        Array.from(cache.entries()).filter(([, value]) => value !== null)
+      )
     );
+  } catch {
+    // Quota exceeded — drop the persisted cache rather than compete with lists.
+    try {
+      localStorage.removeItem(CACHE_STORAGE_KEY);
+    } catch {}
+  }
+};
+
+// Frees localStorage space, e.g. when saving lists hits the quota.
+export const clearRuleDescriptionCache = () => {
+  cache.clear();
+  try {
+    Object.keys(localStorage)
+      .filter((k) => k.startsWith("owb-rule-descriptions-"))
+      .forEach((k) => localStorage.removeItem(k));
   } catch {}
 };
 
 export const fetchRuleDescription = async (rulePath) => {
-  if (cache.has(rulePath)) return cache.get(rulePath);
+  if (cache.has(rulePath)) {
+    const cached = cache.get(rulePath);
+    setCacheEntry(rulePath, cached);
+    return cached;
+  }
 
   try {
     const res = await fetch(
       `https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`
     );
     if (!res.ok) {
-      cache.set(rulePath, null);
+      setCacheEntry(rulePath, null);
       return null;
     }
     const html = await res.text();
@@ -73,13 +107,13 @@ export const fetchRuleDescription = async (rulePath) => {
 
     const text = paragraphs.map((p) => p.textContent.trim()).join(" ");
     const result = text || null;
-    cache.set(rulePath, result);
+    setCacheEntry(rulePath, result);
     persistCache();
     return result;
   } catch (error) {
     // CORS or network failure — visible in browser DevTools console
     console.error(`[OWB] Failed to fetch rule description for ${rulePath}:`, error);
-    cache.set(rulePath, null);
+    setCacheEntry(rulePath, null);
     return null;
   }
 };

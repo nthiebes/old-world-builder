@@ -12,6 +12,7 @@ import { Icon } from "../../components/icon";
 import { NumberInput } from "../../components/number-input";
 import { getGameSystems } from "../../utils/game-systems";
 import { getRandomId } from "../../utils/id";
+import { saveLocalLists } from "../../utils/list";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
@@ -108,7 +109,7 @@ export const NewList = ({ isMobile }) => {
     const newLists = [newList, ...lists];
     const newSettings = { ...settings, lastChanged: new Date().toString() };
 
-    localStorage.setItem("owb.lists", JSON.stringify(newLists));
+    saveLocalLists(newLists);
     localStorage.setItem("owb.settings", JSON.stringify(newSettings));
     dispatch(setLists(newLists));
     dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
