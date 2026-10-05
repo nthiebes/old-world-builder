@@ -771,12 +771,6 @@ export const Editor = ({ isMobile }) => {
   );
 };
 
-/**
- * @param {object} props
- * @param {object[]} props.units
- * @param {string} props.type
- * @param {string} props.listId
- */
 export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
   const dispatch = useDispatch();
   const location = useLocation();

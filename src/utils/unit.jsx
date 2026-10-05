@@ -254,6 +254,7 @@ export const getAllOptions = (
       });
     });
   }
+
   const allDetachments = detachments
     ? detachments
         .filter(({ strength }) => strength > 0)
@@ -339,7 +340,7 @@ export const getAllOptions = (
   let allOptionsString = allOptionsArray.join(", ").replace(/\*/g, "");
 
   if (removeFactionName) {
-    allOptionsString = allOptionsString.replace(/ *\{[^)]*\}/g, "");
+    allOptionsString = allOptionsString.replace(/ *\{[^}]*\}/g, "");
   }
 
   if (allOptionsString) {
@@ -666,8 +667,9 @@ export const getUnitWizardryLevel = (unit) => {
     return 1;
   }
 
-  const levelOptions = findAllOptions([...unit?.options, ...unit?.command], (option) =>
-    /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
+  const levelOptions = findAllOptions(
+    [...unit?.options, ...unit?.command],
+    (option) => /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
   );
 
   if (unit?.command) {

@@ -2021,12 +2021,13 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     <p>
                       {item.selected
                         .map((selectedItem) =>
-                          selectedItem.amount > 1
+                          (selectedItem.amount > 1
                             ? `${selectedItem.amount}x ` +
                               (selectedItem[`name_${language}`] ||
                                 selectedItem.name_en)
                             : selectedItem[`name_${language}`] ||
-                              selectedItem.name_en,
+                              selectedItem.name_en
+                          ).replace(" {renegade}", ""),
                         )
                         .join(", ")
                         .replace(/\*/g, "")}
