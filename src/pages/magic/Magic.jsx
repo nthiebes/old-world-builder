@@ -602,13 +602,13 @@ export const Magic = ({ isMobile }) => {
   };
 
   let unitMagicPoints = 0;
-  const commandOptions = unit?.command.filter(
+  const commandOptions = unit?.command?.filter(
     (commandOption) =>
       !commandOption.armyComposition ||
       commandOption.armyComposition.includes(
         unit.army || list?.armyComposition || list?.army,
       ),
-  );
+  ) || [];
   const hasCommandMagicItems = Boolean(
     commandOptions &&
       commandOptions[command] &&
