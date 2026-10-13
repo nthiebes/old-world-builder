@@ -141,6 +141,22 @@ export const About = () => {
             }}
           />
         </p>
+        <p>
+          <FormattedMessage
+            id="about.creditsIcons"
+            values={{
+              instagram: (
+                <a
+                  href="https://www.instagram.com/bobby.donald/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+              ),
+            }}
+          />
+        </p>
         <br />
         <p>
           <b>

@@ -16,6 +16,7 @@ export const settingsSlice = createSlice({
     lastSynced: null,
     autoSync: false,
     favorites: [],
+    factionIcons: "owb",
   },
   reducers: {
     setSettings: (_, { payload }) => {

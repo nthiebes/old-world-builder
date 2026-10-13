@@ -78,7 +78,7 @@ export const useDropboxAuthentication = () => {
       dbxAuth.setCodeVerifier(window.sessionStorage.getItem("codeVerifier"));
       dbxAuth
         .getAccessTokenFromCode(
-          process.env.NODE_ENV === "development"
+          import.meta.env.NODE_ENV === "development"
             ? "http://localhost:5173/"
             : "https://old-world-builder.com/",
           code,

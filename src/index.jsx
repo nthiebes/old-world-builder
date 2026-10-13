@@ -19,11 +19,11 @@ import Polish from "./i18n/pl.json";
 import Chinese from "./i18n/cn.json";
 
 // Sentry error tracking
-if (process.env.NODE_ENV !== "development") {
+if (import.meta.env.NODE_ENV !== "development") {
   Sentry.init({
     dsn: "https://3947feb62e2f5348c1759e8d4d9ed084@o314295.ingest.sentry.io/4506569636642816",
     integrations: [],
-    environment: process.env.NODE_ENV,
+    environment: import.meta.env.NODE_ENV,
     release: `owb@${import.meta.env.VITE_VERSION}`,
   });
 }

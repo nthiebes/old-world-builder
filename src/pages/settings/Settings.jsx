@@ -130,6 +130,36 @@ export const Settings = () => {
             <FormattedMessage id="settings.colorSchemeDark" />
           </label>
         </div>
+
+        <h3>
+          <FormattedMessage id="settings.factionIcons" />
+        </h3>
+        <div className="radio">
+          <input
+            type="radio"
+            id="icons-owb"
+            value="owb"
+            onChange={handleSettingChange("factionIcons", "owb")}
+            checked={settings.factionIcons === "owb"}
+            className="radio__input"
+          />
+          <label htmlFor="icons-owb" className="radio__label">
+            <FormattedMessage id="settings.factionIconsOwb" />
+          </label>
+        </div>
+        <div className="radio">
+          <input
+            type="radio"
+            id="icons-community"
+            value="community"
+            onChange={handleSettingChange("factionIcons", "community")}
+            checked={settings.factionIcons === "community"}
+            className="radio__input"
+          />
+          <label htmlFor="icons-community" className="radio__label">
+            <FormattedMessage id="settings.factionIconsCommunity" />
+          </label>
+        </div>
       </Main>
     </>
   );
