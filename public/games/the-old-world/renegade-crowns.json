@@ -2284,11 +2284,6 @@
           "points": 0,
           "active": true,
           "alwaysActive": true,
-          "notes": {
-            "name_en": "0-1 Close Order and 0-1 Skirmishers per 1000 points",
-            "name_cn": "0-1紧密阵型，每1000分0-1单位的散兵阵型",
-            "name_fr": "0-1 Ordre Serré et 0-1 Tirailleurs par tranche de 1000 points"
-          },
           "options": [
             {
               "name_en": "Open Order",
@@ -2309,7 +2304,12 @@
               "name_fr": "Ordre Serré",
               "points": 0,
               "perModel": true,
-              "exclusive": true
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 Close Order per 1000 points",
+                "name_cn": "0-1 Close Order per 1000 points",
+                "name_fr": "0-1 Ordre Serré par tranche de 1000 points"
+              }
             },
             {
               "name_en": "Skirmishers",
@@ -2318,7 +2318,12 @@
               "name_fr": "Tirailleurs",
               "points": 0,
               "perModel": true,
-              "exclusive": true
+              "exclusive": true,
+              "notes": {
+                "name_en": "0-1 Skirmishers per 1000 points",
+                "name_cn": "0-1 Skirmishers per 1000 points",
+                "name_fr": "0-1 Tirailleurs par tranche de 1000 points"
+              }
             }
           ]
         },
