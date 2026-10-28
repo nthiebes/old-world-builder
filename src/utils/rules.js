@@ -442,6 +442,75 @@ export const rules = {
       ],
     },
   },
+  "barrow-kingdoms": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "tomb-prince",
+            "prince-apophas-the-cursed-scarab-lord",
+            "royal-herald",
+          ],
+          min: 1,
+        },
+        {
+          ids: ["high-priest", "mortuary-priest"],
+          min: 1,
+        },
+        {
+          ids: [
+            "tomb-king",
+            "high-priest",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+          ],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["skeleton-warriors", "skeleton-archers"],
+          min: 1,
+        },
+        {
+          ids: ["tomb-guard-core"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["tomb-scorpion", "khemrian-warsphinx"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["necrolith-colossus", "necrosphinx", "winged-warsphinx"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["screaming-skull-catapult"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "orc-and-goblin-tribes": {
     characters: {
       maxPercent: 50,

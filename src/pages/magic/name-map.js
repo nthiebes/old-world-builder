@@ -374,6 +374,12 @@ export const nameMap = {
     name_cn: "葬仪教团",
     name_fr: "Cultes Mortuaires",
   },
+  "barrow-kingdoms": {
+    name_de: "Barrow Kingdoms",
+    name_en: "Barrow Kingdoms",
+    name_cn: "Barrow Kingdoms",
+    name_fr: "Barrow Kingdoms",
+  },
   "nomadic-waaagh": {
     name_de: "Nomadic Waaagh!",
     name_en: "Nomadic Waaagh!",
