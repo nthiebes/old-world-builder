@@ -1899,6 +1899,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 if (
                   lore === "lore-of-the-wilds" &&
                   unitArmyComposition !== "host-of-talsyn" &&
+                  !unit.id.startsWith("gargantuan-treeman") &&
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
@@ -1906,6 +1907,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     ) === undefined &&
                   index !== 0
                 ) {
+                  console.log('here')
                   if (unit.activeLore === "lore-of-the-wilds") {
                     handleLoresChange(lores[0]);
                   }
