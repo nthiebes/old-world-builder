@@ -742,6 +742,9 @@
         },
         "host-of-talsyn": {
           "category": "characters"
+        },
+        "spirits-of-the-forest": {
+          "category": "characters"
         }
       },
       "command": [
@@ -1971,7 +1974,7 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
@@ -1982,7 +1985,7 @@
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -1993,7 +1996,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2004,7 +2007,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2015,7 +2018,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2116,18 +2177,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -2138,7 +2199,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2149,7 +2210,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2160,7 +2221,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2310,6 +2429,64 @@
             "name_es": "0-1 por cada 1000 puntos",
             "name_fr": "0-1 par tranche de 1000 points"
           }
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2562,8 +2739,7 @@
             "name_es": "0-1 unidad Jinetes del Bosque, Jinetes de Halcón o Manadas de Bestias por cada 1000 puntos",
             "name_it": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points"
           }
-        },
-        {
+        },{
           "name_en": "Arcane Bodkins",
           "name_cn": "奥术之锥",
           "name_de": "Arkane Dolchpfeile",
@@ -2572,18 +2748,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -2594,7 +2770,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2605,7 +2781,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2616,7 +2792,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2939,8 +3173,7 @@
             "name_es": "0-1 por cada 1000 puntos",
             "name_fr": "0-1 par tranche de 1000 points"
           }
-        },
-        {
+        },{
           "name_en": "Arcane Bodkins",
           "name_cn": "奥术之锥",
           "name_de": "Arkane Dolchpfeile",
@@ -2949,7 +3182,7 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
@@ -2960,7 +3193,7 @@
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -2971,7 +3204,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2982,7 +3215,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2993,7 +3226,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -3089,18 +3380,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -3111,7 +3402,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -3122,7 +3413,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -3133,7 +3424,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -3245,6 +3594,64 @@
           "name_pl": "Tarcze",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
