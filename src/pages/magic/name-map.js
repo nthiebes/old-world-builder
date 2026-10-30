@@ -198,6 +198,12 @@ export const nameMap = {
     name_cn: "森林精魂",
     name_fr: "Fiel-follet des Forêts",
   },
+  "elder-wood-blessings": {
+    name_de: "Blessings of the Elder Wood",
+    name_en: "Blessings of the Elder Wood",
+    name_cn: "Blessings of the Elder Wood",
+    name_fr: "Blessings of the Elder Wood",
+  },
   "beastmen-brayherds": {
     name_de: "Beastmen Brayherds",
     name_en: "Beastmen Brayherds",
@@ -721,6 +727,12 @@ export const nameMap = {
     name_en: "Host of Talsyn",
     name_cn: "塔塞恩大军",
     name_fr: "Ost de Talsyn",
+  },
+  "spirits-of-the-forest": {
+    name_de: "Spirits of the Forest",
+    name_en: "Spirits of the Forest",
+    name_cn: "Spirits of the Forest",
+    name_fr: "Spirits of the Forest",
   },
   "lore-of-the-wilds": {
     name_de: "Lore of the Wilds",
