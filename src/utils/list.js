@@ -6,6 +6,37 @@ import { clearRuleDescriptionCache } from "./rule-descriptions";
 
 const STORAGE_FULL_ERROR = "misc.storageFull";
 
+let hasReportedStorageFull = false;
+
+// Characters used per localStorage key, to show what is filling the quota.
+const getStorageUsage = () => {
+  const usage = {};
+
+  for (let index = 0; index < localStorage.length; index++) {
+    const key = localStorage.key(index);
+
+    usage[key] = localStorage.getItem(key)?.length ?? 0;
+  }
+
+  return usage;
+};
+
+// Every edit retries the save, so only report the first failure per session.
+const reportStorageFull = (error, { lists, serializedLists }) => {
+  if (hasReportedStorageFull) {
+    return;
+  }
+
+  hasReportedStorageFull = true;
+  Sentry.captureException(error, {
+    extra: {
+      listCount: lists.length,
+      attemptedListsSize: serializedLists.length,
+      storageUsage: getStorageUsage(),
+    },
+  });
+};
+
 const hasStorageFullError = () =>
   store.getState().errors.some(({ message }) => message === STORAGE_FULL_ERROR);
 
@@ -35,7 +66,7 @@ export const saveLocalLists = (lists) => {
     setStorageFullError(false);
     return true;
   } catch (error) {
-    Sentry.captureException(error);
+    reportStorageFull(error, { lists, serializedLists });
     setStorageFullError(true);
     return false;
   }
@@ -45,10 +76,10 @@ export const updateLocalList = (updatedList) => {
   const localLists = JSON.parse(localStorage.getItem("owb.lists"));
 
   if (!localLists) {
-    return;
+    return true;
   }
 
-  saveLocalLists(
+  return saveLocalLists(
     localLists.map((list) => (list.id === updatedList.id ? updatedList : list))
   );
 };

@@ -112,7 +112,11 @@ export const Header = ({
     );
 
     if (list && updatedList !== localList) {
-      updateLocalList(list);
+      // Without a saved change, a newer lastChanged would make the Dropbox sync
+      // upload the outdated stored lists and report them as up to date.
+      if (!updateLocalList(list)) {
+        return;
+      }
 
       const newSettings = { ...settings, lastChanged: new Date().toString() };
       dispatch(updateSetting({ lastChanged: newSettings.lastChanged }));
