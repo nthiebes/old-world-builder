@@ -21,6 +21,12 @@ describe("normalizeRuleName", () => {
   test("Removes curly braces", () => {
     expect(normalizeRuleName("Skeletal Steed {Tomb Kings}")).toBe("skeletal steed tomb kings");
   });
+
+  test("Removes model count prefixes with one or more digits", () => {
+    expect(normalizeRuleName("9x Blunderbusses")).toBe("blunderbusses");
+    expect(normalizeRuleName("10x Blunderbusses")).toBe("blunderbusses");
+    expect(normalizeRuleName("125x Skeletons")).toBe("skeletons");
+  });
 });
 
 describe("equalsOrIncludes", () => {
