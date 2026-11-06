@@ -99,12 +99,28 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         (option) => option.name_en === "Detachment" && option.active,
       ),
     );
+  // Allied and mercenary units come from another army dataset, so their
+  // detachments must be looked up there instead of in the list's army.
+  // Allies store their army composition in `unit.army`, mercenaries the army id.
+  const listArmyId = list?.armyComposition || list?.army;
+  const foreignArmy =
+    unit?.army && unit.army !== listArmyId
+      ? armyData?.allies?.find(
+          (ally) => (ally.armyComposition || ally.army) === unit.army,
+        ) || { army: unit.army }
+      : null;
+  const foreignArmyId = foreignArmy?.army;
+  const foreignArmyComposition =
+    foreignArmy?.armyComposition || foreignArmy?.army;
+  const [unitArmy, setUnitArmy] = useState(null);
+  const detachmentsArmy = foreignArmy ? unitArmy : army;
   const detachments =
-    army &&
+    detachmentsArmy &&
     getDetachments({
-      army,
+      army: detachmentsArmy,
       unit,
     });
+
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -581,6 +597,43 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       }
     }
   }, [list, army, dispatch, game, armyData?.version]);
+
+  useEffect(() => {
+    if (!foreignArmyId || !game) {
+      setUnitArmy(null);
+      return;
+    }
+
+    const isCustom = game.id !== "the-old-world";
+    const customData = isCustom && getCustomDatasetData(foreignArmyId);
+    const customUrl =
+      isCustom && game.armies.find((a) => a.id === foreignArmyId)?.url;
+
+    if (customData && !customUrl) {
+      setUnitArmy(
+        getArmyData({
+          data: customData,
+          armyComposition: foreignArmyComposition,
+        }),
+      );
+      return;
+    }
+
+    fetcher({
+      url: customUrl || `games/${game.id}/${foreignArmyId}`,
+      baseUrl: customUrl ? "" : undefined,
+      appendJson: Boolean(!customUrl),
+      version: armyData?.version,
+      onSuccess: (data) => {
+        setUnitArmy(
+          getArmyData({
+            data,
+            armyComposition: foreignArmyComposition,
+          }),
+        );
+      },
+    });
+  }, [foreignArmyId, foreignArmyComposition, game, armyData?.version]);
 
   if (redirect === true) {
     return <Redirect to={`/editor/${listId}`} />;
@@ -2118,6 +2171,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 };
 
 Unit.propTypes = {
+  isMobile: PropTypes.bool,
   previewData: PropTypes.shape({
     type: PropTypes.string,
     unit: PropTypes.object,
