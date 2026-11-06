@@ -65,6 +65,7 @@ const magicItemTypes = [
   "chaos-mutation-chieftain",
   "gift-of-chaos",
   "forest-spite",
+  "elder-wood-blessings",
   "vampiric-power",
   "daemonic-gift",
 ];

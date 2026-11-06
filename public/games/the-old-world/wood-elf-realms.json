@@ -262,6 +262,17 @@
         "name_es": "La Flecha de Kurnous, Evasivo, Disparar y Huir, Ignora Cobertura, Mover a Través de Cobertura, Grito de Guerra, Golpea Primero",
         "name_fr": "La Flèche de Kurnous, Esquiveur, Tir & Fuite, Ignore les Couverts, Mouvement à Couvert, Cri de Ralliement, Frappe En Premier",
         "name_pl": "Strzały Kurnous, Nieuchwytny, Strzał i Ucieczka, Ignorowanie Zasłon, Przechodzenie przez Zasłony, Okrzyk Bojowy, Pierwszeństwo Ataku"
+      },
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -535,6 +546,16 @@
         },
         "host-of-talsyn": {
           "category": "characters"
+        },
+        "spirits-of-the-forest": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
         }
       },
       "command": [
@@ -720,6 +741,9 @@
           "category": "characters"
         },
         "host-of-talsyn": {
+          "category": "characters"
+        },
+        "spirits-of-the-forest": {
           "category": "characters"
         }
       },
@@ -968,6 +992,17 @@
         "name_es": "Evasivo, Carga Devastadora, Inmune a Psicología, Solitario, Mover a Través de Cobertura, Golpea Primero, Tatuajes Talismánicos, Trovador de Loec",
         "name_fr": "Esquiveur, Charge Dévastatrice, Immunisé à la Psychologie, Solitaire, Mouvement à Couvert, Frappe En Premier, Tatouages Talismaniques, Troubadour de Loec",
         "name_pl": "Nieuchwytny, Wściekła Szarża, Odporność na Psychologię, Samotnik, Przechodzenie przez Zasłony, Pierwszeństwo Ataku, Talizmanowe Tatuaże, Trubadurzy Loeca"
+      },
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -1148,6 +1183,17 @@
         "host-of-talsyn": {
           "category": "characters",
           "lores": ["battle-magic", "elementalism", "lore-of-the-wilds"]
+        },
+        "spirits-of-the-forest": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points",
+            "name_cn": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points",
+            "name_de": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points",
+            "name_es": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points",
+            "name_fr": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points",
+            "name_pl": "0-1 Treeman Ancient o Gargantuan Treeman Ancient per 1,000 points"
+          }
         }
       },
       "command": [
@@ -1237,7 +1283,7 @@
           "name_fr": "Embusqueurs",
           "name_es": "Emboscadores",
           "points": 10,
-          "armyComposition": "host-of-talsyn"
+          "armyComposition": ["host-of-talsyn", "spirits-of-the-forest"]
         }
       ],
       "mounts": [],
@@ -1253,6 +1299,17 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 100
+        },
+        {
+          "name_en": "Blessings of the Elder Wood",
+          "name_cn": "Blessings of the Elder Wood",
+          "name_de": "Blessings of the Elder Wood",
+          "name_fr": "Blessings of the Elder Wood",
+          "name_es": "Blessings of the Elder Wood",
+          "name_pl": "Blessings of the Elder Wood",
+          "types": ["elder-wood-blessings"],
+          "selected": [],
+          "armyComposition": "spirits-of-the-forest"
         }
       ],
       "specialRules": {
@@ -1285,6 +1342,9 @@
             "illusion",
             "lore-of-the-wilds"
           ]
+        },
+        "spirits-of-the-forest": {
+          "category":"characters"
         }
       },
       "command": [
@@ -1296,6 +1356,20 @@
           "name_es": "General",
           "name_pl": "Generał",
           "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_cn": "战旗手",
+          "name_de": "Armeestandartenträger",
+          "name_pl": "Chorąży",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          },
+          "armyComposition": "spirits-of-the-forest"
         }
       ],
       "equipment": [
@@ -1376,6 +1450,15 @@
               "exclusive": true
             }
           ]
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Emboscadores",
+          "points": 10,
+          "armyComposition": "spirits-of-the-forest"
         }
       ],
       "mounts": [],
@@ -1391,6 +1474,17 @@
           "types": ["forest-spite"],
           "selected": [],
           "maxPoints": 50
+        },
+        {
+          "name_en": "Blessings of the Elder Wood",
+          "name_cn": "Blessings of the Elder Wood",
+          "name_de": "Blessings of the Elder Wood",
+          "name_fr": "Blessings of the Elder Wood",
+          "name_es": "Blessings of the Elder Wood",
+          "name_pl": "Blessings of the Elder Wood",
+          "types": ["elder-wood-blessings"],
+          "selected": [],
+          "armyComposition": "spirits-of-the-forest"
         }
       ],
       "specialRules": {
@@ -1498,6 +1592,17 @@
         "name_es": "El Más Audaz de los Audaces, Evasivo, Favor de la Diosa, Mover a Través de Cobertura, Grito de Guerra, Skaryn el Ladrón de Ojo, Golpea Primero, Tozudo",
         "name_fr": "Intrépide Entre Tous, Esquiveur, Faveur de la Déesse, Mouvement à Couvert, Cri de Ralliement, Skaryn le Voleur d’Yeux, Frappe En Premier, Obstiné",
         "name_pl": "Boldest of the Bold, Evasive, Favour of the Goddess, Move Through Cover, Rallying Cry, Skaryn the Eye Thief, Strike First, Stubborn"
+      },
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -1612,6 +1717,127 @@
         "name_fr": "Ordre Serré, Incomparable Courage, Bien Entraînés, Réflexes Elfiques, Immunisé à la Psychologie, Mouvement à Couvert, Parade, Frappe En Premier, Obstiné",
         "name_pl": "Close Order, Courage Beyond Compare, Drilled, Elven Reflexes, Immune to Psychology, Move Through Cover, Parry, Strike First, Stubborn"
       }
+    },
+    {
+      "name_en": "Gargantuan Treeman Ancient",
+      "name_cn": "Gargantuan 远古树人",
+      "name_de": "Gargantuan Baummenschenälteste",
+      "name_fr": "Gargantuan Homme-arbre Vénérable",
+      "name_es": "Gargantuan Milenario",
+      "name_pl": "Gargantuan Starożytny Drzewiec",
+      "id": "gargantuan-treeman-ancient",
+      "points": 325,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
+        },
+        "spirits-of-the-forest": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points",
+            "name_cn": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points",
+            "name_de": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points",
+            "name_es": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points",
+            "name_fr": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points",
+            "name_pl": "0-1 Treeman Ancient or Gargantuan Treeman Ancient per 1,000 points"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "name_pl": "Generał",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Huge oaken fists, Root eruption",
+          "name_cn": "Huge oaken fists, Root eruption",
+          "name_de": "Huge oaken fists, Root eruption",
+          "name_es": "Huge oaken fists, Root eruption",
+          "name_fr": "Huge oaken fists, Root eruption",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète (Armure arboricole)",
+          "name_es": "Armadura completa (armadura arbórea)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
+          "name_de": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
+          "name_es": "Hechicero de Nivel 2",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Emboscadores",
+          "points": 10,
+          "armyComposition": "spirits-of-the-forest"
+        }
+      ],
+      "mounts": [],
+      "lores": ["battle-magic", "elementalism", "lore-of-the-wilds"],
+      "items": [
+        {
+          "name_en": "Forest Spites",
+          "name_cn": "森林精魂",
+          "name_de": "Naturgeister",
+          "name_fr": "Fiel-follets des Forêts",
+          "name_es": "Duendes y Hadas",
+          "name_pl": "Leśne duchy",
+          "types": ["forest-spite"],
+          "selected": [],
+          "maxPoints": 100
+        },
+        {
+          "name_en": "Blessings of the Elder Wood",
+          "name_cn": "Blessings of the Elder Wood",
+          "name_de": "Blessings of the Elder Wood",
+          "name_fr": "Blessings of the Elder Wood",
+          "name_es": "Blessings of the Elder Wood",
+          "name_pl": "Blessings of the Elder Wood",
+          "types": ["elder-wood-blessings"],
+          "selected": [],
+          "armyComposition": "spirits-of-the-forest"
+        }
+      ],
+      "specialRules": {
+        "name_en": "Close Order, Flammable, Immune to Psychology, Large Target, Lore of Athel Loren, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (D6), Terror, Timmm-berrr!, Tree Spirit, Tree Whack, Unbreakable",
+        "name_cn": "紧密阵型, 易燃, 心理免疫, 大型目标, 艾索洛伦法系, 魔法攻击, 穿行掩体, 重生(5+), 践踏攻击(D3), 坚毅, 惊骇, 倒啦！, 树木精魂, 树根重击, Unbreakable",
+        "name_de": "Geschlossene Ränge, Brennbar, Immun gegen Psychologie, Großes Ziel, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen, Regeneration (5+), Stampfattacken (W3), Unnachgiebig, Entsetzen, Baum fällt!, Baumgeist, Baumprügel, Unbreakable",
+        "name_es": "Formación Cerrada, Inflamable, Inmune a Psicología, Objetivo Grande, Saber de Athel Loren, Ataques Mágicos, Mover a Través de Cobertura, Regeneración (5+), Golpetazo (1D3), Tozudo, Terror, Árbol Vaaa!, Espíritu del Bosque, Golpe Arbóreo, Unbreakable",
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage, Unbreakable",
+        "name_pl": "Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr!, Duch Drzew, Drzewne Uderzenie, Unbreakable"
+      }
     }
   ],
   "core": [
@@ -1632,6 +1858,17 @@
         },
         "host-of-talsyn": {
           "category": "core"
+        },
+        "spirits-of-the-forest": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_cn": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_de": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_fr": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_es": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_pl": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points"
+          }
         }
       },
       "command": [
@@ -1737,7 +1974,7 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
@@ -1748,7 +1985,7 @@
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -1759,7 +1996,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1770,7 +2007,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1781,7 +2018,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -1812,6 +2107,17 @@
         },
         "host-of-talsyn": {
           "category": "core"
+        },
+        "spirits-of-the-forest": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_cn": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_de": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_fr": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_es": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points",
+            "name_pl": "0-1 unit of Deepwood Scouts or Glade Guard may be taken as a Core choice per 1,000 points"
+          }
         }
       },
       "command": [
@@ -1871,18 +2177,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -1893,7 +2199,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -1904,7 +2210,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -1915,7 +2221,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -1953,6 +2317,9 @@
         },
         "host-of-talsyn": {
           "category": "core"
+        },
+        "spirits-of-the-forest": {
+          "category": "special"
         }
       },
       "command": [
@@ -2062,6 +2429,64 @@
             "name_es": "0-1 por cada 1000 puntos",
             "name_fr": "0-1 par tranche de 1000 points"
           }
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2091,6 +2516,9 @@
           "category": "core"
         },
         "host-of-talsyn": {
+          "category": "core"
+        },
+        "spirits-of-the-forest": {
           "category": "core"
         }
       },
@@ -2144,7 +2572,7 @@
           "name_es": "Emboscadores",
           "points": 1,
           "perModel": true,
-          "armyComposition": "host-of-talsyn"
+          "armyComposition": ["host-of-talsyn", "spirits-of-the-forest"]
         }
       ],
       "mounts": [],
@@ -2175,6 +2603,9 @@
         },
         "orions-wild-hunt": {
           "category": "core"
+        },
+        "spirits-of-the-forest": {
+          "category": "special"
         }
       },
       "command": [
@@ -2308,8 +2739,7 @@
             "name_es": "0-1 unidad Jinetes del Bosque, Jinetes de Halcón o Manadas de Bestias por cada 1000 puntos",
             "name_it": "0-1 unit of Glade Riders, Warhawk Riders or Wood Elf Beast Packs per 1000 points"
           }
-        },
-        {
+        },{
           "name_en": "Arcane Bodkins",
           "name_cn": "奥术之锥",
           "name_de": "Arkane Dolchpfeile",
@@ -2318,18 +2748,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -2340,7 +2770,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2351,7 +2781,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2362,7 +2792,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2485,9 +2973,331 @@
         "name_es": "0-1 unidad de Jinetes Salvajes por cada 1.000 puntos",
         "name_it": "0-1 unit of Wild Riders per 1000 points"
       }
+    },
+    {
+      "name_en": "Tree Kin",
+      "name_cn": "树精",
+      "name_de": "Baumschrate",
+      "name_fr": "Lémures",
+      "name_es": "Arbóreos",
+      "name_pl": "Drzewne Bractwo",
+      "id": "treekin-core",
+      "points": 51,
+      "minimum": 2,
+      "maximum": 0,
+      "armyComposition": {
+        "spirits-of-the-forest": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient",
+            "name_cn": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient",
+            "name_de": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient",
+            "name_fr": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient",
+            "name_es": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient",
+            "name_pl": "0-1 unit of Tree Kin can be taken as a Core choice if your General is a Treeman Anceitn or a Gargantuan Treeman Ancient"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Elder",
+          "name_cn": "沧桑精魂",
+          "name_de": "Alte Seele",
+          "name_fr": "Ancien",
+          "name_es": "Arbóreo Anciano",
+          "name_pl": "Starszy",
+          "points": 7,
+          "magic": {
+            "types": ["forest-spite"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "name_pl": "Broń ręczna",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Hardwood flesh)",
+          "name_cn": "重甲(Hardwood flesh)",
+          "name_de": "Schwere Rüstung (Hartholzhaut)",
+          "name_fr": "Armure lourde (Peau de chêne)",
+          "name_es": "Armadura pesada (piel de corteza)",
+          "name_pl": "Ciężka zbroja z dębu",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Emboscadores",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "spirits-of-the-forest"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2), Close Order, Fear, Flammable, Immune to Psychology, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (1), Stubborn, Tree Spirit, Tree Whack",
+        "name_cn": "碎甲攻击(2), 紧密阵型, 恐惧, 易燃, 心理免疫, 魔法攻击, 穿行掩体, 重生(5+), 践踏攻击(1), 坚毅, 树木精魂, 树根重击",
+        "name_de": "Rüstungsfluch (2), Geschlossene Ränge, Angst, Brennbar, Immun gegen Psychologie, Magische Attacken, Durch Deckung bewegen, Regeneration (5+), Stampfattacken (1), Unnachgiebig, Baumgeist, Baumprügel",
+        "name_es": "Perforacorazas (2), Formación Cerrada, Miedo, Inflamable, Inmune a la Psicología, Ataques Mágicos, Mover a Través de Cobertura, Regeneración (5+), Golpetazo (1), Tozudos, Espíritu del Bosque, Golpe Arbóreo",
+        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Inflammable, Immunisé à la Psychologie, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (1), Obstiné, Esprit des Forêts, Abattage",
+        "name_pl": "Przebicie Zbroi (2), Zwarty Szyk, Strach, Łatwopalny, Odporność na Psychologię, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (1), Upartość, Duch Drzew, Drzewne Uderzenie"
+      }
     }
   ],
   "special": [
+    {
+      "name_en": "Glade Guard",
+      "name_cn": "林地守卫",
+      "name_de": "Waldelfenkrieger",
+      "name_fr": "Gardes Sylvains",
+      "name_es": "Guardia del Bosque",
+      "name_pl": "Strażnik Polany",
+      "id": "glade-guard-special",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "spirits-of-the-forest": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Lord's Bowmen",
+          "name_cn": "领主之弓",
+          "name_de": "Bogenmeister",
+          "name_fr": "Féal",
+          "name_es": "Paladín del Bosque",
+          "name_pl": "Łucznicy",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_fr": "Porte-étendard",
+          "name_es": "Portaestandarte",
+          "name_pl": "Sztandarowy",
+          "points": 6,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_cn": "0-1单位/每1000分可以选择装备一个魔法战旗",
+            "name_it": "0-1 unit per 1000 points may purchase a magic standard",
+            "name_de": "0-1 Einheit pro 1000 Punkte darf eine Magische Standarte erwerben",
+            "name_fr": "0-1 unité par tranche de 1000 points peut acheter une bannière magique",
+            "name_es": "0-1 unidad cada 1.000 puntos puede adquirir un estandarte mágico"
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_fr": "Musicien",
+          "name_es": "Músico",
+          "name_pl": "Muzyk",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Asrai longbows",
+          "name_cn": "单手武器, 阿斯莱长弓",
+          "name_de": "Handwaffen, Asrai-Langbogen",
+          "name_fr": "Arme de base, Arcs longs Asrai",
+          "name_es": "Arma de mano, arco largo Asrai",
+          "name_pl": "Broń ręczna, Długi łuk Asrai",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Fire & Flee",
+          "name_cn": "游击",
+          "name_de": "Schießen und Verschwinden",
+          "name_fr": "Tir & Fuite",
+          "name_es": "Disparar y Huir",
+          "name_pl": "Strzał i Ucieczka",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Vanguard",
+          "name_cn": "先锋",
+          "name_de": "Vorhut",
+          "name_fr": "Avant-garde",
+          "name_es": "Vanguardia",
+          "name_pl": "Awangarda",
+          "points": 1,
+          "perModel": true,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },{
+          "name_en": "Arcane Bodkins",
+          "name_cn": "奥术之锥",
+          "name_de": "Arkane Dolchpfeile",
+          "name_fr": "Bodkins Cabalistiques",
+          "name_es": "Espadillas Arcanas",
+          "name_pl": "Nieprzeniknione szpile",
+          "points": 2,
+          "perModel": true,
+          "group": "arrows"
+        },
+        {
+          "name_en": "Hagbane Tips",
+          "name_cn": "淬毒箭尖",
+          "name_de": "Hexenfluchpfeile",
+          "name_fr": "Flèches de Fléau des Furies",
+          "name_es": "Maldicion de la Bruja",
+          "name_pl": "Zmora wiedźm",
+          "points": 2,
+          "perModel": true,
+          "group": "arrows"
+        },
+        {
+          "name_en": "Moonfire Shot",
+          "name_cn": "月火箭头",
+          "name_de": "Mondfeuerpfeile",
+          "name_fr": "Traits de Feu Lunaire",
+          "name_es": "Fuego Lunar",
+          "name_pl": "Pociski księżycowego ognia",
+          "points": 1,
+          "perModel": true,
+          "group": "arrows"
+        },
+        {
+          "name_en": "Swiftshiver Shards",
+          "name_cn": "迅银箭头",
+          "name_de": "Geschwinde Pfeile",
+          "name_fr": "Échardes d’Archère Hâtive",
+          "name_es": "Flechas Veloces",
+          "name_pl": "Szybkie odłamki",
+          "points": 2,
+          "perModel": true,
+          "group": "arrows"
+        },
+        {
+          "name_en": "Trueflight Arrows",
+          "name_cn": "制导箭头",
+          "name_de": "Jagende Pfeile",
+          "name_fr": "Pointes de Parabole Pure",
+          "name_es": "Flechas Certeras",
+          "name_pl": "Strzały celnego lotu",
+          "points": 1,
+          "perModel": true,
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Move Through Cover, Open Order",
+        "name_cn": "精灵反应, 穿行掩体, 开放阵型",
+        "name_de": "Elfenreflexe, Durch Deckung bewegen, Offene Ränge",
+        "name_es": "Reflejos Élficos, Mover a Través de Cobertura, Formación Abierta",
+        "name_fr": "Réflexes Elfiques, Mouvement à Couvert, Ordre Dispersé",
+        "name_pl": "Elfickie Refleksy, Przechodzenie przez Zasłony, Luźny Szyk"
+      }
+    },
     {
       "name_en": "Deepwood Scouts",
       "name_cn": "深林斥候",
@@ -2507,6 +3317,9 @@
           "category": "rare"
         },
         "host-of-talsyn": {
+          "category": "special"
+        },
+        "spirits-of-the-forest": {
           "category": "special"
         }
       },
@@ -2567,18 +3380,18 @@
           "name_pl": "Nieprzeniknione szpile",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Hagbane Tips",
           "name_cn": "淬毒箭尖",
           "name_de": "Hexenfluchpfeile",
           "name_fr": "Flèches de Fléau des Furies",
-          "name_es": "Maldición de la Bruja",
+          "name_es": "Maldicion de la Bruja",
           "name_pl": "Zmora wiedźm",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Moonfire Shot",
@@ -2589,7 +3402,7 @@
           "name_pl": "Pociski księżycowego ognia",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Swiftshiver Shards",
@@ -2600,7 +3413,7 @@
           "name_pl": "Szybkie odłamki",
           "points": 2,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
         },
         {
           "name_en": "Trueflight Arrows",
@@ -2611,7 +3424,65 @@
           "name_pl": "Strzały celnego lotu",
           "points": 1,
           "perModel": true,
-          "exclusive": true
+          "group": "arrows"
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2644,6 +3515,9 @@
           "category": "rare"
         },
         "host-of-talsyn": {
+          "category": "special"
+        },
+        "spirits-of-the-forest": {
           "category": "special"
         }
       },
@@ -2720,6 +3594,64 @@
           "name_pl": "Tarcze",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "The Kinbands of Cavaroc",
+          "name_cn": "The Kinbands of Cavaroc",
+          "name_de": "The Kinbands of Cavaroc",
+          "name_fr": "The Kinbands of Cavaroc",
+          "name_es": "The Kinbands of Cavaroc",
+          "points": 15,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Argwylon",
+          "name_cn": "The Kinbands of Argwylon",
+          "name_de": "The Kinbands of Argwylon",
+          "name_fr": "The Kinbands of Argwylon",
+          "name_es": "The Kinbands of Argwylon",
+          "points": 10,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Atylwyth",
+          "name_cn": "The Kinbands of Atylwyth",
+          "name_de": "The Kinbands of Atylwyth",
+          "name_fr": "The Kinbands of Atylwyth",
+          "name_es": "The Kinbands of Atylwyth",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Modryn",
+          "name_cn": "The Kinbands of Modryn",
+          "name_de": "The Kinbands of Modryn",
+          "name_fr": "The Kinbands of Modryn",
+          "name_es": "The Kinbands of Modryn",
+          "points": 2,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Cythral",
+          "name_cn": "The Kinbands of Cythral",
+          "name_de": "The Kinbands of Cythral",
+          "name_fr": "The Kinbands of Cythral",
+          "name_es": "The Kinbands of Cythral",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
+        },
+        {
+          "name_en": "The Kinbands of Torgovann",
+          "name_cn": "The Kinbands of Torgovann",
+          "name_de": "The Kinbands of Torgovann",
+          "name_fr": "The Kinbands of Torgovann",
+          "name_es": "The Kinbands of Torgovann",
+          "points": 1,
+          "perModel": true,
+          "group": "kinbands"
         }
       ],
       "mounts": [],
@@ -2753,6 +3685,9 @@
         },
         "host-of-talsyn": {
           "category": "rare"
+        },
+        "spirits-of-the-forest": {
+          "category": "special"
         }
       },
       "command": [
@@ -3171,6 +4106,9 @@
         },
         "host-of-talsyn": {
           "category": "special"
+        },
+        "spirits-of-the-forest": {
+          "category": "special"
         }
       },
       "command": [
@@ -3223,7 +4161,7 @@
           "name_es": "Emboscadores",
           "points": 1,
           "perModel": true,
-          "armyComposition": "host-of-talsyn"
+          "armyComposition": ["host-of-talsyn", "spirits-of-the-forest"]
         }
       ],
       "mounts": [],
@@ -3540,6 +4478,17 @@
         "name_es": "Formación Cerrada, Miedo, Volar (10), Golpetazo (1), Zancada Veloz",
         "name_fr": "Ordre Serré, Peur, Vol (10), Attaques de Piétinement (1), Rapide",
         "name_pl": "Luźny Szyk, Strach, Lot (10), Zdeptanie (1), Szybki Krok"
+      },
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "characters"
+        },
+        "orions-wild-hunt": {
+          "category": "characters"
+        },
+        "host-of-talsyn": {
+          "category": "characters"
+        }
       }
     },
     {
@@ -3556,6 +4505,9 @@
           "category": "rare"
         },
         "host-of-talsyn": {
+          "category": "rare"
+        },
+        "spirits-of-the-forest": {
           "category": "rare"
         }
       },
@@ -3590,7 +4542,7 @@
           "name_fr": "Embusqueurs",
           "name_es": "Emboscadores",
           "points": 10,
-          "armyComposition": "host-of-talsyn"
+          "armyComposition": ["host-of-talsyn", "spirits-of-the-forest"]
         }
       ],
       "mounts": [],
@@ -3846,6 +4798,116 @@
         "name_cn": "每位野兽饲养者最多1只洛伦熊",
         "name_fr": "1 Ours de Loren par Gardien des Bêtes",
         "name_es": "1 Oso de Loren por cada Guardián de Bestias"
+      }
+    },
+    {
+      "name_en": "Gargantuan Treeman",
+      "name_cn": "Gargantuan Treeman",
+      "name_de": "Gargantuan Treeman",
+      "name_fr": "Gargantuan Homme-arbre",
+      "name_es": "Gargantuan Treeman",
+      "name_pl": "Gargantuan Treeman",
+      "id": "gargantuan-treeman",
+      "points": 300,
+      "armyComposition": {
+        "wood-elf-realms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 per army",
+            "name_cn": "0-1 per army",
+            "name_de": "0-1 pro Armee",
+            "name_es": "0-1 per army",
+            "name_fr": "0-1 par armée"
+          }
+        },
+        "spirits-of-the-forest": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Gargantuan Treeman per 1,000 points",
+            "name_cn": "0-1 Gargantuan Treeman per 1,000 points",
+            "name_de": "0-1 Gargantuan Treeman per 1,000 points",
+            "name_es": "0-1 Gargantuan Treeman per 1,000 points",
+            "name_fr": "0-1 Gargantuan Treeman per 1,000 points",
+            "name_pl": "0-1 Gargantuan Treeman per 1,000 points"
+          }
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Huge oaken fists, Root eruption",
+          "name_cn": "Huge oaken fists, Root eruption",
+          "name_de": "Huge oaken fists, Root eruption",
+          "name_es": "Huge oaken fists, Root eruption",
+          "name_fr": "Huge oaken fists, Root eruption",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour (Arboreal armour)",
+          "name_cn": "全身甲",
+          "name_de": "Plattenrüstung",
+          "name_fr": "Armure de plate complète (Armure arboricole)",
+          "name_es": "Armadura completa (armadura arbórea)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
+          "name_es": "Hechicero de Nivel 1",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Ambushers",
+          "name_cn": "伏击",
+          "name_de": "Überfall",
+          "name_fr": "Embusqueurs",
+          "name_es": "Emboscadores",
+          "points": 10,
+          "armyComposition": "spirits-of-the-forest"
+        }
+      ],
+      "mounts": [],
+      "lores": ["battle-magic", "elementalism", "lore-of-the-wilds"],
+      "items": [
+        {
+          "name_en": "Forest Spites",
+          "name_cn": "森林精魂",
+          "name_de": "Naturgeister",
+          "name_fr": "Fiel-follets des Forêts",
+          "name_es": "Duendes y Hadas",
+          "name_pl": "Leśne duchy",
+          "types": ["forest-spite"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Blessings of the Elder Wood",
+          "name_cn": "Blessings of the Elder Wood",
+          "name_de": "Blessings of the Elder Wood",
+          "name_fr": "Blessings of the Elder Wood",
+          "name_es": "Blessings of the Elder Wood",
+          "name_pl": "Blessings of the Elder Wood",
+          "types": ["elder-wood-blessings"],
+          "selected": [],
+          "armyComposition": "spirits-of-the-forest"
+        }
+      ],
+      "specialRules": {
+        "name_en": "Close Order, Flammable, Immune to Psychology, Large Target, Lore of Athel Loren, Magical Attacks, Move Through Cover, Regeneration (5+), Stomp Attacks (D6), Terror, Timmm-berrr!, Tree Spirit, Tree Whack, Unbreakable",
+        "name_cn": "紧密阵型, 易燃, 心理免疫, 大型目标, 艾索洛伦法系, 魔法攻击, 穿行掩体, 重生(5+), 践踏攻击(D3), 坚毅, 惊骇, 倒啦！, 树木精魂, 树根重击, Unbreakable",
+        "name_de": "Geschlossene Ränge, Brennbar, Immun gegen Psychologie, Großes Ziel, Lehre Athel Lorens, Magische Attacken, Durch Deckung bewegen, Regeneration (5+), Stampfattacken (W3), Unnachgiebig, Entsetzen, Baum fällt!, Baumgeist, Baumprügel, Unbreakable",
+        "name_es": "Formación Cerrada, Inflamable, Inmune a Psicología, Objetivo Grande, Saber de Athel Loren, Ataques Mágicos, Mover a Través de Cobertura, Regeneración (5+), Golpetazo (1D3), Tozudo, Terror, Árbol Vaaa!, Espíritu del Bosque, Golpe Arbóreo, Unbreakable",
+        "name_fr": "Ordre Serré, Inflammable, Immunisé à la Psychologie, Grande Cible, Domaine d’Athel Loren, Attaques Magiques, Mouvement à Couvert, Régénération (5+), Attaques de Piétinement (D3), Obstiné, Terreur, Timmm-berrr!, Esprit des Forêts, Abattage, Unbreakable",
+        "name_pl": "Zwarty Szyk, Łatwopalny, Odporność na Psychologię, Duży Cel, Domena Athel Loren, Magiczne Ataki, Przechodzenie przez Zasłony, Regeneracja (5+), Zdeptanie (d3), Upartość, Terror, Timmm-berrr!, Duch Drzew, Drzewne Uderzenie, Unbreakable"
       }
     }
   ],

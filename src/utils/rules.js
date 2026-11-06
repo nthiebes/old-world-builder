@@ -2182,6 +2182,11 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["gargantuan-treeman-ancient"],
+          min: 0,
+          max: 1,
+        },
       ],
     },
     core: {
@@ -2225,6 +2230,12 @@ export const rules = {
           ids: ["giant-eagle"],
           min: 0,
           max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["gargantuan-treeman"],
+          min: 0,
+          max: 1,
           points: 1000,
         },
       ],
@@ -2361,6 +2372,61 @@ export const rules = {
           ids: ["giant-eagle"],
           min: 0,
           max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "spirits-of-the-forest": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["treeman-ancient", "gargantuan-treeman-ancient"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["spellweaver"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["dryads"],
+          min: 1,
+        },
+        {
+          ids: ["deepwood-scouts-core", "glade-guard"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["treekin-core"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["treeman-ancient", "gargantuan-treeman-ancient"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["gargantuan-treeman"],
+          min: 0,
+          max: 1,
           points: 1000,
         },
       ],

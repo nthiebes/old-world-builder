@@ -480,11 +480,12 @@
       "name_es": "Reinos de los Elfos Silvanos",
       "name_fr": "Royaumes Elfes Sylvains",
       "group": "forces-of-fantasy",
-      "items": ["general", "wood-elf-realms", "forest-spites", "kindreds"],
+      "items": ["general", "wood-elf-realms", "forest-spites", "kindreds", "elder-wood-blessings"],
       "armyComposition": [
         "wood-elf-realms",
         "orions-wild-hunt",
-        "host-of-talsyn"
+        "host-of-talsyn",
+        "spirits-of-the-forest"
       ],
       "allies": [
         {
@@ -506,6 +507,10 @@
         {
           "army": "wood-elf-realms",
           "armyComposition": "host-of-talsyn"
+        },
+        {
+          "army": "wood-elf-realms",
+          "armyComposition": "spirits-of-the-forest"
         }
       ],
       "mercenaries": {

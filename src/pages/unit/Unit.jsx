@@ -282,7 +282,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       }),
     );
   };
-  const handleOptionsChange = (id, optionIndex, isRadio) => {
+  const handleOptionsChange = (id, optionIndex, isRadio, group) => {
     let newOptions;
 
     // Option with sub-options
@@ -315,15 +315,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
       // Top level
     } else {
-      newOptions = unit.options.map((option) => {
-        if (option.id === id) {
-          return {
-            ...option,
-            active: option.active ? false : true,
-          };
-        }
-        return option;
-      });
+      newOptions = unit.options.map((option) => ({
+        ...option,
+        active:
+          option.id === id
+            ? !option.active
+            : group !== undefined && option.group === group 
+              ? false 
+              : option.active
+        })
+      )
     }
 
     dispatch(
@@ -1169,6 +1170,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   options,
                   useCheckboxes,
                   alwaysActive,
+                  group,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
@@ -1189,7 +1191,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             id={`options-${id}`}
                             value={id}
                             onChange={() =>
-                              !alwaysActive && handleOptionsChange(id)
+                              !alwaysActive && handleOptionsChange(id, undefined, false, group)
                             }
                             checked={alwaysActive || active}
                             className="checkbox__input"
@@ -1250,6 +1252,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                             id,
                                             optionIndex,
                                             allOptionsExclusive,
+                                            group,
                                           )
                                         }
                                         checked={Boolean(option.active)}
@@ -1899,6 +1902,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 if (
                   lore === "lore-of-the-wilds" &&
                   unitArmyComposition !== "host-of-talsyn" &&
+                  !unit.id.startsWith("gargantuan-treeman") &&
                   unit.items
                     .find((items) => items.name_en === "Magic Items")
                     ?.selected.find(
@@ -1906,6 +1910,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     ) === undefined &&
                   index !== 0
                 ) {
+                  console.log('here')
                   if (unit.activeLore === "lore-of-the-wilds") {
                     handleLoresChange(lores[0]);
                   }
