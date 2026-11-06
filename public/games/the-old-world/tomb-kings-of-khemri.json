@@ -18,7 +18,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts", "barrow-kingdoms"],
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "nehekharan-royal-hosts",
+            "barrow-kingdoms"
+          ],
           "options": [
             {
               "name_en": "Arise!, Level 1 Wizard",
@@ -179,15 +183,7 @@
           "name_de": "Skelettstreitwagen",
           "name_fr": "Char Squelette",
           "points": 35
-        },
-        {
-          "name_en": "Necrolith Bone Dragon",
-          "name_cn": "死灵骨龙",
-          "name_it": "Drago Scheletrico Necrolitico",
-          "name_de": "Nekrolith Knochendrache",
-          "name_fr": "Dragon d’Os Nécrolithe",
-          "points": 195
-        },
+        }
         {
           "name_en": "Khemrian Warsphinx",
           "name_cn": "喀穆里征战斯芬克斯",
@@ -229,7 +225,15 @@
               "points": 20
             }
           ]
-        }
+        }, 
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195
+        } 
       ],
       "items": [
         {
@@ -339,7 +343,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts", "barrow-kingdoms"],
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "nehekharan-royal-hosts",
+            "barrow-kingdoms"
+          ],
           "options": [
             {
               "name_en": "Arise!, Level 1 Wizard",
@@ -856,7 +864,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults", "barrow-kingdoms"]
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "mortuary-cults",
+            "barrow-kingdoms"
+          ]
         },
         {
           "name_en": "The Hierophant",
@@ -1023,8 +1035,14 @@
           }
         },
         "barrow-kingdoms": {
-          "category":"characters",
-          "lores": ["battle-magic", "dark-magic", "elementalism", "illusion", "necromancy"],
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "dark-magic",
+            "elementalism",
+            "illusion",
+            "necromancy"
+          ],
           "notes": {
             "name_en": "1+ High Priest or Mortuary Priest, 0-1 Tomb King or High Priest",
             "name_cn": "1+ High Priest或葬仪祭司, 每1000分0-1古墓王或高等祭司",
@@ -1054,7 +1072,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults", "barrow-kingdoms"]
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "mortuary-cults",
+            "barrow-kingdoms"
+          ]
         },
         {
           "name_en": "The Hierophant",
@@ -1229,8 +1251,14 @@
           "category": "characters"
         },
         "barrow-kingdoms": {
-          "category":"characters",
-          "lores": ["battle-magic", "dark-magic", "elementalism", "illusion", "necromancy"],
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "dark-magic",
+            "elementalism",
+            "illusion",
+            "necromancy"
+          ],
           "notes": {
             "name_en": "1+ High Priest or Mortuary Priest",
             "name_cn": "1+ High Priest或葬仪祭司",
@@ -2285,11 +2313,11 @@
           }
         },
         {
-          "name_en": "Shades of Death — Ethereal, Magical Attacks",
-          "name_cn": "Shades of Death — Ethereal, Magical Attacks",
-          "name_it": "Shades of Death — Ethereal, Magical Attacks",
-          "name_de": "Shades of Death — Ethereal, Magical Attacks",
-          "name_fr": "Shades of Death — Ethereal, Magical Attacks",
+          "name_en": "Shades of Death",
+          "name_cn": "Shades of Death",
+          "name_it": "Shades of Death",
+          "name_de": "Shades of Death",
+          "name_fr": "Shades of Death",
           "points": 3,
           "perModel": true,
           "armyComposition": "barrow-kingdoms",
@@ -2414,11 +2442,11 @@
       ],
       "options": [
         {
-          "name_en": "Finest Charioteers — Initiative 3, Regeneration (5+), First Charge, Khopesh",
-          "name_cn": "Finest Charioteers — Initiative 3, Regeneration (5+), First Charge, Khopesh",
-          "name_it": "Finest Charioteers — Initiative 3, Regeneration (5+), First Charge, Khopesh",
-          "name_de": "Finest Charioteers — Initiative 3, Regeneration (5+), First Charge, Khopesh",
-          "name_fr": "Finest Charioteers — Initiative 3, Regeneration (5+), First Charge, Khopesh",
+          "name_en": "Finest Charioteers",
+          "name_cn": "Finest Charioteers",
+          "name_it": "Finest Charioteers",
+          "name_de": "Finest Charioteers",
+          "name_fr": "Finest Charioteers",
           "points": 6,
           "perModel": true,
           "armyComposition": "barrow-kingdoms",
@@ -2651,11 +2679,11 @@
           }
         },
         {
-          "name_en": "Noble Cavalry — Weapon Skill 3, Regeneration (5+), Khopesh",
-          "name_cn": "Noble Cavalry — Weapon Skill 3, Regeneration (5+), Khopesh",
-          "name_it": "Noble Cavalry — Weapon Skill 3, Regeneration (5+), Khopesh",
-          "name_de": "Noble Cavalry — Weapon Skill 3, Regeneration (5+), Khopesh",
-          "name_fr": "Noble Cavalry — Weapon Skill 3, Regeneration (5+), Khopesh",
+          "name_en": "Noble Cavalry",
+          "name_cn": "Noble Cavalry",
+          "name_it": "Noble Cavalry",
+          "name_de": "Noble Cavalry",
+          "name_fr": "Noble Cavalry",
           "points": 3,
           "perModel": true,
           "armyComposition": "barrow-kingdoms",
