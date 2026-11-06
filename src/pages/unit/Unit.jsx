@@ -320,11 +320,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         active:
           option.id === id
             ? !option.active
-            : group !== undefined && option.group === group 
-              ? false 
-              : option.active
-        })
-      )
+            : group !== undefined && option.group === group
+            ? false
+            : option.active,
+      }));
     }
 
     dispatch(
@@ -1191,7 +1190,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             id={`options-${id}`}
                             value={id}
                             onChange={() =>
-                              !alwaysActive && handleOptionsChange(id, undefined, false, group)
+                              !alwaysActive &&
+                              handleOptionsChange(id, undefined, false, group)
                             }
                             checked={alwaysActive || active}
                             className="checkbox__input"
@@ -1910,7 +1910,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                     ) === undefined &&
                   index !== 0
                 ) {
-                  console.log('here')
                   if (unit.activeLore === "lore-of-the-wilds") {
                     handleLoresChange(lores[0]);
                   }
