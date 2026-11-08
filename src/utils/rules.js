@@ -412,7 +412,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["necrolith-colossus", "necrosphinx"],
+          ids: ["necrolith-colossus", "necrosphinx-special"],
           min: 0,
           max: 1,
         },
