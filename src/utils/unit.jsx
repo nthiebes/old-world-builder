@@ -668,7 +668,7 @@ export const getUnitWizardryLevel = (unit) => {
   }
 
   const levelOptions = findAllOptions(
-    [...unit?.options, ...unit?.command],
+    [...(unit?.options || []), ...(unit?.command || [])],
     (option) => /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
   );
 
