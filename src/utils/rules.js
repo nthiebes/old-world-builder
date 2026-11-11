@@ -2619,7 +2619,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["sorcerer-prophet-renegade", "despot-renegades"],
+          ids: ["sorcerer-prophet-renegade", "despot-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -2654,9 +2654,8 @@ export const rules = {
           ids: ["infernal-ironsworn-core-renegade"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresType: "characters",
           requires: ["castellan-renegade"],
-          perUnit: true,
         },
       ],
     },
