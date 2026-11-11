@@ -3447,7 +3447,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["slann-mage-priest", "saurus-oldblood"],
+          ids: ["slann-mage-priest-renegade", "saurus-oldblood-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3462,7 +3462,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: ["slann-mage-priest"],
+          requires: ["slann-mage-priest-renegade"],
         },
       ],
     },
@@ -3549,7 +3549,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tyrant", "slaughtermaster-renegade"],
+          ids: ["tyrant-renegade", "slaughtermaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3563,19 +3563,19 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["maneaters"],
+          ids: ["maneaters-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["mournfang-cavalry"],
+          ids: ["mournfang-cavalry-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["ironblaster"],
+          ids: ["ironblaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
