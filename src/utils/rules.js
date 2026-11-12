@@ -221,10 +221,22 @@ export const rules = {
             "prince-apophas-the-cursed-scarab-lord",
           ],
           min: 1,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
         {
           ids: ["high-priest", "mortuary-priest"],
           min: 1,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
         {
           ids: [
@@ -235,6 +247,12 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
       ],
     },

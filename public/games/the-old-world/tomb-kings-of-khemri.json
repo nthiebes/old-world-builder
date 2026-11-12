@@ -365,6 +365,16 @@
                 "name_it": "Must be Hierophant"
               },
               "armyComposition": "nehekharan-royal-hosts"
+            },
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
             }
           ]
         },
@@ -641,7 +651,30 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"]
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"],
+          "options": [
+            {
+              "name_en": "Honour Thy King",
+              "name_cn": "Honour Thy King",
+              "name_it": "Honour Thy King",
+              "name_de": "Honour Thy King",
+              "name_fr": "Honour Thy King",
+              "name_es": "Honour Thy King",
+              "points": 0,
+              "compositionRule": "battle-march",
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
+            }
+          ]
         },
         {
           "name_en": "Battle Standard Bearer",
@@ -1371,7 +1404,19 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"]
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"],
+          "options": [
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
+            }
+          ]
         }
       ],
       "equipment": [
