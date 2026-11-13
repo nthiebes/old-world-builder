@@ -188,12 +188,12 @@ export const validateList = ({ list, language, intl }) => {
   let used0XUnits = [];
 
   const checkRules = ({ ruleUnit, type }) => {
-    const compRule = list?.compositionRule;
+    const compRule = list?.compositionRule || "open-war";
     if (
       ruleUnit.compositionRule &&
       !ruleUnit.compositionRule.includes(compRule)
     ) {
-      return ;
+      return;
     }
     const generals = getGenerals(list);
     const unitsInList = (

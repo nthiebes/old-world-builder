@@ -802,16 +802,30 @@ export const getUnitStrength = (unit, includeDetachments) => {
   }
 };
 
-/** 
+/**
  * Checks an option's restrictions (which may be undefined) against the army's
  * army composition and composition rules to see if the option is available.
  */
 export const optionIsAvailable = (option, armyComp, compRule) => {
   return (
-    !option.armyComposition ||
-    option.armyComposition.includes(armyComp)
-  ) && (
-    !option.compositionRule ||
-    option.compositionRule.includes(compRule)
+    matchesRestriction(option.armyComposition, armyComp) &&
+    matchesRestriction(option.compositionRule, compRule)
   );
-}
+};
+
+/**
+ * A restriction is either missing, a string or an array of allowed values.
+ * Object-shaped values (e.g. `{ "royal-clan": { maxPoints } }` on items) are
+ * per-composition overrides, not restrictions, so they always match.
+ */
+const matchesRestriction = (restriction, value) => {
+  if (!restriction) {
+    return true;
+  }
+
+  if (typeof restriction === "string" || Array.isArray(restriction)) {
+    return restriction.includes(value);
+  }
+
+  return true;
+};

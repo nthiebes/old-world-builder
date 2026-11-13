@@ -5,7 +5,7 @@ describe("getUnitStrength", () => {
   test("Returns correct unit strength of regular infantry", () => {
     const unitStr = getUnitStrength({
       name_en: "State Troops",
-      strength: 10
+      strength: 10,
     });
     expect(unitStr).toBe(10);
   });
@@ -13,7 +13,7 @@ describe("getUnitStrength", () => {
   test("Treats unknown units as unit strength 1 per model", () => {
     const unitStr = getUnitStrength({
       name_en: "Made Up Unit",
-      strength: 10
+      strength: 10,
     });
     expect(unitStr).toBe(10);
   });
@@ -43,7 +43,7 @@ describe("getUnitStrength", () => {
         {
           name_en: "Barded Warhorse",
           active: true,
-        }
+        },
       ],
     });
     expect(unitStr).toBe(2);
@@ -60,45 +60,52 @@ describe("getUnitStrength", () => {
         {
           name_en: "Griffon {empire}",
           active: true,
-        }
+        },
       ],
     });
     expect(unitStr).toBe(6);
   });
 
   test("Includes detachment strength when parameter is true", () => {
-    const unitStr = getUnitStrength({
-      name_en: "Nuln State Troops",
-      strength: 20,
-      detachments: [
-        {
-          name_en: "State Troops",
-          strength: 5
-        },
-        {
-          name_en: "State Missile Troops",
-          strength: 5
-        },
-      ],
-    }, true, false);
+    const unitStr = getUnitStrength(
+      {
+        name_en: "Nuln State Troops",
+        strength: 20,
+        detachments: [
+          {
+            name_en: "State Troops",
+            strength: 5,
+          },
+          {
+            name_en: "State Missile Troops",
+            strength: 5,
+          },
+        ],
+      },
+      true,
+      false,
+    );
     expect(unitStr).toBe(30);
   });
-  
+
   test("Can get correct strength for detachment only units", () => {
-    const unitStr = getUnitStrength({
-      name_en: "Primal Warherd",
-      detachmentsInUnitStr: true,
-      detachments: [
-        {
-          name_en: "Gors",
-          strength: 10
-        },
-        {
-          name_en: "Ungors",
-          strength: 12
-        },
-      ],
-    }, true);
+    const unitStr = getUnitStrength(
+      {
+        name_en: "Primal Warherd",
+        detachmentsInUnitStr: true,
+        detachments: [
+          {
+            name_en: "Gors",
+            strength: 10,
+          },
+          {
+            name_en: "Ungors",
+            strength: 12,
+          },
+        ],
+      },
+      true,
+    );
     expect(unitStr).toBe(22);
   });
 });
@@ -106,8 +113,8 @@ describe("getUnitStrength", () => {
 describe("optionIsAvailable", () => {
   test("No defined restrictions returns true", () => {
     const option = {
-      name_en: "No restriction option"
-    }
+      name_en: "No restriction option",
+    };
     expect(optionIsAvailable(option, "grand-army", "battle-march")).toBe(true);
     expect(optionIsAvailable(option, "grand-army", undefined)).toBe(true);
     expect(optionIsAvailable(option, undefined, "battle-march")).toBe(true);
@@ -117,38 +124,65 @@ describe("optionIsAvailable", () => {
   test("Checks for matching army composition", () => {
     const option = {
       name_en: "Army Comp restricted option",
-      armyComposition: "grand-army"
-    }
+      armyComposition: "grand-army",
+    };
     expect(optionIsAvailable(option, "grand-army", undefined)).toBe(true);
     expect(optionIsAvailable(option, "other-army", undefined)).toBe(false);
     expect(optionIsAvailable(option, undefined, undefined)).toBe(false);
 
     const optionWithArray = {
       name_en: "Army Comp restricted option",
-      armyComposition: ["grand-army", "other-army"]
-    }
-    expect(optionIsAvailable(optionWithArray, "grand-army", undefined)).toBe(true);
-    expect(optionIsAvailable(optionWithArray, "other-army", undefined)).toBe(true);
-    expect(optionIsAvailable(optionWithArray, "different-army", undefined)).toBe(false);
-    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(false);
+      armyComposition: ["grand-army", "other-army"],
+    };
+    expect(optionIsAvailable(optionWithArray, "grand-army", undefined)).toBe(
+      true,
+    );
+    expect(optionIsAvailable(optionWithArray, "other-army", undefined)).toBe(
+      true,
+    );
+    expect(
+      optionIsAvailable(optionWithArray, "different-army", undefined),
+    ).toBe(false);
+    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(
+      false,
+    );
   });
 
   test("Checks for matching composition rule", () => {
     const option = {
       name_en: "Composition rule restricted option",
-      compositionRule: "battle-march"
-    }
+      compositionRule: "battle-march",
+    };
     expect(optionIsAvailable(option, undefined, "battle-march")).toBe(true);
     expect(optionIsAvailable(option, undefined, "open-war")).toBe(false);
     expect(optionIsAvailable(option, undefined, undefined)).toBe(false);
 
     const optionWithArray = {
       name_en: "Composition rule restricted option",
-      compositionRule: ["battle-march", "open-war"]
-    }
-    expect(optionIsAvailable(optionWithArray, undefined, "battle-march")).toBe(true);
-    expect(optionIsAvailable(optionWithArray, undefined, "open-war")).toBe(true);
-    expect(optionIsAvailable(optionWithArray, undefined, "grand-melee")).toBe(false);
-    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(false);
+      compositionRule: ["battle-march", "open-war"],
+    };
+    expect(optionIsAvailable(optionWithArray, undefined, "battle-march")).toBe(
+      true,
+    );
+    expect(optionIsAvailable(optionWithArray, undefined, "open-war")).toBe(
+      true,
+    );
+    expect(optionIsAvailable(optionWithArray, undefined, "grand-melee")).toBe(
+      false,
+    );
+    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(
+      false,
+    );
+  });
+
+  test("Treats object-shaped army composition as an override, not a restriction", () => {
+    const item = {
+      name_en: "Runes",
+      armyComposition: { "royal-clan": { maxPoints: 150 } },
+    };
+    expect(optionIsAvailable(item, "royal-clan", "open-war")).toBe(true);
+    expect(optionIsAvailable(item, "dwarfen-mountain-holds", "open-war")).toBe(
+      true,
+    );
   });
 });

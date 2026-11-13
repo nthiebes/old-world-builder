@@ -359,18 +359,16 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     if (optionIndex !== undefined) {
       command = unit.command.map((commandOption) => {
         if (commandOption.id === id) {
-          const options = commandOption.options
-            .filter((option) => optionIsAvailable(option, list?.armyComposition, list?.compositionRule))
-            .map((option, index) => {
-              if (index === optionIndex) {
-                return {
-                  ...option,
-                  active: option.active ? false : true,
-                };
-              }
+          const options = commandOption.options.map((option, index) => {
+            if (index === optionIndex) {
+              return {
+                ...option,
+                active: option.active ? false : true,
+              };
+            }
 
-              return option;
-            });
+            return option;
+          });
 
           return {
             ...commandOption,
@@ -1022,7 +1020,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                       id={`command-${id}-option-${optionIndex}`}
                                       value={`${id}-${optionIndex}`}
                                       onChange={() =>
-                                        handleCommandChange(id, optionIndex)
+                                        handleCommandChange(
+                                          id,
+                                          options.indexOf(option),
+                                        )
                                       }
                                       checked={Boolean(option.active || option.alwaysActive)}
                                       className="checkbox__input"
@@ -1524,7 +1525,11 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         let combinedStackableCount = 0;
 
                                         if (
-                                          optionIsAvailable(equipment, unitArmyComposition, compositionRule)
+                                          !optionIsAvailable(
+                                            equipment,
+                                            unitArmyComposition,
+                                            compositionRule,
+                                          )
                                         ) {
                                           return null;
                                         }
