@@ -111,6 +111,7 @@ export const Print = () => {
   }
 
   const armyComposition = list.armyComposition || list.army;
+  const compositionRule = list.compositionRule;
   const allPoints = getAllPoints(list);
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
@@ -273,6 +274,7 @@ export const Print = () => {
                 noMagic: isShowList,
                 pageNumbers: showPageNumbers,
                 armyComposition,
+                compositionRule
               })}
               {showSpecialRules && specialRules ? (
                 <>

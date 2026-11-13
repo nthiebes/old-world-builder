@@ -172,11 +172,11 @@ describe("validateList", () => {
           name_en: "Baron",
           command: [{ name_en: "General", active: true }],
         },
-      ],
-      core: [
-        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
-        { id: "chaos-warhounds.1", name_en: "Chaos Warhounds" },
-      ],
+        ],
+        core: [
+          { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
+          { id: "chaos-warhounds.1", name_en: "Chaos Warhounds" },
+        ],
     };
 
     const errors = validateList({ list, language: "en", intl });
@@ -966,6 +966,37 @@ describe("validateList", () => {
     const errors = validateList({ list, language: "en", intl });
     expect(getMessages(errors)).toEqual(["misc.error.hierophantGeneral"]);
   });
+
+  test("does not add noHierophant in Battle March if general has Arch Hierophant", () => {
+    const list = {
+      ...baseList,
+      army: "tomb-kings-of-khemri",
+      compositionRule: "open-war",
+      characters: [
+        makeCharacter({
+          id: "royal-herald.1",
+          name_en: "Royal Herald",
+          command: [{
+            name_en: "General",
+            active: true,
+            options: [{ name_en: "Arch Hierophant", active: true }]
+          }]
+        })
+      ],
+      core: [
+        { id: "skeleton-archers.1", name_en: "Skeleton Archers" },
+        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
+        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
+      ],
+    }
+
+    const errors1 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors1)).toEqual(["misc.error.noHierophant"]);
+
+    list.compositionRule = "battle-march";
+    const errors2 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors2)).toEqual([]);
+  })
 
   test("adds wizardGeneral if a Vampire Count general is not a wizard", () => {
     const list = {

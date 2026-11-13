@@ -99,6 +99,7 @@ export const Editor = ({ isMobile }) => {
   }
 
   const armyComposition = list.armyComposition || list.army;
+  const compositionRule = list.compositionRule;
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
@@ -343,6 +344,7 @@ export const Editor = ({ isMobile }) => {
               type="lords"
               listId={listId}
               armyComposition={armyComposition}
+              compositionRule={compositionRule}
             />
 
             <Button
@@ -385,6 +387,7 @@ export const Editor = ({ isMobile }) => {
               type="heroes"
               listId={listId}
               armyComposition={armyComposition}
+              compositionRule={compositionRule}
             />
 
             <Button
@@ -427,6 +430,7 @@ export const Editor = ({ isMobile }) => {
               type="characters"
               listId={listId}
               armyComposition={armyComposition}
+              compositionRule={compositionRule}
             />
 
             {errors
@@ -486,6 +490,7 @@ export const Editor = ({ isMobile }) => {
             type="core"
             listId={listId}
             armyComposition={armyComposition}
+              compositionRule={compositionRule}
           />
 
           {errors
@@ -543,6 +548,7 @@ export const Editor = ({ isMobile }) => {
             type="special"
             listId={listId}
             armyComposition={armyComposition}
+            compositionRule={compositionRule}
           />
 
           {errors
@@ -600,6 +606,7 @@ export const Editor = ({ isMobile }) => {
             type="rare"
             listId={listId}
             armyComposition={armyComposition}
+            compositionRule={compositionRule}
           />
 
           {errors
@@ -664,6 +671,7 @@ export const Editor = ({ isMobile }) => {
                 type="mercenaries"
                 listId={listId}
                 armyComposition={armyComposition}
+                compositionRule={compositionRule}
               />
 
               {errors
@@ -726,6 +734,7 @@ export const Editor = ({ isMobile }) => {
                 type="allies"
                 listId={listId}
                 armyComposition={armyComposition}
+                compositionRule={compositionRule}
               />
 
               {errors
@@ -771,7 +780,7 @@ export const Editor = ({ isMobile }) => {
   );
 };
 
-export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
+export const OrderableUnitList = ({ units, type, listId, armyComposition, compositionRule }) => {
   const dispatch = useDispatch();
   const location = useLocation();
   const intl = useIntl();
@@ -810,7 +819,7 @@ export const OrderableUnitList = ({ units, type, listId, armyComposition }) => {
                 id: "app.points",
               })}`}</i>
             </div>
-            <p>{getAllOptions(unit, { armyComposition })}</p>
+            <p>{getAllOptions(unit, { armyComposition, compositionRule })}</p>
           </ListItem>
         ))}
     </OrderableList>

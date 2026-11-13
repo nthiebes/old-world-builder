@@ -188,6 +188,13 @@ export const validateList = ({ list, language, intl }) => {
   let used0XUnits = [];
 
   const checkRules = ({ ruleUnit, type }) => {
+    const compRule = list?.compositionRule;
+    if (
+      ruleUnit.compositionRule &&
+      !ruleUnit.compositionRule.includes(compRule)
+    ) {
+      return ;
+    }
     const generals = getGenerals(list);
     const unitsInList = (
       ruleUnit?.requiredByType === "all"

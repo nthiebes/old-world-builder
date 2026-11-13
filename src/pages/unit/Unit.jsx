@@ -39,6 +39,7 @@ import {
   isWizard,
   getStats,
   getUnitStrength,
+  optionIsAvailable
 } from "../../utils/unit";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
 
@@ -358,16 +359,18 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     if (optionIndex !== undefined) {
       command = unit.command.map((commandOption) => {
         if (commandOption.id === id) {
-          const options = commandOption.options.map((option, index) => {
-            if (index === optionIndex) {
-              return {
-                ...option,
-                active: option.active ? false : true,
-              };
-            }
+          const options = commandOption.options
+            .filter((option) => optionIsAvailable(option, list?.armyComposition, list?.compositionRule))
+            .map((option, index) => {
+              if (index === optionIndex) {
+                return {
+                  ...option,
+                  active: option.active ? false : true,
+                };
+              }
 
-            return option;
-          });
+              return option;
+            });
 
           return {
             ...commandOption,
@@ -694,6 +697,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       ?.specialRules || unit.specialRules;
   const listArmyComposition = list?.armyComposition || list?.army;
   const unitArmyComposition = unit.army ? unit.army : listArmyComposition;
+  const compositionRule = list?.compositionRule;
   const stats = unit.profile?.stats || getStats(unit, unitArmyComposition);
   const notes =
     unit?.armyComposition?.[unitArmyComposition]?.notes || unit.notes;
@@ -820,8 +824,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
           </>
         ) : null}
         {currentUnitStrength > 20 &&
-          list.compositionRule &&
-          list.compositionRule.includes("battle-march") && (
+          compositionRule &&
+          compositionRule.includes("battle-march") && (
             <p className="unit__error">
               <Icon symbol="error" className="unit__notes-icon" />
               <FormattedMessage id="unit.battleMarchUnitStrErr" />
@@ -836,9 +840,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             )}
             {unit.command
               .filter(
-                (unitCommand) =>
-                  !unitCommand.armyComposition ||
-                  unitCommand.armyComposition.includes(unitArmyComposition),
+                (unitCommand) => optionIsAvailable(unitCommand, unitArmyComposition, compositionRule)
               )
               .map(
                 (
@@ -1003,11 +1005,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                         <Fragment>
                           {options
                             .filter(
-                              (option) =>
-                                !option.armyComposition ||
-                                option.armyComposition.includes(
-                                  unitArmyComposition,
-                                ),
+                              (unitCommand) => optionIsAvailable(unitCommand, unitArmyComposition, compositionRule)
                             )
                             .map((option, optionIndex) => {
                               const exclusiveCheckedOption = options.find(
@@ -1026,7 +1024,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                       onChange={() =>
                                         handleCommandChange(id, optionIndex)
                                       }
-                                      checked={Boolean(option.active)}
+                                      checked={Boolean(option.active || option.alwaysActive)}
                                       className="checkbox__input"
                                       disabled={
                                         (exclusiveCheckedOption &&
@@ -1076,9 +1074,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </h2>
             {unit.equipment
               .filter(
-                (unitEquipment) =>
-                  !unitEquipment.armyComposition ||
-                  unitEquipment.armyComposition.includes(unitArmyComposition),
+                (unitEquipment) => optionIsAvailable(unitEquipment, unitArmyComposition, compositionRule)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
@@ -1134,9 +1130,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </h2>
             {unit.armor
               .filter(
-                (unitArmor) =>
-                  !unitArmor.armyComposition ||
-                  unitArmor.armyComposition.includes(unitArmyComposition),
+                (unitArmor) => optionIsAvailable(unitArmor, unitArmyComposition, compositionRule)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
@@ -1200,9 +1194,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </h2>
             {unit.options
               .filter(
-                (unitOption) =>
-                  !unitOption.armyComposition ||
-                  unitOption.armyComposition.includes(unitArmyComposition),
+                (unitOption) => optionIsAvailable(unitOption, unitArmyComposition, compositionRule)
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
@@ -1274,10 +1266,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             {options
                               .filter(
                                 (option) =>
-                                  !option.armyComposition ||
-                                  option.armyComposition.includes(
-                                    unitArmyComposition,
-                                  ),
+                                  optionIsAvailable(option, unitArmyComposition, compositionRule),
                               )
                               .map((option, optionIndex) => {
                                 const exclusiveCheckedOption = options.find(
@@ -1535,10 +1524,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         let combinedStackableCount = 0;
 
                                         if (
-                                          equipment.armyComposition &&
-                                          !equipment.armyComposition.includes(
-                                            unitArmyComposition,
-                                          )
+                                          optionIsAvailable(equipment, unitArmyComposition, compositionRule)
                                         ) {
                                           return null;
                                         }
@@ -1800,9 +1786,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </h2>
             {unit.mounts
               .filter(
-                ({ armyComposition }) =>
-                  !armyComposition ||
-                  armyComposition.includes(unitArmyComposition),
+                (mount) => optionIsAvailable(mount, unitArmyComposition, compositionRule),
               )
               .filter(({ requiredMagicItem }) =>
                 requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
@@ -1847,11 +1831,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       <>
                         {options
                           .filter(
-                            (option) =>
-                              !option.armyComposition ||
-                              option.armyComposition.includes(
-                                unitArmyComposition,
-                              ),
+                            (option) => optionIsAvailable(option, unitArmyComposition, compositionRule),
                           )
                           .map((option, optionIndex) => {
                             const exclusiveCheckedOption = options.find(
@@ -2012,13 +1992,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   item.armyComposition[unitArmyComposition]?.maxPoints) ||
                 item.maxPoints;
 
-              if (
-                item.armyComposition &&
-                ((typeof item.armyComposition === "string" &&
-                  !item.armyComposition.includes(unitArmyComposition)) ||
-                  (item.armyComposition.length > 0 &&
-                    item.armyComposition.indexOf(unitArmyComposition) < 0))
-              ) {
+              if (!optionIsAvailable(item, unitArmyComposition, compositionRule)) {
                 return null;
               }
 

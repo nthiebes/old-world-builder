@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { getUnitStrength } from "./unit";
+import { getUnitStrength, optionIsAvailable } from "./unit";
 
 describe("getUnitStrength", () => {
   test("Returns correct unit strength of regular infantry", () => {
@@ -100,5 +100,55 @@ describe("getUnitStrength", () => {
       ],
     }, true);
     expect(unitStr).toBe(22);
+  });
+});
+
+describe("optionIsAvailable", () => {
+  test("No defined restrictions returns true", () => {
+    const option = {
+      name_en: "No restriction option"
+    }
+    expect(optionIsAvailable(option, "grand-army", "battle-march")).toBe(true);
+    expect(optionIsAvailable(option, "grand-army", undefined)).toBe(true);
+    expect(optionIsAvailable(option, undefined, "battle-march")).toBe(true);
+    expect(optionIsAvailable(option, undefined, undefined)).toBe(true);
+  });
+
+  test("Checks for matching army composition", () => {
+    const option = {
+      name_en: "Army Comp restricted option",
+      armyComposition: "grand-army"
+    }
+    expect(optionIsAvailable(option, "grand-army", undefined)).toBe(true);
+    expect(optionIsAvailable(option, "other-army", undefined)).toBe(false);
+    expect(optionIsAvailable(option, undefined, undefined)).toBe(false);
+
+    const optionWithArray = {
+      name_en: "Army Comp restricted option",
+      armyComposition: ["grand-army", "other-army"]
+    }
+    expect(optionIsAvailable(optionWithArray, "grand-army", undefined)).toBe(true);
+    expect(optionIsAvailable(optionWithArray, "other-army", undefined)).toBe(true);
+    expect(optionIsAvailable(optionWithArray, "different-army", undefined)).toBe(false);
+    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(false);
+  });
+
+  test("Checks for matching composition rule", () => {
+    const option = {
+      name_en: "Composition rule restricted option",
+      compositionRule: "battle-march"
+    }
+    expect(optionIsAvailable(option, undefined, "battle-march")).toBe(true);
+    expect(optionIsAvailable(option, undefined, "open-war")).toBe(false);
+    expect(optionIsAvailable(option, undefined, undefined)).toBe(false);
+
+    const optionWithArray = {
+      name_en: "Composition rule restricted option",
+      compositionRule: ["battle-march", "open-war"]
+    }
+    expect(optionIsAvailable(optionWithArray, undefined, "battle-march")).toBe(true);
+    expect(optionIsAvailable(optionWithArray, undefined, "open-war")).toBe(true);
+    expect(optionIsAvailable(optionWithArray, undefined, "grand-melee")).toBe(false);
+    expect(optionIsAvailable(optionWithArray, undefined, undefined)).toBe(false);
   });
 });
