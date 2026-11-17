@@ -4,7 +4,7 @@ import renegadeRulesMap from "./renegade-rules-map.json";
 import renegadeRulesExport from "./renegade-rules-export.json";
 
 export const WHFB_RULES_URL = "https://tow.whfb.app";
-export const RENEGADE_RULES_URL = "https://renegade-rules.sharkbyte539.workers.dev";
+export const RENEGADE_RULES_URL = "https://renegade-rules.battletown.eu";
 
 const additionalOWBRules = {
   "throwing spears": { url: "weapons-of-war/throwing-spear" },
