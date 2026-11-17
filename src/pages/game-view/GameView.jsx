@@ -82,6 +82,7 @@ export const GameView = () => {
   }
 
   const armyComposition = list.armyComposition || list.army;
+  const compositionRule = list.compositionRule;
   const allPoints = getAllPoints(list);
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
@@ -305,10 +306,12 @@ export const GameView = () => {
                         language: "en",
                         removeFactionName: false,
                         armyComposition,
+                        compositionRule,
                       }),
                       [`name_${language}`]: getAllOptions(unit, {
                         removeFactionName: false,
                         armyComposition,
+                        compositionRule,
                       }),
                     }}
                   />

@@ -3512,6 +3512,7 @@
         }
       },
       "regimentalUnit": true,
+      "allowedDetachments": ["fanatics"],
       "maxDetachments": 1,
       "ignoreNoDetachment": true,
       "command": [
@@ -5069,7 +5070,15 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "6+",
+          "name_cn": "6+",
+          "name_fr": "6+",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "specialRules": {

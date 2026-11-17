@@ -106,19 +106,51 @@ export const maxOneBSB = (list) => {
  * This Hierophant must be chosen from the highest level wizards in the army.
  * If a Tomb King with The Language of the Priests or Settra is included in the
  * army, they must be the Hierophant.
+ * In Battle March Hierophants are not required if the army takes the Arch
+ * Hierophant rule.
  */
 export const hierophantChecks = (list) => {
-  const hierophants = !list?.characters?.length
-    ? []
-    : list.characters.filter(
+  let hasArchHierophant = false
+  if (list.compositionRule && list.compositionRule === "battle-march") {
+    hasArchHierophant = list?.characters?.length
+      ? list.characters.find(
+        (unit) =>
+          unit.command &&
+        unit.command.find(
+          (command) => 
+            command.active && 
+            command.name_en === "General" &&
+            command.options?.find(
+              (commandSubOption) => 
+                commandSubOption.active && commandSubOption.name_en === "Arch Hierophant"
+            )
+        )
+      )
+      : false;
+  }
+
+  const hierophants = list?.characters?.length
+    ? list.characters.filter( 
         (unit) =>
           unit.command &&
           unit.command.find(
             (command) => command.active && command.name_en === "The Hierophant",
           ),
-      );
+      )
+    : [];
 
-  if (hierophants.length < 1) {
+  if (hasArchHierophant) {
+    if (hierophants.length > 0) {
+      return [
+        {
+          message: "misc.error.multipleHierophants",
+          section: "characters",
+        }
+      ]
+    } else {
+      return [];
+    }
+  } else if (hierophants.length < 1) {
     return [
       {
         message: "misc.error.noHierophant",

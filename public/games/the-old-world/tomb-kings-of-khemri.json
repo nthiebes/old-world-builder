@@ -18,7 +18,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"],
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "nehekharan-royal-hosts",
+            "barrow-kingdoms"
+          ],
           "options": [
             {
               "name_en": "Arise!, Level 1 Wizard",
@@ -181,14 +185,6 @@
           "points": 35
         },
         {
-          "name_en": "Necrolith Bone Dragon",
-          "name_cn": "死灵骨龙",
-          "name_it": "Drago Scheletrico Necrolitico",
-          "name_de": "Nekrolith Knochendrache",
-          "name_fr": "Dragon d’Os Nécrolithe",
-          "points": 195
-        },
-        {
           "name_en": "Khemrian Warsphinx",
           "name_cn": "喀穆里征战斯芬克斯",
           "name_it": "Sfinge da Guerra Khemriana",
@@ -229,6 +225,14 @@
               "points": 20
             }
           ]
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195
         }
       ],
       "items": [
@@ -241,7 +245,7 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 100,
-          "armyComposition": "tomb-kings-of-khemri"
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"]
         },
         {
           "name_en": "Magic Items",
@@ -307,6 +311,17 @@
             "name_fr": "1+ Roi des Tombes ou Prince des Tombes",
             "name_it": "1+ Re dei Sepolcri i Principe dei Sepolcri"
           }
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Tomb King or High Priest",
+            "name_cn": "每1000分0-1古墓王或高等祭司",
+            "name_de": "0-1 Gruftkönig or Hohepriester",
+            "name_es": "0-1 Tomb King or High Priest",
+            "name_fr": "0-1 Roi des Tombes ou Grand Prêtre",
+            "name_it": "0-1 Re dei Sepolcri i Sommo Sacerdote Liche"
+          }
         }
       }
     },
@@ -328,7 +343,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "nehekharan-royal-hosts"],
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "nehekharan-royal-hosts",
+            "barrow-kingdoms"
+          ],
           "options": [
             {
               "name_en": "Arise!, Level 1 Wizard",
@@ -346,6 +365,16 @@
                 "name_it": "Must be Hierophant"
               },
               "armyComposition": "nehekharan-royal-hosts"
+            },
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
             }
           ]
         },
@@ -489,6 +518,18 @@
           "name_de": "Skelettstreitwagen",
           "name_fr": "Char Squelette",
           "points": 35
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "Only available to General"
+          }
         }
       ],
       "items": [
@@ -501,7 +542,7 @@
           "types": ["weapon", "armor", "talisman", "enchanted-item"],
           "selected": [],
           "maxPoints": 50,
-          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults"]
+          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults", "barrow-kingdoms"]
         },
         {
           "name_en": "Magic Items",
@@ -567,6 +608,17 @@
             "name_fr": "0-1 Prince des Tombes ou Archi-Nécrotecte par tranche de 1000 points",
             "name_it": "0-1 Principe dei Sepolcri o Gran Necrotetto ogni 1.0000 punti"
           }
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "notes": {
+            "name_en": "1+ Tomb Prince or Royal Herald",
+            "name_cn": "1+ Tomb Prince or Royal Herald",
+            "name_de": "1+ Tomb Prince or Royal Herald",
+            "name_es": "1+ Tomb Prince or Royal Herald",
+            "name_fr": "1+ Tomb Prince or Royal Herald",
+            "name_it": "1+ Tomb Prince or Royal Herald"
+          }
         }
       },
       "magic": {
@@ -599,7 +651,30 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri"]
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"],
+          "options": [
+            {
+              "name_en": "Honour Thy King",
+              "name_cn": "Honour Thy King",
+              "name_it": "Honour Thy King",
+              "name_de": "Honour Thy King",
+              "name_fr": "Honour Thy King",
+              "name_es": "Honour Thy King",
+              "points": 0,
+              "compositionRule": "battle-march",
+              "alwaysActive": true
+            },
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
+            }
+          ]
         },
         {
           "name_en": "Battle Standard Bearer",
@@ -727,6 +802,18 @@
           "name_de": "Skelettstreitwagen",
           "name_fr": "Char Squelette",
           "points": 35
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "Only available to General"
+          }
         }
       ],
       "items": [
@@ -770,6 +857,25 @@
         },
         "nehekharan-royal-hosts": {
           "category": "characters"
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector, Honour Thy King",
+            "name_cn": "王之旗手, 干枯如尘, 易燃, 顽强不屈(1), 霍佩什, 尼赫喀拉亡灵, 重生(5+), 保护誓言, Honour Thy King",
+            "name_de": "Banner des Königs, Staubtrocken, Brennbar, Unverwüstlich (1), Chepesh, Untote von Nehekhara, Regeneration (5+), Eingeschworener Leibwächter, Honour Thy King",
+            "name_es": "Banner of the King, Dry as Dust, Flammable, Indomitable (1), Khopesh, Nehekharan Undead, Regeneration (5+), Sworn Protector, Honour Thy King",
+            "name_fr": "Bannière du Roi, Desséchés, Inflammable, Indomptable (1), Khopesh, Morts-vivants de Nehekhara, Régénération (5+), Protecteur Assermenté, Honour Thy King",
+            "name_it": "Stendardo del Re, Arido come Polvere, Suscettibile al Fuoco, Costrutto (1), Khopesh, Non Morti di Nehekharan, Rigenerazione (5+), Protettore Giurato, Honour Thy King"
+          },
+          "notes": {
+            "name_en": "1+ Tomb Prince or Royal Herald",
+            "name_cn": "1+ Tomb Prince or Royal Herald",
+            "name_de": "1+ Tomb Prince or Royal Herald",
+            "name_es": "1+ Tomb Prince or Royal Herald",
+            "name_fr": "1+ Tomb Prince or Royal Herald",
+            "name_it": "1+ Tomb Prince or Royal Herald"
+          }
         }
       }
     },
@@ -791,7 +897,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults"]
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "mortuary-cults",
+            "barrow-kingdoms"
+          ]
         },
         {
           "name_en": "The Hierophant",
@@ -956,6 +1066,24 @@
             "name_fr": "1+ Grand Prêtre ou Prêtre Mortuaire",
             "name_it": "1+ Sommo Sacerdote Liche o Sacerdote Liche"
           }
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "dark-magic",
+            "elementalism",
+            "illusion",
+            "necromancy"
+          ],
+          "notes": {
+            "name_en": "1+ High Priest or Mortuary Priest, 0-1 Tomb King or High Priest",
+            "name_cn": "1+ High Priest或葬仪祭司, 每1000分0-1古墓王或高等祭司",
+            "name_de": "1+ Hohepriester or Priester des Totenkults, 0-1 Gruftkönig oder Hohepriester",
+            "name_es": "1+ High Priest or Mortuary Priest, 0-1 Tomb King or High Priest",
+            "name_fr": "1+ Grand Prêtre ou Prêtre Mortuaire, 0-1 Roi des Tombes ou Grand Prêtre",
+            "name_it": "1+ Sommo Sacerdote Liche o Sacerdote Liche, 0-1 Re dei Sepolcri o Sommo Sacerdote Liche"
+          }
         }
       }
     },
@@ -977,7 +1105,11 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri", "mortuary-cults"]
+          "armyComposition": [
+            "tomb-kings-of-khemri",
+            "mortuary-cults",
+            "barrow-kingdoms"
+          ]
         },
         {
           "name_en": "The Hierophant",
@@ -1073,6 +1205,18 @@
           "name_de": "Barded Skelettpferd",
           "name_fr": "Coursier Squelette Caparaçonné",
           "points": 16
+        },
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "Only available to General"
+          }
         }
       ],
       "items": [
@@ -1138,6 +1282,24 @@
         },
         "nehekharan-royal-hosts": {
           "category": "characters"
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "lores": [
+            "battle-magic",
+            "dark-magic",
+            "elementalism",
+            "illusion",
+            "necromancy"
+          ],
+          "notes": {
+            "name_en": "1+ High Priest or Mortuary Priest",
+            "name_cn": "1+ High Priest或葬仪祭司",
+            "name_de": "1+ Hohepriester or Priester des Totenkults",
+            "name_es": "1+ High Priest or Mortuary Priest",
+            "name_fr": "1+ Grand Prêtre ou Prêtre Mortuaire",
+            "name_it": "1+ Sommo Sacerdote Liche o Sacerdote Liche"
+          }
         }
       }
     },
@@ -1242,7 +1404,19 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri"]
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"],
+          "options": [
+            {
+              "name_en": "Arch Hierophant",
+              "name_cn": "Arch Hierophant",
+              "name_it": "Arch Hierophant",
+              "name_de": "Arch Hierophant",
+              "name_fr": "Arch Hierophant",
+              "name_es": "Arch Hierophant",
+              "points": 0,
+              "compositionRule": "battle-march"
+            }
+          ]
         }
       ],
       "equipment": [
@@ -1270,7 +1444,20 @@
         }
       ],
       "options": [],
-      "mounts": [],
+      "mounts": [
+        {
+          "name_en": "Necrolith Bone Dragon",
+          "name_cn": "死灵骨龙",
+          "name_it": "Drago Scheletrico Necrolitico",
+          "name_de": "Nekrolith Knochendrache",
+          "name_fr": "Dragon d’Os Nécrolithe",
+          "points": 195,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "Only available to General"
+          }
+        }
+      ],
       "items": [
         {
           "name_en": "Magic Items",
@@ -1317,6 +1504,9 @@
         },
         "mortuary-cults": {
           "category": "characters"
+        },
+        "barrow-kingdoms": {
+          "category": "characters"
         }
       }
     },
@@ -1335,6 +1525,9 @@
           "category": "characters"
         },
         "nehekharan-royal-hosts": {
+          "category": "characters"
+        },
+        "barrow-kingdoms": {
           "category": "characters"
         }
       },
@@ -1485,6 +1678,17 @@
         },
         "nehekharan-royal-hosts": {
           "category": "characters"
+        },
+        "barrow-kingdoms": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra's Champion, Sworn Protector, Honour Thy King",
+            "name_cn": "干枯如尘, 易燃, 绝望使者, 顽强不屈(2), 一击必杀, 尼赫喀拉亡灵, 重生(5+), 塞特拉冠军, 保护誓言, Honour Thy King",
+            "name_it": "Arido come Polvere, Suscettibile al Fuoco, Araldo Della Disperazione, Costrutto (2), Colpo Mortale, Non Morto di Nehekharan, Rigenerazione (5+), Campione di Settra, Protettore Giurato, Honour Thy King",
+            "name_de": "Staubtrocken, Brennbar, Bote der Verzweiflung, Unverwüstlich (2), Todesstoß, Untote von Nehekhara, Regeneration (5+), Settras Schiedskämpfer, Eingeschworener Leibwächter, Honour Thy King",
+            "name_es": "Dry as Dust, Flammable, Herald of Despair, Indomitable (2), Killing Blow, Nehekharan Undead, Regeneration (5+), Settra's Champion, Sworn Protector, Honour Thy King",
+            "name_fr": "Desséchés, Inflammable, Héraut du Désespoir, Indomptable (2), Coup Fatal, Morts-vivants de Nehekhara, Régénération (5+), Champion de Settra, Protecteur Assermenté, Honour Thy King"
+          }
         }
       },
       "command": [
@@ -1496,7 +1700,7 @@
           "name_fr": "Général",
           "name_es": "General",
           "points": 0,
-          "armyComposition": ["tomb-kings-of-khemri"]
+          "armyComposition": ["tomb-kings-of-khemri", "barrow-kingdoms"]
         }
       ],
       "equipment": [
@@ -1685,6 +1889,17 @@
         },
         "mortuary-cults": {
           "category": "core"
+        },
+        "barrow-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Skeleton Warriors and/or Skeleton Archers",
+            "name_cn": "1+ 骷髅战士和/或骷髅弓箭手",
+            "name_de": "1+ Einheit von Skelettkriegern und/oder Skelettbogenschützen",
+            "name_es": "1+ unit of Skeleton Warriors and/or Skeleton Archers",
+            "name_fr": "1+ unité de Guerriers Squelette et/ou d’Archers Squelettes",
+            "name_it": "1+ Unità di Guarrieri Scheletri e/o Arcieri Scheletri"
+          }
         }
       }
     },
@@ -1797,6 +2012,17 @@
         },
         "nehekharan-royal-hosts": {
           "category": "core"
+        },
+        "barrow-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Skeleton Warriors and/or Skeleton Archers",
+            "name_cn": "1+ 骷髅战士和/或骷髅弓箭手",
+            "name_de": "1+ Einheit von Skelettkriegern und/oder Skelettbogenschützen",
+            "name_es": "1+ unit of Skeleton Warriors and/or Skeleton Archers",
+            "name_fr": "1+ unité de Guerriers Squelette et/ou d’Archers Squelettes",
+            "name_it": "1+ Unità di Guarrieri Scheletri e/o Arcieri Scheletri"
+          }
         }
       }
     },
@@ -1954,6 +2180,17 @@
             "name_es": "0-1 unit of Tomb Guard or Tomb Guard Chariots may be taken as a Core choice",
             "name_fr": "0-1 unité de Gardien des Tombes ou Chars Gardien des Tombes peut être prise comme choix d’Unité de Base",
             "name_it": "0-1 unità di Guardia dei Sepolcri o Carri della Guardia dei Sepolcri possono essere scelte come Truppa"
+          }
+        },
+        "barrow-kingdoms": {
+          "category": "core",
+          "notes": {
+            "name_en": "0-1 unit of Tomb Guard may be taken as a Core choice",
+            "name_cn": "0-1个单位的古墓守卫或古墓守卫战车可作为核心选择",
+            "name_de": "0-1 Einheit Gruftwächter darf als Kernauswahl gewählt werden",
+            "name_es": "0-1 unit of Tomb Guard may be taken as a Core choice",
+            "name_fr": "0-1 unité de Gardien des Tombes peut être prise comme choix d’Unité de Base",
+            "name_it": "0-1 unità di Guardia dei Sepolcri dei Sepolcri possono essere scelte come Truppa"
           }
         }
       }
@@ -2119,6 +2356,23 @@
             "name_de": "0-1 pro 1000 Punkte",
             "name_fr": "0-1 par tranche de 1000 points"
           }
+        },
+        {
+          "name_en": "Shades of Death",
+          "name_cn": "Shades of Death",
+          "name_it": "Shades of Death",
+          "name_de": "Shades of Death",
+          "name_fr": "Shades of Death",
+          "points": 3,
+          "perModel": true,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "0-2 per army",
+            "name_cn": "0-2 per army",
+            "name_de": "0-2 pro Armee",
+            "name_es": "0-2 per army",
+            "name_fr": "0-2 par armée"
+          }
         }
       ],
       "mounts": [],
@@ -2148,6 +2402,9 @@
           "category": "special"
         },
         "mortuary-cults": {
+          "category": "core"
+        },
+        "barrow-kingdoms": {
           "category": "core"
         }
       }
@@ -2228,7 +2485,25 @@
           "alwaysActive": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Finest Charioteers",
+          "name_cn": "Finest Charioteers",
+          "name_it": "Finest Charioteers",
+          "name_de": "Finest Charioteers",
+          "name_fr": "Finest Charioteers",
+          "points": 6,
+          "perModel": true,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "0-2 per army",
+            "name_cn": "0-2 per army",
+            "name_de": "0-2 pro Armee",
+            "name_es": "0-2 per army",
+            "name_fr": "0-2 par armée"
+          }
+        }
+      ],
       "mounts": [],
       "items": [],
       "lores": [],
@@ -2257,6 +2532,9 @@
         },
         "mortuary-cults": {
           "category": "special"
+        },
+        "barrow-kingdoms": {
+          "category": "core"
         }
       }
     },
@@ -2444,6 +2722,23 @@
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_fr": "0-1 unité par tranche de 1000 points"
           }
+        },
+        {
+          "name_en": "Noble Cavalry",
+          "name_cn": "Noble Cavalry",
+          "name_it": "Noble Cavalry",
+          "name_de": "Noble Cavalry",
+          "name_fr": "Noble Cavalry",
+          "points": 3,
+          "perModel": true,
+          "armyComposition": "barrow-kingdoms",
+          "notes": {
+            "name_en": "0-2 per army",
+            "name_cn": "0-2 per army",
+            "name_de": "0-2 pro Armee",
+            "name_es": "0-2 per army",
+            "name_fr": "0-2 par armée"
+          }
         }
       ],
       "mounts": [],
@@ -2470,6 +2765,9 @@
           "category": "core"
         },
         "mortuary-cults": {
+          "category": "core"
+        },
+        "barrow-kingdoms": {
           "category": "core"
         }
       }
@@ -2589,6 +2887,9 @@
           "category": "special"
         },
         "mortuary-cults": {
+          "category": "core"
+        },
+        "barrow-kingdoms": {
           "category": "core"
         }
       }
@@ -2968,7 +3269,17 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_fr": "4+",
+          "name_es": "4+",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -3150,6 +3461,17 @@
         "name_es": "",
         "name_fr": "",
         "name_it": ""
+      },
+      "armyComposition": {
+        "tomb-kings-of-khemri": {
+          "category": "special"
+        },
+        "nehekharan-royal-hosts": {
+          "category": "special"
+        },
+        "mortuary-cults": {
+          "category": "special"
+        }
       }
     },
     {
@@ -3400,26 +3722,17 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_it": "Armatura Leggera",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
-          "points": 0,
-          "perModel": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shields",
-          "name_cn": "盾牌",
-          "name_it": "Scudi",
-          "name_de": "Schilde",
-          "name_fr": "Boucliers",
+          "name_en": "Light armour, Shields",
+          "name_cn": "轻甲, 盾牌",
+          "name_it": "Armatura Leggera, Scudi",
+          "name_de": "Leichte Rüstung, Schilde",
+          "name_fr": "Armure légère, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
-        },
+        }
+      ],
+      "options": [
         {
           "name_en": "Great weapon for Captain only",
           "name_cn": "仅墓地队长装备重型武器",
@@ -3453,6 +3766,9 @@
           "category": "special"
         },
         "nehekharan-royal-hosts": {
+          "category": "special"
+        },
+        "barrow-kingdoms": {
           "category": "special"
         }
       }
@@ -3590,6 +3906,9 @@
         },
         "nehekharan-royal-hosts": {
           "category": "special"
+        },
+        "barrow-kingdoms": {
+          "category": "special"
         }
       }
     },
@@ -3643,6 +3962,9 @@
       },
       "armyComposition": {
         "mortuary-cults": {
+          "category": "special"
+        },
+        "barrow-kingdoms": {
           "category": "special"
         }
       }
@@ -3719,6 +4041,9 @@
           "category": "special"
         },
         "mortuary-cults": {
+          "category": "special"
+        },
+        "barrow-kingdoms": {
           "category": "special"
         }
       }
@@ -3822,6 +4147,17 @@
             "name_fr": "0-2 Scorpions des Tombes par tranche de 1000 points",
             "name_it": "0-2 Scorpione dei Sepolcri ogni 1.000 punti"
           }
+        },
+        "barrow-kingdoms": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_cn": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_de": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_es": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_fr": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_it": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points"
+          }
         }
       }
     },
@@ -3915,6 +4251,17 @@
         },
         "nehekharan-royal-hosts": {
           "category": "special"
+        },
+        "barrow-kingdoms": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_cn": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_de": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_es": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_fr": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points",
+            "name_it": "0-2 Khemrian Warsphinx or Tomb Scorpions per 1000 points"
+          }
         }
       }
     },
@@ -3996,6 +4343,17 @@
         },
         "mortuary-cults": {
           "category": "rare"
+        },
+        "barrow-kingdoms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_cn": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_de": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_es": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_fr": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_it": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points"
+          }
         }
       }
     },
@@ -4059,7 +4417,17 @@
           "active": true
         }
       ],
-      "armor": [],
+      "armor": [
+        {
+          "name_en": "4+",
+          "name_cn": "4+",
+          "name_de": "4+",
+          "name_fr": "4+",
+          "name_es": "4+",
+          "points": 0,
+          "active": true
+        }
+      ],
       "options": [],
       "mounts": [],
       "items": [],
@@ -4145,7 +4513,7 @@
       "name_es": "Necrosphinx",
       "name_fr": "Nécrosphinx",
       "name_it": "Necrosfinge",
-      "id": "necrosphinx",
+      "id": "necrosphinx-special",
       "points": 195,
       "command": [],
       "equipment": [
@@ -4187,12 +4555,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
-        "name_cn": "紧密阵型, 飞行(9), 顽强不屈(2), 大型目标, 尼赫喀拉亡灵, 重生(5+), 践踏攻击(D3+2), 快速行进, 惊骇",
-        "name_de": "Geschlossene Ränge, Fliegen (9), Unverwüstlich (2), Großes Ziel, Untote von Nehekhara, Regeneration (5+), Stampfattacken (W3+2), Schnelle Bewegung, Entsetzen",
-        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
-        "name_fr": "Ordre Serré, Vol (9), Indomptable (2), Grande Cible, Morts-vivants de Nehekhara, Régénération (5+), Attaques de Piétinement (D3+2), Rapide, Terreur",
-        "name_it": "Formazione Serrata, Volo (9), Costrutto (2), Bersaglio Grande, Passo Rapido, Terrore, Non morto di Nehekharan, Rigenerazione (5+), Calpestamento (D3+2)"
+        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror, Soul Reaper",
+        "name_cn": "紧密阵型, 飞行(9), 顽强不屈(2), 大型目标, 尼赫喀拉亡灵, 重生(5+), 践踏攻击(D3+2), 快速行进, 惊骇, Soul Reaper",
+        "name_de": "Geschlossene Ränge, Fliegen (9), Unverwüstlich (2), Großes Ziel, Untote von Nehekhara, Regeneration (5+), Stampfattacken (W3+2), Schnelle Bewegung, Entsetzen, Soul Reaper",
+        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror, Soul Reaper",
+        "name_fr": "Ordre Serré, Vol (9), Indomptable (2), Grande Cible, Morts-vivants de Nehekhara, Régénération (5+), Attaques de Piétinement (D3+2), Rapide, Terreur, Soul Reaper",
+        "name_it": "Formazione Serrata, Volo (9), Costrutto (2), Bersaglio Grande, Passo Rapido, Terrore, Non morto di Nehekharan, Rigenerazione (5+), Calpestamento (D3+2), Soul Reaper"
       },
       "armyComposition": {
         "mortuary-cults": {
@@ -4262,6 +4630,17 @@
         },
         "mortuary-cults": {
           "category": "rare"
+        },
+        "barrow-kingdoms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_cn": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_de": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_es": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_fr": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_it": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points"
+          }
         }
       }
     },
@@ -4442,12 +4821,12 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
-        "name_cn": "紧密阵型, 飞行(9), 顽强不屈(2), 大型目标, 尼赫喀拉亡灵, 重生(5+), 践踏攻击(D3+2), 快速行进, 惊骇",
-        "name_de": "Geschlossene Ränge, Fliegen (9), Unverwüstlich (2), Großes Ziel, Untote von Nehekhara, Regeneration (5+), Stampfattacken (W3+2), Schnelle Bewegung, Entsetzen",
-        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror",
-        "name_fr": "Ordre Serré, Vol (9), Indomptable (2), Grande Cible, Morts-vivants de Nehekhara, Régénération (5+), Attaques de Piétinement (D3+2), Rapide, Terreur",
-        "name_it": "Formazione Serrata, Volo (9), Costrutto (2), Bersaglio Grande, Passo Rapido, Terrore, Non morto di Nehekharan, Rigenerazione (5+), Calpestamento (D3+2)"
+        "name_en": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror, Soul Reaper",
+        "name_cn": "紧密阵型, 飞行(9), 顽强不屈(2), 大型目标, 尼赫喀拉亡灵, 重生(5+), 践踏攻击(D3+2), 快速行进, 惊骇, Soul Reaper",
+        "name_de": "Geschlossene Ränge, Fliegen (9), Unverwüstlich (2), Großes Ziel, Untote von Nehekhara, Regeneration (5+), Stampfattacken (W3+2), Schnelle Bewegung, Soul Reaper, Entsetzen",
+        "name_es": "Close Order, Fly (9), Indomitable (2), Large Target, Nehekharan Undead, Regeneration (5+), Stomp Attacks (D3+2), Swiftstride, Terror, Soul Reaper",
+        "name_fr": "Ordre Serré, Vol (9), Indomptable (2), Grande Cible, Morts-vivants de Nehekhara, Régénération (5+), Attaques de Piétinement (D3+2), Rapide, Terreur, Soul Reaper",
+        "name_it": "Formazione Serrata, Volo (9), Costrutto (2), Bersaglio Grande, Passo Rapido, Terrore, Non morto di Nehekharan, Rigenerazione (5+), Calpestamento (D3+2), Soul Reaper"
       },
       "armyComposition": {
         "tomb-kings-of-khemri": {
@@ -4455,6 +4834,17 @@
         },
         "mortuary-cults": {
           "category": "rare"
+        },
+        "barrow-kingdoms": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_cn": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_de": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_es": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_fr": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points",
+            "name_it": "0-1 Necrolith Colossus, Necrosphinx, or Winged Warsphinx per 1000 points"
+          }
         }
       }
     }

@@ -65,6 +65,7 @@ export const getAllOptions = (
     language: overrideLanguage,
     pageNumbers,
     armyComposition,
+    compositionRule,
   } = {},
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
@@ -88,7 +89,10 @@ export const getAllOptions = (
 
         if (options && options.length > 0) {
           options.forEach((option) => {
-            if (option.active) {
+            if (
+              (option.active || option.alwaysActive) &&
+              optionIsAvailable(option, armyComposition, compositionRule)
+            ) {
               selectedOptions.push(option.name_en);
             }
           });
@@ -673,7 +677,7 @@ export const getUnitWizardryLevel = (unit) => {
   }
 
   const levelOptions = findAllOptions(
-    [...unit?.options, ...unit?.command],
+    [...(unit?.options || []), ...(unit?.command || [])],
     (option) => /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
   );
 
@@ -784,7 +788,7 @@ export const getUnitStrength = (unit, includeDetachments) => {
       str += additionalWounds;
     }
 
-    // Usually a unit no strength defined has one model in it, but "detachment only"
+    // Usually a unit with no strength defined has one model in it, but "detachment only"
     // units like Primal Warherds or Skeleton Cohorts have their model counts entirely
     // in the detachments.
     str = str * (unit.strength || (unit.detachmentsInUnitStr ? 0 : 1));
@@ -801,4 +805,32 @@ export const getUnitStrength = (unit, includeDetachments) => {
   } else {
     return 0;
   }
+};
+
+/**
+ * Checks an option's restrictions (which may be undefined) against the army's
+ * army composition and composition rules to see if the option is available.
+ */
+export const optionIsAvailable = (option, armyComp, compRule) => {
+  return (
+    matchesRestriction(option.armyComposition, armyComp) &&
+    matchesRestriction(option.compositionRule, compRule)
+  );
+};
+
+/**
+ * A restriction is either missing, a string or an array of allowed values.
+ * Object-shaped values (e.g. `{ "royal-clan": { maxPoints } }` on items) are
+ * per-composition overrides, not restrictions, so they always match.
+ */
+const matchesRestriction = (restriction, value) => {
+  if (!restriction) {
+    return true;
+  }
+
+  if (typeof restriction === "string" || Array.isArray(restriction)) {
+    return restriction.includes(value);
+  }
+
+  return true;
 };

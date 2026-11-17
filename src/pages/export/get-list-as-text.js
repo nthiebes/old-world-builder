@@ -58,6 +58,7 @@ const getUnitsString = ({
   showStats,
   showCustomNotes,
   armyComposition,
+  compositionRule,
   isSimpleList,
   type,
 }) => {
@@ -74,6 +75,7 @@ const getUnitsString = ({
           noMagic: isShowList,
           pageNumbers: false,
           armyComposition,
+          compositionRule,
         });
 
         // Format: "name, important options - points"
@@ -100,6 +102,7 @@ const getUnitsString = ({
         noMagic: isShowList,
         pageNumbers: showPageNumbers,
         armyComposition,
+        compositionRule
       });
       const specialRules =
         unit.armyComposition?.[armyComposition]?.specialRules ||
@@ -212,6 +215,7 @@ export const getListAsText = ({
   const armyCompositionString = armyCompositionName
     ? `, ${armyCompositionName}${list.version ? ` (v${list.version})` : ``}`
     : "";
+  const compositionRule = list.compositionRule;
   const compositionRuleString = intl.formatMessage({
     id: `misc.${list.compositionRule || "open-war"}`,
   });
@@ -252,6 +256,7 @@ export const getListAsText = ({
       language,
       showStats: false,
       armyComposition,
+      compositionRule,
       isSimpleList: true,
     });
 
@@ -306,6 +311,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,showStats,
       armyComposition,
+      compositionRule,
       type: "characters",
     })}`;
   }
@@ -358,6 +364,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       intl,
       language,
       armyComposition,
+      compositionRule,
       type: "heroes",
     })}`;
   }
@@ -385,6 +392,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       language,
       showStats,
       armyComposition,
+      compositionRule,
       type: "core",
     })}`;
   }
@@ -412,6 +420,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       language,
       showStats,
       armyComposition,
+      compositionRule,
       type: "special",
     })}`;
   }
@@ -439,6 +448,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       language,
       showStats,
       armyComposition,
+      compositionRule,
       type: "rare",
     })}`;
   }
@@ -466,6 +476,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       language,
       showStats,
       armyComposition,
+      compositionRule,
       type: "mercenaries",
     })}`;
   }
@@ -493,6 +504,7 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       language,
       showStats,
       armyComposition,
+      compositionRule,
       type: "allies",
     })}`;
   }

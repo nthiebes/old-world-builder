@@ -967,6 +967,63 @@ describe("validateList", () => {
     expect(getMessages(errors)).toEqual(["misc.error.hierophantGeneral"]);
   });
 
+  test("applies composition rule restricted rules to lists without compositionRule", () => {
+    const list = {
+      ...baseList,
+      army: "tomb-kings-of-khemri",
+      armyComposition: "tomb-kings-of-khemri",
+      characters: [],
+    };
+    delete list.compositionRule;
+
+    const characterMinErrors = (errors) =>
+      errors.filter(
+        (error) =>
+          error.message === "misc.error.minUnits" &&
+          error.section === "characters",
+      );
+
+    const errors = validateList({ list, language: "en", intl });
+    expect(characterMinErrors(errors)).toHaveLength(2);
+
+    list.compositionRule = "battle-march";
+    const battleMarchErrors = validateList({ list, language: "en", intl });
+    expect(characterMinErrors(battleMarchErrors)).toHaveLength(0);
+  });
+
+  test("does not add noHierophant in Battle March if general has Arch Hierophant", () => {
+    const list = {
+      ...baseList,
+      army: "tomb-kings-of-khemri",
+      compositionRule: "open-war",
+      characters: [
+        makeCharacter({
+          id: "royal-herald.1",
+          name_en: "Royal Herald",
+          command: [
+            {
+              name_en: "General",
+              active: true,
+              options: [{ name_en: "Arch Hierophant", active: true }],
+            },
+          ],
+        }),
+      ],
+      core: [
+        { id: "skeleton-archers.1", name_en: "Skeleton Archers" },
+        { id: "badlands-ogre-bulls.1", name_en: "Badlands Ogre Bulls" },
+        { id: "battle-pilgrims.1", name_en: "Battle Pilgrims" },
+      ],
+    };
+
+    const errors1 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors1)).toEqual(["misc.error.noHierophant"]);
+
+    list.compositionRule = "battle-march";
+    const errors2 = validateList({ list, language: "en", intl });
+    expect(getMessages(errors2)).toEqual([]);
+  });
+
   test("adds wizardGeneral if a Vampire Count general is not a wizard", () => {
     const list = {
       ...baseList,

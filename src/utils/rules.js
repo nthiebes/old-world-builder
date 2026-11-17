@@ -221,10 +221,22 @@ export const rules = {
             "prince-apophas-the-cursed-scarab-lord",
           ],
           min: 1,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
         {
           ids: ["high-priest", "mortuary-priest"],
           min: 1,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
         {
           ids: [
@@ -235,6 +247,12 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
+          "compositionRule": [
+            "open-war",
+            "grand-melee",
+            "combined-arms",
+            "grand-melee-combined-arms"
+          ]
         },
       ],
     },
@@ -412,7 +430,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["necrolith-colossus", "necrosphinx"],
+          ids: ["necrolith-colossus", "necrosphinx-special"],
           min: 0,
           max: 1,
         },
@@ -437,6 +455,75 @@ export const rules = {
           ids: ["winged-warsphinx"],
           min: 0,
           max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "barrow-kingdoms": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "tomb-prince",
+            "prince-apophas-the-cursed-scarab-lord",
+            "royal-herald",
+          ],
+          min: 1,
+        },
+        {
+          ids: ["high-priest", "mortuary-priest"],
+          min: 1,
+        },
+        {
+          ids: [
+            "tomb-king",
+            "high-priest",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+          ],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["skeleton-warriors", "skeleton-archers"],
+          min: 1,
+        },
+        {
+          ids: ["tomb-guard-core"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["tomb-scorpion", "khemrian-warsphinx"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["necrolith-colossus", "necrosphinx", "winged-warsphinx"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["screaming-skull-catapult"],
+          min: 0,
+          max: 2,
           points: 1000,
         },
       ],
@@ -2113,6 +2200,11 @@ export const rules = {
           max: 1,
           points: 1000,
         },
+        {
+          ids: ["gargantuan-treeman-ancient"],
+          min: 0,
+          max: 1,
+        },
       ],
     },
     core: {
@@ -2156,6 +2248,12 @@ export const rules = {
           ids: ["giant-eagle"],
           min: 0,
           max: 3,
+          points: 1000,
+        },
+        {
+          ids: ["gargantuan-treeman"],
+          min: 0,
+          max: 1,
           points: 1000,
         },
       ],
@@ -2292,6 +2390,61 @@ export const rules = {
           ids: ["giant-eagle"],
           min: 0,
           max: 3,
+          points: 1000,
+        },
+      ],
+    },
+  },
+  "spirits-of-the-forest": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["treeman-ancient", "gargantuan-treeman-ancient"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["spellweaver"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["dryads"],
+          min: 1,
+        },
+        {
+          ids: ["deepwood-scouts-core", "glade-guard"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["treekin-core"],
+          min: 0,
+          max: 1,
+          requiresGeneral: true,
+          requires: ["treeman-ancient", "gargantuan-treeman-ancient"],
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [],
+    },
+    rare: {
+      maxPercent: 33,
+      units: [
+        {
+          ids: ["gargantuan-treeman"],
+          min: 0,
+          max: 1,
           points: 1000,
         },
       ],
