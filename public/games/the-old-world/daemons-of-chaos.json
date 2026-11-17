@@ -13,18 +13,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "characters"
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons {renegade}, Regeneration (5+), Singular Essence {renegade}",
-            "name_cn": "混沌甲, 恶魔, 炼狱恩宠(2), 恶魔法系, 重生（5+）, Singular Essence",
-            "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
-            "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
-            "name_fr": "Armure du Chaos, Démoniaque, Faveur Infernale (2), Domaine des Démons, Régénération (5+), Singular Essence",
-            "name_it": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
-            "name_pl": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence"
-          }
         }
       },
       "command": [
@@ -355,7 +343,377 @@
       ],
       "lores": ["battle-magic", "daemonology", "dark-magic"],
       "specialRules": {
-        "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
+        "name_en": "Chaos Armour {daemons of chaos}, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
+        "name_cn": "混沌甲, 恶魔, 炼狱恩宠(2), 恶魔法系, 践踏攻击(D3+1)",
+        "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
+        "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
+        "name_fr": "Armure du Chaos, Démoniaque, Faveur Infernale (2), Domaine des Démons, Attaques de Piétinement (D3+1)",
+        "name_it": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
+        "name_pl": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)"
+      },
+      "notes": {
+        "name_en": "0-1 Daemon Prince per 1000 points",
+        "name_cn": "每1000分可选取0-1名恶魔亲王",
+        "name_de": "0-1 Daemon Prince per 1000 points",
+        "name_es": "0-1 Daemon Prince per 1000 points",
+        "name_fr": "0-1 Prince Démon par tranche de 1000 points",
+        "name_it": "0-1 Daemon Prince per 1000 points",
+        "name_pl": "0-1 Daemon Prince per 1000 points"
+      }
+    },
+    {
+      "name_en": "Daemon Prince {daemons of chaos} {renegade}",
+      "name_cn": "恶魔亲王",
+      "name_de": "Daemon Prince",
+      "name_es": "Daemon Prince",
+      "name_fr": "Prince Démon",
+      "name_it": "Daemon Prince",
+      "name_pl": "Daemon Prince",
+      "id": "daemon-prince-renegade",
+      "points": 210,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons {renegade}, Regeneration (5+), Singular Essence {renegade}",
+            "name_cn": "混沌甲, 恶魔, 炼狱恩宠(2), 恶魔法系, 重生（5+）, Singular Essence",
+            "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
+            "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
+            "name_fr": "Armure du Chaos, Démoniaque, Faveur Infernale (2), Domaine des Démons, Régénération (5+), Singular Essence",
+            "name_it": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence",
+            "name_pl": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Regeneration (5+), Singular Essence"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Ensorcelled weapon",
+          "name_cn": "单手武器, 附魔武器",
+          "name_de": "Hand weapon, Ensorcelled weapon",
+          "name_es": "Hand weapon, Ensorcelled weapon",
+          "name_fr": "Arme de base, Arme ensorcelée",
+          "name_it": "Hand weapon, Ensorcelled weapon",
+          "name_pl": "Hand weapon, Ensorcelled weapon",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "name_it": "Light armour",
+          "name_pl": "Light armour",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_it": "Heavy armour",
+          "name_pl": "Heavy armour",
+          "points": 6
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Fly (9)",
+          "name_cn": "飞行(9)",
+          "name_de": "Fly (9)",
+          "name_es": "Fly (9)",
+          "name_fr": "Vol (9)",
+          "name_it": "Fly (9)",
+          "name_pl": "Fly (9)",
+          "points": 30
+        },
+        {
+          "name_en": "No daemonic alignment",
+          "name_cn": "混沌无分",
+          "name_de": "No daemonic alignment",
+          "name_es": "No daemonic alignment",
+          "name_fr": "Non aligné",
+          "name_it": "No daemonic alignment",
+          "name_pl": "No daemonic alignment",
+          "id": "no-daemonic-alignment",
+          "points": 0,
+          "exclusive": true,
+          "active": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Daemon of Khorne {renegade}",
+          "name_cn": "恐虐恶魔",
+          "name_de": "Daemon of Khorne",
+          "name_es": "Daemon of Khorne",
+          "name_fr": "Démon de Khorne",
+          "name_it": "Daemon of Khorne",
+          "name_pl": "Daemon of Khorne",
+          "id": "daemon-of-khorne",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Daemon of Nurgle {renegade}",
+          "name_cn": "纳垢恶魔",
+          "name_de": "Daemon of Nurgle",
+          "name_es": "Daemon of Nurgle",
+          "name_fr": "Démon de Nurgle",
+          "name_it": "Daemon of Nurgle",
+          "name_pl": "Daemon of Nurgle",
+          "id": "daemon-of-nurgle",
+          "points": 10,
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Daemon of Slaanesh {renegade}",
+          "name_cn": "色孽恶魔",
+          "name_de": "Daemon of Slaanesh",
+          "name_es": "Daemon of Slaanesh",
+          "name_fr": "Démon de Slaanesh",
+          "name_it": "Daemon of Slaanesh",
+          "name_pl": "Daemon of Slaanesh",
+          "points": 10,
+          "id": "daemon-of-slaanesh",
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "name_en": "Daemon of Tzeentch {renegade}",
+          "name_cn": "奸奇恶魔",
+          "name_de": "Daemon of Tzeentch",
+          "name_es": "Daemon of Tzeentch",
+          "name_fr": "Démon de Tzeentch",
+          "name_it": "Daemon of Tzeentch",
+          "name_pl": "Daemon of Tzeentch",
+          "points": 10,
+          "id": "daemon-of-tzeentch",
+          "exclusive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 25,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 50,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 75,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 100,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": [
+            "daemonic-gift-common",
+            "daemonic-gift-khorne",
+            "daemonic-gift-nurgle",
+            "daemonic-gift-slaanesh",
+            "daemonic-gift-tzeentch"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["battle-magic", "daemonology", "dark-magic"],
+      "specialRules": {
+        "name_en": "Chaos Armour {daemons of chaos}, Daemonic {renegade}, Infernal Favour (2), Lore of Daemons {renegade}, Stomp Attacks (D3+1)",
         "name_cn": "混沌甲, 恶魔, 炼狱恩宠(2), 恶魔法系, 践踏攻击(D3+1)",
         "name_de": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
         "name_es": "Chaos Armour, Daemonic, Infernal Favour (2), Lore of Daemons, Stomp Attacks (D3+1)",
@@ -395,7 +753,108 @@
             "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
             "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
           }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Lash of Khorne",
+          "name_cn": "单手武器, 恐虐之鞭",
+          "name_de": "Hand weapon, Lash of Khorne",
+          "name_es": "Hand weapon, Lash of Khorne",
+          "name_fr": "Arme de base, Fouet de Khorne",
+          "name_it": "Hand weapon, Lash of Khorne",
+          "name_pl": "Hand weapon, Lash of Khorne",
+          "points": 15,
+          "perModel": true,
+          "active": true
         },
+        {
+          "name_en": "Hand weapon, Bloodflail",
+          "name_cn": "单手武器, Bloodflail",
+          "name_de": "Hand weapon, Bloodflail",
+          "name_es": "Hand weapon, Bloodflail",
+          "name_fr": "Arme de base, Bloodflail",
+          "name_it": "Hand weapon, Bloodflail",
+          "name_pl": "Hand weapon, Bloodflail",
+          "points": 20,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapon, Great axe",
+          "name_cn": "单手武器, Great axe",
+          "name_de": "Hand weapon, Great axe",
+          "name_es": "Hand weapon, Great axe",
+          "name_fr": "Arme de base, Great axe",
+          "name_it": "Hand weapon, Great axe",
+          "name_pl": "Hand weapon, Great axe",
+          "points": 35,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_it": "Heavy armour",
+          "name_pl": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_cn": "恶魔, 恶魔冲锋, 恐虐恶魔, 飞行(10), 狂怒冲锋, 撞击（D3), 鲁莽, 炼狱恩宠(2), 大型目标, 魔法抗性(-2), 惊骇",
+        "name_de": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_es": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_fr": "Démoniaque, Charge Démoniaque, Démon de Khorne, Vol (10), Charge Dévastatrice, Touches d’Impact (D3), Impétueux, Faveur Infernale (2), Grande Cible, Résistance à la Magie (-2), Terreur",
+        "name_it": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_pl": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror"
+      }
+    },
+    {
+      "name_en": "Bloodthirster {renegade}",
+      "name_cn": "嗜血狂魔-恐虐大魔",
+      "name_de": "Bloodthirster",
+      "name_es": "Bloodthirster",
+      "name_fr": "Buveur de Sang",
+      "name_it": "Bloodthirster",
+      "name_pl": "Bloodthirster",
+      "id": "bloodthirster-renegade",
+      "points": 355,
+      "armyComposition": {
         "doc-renegade": {
           "category": "characters",
           "specialRules": {
@@ -432,20 +891,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Lash of Khorne",
-          "name_cn": "单手武器, 恐虐之鞭",
-          "name_de": "Hand weapon, Lash of Khorne",
-          "name_es": "Hand weapon, Lash of Khorne",
-          "name_fr": "Arme de base, Fouet de Khorne",
-          "name_it": "Hand weapon, Lash of Khorne",
-          "name_pl": "Hand weapon, Lash of Khorne",
-          "points": 15,
-          "perModel": true,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Hand weapon, Lash of Khorne",
+          "name_en": "Hand weapon, Lash of Khorne {renegade}",
           "name_cn": "单手武器, 恐虐之鞭",
           "name_de": "Hand weapon, Lash of Khorne",
           "name_es": "Hand weapon, Lash of Khorne",
@@ -454,11 +900,10 @@
           "name_pl": "Hand weapon, Lash of Khorne",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         },
         {
-          "name_en": "Hand weapon, Bloodflail",
+          "name_en": "Hand weapon, Bloodflail {renegade}",
           "name_cn": "单手武器, Bloodflail",
           "name_de": "Hand weapon, Bloodflail",
           "name_es": "Hand weapon, Bloodflail",
@@ -466,23 +911,10 @@
           "name_it": "Hand weapon, Bloodflail",
           "name_pl": "Hand weapon, Bloodflail",
           "points": 20,
-          "perModel": true,
-          "armyComposition": "daemons-of-chaos"
+          "perModel": true
         },
         {
-          "name_en": "Hand weapon, Bloodflail",
-          "name_cn": "单手武器, Bloodflail",
-          "name_de": "Hand weapon, Bloodflail",
-          "name_es": "Hand weapon, Bloodflail",
-          "name_fr": "Arme de base, Bloodflail",
-          "name_it": "Hand weapon, Bloodflail",
-          "name_pl": "Hand weapon, Bloodflail",
-          "points": 20,
-          "perModel": true,
-          "armyComposition": "doc-renegade"
-        },
-        {
-          "name_en": "Hand weapon, Great axe",
+          "name_en": "Hand weapon, Great axe {renegade}",
           "name_cn": "单手武器, Great axe",
           "name_de": "Hand weapon, Great axe",
           "name_es": "Hand weapon, Great axe",
@@ -495,19 +927,6 @@
       ],
       "armor": [
         {
-          "name_en": "Heavy armour",
-          "name_cn": "重甲",
-          "name_de": "Heavy armour",
-          "name_es": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_it": "Heavy armour",
-          "name_pl": "Heavy armour",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
           "name_en": "Full plate armour (Daemonic flesh)",
           "name_cn": "Full plate armour (Daemonic flesh)",
           "name_de": "Full plate armour (Daemonic flesh)",
@@ -517,8 +936,7 @@
           "name_pl": "Full plate armour (Daemonic flesh)",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         }
       ],
       "options": [],
@@ -539,7 +957,7 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
+        "name_en": "Daemonic {renegade}, Daemonic Charge {renegade}, Daemon of Khorne {renegade}, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
         "name_cn": "恶魔, 恶魔冲锋, 恐虐恶魔, 飞行(10), 狂怒冲锋, 撞击（D3), 鲁莽, 炼狱恩宠(2), 大型目标, 魔法抗性(-2), 惊骇",
         "name_de": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
         "name_es": "Daemonic, Daemonic Charge, Daemon of Khorne, Fly (10), Furious Charge, Impact Hits (D3), Impetuous, Infernal Favour (2), Large Target, Magic Resistance (-2), Terror",
@@ -561,18 +979,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "characters"
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemon of Khorne {renegade}, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath {renegade}",
-            "name_cn": "恶魔, 恐虐恶魔, 鲁莽, 炼狱恩宠（1）, 魔法抗性(-2), Locus of Wrath",
-            "name_de": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
-            "name_es": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
-            "name_fr": "Démoniaque, Démon de Khorne, Impétueux, Faveur Infernale (1), Résistance à la Magie (-2), Locus of Wrath",
-            "name_it": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
-            "name_pl": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath"
-          }
         }
       },
       "command": [
@@ -624,20 +1030,7 @@
           "name_it": "Light armour (calloused hides)",
           "name_pl": "Light armour (calloused hides)",
           "points": 0,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Heavy armour (Brazen scales)",
-          "name_cn": "Heavy armour (Brazen scales)",
-          "name_de": "Heavy armour (Brazen scales)",
-          "name_es": "Heavy armour (Brazen scales)",
-          "name_fr": "Heavy armour (Brazen scales)",
-          "name_it": "Heavy armour (Brazen scales)",
-          "name_pl": "Heavy armour (Brazen scales)",
-          "points": 0,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         }
       ],
       "options": [],
@@ -671,19 +1064,7 @@
           "name_fr": "Trône de Sang de Khorne",
           "name_it": "Blood Throne of Khorne",
           "name_pl": "Blood Throne of Khorne",
-          "points": 160,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Blood Throne of Khorne {renegade}",
-          "name_cn": "恐虐鲜血王座",
-          "name_de": "Blood Throne of Khorne",
-          "name_es": "Blood Throne of Khorne",
-          "name_fr": "Trône de Sang de Khorne",
-          "name_it": "Blood Throne of Khorne",
-          "name_pl": "Blood Throne of Khorne",
-          "points": 130,
-          "armyComposition": "doc-renegade"
+          "points": 160
         }
       ],
       "items": [
@@ -703,6 +1084,150 @@
       "lores": [],
       "specialRules": {
         "name_en": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_cn": "恶魔, 恐虐恶魔, 狂怒冲锋, 鲁莽, 炼狱恩宠(1), 魔法抗性(-1)",
+        "name_de": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_es": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_fr": "Démoniaque, Démon de Khorne, Charge Dévastatrice, Impétueux, Faveur Infernale (1), Résistance à la Magie (-1)",
+        "name_it": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
+        "name_pl": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)"
+      },
+      "notes": {
+        "name_en": "0-1 Daemonic Herald of Khorne per unit with the same Daemonic Alignment",
+        "name_cn": "每1000分可选取0-1名相同恶魔阵营的恐虐恶魔先锋",
+        "name_de": "0-1 Daemonic Herald of Khorne per unit with the same Daemonic Alignment",
+        "name_es": "0-1 Daemonic Herald of Khorne per unit with the same Daemonic Alignment",
+        "name_fr": "0-1 Héraut Démoniaque de Khorne par unité du même Alignement Démoniaque",
+        "name_it": "0-1 Daemonic Herald of Khorne per unit with the same Daemonic Alignment",
+        "name_pl": "0-1 Daemonic Herald of Khorne per unit with the same Daemonic Alignment"
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Khorne {renegade}",
+      "name_cn": "恐虐恶魔先锋",
+      "name_de": "Daemonic Herald of Khorne",
+      "name_es": "Daemonic Herald of Khorne",
+      "name_fr": "Héraut Démoniaque de Khorne",
+      "name_it": "Daemonic Herald of Khorne",
+      "name_pl": "Daemonic Herald of Khorne",
+      "id": "daemonic-herald-of-khorne-renegade",
+      "points": 80,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Khorne {renegade}, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath {renegade}",
+            "name_cn": "恶魔, 恐虐恶魔, 鲁莽, 炼狱恩宠（1）, 魔法抗性(-2), Locus of Wrath",
+            "name_de": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
+            "name_es": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
+            "name_fr": "Démoniaque, Démon de Khorne, Impétueux, Faveur Infernale (1), Résistance à la Magie (-2), Locus of Wrath",
+            "name_it": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath",
+            "name_pl": "Daemonic, Daemon of Khorne, Impetuous, Infernal Favour (1), Magic Resistance (-2), Locus of Wrath"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Daemonic Locus (Battle Standard Bearer) {renegade}",
+          "name_cn": "恶魔支点（战斗旗手）",
+          "name_de": "Daemonic Locus (Battle Standard Bearer)",
+          "name_es": "Daemonic Locus (Battle Standard Bearer)",
+          "name_fr": "Locus Démoniaque (Porteur de la Grande Bannière)",
+          "name_it": "Daemonic Locus (Battle Standard Bearer)",
+          "name_pl": "Daemonic Locus (Battle Standard Bearer)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hellblade",
+          "name_cn": "地狱之刃",
+          "name_de": "Hellblade",
+          "name_es": "Hellblade",
+          "name_fr": "Lame Infernale",
+          "name_it": "Hellblade",
+          "name_pl": "Hellblade",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Brazen scales)",
+          "name_cn": "Heavy armour (Brazen scales)",
+          "name_de": "Heavy armour (Brazen scales)",
+          "name_es": "Heavy armour (Brazen scales)",
+          "name_fr": "Heavy armour (Brazen scales)",
+          "name_it": "Heavy armour (Brazen scales)",
+          "name_pl": "Heavy armour (Brazen scales)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "name_it": "On foot",
+          "name_pl": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Juggernaut of Khorne {renegade}",
+          "name_cn": "恐虐钢牛",
+          "name_de": "Juggernaut of Khorne",
+          "name_es": "Juggernaut of Khorne",
+          "name_fr": "Juggernaut de Khorne",
+          "name_it": "Juggernaut of Khorne",
+          "name_pl": "Juggernaut of Khorne",
+          "points": 50
+        },
+        {
+          "name_en": "Blood Throne of Khorne {renegade}",
+          "name_cn": "恐虐鲜血王座",
+          "name_de": "Blood Throne of Khorne",
+          "name_es": "Blood Throne of Khorne",
+          "name_fr": "Trône de Sang de Khorne",
+          "name_it": "Blood Throne of Khorne",
+          "name_pl": "Blood Throne of Khorne",
+          "points": 130
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemon of Khorne {renegade}, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
         "name_cn": "恶魔, 恐虐恶魔, 狂怒冲锋, 鲁莽, 炼狱恩宠(1), 魔法抗性(-1)",
         "name_de": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
         "name_es": "Daemonic, Daemon of Khorne, Furious Charge, Impetuous, Infernal Favour (1), Magic Resistance (-1)",
@@ -896,7 +1421,7 @@
       }
     },
     {
-      "name_en": "Great Unclean One",
+      "name_en": "Great Unclean One {renegade}",
       "name_cn": "大不净者-纳垢大魔",
       "name_de": "Great Unclean One",
       "name_es": "Great Unclean One",
@@ -986,7 +1511,7 @@
           "exclusive": true
         },
         {
-          "name_en": "Plagueflail",
+          "name_en": "Plagueflail {renegade}",
           "name_cn": "瘟疫连枷",
           "name_de": "Plagueflail",
           "name_es": "Plagueflail",
@@ -1065,18 +1590,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "characters"
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemon of Nurgle {renegade}, Infernal Favour (1), Lore of Daemons {renegade}, Poisoned Attacks, Locus of Fecundity {renegade}",
-            "name_cn": "恶魔, 纳垢恶魔, 炼狱恩宠（1）, 恶魔法系, 淬毒攻击, Locus of Fecundity",
-            "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
-            "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
-            "name_fr": "Démoniaque, Démon de Nurgle, Faveur Infernale (1), Domaine des Démons, Attaques Empoisonnées, Locus of Fecundity",
-            "name_it": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
-            "name_pl": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity"
-          }
         }
       },
       "command": [
@@ -1135,6 +1648,165 @@
           "maximum": 0
         },
         {
+          "name_en": "Level 1 Wizard",
+          "name_cn": "1级法师",
+          "name_de": "Level 1 Wizard",
+          "name_es": "Level 1 Wizard",
+          "name_fr": "Sorcier de Niveau 1",
+          "name_it": "Level 1 Wizard",
+          "name_pl": "Level 1 Wizard",
+          "points": 30,
+          "exclusive": true
+        },
+        {
+          "name_en": "Level 2 Wizard",
+          "name_cn": "2级法师",
+          "name_de": "Level 2 Wizard",
+          "name_es": "Level 2 Wizard",
+          "name_fr": "Sorcier de Niveau 2",
+          "name_it": "Level 2 Wizard",
+          "name_pl": "Level 2 Wizard",
+          "points": 60,
+          "exclusive": true
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "battle-magic"],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "name_it": "On foot",
+          "name_pl": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Palanquin of Nurgle",
+          "name_cn": "纳垢步辇",
+          "name_de": "Palanquin of Nurgle",
+          "name_es": "Palanquin of Nurgle",
+          "name_fr": "Palanquin de Nurgle",
+          "name_it": "Palanquin of Nurgle",
+          "name_pl": "Palanquin of Nurgle",
+          "points": 40
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "specialRules": {
+        "name_en": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_cn": "恶魔, 纳垢恶魔, 炼狱恩宠（1）, 恶魔法系, 淬毒攻击, 重生(6+)",
+        "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_fr": "Démoniaque, Démon de Nurgle, Faveur Infernale (1), Domaine des Démons, Attaques Empoisonnées, Régénération (6+)",
+        "name_it": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
+        "name_pl": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)"
+      },
+      "notes": {
+        "name_en": "0-1 Daemonic Herald of Nurgle per unit with the same Daemonic Alignment",
+        "name_cn": "每1000分可选取0-1名相同恶魔阵营的纳垢恶魔先锋",
+        "name_de": "0-1 Daemonic Herald of Nurgle per unit with the same Daemonic Alignment",
+        "name_es": "0-1 Daemonic Herald of Nurgle per unit with the same Daemonic Alignment",
+        "name_fr": "0-1 Héraut Démoniaque de Nurgle par unité du même Alignement Démoniaque",
+        "name_it": "0-1 Daemonic Herald of Nurgle per unit with the same Daemonic Alignment",
+        "name_pl": "0-1 Daemonic Herald of Nurgle per unit with the same Daemonic Alignment"
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Nurgle {renegade}",
+      "name_cn": "纳垢恶魔先锋",
+      "name_de": "Daemonic Herald of Nurgle",
+      "name_es": "Daemonic Herald of Nurgle",
+      "name_fr": "Héraut Démoniaque de Nurgle",
+      "name_it": "Daemonic Herald of Nurgle",
+      "name_pl": "Daemonic Herald of Nurgle",
+      "id": "daemonic-herald-of-nurgle-renegade",
+      "points": 95,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Nurgle {renegade}, Infernal Favour (1), Lore of Daemons {renegade}, Poisoned Attacks, Locus of Fecundity {renegade}",
+            "name_cn": "恶魔, 纳垢恶魔, 炼狱恩宠（1）, 恶魔法系, 淬毒攻击, Locus of Fecundity",
+            "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
+            "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
+            "name_fr": "Démoniaque, Démon de Nurgle, Faveur Infernale (1), Domaine des Démons, Attaques Empoisonnées, Locus of Fecundity",
+            "name_it": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity",
+            "name_pl": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Locus of Fecundity"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Daemonic Locus (Battle Standard Bearer) {renegade}",
+          "name_cn": "恶魔支点（战斗旗手）",
+          "name_de": "Daemonic Locus (Battle Standard Bearer)",
+          "name_es": "Daemonic Locus (Battle Standard Bearer)",
+          "name_fr": "Locus Démoniaque (Porteur de la Grande Bannière)",
+          "name_it": "Daemonic Locus (Battle Standard Bearer)",
+          "name_pl": "Daemonic Locus (Battle Standard Bearer)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plaguesword {renegade}",
+          "name_cn": "瘟疫之剑",
+          "name_de": "Plaguesword",
+          "name_es": "Plaguesword",
+          "name_fr": "Épée pestilentielle",
+          "name_it": "Plaguesword",
+          "name_pl": "Plaguesword",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Death's heads",
+          "name_cn": "死者之颅",
+          "name_de": "Death's heads",
+          "name_es": "Death's heads",
+          "name_fr": "Têtes de morts",
+          "name_it": "Death's heads",
+          "name_pl": "Death's heads",
+          "points": 10,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
           "name_en": "Wizard",
           "name_cn": "法师",
           "name_de": "Wizard",
@@ -1143,7 +1815,6 @@
           "points": 0,
           "active": true,
           "alwaysActive": true,
-          "armyComposition": "doc-renegade",
           "options": [
             {
               "name_en": "Level 1 Wizard",
@@ -1169,30 +1840,6 @@
               "exclusive": true
             }
           ]
-        },
-        {
-          "name_en": "Level 1 Wizard",
-          "name_cn": "1级法师",
-          "name_de": "Level 1 Wizard",
-          "name_es": "Level 1 Wizard",
-          "name_fr": "Sorcier de Niveau 1",
-          "name_it": "Level 1 Wizard",
-          "name_pl": "Level 1 Wizard",
-          "points": 30,
-          "exclusive": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Level 2 Wizard",
-          "name_cn": "2级法师",
-          "name_de": "Level 2 Wizard",
-          "name_es": "Level 2 Wizard",
-          "name_fr": "Sorcier de Niveau 2",
-          "name_it": "Level 2 Wizard",
-          "name_pl": "Level 2 Wizard",
-          "points": 60,
-          "exclusive": true,
-          "armyComposition": "daemons-of-chaos"
         }
       ],
       "lores": ["daemonology", "dark-magic", "battle-magic"],
@@ -1234,7 +1881,7 @@
         }
       ],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons {renegade}, Poisoned Attacks, Regeneration (6+)",
+        "name_en": "Daemonic {renegade}, Daemon of Nurgle {renegade}, Infernal Favour (1), Lore of Daemons {renegade}, Poisoned Attacks, Regeneration (6+)",
         "name_cn": "恶魔, 纳垢恶魔, 炼狱恩宠（1）, 恶魔法系, 淬毒攻击, 重生(6+)",
         "name_de": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
         "name_es": "Daemonic, Daemon of Nurgle, Infernal Favour (1), Lore of Daemons, Poisoned Attacks, Regeneration (6+)",
@@ -1274,27 +1921,6 @@
             "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)",
             "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch)"
           }
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Evasive, Infernal Favour (2), Large Target, Lore of Daemons {renegade}, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
-            "name_cn": "恶魔, 色孽恶魔, 闪避, 炼狱恩宠(2), 大型目标, 恶魔法系, 预备移动, 践踏攻击(D3+1), 快速行进, 践踏攻击(D6+1), 紧密阵型",
-            "name_de": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
-            "name_es": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
-            "name_fr": "Démoniaque, Démon de Slaanesh, Évasif, Faveur Infernale (2), Grande Cible, Domaine des Démons, Mouvement de Réserve, Attaques de Piétinement (D3+1), Rapide, Terreur, Ordre Serré",
-            "name_it": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
-            "name_pl": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order"
-          },
-          "notes": {
-            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
-            "name_cn": "每1000分可选取0-1名相同恶魔阵营的大魔（恐虐, 纳垢, 色孽或奸奇所属）",
-            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
-            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
-            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
-            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
-            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment"
-          }
         }
       },
       "command": [
@@ -1311,19 +1937,6 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Impaling claws",
-          "name_cn": "单手武器, 穿刺利爪",
-          "name_de": "Hand weapon, Impaling claws",
-          "name_es": "Hand weapon, Impaling claws",
-          "name_fr": "Arme de base, Pinces empaleuses",
-          "name_it": "Hand weapon, Impaling claws",
-          "name_pl": "Hand weapon, Impaling claws",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "armyComposition": "doc-renegade"
-        },
-        {
           "name_en": "Impaling claws",
           "name_cn": "穿刺利爪",
           "name_de": "Impaling claws",
@@ -1333,8 +1946,7 @@
           "name_pl": "Impaling claws",
           "points": 0,
           "perModel": true,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
+          "active": true
         }
       ],
       "armor": [],
@@ -1424,6 +2036,151 @@
       }
     },
     {
+      "name_en": "Keeper of Secrets {renegade}",
+      "name_cn": "守秘者-色孽大魔",
+      "name_de": "Keeper of Secrets",
+      "name_es": "Keeper of Secrets",
+      "name_fr": "Gardien des Secrets",
+      "name_it": "Keeper of Secrets",
+      "name_pl": "Keeper of Secrets",
+      "id": "keeper-of-secrets-renegade",
+      "points": 330,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Evasive, Infernal Favour (2), Large Target, Lore of Daemons {renegade}, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
+            "name_cn": "恶魔, 色孽恶魔, 闪避, 炼狱恩宠(2), 大型目标, 恶魔法系, 预备移动, 践踏攻击(D3+1), 快速行进, 践踏攻击(D6+1), 紧密阵型",
+            "name_de": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
+            "name_es": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
+            "name_fr": "Démoniaque, Démon de Slaanesh, Évasif, Faveur Infernale (2), Grande Cible, Domaine des Démons, Mouvement de Réserve, Attaques de Piétinement (D3+1), Rapide, Terreur, Ordre Serré",
+            "name_it": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order",
+            "name_pl": "Daemonic, Daemon of Slaanesh, Evasive, Infernal Favour (2), Large Target, Lore of Daemons, Reserve Move, Stomp Attacks (D3+1), Swiftstride, Terror, Close Order"
+          },
+          "notes": {
+            "name_en": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
+            "name_cn": "每1000分可选取0-1名相同恶魔阵营的大魔（恐虐, 纳垢, 色孽或奸奇所属）",
+            "name_de": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
+            "name_es": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
+            "name_fr": "0-1 Démon Majeur (de Khorne, Nurgle, Slaanesh ou Tzeentch) par tranche de 1000 points et par unité du même Alignement Démoniaque",
+            "name_it": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment",
+            "name_pl": "0-1 Greater Daemon (of Khorne, Nurgle, Slaanesh or Tzeentch) per 1000 points and per unit with the same Daemonic Alignment"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Impaling claws",
+          "name_cn": "单手武器, 穿刺利爪",
+          "name_de": "Hand weapon, Impaling claws",
+          "name_es": "Hand weapon, Impaling claws",
+          "name_fr": "Arme de base, Pinces empaleuses",
+          "name_it": "Hand weapon, Impaling claws",
+          "name_pl": "Hand weapon, Impaling claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 60,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_cn": "4级法师",
+              "name_de": "Level 4 Wizard",
+              "name_es": "Level 4 Wizard",
+              "name_fr": "Sorcier de Niveau 4",
+              "name_it": "Level 4 Wizard",
+              "name_pl": "Level 4 Wizard",
+              "points": 90,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": ["dark-magic", "daemonology", "illusion"],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Infernal Favour (2), Large Target, Lore of Daemons {renegade}, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_cn": "恶魔, 色孽恶魔, 炼狱恩宠(2), 大型目标, 恶魔法系, 践踏攻击(D3), 快速行进, 惊骇",
+        "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (2), Grande Cible, Domaine des Démons, Attaques de Piétinement (D3), Rapide, Terreur",
+        "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror",
+        "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (2), Large Target, Lore of Daemons, Stomp Attacks (D3), Swiftstride, Terror"
+      }
+    },
+    {
       "name_en": "Daemonic Herald of Slaanesh",
       "name_cn": "色孽恶魔先锋",
       "name_de": "Daemonic Herald of Slaanesh",
@@ -1436,18 +2193,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "characters"
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Infernal Favour (1), Lore of Daemons {renegade}, Locus of Swiftness {renegade}",
-            "name_cn": "恶魔, 色孽恶魔, 炼狱恩宠（1）, 恶魔法系, Locus of Swiftness",
-            "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
-            "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
-            "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (1), Domaine des Démons, Locus of Swiftness",
-            "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
-            "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness"
-          }
         }
       },
       "command": [
@@ -1493,42 +2238,6 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Wizard",
-          "name_cn": "法师",
-          "name_de": "Wizard",
-          "name_fr": "Sorcier",
-          "name_es": "Hechicero",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true,
-          "armyComposition": "doc-renegade",
-          "options": [
-            {
-              "name_en": "Level 1 Wizard",
-              "name_cn": "1级法师",
-              "name_de": "Level 1 Wizard",
-              "name_es": "Level 1 Wizard",
-              "name_fr": "Sorcier de Niveau 1",
-              "name_it": "Level 1 Wizard",
-              "name_pl": "Level 1 Wizard",
-              "points": 0,
-              "exclusive": true,
-              "active": true
-            },
-            {
-              "name_en": "Level 2 Wizard",
-              "name_cn": "2级法师",
-              "name_de": "Level 2 Wizard",
-              "name_es": "Level 2 Wizard",
-              "name_fr": "Sorcier de Niveau 2",
-              "name_it": "Level 2 Wizard",
-              "name_pl": "Level 2 Wizard",
-              "points": 30,
-              "exclusive": true
-            }
-          ]
-        },
-        {
           "name_en": "Level 1 Wizard",
           "name_cn": "1级法师",
           "name_de": "Level 1 Wizard",
@@ -1537,8 +2246,7 @@
           "name_it": "Level 1 Wizard",
           "name_pl": "Level 1 Wizard",
           "points": 30,
-          "exclusive": true,
-          "armyComposition": "daemons-of-chaos"
+          "exclusive": true
         },
         {
           "name_en": "Level 2 Wizard",
@@ -1549,8 +2257,7 @@
           "name_it": "Level 2 Wizard",
           "name_pl": "Level 2 Wizard",
           "points": 60,
-          "exclusive": true,
-          "armyComposition": "daemons-of-chaos"
+          "exclusive": true
         }
       ],
       "lores": ["daemonology", "dark-magic", "illusion"],
@@ -1584,19 +2291,7 @@
           "name_fr": "Char Traqueur de Slaanesh",
           "name_it": "Seeker Chariot",
           "name_pl": "Seeker Chariot",
-          "points": 100,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Seeker Chariot of Slaanesh",
-          "name_cn": "搜查战车",
-          "name_de": "Seeker Chariot of Slaanesh",
-          "name_es": "Seeker Chariot",
-          "name_fr": "Char Traqueur de Slaanesh",
-          "name_it": "Seeker Chariot",
-          "name_pl": "Seeker Chariot",
-          "points": 85,
-          "armyComposition": "doc-renegade"
+          "points": 100
         },
         {
           "name_en": "Exalted Seeker Chariot of Slaanesh",
@@ -1606,19 +2301,7 @@
           "name_fr": "Char Traqueur Exalté",
           "name_it": "Exalted Seeker Chariot",
           "name_pl": "Exalted Seeker Chariot",
-          "armyComposition": "daemons-of-chaos",
           "points": 185
-        },
-        {
-          "name_en": "Exalted Seeker Chariot of Slaanesh",
-          "name_cn": "华贵搜查战车",
-          "name_de": "Exalted Seeker Chariot of Slaanesh",
-          "name_es": "Exalted Seeker Chariot",
-          "name_fr": "Char Traqueur Exalté",
-          "name_it": "Exalted Seeker Chariot",
-          "name_pl": "Exalted Seeker Chariot",
-          "armyComposition": "doc-renegade",
-          "points": 140
         }
       ],
       "items": [
@@ -1637,6 +2320,185 @@
       ],
       "specialRules": {
         "name_en": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_cn": "恶魔, 色孽恶魔, 炼狱恩宠(1), 恶魔法系",
+        "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (1), Domaine des Démons",
+        "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
+        "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons"
+      },
+      "notes": {
+        "name_en": "0-1 Daemonic Herald of Slaanesh per unit with the same Daemonic Alignment",
+        "name_cn": "每1000分可选取0-1名相同恶魔阵营的色孽恶魔先锋",
+        "name_de": "0-1 Daemonic Herald of Slaanesh per unit with the same Daemonic Alignment",
+        "name_es": "0-1 Daemonic Herald of Slaanesh per unit with the same Daemonic Alignment",
+        "name_fr": "0-1 Héraut Démoniaque de Slaanesh par unité du même Alignement Démoniaque",
+        "name_it": "0-1 Daemonic Herald of Slaanesh per unit with the same Daemonic Alignment",
+        "name_pl": "0-1 Daemonic Herald of Slaanesh per unit with the same Daemonic Alignment"
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Slaanesh {renegade}",
+      "name_cn": "色孽恶魔先锋",
+      "name_de": "Daemonic Herald of Slaanesh",
+      "name_es": "Daemonic Herald of Slaanesh",
+      "name_fr": "Héraut Démoniaque de Slaanesh",
+      "name_it": "Daemonic Herald of Slaanesh",
+      "name_pl": "Daemonic Herald of Slaanesh",
+      "id": "daemonic-herald-of-slaanesh-renegade",
+      "points": 85,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Infernal Favour (1), Lore of Daemons {renegade}, Locus of Swiftness {renegade}",
+            "name_cn": "恶魔, 色孽恶魔, 炼狱恩宠（1）, 恶魔法系, Locus of Swiftness",
+            "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
+            "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
+            "name_fr": "Démoniaque, Démon de Slaanesh, Faveur Infernale (1), Domaine des Démons, Locus of Swiftness",
+            "name_it": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness",
+            "name_pl": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons, Locus of Swiftness"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Daemonic Locus (Battle Standard Bearer) {renegade}",
+          "name_cn": "恶魔支点（战斗旗手）",
+          "name_de": "Daemonic Locus (Battle Standard Bearer)",
+          "name_es": "Daemonic Locus (Battle Standard Bearer)",
+          "name_fr": "Locus Démoniaque (Porteur de la Grande Bannière)",
+          "name_it": "Daemonic Locus (Battle Standard Bearer)",
+          "name_pl": "Daemonic Locus (Battle Standard Bearer)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-slaanesh"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Piercing claws",
+          "name_cn": "穿刺之爪",
+          "name_de": "Piercing claws",
+          "name_es": "Piercing claws",
+          "name_fr": "Pinces perforantes",
+          "name_it": "Piercing claws",
+          "name_pl": "Piercing claws",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "lores": ["daemonology", "dark-magic", "illusion"],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "name_it": "On foot",
+          "name_pl": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Steed of Slaanesh",
+          "name_cn": "色孽蹄兽",
+          "name_de": "Steed of Slaanesh",
+          "name_es": "Steed of Slaanesh",
+          "name_fr": "Monture de Slaanesh",
+          "name_it": "Steed of Slaanesh",
+          "name_pl": "Steed of Slaanesh",
+          "points": 16
+        },
+        {
+          "name_en": "Seeker Chariot of Slaanesh {renegade}",
+          "name_cn": "搜查战车",
+          "name_de": "Seeker Chariot of Slaanesh",
+          "name_es": "Seeker Chariot",
+          "name_fr": "Char Traqueur de Slaanesh",
+          "name_it": "Seeker Chariot",
+          "name_pl": "Seeker Chariot",
+          "points": 85
+        },
+        {
+          "name_en": "Exalted Seeker Chariot of Slaanesh {renegade}",
+          "name_cn": "华贵搜查战车",
+          "name_de": "Exalted Seeker Chariot of Slaanesh",
+          "name_es": "Exalted Seeker Chariot",
+          "name_fr": "Char Traqueur Exalté",
+          "name_it": "Exalted Seeker Chariot",
+          "name_pl": "Exalted Seeker Chariot",
+          "points": 140
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-slaanesh"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemon of Slaanesh {renegade}, Infernal Favour (1), Lore of Daemons {renegade}",
         "name_cn": "恶魔, 色孽恶魔, 炼狱恩宠(1), 恶魔法系",
         "name_de": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
         "name_es": "Daemonic, Daemon of Slaanesh, Infernal Favour (1), Lore of Daemons",
@@ -1799,7 +2661,7 @@
       }
     },
     {
-      "name_en": "Lord of Change",
+      "name_en": "Lord of Change {renegade}",
       "name_cn": "万变魔君–奸奇大魔",
       "name_de": "Lord of Change",
       "name_es": "Lord of Change",
@@ -1944,18 +2806,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "characters"
-        },
-        "doc-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Infernal Favour (1), Locus of Change {renegade}, Lore of Daemons {renegade}",
-            "name_cn": "恶魔, 奸奇恶魔, 炼狱恩宠（1）, Locus of Change, 恶魔法系",
-            "name_de": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
-            "name_es": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
-            "name_fr": "Démoniaque, Démon de Tzeentch, Faveur Infernale (1), Locus of Change, Domaine des Démons",
-            "name_it": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
-            "name_pl": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons"
-          }
         }
       },
       "command": [
@@ -2067,19 +2917,7 @@
           "name_fr": "Disque de Tzeentch",
           "name_it": "Disc of Tzeentch",
           "name_pl": "Disc of Tzeentch",
-          "points": 20,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Disc of Tzeentch",
-          "name_cn": "奸奇飞盘",
-          "name_de": "Disc of Tzeentch",
-          "name_es": "Disc of Tzeentch",
-          "name_fr": "Disque de Tzeentch",
-          "name_it": "Disc of Tzeentch",
-          "name_pl": "Disc of Tzeentch",
-          "points": 35,
-          "armyComposition": "doc-renegade"
+          "points": 20
         },
         {
           "name_en": "Chariot of Tzeentch",
@@ -2100,7 +2938,6 @@
           "name_it": "Burning Chariot of Tzeentch",
           "name_pl": "Burning Chariot of Tzeentch",
           "points": 190,
-          "armyComposition": "daemons-of-chaos",
           "options": [
             {
               "name_en": "Level 1 Wizard",
@@ -2182,7 +3019,214 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons {renegade}",
+        "name_en": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_cn": "恶魔, 奸奇恶魔, 炼狱恩宠（1）, 恶魔法系",
+        "name_de": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_es": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_fr": "Démoniaque, Démon de Tzeentch, Faveur Infernale (1), Domaine des Démons",
+        "name_it": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
+        "name_pl": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons"
+      },
+      "notes": {
+        "name_en": "0-1 Daemonic Herald of Tzeentch per unit with the same Daemonic Alignment",
+        "name_cn": "每1000分可选取0-1名相同恶魔阵营的奸奇恶魔先锋",
+        "name_de": "0-1 Daemonic Herald of Tzeentch per unit with the same Daemonic Alignment",
+        "name_es": "0-1 Daemonic Herald of Tzeentch per unit with the same Daemonic Alignment",
+        "name_fr": "0-1 Héraut Démoniaque de Tzeentch par unité du même Alignement Démoniaque",
+        "name_it": "0-1 Daemonic Herald of Tzeentch per unit with the same Daemonic Alignment",
+        "name_pl": "0-1 Daemonic Herald of Tzeentch per unit with the same Daemonic Alignment"
+      }
+    },
+    {
+      "name_en": "Daemonic Herald of Tzeentch {renegade}",
+      "name_cn": "奸奇恶魔先锋",
+      "name_de": "Daemonic Herald of Tzeentch",
+      "name_es": "Daemonic Herald of Tzeentch",
+      "name_fr": "Héraut Démoniaque de Tzeentch",
+      "name_it": "Daemonic Herald of Tzeentch",
+      "name_pl": "Daemonic Herald of Tzeentch",
+      "id": "daemonic-herald-of-tzeentch-renegade",
+      "points": 90,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "characters",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Infernal Favour (1), Locus of Change {renegade}, Lore of Daemons {renegade}",
+            "name_cn": "恶魔, 奸奇恶魔, 炼狱恩宠（1）, Locus of Change, 恶魔法系",
+            "name_de": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
+            "name_es": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
+            "name_fr": "Démoniaque, Démon de Tzeentch, Faveur Infernale (1), Locus of Change, Domaine des Démons",
+            "name_it": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons",
+            "name_pl": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Locus of Change, Lore of Daemons"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "name_it": "General",
+          "name_pl": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Daemonic Locus (Battle Standard Bearer) {renegade}",
+          "name_cn": "恶魔支点（战斗旗手）",
+          "name_de": "Daemonic Locus (Battle Standard Bearer)",
+          "name_es": "Daemonic Locus (Battle Standard Bearer)",
+          "name_fr": "Locus Démoniaque (Porteur de la Grande Bannière)",
+          "name_it": "Daemonic Locus (Battle Standard Bearer)",
+          "name_pl": "Daemonic Locus (Battle Standard Bearer)",
+          "points": 25,
+          "magic": {
+            "types": ["daemonic-icon-common", "daemonic-icon-tzeentch"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Flames of Tzeentch",
+          "name_cn": "单手武器, 奸奇烈焰",
+          "name_de": "Hand weapon, Flames of Tzeentch",
+          "name_es": "Hand weapon, Flames of Tzeentch",
+          "name_fr": "Arme de base, Flammes de Tzeentch",
+          "name_it": "Hand weapon, Flames of Tzeentch",
+          "name_pl": "Hand weapon, Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_es": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_it": "Level 1 Wizard",
+              "name_pl": "Level 1 Wizard",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_es": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_it": "Level 2 Wizard",
+              "name_pl": "Level 2 Wizard",
+              "points": 30,
+              "exclusive": true
+            },
+            {
+              "name_en": "Level 3 Wizard",
+              "name_cn": "3级法师",
+              "name_de": "Level 3 Wizard",
+              "name_es": "Level 3 Wizard",
+              "name_fr": "Sorcier de Niveau 3",
+              "name_it": "Level 3 Wizard",
+              "name_pl": "Level 3 Wizard",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "name_it": "On foot",
+          "name_pl": "On foot",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Disc of Tzeentch {renegade}",
+          "name_cn": "奸奇飞盘",
+          "name_de": "Disc of Tzeentch",
+          "name_es": "Disc of Tzeentch",
+          "name_fr": "Disque de Tzeentch",
+          "name_it": "Disc of Tzeentch",
+          "name_pl": "Disc of Tzeentch",
+          "points": 35
+        },
+        {
+          "name_en": "Chariot of Tzeentch",
+          "name_cn": "奸奇战车",
+          "name_de": "Chariot of Tzeentch",
+          "name_es": "Chariot of Tzeentch",
+          "name_fr": "Char de Tzeentch",
+          "name_it": "Chariot of Tzeentch",
+          "name_pl": "Chariot of Tzeentch",
+          "points": 90
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+          "selected": [],
+          "maxPoints": 50
+        },
+        {
+          "name_en": "Daemonic Gifts",
+          "name_cn": "恶魔赠礼",
+          "name_de": "Daemonic Gifts",
+          "name_es": "Daemonic Gifts",
+          "name_fr": "Dons Démoniaques",
+          "name_it": "Daemonic Gifts",
+          "name_pl": "Daemonic Gifts",
+          "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+          "selected": [],
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "(Burning Chariot of Tzeentch only)",
+            "name_cn": "(仅限奸奇燃烧战车)",
+            "name_fr": "(Char Incendiaire de Tzeentch uniquement)",
+            "name_de": "(Burning Chariot of Tzeentch only)",
+            "name_es": "(Burning Chariot of Tzeentch only)",
+            "name_it": "(Burning Chariot of Tzeentch only)",
+            "name_pl": "(Burning Chariot of Tzeentch only)"
+          }
+        }
+      ],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "battle-magic",
+        "illusion"
+      ],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Infernal Favour (1), Lore of Daemons {renegade}",
         "name_cn": "恶魔, 奸奇恶魔, 炼狱恩宠（1）, 恶魔法系",
         "name_de": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
         "name_es": "Daemonic, Daemon of Tzeentch, Infernal Favour (1), Lore of Daemons",
@@ -2237,8 +3281,7 @@
           "name_fr": "Tentatrice (champion)",
           "name_it": "Alluress (champion)",
           "name_pl": "Alluress (champion)",
-          "points": 6,
-          "armyComposition": "daemons-of-chaos"
+          "points": 6
         },
         {
           "name_en": "Standard bearer",
@@ -2294,7 +3337,7 @@
       }
     },
     {
-      "name_en": "Daemonettes of Slaanesh",
+      "name_en": "Daemonettes of Slaanesh {renegade}",
       "name_cn": "色孽女妖",
       "name_de": "Daemonettes of Slaanesh",
       "name_es": "Daemonettes of Slaanesh",
@@ -2369,7 +3412,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Open Order, Daemonic {renegade}, Daemons of Slaanesh {renegade}",
+        "name_en": "Open Order, Daemonic {renegade}, Daemon of Slaanesh {renegade}",
         "name_cn": "开放阵型, 恶魔, 色孽恶魔",
         "name_de": "Open Order, Daemonic, Daemons of Slaanesh",
         "name_es": "Open Order, Daemonic, Daemons of Slaanesh",
@@ -2451,7 +3494,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_cn": "碎甲攻击 (1, 仅色孽蹄兽), 反制冲锋, 恶魔, 色孽恶魔, 快速骑兵, 开放阵型, 淬毒攻击(仅色孽蹄兽), 散兵, 快速行进",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, Fast Cavalry, Open Order, Poisoned Attacks (Steed of Slaanesh only), Skirmishers, Swiftstride",
@@ -2470,7 +3513,7 @@
       }
     },
     {
-      "name_en": "Seekers of Slaanesh",
+      "name_en": "Seekers of Slaanesh {renegade}",
       "name_cn": "色孽搜查骑兵",
       "name_de": "Seekers of Slaanesh",
       "name_es": "Seekers of Slaanesh",
@@ -2656,7 +3699,7 @@
       }
     },
     {
-      "name_en": "Plaguebearers of Nurgle",
+      "name_en": "Plaguebearers of Nurgle {renegade}",
       "name_cn": "纳垢携疫者",
       "name_de": "Plaguebearers of Nurgle",
       "name_es": "Plaguebearers of Nurgle",
@@ -2714,7 +3757,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Plagueswords",
+          "name_en": "Plagueswords {renegade}",
           "name_cn": "瘟疫之剑",
           "name_de": "Plagueswords",
           "name_es": "Plagueswords",
@@ -2732,7 +3775,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Nurgle {renegade}, Poisoned Attacks, Regeneration (6+)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Nurgle {renegade}, Poisoned Attacks, Regeneration (6+)",
         "name_cn": "紧密阵型, 恶魔, 纳垢恶魔, 淬毒攻击, 重生(6+)",
         "name_de": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_es": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
@@ -2756,11 +3799,51 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "core"
-        },
+        }
+      },
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵",
+        "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_fr": "Démoniaque, Démons de Nurgle, Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (6+), Tirailleurs",
+        "name_it": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_pl": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "If your General is a Daemon of Nurgle",
+        "name_cn": "如果您的主将是一名纳垢恶魔",
+        "name_de": "If your General is a Daemon of Nurgle",
+        "name_es": "If your General is a Daemon of Nurgle",
+        "name_fr": "Si votre Général est un Démon de Nurgle",
+        "name_it": "If your General is a Daemon of Nurgle",
+        "name_pl": "If your General is a Daemon of Nurgle"
+      }
+    },
+    {
+      "name_en": "Nurglings {renegade}",
+      "name_cn": "纳垢灵",
+      "name_de": "Nurglings",
+      "name_es": "Nurglings",
+      "name_fr": "Nurglings",
+      "name_it": "Nurglings",
+      "name_pl": "Nurglings",
+      "id": "nurglings-core-renegade",
+      "points": 45,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": {
         "doc-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemons of Nurgle {renegade}, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_en": "Daemonic {renegade}, Daemon of Nurgle {renegade}, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
             "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵, 侦察",
             "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
             "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
@@ -2778,7 +3861,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_en": "Daemonic {renegade}, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
         "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵",
         "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
         "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
@@ -2899,7 +3982,7 @@
       }
     },
     {
-      "name_en": "Bloodletters of Khorne",
+      "name_en": "Bloodletters of Khorne {renegade}",
       "name_cn": "恐虐放血鬼",
       "name_de": "Bloodletters of Khorne",
       "name_es": "Bloodletters of Khorne",
@@ -2986,7 +4069,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne {renegade}, Impetuous, Magic Resistance (-1)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Khorne {renegade}, Impetuous, Magic Resistance (-1)",
         "name_cn": "紧密阵型, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-1)",
         "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
@@ -3105,7 +4188,7 @@
       }
     },
     {
-      "name_en": "Flesh Hounds of Khorne",
+      "name_en": "Flesh Hounds of Khorne {renegade}",
       "name_cn": "恐虐血肉猎犬",
       "name_de": "Flesh Hounds of Khorne",
       "name_es": "Flesh Hounds of Khorne",
@@ -3120,7 +4203,7 @@
         "doc-renegade": {
           "category": "core",
           "specialRules": {
-            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne {renegade}, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Khorne {renegade}, Impetuous, Magic Resistance (-2), Swiftstride",
             "name_cn": "碎甲攻击(1), 紧密阵型, 反制冲锋, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-2), 快速行进",
             "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
             "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
@@ -3237,18 +4320,6 @@
             "name_it": "If your General is a Daemon of Tzeentch",
             "name_pl": "If your General is a Daemon of Tzeentch"
           }
-        },
-        "doc-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Open Order, Daemonic {renegade}, Daemons of Tzeentch {renegade}, Scintillating Sorcery {renegade}",
-            "name_cn": "开放阵型, 恶魔, 奸奇恶魔, 闪烁魔法",
-            "name_de": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
-            "name_es": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
-            "name_fr": "Ordre Dispersé, Démoniaque, Démons de Tzeentch, Sorcellerie Scintillante",
-            "name_it": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
-            "name_pl": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery"
-          }
         }
       },
       "command": [
@@ -3260,23 +4331,7 @@
           "name_fr": "Horreur Iridescente (champion)",
           "name_it": "Iridescent Horror (champion)",
           "name_pl": "Iridescent Horror (champion)",
-          "points": 6,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Iridescent Horror (champion)",
-          "name_cn": "闪烁惧妖（冠军）",
-          "name_de": "Iridescent Horror (champion)",
-          "name_es": "Iridescent Horror (champion)",
-          "name_fr": "Horreur Iridescente (champion)",
-          "name_it": "Iridescent Horror (champion)",
-          "name_pl": "Iridescent Horror (champion)",
-          "points": 6,
-          "armyComposition": "doc-renegade",
-          "magic": {
-            "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
-            "maxPoints": 25
-          }
+          "points": 6
         },
         {
           "name_en": "Standard bearer",
@@ -3290,23 +4345,7 @@
           "magic": {
             "types": ["daemonic-icon-tzeentch"],
             "maxPoints": 50
-          },
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer",
-          "name_pl": "Standard bearer",
-          "points": 6,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-tzeentch"],
-            "maxPoints": 50
-          },
-          "armyComposition": "doc-renegade"
+          }
         },
         {
           "name_en": "Musician",
@@ -3349,6 +4388,101 @@
       }
     },
     {
+      "name_en": "Pink Horrors of Tzeentch {renegade}",
+      "name_cn": "奸奇粉色惧妖",
+      "name_de": "Pink Horrors of Tzeentch",
+      "name_es": "Pink Horrors of Tzeentch",
+      "name_fr": "Horreurs Roses de Tzeentch",
+      "name_it": "Pink Horrors of Tzeentch",
+      "name_pl": "Pink Horrors of Tzeentch",
+      "id": "pink-horrors-of-tzeentch-core-renegade",
+      "points": 12,
+      "minimum": 9,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Open Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Scintillating Sorcery {renegade}",
+            "name_cn": "开放阵型, 恶魔, 奸奇恶魔, 闪烁魔法",
+            "name_de": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+            "name_es": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+            "name_fr": "Ordre Dispersé, Démoniaque, Démons de Tzeentch, Sorcellerie Scintillante",
+            "name_it": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+            "name_pl": "Open Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Iridescent Horror (champion)",
+          "name_cn": "闪烁惧妖（冠军）",
+          "name_de": "Iridescent Horror (champion)",
+          "name_es": "Iridescent Horror (champion)",
+          "name_fr": "Horreur Iridescente (champion)",
+          "name_it": "Iridescent Horror (champion)",
+          "name_pl": "Iridescent Horror (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-tzeentch"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 6,
+          "magic": {
+            "types": ["daemonic-icon-tzeentch"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Flames of Tzeentch",
+          "name_cn": "单手武器, 奸奇烈焰",
+          "name_de": "Hand weapon, Flames of Tzeentch",
+          "name_es": "Hand weapon, Flames of Tzeentch",
+          "name_fr": "Arme de base, Flammes de Tzeentch",
+          "name_it": "Hand weapon, Flames of Tzeentch",
+          "name_pl": "Hand weapon, Flames of Tzeentch",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Daemonic {renegade}, Daemons of Tzeentch, Scintillating Sorcery {renegade}",
+        "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 闪烁魔法",
+        "name_de": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_es": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_fr": "Ordre Serré, Démoniaque, Démons de Tzeentch, Sorcellerie Scintillante",
+        "name_it": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_pl": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery"
+      }
+    },
+    {
       "name_en": "Blue Horrors of Tzeentch",
       "name_cn": "奸奇蓝色惧妖",
       "name_de": "Blue Horrors of Tzeentch",
@@ -3363,18 +4497,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "core"
-        },
-        "doc-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemons of Tzeentch {renegade}, Move Through Cover, Open Order, Skirmishers",
-            "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型, 散兵",
-            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
-            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
-          }
         }
       },
       "command": [
@@ -3427,15 +4549,95 @@
       }
     },
     {
-      "name_en": "Brimstone Horrors of Tzeentch",
+      "name_en": "Blue Horrors of Tzeentch {renegade}",
+      "name_cn": "奸奇蓝色惧妖",
+      "name_de": "Blue Horrors of Tzeentch",
+      "name_es": "Blue Horrors of Tzeentch",
+      "name_fr": "Horreurs Bleues de Tzeentch",
+      "name_it": "Blue Horrors of Tzeentch",
+      "name_pl": "Blue Horrors of Tzeentch",
+      "id": "blue-horrors-of-tzeentch-core-renegade",
+      "points": 9,
+      "minimum": 9,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "core",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Move Through Cover, Open Order, Skirmishers",
+            "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型, 散兵",
+            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
+            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Ectoplasmic Horror (champion)",
+          "name_cn": "灵质惧妖（冠军）",
+          "name_de": "Ectoplasmic Horror (champion)",
+          "name_es": "Ectoplasmic Horror (champion)",
+          "name_fr": "Horreur Ectoplasmique (champion)",
+          "name_it": "Ectoplasmic Horror (champion)",
+          "name_pl": "Ectoplasmic Horror (champion)",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Flames of Tzeentch",
+          "name_cn": "单手武器, 奸奇烈焰",
+          "name_de": "Hand weapons, Flames of Tzeentch",
+          "name_es": "Hand weapons, Flames of Tzeentch",
+          "name_fr": "Armes de base, Flammes de Tzeentch",
+          "name_it": "Hand weapons, Flames of Tzeentch",
+          "name_pl": "Hand weapons, Flames of Tzeentch",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型",
+        "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé",
+        "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order"
+      },
+      "notes": {
+        "name_en": "If your General is a Daemon of Tzeentch",
+        "name_cn": "如果您的主将是一名奸奇恶魔",
+        "name_de": "If your General is a Daemon of Tzeentch",
+        "name_es": "If your General is a Daemon of Tzeentch",
+        "name_fr": "Si votre Général est un Démon de Tzeentch",
+        "name_it": "If your General is a Daemon of Tzeentch",
+        "name_pl": "If your General is a Daemon of Tzeentch"
+      }
+    },
+    {
+      "name_en": "Brimstone Horrors of Tzeentch {renegade}",
       "name_cn": "奸奇硫磺惧妖",
       "name_de": "Brimstone Horrors of Tzeentch",
       "name_es": "Brimstone Horrors of Tzeentch",
       "name_fr": "Horreurs Sulfureuses de Tzeentch",
       "name_it": "Brimstone Horrors of Tzeentch",
       "name_pl": "Brimstone Horrors of Tzeentch",
-      "id": "brimstone-horrors-of-tzeentch",
+      "id": "brimstone-horrors-of-tzeentch-core-renegade",
       "points": 38,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "core"
+        }
+      },
       "minimum": 2,
       "maximum": 0,
       "command": [],
@@ -3459,7 +4661,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Flaming Attacks, Loner, Skirmishers",
         "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 独行, 散兵",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
         "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
@@ -3757,7 +4959,7 @@
       }
     },
     {
-      "name_en": "Chaos Furies",
+      "name_en": "Chaos Furies {renegade}",
       "name_cn": "混沌怒妖",
       "name_de": "Chaos Furies",
       "name_es": "Chaos Furies",
@@ -3820,7 +5022,7 @@
       }
     },
     {
-      "name_en": "Chaos Furies of Slaanesh",
+      "name_en": "Chaos Furies of Slaanesh {renegade}",
       "name_cn": "Chaos Furies of Slaanesh",
       "name_de": "Chaos Furies of Slaanesh",
       "name_es": "Chaos Furies of Slaanesh",
@@ -3864,7 +5066,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard, Daemons of Slaanesh {renegade}",
+        "name_en": "Daemonic {renegade}, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard, Daemon of Slaanesh {renegade}",
         "name_cn": "恶魔, 飞行(8), 狂怒冲锋, 散兵, 快速行进, 先锋, 色孽恶魔",
         "name_de": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard, Daemons of Slaanesh",
         "name_es": "Daemonic, Fly (8), Furious Charge, Skirmishers, Swiftstride, Vanguard, Daemons of Slaanesh",
@@ -3874,7 +5076,7 @@
       }
     },
     {
-      "name_en": "Chaos Furies of Nurgle",
+      "name_en": "Chaos Furies of Nurgle {renegade}",
       "name_cn": "Chaos Furies of Nurgle",
       "name_de": "Chaos Furies of Nurgle",
       "name_es": "Chaos Furies of Nurgle",
@@ -3918,7 +5120,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Nurgle {renegade}",
+        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemon of Nurgle {renegade}",
         "name_cn": "恶魔, 飞行(8), 散兵, 快速行进, 先锋, 纳垢恶魔",
         "name_de": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Nurgle",
         "name_es": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Nurgle",
@@ -3928,7 +5130,7 @@
       }
     },
     {
-      "name_en": "Chaos Furies of Khorne",
+      "name_en": "Chaos Furies of Khorne {renegade}",
       "name_cn": "Chaos Furies of Khorne",
       "name_de": "Chaos Furies of Khorne",
       "name_es": "Chaos Furies of Khorne",
@@ -3972,7 +5174,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Khorne {renegade}",
+        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemon of Khorne {renegade}",
         "name_cn": "恶魔, 飞行(8), 散兵, 快速行进, 先锋, 恐虐恶魔",
         "name_de": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Khorne",
         "name_es": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Khorne",
@@ -3982,7 +5184,7 @@
       }
     },
     {
-      "name_en": "Chaos Furies of Tzeentch",
+      "name_en": "Chaos Furies of Tzeentch {renegade}",
       "name_cn": "Chaos Furies of Tzeentch",
       "name_de": "Chaos Furies of Tzeentch",
       "name_es": "Chaos Furies of Tzeentch",
@@ -4026,7 +5228,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Tzeentch {renegade}",
+        "name_en": "Daemonic {renegade}, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemon of Tzeentch {renegade}",
         "name_cn": "恶魔, 飞行(8), 散兵, 快速行进, 先锋, 奸奇恶魔",
         "name_de": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Tzeentch",
         "name_es": "Daemonic, Fly (8), Skirmishers, Swiftstride, Vanguard, Daemons of Tzeentch",
@@ -4219,7 +5421,7 @@
       }
     },
     {
-      "name_en": "Seekers of Slaanesh",
+      "name_en": "Seekers of Slaanesh {renegade}",
       "name_cn": "色孽搜查骑兵",
       "name_de": "Seekers of Slaanesh",
       "name_es": "Seekers of Slaanesh",
@@ -4360,7 +5562,7 @@
       }
     },
     {
-      "name_en": "Fiends of Slaanesh",
+      "name_en": "Fiends of Slaanesh {renegade}",
       "name_cn": "色孽兽",
       "name_de": "Fiends of Slaanesh",
       "name_es": "Fiends of Slaanesh",
@@ -4379,7 +5581,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Piercing claws, Venomous tail",
+          "name_en": "Piercing claws, Venomous tail {renegade}",
           "name_cn": "穿刺之爪, 毒液尾刺",
           "name_de": "Piercing claws, Venomous tail",
           "name_es": "Piercing claws, Venomous tail",
@@ -4396,7 +5598,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh {renegade}, Soporific Musk, Swiftstride",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Slaanesh {renegade}, Soporific Musk, Swiftstride",
         "name_cn": "紧密阵型, 恶魔, 色孽恶魔, 催眠魔香, 快速行进",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
@@ -4474,7 +5676,7 @@
       }
     },
     {
-      "name_en": "Seeker Chariot of Slaanesh",
+      "name_en": "Seeker Chariot of Slaanesh {renegade}",
       "name_cn": "色孽搜查战车",
       "name_de": "Seeker Chariot of Slaanesh",
       "name_es": "Seeker Chariot of Slaanesh",
@@ -4523,7 +5725,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemonic Charge (-1) {renegade}, Daemon of Slaanesh{renegade}, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemonic Charge (-1) {renegade}, Daemon of Slaanesh {renegade}, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
         "name_cn": "碎甲攻击 (1, 仅色孽蹄兽), 反制冲锋, 恶魔, 恶魔冲锋(-1), 色孽恶魔, 先行冲锋, 撞击(D3+1), 开放阵型, 淬毒攻击(仅色孽蹄兽), 快速行进, 破甲（1，仅限撞击）",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemonic Charge (-1), Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemonic Charge (-1), Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride, Armour Piercing (1 - Impact Hits only)",
@@ -4586,7 +5788,7 @@
       }
     },
     {
-      "name_en": "Hellflayer of Slaanesh",
+      "name_en": "Hellflayer of Slaanesh {renegade}",
       "name_cn": "色孽地狱剥皮战车",
       "name_de": "Hellflayer of Slaanesh",
       "name_es": "Hellflayer of Slaanesh",
@@ -4723,7 +5925,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
+        "name_en": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_cn": "紧密阵型, 恶魔, 纳垢恶魔, 淬毒攻击, 重生(6+)",
         "name_de": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
         "name_es": "Close Order, Daemonic, Daemons of Nurgle, Poisoned Attacks, Regeneration (6+)",
@@ -4756,11 +5958,51 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "special"
-        },
+        }
+      },
+      "command": [],
+      "equipment": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵",
+        "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_fr": "Démoniaque, Démons de Nurgle, Solitaire, Attaques Empoisonnées, Attaques Aléatoires, Régénération (6+), Tirailleurs",
+        "name_it": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_pl": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      }
+    },
+    {
+      "name_en": "Nurglings {renegade}",
+      "name_cn": "纳垢灵",
+      "name_de": "Nurglings",
+      "name_es": "Nurglings",
+      "name_fr": "Nurglings",
+      "name_it": "Nurglings",
+      "name_pl": "Nurglings",
+      "id": "nurglings-renegade",
+      "points": 45,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": {
         "doc-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemons of Nurgle {renegade}, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
+            "name_en": "Daemonic {renegade}, Daemon of Nurgle {renegade}, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
             "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵, 侦察",
             "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
             "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers, Scouts",
@@ -4778,7 +6020,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
+        "name_en": "Daemonic {renegade}, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
         "name_cn": "恶魔, 纳垢恶魔, 独行, 淬毒攻击, 随机攻击, 重生(6+), 散兵",
         "name_de": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
         "name_es": "Daemonic, Daemons of Nurgle, Loner, Poisoned Attacks, Random Attacks, Regeneration (6+), Skirmishers",
@@ -4842,7 +6084,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Attention Seeker, Close Order, Daemonic {renegade}, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_cn": "寻求注目, 紧密阵型, 恶魔, 纳垢恶魔, 鲁莽, 炼狱恩宠（1）, 独行, 淬毒攻击, 随机攻击, 重生（5+）, 酸性爬行痕",
         "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
@@ -4852,7 +6094,7 @@
       }
     },
     {
-      "name_en": "Beasts of Nurgle",
+      "name_en": "Beasts of Nurgle {renegade}",
       "name_cn": "纳垢兽",
       "name_de": "Beasts of Nurgle",
       "name_es": "Beasts of Nurgle",
@@ -4888,7 +6130,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Attention Seeker, Open Order, Daemonic {renegade}, Daemons of Nurgle {renegade}, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_en": "Attention Seeker, Open Order, Daemonic {renegade}, Daemon of Nurgle {renegade}, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_cn": "寻求注目, 开放阵型, 恶魔, 纳垢恶魔, 鲁莽, 炼狱恩宠（1）, 独行, 淬毒攻击, 随机攻击, 重生（5+）, 酸性爬行痕",
         "name_de": "Attention Seeker, Open Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_es": "Attention Seeker, Open Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
@@ -4912,27 +6154,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "special"
-        },
-        "doc-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemons of Nurgle {renegade}, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生（5+）, 散兵, 快速行进",
-            "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
-            "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride"
-          },
-          "notes": {
-            "name_en": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
-            "name_cn": "如果您的主将是一名纳垢恶魔，则0-1只瘟疫蜂可以作为特殊单位",
-            "name_de": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
-            "name_es": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
-            "name_fr": "Si votre Général est un Démon de Nurgle, 0-1 Drone de la Peste peut être pris comme choix Spécial",
-            "name_it": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
-            "name_pl": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices"
-          }
         }
       },
       "command": [
@@ -4944,23 +6165,7 @@
           "name_fr": "Pouacre (champion)",
           "name_it": "Plagueridden (champion)",
           "name_pl": "Plagueridden (champion)",
-          "points": 7,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Plagueridden (champion)",
-          "name_cn": "瘟疫使者（冠军）",
-          "name_de": "Plagueridden (champion)",
-          "name_es": "Plagueridden (champion)",
-          "name_fr": "Pouacre (champion)",
-          "name_it": "Plagueridden (champion)",
-          "name_pl": "Plagueridden (champion)",
-          "points": 7,
-          "armyComposition": "doc-renegade",
-          "magic": {
-            "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
-            "maxPoints": 25
-          }
+          "points": 7
         },
         {
           "name_en": "Standard bearer",
@@ -4974,23 +6179,7 @@
           "magic": {
             "types": ["daemonic-icon-nurgle"],
             "maxPoints": 50
-          },
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer",
-          "name_pl": "Standard bearer",
-          "points": 7,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
-            "maxPoints": 50
-          },
-          "armyComposition": "doc-renegade"
+          }
         },
         {
           "name_en": "Musician",
@@ -5029,9 +6218,134 @@
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0,
-          "armyComposition": "daemons-of-chaos"
+          "maximum": 0
         },
+        {
+          "name_en": "Venom sting",
+          "name_cn": "毒液针刺",
+          "name_de": "Venom sting",
+          "name_es": "Venom sting",
+          "name_fr": "Dard venimeux",
+          "name_it": "Venom sting",
+          "name_pl": "Venom sting",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生(6+), 散兵, 快速行进",
+        "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
+        "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+        "name_cn": "如果您的主将是一名纳垢恶魔，则纳垢兽, 瘟疫蜂可以作为特殊单位",
+        "name_de": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+        "name_es": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+        "name_fr": "Si votre Général est un Démon de Nurgle, les Bêtes de Nurgle et les Drones de la Peste peuvent être pris comme choix Spécial",
+        "name_it": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices",
+        "name_pl": "If your General is a Daemon of Nurgle, Beasts of Nurgle and Plague Drones may be taken as Special choices"
+      }
+    },
+    {
+      "name_en": "Plague Drones of Nurgle {renegade}",
+      "name_cn": "纳垢瘟疫蜂",
+      "name_de": "Plague Drones of Nurgle",
+      "name_es": "Plague Drones of Nurgle",
+      "name_fr": "Drones de la Peste de Nurgle",
+      "name_it": "Plague Drones of Nurgle",
+      "name_pl": "Plague Drones of Nurgle",
+      "id": "plague-drones-of-nurgle-renegade",
+      "points": 63,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemon of Nurgle {renegade}, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生（5+）, 散兵, 快速行进",
+            "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
+            "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride"
+          },
+          "notes": {
+            "name_en": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
+            "name_cn": "如果您的主将是一名纳垢恶魔，则0-1只瘟疫蜂可以作为特殊单位",
+            "name_de": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
+            "name_es": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
+            "name_fr": "Si votre Général est un Démon de Nurgle, 0-1 Drone de la Peste peut être pris comme choix Spécial",
+            "name_it": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices",
+            "name_pl": "If your General is a Daemon of Nurgle, 0-1 Plague Drones may be taken as Special choices"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_cn": "瘟疫使者（冠军）",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Pouacre (champion)",
+          "name_it": "Plagueridden (champion)",
+          "name_pl": "Plagueridden (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-icon-nurgle"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plagueswords {renegade}, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_cn": "瘟疫之剑, 死者之颅, 污垢之爪(视为单手武器)",
+          "name_de": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_es": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_fr": "Épées pestilentielles, Têtes de morts, Armes de base (griffes encroûtées de crasse)",
+          "name_it": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_pl": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
         {
           "name_en": "Plague Proboscis",
           "name_cn": "瘟疫之吻(+1 先攻值)",
@@ -5043,11 +6357,10 @@
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0,
-          "armyComposition": "doc-renegade"
+          "maximum": 0
         },
         {
-          "name_en": "Venom sting",
+          "name_en": "Venom sting {renegade}",
           "name_cn": "毒液针刺",
           "name_de": "Venom sting",
           "name_es": "Venom sting",
@@ -5166,7 +6479,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
+        "name_en": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_cn": "紧密阵型, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-1)",
         "name_de": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
         "name_es": "Close Order, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-1)",
@@ -5261,7 +6574,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
+        "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_cn": "碎甲攻击(1), 紧密阵型, 反制冲锋, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-2)",
         "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
         "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2)",
@@ -5280,7 +6593,7 @@
       }
     },
     {
-      "name_en": "Flesh Hounds of Khorne",
+      "name_en": "Flesh Hounds of Khorne {renegade}",
       "name_cn": "恐虐血肉猎犬",
       "name_de": "Flesh Hounds of Khorne",
       "name_es": "Flesh Hounds of Khorne",
@@ -5295,7 +6608,7 @@
         "doc-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemons of Khorne {renegade}, Impetuous, Magic Resistance (-2), Swiftstride",
+            "name_en": "Armour Bane (1), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Khorne {renegade}, Impetuous, Magic Resistance (-2), Swiftstride",
             "name_cn": "碎甲攻击(1), 紧密阵型, 反制冲锋, 恶魔, 恐虐恶魔, 鲁莽, 魔法抗性(-2), 快速行进",
             "name_de": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
             "name_es": "Armour Bane (1), Close Order, Counter Charge, Daemonic, Daemons of Khorne, Impetuous, Magic Resistance (-2), Swiftstride",
@@ -5403,18 +6716,6 @@
             "name_it": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices",
             "name_pl": "If your General is a Daemon of Khorne, Bloodcrushers may be taken as Special choices"
           }
-        },
-        "doc-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemonic Charge (-2) {renegade}, Daemon of Khorne {renegade}, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
-            "name_cn": "坚硬皮肤(1), 紧密阵型, 恶魔, 恶魔冲锋(-2), 恐虐恶魔, 撞击(2), 鲁莽, 魔法抗性(-1), 快速行进",
-            "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
-            "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
-            "name_fr": "Peau Blindée (1), Ordre Serré, Démoniaque, Charge Démoniaque (-2), Démon de Khorne, Touches d’Impact (2), Impétueux, Résistance à la Magie (-1), Rapide",
-            "name_it": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
-            "name_pl": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride"
-          }
         }
       },
       "command": [
@@ -5426,23 +6727,7 @@
           "name_fr": "Massacreur (champion)",
           "name_it": "Bloodreaper (champion)",
           "name_pl": "Bloodreaper (champion)",
-          "points": 7,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Bloodreaper (champion)",
-          "name_cn": "放血收割者 （冠军）",
-          "name_de": "Bloodreaper (champion)",
-          "name_es": "Bloodreaper (champion)",
-          "name_fr": "Massacreur (champion)",
-          "name_it": "Bloodreaper (champion)",
-          "name_pl": "Bloodreaper (champion)",
-          "points": 7,
-          "armyComposition": "doc-renegade",
-          "magic": {
-            "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
-            "maxPoints": 25
-          }
+          "points": 7
         },
         {
           "name_en": "Standard bearer",
@@ -5456,23 +6741,7 @@
           "magic": {
             "types": ["daemonic-icon-khorne"],
             "maxPoints": 50
-          },
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer",
-          "name_pl": "Standard bearer",
-          "points": 7,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-khorne"],
-            "maxPoints": 50
-          },
-          "armyComposition": "doc-renegade"
+          }
         },
         {
           "name_en": "Musician",
@@ -5508,20 +6777,7 @@
           "name_it": "Light armour (calloused hides), Barding (brazen hide)",
           "name_pl": "Light armour (calloused hides), Barding (brazen hide)",
           "points": 0,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_cn": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_de": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_es": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_fr": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_it": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "name_pl": "Heavy armour (Brazen scales), Barding (Brazen hide)",
-          "points": 0,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         }
       ],
       "options": [],
@@ -5539,7 +6795,113 @@
       }
     },
     {
-      "name_en": "Soul Grinder of Khorne",
+      "name_en": "Bloodcrushers of Khorne {renegade}",
+      "name_cn": "恐虐碾血者钢牛骑兵",
+      "name_de": "Bloodcrushers of Khorne",
+      "name_es": "Bloodcrushers of Khorne",
+      "name_fr": "Équarrisseurs de Khorne",
+      "name_it": "Bloodcrushers of Khorne",
+      "name_pl": "Bloodcrushers of Khorne",
+      "id": "bloodcrushers-of-khorne-renegade",
+      "points": 65,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemonic Charge (-2) {renegade}, Daemon of Khorne {renegade}, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+            "name_cn": "坚硬皮肤(1), 紧密阵型, 恶魔, 恶魔冲锋(-2), 恐虐恶魔, 撞击(2), 鲁莽, 魔法抗性(-1), 快速行进",
+            "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+            "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+            "name_fr": "Peau Blindée (1), Ordre Serré, Démoniaque, Charge Démoniaque (-2), Démon de Khorne, Touches d’Impact (2), Impétueux, Résistance à la Magie (-1), Rapide",
+            "name_it": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+            "name_pl": "Armoured Hide (1), Close Order, Daemonic, Daemonic Charge (-2), Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Bloodreaper (champion)",
+          "name_cn": "放血收割者 （冠军）",
+          "name_de": "Bloodreaper (champion)",
+          "name_es": "Bloodreaper (champion)",
+          "name_fr": "Massacreur (champion)",
+          "name_it": "Bloodreaper (champion)",
+          "name_pl": "Bloodreaper (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-khorne"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-icon-khorne"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hellblades, Brass bound hooves",
+          "name_cn": "地狱之刃, 黄铜蹄",
+          "name_de": "Hellblades, Brass bound hooves",
+          "name_es": "Hellblades, Brass bound hooves",
+          "name_fr": "Lames Infernales, Sabots sertis d’airain",
+          "name_it": "Hellblades, Brass bound hooves",
+          "name_pl": "Hellblades, Brass bound hooves",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_cn": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_de": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_es": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_fr": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_it": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "name_pl": "Heavy armour (Brazen scales), Barding (Brazen hide)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemon of Khorne {renegade}, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_cn": "坚硬皮肤(1), 紧密阵型, 恶魔, 恐虐恶魔, 撞击(2), 鲁莽, 魔法抗性(-1), 快速行进",
+        "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_fr": "Peau Blindée (1), Ordre Serré, Démoniaque, Démon de Khorne, Touches d’Impact (2), Impétueux, Résistance à la Magie (-1), Rapide",
+        "name_it": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride",
+        "name_pl": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride"
+      }
+    },
+    {
+      "name_en": "Soul Grinder of Khorne {renegade}",
       "name_cn": "恐虐碾魂者恶魔引擎",
       "name_de": "Soul Grinder of Khorne",
       "name_es": "Soul Grinder of Khorne",
@@ -5577,7 +6939,7 @@
           "points": 30
         },
         {
-          "name_en": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
+          "name_en": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment {renegade}",
           "name_cn": "单手武器, 铁爪, 收割炮, 恶意洪流",
           "name_de": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
           "name_es": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
@@ -5711,7 +7073,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Tzeentch, Scintillating Sorcery",
+        "name_en": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 闪烁魔法",
         "name_de": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
         "name_es": "Close Order, Daemonic, Daemons of Tzeentch, Scintillating Sorcery",
@@ -5744,18 +7106,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "special"
-        },
-        "doc-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemons of Tzeentch {renegade}, Move Through Cover, Open Order, Skirmishers",
-            "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型, 散兵",
-            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
-            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
-            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
-          }
         }
       },
       "command": [
@@ -5808,6 +7158,81 @@
       }
     },
     {
+      "name_en": "Blue Horrors of Tzeentch {renegade}",
+      "name_cn": "奸奇蓝色惧妖",
+      "name_de": "Blue Horrors of Tzeentch",
+      "name_es": "Blue Horrors of Tzeentch",
+      "name_fr": "Horreurs Bleues de Tzeentch",
+      "name_it": "Blue Horrors of Tzeentch",
+      "name_pl": "Blue Horrors of Tzeentch",
+      "id": "blue-horrors-of-tzeentch-renegade",
+      "points": 9,
+      "minimum": 9,
+      "maximum": 0,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "special",
+          "specialRules": {
+            "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Move Through Cover, Open Order, Skirmishers",
+            "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型, 散兵",
+            "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé, Tirailleurs",
+            "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers",
+            "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order, Skirmishers"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Ectoplasmic Horror (champion)",
+          "name_cn": "灵质惧妖（冠军）",
+          "name_de": "Ectoplasmic Horror (champion)",
+          "name_es": "Ectoplasmic Horror (champion)",
+          "name_fr": "Horreur Ectoplasmique (champion)",
+          "name_it": "Ectoplasmic Horror (champion)",
+          "name_pl": "Ectoplasmic Horror (champion)",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Flames of Tzeentch",
+          "name_cn": "单手武器, 奸奇烈焰",
+          "name_de": "Hand weapons, Flames of Tzeentch",
+          "name_es": "Hand weapons, Flames of Tzeentch",
+          "name_fr": "Armes de base, Flammes de Tzeentch",
+          "name_it": "Hand weapons, Flames of Tzeentch",
+          "name_pl": "Hand weapons, Flames of Tzeentch",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_cn": "恶魔, 奸奇恶魔, 穿行掩体, 开放阵型",
+        "name_de": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_es": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_fr": "Démoniaque, Démons de Tzeentch, Mouvement à Couvert, Ordre Dispersé",
+        "name_it": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order",
+        "name_pl": "Daemonic, Daemons of Tzeentch, Move Through Cover, Open Order"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      }
+    },
+    {
       "name_en": "Brimstone Horrors of Tzeentch",
       "name_cn": "奸奇硫磺惧妖",
       "name_de": "Brimstone Horrors of Tzeentch",
@@ -5820,11 +7245,64 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "special"
-        },
+        }
+      },
+      "minimum": 2,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapons",
+          "name_es": "Hand weapons",
+          "name_fr": "Armes de base",
+          "name_it": "Hand weapons",
+          "name_pl": "Hand weapons",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 独行, 散兵",
+        "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_fr": "Démoniaque, Démons de Tzeentch, Attaques Enflammées, Solitaire, Tirailleurs",
+        "name_it": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_pl": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      }
+    },
+    {
+      "name_en": "Brimstone Horrors of Tzeentch {renegade}",
+      "name_cn": "奸奇硫磺惧妖",
+      "name_de": "Brimstone Horrors of Tzeentch",
+      "name_es": "Brimstone Horrors of Tzeentch",
+      "name_fr": "Horreurs Sulfureuses de Tzeentch",
+      "name_it": "Brimstone Horrors of Tzeentch",
+      "name_pl": "Brimstone Horrors of Tzeentch",
+      "id": "brimstone-horrors-of-tzeentch-renegade",
+      "points": 38,
+      "armyComposition": {
         "doc-renegade": {
           "category": "special",
           "specialRules": {
-            "name_en": "Daemonic {renegade}, Daemons of Tzeentch {renegade}, Flaming Attacks, Loner, Skirmishers",
+            "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Flaming Attacks, Loner, Skirmishers",
             "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 独行, 散兵",
             "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
             "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
@@ -5857,7 +7335,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
+        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
         "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 独行, 散兵",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
         "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Loner, Skirmishers",
@@ -5932,7 +7410,7 @@
       }
     },
     {
-      "name_en": "Screamers of Tzeentch",
+      "name_en": "Screamers of Tzeentch {renegade}",
       "name_cn": "奸奇尖啸飞鲨",
       "name_de": "Screamers of Tzeentch",
       "name_es": "Screamers of Tzeentch",
@@ -5951,7 +7429,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Lamprey's bite",
+          "name_en": "Lamprey's bite {renegade}",
           "name_cn": "飞鲨撕咬",
           "name_de": "Lamprey's bite",
           "name_es": "Lamprey's bite",
@@ -5969,7 +7447,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch {renegade}, Fly (9), Skirmishers, Slashing Attack",
+        "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Skirmishers, Slashing Attack {renegade}",
         "name_cn": "恶魔, 奸奇恶魔, 飞行(9), 散兵, 鞭笞打击",
         "name_de": "Daemonic, Daemons of Tzeentch, Fly (9), Skirmishers, Slashing Attack",
         "name_es": "Daemonic, Daemons of Tzeentch, Fly (9), Skirmishers, Slashing Attack",
@@ -6074,7 +7552,7 @@
       "items": [],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons {renegade}, Move Through Cover, Skirmishers",
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 炼狱恩宠（1，仅高阶火妖), 恶魔法系, 穿行掩体, 散兵",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
@@ -6084,7 +7562,7 @@
       }
     },
     {
-      "name_en": "Flamers of Tzeentch",
+      "name_en": "Flamers of Tzeentch {renegade}",
       "name_cn": "奸奇火妖",
       "name_de": "Flamers of Tzeentch",
       "name_es": "Flamers of Tzeentch",
@@ -6153,7 +7631,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Warpflame",
+          "name_en": "Hand weapons, Warpflame {renegade}",
           "name_cn": "单手武器, 次元烈焰",
           "name_de": "Hand weapons, Warpflame",
           "name_es": "Hand weapons, Warpflame",
@@ -6170,7 +7648,7 @@
       "items": [],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch {renegade}, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons {renegade}, Move Through Cover, Skirmishers",
+        "name_en": "Daemonic {renegade}, Daemon of Tzeentch {renegade}, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons {renegade}, Move Through Cover, Skirmishers",
         "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 炼狱恩宠（1，仅高阶火妖), 恶魔法系, 穿行掩体, 散兵",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
@@ -6180,7 +7658,7 @@
       }
     },
     {
-      "name_en": "Burning Chariot of Tzeentch",
+      "name_en": "Burning Chariot of Tzeentch {renegade}",
       "name_cn": "奸奇燃烧战车",
       "name_de": "Burning Chariot of Tzeentch",
       "name_es": "Burning Chariot of Tzeentch",
@@ -6197,7 +7675,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_en": "Hand weapons, Warpflame {renegade}, Flames of Tzeentch, Lamprey's bite {renegade}",
           "name_cn": "单手武器, 次元烈焰, 奸奇烈焰, 飞鲨撕咬",
           "name_de": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
           "name_es": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
@@ -6286,7 +7764,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only) {renegade}",
         "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 飞行(9), 撞击(D6+1), 恶魔法系, 鞭笞打击(仅尖啸飞鲨)",
         "name_de": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_es": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
@@ -6390,7 +7868,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armoured Hide (1), Close Order, Daemonic {renegade}, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
+        "name_en": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_cn": "坚硬皮肤(1), 紧密阵型, 恶魔, 恐虐恶魔, 撞击(2), 鲁莽, 魔法抗性(-1), 快速行进, 先行冲锋",
         "name_de": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
         "name_es": "Armoured Hide (1), Close Order, Daemonic, Daemon of Khorne, Impact Hits (2), Impetuous, Magic Resistance (-1), Swiftstride, First Charge",
@@ -6445,7 +7923,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Attention Seeker, Close Order, Daemonic {renegade}, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
+        "name_en": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_cn": "寻求注目, 紧密阵型, 恶魔, 纳垢恶魔, 鲁莽, 炼狱恩宠（1）, 独行, 淬毒攻击, 随机攻击, 重生（5+）, 酸性爬行痕",
         "name_de": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
         "name_es": "Attention Seeker, Close Order, Daemonic, Daemons of Nurgle, Impetuous, Infernal Favour (1), Loner, Poisoned Attacks, Random Attacks, Regeneration (5+), Slime Trail",
@@ -6476,18 +7954,6 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "rare"
-        },
-        "doc-renegade": {
-          "category": "rare",
-          "specialRules": {
-            "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemons of Nurgle {renegade}, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生（5+）, 散兵, 快速行进",
-            "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
-            "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
-            "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride"
-          }
         }
       },
       "minimum": 3,
@@ -6501,23 +7967,7 @@
           "name_fr": "Pouacre (champion)",
           "name_it": "Plagueridden (champion)",
           "name_pl": "Plagueridden (champion)",
-          "points": 7,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Plagueridden (champion)",
-          "name_cn": "瘟疫使者（冠军）",
-          "name_de": "Plagueridden (champion)",
-          "name_es": "Plagueridden (champion)",
-          "name_fr": "Pouacre (champion)",
-          "name_it": "Plagueridden (champion)",
-          "name_pl": "Plagueridden (champion)",
-          "points": 7,
-          "armyComposition": "doc-renegade",
-          "magic": {
-            "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
-            "maxPoints": 25
-          }
+          "points": 7
         },
         {
           "name_en": "Standard bearer",
@@ -6531,23 +7981,7 @@
           "magic": {
             "types": ["daemonic-icon-nurgle"],
             "maxPoints": 50
-          },
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standard bearer",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_it": "Standard bearer",
-          "name_pl": "Standard bearer",
-          "points": 7,
-          "magic": {
-            "types": ["daemonic-icon-common", "daemonic-icon-nurgle"],
-            "maxPoints": 50
-          },
-          "armyComposition": "doc-renegade"
+          }
         },
         {
           "name_en": "Musician",
@@ -6586,9 +8020,125 @@
           "points": 2,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0,
-          "armyComposition": "daemons-of-chaos"
+          "maximum": 0
         },
+        {
+          "name_en": "Venom sting",
+          "name_cn": "毒液针刺",
+          "name_de": "Venom sting",
+          "name_es": "Venom sting",
+          "name_fr": "Dard venimeux",
+          "name_it": "Venom sting",
+          "name_pl": "Venom sting",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生(6+), 散兵, 快速行进",
+        "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
+        "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride",
+        "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (6+), Skirmishers, Swiftstride"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": "",
+        "name_it": "",
+        "name_pl": ""
+      }
+    },
+    {
+      "name_en": "Plague Drones of Nurgle {renegade}",
+      "name_cn": "纳垢瘟疫蜂",
+      "name_de": "Plague Drones of Nurgle",
+      "name_es": "Plague Drones of Nurgle",
+      "name_fr": "Drones de la Peste de Nurgle",
+      "name_it": "Plague Drones of Nurgle",
+      "name_pl": "Plague Drones of Nurgle",
+      "id": "plague-drones-of-nurgle-renegade",
+      "points": 63,
+      "armyComposition": {
+        "doc-renegade": {
+          "category": "rare",
+          "specialRules": {
+            "name_en": "Armour Bane (2 - Rot Fly only), Daemonic {renegade}, Daemon of Nurgle {renegade}, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_cn": "碎甲攻击(2, 仅瘟疫蜂), 恶魔, 纳垢恶魔, 飞行(9), 淬毒攻击, 重生（5+）, 散兵, 快速行进",
+            "name_de": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_es": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_fr": "Arme Perforante (2 - Mouche à Peste uniquement), Démoniaque, Démons de Nurgle, Vol (9), Attaques Empoisonnées, Régénération (6+), Tirailleurs, Rapide",
+            "name_it": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride",
+            "name_pl": "Armour Bane (2 - Rot Fly only), Daemonic, Daemons of Nurgle, Fly (9), Poisoned Attacks, Regeneration (5+), Skirmishers, Swiftstride"
+          }
+        }
+      },
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Plagueridden (champion)",
+          "name_cn": "瘟疫使者（冠军）",
+          "name_de": "Plagueridden (champion)",
+          "name_es": "Plagueridden (champion)",
+          "name_fr": "Pouacre (champion)",
+          "name_it": "Plagueridden (champion)",
+          "name_pl": "Plagueridden (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-gift-common", "daemonic-gift-nurgle"],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "name_it": "Standard bearer",
+          "name_pl": "Standard bearer",
+          "points": 7,
+          "magic": {
+            "types": ["daemonic-icon-nurgle"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "name_it": "Musician",
+          "name_pl": "Musician",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Plagueswords {renegade}, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_cn": "瘟疫之剑, 死者之颅, 污垢之爪(视为单手武器)",
+          "name_de": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_es": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_fr": "Épées pestilentielles, Têtes de morts, Armes de base (griffes encroûtées de crasse)",
+          "name_it": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "name_pl": "Plagueswords, Death's heads, Hand weapons (filth-encrusted claws)",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
         {
           "name_en": "Plague Proboscis",
           "name_cn": "瘟疫之吻(+1 先攻值)",
@@ -6600,11 +8150,10 @@
           "points": 1,
           "perModel": true,
           "minimum": 0,
-          "maximum": 0,
-          "armyComposition": "doc-renegade"
+          "maximum": 0
         },
         {
-          "name_en": "Venom sting",
+          "name_en": "Venom sting {renegade}",
           "name_cn": "毒液针刺",
           "name_de": "Venom sting",
           "name_es": "Venom sting",
@@ -6676,7 +8225,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemons of Slaanesh, Soporific Musk, Swiftstride",
+        "name_en": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_cn": "紧密阵型, 恶魔, 色孽恶魔, 催眠魔香, 快速行进",
         "name_de": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
         "name_es": "Close Order, Daemonic, Daemons of Slaanesh, Soporific Musk, Swiftstride",
@@ -6729,7 +8278,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_cn": "碎甲攻击 (1, 仅色孽蹄兽), 紧密阵型, 反制冲锋, 恶魔, 色孽恶魔, 先行冲锋, 撞击(2D6+1), 淬毒攻击(仅色孽蹄兽), 快速行进",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Close Order, Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (2D6+1), Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
@@ -6748,7 +8297,7 @@
       }
     },
     {
-      "name_en": "Hellflayer of Slaanesh",
+      "name_en": "Hellflayer of Slaanesh {renegade}",
       "name_cn": "色孽地狱剥皮战车",
       "name_de": "Hellflayer of Slaanesh",
       "name_es": "Hellflayer of Slaanesh",
@@ -6862,7 +8411,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic {renegade}, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
+        "name_en": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_cn": "碎甲攻击 (1, 仅色孽蹄兽), 反制冲锋, 恶魔, 色孽恶魔, 先行冲锋, 撞击(D3+1), 开放阵型, 淬毒攻击(仅色孽蹄兽), 快速行进",
         "name_de": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
         "name_es": "Armour Bane (1 - Steed of Slaanesh only), Counter Charge, Daemonic, Daemon of Slaanesh, First Charge, Impact Hits (D3+1), Open Order, Poisoned Attacks (Steed of Slaanesh only), Swiftstride",
@@ -6967,7 +8516,7 @@
       "items": [],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons {renegade}, Move Through Cover, Skirmishers",
+        "name_en": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_cn": "恶魔, 奸奇恶魔, 火焰攻击, 炼狱恩宠（1，仅高阶火妖), 恶魔法系, 穿行掩体, 散兵",
         "name_de": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
         "name_es": "Daemonic, Daemons of Tzeentch, Flaming Attacks, Infernal Favour (1 - Exalted Flamer only), Lore of Daemons, Move Through Cover, Skirmishers",
@@ -7023,7 +8572,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Daemonic {renegade}, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
+        "name_en": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
         "name_cn": "恶魔, 奸奇恶魔, 飞行(9), 独行, 散兵, 鞭笞打击",
         "name_de": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
         "name_es": "Daemonic, Daemons of Tzeentch, Fly (9), Loner, Skirmishers, Slashing Attack",
@@ -7148,7 +8697,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only)",
+        "name_en": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 飞行(9), 撞击(D6+1), 恶魔法系, 鞭笞打击(仅尖啸飞鲨)",
         "name_de": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_es": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
@@ -7167,7 +8716,7 @@
       }
     },
     {
-      "name_en": "Burning Chariot of Tzeentch",
+      "name_en": "Burning Chariot of Tzeentch {renegade}",
       "name_cn": "奸奇燃烧战车",
       "name_de": "Burning Chariot of Tzeentch",
       "name_es": "Burning Chariot of Tzeentch",
@@ -7184,7 +8733,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
+          "name_en": "Hand weapons, Warpflame {renegade}, Flames of Tzeentch, Lamprey's bite {renegade}",
           "name_cn": "单手武器, 次元烈焰, 奸奇烈焰, 飞鲨撕咬",
           "name_de": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
           "name_es": "Hand weapons, Warpflame, Flames of Tzeentch, Lamprey's bite",
@@ -7273,7 +8822,7 @@
       ],
       "lores": ["daemonology", "dark-magic", "elementalism", "illusion"],
       "specialRules": {
-        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only)",
+        "name_en": "Close Order, Daemonic {renegade}, Daemon of Tzeentch {renegade}, Fly (9), Impact Hits (D6+1), Lore of Daemons {renegade}, Slashing Attack (Screamers only) {renegade}",
         "name_cn": "紧密阵型, 恶魔, 奸奇恶魔, 飞行(9), 撞击(D6+1), 恶魔法系, 鞭笞打击(仅尖啸飞鲨)",
         "name_de": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
         "name_es": "Close Order, Daemonic, Daemon of Tzeentch, Fly (9), Impact Hits (D6+1), Lore of Daemons, Slashing Attack (Screamers only)",
@@ -7430,7 +8979,7 @@
       }
     },
     {
-      "name_en": "Soul Grinder",
+      "name_en": "Soul Grinder {renegade}",
       "name_cn": "碾魂者恶魔引擎",
       "name_de": "Soul Grinder",
       "name_es": "Soul Grinder",
@@ -7468,7 +9017,7 @@
           "points": 30
         },
         {
-          "name_en": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
+          "name_en": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment {renegade}",
           "name_cn": "单手武器, 铁爪, 收割炮, 恶意洪流",
           "name_de": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
           "name_es": "Hand weapon, Iron claw, Harvester cannon, Phlegm Bombardment",
@@ -7580,7 +9129,69 @@
       "armyComposition": {
         "daemons-of-chaos": {
           "category": "rare"
-        },
+        }
+      },
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_cn": "黄铜车轮, 镰刀刃(视为单手武器), 恐虐加农炮, 地狱之刃",
+          "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_fr": "Roues d’airain, Arme de base (faux), Canon de Khorne, Lames Infernales",
+          "name_it": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "name_pl": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_it": "Full plate armour",
+          "name_pl": "Full plate armour",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_cn": "黄铜车轮, 紧密阵型, 恶魔, 恐虐恶魔, 先行冲锋, 撞击(D3+1), 鲁莽, 践踏攻击(D3)",
+        "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_fr": "Roues d’airain, Ordre Serré, Démoniaque, Démon de Khorne, Première Charge, Touches d’Impact (D3+1), Impétueux, Attaques de Piétinement (D3)",
+        "name_it": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_pl": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分可选取0-1名该单位",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 per 1000 points",
+        "name_fr": "0-1 par tranche de 1000 points",
+        "name_it": "0-1 per 1000 points",
+        "name_pl": "0-1 per 1000 points"
+      }
+    },
+    {
+      "name_en": "Skull Cannon of Khorne {renegade}",
+      "name_cn": "恐虐颅骨炮",
+      "name_de": "Skull Cannon of Khorne",
+      "name_es": "Skull Cannon of Khorne",
+      "name_fr": "Canon à Crânes de Khorne",
+      "name_it": "Skull Cannon of Khorne",
+      "name_pl": "Skull Cannon of Khorne",
+      "id": "skull-cannon-of-khorne-renegade",
+      "points": 185,
+      "armyComposition": {
         "doc-renegade": {
           "category": "rare",
           "specialRules": {
@@ -7597,18 +9208,6 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
-          "name_cn": "黄铜车轮, 镰刀刃(视为单手武器), 恐虐加农炮, 地狱之刃",
-          "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
-          "name_es": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
-          "name_fr": "Roues d’airain, Arme de base (faux), Canon de Khorne, Lames Infernales",
-          "name_it": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
-          "name_pl": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
-          "points": 0,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
-        {
           "name_en": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne {renegade}, Hellblades",
           "name_cn": "黄铜车轮, 镰刀刃(视为单手武器), 恐虐加农炮, 地狱之刃",
           "name_de": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
@@ -7617,23 +9216,10 @@
           "name_it": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "name_pl": "Brazen wheels, Hand weapon (scything blades), Cannon of Khorne, Hellblades",
           "points": 0,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         }
       ],
       "armor": [
-        {
-          "name_en": "Full plate armour",
-          "name_cn": "全身甲",
-          "name_de": "Full plate armour",
-          "name_es": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_it": "Full plate armour",
-          "name_pl": "Full plate armour",
-          "points": 0,
-          "active": true,
-          "armyComposition": "daemons-of-chaos"
-        },
         {
           "name_en": "3+",
           "name_cn": "3+",
@@ -7643,8 +9229,7 @@
           "name_it": "3+",
           "name_pl": "3+",
           "points": 0,
-          "active": true,
-          "armyComposition": "doc-renegade"
+          "active": true
         }
       ],
       "options": [],
@@ -7652,7 +9237,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
+        "name_en": "Brazen Wheels, Close Order, Daemonic {renegade}, Daemon of Khorne {renegade}, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
         "name_cn": "黄铜车轮, 紧密阵型, 恶魔, 恐虐恶魔, 先行冲锋, 撞击(D3+1), 鲁莽, 践踏攻击(D3)",
         "name_de": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",
         "name_es": "Brazen Wheels, Close Order, Daemonic, Daemon of Khorne, First Charge, Impact Hits (D3+1), Impetuous, Stomp Attacks (D3)",

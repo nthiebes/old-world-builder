@@ -4,10 +4,9 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { Button } from "../button";
-import { normalizeRuleName } from "../../utils/string";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getRuleData } from "./rules-map";
 import "./RuleWithIcon.css";
 
 export const RuleWithIcon = ({ name, armyComposition, isDark, className }) => {
@@ -18,15 +17,7 @@ export const RuleWithIcon = ({ name, armyComposition, isDark, className }) => {
     return null;
   }
 
-  const isRenegade = armyComposition?.includes("renegade");
-  let normalizedName = normalizeRuleName(name);
-
-  if (!isRenegade) {
-    normalizedName = normalizedName.replace(" renegade", "");
-  }
-
-  const synonym = synonyms[normalizedName];
-  const ruleExists = rulesMap[normalizedName] || rulesMap[synonym];
+  const ruleExists = getRuleData(name, armyComposition);
 
   return ruleExists ? (
     <Button
