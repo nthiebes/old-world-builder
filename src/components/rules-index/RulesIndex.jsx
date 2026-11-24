@@ -6,10 +6,9 @@ import classNames from "classnames";
 
 import { Dialog } from "../../components/dialog";
 import { Spinner } from "../../components/spinner";
-import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getRuleData } from "./rules-map";
 import "./RulesIndex.css";
 
 export const RulesIndex = () => {
@@ -25,17 +24,11 @@ export const RulesIndex = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-  const normalizedName =
-    activeRule.includes("renegade") && listArmyComposition?.includes("renegade")
-      ? normalizeRuleName(activeRule)
-      : normalizeRuleName(activeRule.replace(" {renegade}", ""));
-  const synonym = synonyms[normalizedName];
-  const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
-  const rulePath = ruleData?.url;
+  const ruleUrl = getRuleData(activeRule, listArmyComposition)?.url;
 
   return (
     <Dialog open={open} onClose={handleClose}>
-      {rulePath ? (
+      {ruleUrl ? (
         <>
           <iframe
             onLoad={() => setIsLoading(false)}
@@ -43,7 +36,7 @@ export const RulesIndex = () => {
               "rules-index__iframe",
               !isLoading && "rules-index__iframe--show",
             )}
-            src={`https://tow.whfb.app/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
+            src={ruleUrl}
             title="Warhammer: The Old World Online Rules Index"
             height="500"
             width="700"

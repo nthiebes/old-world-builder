@@ -7,6 +7,11 @@
       "name_es": "Príncipe oscuro",
       "name_fr": "Despote Elfe Noir",
       "id": "dark-elf-dreadlord",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        }
+      },
       "points": 130,
       "command": [
         {
@@ -180,31 +185,12 @@
           "points": 18
         },
         {
-          "name_en": "Dark Pegasus",
-          "name_cn": "黑暗天马",
-          "name_de": "Dark Pegasus",
-          "name_es": "Pegaso negro",
-          "name_fr": "Pégase Noir",
-          "points": 35,
-          "armyComposition": "de-renegade"
-        },
-        {
           "name_en": "Cold One Chariot",
           "name_cn": "冷蜥战车",
           "name_de": "Cold One Chariot",
           "name_es": "Carro de gélidos",
           "name_fr": "Char à Sang-froid",
-          "armyComposition": "dark-elves",
           "points": 125
-        },
-        {
-          "name_en": "Cold One Chariot {renegade}",
-          "name_cn": "冷蜥战车",
-          "name_de": "Cold One Chariot",
-          "name_es": "Carro de gélidos",
-          "name_fr": "Char à Sang-froid",
-          "armyComposition": "de-renegade",
-          "points": 110
         },
         {
           "name_en": "Black Dragon",
@@ -220,7 +206,6 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "dark-elves",
           "points": 130,
           "options": [
             {
@@ -232,6 +217,243 @@
               "points": 15
             }
           ]
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_cn": "亘古长恨, 仇恨（高等精灵）*, 嗜血（叛变）, 先攻*",
+        "name_de": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_es": "Odio eterno, Odio (Altos elfos)*, Destreza asesina, Siempre ataca primero*",
+        "name_fr": "Haine Éternelle, Haine (Hauts Elfes)*, Meurtriers, Frappe En Premier*"
+      },
+      "notes": {
+        "name_en": "0-1 Dark Elf Dreadlord or Supreme Sorceress per 1000 points: *These special rules do not apply to this model's mount (should it have one).",
+        "name_cn": "0-1Dark Elf Dreadlord or Supreme Sorceress per 1000 points: *These special rules do not apply to this model's mount (should it have one).",
+        "name_de": "*These special rules do not apply to this model's mount (should it have one).",
+        "name_es": "0-1 Príncipe osucor o Gran hechicera por cada 1000 puntos: *Estas reglas especiales no se aplican a la montura de esta miniatura (si la tuviera).",
+        "name_fr": "0-1 Despote Elfe Noir ou Sorcière Suprême par tranche de 1000 points:  *Ces règles spéciales ne s’appliquent pas à la monture de cette figurine (si elle en a une)."
+      }
+    },
+    {
+      "name_en": "Dark Elf Dreadlord {renegade}",
+      "name_cn": "恐惧领主",
+      "name_de": "Dark Elf Dreadlord",
+      "name_es": "Príncipe oscuro",
+      "name_fr": "Despote Elfe Noir",
+      "id": "dark-elf-dreadlord-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 130,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapon",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapon",
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Halberd",
+          "name_es": "Alabarda",
+          "name_fr": "Hallebarde",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance",
+          "name_cn": "长枪",
+          "name_de": "Lance",
+          "name_es": "Lanza de caballería",
+          "name_fr": "Lance de joute",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Armadura completa",
+          "name_fr": "Armure de plate complète",
+          "points": 6,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Escudo",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater crossbow",
+          "name_cn": "连发弩",
+          "name_de": "Repeater crossbow",
+          "name_es": "Ballesta de repetición",
+          "name_fr": "Arbalète à répétition",
+          "points": 6,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater handbow",
+          "name_cn": "连发手弩",
+          "name_de": "Repeater handbow",
+          "name_es": "Pistola ballesta",
+          "name_fr": "Arbalète de poing à répétition",
+          "points": 5,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Repeater handbows",
+          "name_cn": "成对连发手弩",
+          "name_de": "Brace of Repeater handbows",
+          "name_es": "Ristra de pistolas ballesta",
+          "name_fr": "Paire d’arbalètes à répétition de poing",
+          "points": 10,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_cn": "海龙披风",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Capa de dragón marino",
+          "name_fr": "Cape en peau de Dragon des Mers",
+          "points": 4,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Dark Steed",
+          "name_cn": "黑暗骏马",
+          "name_de": "Dark Steed",
+          "name_es": "Corcel oscuro",
+          "name_fr": "Coursier Noir",
+          "points": 14
+        },
+        {
+          "name_en": "Cold One {dark elves} {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18
+        },
+        {
+          "name_en": "Dark Pegasus",
+          "name_cn": "黑暗天马",
+          "name_de": "Dark Pegasus",
+          "name_es": "Pegaso negro",
+          "name_fr": "Pégase Noir",
+          "points": 35
+        },
+        {
+          "name_en": "Cold One Chariot {renegade}",
+          "name_cn": "冷蜥战车",
+          "name_de": "Cold One Chariot",
+          "name_es": "Carro de gélidos",
+          "name_fr": "Char à Sang-froid",
+          "points": 110
+        },
+        {
+          "name_en": "Black Dragon",
+          "name_cn": "黑龙",
+          "name_de": "Black Dragon",
+          "name_es": "Dragón negro",
+          "name_fr": "Dragon Noir",
+          "points": 280
         },
         {
           "name_en": "Manticore {renegade}",
@@ -239,7 +461,6 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "de-renegade",
           "points": 130,
           "options": [
             {
@@ -288,6 +509,11 @@
       "name_es": "Noble oscuro",
       "name_fr": "Maître Elfe Noir",
       "id": "dark-elf-master",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        }
+      },
       "points": 70,
       "command": [
         {
@@ -473,22 +699,245 @@
           "points": 18
         },
         {
-          "name_en": "Dark Pegasus",
-          "name_cn": "黑暗天马",
-          "name_de": "Dark Pegasus",
-          "name_es": "Pegaso negro",
-          "name_fr": "Pégase Noir",
-          "points": 35,
-          "armyComposition": "de-renegade"
-        },
-        {
           "name_en": "Cold One Chariot",
           "name_cn": "冷蜥战车",
           "name_de": "Cold One Chariot",
           "name_es": "Carro de gélidos",
           "name_fr": "Char à Sang-froid",
-          "armyComposition": "dark-elves",
           "points": 125
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_cn": "亘古长恨, 仇恨（高等精灵）*, 嗜血（叛变）, 先攻*",
+        "name_de": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_es": "Odio eterno, Odio (Altos elfos)*, Destreza homicida, Siempre ataca primero*",
+        "name_fr": "Haine Éternelle, Haine (Hauts Elfes)*, Meurtriers, Frappe En Premier*"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Dark Elf Master {renegade}",
+      "name_cn": "奴主",
+      "name_de": "Dark Elf Master",
+      "name_es": "Noble oscuro",
+      "name_fr": "Maître Elfe Noir",
+      "id": "dark-elf-master-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Battle Standard Bearer",
+          "name_es": "Portaestandarte de batalla",
+          "name_fr": "Porteur de la Grande Bannière",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapon",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Additional hand weapon",
+          "name_es": "Arma de mano adicional",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "name_fr": "Arme lourde",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Halberd",
+          "name_es": "Alabarda",
+          "name_fr": "Hallebarde",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance",
+          "name_cn": "长枪",
+          "name_de": "Lance",
+          "name_es": "Lanza de caballería",
+          "name_fr": "Lance de joute",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Armadura completa",
+          "name_fr": "Armure de plate complète",
+          "points": 6,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Escudo",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater crossbow",
+          "name_cn": "连发弩",
+          "name_de": "Repeater crossbow",
+          "name_es": "Ballesta de repetición",
+          "name_fr": "Arbalète à répétition",
+          "points": 6,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Repeater handbow",
+          "name_cn": "连发手弩",
+          "name_de": "Repeater handbow",
+          "name_es": "Pistola ballesta",
+          "name_fr": "Arbalète de poing à répétition",
+          "points": 5,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of Repeater handbows",
+          "name_cn": "成对连发手弩",
+          "name_de": "Brace of Repeater handbows",
+          "name_es": "Ristra de pistolas ballesta",
+          "name_fr": "Paire d’arbalètes à répétition de poing",
+          "points": 10,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_cn": "海龙披风",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Capa de dragón marino",
+          "name_fr": "Cape en peau de Dragon des Mers",
+          "points": 4,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Dark Steed",
+          "name_cn": "黑暗骏马",
+          "name_de": "Dark Steed",
+          "name_es": "Corcel oscuro",
+          "name_fr": "Coursier Noir",
+          "points": 14
+        },
+        {
+          "name_en": "Cold One {dark elves} {renegade}",
+          "name_cn": "冷蜥",
+          "name_de": "Cold One",
+          "name_es": "Gélido",
+          "name_fr": "Sang-froid",
+          "points": 18
+        },
+        {
+          "name_en": "Dark Pegasus",
+          "name_cn": "黑暗天马",
+          "name_de": "Dark Pegasus",
+          "name_es": "Pegaso negro",
+          "name_fr": "Pégase Noir",
+          "points": 35
         },
         {
           "name_en": "Cold One Chariot {renegade}",
@@ -496,7 +945,6 @@
           "name_de": "Cold One Chariot",
           "name_es": "Carro de gélidos",
           "name_fr": "Char à Sang-froid",
-          "armyComposition": "de-renegade",
           "points": 110
         }
       ],
@@ -535,12 +983,12 @@
       "name_es": "Gran hechicera",
       "name_fr": "Sorcière Suprême",
       "id": "supreme-sorceress",
-      "points": 150,
       "armyComposition": {
         "dark-elves": {
           "category": "characters"
         }
       },
+      "points": 150,
       "command": [
         {
           "name_en": "General",
@@ -666,7 +1114,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -681,7 +1129,7 @@
       }
     },
     {
-      "name_en": "Supreme Sorceress",
+      "name_en": "Supreme Sorceress {renegade}",
       "name_cn": "高阶女术士",
       "name_de": "Supreme Sorceress",
       "name_es": "Gran hechicera",
@@ -768,7 +1216,7 @@
           "points": 14
         },
         {
-          "name_en": "Cold One {dark elves}",
+          "name_en": "Cold One {dark elves} {renegade}",
           "name_cn": "冷蜥",
           "name_de": "Cold One",
           "name_es": "Gélido",
@@ -818,7 +1266,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing {renegade}, Lore of Naggaroth {renegade}, Murderous {renegade}",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -839,12 +1287,12 @@
       "name_es": "Hechicera ",
       "name_fr": "Sorcière",
       "id": "sorceress",
-      "points": 75,
       "armyComposition": {
         "dark-elves": {
           "category": "characters"
         }
       },
+      "points": 75,
       "command": [
         {
           "name_en": "General",
@@ -962,7 +1410,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -977,18 +1425,18 @@
       }
     },
     {
-      "name_en": "Sorceress",
+      "name_en": "Sorceress {renegade}",
       "name_cn": "女术士",
       "name_de": "Sorceress",
       "name_es": "Hechicera ",
       "name_fr": "Sorcière",
-      "id": "sorceress",
-      "points": 80,
+      "id": "sorceress-renegade",
       "armyComposition": {
         "de-renegade": {
           "category": "characters"
         }
       },
+      "points": 80,
       "command": [
         {
           "name_en": "General",
@@ -1064,7 +1512,7 @@
           "points": 14
         },
         {
-          "name_en": "Cold One {dark elves}",
+          "name_en": "Cold One {dark elves} {renegade}",
           "name_cn": "冷蜥",
           "name_de": "Cold One",
           "name_es": "Gélido",
@@ -1106,7 +1554,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth {renegade}, Murderous {renegade}",
+        "name_en": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing {renegade}, Lore of Naggaroth {renegade}, Murderous {renegade}",
         "name_cn": "精灵反应, 亘古长恨, 仇恨(高等精灵), 赫卡提的祝福, 纳加隆德之智, 嗜血（叛变）",
         "name_de": "Elven Reflexes, Eternal Hatred, Hatred (High Elves), Hekarti's Blessing, Lore of Naggaroth, Murderous",
         "name_es": "Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Bendición de Hekarti, Saber de Naggaroth, Destreza homicida",
@@ -1127,6 +1575,11 @@
       "name_es": "Gran señor de las bestias",
       "name_fr": "Haut Belluaire",
       "id": "high-beastmaster",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        }
+      },
       "points": 75,
       "command": [
         {
@@ -1231,7 +1684,6 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "dark-elves",
           "points": 130,
           "options": [
             {
@@ -1243,6 +1695,138 @@
               "points": 15
             }
           ]
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_cn": "亘古长恨, 诱导野兽, 仇恨（高等精灵）*, 嗜血（叛变）, 先攻*",
+        "name_de": "Eternal Hatred, Goad Beast, Hatred (High Elves)*, Murderous, Strike First*",
+        "name_es": "Odio acérrimo, Domador de bestias, Odio (Altos elfos)*, Destreza homicida, Siempre ataca primero*",
+        "name_fr": "Haine Éternelle, Dompteur, Haine (Hauts Elfes)*, Meurtriers, Frappe En Premier*"
+      }
+    },
+    {
+      "name_en": "High Beastmaster {renegade}",
+      "name_cn": "高阶驯兽师",
+      "name_de": "High Beastmaster",
+      "name_es": "Gran señor de las bestias",
+      "name_fr": "Haut Belluaire",
+      "id": "high-beastmaster-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 75,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_es": "General",
+          "name_fr": "Général",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Whip",
+          "name_cn": "单手武器, 长鞭",
+          "name_de": "Hand weapon, Whip",
+          "name_es": "Arma de mano, Látigo",
+          "name_fr": "Arme de base, Fouet",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Whip, Cavalry spear",
+          "name_cn": "单手武器, 长鞭, 骑兵长矛",
+          "name_de": "Hand weapon, Whip, Cavalry spear",
+          "name_es": "Arma de mano, Látigo, Lanza de caballería",
+          "name_fr": "Arme de base, Fouet, Lance de cavalerie",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 3,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Repeater crossbow",
+          "name_cn": "连发弩",
+          "name_de": "Repeater crossbow",
+          "name_es": "Ballesta de repetición",
+          "name_fr": "Arbalète à répétition",
+          "points": 6,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Shield",
+          "name_es": "Escudo",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Sea Dragon Cloak",
+          "name_cn": "海龙披风",
+          "name_de": "Sea Dragon Cloak",
+          "name_es": "Capa de dragón marino",
+          "name_fr": "Cape en peau de Dragon des Mers",
+          "points": 4,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Scourgerunner Chariot {renegade}",
+          "name_cn": "灾行者战车",
+          "name_de": "Scourgerunner Chariot",
+          "name_es": "Carro fustigador",
+          "name_fr": "Char à Courre",
+          "points": 85,
+          "active": true
         },
         {
           "name_en": "Manticore {renegade}",
@@ -1250,7 +1834,6 @@
           "name_de": "Manticore",
           "name_es": "Mantícora",
           "name_fr": "Manticore",
-          "armyComposition": "de-renegade",
           "points": 130,
           "options": [
             {
@@ -1292,30 +1875,98 @@
       "name_es": "Sacerdotisa elfa bruja",
       "name_fr": "Matriarche",
       "id": "death-hag",
-      "points": 70,
-      "command": [],
       "armyComposition": {
-        "de-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Gifts of Khaine, Warband",
-            "name_cn": "亘古长恨, 狂暴, 仇恨(所有敌人), 独行, 嗜血（叛变）, 淬毒攻击, 先攻, 凯恩赠礼, Warband",
-            "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts of Khaine, Warband",
-            "name_es": "Odio acérrimo, Furia asesina, Odio (a todos los enemigos), Solitaria, Destreza asesina, Ataques envenenados, Siempre ataca primero, Regalos de Khaine, Warband",
-            "name_fr": "Haine Éternelle, Frénésie, Haine (Tous les ennemis), Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Dons de Khaine, Warband"
-          }
-        },
         "dark-elves": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Gifts of Khaine",
-            "name_cn": "亘古长恨, 狂暴, 仇恨(所有敌人), 独行, 嗜血（叛变）, 淬毒攻击, 先攻, 凯恩赠礼",
-            "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts of Khaine",
-            "name_es": "Odio acérrimo, Furia asesina, Odio (a todos los enemigos), Solitaria, Destreza asesina, Ataques envenenados, Siempre ataca primero, Regalos de Khaine",
-            "name_fr": "Haine Éternelle, Frénésie, Haine (Tous les ennemis), Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Dons de Khaine"
-          }
+          "category": "characters"
         }
       },
+      "points": 70,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Two hand weapons",
+          "name_cn": "两把单手武器",
+          "name_de": "Two hand weapons",
+          "name_es": "Dos armas de mano",
+          "name_fr": "Deux armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Cauldron of Blood",
+          "name_cn": "血骸神龛（叛变）",
+          "name_de": "Cauldron of Blood",
+          "name_es": "Caldero de sangre",
+          "name_fr": "Chaudron de Sang",
+          "points": 150,
+          "notes": {
+            "name_en": "0-1 Cauldron of Blood per 1000 points",
+            "name_cn": "0-1每1000分Cauldron of Blood",
+            "name_de": "0-1 Cauldron of Blood per 1000 points",
+            "name_es": "0-1 Calderos de sangre por cada 1000 puntos",
+            "name_fr": "0-1 Chaudron de Sang par tranche de 1000 points"
+          }
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Gifts of Khaine",
+          "name_cn": "凯恩赠礼",
+          "name_de": "Gifts of Khaine",
+          "name_es": "Regalos de Khaine",
+          "name_fr": "Dons de Khaine",
+          "types": ["gift-of-khaine"],
+          "selected": [],
+          "maxPoints": 20
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts of Khaine",
+        "name_cn": "亘古长恨, 狂暴, 仇恨(所有敌人), 独行, 嗜血（叛变）, 淬毒攻击, 先攻, 凯恩赠礼",
+        "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts of Khaine",
+        "name_es": "Odio acérrimo, Furia asesina, Odio (a todos los enemigos), Solitaria, Destreza asesina, Ataques envenenados, Siempre ataca primero, Regalos de Khaine",
+        "name_fr": "Haine Éternelle, Frénésie, Haine (Tous les ennemis), Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Dons de Khaine"
+      }
+    },
+    {
+      "name_en": "Death Hag {renegade}",
+      "name_cn": "死亡魔女",
+      "name_de": "Death Hag",
+      "name_es": "Sacerdotisa elfa bruja",
+      "name_fr": "Matriarche",
+      "id": "death-hag-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 70,
+      "command": [],
       "equipment": [
         {
           "name_en": "Two hand weapons",
@@ -1378,7 +2029,14 @@
           "maxPoints": 75
         }
       ],
-      "lores": []
+      "lores": [],
+      "specialRules": {
+        "name_en": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous {renegade}, Poisoned Attacks, Strike First, Gifts of Khaine, Warband",
+        "name_cn": "亘古长恨, 狂暴, 仇恨(所有敌人), 独行, 嗜血（叛变）, 淬毒攻击, 先攻, 凯恩赠礼, Warband",
+        "name_de": "Eternal Hatred, Frenzy, Hatred (all enemies), Loner, Murderous, Poisoned Attacks, Strike First, Gifts of Khaine, Warband",
+        "name_es": "Odio acérrimo, Furia asesina, Odio (a todos los enemigos), Solitaria, Destreza asesina, Ataques envenenados, Siempre ataca primero, Regalos de Khaine, Warband",
+        "name_fr": "Haine Éternelle, Frénésie, Haine (Tous les ennemis), Solitaire, Meurtriers, Attaques Empoisonnées, Frappe En Premier, Dons de Khaine, Warband"
+      }
     },
     {
       "name_en": "Khainite Assassin",
@@ -1387,29 +2045,12 @@
       "name_es": "Asesino Khainita",
       "name_fr": "Assassin Khainite",
       "id": "khainite-assassin",
-      "points": 80,
       "armyComposition": {
-        "de-renegade": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves}, Immune to Psychology, Murderous {renegade}, Strike First, Poisoned Attacks",
-            "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变, 先攻, Poisoned Attacks",
-            "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Strike First, Poisoned Attacks",
-            "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Siempre ataca primero, Poisoned Attacks",
-            "name_fr": "Haine Éternelle, Haine (Tous les ennemis), Caché, Immunisé à la Psychologie, Meurtriers, Frappe En Premier, Poisoned Attacks"
-          }
-        },
         "dark-elves": {
-          "category": "characters",
-          "specialRules": {
-            "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves}, Immune to Psychology, Murderous {renegade}, Strike First",
-            "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变, 先攻",
-            "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Strike First",
-            "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Siempre ataca primero",
-            "name_fr": "Haine Éternelle, Haine (Tous les ennemis), Caché, Immunisé à la Psychologie, Meurtriers, Frappe En Premier"
-          }
+          "category": "characters"
         }
       },
+      "points": 80,
       "command": [],
       "equipment": [
         {
@@ -1483,6 +2124,108 @@
         "name_de": "",
         "name_es": "",
         "name_fr": ""
+      },
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves}, Immune to Psychology, Murderous, Strike First",
+        "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变, 先攻",
+        "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Strike First",
+        "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Siempre ataca primero",
+        "name_fr": "Haine Éternelle, Haine (Tous les ennemis), Caché, Immunisé à la Psychologie, Meurtriers, Frappe En Premier"
+      }
+    },
+    {
+      "name_en": "Khainite Assassin {renegade}",
+      "name_cn": "凯恩刺客",
+      "name_de": "Khainite Assassin",
+      "name_es": "Asesino Khainita",
+      "name_fr": "Assassin Khainite",
+      "id": "khainite-assassin-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 80,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapon, Throwing weapons",
+          "name_cn": "单手武器, 投掷武器",
+          "name_de": "Hand weapon, Throwing weapons",
+          "name_es": "Arma de mano, Armas arrojadizas",
+          "name_fr": "Arme de base, Armes de lancer",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Throwing weapons, Additional hand weapon",
+          "name_cn": "单手武器, 投掷武器, 额外单手武器",
+          "name_de": "Hand weapon, Throwing weapons, Additional hand weapon",
+          "name_es": "Arma de mano, Armas arrojadizas, Arma de mano adicional",
+          "name_fr": "Arme de base, Armes de lancer, Arme de base additionnelle",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapon, Throwing weapons, Repeater handbow",
+          "name_cn": "单手武器, 投掷武器, 连发手弩",
+          "name_de": "Hand weapon, Throwing weapons, Repeater handbow",
+          "name_es": "Arma de mano, Armas arrojadizas, Ballesta de repetición",
+          "name_fr": "Arme de base, Armes de lancer, Arbalète de poing à répétition",
+          "points": 5,
+          "perModel": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "On foot",
+          "name_es": "A pie",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Forbidden Poisons",
+          "name_cn": "禁忌剧毒",
+          "name_de": "Forbidden Poisons",
+          "name_es": "Venenos prohibidos",
+          "name_fr": "Poisons Interdits",
+          "types": ["forbidden-poison"],
+          "selected": [],
+          "maxPoints": 15
+        },
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      },
+      "specialRules": {
+        "name_en": "Eternal Hatred, Hatred (all enemies), Hidden {dark elves} {renegade}, Immune to Psychology, Murderous {renegade}, Strike First, Poisoned Attacks",
+        "name_cn": "亘古长恨, 仇恨(所有敌人), 隐蔽, 心理免疫, 嗜血（叛变, 先攻, Poisoned Attacks",
+        "name_de": "Eternal Hatred, Hatred (all enemies), Hidden, Immune to Psychology, Murderous, Strike First, Poisoned Attacks",
+        "name_es": "Odio acérrimo, Odio (a todos los enemigos), Oculto, Inmune a la psicología, Destreza homicida, Siempre ataca primero, Poisoned Attacks",
+        "name_fr": "Haine Éternelle, Haine (Tous les ennemis), Caché, Immunisé à la Psychologie, Meurtriers, Frappe En Premier, Poisoned Attacks"
       }
     }
   ],
@@ -1494,12 +2237,12 @@
       "name_es": "Guerreros elfos oscuros",
       "name_fr": "Guerriers Elfes Noirs",
       "id": "dark-elf-warriors",
-      "points": 8,
       "armyComposition": {
         "dark-elves": {
           "category": "core"
         }
       },
+      "points": 8,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -1611,12 +2354,12 @@
       "name_es": "Guerreros elfos oscuros",
       "name_fr": "Guerriers Elfes Noirs",
       "id": "dark-elf-warriors-renegade",
-      "points": 8,
       "armyComposition": {
         "de-renegade": {
           "category": "core"
         }
       },
+      "points": 8,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1714,7 +2457,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess {renegade}",
         "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 精湛武艺",
         "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
         "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza marcial",
@@ -1728,12 +2471,12 @@
       "name_es": "Ballesteros",
       "name_fr": "Arbalétriers Elfes Noirs",
       "id": "repeater-crossbowmen",
-      "points": 11,
       "armyComposition": {
         "dark-elves": {
           "category": "core"
         }
       },
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -1847,12 +2590,12 @@
       "name_es": "Ballesteros",
       "name_fr": "Arbalétriers Elfes Noirs",
       "id": "repeater-crossbowmen-renegade",
-      "points": 10,
       "armyComposition": {
         "de-renegade": {
           "category": "core"
         }
       },
+      "points": 10,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1952,7 +2695,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess {renegade}",
         "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 精湛武艺",
         "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Martial Prowess",
         "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza marcial",
@@ -1966,12 +2709,12 @@
       "name_es": "Corsarios de arca negra",
       "name_fr": "Corsaires des Arches Noires",
       "id": "black-ark-corsairs",
-      "points": 11,
       "armyComposition": {
         "dark-elves": {
           "category": "core"
         }
       },
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -2057,18 +2800,18 @@
       }
     },
     {
-      "name_en": "Black Ark Corsairs",
+      "name_en": "Black Ark Corsairs {renegade}",
       "name_cn": "黑色方舟海盗",
       "name_de": "Black Ark Corsairs",
       "name_es": "Corsarios de arca negra",
       "name_fr": "Corsaires des Arches Noires",
       "id": "black-ark-corsairs-renegade",
-      "points": 11,
       "armyComposition": {
         "de-renegade": {
           "category": "core"
         }
       },
+      "points": 11,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2197,6 +2940,145 @@
       "name_es": "Jinetes oscuros",
       "name_fr": "Cavaliers Noirs",
       "id": "dark-riders",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        }
+      },
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Herald (champion)",
+          "name_cn": "先驱(冠军)",
+          "name_de": "Herald (champion)",
+          "name_es": "Heraldo (campeón)",
+          "name_fr": "Héraut (champion)",
+          "points": 6
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 6
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Cavalry spears",
+          "name_cn": "单手武器, 骑兵长矛",
+          "name_de": "Hand weapons, Cavalry spears",
+          "name_es": "Armas de mano, lanzas de caballería",
+          "name_fr": "Armes de base, Lances de cavalerie",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_cn": "单手武器, 骑兵长矛, 连发弩",
+          "name_de": "Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_es": "Armas de mano, Lanzas de caballería, Ballestas de repetición",
+          "name_fr": "Armes de base, Lances de cavalerie, Arbalètes à répétition",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shields",
+          "name_cn": "盾牌",
+          "name_de": "Shields",
+          "name_es": "Escudos",
+          "name_fr": "Boucliers",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Fire & Flee",
+          "name_cn": "游击",
+          "name_de": "Fire & Fleet",
+          "name_es": "Disparar y huir",
+          "name_fr": "Tir & Fuite",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        },
+        {
+          "name_en": "Scouts",
+          "name_cn": "侦察",
+          "name_de": "Scouts",
+          "name_es": "Exploradores",
+          "name_fr": "Éclaireurs",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0,
+          "notes": {
+            "name_en": "0-1 per 1000 points",
+            "name_cn": "每1000分0-1",
+            "name_de": "0-1 pro 1000 Punkte",
+            "name_es": "0-1 por cada 1000 puntos",
+            "name_fr": "0-1 par tranche de 1000 points"
+          }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
+        "name_cn": "精灵反应, 快速骑兵, 仇恨(高等精灵), 开放阵型, 散兵, 快速行进",
+        "name_de": "Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Skirmishers, Swiftstride",
+        "name_es": "Reflejos élficos, Caballería rápida, Odio (Altos elfos), Orden abierto, Escaramuzadores, Rápidos",
+        "name_fr": "Réflexes Elfiques, Cavalerie Rapide, Haine (Hauts Elfes), Ordre Dispersé, Tirailleurs, Rapide"
+      }
+    },
+    {
+      "name_en": "Dark Riders {renegade}",
+      "name_cn": "黑暗骑手",
+      "name_de": "Dark Riders",
+      "name_es": "Jinetes oscuros",
+      "name_fr": "Cavaliers Noirs",
+      "id": "dark-riders-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "core"
+        }
+      },
       "points": 16,
       "minimum": 5,
       "maximum": 0,
@@ -2326,12 +3208,12 @@
       "name_es": "Elfas brujas",
       "name_fr": "Furies",
       "id": "witch-elves-core",
-      "points": 11,
       "armyComposition": {
         "dark-elves": {
           "category": "core"
         }
       },
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -2382,7 +3264,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks",
+        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
         "name_cn": "紧密阵型, 精灵反应, 狂暴, 仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击",
         "name_de": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
         "name_es": "Orden cerrado, Reflejos élficos, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados",
@@ -2482,12 +3364,12 @@
       "name_es": "Verdugos de Har Ganeth",
       "name_fr": "Exécuteurs de Har Ganeth",
       "id": "har-ganeth-executioners",
-      "points": 15,
       "armyComposition": {
         "dark-elves": {
           "category": "special"
         }
       },
+      "points": 15,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -2565,7 +3447,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous {renegade}, Veteran",
+        "name_en": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran",
         "name_cn": "紧密阵型, 精灵反应, 仇恨(高等精灵), 嗜血（叛变）, 老兵",
         "name_de": "Close Order, Elven Reflexes, Hatred (High Elves), Murderous, Veteran",
         "name_es": "Orden cerrado, Reflejos élficos, Odio (Altos elfos), Destreza asesina, Veterano",
@@ -2585,13 +3467,13 @@
       "name_de": "Har Ganeth Executioners",
       "name_es": "Verdugos de Har Ganeth",
       "name_fr": "Exécuteurs de Har Ganeth",
-      "id": "har-ganeth-executioners",
-      "points": 14,
+      "id": "har-ganeth-executioners-renegade",
       "armyComposition": {
         "de-renegade": {
           "category": "special"
         }
       },
+      "points": 14,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -2630,7 +3512,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Har Ganeth greatswords",
+          "name_en": "Hand weapons, Har Ganeth greatswords {renegade}",
           "name_cn": "单手武器, 哈尔冈西巨剑",
           "name_de": "Hand weapons, Har Ganeth greatswords",
           "name_es": "Armas de mano, Mandobles de Har Ganeth",
@@ -2688,12 +3570,12 @@
       "name_es": "Elfas brujas",
       "name_fr": "Furies",
       "id": "witch-elves",
-      "points": 11,
       "armyComposition": {
         "dark-elves": {
           "category": "special"
         }
       },
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -2744,7 +3626,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous {renegade}, Poisoned Attacks",
+        "name_en": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner, Murderous, Poisoned Attacks",
         "name_cn": "紧密阵型, 精灵反应, 狂暴, 仇恨(高等精灵), 部群, 独行, 嗜血（叛变）, 淬毒攻击",
         "name_de": "Close Order, Elven Reflexes, Frenzy, Hatred (High Elves), Horde, Loner,  Murderous, Poisoned Attacks",
         "name_es": "Orden cerrado, Reflejos élficos, Furia asesina, Odio (Altos elfos), Horda, Solitario, Destreza asesina, Ataques envenenados",
@@ -2764,7 +3646,7 @@
       "name_de": "Witch Elves",
       "name_es": "Elfas brujas",
       "name_fr": "Furies",
-      "id": "witch-elves-core-renegade",
+      "id": "witch-elves-renegade",
       "armyComposition": {
         "de-renegade": {
           "category": "special"
@@ -2829,37 +3711,20 @@
       }
     },
     {
-      "name_en": "Dark Elf Shades {renegade}",
+      "name_en": "Dark Elf Shades",
       "name_cn": "黯影",
       "name_de": "Dark Elf Shades",
       "name_es": "Sombras",
       "name_fr": "Ombres Elfes Noirs",
       "id": "dark-elf-shades",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
       "points": 15,
       "minimum": 5,
       "maximum": 0,
-      "armyComposition": {
-        "dark-elves": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
-            "name_cn": "精灵反应, 闪避, 仇恨(高等精灵), 穿行掩体, 侦察, 散兵",
-            "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
-            "name_es": "Reflejos élficos, Evasivos, Odio (Altos elfos), Mover a través de cobertura, Exploradores, Escaramuzadores",
-            "name_fr": "Réflexes Elfiques, Esquiveur, Haine (Hauts Elfes), Mouvement à Couvert, Éclaireurs, Tirailleurs"
-          }
-        },
-        "de-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers, Fire & Flee",
-            "name_cn": "精灵反应, 闪避, 仇恨(高等精灵), 穿行掩体, 侦察, 散兵, Fire & Flee",
-            "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers, Fire & Flee",
-            "name_es": "Reflejos élficos, Evasivos, Odio (Altos elfos), Mover a través de cobertura, Exploradores, Escaramuzadores, Fire & Flee",
-            "name_fr": "Réflexes Elfiques, Esquiveur, Haine (Hauts Elfes), Mouvement à Couvert, Éclaireurs, Tirailleurs, Fire & Flee"
-          }
-        }
-      },
       "command": [
         {
           "name_en": "Bloodshade (champion)",
@@ -2912,8 +3777,7 @@
           "name_es": "Sin armadura",
           "name_fr": "Pas d’armure",
           "points": 0,
-          "active": true,
-          "armyComposition": "dark-elves"
+          "active": true
         },
         {
           "name_en": "Light armour",
@@ -2922,19 +3786,7 @@
           "name_es": "Armadura ligera",
           "name_fr": "Armure légère",
           "points": 1,
-          "perModel": true,
-          "armyComposition": "dark-elves"
-        },
-        {
-          "name_en": "Light armour",
-          "name_cn": "轻甲",
-          "name_de": "Light armour",
-          "name_es": "Armadura ligera",
-          "name_fr": "Armure légère",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "armyComposition": "de-renegade"
+          "perModel": true
         }
       ],
       "options": [
@@ -2947,7 +3799,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
@@ -2965,7 +3816,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
@@ -2983,7 +3833,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "dark-elves",
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "0-1 per army",
@@ -2991,7 +3840,91 @@
             "name_es": "0-1 per army",
             "name_fr": "0-1 par armée"
           }
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+        "name_cn": "精灵反应, 闪避, 仇恨(高等精灵), 穿行掩体, 侦察, 散兵",
+        "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers",
+        "name_es": "Reflejos élficos, Evasivos, Odio (Altos elfos), Mover a través de cobertura, Exploradores, Escaramuzadores",
+        "name_fr": "Réflexes Elfiques, Esquiveur, Haine (Hauts Elfes), Mouvement à Couvert, Éclaireurs, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Dark Elf Shades {renegade}",
+      "name_cn": "黯影",
+      "name_de": "Dark Elf Shades",
+      "name_es": "Sombras",
+      "name_fr": "Ombres Elfes Noirs",
+      "id": "dark-elf-shades-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special"
+        }
+      },
+      "points": 15,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Bloodshade (champion)",
+          "name_cn": "血影(冠军)",
+          "name_de": "Bloodshade (champion)",
+          "name_es": "Sombra de sangre (champion)",
+          "name_fr": "Ombre Sanglante (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Repeater crossbows",
+          "name_cn": "单手武器, 连发弩",
+          "name_de": "Hand weapons, Repeater crossbows",
+          "name_es": "Armas de mano, Ballestas de repetición",
+          "name_fr": "Armes de base, Arbalètes à répétition",
+          "points": 0,
+          "perModel": true,
+          "active": true
         },
+        {
+          "name_en": "Hand weapons, Repeater crossbows, Additional hand weapons",
+          "name_cn": "单手武器, 连发弩, 额外单手武器",
+          "name_de": "Hand weapons, Repeater crossbows, Additional hand weapons",
+          "name_es": "Armas de mano, Ballestas de repetición, Armas de mano adicionales",
+          "name_fr": "Armes de base, Arbalètes à répétition, Armes de base additionnelles",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Repeater crossbows, Great weapons",
+          "name_cn": "单手武器, 连发弩, 重型武器",
+          "name_de": "Hand weapons, Repeater crossbows, Great weapons",
+          "name_es": "Armas de mano, Ballestas de repetición, Armas a dos manos",
+          "name_fr": "Armes de base, Arbalètes à répétition, Armes lourdes",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
         {
           "name_en": "Ambushers",
           "name_cn": "伏击",
@@ -3001,7 +3934,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "de-renegade",
           "notes": {
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_en": "0-1 unit per 1000 points",
@@ -3019,7 +3951,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "de-renegade",
           "notes": {
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_en": "0-1 unit per 1000 points",
@@ -3037,7 +3968,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "de-renegade",
           "notes": {
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_en": "0-1 unit per 1000 points",
@@ -3055,7 +3985,6 @@
           "points": 1,
           "perModel": true,
           "exclusive": true,
-          "armyComposition": "de-renegade",
           "notes": {
             "name_de": "0-1 Einheit pro 1000 Punkte",
             "name_en": "0-1 unit per 1000 points",
@@ -3067,7 +3996,14 @@
       ],
       "mounts": [],
       "items": [],
-      "lores": []
+      "lores": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers, Fire & Flee",
+        "name_cn": "精灵反应, 闪避, 仇恨(高等精灵), 穿行掩体, 侦察, 散兵, Fire & Flee",
+        "name_de": "Elven Reflexes, Evasive, Hatred (High Elves), Move Through Cover, Scouts, Skirmishers, Fire & Flee",
+        "name_es": "Reflejos élficos, Evasivos, Odio (Altos elfos), Mover a través de cobertura, Exploradores, Escaramuzadores, Fire & Flee",
+        "name_fr": "Réflexes Elfiques, Esquiveur, Haine (Hauts Elfes), Mouvement à Couvert, Éclaireurs, Tirailleurs, Fire & Flee"
+      }
     },
     {
       "name_en": "Harpies",
@@ -3076,6 +4012,59 @@
       "name_es": "Arpías",
       "name_fr": "Harpies",
       "id": "harpies",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws)",
+          "name_cn": "单手武器(Claws)",
+          "name_de": "Hand weapons (Claws)",
+          "name_es": "Armas de mano (Garras)",
+          "name_fr": "Armes de base (Griffes)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_cn": "飞行(10), 穿行掩体, 侦察, 散兵, 快速行进",
+        "name_de": " Fly (10), Move Through Cover, Scouts, Skirmishers, Swiftstride",
+        "name_es": " Volar (10), Mover a través de cobertura, Exploradores, Escaramuzadores, Rápido",
+        "name_fr": " Vol (10), Mouvement à Couvert, Éclaireurs, Tirailleurs, Rapide"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Harpies {renegade}",
+      "name_cn": "鹰身女妖",
+      "name_de": "Harpies",
+      "name_es": "Arpías",
+      "name_fr": "Harpies",
+      "id": "harpies-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special"
+        }
+      },
       "points": 11,
       "minimum": 5,
       "maximum": 0,
@@ -3119,12 +4108,12 @@
       "name_es": "Guardia negra de Naggarond",
       "name_fr": "Garde Noire de Naggarond",
       "id": "black-guard-of-naggarond",
-      "points": 15,
       "armyComposition": {
         "dark-elves": {
           "category": "special"
         }
       },
+      "points": 15,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -3223,12 +4212,12 @@
       "name_es": "Guardia negra de Naggarond",
       "name_fr": "Garde Noire de Naggarond",
       "id": "black-guard-of-naggarond-renegade",
-      "points": 15,
       "armyComposition": {
         "de-renegade": {
           "category": "special"
         }
       },
+      "points": 15,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -3306,11 +4295,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn, Hatred (All Enemies)",
-        "name_cn": "紧密阵型, 精灵反应, 亘古长恨, 仇恨(高等精灵), 心理免疫, 精湛武艺, 坚毅, Hatred (All Enemies)",
-        "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (High Elves), Immune to Psychology, Martial Prowess, Stubborn, Hatred (All Enemies)",
-        "name_es": "Orden cerrado, Reflejos élficos, Odio acérrimo, Odio (Altos elfos), Inmune a la psicología, Destreza marcial, Tozudo, Hatred (All Enemies)",
-        "name_fr": "Ordre Serré, Réflexes Elfiques, Haine Éternelle, Haine (Hauts Elfes), Immunisé à la Psychologie, Prouesses Martiales, Obstiné, Hatred (All Enemies)"
+        "name_en": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (All Enemies), Immune to Psychology, Martial Prowess {renegade}, Stubborn",
+        "name_cn": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (All Enemies), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_de": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (All Enemies), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_es": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (All Enemies), Immune to Psychology, Martial Prowess, Stubborn",
+        "name_fr": "Close Order, Elven Reflexes, Eternal Hatred, Hatred (All Enemies), Immune to Psychology, Martial Prowess, Stubborn"
       },
       "notes": {
         "name_en": "0-1 unit of Black Guard of Naggarond per 1,000 points",
@@ -3321,7 +4310,7 @@
       }
     },
     {
-      "name_en": "Cold One Knights {renegade}",
+      "name_en": "Cold One Knights",
       "name_cn": "冷蜥骑士",
       "name_de": "Cold One Knights",
       "name_es": "Caballeros gélidos",
@@ -3329,24 +4318,7 @@
       "id": "cold-one-knights",
       "armyComposition": {
         "dark-elves": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
-            "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进",
-            "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
-            "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido",
-            "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide"
-          }
-        },
-        "de-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride, Counter Charge",
-            "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进, Counter Charge",
-            "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride, Counter Charge",
-            "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido, Counter Charge",
-            "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide, Counter Charge"
-          }
+          "category": "special"
         }
       },
       "points": 31,
@@ -3429,6 +4401,114 @@
         "name_de": "0-1 per 1000 points",
         "name_es": "0-1 por cada 1000 puntos",
         "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "specialRules": {
+        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+        "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进",
+        "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+        "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido",
+        "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide"
+      }
+    },
+    {
+      "name_en": "Cold One Knights {renegade}",
+      "name_cn": "冷蜥骑士",
+      "name_de": "Cold One Knights",
+      "name_es": "Caballeros gélidos",
+      "name_fr": "Chevaliers sur Sang-froid",
+      "id": "cold-one-knights-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special"
+        }
+      },
+      "points": 31,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Dread Knight (champion)",
+          "name_cn": "恐惧骑士(冠军)",
+          "name_de": "Dread Knight (champion)",
+          "name_es": "Caballero siniestro (campeón)",
+          "name_fr": "Chevalier d’Effroi (champion)",
+          "points": 7,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standard bearer",
+          "name_es": "Portaestandarte",
+          "name_fr": "Porte-étendard",
+          "points": 7,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musician",
+          "name_es": "Músico",
+          "name_fr": "Musicien",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Lances, Shields",
+          "name_cn": "单手武器, 长枪, 盾牌",
+          "name_de": "Hand weapons, Lances, Shields",
+          "name_es": "Armas de mano, Lanzas de caballería, Shields",
+          "name_fr": "Armes de base, Lances de joute, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "name_fr": "Armure lourde",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_cn": "全身甲",
+          "name_de": "Full plate armour",
+          "name_es": "Armadura completa",
+          "name_fr": "Armure de plate complète",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 por cada 1000 puntos",
+        "name_fr": "0-1 par tranche de 1000 points"
+      },
+      "specialRules": {
+        "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride, Counter Charge",
+        "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进, Counter Charge",
+        "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride, Counter Charge",
+        "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido, Counter Charge",
+        "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide, Counter Charge"
       }
     },
     {
@@ -3438,6 +4518,11 @@
       "name_es": "Carros fustigadores",
       "name_fr": "Chars à Courre",
       "id": "scourgerunner-chariots",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
       "points": 85,
       "minimum": 1,
       "maximum": 3,
@@ -3486,18 +4571,77 @@
       }
     },
     {
+      "name_en": "Scourgerunner Chariots {renegade}",
+      "name_cn": "灾行者战车",
+      "name_de": "Scourgerunner Chariots",
+      "name_es": "Carros fustigadores",
+      "name_fr": "Chars à Courre",
+      "id": "scourgerunner-chariots-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "special"
+        }
+      },
+      "points": 85,
+      "minimum": 1,
+      "maximum": 3,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Ravager harpoon* {renegade}, Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_cn": "掠夺者鱼叉*, 单手武器, 骑兵长矛, 连发弩",
+          "name_de": "Ravager harpoon*, Hand weapons, Cavalry spears, Repeater crossbows",
+          "name_es": "Arpón devastador*, Armas de mano, Lanzas de caballería, Ballestas de repetición",
+          "name_fr": "Harpon ravageur*, Armes de base, Lances de cavalerie, Arbalètes à répétition",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "5+",
+          "name_cn": "5+",
+          "name_de": "5+",
+          "name_es": "5+",
+          "name_fr": "5+",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride",
+        "name_cn": "精灵反应, 仇恨(高等精灵), 撞击(D6), 开放阵型, 海龙披风, 快速行进",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Impact Hits (D6), Open Order, Sea Dragon Cloak, Swiftstride",
+        "name_es": "Reflejos élficos, Odio (Altos elfos), Golpes de impacto (D6), Orden abierto, Capa de dragón marino, Rápido",
+        "name_fr": "Réflexes Elfiques, Haine (Hauts Elfes), Touches d’Impact (D6), Ordre Dispersé, Cape en peau de Dragon des Mers, Rapide"
+      },
+      "notes": {
+        "name_en": "0-2 Scourgerunner Chariots or Cold One Chariots per 1000 points",
+        "name_cn": "每1000分0-2灾行者战车或Cold One Chariots",
+        "name_de": "0-2 per 1000 points",
+        "name_es": "0-2 Carros fustigadores o Carros de gélidos por cada 1000 puntos",
+        "name_fr": "0-2 Chars à Courre ou Chars à Sang-froid par tranche de 1000 points"
+      }
+    },
+    {
       "name_en": "Cold One Chariot",
       "name_cn": "冷蜥战车",
       "name_de": "Cold One Chariot",
       "name_es": "Carros de gélidos",
       "name_fr": "Char à Sang-froid",
       "id": "cold-one-chariots",
-      "points": 125,
       "armyComposition": {
         "dark-elves": {
           "category": "special"
         }
       },
+      "points": 125,
       "command": [],
       "equipment": [
         {
@@ -3549,12 +4693,12 @@
       "name_es": "Carros de gélidos",
       "name_fr": "Char à Sang-froid",
       "id": "cold-one-chariots-renegade",
-      "points": 110,
       "armyComposition": {
         "de-renegade": {
           "category": "special"
         }
       },
+      "points": 110,
       "command": [],
       "equipment": [
         {
@@ -3615,7 +4759,7 @@
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath, Hand weapons, Whips",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -3663,16 +4807,16 @@
       "name_es": "Hidra de guerra",
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra-special-renegade",
-      "points": 165,
       "armyComposition": {
         "de-renegade": {
           "category": "special"
         }
       },
+      "points": 165,
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath, Hand weapons, Whips",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -3720,12 +4864,12 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss-special",
-      "points": 195,
       "armyComposition": {
         "dark-elves": {
           "category": "special"
         }
       },
+      "points": 195,
       "command": [],
       "equipment": [
         {
@@ -3777,12 +4921,12 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss-special-renegade",
-      "points": 145,
       "armyComposition": {
         "de-renegade": {
           "category": "special"
         }
       },
+      "points": 145,
       "command": [],
       "equipment": [
         {
@@ -3836,12 +4980,12 @@
       "name_es": "Hermanas de la matanza",
       "name_fr": "Sœurs du Massacre",
       "id": "sisters-of-slaughter",
-      "points": 17,
       "armyComposition": {
         "dark-elves": {
           "category": "rare"
         }
       },
+      "points": 17,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -3892,7 +5036,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous {renegade}, Open Order",
+        "name_en": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
         "name_cn": "死亡之舞, 精灵反应, 仇恨(高等精灵), 鲁莽, 独行, 嗜血（叛变）, 开放阵型",
         "name_de": "Dance of Death, Elven Reflexes, Hatred (High Elves), Impetuous, Loner, Murderous, Open Order",
         "name_es": "Danza de la muerte, Reflejos élficos, Odio (Altos elfos), Impetuoso, Solitario, Destreza homicida, Orden abierto",
@@ -3906,12 +5050,12 @@
       "name_es": "Hermanas de la matanza",
       "name_fr": "Sœurs du Massacre",
       "id": "sisters-of-slaughter-renegade",
-      "points": 14,
       "armyComposition": {
         "de-renegade": {
           "category": "rare"
         }
       },
+      "points": 14,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -3950,7 +5094,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Lash & buckler",
+          "name_en": "Hand weapons, Lash & buckler {renegade}",
           "name_cn": "单手武器, 鞭子与格斗盾",
           "name_de": "Hand weapons, Lash & buckler",
           "name_es": "Armas de mano, Látigo y broquel",
@@ -3966,11 +5110,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Dance of Death, Hatred (High Elves), Impetuous, Loner, Murderous {renegade}, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
-        "name_cn": "死亡之舞, 仇恨(高等精灵), 鲁莽, 独行, 嗜血（叛变), 开放阵型, Strike First, Skirmishers, Warband, First to the Fray",
-        "name_de": "Dance of Death, Hatred (High Elves), Impetuous, Loner, Murderous, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
-        "name_es": "Danza de la muerte, Odio (Altos elfos), Impetuoso, Solitario, Destreza homicida, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
-        "name_fr": "Danse de Mort, Haine (Hauts Elfes), Impétueux, Solitaire, Meurtriers, Strike First, Open Order, Skirmishers, Warband, First to the Fray"
+        "name_en": "Dance of Death {renegade}, Hatred (High Elves), Murderous {renegade}, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
+        "name_cn": "Dance of Death, Hatred (High Elves), Murderous, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
+        "name_de": "Dance of Death, Hatred (High Elves), Murderous, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
+        "name_es": "Dance of Death, Hatred (High Elves), Murderous, Strike First, Open Order, Skirmishers, Warband, First to the Fray",
+        "name_fr": "Dance of Death, Hatred (High Elves), Murderous, Strike First, Open Order, Skirmishers, Warband, First to the Fray"
       }
     },
     {
@@ -3980,12 +5124,12 @@
       "name_es": "Altares drenasangre",
       "name_fr": "Sanctuaires Incarnats",
       "id": "bloodwrack-shrines",
-      "points": 175,
       "armyComposition": {
         "dark-elves": {
           "category": "rare"
         }
       },
+      "points": 175,
       "command": [],
       "equipment": [
         {
@@ -4016,7 +5160,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare, Terror",
+        "name_en": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
         "name_cn": "紧密阵型, 拖曳, 精灵反应, 狂暴, 仇恨(高等精灵), 撞击(D6+1), 大型目标, 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视, 惊骇",
         "name_de": "Close Order, Dragged Along, Elven Reflexes, Frenzy, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror",
         "name_es": "Orden abierto, Arrastrado, reflejos élficos, Furia asesina, Odio (Altos elfos), Golpes de impacto (D6+1), Objetivo grande, Resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora, Terror",
@@ -4037,16 +5181,16 @@
       "name_es": "Altares drenasangre",
       "name_fr": "Sanctuaires Incarnats",
       "id": "bloodwrack-shrines-renegade",
-      "points": 140,
       "armyComposition": {
         "de-renegade": {
           "category": "rare"
         }
       },
+      "points": 140,
       "command": [],
       "equipment": [
         {
-          "name_en": "Cavalry spears (Shrinekeepers), Halberd (Medusa), Petrifying gaze (Medusa)",
+          "name_en": "Cavalry spears (Shrinekeepers), Halberd (Medusa), Petrifying gaze {renegade} (Medusa)",
           "name_cn": "骑兵长矛 (Shrinekeepers), Halberd (Medusa), 石化凝视 (Medusa)",
           "name_de": "Cavalry spears (Shrinekeepers), Halberd (Medusa), Petrifying gaze (Medusa)",
           "name_es": "Lanzas de caballería (Shrinekeepers), Halberd (Medusa), Mirada petrificante (Medusa)",
@@ -4073,11 +5217,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Will of the Gods, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare, Terror, Impetuous",
-        "name_cn": "紧密阵型, Will of the Gods, 精灵反应, 仇恨(高等精灵), 撞击(D6+1), 大型目标, 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视, 惊骇, Impetuous",
+        "name_en": "Close Order, Will of the Gods {renegade}, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare, Terror, Impetuous",
+        "name_cn": "Close Order, Will of the Gods, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror, Impetuous",
         "name_de": "Close Order, Will of the Gods, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror, Impetuous",
-        "name_es": "Orden abierto, Will of the Gods, reflejos élficos, Odio (Altos elfos), Golpes de impacto (D6+1), Objetivo grande, Resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora, Terror, Impetuous",
-        "name_fr": "Ordre Serré, Will of the Gods, Réflexes Elfiques, Haine (Hauts Elfes), Touches d’Impact (D6+1), Grande Cible, Résistance à la Magie (-1), Meurtriers, Attaques Empoisonnées, Regard de Pierre, Terreur, Impetuous"
+        "name_es": "Close Order, Will of the Gods, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror, Impetuous",
+        "name_fr": "Close Order, Will of the Gods, Elven Reflexes, Hatred (High Elves), Impact Hits (D6+1), Large Target, Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare, Terror, Impetuous"
       },
       "notes": {
         "name_en": "",
@@ -4094,16 +5238,16 @@
       "name_es": "Hidra de guerra",
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra",
-      "points": 200,
       "armyComposition": {
         "dark-elves": {
           "category": "rare"
         }
       },
+      "points": 200,
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -4151,16 +5295,16 @@
       "name_es": "Hidra de guerra",
       "name_fr": "Hydre de Guerre",
       "id": "war-hydra-renegade",
-      "points": 165,
       "armyComposition": {
         "de-renegade": {
           "category": "rare"
         }
       },
+      "points": 165,
       "command": [],
       "equipment": [
         {
-          "name_en": "Wicked claws, Serrated maws {renegade}, Fiery breath {dark elves}, Hand weapons, Whips",
+          "name_en": "Wicked claws, Serrated maws, Fiery breath {dark elves}, Hand weapons, Whips",
           "name_cn": "恶毒之爪, 锯齿巨口（叛变）, 炽热吐息, 单手武器, 鞭子",
           "name_de": "Wicked claws, Serrated maws, Fiery breath, Hand weapons, Whips",
           "name_es": "Garras crueles, Dientes serrados, Aliento de fuego, Armas de mano, Látigos",
@@ -4201,12 +5345,12 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss",
-      "points": 195,
       "armyComposition": {
         "dark-elves": {
           "category": "rare"
         }
       },
+      "points": 195,
       "command": [],
       "equipment": [
         {
@@ -4251,12 +5395,12 @@
       "name_es": "Kharibdyss",
       "name_fr": "Kharibdyss",
       "id": "kharibdyss-renegade",
-      "points": 145,
       "armyComposition": {
         "de-renegade": {
           "category": "rare"
         }
       },
+      "points": 145,
       "command": [],
       "equipment": [
         {
@@ -4301,12 +5445,12 @@
       "name_es": "Medusas drenasangre",
       "name_fr": "Méduses Incarnates",
       "id": "bloodwrack-medusas",
-      "points": 85,
       "armyComposition": {
         "dark-elves": {
           "category": "rare"
         }
       },
+      "points": 85,
       "command": [],
       "equipment": [
         {
@@ -4337,7 +5481,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous {renegade}, Poisoned Attacks, Stony Stare",
+        "name_en": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
         "name_cn": "紧密阵型, 精灵反应, 恐惧, 狂暴, 仇恨(高等精灵), 魔法抗性(-1), 嗜血（叛变）, 淬毒攻击, 石化凝视",
         "name_de": "Close Order, Elven Reflexes, Fear, Frenzy, Hatred (High Elves), Magic Resistance (-1), Murderous, Poisoned Attacks, Stony Stare",
         "name_es": "Orden cerrado, Reflejos élficos, Miedo, Furia asesina, Odio (Altos elfos), resistencia a la magia (-1), Destreza asesina, Ataques envenenados, Mirada petrificadora",
@@ -4358,16 +5502,16 @@
       "name_es": "Medusas drenasangre",
       "name_fr": "Méduses Incarnates",
       "id": "bloodwrack-medusas-renegade",
-      "points": 70,
       "armyComposition": {
         "de-renegade": {
           "category": "rare"
         }
       },
+      "points": 70,
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapon, Petrifying gaze",
+          "name_en": "Hand weapon, Halberd, Petrifying gaze {renegade}",
           "name_cn": "单手武器, 石化凝视",
           "name_de": "Hand weapon, Petrifying gaze",
           "name_es": "arma de mano, Mirada petrificante",
@@ -4415,6 +5559,73 @@
       "name_es": "Brujos fuegoletal",
       "name_fr": "Conjurateurs du Feu Maudit",
       "id": "doomfire-warlocks",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "points": 22,
+      "minimum": 5,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Master (champion)",
+          "name_cn": "导师(冠军)",
+          "name_de": "Master (champion)",
+          "name_es": "Mentor (cmpeón)",
+          "name_fr": "Maître Conjurateur (champion)",
+          "points": 6,
+          "magic": {
+            "types": ["weapon", "armor", "talisman", "enchanted-item"],
+            "maxPoints": 25
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Hand weapon",
+          "name_es": "Arma de mano",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": ["dark-magic", "daemonology"],
+      "spellCount": 1,
+      "specialRules": {
+        "name_en": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks (Doomfire Warlocks and Master only), Swiftstride",
+        "name_cn": "诅咒巫会, 黑暗符文, 精灵反应, 快速骑兵, 仇恨(高等精灵), 开放阵型, 淬毒攻击(仅限地狱火术士与导师), 快速行进",
+        "name_de": "Cursed Coven, Dark Runes, Elven Reflexes, Fast Cavalry, Hatred (High Elves), Open Order, Poisoned Attacks (Doomfire Warlocks and Master only), Swiftstride",
+        "name_es": "Cónclave maldito, Runas oscuras, Reflejos élficos, Caballería rápida, Odio (Altos elfos), Orden abierto, Ataques envenenados (Doomfire Warlocks and Master only), Rápido",
+        "name_fr": "Cabale Maudite, Runes Sombres, Réflexes Elfiques, Cavalerie Rapide, Haine (Hauts Elfes), Ordre Dispersé, Attaques Empoisonnées (Conjurateurs du Feu Maudit et Maître Conjurateur uniquement), Rapide"
+      },
+      "notes": {
+        "name_en": "0-1 per 1000 points",
+        "name_cn": "每1000分0-1",
+        "name_de": "0-1 per 1000 points",
+        "name_es": "0-1 por cada 1000 points",
+        "name_fr": "0-1 par tranche de 1000 points"
+      }
+    },
+    {
+      "name_en": "Doomfire Warlocks {renegade}",
+      "name_cn": "地狱火术士",
+      "name_de": "Doomfire Warlocks",
+      "name_es": "Brujos fuegoletal",
+      "name_fr": "Conjurateurs du Feu Maudit",
+      "id": "doomfire-warlocks-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare"
+        }
+      },
       "points": 22,
       "minimum": 5,
       "maximum": 0,
@@ -4472,6 +5683,68 @@
       "name_es": "Lanzavirotes destripador",
       "name_fr": "Baliste Faucheuse",
       "id": "reaper-bolt-throwers",
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "points": 80,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Repeater bolt thrower, Hand weapons",
+          "name_cn": "连发弩炮, 单手武器",
+          "name_de": "Repeater bolt thrower, Hand weapons",
+          "name_es": "Lanzavirotes destripador, Armas de mano",
+          "name_fr": "Baliste à répétition, Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Light armour",
+          "name_es": "Armadura ligera",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Elven Reflexes, Hatred (High Elves), Skirmishers",
+        "name_cn": "精灵反应, 仇恨(高等精灵), 散兵",
+        "name_de": "Elven Reflexes, Hatred (High Elves), Skirmishers",
+        "name_es": "Reflejos élficos, Odio (Altos elfos), Escaramuzadores",
+        "name_fr": "Réflexes Elfiques, Haine (Hauts Elfes), Tirailleurs"
+      },
+      "notes": {
+        "name_en": "0-2 per 1000 points",
+        "name_cn": "每1000分0-2",
+        "name_de": "0-2 per 1000 points",
+        "name_es": "0-2 por cada 1000 puntos",
+        "name_fr": "0-2 par tranche de 1000 points"
+      }
+    },
+    {
+      "name_en": "Reaper Bolt Thrower {renegade}",
+      "name_cn": "收割者弩炮",
+      "name_de": "Reaper Bolt Thrower",
+      "name_es": "Lanzavirotes destripador",
+      "name_fr": "Baliste Faucheuse",
+      "id": "reaper-bolt-throwers-renegade",
+      "armyComposition": {
+        "de-renegade": {
+          "category": "rare"
+        }
+      },
       "points": 80,
       "command": [],
       "equipment": [

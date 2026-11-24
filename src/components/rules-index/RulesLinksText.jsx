@@ -1,11 +1,10 @@
 import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 
-import { normalizeRuleName } from "../../utils/string";
 import { useLanguage } from "../../utils/useLanguage";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getRuleData } from "./rules-map";
 
 export const RulesLinksText = ({
   textObject,
@@ -24,15 +23,7 @@ export const RulesLinksText = ({
   let ruleButtons = ruleString.split(", ");
 
   return ruleButtons.map((rule, index) => {
-    const isRenegade = armyComposition?.includes("renegade");
-    let normalizedName = normalizeRuleName(textEn[index]);
-
-    if (!isRenegade) {
-      normalizedName = normalizedName.replace(" renegade", "");
-    }
-
-    const synonym = synonyms[normalizedName];
-    const ruleData = rulesMap[synonym || normalizedName];
+    const ruleData = getRuleData(textEn[index], armyComposition);
 
     return (
       <Fragment key={rule}>
