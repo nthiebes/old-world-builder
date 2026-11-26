@@ -588,9 +588,14 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
         };
       }
 
+      // Renegade lores with their own spells, e.g. "lore-of-naggaroth-renegade"
+      const renegadeLore =
+        rule.includes("{renegade}") &&
+        loresOfMagicWithSpells[`${loreId}-renegade`];
+
       return {
         ...result,
-        [loreId]: loresOfMagicWithSpells[loreId],
+        [loreId]: renegadeLore || loresOfMagicWithSpells[loreId],
       };
     }, {});
 

@@ -1,18 +1,23 @@
 import { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { useIntl } from "react-intl";
 
 import { Button } from "../button";
-import { normalizeRuleName } from "../../utils/string";
 import { useLanguage } from "../../utils/useLanguage";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getRuleData } from "./rules-map";
 
 export const RulesWithIcon = ({ textObject }) => {
   const dispatch = useDispatch();
   const { language } = useLanguage();
   const intl = useIntl();
+  const { listId } = useParams();
+  const list = useSelector((state) =>
+    state.lists.find(({ id }) => listId === id),
+  );
+  const listArmyComposition = list?.armyComposition || list?.army;
 
   if (!textObject.name_en) {
     return [];
@@ -25,8 +30,7 @@ export const RulesWithIcon = ({ textObject }) => {
   return ruleButtons.map((rule, index) => {
     return (
       <Fragment key={`${rule}-${index}`}>
-        {rulesMap[normalizeRuleName(textEn[index])] ||
-        rulesMap[synonyms[normalizeRuleName(textEn[index])]] ? (
+        {getRuleData(textEn[index], listArmyComposition) ? (
           <span className="unit__rule-wrapper">
             {rule
               .replace(/\[/g, "")

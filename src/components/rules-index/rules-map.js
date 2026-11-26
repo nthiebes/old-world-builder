@@ -1,4 +1,10 @@
+import { normalizeRuleName } from "../../utils/string";
 import rulesIndexExport from "./rules-index-export.json";
+import renegadeRulesMap from "./renegade-rules-map.json";
+import renegadeRulesExport from "./renegade-rules-export.json";
+
+export const WHFB_RULES_URL = "https://tow.whfb.app";
+export const RENEGADE_RULES_URL = "http://renegade-rules.old-world-builder.com";
 
 const additionalOWBRules = {
   "throwing spears": { url: "weapons-of-war/throwing-spear" },
@@ -335,7 +341,73 @@ export const synonyms = {
   "long spears": "long spear",
 };
 
+// Profiles of {renegade} units come from the renegade rules index,
+// other fields like the page reference from tow.whfb.app if it has one
+const renegadeRules = Object.fromEntries(
+  Object.entries(renegadeRulesExport).map(([name, rule]) => [
+    name,
+    { ...rulesIndexExport[name], ...rule },
+  ]),
+);
+
 export const rulesMap = {
   ...rulesIndexExport,
   ...additionalOWBRules,
+  ...renegadeRules,
+};
+
+// Always light: in dark mode, RulesIndex.css inverts the iframe like tow.whfb.app
+const getRenegadeRuleData = (path, exportData) => ({
+  ...exportData,
+  url: `${RENEGADE_RULES_URL}/${path}?minimal=true&theme=light`,
+});
+
+/**
+ * Resolves a rule name to its rules index entry.
+ * In renegade lists, {renegade} rules link to the renegade rules index
+ * and never fall back to tow.whfb.app. Untagged names link there too
+ * if the army has a renegade page for them, e.g. "Bloodthirster".
+ *
+ * @param {string} name - Rule name, e.g. "Daemonic Instability {renegade}"
+ * @param {string} armyComposition - Army composition of the list
+ * @returns {{url: string, page?: string, stats?: array}|undefined}
+ */
+export const getRuleData = (name = "", armyComposition) => {
+  const isRenegadeList = armyComposition?.endsWith("-renegade");
+
+  if (isRenegadeList && name.toLowerCase().includes("renegade")) {
+    const normalizedName = normalizeRuleName(name);
+    const renegadePath = renegadeRulesMap.rules[normalizedName];
+
+    return renegadePath
+      ? getRenegadeRuleData(
+          renegadePath,
+          rulesMap[normalizedName] || rulesMap[synonyms[normalizedName]],
+        )
+      : undefined;
+  }
+
+  if (isRenegadeList) {
+    const baseName = normalizeRuleName(name.replace(/ *\{[^}]*\}/g, ""));
+    const armyRules = renegadeRulesMap.armies[armyComposition] || {};
+    const renegadePath = armyRules[baseName] || armyRules[synonyms[baseName]];
+
+    if (renegadePath) {
+      return getRenegadeRuleData(
+        renegadePath,
+        rulesMap[baseName] || rulesMap[synonyms[baseName]],
+      );
+    }
+  }
+
+  const normalizedName = normalizeRuleName(name.replace(/ *\{renegade\}/g, ""));
+  const ruleData =
+    rulesMap[normalizedName] || rulesMap[synonyms[normalizedName]];
+
+  return ruleData?.url
+    ? {
+        ...ruleData,
+        url: `${WHFB_RULES_URL}/${ruleData.url}?minimal=true&utm_source=owb&utm_medium=referral`,
+      }
+    : undefined;
 };

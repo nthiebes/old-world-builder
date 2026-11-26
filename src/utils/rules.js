@@ -209,6 +209,76 @@ export const rules = {
       maxPercent: 25,
     },
   },
+  "questing-host": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "baron",
+            "prophetess",
+            "sir-cecil-gastonne-the-wyrm-slayer",
+            "lady-élisse-duachaard",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["outcast-wizard"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["questing-knights-core"],
+          min: 1,
+          points: 1000,
+        },
+        {
+          ids: ["knights-of-the-realm", "mounted-knights-of-the-realm"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["pegasus-knights"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["knights-errant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["battle-pilgrims"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["border-princes-brigands"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "tomb-kings-of-khemri": {
     characters: {
       maxPercent: 50,
@@ -221,22 +291,22 @@ export const rules = {
             "prince-apophas-the-cursed-scarab-lord",
           ],
           min: 1,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
         {
           ids: ["high-priest", "mortuary-priest"],
           min: 1,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
         {
           ids: [
@@ -247,12 +317,12 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
       ],
     },
@@ -1288,7 +1358,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["centigore-chieftain", "ghorros"],
+          requires: ["warhoof", "ghorros"],
           perUnit: true,
         },
         {
@@ -2772,7 +2842,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["sorcerer-prophet-renegade", "despot-renegades"],
+          ids: ["sorcerer-prophet-renegade", "despot-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -2807,9 +2877,8 @@ export const rules = {
           ids: ["infernal-ironsworn-core-renegade"],
           min: 0,
           max: 1,
-          requiresGeneral: true,
+          requiresType: "characters",
           requires: ["castellan-renegade"],
-          perUnit: true,
         },
       ],
     },
@@ -2923,6 +2992,7 @@ export const rules = {
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
@@ -2984,7 +3054,7 @@ export const rules = {
           ids: [
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
           ],
           requiresGeneral: true,
           requires: [
@@ -3078,9 +3148,9 @@ export const rules = {
       units: [
         {
           ids: [
-            "bloodthirster",
+            "bloodthirster-renegade",
             "great-unclean-one-renegade",
-            "keeper-of-secrets",
+            "keeper-of-secrets-renegade",
             "lord-of-change-renegade",
           ],
           min: 0,
@@ -3088,7 +3158,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["bloodthirster"],
+          ids: ["bloodthirster-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
@@ -3097,8 +3167,8 @@ export const rules = {
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
             "flesh-hounds-of-khorne-core-renegade",
-            "bloodcrushers-of-khorne",
-            "skull-cannon-of-khorne",
+            "bloodcrushers-of-khorne-renegade",
+            "skull-cannon-of-khorne-renegade",
             "soul-grinder-khorne-renegade",
           ],
           perUnit: true,
@@ -3111,15 +3181,15 @@ export const rules = {
           requires: [
             "chaos-furies-of-nurgle-renegade",
             "plaguebearers-of-nurgle-renegade",
-            "nurglings",
-            "nurglings-core",
+            "nurglings-renegade",
+            "nurglings-core-renegade",
             "beasts-of-nurgle-renegade",
-            "plague-drones-of-nurgle",
+            "plague-drones-of-nurgle-renegade",
           ],
           perUnit: true,
         },
         {
-          ids: ["keeper-of-secrets"],
+          ids: ["keeper-of-secrets-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
@@ -3141,11 +3211,11 @@ export const rules = {
           requiresType: "all",
           requires: [
             "chaos-furies-of-tzeentch-renegade",
-            "blue-horrors-of-tzeentch",
-            "pink-horrors-of-tzeentch",
-            "pink-horrors-of-tzeentch-core",
-            "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch-renegade",
+            "pink-horrors-of-tzeentch-core-renegade",
+            "blue-horrors-of-tzeentch-core-renegade",
+            "brimstone-horrors-of-tzeentch-renegade",
+            "brimstone-horrors-of-tzeentch-core-renegade",
             "flamers-of-tzeentch-renegade",
             "screamers-of-tzeentch-renegade",
             "burning-chariot-of-tzeentch-renegade",
@@ -3153,7 +3223,7 @@ export const rules = {
           perUnit: true,
         },
         {
-          ids: ["daemonic-herald-of-khorne"],
+          ids: ["daemonic-herald-of-khorne-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
@@ -3162,29 +3232,29 @@ export const rules = {
             "bloodletters-of-khorne-renegade",
             "flesh-hounds-of-khorne-renegade",
             "flesh-hounds-of-khorne-core-renegade",
-            "bloodcrushers-of-khorne",
-            "skull-cannon-of-khorne",
+            "bloodcrushers-of-khorne-renegade",
+            "skull-cannon-of-khorne-renegade",
             "soul-grinder-khorne-renegade",
           ],
           perUnit: true,
         },
         {
-          ids: ["daemonic-herald-of-nurgle"],
+          ids: ["daemonic-herald-of-nurgle-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
           requires: [
             "chaos-furies-of-nurgle-renegade",
             "plaguebearers-of-nurgle-renegade",
-            "nurglings",
-            "nurglings-core",
+            "nurglings-renegade",
+            "nurglings-core-renegade",
             "beasts-of-nurgle-renegade",
-            "plague-drones-of-nurgle",
+            "plague-drones-of-nurgle-renegade",
           ],
           perUnit: true,
         },
         {
-          ids: ["daemonic-herald-of-slaanesh"],
+          ids: ["daemonic-herald-of-slaanesh-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
@@ -3200,17 +3270,17 @@ export const rules = {
           perUnit: true,
         },
         {
-          ids: ["daemonic-herald-of-tzeentch"],
+          ids: ["daemonic-herald-of-tzeentch-renegade"],
           min: 0,
           max: 1,
           requiresType: "all",
           requires: [
             "chaos-furies-of-tzeentch-renegade",
-            "blue-horrors-of-tzeentch",
-            "pink-horrors-of-tzeentch",
-            "pink-horrors-of-tzeentch-core",
-            "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch-renegade",
+            "pink-horrors-of-tzeentch-core-renegade",
+            "blue-horrors-of-tzeentch-core-renegade",
+            "brimstone-horrors-of-tzeentch-renegade",
+            "brimstone-horrors-of-tzeentch-core-renegade",
             "flamers-of-tzeentch-renegade",
             "screamers-of-tzeentch-renegade",
             "burning-chariot-of-tzeentch-renegade",
@@ -3218,7 +3288,7 @@ export const rules = {
           perUnit: true,
         },
         {
-          ids: ["daemon-prince"],
+          ids: ["daemon-prince-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3232,56 +3302,55 @@ export const rules = {
           ids: ["flesh-hounds-of-khorne-core-renegade"],
           requiresGeneral: true,
           requires: [
-            "bloodthirster",
-            "daemonic-herald-of-khorne",
-            "daemon-prince",
+            "bloodthirster-renegade",
+            "daemonic-herald-of-khorne-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-khorne",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
-          ids: ["nurglings-core"],
+          ids: ["nurglings-core-renegade"],
           requiresGeneral: true,
           requires: [
             "great-unclean-one-renegade",
-            "daemonic-herald-of-nurgle",
-            "daemon-prince",
+            "daemonic-herald-of-nurgle-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-nurgle",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
           ids: ["seekers-of-slaanesh-core-renegade"],
           requiresGeneral: true,
           requires: [
-            "keeper-of-secrets",
-            "daemonic-herald-of-slaanesh",
-            "daemon-prince",
+            "keeper-of-secrets-renegade",
+            "daemonic-herald-of-slaanesh-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-slaanesh",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
           ids: [
-            "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "blue-horrors-of-tzeentch-core-renegade",
+            "brimstone-horrors-of-tzeentch-core-renegade",
           ],
           requiresGeneral: true,
           requires: [
             "lord-of-change-renegade",
-            "daemonic-herald-of-tzeentch",
-            "daemon-prince",
+            "daemonic-herald-of-tzeentch-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-tzeentch",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
       ],
@@ -3295,28 +3364,28 @@ export const rules = {
           max: 1,
           requiresGeneral: true,
           requires: [
-            "bloodthirster",
-            "daemonic-herald-of-khorne",
-            "daemon-prince",
+            "bloodthirster-renegade",
+            "daemonic-herald-of-khorne-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-khorne",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
-          ids: ["plague-drones-of-nurgle"],
+          ids: ["plague-drones-of-nurgle-renegade"],
           min: 0,
           max: 1,
           requiresGeneral: true,
           requires: [
             "great-unclean-one-renegade",
-            "daemonic-herald-of-nurgle",
-            "daemon-prince",
+            "daemonic-herald-of-nurgle-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-nurgle",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
@@ -3325,13 +3394,13 @@ export const rules = {
           max: 1,
           requiresGeneral: true,
           requires: [
-            "keeper-of-secrets",
-            "daemonic-herald-of-slaanesh",
-            "daemon-prince",
+            "keeper-of-secrets-renegade",
+            "daemonic-herald-of-slaanesh-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-slaanesh",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
         {
@@ -3341,12 +3410,12 @@ export const rules = {
           requiresGeneral: true,
           requires: [
             "lord-of-change-renegade",
-            "daemonic-herald-of-tzeentch",
-            "daemon-prince",
+            "daemonic-herald-of-tzeentch-renegade",
+            "daemon-prince-renegade",
           ],
           requiresOption: {
             id: "daemon-of-tzeentch",
-            unit: "daemon-prince",
+            unit: "daemon-prince-renegade",
           },
         },
       ],
@@ -3355,7 +3424,7 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["skull-cannon-of-khorne"],
+          ids: ["skull-cannon-of-khorne-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3445,7 +3514,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["dark-elf-dreadlord", "supreme-sorceress-renegade"],
+          ids: ["dark-elf-dreadlord-renegade", "supreme-sorceress-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3460,7 +3529,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["death-hag"],
+          requires: ["death-hag-renegade"],
         },
       ],
     },
@@ -3471,18 +3540,19 @@ export const rules = {
           ids: ["black-guard-of-naggarond-renegade"],
           min: 0,
           max: 1,
-          requiresType: "characters",
-          requires: ["dark-elf-dreadlord", "dark-elf-master"],
-          perUnit: true,
+          points: 1000,
         },
         {
-          ids: ["cold-one-knights"],
+          ids: ["cold-one-knights-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["scourgerunner-chariots", "cold-one-chariots"],
+          ids: [
+            "scourgerunner-chariots-renegade",
+            "cold-one-chariots-renegade",
+          ],
           min: 0,
           max: 2,
           points: 1000,
@@ -3492,7 +3562,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["high-beastmaster"],
+          requires: ["high-beastmaster-renegade"],
         },
       ],
     },
@@ -3500,13 +3570,13 @@ export const rules = {
       maxPercent: 25,
       units: [
         {
-          ids: ["doomfire-warlocks"],
+          ids: ["doomfire-warlocks-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["reaper-bolt-throwers"],
+          ids: ["reaper-bolt-throwers-renegade"],
           min: 0,
           max: 2,
           points: 1000,
@@ -3599,7 +3669,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["slann-mage-priest", "saurus-oldblood"],
+          ids: ["slann-mage-priest-renegade", "saurus-oldblood-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3614,7 +3684,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresGeneral: true,
-          requires: ["slann-mage-priest"],
+          requires: ["slann-mage-priest-renegade"],
         },
       ],
     },
@@ -3701,7 +3771,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["tyrant", "slaughtermaster-renegade"],
+          ids: ["tyrant-renegade", "slaughtermaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -3715,19 +3785,19 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["maneaters"],
+          ids: ["maneaters-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["mournfang-cavalry"],
+          ids: ["mournfang-cavalry-renegade"],
           min: 0,
           max: 1,
           points: 1000,
         },
         {
-          ids: ["ironblaster"],
+          ids: ["ironblaster-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -4075,7 +4145,7 @@ export const rules = {
       maxPercent: 50,
       units: [
         {
-          ids: ["skaven-warlord", "master-assassin-renegade"],
+          ids: ["skaven-warlord-renegade", "master-assassin-renegade"],
           min: 0,
           max: 1,
           points: 1000,
@@ -4085,12 +4155,6 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
-        },
-        {
-          ids: ["plague-priest"],
-          requiresType: "all",
-          requires: ["plague-monks-renegade", "plague-monks-core-renegade"],
-          perUnit: true,
         },
       ],
     },
@@ -4102,14 +4166,14 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["skaven-warlord"],
+          requires: ["skaven-warlord-renegade"],
         },
         {
           ids: ["plague-monks-core-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["plague-priest"],
+          requires: ["plague-priest-renegade"],
         },
         {
           ids: ["plague-monks-core-renegade", "stormvermin-core-renegade"],
@@ -4121,7 +4185,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "all",
-          requires: ["clanrats"],
+          requires: ["clanrats-renegade"],
           perUnit: true,
         },
       ],
@@ -4135,7 +4199,7 @@ export const rules = {
           requires: ["warlock-engineer-renegade"],
         },
         {
-          ids: ["poisoned-wind-globadiers"],
+          ids: ["poisoned-wind-globadiers-renegade"],
           requiresType: "characters",
           requires: ["warlock-engineer-renegade"],
           min: 0,
@@ -4162,7 +4226,7 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["warp-lightning-cannon"],
+          ids: ["warp-lightning-cannon-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
@@ -4170,11 +4234,11 @@ export const rules = {
           points: 1000,
         },
         {
-          ids: ["plagueclaw-catapult"],
+          ids: ["plagueclaw-catapult-renegade"],
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["plague-priest"],
+          requires: ["plague-priest-renegade"],
           points: 1000,
         },
         {
@@ -4182,7 +4246,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["plague-priest"],
+          requires: ["plague-priest-renegade"],
           points: 1000,
         },
       ],
@@ -4611,7 +4675,7 @@ export const rules15 = {
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
@@ -4671,7 +4735,7 @@ export const rules15 = {
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
