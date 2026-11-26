@@ -209,6 +209,76 @@ export const rules = {
       maxPercent: 25,
     },
   },
+  "questing-host": {
+    characters: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: [
+            "baron",
+            "prophetess",
+            "sir-cecil-gastonne-the-wyrm-slayer",
+            "lady-élisse-duachaard",
+          ],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["outcast-wizard"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minPercent: 25,
+      units: [
+        {
+          ids: ["questing-knights-core"],
+          min: 1,
+          points: 1000,
+        },
+        {
+          ids: ["knights-of-the-realm", "mounted-knights-of-the-realm"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxPercent: 50,
+      units: [
+        {
+          ids: ["pegasus-knights"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["knights-errant"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+        {
+          ids: ["battle-pilgrims"],
+          min: 0,
+          max: 2,
+          points: 1000,
+        },
+      ],
+    },
+    rare: {
+      maxPercent: 25,
+      units: [
+        {
+          ids: ["border-princes-brigands"],
+          min: 0,
+          max: 1,
+          points: 1000,
+        },
+      ],
+    },
+  },
   "tomb-kings-of-khemri": {
     characters: {
       maxPercent: 50,

@@ -276,6 +276,30 @@ export const nameMap = {
     name_cn: "骑士美德",
     name_fr: "Vertu Chevaleresque",
   },
+  "pledges-of-honour": {
+    name_de: "Pledges of Honour",
+    name_en: "Pledges of Honour",
+    name_cn: "Pledges of Honour",
+    name_fr: "Pledges of Honour",
+  },
+  "pledge-of-honour": {
+    name_de: "Pledge of Honour",
+    name_en: "Pledge of Honour",
+    name_cn: "Pledge of Honour",
+    name_fr: "Pledge of Honour",
+  },
+  "knightly-pledges-of-honour": {
+    name_de: "Knightly Pledges of Honour",
+    name_en: "Knightly Pledges of Honour",
+    name_cn: "Knightly Pledges of Honour",
+    name_fr: "Knightly Pledges of Honour",
+  },
+  "knightly-pledge-of-honour": {
+    name_de: "Knightly Pledge of Honour",
+    name_en: "Knightly Pledge of Honour",
+    name_cn: "Knightly Pledge of Honour",
+    name_fr: "Knightly Pledge of Honour",
+  },
   "elven-honours": {
     name_de: "Elven Honours",
     name_en: "Elven Honours",
@@ -367,6 +391,12 @@ export const nameMap = {
     name_en: "Bretonnian Exiles",
     name_cn: "巴托尼亚放逐者",
     name_fr: "Exilés Bretonniens",
+  },
+  "questing-host": {
+    name_de: "Questing Host",
+    name_en: "Questing Host",
+    name_cn: "Questing Host",
+    name_fr: "Questing Host",
   },
   "nehekharan-royal-hosts": {
     name_de: "Nehekharan Royal Hosts",

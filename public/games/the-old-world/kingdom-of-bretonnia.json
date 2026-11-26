@@ -140,6 +140,20 @@
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
+        },
+        {
+          "name_en": "Pledges of Honour",
+          "name_cn": "Pledges of Honour",
+          "name_de": "Pledges of Honour",
+          "name_fr": "Pledges of Honour",
+          "types": ["pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": [
+            "kingdom-of-bretonnia",
+            "errantry-crusades",
+            "bretonnian-exiles"
+          ]
         }
       ],
       "specialRules": {
@@ -209,6 +223,16 @@
             "name_de": "0-1 Baron pro 1.000 Punkte",
             "name_es": "",
             "name_fr": "0-1 Baron par tranche de 1000 points"
+          }
+        },
+        "questing-host": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Baron or Prophetess per 1000 points",
+            "name_cn": "0-1 Baron or Prophetess per 1000 points",
+            "name_de": "0-1 Baron or Prophetess per 1000 points",
+            "name_es": "0-1 Baron or Prophetess per 1000 points",
+            "name_fr": "0-1 Baron or Prophetess per 1000 points"
           }
         }
       },
@@ -366,6 +390,33 @@
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
+        },
+        {
+          "name_en": "Pledges of Honour",
+          "name_cn": "Pledges of Honour",
+          "name_de": "Pledges of Honour",
+          "name_fr": "Pledges of Honour",
+          "types": ["pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "notes": {
+            "name_en": "Requires the Questing Vow"
+          },
+          "armyComposition": [
+            "kingdom-of-bretonnia",
+            "errantry-crusades",
+            "bretonnian-exiles"
+          ]
+        },
+        {
+          "name_en": "Pledges of Honour",
+          "name_cn": "Pledges of Honour",
+          "name_de": "Pledges of Honour",
+          "name_fr": "Pledges of Honour",
+          "types": ["pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
         }
       ],
       "specialRules": {
@@ -512,6 +563,16 @@
         },
         "errantry-crusades": {
           "category": "characters"
+        },
+        "questing-host": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Baron or Prophetess per 1000 points",
+            "name_cn": "0-1 Baron or Prophetess per 1000 points",
+            "name_de": "0-1 Baron or Prophetess per 1000 points",
+            "name_es": "0-1 Baron or Prophetess per 1000 points",
+            "name_fr": "0-1 Baron or Prophetess per 1000 points"
+          }
         }
       }
     },
@@ -537,6 +598,9 @@
           }
         },
         "bretonnian-exiles": {
+          "category": "characters"
+        },
+        "questing-host": {
           "category": "characters"
         }
       },
@@ -699,6 +763,33 @@
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
+        },
+        {
+          "name_en": "Pledges of Honour",
+          "name_cn": "Pledges of Honour",
+          "name_de": "Pledges of Honour",
+          "name_fr": "Pledges of Honour",
+          "types": ["pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "notes": {
+            "name_en": "Requires the Questing Vow"
+          },
+          "armyComposition": [
+            "kingdom-of-bretonnia",
+            "errantry-crusades",
+            "bretonnian-exiles"
+          ]
+        },
+        {
+          "name_en": "Pledges of Honour",
+          "name_cn": "Pledges of Honour",
+          "name_de": "Pledges of Honour",
+          "name_fr": "Pledges of Honour",
+          "types": ["pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
         }
       ],
       "specialRules": {
@@ -720,6 +811,9 @@
           "category": "characters"
         },
         "errantry-crusades": {
+          "category": "characters"
+        },
+        "questing-host": {
           "category": "characters"
         },
         "bretonnian-exiles": {
@@ -1071,6 +1165,16 @@
       "armyComposition": {
         "bretonnian-exiles": {
           "category": "characters"
+        },
+        "questing-host": {
+          "category": "characters",
+          "notes": {
+            "name_en": "0-1 Outcast Wizard",
+            "name_cn": "0-1 Outcast Wizard",
+            "name_de": "0-1 Outcast Wizard",
+            "name_es": "0-1 Outcast Wizard",
+            "name_fr": "0-1 Outcast Wizard"
+          }
         }
       }
     },
@@ -1235,6 +1339,9 @@
         },
         "errantry-crusades": {
           "category": "characters"
+        },
+        "questing-host": {
+          "category": "characters"
         }
       }
     }
@@ -1311,7 +1418,17 @@
           "active": true
         }
       ],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Campaign Yeomen",
+          "name_cn": "Campaign Yeomen",
+          "name_de": "Campaign Yeomen",
+          "name_fr": "Campaign Yeomen",
+          "points": 1,
+          "perModel": true,
+          "armyComposition": "questing-host"
+        }
+      ],
       "mounts": [],
       "specialRules": {
         "name_en": "Close Order, Horde, Levies, Peasantry, Shieldwall, Warband",
@@ -1334,6 +1451,9 @@
           "category": "special"
         },
         "bretonnian-exiles": {
+          "category": "core"
+        },
+        "questing-host": {
           "category": "core"
         }
       }
@@ -1444,6 +1564,9 @@
         "errantry-crusades": {
           "category": "special"
         },
+        "questing-host": {
+          "category": "core"
+        },
         "bretonnian-exiles": {
           "category": "core",
           "notes": {
@@ -1488,6 +1611,16 @@
         },
         "errantry-crusades": {
           "category": "core"
+        },
+        "questing-host": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_cn": "1个单位以上的步战王国骑士和/或骑马王国骑士",
+            "name_de": "1+ Einheiten Ritter des Königs zu Fuß und/oder Berittene Ritter des Königs",
+            "name_es": "",
+            "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
+          }
         }
       },
       "command": [
@@ -1578,6 +1711,18 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
+        }
+      ],
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Furious Charge, The Knight's Vow",
         "name_cn": "女神祝福, 紧密阵型, 狂怒冲锋, 骑士誓言",
@@ -1617,6 +1762,16 @@
         },
         "errantry-crusades": {
           "category": "core"
+        },
+        "questing-host": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm on Foot and/or Mounted Knights of the Realm",
+            "name_cn": "1个单位以上的步战王国骑士和/或骑马王国骑士",
+            "name_de": "1+ Einheiten Ritter des Königs zu Fuß und/oder Berittene Ritter des Königs",
+            "name_es": "",
+            "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
+          }
         }
       },
       "command": [
@@ -1692,6 +1847,18 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
+        }
+      ],
       "specialRules": {
         "name_en": "Blessings of the Lady, Close Order, Counter Charge, Finest Warhorses, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
         "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 快速行进, 骑士誓言",
@@ -1737,6 +1904,12 @@
             "name_de": "1+ Einheiten Fahrende Ritter pro 1000 Punkte",
             "name_es": "",
             "name_fr": "1+ unité de Chevaliers Errants et/ou 1000 par tranche de $4 points"
+          }
+        },
+        "questing-host": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Knights Errant per 1,000 points"
           }
         }
       },
@@ -2000,6 +2173,121 @@
           }
         }
       }
+    },
+    {
+      "name_en": "Questing Knights",
+      "name_cn": "探索骑士",
+      "name_de": "Questritter",
+      "name_fr": "Chevaliers de la Quête",
+      "id": "questing-knights-core",
+      "points": 26,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Paragon (champion)",
+          "name_cn": "典范(冠军)",
+          "name_de": "Eremit",
+          "name_fr": "Champion de la Quête (champion)",
+          "points": 7,
+          "magic": {
+            "maxPoints": 25,
+            "types": ["weapon", "armor", "talisman", "enchanted-item"]
+          }
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 7,
+          "magic": {
+            "maxPoints": 100,
+            "types": ["banner"]
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "name_de": "Musiker",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Great weapons, Shields",
+          "name_cn": "单手武器, 重型武器, 盾牌",
+          "name_de": "Handwaffen, Zweihandwaffe, Schilde",
+          "name_fr": "Armes de base, Armes lourdes, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Barding",
+          "name_cn": "重甲, 马铠",
+          "name_de": "Schwere Rüstung, Rossharnische",
+          "name_fr": "Armure lourde, Caparaçon",
+          "name_es": "Armadura pesada, Barding",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Paragon's Knightly Virtues",
+          "name_cn": "典范骑士可选择一项骑士美德",
+          "name_de": "Rittergelübde für Eremit",
+          "name_fr": "Vertu Chevaleresque du Champion de la Quête",
+          "types": ["knightly-virtue"],
+          "selected": [],
+          "maxPoints": 0
+        },
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": [
+            "kingdom-of-bretonnia",
+            "errantry-crusades",
+            "bretonnian-exiles"
+          ]
+        },
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
+        }
+      ],
+      "specialRules": {
+        "name_en": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Questing Vow",
+        "name_cn": "女神祝福, 紧密阵型, 良种战马, 先行冲锋, 枪骑阵型, 快速行进, 探索誓言",
+        "name_de": "Blessings of the Lady, Close Order, Finest Warhorses, First Charge, Lance Formation, Swiftstride, the Questing Vow",
+        "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Vœu de la Quête"
+      },
+      "armyComposition": {
+        "questing-host": {
+          "category": "core",
+          "notes": {
+            "name_en": "1 unit of Questing Knights per 1,000 points"
+          }
+        }
+      }
     }
   ],
   "special": [
@@ -2077,6 +2365,30 @@
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
+        },
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": [
+            "kingdom-of-bretonnia",
+            "errantry-crusades",
+            "bretonnian-exiles"
+          ]
+        },
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
         }
       ],
       "specialRules": {
@@ -2093,6 +2405,9 @@
           "category": "rare"
         },
         "errantry-crusades": {
+          "category": "special"
+        },
+        "questing-host": {
           "category": "special"
         }
       }
@@ -2175,6 +2490,35 @@
         }
       ],
       "mounts": [],
+      "items": [
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
+        }
+      ],
+      "armyComposition": {
+        "kingdom-of-bretonnia": {
+          "category": "special"
+        },
+        "bretonnian-exiles": {
+          "category": "special"
+        },
+        "errantry-crusades": {
+          "category": "special"
+        },
+        "questing-host": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-1 unit of Pegasus Knights"
+          }
+        }
+      },
       "specialRules": {
         "name_en": "Blessings of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Skirmishers, Swiftstride, The Knight's Vow",
         "name_cn": "女神祝福, 反制冲锋, 分散阵型, 先行冲锋, 飞行(10), 狂怒冲锋(仅限飞马骑士&首席骑士), 散兵, 快速行进, 骑士誓言",
@@ -2278,6 +2622,9 @@
         },
         "errantry-crusades": {
           "category": "rare"
+        },
+        "questing-host": {
+          "category": "special"
         }
       }
     },
@@ -2359,6 +2706,9 @@
         },
         "bretonnian-exiles": {
           "category": "special"
+        },
+        "questing-host": {
+          "category": "core"
         }
       }
     },
@@ -2394,6 +2744,16 @@
         },
         "errantry-crusades": {
           "category": "special"
+        },
+        "questing-host": {
+          "category": "special",
+          "notes": {
+            "name_en": "0-2 units of Battle Pilgrims per 1000 points",
+            "name_cn": "每1000分0-2个单位的战斗朝圣者",
+            "name_de": "0-2 Einheiten Gralspilger pro 1.000 Punkte",
+            "name_es": "",
+            "name_fr": "0-2 unités de Pèlerins du Graal par tranche de 1000 points"
+          }
         }
       },
       "command": [
@@ -2512,6 +2872,16 @@
           "types": ["knightly-virtue"],
           "selected": [],
           "maxPoints": 0
+        },
+        {
+          "name_en": "Knightly Pledges of Honour",
+          "name_cn": "Knightly Pledges of Honour",
+          "name_de": "Knightly Pledges of Honour",
+          "name_fr": "Knightly Pledges of Honour",
+          "types": ["knightly-pledge-of-honour"],
+          "selected": [],
+          "maxPoints": 0,
+          "armyComposition": "questing-host"
         }
       ],
       "specialRules": {
@@ -2525,6 +2895,9 @@
           "category": "rare"
         },
         "errantry-crusades": {
+          "category": "rare"
+        },
+        "questing-host": {
           "category": "rare"
         }
       }
@@ -2791,6 +3164,12 @@
       "armyComposition": {
         "bretonnian-exiles": {
           "category": "rare"
+        },
+        "questing-host": {
+          "category": "rare",
+          "notes": {
+            "name_en": "0-1 unit of Border Princes Brigands per 1,000 points"
+          }
         }
       }
     },

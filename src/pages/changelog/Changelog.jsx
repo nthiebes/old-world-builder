@@ -64,6 +64,14 @@ export const Changelog = () => {
               }}
             />
           </li>
+          <li>
+            <FormattedMessage
+              id="changelog.change87"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+              }}
+            />
+          </li>
         </ul>
 
         <hr />
